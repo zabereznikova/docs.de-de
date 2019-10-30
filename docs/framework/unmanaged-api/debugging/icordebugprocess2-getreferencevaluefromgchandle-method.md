@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd7f4c-19f2-4ede-875e-603773e8c128
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 47647bf0460507b4c88b47bf87bfcc3bf620aecc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137223"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle-Methode
 Ruft einen Verweis Zeiger auf das angegebene verwaltete Objekt ab, das über ein Garbage Collection Handle verfügt.  
@@ -38,7 +36,7 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>Parameter  
  `handle`  
- in Ein Zeiger auf ein verwaltetes Objekt, das über ein Garbage Collection Handle verfügt. Dieser Wert ist ein <xref:System.IntPtr> -Objekt und kann <xref:System.Runtime.InteropServices.GCHandle> vom für das verwaltete Objekt abgerufen werden.  
+ in Ein Zeiger auf ein verwaltetes Objekt, das über ein Garbage Collection Handle verfügt. Dieser Wert ist ein <xref:System.IntPtr> Objekt und kann aus dem <xref:System.Runtime.InteropServices.GCHandle> für das verwaltete Objekt abgerufen werden.  
   
  `pOutValue`  
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugReferenceValue-Objekts, das einen Verweis auf das angegebene verwaltete Objekt darstellt.  
@@ -49,13 +47,13 @@ HRESULT GetReferenceValueFromGCHandle (
  Der zurückgegebene Verweis verhält sich wie ein normaler Verweis. Diese Option ist deaktiviert, wenn die Codeausführung nach einem Breakpoint fortgesetzt wird. Die Lebensdauer des Zielobjekts wird von der Lebensdauer des Verweis Werts nicht beeinträchtigt.  
   
 > [!NOTE]
-> Die `GetReferenceValueFromGCHandle` -Methode validiert das Handle nicht. Daher kann die `GetReferenceValueFromGCHandle` -Methode den Debugger und den Code, der debuggt wird, potenziell beschädigen, wenn ein ungültiges Handle übermittelt wird.  
+> Die `GetReferenceValueFromGCHandle`-Methode überprüft das Handle nicht. Daher kann die `GetReferenceValueFromGCHandle`-Methode den Debugger und den Code, der debuggt wird, potenziell beschädigen, wenn ein ungültiges Handle übermittelt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

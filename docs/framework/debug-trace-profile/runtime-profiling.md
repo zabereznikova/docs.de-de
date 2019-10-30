@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052303"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121565"
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
@@ -42,7 +40,7 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
   
 6. Klicken Sie im Listenfeld **Instanzen des ausgewählten Objekts** auf **\<Alle Instanzen>** , um anzugeben, dass Sie den Leistungsindikator für die Common Language Runtime global (d.h. systemweit) überwachen möchten.  
   
-     -oder-  
+     - oder -  
   
      Klicken Sie im Listenfeld **Instanzen des ausgewählten Objekts** auf einen Anwendungsnamen, um den Leistungsindikator für diese Anwendung zu überwachen.  
   

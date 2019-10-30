@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget2-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ea68474a1ee3a856b2e9393ff67d44f40a471c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c59752949ca29cbd0ed5a34ec7aeb3d98b6f9b6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911443"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136487"
 ---
 # <a name="icordebugdatatarget2-interface"></a>ICorDebugDataTarget2-Schnittstelle
 Erweitert logisch die [ICorDebug DataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)-Schnittstelle.  
@@ -30,11 +28,11 @@ Erweitert logisch die [ICorDebug DataTarget](../../../../docs/framework/unmanage
 > Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Wenn Sie diese Schnittstelle für ICorDebug-Szenarien außerhalb von .NET Native implementieren, ignoriert die Common Language Runtime diese Schnittstelle.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

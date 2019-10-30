@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122972"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs-Funktion
 Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
@@ -70,15 +68,15 @@ HRESULT EnumerateCLRs (
   
  Unter dem Windows-Betriebssystem wird `debuggeePID` einem Betriebssystem-Prozessbezeichner zugeordnet.  
   
- Der Arbeitsspeicher für `ppHandleArrayOut` und `ppStringArrayOut` wird von dieser Funktion zugeordnet. Um den belegten Arbeitsspeicher freizugeben, müssen Sie aufrufen [CloseCLREnumeration-Funktion](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ Der Arbeitsspeicher für `ppHandleArrayOut` und `ppStringArrayOut` wird von dieser Funktion zugeordnet. Um den zugeordneten Arbeitsspeicher freizugeben, müssen Sie die [closeclrenumeration-Funktion](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)abrufen.  
   
  Diese Funktion kann mit beiden auf null festgelegten Arrayparametern aufgerufen werden, um die Anzahl der CLRs im Zielprozess zurückzugeben. Aus dieser Anzahl kann ein Aufrufer die Größe des Puffers ableiten, der erstellt wird: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** dbgshim.h  
+ **Header:** dbgshim. h  
   
- **Bibliothek:** dbgshim.dll  
+ **Bibliothek:** dbgshim. dll  
   
- **.NET Framework-Versionen:** 3.5 SP1
+ **.NET Framework Versionen:** 3,5 SP1

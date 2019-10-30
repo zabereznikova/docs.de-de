@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599454"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124462"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent-Schnittstelle
-Bietet eine Darstellung der Implementierung des Hosts ein automatisches Zurücksetzungsereignis.  
+Stellt eine Darstellung der Host Implementierung eines automatischen Zurücksetzungs Ereignisses bereit.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Set-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Legt die aktuelle `IHostAutoEvent` Instanz in einem signalisierten Zustand.|  
-|[Wait-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Bewirkt, dass die aktuelle `IHostAutoEvent` zu warten, bis das Ereignis gehört-Instanz oder einen bestimmten Zeitraum abgelaufen ist.|  
+|[Set-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Legt die aktuelle `IHostAutoEvent` Instanz auf einen signalisierten Zustand fest.|  
+|[Wait-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Bewirkt, dass die aktuelle `IHostAutoEvent` Instanz wartet, bis das Ereignis im Besitz des Ereignisses ist oder eine angegebene Zeitspanne abläuft.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

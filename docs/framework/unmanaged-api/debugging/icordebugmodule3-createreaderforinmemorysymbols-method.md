@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764014"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137303"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols-Methode
-Erstellt einen Debug-Symbolreader für ein dynamisches Modul.  
+Erstellt einen debugsymbolreader für ein dynamisches Modul.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,39 +35,39 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>Parameter  
  riid  
- [in] Die IID der COM-Schnittstelle zurückgegeben werden soll. Dies ist normalerweise ein [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ in Die IID der zurück zugebende com-Schnittstelle. In der Regel ist dies eine [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
   
- ppObj  
- [out] Zeiger auf einen Zeiger auf die zurückgegebene Schnittstelle.  
+ ppobj  
+ vorgenommen Zeiger auf einen Zeiger auf die zurückgegebene Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- Wurde erfolgreich erstellt. den Reader.  
+ Der Reader wurde erfolgreich erstellt.  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
- Das Modul ist es sich nicht um ein im Arbeitsspeicher oder dynamischen Modul.  
+ Das Modul ist kein in-Memory-oder dynamisches Modul.  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- Symbole nicht von der Anwendung bereitgestellt haben, oder es sind noch nicht verfügbar.  
+ Es wurden keine Symbole von der Anwendung bereitgestellt oder sind noch nicht verfügbar.  
   
  E_FAIL (oder andere E_-Rückgabecodes)  
- Erstellen des Readers nicht möglich.  
+ Der Reader kann nicht erstellt werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode kann auch sein verwendet, um ein Symbol Reader-Objekt zu (nicht dynamisch) im Arbeitsspeicher-Modulen zu erstellen, aber nur, wenn die Symbole zuerst zur Verfügung stehen (angegeben durch die [UpdateModuleSymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) Rückruf).  
+ Diese Methode kann auch verwendet werden, um ein Symbol Reader-Objekt für in-Memory-Module (nicht dynamisch) zu erstellen, aber erst nach der ersten Verfügbarkeit der Symbole (angegeben durch den [UpdateModuleSymbols-Methoden](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) Rückruf).  
   
- Diese Methode gibt eine neue Readerinstanz zurück, jedes Mal, wenn sie aufgerufen wird (z. B. [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Aus diesem Grund sollte der Debugger Zwischenspeicherung des Ergebnisses und fordern Sie eine neue Instanz nur, wenn die zugrunde liegenden Daten geändert haben können (d. h. bei einer [LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) -Rückruf empfangen wird).  
+ Diese Methode gibt jedes Mal, wenn Sie aufgerufen wird, eine neue Reader-Instanz zurück (z. b. [CComPtrBase:: cokreateinstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Daher sollte der Debugger das Ergebnis Zwischenspeichern und eine neue Instanz nur dann anfordern, wenn sich die zugrunde liegenden Daten möglicherweise geändert haben (d. h., wenn ein [LoadClass-Methoden](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) Rückruf empfangen wird).  
   
- Dynamische Module müssen keine verfügbaren Symbole aus, bis der erste Typ geladen wurde (wie durch die [LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) Rückruf).  
+ Für dynamische Module sind keine Symbole verfügbar, bis der erste Typ geladen wurde (wie durch den [LoadClass-Methoden](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) Rückruf angegeben).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** 4.5, 4, 3.5 SP1  
+ **.NET Framework Versionen:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Siehe auch
 

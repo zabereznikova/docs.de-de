@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761166"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130590"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection-Methode
-Benachrichtigt den Debugger an, dass eine neue Verbindung erstellt wurde.  
+Benachrichtigt den Debugger, dass eine neue Verbindung erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +37,23 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>Parameter  
  `pProcess`  
- [in] Ein Zeiger auf ein "ICorDebugProcess"-Objekt, das den Prozess darstellt, in dem die Verbindung erstellt wurde  
+ in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem die Verbindung erstellt wurde.  
   
  `dwConnectionId`  
- [in] Die ID der neuen Verbindung.  
+ in Die ID der neuen Verbindung.  
   
  `pConnName`  
- [in] Ein Zeiger auf den Namen der neuen Verbindung.  
+ in Ein Zeiger auf den Namen der neuen Verbindung.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `CreateConnection` Rückruf wird in den folgenden Fällen ausgelöst werden:  
+ Ein `CreateConnection` Rückruf wird in einem der folgenden Fälle ausgelöst:  
   
-- Wenn Fügt einen Debugger an einen Prozess aus, der Verbindungen enthält ein. In diesem Fall die Laufzeit generiert und ein `CreateConnection` Ereignis und einem [ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) Ereignis für jede Verbindung im Prozess.  
+- Wenn ein Debugger an einen Prozess angefügt wird, der Verbindungen enthält. In diesem Fall generiert und versendet die Common Language Runtime für jede Verbindung im Prozess ein `CreateConnection` Ereignis und ein [ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) -Ereignis.  
   
-- Wenn ein Host ruft [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in die [Hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Wenn ein Host [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in der [Hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md)aufruft.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

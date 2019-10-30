@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754918"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137783"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus-Methode
-Markiert die Funktion, die von dieser ICorDebugFunction2 dargestellt für nur mein Code schrittweise ausführen.  
+Markiert die durch dieses ICorDebugFunction2 dargestellte Funktion für nur eigenen Code schrittweise.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +35,20 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parameter  
  `bIsJustMyCode`  
- [in] Legen Sie auf `true` , markieren Sie die Funktion als Benutzercode; legen Sie andernfalls auf `false`.  
+ in Auf `true` festlegen, um die Funktion als Benutzercode zu markieren. Legen Sie andernfalls auf `false`fest.  
   
 ## <a name="return-values"></a>Rückgabewerte  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|Die Funktion wurde erfolgreich markiert.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Die Funktion konnte nicht als Benutzercode gekennzeichnet werden, da es nicht gedebuggt werden kann.|  
+|`S_OK`|Die Funktion wurde erfolgreich gekennzeichnet.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Die Funktion konnte nicht als Benutzercode gekennzeichnet werden, da Sie nicht deentschlbelt werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine zugeordnetem nur mein Code wird nicht benutzerseitiger Code überspringen. Benutzercode muss es sich um eine Teilmenge der debugfähiger Code sein.  
+ Ein nur eigenen Code Stepper überspringt Nichtbenutzer Code. Der Benutzercode muss eine Teilmenge des debugfähigen Codes sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

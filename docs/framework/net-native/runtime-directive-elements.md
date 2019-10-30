@@ -2,19 +2,17 @@
 title: Elemente der Laufzeitanweisung
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128169"
 ---
 # <a name="runtime-directive-elements"></a>Elemente der Laufzeitanweisung
 Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Laufzeitanweisungselemente. Eine hierarchische Darstellung finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md).  
   
- [\<Application>](application-element-net-native.md)  
+ [\<Anwendung>](application-element-net-native.md)  
  Wendet die Laufzeitreflektionsrichtlinie auf alle von der Anwendung verwendeten Typen an und dient als Container für anwendungsweite Typen und Typmember, deren Metadaten für die Reflektion zur Laufzeit verfügbar sind. Dies ist ein untergeordnetes Element des [\<Directives>](directives-element-net-native.md)-Elements.  
   
  [\<Assembly>](assembly-element-net-native.md)  

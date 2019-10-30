@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760890"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131826"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next-Methode
-Verschiebt die [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) Objekt zum nächsten Frame.  
+Verschiebt das [icorentbugstackwalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) -Objekt in den nächsten Frame.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +36,18 @@ HRESULT Next();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Laufzeit Entladevorgang erfolgreich bis zum nächsten Frame (siehe Hinweise).|  
-|E_FAIL|Die `ICorDebugStackWalk` Objekt konnte nicht erweitert werden.|  
+|S_OK|Die Laufzeit wurde erfolgreich auf den nächsten Frame aufgelöst (siehe Hinweise).|  
+|E_FAIL|Das `ICorDebugStackWalk` Objekt konnte nicht erweitert werden.|  
 |CORDBG_S_AT_END_OF_STACK|Das Ende des Stapels wurde als Ergebnis dieser Entladung erreicht.|  
-|CORDBG_E_PAST_END_OF_STACK|Die Frame-Pointer ist bereits am Ende des Stapels. aus diesem Grund können keine zusätzlichen Frames zugegriffen werden.|  
+|CORDBG_E_PAST_END_OF_STACK|Der Frame Zeiger befindet sich bereits am Ende des Stapels. Daher können keine weiteren Frames aufgerufen werden.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Next` Methode Fortschritte der `ICorDebugStackWalk` Objekt an den aufrufenden Rahmen nur dann, wenn die Laufzeit den aktuellen Rahmen entladen werden kann. Andernfalls setzt sich das Objekt in den nächsten Frame, den die Laufzeit entladen werden kann.  
+ Die `Next`-Methode verschiebt das `ICorDebugStackWalk`-Objekt nur dann auf den aufrufenden Frame, wenn die Laufzeit den aktuellen Frame entladen kann. Andernfalls wechselt das Objekt zum nächsten Frame, der von der Laufzeit entladen werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

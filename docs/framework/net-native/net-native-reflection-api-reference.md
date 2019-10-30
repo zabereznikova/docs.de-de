@@ -2,14 +2,12 @@
 title: .NET Native-Reflektions-API-Referenz
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c1fbef46231fed3af0d335e9396b301fe503254
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128220"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native-Reflektions-API-Referenz
 .Net Native enthält drei neue Ausnahme Typen: [System. Runtime. CompilerServices. missinginteropdataexception](missinginteropdataexception-class-net-native.md), [System. Reflection. MissingMetadataException](missingmetadataexception-class-net-native.md)und [System. Reflection. missingruntimeartifaktexception](missingruntimeartifactexception-class-net-native.md). Beachten Sie für alle drei Ausnahmetypen die folgenden Punkte:  
@@ -25,7 +23,7 @@ ms.locfileid: "71049382"
 - Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/method.html) für Methoden.  
   
 > [!NOTE]
-> In diesem Verweis werden drei Ausnahme Typen dokumentiert, die für .net Native eindeutig sind. Eine Referenz Dokumentation für die .NET Framework-kernreflektionsapi <xref:System.Reflection>finden <xref:System.Reflection.Context> Sie <xref:System.Reflection.Emit> unter den Namespaces, und. Eine Referenzdokumentation für die zentrale .NET Framework-Interop-API finden Sie unter <xref:System.Runtime.InteropServices>.  
+> In diesem Verweis werden drei Ausnahme Typen dokumentiert, die für .net Native eindeutig sind. Eine Referenz Dokumentation für die .NET Framework-kernreflektionsapi finden Sie in den Namespaces <xref:System.Reflection>, <xref:System.Reflection.Context> und <xref:System.Reflection.Emit>. Eine Referenzdokumentation für die zentrale .NET Framework-Interop-API finden Sie unter <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection-Namespace  
  Der <xref:System.Reflection> -Namespace enthält die grundlegenden Typen, die für die Reflektion im .NET Framework verwendet werden. Für .net Native enthält es auch zwei neue Ausnahme Typen:  

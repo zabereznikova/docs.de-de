@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133677"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason-Enumeration
 Gibt das Ergebnis eines einzelnen Schritts an.  
@@ -44,16 +42,16 @@ typedef enum CorDebugStepReason {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Schrittweises durchlaufen werden normalerweise innerhalb der gleichen Funktion abgeschlossen.|  
-|`STEP_RETURN`|Schrittweise ausführen werden normalerweise nach der Rückgabe der Funktion fortgesetzt.|  
-|`STEP_CALL`|Stepping weiterhin in der Regel am Anfang einer neu aufgerufenen Funktion.|  
-|`STEP_EXCEPTION_FILTER`|Eine Ausnahme wurde generiert, und Kontrolle an einen Ausnahmefilter übergeben wurde.|  
-|`STEP_EXCEPTION_HANDLER`|Eine Ausnahme wurde generiert, und Steuerelement zu einem Ausnahmehandler übergeben wurde.|  
-|`STEP_INTERCEPT`|Steuerelement wurde an einen Interceptor übergeben.|  
-|`STEP_EXIT`|Der Thread beendet wurde, bevor der Schritt abgeschlossen wurde.|  
+|`STEP_NORMAL`|Die schrittweise Ausführung erfolgt in derselben Funktion.|  
+|`STEP_RETURN`|Die schrittweise Ausführung wird nach der Rückgabe der Funktion fortgesetzt.|  
+|`STEP_CALL`|Schrittweise Fortsetzung am Anfang einer neu aufgerufenen Funktion.|  
+|`STEP_EXCEPTION_FILTER`|Eine Ausnahme wurde generiert, und die Steuerung wurde an einen Ausnahme Filter übermittelt.|  
+|`STEP_EXCEPTION_HANDLER`|Eine Ausnahme wurde generiert, und die Steuerung wurde an einen Ausnahmehandler übermittelt.|  
+|`STEP_INTERCEPT`|Das Steuerelement wurde an einen Interceptor übermittelt.|  
+|`STEP_EXIT`|Der Thread wurde beendet, bevor der Schritt abgeschlossen wurde.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

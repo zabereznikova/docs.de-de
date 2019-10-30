@@ -6,24 +6,22 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d97960a43e1d7ce625d96755a7c597a0425d0911
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: adc47417265d32d79508af949c118c4d31a83365
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124196"
 ---
 # <a name="profiling-interfaces"></a>Profilerstellungsschnittstellen
 In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die die Profilerstellung eines Programms ermöglichen, das von der Common Language Runtime (CLR) ausgeführt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ICLRProfiling-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
- Stellt die [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) -Methode, die einen Profiler an einen laufenden Prozess anfügen kann.  
+ Stellt die [attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) -Methode bereit, die einem Profiler das Anfügen an einen laufenden Prozess ermöglicht.  
   
  [ICorProfilerAssemblyReferenceProvider-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
- Ermöglicht es dem Profiler, um die CLR über Assemblyverweise zu informieren, die der Profiler im Hinzufügen der [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) Rückruf.  
+ Ermöglicht es dem Profiler, die CLR der Assemblyverweise zu informieren, die der Profiler im [ICorProfilerCallback:: moduleloadabgeschlossene](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) -Rückruf hinzufügt.  
   
  [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  Stellt Methoden bereit, mit denen die CLR einen Codeprofiler benachrichtigt, wenn die abonnierten Ereignisse des Profilers auftreten.  
@@ -44,13 +42,13 @@ In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die
  Stellt eine Rückrufmethode bereit, die von der CLR genutzt wird, um einen Profiler zu benachrichtigen, dass eine Assembly geladen wird.  
   
  [CorProfilerCallback7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
- Stellt eine Rückrufmethode, die die common Language Runtime verwendet, um den Profiler zu benachrichtigen, dass der symbolstream ein in-Memory-Modul aktualisiert wird.  
+ Stellt eine Rückruf Methode bereit, die der-Common Language Runtime verwendet, um den Profiler zu benachrichtigen, dass der mit einem in-Memory-Modul verknüpfte Symbol Datenstrom aktualisiert wird.  
 
 [ICorProfilerCallback8-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
-Stellt Rückrufmethoden bereit, die die common Language Runtime verwendet wird, um den Profiler zu benachrichtigen, den JIT-Kompilierung einer dynamischen Methode gestartet und abgeschlossen.
+Stellt Rückruf Methoden bereit, die von der Common Language Runtime verwendet werden, um den Profiler zu benachrichtigen, dass die JIT-Kompilierung einer dynamischen Methode gestartet und beendet wurde.
 
 [ICorProfilerCallback9-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
-Stellt eine Rückrufmethode, die die common Language Runtime verwendet, um den Profiler zu benachrichtigen, den eine dynamische Methode Garbage Collector gesammelt und anschließend entladen wird.
+Stellt eine Rückruf Methode bereit, die der Common Language Runtime verwendet, um den Profiler zu benachrichtigen, dass eine dynamische Methode in eine Garbage Collection und anschließend entladen wird.
 
  [ICorProfilerFunctionControl-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Stellt Methoden bereit, die einem Codeprofiler ermöglichen, mit der CLR zu kommunizieren, um zu steuern, wie der JIT-Compiler Code generieren soll, wenn er eine bestimmte Methode neu kompiliert.  
@@ -65,7 +63,7 @@ Stellt eine Rückrufmethode, die die common Language Runtime verwendet, um den P
  Erweitert die `ICorProfilerInfo`-Schnittstelle um Methoden, die in .NET Framework 2.0 und höheren Versionen unterstützt werden.  
   
  [ICorProfilerInfo3-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- Erweitert die `ICorProfilerInfo2` -Schnittstelle um Methoden, die in der .NET Framework 4 und höheren Versionen unterstützt.  
+ Erweitert die `ICorProfilerInfo2`-Schnittstelle um Methoden, die in der .NET Framework 4 und höheren Versionen unterstützt werden.  
   
  [ICorProfilerInfo4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  Stellt Methoden bereit, mit denen Codeprofiler mit der CLR kommunizieren können, um die Ereignisüberwachung zu steuern und Informationen anzufordern.  
@@ -74,22 +72,22 @@ Stellt eine Rückrufmethode, die die common Language Runtime verwendet, um den P
  Stellt Methoden bereit, mit denen Codeprofiler mit der CLR kommunizieren können, um die Ereignisüberwachung zu steuern.  
   
  [ICorProfilerInfo6-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)  
- Stellt einen Enumerator für alle Methoden, die ein bestimmtes NGen-Modul gehören, und im Text einer bestimmten Methode Inline sind.  
+ Stellt einen Enumerator für alle Methoden bereit, die zu einem angegebenen ngen-Modul gehören und im Text einer angegebenen Methode Inline sind.  
   
  [ICorProfilerInfo7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
- Stellt eine Methode, um neu anwenden Metadaten zu einem Modul definiert und Zugriff auf eine in-Memory symbolstream bereitstellt.  
+ Stellt eine Methode bereit, um neu definierte Metadaten auf ein Modul anzuwenden, das Zugriff auf einen in-Memory-symbolstream bereitstellt.  
   
  [ICorProfilerModuleEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
  Stellt Methoden bereit, um eine Auflistung von Modulen, die von der Anwendung oder dem Profiler geladen wurden, sequenziell zu durchlaufen.  
   
  [ICorProfilerObjectEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)  
- Stellt Methoden für die nacheinander durchlaufen einer Auflistung von fixierten Objekten, die vom generierten [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die von [Ngen. exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)generiert werden.  
   
  [ICorProfilerThreadEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
  Stellt Methoden bereit, um eine Auflistung von Threads in der CLR sequenziell zu durchlaufen.  
   
  [IMethodMalloc-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
- Stellt die [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) Methode zum Belegen von Arbeitsspeicher für einen neuen Microsoft intermediate Language (MSIL)-Funktionsrumpf.  
+ Stellt die [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) -Methode bereit, um Arbeitsspeicher für einen neuen MSIL-Funktions Text (Microsoft Intermediate Language) zuzuweisen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Übersicht über die Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

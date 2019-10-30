@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798451"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127428"
 ---
 # <a name="inheritsfrom-function"></a>Verersfrom-Funktion
 Bestimmt, ob die aktuelle Klasse oder Instanz aus einer angegebenen übergeordneten Klasse abgeleitet ist.
@@ -47,16 +45,16 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszAncestor`  
-in Der Name der Klasse. `wszAncestor`muss auf einen gültigen `LPCWSTR`zeigen.
+in Der Name der Klasse. `wszAncestor` muss auf einen gültigen `LPCWSTR`zeigen.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
-|Konstante  |Wert  |Description  |
+|Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | Das aktuelle-Objekt erbt `wszAncestor`von.  |
-| `WBEM_S_FALSE` | 1 | Das aktuelle-Objekt erbt nicht `wszAncestor`von. |
+| `WBEM_S_NO_ERROR` | 0 | Das aktuelle-Objekt erbt von `wszAncestor`.  |
+| `WBEM_S_FALSE` | 1 | Das aktuelle-Objekt erbt nicht von `wszAncestor`. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` ist `null`. |
   
 ## <a name="remarks"></a>Hinweise
@@ -64,9 +62,9 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: verersfrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) -Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

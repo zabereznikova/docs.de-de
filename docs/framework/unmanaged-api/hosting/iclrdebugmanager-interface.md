@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 008143c608cd19bee9dd115e97620906fb5b93b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129406"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager-Schnittstelle
 Stellt Methoden bereit, mit denen ein Host eine Reihe von Aufgaben einem Bezeichner und einem anzeigen Amen zuordnen kann.  
@@ -39,19 +37,19 @@ Stellt Methoden bereit, mit denen ein Host eine Reihe von Aufgaben einem Bezeich
 |[SetSymbolReadingPolicy-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Legt die Richtlinie zum Lesen von Programm Datenbankdateien (PDB) fest. Die Richtlinie bestimmt, ob Informationen über Zeilennummern und Dateien in Aufruf Listen eingeschlossen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- In Debugszenarien kann ein Host Aufgaben entsprechend seiner eigenen Programmierlogik gruppieren. Beispielsweise kann ein Entwickler mit einer Gruppierung nur die Aufgaben anzeigen, die für die Entwickler-APIs erforderlich sind, anstatt jede Aufgabe zu sehen, die im Prozess ausgeführt wird. `ICLRDebugManager`ermöglicht es dem Host, diese Art von Gruppierung zu implementieren.  
+ In Debugszenarien kann ein Host Aufgaben entsprechend seiner eigenen Programmierlogik gruppieren. Beispielsweise kann ein Entwickler mit einer Gruppierung nur die Aufgaben anzeigen, die für die Entwickler-APIs erforderlich sind, anstatt jede Aufgabe zu sehen, die im Prozess ausgeführt wird. `ICLRDebugManager` ermöglicht es dem Host, diese Art von Gruppierung zu implementieren.  
   
 > [!IMPORTANT]
-> Die `ICLRDebugManager` drei `BeginConnection`Methoden ,und`EndConnection`sindvoneinanderabhängig. `SetConnectionTasks` Sie müssen in der angegebenen Reihenfolge aufgerufen werden, damit Sie erwartungsgemäß funktioniert.  
+> Drei `ICLRDebugManager` Methoden, `BeginConnection`, `SetConnectionTasks` und `EndConnection`, sind voneinander abhängig. Sie müssen in der angegebenen Reihenfolge aufgerufen werden, damit Sie erwartungsgemäß funktioniert.  
   
  Die Gruppierung und die Bezeichner und anzeigen Amen, die der Host der Gruppierung zuweist, haben keine Bedeutung für die Common Language Runtime (CLR). Die CLR übergibt die Informationen lediglich an den Debugger.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

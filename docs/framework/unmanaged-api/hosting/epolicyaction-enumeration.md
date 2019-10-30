@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 404cd5513a1cbd353faed41030a80ec2abef235f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaba6b2166a82cfe825ffb98db515e24d4656462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138230"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction-Enumeration
-Beschreibt die Richtlinienaktionen, der Host kann für Vorgänge, die durch beschrieben festlegen [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) sowie durch beschriebene Fehler [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
+Beschreibt die Richtlinien Aktionen, die der Host für Vorgänge festlegen kann, die durch [eclroperations](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) und Fehler beschrieben werden, die von [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)beschrieben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,26 +45,26 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eAbortThread`|Gibt an, dass die common Language Runtime (CLR) den Thread ordnungsgemäß abgebrochen werden soll. Ein ordnungsgemäßer Abbruch beinhaltet versuchen der Ausführung alle `finally` Blöcke, alle `catch` Blöcke im Zusammenhang mit der Threadabbrüche und Finalizer.|  
-|`eDisableRuntime`|Gibt an, dass die CLR deaktiviert eingeben soll. Verwalteter Code kann keine weiteren des betroffenen Prozesses ausgeführt werden, und der CLR Threads blockiert.|  
-|`eExitProcess`|Gibt an, dass die CLR dem ordnungsgemäßen Beenden der Prozess, einschließlich der Ausführung von Finalizern und Bereinigung und protokollieren soll.|  
-|`eFastExitProcess`|Gibt an, dass die CLR den Prozess sofort beendet werden soll ohne Ausführung von Finalizern oder Bereinigung und Vorgänge. Allerdings wird die Benachrichtigung an den Debugger gesendet.|  
+|`eAbortThread`|Gibt an, dass die Common Language Runtime (CLR) den Thread ordnungsgemäß abbrechen soll. Ein ordnungsgemäßer Abbruch umfasst den Versuch, alle `finally` Blöcke, alle `catch` Blöcke im Zusammenhang mit Thread Abbrüchen und Finalizern auszuführen.|  
+|`eDisableRuntime`|Gibt an, dass die CLR einen deaktivierten Zustand aufweisen soll. Im betroffenen Prozess kann kein weiterer verwalteter Code ausgeführt werden, und Threads können nicht in die CLR-Datei eingegeben werden.|  
+|`eExitProcess`|Gibt an, dass die CLR eine ordnungsgemäße Beendigung des Prozesses versuchen soll, einschließlich der Ausführung von Finalizern und der Ausführung von Bereinigung-und Protokollierungs Vorgängen.|  
+|`eFastExitProcess`|Gibt an, dass die CLR den Prozess sofort beenden soll, ohne Finalizer auszuführen oder Bereinigungs-und Protokollierungs Vorgänge auszuführen. Die Benachrichtigung wird jedoch an den Debugger gesendet.|  
 |`eNoAction`|Gibt an, dass keine Aktion ausgeführt werden soll.|  
-|`eRudeAbortThread`|Gibt an, dass die CLR einen grobe Threadabbruch ausführen soll. Nur die `catch` und `finally` Blöcke gekennzeichnet mit <xref:System.EnterpriseServices.MustRunInClientContextAttribute> ausgeführt werden.|  
-|`eRudeExitProcess`|Gibt an, dass die CLR den Prozess beendet werden soll, ohne Ausführung von Finalizern oder Vorgänge protokollieren.|  
-|`eRudeUnloadAppDomain`|Gibt an, dass die CLR ein grobe Entladen durchführen, sollten die <xref:System.AppDomain>. Nur Finalizer mit markierten <xref:System.EnterpriseServices.MustRunInClientContextAttribute> ausgeführt werden. Auf ähnliche Weise alle Threads mit dieser <xref:System.AppDomain> in ihrem Stapel erhalten eine `ThreadAbortException`, sondern nur die `catch` und `finally` Blöcke gekennzeichnet mit <xref:System.EnterpriseServices.MustRunInClientContextAttribute> ausgeführt werden.|  
-|`eThrowException`|Gibt an, dass es sich bei der Bedingung, z. B. Out-of-Memory, Pufferüberlauf usw., entsprechende Ausnahme ausgelöst werden soll.|  
-|`eUnloadAppDomain`|Gibt an, dass die <xref:System.AppDomain> entladen werden soll. Die CLR versucht, die Finalizer ausgeführt.|  
+|`eRudeAbortThread`|Gibt an, dass die CLR einen unhöflichen Thread Abbruch ausführen soll. Nur die `catch` und `finally` Blöcke, die mit <xref:System.EnterpriseServices.MustRunInClientContextAttribute> gekennzeichnet sind, werden ausgeführt.|  
+|`eRudeExitProcess`|Gibt an, dass die CLR den Prozess beenden soll, ohne Finalizer oder Protokollierungs Vorgänge ausführen zu müssen.|  
+|`eRudeUnloadAppDomain`|Gibt an, dass die CLR eine unhöfliche Entladung des <xref:System.AppDomain>ausführen soll. Nur Finalizer, die mit <xref:System.EnterpriseServices.MustRunInClientContextAttribute> gekennzeichnet sind, werden ausgeführt. Ebenso erhalten alle Threads mit diesem <xref:System.AppDomain> in Ihrem Stapel eine `ThreadAbortException`, aber nur die `catch` und `finally` Blöcke, die mit <xref:System.EnterpriseServices.MustRunInClientContextAttribute> gekennzeichnet sind, werden ausgeführt.|  
+|`eThrowException`|Gibt an, dass eine für die Bedingung geeignete Ausnahme, z. b. nicht genügend Arbeitsspeicher, Pufferüberlauf usw., ausgelöst werden soll.|  
+|`eUnloadAppDomain`|Gibt an, dass die <xref:System.AppDomain> entladen werden soll. Die CLR versucht, Finalizer auszuführen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host setzt Richtlinienaktionen durch Aufrufen der Methoden der der [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) Schnittstelle. Informationen über grobe und ordnungsgemäße Abbrüche finden Sie unter den [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) Enumeration.  
+ Der Host legt Richtlinien Aktionen durch Aufrufen von Methoden der [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) -Schnittstelle fest. Informationen über grobe und ordnungsgemäße Abbrüche finden Sie in der [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) -Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

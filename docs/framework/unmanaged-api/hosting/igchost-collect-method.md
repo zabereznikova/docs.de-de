@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e20ea6addc1ae3f99b4b3d65f532e0128ac160b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134972"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect-Methode
-Erzwingt, dass eine Collection für die angegebene Generation, unabhängig vom Status des aktuellen Garbagecollection durchgeführt.  
+Erzwingt, dass eine Auflistung für die angegebene Generierung stattfindet, unabhängig vom Zustand des aktuellen Garbage Collection.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +35,14 @@ HRESULT Collect (
   
 ## <a name="parameters"></a>Parameter  
  `Generation`  
- [in] Die Objektgeneration, für den die Garbagecollection ausgeführt werden soll. Der Wert-1 gibt an, dass alle Generationen eine Garbagecollection unterzogen werden.  
+ in Die Generierung, auf der die Garbage Collection durchgeführt werden soll. Der Wert-1 gibt an, dass alle Generationen einem Garbage Collection unterzogen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** GCHost.idl, GCHost.h  
+ **Header:** Gchost. idl, gchost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

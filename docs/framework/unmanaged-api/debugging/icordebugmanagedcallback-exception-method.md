@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130827"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception-Methode
-Benachrichtigt den Debugger, dass eine Ausnahme in verwaltetem Code ausgelöst wurde.  
+Benachrichtigt den Debugger, dass eine Ausnahme von verwaltetem Code ausgelöst wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +37,19 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Ausnahme ausgelöst wurde.  
+ in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Ausnahme ausgelöst wurde.  
   
  `pThread`  
- [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Ausnahme ausgelöst wurde.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Ausnahme ausgelöst wurde.  
   
  `unhandled`  
- [in] Wenn dieser Wert ist `false`, der die Ausnahme ist noch nicht wurde von der Anwendung verarbeitet wird; andernfalls, die Ausnahme nicht behandelt wird und der Prozess beendet wird.  
+ in Wenn dieser Wert `false`ist, wurde die Ausnahme noch nicht von der Anwendung verarbeitet. Andernfalls wird die Ausnahme nicht behandelt, und der Prozess wird beendet.  
   
 ## <a name="remarks"></a>Hinweise  
- Die spezielle Ausnahme kann aus dem Threadobjekt abgerufen werden.  
+ Die spezifische Ausnahme kann aus dem Thread Objekt abgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

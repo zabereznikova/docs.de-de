@@ -1,24 +1,22 @@
 ---
-title: 'Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion'
+title: 'Gewusst wie: Abgleichen von Typ-und Element Informationen mithilfe von Reflektion'
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
 - types [.NET Framework], obtaining member information from
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: da71845ea276267220636cfd661465ea02b2b50d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130213"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Gewusst wie: Abgleichen von Typ-und Element Informationen mithilfe von Reflektion
 Der <xref:System.Reflection>-Namespace enthält viele Methoden zum Abrufen von Informationen zu Typen und deren Membern. In diesem Artikel wird eine dieser Methoden, nämlich <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>, veranschaulicht. Weitere Informationen finden Sie unter [Übersicht über Reflektion](reflection.md).
   
 ## <a name="example"></a>Beispiel
@@ -32,5 +30,5 @@ In folgendem Beispiel werden mithilfe von Reflektion Typ- und Memberinformatione
 ## <a name="see-also"></a>Siehe auch
 
 - [Programmieren mit Anwendungsdomänen](../app-domains/application-domains.md#programming-with-application-domains)
-- [Reflexion](reflection.md)
+- [Reflektion](reflection.md)
 - [Verwenden von Anwendungsdomänen](../app-domains/use.md)

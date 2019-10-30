@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121296"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList-Methode
-Enthält eine geordnete Liste von Threads, die in die Warteschlange eingereiht werden auf das Ereignis, das eine Sperre für die Überwachung zugeordnet ist.  
+Stellt eine geordnete Liste von Threads bereit, die für das-Ereignis in die Warteschlange eingereiht werden, das einer Monitor Sperre zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +35,7 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="parameters"></a>Parameter  
  `ppThreadEnum`  
- [out] Der ICorDebugThreadEnum-Enumerator, der die geordnete Liste der Threads bereitstellt.  
+ vorgenommen Der ICorDebugThreadEnum-Enumerator, der die geordnete Liste der Threads bereitstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -50,18 +48,18 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Thread in der Liste ist der erste Thread, der durch den nächsten Aufruf von freigegeben wird <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Der nächste Thread in der Liste wird auf dem folgenden Aufruf, und So weiter freigegeben.  
+ Der erste Thread in der Liste ist der erste Thread, der vom nächsten <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>-Auflistungs-aufgerufen wird. Der nächste Thread in der Liste wird für den folgenden-Befehl freigegeben, usw.  
   
- Wenn die Liste nicht leer ist, gibt diese Methode S_OK zurück. Die Methode gibt S_FALSE zurück, wenn die Liste leer ist, In diesem Fall ist die Enumeration noch gültig ist, auch wenn es leer ist.  
+ Wenn die Liste nicht leer ist, gibt diese Methode S_OK zurück. Wenn die Liste leer ist, gibt die Methode S_FALSE zurück. in diesem Fall ist die Enumeration weiterhin gültig, obwohl Sie leer ist.  
   
- In beiden Fällen kann die Enumerationsschnittstelle nur für die Dauer des aktuellen Status "synchronisiert" verwendet werden. Verteilten des Threads Schnittstellen sind jedoch gültig, bis der Thread beendet wird.  
+ In beiden Fällen kann die Enumerationsschnittstelle nur für die Dauer des aktuellen synchronisierten Zustands verwendet werden. Die von ihm ausgegebene Schnittstellen des Threads sind jedoch gültig, bis der Thread beendet wird.  
   
- Wenn `ppThreadEnum` ist kein gültiger Zeiger ist, das Ergebnis nicht definiert ist.  
+ Wenn `ppThreadEnum` kein gültiger Zeiger ist, ist das Ergebnis nicht definiert.  
   
- Wenn ein Fehler auftritt, sodass nicht bestimmt werden kann, die ggf. Threads für den Monitor, warten gibt die Methode ein HRESULT, der Fehler weist darauf hin.  
+ Wenn ein Fehler auftritt, sodass nicht bestimmt werden kann, welche Threads ggf. auf den Monitor warten, gibt die Methode ein HRESULT zurück, das einen Fehler anzeigt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

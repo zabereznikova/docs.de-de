@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7153ac214ab99228ac9c59032aa8248d06d14c3b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129298"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump-Methode
 Gibt die Konfiguration von benutzerdefinierten Heap-Abbilder für die Fehlerberichterstattung an.  
@@ -43,10 +41,10 @@ HRESULT BeginCustomDump (
  in Ein [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) -Wert, der die Art des Heap Abbilds angibt, auf dem der benutzerdefinierte Heap Abbild erstellt werden soll.  
   
  `dwNumItems`  
- in Die Länge des `items` Arrays. Wenn `dwFlavor` nicht DUMP_FLAVOR_Mini ist, `dwNumItems` sollte 0 (null) sein.  
+ in Die Länge des `items` Arrays. Wenn `dwFlavor` nicht DUMP_FLAVOR_Mini ist, sollte `dwNumItems` 0 (null) sein.  
   
  `items`  
- in Ein Array von [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) -Instanzen, das die Elemente angibt, die dem Mini Abbild hinzugefügt werden sollen. Wenn `dwFlavor` nicht DUMP_FLAVOR_Mini ist, `items` sollte NULL sein.  
+ in Ein Array von [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) -Instanzen, das die Elemente angibt, die dem Mini Abbild hinzugefügt werden sollen. Wenn `dwFlavor` nicht DUMP_FLAVOR_Mini ist, sollte `items` NULL sein.  
   
  `dwReserved`  
  in Reserviert für zukünftige Verwendung.  
@@ -63,17 +61,17 @@ HRESULT BeginCustomDump (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `BeginCustomDump` -Methode legt die benutzerdefinierte Heap Speicherkonfiguration fest. Die [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) -Methode löscht die benutzerdefinierte Heap Speicherkonfiguration und gibt jeden zugeordneten Zustand frei. Er sollte nach Abschluss des benutzerdefinierten Heap Abbilds aufgerufen werden.  
+ Die `BeginCustomDump`-Methode legt die benutzerdefinierte Heap Speicherkonfiguration fest. Die [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) -Methode löscht die benutzerdefinierte Heap Speicherkonfiguration und gibt jeden zugeordneten Zustand frei. Er sollte nach Abschluss des benutzerdefinierten Heap Abbilds aufgerufen werden.  
   
 > [!IMPORTANT]
-> Wenn Sie den `EndCustomDump` Vorgang nicht aufzurufen, ist der Speicherfehler  
+> Wenn `EndCustomDump` nicht aufgerufen wird, verursacht der Speicher einen Fehler.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

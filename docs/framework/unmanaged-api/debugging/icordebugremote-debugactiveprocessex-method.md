@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13371d15c8b29f9ef93cc4af87acf85029404644
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131274"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx-Methode
-Startet einen Prozess auf einem Remotecomputer unter dem Debugger.  
+Startet einen Prozess auf einem Remote Computer unter dem Debugger.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,35 +38,35 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>Parameter  
  `pRemoteTarget`  
- [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.  
+ in Zeiger auf eine [icordebugremotetarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.  
   
  `id`  
- [in] Die ID des Prozesses, für die der Debugger wird angefügt werden.  
+ in Die ID des Prozesses, an den der Debugger angefügt werden soll.  
   
  `win32Attach`  
- [in] `true` Wenn der Debugger sollte sich so wie Win32-Debugger für den Prozess Verhalten und die nicht verwalteten Rückrufe; anderenfalls `false`.  
+ [in] `true`, wenn sich der Debugger als Win32-Debugger für den Prozessverhalten soll und die nicht verwalteten Rückrufe versendet. Andernfalls `false`.  
   
  `ppProcess`  
- [out] Ein Zeiger auf die Adresse ein "ICorDebugProcess"-Objekt, das den Prozess darstellt, an dem der Debugger angefügt wurde.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugProcess-Objekts, das den Prozess darstellt, dem der Debugger angefügt wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- Erfolgreich an den Prozess auf dem Remotecomputer angefügt.  
+ Erfolgreich an den Prozess auf dem Remote Computer angefügt.  
   
  E_FAIL (oder andere E_-Rückgabecodes)  
- Anfügen an den Prozess auf dem Remotecomputer nicht möglich.  
+ Das Anfügen an den Prozess auf dem Remote Computer ist nicht möglich.  
   
 ## <a name="remarks"></a>Hinweise  
- Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
+ Das Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** 4.5, 4, 3.5 SP1  
+ **.NET Framework Versionen:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Siehe auch
 

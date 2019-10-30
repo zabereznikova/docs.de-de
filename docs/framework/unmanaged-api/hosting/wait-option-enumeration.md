@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ecfb551b55551e5f6cc7e7e9ffb55e5a96259ee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141514"
 ---
-# <a name="waitoption-enumeration"></a>WAIT_OPTION-Enumeration
-Enthält Werte, die angeben, dass die Aktion eines Hosts durchführen soll, wenn ein Vorgang angefordert wird, durch die common Language Runtime (CLR) ausgeführt.  
+# <a name="wait_option-enumeration"></a>WAIT_OPTION-Enumeration
+Enthält Werte, die angeben, welche Aktion ein Host durchführen soll, wenn ein vom Common Language Runtime (CLR)-Block angeforderter Vorgang ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +38,19 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|Benachrichtigt den Host, dass die Aufgabe aktiviert werden soll, wenn die CLR ruft die [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) Methode.|  
-|`WAIT_MSGPUMP`|Benachrichtigt den Host an, dass Nachrichten in der aktuellen BS-Thread verteilt werden müssen, wenn der Thread blockiert wird. Die Common Language Runtime gibt dieser Wert nur auf eine <xref:System.Threading.ApartmentState.STA> Thread.|  
-|`WAIT_NOTINDEADLOCK`|Benachrichtigt den Host, dass die angegebene synchronisierungsanforderung von einem Host aufgeteilt werden kann. Der Host kann nicht zurückkehren, d. h. `HOST_E_DEADLOCK`.|  
+|`WAIT_ALERTABLE`|Benachrichtigt den Host, dass die Aufgabe ausgelöst werden soll, wenn die CLR die [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) -Methode aufruft.|  
+|`WAIT_MSGPUMP`|Benachrichtigt den Host, dass er Nachrichten auf dem aktuellen Betriebssystem Thread verschieben muss, wenn der Thread blockiert wird. Die Laufzeit gibt diesen Wert nur in einem <xref:System.Threading.ApartmentState.STA> Thread an.|  
+|`WAIT_NOTINDEADLOCK`|Benachrichtigt den Host, dass die angegebene Synchronisierungs Anforderung nicht von einem Host getrennt werden kann. Das heißt, der Host kann keine `HOST_E_DEADLOCK`zurückgeben.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) und [IHostTaskManager:: SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) beide Methoden akzeptieren einen Parameter dieses Typs.  
+ Die [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) -und [IHostTaskManager:: switchdetask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) -Methoden akzeptieren beide einen Parameter dieses Typs.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

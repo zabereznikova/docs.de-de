@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d7a4ca2-5f46-4ef1-a9a2-257884e9dc11
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73c531378355100fdfca264ea9f96ff4d7c7ceda
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ade404557d65fa073b6a0e66fe8234b41223ecde
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134437"
 ---
 # <a name="iassemblyenumgetnextassembly-method"></a>IAssemblyEnum::GetNextAssembly-Methode
 Ruft einen Zeiger auf den nächsten [IAssemblyName](iassemblyname-interface.md) ab, der in diesem [IAssemblyEnum](iassemblyenum-interface.md) -Objekt enthalten ist.  
@@ -39,16 +37,16 @@ HRESULT GetNextAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved` muss ein NULL-Verweis sein.  
   
  `ppName`  
- vorgenommen Der zurück `IAssemblyName` gegebene Zeiger.  
+ vorgenommen Der zurückgegebene `IAssemblyName` Zeiger.  
   
  `dwFlags`  
- [in] Für zukünftige Erweiterungen reserviert. `dwFlags`muss 0 (null) sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `dwFlags` muss 0 (null) sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   

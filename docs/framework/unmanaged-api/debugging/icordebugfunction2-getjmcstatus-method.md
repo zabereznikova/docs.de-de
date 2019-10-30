@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed2364c7c47aed1430a86aeee3daabf6b94cbf3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 360434fe6e08804d8c80c4ea36d585209cc6761a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137816"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus-Methode
-Ruft einen Wert, der angibt, ob die Funktion, die von diesem ICorDebugFunction2-Objekt dargestellt wird als Benutzercode markiert ist.  
+Ruft einen Wert ab, der angibt, ob die Funktion, die durch dieses ICorDebugFunction2-Objekt dargestellt wird, als Benutzercode gekennzeichnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetJMCStatus (
   
 ## <a name="parameters"></a>Parameter  
  `pbIsJustMyCode`  
- [out] Ein Zeiger auf einen booleschen Wert, der `true`, wenn diese Funktion als Benutzercode markiert ist; andernfalls ist des Werts `false`.  
+ vorgenommen Ein Zeiger auf einen booleschen Wert, der `true`ist, wenn diese Funktion als Benutzercode markiert ist. Andernfalls ist der Wert `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Funktion von diesem dargestellt `ICorDebugFunction2` kann nicht debuggt werden kann, `pbIsJustMyCode` immer `false`.  
+ Wenn die Funktion, die von diesem `ICorDebugFunction2` dargestellt wird, nicht deentschlbelt werden kann, werden `pbIsJustMyCode` immer `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

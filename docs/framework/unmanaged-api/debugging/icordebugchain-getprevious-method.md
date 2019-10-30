@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31c795c2fbbfdc45b6e1aac6684f730f55fc106a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746417"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124733"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious-Methode
-Ruft die vorherige Kette von Frames für den Thread ab.  
+Ruft die vorherige Rahmen Kette für den Thread ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetPrevious (
   
 ## <a name="parameters"></a>Parameter  
  `ppChain`  
- [out] Ein Zeiger auf die Adresse des ICorDebugChain-Objekts, das die vorherige Kette von Frames für den Thread darstellt. Dieser Kette ist der erste Kette, `ppChain` ist null.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugChain-Objekts, das die vorherige Rahmen Kette für diesen Thread darstellt. Wenn diese Kette die erste Kette ist, `ppChain` ist NULL.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

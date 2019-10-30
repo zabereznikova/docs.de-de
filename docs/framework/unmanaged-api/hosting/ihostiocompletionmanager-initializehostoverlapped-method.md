@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac7014962b99ac167e8192c13b2bae5ca92470f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fd299ad25166bcbcf0202da13a5b4cbdd20d7d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948515"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133800"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped-Methode
-Bietet dem Host die Möglichkeit, benutzerdefinierte Daten zu initialisieren, um Sie an eine Win32 `OVERLAPPED` -Struktur anzufügen, die für asynchrone e/a-Anforderungen verwendet wird.  
+Bietet dem Host die Möglichkeit, benutzerdefinierte Daten zu initialisieren, um an eine Win32-`OVERLAPPED` Struktur anzufügen, die für asynchrone e/a-Anforderungen verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT InitializeHostOverlapped (
   
 ## <a name="parameters"></a>Parameter  
  `pvOverlapped`  
- in Ein Zeiger auf die Win32 `OVERLAPPED` -Struktur, die in der e/a-Anforderung enthalten sein soll.  
+ in Ein Zeiger auf die Win32-`OVERLAPPED`-Struktur, die in der e/a-Anforderung enthalten sein soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped`wurde erfolgreich zurückgegeben.|  
+|S_OK|`InitializeHostOverlapped` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -52,19 +50,19 @@ HRESULT InitializeHostOverlapped (
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Ressource zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen der Windows-Plattform `OVERLAPPED` verwenden die-Struktur, um den Zustand für asynchrone e/a-Anforderungen zu speichern. Die CLR ruft die `InitializeHostOverlapped` -Methode auf, um dem Host die Möglichkeit zu geben, benutzerdefinierte `OVERLAPPED` Daten an eine Instanz anzufügen.  
+ Die Funktionen der Windows-Plattform verwenden die `OVERLAPPED` Struktur zum Speichern des Zustands für asynchrone e/a-Anforderungen. Die CLR ruft die `InitializeHostOverlapped`-Methode auf, um dem Host die Möglichkeit zu geben, benutzerdefinierte Daten an eine `OVERLAPPED` Instanz anzufügen.  
   
 > [!IMPORTANT]
-> Um zum Anfang des benutzerdefinierten Datenblocks zu gelangen, müssen die Hosts den Offset auf die Größe `OVERLAPPED` der Struktur (`sizeof(OVERLAPPED)`) festlegen.  
+> Um zum Anfang des benutzerdefinierten Datenblocks zu gelangen, muss der Offset auf die Größe der `OVERLAPPED` Struktur (`sizeof(OVERLAPPED)`) festgelegt werden.  
   
  Der Rückgabewert E_OUTOFMEMORY gibt an, dass der Host seine benutzerdefinierten Daten nicht initialisieren konnte. In diesem Fall meldet die CLR einen Fehler und schlägt den-Befehl fehl.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8::DynamicMethodJITCompilationStarted-Methode
+title: ICorProfilerCallback8::D ynamicmethodjitcompilationstarted-Methode
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a60f074ce0081df07a61d0b832d542c8873776f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1eaf29e1c93f352facde4af2ee57910783d82e5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136468"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationStarted-Methode
-[Wird nur in der .NET Framework 4.7 und höheren Versionen unterstützt]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicmethodjitcompilationstarted-Methode
+[Wird in der .NET Framework 4,7 und höheren Versionen unterstützt]  
   
-Benachrichtigt den Profiler an, wenn JIT-Kompilierung einer dynamischen Methode gestartet wurde.  
+Benachrichtigt den Profiler, wenn die JIT-Kompilierung einer dynamischen Methode gestartet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,28 +33,28 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 ## <a name="parameters"></a>Parameter  
 [in] `functionId`  
-Der Bezeichner der in-Memory-Funktion, die für die JIT-Kompilierung gestartet wird.   
+Der Bezeichner der in-Memory-Funktion, für die die JIT-Kompilierung gestartet wird.   
 
 [in] `fIsSafeToBlock`   
-`true` um anzugeben, das blockieren die Laufzeit zu warten, bis der aufrufende Thread von diesem Rückruf zurück zur Folge haben. `false` um anzugeben, dass die Blockierung der Vorgang der Laufzeit nicht beeinflusst wird.  
+`true`, um anzugeben, dass eine Blockierung bewirken kann, dass die Laufzeit auf die Rückgabe des aufrufenden Threads von diesem Rückruf wartet. `false`, um anzugeben, dass die Blockierung sich nicht auf den Lauf Zeit Vorgang auswirkt.  
 
 [in] `pILHeader`    
-Ein Zeiger auf das erste Byte des IL-Headers der Methode.   
+Ein Zeiger auf das erste Byte des Il-Headers der Methode.   
 
 [in] `cbILHeader`    
-Die Anzahl der Bytes in der IL-Header. 
+Die Anzahl der Bytes im Il-Header. 
 
 ## <a name="remarks"></a>Hinweise  
 
-Dieser Rückruf wird immer dann ausgelöst, wenn eine dynamische Methode JIT-kompiliert wird. Dies umfasst verschiedene IL-Stubs und LCG-Methoden. Das Ziel ist, die Profiler-Schreiber genügend Informationen zum Identifizieren der kompilierten Methode für Benutzer bereitstellen.
+Dieser Rückruf wird ausgelöst, wenn eine dynamische Methode JIT-kompiliert wird. Dies schließt verschiedene IL-Stub-und LCG-Methoden ein. Ziel ist es, Profiler-Writern ausreichend Informationen bereitzustellen, um die kompilierte Methode für Benutzer zu identifizieren.
 
 > [!NOTE]
-> `functionId` Werte können nicht zum Auflösen in ihren Metadatentoken verwendet werden, da dynamische Methoden keine Metadaten haben.
+> `functionId` Werte können nicht verwendet werden, um Ihre Metadatentoken aufzulösen, da dynamische Methoden keine Metadaten aufweisen.
 
-Die `pILHeader` -Zeiger ist nur gültig, während des Rückrufs.
+Der `pILHeader` Zeiger ist nur während des Rückrufs gültig.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

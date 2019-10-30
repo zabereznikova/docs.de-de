@@ -13,17 +13,15 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5c61e2e1208cec0bda1492964a8d02bd71f5a1c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129329"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType-Methode
-Gibt den von der <xref:System.AppDomainManager?displayProperty=nameWithType> -Klasse abgeleiteten Typ des Anwendungs Domänen-Managers an, der zum Initialisieren der Standard Anwendungsdomäne verwendet wird.  
+Gibt den von der <xref:System.AppDomainManager?displayProperty=nameWithType>-Klasse abgeleiteten Typ des Anwendungs Domänen-Managers an, der zum Initialisieren der Standard Anwendungsdomäne verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +35,7 @@ HRESULT SetAppDomainManagerType(
   
 ## <a name="parameters"></a>Parameter  
  `wszAppDomainManagerAssembly`  
- in Der Anzeige Name der Assembly, die den Typ des Anwendungs Domänen-Managers enthält. Zum Beispiel: "AdMgrExample, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccs150s00b3".  
+ in Der Anzeige Name der Assembly, die den Typ des Anwendungs Domänen-Managers enthält. Beispiel: "AdMgrExample, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf 150s00b3".  
   
  `wszAppDomainManagerType`  
  in Der Typname des Anwendungs Domänen-Managers, einschließlich des Namespace.  
@@ -54,19 +52,19 @@ HRESULT SetAppDomainManagerType(
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Derzeit ist `dwInitializeDomainFlags` `eInitializeNewDomainFlags_NoSecurityChanges`der einzige definierte Wert für, der die Common Language Runtime (CLR) anweist, dass der Anwendungs Domänen-Manager <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> während der Ausführung der Methode keine Sicherheitseinstellungen ändert. Dadurch kann die CLR das Laden von Assemblys optimieren, die über <xref:System.Security.AllowPartiallyTrustedCallersAttribute> das Conditional-Attribut (APTCA) verfügen. Dies kann zu einer erheblichen Verbesserung der Startzeit führen, wenn die transitiv Schließung dieses Assemblysatzes sehr groß ist.  
+ Derzeit ist der einzige definierte Wert für `dwInitializeDomainFlags` `eInitializeNewDomainFlags_NoSecurityChanges`, der die Common Language Runtime (CLR) anweist, dass der Anwendungs Domänen-Manager während der Ausführung der <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>-Methode die Sicherheitseinstellungen nicht ändert. Dadurch kann die CLR das Laden von Assemblys optimieren, die über das APTCA-Attribut (Conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute>) verfügen. Dies kann zu einer erheblichen Verbesserung der Startzeit führen, wenn die transitiv Schließung dieses Assemblysatzes sehr groß ist.  
   
 > [!IMPORTANT]
-> Wenn der Host für `eInitializeNewDomainFlags_NoSecurityChanges` den Anwendungs Domänen-Manager angibt <xref:System.InvalidOperationException> , wird eine ausgelöst, wenn versucht wird, die Sicherheit der Anwendungsdomäne zu ändern.  
+> Wenn der Host `eInitializeNewDomainFlags_NoSecurityChanges` für den Anwendungs Domänen-Manager angibt, wird eine <xref:System.InvalidOperationException> ausgelöst, wenn versucht wird, die Sicherheit der Anwendungsdomäne zu ändern.  
   
- Das Aufrufen der [ICLRControl:: abtappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)-Methode entspricht dem `ICLRDomainManager::SetAppDomainManagerType` aufrufen `eInitializeNewDomainFlags_None`von mit.  
+ Das Aufrufen der [ICLRControl:: abtappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)-Methode entspricht dem Aufrufen von `ICLRDomainManager::SetAppDomainManagerType` mit `eInitializeNewDomainFlags_None`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

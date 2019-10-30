@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132242"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType-Enumeration
-Gibt den Typ der Rückruf, der von erfolgt eine [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) Ereignis.  
+Gibt den Typ des Rückrufs an, der von einem [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) -Ereignis stammt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +39,13 @@ typedef enum CorDebugExceptionCallbackType {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|Es wurde eine Ausnahme ausgelöst.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Die Ausnahmeabschlussprozess Benutzercode.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Der Ausnahmeabschlussprozess finden Sie eine `catch` im Benutzercode blockiert.|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|Eine Ausnahme wurde ausgelöst.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Der windup-Ausnahme Prozess hat den Benutzercode eingegeben.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Der windup-Ausnahme Prozess hat einen `catch` Block im Benutzercode gefunden.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|Die Ausnahme wurde nicht behandelt.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

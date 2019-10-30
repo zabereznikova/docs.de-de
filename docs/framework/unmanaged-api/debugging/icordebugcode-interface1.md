@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75cc8ea9d88dda42362f50b519864b1a78e1a64b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8cb95fad4394e2ce9b7f922e720071d8c4434edb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125593"
 ---
 # <a name="icordebugcode-interface"></a>ICorDebugCode-Schnittstelle
 
@@ -42,17 +40,17 @@ Stellt ein Segment von Microsoft Intermediate Language (MSIL)-Code oder nativem 
 |[IsIL-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|Ruft einen Wert ab, der angibt, ob dieser `ICorDebugCode` in MSIL kompiliert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugCode` kann entweder MSIL- oder systemeigenen Code darstellen. Einem ICorDebugFunction-Objekt, das MSIL-Code darstellt, kann entweder NULL oder `ICorDebugCode` ein-Objekt zugeordnet werden. Einem ICorDebugFunction-Objekt, das nativen Code darstellt, kann eine beliebige `ICorDebugCode` Anzahl von Objekten zugeordnet sein.  
+ `ICorDebugCode` kann entweder MSIL- oder systemeigenen Code darstellen. Ein ICorDebugFunction-Objekt, das MSIL-Code darstellt, kann entweder 0 (null) oder einen `ICorDebugCode` zugeordneten Objekten aufweisen. Einem ICorDebugFunction-Objekt, das systemeigenen Code darstellt, kann eine beliebige Anzahl von `ICorDebugCode`-Objekten zugeordnet sein.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

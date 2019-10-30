@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3bb2f6333f306c8a19c8b2f67986b23819b74ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77d28d8eef97a934c15ac29725f856f4bf39e6ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966863"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140158"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue-Schnittstelle
 Stellt einen Wert in dem Prozess dar, der gedebuggt wird. Der Wert kann ein Lese-oder ein Schreib Wert sein.  
@@ -31,9 +29,9 @@ Stellt einen Wert in dem Prozess dar, der gedebuggt wird. Der Wert kann ein Lese
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[CreateBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Diese Methode ist zurzeit nicht implementiert.|  
-|[GetAddress-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Ruft die Adresse dieses `ICorDebugValue` -Objekts ab, das gerade gedebuggt wird.|  
-|[GetSize-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Ruft die Größe des `ICorDebugValue` -Objekts in Bytes ab.|  
-|[GetType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Ruft den primitiven Typ dieses `ICorDebugValue` -Objekts ab.|  
+|[GetAddress-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Ruft die Adresse dieses `ICorDebugValue` Objekts ab, das gerade gedebuggt wird.|  
+|[GetSize-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Ruft die Größe dieses `ICorDebugValue` Objekts in Bytes ab.|  
+|[GetType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Ruft den primitiven Typ dieses `ICorDebugValue` Objekts ab.|  
   
 ## <a name="remarks"></a>Hinweise  
  Im Allgemeinen wird der Besitz eines Wert Objekts bei der Rückgabe übermittelt. Der Empfänger ist dafür verantwortlich, einen Verweis aus dem-Objekt zu entfernen, wenn er mit dem-Objekt fertig ist.  
@@ -44,11 +42,11 @@ Stellt einen Wert in dem Prozess dar, der gedebuggt wird. Der Wert kann ein Lese
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

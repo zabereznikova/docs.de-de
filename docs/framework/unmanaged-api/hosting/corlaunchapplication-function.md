@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758376"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136950"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication-Funktion
 Startet die Anwendung im angegebenen Netzwerkpfad, wobei die angegebenen Manifeste und sonstigen Anwendungsdaten verwendet werden.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,32 +43,32 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parameter  
  `dwClickOnceHost`  
- [in] Der Wert der [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) -Enumeration, der den Typ des Hosts gibt an, die die Anwendung gestartet wird.  
+ in Ein Wert der [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) -Enumeration, der den Typ des Hosts angibt, der die Anwendung startet.  
   
  `pwzAppFullName`  
- [in] Der vollständige Name der Anwendung, die gestartet wird.  
+ in Der vollständige Name der Anwendung, die gestartet wird.  
   
  `dwManifestPaths`  
- [in] Die Anzahl der Manifestspfade für die Anwendung.  
+ in Die Anzahl der manifestressfade für die Anwendung.  
   
  `ppwzManifestPaths`  
- [in] Ein Array von Zeichenfolgen, von denen jede einen Pfad zu einem Anwendungsmanifest für die Anwendung angibt, das gestartet wird.  
+ in Ein Array von Zeichen folgen, von denen jede einen Pfad zu einem Manifest für die Anwendung angibt, die gestartet wird.  
   
  `dwActivationData`  
- [in] Die Anzahl der Aktivierung von Datenelementen für die Anwendung, die gestartet wird.  
+ in Die Anzahl der Aktivierungsdaten Elemente für die Anwendung, die gestartet wird.  
   
  `ppwzActivationData`  
- [in] Ein Array von Zeichenfolgen, von denen jede eine Aktivierung-Datenelement für die Anwendung ist, das gestartet wird.  
+ in Ein Array von Zeichen folgen, von denen jedes ein Aktivierungsdaten Element für die Anwendung ist, die gestartet wird.  
   
  `lpProcessInformation`  
- [out] Ein Zeiger auf die Informationen über den Prozess, in dem die Anwendung geladen wurde.  
+ vorgenommen Ein Zeiger auf Informationen über den Prozess, in dem die Anwendung geladen wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

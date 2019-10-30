@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739513"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132746"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop-Enumeration
 Gibt den Typ von nicht zugeordnetem Code an, der eine Unterbrechung der Codeausführung durch die Schritte auslösen kann.  
@@ -44,19 +42,19 @@ typedef enum CorDebugUnmappedStop {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STOP_NONE`|Beenden Sie nicht in jeder Art von nicht zugeordnetem Code.|  
-|`STOP_PROLOG`|In der Prologcode anhalten.|  
-|`STOP_EPILOG`|Beenden Sie im Epilogcode.|  
-|`STOP_NO_MAPPING_INFO`|Beenden Sie im Code, der keine Zuordnungsinformationen enthält.|  
-|`STOP_OTHER_UNMAPPED`|Beenden Sie in nicht zugeordnete Code, der nicht in der Prolog, Epilog, ohne-Zuordnungsinformationen oder nicht verwalteten Kategorie passt.|  
-|`STOP_UNMANAGED`|Beenden Sie in nicht verwaltetem Code. Dieser Wert ist nur gültig mit interop-Debuggen.|  
-|`STOP_ALL`|Beenden Sie alle Arten von nicht zugeordnetem Code an.|  
+|`STOP_NONE`|Nicht in einem Typ von nicht zugeordnetem Code abbrechen.|  
+|`STOP_PROLOG`|Im Prolog-Code abbrechen.|  
+|`STOP_EPILOG`|Wird im Epilogcode beendet.|  
+|`STOP_NO_MAPPING_INFO`|Wird in Code beendet, der über keine Informationen zur Zuordnung verfügt.|  
+|`STOP_OTHER_UNMAPPED`|Halten Sie in nicht zugeordnetem Code an, der nicht in die Kategorie Prolog, Epilog, No-Mapping-Information oder nicht verwaltet passt.|  
+|`STOP_UNMANAGED`|In nicht verwaltetem Code beendet. Dieser Wert ist nur beim Interop-Debuggen gültig.|  
+|`STOP_ALL`|Wird in allen Typen von nicht zugeordnetem Code beendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) Methode, um die Flags festlegen, die den nicht verwalteten Code angeben, in dem die zugeordnetem wird beendet.  
+ Verwenden Sie die [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) -Methode, um die Flags festzulegen, die den nicht zugeordneten Code angeben, in dem der Stepper angehalten wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

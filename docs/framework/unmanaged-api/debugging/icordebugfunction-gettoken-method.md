@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4613e11896a34ed1a7fe91d4767fb38ac75aab8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4229d567fc4ced5e3b78b390ced29fb9ea60f93b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754516"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137841"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken-Methode
-Ruft den Metadatentoken für diese Funktion.  
+Ruft das Metadatentoken für diese Funktion ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>Parameter  
  `pMethodDef`  
- [out] Ein Zeiger auf ein `mdMethodDef` Token, die Metadaten für diese Funktion verweist.  
+ vorgenommen Ein Zeiger auf ein `mdMethodDef` Token, das auf die Metadaten für diese Funktion verweist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

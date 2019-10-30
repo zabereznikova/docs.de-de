@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8eb4095-3a8f-4be3-9446-63e9893dce7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fde9586c1b3736b5db2c4814058dd23713dd34d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f2048c8ab85fa7e94f73aad430400ad4c8352f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124593"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask-Methode
-Fordert an, dass die common Language Runtime (CLR) die Aufgabe zurückstellt, die die aktuelle [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Instanz darstellt, und stellen Sie die CPU-Zeit für andere Aufgaben verfügbar.  
+Fordert an, dass die Common Language Runtime (CLR) die Aufgabe, die die aktuelle [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Instanz darstellt, außer Kraft setzen und die Prozessorzeit für andere Tasks verfügbar machen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +35,22 @@ HRESULT YieldTask ();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`YieldTask` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`YieldTask` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Host ruft `YieldTask` auf Anforderung Prozessorressourcen für andere Aufgaben oder Prozesse. Diese Methode wird in erster Linie langer Codes freizugeben, CPU-Zeit zu ermöglichen. Die Laufzeit versucht, versetzen die Aufgabe, die die aktuelle `ICLRTask` Instanz darstellt, in einem Zustand, in denen Verarbeitungszeit abgezogen werden kann, sondern stellt keine Garantie für Erfolg.  
+ Ein Host ruft `YieldTask` auf, um Prozessorressourcen für andere Tasks oder Prozesse anzufordern. Diese Methode ist primär dafür gedacht, Code mit langer Ausführungszeit zu ermöglichen, die CPU-Zeit zu Verb legen. Die Laufzeit versucht, die Aufgabe, die die aktuelle `ICLRTask` Instanz darstellt, in einem Zustand zu platzieren, in dem Sie die Verarbeitungszeit erzielen kann, aber keine Garantie für Erfolg hat.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

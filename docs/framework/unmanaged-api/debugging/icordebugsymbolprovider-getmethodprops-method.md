@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetMethodProps-Methode
+title: 'Icordebugsymbolprovider:: getmethodrequismethode'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138827"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps-Methode
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>Icordebugsymbolprovider:: getmethodrequismethode
 Gibt Informationen zu Methodeneigenschaften wie das Metadatentoken der Methode und Informationen zu den generischen Parametern der Methode zurück, wenn eine relative virtuelle Adresse (RVA) in der Methode angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,17 +45,17 @@ HRESULT GetMethodProps(
  [out] Ein Puffer, der die TypeSpec-Signaturen aller generischen Parameter enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Um die erforderliche Größe des Arrays der Methode zu `signature` erhalten, legen Sie `cbSignature` das-Argument auf `signature` 0 und auf **null**fest. Wenn die Methode zurückgegeben wird, enthält `pcbSignature` die Anzahl der für das `signature`-Array erforderlichen Bytes.  
+ Um die erforderliche Größe des `signature` Arrays der Methode zu erhalten, legen Sie das `cbSignature`-Argument auf 0 und `signature` auf **null**fest. Wenn die Methode zurückgegeben wird, enthält `pcbSignature` die Anzahl der für das `signature`-Array erforderlichen Bytes.  
   
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

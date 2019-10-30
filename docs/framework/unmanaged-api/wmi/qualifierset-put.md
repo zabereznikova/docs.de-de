@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798273"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120232"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put-Funktion
 
@@ -53,12 +51,12 @@ in Ein Zeiger auf eine [iwbemqualifierset](/windows/desktop/api/wbemcli/nn-wbemc
 in Der Name des Qualifizierers, der geschrieben werden soll.
 
 `pVal`\
-in Ein Zeiger auf einen gültigen `VARIANT` , der den Qualifizierer enthält, der geschrieben werden soll. Dieser Parameter darf nicht `null`sein.
+in Ein Zeiger auf einen gültigen `VARIANT`, der den Qualifizierer enthält, der geschrieben werden soll. Dieser Parameter kann nicht `null`werden.
 
 `lFlavor`\
 in Eine der folgenden Konstanten, die die gewünschten qualifizierervarianten für diesen Qualifizierer definiert. Der Standardwert ist `WBEM_FLAVOR_OVERRIDABLE` (0).
 
-|Konstante  |Wert  |Description  |
+|Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz überschrieben werden. **Dies ist der Standardwert.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Der Qualifizierer wird an Instanzen weitergegeben. |
@@ -74,8 +72,8 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Es wurde ein unzulässiger Versuch unternommen, den **Schlüssel** Qualifizierer für eine Eigenschaft anzugeben, die kein Schlüssel sein kann. Die Schlüssel werden in der Klassendefinition für ein Objekt angegeben und können nicht pro Instanz geändert werden. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Der `pVal` -Parameter ist kein gültiger qualifizierungstyp. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Es ist nicht möglich, die `QualifierSet_Put` -Methode für den Qualifizierer aufzurufen, da das besitzende Objekt keine über schreibungen zulässt. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Der `pVal`-Parameter ist kein gültiger qualifizierungstyp. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Es ist nicht möglich, die `QualifierSet_Put`-Methode für den Qualifizierer aufzurufen, da das besitzende Objekt keine über schreibungen zulässt. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
 ## <a name="remarks"></a>Hinweise
@@ -84,9 +82,9 @@ Diese Funktion umschließt einen aufzurufenden Befehl der [iwbemqualifierset::P 
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

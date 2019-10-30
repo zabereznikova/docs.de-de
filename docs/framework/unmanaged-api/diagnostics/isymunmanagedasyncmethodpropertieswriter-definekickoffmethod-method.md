@@ -2,17 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineKickoffMethod-Methode
 ms.date: 03/30/2017
 ms.assetid: 4662f70d-817b-4374-8da8-e0545585939f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce3c135e031d0c8425e990811fedc40f4ec45243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccf1287a1b0218e7f2560e1afbb0930c93b43263
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129176"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinekickoffmethod-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineKickoffMethod-Methode
-Legt die Start-Methode, die den asynchronen Vorgang initiiert.  
+Legt die Anfangs Methode fest, die den asynchronen Vorgang initiiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,7 +28,7 @@ HRESULT DefineKickoffMethod(    [in] mdToken kickoffMethod);
  Gibt `HRESULT`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

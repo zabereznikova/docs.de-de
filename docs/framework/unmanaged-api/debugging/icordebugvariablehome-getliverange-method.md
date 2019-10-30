@@ -1,5 +1,5 @@
 ---
-title: IcorDebugVariableHome::GetLiveRange-Methode
+title: 'Icordebugvariablehome:: getliverange-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125116"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange-Methode
-Ruft ab, der systemeigenen Bereich, in dem diese Variable ist.  
+# <a name="icordebugvariablehomegetliverange-method"></a>Icordebugvariablehome:: getliverange-Methode
+Ruft den systemeigenen Bereich ab, in dem diese Variable Live ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +36,13 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>Parameter  
  `pStartOffset`  
- [out] Der logische Offset, an dem die Variable ersten live ist.  
+ vorgenommen Der logische Offset, bei dem die Variable zum ersten Mal Live ist.  
   
  `pEndOffset`  
- [out] Der logische Offset unmittelbar nach dem Punkt, an dem die Variable letzten live ist.  
+ vorgenommen Der logische Offset unmittelbar nach dem Punkt, an dem die Variable zuletzt aktiv ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

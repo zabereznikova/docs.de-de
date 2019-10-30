@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c1b90390689e709ee131935bd6417fa6b273eb2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131357"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters-Methode
-Ruft den Wert jedes Registers (für die Plattform, auf der Code derzeit ausgeführt wird), die von der angegebenen Bitmaske angegeben ist.  
+Ruft den Wert der einzelnen Register (für die Plattform, auf der der Code gerade ausgeführt wird) ab, die von der angegebenen Bitmaske angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,28 +38,28 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parameter  
  `maskCount`  
- [in] Die Größe in Bytes, der die `mask` Array.  
+ in Die Größe des `mask` Arrays in Bytes.  
   
  `mask`  
- [in] Ein Array von Bytes, von denen jedes Bit eines Registers entspricht. Wenn das Bit 1 ist, wird der entsprechende Wert des Registers abgerufen werden.  
+ in Ein Bytearray, das jedem Bit entspricht, das einem Register entspricht. Wenn das Bit 1 ist, wird der zugehörige Registrierungs Wert abgerufen.  
   
  `regCount`  
- [in] Die Anzahl der Registerwerte abgerufen werden sollen.  
+ in Die Anzahl der abzurufenden Registrierungs Werte.  
   
  `regBuffer`  
- [out] Ein Array von `CORDB_REGISTER` Objekte, von denen jede den Wert eines Registers empfängt.  
+ vorgenommen Ein Array von `CORDB_REGISTER`-Objekten, von denen jede den Wert eines Register empfängt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetRegisters` Methode gibt ein Array von Werten zurück, über die Register, die von der Maske angegeben werden. Das Array enthält keine Werte der Register, dessen Maskenbit nicht festgelegt ist. Daher die Größe der `regBuffer` Arrays gleich der Anzahl von 1 in der Maske sein muss. Wenn der Wert des `regCount` ist zu klein für die Anzahl der von der Maske, die Werte der Register mit höheren Nummern angegebene Register aus dem Satz abgeschnitten wird. Wenn `regCount` ist zu groß, die nicht verwendeten `regBuffer` Elemente nicht geändert werden.  
+ Die `GetRegisters`-Methode gibt ein Array von Werten aus den Registern zurück, die von der Maske angegeben werden. Das Array enthält keine Werte von Registern, deren Masken Bit nicht festgelegt ist. Folglich muss die Größe des `regBuffer` Arrays gleich der Anzahl von 1 sein. Wenn der Wert von `regCount` für die Anzahl der von der Maske festgelegten Register zu klein ist, werden die Werte der höheren nummerierten Register vom Satz abgeschnitten. Wenn `regCount` zu groß ist, werden die nicht verwendeten `regBuffer` Elemente unverändert geändert.  
   
- Wenn ein Register nicht verfügbar, die von der Maske angegeben ist, wird für dieses Register ein unbestimmter Wert zurückgegeben.  
+ Wenn ein nicht verfügbares Register durch die Maske angegeben wird, wird für dieses Register ein unbestimmter Wert zurückgegeben.  
   
- Die `ICorDebugRegisterSet2::GetRegisters` Methode ist erforderlich, für die Plattformen, für die mehr als 64 Registern. IA64 hat z. B. 128 Allzweckregister und 128 Gleitkomma-Registerkarten, daher Sie mehr als 64-Bit in der Bitmaske müssen.  
+ Die `ICorDebugRegisterSet2::GetRegisters`-Methode ist für Plattformen erforderlich, die über mehr als 64 Register verfügen. Beispielsweise hat ia64 128 allgemeine Register und 128 Gleit Komma Register, sodass Sie mehr als 64 Bits in der Bitmaske benötigen.  
   
- Wenn Sie nicht mehr als 64 Registern verfügen wie der Fall auf Plattformen wie X86, ist die `GetRegisters` -Methode übersetzt die Bytes in den `mask` Bytearray, in eine `ULONG64` und ruft dann die [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) Methode, die akzeptiert die `ULONG64` Maske.  
+ Wenn Sie nicht über mehr als 64 Register verfügen, wie es bei Plattformen wie z. b. x86 der Fall ist, übersetzt die `GetRegisters`-Methode tatsächlich lediglich die Bytes im `mask` Bytearray in eine `ULONG64` und ruft dann die [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) -Methode auf. , der die `ULONG64` Maske annimmt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1272df17a9a9a500b84f62914811b8d109bf3cdd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140073"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID-Methode
-Ruft den Bezeichner des Tasks in diesem Thread ausgeführt wird.  
+Ruft den Bezeichner der Aufgabe ab, die auf diesem Thread ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetTaskID (
   
 ## <a name="parameters"></a>Parameter  
  `pTaskId`  
- [out] Ein Zeiger auf den Bezeichner der Aufgabe ausgeführt, die für den Thread, der von diesem ICorDebugThread2-Objekt dargestellt wird.  
+ vorgenommen Ein Zeiger auf den Bezeichner der Aufgabe, die auf dem Thread ausgeführt wird, der durch dieses ICorDebugThread2-Objekt dargestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Aufgabe kann nur auf dem Thread ausgeführt werden, wenn der Thread mit einer Verbindung verknüpft ist. `GetTaskID` Gibt NULL zurück, `pTaskId` , wenn der Thread nicht mit einer Verbindung verknüpft ist.  
+ Ein Task kann nur auf dem Thread ausgeführt werden, wenn der Thread einer Verbindung zugeordnet ist. `GetTaskID` gibt in `pTaskId` 0 (null) zurück, wenn der Thread keiner Verbindung zugeordnet ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

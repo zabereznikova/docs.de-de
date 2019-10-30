@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8fe1a25c4bc1f5e19f49f0d660d0aad5a180ea2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a3a1b658f4ab05c7029de907882fe5ab2513ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127889"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2-Schnittstelle
 
@@ -32,10 +30,10 @@ Dient als logische Erweiterung der ICorDebugModule-Schnittstelle.
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[ApplyChanges-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Wendet die Änderungen an den Metadaten und den Änderungen im MSIL-Code (Microsoft Intermediate Language) auf den laufenden Prozess an.|  
-|[GetJITCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Ruft die Flags ab, die die JIT-Kompilierung (Just-in-Time `ICorDebugModule2`) für dieses Steuerelement steuern.|  
+|[GetJITCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Ruft die Flags ab, die die JIT-Kompilierung (Just-in-Time) für dieses `ICorDebugModule2`steuern.|  
 |[ResolveAssembly-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Löst die Assembly auf, auf die vom angegebenen Metadatentoken verwiesen wird.|  
 |[SetJITCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|Legt die Flags fest, die die JIT-Kompilierung für dieses `ICorDebugModule2`steuern.|  
-|[SetJMCStatus-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Legt den JMC-Status (nur eigenen Code) aller Methoden aller-Klassen in diesem `ICorDebugModule2` auf den angegebenen Wert fest, mit Ausnahme der Werte `pTokens` im-Array, die auf den umgekehrten Wert festgelegt werden.|  
+|[SetJMCStatus-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Legt den nur eigenen Code (JMC)-Status aller Methoden aller Klassen in diesem `ICorDebugModule2` auf den angegebenen Wert fest, mit Ausnahme derjenigen im `pTokens` Array, die auf den umgekehrten Wert festgelegt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -43,11 +41,11 @@ Dient als logische Erweiterung der ICorDebugModule-Schnittstelle.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

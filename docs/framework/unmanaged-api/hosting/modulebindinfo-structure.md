@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e0e877402daf27c375aedddf8922e919a546ae5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae40d8adaae70ccff6e8058858a506267d58873f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781179"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133747"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo-Struktur
-Enthält ausführliche Informationen über das Modul verwiesen wird und die Assembly, die sie enthält.  
+Bietet ausführliche Informationen über das Modul, auf das verwiesen wird, und die Assembly, die es enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +38,19 @@ typedef struct _ModuleBindInfo {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`dwAppDomainId`|Ein eindeutiger Bezeichner für die `IStream` zurückgegeben, die durch einen Aufruf der [IHostAssemblyStore:: ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) -Methode aus der das Modul verwiesen wird, ist geladen werden.|  
-|`lpAssemblyIdentity`|Ein eindeutiger Bezeichner für die Assembly mit dem Modul verwiesen wird.|  
-|`lpModuleName`|Der Name des Moduls auf die verwiesen wird.|  
+|`dwAppDomainId`|Ein eindeutiger Bezeichner für die `IStream`, die durch einen [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) -Methode zurückgegeben wird, aus der das Modul, auf das verwiesen wird, geladen werden soll.|  
+|`lpAssemblyIdentity`|Ein eindeutiger Bezeichner der Assembly, die das Modul enthält, auf das verwiesen wird.|  
+|`lpModuleName`|Der Name des Moduls, auf das verwiesen wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ModuleBindInfo` wird als Parameter übergeben, `IHostAssemblyStore::ProvideModule`. Der Host stellt den eindeutigen Bezeichner `dwAppDomainId` für die common Language Runtime (CLR). Nach einem Aufruf von der [IHostAssemblyStore:: ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) Methode zurückgegeben wird, die Runtime den Bezeichner verwendet, um zu bestimmen, ob der Inhalt des der `IStream` zugeordnet wurde. Wenn dies der Fall ist, lädt die Runtime den Stream neu zuzuordnen, anstatt die vorhandene Kopie. Die Common Language Runtime verwendet diesen Bezeichner auch als Suchschlüssel für Datenströme, die von Aufrufen zurückgegeben werden die `IHostAssemblyStore::ProvideAssembly` Methode. Aus diesem Grund muss der Bezeichner für Anforderungen zum modulimport sowie für Anforderungen von Assembly eindeutig sein.  
+ `ModuleBindInfo` wird als Parameter an `IHostAssemblyStore::ProvideModule`übergeben. Der Host stellt den eindeutigen Bezeichner `dwAppDomainId` für die Common Language Runtime (CLR) bereit. Nachdem ein Aufrufen der [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) -Methode zurückgegeben wurde, verwendet die Common Language Runtime den Bezeichner, um zu bestimmen, ob die Inhalte der `IStream` zugeordnet wurden. Wenn dies der Fall ist, lädt die Laufzeit die vorhandene Kopie, anstatt den Stream neu zuzuordnen. Die Laufzeit verwendet diesen Bezeichner auch als Suchschlüssel für Streams, die von Aufrufen der `IHostAssemblyStore::ProvideAssembly`-Methode zurückgegeben werden. Daher muss der Bezeichner für Modul Anforderungen und für Assemblyanforderungen eindeutig sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

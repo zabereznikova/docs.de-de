@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795364"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108611"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader-Funktion
 Erstellt einen Verlaufs Leser für die angegebene Datei.  
@@ -48,12 +46,12 @@ HRESULT CreateHistoryReader (
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Gibt an, dass die Methode erfolgreich abgeschlossen wurde.|  
-|E_INVALIDARG|Gibt an `wzFilePath` , `ppHistoryReader` dass oder auf einen NULL-Verweis festgelegt ist.|  
+|E_INVALIDARG|Gibt an, dass `wzFilePath` oder `ppHistoryReader` auf einen NULL-Verweis festgelegt sind.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Fern** Fusion. dll  
+ **Bibliothek:** Fusion. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

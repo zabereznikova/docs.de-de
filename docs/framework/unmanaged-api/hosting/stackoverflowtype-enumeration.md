@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44d5b7fdb2908678671505649bb906c0c5f740e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141470"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType-Enumeration
-Enthält Werte, die angeben, die zugrunde liegende Ursache für ein Stack Overflow-Ereignis.  
+Enthält Werte, die die zugrunde liegende Ursache eines Stapelüberlauf Ereignisses angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +38,19 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`SO_ClrEngine`|Der Stapelüberlauf wurde durch die ausführungs-Engine ausgelöst.|  
-|`SO_Managed`|Der Stapelüberlauf verursachte von verwaltetem Code.|  
-|`SO_Other`|Der Stapelüberlauf verursachte von nicht verwaltetem Code.|  
+|`SO_ClrEngine`|Der Stapelüberlauf wurde von der Ausführungs-Engine verursacht.|  
+|`SO_Managed`|Der Stapelüberlauf wurde durch verwalteten Code verursacht.|  
+|`SO_Other`|Der Stapelüberlauf wurde durch nicht verwalteten Code verursacht.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Informationen werden an den Host übergeben, durch einen Aufruf der [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) Methode.  
+ Diese Informationen werden an den Host über einen aufzurufenden Befehl der [iaktiononclrevent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) -Methode übermittelt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

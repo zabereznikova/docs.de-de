@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMutableDataTarget::WriteVirtual-Methode
+title: 'Icordebugmutabledatatarget:: Write Virtual-Methode'
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d0a6a58a1a270cb67b75cf34ac5df8d45ccf307c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5947caa8dfb97574bb4b3c5634d962df153211c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764577"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132677"
 ---
-# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual-Methode
+# <a name="icordebugmutabledatatargetwritevirtual-method"></a>Icordebugmutabledatatarget:: Write Virtual-Methode
 Schreibt Speicher in den Prozessadressraum.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,7 +38,7 @@ HRESULT WriteVirtual(
  Wenn Bytes nicht geschrieben werden können, tritt ein Fehler beim Methodenaufruf auf, und es werden keine Bytes im Zieladressraum geändert. (Andernfalls würde sich das Ziel in einem inkonsistenten Zustand befinden, wodurch ein weiteres Debuggen unzuverlässig wäre.)  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

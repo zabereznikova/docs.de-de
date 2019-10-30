@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126383"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 
@@ -201,7 +199,7 @@ public class MyClass
 }
 ```
 
-Wenn der Vertragstyp vom `dynamic` -Schlüsselwort abgeleitet wird, stimmt er mit einem beliebigen Vertragstyp überein. In diesem Fall sollte für einen Import **immer** ein Vertragsname zur Prüfung von Übereinstimmungen mit Exporten angegeben werden. (Ohne Angabe eines Vertragsnamens wird angenommen, dass für den Import keine übereinstimmenden Export vorliegen.) Beide der folgenden Exporte entsprechen dem vorherigen Import.
+Wenn der Vertragstyp vom `dynamic` -Schlüsselwort abgeleitet wird, stimmt er mit einem beliebigen Vertragstyp überein. In diesem Fall sollte für einen Import **immer** ein Vertragsname zur Prüfung von Übereinstimmungen mit Exporten angegeben werden. (Wenn kein Vertrags Name angegeben ist, wird der Import als mit keinem Export abgeglichen.) Beide der folgenden Exporte entsprechen dem vorherigen Import.
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -343,7 +341,7 @@ Wenn ein importierter Wert vom Konstruktor eines Teils benötigt wird, kann dies
 
 Das `Import` -Attribut gibt eine Anforderung an, damit der Teil funktionsfähig ist. Wenn ein Import nicht erfüllt werden kann, schlägt die Komposition dieses Teils fehl, und der Teil ist nicht verfügbar.
 
-Sie können mit der *-Eigenschaft angeben, dass ein Import* optional `AllowDefault` ist. In diesem Fall ist die Komposition erfolgreich, auch wenn der Import mit keinen verfügbaren Exporten übereinstimmt, und die importierende Eigenschaft wird auf die Standardeinstellung für den Eigenschaftentyp festgelegt (`null` für Objekteigenschaften, `false` für boolesche Werte oder 0 (null) für numerische Eigenschaften). Die folgende Klasse verwendet einen optionalen Import.
+Sie können mit der *-Eigenschaft angeben, dass ein Import* optional `AllowDefault` ist. In diesem Fall ist die Komposition auch dann erfolgreich, wenn der Import nicht mit den verfügbaren Exporten identisch ist, und die importierende Eigenschaft wird auf den Standardwert für den Eigenschaftentyp festgelegt (`null` für Objekteigenschaften, `false` für boolesche Werte oder 0 (null) für numerische Eigenschaften.) Die folgende Klasse verwendet einen optionalen Import.
 
 ```vb
 Public Class MyClass1
@@ -687,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-Wenn Metadaten einem `InheritedExport` -Attribut zugeordnet sind, werden diese Metadaten ebenfalls geerbt. (Weitere Informationen finden Sie im Abschnitt "Metadaten und Metadatenansichten".) Geerbte Metadaten können nicht von der Unterklasse geändert werden. Allerdings kann die Unterklasse durch erneutes Deklarieren des `InheritedExport` -Attributs mit dem gleichen Vertragsnamen und Vertragstyp (jedoch mit neuen Metadaten) die geerbten Metadaten durch neue Metadaten ersetzen. Die folgende Klasse verdeutlicht dieses Prinzip. Der `MegaLogger` -Teil erbt von `Logger` und schließt das `InheritedExport` -Attribut ein. Da `MegaLogger` neue Metadaten mit dem Namen "Status" erneut deklariert, erbt es nicht die Namens- und Versionsmetadaten von `Logger`.
+Wenn Metadaten einem `InheritedExport` -Attribut zugeordnet sind, werden diese Metadaten ebenfalls geerbt. (Weitere Informationen finden Sie im vorherigen Abschnitt "Metadaten und metadatenansichten".) Geerbte Metadaten können von der Unterklasse nicht geändert werden. Allerdings kann die Unterklasse durch erneutes Deklarieren des `InheritedExport` -Attributs mit dem gleichen Vertragsnamen und Vertragstyp (jedoch mit neuen Metadaten) die geerbten Metadaten durch neue Metadaten ersetzen. Die folgende Klasse verdeutlicht dieses Prinzip. Der `MegaLogger` -Teil erbt von `Logger` und schließt das `InheritedExport` -Attribut ein. Da `MegaLogger` neue Metadaten mit dem Namen "Status" erneut deklariert, erbt es nicht die Namens- und Versionsmetadaten von `Logger`.
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-Wenn Sie das `InheritedExport` -Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport` -Attribut überschreiben (siehe vorheriges Beispiel).
+Wenn Sie das `InheritedExport` -Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn Sie sich unterscheiden, anstatt zu überschreiben, erstellt das zweite Attribut einen zweiten, unabhängigen Export aus dem Teil. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport` -Attribut überschreiben (siehe vorheriges Beispiel).
 
 Da Schnittstellen nicht direkt instanziiert werden können, können sie im Allgemeinen nicht mit `Export` -Attributen oder `Import` -Attribut ergänzt werden. Allerdings kann eine Schnittstelle mit einem `InheritedExport` -Attribut auf der Schnittstellenebene ergänzt werden. Dieser Export wird zusammen mit allen zugeordneten Metadaten von jeder beliebigen implementierenden Klasse geerbt. Die Schnittstelle selbst ist jedoch nicht als ein Teil verfügbar.
 

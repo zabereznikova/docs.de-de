@@ -2,16 +2,14 @@
 title: <Subtypes>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049125"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128106"
 ---
-# <a name="subtypes-element-net-native"></a>\<Untertypen > Element (.net Native)
+# <a name="subtypes-element-net-native"></a>\<-Untertypen > Element (.net Native)
 Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -91,7 +89,7 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Type >-Element](type-element-net-native.md)
+- [\<Typ > Element](type-element-net-native.md)
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

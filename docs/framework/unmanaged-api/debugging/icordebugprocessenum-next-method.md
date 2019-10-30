@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ac7077c-8d88-49c4-b360-b3af0c541c63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59efdb76c000a78007ec0321202793ed0dd50cfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0666becb5a34688d3f4cf5bddd1e2fa71785b38a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768276"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139790"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next-Methode
-Ruft die angegebene Anzahl von ICorDebugProcess-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
+Ruft die angegebene Anzahl von ICorDebugProcess-Instanzen aus der-Enumeration ab, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der `ICorDebugProcess` Instanzen abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugProcess` Instanzen, die abgerufen werden sollen.  
   
  `processes`  
- [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugProcess` -Objekt, das einen Prozess darstellt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugProcess` Objekt verweist, das einen Prozess darstellt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugProcess` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugProcess` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

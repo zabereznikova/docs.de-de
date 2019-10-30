@@ -2,19 +2,17 @@
 title: COR_PRF_HIGH_MONITOR-Enumeration
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc66ef1eb5048d2c708a615a99ea363d29540f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03fa33e0e2b4175d9f82bc6021731d58805da258
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123993"
 ---
-# <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR-Enumeration
+# <a name="cor_prf_high_monitor-enumeration"></a>COR_PRF_HIGH_MONITOR-Enumeration
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
   
- Stellt Kennzeichen neben denen in der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration, die der Profiler, um angeben kann die [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) Methode, wenn es geladen wird.  
+ Bietet zusätzlich zu den in der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration gefundenen Flags, die der Profiler beim Laden an die [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) -Methode angeben kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,26 +41,26 @@ typedef enum {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`COR_PRF_HIGH_MONITOR_NONE`|Es sind keine Flags festgelegt.|  
-|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Steuerelemente der [icorprofilercallback6:: Getassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) -Rückruf für das Hinzufügen von Assemblyverweisen während der CLR Assemblyverweis-abschlussdurchlauf.|  
-|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Steuerelemente der [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) Rückruf für Aktualisierungen der symbolstream ein in-Memory-Modul.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Steuerelemente der [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) Rückruf für den, der angibt, wenn eine dynamische Methode Garbage Collector wurde gesammelt und entladen. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
-|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET Core 3.0 und höheren Versionen: Deaktiviert die [Ebenen Kompilierung](../../../core/whats-new/dotnet-core-3-0.md) für Tools für die profilerstellung.|
-|`COR_PRF_HIGH_BASIC_GC`|.NET Core 3.0 und höheren Versionen: Bietet eine vereinfachte GC-Option die profilerstellung im Vergleich zu [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Steuert nur die [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), und [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) Rückrufe. Im Gegensatz zu den `COR_PRF_MONITOR_GC` Flag `COR_PRF_HIGH_BASIC_GC` nicht gleichzeitige Garbagecollection deaktiviert.|
-|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET Core 3.0 und höheren Versionen: Ermöglicht die [MovedReferences](icorprofilercallback-movedreferences-method.md) und [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) Rückrufe für komprimierende globale Kataloge.|
-|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET Core 3.0 und höheren Versionen: Ähnlich wie [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), sondern enthält Informationen zum objektzuordnungen für den Large Object Heap (LOH) nur.|
-|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Stellt alle `COR_PRF_HIGH_MONITOR`-Flags dar, die durch Profiler verbesserte Bilder erfordern. Dies entspricht der `COR_PRF_REQUIRE_PROFILE_IMAGE` -flag in der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) Enumeration.|  
+|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Steuert den [ICorProfilerCallback6:: getassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) -Rückruf zum Hinzufügen von Assemblyverweisen während des CLR-Assemblyverweises zum Schließen.|  
+|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Steuert den [ICorProfilerCallback7:: moduleinmemorysymbolsupdates](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) -Rückruf für Aktualisierungen des einem in-Memory-Modul zugeordneten Symbol Datenstroms.|  
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Steuert den [ICorProfilerCallback9::D ynamicmethodunloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) -Rückruf für die Angabe, wann eine dynamische Methode in eine Garbage Collection und entladen wurde. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|Nur .net Core 3,0 und höhere Versionen: deaktiviert die mehr [stufige Kompilierung](../../../core/whats-new/dotnet-core-3-0.md) für Profiler.|
+|`COR_PRF_HIGH_BASIC_GC`|Nur .net Core 3,0 und höhere Versionen: bietet im Vergleich zu [`COR_PRF_MONITOR_GC`](cor-prf-monitor-enumeration.md)eine Lightweight-Profil Erstellungs Option. Steuert nur die Rückrufe [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [garbagecollectionabgeschlossene](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)und [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) . Im Gegensatz zum `COR_PRF_MONITOR_GC`-Flag deaktiviert `COR_PRF_HIGH_BASIC_GC` gleichzeitige Garbage Collection nicht.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|Nur .net Core 3,0 und höhere Versionen: aktiviert die Rückrufe " [muvedreferences](icorprofilercallback-movedreferences-method.md) " und " [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) " nur für komprimierende GCS.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|Nur .net Core 3,0 und höhere Versionen: ähnlich wie [`COR_PRF_MONITOR_OBJECT_ALLOCATED`](cor-prf-monitor-enumeration.md), stellt jedoch nur Informationen zu Objekt Zuordnungen für den Large Object Heap (Loh) bereit.|
+|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Stellt alle `COR_PRF_HIGH_MONITOR`-Flags dar, die durch Profiler verbesserte Bilder erfordern. Dies entspricht dem `COR_PRF_REQUIRE_PROFILE_IMAGE`-Flag in der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration.|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Stellt alle `COR_PRF_HIGH_MONITOR`-Flags dar, die festgelegt werden können, wenn der Profiler mit einer ausgeführten App verknüpft wurde.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Stellt alle `COR_PRF_HIGH_MONITOR`-Flags dar, die nur während der Initialisierung festgelegt werden können. Wenn Sie versuchen, eines dieser Flags an einem anderen Ort zu ändern, führt dies zu einem `HRESULT`-Wert, der auf einen Fehler hinweist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `COR_PRF_HIGH_MONITOR` Flags werden verwendet, mit der `pdwEventsHigh` Parameter, der die [icorprofilerinfo5:: Geteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) und [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) Methoden.  
+ Die `COR_PRF_HIGH_MONITOR` Flags werden mit dem `pdwEventsHigh`-Parameter der [ICorProfilerInfo5:: GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) -Methode und der [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) -Methode verwendet.  
   
-Ab .NET Framework 4.6.1, den Wert des der `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` geändert von 0 bis `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0 x 00000002). Ab .NET Framework 4.7.2, deren Wert geändert von `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` zu `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
+Beginnend mit der .NET Framework 4.6.1 hat sich der Wert des `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` von 0 in `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002) geändert. Beginnend mit der .NET Framework 4.7.2 hat sich der Wert von `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` in `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`geändert.   
 
-`COR_PRF_HIGH_MONITOR_IMMUTABLE` dient eine Bitmaske, die alle Flags darstellt, die nur während der Initialisierung festgelegt werden kann. So ändern Sie eines dieser Flags an anderer Stelle zu einem fehlgeschlagenen führt Versuch `HRESULT`.
+`COR_PRF_HIGH_MONITOR_IMMUTABLE` ist eine Bitmaske, die alle Flags darstellt, die nur während der Initialisierung festgelegt werden können. Wenn Sie versuchen, diese Flags an anderer Stelle zu ändern, führt dies zu einem Fehler `HRESULT`.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

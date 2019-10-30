@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834809"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127247"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile
 
-In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe [auch Exemplarische Vorgehensweise: Hosting eines Windows Forms-Steuer Elements in](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)WPF.
+In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch Exemplarische Vorgehensweise [: Hosting eines Windows Forms-Steuer Elements in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
 ## <a name="procedure"></a>Prozedur  
   
@@ -31,7 +29,7 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. Deklarieren Sie eine Klasse mit dem Namen "`Form1`", die von der Formular Klasse erbt:
+2. Deklarieren Sie eine Klasse mit dem Namen `Form1`, die von der Formular Klasse erbt:
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
@@ -45,9 +43,9 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 4. Fügen Sie der Klasse eine `Main`-Method hinzu.
   
-    1. Wenden Sie <xref:System.STAThreadAttribute> das auf C# `Main` die-Methode an, um anzugeben, dass die Windows Forms Anwendung ein Single Thread-Apartment ist. (Das-Attribut ist in Visual Basic nicht erforderlich, da Windows Forms-Anwendungen, die mit Visual Basic entwickelt wurden, standardmäßig ein Single Thread-Apartment Modell verwenden.)  
+    1. Wenden Sie die <xref:System.STAThreadAttribute> auf C# die `Main` Methode an, um anzugeben, dass die Windows Forms Anwendung ein Single Thread-Apartment ist. (Das-Attribut ist in Visual Basic nicht erforderlich, da Windows Forms-Anwendungen, die mit Visual Basic entwickelt wurden, standardmäßig ein Single Thread-Apartment Modell verwenden.)  
   
-    2. Wenden <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Sie an, um Betriebssystem Stile auf Ihre Anwendung anzuwenden.  
+    2. Wenden Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> an, um Betriebssystem Stile auf Ihre Anwendung anzuwenden.  
   
     3. Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.  
   
@@ -60,13 +58,13 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 2. Kompilieren Sie das Formular.  
   
-    - Wenn Sie verwenden C#, geben Sie Folgendes ein:`csc form1.cs`  
+    - Wenn Sie verwenden C#, geben Sie Folgendes ein: `csc form1.cs`  
   
          `-or-`  
   
-    - Wenn Sie Visual Basic verwenden, geben Sie Folgendes ein:`vbc form1.vb`  
+    - Wenn Sie Visual Basic verwenden, geben Sie Folgendes ein: `vbc form1.vb`  
   
-3. Geben Sie an der Eingabeaufforderung Folgendes ein:`Form1.exe`  
+3. Geben Sie an der Eingabeaufforderung Folgendes ein: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Hinzufügen eines Steuer Elements und behandeln eines Ereignisses
 

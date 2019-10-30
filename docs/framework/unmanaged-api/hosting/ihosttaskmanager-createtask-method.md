@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a154aeafed9bc4de63dea3fe7fc32e2daee7b96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16916d62a528222db952a1d29dc7c69de2352191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133124"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask-Methode
 Fordert an, dass der Host eine neue Aufgabe erstellt.  
@@ -40,38 +38,38 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>Parameter  
  `stacksize`  
- [in] Die angeforderte Größe der angeforderten Stapel, oder 0 (null) für die standardmäßige Größe in Bytes.  
+ in Die angeforderte Größe (in Bytes) des angeforderten Stapels oder 0 (null) für die Standardgröße.  
   
  `pStartAddress`  
- [in] Ein Zeiger auf die Funktion ist die Aufgabe ausgeführt.  
+ in Ein Zeiger auf die Funktion, die vom Task ausgeführt werden soll.  
   
  `pParameter`  
- [in] Ein Zeiger auf die Benutzerdaten an die Funktion, oder null, wenn die Funktion übergeben werden, nimmt keine Parameter.  
+ in Ein Zeiger auf die Benutzerdaten, die an die Funktion übermittelt werden sollen, oder NULL, wenn die Funktion keine Parameter annimmt.  
   
  `ppTask`  
- [out] Ein Zeiger auf die Adresse einer [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz, die vom Host oder Null erstellt werden, wenn der Task kann nicht erstellt werden. Die Aufgabe in einem angehaltenen Zustand bleibt, bis sie explizit, durch einen Aufruf von gestartet wird [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+ vorgenommen Ein Zeiger auf die Adresse einer vom Host erstellten [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) -Instanz oder NULL, wenn die Aufgabe nicht erstellt werden kann. Der Task bleibt in einem angehaltenen Zustand, bis er durch einen [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)-Befehl explizit gestartet wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CreateTask` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`CreateTask` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aufgabe zu erstellen.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_OUTOFMEMORY|Zum Erstellen der angeforderten Aufgabe war nicht genügend Arbeitsspeicher verfügbar.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR ruft `CreateTask` anfordern, dass der Host eine neue Aufgabe erstellt. Der Host gibt einen Schnittstellenzeiger auf ein `IHostTask` Instanz. Die zurückgegebene Aufgabe muss angehalten bleiben, bis sie explizit durch einen Aufruf gestartet wird `IHostTask::Start`.  
+ Die CLR ruft `CreateTask` auf, um anzufordern, dass der Host eine neue Aufgabe erstellt. Der Host gibt einen Schnittstellen Zeiger auf eine `IHostTask` Instanz zurück. Die zurückgegebene Aufgabe muss angehalten bleiben, bis Sie explizit durch einen `IHostTask::Start`aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

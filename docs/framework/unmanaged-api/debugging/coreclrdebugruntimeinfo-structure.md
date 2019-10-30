@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58832e110f67a54d3bd57a7284b2e26e43d6bf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739403"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132132"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo-Struktur
 Stellt eine CLR-Instanz (Common Language Runtime) dar, die in einem Prozess auf einem Remotecomputer geladen wird.  
@@ -43,10 +41,10 @@ struct  CoreClrDebugRuntimeInfo {
 |`m_dwInternalID`|Der Prozessbezeichner, der durch den auf dem Zielcomputer ausgeführten Remotedebugproxy zugewiesen wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CoreClrRemoteDebuggingInterfaces.h  
+ **Header:** Coreclrremotedebugginginterfaces. h  
   
- **Bibliothek:** mscordbi_macx86.dll  
+ **Bibliothek:** mscordbi_macx86. dll  
   
- **.NET Framework-Versionen:** 3.5 SP1
+ **.NET Framework Versionen:** 3,5 SP1

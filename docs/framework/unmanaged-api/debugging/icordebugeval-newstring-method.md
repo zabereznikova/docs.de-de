@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753340"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137641"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString-Methode
-Weist eine neue Zeichenfolgeninstanz mit dem angegebenen Inhalt.  
+Weist dem angegebenen Inhalt eine neue Zeichen folgen Instanz zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT NewString (
   
 ## <a name="parameters"></a>Parameter  
  `string`  
- [in] Zeiger auf den Inhalt der Zeichenfolge.  
+ in Zeiger auf den Inhalt der Zeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Zeichenfolge wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.  
+ Die Zeichenfolge wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

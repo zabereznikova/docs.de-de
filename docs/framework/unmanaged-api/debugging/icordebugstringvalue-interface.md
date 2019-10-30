@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1d3a5eb6e0b24b40a35c13a99465dd3c7032a91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957429"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138941"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue-Schnittstelle
 Eine Unterklasse von ICorDebugHeapValue, die auf Zeichen folgen Werte angewendet wird.  
@@ -30,8 +28,8 @@ Eine Unterklasse von ICorDebugHeapValue, die auf Zeichen folgen Werte angewendet
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetLength-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Ruft die Anzahl der Zeichen in der Zeichenfolge ab, `ICorDebugStringValue`auf die von diesem verwiesen wird.|  
-|[GetString-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Ruft die Zeichenfolge ab, `ICorDebugStringValue`auf die von verwiesen wird.|  
+|[GetLength-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Ruft die Anzahl der Zeichen in der Zeichenfolge ab, auf die von diesem `ICorDebugStringValue`verwiesen wird.|  
+|[GetString-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Ruft die Zeichenfolge ab, auf die diese `ICorDebugStringValue`verweist.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -39,11 +37,11 @@ Eine Unterklasse von ICorDebugHeapValue, die auf Zeichen folgen Werte angewendet
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

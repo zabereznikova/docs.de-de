@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134291"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable-Enumeration
-Enthält Werte, die die Menge des freien physischen Arbeitsspeichers auf dem Computer angeben. Diese Werte logisch sind die Ereignisse für die oberen und unteren zurückgegebene Arbeitsspeicher aus dem `CreateMemoryResourceNotification` -Funktion in der Windows-API.  
+Enthält Werte, die angeben, wie viel freier physischer Speicher auf dem Computer vorhanden ist. Diese Werte werden logisch den Ereignissen für einen hohen und niedrigen Arbeitsspeicher zugeordnet, der von der `CreateMemoryResourceNotification` Funktion in der Windows-API zurückgegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +38,19 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Viel physikalischer Speicher ist verfügbar.|  
-|`eMemoryAvailableLow`|Es ist nur wenig physischer Speicher verfügbar.|  
-|`eMemoryAvailableNeutral`|Der verfügbare physische Arbeitsspeicher ist neutral.|  
+|`eMemoryAvailableHigh`|Es ist viel physischer Arbeitsspeicher verfügbar.|  
+|`eMemoryAvailableLow`|Es ist nur wenig physischer Arbeitsspeicher verfügbar.|  
+|`eMemoryAvailableNeutral`|Der verfügbare physische Speicher ist neutral.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieser Wert wird mithilfe eines Aufrufs vom Host die common Language Runtime (CLR) durch Übergeben der [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) Methode.  
+ Dieser Wert wird vom Host mithilfe eines Aufrufs der [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) -Methode an die Common Language Runtime (CLR) übergeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

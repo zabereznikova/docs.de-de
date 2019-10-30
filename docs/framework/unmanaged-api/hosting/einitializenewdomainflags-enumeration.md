@@ -12,17 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129417"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags-Enumeration
-Kann der Host die Laufzeitumgebung mit Informationen zur Initialisierung einer Anwendungsdomäne bereitstellen.  
+Ermöglicht dem Host, der Laufzeit Informationen zur Initialisierung einer Anwendungsdomäne bereitzustellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +36,17 @@ typedef enum {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|Keine Flags.|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|Informiert der common Language Runtime (CLR), dass der Host keine Änderungen an die Anwendungsdomäne, in den Sicherheitszustand vornehmen, wird die <xref:System.AppDomainManager.InitializeNewDomain%2A> Methode.|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|Informiert den Common Language Runtime (CLR), dass der Host keine Änderungen am Sicherheitszustand der Anwendungsdomäne in der <xref:System.AppDomainManager.InitializeNewDomain%2A>-Methode vornimmt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) Methode nimmt einen Parameter vom Typ `EInitializeNewDomainFlags`.  
+ Die [iclrdomainmanager:: abtappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) -Methode nimmt einen Parameter vom Typ "`EInitializeNewDomainFlags`" an.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

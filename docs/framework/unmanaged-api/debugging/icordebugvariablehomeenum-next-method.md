@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHomeEnum::Next-Methode
+title: 'Icordebugvariablehomeerum:: Next-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum.Next
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c2c16789fb61099c9b7c58154810739d225af1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121919"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum::Next-Methode
-Ruft die angegebene Anzahl von [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Instanzen, die Informationen über die lokalen Variablen und Argumente in einer Funktion enthalten.  
+# <a name="icordebugvariablehomeenumnext-method"></a>Icordebugvariablehomeerum:: Next-Methode
+Ruft die angegebene Anzahl von [icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Instanzen ab, die Informationen zu den lokalen Variablen und Argumenten in einer Funktion enthalten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,24 +40,24 @@ HRESULT Next(
  [in] Die Anzahl der abzurufenden Objekte.  
   
  `homes`  
- Ein Array von Zeigern, die jeweils auf eine [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Objekt, das Informationen über eine lokale Variable oder ein Argument einer Funktion.  
+ Ein Array von Zeigern, von denen jedes auf ein [icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Objekt verweist, das Informationen über eine lokale Variable oder ein Argument einer Funktion bereitstellt.  
   
  `pceltFetched`  
- [out] Die Anzahl der Instanzen, die tatsächlich in Objekten zurückgegeben.  
+ vorgenommen Die Anzahl der Instanzen, die in-Objekten tatsächlich zurückgegeben wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte an.  
+ Die-Methode gibt die folgenden Werte zurück.  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|Die Methode wurde erfolgreich abgeschlossen.|  
-|`S_FALSE`|Die tatsächliche Anzahl der Instanzen abgerufen, wie dargestellt in `pceltFetched`, ist kleiner als die Anzahl der Instanzen angefordert.|  
+|`S_FALSE`|Die tatsächliche Anzahl der abgerufenen Instanzen, die sich in `pceltFetched`widerspiegeln, ist geringer als die Anzahl der angeforderten Instanzen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) Methode ruft die maximal `celt` Objekte, die an der aktuellen Position des Enumerators ab. Wenn die Methode zurückgibt, `pceltFetched` enthält die tatsächliche Anzahl von Objekten abgerufen.  
+ Die [icordebugvariablehomeenumeration:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) -Methode ruft ein Maximum von `celt`-Objekten ab, beginnend an der aktuellen Position des Enumerators. Wenn die Methode zurückgegeben wird, enthält `pceltFetched` die tatsächliche Anzahl der abgerufenen Objekte.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

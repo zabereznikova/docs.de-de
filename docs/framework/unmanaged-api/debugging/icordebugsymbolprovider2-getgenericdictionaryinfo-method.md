@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
+title: 'ICorDebugSymbolProvider2:: getgenericdiktattionaryinfo-Methode'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662531"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133630"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: getgenericdiktattionaryinfo-Methode
 
 Ruft eine generische Wörterbuchzuordnung ab.
 
@@ -26,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parameter
 
 `ppMemoryBuffer`\
-[out] Ein Zeiger auf die Adresse einer [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) -Objekt, das die generische wörterbuchzuordnung enthält. Weitere Informationen finden Sie im Abschnitt Hinweise.
+vorgenommen Ein Zeiger auf die Adresse eines [icorentbugmemorybuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) -Objekts, das die generische Wörterbuch Zuordnung enthält. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -35,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
 
 Die Zuordnung besteht aus zwei Abschnitten auf oberster Ebene:
 
-- Ein [Directory](#Directory) mit den relativen virtuellen Adressen (RVA) aller Wörterbücher, die in dieser Zuordnung enthalten.
+- Ein [Verzeichnis](#Directory) mit den relativen virtuellen Adressen (RVA) aller Wörterbücher, die in dieser Zuordnung enthalten sind.
 
-- Einem byteausgerichteten [Heap](#Heap) , die Informationen zur Objektinstanziierung enthält. Er beginnt unmittelbar nach dem letzten Verzeichniseintrag.
+- Ein Byte-ausgerichteter [Heap](#Heap) , der objektinstanziationsinformationen enthält. Er beginnt unmittelbar nach dem letzten Verzeichniseintrag.
 
 <a name="Directory"></a>
 
@@ -47,13 +45,13 @@ Jeder Eintrag im Verzeichnis verweist auf einen Offset innerhalb des Heaps. Dies
 
 Der Verzeichnisteil der generischen Wörterbuchzuordnung weist die folgende Struktur auf:
 
-- Die ersten 4 Bytes enthalten die Anzahl der Wörterbucheinträge (d. h. die Anzahl der relativen virtuellen Adressen im Wörterbuch). Wir bezeichnen diesen Wert als *N*. Wenn das High-Bit festgelegt ist, werden die Einträge anhand der relativen virtuellen Adresse in aufsteigender Reihenfolge sortiert.
+- Die ersten 4 Bytes enthalten die Anzahl der Wörterbucheinträge (d. h. die Anzahl der relativen virtuellen Adressen im Wörterbuch). Dieser Wert wird als *N*bezeichnet. Wenn das hohe Bit festgelegt ist, werden die Einträge anhand der relativen virtuellen Adresse in aufsteigender Reihenfolge sortiert.
 
-- Die *N* Verzeichniseinträge folgen. Jeder Eintrag besteht aus 8 Bytes in zwei 4-Byte-Segmenten:
+- Die *N* -Verzeichniseinträge folgen. Jeder Eintrag besteht aus 8 Bytes in zwei 4-Byte-Segmenten:
 
-  - Bytes 0-3: RVA; relative virtuelle Adresse des Wörterbuchs.
+  - Bytes 0 - 3: RVA - die relative virtuelle Adresse des Wörterbuchs.
 
-  - Bytes 4-7: Offset; ein Offset relativ zum Beginn des Heaps.
+  - Bytes 4 - 7: Offset - ein Offset relativ zum Beginn des Heaps.
 
 <a name="Heap"></a>
 
@@ -71,15 +69,15 @@ Das folgende Format wird für jedes Instanziierungsinformationselement auf dem H
 
 - Die Länge dieses Instanziierungsinformationselements in Bytes im komprimierten ECMA-Metadatenformat. Der Wert schließt diese Längeninformationen aus.
 
-- Die Anzahl der generischen instanziierungstypen oder *T*, im komprimierten ECMA-Metadatenformat.
+- Die Anzahl der generischen instanziationstypen oder *T*im komprimierten ECMA-Metadatenformat.
 
-- *T* Typen, die jeweils im ECMA-typsignaturformat dargestellt.
+- *T* -Typen, die jeweils im ECMA-Typsignatur Format dargestellt werden.
 
 Die Berücksichtigung der Länge für jedes Heapelement ermöglicht eine einfache Sortierung des Verzeichnisabschnitts ohne Auswirkungen auf den Heap.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 

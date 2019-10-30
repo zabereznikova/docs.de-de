@@ -1,17 +1,15 @@
 ---
-title: ICorDebugInstanceFieldSymbol::GetOffset-Methode
+title: 'Icordebuginstancefieldsymbol:: gedeffset-Methode'
 ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 453f691f414050905f5d73e201ebeed79e2aaf50
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3886e29a1c2fd44fbe50d1eef722f99da7abdbe5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139014"
 ---
-# <a name="icordebuginstancefieldsymbolgetoffset-method"></a>ICorDebugInstanceFieldSymbol::GetOffset-Methode
+# <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Icordebuginstancefieldsymbol:: gedeffset-Methode
 Ruft den Offset dieses Instanzenfelds in der übergeordneten Klasse in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,11 +30,11 @@ HRESULT GetOffset(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

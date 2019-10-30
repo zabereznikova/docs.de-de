@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140899"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification-Methode
 Stellt eine Rückruffunktion bereit, die garantiert aufgerufen wird, wenn eine Common Language Runtime (CLR)-Version zum ersten Mal geladen, aber noch nicht gestartet wurde. Diese Methode löst die [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) -Funktion aus.  
@@ -78,23 +76,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Wenn der Host geladen werden soll oder eine andere Laufzeit in eine Einstiegs Weise geladen werden soll, müssen die `pfnCallbackThreadSet` -und- `pfnCallbackThreadUnset` Parameter, die in der Rückruffunktion bereitgestellt werden, wie folgt verwendet werden:  
+ Wenn der Host geladen werden soll oder eine andere Laufzeit in eine Einstiegs Weise geladen werden soll, müssen die in der Rückruffunktion bereitgestellten `pfnCallbackThreadSet`-und `pfnCallbackThreadUnset` Parameter wie folgt verwendet werden:  
   
-- `pfnCallbackThreadSet`muss vom Thread aufgerufen werden, der eine Lauf Zeit Auslastung verursachen kann, bevor ein solcher Ladevorgang versucht wird.  
+- `pfnCallbackThreadSet` müssen von dem Thread aufgerufen werden, der eine Lauf Zeit Auslastung verursachen kann, bevor ein solcher Ladevorgang versucht wird.  
   
-- `pfnCallbackThreadUnset`muss aufgerufen werden, wenn der Thread eine solche Lauf Zeit Auslastung nicht mehr bewirkt (und bevor der anfängliche Rückruf zurückgegeben wird).  
+- `pfnCallbackThreadUnset` müssen aufgerufen werden, wenn der Thread eine solche Lauf Zeit Auslastung nicht mehr bewirkt (und bevor der anfängliche Rückruf zurückgegeben wird).  
   
-- `pfnCallbackThreadSet`und `pfnCallbackThreadUnset` sind beide nicht Wiedereintritts fähig.  
+- `pfnCallbackThreadSet` und `pfnCallbackThreadUnset` sind nicht Wiedereintritts fähig.  
   
 > [!NOTE]
-> Host Anwendungen dürfen nicht und `pfnCallbackThreadSet` `pCallbackFunction` außerhalb `pfnCallbackThreadUnset` des Gültigkeits Bereichs des-Parameters aufrufen.  
+> Host Anwendungen dürfen `pfnCallbackThreadSet` nicht aufrufen und `pfnCallbackThreadUnset` außerhalb des Bereichs des `pCallbackFunction`-Parameters.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

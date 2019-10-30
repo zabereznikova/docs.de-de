@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db6f39119d143d27c0d3a80a9c65565d4dfd0d39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140675"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW-Funktion
 Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge angegebenen Datei.  
@@ -51,20 +49,20 @@ HRESULT GetHashFromFileW (
  vorgenommen Ein Bytearray, das den generierten Hash enthält.  
   
  `cchHash`  
- in Die maximale Puffergröße, auf die von verwiesen `pbHash`wird.  
+ in Die maximale Größe des Puffers, auf den `pbHash`zeigt.  
   
  `pchHash`  
- vorgenommen Die Größe von `pbHash`in Bytes.  
+ vorgenommen Die Größe `pbHash`in Byte.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Funktion ist mit [GetHashFromFile](gethashfromfile-function.md)identisch, mit der Ausnahme, dass die Dateinamen Spezifikation anstelle von ANSI Unicode ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** StrongName. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

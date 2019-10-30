@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Datenbindung in Windows Forms-DataGridView-Steuerelement'
+title: 'Gewusst wie: Binden von Daten an das Windows Forms DataGridView-Steuerelement'
 ms.date: 02/08/2019
 dev_langs:
 - csharp
@@ -9,40 +9,38 @@ helpviewer_keywords:
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e147109a64687177f201ad1e312fab56ea61d604
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdba8af04cd9473b17d1a28f07ead7cd5bf43698
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139093"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Vorgehensweise: Datenbindung in Windows Forms-DataGridView-Steuerelement
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Gewusst wie: Binden von Daten an das Windows Forms DataGridView-Steuerelement
 
-Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit es mit einer Vielzahl von Datenquellen gebunden werden kann. In der Regel Sie binden an eine <xref:System.Windows.Forms.BindingSource> , verwaltet die Interaktion mit der Datenquelle. Die <xref:System.Windows.Forms.BindingSource> kann jede beliebige Windows Forms-Datenquelle, die Ihnen viel Flexibilität bei der Auswahl oder Änderung des Daten Speicherorts bietet sein. Weitere Informationen zu den Datenquellen der <xref:System.Windows.Forms.DataGridView> Steuerelement unterstützt, finden Sie die [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md).  
+Das <xref:System.Windows.Forms.DataGridView>-Steuerelement unterstützt das Standardmodell für die Windows Forms-Datenbindung, sodass es an eine Vielzahl von Datenquellen gebunden werden kann. Normalerweise binden Sie an eine <xref:System.Windows.Forms.BindingSource>, die die Interaktion mit der Datenquelle verwaltet. Der <xref:System.Windows.Forms.BindingSource> kann eine beliebige Windows Forms Datenquelle sein, die Ihnen bei der Auswahl oder Änderung des Speicher Orts Ihrer Daten eine hohe Flexibilität bietet. Weitere Informationen zu Datenquellen, die das <xref:System.Windows.Forms.DataGridView> Steuerelement unterstützt, finden Sie unter [Übersicht über das DataGridView-Steuer](datagridview-control-overview-windows-forms.md)Element.  
 
-Visual Studio bietet umfassende Unterstützung für die Datenbindung an das DataGridView-Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten an das Windows Forms-DataGridView-Steuerelement, das mithilfe des Designers](bind-data-to-the-datagrid-using-the-designer.md).  
+Visual Studio bietet umfangreiche Unterstützung für die Datenbindung an das DataGridView-Steuerelement. Weitere Informationen finden Sie unter Gewusst [wie: Binden von Daten an das Windows Forms DataGridView-Steuerelement mithilfe des Designers](bind-data-to-the-datagrid-using-the-designer.md).  
 
-So verbinden ein DataGridView-Steuerelement mit Daten:
+So verbinden Sie ein DataGridView-Steuerelement mit Daten:
 
-1. Implementieren Sie eine Methode, um die Details zum Abrufen der Daten zu behandeln. Das folgende Codebeispiel implementiert eine `GetData` -Methode, initialisiert ein <xref:System.Data.SqlClient.SqlDataAdapter>, und verwendet ihn zum Auffüllen einer <xref:System.Data.DataTable>. Klicken Sie dann bindet die <xref:System.Data.DataTable> auf die <xref:System.Windows.Forms.BindingSource>. 
+1. Implementieren Sie eine Methode, um die Details zum Abrufen der Daten zu behandeln. Im folgenden Codebeispiel wird eine `GetData`-Methode implementiert, die ein <xref:System.Data.SqlClient.SqlDataAdapter>initialisiert und zum Auffüllen eines <xref:System.Data.DataTable>verwendet. Anschließend wird der <xref:System.Data.DataTable> an den <xref:System.Windows.Forms.BindingSource>gebunden. 
 
-2. Des Formulars <xref:System.Windows.Forms.Form.Load> Ereignishandler, binden die <xref:System.Windows.Forms.DataGridView> die Steuerung an die <xref:System.Windows.Forms.BindingSource>, und rufen Sie die `GetData` Methode zum Abrufen der Daten.  
+2. Binden Sie im <xref:System.Windows.Forms.Form.Load> Ereignishandler des Formulars das <xref:System.Windows.Forms.DataGridView> Steuerelement an die <xref:System.Windows.Forms.BindingSource>, und rufen Sie die `GetData`-Methode auf, um die Daten abzurufen.  
 
 ## <a name="example"></a>Beispiel
 
-Dieser vollständige Codebeispiel ruft Daten ab, aus einer Datenbank in einem DataGridView-Steuerelement in einem Windows-Formular zu füllen. Das Formular verfügt auch über die Schaltflächen zum Laden von Daten und Übermitteln von Änderungen an der Datenbank.  
+Dieses vollständige Codebeispiel ruft Daten aus einer Datenbank ab, um ein DataGridView-Steuerelement in einem Windows Form aufzufüllen. Das Formular enthält auch Schaltflächen zum erneuten Laden von Daten und Übermitteln von Änderungen an die Datenbank.  
 
 Für dieses Beispiel benötigen Sie Folgendes: 
 
-- Zugriff mit der Beispieldatenbank Northwind-SQL Server. Weitere Informationen zum Installieren der Beispieldatenbank Northwind finden Sie unter [erhalten Sie die Beispieldatenbanken ADO.NET Codebeispiele](../../data/adonet/sql/linq/downloading-sample-databases.md). 
+- Zugriff auf eine Beispieldatenbank für Northwind SQL Server. Weitere Informationen zum Installieren der Beispieldatenbank Northwind finden Sie unter [Get the Sample Database for ADO.NET Code Samples](../../data/adonet/sql/linq/downloading-sample-databases.md). 
 
-- Verweise auf die Assemblys System, "System.Windows.Forms", "System.Data" und "System.xml".  
+- Verweise auf die Assemblys "System", "System. Windows. Forms", "System. Data" und "System. xml"  
 
-Fügen Sie zum Erstellen und dieses Beispiel ausführen, die den Code in die *Form1* Codedatei in einem neuen Windows Forms-Projekt. Informationen zum Erstellen von der C# oder Visual Basic über die Befehlszeile, finden Sie unter [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) oder [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+Um dieses Beispiel zu erstellen und auszuführen, fügen Sie den Code in ein neues Windows Forms Projekt in die *Form1* -Codedatei ein. Weitere Informationen zum Erstellen von über C# die oder Visual Basic Befehlszeile finden Sie unter Erstellen von [Befehlszeilen mit "csc. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) " oder [Erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
-Füllen Sie die `connectionString` Variable im Beispiel durch die Werte für Ihre Beispieldatenbank Northwind-SQL Server-Verbindung. Windows-Authentifizierung, integrierte Sicherheit, so genannte ist eine sicherere Methode für die Verbindung mit der Datenbank als ein Kennwort in der Verbindungszeichenfolge speichern. Weitere Informationen zur verbindungssicherheit finden Sie unter [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md).  
+Füllen Sie die `connectionString` Variable im Beispiel mit den Werten für die Northwind-SQL Server Beispiel Datenbankverbindung. Die Windows-Authentifizierung (auch als integrierte Sicherheit bezeichnet) ist eine sicherere Möglichkeit zum Herstellen einer Verbindung mit der Datenbank als das Speichern eines Kennworts in der Verbindungs Zeichenfolge. Weitere Informationen zur Verbindungssicherheit finden Sie unter [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md).  
 
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
@@ -52,5 +50,5 @@ Füllen Sie die `connectionString` Variable im Beispiel durch die Werte für Ihr
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
-- [Anzeigen von Daten in Windows Forms-DataGridView-Steuerelement](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md)
+- [Anzeigen von Daten im Windows Forms DataGridView-Steuerelement](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Verbindungsinformationen schützen](../../data/adonet/protecting-connection-information.md)

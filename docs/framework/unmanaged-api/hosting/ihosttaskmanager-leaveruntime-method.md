@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ac1c18d094deca50d461ef9ff0933a4f87176e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959042"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132990"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime-Methode
 Benachrichtigt den Host, dass die derzeit ausgeführte Aufgabe im Begriff ist, die Common Language Runtime (CLR) zu verlassen und nicht verwalteten Code einzugeben.  
@@ -46,7 +44,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`wurde erfolgreich zurückgegeben.|  
+|S_OK|`LeaveRuntime` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -55,7 +53,7 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Zuordnung abzuschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Aufrufe von Sequenzen in und aus nicht verwaltetem Code können eingebettet werden. In der folgenden Liste wird z. b. eine hypothetische Situation beschrieben, in der `LeaveRuntime`die Sequenz von Aufrufen von, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), und `IHostTaskManager::EnterRuntime` ermöglicht dem Host das Identifizieren Sie die unter-und-Ebenen.  
+ Die Aufrufe von Sequenzen in und aus nicht verwaltetem Code können eingebettet werden. In der folgenden Liste wird z. b. eine hypothetische Situation beschrieben, in der die Sequenz von Aufrufen von `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)und `IHostTaskManager::EnterRuntime` das Erkennen des die-Ebenen.  
   
 |Aktion|Entsprechender Methodenaufrufe|  
 |------------|-------------------------------|  
@@ -67,11 +65,11 @@ HRESULT LeaveRuntime (
 |Die erste nicht verwaltete Funktion gibt die Ausführung an das Visual Basic Programm zurück.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

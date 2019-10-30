@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045681"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129980"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  Wenn die Textdatei doppelte Vorkommen von *name* enthält, zeigt der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) eine Warnung an und ignoriert den zweiten Namen.
 
- *value* darf keine Neue-Zeile-Zeichen enthalten. Sie können aber Escapezeichen im C-Stil verwenden, z.B. `\n` für eine neue Zeile oder `\t` für einen Tabstopp. Sie können einen umgekehrten Schrägstrich verwenden, wenn er mit Escapezeichen versehen wird (beispielsweise \\\\). Darüber hinaus ist eine leere Zeichenfolge zulässig.
+ der *Wert* darf keine neuen Zeilenzeichen enthalten, Sie können jedoch Escapezeichen im C-Stil verwenden, wie z. b. `\n`, um eine neue Zeile darzustellen, und `\t`, um eine Registerkarte darzustellen. Sie können auch einen umgekehrten Schrägstrich einschließen, wenn er mit Escapezeichen versehen ist (z. b. "\\\\"). Darüber hinaus ist eine leere Zeichenfolge zulässig.
 
  Sie sollten Ressourcen im Textdateiformat mit UTF-8-Codierung oder UTF-16-Codierung entweder in Little-Endian oder Big-Endian-Bytereihenfolge speichern. Obwohl der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) TXT-Dateien in RESOURCES-Dateien konvertiert, behandelt er Dateien standardmäßig als UTF-8. Wenn "Resgen.exe" eine als UTF-16 codierte Datei erkennen soll, müssen Sie am Anfang der Datei eine Unicode-Bytereihenfolgemarkierung (U+FEFF) angeben.
 
@@ -208,4 +206,4 @@ Zur Kompilierzeit werden von Visual Studio zuerst die RESX-Dateien in einem Proj
 
 - <xref:System.Resources>
 - [Ressourcen in Desktop-Apps](index.md)
-- [Verpacken und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packen und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md)

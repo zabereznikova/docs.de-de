@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7d3325c8aee44849ff1fb7a6cc06a0ed7c2c6f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f3511ff5ee9b9221037c64a5e17d61f6bf52e5f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769101"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133421"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState-Methode
-Ruft den aktuellen Benutzerzustand dieses ICorDebugThread ab.  
+Ruft den aktuellen Benutzer Zustand dieses ICorDebugThread ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetUserState (
   
 ## <a name="parameters"></a>Parameter  
  `pState`  
- [out] Ein Zeiger auf eine bitweise Kombination von CorDebugUserState-Enumerationswerte, die den aktuellen Benutzerzustand dieses Threads beschreiben.  
+ vorgenommen Ein Zeiger auf eine bitweise Kombination von CorDebugUserState-Enumerationswerten, die den aktuellen Benutzer Zustand dieses Threads beschreiben.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Benutzerzustand des Threads ist der Zustand des Threads an, wenn er von der Anwendung überprüft wird, der debuggt wird. Ein Thread möglicherweise mehrere Statusbits festgelegt.  
+ Der Benutzer Zustand des Threads ist der Zustand des Threads, wenn er von dem Programm überprüft wird, das gerade deentschlgt wird. Für einen Thread sind möglicherweise mehrere State-Bits festgelegt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

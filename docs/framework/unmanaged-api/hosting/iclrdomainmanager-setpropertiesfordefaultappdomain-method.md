@@ -13,17 +13,15 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cfd7c835cdc4b53c753d714216d1745eb0b80c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37919be2d0ebd7d243615bc5845b0781ac13e574
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129316"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain-Methode
-Legt die Eigenschaften, die zum Initialisieren der Standardanwendungsdomäne verwendet werden.  
+Legt Eigenschaften fest, die verwendet werden, um die Standard Anwendungsdomäne zu initialisieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
 ## <a name="parameters"></a>Parameter  
  `nProperties`  
- [in] Die Anzahl der Einträge im `pwszPropertyNames` und `pwszPropertyValues`.  
+ in Die Anzahl der Einträge in `pwszPropertyNames` und `pwszPropertyValues`.  
   
  `pwszPropertyNames`  
- [in] Ein Array von Eigenschaftennamen oder Null, wenn keine Eigenschaften vorhanden sind. Derzeit ist der einzige Eigenschaftenname, der von dieser Methode erkannt wird, "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
+ in Ein Array von Eigenschaften Namen oder NULL, wenn keine Eigenschaften vorhanden sind. Derzeit ist der einzige Eigenschaftsname, der von dieser Methode erkannt wird, "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
   
  `pwszPropertyValues`  
- [in] Ein Array von Eigenschaftswerten oder Null, wenn keine Eigenschaften vorhanden sind.  
+ in Ein Array von Eigenschafts Werten oder NULL, wenn keine Eigenschaften vorhanden sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -51,17 +49,17 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` enthält einen Eigenschaftennamen an, der von dieser Methode nicht erkannt wird.|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` enthält einen Eigenschaftsnamen, der von dieser Methode nicht erkannt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Eigenschaftswert für "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" ist eine Liste der Assemblys, die bedingte <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA), mit der <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> -Flag, das in der standardanwendung für teilweise vertrauenswürdige Aufrufer sichtbar gemacht werden sollen die Domäne.  
+ Der Eigenschafts Wert für "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" ist eine Liste von Assemblys mit dem Conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut (APTCA) mit dem <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType>-Flag, die für teilweise vertrauenswürdige Aufrufer in der Standard Anwendungsdomäne sichtbar gemacht werden sollen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

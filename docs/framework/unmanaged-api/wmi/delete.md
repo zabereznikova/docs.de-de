@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127669"
 ---
 # <a name="delete-function"></a>Delete-Funktion
 
@@ -48,7 +46,7 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`\
-in Der Name der zu löschenden Eigenschaft. `wszName`muss ein Zeiger auf einen gültigen `LPCWSTR`sein.
+in Der Name der zu löschenden Eigenschaft. `wszName` muss ein Zeiger auf einen gültigen `LPCWSTR`sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -59,7 +57,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 | `WBEM_E_FAILED` | 0x80041001 | Ein nicht angegebener Fehler ist aufgetreten. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Die Eigenschaft kann nicht gelöscht werden. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` ist ungültig. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft ist nicht vorhanden. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 angezeigt | Die angegebene Eigenschaft ist nicht vorhanden. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Die-Eigenschaft wird von einer Basisklasse geerbt. |
 | `WBEM_E_SYSTEM_PROPERTY` | | Die-Eigenschaft ist eine System Eigenschaft. |
@@ -72,9 +70,9 @@ Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject::D Elete
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

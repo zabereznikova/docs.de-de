@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3f958d41-e82e-4ec3-ae6f-16c7b3b31e3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15ce6b589beb6c8b30ff4e8b16440c8110cc466b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136891"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool-Funktion
-Markiert den aktuell ausgeführten Thread aus dem Threadpool für die Ausführung von verwaltetem Code. Ab .NET Framework Version 2.0 besitzt diese Funktion keine Auswirkungen. Sie ist nicht erforderlich und kann aus dem Code entfernt werden. Diese Funktion ist in .NET Framework 4 veraltet.  
+Markiert den aktuell ausgeführten Thread aus dem Threadpool für die Ausführung von verwaltetem Code. Ab .NET Framework Version 2.0 besitzt diese Funktion keine Auswirkungen. Sie ist nicht erforderlich und kann aus dem Code entfernt werden. Diese Funktion ist in der .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,11 +31,11 @@ void CorMarkThreadInThreadPool ();
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

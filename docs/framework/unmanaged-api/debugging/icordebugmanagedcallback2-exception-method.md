@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137453"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception-Methode
 Benachrichtigt den Debugger, dass eine Suche nach einem Ausnahmehandler gestartet wurde.  
@@ -42,39 +40,39 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das mit dem Thread, der auf dem die Ausnahme ausgelöst wurde der Anwendungsdomäne darstellt.  
+ in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne mit dem Thread darstellt, für den die Ausnahme ausgelöst wurde.  
   
  `pThread`  
- [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, auf dem die Ausnahme ausgelöst wurde.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, für den die Ausnahme ausgelöst wurde.  
   
  `pFrame`  
- [in] Ein Zeiger auf ein ICorDebugFrame-Objekt, das einen Frame darstellt, durch die `dwEventType` Parameter. Weitere Informationen finden Sie in der Tabelle im Abschnitt "Hinweise".  
+ in Ein Zeiger auf ein ICorDebug Frame-Objekt, das einen Frame darstellt, wie vom `dwEventType`-Parameter festgelegt. Weitere Informationen finden Sie in der Tabelle im Abschnitt "Hinweise".  
   
  `nOffset`  
- [in] Eine ganze Zahl, die einen Offset angibt, laut der `dwEventType` Parameter. Weitere Informationen finden Sie in der Tabelle im Abschnitt "Hinweise".  
+ in Eine ganze Zahl, die einen Offset angibt, der vom `dwEventType`-Parameter bestimmt wird. Weitere Informationen finden Sie in der Tabelle im Abschnitt "Hinweise".  
   
  `dwEventType`  
- [in] Der Wert CorDebugExceptionCallbackType-Enumeration, die der den von diesem Ausnahmerückruf angibt.  
+ in Ein Wert der CorDebugExceptionCallbackType-Enumeration, der den Typ dieses Ausnahme Rückrufs angibt.  
   
  `dwFlags`  
- [in] Der Wert der [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) Enumeration, die zusätzliche Informationen über die Ausnahme angibt.  
+ in Ein Wert der [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) -Enumeration, der zusätzliche Informationen über die Ausnahme angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Exception` Rückruf zu verschiedenen Zeitpunkten während der Suche Phase des Prozesses für die Ausnahmebehandlung aufgerufen wird. D. h. es kann aufgerufen werden, mehr als einmal während eine Ausnahme entladen.  
+ Der `Exception` Rückruf wird an verschiedenen Punkten während der Suchphase des Ausnahme Behandlungsprozesses aufgerufen. Das heißt, dass Sie mehrmals aufgerufen werden kann, während Sie eine Ausnahme entwickeln.  
   
- Die Ausnahme, die verarbeitet werden kann abgerufen werden, aus der ICorDebugThread-Objekt, das auf die `pThread` Parameter.  
+ Die zu verarbeitende Ausnahme kann aus dem ICorDebugThread-Objekt abgerufen werden, auf das durch den `pThread`-Parameter verwiesen wird.  
   
- Der bestimmten Frame und Offset hängen von der `dwEventType` Parameter wie folgt:  
+ Der jeweilige Frame und der Offset werden vom `dwEventType`-Parameter wie folgt bestimmt:  
   
 |Wert von `dwEventType`|Wert von `pFrame`|Wert von `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Der Frame, der die Ausnahme ausgelöst hat.|Der Anweisungszeiger im Frame.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Der Rahmen Benutzercode dem Punkt der ausgelösten Ausnahme am nächsten ist.|Der Anweisungszeiger im Frame.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Der Frame, der den Catch-Handler enthält.|Der Microsoft intermediate Language (MSIL)-Offset des Anfangs des Catch-Handler.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Ist nicht definiert.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Der Frame, der die Ausnahme ausgelöst hat.|Der Anweisungs Zeiger im Frame.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Der Benutzercode Rahmen, der dem Punkt der ausgelösten Ausnahme am nächsten ist.|Der Anweisungs Zeiger im Frame.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Der Frame, der den catch-Handler enthält.|Der MSIL-Offset (Microsoft Intermediate Language) am Anfang des catch-Handlers.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Definiert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

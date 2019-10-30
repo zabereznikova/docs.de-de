@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc647805fcb7d8354a2540ac9424dc7155853444
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b024d3396dfe1796fcb18afa122d4aee39c4ccc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132721"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames-Methode
-Ruft einen Enumerator, der alle verwalteten Stapelrahmen in der Kette, enthält der letzten Frame ab.  
+Ruft einen Enumerator ab, der alle verwalteten Stapel Rahmen in der Kette enthält, beginnend mit dem letzten Frame.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT EnumerateFrames (
   
 ## <a name="parameters"></a>Parameter  
  `ppFrames`  
- [out] Ein Zeiger auf die Adresse des ICorDebugFrameEnum-Objekts, das den Enumerator für Stapelrahmen.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebug-Objekts, das der Enumerator für die Stapel Rahmen ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Kette stellt die physische Aufrufliste für den Thread dar.  
+ Die Kette stellt die physische aufrufsstapel für den Thread dar.  
   
- Die `EnumerateFrames` -Methode nur für verwaltete Ketten aufgerufen werden soll. Die Debug-API bietet keine Methoden zum Abrufen von Frames, die in nicht verwalteten Ketten. Der Debugger muss anderweitig verwenden, um diese Informationen abzurufen.  
+ Die `EnumerateFrames`-Methode sollte nur für verwaltete Ketten aufgerufen werden. Die Debug-API stellt keine Methoden zum Abrufen von Frames bereit, die in nicht verwalteten Ketten enthalten sind. Der Debugger muss andere Mittel zum Abrufen dieser Informationen verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

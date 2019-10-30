@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f334b4a28b0573fa938c2fda340c0c03175ff18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138518"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next-Methode
-Ruft die angegebene Anzahl von [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Instanzen, die GUIDs, die Typinformationen zuordnen.  
+Ruft die angegebene Anzahl von [cordebugguidtoidetypemapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) -Instanzen ab, die GUIDs Typinformationen zuordnen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +37,13 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der auf den Typ GUID Zuordnen von Objekten abgerufen werden sollen.  
+ in Die Anzahl der abzurufenden GUID-zu-Typ-Zuordnungsobjekte.  
   
  `values`  
- [out] Ein Array von Zeigern, die jeweils auf eine [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Objekt, eine Windows-Runtime-GUID mit der entsprechenden ICorDebugType-Objekt zugeordnet, ist.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein [cordebugguidtotypemapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) -Objekt verweist, das eine Windows-Runtime GUID dem entsprechenden ICorDebugType-Objekt zuordnet.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) tatsächlich zurückgegebenen Objekte `values`.  
+ vorgenommen Ein Zeiger auf die Anzahl der [Cordebug](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) -Objekte, die tatsächlich in `values`zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
   

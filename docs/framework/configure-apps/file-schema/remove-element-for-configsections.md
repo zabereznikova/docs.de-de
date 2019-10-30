@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f57dc9279c107ce751f71c2998670ab992db162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927456"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118437"
 ---
-# <a name="remove-element-for-configsections"></a>\<Entfernen Sie > Element \<für configabschnitts >
+# <a name="remove-element-for-configsections"></a>\<> Element für \<configabschnitts entfernen >
 
 Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;[ **\<configabschnitts >** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<entfernen >**
 
 ## <a name="syntax"></a>Syntax
@@ -40,21 +40,21 @@ Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können das  **\<remove >** -Element verwenden, um Abschnitts-und Abschnitts Gruppen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
+Sie können das **\<remove >** -Element verwenden, um Abschnitts-und Abschnitts Gruppen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie das  **\<remove >** -Element in einer Anwendungs Konfigurationsdatei verwendet wird, um einen Abschnitt zu entfernen, der zuvor in der Computer Konfigurationsdatei definiert wurde.
+Im folgenden Beispiel wird gezeigt, wie das **\<remove >** -Elements in einer Anwendungs Konfigurationsdatei verwendet wird, um einen Abschnitt zu entfernen, der zuvor in der Computer Konfigurationsdatei definiert wurde.
 
-Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt  **\<sampleSection->** :
+Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt **\<sampleSection->** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt  **\
 </configuration>
 ```
 
-Der folgende Anwendungs Konfigurationsdatei-Code entfernt den  **\<Abschnitt "Sample section >** ". Nach dem Entfernen kann die Anwendung die Einstellungen nicht mehr in  **\<sampleSection >** abrufen.
+Der folgende Anwendungs Konfigurationsdatei-Code entfernt den Abschnitt **\<Sample section >** . Nach dem Entfernen kann die Anwendung die Einstellungen nicht mehr in **\<sampleSection->** abrufen.
 
 ```xml
 <!-- Application configuration file -->

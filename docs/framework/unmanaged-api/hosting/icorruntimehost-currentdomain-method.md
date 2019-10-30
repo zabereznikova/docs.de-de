@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa6bc844d2c6629085b0596127c0b51b99357d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2249d10159b1ff0be7ead0783efb8a2742d26b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766351"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139604"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain-Methode
-Ruft einen Schnittstellenzeiger vom Typ <xref:System.AppDomain?displayProperty=nameWithType> , das die Domäne geladen werden, für den aktuellen Thread darstellt.  
+Ruft einen Schnittstellen Zeiger vom Typ <xref:System.AppDomain?displayProperty=nameWithType> ab, der die Domäne darstellt, die für den aktuellen Thread geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,25 +35,25 @@ HRESULT CurrentDomain (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [out] Ein Zeiger des Typs <xref:System.AppDomain?displayProperty=nameWithType> , das aktuelle Anwendungsdomäne des Threads darstellt. Dieser Zeiger wird als `IUnknown`, sodass Aufrufer, in der Regel aufrufen müssen `QueryInterface` einen Zeiger des Typs abrufen <xref:System._AppDomain>.  
+ vorgenommen Ein Zeiger vom Typ <xref:System.AppDomain?displayProperty=nameWithType>, der die aktuelle Anwendungsdomäne des Threads darstellt. Dieser Zeiger ist `IUnknown`typisiert. Daher sollten Aufrufer im allgemeinen `QueryInterface` abrufen, um einen Zeiger vom Typ <xref:System._AppDomain>zu erhalten.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Der Vorgang war erfolgreich.|  
-|S_FALSE|Der Vorgang konnte nicht abgeschlossen.|  
-|E_FAIL|Ein Unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
+|S_FALSE|Der Vorgang konnte nicht ausgeführt werden.|  
+|E_FAIL|Ein unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die Common Language Runtime (CLR) im Prozess nicht mehr verwendet werden. Nachfolgende Aufrufe von Hosting-APIs geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** 1.0, 1.1  
+ **.NET Framework Versionen:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04b8ac6751024e64cc866fce1cfe72fb42e41200
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4518637eb47acf416a02c045f8ca6f8a90167277
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130785"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess-Methode
-Benachrichtigt den Debugger an, dass ein Prozess beendet wurde.  
+Benachrichtigt den Debugger, dass ein Prozess beendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Parameter  
  `pProcess`  
- [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt.  
+ in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können nicht fortgesetzt werden, von einem `ExitProcess` Ereignis. Dieses Ereignis kann asynchron mit anderen Ereignissen ausgelöst werden, während der Prozess angezeigt wird, beendet werden soll. Dies kann auftreten, wenn der Prozess beendet wird, während angehalten, in der Regel aufgrund von einigen externen erzwingen.  
+ Die Fortsetzung eines `ExitProcess` Ereignisses ist nicht möglich. Dieses Ereignis wird möglicherweise asynchron für andere Ereignisse ausgelöst, während der Prozess scheinbar beendet ist. Dies kann vorkommen, wenn der Prozess beendet wird, in der Regel aufgrund externer Kraft.  
   
- Wenn die common Language Runtime (CLR) bereits einen verwalteten Rückruf sendet, wird dieses Ereignis bis verzögert werden, nachdem dieser Rückruf zurückgegeben wurde.  
+ Wenn die Common Language Runtime (CLR) bereits einen verwalteten Rückruf sendet, wird dieses Ereignis verzögert, bis dieser Rückruf zurückgegeben wurde.  
   
- Die `ExitProcess` Ereignis ist das einzige Beenden/Entladen-Ereignis, die mit Sicherheit beim Herunterfahren aufgerufen wird.  
+ Das `ExitProcess` Ereignis ist das einzige Ereignis zum Beenden/entladen, das beim Herunterfahren garantiert aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

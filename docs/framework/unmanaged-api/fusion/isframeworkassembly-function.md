@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796315"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123070"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly-Funktion
 Ruft einen Wert ab, der angibt, ob die angegebene Assembly verwaltet wird.  
@@ -51,14 +49,14 @@ HRESULT IsFrameworkAssembly (
  [in] Die Größe des `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Hinweise  
- Der `pwzAssemblyReference` -Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
+ Der `pwzAssemblyReference`-Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
   
- Wenn diese Assembly Teil des .NET Framework ist, enthält der `pbIsFrameworkAssembly` -Parameter den booleschen `true`Wert.  
+ Wenn diese Assembly Teil des .NET Framework ist, enthält der `pbIsFrameworkAssembly` Parameter den booleschen Wert `true`.  
   
- Wenn die benannte Assembly nicht Teil der .NET Framework ist, oder wenn der `pwzAssemblyReference` -Parameter keine Assembly benannt hat, `pbIsFrameworkAssembly` enthält einen booleschen Wert von `false`.  
+ Wenn die benannte Assembly nicht Teil der .NET Framework ist, oder wenn der `pwzAssemblyReference` Parameter keine Assembly benannt hat, enthält `pbIsFrameworkAssembly` den booleschen Wert `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

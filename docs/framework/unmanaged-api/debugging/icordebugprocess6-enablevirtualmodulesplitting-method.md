@@ -2,14 +2,12 @@
 title: ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8bd06dd3f58a1f74fbdb5ec61c4896f5c1696856
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32648f40046959ffd8676fe67a1e0a123b0e801f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931059"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123508"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 Aktiviert oder deaktiviert die virtuelle Modulteilung.  
@@ -46,7 +44,7 @@ HRESULT EnableVirtualModuleSplitting(
  reguläre Module  
  Module, die zur Zeit der Erstellung nicht zusammengeführt wurden. Hierbei handelt es sich weder um Containermodule noch um untergeordnete Module.  
   
- Containermodule und untergeordnete Module werden durch ICorDebug Module-Schnittstellen Objekte dargestellt. Das Verhalten der-Schnittstelle unterscheidet sich jedoch in jedem Fall geringfügig, \<wie im Abschnitt "x-ref to section >" beschrieben.  
+ Containermodule und untergeordnete Module werden durch ICorDebug Module-Schnittstellen Objekte dargestellt. Das Verhalten der-Schnittstelle unterscheidet sich jedoch in jedem Fall geringfügig, wie im Abschnitt \<x-ref to section > beschrieben.  
   
 ## <a name="modules-and-assemblies"></a>Module und Assemblys  
  Assemblys mit mehreren Modulen werden nicht bei Zusammenführungen nicht unterstützt, somit stehen ein Modul und eine Assembly im Verhältnis 1:1. Jedes ICorDebug Module-Objekt, unabhängig davon, ob es ein Containermodul oder ein Untermodul darstellt, verfügt über ein entsprechendes ICorDebug-Objekt. Die [ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) -Methode konvertiert vom Modul in die Assembly. Um in der anderen Richtung zuzuordnen, listet die [ICorDebugAssembly:: EnumerateModules](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md) -Methode nur ein Modul auf. Da Assembly und Modul in diesem Fall eng miteinander verknüpft sind, sind die Begriffe Assembly und Modul weitgehend austauschbar.  
@@ -97,18 +95,18 @@ HRESULT EnableVirtualModuleSplitting(
   
 |Methode|`enableSplitting` = `true`|`enableSplitting` = `false`|  
 |------------|---------------------------------|----------------------------------|  
-|[ICorDebugFunction::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Gibt das untergeordnete Modul aus, in dem diese Funktion ursprünglich definiert wurde|Gibt das Containermodul zurück, mit dem diese Funktion zusammengeführt wurde|  
-|[ICorDebugClass::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Gibt das untergeordnete Modul aus, in dem diese Klasse ursprünglich definiert wurde.|Gibt das Containermodul aus, mit dem diese Klasse zusammengeführt wurde.|  
+|[ICorDebug function:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Gibt das untergeordnete Modul aus, in dem diese Funktion ursprünglich definiert wurde|Gibt das Containermodul zurück, mit dem diese Funktion zusammengeführt wurde|  
+|[ICorDebugClass:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Gibt das untergeordnete Modul aus, in dem diese Klasse ursprünglich definiert wurde.|Gibt das Containermodul aus, mit dem diese Klasse zusammengeführt wurde.|  
 |ICorDebugModuleDebugEvent::GetModule|Gibt das Containermodul aus, das geladen wurde. Untergeordnete Module erhalten unabhängig von dieser Einstellung keine Ladeereignisse.|Gibt das Containermodul aus, das geladen wurde.|  
-|[ICorDebugAppDomain::EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Gibt eine Liste aller untergeordneten und regulären Assemblys aus; Container-Assemblys sind nicht enthalten. **Hinweis**:  Damit die untergeordneten Assemblys aufgeführt werden, dürfen in keiner Container-Assembly Symbole fehlen. Wenn in einer regulären Baugruppe Symbole fehlen, kann die Auflistung u.U. erfolgen.|Gibt eine Liste der Container-Assemblys und regulären Assemblys aus; untergeordnete Assemblys sind nicht enthalten. **Hinweis**:  Wenn in einer regulären Baugruppe Symbole fehlen, kann die Auflistung u.U. erfolgen.|  
+|[ICorDebugAppDomain:: enumerateassemassemblys](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Gibt eine Liste aller untergeordneten und regulären Assemblys aus; Container-Assemblys sind nicht enthalten. **Hinweis:**  Wenn in einer containerassembly Symbole fehlen, wird keine der zugehörigen untergeordneten Assemblys aufgelistet. Wenn in einer regulären Baugruppe Symbole fehlen, kann die Auflistung u.U. erfolgen.|Gibt eine Liste der Container-Assemblys und regulären Assemblys aus; untergeordnete Assemblys sind nicht enthalten. **Hinweis:**  Wenn in einer regulären Assembly Symbole fehlen, kann diese nicht aufgelistet werden.|  
 |[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (nur bei verweisen auf IL-Code)|Gibt die IL aus, die in einem Assemblybild vor dem Merge gültig wäre. Insbesondere werden Inline-Metadatentoken korrekt zu TypeRef-Token oder MemberRef-Token, wenn die Typen, auf die verwiesen wird, nicht im virtuellen Modul definiert werden, das den IL-Code enthält. Diese TypeRef-oder Mitgliedschafts Token können im [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Objekt für das entsprechende virtuelle ICorDebug Module-Objekt gesucht werden.|Gibt die IL im Assemblybild nach der Zusammenführung aus.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

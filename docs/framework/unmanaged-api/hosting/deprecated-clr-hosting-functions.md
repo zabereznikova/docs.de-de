@@ -7,29 +7,27 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde711f2d626d88fd80009fa83f1198dd9d47810
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 62773ce526b1f21c57ab85a106708589fcf92f6f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138271"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Veraltete CLR-Hostingfunktionen
 In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von früheren Versionen der Hosting-API verwendet wurden.  
   
- Mit Ausnahme von Infrastrukturfunktionen (`_Cor*` Funktionen), die nur vom .NET Framework verwendet wird, diese Funktionen sind in .NET Framework 4 veraltet.  
+ Mit Ausnahme der Infrastrukturfunktionen (`_Cor*` Funktionen), die nur vom .NET Framework verwendet werden, sind diese Funktionen in der .NET Framework 4 veraltet.  
   
 ## <a name="activation-functions"></a>Aktivierungsfunktionen  
  [ClrCreateManagedInstance-Funktion](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
  Veraltet. Erstellt eine Instanz des angegebenen verwalteten Typs.  
   
  [CoInitializeCor-Funktion](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
- Veraltet. Um die common Language Runtime (CLR) zu initialisieren, verwenden Sie entweder [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
+ Veraltet. Verwenden Sie zum Initialisieren des Common Language Runtime (CLR) entweder [corbindtoriuntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder [corbindumcurrentruntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
  [CoInitializeEE-Funktion](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- Veraltet. Stellt sicher, dass die CLR-Ausführungs-Engine in einen Prozess geladen wird. Verwenden der [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode stattdessen.  
+ Veraltet. Stellt sicher, dass die CLR-Ausführungs-Engine in einen Prozess geladen wird. Verwenden Sie stattdessen die [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) -Methode.  
   
  [CorBindToCurrentRuntime-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
  Veraltet. Lädt die Common Language Runtime (CLR) in einen Prozess, indem in einer XML-Datei gespeicherte Versionsinformationen verwendet werden.  
@@ -102,13 +100,13 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet.  
   
  [CreateDebuggingInterfaceFromVersion-Funktion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
- Veraltet. Erstellt eine [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt auf Grundlage der angegebenen Versionsinformationen.  
+ Veraltet. Erstellt ein [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt auf Grundlage der angegebenen Versionsinformationen.  
   
  [CreateICeeFileGen-Funktion](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
- Veraltet. Erstellt eine [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
+ Veraltet. Erstellt ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) -Objekt.  
   
  [DestroyICeeFileGen-Funktion](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
- Veraltet. Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
+ Veraltet. Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) -Objekt.  
   
  [FExecuteInAppDomainCallback-Funktionszeiger](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
  Veraltet. Zeigt auf eine Funktion, die die CLR zum Ausführen von verwaltetem Code aufruft.  

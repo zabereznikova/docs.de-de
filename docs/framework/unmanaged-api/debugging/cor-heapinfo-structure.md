@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274190"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132333"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO-Struktur
 Liefert allgemeine Informationen zum Garbage Collection-Heap, auch zu dessen Aufzählbarkeit.  
@@ -42,23 +40,23 @@ typedef struct _COR_HEAPINFO {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`, wenn Garbage Collection Strukturen gültig sind und der Heap aufgelistet werden kann. `false`andernfalls.|  
+|`areGCStructuresValid`|`true`, wenn Garbage Collection Strukturen gültig sind und der Heap aufgelistet werden kann. Andernfalls `false`.|  
 |`pointerSize`|Die Größe von Zeigern in der Zielarchitektur in Byte.|  
 |`numHeaps`|Die Anzahl logischer Garbage Collection Heaps im Prozess.|  
-|`concurrent`|`TRUE`, wenn die gleichzeitige (Background-) Garbage Collection aktiviert ist. `FALSE`andernfalls.|  
+|`concurrent`|`TRUE`, wenn die gleichzeitige (Hintergrund-) Garbage Collection aktiviert ist. Andernfalls `FALSE`.|  
 |`gcType`|Ein Member der [cordebuggctype](cordebuggctype-enumeration.md) -Enumeration, der angibt, ob der Garbage Collector auf einer Arbeitsstation oder einem Server ausgeführt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Instanz der `COR_HEAPINFO` -Struktur wird durch Aufrufen der [ICorDebugProcess5:: getgcheapinformation](icordebugprocess5-getgcheapinformation-method.md) -Methode zurückgegeben.  
+ Eine Instanz der `COR_HEAPINFO` Struktur wird durch Aufrufen der [ICorDebugProcess5:: getgcheapinformation](icordebugprocess5-getgcheapinformation-method.md) -Methode zurückgegeben.  
   
- Vor dem Auflisten von Objekten auf dem Garbage Collection Heap muss immer das `areGCStructuresValid` Feld überprüft werden, um sicherzustellen, dass sich der Heap in einem Aufzähl Bare-Zustand befindet. Weitere Informationen finden Sie unter der [ICorDebugProcess5:: getgcheapinformation](icordebugprocess5-getgcheapinformation-method.md) -Methode.  
+ Vor dem Auflisten von Objekten auf dem Garbage Collection Heap müssen Sie immer das `areGCStructuresValid` Feld überprüfen, um sicherzustellen, dass sich der Heap in einem Aufzähl Bare-Zustand befindet. Weitere Informationen finden Sie unter der [ICorDebugProcess5:: getgcheapinformation](icordebugprocess5-getgcheapinformation-method.md) -Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

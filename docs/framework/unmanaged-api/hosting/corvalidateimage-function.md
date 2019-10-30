@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42da5bb761ba8ce388bd41d46e8fdc4561ad0290
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136882"
 ---
-# <a name="corvalidateimage-function"></a>_CorValidateImage-Funktion
+# <a name="_corvalidateimage-function"></a>_CorValidateImage-Funktion
 Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,48 +35,48 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parameter  
  `ImageBase`  
- [in] Ein Zeiger auf den Anfangsort des Bildes, das als Überprüfen von verwaltetem Code. Das Image muss bereits in den Arbeitsspeicher geladen werden.  
+ in Ein Zeiger auf die Startposition des Bilds, das als verwalteter Code validiert werden soll. Das Image muss bereits in den Arbeitsspeicher geladen werden.  
   
  `FileName`  
- [in] Der Dateiname des Bilds.  
+ in Der Dateiname des Bilds.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Funktion gibt die Standardwerte zurück `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, und `E_FAIL`, sowie die folgenden Werte.  
+ Diese Funktion gibt die Standardwerte `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`und `E_FAIL`sowie die folgenden Werte zurück.  
   
 |Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|Das Image ist ungültig. Dieser Wert muss es sich um das HRESULT 0xC000007BL auf.|  
-|`STATUS_SUCCESS`|Das Image ist ungültig. Dieser Wert muss es sich um das HRESULT 0x00000000L auf.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|Das Bild ist ungültig. Dieser Wert weist das HRESULT 0xC000007BL auf.|  
+|`STATUS_SUCCESS`|Das Bild ist gültig. Dieser Wert hat das HRESULT 0x00000000L.|  
   
 ## <a name="remarks"></a>Hinweise  
- In Windows XP und höheren Versionen überprüft vom Ladeprogramm des Betriebssystems nach verwalteten Modulen durch untersuchen das Verzeichnis der COM-Deskriptor-Bit in den Header zu common Object File-Format (COFF). Ein festgelegtes Bit gibt an, ein verwaltetes Modul. Wenn das Ladeprogramm ein verwaltetes Modul erkannt wird, lädt es "Mscoree.dll" und ruft `_CorValidateImage`, die die folgenden Aktionen ausführt:  
+ In Windows XP und höheren Versionen überprüft das Betriebssystem-Lade Modul die verwalteten Module, indem er das com-deskriptorverzeichnisbit im COFF-Header (Common Object File Format) untersucht. Ein festgelegtes Bit gibt ein verwaltetes Modul an. Wenn das Lade Modul ein verwaltetes Modul erkennt, lädt es Mscoree. dll und ruft `_CorValidateImage`auf, das die folgenden Aktionen ausführt:  
   
-- Bestätigt, dass das Bild, ein gültiges verwaltetes Modul ist.  
+- Bestätigt, dass das Image ein gültiges verwaltetes Modul ist.  
   
-- Ändert den Einstiegspunkt in das Abbild an einen Einstiegspunkt in die common Language Runtime (CLR).  
+- Ändert den Einstiegspunkt im Bild in einen Einstiegspunkt in der Common Language Runtime (CLR).  
   
-- Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformieren.  
+- Bei 64-Bit-Versionen von Windows ändert das Bild, das sich im Arbeitsspeicher befindet, indem es von das Format PE32 in das Format PE32 + Format transformiert wird.  
   
-- Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls geladen werden.  
+- Kehrt zum Lade Modul zurück, wenn die Images des verwalteten Moduls geladen werden.  
   
- Für ausführbare Images vom Ladeprogramm des Betriebssystems dann ruft der [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion, unabhängig von der Einstiegspunkt in die ausführbare Datei angegeben. DLL-Assembly-Images, das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) Funktion.  
+ Bei ausführbaren Images Ruft das Betriebssystem-Lade Programm dann die [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion auf, unabhängig vom Einstiegspunkt, der in der ausführbaren Datei angegeben ist. Bei dll-assemblyimages Ruft das Lade Modul die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) -Funktion auf.  
   
- `_CorExeMain` oder `_CorDllMain` führt folgende Aktionen aus:  
+ `_CorExeMain` oder `_CorDllMain` führt die folgenden Aktionen aus:  
   
 - Initialisiert die CLR.  
   
-- Sucht den verwalteten Einstiegspunkt von CLR-Header der Assembly an.  
+- Der verwaltete Einstiegspunkt wird aus dem CLR-Header der Assembly lokalisiert.  
   
-- Beginnt die Ausführung.  
+- Startet die Ausführung.  
   
- Die Aufrufe der Loader die [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funktionieren, wenn verwaltete Modulimages entladen. Diese Funktion führt jedoch keine Maßnahmen; Es gibt nur zurück.  
+ Das Lade Modul ruft die [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) -Funktion auf, wenn verwaltete Modul Images entladen werden. Diese Funktion führt jedoch keine Aktion aus. Er gibt nur zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

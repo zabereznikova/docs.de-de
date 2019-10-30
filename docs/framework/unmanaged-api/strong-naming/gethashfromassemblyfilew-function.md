@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d4b748370ff1aff042923002ad827a0e39d99963
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140700"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW-Funktion
 Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen Hashalgorithmus ab. Der Pfad zur Assemblydatei muss als Unicode-Zeichenfolge angegeben werden.  
@@ -51,17 +49,17 @@ HRESULT GetHashFromAssemblyFileW (
  vorgenommen Der zurückgegebene Hash Puffer.  
   
  `cchHash`  
- in Die angeforderte maximale Größe `pbHash`von.  
+ in Die angeforderte maximale Größe `pbHash`.  
   
  `pchHash`  
- vorgenommen Die zurückgegebene Größe von `pbHash`in Bytes.  
+ vorgenommen Die zurückgegebene Größe (in Bytes) der `pbHash`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** StrongName. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

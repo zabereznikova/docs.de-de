@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c76b587-f941-4fa1-8b86-f3494fb10c8e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc4963dcf686fe62f473aea1af86868df03718df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a81842132769934a6f5f34e6dc462bba77b3854a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138689"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID-Methode
-Ruft den Bezeichner der Verbindung für dieses ICorDebugThread2-Objekt ab.  
+Ruft den Verbindungs Bezeichner für dieses ICorDebugThread2-Objekt ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT GetConnectionID (
   
 ## <a name="parameters"></a>Parameter  
  `pdwConnectionId`  
- [out] Ein `CONNID` , die den Bezeichner der Verbindung darstellt.  
+ vorgenommen Ein-`CONNID`, der den Verbindungs Bezeichner darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetConnectionID` Methode gibt 0 (null), in der `pdwConnectionId` -Parameters, wenn dieser Thread nicht Teil einer Verbindung ist.  
+ Die `GetConnectionID`-Methode gibt 0 (null) im `pdwConnectionId`-Parameter zurück, wenn dieser Thread nicht Teil einer Verbindung ist.  
   
- Wenn dieser Thread auf eine Instanz von Microsoft SQL Server 2005 Analysis Services (SSAS), besteht die `CONNID` ordnet einen Serverprozessbezeichner (SPID).  
+ Wenn dieser Thread mit einer Instanz von Microsoft SQL Server 2005 Analysis Services (SSAS) verbunden ist, wird die `CONNID` einem Server Prozess Bezeichner (SPID) zugeordnet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::ReadInMemorySymbols
+title: 'ICorProfilerInfo7:: Read inmemorysymbols'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
@@ -10,16 +10,14 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae51490be96f3eb6524831c93739c3befbc30b37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955377"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132025"
 ---
-# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
+# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: Read inmemorysymbols
 [Wird nur in .NET Framework 4.6.1 und höheren Versionen unterstützt]  
   
  Liest Bytes aus einem in-Memory-symbolstream.  
@@ -44,7 +42,7 @@ HRESULT ReadInMemorySymbols(
  in Der Offset innerhalb des in-Memory-Streams, an dem mit dem Lesen von Bytes begonnen werden soll.  
   
  `pSymbolBytes`  
- vorgenommen Ein Zeiger auf den Puffer, in den die Daten kopiert werden. Für den Puffer muss `countSymbolBytes` Speicherplatz verfügbar sein.  
+ vorgenommen Ein Zeiger auf den Puffer, in den die Daten kopiert werden. Der Puffer sollte `countSymbolBytes` verfügbaren Speicherplatz aufweisen.  
   
  `countSymbolBytes`  
  in Die Anzahl der zu kopierenden Bytes.  
@@ -55,20 +53,20 @@ HRESULT ReadInMemorySymbols(
 ## <a name="return-value"></a>Rückgabewert  
  `S_OK`, wenn eine Anzahl von Bytes ungleich 0 (null) gelesen wurde.  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`, wenn das Modul mithilfe <xref:System.Reflection.Emit>von erstellt wurde.  
+ `CORPROF_E_MODULE_IS_DYNAMIC`, wenn das Modul mit <xref:System.Reflection.Emit>erstellt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ReadInMemorySymbols` -Methode versucht, `countSymbolBytes` die Daten zu lesen, `symbolsReadOffset` beginnend beim Offset innerhalb des in-Memory-Streams. Die Daten werden in `pSymbolBytes`kopiert, und es wird erwartet `countSymbolBytes` , dass genügend Speicherplatz verfügbar ist.     `pCountSymbolsBytesRead`enthält die tatsächliche Anzahl von gelesenen Bytes, die kleiner als `countSymbolBytes` sein kann, wenn das Ende des Streams erreicht ist.  
+ Die `ReadInMemorySymbols`-Methode versucht, `countSymbolBytes` von Daten zu lesen, beginnend bei Offset `symbolsReadOffset` innerhalb des in-Memory-Streams. Die Daten werden in `pSymbolBytes`kopiert, wobei erwartet wird, dass `countSymbolBytes` Speicherplatz verfügbar ist.     `pCountSymbolsBytesRead` enthält die tatsächliche Anzahl von gelesenen Bytes, die kleiner als `countSymbolBytes` sein kann, wenn das Ende des Streams erreicht ist.  
   
 > [!NOTE]
 > Die aktuelle Implementierung unterstützt Reflektion. ausgeben nicht. Wenn das Modul mithilfe von Reflection. ausgeben erstellt wurde, gibt die Methode `CORPROF_E_MODULE_IS_DYNAMIC`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corprof. idl, Corprof. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748190"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135202"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob-Methode
 Ruft einen Hash der Assembly unter der angegebenen Speicheradresse unter Verwendung des angegebenen Hashalgorithmus ab.  
@@ -42,32 +40,32 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>Parameter  
  `pbBlob`  
- [in] Ein Zeiger auf die Adresse des Speicherblocks, der Hashwert berechnet werden soll.  
+ in Ein Zeiger auf die Adresse des Speicherblocks, für den der Hashwert verwendet werden soll.  
   
  `cchBlob`  
- [in] Die Länge des Speicherblocks in Bytes.  
+ in Die Länge des Speicherblocks in Bytes.  
   
  `piHashAlg`  
- [in, out] Eine Konstante, die den Hashalgorithmus angibt. Verwenden Sie 0 (null), für den Standardalgorithmus.  
+ [in, out] Eine-Konstante, die den Hash Algorithmus angibt. Verwenden Sie 0 (null) für den Standard Algorithmus.  
   
  `pbHash`  
- [out] Der zurückgegebene Hashpuffer.  
+ vorgenommen Der zurückgegebene Hash Puffer.  
   
  `cchHash`  
- [in] Die angeforderte maximale Größe des `pbHash`.  
+ in Die angeforderte maximale Größe `pbHash`.  
   
  `pchHash`  
- [out] Die Größe in Bytes, des zurückgegebenen `pbHash`.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

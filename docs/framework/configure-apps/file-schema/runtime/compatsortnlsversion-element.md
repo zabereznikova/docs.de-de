@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117679"
 ---
-# <a name="compatsortnlsversion-element"></a>\<Compatsortnlsversion >-Element
+# <a name="compatsortnlsversion-element"></a>\<compatsortnlsversion-> Element
 Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleichen von Zeichenfolgen verwenden soll.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<compatsortnlsversion >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +55,7 @@ Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleic
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Da Zeichen folgen Vergleichs-, Sortier-und Schreibvorgänge, <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> die von der-Klasse in .NET Framework 4 ausgeführt werden, dem Unicode 5,1-Standard entsprechen, können sich <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> die <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> Ergebnisse von Zeichen folgen Vergleichsmethoden wie und von frühere Versionen des .NET Framework. Wenn Ihre Anwendung von Legacy Verhalten abhängig ist, können Sie den Zeichen folgen Vergleich und die Sortierregeln, die in der .NET Framework 3,5 und früheren Versionen `<CompatSortNLSVersion>` verwendet werden, wiederherstellen, indem Sie das-Element in die Konfigurationsdatei der Anwendung einschließen.  
+ Da Zeichen folgen Vergleichs-, Sortier-und Schreibvorgänge, die von der <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>-Klasse in .NET Framework 4 ausgeführt werden, dem Unicode 5,1-Standard entsprechen, können sich die Ergebnisse von Zeichen folgen Vergleichsmethoden wie <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> und <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> von früheren Versionen von unterscheiden. .NET Framework. Wenn Ihre Anwendung von Legacy Verhalten abhängig ist, können Sie den Zeichen folgen Vergleich und die Sortierregeln, die in der .NET Framework 3,5 und früheren Versionen verwendet werden, wiederherstellen, indem Sie das `<CompatSortNLSVersion>`-Element in die Konfigurationsdatei der Anwendung einschließen.  
   
 > [!IMPORTANT]
 > Zum Wiederherstellen von Zeichenfolgenvergleichs- und Zeichenfolgensortierregeln von Legacyversionen muss auch die sort00001000.dll-Dynamic Link Library auf dem lokalen System verfügbar sein.  

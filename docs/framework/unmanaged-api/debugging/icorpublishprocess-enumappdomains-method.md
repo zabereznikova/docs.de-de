@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c614afee18824e1672b378dd468cb11c9c173d9f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa76bf511ff1e1710a7ff86ad2ac97665969f2bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764950"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140439"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains-Methode
-Ruft einen Enumerator für die Anwendungsdomänen im Prozess, der von diesem verwiesen wird [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
+Ruft einen Enumerator für die Anwendungs Domänen in dem Prozess ab, auf den von diesem [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT EnumAppDomains (
   
 ## <a name="parameters"></a>Parameter  
  `ppEnum`  
- [out] Ein Zeiger auf die Adresse einer [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) -Instanz, die Iteration durch die Auflistung von Anwendungsdomänen in diesem Prozess ermöglicht.  
+ vorgenommen Ein Zeiger auf die Adresse einer [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) -Instanz, die Iterationen durch die Auflistung von Anwendungs Domänen in diesem Prozess ermöglicht.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Liste der Anwendungsdomänen basiert darauf, dass eine Momentaufnahme der Anwendungsdomänen, die vorhanden sind bei der `EnumAppDomains` Methode wird aufgerufen. Diese Methode kann mehr als einmal aufgerufen werden, um eine neue auf dem neuesten Stand Liste zu erstellen. Vorhandene Listen werden durch nachfolgende Aufrufe dieser Methode nicht betroffen.  
+ Die Liste der Anwendungs Domänen basiert auf einer Momentaufnahme der Anwendungs Domänen, die vorhanden sind, wenn die `EnumAppDomains`-Methode aufgerufen wird. Diese Methode kann mehrmals aufgerufen werden, um eine neue aktuelle Liste zu erstellen. Bei nachfolgenden Aufrufen dieser Methode werden vorhandene Listen nicht beeinträchtigt.  
   
- Wenn der Prozess beendet wurde, `EnumAppDomains` mit HRESULT-Wert CORDBG_E_PROCESS_TERMINATED fehl.  
+ Wenn der Prozess beendet wurde, wird `EnumAppDomains` mit einem HRESULT-Wert von CORDBG_E_PROCESS_TERMINATED fehlschlagen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   

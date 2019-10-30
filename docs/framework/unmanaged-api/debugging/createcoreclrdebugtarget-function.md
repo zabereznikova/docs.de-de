@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbcf6c842e7eee55609a9ea2a25cda4360f8dc95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52757f82a950c382c7c8f2162630eda7d7795e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739290"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132091"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget-Funktion
-Erstellt eine Verbindung mit einem Debuggerproxy, die auf einem Remotecomputer ausgeführt wird, und gibt eine [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt, das zum Abfragen der ausgeführten Prozesse und geladene Laufzeitmodule auf dem Remotecomputer verwendet werden kann.  
+Erstellt eine Verbindung mit einem debuggerproxy, der auf einem Remote Computer ausgeführt wird, und gibt ein [icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt zurück, das zum Abfragen von laufenden Prozessen und geladenen Laufzeiten auf dem Remote Computer verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] IPv4-Adresse eines Remotezielcomputers.  
   
  `ppTarget`  
- [out] Zeiger auf einen Zeiger auf ein [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt, das erstellt wird.  
+ vorgenommen Zeiger auf einen Zeiger auf ein [icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt, das erstellt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -55,10 +53,10 @@ HRESULT CreateCoreClrDebugTarget (
  Andere Fehler.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CoreClrRemoteDebuggingInterfaces.h  
+ **Header:** Coreclrremotedebugginginterfaces. h  
   
- **Bibliothek:** mscordbi_macx86.dll  
+ **Bibliothek:** mscordbi_macx86. dll  
   
- **.NET Framework-Versionen:** 3.5 SP1
+ **.NET Framework Versionen:** 3,5 SP1

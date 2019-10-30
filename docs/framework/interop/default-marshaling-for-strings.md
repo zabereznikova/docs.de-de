@@ -8,14 +8,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
-ms.translationtype: HT
+ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123547"
 ---
 # <a name="default-marshaling-for-strings"></a>Standardmäßiges Marshalling für Zeichenfolgen
 
@@ -29,7 +27,7 @@ In der folgenden Tabelle werden die Marshallingoptionen für den String-Datentyp
 
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr` (Standard)|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|
+|`UnmanagedType.BStr` (Standardwert)|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|
 |`UnmanagedType.LPStr`|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|
 
@@ -90,7 +88,7 @@ In der folgenden Tabelle werden die Marshallingoptionen für Zeichenfolgen aufge
 |----------------------|-------------------------------------|
 |`UnmanagedType.AnsiBStr`|`BSTR` im COM-Format mit vorangestellter Länge und ANSI-Zeichen.|
 |`UnmanagedType.BStr`|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|
-|`UnmanagedType.LPStr` (Standard)|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|
+|`UnmanagedType.LPStr` (Standardwert)|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|
 |`UnmanagedType.LPTStr`|Ein Zeiger auf ein mit NULL endendes Array von plattformabhängigen Zeichen.|
 |`UnmanagedType.LPUTF8Str`|Ein Zeiger auf ein mit Null endendes Array von UTF-8-codierten Zeichen.|
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|
@@ -147,7 +145,7 @@ Zeichenfolgen sind gültige Member von Strukturen. <xref:System.Text.StringBuild
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|
 |----------------------|-------------------------------------|
 |`UnmanagedType.BStr`|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|
-|`UnmanagedType.LPStr` (Standard)|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|
+|`UnmanagedType.LPStr` (Standardwert)|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|
 |`UnmanagedType.LPTStr`|Ein Zeiger auf ein mit NULL endendes Array von plattformabhängigen Zeichen.|
 |`UnmanagedType.LPUTF8Str`|Ein Zeiger auf ein mit Null endendes Array von UTF-8-codierten Zeichen.|
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|
@@ -289,7 +287,7 @@ End Class
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+- [Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

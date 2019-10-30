@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af0c67c7-f53e-47c9-b84b-be50bd04903e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a3f01edcd6ce1d16ab2c651a66d2fd9cd2eb0ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e0b0c4ed9bac4abd1dc185031e41c1e3ed014a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737817"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134674"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached-Methode
-Ruft einen Wert, der angibt, ob die Anwendungsdomäne der Debugger angefügt ist.  
+Ruft einen Wert ab, der angibt, ob der Debugger an die Anwendungsdomäne angefügt ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT IsAttached (
   
 ## <a name="parameters"></a>Parameter  
  `pbAttached`  
- [out] `true` ist der Debugger an die Anwendungsdomäne angefügt ist, andernfalls `false`.  
+ [out] `true`, wenn der Debugger an die Anwendungsdomäne angefügt ist. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die ICorDebugController-Methoden können nicht verwendet werden, bis der Debugger an die Anwendungsdomäne angefügt.  
+ Die ICorDebugController-Methoden können erst verwendet werden, wenn der Debugger an die Anwendungsdomäne angefügt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132069"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue-Methode
-Ruft einen Schnittstellenzeiger auf ein ICorDebugValue-Objekt, das den Wert des statischen Felds auf die verwiesen wird durch das angegebene Feld enthält Tokens in den angegebenen Stapelrahmen.  
+Ruft einen Schnittstellen Zeiger auf ein ICorDebugValue-Objekt ab, das den Wert des statischen Felds enthält, auf das durch das angegebene Feld Token im angegebenen Stapel Rahmen verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,26 +37,26 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Parameter  
  `fieldDef`  
- [in] Ein `mdFieldDef` -Token, das statische Feld angibt.  
+ in Ein `mdFieldDef` Token, das das statische Feld angibt.  
   
  `pFrame`  
- [in] Ein Zeiger auf einen ICorDebugFrame, das den Stapelrahmen darstellt.  
+ in Ein Zeiger auf ein ICorDebug Frame-Element, das den Stapel Rahmen darstellt.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugValue` , den Wert des statischen Felds enthält.  
+ vorgenommen Ein Zeiger auf die Adresse einer `ICorDebugValue`, die den Wert des statischen Felds enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetStaticFieldValue` Methode kann verwendet werden nur dann, wenn der Typ ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE, ist wie durch die [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) Methode.  
+ Die `GetStaticFieldValue`-Methode kann nur verwendet werden, wenn der Typ ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE ist, wie durch die [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) -Methode angegeben.  
   
- Für nicht generische Typen, die Operation ausgeführt werden, indem `GetStaticFieldValue` entspricht dem Aufrufen von [ICorDebugClass:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) auf das ICorDebugClass-Objekt, das von zurückgegebene [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ Bei nicht generischen Typen ist der von `GetStaticFieldValue` ausgeführte Vorgang identisch mit dem Aufruf von [ICorDebugClass:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) für das ICorDebugClass-Objekt, das von [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)zurückgegeben wird.  
   
- Bei generischen Typen wird der Wert eines statischen Felds relativ zu einer bestimmten Instanziierung sein. Auch wenn das statische Feld möglicherweise relativ zu einem Thread, einen Kontext oder eine Anwendungsdomäne werden konnte, helfen klicken Sie dann der Stapelrahmen den Debugger den richtigen Wert zu ermitteln.  
+ Bei generischen Typen ist ein statischer Feldwert relativ zu einer bestimmten Instanziierung. Wenn das statische Feld möglicherweise relativ zu einem Thread, einem Kontext oder einer Anwendungsdomäne sein kann, unterstützt der Stapel Rahmen den richtigen Wert für den Debugger.  
   
 ## <a name="remarks"></a>Hinweise  
- `GetStaticFieldValue` kann verwendet werden, nur wenn ein Aufruf von `ICorDebugType::GetType` gibt einen Wert von ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE zurück.  
+ `GetStaticFieldValue` können nur verwendet werden, wenn ein-Aufruf`ICorDebugType::GetType` den Wert ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE zurückgibt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

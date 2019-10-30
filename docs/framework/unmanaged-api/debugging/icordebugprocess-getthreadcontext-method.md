@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758740"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128810"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext-Methode
 Ruft den Kontext für den angegebenen Thread in diesem Prozess ab.  
@@ -39,23 +37,23 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parameter  
  `threadID`  
- [in] Die ID des Threads, für den zum Abrufen des Kontexts.  
+ in Die ID des Threads, für den der Kontext abgerufen werden soll.  
   
  `contextSize`  
  [in] Die Größe des `context`-Arrays.  
   
  `context`  
- [in, out] Ein Array von Bytes, die Kontext des Threads zu beschreiben.  
+ [in, out] Ein Bytearray, das den Thread Kontext beschreibt.  
   
- Der Kontext gibt die Architektur des Prozessors auf dem der Thread ausgeführt wird.  
+ Der Kontext gibt die Architektur des Prozessors an, auf dem der Thread ausgeführt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger sollte diese Methode anstelle der Win32-Aufrufen `GetThreadContext` -Methode, da der Thread tatsächlich "gehackte" sind, möglicherweise in der der Kontext vorübergehend geändert wurde. Diese Methode sollte verwendet werden, nur wenn ein Thread in systemeigenem Code. Verwendung [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) für Threads in verwaltetem Code.  
+ Der Debugger sollte diese Methode anstelle der Win32-`GetThreadContext`-Methode aufzurufen, da der Thread tatsächlich den Zustand "entführt" aufweisen kann, in dem der Kontext vorübergehend geändert wurde. Diese Methode sollte nur verwendet werden, wenn sich ein Thread in nativem Code befindet. Verwenden Sie [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) für Threads in verwaltetem Code.  
   
- Die zurückgegebenen Daten ist ein Context-Struktur für die aktuelle Plattform. Genau wie bei der Win32 `GetThreadContext` -Methode, die der Aufrufer sollte Initialisieren der `context` -Parameter vor dem Aufrufen dieser Methode.  
+ Die zurückgegebenen Daten sind eine Kontext Struktur für die aktuelle Plattform. Ebenso wie bei der Win32-`GetThreadContext` Methode sollte der Aufrufer den `context`-Parameter initialisieren, bevor diese Methode aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130282"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
 
@@ -76,7 +74,7 @@ Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgen
 ## <a name="dlr-architecture"></a>DLR-Architektur
  Die folgende Abbildung zeigt die Architektur der Dynamic Language Runtime.
 
- ![Übersicht über die DLR-Architektur (Dynamic Language Runtime)](./media/dlr-archoverview.png "DLR_ArchOverview") DLR-Architektur
+ ![Übersicht über die Dynamic Language Runtime-Architektur](./media/dlr-archoverview.png "DLR_ArchOverview") DLR-Architektur
 
  Die DLR fügt der CLR eine Reihe von Diensten hinzu, um dynamische Sprachen besser zu unterstützen. Einige dieser Dienste sind:
 

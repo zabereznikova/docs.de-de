@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 79edbd876fc9992f088b9adb159e005c735a72cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127324"
 ---
 # <a name="qualifierset_beginenumeration-function"></a>QualifierSet_BeginEnumeration-Funktion
 
@@ -57,7 +55,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Der `lFlags`-Parameter ist ungültig. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Es `QualifierSet_BeginEnumeration` wurde ein zweiter-Rückruf ohne einen dazwischen liegenden- [`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)Rückruf durchgeführt. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Es wurde ein zweiter `QualifierSet_BeginEnumeration` aufgerufen, ohne dass ein dazwischen befindender [`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)aufgerufen wurde. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um eine neue Enumeration zu beginnen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
@@ -69,17 +67,17 @@ Um alle Qualifizierer eines Objekts aufzulisten, muss diese Methode vor dem erst
 
 Die Flags, die als `lEnumFlags` Argument übermittelt werden können, werden in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren.
 
-|Konstante  |Wert  |Description  |
+|Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |  | 0 | Gibt die Namen aller Qualifizierer zurück. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Gibt nur die Namen der Qualifizierer zurück, die speziell für die aktuelle Eigenschaft oder das aktuelle Objekt <br/> Für eine Eigenschaft: Gibt nur die Qualifizierer zurück, die für die Eigenschaft spezifisch sind (einschließlich außer Kraft setzungen), und nicht die Qualifizierer, die aus der Klassendefinition <br/> Für eine-Instanz: Gibt nur instanzspezifische Qualifizierernamen zurück. <br/> Für eine Klasse: Gibt nur Qualifizierer zurück, die für die abgeleitete Klasse spezifisch sind
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Gibt nur die Namen der Qualifizierer zurück, die von einem anderen-Objekt <br/> Für eine Eigenschaft: Gibt nur die Qualifizierer zurück, die von der Klassendefinition an diese Eigenschaft weitergegeben werden, nicht die der Eigenschaft selbst. <br/> Für eine-Instanz: Gibt nur die Qualifizierer zurück, die aus der Klassendefinition verteilt werden <br/> Für eine Klasse: Gibt nur die von den übergeordneten Klassen geerbten Qualifizierernamen zurück. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Gibt nur die Namen der Qualifizierer zurück, die speziell für die aktuelle Eigenschaft oder das aktuelle Objekt <br/> Für eine Eigenschaft: gibt nur die Qualifizierer zurück, die für die Eigenschaft spezifisch sind (einschließlich über schreibungen), nicht die Qualifizierer, die von der Klassendefinition weitergegeben werden <br/> Für eine-Instanz: gibt nur instanzspezifische Qualifizierernamen zurück. <br/> Für eine Klasse: gibt nur Qualifizierer zurück, die für die abgeleitete Klasse spezifisch sind.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Gibt nur die Namen der Qualifizierer zurück, die von einem anderen-Objekt <br/> Für eine Eigenschaft: gibt nur die Qualifizierer zurück, die von der Klassendefinition an diese Eigenschaft weitergegeben werden, und nicht die der Eigenschaft selbst. <br/> Für eine Instanz: gibt nur die Qualifizierer zurück, die aus der Klassendefinition weitergegeben wurden <br/> Für eine Klasse: gibt nur die Qualifizierernamen zurück, die von den übergeordneten Klassen geerbt wurden. |
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

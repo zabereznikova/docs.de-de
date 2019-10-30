@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e467234a45ae702a5b77a5f0fa8b75d4ff03c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124132"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Setzt einen Enumerator auf den Anfang der-Enumeration zurück.  
@@ -55,8 +53,8 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Die Kombination von Flags `lEnumFlags` in ist ungültig, oder es wurde ein ungültiges Argument angegeben. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Es `BeginEnumeration` wurde ein zweiter-Rückruf ohne einen dazwischen liegenden- [`EndEnumeration`](endenumeration.md)Rückruf durchgeführt. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Die Kombination der Flags in `lEnumFlags` ist ungültig, oder es wurde ein ungültiges Argument angegeben. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Es wurde ein zweiter `BeginEnumeration` aufgerufen, ohne dass ein dazwischen befindender [`EndEnumeration`](endenumeration.md)aufgerufen wurde. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um eine neue Enumeration zu beginnen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
@@ -98,9 +96,9 @@ Konstante  |Wert  |Beschreibung  |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Basisklassen geerbt werden. |
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

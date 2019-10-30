@@ -8,28 +8,26 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c383a2e221e61770d3c28a65c561c48f6059b6d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991990"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136563"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9-Schnittstelle
-[Wird nur in .NET Framework 4.7.2 und höheren Versionen unterstützt]  
+[Wird in der .NET Framework 4.7.2 und höheren Versionen unterstützt]  
 
- Eine Unterklasse von [ICorProfilerCallback8](icorprofilercallback8-interface.md) , der eine Rückrufmethode, die von der common Language Runtime verwendet werden, um den Profiler zu benachrichtigen, dass eine dynamische Methode Garbage Collector gesammelt und anschließend entladen wurde bereitstellt.  
+ Eine Unterklasse von [ICorProfilerCallback8](icorprofilercallback8-interface.md) , die eine Rückruf Methode bereitstellt, die vom Common Language Runtime verwendet wird, um den Profiler zu benachrichtigen, dass eine dynamische Methode in eine Garbage Collection aufgenommen und anschließend entladen wurde.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[DynamicMethodUnloaded-Methode](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|Benachrichtigt den Profiler, dass eine dynamische Methode Garbage Collector gesammelt und anschließend entladen wurde.|  
+|[DynamicMethodUnloaded-Methode](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|Benachrichtigt den Profiler, dass eine dynamische Methode in eine Garbage Collection aufgenommen und anschließend entladen wurde.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -39,5 +37,5 @@ ms.locfileid: "61991990"
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerCallback8-Schnittstelle](icorprofilercallback9-interface.md)
-- [ICorProfilerCallback8.DynamicMethodJITCompilationStarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [ICorProfilerCallback8.DynamicMethodJITCompilationFinished-Methode](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8. dynamicmethodjitcompilationstarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8. dynamicmethodjitcompilationabgeschlossene-Methode](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbaa0794-a031-4015-8beb-2749e47ac340
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca64e392b930ed57691f05ae771bbaf305df8eb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a4f533c0ab817d800c2d35b7d64c7aee78faaea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754071"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121166"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode-Methode
-Ruft einen Zeiger auf den Code für diesen Stapelrahmen.  
+Ruft einen Zeiger auf den Code ab, der diesem Stapel Rahmen zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parameter  
  `ppCode`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das den Code für diesen Frame darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das den diesem Frame zugeordneten Code darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

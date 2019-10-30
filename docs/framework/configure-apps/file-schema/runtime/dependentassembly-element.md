@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117584"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly-> Element
-Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie `dependentAssembly` ein-Element für jede Assembly.  
+Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie für jede Assembly ein `dependentAssembly` Element.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding->** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +41,7 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Enthält identifizierende Informationen über die Assembly. Dieses Element muss in jedem `dependentAssembly` Element enthalten sein.|  
+|`assemblyIdentity`|Enthält identifizierende Informationen über die Assembly. Dieses Element muss in jedem `dependentAssembly`-Element enthalten sein.|  
 |`codeBase`|Gibt an, wo die Runtime eine freigegebene Assembly finden kann, wenn Sie nicht auf dem Computer installiert ist.|  
 |`bindingRedirect`|Leitet eine Assemblyversion in eine andere um.|  
 |`publisherPolicy`|Gibt an, ob die Laufzeit die Herausgeber Richtlinie für diese Assembly anwendet.|  

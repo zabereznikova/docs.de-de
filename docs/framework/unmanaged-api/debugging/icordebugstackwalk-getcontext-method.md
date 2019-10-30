@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760928"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131849"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext-Methode
-Gibt den Kontext für den aktuellen Frame in der [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) Objekt.  
+Gibt den Kontext für den aktuellen Frame im [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) -Objekt zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>Parameter  
  `contextFlags`  
- [in] Flags, die den angeforderten Inhalt des Kontextpuffers (definiert in "Winnt.h") angeben.  
+ in Flags, die den angeforderten Inhalt des Kontext Puffers angeben (in "Winnt. h" definiert).  
   
  `contextBufSize`  
- [in] Die Größe der reservierten des Kontextpuffers.  
+ in Die zugeordnete Größe des Kontext Puffers.  
   
  `contextSize`  
- [out] Die tatsächliche Größe des Kontexts. Dieser Wert muss kleiner als oder gleich der Größe des Kontextpuffers.  
+ vorgenommen Die tatsächliche Größe des Kontexts. Dieser Wert muss kleiner oder gleich der Größe des Kontext Puffers sein.  
   
  `contextBuf`  
- [out] Der Kontextpuffer.  
+ vorgenommen Der Kontext Puffer.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -56,16 +54,16 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |-------------|-----------------|  
 |S_OK|Der Kontext für den aktuellen Frame wurde erfolgreich zurückgegeben.|  
 |E_FAIL|Der Kontext konnte nicht zurückgegeben werden.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Der Kontextpuffer ist zu klein.|  
-|CORDBG_E_PAST_END_OF_STACK|Die Frame-Pointer ist bereits am Ende des Stapels. aus diesem Grund können keine zusätzlichen Frames zugegriffen werden.|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT-Puffer)|Der Kontext Puffer ist zu klein.|  
+|CORDBG_E_PAST_END_OF_STACK|Der Frame Zeiger befindet sich bereits am Ende des Stapels. Daher können keine weiteren Frames aufgerufen werden.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Da nur eine Teilmenge der Register, z. B. nicht flüchtigen Register, entladen wiederhergestellt werden. entspricht der Kontext möglicherweise nicht exakt dem registrierungszustand zum Zeitpunkt des Aufrufs.  
+ Da bei der Entwicklung nur eine Teilmenge der Register wieder hergestellt wird, z. b. nicht flüchtige Register, stimmt der Kontext möglicherweise nicht genau mit dem Registrierungs Zustand zum Zeitpunkt des Aufrufes überein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

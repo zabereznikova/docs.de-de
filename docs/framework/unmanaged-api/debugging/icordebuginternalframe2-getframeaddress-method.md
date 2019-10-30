@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122673"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress-Methode
-Gibt die Stack-Adresse des internen Frames zurück.  
+Gibt die Stapel Adresse des internen Frames zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +33,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>Parameter  
  `pAddress`  
- [out] Zeiger auf die `CORDB_ADDRESS` für den internen Frame.  
+ vorgenommen Zeiger auf den `CORDB_ADDRESS` für den internen Frame.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -43,14 +41,14 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Adresse des internen Frames wurde erfolgreich zurückgegeben.|  
-|E_FAIL|Die Adresse des internen Frames kann nicht zurückgegeben werden.|  
+|E_FAIL|Die Adresse des internen Frames konnte nicht zurückgegeben werden.|  
 |E_INVALIDARG|`pAddress` ist `null`.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der zurückgegebene Wert in `pAddress` können verwendet werden, um die Position des internen Frames relativ zu anderen Frames im Stapel zu bestimmen. Auch auf IA-64-basierten Computern internen Frames befindet sich nur auf dem Stapel, und keine entsprechenden Zeiger in einen Sicherungsspeicher.  
+ Der in `pAddress` zurückgegebene Wert kann verwendet werden, um den Speicherort des internen Frames relativ zu anderen Frames im Stapel zu bestimmen. Selbst bei IA-64-basierten Computern befindet sich der interne Frame nur im Stapel, und es gibt keinen entsprechenden Zeiger auf einen Sicherungs Speicher.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

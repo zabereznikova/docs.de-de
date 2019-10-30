@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 429ce0510162b3256cdf58f4820b04dd80243e29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779979"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139637"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence-Methode
-Ruft einen Schnittstellenzeiger vom Typ <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, wodurch den Host erstellen Sicherheitsbeweis Übergabe an die [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) oder [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) Methode.  
+Ruft einen Schnittstellen Zeiger vom Typ "<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>" ab, der dem Host das Erstellen von Sicherheits beweisen ermöglicht, die an die Methode " [kreatedomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) " oder " [kreatedomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) " übergeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,28 +35,28 @@ HRESULT CreateEvidence (
   
 ## <a name="parameters"></a>Parameter  
  `pEvidence`  
- [out] Einen Schnittstellenzeiger auf ein <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> Instanz verwendet, um die Sicherheitsbeweis zu erstellen. Dieser Zeiger wird als `IUnknown`, sodass Aufrufer, in der Regel aufrufen müssen `QueryInterface` für diese Schnittstelle zum Abrufen der eines Zeigers auf ein <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
+ vorgenommen Ein Schnittstellen Zeiger auf eine <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>-Instanz, mit der Sicherheits Beweise erstellt werden. Dieser Zeiger ist `IUnknown`typisiert. Daher sollten Aufrufer in der Regel `QueryInterface` auf dieser Schnittstelle aufzurufen, um einen Zeiger auf eine <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>zu erhalten.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Der Vorgang war erfolgreich.|  
-|S_FALSE|Der Vorgang konnte nicht abgeschlossen.|  
-|E_FAIL|Ein Unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
+|S_FALSE|Der Vorgang konnte nicht ausgeführt werden.|  
+|E_FAIL|Ein unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die Common Language Runtime (CLR) im Prozess nicht mehr verwendet werden. Nachfolgende Aufrufe von Hosting-APIs geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode gibt eine leere Auflistung, die nicht aufgefüllt werden kann, von nativem Code. Verwenden Sie die <xref:System.Security.Policy.Evidence> Methode stattdessen.  
+ Diese Methode gibt eine leere Auflistung zurück, die nicht aus nativem Code aufgefüllt werden kann. Verwenden Sie stattdessen die <xref:System.Security.Policy.Evidence>-Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework Version:** 1.0, 1.1  
+ **.NET Framework Version:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5323538447e083a0c727e43261dd68337182b9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141078"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy-Methode
-Ändert die Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
+Ändert die Bindungs Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,48 +41,48 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="parameters"></a>Parameter  
  `pwzSourceAssemblyIdentity`  
- [in] Die Identität der Assembly, zu ändern.  
+ in Die Identität der Assembly, die geändert werden soll.  
   
  `pwzTargetAssemblyIdentity`  
- [in] Die neue Identität der Assembly geändert.  
+ in Die neue Identität der geänderten Assembly.  
   
  `pbApplicationPolicy`  
- [in] Ein Zeiger auf einen Puffer, der Daten der Bindung für den zu ändernden Assembly enthält.  
+ in Ein Zeiger auf einen Puffer, der die Bindungs Richtlinien Daten für die zu ändernde Assembly enthält.  
   
  `cbAppPolicySize`  
- [in] Die Größe der Bindungsrichtlinie ersetzt werden.  
+ in Die Größe der zu ersetzenden Bindungs Richtlinie.  
   
  `dwPolicyModifyFlags`  
- [in] Eine logische OR-Kombination von [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) Werte, der Kontrolle über die Umleitung angibt.  
+ in Eine logische OR-Kombination von [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) -Werten, die die Steuerung der Umleitung angeben.  
   
  `pbNewApplicationPolicy`  
- [out] Ein Zeiger auf einen Puffer, der Daten der neuen Bindung enthält.  
+ vorgenommen Ein Zeiger auf einen Puffer, der die neuen Bindungs Richtlinien Daten enthält.  
   
  `pcbNewAppPolicySize`  
- [in, out] Ein Zeiger auf die Größe des Puffers Richtlinie neue Bindung.  
+ [in, out] Ein Zeiger auf die Größe des neuen Bindungs Richtlinien Puffers.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Richtlinie wurde erfolgreich geändert.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity` oder `pwzTargetAssemblyIdentity` wurde ein null-Verweis.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` oder `pwzTargetAssemblyIdentity` war ein NULL-Verweis.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` ist zu klein.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben hat, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ModifyApplicationPolicy` -Methode zweimal aufgerufen werden kann. Geben Sie beim erste Aufruf sollte null-Wert für die `pbNewApplicationPolicy` Parameter. Dieser Aufruf gibt den erforderlichen Wert für `pcbNewAppPolicySize`. Der zweite Aufruf sollte diesen Wert für bereitstellen `pcbNewAppPolicySize`, und zeigen Sie auf einen Puffer dieser Größe für `pbNewApplicationPolicy`.  
+ Die `ModifyApplicationPolicy`-Methode kann zweimal aufgerufen werden. Der erste-Befehl sollte einen NULL-Wert für den `pbNewApplicationPolicy`-Parameter angeben. Dieser Rückruf gibt mit dem erforderlichen Wert für `pcbNewAppPolicySize`zurück. Der zweite-Befehl sollte diesen Wert für `pcbNewAppPolicySize`bereitstellen und auf einen Puffer dieser Größe für `pbNewApplicationPolicy`zeigen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

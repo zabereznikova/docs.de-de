@@ -11,14 +11,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64f3f2bb54bd454ef037da2f7e10dd9067bf2217
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ede34231bd7fb3ffbd735a06fd4eec4a56657a9f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045600"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129951"
 ---
 # <a name="resources-in-net-apps"></a>Ressourcen in .NET-Apps
 Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sich um nicht ausführbare Daten, die logisch mit einer App bereitgestellt werden. Eine Ressource kann in einer App als Fehlermeldung oder als Teil der Benutzeroberfläche angezeigt werden. Ressourcen können verschiedene Formen von Daten enthalten, z. B. Zeichenfolgen, Bilder und beibehaltene Objekte. (Objekte, die beibehalten werden, müssen serialisierbar sein, um in eine Ressourcendatei geschrieben werden zu können.) Durch Speichern von Daten in einer Ressourcendatei können Sie die Daten ändern, ohne die gesamte App neu kompilieren zu müssen. Außerdem können Sie dadurch die Daten an einem einzigen Ort speichern und müssen nicht auf hartcodierte Daten zurückgreifen, die an mehreren Orten gespeichert wird.  

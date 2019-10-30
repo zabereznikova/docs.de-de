@@ -2,14 +2,12 @@
 title: <Assembly>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128511"
 ---
 # <a name="assembly-element-net-native"></a>\<Assembly > Element (.net Native)
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.  
@@ -73,7 +71,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Ass
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Application>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Application>](application-element-net-native.md)-Element kann null, eins oder mehrere `<Assembly>`-Elemente enthalten.|  
+|[\<Anwendung>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Application>](application-element-net-native.md)-Element kann null, eins oder mehrere `<Assembly>`-Elemente enthalten.|  
 |[\<Library>](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Library>](library-element-net-native.md)-Element kann null oder ein `<Assembly>`-Element enthalten.|  
   
 ## <a name="remarks"></a>Hinweise  

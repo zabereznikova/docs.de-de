@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986673"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140331"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain-Schnittstelle
 Stellt Informationen zu einer Anwendungsdomäne dar und bereit.  
@@ -30,13 +28,13 @@ Stellt Informationen zu einer Anwendungsdomäne dar und bereit.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetID-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Ruft den eindeutigen Bezeichner für diese `ICorPublishAppDomain`.|  
-|[GetName-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Ruft den Namen der Anwendungsdomäne verwiesen wird, von diesem `ICorPublishAppDomain`.|  
+|[GetID-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Ruft den eindeutigen Bezeichner für dieses `ICorPublishAppDomain`ab.|  
+|[GetName-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Ruft den Namen der Anwendungsdomäne ab, auf die von diesem `ICorPublishAppDomain`verwiesen wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   

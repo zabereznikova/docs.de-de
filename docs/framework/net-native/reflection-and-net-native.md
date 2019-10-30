@@ -2,14 +2,12 @@
 title: Reflektion und .NET Native
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17b567fe0f476e689a9775c5c73ebf068424e840
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049288"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128188"
 ---
 # <a name="reflection-and-net-native"></a>Reflektion und .NET Native
 Die verwaltete Entwicklung in .NET Framework unterstützt Metaprogrammierung durch die Reflektions-API. Durch Reflektion können Sie Objekte in einer App überprüfen, Methoden für bei der Überprüfung ermittelte Objekte aufrufen und neue Typen zur Laufzeit generieren. Außerdem werden viele weitere Szenarien mit dynamischem Code unterstützt. Zudem werden die Serialisierung und Deserialisierung unterstützt, wodurch die Feldwerte eines Objekts beibehalten und später wiederhergestellt werden können. All diese Szenarien erfordern den .NET Framework Just-In-Time-Compiler (JIT) zur Generierung von nativem Code basierend auf verfügbaren Metadaten.  

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 1d42292705dae03e9bf1a1555508dfb69cebde82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274285"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132433"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration-Funktion
 Schließt alle gültigen Common Language Runtime (CLR) Continue-Startup-Ereignisse in einem Array von Handles, die von der [enumerateclrs-Funktion](enumerateclrs-function.md)zurückgegeben werden, und gibt den Arbeitsspeicher für das Handle und die Zeichen folgen Pfad Arrays frei.  
@@ -59,10 +57,10 @@ HRESULT CloseCLREnumeration (
  Die Funktion kann den Arbeitsspeicher für `pHandleArray` und `pStringArray` nicht freigeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  
   
  **Bibliothek:** dbgshim. dll  
   
- **.NET Framework Versionen:** 3.5 SP1
+ **.NET Framework Versionen:** 3,5 SP1

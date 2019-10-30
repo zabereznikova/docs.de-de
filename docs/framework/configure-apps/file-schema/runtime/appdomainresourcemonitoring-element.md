@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118252"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<appdomainresourcemonitoring-> Element
+# <a name="appdomainresourcemonitoring-element"></a>\<appdomainresourcemonitoring > Element
 Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses an.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appdomainresourcemonitoring >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +55,7 @@ Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Pr
 ## <a name="remarks"></a>Hinweise  
  Die Ressourcenüberwachung für die Anwendungsdomäne ist über die verwaltete Anwendungs Domänen Klasse, die hostende [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) -Schnittstelle und die Ereignis Ablauf Verfolgung für Windows (ETW) verfügbar. Wenn die Überwachung aktiviert ist, werden Statistiken für alle Anwendungs Domänen im Prozess für die Lebensdauer des Prozesses erfasst.  
   
- Um die Überwachung aus verwaltetem Code zu aktivieren <xref:System.AppDomain.MonitoringIsEnabled%2A> , verwenden Sie die-Eigenschaft.  
+ Um die Überwachung aus verwaltetem Code zu aktivieren, verwenden Sie die <xref:System.AppDomain.MonitoringIsEnabled%2A>-Eigenschaft.  
   
  Dieses Konfigurationselement ist nur in den .NET Framework 4 und höher verfügbar.  
   

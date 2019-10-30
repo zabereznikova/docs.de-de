@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136994"
 ---
-# <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS-Enumeration
-Enthält Werte, die angeben, wie die common Language Runtime (CLR) aufgelöst werden soll eine `CLSID`.  
+# <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS-Enumeration
+Enthält Werte, die angeben, wie die Common Language Runtime (CLR) eine `CLSID`auflösen soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +37,13 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|Gibt an, das Standardverhalten.|  
-|`CLSID_RESOLUTION_REGISTERED`|Gibt an, dass die Common Language Runtime die Registrierung durchsucht und wendet die Shimrichtlinie.|  
+|`CLSID_RESOLUTION_DEFAULT`|Gibt das Standardverhalten an.|  
+|`CLSID_RESOLUTION_REGISTERED`|Gibt an, dass die Laufzeit die Registrierung durchsucht und die Shim-Richtlinie anwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

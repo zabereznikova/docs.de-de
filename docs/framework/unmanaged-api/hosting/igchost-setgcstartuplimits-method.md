@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ae50fb3ff15097f9a6ca5839f3832bcfc58d3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928667"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134857"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits-Methode
 Legt die Segmentgröße und die maximale Größe für die Generation 0 fest.  
   
 > [!IMPORTANT]
-> Beginnend mit dem .NET Framework 4,5 können Sie die Segmentgröße und die maximale Generation 0-Größe auf Werte `DWORD` festlegen, die größer als sind, indem Sie die [IGCHost2:: setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) -Methode verwenden.  
+> Beginnend mit dem .NET Framework 4,5 können Sie mit der [IGCHost2:: setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) -Methode Segmentgröße und maximale Generation 0-Größe auf Werte festlegen, die größer sind als `DWORD`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,14 +45,14 @@ HRESULT SetGCStartupLimits (
  in Die maximale Größe für die Generation 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `SetGCStartupLimits` -Methode kann nur einmal aufgerufen werden. Diese Werte können später nicht mehr geändert werden.  
+ Die `SetGCStartupLimits`-Methode kann nur einmal aufgerufen werden. Diese Werte können später nicht mehr geändert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** GCHost.idl, GCHost.h  
+ **Header:** Gchost. idl, gchost. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

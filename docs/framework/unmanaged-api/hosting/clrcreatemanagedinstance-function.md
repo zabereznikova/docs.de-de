@@ -18,19 +18,17 @@ helpviewer_keywords:
 ms.assetid: 58ba42c0-4857-43bf-a039-73a4dc6544c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1ae530b8488dcd375e91058a227316dd38cf4ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e672030ae83b57da6f9ab66630513d79f28b8f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779162"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131990"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance-Funktion
 Erstellt eine Instanz des angegebenen verwalteten Typs.  
   
- Diese Funktion ist in .NET Framework 4 veraltet. Verwenden Sie COM-Aktivierung zum Erstellen einer Instanz des verwalteten Typs oder -hosting (finden Sie unter [CLR Hosten von Schnittstellen hinzugefügt, in .NET Framework 4 und 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert. Verwenden Sie die COM-Aktivierung, um eine Instanz des verwalteten Typs zu erstellen, oder verwenden Sie das Hosting (siehe [CLR-Hostingschnittstellen, die im .NET Framework 4 und 4,5 hinzugefügt](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)wurden)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,23 +42,23 @@ STDAPI ClrCreateManagedInstance (
   
 ## <a name="parameters"></a>Parameter  
  `pTypeName`  
- [in] Ein Zeiger auf den Namen des Instanztyps angefordert wird.  
+ in Ein Zeiger auf den Namen des angeforderten Instanztyps.  
   
  `riid`  
- [in] Die `IID` des Instanztyps angefordert wird.  
+ in Die `IID` des angeforderten Instanztyps.  
   
  `ppObject`  
- [out] Ein Zeiger auf einen Zeiger auf eine Instanz des verwalteten Typs, der vom Aufrufer angefordert wurde.  
+ vorgenommen Ein Zeiger auf einen Zeiger auf eine Instanz des verwalteten Typs, der vom Aufrufer angefordert wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die common Language Runtime sollte bereits in einen Prozess geladen werden. Sie können z. B. geladen werden, mithilfe eines Aufrufs an die [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funktionieren, bevor Sie die `ClrCreateManagedInstance` Funktion wird aufgerufen. Wenn die Laufzeit nicht geladen wurde, `ClrCreateManagedInstance` versucht zuerst, Version 1.0.3705 der Laufzeit zu laden. Wenn dies fehlschlägt, versucht, die neueste Version der Laufzeit zu laden.  
+ Die Common Language Runtime sollte bereits in einen Prozess geladen werden. Beispielsweise kann Sie mithilfe eines Aufrufs der [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) -Funktion geladen werden, bevor die `ClrCreateManagedInstance`-Funktion aufgerufen wird. Wenn die Laufzeit nicht geladen wird, versucht `ClrCreateManagedInstance` zuerst, die v-1.0.3705 der Laufzeit zu laden. Wenn dies nicht möglich ist, wird versucht, die neueste Version der Laufzeit zu laden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

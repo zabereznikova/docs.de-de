@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950259"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126807"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen-Klasse
 Stellt Funktionen zum Erstellen einer nativen PE-Datei (Portable portable ausführbare Datei) bereit. Die-Schnittstelle wird in der Regel von Compilern verwendet, um Ihre kompilierte ausführbare Ausgabedatei zu generieren  
   
 > [!NOTE]
-> `ICeeFileGen`unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.  
+> `ICeeFileGen` unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.  
   
  Diese Schnittstelle ist veraltet und wird in einer zukünftigen Version entfernt.  
   
@@ -237,11 +235,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ICeeFileGen. h  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework Version:** 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

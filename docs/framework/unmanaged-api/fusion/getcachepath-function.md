@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132700"
 ---
 # <a name="getcachepath-function"></a>GetCachePath-Funktion
 Ruft den Pfad zur zwischengespeicherten Assembly unter Verwendung der angegebenen Flags ab.  
@@ -46,10 +44,10 @@ HRESULT GetCachePath (
  vorgenommen Der zurückgegebene Zeiger auf den Pfad.  
   
  `pcchPath`  
- [in, out] Die angeforderte maximale Länge `pwzCachePath`von und bei Rückgabe die tatsächliche Länge von. `pwzCachePath`  
+ [in, out] Die angeforderte maximale Länge `pwzCachePath`und bei Rückgabe der tatsächlichen Länge `pwzCachePath`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   

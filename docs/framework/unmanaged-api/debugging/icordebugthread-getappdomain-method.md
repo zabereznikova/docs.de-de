@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da473ed176ab6c69ed974d5f28b22fc8eb30c6af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a845eed993914e02de34ec5c60ed232ccabc561e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762518"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133527"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain-Methode
-Ruft einen Schnittstellenzeiger an die Anwendungsdomäne, in der dieser ICorDebugThread derzeit ausgeführt wird.  
+Ruft einen Schnittstellen Zeiger auf die Anwendungsdomäne ab, in der dieser ICorDebugThread gerade ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>Parameter  
  `ppAppDomain`  
- [out] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der der Thread gerade ausgeführt wird.  
+ vorgenommen Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der dieser Thread gerade ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

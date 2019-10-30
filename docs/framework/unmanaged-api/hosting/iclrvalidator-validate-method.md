@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5fbf83690f616556774e8f279e1077fccdb8baf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779910"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127831"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate-Methode
-Überprüft die Datei (portable Executable) oder Microsoft intermediate Language (MSIL) in der angegebenen Datei.  
+Überprüft die portable ausführbare Datei (PE) oder Microsoft Intermediate Language (MSIL) in der angegebenen Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,46 +42,46 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parameter  
  `veh`  
- [in] Ein Zeiger auf ein `IVEHandler` -Instanz, die Validierungsfehler behandelt.  
+ in Ein Zeiger auf eine `IVEHandler`-Instanz, die Validierungs Fehler behandelt.  
   
  `ulAppDomainId`  
- [in] Der Bezeichner für die aktuelle <xref:System.AppDomain>.  
+ in Der Bezeichner für die aktuelle <xref:System.AppDomain>.  
   
  `ulFlags`  
- [in] Eine Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) Werte, der die Art der Validierung ausgeführt werden soll.  
+ in Eine Kombination aus [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) -Werten, die die Art der Überprüfung angeben, die ausgeführt werden soll.  
   
  `ulMaxError`  
- [in] Die maximale Anzahl von Fehlern, die vor dem Beenden der Überprüfungsprozess zulassen.  
+ in Die maximal zulässige Anzahl von Fehlern, bevor die Überprüfung beendet wird.  
   
  `token`  
- [in] Nicht verwendet.  
+ in Genutzt.  
   
  `fileName`  
- [in] Der Name der Datei, die überprüft werden.  
+ in Der Name der zu validierenden Datei.  
   
  `pe`  
- [in] Ein Zeiger auf den Dateipuffer.  
+ in Ein Zeiger auf den Datei Puffer.  
   
  `ulSize`  
- [in] Die Größe in Bytes der Datei, die überprüft werden.  
+ in Die Größe (in Bytes) der zu validierenden Datei.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`Validate` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`Validate` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** IValidator.idl, IValidator.h  
+ **Header:** IValidator. idl, IValidator. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

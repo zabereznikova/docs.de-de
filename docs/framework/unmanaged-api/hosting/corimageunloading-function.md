@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758394"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136924"
 ---
-# <a name="corimageunloading-function"></a>_CorImageUnloading-Funktion
+# <a name="_corimageunloading-function"></a>_CorImageUnloading-Funktion
 Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls entladen werden.  
   
- Diese Funktion ist nicht implementiert. Wird aufgerufen, gibt E_NOTIMPL zurück.  
+ Diese Funktion ist nicht implementiert. Wenn Sie aufgerufen wird, wird E_NOTIMPL zurückgegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +36,14 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Parameter  
  `ImageBase`  
- [in] Ein Zeiger auf den Anfangsort des Bildes, das nicht entladen werden soll.  
+ in Ein Zeiger auf die Startposition des zu entladenden Bilds.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

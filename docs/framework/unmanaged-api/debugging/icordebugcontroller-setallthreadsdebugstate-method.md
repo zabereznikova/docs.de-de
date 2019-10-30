@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdda4bd7-4743-4d58-a22b-8067e967db95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9348652129a3357784654006dc16d822298f28f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1190f83e2671216cf1627eeb710ba576e4b2ec93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125362"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState-Methode
-Legt den Debugzustand des alle verwalteten Threads im Prozess fest.  
+Legt den Debugstatus aller verwalteten Threads im Prozess fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT SetAllThreadsDebugState (
   
 ## <a name="parameters"></a>Parameter  
  `state`  
- [in] Der Wert der "CorDebugThreadState"-Enumeration, die den Zustand des Threads für das Debuggen angibt.  
+ in Ein Wert der CorDebugThreadState-Enumeration, der den Zustand des Threads für das Debuggen angibt.  
   
  `pExceptThisThread`  
- [in] Ein Zeiger auf ein "ICorDebugThread"-Objekt, das einen Thread, der von der Festlegung des Status, ausgenommen werden darstellt. Wenn dieser Wert null ist, ist kein Thread ausgenommen.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das einen Thread darstellt, der von der Debug-Statuseinstellung ausgenommen werden soll. Wenn dieser Wert NULL ist, wird kein Thread ausgenommen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `SetAllThreadsDebugState` Methode beeinträchtigen Threads, die nicht über sichtbar sind [EnumerateThreads-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md), also mit unterbrochene Threads die `SetAllThreadsDebugState` Methode müssen mit fortgesetzt werden die `SetAllThreadsDebugState` Methode.  
+ Die `SetAllThreadsDebugState`-Methode wirkt sich möglicherweise auf Threads aus, die über die [EnumerateThreads-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)nicht sichtbar sind, sodass Threads, die mit der `SetAllThreadsDebugState`-Methode angehalten wurden, mit der `SetAllThreadsDebugState`-Methode fortgesetzt werden müssen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768406"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133778"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion-Funktion
-Ermöglicht dem Host, um zu bestimmen, welche Version der common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.  
+Ermöglicht dem Host, zu bestimmen, welche Version des Common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,55 +39,55 @@ HRESULT LockClrVersion (
   
 ## <a name="parameters"></a>Parameter  
  `hostCallback`  
- [in] Die Funktion, die von der CLR bei der Initialisierung aufgerufen werden.  
+ in Die Funktion, die von der CLR bei der Initialisierung aufgerufen werden soll.  
   
  `pBeginHostSetup`  
- [in] Die Funktion, die durch den Host aus, um die CLR darüber zu informieren, dass die Initialisierung aufgerufen werden, wird gestartet.  
+ in Die Funktion, die vom Host aufgerufen werden soll, um die CLR darüber zu informieren, dass die Initialisierung gestartet wird.  
   
  `pEndHostSetup`  
- [in] Die Funktion, die durch den Host aus, um die CLR darüber zu informieren, dass die Initialisierung aufgerufen werden, ist abgeschlossen.  
+ in Die Funktion, die vom Host aufgerufen werden soll, um die CLR darüber zu informieren, dass die Initialisierung beendet ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt die standard-COM-Fehlercodes, zurück, wie in "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
+ Diese Methode gibt neben den folgenden Werten Standard-COM-Fehlercodes zurück, die in WinError. h definiert sind.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|Eine oder mehrere der Argumente ist null.|  
+|E_INVALIDARG|Mindestens eines der Argumente ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host ruft `LockClrVersion` vor der Initialisierung der CLR. `LockClrVersion` akzeptiert drei Parameter, die alle Rückrufe vom Typ sind [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Dieser Typ ist wie folgt definiert.  
+ Der Host ruft `LockClrVersion` vor dem Initialisieren der CLR auf. `LockClrVersion` benötigt drei Parameter, von denen alle Rückrufe des Typs [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)sind. Dieser Typ wird wie folgt definiert.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- Die folgenden Schritte werden bei der Initialisierung der Runtime:  
+ Die folgenden Schritte erfolgen bei der Initialisierung der Laufzeit:  
   
-1. Der Host ruft [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder eine der anderen Initialisierungsfunktionen Common Language Runtime. Sie können auch konnte der Host die Laufzeit mithilfe von COM-objektaktivierung initialisiert werden.  
+1. Der Host ruft [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder eine der anderen Lauf Zeit Initialisierungs Funktionen auf. Alternativ kann der Host die Laufzeit mithilfe der COM-Objekt Aktivierung initialisieren.  
   
-2. Ruft die Runtime die Funktion, die anhand der `hostCallback` Parameter.  
+2. Die Laufzeit ruft die durch den `hostCallback`-Parameter angegebene Funktion auf.  
   
-3. Die Funktion anhand des `hostCallback` macht anschließend die folgende Sequenz von aufrufen:  
+3. Die von `hostCallback` angegebene Funktion führt dann die folgende Sequenz von Aufrufen aus:  
   
-    - Die Funktion, die anhand der `pBeginHostSetup` Parameter.  
+    - Die Funktion, die durch den `pBeginHostSetup`-Parameter angegeben wird.  
   
-    - `CorBindToRuntimeEx` (oder eine andere Funktion der Common Language Runtime-Initialisierung).  
+    - `CorBindToRuntimeEx` (oder eine andere Lauf Zeit Initialisierungsfunktion).  
   
-    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost:: abgelegte Control](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    - [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    - Die Funktion, die anhand der `pEndHostSetup` Parameter.  
+    - Die Funktion, die durch den `pEndHostSetup`-Parameter angegeben wird.  
   
- Alle Aufrufe von `pBeginHostSetup` zu `pEndHostSetup` muss auf einem einzelnen Thread oder eine Fiber mit demselben logischen Stapel auftreten. Dieser Thread kann aus dem Thread, von denen unterscheiden `hostCallback` aufgerufen wird.  
+ Alle Aufrufe von `pBeginHostSetup` an `pEndHostSetup` müssen in einem einzelnen Thread oder einer Fiber mit demselben logischen Stapel erfolgen. Dieser Thread kann sich von dem Thread unterscheiden, für den `hostCallback` aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

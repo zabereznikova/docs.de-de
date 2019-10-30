@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739003"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123015"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo-Funktion
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_getmanagedobjectfieldinfo-Funktion
 Ruft den Offset vom Beginn eines Objekts zu einem Feld sowie den Wert des Felds mit dem bereitgestellten Objektzeiger und Feldnamen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,29 +38,29 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Parameter  
  `Client`  
- [in] Ein Zeiger auf den Client Debuggen.  
+ in Ein Zeiger auf den Debugclient.  
   
  `objAddr`  
- [in] Ein Zeiger des verwalteten Objekts.  
+ in Ein Zeiger für verwaltete Objekte.  
   
  szFieldName  
- [in] Ein verwaltetes Objektzeiger auf den Namen des Felds.  
+ in Ein verwalteter Objekt Zeiger auf den Feldnamen.  
   
  `pValue`  
- [out] Der Wert des Felds. Dieser Parameter kann NULL sein.  
+ vorgenommen Der Feldwert. Dieser Parameter kann NULL sein.  
   
  `pOffset`  
- [out] Der Offset vom `objAddr` auf das Feld. Dieser Parameter kann NULL sein.  
+ vorgenommen Der Offset von `objAddr` in das Feld. Dieser Parameter kann NULL sein.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Offset 0 ist, wird kein Offset geschrieben.  
+ Wenn der Offset 0 (null) ist, wird kein Offset geschrieben.  
   
- Es ist kein verwalteter Code für den Thread aktuell im Kontext, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einer Funktion 0xa0 und Fehlercode 0 x 1000 zurück.  
+ Wenn im Thread derzeit kein verwalteter Code vorhanden ist, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einem Einrichtungs Wert von 0xa0 und dem Fehlercode 0x1000 zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** SOS_Stacktrace.h  
+ **Header:** SOS_Stacktrace. h  
   
  **.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

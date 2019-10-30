@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f881440b2e93745723bd090cfbab0286dcd0a4e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7475e2423d4dc6f57e8928514d7991169eef232
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124499"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore-Schnittstelle
 Stellt Methoden bereit, die einem Host das Laden von Assemblys und Modulen unabhängig von der Common Language Runtime (CLR) ermöglichen.  
@@ -34,22 +32,22 @@ Stellt Methoden bereit, die einem Host das Laden von Assemblys und Modulen unabh
 |[ProvideModule-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Löst ein Modul in einer Assembly oder einer verknüpften (nicht eingebetteten) Ressourcen Datei auf.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IHostAssemblyStore`ermöglicht einem Host das effiziente Laden von Assemblys basierend auf der Assemblyidentität. Der Host lädt Assemblys `IStream` , indem er Instanzen zurückgibt, die direkt auf die Bytes zeigen.  
+ `IHostAssemblyStore` bietet eine Möglichkeit für einen Host, Assemblys basierend auf der Assemblyidentität effizient zu laden. Der Host lädt Assemblys, indem `IStream` Instanzen zurückgegeben werden, die direkt auf die Bytes zeigen.  
   
- Die CLR bestimmt, ob ein Host durch `IHostAssemblyStore` aufrufen `IHostAssemblyManager::GetNonHostAssemblyStores` von bei der Initialisierung implementiert wurde. Dadurch kann der Host z. b. die Bindung an Benutzerassemblys steuern, sich jedoch auf die Laufzeit zum Binden an .NET Framework Assemblys verlassen.  
+ Die CLR bestimmt, ob ein Host `IHostAssemblyStore` implementiert hat, indem `IHostAssemblyManager::GetNonHostAssemblyStores` bei der Initialisierung aufgerufen wird. Dadurch kann der Host z. b. die Bindung an Benutzerassemblys steuern, sich jedoch auf die Laufzeit zum Binden an .NET Framework Assemblys verlassen.  
   
 > [!NOTE]
-> Beim Bereitstellen einer Implementierung `IHostAssemblyStore`von gibt der Host seine Absicht an, alle Assemblys aufzulösen, auf die `ICLRAssemblyReferenceList` nicht von `IHostAssemblyManager::GetNonHostStoreAssemblies`der zurückgegebenen verwiesen wird.  
+> Wenn eine Implementierung von `IHostAssemblyStore`bereitgestellt wird, gibt der Host die Absicht an, alle Assemblys aufzulösen, auf die nicht durch die von `IHostAssemblyManager::GetNonHostStoreAssemblies`zurückgegebenen `ICLRAssemblyReferenceList` verwiesen wird.  
   
 > [!NOTE]
 > Der .NET Framework Version 2,0 bietet dem Host keine Möglichkeit, das systemeigene Image einer Assembly zu laden, wie vom systemeigenen [Image Generator (Ngen. exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) bereitgestellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

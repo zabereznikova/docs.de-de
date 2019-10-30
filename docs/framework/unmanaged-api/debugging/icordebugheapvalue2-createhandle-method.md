@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9eab1274f2d0ad562c0dec6adeddb85c6cfc458
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138390"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle-Methode
-Erstellt ein Handle des angegebenen Typs für den Heapwert, der von diesem ICorDebugHeapValue2-Objekt dargestellt.  
+Erstellt ein Handle des angegebenen Typs für den Heap Wert, der durch dieses ICorDebugHeapValue2-Objekt dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +36,18 @@ HRESULT CreateHandle (
   
 ## <a name="parameters"></a>Parameter  
  `type`  
- [in] Der Wert CorDebugHandleType-Enumeration, die den Typ des zu erstellenden Handle angibt.  
+ in Ein Wert der CorDebugHandleType-Enumeration, der den Typ des zu erstellenden Handles angibt.  
   
  `ppHandle`  
- [out] Ein Zeiger auf die Adresse des ICorDebugHandleValue-Objekts, das das neue Handle für diesen Heapwert darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugHandleValue-Objekts, das das neue Handle für diesen Heapwert darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Handle erstellt werden, in der Anwendungsdomäne, die mit dem Heapwert verknüpft ist, und es werden dadurch ungültig, wenn die Anwendungsdomäne entladen wird.  
+ Das Handle wird in der Anwendungsdomäne erstellt, die dem Heap Wert zugeordnet ist, und wird ungültig, wenn die Anwendungsdomäne entladen wird.  
   
- Mehrere Aufrufe dieser Funktion für den gleichen Heapwert erstellt mehrere Handles. Da Handles auf die Leistung der Garbage Collection betreffen, sollten der Debugger selbst, um eine relativ kleine Anzahl von Handles (ca. 256) einschränken, die gleichzeitig aktiv sind.  
+ Mehrere Aufrufe dieser Funktion für denselben Heap Wert werden mehrere Handles erstellen. Da Handles die Leistung des Garbage Collector beeinflussen, sollte sich der Debugger auf eine relativ kleine Anzahl von Handles (etwa 256) beschränken, die gleichzeitig aktiv sind.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

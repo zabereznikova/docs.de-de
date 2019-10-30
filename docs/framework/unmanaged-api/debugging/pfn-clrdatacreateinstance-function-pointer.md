@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139165"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance-Funktionszeiger
-Verweist auf eine Funktion, die einem Schnittstellenobjekt für das angegebene Ziel-Element erstellt.  
+# <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance-Funktionszeiger
+Verweist auf eine Funktion, die ein Schnittstellen Objekt für das angegebene Ziel Element erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,21 +36,21 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="parameters"></a>Parameter  
  `iid`  
- [in] Der Bezeichner der Schnittstelle, die instanziiert werden.  
+ in Der Bezeichner der Schnittstelle, die instanziiert werden soll.  
   
  `target`  
- [in] Ein Zeiger auf eine vom Benutzer implementierte [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) -Objekt, das Zielelement, für die zum Erstellen des Schnittstellenobjekts darstellt.  
+ in Ein Zeiger auf ein vom Benutzer implementiertes [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) -Objekt, das das Ziel Element darstellt, für das das Schnittstellen Objekt erstellt werden soll.  
   
  `iface`  
- [out] Ein Zeiger auf die Adresse des Objekts zurückgegebene Schnittstelle.  
+ vorgenommen Ein Zeiger auf die Adresse des zurückgegebenen Schnittstellen Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICLRDataTarget` Objekt wird vom Writer der Debuganwendung implementiert. Die Implementierung hängt von den Typ des Target-Element dargestellt wird. Das Zielelement ist möglicherweise ein Prozess, Speicherabbild, Remotecomputer und So weiter.  
+ Das `ICLRDataTarget` Objekt wird vom Writer der debugginganwendung implementiert. Die-Implementierung hängt vom Typ des dargestellten Ziel Elements ab. Das Ziel Element kann ein Prozess, ein Speicher Abbild, ein Remote Computer usw. sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl  
+ **Header:** Clrdata. idl  
   
  **Bibliothek:** CorGuids.lib  
   

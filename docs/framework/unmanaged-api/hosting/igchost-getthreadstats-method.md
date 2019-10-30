@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87e318c4f2367e8c66910978f4a9c89f36c95632
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36eeb7ed4f80979ef2edb930e65963a1db0c894f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134906"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats-Methode
-Ruft die Statistiken pro Thread für die Garbagecollection ab.  
+Ruft die Statistiken pro Thread für Garbage Collection ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +36,17 @@ HRESULT GetThreadStats (
   
 ## <a name="parameters"></a>Parameter  
  `pFiberCookie`  
- [in] Ein Zeiger auf ein Fibercookie, der angibt, den Thread für die die Statistiken abzurufen.  
+ in Ein Zeiger auf ein Fiber Cookie, das den Thread angibt, für den die Statistiken abgerufen werden sollen.  
   
  `pStats`  
- [in, out] Ein Zeiger auf eine [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) Struktur, die die Garbage Collection-Statistik für den angegebenen Thread enthält.  
+ [in, out] Ein Zeiger auf eine [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) -Struktur, die die Garbage Collection Statistiken für den angegebenen Thread enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** GCHost.idl, GCHost.h  
+ **Header:** Gchost. idl, gchost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

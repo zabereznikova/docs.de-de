@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetObjectSize-Methode
+title: 'Icordebugsymbolprovider:: GetObjectSize-Methode'
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59054d7b939ab29cb08c30961601a323529ce06b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138815"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize-Methode
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>Icordebugsymbolprovider:: GetObjectSize-Methode
 Gibt die Objektgröße eines Objekts basierend auf seiner TypeSpec-Signatur zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,11 +38,11 @@ HRESULT GetObjectSize(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

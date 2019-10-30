@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Installieren einer Assembly im globalen Assemblycache'
+title: 'Gewusst wie: Installieren einer Assembly im globalen Assemblycache'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119811"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Vorgehensweise: Installieren einer Assembly im globalen Assemblycache
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Gewusst wie: Installieren einer Assembly im globalen Assemblycache
 
 Im globalen Assemblycache (GAC) werden Assemblys gespeichert, die von mehreren Anwendungen gemeinsam verwendet werden. Installieren Sie eine Assembly mit einer der folgenden Komponenten in den [globalen Assemblycache](gac.md): 
 
@@ -26,13 +24,13 @@ Im globalen Assemblycache (GAC) werden Assemblys gespeichert, die von mehreren A
 - [Tool für globalen Assemblycache](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> Sie können nur Assemblys mit starkem Namen im globalen Assemblycache installieren. Informationen zum Erstellen von Assemblys mit starkem Namen finden Sie unter [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md).
+> Sie können nur Assemblys mit starkem Namen im globalen Assemblycache installieren. Weitere Informationen zum Erstellen einer Assembly mit starkem Namen finden Sie unter Gewusst [wie: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md).
 
 ## <a name="windows-installer"></a>Windows Installer
 
 [Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), das Windows-Installationsmodul, stellt das empfohlene Verfahren zum Hinzufügen von Assemblys zum globalen Assemblycache dar. Der Windows Installer bietet neben einem Verweiszähler für Assemblys im globalen Assemblycache noch weitere Vorteile. Verwenden Sie die [WiX-Toolseterweiterung für Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension), um ein Installationspaket für Windows Installer zu erstellen.
 
-## <a name="global-assembly-cache-tool"></a>Tool für globalen Assemblycache
+## <a name="global-assembly-cache-tool"></a>Globaler Assemblycache (Tool)
 
 Mit dem [.NET-Hilfsprogramm für den globalen Assemblycache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) können Sie dem globalen Assemblycache Assemblys hinzufügen und sich dessen Inhalt anzeigen lassen.
 
@@ -63,4 +61,4 @@ gacutil -i hello.dll
 - [Arbeiten mit Assemblys und dem globalen Assemblycache](working-with-assemblies-and-the-gac.md)
 - [Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil.exe (Tool für globalen Assemblycache)](../tools/gacutil-exe-gac-tool.md)
-- [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md)
+- [Gewusst wie: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md)

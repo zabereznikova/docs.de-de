@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123849"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged-Methode
-Ruft einen Wert, der angibt, ob dieser Kette auf verwalteten Code ausgeführt wird.  
+Ruft einen Wert ab, der angibt, ob diese Kette verwalteten Code ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Parameter  
  `pManaged`  
- [out] `true` Wenn dieser Kette auf verwalteten Code ausgeführt wird, andernfalls `false`.  
+ [out] `true`, wenn diese Kette verwalteten Code ausgeführt hat. Andernfalls `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

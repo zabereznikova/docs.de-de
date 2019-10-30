@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274145"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132384"
 ---
 # <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION-Struktur
 Enthält Informationen zu den Funktionen, die aktuell in den Rahmen eines Threads aktiv sind. Diese Struktur wird von der [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) -Methode verwendet.  
@@ -42,18 +40,18 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`pAppDomain`|Zeiger auf den Anwendungs Domänen Besitzer des `ilOffset` Felds.|  
+|`pAppDomain`|Zeiger auf den Besitzer der Anwendungsdomäne des `ilOffset` Felds.|  
 |`pModule`|Zeiger auf den Modul Besitzer des `ilOffset` Felds.|  
 |`pFunction`|Zeiger auf den Funktions Besitzer des `ilOffset` Felds.|  
 |`ilOffset`|Der MSIL-Offset (Microsoft Intermediate Language) des Frames.|  
 |`flags`|Reserviert für zukünftige Erweiterbarkeit.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl  
+ **Header:** Cordebug. idl  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

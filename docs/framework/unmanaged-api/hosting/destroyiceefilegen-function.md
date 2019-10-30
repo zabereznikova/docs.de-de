@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab4560774edce49341c86dd9446e38701db7fa62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769832"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136500"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen-Funktion
-Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
+Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) -Objekt.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +38,20 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>Parameter  
  `ceeFileGen`  
- [in] Die `ICeeFileGen` Objekt zu zerstören.  
+ in Das `ICeeFileGen` Objekt, das zerstört werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt die standard-COM-Fehlercodes zurück.  
+ Diese Methode gibt com-Standard Fehlercodes zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- `DestroyICeeFileGen` zerstört die `ICeeFileGen` Objekt erstellt wurde, indem die [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) Funktion.  
+ `DestroyICeeFileGen` zerstört das `ICeeFileGen` Objekt [, das von der Funktion "](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) -Funktion" erstellt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ICeeFileGen.h  
+ **Header:** ICeeFileGen. h  
   
- **Bibliothek:** MSCorPE.dll  
+ **Bibliothek:** Mscorpe. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

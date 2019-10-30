@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127169"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName-Methode
-Ruft den Namen der Assembly ab, die dies `ICorDebugAssembly` -Instanz darstellt.  
+Ruft den Namen der Assembly ab, die diese `ICorDebugAssembly` Instanz darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,16 +40,16 @@ HRESULT GetName (
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [out] Ein Zeiger auf eine ganze Zahl, die die tatsächliche Länge des Namens angibt.  
+ vorgenommen Ein Zeiger auf eine ganze Zahl, die die tatsächliche Länge des Namens angibt.  
   
  `szName`  
- [out] Ein Array, das den Namen speichert.  
+ vorgenommen Ein Array, in dem der Name gespeichert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName` Methode gibt den vollständigen Pfad und Namen der Assembly zurück.  
+ Die `GetName`-Methode gibt den vollständigen Pfad und den Dateinamen der Assembly zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

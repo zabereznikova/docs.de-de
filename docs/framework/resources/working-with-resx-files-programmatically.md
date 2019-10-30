@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e5a57664c5d86ebf394ce026608be9a55872eb8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129908"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Programmgesteuertes Arbeiten mit RESX-Dateien
 Da XML-Ressourcendateien (RESX) aus ordnungsgemäß definiertem XML-Code bestehen müssen, einschließlich eines Headers, der einem bestimmten Schema entsprechen muss, und auf den Daten in Name/Wert-Paaren folgen, werden Sie vermutlich feststellen, dass das manuelle Erstellen dieser Dateien ziemlich fehlerträchtig ist. Alternativ können Sie RESX-Dateien programmgesteuert mithilfe von Typen und Elementen aus der .NET-Klassenbibliothek erstellen. Sie können die .NET-Klassenbibliothek auch zum Abrufen der in RESX-Dateien gespeicherten Ressourcen verwenden. In diesem Thema wird erläutert, wie Sie die Typen und Elemente im <xref:System.Resources> -Namespace für das Arbeiten mit RESX-Dateien verwenden können.

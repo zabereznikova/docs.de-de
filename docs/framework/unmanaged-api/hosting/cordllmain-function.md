@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136964"
 ---
-# <a name="cordllmain-function"></a>\_CorDllMain-Funktion
+# <a name="_cordllmain-function"></a>\_cordllmain-Funktion
 
-Initialisiert die common Language Runtime (CLR), sucht den verwalteten Einstiegspunkt im CLR-Header der DLL-Assembly und startet die Ausführung.  
+Initialisiert die Common Language Runtime (CLR), gibt den verwalteten Einstiegspunkt im CLR-Header der dll-Assembly an und beginnt die Ausführung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,33 +37,33 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>Parameter  
  `hInst`  
- [in] Der Instanzhandle des geladenen Moduls.  
+ in Der Instanzhandle des geladenen Moduls.  
   
  `dwReason`  
- [in] Gibt an, warum die DLL-Einstiegspunkt-Funktion aufgerufen wird. Dieser Parameter kann einen der folgenden Werte sein: DLL\_PROCESS_ATTACH, DLL\_THREAD\_ATTACH, DLL\_THREAD\_ATTACH, or DLL\_PROCESS\_DETACH. Beschreibungen dieser Werte finden Sie die `DllMain` Dokumentation im Platform SDK.  
+ in Gibt an, warum die DLL-Einstiegspunkt Funktion aufgerufen wird. Dieser Parameter kann einen der folgenden Werte aufweisen: dll\_PROCESS_ATTACH, dll\_Thread\_Attach, dll\_Thread\_Attach oder dll\_Prozess\_Detach. Beschreibungen dieser Werte finden Sie in der `DllMain`-Dokumentation im Platform SDK.  
   
  `lpReserved`  
- [in] Nicht verwendet.  
+ in Genutzt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt `true` für Erfolg und `false` Wenn ein Fehler auftritt.  
+ Diese Methode gibt `true` für Erfolg und `false` zurück, wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion wird vom Ladeprogramm Betriebssystems für DLL-Assemblys aufgerufen werden. Für ausführbare Assemblys ruft das Ladeprogramm die [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) stattdessen funktionieren.  
+ Diese Funktion wird vom Betriebssystem-Lade Modul für dll-Assemblys aufgerufen. Bei ausführbaren Assemblys Ruft das Lade Programm stattdessen die [\_CORExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion auf.  
   
- Vom Ladeprogramm des Betriebssystems ruft diese Methode unabhängig von der Einstiegspunkt in die DLL-Datei angegeben.  
+ Das Betriebssystem-Lade Modul ruft diese Methode unabhängig vom Einstiegspunkt auf, der in der DLL-Datei angegeben ist.  
   
-Die `_CorDllMain` Funktion direkt vom Ladeprogramm Betriebssystems aufgerufen wird.
+Die `_CorDllMain`-Funktion wird direkt vom Betriebssystem-Lade Modul aufgerufen.
   
- Weitere Informationen finden Sie im Abschnitt "Hinweise" in der [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) Thema.  
+ Weitere Informationen finden Sie im Abschnitt "Hinweise" des Themas [\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Anforderungen  
 
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

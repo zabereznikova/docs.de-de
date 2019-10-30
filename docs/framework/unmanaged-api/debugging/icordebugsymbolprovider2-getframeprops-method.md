@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2::GetFrameProps-Methode
+title: 'ICorDebugSymbolProvider2:: getframerequismethode'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c22e9c58a203c13611298e1956a6951d8ca7e8b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133646"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2::GetFrameProps-Methode
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2:: getframerequismethode
 Gibt die relative virtuelle Startadresse einer Methode und den übergeordneten Frame zurück, wenn eine coderelative virtuelle Adresse angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,11 +38,11 @@ HRESULT GetFrameProps(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

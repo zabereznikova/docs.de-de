@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50a95b8b-9766-470e-bb29-2c7ecddfd4a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3ce0b9a40d5375f563662d73964d28724209dcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eddc2f29da0efd9e56df710203b1d7621ffc27a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136871"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor-Funktion
 `CoUninitializeCor` ist veraltet.  
@@ -34,7 +32,7 @@ STDAPI_(void) CoUninitializeCor(void);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die common Language Runtime kann nicht von einem Prozess entladen werden. Um die Laufzeit von einem laufenden Prozess vollständig zu entfernen, müssen Sie diesen Prozess beenden.  
+ Der Common Language Runtime kann nicht aus einem Prozess entladen werden. Wenn Sie die Laufzeit vollständig aus einem laufenden Prozess entfernen möchten, müssen Sie diesen Prozess beenden.  
   
 ## <a name="see-also"></a>Siehe auch
 

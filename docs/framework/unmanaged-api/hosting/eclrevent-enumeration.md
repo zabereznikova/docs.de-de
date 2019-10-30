@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee749fd40f440e92f1d1b09c2ea5e7bdd51f1cbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769711"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131133"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent-Enumeration
-Beschreibt die common Language Runtime (CLR)-Ereignisse für die der Host Rückrufe registrieren kann.  
+Beschreibt die Common Language Runtime (CLR)-Ereignisse, für die der Host Rückrufe registrieren kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,24 +39,24 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|Gibt einen schwerwiegenden Fehler für die CLR.|  
-|`Event_DomainUnload`|Gibt an, das Entladen eines bestimmten <xref:System.AppDomain>.|  
-|`Event_MDAFired`|Gibt an, dass eine Nachricht des Assistenten für verwaltetes Debuggen (Managed Debugging Assistant, MDA) generiert wurde.|  
-|`Event_StackOverflow`|Gibt an, dass ein Stapelüberlauf auftritt, aufgetreten ist.|  
+|`Event_ClrDisabled`|Gibt einen schwerwiegenden CLR-Fehler an.|  
+|`Event_DomainUnload`|Gibt das Entladen eines bestimmten <xref:System.AppDomain>an.|  
+|`Event_MDAFired`|Gibt an, dass eine MDA-Nachricht (Managed Debug Assistant) generiert wurde.|  
+|`Event_StackOverflow`|Gibt an, dass ein Stapelüberlauf Fehler aufgetreten ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host kann Rückrufe für alle Ereignistypen, die durch beschrieben registrieren `EClrEvent` durch Aufrufen der Methoden, die von der [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) Schnittstelle. Der Host Ruft einen Zeiger auf diese Schnittstelle ab, durch den Aufruf der [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) Methode.  
+ Der Host kann Rückrufe für jeden der Ereignis Typen registrieren, die von `EClrEvent` beschrieben werden, indem Methoden der [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) -Schnittstelle aufgerufen werden. Der Host erhält einen Zeiger auf diese Schnittstelle, indem er die [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) -Methode aufruft.  
   
- Die `Event_CLRDisabled` und `Event_DomainUnload` Ereignisse ausgelöst werden können, mehr als einmal und von verschiedenen Threads ein Entladen oder das Deaktivieren der CLR signalisiert.  
+ Die `Event_CLRDisabled`-und `Event_DomainUnload` Ereignisse können mehrmals und aus unterschiedlichen Threads ausgelöst werden, um eine Entladung oder die Deaktivierung der CLR zu signalisieren.  
   
- Die `Event_MDAFired` Ereignis löst die Erstellung einer [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) -Instanz, die die Details der MDA-Meldung enthält. Weitere Informationen über MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Das `Event_MDAFired`-Ereignis löst die Erstellung einer [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) -Instanz aus, die die Details der MDA-Nachricht enthält. Weitere Informationen zu MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

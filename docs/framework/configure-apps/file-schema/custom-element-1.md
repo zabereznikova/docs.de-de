@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118837"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Benutzerdefiniertes Element für SingleTagSectionHandler
 
-Definiert Einstellungen in einem benutzerdefinierten Konfigurations Abschnitt, der von einem \<Abschnitt >-Elements definiert wird <xref:System.Configuration.SingleTagSectionHandler> und die-Klasse verwendet.
+Definiert Einstellungen in einem benutzerdefinierten Konfigurations Abschnitt, der von einem \<Abschnitt >-Element definiert wird und die <xref:System.Configuration.SingleTagSectionHandler>-Klasse verwendet.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,15 +40,15 @@ Attribute und Attributwerte sind Benutzer definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 
-**Das\<Element sectionName >** ist ein benutzerdefiniertes Element, das durch einen [ **\<Abschnitt >** ](section-element.md) -Tag im [ **\<>** ](configsections-element-for-configuration.md) -Element von configabschnitts definiert wird. Das Konfigurationssystem gibt ein <xref:System.Collections.IDictionary> -Objekt zurück, <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>wenn aufgerufen wird.
+Das **\<sectionName >** -Element ist ein benutzerdefiniertes Element, das durch einen [ **\<Abschnitt >** ](section-element.md) -Tag im\<Element > [**configabschnitts**](configsections-element-for-configuration.md) definiert wird. Das Konfigurationssystem gibt ein <xref:System.Collections.IDictionary> Objekt zurück, wenn Sie <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>aufgerufen haben.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird ein benutzerdefiniertes Element namens  **\<sampleSection >** deklariert, das die <xref:System.Configuration.SingleTagSectionHandler> von der-Klasse gelesenen Einstellungen enthält:
+Im folgenden Beispiel wird ein benutzerdefiniertes Element namens **\<sampleSection >** deklariert, das die von der <xref:System.Configuration.SingleTagSectionHandler>-Klasse gelesenen Einstellungen enthält:
 
 ```xml
 <configuration>

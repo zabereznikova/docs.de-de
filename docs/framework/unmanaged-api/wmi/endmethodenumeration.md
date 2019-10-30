@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 174cf76d4b0ddf07e67e02bff20a983dca08819a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132021"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration-Funktion
 Beendet eine enumerationssequenz, die mit einem Aufrufen der [beginmethodenumeration-Funktion](beginmethodenumeration.md)gestartet wurde.  
@@ -58,12 +56,12 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: endmethodenumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) -Methode.
 
-Der Aufrufer startet die enumerationssequenz mithilfe der [beginmethodenumeration-Funktion](beginmethodenumeration.md)und ruft dann die [nextmethod](nextmethod.md )- `WBEM_S_NO_MORE_DATA`Funktion auf, bis die Methode zurückgibt. Der Aufrufer schließt die Sequenz optional `EndMethodEnumeration`durch Aufrufen von ab. Der Aufrufer kann die Enumeration frühzeitig `EndMethodEnumeration` beenden, indem er jederzeit aufruft.
+Der Aufrufer startet die enumerationssequenz mithilfe der [beginmethodenumeration-Funktion](beginmethodenumeration.md)und ruft dann die [nextmethod-Funktion](nextmethod.md )auf, bis die Methode `WBEM_S_NO_MORE_DATA`zurückgibt. Der Aufrufer schließt die Sequenz optional durch Aufrufen von `EndMethodEnumeration`ab. Der Aufrufer kann die Enumeration frühzeitig beenden, indem `EndMethodEnumeration` jederzeit aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
