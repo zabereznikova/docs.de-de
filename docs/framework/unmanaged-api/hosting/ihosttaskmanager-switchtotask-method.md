@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4af3d73a4c45654d1d40ef2fbf44a0e2b3e1bf32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a55b43f3629cebb0ba1d3a7ac1802126874418d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913716"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122117"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask-Methode
 Benachrichtigt den Host, dass der aktuelle Task gewechselt werden soll.  
@@ -43,7 +41,7 @@ HRESULT SwitchToTask (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SwitchToTask` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -54,14 +52,14 @@ HRESULT SwitchToTask (
  Der Host kann in einer anderen Aufgabe wie gewünscht oder benötigt wechseln.  
   
 > [!NOTE]
-> `SwitchToTask`gibt nicht an, zu welcher Aufgabe der Host wechseln soll. Er gibt nur die Aufgabe an, von der er wechseln soll.  
+> `SwitchToTask` gibt nicht an, zu welcher Aufgabe der Host wechseln soll. Er gibt nur die Aufgabe an, von der er wechseln soll.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

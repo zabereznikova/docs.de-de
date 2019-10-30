@@ -2,19 +2,17 @@
 title: ISymUnmanagedWriter4::GetDebugInfoWithPadding-Methode
 ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 191aa16c285b3a28beed65004d65525c9214ec93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 274bf79175bda9e880b1ef3cf8f125a017ad0734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121661"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding-Methode
-Funktioniert genauso wie [GetDebugInfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) mit dem Unterschied, dass die Path-Zeichenfolge mit Nullen nach dem das abschließende Nullzeichen, um den Zeichenfolgendaten eine feste Größe von machen aufgefüllt wird `MAX_PATH`. Auffüllung wird nur ausgegeben, wenn die Länge der Zeichenfolge Pfad selbst ist kleiner als `MAX_PATH`.  
+Funktioniert genauso wie die [GetDebugInfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , mit der Ausnahme, dass die Pfad Zeichenfolge nach dem abschließenden NULL-Zeichen mit Nullen aufgefüllt wird, damit die Zeichen folgen Daten eine festgelegte Größe von `MAX_PATH`werden. Padding wird nur angegeben, wenn die Länge der Pfad Zeichenfolge selbst kleiner als `MAX_PATH`ist.  
   
- Dies erleichtert es, Tools, Unterschied PE-Dateien zu schreiben.  
+ Dadurch wird das Schreiben von Tools erleichtert, die PE-Dateien unterscheiden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +33,7 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
  Gibt `HRESULT`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

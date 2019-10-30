@@ -6,14 +6,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121601"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
 Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-System [Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)finden können.  
@@ -55,8 +53,8 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Anzahl der CCWs**|Zeigt die aktuelle Anzahl der COM Callable Wrapper (CCWs) an. Ein CCW ist ein Proxy für ein verwaltetes Objekt, auf das aus einem nicht verwalteten COM-Client verwiesen wird. Dieser Indikator gibt die Anzahl der verwalteten Objekte an, auf die von nicht verwaltetem COM-Code verwiesen wird.|  
 |**Anzahl der Marshallingvorgänge**|Zeigt die Gesamtanzahl an, wie oft Argumente und Rückgabewerte seit dem Anwendungsstart von verwaltetem zu nicht verwaltetem Code (und umgekehrt) gemarshallt wurden. Dieser Indikator wird nicht erhöht, wenn die Stubs inline sind. (Stubs sind verantwortlich für das Marshalling von Argumenten und Rückgabewerten). Stubs sind normalerweise inline, wenn der Marshallingmehraufwand gering ist.|  
 |**Anzahl Stubs**|Zeigt die aktuelle Anzahl von Stubs an, die von der Common Language Runtime erstellt werden. Stubs sind während eines COM-Interop- oder Plattformaufrufs verantwortlich für das Marshalling von Argumenten und Rückgabewerten von verwaltetem zu nicht verwaltetem Code und umgekehrt.|  
-|**Anzahl TLB-Exporte/s**|Zur künftigen Verwendung reserviert.|  
-|**Anzahl TLB-Importe/s**|Zur künftigen Verwendung reserviert.|  
+|**Anzahl TLB-Exporte/s**|Für zukünftige Verwendung reserviert.|  
+|**Anzahl TLB-Importe/s**|Für zukünftige Verwendung reserviert.|  
   
 <a name="jit"></a>   
 ## <a name="jit-performance-counters"></a>JIT-Leistungsindikatoren  
@@ -77,8 +75,8 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
   
 |Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
-|**Ladezeit in Prozent**|Zur künftigen Verwendung reserviert.|  
-|**Assemblysuchdauer**|Zur künftigen Verwendung reserviert.|  
+|**Ladezeit in Prozent**|Für zukünftige Verwendung reserviert.|  
+|**Assemblysuchdauer**|Für zukünftige Verwendung reserviert.|  
 |**Bytes im Loaderheap**|Zeigt die aktuelle Größe des vom Klassenladeprogramm in allen Anwendungsdomänen zugesicherten Speichers in Bytes an. Zugesicherter Speicher ist der in der Auslagerungsdatei des Datenträgers reservierte physische Speicherplatz.|  
 |**Aktuelle Anwendungsdomänen**|Zeigt die aktuelle Anzahl der in der Anwendung geladenen Anwendungsdomänen an.|  
 |**Aktuelle Assemblys**|Zeigt die aktuelle Anzahl der in der aktuell ausgeführten Anwendung in allen Anwendungsdomänen geladenen Assemblys an. Wenn die Assembly aus mehreren Anwendungsdomänen domänenneutral geladen wird, wird dieser Zähler nur einmal erhöht.|  
@@ -247,7 +245,7 @@ for (int i = 0; i < Array.Length; i++)
 |-------------------------|-----------------|  
 |**Anzahl Linkzeittests**|Zeigt die Gesamtzahl der Sicherheitsüberprüfungen für den Linkzeitcode-Zugriff seit dem Anwendungsstart an. Sicherheitsüberprüfungen für den Linkzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung zur JIT-Kompilierzeit (Just-in-Time) anfordert. Eine Linkzeitüberprüfung wird einmal pro Aufrufer durchgeführt. Dieser Indikator ist kein Hinweis auf schwerwiegende Leistungsprobleme. Er zeigt lediglich die Sicherheitssystemaktivität an.|  
 |**Zeit in RT-Überprüfungen in Prozent**|Zeigt den Prozentsatz der verstrichenen Zeit an, der seit der letzten Messung mit dem Ausführen von Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff verbracht wurde. Dieser Indikator wird am Ende einer .NET Framework-Sicherheitsüberprüfung aktualisiert. Er ist kein Durchschnittswert. Er zeigt den letzten erfassten Wert an.|  
-|**Sig-Authentifizierungszeit in Prozent**|Zur künftigen Verwendung reserviert.|  
+|**Sig-Authentifizierungszeit in Prozent**|Für zukünftige Verwendung reserviert.|  
 |**Stackwalktiefe**|Zeigt die Tiefe des Stapels während der letzten Sicherheitsüberprüfung für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden durch das Durchlaufen des Stapels (Stackwalk) durchgeführt. Dieser Indikator ist kein Durchschnittswert. Er zeigt nur den letzten erfassten Wert an.|  
 |**Laufzeitüberprüfungen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart durchgeführten Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung anfordert. Die Sicherheitsüberprüfung wird bei jedem Aufruf durch den Aufrufer ausgeführt, und sie untersucht den aktuellen Threadstapel des Aufrufers. Bei Verwendung zusammen mit dem Indikator **Stackwalktiefe**, zeigt dieser Indikator die Leistungseinbuße an, die bei Sicherheitsüberprüfungen auftritt.|  
   

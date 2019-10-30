@@ -2,14 +2,12 @@
 title: Serialisierung und Metadaten
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128124"
 ---
 # <a name="serialization-and-metadata"></a>Serialisierung und Metadaten
 
@@ -47,7 +45,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
   
 ### <a name="typeof-used-outside-the-constructor"></a>Außerhalb des Konstruktors verwendetes "typeof"-Schlüsselwort
 
- Wenn Sie einen Konstruktor dieser Serialisierungsklassen aufrufen und den C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) -Operator außerhalb des Ausdrucks verwenden, der für den- <xref:System.Type> Parameter des Konstruktors bereitgestellt wird (wie im folgenden Code), kann der .net Native Compiler den Typ nicht auflösen:  
+ Wenn Sie einen Konstruktor dieser Serialisierungsklassen aufrufen und den C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) -Operator außerhalb des Ausdrucks verwenden, der für den <xref:System.Type>-Parameter des Konstruktors bereitgestellt wird (wie im folgenden Code), kann der .net Native Compiler den Typ nicht auflösen:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +55,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Wenn Sie einen Konstruktor wie z <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> . b. und ein Array von zusätzlichen <xref:System.Type> Objekten für die Serialisierung wie im folgenden Code aufzurufen, kann der .net Native-Compiler diese Typen ebenso nicht auflösen.  
+ Wenn Sie einen Konstruktor wie z. b. <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> aufzurufen und ein Array von zusätzlichen <xref:System.Type> Objekten bereitstellen, die serialisiert werden sollen, wie im folgenden Code, kann der .net Native Compiler diese Typen nicht auflösen.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -73,5 +71,5 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
-- [\<Type >-Element](type-element-net-native.md)
+- [\<Typ > Element](type-element-net-native.md)
 - [\<Namespace>-Element](namespace-element-net-native.md)

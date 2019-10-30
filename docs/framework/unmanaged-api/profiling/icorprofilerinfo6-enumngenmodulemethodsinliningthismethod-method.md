@@ -2,18 +2,16 @@
 title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod-Methode
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 103fe1b6845edfe0a364db979557db63511f6ee3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130382"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod-Methode
 
-Gibt einen Enumerator für alle Methoden, die in einem bestimmten NGen-Modul und Inline einer bestimmten Methode definiert sind.
+Gibt einen Enumerator für alle Methoden zurück, die in einem angegebenen ngen-Modul definiert sind, und Inline eine angegebene Methode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,52 +28,52 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 ## <a name="parameters"></a>Parameter
 
 `inlinersModuleId`\
-[in] Der Bezeichner des NGen-Modul.
+in Der Bezeichner eines ngen-Moduls.
 
 `inlineeModuleId`\
-[in] Der Bezeichner eines Moduls, das definiert `inlineeMethodId`. Weitere Informationen finden Sie im Abschnitt Hinweise.
+in Der Bezeichner eines Moduls, das `inlineeMethodId`definiert. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 `inlineeMethodId`\
-[in] Der Bezeichner einer Inline-Methode. Weitere Informationen finden Sie im Abschnitt Hinweise.
+in Der Bezeichner einer Inline Methode. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 `incompleteData`\
-[out] Ein Flag, das angibt, ob `ppEnum` enthält alle Methoden, die inlineersetzung eine bestimmte Methode.  Weitere Informationen finden Sie im Abschnitt Hinweise.
+vorgenommen Ein Flag, das angibt, ob `ppEnum` alle Methoden enthält, die eine bestimmte Methode Inlining.  Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 `ppEnum`\
-[out] Ein Zeiger auf die Adresse eines Enumerators
+vorgenommen Ein Zeiger auf die Adresse eines Enumerators.
 
 ## <a name="remarks"></a>Hinweise
 
-`inlineeModuleId` und `inlineeMethodId` zusammen bilden den vollständigen Bezeichner für die Methode, die intern sein können. Nehmen wir beispielsweise an das Modul `A` definiert eine Methode `Simple.Add`:
+`inlineeModuleId` und `inlineeMethodId` bilden den vollständigen Bezeichner für die Methode, die möglicherweise Inline ist. Nehmen Sie beispielsweise an, Modul `A` definiert eine Methode `Simple.Add`:
 
 ```csharp
 Simple.Add(int a, int b)
 { return a + b; }
 ```
 
-Modul B definiert `Fancy.AddTwice`:
+und Modul B definiert `Fancy.AddTwice`:
 
 ```csharp
 Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-Ermöglicht darüber hinaus vorausgesetzt, die `Fancy.AddTwice` wird der Aufruf zum `SimpleAdd`. Ein Profiler kann dieser Enumerator verwenden, finden Sie in Modul B die Inline definiert alle Methoden `Simple.Add`, und das Ergebnis würde auflisten `AddTwice`.  `inlineeModuleId` Der Bezeichner des Moduls `A`, und `inlineeMethodId` ist der Bezeichner des `Simple.Add(int a, int b)`.
+Außerdem wird angenommen, dass `Fancy.AddTwice` den-Aufruf`SimpleAdd`. Ein Profiler kann diesen Enumerator verwenden, um alle in Modul B definierten Methoden zu suchen, die Inline `Simple.Add`sind, und das Ergebnis listet `AddTwice`auf.  `inlineeModuleId` ist der Bezeichner des Moduls `A`, und `inlineeMethodId` ist der Bezeichner `Simple.Add(int a, int b)`.
 
-Wenn `incompleteData` ist nach der Funktion "true" zurückgibt, der Enumerator enthält nicht alle Methoden, die inlineersetzung eine bestimmte Methode. Dies kann auftreten, wenn ein oder direkte oder indirekte Abhängigkeiten des Inliners-Moduls wurde noch nicht getan haben geladen. Wenn ein Profiler die genaue Daten benötigt, sollte es später noch Mal, wenn weitere Module, vorzugsweise auf jedem Modul laden geladen werden.
+Wenn `incompleteData` nach der Rückgabe der Funktion true ist, enthält der Enumerator nicht alle Methoden, die eine bestimmte Methode Inlining enthalten. Dies kann vorkommen, wenn eine oder mehrere direkte oder indirekte Abhängigkeiten des Inliners-Moduls noch nicht geladen wurden. Wenn ein Profiler genaue Daten benötigt, sollte er später wiederholt werden, wenn mehr Module geladen werden, vorzugsweise bei jedem Modul Ladevorgang.
 
-Die `EnumNgenModuleMethodsInliningThisMethod` Methode kann verwendet werden, um Einschränkungen umgehen für ReJIT inlining. ReJIT kann es sich um einen Profiler, ändern Sie die Implementierung einer Methode, und klicken Sie dann für sie neuen Code erstellen, im laufenden Betrieb. Wir könnten z. B. ändern `Simple.Add` wie folgt:
+Die `EnumNgenModuleMethodsInliningThisMethod`-Methode kann verwendet werden, um Einschränkungen für das Inlining für ReJIT zu umgehen. ReJIT ermöglicht einem Profiler, die Implementierung einer Methode zu ändern und dann im Handumdrehen neuen Code zu erstellen. Beispielsweise können wir `Simple.Add` wie folgt ändern:
 
 ```csharp
 Simple.Add(int a, int b)
 { return 42; }
 ```
 
-Aber da `Fancy.AddTwice` hat bereits inline `Simple.Add`, es verfügt auch weiterhin über das gleiche Verhalten wie zuvor. Zur Umgehung dieser Einschränkung der Aufrufer muss für alle Methoden in allen Modulen, Inline suchen `Simple.Add` und `ICorProfilerInfo5::RequestRejit` auf jede dieser Methoden. Wenn die Methoden neu kompilierten sind, müssen sie das neue Verhalten der `Simple.Add` anstatt das alte Verhalten.
+Da `Fancy.AddTwice` jedoch bereits `Simple.Add`Inline ist, weist es weiterhin das gleiche Verhalten wie zuvor auf. Um diese Einschränkung zu umgehen, muss der Aufrufer alle Methoden in allen Modulen suchen, die Inline `Simple.Add` und `ICorProfilerInfo5::RequestRejit` für jede dieser Methoden verwenden. Wenn die Methoden erneut kompiliert werden, haben Sie das neue Verhalten von `Simple.Add` anstelle des alten Verhaltens.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorProf.idl, CorProf.h
 

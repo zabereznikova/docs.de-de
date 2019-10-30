@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778145"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136334"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion-Funktion
-Ruft die common Language Runtime (CLR) Versionsinformationen von der angegebenen Datei, die mithilfe des angegebenen Puffers ab.  
+Ruft die Common Language Runtime (CLR)-Versionsinformationen der angegebenen Datei unter Verwendung des angegebenen Puffers ab.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,21 +39,21 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parameter  
  `szFilename`  
- [in] Der Pfad der Datei, die untersucht werden.  
+ in Der Pfad der Datei, die überprüft werden soll.  
   
  `szBuffer`  
- [in, out] Der Puffer zugeordnet werden, für die Versionsinformationen, die zurückgegeben wird.  
+ [in, out] Der Puffer, der den zurückgegebenen Versionsinformationen zugeordnet ist.  
   
  `cchBuffer`  
- [in] Die Größe in Breitzeichen, der `szBuffer`.  
+ in Die Größe `szBuffer`in breit Zeichen.  
   
  `dwLength`  
- [out] Die Größe in Bytes, des zurückgegebenen `szBuffer`.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `szBuffer`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

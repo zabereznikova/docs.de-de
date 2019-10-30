@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 23bc251053dd27a7c5accb48ab4759ecdb79fe09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134303"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual-Methode
-Bestimmt basierend auf den angegebenen Vergleichsflags, ob ein angegebenes `IAssemblyName` [IAssemblyName](iassemblyname-interface.md) -Objekt gleich diesem ist.  
+Bestimmt, ob ein angegebenes [IAssemblyName](iassemblyname-interface.md) -Objekt auf Grundlage der angegebenen Vergleichsflags gleich diesem `IAssemblyName`ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +36,13 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>Parameter  
  `pName`  
- in Das `IAssemblyName` Objekt, mit dem dieses `IAssemblyName`verglichen werden soll.  
+ in Das `IAssemblyName` Objekt, mit dem diese `IAssemblyName`verglichen werden soll.  
   
  `dwCmpFlags`  
  in Eine bitweise Kombination von [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) -Werten, die den Vergleich beeinflussen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   

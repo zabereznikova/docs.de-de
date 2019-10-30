@@ -2,16 +2,14 @@
 title: <Directives>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a9ec9a09e2fc03adbfcff0d7e69489e37da6e4a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: abe2e7221e0afb984a6178b12fabc36ea24deb35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128470"
 ---
-# <a name="directives-element-net-native"></a>\<Direktiven > Element (.net Native)
+# <a name="directives-element-net-native"></a>\<-Direktiven > Element (.net Native)
 Das Stamm Element in jeder laufzeitdirektivendatei für .net Native.  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
@@ -34,7 +32,7 @@ Das Stamm Element in jeder laufzeitdirektivendatei für .net Native.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Application>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, dessen Metadaten für die Reflektion verfügbar sind.|  
+|[\<Anwendung>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, dessen Metadaten für die Reflektion verfügbar sind.|  
 |[\<Library>](library-element-net-native.md)|Definiert die Assembly, deren untergeordneten Typen und Typmember Metadaten zur Laufzeit erfordern.|  
   
 ## <a name="remarks"></a>Hinweise  

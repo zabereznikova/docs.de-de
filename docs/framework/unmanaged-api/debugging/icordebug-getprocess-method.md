@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ed875059730e91e28ff0903ab93fb25c68910b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134114"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess-Methode
-Ruft einen Zeiger auf die "ICorDebugProcess"-Instanz für den angegebenen Prozess an.  
+Ruft einen Zeiger auf die ICorDebugProcess-Instanz für den angegebenen Prozess ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +36,13 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>Parameter  
  `dwProcessId`  
- [in] Die ID des Prozesses.  
+ in Die ID des Prozesses.  
   
  `ppProcess`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugProcess` Instanz für den angegebenen Prozess.  
+ vorgenommen Ein Zeiger auf die Adresse einer `ICorDebugProcess` Instanz für den angegebenen Prozess.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

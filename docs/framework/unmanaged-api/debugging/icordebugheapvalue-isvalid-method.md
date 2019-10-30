@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757218"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138400"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid-Methode
-Ruft einen Wert, der angibt, ob das durch diesen ICorDebugHeapValue dargestellte Objekt gültig ist.  
+Ruft einen Wert ab, der angibt, ob das von diesem ICorDebugHeapValue dargestellte Objekt gültig ist.  
   
- Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert.  
+ Diese Methode ist in der .NET Framework Version 2,0 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,15 +37,15 @@ HRESULT IsValid (
   
 ## <a name="parameters"></a>Parameter  
  `pbValid`  
- [out] Ein Zeiger auf einen booleschen Wert, der angibt, ob dieser Wert auf dem Heap gültig ist.  
+ vorgenommen Ein Zeiger auf einen booleschen Wert, der angibt, ob dieser Wert im Heap gültig ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert ist ungültig, wenn es vom Garbage Collector freigegeben wurde.  
+ Der Wert ist ungültig, wenn er vom Garbage Collector freigegeben wurde.  
   
- Diese Methode ist veraltet. In .NET Framework 2.0, alle Werte sind gültig bis [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird, an der Zeit werden die Werte ungültig sind.  
+ Diese Methode ist veraltet. In den .NET Framework 2,0 sind alle Werte gültig, bis [icordbugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird. zu diesem Zeitpunkt werden die Werte für ungültig erklärt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

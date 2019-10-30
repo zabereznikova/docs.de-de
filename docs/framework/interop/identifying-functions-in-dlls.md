@@ -11,14 +11,12 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a94bb2020b07ba8405d901f46ec4a0687e79700
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121975"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identifizieren von Funktionen in DLLs
 Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:  
@@ -50,5 +48,5 @@ Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:
 - [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)
 - [Angeben eines Einstiegspunktes](specifying-an-entry-point.md)
 - [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md)
-- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
+- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
 - [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)
