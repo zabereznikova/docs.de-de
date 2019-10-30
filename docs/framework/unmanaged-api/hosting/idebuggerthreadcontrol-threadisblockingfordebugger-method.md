@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9324e1596913fdafb13239dbefd631cbe3c6ffe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780491"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134938"
 ---
-# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="e791d-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger-Methode</span><span class="sxs-lookup"><span data-stu-id="e791d-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
-<span data-ttu-id="e791d-103">Benachrichtigt den Host, die der Thread, der diesen Rückruf sendet Block in der debugging-Diensten.</span><span class="sxs-lookup"><span data-stu-id="e791d-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
+# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="06fde-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger-Methode</span><span class="sxs-lookup"><span data-stu-id="06fde-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
+<span data-ttu-id="06fde-103">Benachrichtigt den Host, dass der Thread, der diesen Rückruf sendet, innerhalb der Debugdienste blockiert wird.</span><span class="sxs-lookup"><span data-stu-id="06fde-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e791d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e791d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06fde-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="06fde-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadIsBlockingForDebugger ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e791d-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e791d-105">Remarks</span></span>  
- <span data-ttu-id="e791d-106">Die `ThreadIsBlockingForDebugger` Methode wird immer in einem Runtime-Thread aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="e791d-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06fde-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="06fde-105">Remarks</span></span>  
+ <span data-ttu-id="06fde-106">Die `ThreadIsBlockingForDebugger`-Methode wird immer für einen Lauf Zeit Thread aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="06fde-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
   
- <span data-ttu-id="e791d-107">Die `ThreadIsBlockingForDebugger` -Methode ermöglicht dem Host eine Möglichkeit zum Ausführen einer anderen Aktion während der Thread blockiert.</span><span class="sxs-lookup"><span data-stu-id="e791d-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
+ <span data-ttu-id="06fde-107">Die `ThreadIsBlockingForDebugger`-Methode bietet dem Host die Möglichkeit, eine andere Aktion auszuführen, während der Thread blockiert wird.</span><span class="sxs-lookup"><span data-stu-id="06fde-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e791d-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e791d-108">Requirements</span></span>  
- <span data-ttu-id="e791d-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e791d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06fde-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="06fde-108">Requirements</span></span>  
+ <span data-ttu-id="06fde-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06fde-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e791d-110">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e791d-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="06fde-110">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="06fde-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e791d-111">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="e791d-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="06fde-111">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="06fde-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e791d-112">**NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e791d-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="06fde-112">.Net **Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06fde-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e791d-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e791d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06fde-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="06fde-113">See also</span></span>
 
-- [<span data-ttu-id="e791d-114">IDebuggerThreadControl-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e791d-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [<span data-ttu-id="06fde-114">IDebuggerThreadControl-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="06fde-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

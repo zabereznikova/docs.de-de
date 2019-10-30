@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132843"
 ---
-# <a name="cordebugguidtotypemapping-structure"></a><span data-ttu-id="553d5-102">CorDebugGuidToTypeMapping-Struktur</span><span class="sxs-lookup"><span data-stu-id="553d5-102">CorDebugGuidToTypeMapping Structure</span></span>
-<span data-ttu-id="553d5-103">Ordnet eine Windows-Runtime-GUID mit der entsprechenden ICorDebugType-Objekt.</span><span class="sxs-lookup"><span data-stu-id="553d5-103">Maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
+# <a name="cordebugguidtotypemapping-structure"></a><span data-ttu-id="7e142-102">CorDebugGuidToTypeMapping-Struktur</span><span class="sxs-lookup"><span data-stu-id="7e142-102">CorDebugGuidToTypeMapping Structure</span></span>
+<span data-ttu-id="7e142-103">Ordnet eine Windows-Runtime GUID dem entsprechenden ICorDebugType-Objekt zu.</span><span class="sxs-lookup"><span data-stu-id="7e142-103">Maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="553d5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="553d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e142-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7e142-104">Syntax</span></span>  
   
 ```cpp
 typedef struct CorDebugGuidToTypeMapping {  
@@ -37,23 +35,23 @@ typedef struct CorDebugGuidToTypeMapping {
 } CorDebugGuidToTypeMapping;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="553d5-105">Member</span><span class="sxs-lookup"><span data-stu-id="553d5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7e142-105">Member</span><span class="sxs-lookup"><span data-stu-id="7e142-105">Members</span></span>  
   
-|<span data-ttu-id="553d5-106">Member</span><span class="sxs-lookup"><span data-stu-id="553d5-106">Member</span></span>|<span data-ttu-id="553d5-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="553d5-107">Description</span></span>|  
+|<span data-ttu-id="7e142-106">Member</span><span class="sxs-lookup"><span data-stu-id="7e142-106">Member</span></span>|<span data-ttu-id="7e142-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7e142-107">Description</span></span>|  
 |------------|-----------------|  
-|`iid`|<span data-ttu-id="553d5-108">Die GUID der der zwischengespeicherte Windows-Runtime-Typ.</span><span class="sxs-lookup"><span data-stu-id="553d5-108">The GUID of the cached Windows Runtime type.</span></span>|  
-|`pType`|<span data-ttu-id="553d5-109">Ein Zeiger auf ein ICorDebugType-Objekt, das Informationen zu der zwischengespeicherte Typ bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="553d5-109">A pointer to an ICorDebugType object that provides information about the cached type.</span></span>|  
+|`iid`|<span data-ttu-id="7e142-108">Der GUID des zwischengespeicherten Windows-Runtime Typs.</span><span class="sxs-lookup"><span data-stu-id="7e142-108">The GUID of the cached Windows Runtime type.</span></span>|  
+|`pType`|<span data-ttu-id="7e142-109">Ein Zeiger auf ein ICorDebugType-Objekt, das Informationen über den zwischengespeicherten Typ bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="7e142-109">A pointer to an ICorDebugType object that provides information about the cached type.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="553d5-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="553d5-110">Requirements</span></span>  
- <span data-ttu-id="553d5-111">**Plattformen:** Windows-Runtime.</span><span class="sxs-lookup"><span data-stu-id="553d5-111">**Platforms:** Windows Runtime.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e142-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7e142-110">Requirements</span></span>  
+ <span data-ttu-id="7e142-111">**Plattformen:** Windows-Runtime.</span><span class="sxs-lookup"><span data-stu-id="7e142-111">**Platforms:** Windows Runtime.</span></span>  
   
- <span data-ttu-id="553d5-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="553d5-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7e142-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e142-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="553d5-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="553d5-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7e142-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e142-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="553d5-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="553d5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="7e142-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e142-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="553d5-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="553d5-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e142-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7e142-115">See also</span></span>
 
-- [<span data-ttu-id="553d5-116">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="553d5-116">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="553d5-117">Debuggen</span><span class="sxs-lookup"><span data-stu-id="553d5-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="7e142-116">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="7e142-116">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="7e142-117">Debuggen</span><span class="sxs-lookup"><span data-stu-id="7e142-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

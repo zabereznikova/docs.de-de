@@ -14,34 +14,32 @@ helpviewer_keywords:
 ms.assetid: 9395a8a0-ffb9-475f-8da6-890999ae4bb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bb52d499faa83bd05ac0e6c817582f229ae183c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133186"
 ---
-# <a name="idebuggerinfo-interface"></a><span data-ttu-id="5bc25-102">IDebuggerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5bc25-102">IDebuggerInfo Interface</span></span>
-<span data-ttu-id="5bc25-103">Stellt Methoden zum Abrufen von Informationen über den Status der Debugdienste bereit.</span><span class="sxs-lookup"><span data-stu-id="5bc25-103">Provides methods for obtaining information about the state of the debugging services.</span></span>  
+# <a name="idebuggerinfo-interface"></a><span data-ttu-id="f8e64-102">IDebuggerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f8e64-102">IDebuggerInfo Interface</span></span>
+<span data-ttu-id="f8e64-103">Stellt Methoden zum Abrufen von Informationen über den Zustand der Debugdienste bereit.</span><span class="sxs-lookup"><span data-stu-id="f8e64-103">Provides methods for obtaining information about the state of the debugging services.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5bc25-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="5bc25-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f8e64-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="f8e64-104">Methods</span></span>  
   
-|<span data-ttu-id="5bc25-105">Methode</span><span class="sxs-lookup"><span data-stu-id="5bc25-105">Method</span></span>|<span data-ttu-id="5bc25-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5bc25-106">Description</span></span>|  
+|<span data-ttu-id="f8e64-105">Methode</span><span class="sxs-lookup"><span data-stu-id="f8e64-105">Method</span></span>|<span data-ttu-id="f8e64-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f8e64-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5bc25-107">IsDebuggerAttached-Methode</span><span class="sxs-lookup"><span data-stu-id="5bc25-107">IsDebuggerAttached Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|<span data-ttu-id="5bc25-108">Ruft einen Wert, der angibt, ob dieses Prozesses ein verwalteter Debugger angefügt wird.</span><span class="sxs-lookup"><span data-stu-id="5bc25-108">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>|  
+|[<span data-ttu-id="f8e64-107">IsDebuggerAttached-Methode</span><span class="sxs-lookup"><span data-stu-id="f8e64-107">IsDebuggerAttached Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|<span data-ttu-id="f8e64-108">Ruft einen Wert ab, der angibt, ob ein verwalteter Debugger an diesen Prozess angefügt ist.</span><span class="sxs-lookup"><span data-stu-id="f8e64-108">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5bc25-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5bc25-109">Requirements</span></span>  
- <span data-ttu-id="5bc25-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5bc25-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8e64-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8e64-109">Requirements</span></span>  
+ <span data-ttu-id="f8e64-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8e64-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5bc25-111">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5bc25-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f8e64-111">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="f8e64-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5bc25-112">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="5bc25-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f8e64-112">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="f8e64-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5bc25-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bc25-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f8e64-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8e64-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bc25-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5bc25-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8e64-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8e64-114">See also</span></span>
 
-- [<span data-ttu-id="5bc25-115">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="5bc25-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="5bc25-116">CorRuntimeHost-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="5bc25-116">CorRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [<span data-ttu-id="f8e64-115">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="f8e64-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f8e64-116">CorRuntimeHost-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="f8e64-116">CorRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
