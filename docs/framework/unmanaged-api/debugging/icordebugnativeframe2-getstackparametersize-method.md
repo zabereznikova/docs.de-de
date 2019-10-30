@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dd9760c347bbc23f3e8225c1ff748c6b7b8bfe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096540"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize-Methode
-Gibt die kumulierte Größe der Parameter auf dem Stapel von Betriebssystemen X86 zurück.  
+Gibt die kumulierte Größe der Parameter auf dem Stapel unter x86-Betriebssystemen zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,25 +33,25 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
 ## <a name="parameters"></a>Parameter  
  `pSize`  
- [out] Ein Zeiger auf die kumulierte Größe der Parameter im Stapel.  
+ vorgenommen Ein Zeiger auf die kumulierte Größe der Parameter im Stapel.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Größe des Stapels wurde erfolgreich zurückgegeben.|  
-|S_FALSE|`GetStackParameterSize` wurde eine nicht-X86 Plattform aufgerufen.|  
-|E_FAIL|`The size of the parameters could not be returned`.|  
+|S_OK|Die Stapelgröße wurde erfolgreich zurückgegeben.|  
+|S_FALSE|`GetStackParameterSize` wurde auf einer nicht-x86-Plattform aufgerufen.|  
+|E_FAIL|`The size of the parameters could not be returned`|  
 |E_INVALIDARG|`pSize` ist `null`.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) -Methoden passen sich nicht auf den Stapelzeiger für Parameter, die auf dem Stapel abgelegt werden. Sie können stattdessen den Rückgabewert von `GetStackParameterSize` anpassen den Stapelzeiger als Ausgangswert für eine native Entlader, die für die Parameter angepasst.  
+ Die [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) -Methoden passen den Stapelzeiger nicht für Parameter an, die auf dem Stapel abgelegt werden. Stattdessen können Sie den von `GetStackParameterSize` zurückgegebenen Wert verwenden, um den Stapelzeiger auf einen Ausgangswert für einen nativen Unwinder festzulegen, der für die Parameter angepasst wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

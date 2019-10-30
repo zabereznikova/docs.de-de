@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 1fbbf572-6d28-41a5-82fb-579ac90bfcf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5dc1ad5bd98899f82e0b52345710c5ea3da864b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943399"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103034"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject-Schnittstelle
-Stellt Methoden zum Steuern eines verwalteten Objekts.  
+Stellt Methoden zum Steuern eines verwalteten Objekts bereit.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetObjectIdentity-Methode](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Ruft die Identität dieser verwalteten Objekts.|  
-|[GetSerializedBuffer-Methode](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Ruft eine Zeichenfolgendarstellung von diesem verwalteten Objekt ab.|  
+|[GetObjectIdentity-Methode](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Ruft die Identität dieses verwalteten Objekts ab.|  
+|[GetSerializedBuffer-Methode](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Ruft die Zeichen folgen Darstellung dieses verwalteten Objekts ab.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

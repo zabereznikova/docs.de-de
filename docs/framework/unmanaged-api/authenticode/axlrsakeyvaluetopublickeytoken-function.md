@@ -8,16 +8,14 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 690035ffe0724d3987a198c78bf14e668527b98a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f53df33a65d3f75b7574eda3507e370c2e086ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099816"
 ---
-# <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_Axlrsakeyvaluetopublickeytoken-Funktion
+# <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_axlrsakeyvaluetopublickeytoken-Funktion
 
 Konvertiert einen Modulo und Exponenten in einen starken Namen des öffentlichen Schlüsseltokens.  
   
@@ -33,10 +31,10 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
   
 ## <a name="parameters"></a>Parameter  
  `pModulusBlob`  
- in Das Base64-codierte Modulus-BLOB ( \<aus dem Modulus >-Element).  Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) -Struktur.  
+ in Das Base64-codierte Modulus-BLOB (aus dem \<Modulus >-Element).  Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) -Struktur.  
   
  `pExponentBlob`  
- in Der Base64-codierte Exponent-BLOB ( \<aus dem Exponent >-Element). Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) -Struktur.  
+ in Der Base64-codierte Exponent-BLOB (aus dem \<Exponent >-Element). Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) -Struktur.  
   
  `ppwszPublicKeyToken`  
  [out] Ein Zeiger auf WCHAR *, um den hexadezimal codierten öffentlichen Schlüsseltoken zu erhalten.  

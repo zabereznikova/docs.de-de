@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095881"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue-Methode
-Ruft den Wert des angegebenen Felds der angegebenen Klasse für den Wert dieses Objekts ab.  
+Ruft den Wert des angegebenen Felds der angegebenen Klasse für diesen Objektwert ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +37,21 @@ HRESULT GetFieldValue (
   
 ## <a name="parameters"></a>Parameter  
  `pClass`  
- [in] Ein Zeiger auf ein "ICorDebugClass"-Objekt, das die Klasse für den abzurufenden Wert des Felds darstellt.  
+ in Ein Zeiger auf ein ICorDebugClass-Objekt, das die Klasse darstellt, für die der Feldwert zu erhalten ist.  
   
  `fieldDef`  
- [in] Ein `mdFieldDef` -Token, die Metadaten zum Beschreiben des Felds verweist.  
+ in Ein `mdFieldDef` Token, das auf die Metadaten verweist, die das Feld beschreiben.  
   
  `ppValue`  
- [out] Ein Zeiger auf ein "ICorDebugValue"-Objekt, das den Wert des angegebenen Felds darstellt.  
+ vorgenommen Ein Zeiger auf ein ICorDebugValue-Objekt, das den Wert des angegebenen Felds darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Klasse, die im angegebenen die `pClass` -Parameter muss in der Hierarchie, der den Objektwert-Klasse, und das Feld muss ein Feld der Klasse sein.  
+ Die im `pClass`-Parameter angegebene-Klasse muss sich in der Hierarchie der-Klasse des Objekt Werts befinden, und das Feld muss ein Feld dieser Klasse sein.  
   
- Die `GetFieldValue` Methode ist für generische Objekte und die generischen Klassen dennoch erfolgreich. Z. B. wenn MyDictionary\<V > erbt von Wörterbuch\<"string", "V >, und der Objektwert ist vom Typ MyDictionary\<int32 >, und übergeben Sie die `ICorDebugClass` Objekt für das Wörterbuch\<K, V > wird ein Feld des Wörterbuchs abgerufen\<String, int32 >.  
+ Die `GetFieldValue`-Methode ist für generische Objekte und generische Klassen weiterhin erfolgreich. Wenn z. b. MyDictionary\<V > von der Wörterbuch\<String, v > erbt und der Objektwert vom Typ MyDictionary\<Int32 > ist, wird ein Feld Wörterbuch\<Zeichenfolge, Int32 >.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

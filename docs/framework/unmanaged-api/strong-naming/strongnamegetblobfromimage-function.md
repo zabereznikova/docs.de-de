@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86b99b29a85f498a6bfa0363a446bf589876bff9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 41226cd909900bd2da7bdcf9b9a49567d3042b01
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799082"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094882"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage-Funktion
 Ruft eine binäre Darstellung des Assemblyimages an der angegebenen Speicheradresse ab.  
@@ -44,26 +42,26 @@ BOOLEAN StrongNameGetBlobFromImage (
  in Die Speicheradresse des zugeordneten Assemblymanifests.  
   
  `dwLength`  
- in Die Größe des Bilds `pbBase`in Bytes in.  
+ in Die Größe des Bilds in `pbBase`in Byte.  
   
  `pbBlob`  
  in Ein Puffer, der die binäre Darstellung des Bilds enthalten soll.  
   
  `pcbBlob`  
- [in, out] Die angeforderte maximale Größe von `pbBlob`in Bytes. Bei der Rückgabe die tatsächliche Größe von `pbBlob`in Bytes.  
+ [in, out] Die angeforderte maximale Größe des `pbBlob`in Byte. Bei der Rückgabe die tatsächliche Größe (in Bytes) der `pbBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`nach erfolgreichem Abschluss: `false`andernfalls.  
+ `true` nach erfolgreichem Abschluss. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die `StrongNameGetBlobFromImage` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.  
+ Wenn die `StrongNameGetBlobFromImage`-Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** StrongName. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

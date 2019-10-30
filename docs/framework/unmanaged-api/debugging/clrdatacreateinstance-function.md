@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 71836108dbd0ce01a64b4d9ac773c28d385dfd7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099686"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance-Funktion
 Erstellt ein Schnittstellen Objekt für das angegebene Ziel Element.  
@@ -48,14 +46,14 @@ HRESULT CLRDataCreateInstance (
  vorgenommen Ein Zeiger auf die Adresse des zurückgegebenen Schnittstellen Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Das `ICLRDataTarget` -Objekt wird vom Writer der debugginganwendung implementiert. Die-Implementierung hängt vom Typ des dargestellten Ziel Elements ab. Das Ziel Element kann ein Prozess, ein Speicher Abbild, ein Remote Computer usw. sein.  
+ Das `ICLRDataTarget` Objekt wird vom Writer der debugginganwendung implementiert. Die-Implementierung hängt vom Typ des dargestellten Ziel Elements ab. Das Ziel Element kann ein Prozess, ein Speicher Abbild, ein Remote Computer usw. sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** ClrData.idl  
+ **Header:** Clrdata. idl  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

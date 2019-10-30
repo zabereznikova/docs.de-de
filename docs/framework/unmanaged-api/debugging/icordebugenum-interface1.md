@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085263"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum-Schnittstelle
 
@@ -31,7 +29,7 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` -Objekts.|  
+|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` Objekts.|  
 |[GetCount-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ruft die Anzahl der Elemente in der-Enumeration ab.|  
 |[Reset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Verschiebt den Cursor an den Anfang der Enumeration.|  
 |[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.|  
@@ -39,23 +37,23 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
 ## <a name="remarks"></a>Hinweise  
  Die folgenden Enumeratoren werden von `ICorDebugEnum`abgeleitet:  
   
-- "ICorDebugAppDomainEnum"  
+- ICorDebugAppDomainEnum  
   
-- "ICorDebugAssemblyEnum"  
+- ICorDebugAssemblyEnum  
   
 - [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
-- "ICorDebugBreakpointEnum"  
+- ICorDebugBreakpointEnum  
   
 - ICorDebugChainEnum  
   
-- "ICorDebugCodeEnum"  
+- ICorDebugCodeEnum  
   
 - ICorDebugErrorInfoEnum  
   
 - [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
-- "ICorDebugFrameEnum"  
+- ICorDebugFrameEnum  
   
 - [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
@@ -67,15 +65,15 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
   
 - ICorDebugModuleEnum  
   
-- "ICorDebugObjectEnum"  
+- ICorDebugObjectEnum  
   
-- "ICorDebugProcessEnum"  
+- ICorDebugProcessEnum  
   
-- "ICorDebugStepperEnum"  
+- ICorDebugStepperEnum  
   
-- "ICorDebugThreadEnum"  
+- ICorDebugThreadEnum  
   
-- "ICorDebugTypeEnum"  
+- ICorDebugTypeEnum  
   
 - ICorDebugValueEnum  
   
@@ -85,11 +83,11 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

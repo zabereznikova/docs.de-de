@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757050"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096107"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next-Methode
-Ruft den relativen virtuellen Adresse (RVA) der angegebenen Anzahl von Objekten aus der Enumeration ab, an der aktuellen Position ab.  
+Ruft die relativen virtuellen Adressen (RVAs) der angegebenen Anzahl von Objekten aus der-Enumeration ab, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +41,13 @@ HRESULT Next (
  [in] Die Anzahl der abzurufenden Objekte.  
   
  `objects`  
- [out] Ein Array von Zeigern, von denen jedes auf ein CORDB_ADDRESS-Objekt verweist.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein CORDB_ADDRESS-Objekt verweist.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

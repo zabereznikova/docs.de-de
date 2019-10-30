@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097953"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType-Enumeration
-Identifiziert den Stapelrahmentyp. Diese Enumeration wird verwendet, durch die [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) Methode.  
+Identifiziert den Stapelrahmentyp. Diese Enumeration wird von der [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) -Methode verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,20 +47,20 @@ typedef enum CorDebugInternalFrameType {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Ein NULL-Wert. Die `ICorDebugInternalFrame::GetFrameType` Methode gibt diesen Wert nie zurück.|  
-|`STUBFRAME_M2U`|Ein Stub verwalteten zum nicht verwalteten Frame.|  
-|`STUBFRAME_U2M`|Ein Stub nicht verwalteten zu verwalteten Frame.|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|Ein Übergang zwischen Anwendungsdomänen.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Der Aufruf einer einfachen Methode.|  
-|`STUBFRAME_FUNC_EVAL`|Der Anfang der funktionsauswertung.|  
-|`STUBFRAME_INTERNALCALL`|Einen internen Aufruf in der common Language Runtime.|  
-|`STUBFRAME_CLASS_INIT`|Der Anfang der Initialisierung einer Klasse.|  
+|`STUBFRAME_NONE`|Ein NULL-Wert. Die `ICorDebugInternalFrame::GetFrameType`-Methode gibt diesen Wert nie zurück.|  
+|`STUBFRAME_M2U`|Ein verwalteter-zu-nicht verwalteter Stub-Frame.|  
+|`STUBFRAME_U2M`|Ein nicht verwalteter zu verwalteter Stub-Frame.|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|Ein Übergang zwischen Anwendungs Domänen.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Ein Lightweight-Methoden Aufruf.|  
+|`STUBFRAME_FUNC_EVAL`|Der Anfang der Funktions Auswertung.|  
+|`STUBFRAME_INTERNALCALL`|Ein interner-Rückruf für die Common Language Runtime.|  
+|`STUBFRAME_CLASS_INIT`|Der Anfang einer Klassen Initialisierung.|  
 |`STUBFRAME_EXCEPTION`|Eine Ausnahme, die ausgelöst wird.|  
-|`STUBFRAME_SECURITY`|Ein Frame, der für die Codezugriffssicherheit verwendet wird.|  
-|`STUBFRAME_JIT_COMPILATION`|Die Laufzeit ist eine Methode JIT-Kompilierung.|  
+|`STUBFRAME_SECURITY`|Ein Frame, der für die Code Zugriffssicherheit verwendet wird.|  
+|`STUBFRAME_JIT_COMPILATION`|Die Laufzeit ist eine JIT-Kompilierung einer Methode.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088841"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum-Schnittstelle
 
-Stellt die `Next` -Methode bereit, die eine angegebene Anzahl `ICorDebugAppDomainEnum` von Werten zurückgibt, beginnend an der nächsten Position in der-Enumeration. Bei dieser Schnittstelle handelt es sich um eine Unterklasse von "ICorDebugEnum".  
+Stellt die `Next`-Methode bereit, die eine angegebene Anzahl von `ICorDebugAppDomainEnum` Werten zurückgibt, beginnend an der nächsten Position in der-Enumeration. Bei dieser Schnittstelle handelt es sich um eine Unterklasse von "ICorDebugEnum".  
   
 ## <a name="methods"></a>Methoden  
   
@@ -39,11 +37,11 @@ Stellt die `Next` -Methode bereit, die eine angegebene Anzahl `ICorDebugAppDomai
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

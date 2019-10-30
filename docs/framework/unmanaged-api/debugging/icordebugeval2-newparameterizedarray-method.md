@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084840"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray-Methode
-Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.  
+Ordnet ein neues Array vom angegebenen Elementtyp und den angegebenen Dimensionen zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +38,22 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>Parameter  
  `pElementType`  
- [in] Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des im Array gespeicherten Elements darstellt.  
+ in Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des im Array gespeicherten Elements darstellt.  
   
  `rank`  
- [in] Die Anzahl der Dimensionen des Arrays. In .NET Framework, Version 2.0 muss dieser Wert als 1 sein.  
+ in Die Anzahl der Dimensionen des Arrays. In der .NET Framework Version 2,0 muss dieser Wert 1 lauten.  
   
  `dims`  
- [in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.  
+ in Die Größe der einzelnen Dimensionen des Arrays in Bytes.  
   
  `lowBounds`  
- [in] Optional. Die untere Grenze der einzelnen Dimensionen des Arrays. Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension ausgegangen.  
+ [in] Optional. Die untere Grenze jeder Dimension des Arrays. Wenn dieser Wert weggelassen wird, wird für jede Dimension eine untere Grenze von 0 (null) angenommen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente des Arrays können es sich um Instanzen eines generischen Typs sein. Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird. In .NET Framework 2.0, den Wert der `rank` muss 1 sein.  
+ Die Elemente des Arrays können Instanzen eines generischen Typs sein. Das Array wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird. Im .NET Framework 2,0 muss der Wert von `rank` 1 sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
