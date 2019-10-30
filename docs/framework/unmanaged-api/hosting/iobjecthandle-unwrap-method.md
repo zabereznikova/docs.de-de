@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc5bed553ac54eb708beae23f5c29cbedcb2b4e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be488ebe663169cabc5b569335dfc784fdf30556
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102696"
 ---
-# <a name="iobjecthandleunwrap-method"></a><span data-ttu-id="68098-102">IObjectHandle::Unwrap-Methode</span><span class="sxs-lookup"><span data-stu-id="68098-102">IObjectHandle::Unwrap Method</span></span>
-<span data-ttu-id="68098-103">Eine Marshal-by-Value-Objekt, aus der Dereferenzierung entpackt.</span><span class="sxs-lookup"><span data-stu-id="68098-103">Unwraps a marshal-by-value object from indirection.</span></span>  
+# <a name="iobjecthandleunwrap-method"></a><span data-ttu-id="939ab-102">IObjectHandle::Unwrap-Methode</span><span class="sxs-lookup"><span data-stu-id="939ab-102">IObjectHandle::Unwrap Method</span></span>
+<span data-ttu-id="939ab-103">Entpackt ein Marshal-by-Value-Objekt von der Dereferenzierung.</span><span class="sxs-lookup"><span data-stu-id="939ab-103">Unwraps a marshal-by-value object from indirection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68098-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="68098-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="939ab-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="939ab-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Unwrap (  
@@ -35,15 +33,15 @@ HRESULT Unwrap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68098-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="68098-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="939ab-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="939ab-105">Parameters</span></span>  
  `ppv`  
- <span data-ttu-id="68098-106">[out] Ein Zeiger auf das Objekt, dessen Wrapper entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="68098-106">[out] A pointer to the object to be unwrapped.</span></span>  
+ <span data-ttu-id="939ab-106">vorgenommen Ein Zeiger auf das Objekt, das entpackt werden soll.</span><span class="sxs-lookup"><span data-stu-id="939ab-106">[out] A pointer to the object to be unwrapped.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68098-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="68098-107">Requirements</span></span>  
- <span data-ttu-id="68098-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68098-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="939ab-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="939ab-107">Requirements</span></span>  
+ <span data-ttu-id="939ab-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="939ab-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68098-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="68098-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="939ab-109">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="939ab-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="68098-110">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="68098-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="939ab-110">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="939ab-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="68098-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68098-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="939ab-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="939ab-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
