@@ -14,44 +14,42 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bbde873481aea9de94862117a99079301965f33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fab64c31d4a73995c16d21767f4569f21c7df9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126870"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup-Schnittstelle
-Enthält Eigenschaften, die dem Host so konfigurieren Sie eine <xref:System.AppDomain?displayProperty=nameWithType> Typ vor dem Aufruf der [ICorRuntimeHost:: CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) Methode, um es zu erstellen.  
+Stellt Eigenschaften bereit, die es dem Host ermöglichen, einen <xref:System.AppDomain?displayProperty=nameWithType> Typ zu konfigurieren, bevor die [ICorRuntimeHost:: CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) -Methode aufgerufen wird, um ihn zu erstellen.  
   
 ## <a name="properties"></a>Eigenschaften  
   
-|Eigenschaft|Beschreibung|  
+|property|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.AppDomainSetup.ApplicationBase%2A>|Übernimmt oder bestimmt den Namen des Verzeichnisses, das die Anwendung enthält.|  
+|<xref:System.AppDomainSetup.ApplicationBase%2A>|Ruft den Namen des Verzeichnisses ab, das die Anwendung enthält, oder legt diesen fest.|  
 |<xref:System.AppDomainSetup.ApplicationName%2A>|Ruft den Namen der Anwendung ab oder legt diesen fest.|  
-|<xref:System.AppDomainSetup.CachePath%2A>|Übernimmt oder bestimmt den Namen eines Bereichs bestimmte für die Anwendung, in denen Dateien Schattenkopien sind.|  
-|<xref:System.AppDomainSetup.ConfigurationFile%2A>|Ruft ab oder legt den Namen der Konfigurationsdatei für eine Anwendung fest.|  
-|<xref:System.AppDomainSetup.DynamicBase%2A>|Übernimmt oder bestimmt den Namen des Verzeichnisses, in dem dynamisch generierte Dateien gespeichert und auf die zugegriffen werden.|  
-|<xref:System.AppDomainSetup.LicenseFile%2A>|Übernimmt oder bestimmt den Pfad zu der Lizenzdatei, die mit dieser Domäne verbunden ist.|  
-|<xref:System.AppDomainSetup.PrivateBinPath%2A>|Übernimmt oder bestimmt die Liste der Verzeichnisse, die in Kombination mit der <xref:System.AppDomainSetup.ApplicationBase%2A> Verzeichnis nach privaten Assemblys suchen.|  
-|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|Übernimmt oder bestimmt die Zeichenfolge zurück, das ein- oder ausschließt <xref:System.AppDomainSetup.ApplicationBase%2A> in den Suchpfad für die Anwendung.|  
-|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|Übernimmt oder bestimmt den Namen der Verzeichnisse, die Assemblys werden Schattenkopien enthalten.|  
-|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Ruft ab oder legt eine Zeichenfolge, die angibt, ob die Erstellung von Schattenkopien aktiviert oder deaktiviert ist. Gültige Werte sind "true" oder "false".|  
+|<xref:System.AppDomainSetup.CachePath%2A>|Ruft den Namen eines für die Anwendung spezifischen Bereichs ab, in dem Dateien kopiert werden, oder legt diesen fest.|  
+|<xref:System.AppDomainSetup.ConfigurationFile%2A>|Ruft den Namen der Konfigurationsdatei für eine Anwendung ab oder legt ihn fest.|  
+|<xref:System.AppDomainSetup.DynamicBase%2A>|Ruft den Namen des Verzeichnisses ab, in dem dynamisch generierte Dateien gespeichert und darauf zugegriffen wird, oder legt diesen fest.|  
+|<xref:System.AppDomainSetup.LicenseFile%2A>|Ruft den Pfad zu der Lizenzdatei ab, die dieser Domäne zugeordnet ist, oder legt diesen fest.|  
+|<xref:System.AppDomainSetup.PrivateBinPath%2A>|Ruft die Liste der Verzeichnisse in Kombination mit dem <xref:System.AppDomainSetup.ApplicationBase%2A> Verzeichnis ab, das nach privaten Assemblys gesucht werden soll|  
+|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|Ruft einen Zeichen folgen Wert ab, der <xref:System.AppDomainSetup.ApplicationBase%2A> aus dem Suchpfad für die Anwendung einschließt oder ausschließt, oder legt diesen fest.|  
+|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|Ruft die Namen der Verzeichnisse ab, die die zu Schatten kopierenden Assemblys enthalten, oder legt diese fest.|  
+|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Ruft eine Zeichenfolge ab, die angibt, ob das Schatten kopieren aktiviert oder deaktiviert ist, oder legt diese fest. Gültige Werte sind "true" oder "false".|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `IAppDomainSetup` Schnittstelle entspricht der verwalteten <xref:System.IAppDomainSetup> Schnittstelle, die die <xref:System.AppDomainSetup> Typ implementiert. Finden Sie unter <xref:System.IAppDomainSetup?displayProperty=nameWithType> ausführliche Beschreibungen der Eigenschaften.  
+ Die `IAppDomainSetup`-Schnittstelle entspricht der verwalteten <xref:System.IAppDomainSetup> Schnittstelle, die vom <xref:System.AppDomainSetup> Typ implementiert wird. Ausführliche Beschreibungen der Eigenschaften finden Sie unter <xref:System.IAppDomainSetup?displayProperty=nameWithType>.  
   
- `IAppDomainSetup` Stellt Assembly-Bindungsinformationen, die hinzugefügt werden, kann, ein <xref:System.AppDomain> Instanz vor ihrer Erstellung. Ein Host kann festlegen, z. B. die <xref:System.AppDomainSetup.ApplicationBase%2A> Eigenschaft ein Stammverzeichnis, zu ermitteln, welche die Tests die common Language Runtime (CLR) für verwaltete Assemblys.  
+ `IAppDomainSetup` stellt Assemblybindungsinformationen dar, die einer <xref:System.AppDomain> Instanz vor deren Erstellung hinzugefügt werden können. Beispielsweise kann ein Host die <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft festlegen, um ein Stammverzeichnis einzurichten, das von der Common Language Runtime (CLR) für verwaltete Assemblys überprüft wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

@@ -5,21 +5,19 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252209"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114922"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<Das Element "" ist > Element "" von "".
+# <a name="usesmallinternalthreadstacks-element"></a>\<> Element "Element"
 Fordert an, dass die Common Language Runtime (CLR) die Speicherauslastung reduziert, indem explizite Stapel Größen angegeben werden, wenn bestimmte, intern verwendete Threads erstellt werden, anstatt die Standard Stapelgröße für diese Threads zu verwenden.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<"->**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** "".  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +39,7 @@ Fordert an, dass die Common Language Runtime (CLR) die Speicherauslastung reduzi
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |true|Anfordern von expliziten Stapel Größen.|  
-|false|Verwenden Sie die Standard Stapelgröße. Dies ist die Standardeinstellung für die .NET Framework 4.|  
+|False|Verwenden Sie die Standard Stapelgröße. Dies ist die Standardeinstellung für die .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca5d96e51c3809c6652d1a1fd75b80efb0b34222
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128040"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName-Methode
-Ruft eine Zeichenfolge, die mit dem Namen der der Assistent für verwaltetes Debuggen (MDA), dargestellt durch [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Ruft eine Zeichenfolge ab, die den Namen des von [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)dargestellten Assistenten für verwaltetes Debuggen (MDA) enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,16 +41,16 @@ HRESULT GetName (
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [out] Ein Zeiger auf die Länge des Namens.  
+ vorgenommen Ein Zeiger auf die Länge des Namens.  
   
  `szName`  
- [out] Ein Array, in dem Sie den Namen zu speichern.  
+ vorgenommen Ein Array, in dem der Name gespeichert werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- MDA-Namen sind eindeutige Werte. Die `GetName` Methode ist eine praktische Alternative zum Abrufen der XML-Streams und extrahieren den Namen aus dem Stream, der basierend auf dem Schema.  
+ MDA-Namen sind eindeutige Werte. Die `GetName`-Methode ist eine bequeme Leistungs Alternative, um den XML-Stream zu erhalten und den Namen basierend auf dem Schema aus dem Stream zu extrahieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -63,4 +61,4 @@ HRESULT GetName (
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMDA-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

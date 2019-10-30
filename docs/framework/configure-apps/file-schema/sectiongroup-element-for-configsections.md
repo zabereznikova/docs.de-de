@@ -7,22 +7,22 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9113811557ded3a580a0bbacb24f2fe7e8d05ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114782"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<SectionGroup > Element für \<configabschnitts >
+# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup-> Element für \<configabschnitts->
 
 Definiert einen Namespace für Konfigurations Abschnitte.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<SectionGroup->**
+&nbsp;&nbsp;[ **\<configabschnitts >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ Definiert einen Namespace für Konfigurations Abschnitte.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<Abschnitts >** ](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
+| [ **\<Abschnitt >** ](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
 
 ## <a name="remarks"></a>Hinweise
 
-Beim Deklarieren einer Abschnitts Gruppe wird ein containertag für Konfigurations Abschnitte erstellt, und es wird sichergestellt, dass keine Namenskonflikte mit von einer anderen Person definierten Konfigurations Abschnitten bestehen. Sie können  **\<sectionGroup->** Elemente in einander Schachteln.
+Beim Deklarieren einer Abschnitts Gruppe wird ein containertag für Konfigurations Abschnitte erstellt, und es wird sichergestellt, dass keine Namenskonflikte mit von einer anderen Person definierten Konfigurations Abschnitten bestehen. Sie können **\<sectionGroup->** Elemente in einander Schachteln.
 
 ## <a name="example"></a>Beispiel
 

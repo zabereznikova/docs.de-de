@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097270"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag-Enumeration
 Gibt an, ob der Kontext aus dem aktiven Frame (oder Endframe) auf dem Stapel stammt oder durch das Entladen aus einem anderen Frame berechnet wurde.  
@@ -40,14 +38,14 @@ typedef enum CorDebugSetContextFlag
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|SET_CONTEXT_FLAG_ACTIVE_FRAME|Der Kontext ist aktiven Kontext des Threads.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|Der Kontext wurde durch das Entladen aus einem anderen Frame berechnet wurde.|  
+|SET_CONTEXT_FLAG_ACTIVE_FRAME|Der Kontext ist der aktive Kontext des Threads.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|Der Kontext wurde durch entwickeln von einem anderen Frame berechnet.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CorDebugSetContextFlag` enthält Werte, mit denen, die [ICorDebugStackWalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) Methode.  
+ `CorDebugSetContextFlag` stellt Werte bereit, die von der [ICorDebugStackWalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) -Methode verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

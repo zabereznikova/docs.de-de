@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5efc83152763c5ef8b65a1fad33460c5354c0dc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772424"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110065"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next-Methode
-Ruft die Anzahl der "ICorDebugType"-Instanzen, die anhand des `celt` aus der Enumeration, die an der aktuellen Position ab.  
+Ruft die Anzahl der "ICorDebugType"-Instanzen ab, die `celt` von der-Enumeration angegeben werden, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der `ICorDebugType` Instanzen abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugType` Instanzen, die abgerufen werden sollen.  
   
  `values`  
- [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugType` Objekt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugType` Objekt zeigt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugType` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugType` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

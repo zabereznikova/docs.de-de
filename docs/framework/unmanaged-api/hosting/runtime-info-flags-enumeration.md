@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106237"
 ---
-# <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS-Enumeration
-Enthält Werte, die angeben, welche Informationen über die common Language Runtime (CLR) zurückgegeben werden sollen.  
+# <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS-Enumeration
+Enthält Werte, die angeben, welche Informationen zum Common Language Runtime (CLR) zurückgegeben werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,17 +45,17 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Gibt an, dass Verzeichnisinformationen nicht enthalten sein sollen.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Gibt an, dass keine Informationen zur Version enthalten sein sollen.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Gibt an, dass ein Fehlerdialogfeld bei einem Fehler nicht angezeigt werden soll.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Gibt an, dass die Auswirkungen des Aufrufs der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion mit dem SEM_FAILCRITICALERRORS-Flag überschrieben werden soll. D. h. soll ein Dialogfeld für die Installation bei einem Fehler unterdrückt wird angezeigt werden.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Gibt eine Anforderung für Informationen zu einer AMD-64-kompatible Version der Laufzeit an.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Gibt eine Anforderung für Informationen zu einer IA-64-kompatible Version der Laufzeit an.|  
-|`RUNTIME_INFO_REQUEST_X86`|Gibt eine Anforderung für Informationen zu einer X86 kompatible Version der Laufzeit an.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Gibt an, dass das Upgrade Versionsinformationen eingeschlossen werden sollen.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Gibt an, dass Verzeichnisinformationen nicht eingeschlossen werden sollen.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Gibt an, dass keine Versionsinformationen eingeschlossen werden sollen.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Gibt an, dass ein Fehler Dialogfeld bei einem Fehler nicht angezeigt werden soll.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Gibt an, dass die Auswirkungen des Aufrufs der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) -Funktion mit dem SEM_FAILCRITICALERRORS-Flag überschrieben werden sollen. Das heißt, ein Installations Dialogfeld sollte bei einem Fehler angezeigt werden, anstatt unterdrückt zu werden.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Gibt eine Anforderung von Informationen über eine mit AMD 64 kompatible Version der Laufzeit an.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Gibt eine Anforderung von Informationen über eine IA-64-kompatible Version der Laufzeit an.|  
+|`RUNTIME_INFO_REQUEST_X86`|Gibt eine Anforderung von Informationen über eine x86-kompatible Version der Laufzeit an.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Gibt an, dass Informationen zur Versions Aktualisierung eingeschlossen werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgenden Flags der Plattform-Architektur können angegebenen nur jeweils nur ein und können nicht kombiniert werden:  
+ Die folgenden Plattformarchitektur-Flags können jeweils nur einzeln angegeben werden und können nicht kombiniert werden:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,11 +64,11 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

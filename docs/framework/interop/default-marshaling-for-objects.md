@@ -8,14 +8,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2c6e8a013d6486ec55723b91d6bfb6b838c9be5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123590"
 ---
 # <a name="default-marshaling-for-objects"></a>Standardmäßiges Marshalling für Objekte
 
@@ -252,7 +250,7 @@ Beim Marshallen einer Variante an ein Objekt bestimmt der Typ und in einigen Fä
 
 |COM-Varianttyp|Objekttyp|
 |----------------------|-----------------|
-|**VT_EMPTY**|NULL-Objektverweis (**Nothing** (nichts) in Visual Basic).|
+|**VT_EMPTY**|NULL-Objektverweis (**Nothing** (nichts) in Visual&#160;Basic).|
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|
 |**VT_DISPATCH**|**System.__ComObject** oder NULL wenn (pdispVal == NULL)|
 |**VT_UNKNOWN**|**System.__ComObject** oder NULL wenn (punkVal == NULL)|
@@ -323,7 +321,7 @@ In der folgenden Tabelle werden die Regeln zur Weitergabe für Varianten und Obj
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+- [Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopieren und Fixieren](copying-and-pinning.md)

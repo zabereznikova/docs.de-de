@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2ec2748-e9ae-4e1b-80db-6fcec5cb81a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e6bc57fb470a5c12549bb5f9445ecf1551425a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107844"
 ---
 # <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE-Schnittstelle
 Dient als Enumerator für die Attribute des Code-Objekts im aktuellen Gültigkeitsbereich.  
@@ -30,14 +28,14 @@ Dient als Enumerator für die Attribute des Code-Objekts im aktuellen Gültigkei
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Ruft einen Schnittstellen Zeiger auf einen neuen `IEnumIDENTITY_ATTRIBUTE` ab, der dieselben Member wie dieses `IEnumIDENTITY_ATTRIBUTE`enthält.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|Ruft einen Schnittstellen Zeiger auf einen neuen `IEnumIDENTITY_ATTRIBUTE` ab, der dieselben Member wie diese `IEnumIDENTITY_ATTRIBUTE`enthält.|  
 |`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Schreibt die Daten, die in den Elementen dieses `IEnumIDENTITY_ATTRIBUTE` enthalten sind, in den angegebenen Datenpuffer.|  
 |`IEnumIDENTITY_ATTRIBUTE::Next`|Ruft die angegebene Anzahl von Attributen ab der aktuellen Position ab.|  
 |`IEnumIDENTITY_ATTRIBUTE::Reset`|Verschiebt den Anweisungs Zeiger an den Anfang dieses `IEnumIDENTITY_ATTRIBUTE`.|  
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|Verschiebt den Anweisungs Zeiger um die angegebene Anzahl von Elementen, beginnend an der aktuellen Position.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   

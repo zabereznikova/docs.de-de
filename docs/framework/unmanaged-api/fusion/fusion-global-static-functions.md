@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108269"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion – Globale statistische Funktionen
 In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von der Fusion-API verwendet werden.  
@@ -47,7 +45,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Ruft einen Zeiger auf eine [IAppIdAuthority](iappidauthority-interface.md) -Instanz ab, die Schlüssel für Anwendungs Identitäten und-Verweise verwaltet.  
   
  [GetAssemblyIdentityFromFile-Funktion](getassemblyidentityfromfile-function.md)  
- Ruft einen Zeiger auf ein `IUnknown` -Objekt mit dem `IID` angegebenen in der Assembly am angegebenen Dateipfad ab.  
+ Ruft einen Zeiger auf ein `IUnknown`-Objekt mit dem angegebenen `IID` in der Assembly am angegebenen Dateipfad ab.  
   
  [GetCachePath-Funktion](getcachepath-function.md)  
  Ruft den Pfad zur zwischengespeicherten Assembly unter Verwendung der angegebenen Flags ab.  

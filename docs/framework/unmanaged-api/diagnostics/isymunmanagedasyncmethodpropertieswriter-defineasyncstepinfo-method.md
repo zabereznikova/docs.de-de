@@ -2,19 +2,17 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo-Methode
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8305d0a562fd90e3fae32e372b663ca3942d2a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59e3a95a4d2573263600da60b4f852caa361138e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940139"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129198"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo-Methode
-Definieren Sie eine Gruppe von Async "await" Vorgänge in der aktuellen Methode.  
+Definieren Sie eine Gruppe von asynchronen warte Vorgängen in der aktuellen Methode.  
   
- Jede Offset "yield" entspricht einem "await" return-Anweisung, Identifizieren einer potenziellen "yield". Jede `breakpointMethod` / `breakpointOffset` Paar gibt an, in dem der asynchrone Vorgang fortgesetzt, die in einer anderen Methode sein kann.  
+ Jeder yield-Offset entspricht der Return-Anweisung, die eine mögliche Rendite identifiziert. Jede `breakpointMethod`/`breakpointOffset` paar teilt uns mit, wo der asynchrone Vorgang fortgesetzt wird, der sich in einer anderen Methode befinden könnte.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +33,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
  Gibt `HRESULT`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

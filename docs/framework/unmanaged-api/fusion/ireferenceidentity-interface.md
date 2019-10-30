@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9180ac5a-7019-4716-9f83-8a91d157239a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8f6a117d1e2fe76c271b0b014e6079370c8b4fe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796355"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127065"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity-Schnittstelle
 Stellt einen Verweis auf die eindeutige Signatur eines Code Objekts dar.  
@@ -30,13 +28,13 @@ Stellt einen Verweis auf die eindeutige Signatur eines Code Objekts dar.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf eine neue `IReferenceIdentity` -Instanz ab, die mit `IReferenceIdentity`dieser identisch ist, mit Ausnahme der angegebenen Attribut Änderungen.|  
-|`IReferenceIdentity::EnumAttributes`|Ruft einen Schnittstellen Zeiger auf eine `IEnumIDENTITY_ATTRIBUTE` -Instanz ab, die die diesem `IReferenceIdentity`zugeordneten Attribute enthält.|  
+|`IReferenceIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf eine neue `IReferenceIdentity`-Instanz ab, die mit dieser `IReferenceIdentity`identisch ist, mit Ausnahme der angegebenen Attribut Änderungen.|  
+|`IReferenceIdentity::EnumAttributes`|Ruft einen Schnittstellen Zeiger auf eine `IEnumIDENTITY_ATTRIBUTE`-Instanz ab, die die diesem `IReferenceIdentity`zugeordneten Attribute enthält.|  
 |`IReferenceIdentity::GetAttribute`|Ruft den Wert des Attributs im angegebenen Namespace mit dem angegebenen Namen ab.|  
 |`IReferenceIdentity::SetAttribute`|Legt das Attribut mit dem angegebenen Namespace und dem angegebenen Namen auf den angegebenen Wert fest.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   

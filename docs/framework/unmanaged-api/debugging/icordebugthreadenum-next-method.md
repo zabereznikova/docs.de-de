@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770072"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122388"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next-Methode
-Ruft die Anzahl der angegebenen ICorDebugThread-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
+Ruft die Anzahl der angegebenen ICorDebugThread-Instanzen aus der-Enumeration ab, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der `ICorDebugThread` Instanzen abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugThread` Instanzen, die abgerufen werden sollen.  
   
  `threads`  
- [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugThread` -Objekt, das einen Thread darstellt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugThread` Objekt verweist, das einen Thread darstellt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugThread` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugThread` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

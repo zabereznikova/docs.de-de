@@ -14,45 +14,43 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4f27a73022b0495b2772c0485c14a1b007dc883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132642"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask-Schnittstelle
-Bietet Methoden, mit denen den Host aus, um die Anforderungen der common Language Runtime (CLR) zu erstellen oder eine Benachrichtigung an die CLR über die zugewiesene Aufgabe bereitzustellen.  
+Stellt Methoden bereit, die es dem Host ermöglichen, Anforderungen an die Common Language Runtime (CLR) zu senden oder der CLR eine Benachrichtigung über die zugeordnete Aufgabe bereitzustellen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Abort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Fordert an, dass die CLR Abbrechen die Aufgabe, die die aktuelle `ICLRTask` -Instanz darstellt.|  
-|[ExitTask-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Benachrichtigt die CLR, die die Aufgabe mit dem aktuellen verknüpft `ICLRTask` Instanz beendet wird und versucht, die den Task ordnungsgemäß heruntergefahren.|  
-|[GetMemStats-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Ruft die statistische Informationen zur Verwendung der verfügbaren Speicherressourcen ab, von der Aufgabe, die vom aktuellen `ICLRTask` Instanz.|  
-|[LocksHeld-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Ruft die Anzahl der Sperren für den Task ab.|  
-|[NeedsPriorityScheduling-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Ruft einen Wert, der angibt, ob der Host eine hohe Priorität zuweisen sollten durch das erneute Planen der Aufgabe, die vom aktuellen `ICLRTask` Instanz.|  
-|[Reset-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Informiert Sie die CLR, dass der Host eine Aufgabe abgeschlossen hat, und ermöglicht es der CLR, die aktuelle `ICLRTask` Instanz mit einer anderen Aufgabe darstellen.|  
-|[RudeAbort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Bewirkt, dass die CLR zum Abbrechen der Aufgabe, die vom aktuellen `ICLRTask` Instanz sofort, ohne die Garantie, dass Finalizer ausgeführt werden.|  
-|[SetTaskIdentifier-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Den eindeutigen Bezeichner für die Aufgabe, die vom aktuellen `ICLRTask` Instanz, für die Verwendung beim Debuggen.|  
-|[SwitchIn-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Benachrichtigt die CLR, die die Aufgabe von der aktuellen dargestellt `ICLRTask` Instanz befindet sich im betriebsbereiten Zustand.|  
-|[SwitchOut-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Benachrichtigt die CLR, die die Aufgabe von der aktuellen dargestellt `ICLRTask` Instanz ist nicht mehr funktionsfähig.|  
-|[YieldTask-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Fordert an, die die CLR CPU-Zeit für andere Aufgaben verfügbar. Die CLR kann nicht garantiert, dass die Aufgabe in einem Zustand überführt werden sollen, in denen Verarbeitungszeit abgezogen werden kann.|  
+|[Abort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Fordert an, dass die CLR den Task abbricht, den die aktuelle `ICLRTask` Instanz darstellt.|  
+|[ExitTask-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Benachrichtigt die CLR, dass der Task, der der aktuellen `ICLRTask` Instanz zugeordnet ist, endet, und versucht, die Aufgabe ordnungsgemäß zu schließen.|  
+|[GetMemStats-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Ruft statistische Informationen zur Verwendung von Speicherressourcen durch die Aufgabe ab, die durch die aktuelle `ICLRTask`-Instanz dargestellt wird.|  
+|[LocksHeld-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Ruft die Anzahl der Sperren ab, die zurzeit für den Task ausgeführt werden.|  
+|[NeedsPriorityScheduling-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Ruft einen Wert ab, der angibt, ob der Host eine hohe Priorität zum Neuplanen der Aufgabe zuweisen soll, die durch die aktuelle `ICLRTask`-Instanz dargestellt wird.|  
+|[Reset-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Teilt der CLR mit, dass der Host eine Aufgabe abgeschlossen hat, und ermöglicht der CLR die Wiederverwendung der aktuellen `ICLRTask`-Instanz, um eine andere Aufgabe darzustellen.|  
+|[RudeAbort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Bewirkt, dass die CLR die Aufgabe, die von der aktuellen `ICLRTask` Instanz dargestellt wird, sofort abbricht, ohne sicherzustellen, dass Finalizer ausgeführt werden.|  
+|[SetTaskIdentifier-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Legt für die Verwendung beim Debuggen einen eindeutigen Bezeichner für die Aufgabe fest, die durch die aktuelle `ICLRTask`-Instanz dargestellt wird.|  
+|[SwitchIn-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Benachrichtigt die CLR, dass die von der aktuellen `ICLRTask`-Instanz dargestellte Aufgabe in einem eines ausführbaren-Zustand ist.|  
+|[SwitchOut-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Benachrichtigt die CLR, dass die durch die aktuelle `ICLRTask`-Instanz dargestellte Aufgabe nicht mehr in einem eines ausführbaren-Zustand ist.|  
+|[YieldTask-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Fordert an, dass die CLR für andere Tasks Prozessorzeit zur Verfügung stellt. Die CLR garantiert nicht, dass die Aufgabe in einen Zustand versetzt wird, in dem Sie Verarbeitungszeit in sich bringen kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `ICLRTask` ist die Darstellung eines Tasks für die CLR. Zu jedem Zeitpunkt während der codeausführung kann entweder als ausgeführt wird oder darauf warten, führen Sie eine Aufgabe beschrieben werden. Der Host Ruft die `ICLRTask::SwitchIn` Methode, um die CLR darüber zu benachrichtigen, die die Aufgabe, die der aktuellen `ICLRTask` Instanz stellt ist jetzt in einen betriebsfähigen Zustand wiederherzustellen. Nach einem Aufruf von `ICLRTask::SwitchIn`, der Host einplanen Task auf einen beliebigen Thread des Betriebssystems, außer in Fällen, in denen die Common Language Runtime Thread-Affinität, angegeben durch Aufrufe von erfordert, der [IHostTaskManager:: BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) und [IHostTaskManager:: EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) Methoden. Einige Zeit später könnten das Betriebssystem, entfernen Sie die Aufgabe aus dem Thread aus, und fügen Sie ihn in einen inaktiven Zustand. Beispielsweise könnte geschieht das, wenn die Aufgabe auf einer Synchronisierungsprimitive blockiert oder wartet auf den Abschluss von e/a-Vorgänge. Der Host ruft [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) auf die CLR darüber zu benachrichtigen, die die Aufgabe von der aktuellen dargestellt `ICLRTask` Instanz ist nicht mehr funktionsfähig.  
+ Ein `ICLRTask` ist die Darstellung einer Aufgabe für die CLR. Zu jedem Zeitpunkt während der Codeausführung kann eine Aufgabe entweder als ausgeführt oder wartet auf die Ausführung beschrieben werden. Der Host ruft die `ICLRTask::SwitchIn`-Methode auf, um die CLR zu benachrichtigen, dass der Task, der von der aktuellen `ICLRTask` Instanz dargestellt wird, jetzt in einem eines ausführbaren-Zustand ist. Nach einem Aufruf von `ICLRTask::SwitchIn`kann der Host die Aufgabe für jeden Betriebssystem Thread planen, außer in Fällen, in denen die Laufzeit Thread Affinität erfordert, wie durch Aufrufe von [IHostTaskManager:: beginthreadaffinität](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) und [IHostTaskManager:: Endthreadaffinitäts](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) -Methoden. Später kann das Betriebssystem die Aufgabe aus dem Thread entfernen und in einen Zustand versetzen, der nicht ausgeführt wird. Dies kann beispielsweise der Fall sein, wenn der Task bei Synchronisierungs primitiven blockiert oder auf den Abschluss der e/a-Vorgänge wartet. Der Host ruft die [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) -Methode auf, um die CLR zu benachrichtigen, dass die durch die aktuelle `ICLRTask`-Instanz dargestellte Aufgabe nicht mehr in einem eines ausführbaren-Zustand ist.  
   
- Eine Aufgabe, die in der Regel am Ende der Ausführung von Code beendet wird. Zu diesem Zeitpunkt wird der Host ruft `ICLRTask::ExitTask` zugeordneten zerstören `ICLRTask`. Allerdings Aufgaben auch mit einem Aufruf wiederverwendet werden können `ICLRTask::Reset`, wodurch die `ICLRTask` Instanz erneut verwendet werden. Dadurch wird verhindert, dass den Aufwand für das wiederholte erstellen und Zerstören von Instanzen.  
+ Eine Aufgabe wird in der Regel am Ende der Codeausführung beendet. Zu diesem Zeitpunkt ruft der Host `ICLRTask::ExitTask` auf, um den zugeordneten `ICLRTask`zu zerstören. Aufgaben können jedoch auch mithilfe eines Aufrufes `ICLRTask::Reset`wieder verwendet werden, wodurch die `ICLRTask` Instanz wieder verwendet werden kann. Diese Vorgehensweise verhindert den mehr Aufwand für das wiederholte erstellen und zerstören von Instanzen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

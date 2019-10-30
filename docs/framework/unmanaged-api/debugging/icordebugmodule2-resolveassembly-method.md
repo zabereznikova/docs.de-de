@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125304"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly-Methode
 
-Löst die Assembly, die vom angegebenen Metadatentoken verwiesen wird.
+Löst die Assembly auf, auf die vom angegebenen Metadatentoken verwiesen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +38,18 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Parameter
 
 `tkAssemblyRef`\
-[in] Ein `mdToken` -Wert, der die Assembly verweist.
+in Ein `mdToken` Wert, der auf die Assembly verweist.
 
 `ppAssembly`\
-[out] Ein Zeiger auf die Adresse eines ICorDebugAssembly-Objekts, das die Assembly darstellt.
+vorgenommen Ein Zeiger auf die Adresse eines ICorDebug-Objekts, das die Assembly darstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Assembly bei noch nicht geladen ist `ResolveAssembly` aufgerufen wird, wird ein HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY Wert zurückgegeben.
+Wenn die Assembly nicht bereits geladen ist, wenn `ResolveAssembly` aufgerufen wird, wird ein HRESULT-Wert von CORDBG_E_CANNOT_RESOLVE_ASSEMBLY zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 

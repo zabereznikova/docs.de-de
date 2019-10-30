@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyHandle function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5af003f0295e0b403727f9af6b03ab81c4b8bccb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101862"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
 
@@ -53,7 +51,7 @@ in Ein Zeiger auf eine [iwbemubjectaccess](/windows/desktop/api/wbemcli/nn-wbemc
 in Eine NULL-terminierte Zeichenfolge von UTF16-codierten Zeichen, die den Eigenschaftsnamen enthält.
 
 `pType`\
-vorgenommen Ein Zeiger auf einen [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) -Enumerationsmember, der den CIM-Typ der Eigenschaft darstellt.
+vorgenommen Ein Zeiger auf einen [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) Enumerationsmember, der den CIM-Typ der Eigenschaft darstellt.
 
 `pHandle`\
 vorgenommen Ein Zeiger auf eine ganze Zahl, die das Eigenschaften Handle enthält.
@@ -64,9 +62,9 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Der angegebene Eigenschaften Name wurde nicht gefunden. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 angezeigt | Der angegebene Eigenschaften Name wurde nicht gefunden. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Die angeforderte Eigenschaft ist vom `CIM_OBJECT` Datentyp `CIM_ARRAY`oder. |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Die angeforderte Eigenschaft ist vom Typ "`CIM_OBJECT`" oder "`CIM_ARRAY`". |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
 ## <a name="remarks"></a>Hinweise
@@ -79,9 +77,9 @@ Handles können für Eigenschaften aller anderen Datentypen als `CIM_OBJECT` und
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

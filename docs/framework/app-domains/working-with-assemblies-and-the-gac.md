@@ -8,14 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119720"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Arbeiten mit Assemblys und dem globalen Assemblychache
 
@@ -47,13 +45,13 @@ Es gibt verschiedene Gründe, eine Assembly im globalen Assemblycache zu install
  Beachten Sie, dass es Szenarien gibt, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit XCOPY das Anwendungsverzeichnis kopieren. In einem solchen Fall müssen Sie die Assembly ebenfalls im globalen Assemblycache ablegen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-[Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](install-assembly-into-gac.md)  
+[Gewusst wie: Installieren einer Assembly in den globalen Assemblycache](install-assembly-into-gac.md)  
 Beschreibt die Möglichkeiten, eine Assembly im globalen Assemblycache zu installieren.  
   
-[Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](how-to-view-the-contents-of-the-gac.md)  
+[Gewusst wie: Anzeigen der Inhalte des globalen Assemblycaches](how-to-view-the-contents-of-the-gac.md)  
 Verwenden Sie das [Global Assembly Cache-Tool („gacutil.exe“)](../tools/gacutil-exe-gac-tool.md), um den Inhalt des globalen Assemblycaches anzuzeigen.  
   
-[Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache](how-to-remove-an-assembly-from-the-gac.md)  
+[Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache](how-to-remove-an-assembly-from-the-gac.md)  
 Verwenden Sie das [Global Assembly Cache-Tool („gacutil.exe“)](../tools/gacutil-exe-gac-tool.md), um eine Assembly aus dem globalen Assemblycache zu entfernen.  
   
 [Verwenden von Serviced Components mit dem globalen Assemblycache](use-serviced-components-with-the-gac.md)  
@@ -67,7 +65,7 @@ Bietet eine Übersicht über das Erstellen von Assemblys.
 [Globaler Assemblycache](gac.md)  
 Beschreibt den globalen Assemblycache.  
   
-[Vorgehensweise: Anzeigen des Assemblyinhalts](../../standard/assembly/view-contents.md)  
+[Gewusst wie: Anzeigen des Assemblyinhalts](../../standard/assembly/view-contents.md)  
 Erläutert, wie der [IL-Disassembler („ildasm.exe“)](../tools/ildasm-exe-il-disassembler.md) verwendet wird, um Microsoft Intermediate Language-Informationen (MSIL) in einer Assembly anzuzeigen.  
   
 [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)  

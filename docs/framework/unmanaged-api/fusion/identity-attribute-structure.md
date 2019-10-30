@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796485"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107986"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE-Struktur
 Enthält Metadaten-Attributinformationen zu einer [IDefinitionIdentity](idefinitionidentity-interface.md) -Instanz.  
@@ -45,12 +43,12 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszValue`|Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Wert des Attributs enthält.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `IDENTITY_ATTRIBUTE` -Struktur enthält drei Zeiger auf auf NULL endend Zeichen folgen. Diese drei Zeichen folgen beschreiben ein Attribut.  
+ Die `IDENTITY_ATTRIBUTE`-Struktur enthält drei Zeiger auf auf NULL endend Zeichen folgen. Diese drei Zeichen folgen beschreiben ein Attribut.  
   
- Eine Instanz `IDENTITY_ATTRIBUTE` einer-Struktur ist einer Instanz einer [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) -Struktur zugeordnet. Die `IDENTITY_ATTRIBUTE` -Struktur enthält die eigentlichen Zeichen folgen, und `IDENTITY_ATTRIBUTE_BLOB` die entsprechende-Struktur listet die Offsets zu den drei Zeichen `IDENTITY_ATTRIBUTE` folgen auf, die in der-Struktur aufgeführt sind.  
+ Eine Instanz einer `IDENTITY_ATTRIBUTE`-Struktur ist einer Instanz einer [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) -Struktur zugeordnet. Die `IDENTITY_ATTRIBUTE`-Struktur enthält die eigentlichen Zeichen folgen, und die entsprechende `IDENTITY_ATTRIBUTE_BLOB` Struktur listet die Offsets zu den drei Zeichen folgen auf, die in der `IDENTITY_ATTRIBUTE`-Struktur aufgeführt sind.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   

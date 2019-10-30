@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10a5247632f242a4b4e0d33cf7fa7233d1b1e13b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b83dec65e1dd4fc610be3190e8126e6d9d38a6e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754202"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121225"
 ---
 # <a name="icordebugframegetcallee-method"></a>ICorDebugFrame::GetCallee-Methode
-Ruft einen Zeiger auf das ICorDebugFrame-Objekt, in der aktuellen Kette, die diesem Frame aufgerufen.  
+Ruft einen Zeiger auf das ICorDebug Frame-Objekt in der aktuellen Kette ab, das in diesem Frame aufgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parameter  
  `ppFrame`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugFrame` -Objekt, das den aufgerufenen Frame darstellt. Dieser Wert ist null, wenn der aufrufende Frame der innerste Rahmen in der aktuellen Kette ist.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugFrame` Objekts, das den aufgerufenen Frame darstellt. Dieser Wert ist NULL, wenn der aufrufenden Frame der innerste Frame in der aktuellen Kette ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

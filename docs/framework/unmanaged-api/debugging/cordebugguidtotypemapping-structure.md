@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132843"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping-Struktur
-Ordnet eine Windows-Runtime-GUID mit der entsprechenden ICorDebugType-Objekt.  
+Ordnet eine Windows-Runtime GUID dem entsprechenden ICorDebugType-Objekt zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,8 +39,8 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`iid`|Die GUID der der zwischengespeicherte Windows-Runtime-Typ.|  
-|`pType`|Ein Zeiger auf ein ICorDebugType-Objekt, das Informationen zu der zwischengespeicherte Typ bereitstellt.|  
+|`iid`|Der GUID des zwischengespeicherten Windows-Runtime Typs.|  
+|`pType`|Ein Zeiger auf ein ICorDebugType-Objekt, das Informationen über den zwischengespeicherten Typ bereitstellt.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Windows-Runtime.  

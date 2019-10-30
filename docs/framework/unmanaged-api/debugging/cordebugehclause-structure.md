@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098857"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause-Struktur
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -53,9 +51,9 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|Der Offset, in Bytes, vom Beginn des Methodentextes für einen filterbasierten Ausnahmehandler.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Array von `CoreDebugEHClause` Werte wird zurückgegeben, durch die [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) Methode.  
+ Ein Array von `CoreDebugEHClause` Werten wird von der [getehklauseln](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) -Methode zurückgegeben.  
   
- Die Informationen der EH-Klausel werden durch die CLI-Spezifikation definiert. Weitere Informationen finden Sie unter [Standard ECMA-355: Common Language Infrastructure (CLI), 6th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Die Informationen der EH-Klausel werden durch die CLI-Spezifikation definiert. Weitere Informationen finden Sie unter [Standard-ECMA-355: Common Language Infrastructure (CLI), Sechste Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Das `flags`-Feld kann die folgenden Flags enthalten. Beachten Sie, dass diese nicht in CorDebug.idl oder CorDebug.h definiert sind.  
   
@@ -67,7 +65,7 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Eine fault-Klausel (eine `finally`-Klausel, die nur aufgerufen wird, wenn eine Ausnahme ausgelöst wird).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

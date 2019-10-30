@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274048"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132347"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP-Struktur
 Gibt Änderungen im relativen Offset einer Funktion an.  
@@ -42,10 +40,10 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|Der alte MSIL-Offset (Microsoft Intermediate Language) relativ zum Anfang der Funktion.|  
 |`newOffset`|Der neue MSIL-Offset relativ zum Anfang der Funktion.|  
-|`fAccurate`|`true`, wenn die Zuordnung bekanntermaßen korrekt ist. `false`andernfalls.|  
+|`fAccurate`|`true`, wenn die Zuordnung bekanntermaßen korrekt ist. Andernfalls `false`.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Format der Zuordnung lautet wie folgt: Der Debugger geht davon aus `oldOffset` , dass auf einen MSIL-Offset im ursprünglichen, nicht geänderten MSIL-Code verweist. Der `newOffset` -Parameter verweist auf den entsprechenden MSIL-Offset innerhalb des neuen, instrumentierten Codes.  
+ Das Format der Zuordnung lautet wie folgt: der Debugger geht davon aus, dass `oldOffset` auf einen MSIL-Offset im ursprünglichen, nicht geänderten MSIL-Code verweist. Der `newOffset`-Parameter verweist auf den entsprechenden MSIL-Offset innerhalb des neuen, instrumentierten Codes.  
   
  Die folgenden Anforderungen müssen erfüllt sein, damit die Schritt Ausführung ordnungsgemäß funktioniert:  
   
@@ -82,11 +80,11 @@ typedef struct _COR_IL_MAP {
 - Ein neuer Offset von 20 oder höher wird dem alten Offset 9 zugeordnet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorProf.idl  
+ **Header:** Cordebug. idl, Corprof. idl  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -6,189 +6,187 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 66fdd97d101f5ea53a96b996a2a60e5ed65a2701
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456883"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131966"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR-Hostingschnittstellen
-In diesem Abschnitt wird beschrieben, die Schnittstellen, die nicht verwaltete Hosts können die common Language Runtime (CLR) in ihre Anwendungen integrieren. Die Informationen bezieht sich auf die Version von .NET Framework 2.0 und höheren Versionen. Diese Schnittstellen aktivieren Sie den Host zu steuern, zahlreiche weitere Aspekte der Laufzeit als in den Versionen 1.0 und 1.1 möglich war, und geben eine engere Integration zwischen der CLR und Ausführungsmodell des Hosts.  
+In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwaltete Hosts die Common Language Runtime (CLR) in Ihre Anwendungen integrieren können. Die Informationen beziehen sich auf den .NET Framework Version 2,0 und höhere Versionen. Diese Schnittstellen ermöglichen es dem Host, viele weitere Aspekte der Laufzeit zu steuern, als dies in den Versionen 1,0 und 1,1 möglich war, und eine weitaus engere Integration zwischen der CLR und dem Ausführungs Modell des Hosts bereitzustellen.  
   
- In .NET Framework, Version 1.0 und 1.1 aktiviert das hosting-Modell einen nicht verwalteten Host zum Laden der CLR in einen Prozess, um bestimmte Einstellungen zu konfigurieren und ereignisbenachrichtigungen empfangen. Allerdings wurde ausgeführt im Allgemeinen dem Host und die CLR unabhängig voneinander in diesem Prozess. In der .NET Framework, Version 2.0 und höheren Versionen können neue Ebenen der Abstraktion den Host bieten viele der Ressourcen, die derzeit von den Typen in der Win32-Assembly bereitgestellt werden soll, und erweitern Sie den Satz von Funktionen, die der Host konfigurieren können.  
+ In den .NET Framework, Version 1,0 und 1,1, ermöglichte das Hostingmodell einen nicht verwalteten Host, die CLR in einen Prozess zu laden, bestimmte Einstellungen zu konfigurieren und Ereignis Benachrichtigungen zu empfangen. Im allgemeinen wurden der Host und die CLR in diesem Prozess jedoch unabhängig ausgeführt. In der .NET Framework Version 2,0 und höheren Versionen ermöglichen neue Abstraktions Ebenen dem Host die Bereitstellung zahlreicher Ressourcen, die derzeit von den Typen in der Win32-Assembly bereitgestellt werden, und erweitern den Satz von Funktionen, die der Host konfigurieren kann.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [IActionOnCLREvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
- Stellt eine Methode, die einen Rückruf für ein registriertes Ereignis durchführt.  
+ Stellt eine Methode bereit, die einen Rückruf für ein registriertes Ereignis ausführt.  
   
  [IApartmentCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)  
- Stellt Methoden für Rückrufe innerhalb einer Apartment.  
+ Stellt Methoden bereit, um Rückrufe in einem Apartment zu erstellen.  
   
  [IAppDomainBinding-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)  
- Stellt Methoden zum Festlegen der Runtime-Konfiguration bereit.  
+ Stellt Methoden zum Festlegen der Laufzeitkonfiguration bereit.  
   
  [ICatalogServices-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-interface.md)  
- Stellt Methoden zum Katalogisieren von Diensten bereit. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.)  
+ Stellt Methoden für das Katalogisieren von Diensten bereit. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.)  
   
  [ICLRAssemblyIdentityManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- Enthält Methoden, die Kommunikation zwischen dem Host und der CLR Informationen zu Assemblys zu unterstützen.  
+ Stellt Methoden bereit, die die Kommunikation zwischen dem Host und der CLR über Assemblys unterstützen.  
   
  [ICLRAssemblyReferenceList-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- Verwaltet eine Liste der Assemblys, die von der CLR und nicht vom Host geladen werden.  
+ Verwaltet eine Liste von Assemblys, die von der CLR und nicht vom Host geladen werden.  
   
  [ICLRControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- Stellt Methoden für den Zugriff auf, und konfigurieren verschiedene Aspekte der CLR-Host bereit.  
+ Stellt Methoden bereit, mit denen der Host auf die CLR zugreifen und verschiedene Aspekte konfigurieren kann.  
   
  [ICLRDebugManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- Bietet Methoden, mit die einen Host eine Reihe von Aufgaben mit einem Bezeichner sowie einen Anzeigenamen zuordnen können.  
+ Stellt Methoden bereit, mit deren Hilfe einem Host eine Reihe von Tasks mit einem Bezeichner und einem anzeigen Amen verknüpft werden können.  
   
  [ICLRErrorReportingManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- Bietet Methoden, mit die den Host benutzerdefinierte Heap-Sicherungen für die Fehlerberichterstattung konfigurieren zu können.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, benutzerdefinierte Heap-Abbilder für die Fehlerberichterstattung zu konfigurieren.  
   
  [ICLRGCManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
- Enthält Methoden, die einen Host für die Interaktion mit der CLR Garbage Collection-System zu ermöglichen.  
+ Stellt Methoden bereit, mit denen ein Host mit dem Garbage Collection System der CLR interagieren kann.  
   
  [ICLRHostBindingPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
- Stellt Methoden für den Host zum Auswerten und Übermitteln von Änderungen in Richtlinieninformationen für Assemblys.  
+ Stellt Methoden bereit, mit denen der Host Änderungen an Richtlinien Informationen für Assemblys auswerten und übermitteln können.  
   
  [ICLRHostProtectionManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- Ermöglicht es dem Host zum Blockieren von bestimmten verwaltete Klassen, Methoden, Eigenschaften und Felder aus, die in teilweise vertrauenswürdigen Code ausgeführt werden soll.  
+ Ermöglicht es dem Host, bestimmte verwaltete Klassen, Methoden, Eigenschaften und Felder von der Ausführung in teilweise vertrauenswürdigem Code zu blockieren.  
   
  [ICLRIoCompletionManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- Implementiert eine Rückrufmethode, die den Host zu benachrichtigen, die CLR über den Status der angegebenen e/a-Anforderungen ermöglicht.  
+ Implementiert eine Rückruf Methode, die es dem Host ermöglicht, die CLR über den Status der angegebenen e/a-Anforderungen zu benachrichtigen.  
   
  [ICLRMemoryNotificationCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- Ermöglicht dem Host, den Berichts-speicherauslastung, die mit einem Ansatz ähnelt der von der Win32 `CreateMemoryResourceNotification` Funktion.  
+ Ermöglicht es dem Host, Speicher Auslastungs Bedingungen mithilfe eines ähnlichen Ansatzes wie der Win32-`CreateMemoryResourceNotification` Funktion zu melden.  
   
  [ICLROnEventManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- Bietet Methoden, mit denen den Host zu registrieren und Aufheben der Registrierung von Rückrufen für CLR-Ereignisse.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, Rückrufe für CLR-Ereignisse zu registrieren und die Registrierung aufzuheben.  
   
  [ICLRPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- Enthält Methoden, die den Host Geben Sie die, die bei Fehlern oder Timeouts auszuführenden Richtlinienaktionen zu ermöglichen.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, Richtlinien Aktionen anzugeben, die im Fall von Fehlern und Timeouts durchgeführt werden sollen.  
   
  [ICLRProbingAssemblyEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
- Bietet Methoden, mit denen der Host zum Abrufen der gesuchten Identitäten einer Assembly mit Informationen zur Identität der Assembly, die zum Erstellen oder zu verstehen, die diese Identität ohne intern für die CLR ist.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, die in der CLR internen Identitätsinformationen der Assembly zu ermitteln, ohne diese Identität erstellen oder verstehen zu müssen.  
   
  [ICLRReferenceAssemblyEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)  
- Bietet Methoden, mit die den Host den Satz von Assemblys, die auf die verwiesen wird von einer Datei oder den Stream unter Verwendung von Assembly-Identitätsdaten, die intern für die CLR ist, ohne diese Identitäten erstellen oder verstehen bearbeiten können.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, den Satz von Assemblys, auf die von einer Datei oder einem Stream verwiesen wird, mithilfe von Assemblyidentitätsdaten zu bearbeiten, die für die CLR intern sind, ohne dass diese Identitäten  
   
  [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- Bietet Funktionen, die ähnlich wie [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md), mit der eine weitere Methode zum Festlegen der Schnittstelle des Steuerelements.  
+ Bietet ähnliche Funktionen wie [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)mit einer zusätzlichen Methode zum Festlegen der Host Steuerungs Schnittstelle.  
   
  [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- Stellt Methoden für den Host zum Abrufen von Informationen zu den angeforderten Aufgaben und zum Erkennen von Deadlocks in die Synchronisierung-Implementierung bereit.  
+ Stellt Methoden bereit, mit denen der Hostinformationen zu angeforderten Tasks und Deadlocks in der Synchronisierungs Implementierung erhält.  
   
  [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- Bietet Methoden, mit denen den Host aus, um die Anforderungen der CLR zu erstellen oder eine Benachrichtigung an die CLR über die zugewiesene Aufgabe bereitzustellen.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, Anforderungen an die CLR zu senden oder die CLR über die zugeordnete Aufgabe benachrichtigt zu werden.  
   
  [ICLRTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- Bietet Methoden, mit denen der Host explizit anfordern, dass die CLR erstellen eine neue Aufgabe, die aktuell ausgeführte Aufgabe zu erhalten und legen Sie die geografische Sprache und Kultur für den Task.  
+ Stellt Methoden bereit, die es dem Host ermöglichen, explizit anzufordern, dass die CLR einen neuen Task erstellt, die aktuell ausgeführte Aufgabe erhält und die geografische Sprache und Kultur für den Task festgelegt.  
   
  [ICLRValidator-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)  
- Stellt Methoden zum Überprüfen der übertragbaren ausführbaren Datei (PE)-Abbildern, und Melden von Validierungsfehlern.  
+ Stellt Methoden zum Überprüfen von PE-Images (portable ausführbare Dateien) und zum Melden von Validierungs Fehlern bereit.  
   
  [ICorConfiguration-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)  
- Stellt Methoden zum Konfigurieren der CLR.  
+ Stellt Methoden zum Konfigurieren der CLR bereit.  
   
  [ICorThreadpool-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)  
- Stellt Methoden für den Zugriff auf den Threadpool.  
+ Stellt Methoden für den Zugriff auf den Thread Pool bereit.  
   
  [IDebuggerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)  
- Stellt Methoden zum Abrufen von Informationen über den Status der Debugdienste bereit.  
+ Stellt Methoden zum Abrufen von Informationen über den Zustand der Debugdienste bereit.  
   
  [IDebuggerThreadControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)  
- Stellt Methoden zum Benachrichtigen des Hosts über das Blockieren und Entsperren von Threads von den Debugdiensten.  
+ Stellt Methoden bereit, mit denen der Host über die Blockierung und Aufhebung der Blockierung von Threads durch die Debugdienste benachrichtigt wird.  
   
  [IGCHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)  
- Stellt Methoden zum Abrufen von Informationen über die Garbage Collection-System und zum Steuern einige Aspekte der Garbagecollection.  
+ Bietet Methoden zum Abrufen von Informationen über das Garbage Collection System und zum Steuern einiger Aspekte von Garbage Collection.  
   
  [IGCHost2-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)  
- Stellt die [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) Methode, die einen Host, die Größe der Garbage Collection-Segment und die maximale Größe der Garbage Collection-Systems die Generation 0 (null) auf Werte größer als festzulegen ermöglicht `DWORD`.  
+ Stellt die [setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) -Methode bereit, mit der ein Host die Größe des Garbage Collection Segments und die maximale Größe der Generation 0 des Garbage Collection Systems auf Werte festlegen kann, die größer als `DWORD`sind.  
   
  [IGCHostControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)  
- Stellt eine Methode, die der Garbage Collector, den Host zum Ändern der Grenzen des virtuellen Speichers ermöglicht.  
+ Stellt eine Methode bereit, die es dem Garbage Collector ermöglicht, den Host zum Ändern der Grenzwerte für den virtuellen Arbeitsspeicher anzufordern.  
   
  [IGCThreadControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)  
- Stellt Methoden für die Teilnahme an der Planung von Threads, die für die Garbagecollection andernfalls blockiert würden.  
+ Stellt Methoden für die Teilnahme an der Planung von Threads bereit, die andernfalls für Garbage Collection blockiert werden.  
   
  [IHostAssemblyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- Bietet Methoden, mit denen einen Host aus, um Assemblys anzugeben, die von der CLR oder vom Host geladen werden sollen.  
+ Stellt Methoden bereit, mit denen ein Host Assemblys angeben kann, die von der CLR oder vom Host geladen werden sollen.  
   
  [IHostAssemblyStore-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)  
- Enthält Methoden, die einen Host zum Laden von Assemblys und Modulen unabhängig von der CLR zu aktivieren.  
+ Stellt Methoden bereit, mit denen ein Host Assemblys und Module unabhängig von der CLR laden kann.  
   
  [IHostAutoEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- Bietet eine Darstellung der ein automatisches Zurücksetzungsereignis vom Host implementiert.  
+ Stellt eine Darstellung eines vom Host implementierten automatischen Zurücksetzungs Ereignisses bereit.  
   
  [IHostControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)  
- Stellt Methoden für das Laden von Assemblys zu konfigurieren und um zu bestimmen, welche hosting vom Host unterstützten Schnittstellen bereit.  
+ Bietet Methoden zum Konfigurieren des Ladens von Assemblys und zum bestimmen, welche Hostingschnittstellen der Host unterstützt.  
   
  [IHostCrst-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)  
- Dient als Darstellung des Hosts in einem kritischen Abschnitt für das Threading teilweise.  
+ Dient als Host Darstellung eines kritischen Abschnitts zum Threading.  
   
  [IHostGCManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
- Enthält Methoden, die den Host der Ereignisse in die Garbage Collection-Mechanismus implementiert, die von der CLR zu benachrichtigen.  
+ Stellt Methoden bereit, die den Host von Ereignissen in der von der CLR implementierten Garbage Collection Mechanismus benachrichtigen.  
   
  [IHostIoCompletionManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
- Enthält Methoden, die die CLR für die Interaktion mit e/a-Abschlussports, die vom Host zu ermöglichen.  
+ Stellt Methoden bereit, mit denen die CLR mit e/a-Abschlussports interagieren kann, die vom Host bereitgestellt werden.  
   
  [IHostMalloc-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
- Stellt Methoden für die CLR eine differenzierte Zuordnungen aus dem Heap über den Host anfordern.  
+ Stellt Methoden für die CLR bereit, um differenzierte Zuordnungen vom Heap über den Host anzufordern.  
   
  [IHostManualEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- Stellt eine Darstellung der ein Ereignis mit manueller Rücksetzung Implementierung des Hosts.  
+ Stellt die Implementierung eines Hosts für ein manuelles Zurücksetzungs Ereignis bereit.  
   
  [IHostMemoryManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- Stellt Methoden für die CLR um virtueller Arbeitsspeicher-Anforderungen über den Host, anstatt die standard Win32-Funktionen für virtuellen Arbeitsspeicher zu erstellen.  
+ Stellt Methoden für die CLR bereit, um virtuelle Speicheranforderungen über den Host zu erstellen, statt die standardmäßigen Win32-Funktionen für den virtuellen Arbeitsspeicher zu verwenden.  
   
  [IHostPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- Enthält Methoden, die der Host der CLR im Fall von durchgeführten Aktionen abgebrochen wird, Timeouts oder Fehlern zu benachrichtigen.  
+ Stellt Methoden bereit, die den Host über die Aktionen Benachrichtigen, die die CLR im Falle von Abbrüche, Timeouts oder Fehlern ausführt.  
   
  [IHostSecurityContext-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- Aktiviert die CLR vom Host implementierte Sicherheitskontextinformationen zu verwalten.  
+ Ermöglicht der CLR die Verwaltung von Sicherheitskontext Informationen, die vom Host implementiert werden.  
   
  [IHostSecurityManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
- Bietet Methoden, mit denen Zugriff auf und Kontrolle über den Sicherheitskontext des gerade ausgeführten Threads.  
+ Stellt Methoden bereit, die den Zugriff auf den Sicherheitskontext des aktuell ausgeführten Threads ermöglichen und dessen Steuerung ermöglichen.  
   
  [IHostSemaphore-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
- Bietet eine Darstellung eines Semaphors vom Host implementiert.  
+ Stellt eine Darstellung eines Semaphors bereit, der vom Host implementiert wird.  
   
  [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- Stellt Methoden für die CLR die Synchronisierungsprimitiven zu erstellen, indem Sie den Host, anstatt die Win32-Synchronisierung-Funktionen aufruft.  
+ Stellt Methoden für die CLR bereit, um Synchronisierungs primitive durch Aufrufen des Hosts zu erstellen, statt die Win32-Synchronisierungs Funktionen zu verwenden.  
   
  [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- Bietet Methoden, mit denen die CLR für die Kommunikation mit dem Host, um Aufgaben zu verwalten.  
+ Stellt Methoden bereit, mit denen die CLR mit dem Host kommunizieren kann, um Aufgaben zu verwalten.  
   
  [IHostTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- Enthält Methoden, die die CLR arbeiten mit Aufgaben, die über den Host aus, anstatt die Standardbetriebssystem threading oder Fiber-Funktionen zu aktivieren.  
+ Stellt Methoden bereit, mit denen die CLR mit Aufgaben über den Host arbeiten kann, anstatt die Threading-oder Fiber-Funktionen des Standard Betriebssystems zu verwenden.  
   
  [IHostThreadPoolManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
- Stellt Methoden für die CLR, die zum Konfigurieren der Threadpool der Warteschleife hinzu und zum Arbeitsaufgaben an den Threadpool-Warteschlange.  
+ Stellt Methoden für die CLR bereit, um den Thread Pool zu konfigurieren und Arbeitselemente in die Warteschlange des Thread Pools zu übermitteln.  
   
  [IManagedObject-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)  
- Stellt Methoden zum Steuern eines verwalteten Objekts.  
+ Stellt Methoden zum Steuern eines verwalteten Objekts bereit.  
   
- "IObjectHandle"  
- Stellt eine Methode für das Entpacken Marshal-by-Value-Objekte aus der Dereferenzierung.  
+ IObjectHandle  
+ Stellt eine Methode zum Entpacken von Marshal-by-Value-Objekten aus der Dereferenzierung bereit.  
   
  [ITypeName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/itypename-interface.md)  
- Stellt Methoden zum Abrufen von Typinformationen für Namen bereit. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.)  
+ Stellt Methoden zum Abrufen von Informationen zum Typnamen bereit. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.)  
   
  [ITypeNameBuilder-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/itypenamebuilder-interface.md)  
- Stellt Methoden zum Erstellen eines Typnamens. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.)  
+ Stellt Methoden zum Entwickeln eines Typnamens bereit. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.)  
   
  [ITypeNameFactory-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)  
- Stellt Methoden zum dekonstruieren von einem Typnamen. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.)  
+ Stellt Methoden zum dekonstruieren eines Typnamens bereit. (Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.)  
   
- "IValidator"  
- Stellt Methoden zum Überprüfen der übertragbaren ausführbaren Datei (PE)-Abbildern, und Melden von Validierungsfehlern.  
+ IValidator  
+ Stellt Methoden zum Überprüfen von PE-Images (portable ausführbare Dateien) und zum Melden von Validierungs Fehlern bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Veraltete CLR-Hostingschnittstellen und Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- Enthält Themen, die in .NET Framework, Version 1.0 und 1.1 bereitgestellten Hostingschnittstellen beschrieben.  
+ Enthält Themen, in denen die Hostingschnittstellen in den .NET Framework Version 1,0 und 1,1 beschrieben werden.  
   
  [In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Enthält Themen, die in .NET Framework 4 bereitgestellten Hostingschnittstellen beschrieben.
+ Enthält Themen, in denen die Hostingschnittstellen in den .NET Framework 4 beschrieben werden.

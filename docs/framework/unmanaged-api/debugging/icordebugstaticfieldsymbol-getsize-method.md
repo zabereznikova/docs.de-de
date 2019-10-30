@@ -1,17 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetSize-Methode
+title: 'Icordebugstaticfieldsymbol:: GetSize-Methode'
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d99e06c1093dbc67e9c1999e4b9ccabd6579340e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fa9c519a40624dd8c5471231263d2430738af87
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131766"
 ---
-# <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol::GetSize-Methode
+# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Icordebugstaticfieldsymbol:: GetSize-Methode
 Ruft die Größe des statischen Felds in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,11 +30,11 @@ HRESULT GetSize(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

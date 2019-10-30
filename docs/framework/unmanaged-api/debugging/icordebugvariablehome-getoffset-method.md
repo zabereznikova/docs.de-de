@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetOffset-Methode
+title: 'Icordebugvariablehome:: gedeffset-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125098"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset-Methode
-Ruft den Offset aus dem Basis-Register für eine Variable ab.  
+# <a name="icordebugvariablehomegetoffset-method"></a>Icordebugvariablehome:: gedeffset-Methode
+Ruft den Offset aus dem Basisregister für eine Variable ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,18 +35,18 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parameter  
  `pOffset`  
- [out] Der Offset aus dem Basis-Register.  
+ vorgenommen Der Offset aus dem Basisregister.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte:  
+ Die-Methode gibt die folgenden Werte zurück:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`S_OK`|Die Variable ist in einem Register bezogene-Speicherort.|  
-|`E_FAIL`|Die Variable ist nicht in einem Register bezogene-Speicherort.|  
+|`S_OK`|Die Variable befindet sich in einer Register-relativen Speicheradresse.|  
+|`E_FAIL`|Die-Variable befindet sich nicht in einem Register-relativen Speicher Speicherort.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

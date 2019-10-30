@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756607"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127488"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock-Methode
-Gibt zurück, den verwalteten Thread, der die Monitorsperre für dieses Objekt besitzt.  
+Gibt den verwalteten Thread zurück, der die Monitor Sperre für dieses Objekt besitzt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,10 +36,10 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="parameters"></a>Parameter  
  `ppThread`  
- [out] Der verwaltete Thread, der die Monitorsperre für dieses Objekt besitzt.  
+ vorgenommen Der verwaltete Thread, der die Monitor Sperre für dieses Objekt besitzt.  
   
  `pAcquisitionCount`  
- [out] Die Anzahl wie oft dieser Thread die Sperre freizugeben, bevor sie zurückkehrt, ohne Besitzer werden müssten.  
+ vorgenommen Gibt an, wie oft dieser Thread die Sperre freigeben müsste, bevor die Sperre aufgehoben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -49,25 +47,25 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|S_FALSE|Kein verwalteter Thread besitzt die Monitorsperre für dieses Objekt.|  
+|S_FALSE|Kein verwalteter Thread besitzt die Monitor Sperre für dieses Objekt.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt:  
+ Wenn ein verwalteter Thread die Monitor Sperre für dieses Objekt besitzt:  
   
 - Die Methode gibt S_OK zurück.  
   
-- Das Threadobjekt ist gültig, bis der Thread beendet wird.  
+- Das Thread Objekt ist gültig, bis der Thread beendet wird.  
   
- Wenn kein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt `ppThread` und `pAcquisitionCount` bleiben unverändert, und die Methode gibt S_FALSE zurück.  
+ Wenn kein verwalteter Thread die Monitor Sperre für dieses Objekt besitzt, sind `ppThread` und `pAcquisitionCount` unverändert, und die Methode gibt S_FALSE zurück.  
   
- Wenn `ppThread` oder `pAcquisitionCount` ist kein gültiger Zeiger ist, das Ergebnis nicht definiert ist.  
+ Wenn `ppThread` oder `pAcquisitionCount` kein gültiger Zeiger ist, ist das Ergebnis nicht definiert.  
   
- Wenn ein Fehler auftritt, nicht ermittelt werden kann, die ggf. Thread die Sperre der Überwachung für dieses Objekt besitzt, gibt die Methode ein HRESULT, das Fehler weist darauf hin zurück.  
+ Wenn ein Fehler auftritt, sodass nicht bestimmt werden kann, welcher Thread, sofern vorhanden, die Monitor Sperre für dieses Objekt besitzt, gibt die Methode ein HRESULT zurück, das einen Fehler anzeigt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40a6376d4f4ffd09743441df1965d0a0f0d969b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103443"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next-Methode
-Ruft die angegebene Anzahl von Prozessen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.  
+Ruft die angegebene Anzahl von Prozessen ab der aktuellen Cursorposition aus der Auflistung ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der Prozesse abgerufen werden sollen.  
+ in Die Anzahl der abzurufenden Prozesse.  
   
  `objects`  
- [out] Ein Zeiger auf das Array der abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) Objekte, von denen jede einen Prozess darstellt.  
+ vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) -Objekten, von denen jedes einen Prozess darstellt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   

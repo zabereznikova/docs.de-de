@@ -2,14 +2,12 @@
 title: <Field>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128418"
 ---
 # <a name="field-element-net-native"></a>\<Feld > Element (.net Native)
 Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.  

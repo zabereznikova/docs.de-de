@@ -2,40 +2,38 @@
 title: .NET Native Allgemeine Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea5f61b0e250c4f51a966bc60959f7559d8e2fe2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049402"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128238"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Native Allgemeine Problembehandlung
 
 In diesem Thema wird beschrieben, wie Sie mögliche Probleme beheben, die bei der Entwicklung von apps mit .net Native auftreten können.
 
-- **Betrifft** Das buildausgabefenster wird nicht ordnungsgemäß aktualisiert
+- **Problem:** Das Buildausgabefenster wird nicht ordnungsgemäß aktualisiert.
 
-  **Lösungs** Das Fenster Buildausgabe wird erst aktualisiert, wenn der Build abgeschlossen ist. Buildzeiten können bis zu mehreren Minuten dauern, daher kann eine Verzögerung bei der Aktualisierung der Anzeige auftreten.
+  **Lösung:** Das Buildausgabefenster wird erst aktualisiert, wenn der Build abgeschlossen ist. Buildzeiten können bis zu mehreren Minuten dauern, daher kann eine Verzögerung bei der Aktualisierung der Anzeige auftreten.
 
-- **Betrifft** Die Buildzeit der Verkaufsversion Ihrer APP für Arm hat sich gesteigert.
+- **Problem:** Die Buildzeit der Verkaufsversion Ihrer App für ARM hat zugenommen.
 
-  **Lösungs** Wenn Sie eine APP auf Ihrem Arm-Gerät bereitstellen, wird die .net Native-Infrastruktur aufgerufen. Bei dieser Kompilierung wird eine große Anzahl von Optimierungen ausgeführt und gleichzeitig sichergestellt, dass nicht statische Semantik, wie Reflektion, weiterhin funktioniert. Darüber hinaus wird der Teil von .NET Framework, den die App verwendet, für optimale Leistung statisch eingebunden und muss ebenfalls in nativen Code kompiliert werden. Deshalb dauert die Kompilierung länger.
+  **Lösung:** Wenn Sie eine APP auf Ihrem Arm-Gerät bereitstellen, wird die .net Native-Infrastruktur aufgerufen. Bei dieser Kompilierung wird eine große Anzahl von Optimierungen ausgeführt und gleichzeitig sichergestellt, dass nicht statische Semantik, wie Reflektion, weiterhin funktioniert. Darüber hinaus wird der Teil von .NET Framework, den die App verwendet, für optimale Leistung statisch eingebunden und muss ebenfalls in nativen Code kompiliert werden. Deshalb dauert die Kompilierung länger.
 
   Allerdings liegen die Kompilierungszeiten für die meisten Apps auf einem Standardentwicklungscomputer bei Standardkompilierung noch innerhalb einer Minute.  Nur das Generieren von systemeigenen Images für .NET Framework auf einem Standardentwicklungscomputer dauert in der Regel mehrere Minuten.  Sogar mit allen Optimierungen zur Verbesserung des generierten Codes und mit Einschließen von .NET Framework liegen die Buildzeiten von Apps in der Regel bei ein oder zwei Minuten.
 
   Wir arbeiten weiterhin an der Verbesserung der Kompilierungsleistung, indem wir Multithreadkompilierung und andere Optimierungen untersuchen.
 
-- **Betrifft** Sie wissen nicht, ob Ihre APP mit .net Native kompiliert wurde.
+- **Problem:** Sie wissen nicht, ob Ihre APP mit .net Native kompiliert wurde.
 
-  **Lösungs** Wenn der .net Native-Compiler aufgerufen wird, werden Sie längere Buildzeiten feststellen, und der Task-Manager zeigt verschiedene .net native Komponenten Prozesse wie "ILC. exe" und "nutc_driver. exe" an.
+  **Lösung:** Wenn der .net Native-Compiler aufgerufen wird, werden Sie längere Buildzeiten feststellen, und der Task-Manager zeigt verschiedene .net native Komponenten Prozesse wie "ILC. exe" und "nutc_driver. exe" an.
 
-  Nachdem Sie Ihr Projekt erfolgreich mit .net Native erstellt haben, finden Sie die Ausgabe unter obj\\*config*\ *arch*\\*ProjectName*. ilc\out.  Der endgültige native Paketinhalt befindet sich unter „bin\\*arch*\\*config*\AppX“. Der endgültige native Paketinhalt steht unter „\bin\\*arch*\\*config*\AppX“, wenn Sie die App bereitgestellt haben.
+  Nachdem Sie Ihr Projekt erfolgreich mit .net Native erstellt haben, finden Sie die Ausgabe unter obj\\*config*\ *arch*\\*ProjectName*. ilc\out.  Der endgültige Native Paket Inhalt befindet sich unter bin\\*arch*\\*config*\appx. Der endgültige native Paketinhalt steht unter „\bin\\*arch*\\*config*\AppX“, wenn Sie die App bereitgestellt haben.
 
-- **Betrifft** Die .net Native kompilierte APP löst Lauf Zeit Ausnahmen aus (in der Regel [MissingMetadataException](missingmetadataexception-class-net-native.md) -oder [missingruntimeartifaktexception](missingruntimeartifactexception-class-net-native.md) -Ausnahmen), die beim Kompilieren ohne .net Native nicht ausgelöst wurden.
+- **Problem:** Die mit .NET Native kompilierte App löst Laufzeitausnahmen aus (in der Regel [MissingMetadataException](missingmetadataexception-class-net-native.md)- oder [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)-Ausnahmen), die beim Kompilieren ohne .NET Native nicht ausgelöst wurden.
 
-  **Lösungs** Die Ausnahmen werden ausgelöst, weil .net Native weder die Metadaten noch den Implementierungs Code bereitstellt, der andernfalls über Reflektion verfügbar ist. (Weitere Informationen finden Sie unter [.NET Native und Kompilierung](net-native-and-compilation.md).) Zur Beseitigung dieser Ausnahme müssen Sie Ihrer [Laufzeitanweisungsdatei (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md) einen Eintrag hinzufügen, damit die .NET Native-Toolkette die Metadaten oder den Implementierungscode zur Laufzeit bereitstellen kann. Es sind zwei Problembehandlungen verfügbar, die den entsprechenden Eintrag für die Laufzeitdirektivendatei zur Beseitigung der Ausnahme generieren:
+  **Lösung:** Die Ausnahmen werden ausgelöst, da .NET Native weder Metadaten noch Implementierungscode bereitstellt, die andernfalls durch Reflektion verfügbar sind. (Weitere Informationen finden Sie unter [.net Native und Kompilierung](net-native-and-compilation.md).) Um die Ausnahme zu vermeiden, müssen Sie der [laufzeitdirektivendatei (RD. Xml)](runtime-directives-rd-xml-configuration-file-reference.md) einen Eintrag hinzufügen, damit die .net Native-Toolkette die Metadaten oder den Implementierungs Code zur Laufzeit zur Verfügung stellen kann. Es sind zwei Problembehandlungen verfügbar, die den entsprechenden Eintrag für die Laufzeitdirektivendatei zur Beseitigung der Ausnahme generieren:
 
   - Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/type.html) für Typen.
 
@@ -45,4 +43,4 @@ In diesem Thema wird beschrieben, wie Sie mögliche Probleme beheben, die bei de
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Migrieren der Windows Store-App zu .NET Native](migrating-your-windows-store-app-to-net-native.md)
+- [Migrating Your Windows Store App to .NET Native (Migrieren der Windows Store-App auf .NET Native)](migrating-your-windows-store-app-to-net-native.md)

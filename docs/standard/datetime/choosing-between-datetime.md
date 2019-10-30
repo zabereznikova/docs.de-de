@@ -1,5 +1,5 @@
 ---
-title: Auswählen zwischen DateTime, DateTimeOffset, TimeSpan und TimeZoneInfo
+title: Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132579"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
@@ -40,10 +38,10 @@ ms.locfileid: "71835308"
 
 - Durchführen von Datums- und Uhrzeitberechnungen, möglicherweise mit einem Ergebnis, das einen einzigen Zeitpunkt eindeutig identifiziert.
 
-.NET enthält die Typen "<xref:System.DateTime>", "<xref:System.DateTimeOffset>", "<xref:System.TimeSpan>" und "<xref:System.TimeZoneInfo>", die zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
+.Net schließt die Typen <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>und <xref:System.TimeZoneInfo> ein, die alle zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
 
 > [!NOTE]
-> In diesem Thema wird <xref:System.TimeZone> nicht erörtert, da seine Funktionalität fast vollständig in der <xref:System.TimeZoneInfo>-Klasse integriert ist. Verwenden Sie, wenn möglich, die Klasse <xref:System.TimeZoneInfo> anstelle der Klasse <xref:System.TimeZone>.
+> In diesem Thema wird <xref:System.TimeZone> nicht erörtert, da seine Funktionalität fast vollständig in der <xref:System.TimeZoneInfo>-Klasse integriert ist. Verwenden Sie nach Möglichkeit immer die <xref:System.TimeZoneInfo>-Klasse anstelle der <xref:System.TimeZone>-Klasse.
 
 ## <a name="the-datetime-structure"></a>Die DateTime-Struktur
 
@@ -98,9 +96,9 @@ Die <xref:System.TimeSpan> -Struktur stellt ein Zeitintervall dar. Sein zwei typ
 
 - Darstellen des Zeitintervalls zwischen zwei Datums- und Uhrzeitwerten. Beispielsweise gibt die Subtraktion eines <xref:System.DateTime> -Werts von einem anderen einen <xref:System.TimeSpan> -Wert zurück.
 
-- Messen der verstrichenen Zeit. Die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>-Eigenschaft gibt beispielsweise einen <xref:System.TimeSpan>-Wert zurück, der das Zeitintervall angibt, das seit dem Aufruf einer der <xref:System.Diagnostics.Stopwatch>-Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
+- Messen der verstrichenen Zeit. Die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>-Eigenschaft gibt beispielsweise einen <xref:System.TimeSpan>-Wert zurück, der das Zeitintervall angibt, das seit dem Aufruf einer der <xref:System.Diagnostics.Stopwatch> Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
 
-Ein <xref:System.TimeSpan>-Wert kann auch als Ersatz für einen <xref:System.DateTime>-Wert verwendet werden, wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt den Eigenschaften <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, die einen <xref:System.TimeSpan>-Wert zurückgeben, der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
+Ein <xref:System.TimeSpan> Wert kann auch als Ersatz für einen <xref:System.DateTime> Wert verwendet werden, wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt den Eigenschaften <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, die einen <xref:System.TimeSpan> Wert zurückgeben, der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
 
 Das folgende Beispiel definiert eine `StoreInfo` -Struktur, die <xref:System.TimeSpan> -Objekte für Öffnungszeiten von Geschäften enthält sowie ein <xref:System.TimeZoneInfo> -Objekt, das die Zeitzone des Geschäfts darstellt. Die Struktur enthält außerdem zwei Methoden, `IsOpenNow` und `IsOpenAt`, die angeben, ob das Geschäft zu einem vom Benutzer angegebenen Zeitpunkt geöffnet ist, wobei angenommen wird, dass er sich in der lokalen Zeitzone aufhält.
 
@@ -114,7 +112,7 @@ Die `StoreInfo` -Struktur kann dann von Clientcode wie folgt verwendet werden.
 
 ## <a name="the-timezoneinfo-class"></a>Die TimeZoneInfo-Klasse
 
-Die <xref:System.TimeZoneInfo>-Klasse stellt eine beliebige Zeitzone der Erde dar und ermöglicht die Konvertierung jeglicher Datums- und Uhrzeitwerte in einer in die entsprechenden Werte in einer anderen Zeitzone. Die <xref:System.TimeZoneInfo> -Klasse ermöglicht das Arbeiten mit Datums- und Zeitwerten, sodass jeder Datums- und Uhrzeitwert eindeutig einen einzigen Zeitpunkt identifiziert. Die <xref:System.TimeZoneInfo> -Klasse ist außerdem erweiterbar. Obwohl sie von den für Windows-Systeme bereitgestellten und in der Registrierung definierten Zeitzoneninformationen abhängt, unterstützt sie die Erstellung benutzerdefinierter Zeitzonen. Sie unterstützt außerdem die Serialisierung und Deserialisierung von Zeitzoneninformationen.
+Die <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. Die <xref:System.TimeZoneInfo> -Klasse ermöglicht das Arbeiten mit Datums- und Zeitwerten, sodass jeder Datums- und Uhrzeitwert eindeutig einen einzigen Zeitpunkt identifiziert. Die <xref:System.TimeZoneInfo> -Klasse ist außerdem erweiterbar. Obwohl sie von den für Windows-Systeme bereitgestellten und in der Registrierung definierten Zeitzoneninformationen abhängt, unterstützt sie die Erstellung benutzerdefinierter Zeitzonen. Sie unterstützt außerdem die Serialisierung und Deserialisierung von Zeitzoneninformationen.
 
 In einigen Fällen kann noch weitere Entwicklungsarbeit erforderlich sein, um die <xref:System.TimeZoneInfo> -Klasse optimal zu nutzen. Wenn die Datums-und Uhrzeitwerte nicht eng mit den Zeitzonen gekoppelt sind, zu denen Sie gehören, sind weitere Schritte erforderlich. Wenn Ihre Anwendung keinen Mechanismus zum Verknüpfen eines Datums und einer Uhrzeit mit der zugehörigen Zeitzone bereitstellt, ist es einfach, dass ein bestimmter Datums-und Uhrzeitwert von der Zeitzone getrennt wird. Eine Methode zum Verknüpfen dieser Informationen besteht darin, eine Klasse oder Struktur zu definieren, die sowohl den Datums- und Zeitwert als auch sein zugeordnetes Zeitzonenobjekt enthält.
 

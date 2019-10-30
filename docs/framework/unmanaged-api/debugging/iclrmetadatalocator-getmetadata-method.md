@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111249"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata-Methode
-Wird aufgerufen, von der common Language Runtime (CLR) Daten Access Services zum Abrufen der Metadaten eines Bilds.  
+Wird von den Common Language Runtime (CLR)-Datenzugriffs Diensten aufgerufen, um die Metadaten eines Bilds abzurufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,39 +44,39 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>Parameter  
  `imagePath`  
- [in] Eine Zeichenfolge, die den Pfad der Bilddatei angibt.  
+ in Eine Zeichenfolge, die den Pfad der Bilddatei angibt.  
   
  `imageTimestamp`  
- [in] Der Zeitstempel der Bilddatei.  
+ in Der Zeitstempel der Bilddatei.  
   
  `imageSize`  
- [in] Die Größe der Bilddatei.  
+ in Die Größe der Bilddatei.  
   
  `mvid`  
- [in] Der global eindeutige Bezeichner des Bilds.  
+ in Die Globally Unique Identifier des Bilds.  
   
  `mdRva`  
- [in] Die relative virtuelle Adresse (RVA) der Metadaten. Die Adresse ist relativ zur Basisadresse Abbilds.  
+ in Die relative virtuelle Adresse (RVA) der Metadaten. Die Adresse ist relativ zur Basisadresse des Images.  
   
  `flags`  
- [in] Für die zukünftige Verwendung reserviert.  
+ in Reserviert für zukünftige Verwendung.  
   
  `bufferSize`  
- [in] Die Größe des Puffers, in dem die Metadaten zu platzieren.  
+ in Die Größe des Puffers, in dem die Metadaten platziert werden sollen.  
   
  `buffer`  
- [out] Der Puffer, in dem die Metadaten gespeichert werden soll.  
+ vorgenommen Der Puffer, in den die Metadaten platziert werden sollen.  
   
  `dataSize`  
- [out] Die Größe der Metadaten, die zurückgegeben wird.  
+ vorgenommen Die Größe der Metadaten, die zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

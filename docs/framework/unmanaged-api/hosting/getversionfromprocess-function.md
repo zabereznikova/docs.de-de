@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779592"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127034"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess-Funktion
-Ruft die Versionsnummer der die common Language Runtime (CLR), die dem angegebenen Prozesshandle zugeordnet ist.  
+Ruft die Versionsnummer der Common Language Runtime (CLR) ab, die dem angegebenen Prozess Handle zugeordnet ist.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,33 +40,33 @@ HRESULT GetVersionFromProcess (
   
 ## <a name="parameters"></a>Parameter  
  `hProcess`  
- [in] Ein Handle für einen Prozess.  
+ in Ein Handle für einen Prozess.  
   
  `pVersion`  
- [out] Ein Puffer, der die Versionsnummer-Zeichenfolge nach dem erfolgreichen Abschluss der Methode enthält.  
+ vorgenommen Ein Puffer, der die Versionsnummern Zeichenfolge nach erfolgreichem Abschluss der Methode enthält.  
   
  `cchBuffer`  
- [in] Die Länge des Versionspuffers.  
+ in Die Länge des Versions Puffers.  
   
  `pdwLength`  
- [out] Ein Zeiger auf die Länge der die Versionsnummer-Zeichenfolge.  
+ vorgenommen Ein Zeiger auf die Länge der Versionsnummern Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt Component Object Model (COM) Standardfehlercodes in "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
+ Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`pVersion` ist null und `cchBuffer` ist nicht null ist, oder umgekehrt.<br /><br /> - oder -<br /><br /> `hProcess` ist kein gültiges Handle an einen Prozess.<br /><br /> - oder -<br /><br /> Die CLR wird nicht geladen werden.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` ist null oder kleiner als die Länge der Versionszeichenfolge.|  
-|E_NOTIMPL|Diese Methode ist nicht auf das Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition verfügbar.|  
+|E_INVALIDARG|`pVersion` ist NULL und `cchBuffer` nicht NULL oder umgekehrt.<br /><br /> - oder -<br /><br /> `hProcess` ist kein gültiges Handle für einen Prozess.<br /><br /> - oder -<br /><br /> Die CLR ist nicht geladen.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` ist NULL oder kleiner als die Länge der Versions Zeichenfolge.|  
+|E_NOTIMPL|Diese Methode ist nicht im Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition verfügbar.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

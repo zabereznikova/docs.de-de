@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c26a2df3f73af5ebd1f8b735d7662bb23ba4228
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134166"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual-Methode
-Liest Daten aus der angegebenen virtuellen Speicheradresse in den angegebenen Puffer.  
+Liest Daten aus der angegebenen Adresse des virtuellen Speichers in den angegebenen Puffer.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,21 +39,21 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Parameter  
  `address`  
- [in] Eine CLRDATA_ADDRESS, speichert die Adresse des virtuellen Arbeitsspeichers.  
+ in Ein CLRDATA_ADDRESS, in dem die Adresse des virtuellen Speichers gespeichert wird.  
   
  `buffer`  
- [out] Ein Zeiger auf einen Puffer, der die Daten empfängt.  
+ vorgenommen Ein Zeiger auf einen Puffer, der die Daten empfängt.  
   
  `bytesRequested`  
- [in] Die Länge des Puffers.  
+ in Die Länge des Puffers.  
   
  `bytesRead`  
- [out] Ein Zeiger auf die Anzahl der Bytes, die zurückgegeben werden soll.  
+ vorgenommen Ein Zeiger auf die Anzahl der zurückgegebenen Bytes.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

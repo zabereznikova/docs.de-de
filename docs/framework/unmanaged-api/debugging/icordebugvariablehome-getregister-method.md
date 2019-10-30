@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetRegister-Methode
+title: 'Icordebugvariablehome:: getregiester-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetRegister
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125071"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome::GetRegister-Methode
-Ruft ab, das Register, die eine Variable mit einem Standort enthält `VLT_REGISTER`, und registrieren Sie die Basis für eine Variable mit einem Speicherort `VLT_REGISTER_RELATIVE`.  
+# <a name="icordebugvariablehomegetregister-method"></a>Icordebugvariablehome:: getregiester-Methode
+Ruft das Register ab, das eine Variable mit dem Speicherorttyp `VLT_REGISTER`enthält, und das Basisregister für eine Variable mit dem Speicherorttyp `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,18 +35,18 @@ HRESULT GetRegister(
   
 ## <a name="parameters"></a>Parameter  
  `pRegister`  
- [out] Ein CorDebugRegister-Enumeration-Wert, der das Register für eine Variable mit einem Standort gibt `VLT_REGISTER`, und registrieren Sie die Basis für eine Variable mit einem Speicherort `VLT_REGISTER_RELATIVE`.  
+ vorgenommen Ein CorDebugRegister-Enumerationswert, der das Register für eine Variable mit dem Speicherorttyp `VLT_REGISTER`angibt, und das Basisregister für eine Variable mit dem Speicherort `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte:  
+ Die-Methode gibt die folgenden Werte zurück:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`S_OK`|Die Variable ist in der Registrierung, angegeben durch die `pRegister` Argument.|  
-|`E_FAIL`|Die Variable ist nicht in ein Register oder ein Register bezogene-Speicherort.|  
+|`S_OK`|Die Variable befindet sich in dem durch das `pRegister`-Argument aufgeführten Register.|  
+|`E_FAIL`|Die Variable befindet sich nicht in einem Registrierungs Speicherort oder in einem Register relativen Speicherort.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

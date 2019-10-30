@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107530"
 ---
 # <a name="createclassenumwmi-function"></a>Funktion "" in der Funktion "fewmi"
 Gibt einen Enumerator für alle Klassen zurück, die die angegebenen Auswahlkriterien erfüllen.
@@ -48,7 +46,7 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parameter
 
 `strSuperclass`\
-in Wenn nicht `null` oder leer, wird der Name einer übergeordneten Klasse angegeben. der Enumerator gibt nur Unterklassen dieser Klasse zurück. Wenn Sie oder `null` leer ist, `lFlags` und ist WBEM_FLAG_SHALLOW, gibt nur Klassen der obersten Ebene zurück (Klassen ohne übergeordnete Klasse). Wenn Sie oder `null` leer ist und `lFlags` ist `WBEM_FLAG_DEEP`, werden alle Klassen im-Namespace zurückgegeben.
+in Wenn nicht `null` oder leer, wird der Name einer übergeordneten Klasse angegeben. der Enumerator gibt nur Unterklassen dieser Klasse zurück. Wenn Sie `null` oder leer ist und `lFlags` WBEM_FLAG_SHALLOW ist, gibt nur Klassen der obersten Ebene zurück (Klassen ohne übergeordnete Klasse). Wenn Sie `null` oder leer ist und `lFlags` `WBEM_FLAG_DEEP`ist, werden alle Klassen im-Namespace zurückgegeben.
 
 `lFlags`\
 in Eine Kombination von Flags, die sich auf das Verhalten dieser Funktion auswirken. Die folgenden Werte sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
@@ -62,10 +60,10 @@ in Eine Kombination von Flags, die sich auf das Verhalten dieser Funktion auswir
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die-Funktion gibt einen vorwärts-Enumerator zurück. In der Regel sind vorwärts-Enumeratoren schneller und verbrauchen weniger Arbeitsspeicher als herkömmliche Enumeratoren, aber Sie erlauben keine Aufrufe von [Klonen](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI behält Zeiger auf Objekte in der-Enumeration bei, bis Sie freigegeben werden. |
 
-Die empfohlenen Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_ONLY` , um eine optimale Leistung zu erzielen.
+Die empfohlenen Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_ONLY`, um eine optimale Leistung zu erzielen.
 
 `pCtx`\
-in Normalerweise ist `null`dieser Wert. Andernfalls handelt es sich um einen Zeiger auf eine [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, der die angeforderten Klassen bereitstellt.
+in In der Regel ist dieser Wert `null`. Andernfalls handelt es sich um einen Zeiger auf eine [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, der die angeforderten Klassen bereitstellt.
 
 `ppEnum`\
 vorgenommen Empfängt den Zeiger auf den Enumerator.
@@ -111,9 +109,9 @@ Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformatio
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

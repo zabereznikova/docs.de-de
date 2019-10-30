@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f1dd892429724866182248b0c0413a7d2437cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4061580d59b0cf2a6e6e481d5242005e9452caf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128875"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle-Methode
 Ruft ein Handle für den Prozess ab.  
@@ -35,13 +33,13 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
   
 ## <a name="parameters"></a>Parameter  
  `phProcessHandle`  
- [out] Ein Zeiger auf ein `HPROCESS` , das Handle für den Prozess.  
+ vorgenommen Ein Zeiger auf einen `HPROCESS`, der das Handle für den Prozess ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Das abgerufene Handle gehört die Debugschnittstelle. Der Debugger sollte das Handle duplizieren, bevor Sie ihn verwenden.  
+ Der Besitzer des abgerufenen Handles ist die Debugschnittstelle. Der Debugger sollte das Handle vor der Verwendung duplizieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
