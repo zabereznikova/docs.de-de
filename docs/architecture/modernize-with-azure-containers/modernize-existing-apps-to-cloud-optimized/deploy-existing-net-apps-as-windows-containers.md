@@ -2,12 +2,12 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .net-apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089562"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -93,15 +93,15 @@ Wenn Sie den Image Namen der dockerfile-Datei hinzufügen, können Sie das Betri
 
 > | **Tag** | **System und Version** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x unter Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x mit zusätzlicher ASP.net-Anpassung unter Windows Server Core |
+> | **Microsoft/DotNet-Framework: 4. x-Windows Server Core** | .NET Framework 4. x unter Windows Server Core |
+> | **Microsoft/ASPNET: 4. x-Windows Server Core** | .NET Framework 4. x mit zusätzlicher ASP.net-Anpassung unter Windows Server Core |
 
 Für .net Core (plattformübergreifend für Linux und Windows) würden die Tags wie folgt aussehen:
 
 > | **Tag** | **System und Version**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .Net Core 2,0-Laufzeit nur unter Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .Net Core 2,0-Laufzeit nur unter Windows Nano Server |
+> | **Microsoft/DotNet: 2.0.0-Runtime** | .Net Core 2,0-Laufzeit nur unter Linux |
+> | **Microsoft/DotNet: 2.0.0-Runtime-NanoServer** | .Net Core 2,0-Laufzeit nur unter Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Multi-Arch-Images
 
@@ -113,9 +113,9 @@ Wenn die herkömmlichen .NET Framework nur Windows unterstützt, können Sie die
 
 Wie Linux-Container werden Windows Server-Container mithilfe der Docker-Engine verwaltet. Im Gegensatz zu Linux-Containern enthalten Windows-Container zwei verschiedene Containertypen oder Laufzeiten: Windows Server-Container und Hyper-V-Isolation.
 
-**Windows Server-Container**: Bietet Anwendungs Isolation durch Prozess-und Namespace-Isolations Technologie. Ein Windows Server-Container verwendet einen Kernel mit dem Container Host und allen Containern, die auf dem Host ausgeführt werden. Diese Container bieten keine feindliche Sicherheitsgrenze und sollten nicht zum Isolieren von nicht vertrauenswürdigem Code verwendet werden. Aufgrund des freigegebenen Kernel-Speicherplatzes erfordern diese Container die gleiche Kernel Version und-Konfiguration.
+**Windows Server-Container**: bietet Anwendungs Isolation durch Prozess-und Namespace Isolations Technologie. Ein Windows Server-Container verwendet einen Kernel mit dem Container Host und allen Containern, die auf dem Host ausgeführt werden. Diese Container bieten keine feindliche Sicherheitsgrenze und sollten nicht zum Isolieren von nicht vertrauenswürdigem Code verwendet werden. Aufgrund des freigegebenen Kernel-Speicherplatzes erfordern diese Container die gleiche Kernel Version und-Konfiguration.
 
-**Hyper-V-Isolation**: Erweitert die von Windows Server-Containern bereitgestellte Isolation, indem jeder Container auf einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des Container Hosts nicht gemeinsam mit anderen Containern auf dem gleichen Host verwendet. Diese Container sind für das mehr Instanzen fähige Hosting mit den gleichen Sicherheits Zusicherungen eines virtuellen Computers konzipiert. Da diese Container den Kernel nicht mit dem Host oder anderen Containern auf dem Host gemeinsam nutzen, können Sie Kernel mit verschiedenen Versionen und Konfigurationen (mit unterstützten Versionen) ausführen. Alle Windows-Container unter Windows 10 verwenden z. b. die Hyper-V-Isolation, um die Windows Server-Kernel Version und-Konfiguration zu verwenden.
+**Hyper-V-Isolation**: erweitert die von Windows Server-Containern bereitgestellte Isolation, indem jeder Container auf einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des Container Hosts nicht gemeinsam mit anderen Containern auf dem gleichen Host verwendet. Diese Container sind für das mehr Instanzen fähige Hosting mit den gleichen Sicherheits Zusicherungen eines virtuellen Computers konzipiert. Da diese Container den Kernel nicht mit dem Host oder anderen Containern auf dem Host gemeinsam nutzen, können Sie Kernel mit verschiedenen Versionen und Konfigurationen (mit unterstützten Versionen) ausführen. Alle Windows-Container unter Windows 10 verwenden z. b. die Hyper-V-Isolation, um die Windows Server-Kernel Version und-Konfiguration zu verwenden.
 
 Das Ausführen eines Containers unter Windows mit oder ohne Hyper-V-Isolation ist eine Lauf Zeit Entscheidung. Sie können den Container zunächst mit der Hyper-V-Isolation erstellen und zur Laufzeit stattdessen als Windows Server-Container ausführen.
 
@@ -129,7 +129,7 @@ Das Ausführen eines Containers unter Windows mit oder ohne Hyper-V-Isolation is
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **infographic: Microsoft und Container @ no__t-0
+- **Infografik: Microsoft und Container**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -154,11 +154,11 @@ Die Produkte in Azure, die Container gleichzeitig unterstützen, sind mehr auf d
 
 - **Azure App Service**
 - **Azure Kubernetes-Dienst (AKS und ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 Azure Container Registry ist dann eine hochskalierbare Container Registrierung, die in Azure gehostet wird und die Sie für alle vorherigen Produkte verwenden können, wenn Sie Ihre benutzerdefinierten Container Images registrieren und bereitstellen.
 
-Darüber hinaus können Sie in ihren Containern andere verwaltete Dienste in Azure wie Azure SQL-Datenbank, Azure redis Cache, Azure Cosmos DB usw. nutzen. Außerdem gibt es Lösungen/Plattformen von Drittanbietern, die in Azure Marketplace wie Cloud Foundry und openshift verfügbar sind, wo Sie auch Container in Azure verwenden können. 
+Darüber hinaus können Sie in ihren Containern andere verwaltete Dienste in Azure wie Azure SQL-Datenbank, Azure redis Cache, Azure Cosmos DB usw. nutzen. Außerdem gibt es Lösungen/Plattformen von Drittanbietern, die in Azure Marketplace wie Cloud Foundry und openshift verfügbar sind, wo Sie auch Container in Azure verwenden können.
 
 In den nächsten Abschnitten werden die Empfehlungen von Microsoft erläutert, wann die einzelnen Azure-Produkte und-Lösungen speziell für Windows-Container verwendet werden sollen.
 

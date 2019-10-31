@@ -2,12 +2,12 @@
 title: Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093636"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 
@@ -19,7 +19,7 @@ Die Notwendigkeit einer kontinuierlichen Geschäfts Innovation bringt Entwicklun
 
 Wenn eine Organisation Anwendungen erstellt und verwaltet, die in der Cloud optimiert sind, kann Sie den Kunden früher Lösungen hinzufügen und neue Ideen auf den Markt bringen, wenn Sie relevant sind.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Cloud-optimierte anwendungsprinzipien und-Mandanten 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Cloud-optimierte anwendungsprinzipien und-Mandanten
 
 Verbesserungen in der Cloud sind hauptsächlich darauf ausgerichtet, zwei Ziele zu erreichen: senken Sie die Kosten, und verbessern Sie das Geschäftswachstum durch Diese Ziele werden erreicht, indem Sie Prozesse vereinfachen und die Reibung verringern, wenn Sie Anwendungen freigeben und versenden.
 

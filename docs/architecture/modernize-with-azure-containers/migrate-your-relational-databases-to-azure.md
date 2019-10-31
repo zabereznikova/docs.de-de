@@ -2,12 +2,12 @@
 title: Migrieren ihrer relationalen Datenbanken zu Azure
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migrieren ihrer relationalen Datenbanken zu Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093616"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrieren ihrer relationalen Datenbanken zu Azure
 
@@ -90,7 +90,7 @@ Derzeit unterstützt Microsoft Azure bis zu [331 verschiedene Datenbankserver](h
 
 Es gibt möglicherweise einige Fälle, in denen Sie nach wie vor eine Migration zu SQL Server als reguläre VM durchgehen müssen. Ein Beispielszenario ist, wenn Sie SQL Server Reporting Services verwenden müssen. In den meisten Fällen können verwaltete Azure SQL-Datenbank-Instanz jedoch alles bereitstellen, was Sie für die Migration von lokalen SQL Server-Servern benötigen. Daher sollte die Migration zu einer SQL Server-VM der letzte Ausweg sein.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Verwenden von Azure Database Migration Service zum Migrieren ihrer relationalen Datenbanken zu Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Verwenden von Azure Database Migration Service zum Migrieren ihrer relationalen Datenbanken zu Azure
 
 Sie können Azure Database Migration Service verwenden, um relationale Datenbanken wie SQL Server, Oracle und MySQL zu Azure zu migrieren, unabhängig davon, ob es sich um eine Azure SQL-Datenbank, eine verwaltete Azure SQL-Datenbank-Instanz oder SQL Server auf einem virtuellen Azure-Computer handelt.
 
@@ -104,7 +104,7 @@ Informationen zum Migrieren von Datenbanken mithilfe von Azure Database Migratio
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Wählen Sie eine Cloud SQL Server-Option aus: Azure SQL-Datenbank (Azure SQL-Datenbank) oder SQL Server auf Azure-VM (IaaS)**
+- **Wählen Sie eine Cloud-SQL Server Option aus: Azure SQL-Datenbank (Azure SQL-Datenbank) oder SQL Server auf Azure-VM (IaaS).**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
