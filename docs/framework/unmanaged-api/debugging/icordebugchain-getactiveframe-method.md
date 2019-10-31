@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192144"
 ---
-# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="db4ce-102">ICorDebugChain::GetActiveFrame-Methode</span><span class="sxs-lookup"><span data-stu-id="db4ce-102">ICorDebugChain::GetActiveFrame Method</span></span>
-<span data-ttu-id="db4ce-103">Ruft das aktive (d. h. die letzte) Frame in der Kette.</span><span class="sxs-lookup"><span data-stu-id="db4ce-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
+# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="46e54-102">ICorDebugChain::GetActiveFrame-Methode</span><span class="sxs-lookup"><span data-stu-id="46e54-102">ICorDebugChain::GetActiveFrame Method</span></span>
+<span data-ttu-id="46e54-103">Ruft den aktiven Frame (d. h. den aktuellen) Frame in der Kette ab.</span><span class="sxs-lookup"><span data-stu-id="46e54-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db4ce-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="db4ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46e54-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="46e54-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetActiveFrame (  
@@ -35,20 +33,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db4ce-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="db4ce-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="46e54-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="46e54-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="db4ce-106">[out] Ein Zeiger auf die Adresse eines ICorDebugFrame-Objekts, das den aktiven darstellt (d. h. die letzte) Frame in der Kette.</span><span class="sxs-lookup"><span data-stu-id="db4ce-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
+ <span data-ttu-id="46e54-106">vorgenommen Ein Zeiger auf die Adresse eines ICorDebug-Frame-Objekts, das den aktiven Frame (d. h. den aktuellen) Frame in der Kette darstellt.</span><span class="sxs-lookup"><span data-stu-id="46e54-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db4ce-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="db4ce-107">Remarks</span></span>  
- <span data-ttu-id="db4ce-108">Wenn kein verwalteter Stapelrahmen verfügbar ist, `ppFrame` wird festgelegt auf Null.</span><span class="sxs-lookup"><span data-stu-id="db4ce-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="46e54-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="46e54-107">Remarks</span></span>  
+ <span data-ttu-id="46e54-108">Wenn kein verwalteter Stapel Rahmen verfügbar ist, wird `ppFrame` auf NULL festgelegt.</span><span class="sxs-lookup"><span data-stu-id="46e54-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
   
- <span data-ttu-id="db4ce-109">Wenn der aktive Frame nicht verfügbar ist, wird der Aufruf erfolgreich und `ppFrame` NULL.</span><span class="sxs-lookup"><span data-stu-id="db4ce-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="db4ce-110">Aktiven Frames sind nicht verfügbar für Ketten durch CHAIN_ENTER_UNMANAGED initiiert wurden, und für einige Ketten durch CHAIN_CLASS_INIT initiiert wurden.</span><span class="sxs-lookup"><span data-stu-id="db4ce-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="db4ce-111">Finden Sie unter der CorDebugChainReason-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="db4ce-111">See the CorDebugChainReason enumeration.</span></span>  
+ <span data-ttu-id="46e54-109">Wenn der aktive Frame nicht verfügbar ist, wird der-Vorgang erfolgreich ausgeführt, und `ppFrame` wird NULL sein.</span><span class="sxs-lookup"><span data-stu-id="46e54-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="46e54-110">Aktive Frames sind für Ketten, die aufgrund von CHAIN_ENTER_UNMANAGED initiiert wurden, und für einige Ketten, die aufgrund von CHAIN_CLASS_INIT initiiert wurden, nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="46e54-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="46e54-111">Weitere Informationen finden Sie in der Cordebug-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="46e54-111">See the CorDebugChainReason enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db4ce-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="db4ce-112">Requirements</span></span>  
- <span data-ttu-id="db4ce-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db4ce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46e54-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="46e54-112">Requirements</span></span>  
+ <span data-ttu-id="46e54-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46e54-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db4ce-114">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db4ce-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="46e54-114">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="46e54-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="db4ce-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db4ce-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="46e54-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46e54-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="db4ce-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db4ce-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="46e54-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46e54-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

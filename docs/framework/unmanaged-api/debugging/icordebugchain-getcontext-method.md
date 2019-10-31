@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 26abe7ee-e578-4228-affa-01bed0dfce1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b4a59d7ecdb88b6ca052b7ffef896b7471e3f43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdf7f269217390d59e6731ac75cf56b44c77ae9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745241"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196313"
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="16a0d-102">ICorDebugChain::GetContext-Methode</span><span class="sxs-lookup"><span data-stu-id="16a0d-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="16a0d-103">Diese Methode ist nicht in der aktuellen Version von .NET Framework implementiert.</span><span class="sxs-lookup"><span data-stu-id="16a0d-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="0a94e-102">ICorDebugChain::GetContext-Methode</span><span class="sxs-lookup"><span data-stu-id="0a94e-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="0a94e-103">Diese Methode ist in der aktuellen Version des .NET Framework nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="0a94e-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16a0d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="16a0d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a94e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0a94e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContext (  
