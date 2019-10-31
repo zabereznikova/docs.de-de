@@ -118,7 +118,7 @@
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
                 - name: 'Vorgehensweise: Entfernen von ungültigen Zeichen aus einer Zeichenfolge'
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: 'Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen'
+                - name: 'Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen'
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: Zeichencodierung in .NET
           href: character-encoding.md
