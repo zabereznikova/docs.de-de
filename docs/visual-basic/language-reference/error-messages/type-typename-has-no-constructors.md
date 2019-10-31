@@ -1,5 +1,5 @@
 ---
-title: Der Typ '<typename>' hat keinen Konstruktor.
+title: Der Typ "<typename>" hat keinen Konstruktor.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031147"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198157"
 ---
-# <a name="type-typename-has-no-constructors"></a>Typ '\<Typname >' hat keine Konstruktoren
+# <a name="type-typename-has-no-constructors"></a>Der Typ "\<Typname >" hat keine Konstruktoren.
 Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.  
   
  **Fehler-ID:** BC30251  
@@ -25,11 +25,11 @@ Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache is
   
 2. Wenn sich der Typ im gleichen Projekt befindet, kompilieren Sie die Assembly mit dem Typ neu.  
   
-3. Wenn der Fehler erneut auftritt, installieren Sie Visual Basic-Compiler neu.  
+3. Wenn der Fehler erneut auftritt, installieren Sie den Visual Basic-Compiler neu.  
   
 4. Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

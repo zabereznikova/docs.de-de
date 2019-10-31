@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6187da564a62b8c30abdc6a150f0df45d565615
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c23773dce448c8c98d4926dff3fa51100e683fd0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192048"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager-Methode
-Ruft einen Schnittstellenzeiger auf den Host für die Implementierung der Schnittstelle ab, mit dem angegebenen `IID`.  
+Ruft einen Schnittstellen Zeiger auf die Implementierung der-Schnittstelle des Hosts mit dem angegebenen `IID`ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,26 +36,26 @@ HRESULT GetHostManager (
   
 ## <a name="parameters"></a>Parameter  
  `riid`  
- [in] Die `IID` der Schnittstelle, die für die common Language Runtime (CLR) abgefragt wird.  
+ in Der `IID` der Schnittstelle, für die der Common Language Runtime (CLR) eine Abfrage durchläuft.  
   
  `ppObject`  
- [out] Ein Zeiger auf den Host implementierte Schnittstelle oder Null, wenn der Host diese Schnittstelle nicht unterstützt.  
+ vorgenommen Ein Zeiger auf die vom Host implementierte Schnittstelle oder NULL, wenn der Host diese Schnittstelle nicht unterstützt.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`GetHostManager` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_INVALIDARG|Die angeforderte `IID` ist ungültig.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_INVALIDARG|Der angeforderte `IID` ist ungültig.|  
 |E_NOINTERFACE|Die angeforderte Schnittstelle wird nicht unterstützt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR fragt den Host, um zu bestimmen, ob es sich um eine oder mehrere der folgenden Schnittstellen unterstützt:  
+ Die CLR fragt den Host ab, um zu bestimmen, ob eine oder mehrere der folgenden Schnittstellen unterstützt werden:  
   
 - [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
@@ -77,16 +75,16 @@ HRESULT GetHostManager (
   
 - [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- Wenn der Host die angegebene Schnittstelle unterstützt, wird `ppObject` an seine Implementierung dieser Schnittstelle. Andernfalls wird `ppObject` auf Null.  
+ Wenn der Host die angegebene Schnittstelle unterstützt, legt er `ppObject` auf die Implementierung dieser Schnittstelle fest. Andernfalls wird `ppObject` auf NULL festgelegt.  
   
- Die CLR ruft nicht `Release` auf Hostmanager, auch wenn er heruntergefahren.  
+ Die CLR ruft `Release` auf Host-Managern nicht auf, auch wenn Sie Sie Herunterfahren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744975"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192134"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller-Methode
-Ruft die Zertifikatskette, die dieser Kette aufgerufen.  
+Ruft die Kette ab, die diese Kette aufgerufen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parameter  
  `ppChain`  
- [out] Ein Zeiger auf die Adresse des ICorDebugChain-Objekts, das die Aufrufkette darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugChain-Objekts, das die aufrufende Kette darstellt.  
   
- Wenn diese Kette spontan aufgerufen wurde (wie der Fall wäre, wenn diese Kette oder der Debugger die Aufrufliste initialisiert), `ppChain` NULL.  
+ Wenn diese Kette spontan aufgerufen wurde (wie es der Fall wäre, wenn diese Kette oder der Debugger die Aufruf Stapel initialisiert hat), wird `ppChain` NULL sein.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Aufrufkette möglicherweise in einem anderen Thread aus, wenn der Aufruf über Threads hinweg gemarshallt wurde.  
+ Die aufrufende Kette kann sich in einem anderen Thread befinden, wenn der Aufruf über Threads hinweg gemarshallt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

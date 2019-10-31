@@ -2,12 +2,12 @@
 title: WCF Visual Studio-Vorlagen
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320484"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197191"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
 Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte Projekt-und Element Vorlagen, die Sie in Visual Studio verwenden können, um schnell WCF-Dienste und umgebende Anwendungen zu erstellen.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte
  Eine Diensthostdatei (service1.svc) wird auch dann erstellt, wenn das vorhandene Projekt ein Webprojekt ist.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF-WF-Dienstprojektvorlage und Elementvorlage.  
- Diese Vorlagen erstellen WCF-Dienste, die einen Workflow Dienst hosten. dabei handelt es sich um einen Workflow, auf den wie ein Webdienst zugegriffen werden kann. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Workflow Typen finden Sie unter Vorgehens [Weise: Erstellen eines Workflows](../windows-workflow-foundation/how-to-create-a-workflow.md). Weitere Informationen zum Erstellen von Workflow Projekten finden Sie unter [Erstellen von Legacy Workflow Projekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Diese Vorlagen erstellen WCF-Dienste, die einen Workflow Dienst hosten. dabei handelt es sich um einen Workflow, auf den wie ein Webdienst zugegriffen werden kann. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Workflow Typen finden Sie unter Vorgehens [Weise: Erstellen eines Workflows](../windows-workflow-foundation/how-to-create-a-workflow.md). Weitere Informationen zum Erstellen von Workflow Projekten finden Sie unter [Erstellen von Legacy Workflow Projekten](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer).  
   
  Der Visual Studio-Designer reagiert besser, wenn XOML-typworkflows anstelle von Code basierten Workflows verwendet werden. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
   

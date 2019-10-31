@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43927be83b8b2a9163656f8d6d54c2cf83a23e28
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43e9438ed2c1cd82bb4d89ff082545021b2d543e
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052651"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195342"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debuggen, Ablaufverfolgung und Profilerstellung
 Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und die Laufzeitumgebung so konfiguriert sein, dass ein Debugger an die Anwendung angefügt werden und der Debugger, wenn möglich, sowohl Symbole als auch Zeilenzuordnungen für die Anwendung und deren entsprechende Microsoft Intermediate Language (MSIL) erstellen kann. Nach dem Debuggen einer verwalteten Anwendung kann ein Profil für sie erstellt werden, um die Leistung zu verbessern. Bei einer Profilerstellung werden die Quellcodezeilen bewertet und beschrieben, die den am häufigsten ausgeführten Code generieren, und wird ermittelt, wie lange es dauert, diese auszuführen.  
@@ -37,7 +37,7 @@ Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und d
  [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)  
  Beschreibt, wie die Ausführung einer Anwendung überwacht und wie diese instrumentiert werden kann, um anzuzeigen, wie gut die Anwendung ausgeführt wird oder ob etwaige Fehler aufgetreten sind.  
   
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)  
+ [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)  
  Beschreibt MDAs (Managed Debugging Assistants, Assistenten für verwaltetes Debuggen), die Hilfsmittel für das Debuggen sind, die mit der CLR (Common Language Runtime) zusammenarbeiten, um Informationen über den Laufzeitzustand bereitzustellen.  
   
  [Verbessern des Debuggens mit den Debuggeranzeigeattributen](enhancing-debugging-with-the-debugger-display-attributes.md)  
@@ -47,7 +47,7 @@ Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und d
  Beschreibt die Leistungsindikatoren, die Sie zum Überwachen der Leistung einer Anwendung verwenden können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [ASP.net-oder ASP.net Core-apps in Visual Studio debuggen](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
+ [ASP.net-oder ASP.net Core-apps in Visual Studio debuggen](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Enthält Voraussetzungen und Anweisungen für das Debuggen einer ASP.NET-Anwendung während der Entwicklung oder nach der Bereitstellung.  
   
  [Entwicklungshandbuch](../development-guide.md)  

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141199"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197490"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
 Mithilfe von Visual Studio können Sie Windows-basierte Anwendungen erstellen, die bidirektionale (von rechts nach links geschriebene) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.
 
 ## <a name="culture-support"></a>Kulturspezifische Unterstützung
- Durch Einstellungen der Kultur und Benutzeroberflächenkultur wird festgelegt, wie Datums- und Zeitangaben, Währungen und andere Informationen in Anwendungen gehandhabt werden. Kultur und Benutzeroberflächenkultur werden für bidirektionale Sprachen genauso wie für andere Sprachen unterstützt. Weitere Informationen finden Sie unter [kulturspezifische Klassen für globale Windows Forms und Web Forms](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
+ Durch Einstellungen der Kultur und Benutzeroberflächenkultur wird festgelegt, wie Datums- und Zeitangaben, Währungen und andere Informationen in Anwendungen gehandhabt werden. Kultur und Benutzeroberflächenkultur werden für bidirektionale Sprachen genauso wie für andere Sprachen unterstützt. Weitere Informationen finden Sie unter [kulturspezifische Klassen für globale Windows Forms und Web Forms](/visualstudio/ide/globalizing-and-localizing-applications).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft-Eigenschaft und RightToLeftLayout-Eigenschaft
  Die <xref:System.Windows.Forms.Control>-Basisklasse, von der Formulare abgeleitet werden, enthält auch eine <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft, die Sie zum Ändern der Leserichtung eines Formulars und seiner Steuerelemente verwenden können. Wenn Sie die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft eines Formulars festlegen, erben standardmäßig alle Steuerelemente des Formulars diese Einstellung. Bei den meisten Steuerelementen können Sie die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft aber auch individuell festlegen. Siehe auch [Vorgehensweise: Anzeigen von Text mit der Schreibrichtung von rechts nach links in Windows Forms für die Globalisierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e6638f731b335ba7552379cdc77fa912a1def4d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195926"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString-Methode
 Übersetzt einen HRESULT-Wert in eine entsprechende Fehlermeldung für die angegebene Kultur.  
@@ -45,16 +43,16 @@ HRESULT LoadErrorString(
   
 ## <a name="parameters"></a>Parameter  
  `iResourceID`  
- [in] Das HRESULT, um zu übersetzen.  
+ in Das zu über setzende HRESULT.  
   
  `pwzBuffer`  
- [out] Die Meldungszeichenfolge, die dem angegebenen HRESULT zugeordnet.  
+ vorgenommen Die dem angegebenen HRESULT zugeordnete Meldungs Zeichenfolge.  
   
  `pcchBuffer`  
- [in, out] Die Größe des `pwzbuffer` um Pufferüberläufe zu vermeiden. Wenn `pwzbuffer` null ist, `pcchBuffer` bietet die geforderte Größe des `pwzbuffer` um die Vorabbelegung zu ermöglichen.  
+ [in, out] Die Größe der `pwzbuffer`, um Pufferüberläufe zu vermeiden. Wenn `pwzbuffer` NULL ist, stellt `pcchBuffer` die erwartete Größe `pwzbuffer` bereit, um die vorab Zuordnung zuzulassen.  
   
  `iLocaleID`  
- [in] Der Kulturbezeichner. Um die Standardkultur verwenden zu können, müssen Sie-1 angeben.  
+ in Der Kultur Bezeichner. Wenn Sie die Standard Kultur verwenden möchten, müssen Sie-1 angeben.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -66,11 +64,11 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

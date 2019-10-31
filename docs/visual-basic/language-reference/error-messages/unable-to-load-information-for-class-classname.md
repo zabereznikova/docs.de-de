@@ -1,5 +1,5 @@
 ---
-title: Informationen über die Klasse '<classname>' konnten nicht geladen werden.
+title: Informationen über die Klasse "<classname>" konnten nicht geladen werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30712
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3ef2aa5e25d61f005159e06852e23c2c036fd54
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774858"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198187"
 ---
-# <a name="unable-to-load-information-for-class-classname"></a>Kann nicht geladen werden Informationen für die Klasse\<Klassenname >'
-Ein Verweis wurde auf eine Klasse erstellt, die nicht verfügbar ist.  
+# <a name="unable-to-load-information-for-class-classname"></a>Die Informationen für die Klasse "\<ClassName >" können nicht geladen werden.
+Es wurde auf eine Klasse verwiesen, die nicht verfügbar ist.  
   
  **Fehler-ID:** BC30712  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass die Klasse definiert ist und der Name richtig geschrieben.  
+1. Vergewissern Sie sich, dass die Klasse definiert ist und Sie den Namen richtig geschrieben haben.  
   
 2. Versuchen Sie, auf einen der im Modul deklarierten Member zuzugreifen. In einigen Fällen können in der Debugumgebung Member nicht gefunden werden, weil die Module, in denen sie deklariert sind, noch nicht geladen wurden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debuggen in Visual Studio](/visualstudio/debugger/debugger-feature-tour)

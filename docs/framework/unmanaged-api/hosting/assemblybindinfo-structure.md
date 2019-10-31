@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f4cb71e5ac0afe19e865ffca6fe578ad08f3162
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8764a3d665c997460419561eb168f92ca769c30c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192111"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo-Struktur
-Enthält ausführliche Informationen über die referenzierte Assembly.  
+Bietet ausführliche Informationen über die Assembly, auf die verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +39,20 @@ typedef struct _AssemblyBindInfo {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`dwAppDomainId`|Ein eindeutiger Bezeichner für die `IStream` zurückgegeben, die durch einen Aufruf von [IHostAssemblyStore:: ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), von dem die referenzierte Assembly geladen werden.|  
-|`lpReferencedIdentity`|Ein eindeutiger Bezeichner für die Assembly verwiesen wird.|  
-|`lpPostPolicyIdentity`|Der Bezeichner für die referenzierte Assembly nach der Anwendung der Bindung Richtlinienwerte.|  
-|`ePolicyLevel`|Eines der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) Werte, die angeben, welche versionsverwaltung-Richtlinien, sofern vorhanden, für die referenzierte Assembly angewendet werden sollen.|  
+|`dwAppDomainId`|Ein eindeutiger Bezeichner für die `IStream`, die durch einen [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)zurückgegeben wird, aus dem die referenzierte Assembly geladen werden soll.|  
+|`lpReferencedIdentity`|Eine eindeutige ID für die Assembly, auf die verwiesen wird.|  
+|`lpPostPolicyIdentity`|Der Bezeichner für die Assembly, auf die verwiesen wird, nach der Anwendung von Bindungs Richtlinien Werten.|  
+|`ePolicyLevel`|Einer der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte, die angeben, welche Versions Verwaltungsrichtlinien ggf. auf die Assembly angewendet werden sollen, auf die verwiesen wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host stellt den eindeutigen Bezeichner `dwAppDomainId` für die common Language Runtime (CLR). Nach einem Aufruf von `IHostAssemblyStore::ProvideAssembly` zurückgegeben wird, die Runtime den Bezeichner verwendet, um zu bestimmen, ob der Inhalt des der `IStream` zugeordnet wurde. Wenn dies der Fall ist, lädt die Runtime den Stream neu zuzuordnen, anstatt die vorhandene Kopie. Die Common Language Runtime verwendet diesen Bezeichner auch als Suchschlüssel für Streams aus zurückgegebenen Aufrufe von [IHostAssemblyStore:: ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md). Aus diesem Grund muss der Bezeichner für Anforderungen zum modulimport und Anforderungen der Assembly eindeutig sein.  
+ Der Host stellt den eindeutigen Bezeichner `dwAppDomainId` für die Common Language Runtime (CLR) bereit. Nachdem `IHostAssemblyStore::ProvideAssembly` zurückgegeben wurde, verwendet die Common Language Runtime den Bezeichner, um zu bestimmen, ob die Inhalte der `IStream` zugeordnet wurden. Wenn dies der Fall ist, lädt die Laufzeit die vorhandene Kopie, anstatt den Stream neu zuzuordnen. Die Laufzeit verwendet diesen Bezeichner auch als Suchschlüssel für Streams, die von Aufrufen an [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)zurückgegeben werden. Daher muss der Bezeichner für Modul Anforderungen und für Assemblyanforderungen eindeutig sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

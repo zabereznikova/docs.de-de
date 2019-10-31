@@ -2,12 +2,12 @@
 title: Debuggen von Ausdrucks Baumstrukturen in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 51579c74ecbebbfb7da8bf20bef7592980ec437c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b27ab41f3c3d9bd488fd0f7aaa5010f2997946de
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320365"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198269"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debuggen von Ausdrucks Baumstrukturen in Visual Studio (Visual Basic)
 Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um eine Übersicht über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die Ausdrucksbaumstrukturen mit einer [speziellen Syntax](debugview-syntax.md) darstellt. (Beachten Sie, dass `DebugView` nur im Debugmodus verfügbar ist.)  
@@ -22,7 +22,7 @@ Alternativ dazu können Sie eine [benutzerdefinierte Schnellansicht](https://doc
 
 - Mit [lesbaren Ausdrücken](https://github.com/agileobjects/ReadableExpressions) ([MIT-Lizenz](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), die über den [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers) verfügbar ist) wird die Ausdrucksbaumstruktur als C#-Code gerendert:
 
-  ![Screenshot der Visualisierer für lesbare Ausdrücke.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
+  ![Screenshot der Schnellansicht für lesbare Ausdrücke.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
 - [Ausdrucks Baum](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) Struktur-Schnellansicht ([mit-Lizenz](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), stellt eine grafische Ansicht der Ausdrucks Baumstruktur, der zugehörigen Eigenschaften und verknüpften Objekte bereit. und können die Ausdrucks Baumstruktur mithilfe Visual Basic Codes Rendering:
 
@@ -41,6 +41,6 @@ Alternativ dazu können Sie eine [benutzerdefinierte Schnellansicht](https://doc
 ## <a name="see-also"></a>Siehe auch
 
 - [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debuggen in Visual Studio](/visualstudio/debugger/debugger-feature-tour)
 - [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView`-Syntax](debugview-syntax.md)

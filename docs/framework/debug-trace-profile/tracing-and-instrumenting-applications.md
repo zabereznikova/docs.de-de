@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c71e95b3fd1276d2fae4268ed59818e5fafc8a79
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e1b8d5cb25445ffc3ce08e8c73e1d3742067e21
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052241"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196711"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
 Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentierung versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.  
@@ -29,7 +29,7 @@ Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht we
   
 - **Codeablaufverfolgung**: Erhalten informativer Meldungen über die Ausführung einer Anwendung zur Laufzeit.  
   
-- **Debuggen**: Ermitteln und Beheben von Programmierfehlern in einer Anwendung während der Entwicklungsphase. Weitere Informationen finden Sie unter [Debuggen](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Debuggen**: Ermitteln und Beheben von Programmierfehlern in einer Anwendung während der Entwicklungsphase. Weitere Informationen finden Sie unter [Debuggen](/visualstudio/debugger/debugger-feature-tour).  
   
 - **Leistungsindikatoren**: Komponenten zur Ermittlung der Anwendungsleistung. Weitere Informationen finden Sie unter [Leistungsindikatoren](performance-counters.md).  
   
@@ -60,7 +60,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  So können Sie Anwendungen anhand ihres Verhaltens in der Testumgebung debuggen und ihre Leistung optimieren. Sie können die Anwendung im Debugbuild mit aktiviertem bedingtem <xref:System.Diagnostics.Debug>-Attribut debuggen, sodass Sie die gesamte Debugausgabe erhalten. Wenn die Anwendung zur Freigabe bereit ist, können Sie den Releasebuild kompilieren, ohne das bedingte <xref:System.Diagnostics.Debug>-Attribut zu aktivieren, damit der Compiler nicht den Debugcode in die endgültige ausführbare Version aufnimmt. Weitere Informationen finden Sie unter [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](how-to-compile-conditionally-with-trace-and-debug.md). Weitere Informationen zu verschiedenen Buildkonfigurationen für die Anwendung finden Sie unter [Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
- Mit den Methoden der <xref:System.Diagnostics.Trace>-Klasse können Sie die Codeausführung auch in einer installierten Anwendung verfolgen. Wenn Sie [Ablaufverfolgungsschalter](trace-switches.md) im Code platzieren, können Sie steuern, ob und in welchem Umfang eine Ablaufverfolgung stattfindet. Dadurch können Sie den Status der Anwendung in einer Produktionsumgebung überwachen. Dies ist vor allem bei Businessanwendungen wichtig, die aus mehreren Komponenten bestehen, die ihrerseits auf mehreren Computern ausgeführt werden. Über die Konfigurationsdatei steuern Sie die Verwendung der Schalter nach der Bereitstellung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablauf](how-to-create-initialize-and-configure-trace-switches.md)Verfolgungs Schaltern.  
+ Mit den Methoden der <xref:System.Diagnostics.Trace>-Klasse können Sie die Codeausführung auch in einer installierten Anwendung verfolgen. Wenn Sie [Ablaufverfolgungsschalter](trace-switches.md) im Code platzieren, können Sie steuern, ob und in welchem Umfang eine Ablaufverfolgung stattfindet. Dadurch können Sie den Status der Anwendung in einer Produktionsumgebung überwachen. Dies ist vor allem bei Businessanwendungen wichtig, die aus mehreren Komponenten bestehen, die ihrerseits auf mehreren Computern ausgeführt werden. Über die Konfigurationsdatei steuern Sie die Verwendung der Schalter nach der Bereitstellung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md).  
   
  Beim Entwickeln einer Anwendung, in der Ablaufverfolgung möglich sein soll, werden in der Regel Verfolgungs- und Debugmeldungen in den Anwendungscode eingetragen. Wenn die Anwendung die Bereitstellungsphase erreicht hat, können Sie den Releasebuild kompilieren, ohne das bedingte **Debuggen**-Attribut zu aktivieren. Sie können jedoch das bedingte Attribut **Ablaufverfolgung** aktivieren, damit der Compiler den Ablaufverfolgungscode in die ausführbare Datei einträgt. Weitere Informationen finden Sie unter [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](how-to-compile-conditionally-with-trace-and-debug.md).  
   
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. Überlegen Sie, welche Ablaufverfolgungsausgabe nach der Bereitstellung der Anwendung an ihrem Einsatzort benötigt wird.  
   
-2. Erstellen Sie eine Reihe von Schaltern. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von Ablauf](how-to-create-initialize-and-configure-trace-switches.md)Verfolgungs Schaltern.  
+2. Erstellen Sie eine Reihe von Schaltern. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md).  
   
 3. Fügen Sie die Ablaufverfolgungsanweisungen zum Anwendungscode hinzu.  
   
@@ -93,7 +93,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     - Verwenden Sie das Menü **Erstellen** zusammen mit der Seite **Debuggen** im Dialogfeld **Eigenschaftenseite** im **Projektmappen-Explorer**. Dies gilt für die Kompilierung in Visual Studio.  
   
-         \- oder –  
+         \- oder -  
   
     - Verwenden Sie für die Kompilierung der Befehlszeile die Compileranweisungen **Ablaufverfolgung** und **Debuggen**. Weitere Informationen finden Sie unter [Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](how-to-compile-conditionally-with-trace-and-debug.md). Dies gilt für die Kompilierung von der Befehlszeile aus.  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Mit Ablaufverfolgungsanweisungen können Sie die schwierige Aufgabe vermeiden, den ursprünglichen Quellcode überprüfen, bearbeiten, neu kompilieren und den Laufzeitfehler in der Debugumgebung reproduzieren zu müssen. Beachten Sie, dass sich eine Anwendung nicht nur für die Anzeige von Fehlern, sondern auch für die Leistungsüberwachung instrumentieren lässt.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Strategische Platzierung von Ablaufverfolgungsanweisungen  
- Ablaufverfolgungsanweisungen, die zur Laufzeit eingesetzt werden sollen, müssen mit äußerster Sorgfalt platziert werden. Überlegen Sie, welche Ablaufverfolgungsinformationen in einer bereitgestellten Anwendung wahrscheinlich benötigt werden, damit alle Möglichkeiten der Ablaufverfolgung entsprechend abgedeckt werden. Allerdings gibt es keine allgemeingültigen Richtlinien für die strategische Platzierung der Ablaufverfolgung, da die Anwendungen, in denen sie eingesetzt wird, sehr vielfältig sind. Weitere Informationen zum Platzieren von Ablauf Verfolgungs Anweisungen finden [Sie unter Gewusst wie: Fügen Sie Ablauf Verfolgungs Anweisungen zum](how-to-add-trace-statements-to-application-code.md)Anwendungs Code hinzu.  
+ Ablaufverfolgungsanweisungen, die zur Laufzeit eingesetzt werden sollen, müssen mit äußerster Sorgfalt platziert werden. Überlegen Sie, welche Ablaufverfolgungsinformationen in einer bereitgestellten Anwendung wahrscheinlich benötigt werden, damit alle Möglichkeiten der Ablaufverfolgung entsprechend abgedeckt werden. Allerdings gibt es keine allgemeingültigen Richtlinien für die strategische Platzierung der Ablaufverfolgung, da die Anwendungen, in denen sie eingesetzt wird, sehr vielfältig sind. Weitere Informationen zur Platzierung von Ablaufverfolgungsanweisungen finden Sie unter [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Ausgabe der Ablaufverfolgung  
  Die Ausgabe einer Ablaufverfolgung wird von als *Listener* bezeichneten Objekten aufgenommen. Bei einem Listener handelt es sich um ein Objekt, das die Ablaufverfolgungsausgabe empfängt und in ein Ausgabemedium schreibt (in der Regel ein Fenster, ein Protokoll oder eine Textdatei). Wenn ein Ablaufverfolgungslistener erstellt wird, wird er in der Regel zur <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>-Auflistung hinzugefügt, damit er die gesamte Ablaufverfolgungsausgabe empfängt.  
@@ -120,7 +120,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Die sechs <xref:System.Diagnostics.Debug>-Member und <xref:System.Diagnostics.Trace>-Methoden, die Ablaufverfolgungsinformationen schreiben, sind in der folgenden Tabelle aufgeführt.  
   
-|Methode|Ausgabe|  
+|Methode|Output|  
 |------------|------------|  
 |**Assert**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste. Die Ausgabe wird nur geschrieben, wenn die als Argument in der **Assert**-Anweisung angegebene Bedingung **FALSE** ist.|  
 |**Fehler**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste.|  
@@ -133,10 +133,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Durch Implementieren eines eigenen Listeners können Sie benutzerdefinierte Ergebnisse erzielen. Ein benutzerdefinierter Ablaufverfolgungslistener könnte die Meldungen z. B. in einem Meldungsfeld anzeigen oder die Verbindung zu einer Datenbank herstellen, in der die Meldungen zu einer Tabelle hinzugefügt werden. Alle benutzerdefinierten Listener sollten die sechs oben genannten Methoden unterstützen. Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.  
   
- Die Methoden **Write** und **WriteLine** schreiben immer den von Ihnen angegebenen Text. **Assert**, **WriteIf** und **WriteLineIf** erfordern ein boolesches Argument, das steuert, ob der angegebene Text geschrieben wird oder nicht. Der angegebene Text wird nur geschrieben, wenn der Ausdruck **TRUE** (bei **WriteIf** und **WriteLineIf**) oder **FALSE** (bei **Assert**) lautet. Die **Fehler**-Methode schreibt immer den angegebenen Text. Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie Ablauf Verfolgungs Anweisungen zum](how-to-add-trace-statements-to-application-code.md) Anwendungs Code und zum .NET Framework Verweis hinzu.  
+ Die Methoden **Write** und **WriteLine** schreiben immer den von Ihnen angegebenen Text. **Assert**, **WriteIf** und **WriteLineIf** erfordern ein boolesches Argument, das steuert, ob der angegebene Text geschrieben wird oder nicht. Der angegebene Text wird nur geschrieben, wenn der Ausdruck **TRUE** (bei **WriteIf** und **WriteLineIf**) oder **FALSE** (bei **Assert**) lautet. Die **Fehler**-Methode schreibt immer den angegebenen Text. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md) und in der .NET Framework-Referenz.  
   
 ## <a name="security-concerns"></a>Sicherheitsaspekte  
- Wenn Sie vor der Bereitstellung einer ASP.NET-Anwendung nicht die Ablaufverfolgung und das Debuggen deaktivieren, könnte die Anwendung Informationen über sich selbst offen legen, die von böswilligen Programmen missbraucht werden könnten. Weitere Informationen finden Sie unter [Vorgehensweise: Bedingtes Kompilieren mit Ablauf Verfolgung](how-to-compile-conditionally-with-trace-and-debug.md)und Debuggen, [Kompilieren und erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio)und [Gewusst wie: Erstellen, initialisieren und Konfigurieren von Ablauf](how-to-create-initialize-and-configure-trace-switches.md)Verfolgungs Schaltern. Das Debuggen kann auch über Internetinformationendienste (IIS) konfiguriert werden.  
+ Wenn Sie vor der Bereitstellung einer ASP.NET-Anwendung nicht die Ablaufverfolgung und das Debuggen deaktivieren, könnte die Anwendung Informationen über sich selbst offen legen, die von böswilligen Programmen missbraucht werden könnten. Weitere Informationen finden Sie unter [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](how-to-compile-conditionally-with-trace-and-debug.md), [Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio) und [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md). Das Debuggen kann auch über Internetinformationendienste (IIS) konfiguriert werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -144,10 +144,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.TraceSource>
 - [Codeverträge](code-contracts.md)
 - [C#-, F#- und Visual Basic-Projekttypen](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Vorgehensweise: Hinzufügen von Ablauf Verfolgungs Anweisungen zum Anwendungs Code](how-to-add-trace-statements-to-application-code.md)
+- [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
 - [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](how-to-compile-conditionally-with-trace-and-debug.md)
-- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablauf Verfolgungs Schaltern](how-to-create-initialize-and-configure-trace-switches.md)
-- [Vorgehensweise: Erstellen und Initialisieren von Ablauf Verfolgungs Quellen](how-to-create-and-initialize-trace-sources.md)
+- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen](how-to-create-and-initialize-trace-sources.md)
 - [Vorgehensweise: Verwenden von TraceSource und Filtern für Ablaufverfolgungslistener](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Trace Listeners (Ablaufverfolgungslistener)](trace-listeners.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)

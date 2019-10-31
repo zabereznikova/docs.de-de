@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback9::DynamicMethodUnloaded-Methode
+title: ICorProfilerCallback9::D ynamicmethodunloaded-Methode
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback9.DynamicMethodUnloaded
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 680bd351a64632e67432ee03352ee7caa8f4b2d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 05a788179ff40a6889ed613b5f8659dd3f8e066f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780387"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196323"
 ---
-# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded-Methode
-[Wird nur in .NET Framework 4.7.2 und höheren Versionen unterstützt]  
+# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D ynamicmethodunloaded-Methode
+[Wird in der .NET Framework 4.7.2 und höheren Versionen unterstützt]  
   
-Benachrichtigt den Profiler an, wenn eine dynamische Methode Garbage Collector gesammelt und anschließend entladen wird.  
+Benachrichtigt den Profiler, wenn eine dynamische Methode in eine Garbage Collection und anschließend entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,10 +30,10 @@ HRESULT DynamicMethodUnloaded(
   
 ## <a name="parameters"></a>Parameter  
 [in] `functionId`  
-Der Bezeichner der in-Memory-Funktion, die Garbage Collector gesammelt und entladen wurde.   
+Der Bezeichner der in-Memory-Funktion, die in den Garbage Collection-und entladen wurde.   
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -45,7 +43,7 @@ Der Bezeichner der in-Memory-Funktion, die Garbage Collector gesammelt und entla
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerCallback8.DynamicMethodJITCompilationStarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [ICorProfilerCallback8.DynamicMethodJITCompilationFinished-Methode](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8. dynamicmethodjitcompilationstarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8. dynamicmethodjitcompilationabgeschlossene-Methode](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [ICorProfilerCallback9-Schnittstelle](icorprofilercallback9-interface.md)
 - [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

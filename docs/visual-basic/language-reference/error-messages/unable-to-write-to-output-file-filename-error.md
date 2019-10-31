@@ -1,5 +1,5 @@
 ---
-title: "In die Ausgabedatei '<filename>' konnte nicht geschrieben werden: <error>."
+title: 'In die Ausgabedatei "<filename>" konnte nicht geschrieben werden: <error>.'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e0a00c4f57e45d65ff46fb9487a603a67d5a9e5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620600"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198189"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>Beim Schreiben in die Ausgabedatei kann nicht '\<Dateiname >': \<Fehler >
+# <a name="unable-to-write-to-output-file-filename-error"></a>In die Ausgabedatei '\<filename > ' kann nicht geschrieben werden: \<Fehler >
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
   
  Eine Ausgabedatei kann nicht zum Schreiben geöffnet werden. Die Datei (oder der Ordner, der die Datei enthält) kann für die Exklusivnutzung durch einen anderen Prozess geöffnet sein, oder sie ist schreibgeschützt.  
@@ -33,11 +33,11 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 1. Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
   
-2. Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio.  
+2. Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio neu.  
   
 3. Wenn der Fehler weiterhin besteht, starten Sie den Computer neu.  
   
-4. Wenn der Fehler erneut auftritt, installieren Sie Visual Basic.  
+4. Wenn der Fehler erneut auftritt, installieren Sie Visual Basic neu.  
   
 5. Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   
@@ -45,18 +45,18 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 1. Öffnen Sie den gewünschten Ordner.  
   
-2. Klicken Sie auf die **Ansichten** Symbol, und wählen Sie **Details**.  
+2. Klicken Sie auf das Symbol **Sichten** , und wählen Sie **Details**.  
   
-3. Mit der rechten Maustaste in der Kopfzeile der Spalte, und wählen **Attribute** aus der Dropdown-Liste.  
+3. Klicken Sie mit der rechten Maustaste auf den Spaltenheader, und wählen Sie in der Dropdown Liste die Option **Attribute** aus.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>So ändern Sie die Attribute einer Datei oder eines Ordners  
   
-1. In **Datei-Explorer**mit der rechten Maustaste auf die Datei oder den Ordner, und wählen Sie **Eigenschaften**.  
+1. Klicken Sie im **Datei-Explorer**mit der rechten Maustaste auf die Datei oder den Ordner, und wählen Sie **Eigenschaften**.  
   
-2. In der **Attribute** Teil der **allgemeine** Registerkarte die **schreibgeschützte** Feld.  
+2. Deaktivieren **Sie** im Abschnitt **Attribute** der Registerkarte **Allgemein** das Kontrollkästchen schreibgeschützt.  
   
 3. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

@@ -14,14 +14,14 @@ ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2e0b98107ac5f43c80aad6cb5ea61e6f4e1e28d3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5d3aa715590a10391bafa08a85265842ee8cedfb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015709"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197116"
 ---
-# <a name="troubleshoot-control-and-component-authoring"></a>Problembehandlung bei der Erstellung von Steuerelementen und Komponenten
+# <a name="troubleshoot-control-and-component-authoring"></a>Problembehandlung beim Erstellen von Steuerelementen und Komponenten
 
 In diesem Thema werden die folgenden allgemeinen Probleme aufgelistet, die beim Entwickeln von Komponenten und Steuerelementen auftreten:
 
@@ -31,7 +31,7 @@ In diesem Thema werden die folgenden allgemeinen Probleme aufgelistet, die beim 
 
 - Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst
 
-- Entwurfs Zeitfehler: "Fehler beim Erstellen der Komponente '*Komponenten Name*'".
+- Entwurfszeitfehler: „Failed to Create Component '*Component Name*'“ („Fehler beim Erstellen der Komponente ‚Komponentenname‘“)
 
 - STAThreadAttribute
 
@@ -39,7 +39,7 @@ In diesem Thema werden die folgenden allgemeinen Probleme aufgelistet, die beim 
 
 ## <a name="cannot-add-control-to-toolbox"></a>Steuerelement kann nicht zur Toolbox hinzugefügt werden
 
-Wenn Sie ein benutzerdefiniertes Steuerelement, das Sie in einem anderen Projekt erstellt haben, oder ein Drittanbieter-Steuerelement zur **Toolbox** hinzufügen möchten, müssen Sie dies manuell vornehmen. Wenn das aktuelle Projekt ein Steuerelement oder eine Komponente enthält, sollte es automatisch in der **Toolbox** angezeigt werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Auffüllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
+Wenn Sie ein benutzerdefiniertes Steuerelement, das Sie in einem anderen Projekt erstellt haben, oder ein Drittanbieter-Steuerelement zur **Toolbox** hinzufügen möchten, müssen Sie dies manuell vornehmen. Wenn das aktuelle Projekt ein Steuerelement oder eine Komponente enthält, sollte es automatisch in der **Toolbox** angezeigt werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 ### <a name="to-add-a-control-to-the-toolbox"></a>So fügen Sie der Toolbox ein Steuerelement hinzu
 
@@ -73,7 +73,7 @@ Wenn Sie ein benutzerdefiniertes Steuerelement, das Sie in einem anderen Projekt
 
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Windows Forms-Benutzersteuerelement oder Komponente kann nicht debuggt werden
 
-Wenn das Steuerelement von der <xref:System.Windows.Forms.UserControl> -Klasse abgeleitet ist, können Sie das Laufzeitverhalten mit dem Test Container Debuggen. Weitere Informationen finden Sie unter [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl-](how-to-test-the-run-time-behavior-of-a-usercontrol.md)Steuer Elements.
+Wenn das Steuerelement von der <xref:System.Windows.Forms.UserControl>-Klasse abgeleitet ist, können Sie das Laufzeitverhalten mit dem Test Container Debuggen. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 Andere benutzerdefinierte Steuerelemente und Komponenten sind keine eigenständigen Projekte. Sie müssen von einer Anwendung wie einem Windows Forms-Projekt gehostet werden. Zum Debuggen eines Steuerelements oder einer Komponente müssen Sie sie zu einem Windows Forms-Projekt hinzufügen.
 
@@ -99,13 +99,13 @@ Andere benutzerdefinierte Steuerelemente und Komponenten sind keine eigenständi
 
    Sie können jetzt das Steuerelement oder die Komponente wie gewohnt debuggen.
 
-Weitere Informationen zum Debuggen finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) und [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)Steuerelementen zur Entwurfszeit
+Weitere Informationen zum Debuggen finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugger-feature-tour) und [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
 
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst
 
 Dies liegt wahrscheinlich an einer doppelten `Handles`-Klausel. Weitere Informationen finden Sie unter [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Entwurfs Zeitfehler: "Fehler beim Erstellen der Komponente ' Komponenten Name '".
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Entwurfszeitfehler: „Failed to Create Component 'Component Name'“ („Fehler beim Erstellen der Komponente ‚Komponentenname‘“)
 
 Die Komponente oder das Steuerelement muss einen Parameter losen Konstruktor ohne Parameter bereitstellen. Wenn die Entwurfsumgebung eine Instanz der Komponente oder des Steuerelements erstellt, versucht sie nicht, Parameter auf Konstruktorüberladungen bereitzustellen, die Parameter annehmen.
 
@@ -115,11 +115,11 @@ Der <xref:System.STAThreadAttribute> informiert den Common Language Runtime (CLR
 
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>Symbol „Komponente“ wird nicht in der Toolbox angezeigt
 
-Wenn Sie verwenden <xref:System.Drawing.ToolboxBitmapAttribute> , um der benutzerdefinierten Komponente ein Symbol zuzuordnen, wird die Bitmap für automatisch generierte Komponenten nicht in der Toolbox angezeigt. Laden Sie das Steuerelement mithilfe des Dialogfelds **Toolboxelemente auswählen** neu, um die Bitmap anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Stellen Sie eine Toolbox Bitmap für ein](how-to-provide-a-toolbox-bitmap-for-a-control.md)Steuerelement bereit.
+Wenn Sie <xref:System.Drawing.ToolboxBitmapAttribute> verwenden, um der benutzerdefinierten Komponente ein Symbol zuzuordnen, wird die Bitmap für automatisch generierte Komponenten nicht in der Toolbox angezeigt. Laden Sie das Steuerelement mithilfe des Dialogfelds **Toolboxelemente auswählen** neu, um die Bitmap anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement](how-to-provide-a-toolbox-bitmap-for-a-control.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)
-- [Exemplarische Vorgehensweise: Automatisches Auffüllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Vorgehensweise: Testen des Lauf Zeit Verhaltens eines UserControl-Steuer Elements](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)

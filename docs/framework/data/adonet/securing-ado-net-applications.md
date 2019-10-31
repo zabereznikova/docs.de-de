@@ -2,12 +2,12 @@
 title: Sichern von ADO.NET-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795054"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196730"
 ---
 # <a name="securing-adonet-applications"></a>Sichern von ADO.NET-Anwendungen
 Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fallstricke bei der Codierung zu umgehen, wie die Nichtvalidierung von Benutzereingaben. Eine Anwendung, die auf Daten zugreift, verfügt über viele mögliche Schwachstellen, über die ein Hacker vertrauliche Daten abrufen, manipulieren oder vernichten kann. Es ist daher unerlässlich, alle Sicherheitsaspekte zu verstehen, und zwar beginnend bei der Erstellung von Gefahrenmodellen während des Anwendungsentwurfs bis hin zur eigentlichen Bereitstellung der Anwendung und ihrem laufenden Betrieb.  
@@ -36,7 +36,7 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  [SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)  
  Beschreibt SQL Server-Sicherheitsfunktionen aus Entwicklersicht.  
   
- [Überlegungen zur Sicherheit](./ef/security-considerations.md)  
+ [Sicherheitsüberlegungen](./ef/security-considerations.md)  
  Beschreibt Sicherheitsfunktionen für Entity Framework-Anwendungen.  
   
  [Sicherheit](../../../standard/security/index.md)  
@@ -48,7 +48,7 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  [Ressourcen für das Erstellen sicherer Anwendungen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Enthält Links zu Themen zum Erstellen sicherer Anwendungen.  
   
- [Sicherheitsbibliographie](/visualstudio/ide/security-bibliography)  
+ [Sicherheitsbibliographie](/visualstudio/ide/securing-applications)  
  Enthält Links zu externen Ressourcen, die online und in Druckversion verfügbar sind.  
   
 ## <a name="see-also"></a>Siehe auch

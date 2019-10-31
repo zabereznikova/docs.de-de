@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit'
+title: 'Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalts in Windows Forms zur Entwurfszeit'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,24 +11,24 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: fc6f988d6ffd270eba4abe277ca34fa2eeec56fd
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987145"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197426"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Exemplarische Vorgehensweise: Erstellen eines neuen WPF-Inhalts auf Windows Forms zur Entwurfszeit
 
 In diesem Artikel erfahren Sie, wie Sie ein Windows Presentation Foundation-Steuerelement (WPF) für die Verwendung in Ihren Windows Forms basierten Anwendungen erstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 ## <a name="create-the-project"></a>Erstellen eines Projekts
 
-Öffnen Sie Visual Studio, und erstellen Sie ein neues Projekt **Windows Forms app (.NET Framework)** in C# Visual Basic `HostingWpf`oder Visual mit dem Namen.
+Öffnen Sie Visual Studio, und erstellen Sie ein neues Projekt für **Windows Forms-app (.NET Framework)** in Visual Basic oder Visual C# mit dem Namen `HostingWpf`.
 
 > [!NOTE]
 > Beim Hosten von WPF-Inhalt werden nur C#- und Visual Basic-Projekte unterstützt.
@@ -56,11 +56,11 @@ So erstellen Sie ein neues WPF-Steuerelement:
 
 2. Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.
 
-3. Legen Sie im Fenster **Eigenschaften** den Wert <xref:System.Windows.FrameworkElement.Width%2A> der-Eigenschaft und der- <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaft auf 200 fest.
+3. Legen Sie im Fenster **Eigenschaften** den Wert der Eigenschaften <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> auf **200**fest.
 
-4. Ziehen Sie aus der **Toolbox**ein <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> -Steuerelement auf die Entwurfs Oberfläche.
+4. Ziehen Sie aus der **Toolbox**ein <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>-Steuerelement auf die Entwurfs Oberfläche.
 
-5. Legen Sie im Fenster **Eigenschaften** den Wert <xref:System.Windows.Controls.TextBox.Text%2A> der-Eigenschaft auf **gehosteter Inhalt**fest.
+5. Legen Sie im Fenster **Eigenschaften** den Wert der <xref:System.Windows.Controls.TextBox.Text%2A>-Eigenschaft auf **gehosteter Inhalt**fest.
 
    > [!NOTE]
    > Normalerweise sollten Sie anspruchsvolleren WPF-Inhalt hosten. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>-Steuerelement wird hier nur zur Veranschaulichung verwendet.
@@ -69,7 +69,7 @@ So erstellen Sie ein neues WPF-Steuerelement:
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Hinzufügen eines WPF-Steuer Elements zu einem Windows Form
 
-Das neue WPF-Steuerelement kann jetzt im Formular verwendet werden. Windows Forms verwendet das <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement zum Hosten von WPF-Inhalt.
+Das neue WPF-Steuerelement kann jetzt im Formular verwendet werden. Windows Forms verwendet das <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement zum Hosten von WPF-Inhalt.
 
 So fügen Sie einem Windows Form ein WPF-Steuerelement hinzu:
 
@@ -81,7 +81,7 @@ So fügen Sie einem Windows Form ein WPF-Steuerelement hinzu:
 
     - Ein <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement wird automatisch zum Hosten des WPF-Steuerelements auf dem Formular erstellt.
 
-    - Das <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement hat `elementHost1` den Namen, <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> und im Fenster Eigenschaften wird die-Eigenschaft auf **UserControl1**festgelegt.
+    - Das <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement heißt `elementHost1` und im **Eigenschaften** Fenster sehen Sie, dass seine <xref:System.Windows.Forms.Integration.ElementHost.Child%2A>-Eigenschaft auf **UserControl1**festgelegt ist.
 
     - Verweise auf WPF-Assemblys werden dem Projekt hinzugefügt.
 
@@ -95,11 +95,11 @@ So fügen Sie einem Windows Form ein WPF-Steuerelement hinzu:
 
 Windows Forms und WPF sind unterschiedliche Technologien, wurden aber für eine enge Zusammenarbeit entwickelt. Um die Darstellung und das Verhalten in Ihren Anwendungen zu Verb leisten, versuchen Sie Folgendes:
 
-- Hosten eines Windows Forms-Steuerelements in einer WPF-Seite. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosting eines Windows Forms-Steuer Elements in](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)WPF.
+- Hosten eines Windows Forms-Steuerelements in einer WPF-Seite. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Hosting eines Windows Forms-Steuer Elements in WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Übernehmen von visuellen Windows Forms-Stilen für den WPF-Inhalt. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybrid](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)Anwendung.
+- Übernehmen von visuellen Windows Forms-Stilen für den WPF-Inhalt. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Ändern des Stils des WPF-Inhalts. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Formatieren von WPF-Inhalt](walkthrough-styling-wpf-content.md).
+- Ändern des Stils des WPF-Inhalts. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise: Formatieren von [WPF-Inhalt](walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -107,4 +107,4 @@ Windows Forms und WPF sind unterschiedliche Technologien, wurden aber für eine 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migration und Interoperabilität](../../wpf/advanced/migration-and-interoperability.md)
 - [Verwenden von WPF-Steuerelementen](using-wpf-controls.md)
-- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

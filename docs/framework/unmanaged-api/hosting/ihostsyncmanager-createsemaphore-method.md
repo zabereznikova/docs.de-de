@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43935829d11a925d4a3389149f5c316df15f06bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02066d3923714e66bf287f1435b7854280c97cb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764583"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195831"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore-Methode
-Erstellt eine [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) -Objekt für die common Language Runtime (CLR) als eine Semaphore für Wait-Events verwendet.  
+Erstellt ein [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) -Objekt für die Common Language Runtime (CLR), die als Semaphor für warte Ereignisse verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,35 +37,35 @@ HRESULT CreateSemaphore (
   
 ## <a name="parameters"></a>Parameter  
  `dwInitial`  
- [in] Die anfängliche Anzahl für `ppSemaphore`.  
+ in Die anfängliche Anzahl für `ppSemaphore`.  
   
  `dwMax`  
- [in] Die maximale Anzahl für `ppSemaphore`.  
+ in Die maximale Anzahl für `ppSemaphore`.  
   
  `ppSemaphore`  
- [out] Ein Zeiger auf die Adresse einer `IHostSemaphore` -Instanz oder null, wenn das Semaphor konnte nicht erstellt werden.  
+ vorgenommen Ein Zeiger auf die Adresse einer `IHostSemaphore` Instanz oder NULL, wenn das Semaphor nicht erstellt werden konnte.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`CreateSemaphore` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis-Objekt zu erstellen.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis Objekt zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CreateSemaphore` entspricht die Win32-Funktion, die den gleichen Namen hat. Die `dwInitial` und `dwMax` Parameter verwenden die gleiche Semantik für die Semaphorenanzahl als die Win32- `lInitialCount` und `lMaximumCount` Parameter bzw. `dwInitial` muss zwischen 0 (null) sein und `dwMax`(inklusiv) enthalten. `dwMax` Muss größer als 0 (null) sein.  
+ `CreateSemaphore` spiegelt die Win32-Funktion mit demselben Namen. Die Parameter "`dwInitial`" und "`dwMax`" verwenden die gleiche Semantik für die Anzahl der Semaphor wie die Win32-`lInitialCount` und `lMaximumCount` Parameter. `dwInitial` muss zwischen 0 (null) und `dwMax`(einschließlich) liegen. `dwMax` muss größer als 0 (null) sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

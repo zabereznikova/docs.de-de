@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582940"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197330"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic)
 Sie können einen numerischen Wert, einen `Boolean` oder einen Datums-/Uhrzeitwert in einen `String` konvertieren. Sie können auch in umgekehrter Richtung konvertieren – von einem Zeichen folgen Wert zu numeric, `Boolean` oder `Date` –, wenn der Inhalt der Zeichenfolge als gültiger Wert des Ziel Datentyps interpretiert werden kann. Wenn dies nicht möglich ist, tritt ein Laufzeitfehler auf.  
@@ -34,7 +34,7 @@ Str = "The total count is " & count
 ```  
   
 ## <a name="conversion-of-strings-to-numbers"></a>Konvertierung von Zeichen folgen in Zahlen  
- Sie können die `Val`-Funktion verwenden, um die Ziffern in einer Zeichenfolge explizit in eine Zahl zu konvertieren. `Val` liest die Zeichenfolge, bis ein anderes Zeichen als Ziffern, Leerzeichen, Tabstopps, Zeilenvorschub oder Zeitraum gefunden wird. Die Sequenzen "& O" und "& H" ändern die Basis des Zahlen Systems und beenden das Scannen. @No__t_0 alle geeigneten Zeichen in einen numerischen Wert konvertiert, bis der Lesevorgang beendet wird. Beispielsweise gibt die folgende Anweisung den Wert `141.825` zurück.  
+ Sie können die `Val`-Funktion verwenden, um die Ziffern in einer Zeichenfolge explizit in eine Zahl zu konvertieren. `Val` liest die Zeichenfolge, bis ein anderes Zeichen als Ziffern, Leerzeichen, Tabstopps, Zeilenvorschub oder Zeitraum gefunden wird. Die Sequenzen "& O" und "& H" ändern die Basis des Zahlen Systems und beenden das Scannen. `Val` alle geeigneten Zeichen in einen numerischen Wert konvertiert, bis der Lesevorgang beendet wird. Beispielsweise gibt die folgende Anweisung den Wert `141.825` zurück.  
   
  `Val("   14   1.825 miles")`  
   
@@ -49,4 +49,4 @@ Str = "The total count is " & count
 - [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
 - [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Einführung in internationale Anwendungen basierend auf .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Entwickeln von globalisierten und lokalisierten Apps](/visualstudio/ide/globalizing-and-localizing-applications)

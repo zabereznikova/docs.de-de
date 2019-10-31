@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec7ce5ddcfe647088393042dd2ada52d283535f7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649919"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197541"
 ---
-# <a name="class-classname-cannot-be-found"></a>Klasse\<Klassenname >' wurde nicht gefunden
-Klasse\<Klassenname >' wurde nicht gefunden. Diese Bedingung ist in der Regel das Ergebnis einer falsch zugeordneten "Microsoft.VisualBasic.dll".  
+# <a name="class-classname-cannot-be-found"></a>Die Klasse "\<ClassName >" wurde nicht gefunden.
+Die Klasse '\<ClassName > ' wurde nicht gefunden. Diese Bedingung ist in der Regel das Ergebnis einer falsch zugeordneten "Microsoft.VisualBasic.dll".  
   
  Ein definierter Member wurde nicht gefunden.  
   
@@ -27,10 +27,10 @@ Klasse\<Klassenname >' wurde nicht gefunden. Diese Bedingung ist in der Regel da
   
 2. Wenn der Fehler erneut auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio neu.  
   
-3. Wenn der Fehler weiterhin auftritt, installieren Sie Visual Basic.  
+3. Wenn der Fehler weiterhin auftritt, installieren Sie Visual Basic neu.  
   
 4. Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

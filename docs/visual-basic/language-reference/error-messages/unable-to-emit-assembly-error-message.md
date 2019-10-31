@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968852"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197274"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a>Die Assembly kann nicht ausgegeben \<werden: Fehlermeldung >
+# <a name="unable-to-emit-assembly-error-message"></a>Die Assembly kann nicht ausgegeben werden: \<Fehlermeldung >
 
 Der Visual Basic-Compiler ruft den Assemblylinker (*Al. exe*, auch bekannt als ALink) auf, um eine Assembly mit einem Manifest zu generieren, und der Linker meldet einen Fehler in der Ausgabe Phase der Erstellung der Assembly.
 
@@ -61,7 +61,7 @@ Der Visual Basic-Compiler ruft den Assemblylinker (*Al. exe*, auch bekannt als A
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
+- ["Al. exe"](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../standard/assembly/create-public-private-key-pair.md)
-- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

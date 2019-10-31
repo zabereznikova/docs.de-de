@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: a7c36e8fc150fe3268120ed728f1bed87d24e800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8a83dd3f7327d00979431ca7fa801ff642a4eef
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623583"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197799"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element
 
-In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie mit der <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> zuzuordnenden Eigenschaft [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.
+In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>-Eigenschaft verwenden, um den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuer Elements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften zuzuordnen.
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen des Projekts
+- Erstellen des Projekts.
 
 - Definieren des Anwendungslayouts
 
@@ -33,11 +33,11 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 - Erweitern einer standardmäßigen Eigenschaftenzuordnung
 
-Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160019).
+Eine komplette Code Auflistung der Aufgaben in dieser exemplarischen Vorgehensweise finden Sie unter [Mapping Properties using the Windows Form shost Element Sample](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-Wenn Sie fertig sind, Sie werden zum Zuordnen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.
+Wenn Sie fertig sind, können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuer Elements zuordnen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
@@ -45,19 +45,19 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 ## <a name="create-and-set-up-the-project"></a>Erstellen und Einrichten des Projekts
 
-1. Erstellen Sie eine **WPF-App** Projekt mit dem Namen `PropertyMappingWithWfhSample`.
+1. Erstellen Sie ein **WPF-App** -Projekt mit dem Namen `PropertyMappingWithWfhSample`.
 
-2. In **Projektmappen-Explorer**, fügen Sie einen Verweis auf die Assembly "WindowsFormsIntegration", mit dem Namen WindowsFormsIntegration.dll.
+2. Fügen Sie in **Projektmappen-Explorer**einen Verweis auf die WindowsFormsIntegration-Assembly mit dem Namen "WindowsFormsIntegration. dll" hinzu.
 
-3. In **Projektmappen-Explorer**, fügen Sie Verweise auf die Assemblys "System.Drawing" und "System.Windows.Forms" hinzu.
+3. Fügen Sie in **Projektmappen-Explorer**Verweise auf die Assemblys "System. Drawing" und "System. Windows. Forms" hinzu.
 
 ## <a name="defining-the-application-layout"></a>Definieren des Anwendungslayouts
 
-Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]--basierte Anwendung verwendet die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element Host eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.
+Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierte Anwendung verwendet das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element, um ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement zu hosten.
 
 ### <a name="to-define-the-application-layout"></a>So definieren sie das Anwendungslayout
 
-1. Öffnen Sie Window1.xaml in der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+1. Öffnen Sie Window1. XAML im [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
 2. Ersetzen Sie den vorhandenen Code durch folgenden Code:
 
@@ -72,50 +72,50 @@ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md
 
 ## <a name="defining-a-new-property-mapping"></a>Definieren einer neuen Eigenschaftenzuordnung
 
-Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element stellt mehrere Standard-eigenschaftenzuordnungen bereit. Hinzufügen eine neuen eigenschaftenzuordnung durch den Aufruf der <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost> des Elements <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element stellt mehrere Standardeigenschaften Zuordnungen bereit. Sie fügen eine neue Eigenschaften Zuordnung hinzu, indem Sie die <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>-Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>des <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elements aufrufen.
 
 ### <a name="to-define-a-new-property-mapping"></a>Definieren einer neuen Eigenschaftenzuordnung
 
-- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition für die `Window1`-Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
 
-     Die `AddClipMapping` Methode fügt eine neue Zuordnung für die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft.
+     Mit der `AddClipMapping`-Methode wird eine neue Zuordnung für die <xref:System.Windows.UIElement.Clip%2A>-Eigenschaft hinzugefügt.
 
-     Die `OnClipChange` -Methode übersetzt die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft, um die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> Eigenschaft.
+     Die `OnClipChange`-Methode übersetzt die <xref:System.Windows.UIElement.Clip%2A>-Eigenschaft in die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>-Eigenschaft.
 
-     Die `Window1_SizeChanged` Methode verarbeitet das <xref:System.Windows.FrameworkElement.SizeChanged> Ereignis und passt die Größe des Clippingbereichs an das Anwendungsfenster angepasst.
+     Die `Window1_SizeChanged`-Methode behandelt das <xref:System.Windows.FrameworkElement.SizeChanged> Ereignis des Fensters und passt die Größe des Clippingbereichs an das Anwendungsfenster an.
 
 ## <a name="removing-a-default-property-mapping"></a>Entfernen einer standardmäßigen Eigenschaftenzuordnung
 
-Entfernen eine standardmäßigen eigenschaftenzuordnung durch Aufrufen der <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost> des Elements <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Entfernen Sie eine standardmäßige Eigenschaften Zuordnung, indem Sie die <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A>-Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>des <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elements aufrufen.
 
 ### <a name="to-remove-a-default-property-mapping"></a>Entfernen einer standardmäßigen Eigenschaftenzuordnung
 
-- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition für die `Window1`-Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
 
-     Die `RemoveCursorMapping` -Methode löscht die standardzuordnung für die <xref:System.Windows.FrameworkElement.Cursor%2A> Eigenschaft.
+     Die `RemoveCursorMapping`-Methode löscht die Standard Zuordnung für die <xref:System.Windows.FrameworkElement.Cursor%2A>-Eigenschaft.
 
 ## <a name="replacing-a-default-property-mapping"></a>Ersetzen einer standardmäßigen Eigenschaftenzuordnung
 
-Ersetzen eine standardmäßigen eigenschaftenzuordnung durch das Entfernen der standardzuordnung und Aufrufen der <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost> des Elements <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Ersetzen Sie eine standardmäßige Eigenschaften Zuordnung, indem Sie die Standard Zuordnung entfernen und die <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>-Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>des <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elements aufrufen.
 
 ### <a name="to-replace-a-default-property-mapping"></a>So ersetzen Sie eine standardmäßige Eigenschaftenzuordnung
 
-- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition für die `Window1`-Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
 
-     Die `ReplaceFlowDirectionMapping` Methode ersetzt die standardzuordnung für die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft.
+     Die `ReplaceFlowDirectionMapping`-Methode ersetzt die Standard Zuordnung für die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft.
 
-     Die `OnFlowDirectionChange` -Methode übersetzt die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft, um die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> Eigenschaft.
+     Die `OnFlowDirectionChange`-Methode übersetzt die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft in die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft.
 
-     Die `cb_CheckedChanged` verarbeitet die <xref:System.Windows.Forms.CheckBox.CheckedChanged> Ereignis auf der <xref:System.Windows.Forms.CheckBox> Steuerelement. Weist die <xref:System.Windows.FrameworkElement.FlowDirection%2A> -Eigenschaft basierend auf den Wert des der <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft
+     Die `cb_CheckedChanged`-Methode behandelt das <xref:System.Windows.Forms.CheckBox.CheckedChanged>-Ereignis auf dem <xref:System.Windows.Forms.CheckBox>-Steuerelement. Die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft wird basierend auf dem Wert der <xref:System.Windows.Forms.CheckBox.CheckState%2A>-Eigenschaft zugewiesen.
 
 ## <a name="extending-a-default-property-mapping"></a>Erweitern einer standardmäßigen Eigenschaftenzuordnung
 
@@ -123,35 +123,35 @@ Sie können auch eine standardmäßige Eigenschaftenzuordnung verwenden und sie 
 
 ### <a name="to-extend-a-default-property-mapping"></a>So erweitern Sie eine standardmäßigen Eigenschaftenzuordnung
 
-- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition für die `Window1`-Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
 
-     Die `ExtendBackgroundMapping` Methode fügt einen benutzerdefinierten Eigenschaftenübersetzer zur vorhandenen <xref:System.Windows.Controls.Control.Background%2A> eigenschaftenzuordnung.
+     Die `ExtendBackgroundMapping`-Methode fügt der vorhandenen <xref:System.Windows.Controls.Control.Background%2A> Eigenschaften Zuordnung einen benutzerdefinierten Eigenschaften Übersetzer hinzu.
 
-     Die `OnBackgroundChange` Methode weist ein bestimmtes Bild des gehosteten Steuerelements <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft. Die `OnBackgroundChange` Methode wird aufgerufen, nachdem die standardzuordnung angewendet wurde.
+     Die `OnBackgroundChange`-Methode weist ein bestimmtes Bild der <xref:System.Windows.Forms.Control.BackgroundImage%2A>-Eigenschaft des gehosteten Steuer Elements zu. Die `OnBackgroundChange`-Methode wird aufgerufen, nachdem die Standardeigenschaften Zuordnung angewendet wurde.
 
 ## <a name="initializing-your-property-mappings"></a>Initialisieren der Eigenschaftenzuordnungen
 
-Richten Ihre eigenschaftenzuordnungen durch Aufrufen der oben beschriebenen Methoden in der <xref:System.Windows.FrameworkElement.Loaded> -Ereignishandler.
+Richten Sie die Eigenschafts Zuordnungen ein, indem Sie die zuvor beschriebenen Methoden im <xref:System.Windows.FrameworkElement.Loaded>-Ereignishandler aufrufen.
 
 ### <a name="to-initialize-your-property-mappings"></a>So initialisieren Sie Ihre Eigenschaftenzuordnungen
 
-1. Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+1. Kopieren Sie den folgenden Code in die Definition für die `Window1`-Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
-     Die `WindowLoaded` verarbeitet die <xref:System.Windows.FrameworkElement.Loaded> Ereignis und führt die folgende Initialisierung.
+     Die `WindowLoaded`-Methode behandelt das <xref:System.Windows.FrameworkElement.Loaded>-Ereignis und führt die folgende Initialisierung aus.
 
-    - Erstellt eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> Steuerelement.
+    - Erstellt eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> Steuer Elements.
 
     - Sie ruft die Methoden, die Sie zuvor in der exemplarischen Vorgehensweise definiert haben, auf, um die Eigenschaftenzuordnungen einzurichten.
 
     - Sie weist den zugeordneten Eigenschaften Anfangswerte zu.
 
-2. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Klicken Sie auf das Kontrollkästchen, um die Wirkung sehen die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Zuordnung. Wenn Sie das Kontrollkästchen klicken, kehrt das Layout seine Links-Rechts-Ausrichtung um.
+2. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Aktivieren Sie das Kontrollkästchen, um die Auswirkung der <xref:System.Windows.FrameworkElement.FlowDirection%2A> Zuordnung anzuzeigen. Wenn Sie das Kontrollkästchen klicken, kehrt das Layout seine Links-Rechts-Ausrichtung um.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -159,5 +159,5 @@ Richten Ihre eigenschaftenzuordnungen durch Aufrufen der oben beschriebenen Meth
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md)
-- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

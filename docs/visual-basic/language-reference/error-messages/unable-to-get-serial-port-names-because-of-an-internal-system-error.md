@@ -2,19 +2,19 @@
 title: Aufgrund eines internen Systemfehlers können die seriellen Anschlussnamen nicht abgerufen werden
 ms.date: 07/20/2015
 ms.assetid: 789a1e94-28c2-4c20-8ee4-ad65fea37812
-ms.openlocfilehash: 04841634938a1ccd6702fd1e3e14cf379f82875f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 963042f9f6cb3d0b19fbbc62b3f32e2522b7b0db
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936265"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197242"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>Aufgrund eines internen Systemfehlers können die seriellen Anschlussnamen nicht abgerufen werden
 Beim Aufrufen der Eigenschaft `My.Computer.Ports.SerialPortNames` ist ein interner Fehler aufgetreten.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Finden Sie unter [Debugger – Grundlagen](/visualstudio/debugger/debugger-basics) für Weitere Informationen zur Problembehandlung.  
+1. Weitere Informationen zur Problembehandlung finden Sie unter [Debugger-Grundlagen](/visualstudio/debugger/debugger-basics) .  
   
 2. Notieren Sie sich die Umstände, unter denen der Fehler aufgetreten ist, und wenden Sie sich an den Produktsupport von Microsoft.  
   
@@ -22,4 +22,4 @@ Beim Aufrufen der Eigenschaft `My.Computer.Ports.SerialPortNames` ist ein intern
 
 - <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>
 - [Debugger – Grundlagen](/visualstudio/debugger/debugger-basics)
-- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

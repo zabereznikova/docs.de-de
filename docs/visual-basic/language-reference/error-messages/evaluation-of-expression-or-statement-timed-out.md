@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: 7a3b460e7abb0e673457ca6abee2a195912715ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0600c7acdb138e363dcbece392bf4b8122cb250
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803375"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191925"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>Das Zeitlimit für die Auswertung von Ausdruck oder Anweisung wurde überschritten.
-Die Auswertung eines Ausdrucks wurde nicht rechtzeitig abgeschlossen.  
+The evaluation of an expression did not complete in a timely manner.  
   
- **Fehler-ID:** BC30722  
+ **Error ID:** BC30722  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass der eingegebene Code korrekt ist.  
+1. Verify that the entered code is correct.  
   
-2. Vereinfachen Sie den Ausdruck so, dass es weniger Zeit für die Ausführung dauert.  
+2. Simplify your expression so that it takes less time to execute.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debuggen in Visual Studio](/visualstudio/debugger/debugger-feature-tour)

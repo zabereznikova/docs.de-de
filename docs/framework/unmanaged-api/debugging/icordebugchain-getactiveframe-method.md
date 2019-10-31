@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192144"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame-Methode
-Ruft das aktive (d. h. die letzte) Frame in der Kette.  
+Ruft den aktiven Frame (d. h. den aktuellen) Frame in der Kette ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parameter  
  `ppFrame`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugFrame-Objekts, das den aktiven darstellt (d. h. die letzte) Frame in der Kette.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebug-Frame-Objekts, das den aktiven Frame (d. h. den aktuellen) Frame in der Kette darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn kein verwalteter Stapelrahmen verfügbar ist, `ppFrame` wird festgelegt auf Null.  
+ Wenn kein verwalteter Stapel Rahmen verfügbar ist, wird `ppFrame` auf NULL festgelegt.  
   
- Wenn der aktive Frame nicht verfügbar ist, wird der Aufruf erfolgreich und `ppFrame` NULL. Aktiven Frames sind nicht verfügbar für Ketten durch CHAIN_ENTER_UNMANAGED initiiert wurden, und für einige Ketten durch CHAIN_CLASS_INIT initiiert wurden. Finden Sie unter der CorDebugChainReason-Enumeration.  
+ Wenn der aktive Frame nicht verfügbar ist, wird der-Vorgang erfolgreich ausgeführt, und `ppFrame` wird NULL sein. Aktive Frames sind für Ketten, die aufgrund von CHAIN_ENTER_UNMANAGED initiiert wurden, und für einige Ketten, die aufgrund von CHAIN_CLASS_INIT initiiert wurden, nicht verfügbar. Weitere Informationen finden Sie in der Cordebug-Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

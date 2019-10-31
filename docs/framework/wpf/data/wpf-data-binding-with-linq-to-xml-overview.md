@@ -2,12 +2,12 @@
 title: WPF-Datenbindung mit LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139803"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197390"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Übersicht über die WPF-Datenbindung mit LINQ to XML
 
@@ -36,7 +36,7 @@ Die WPF-Datenbindung ermöglicht es einem Benutzeroberflächenelement, eine sein
 |Bindungsquelle|Das Quellobjekt für die Werte, die dem Benutzeroberflächenelement für die Präsentation bereitgestellt werden. WPF unterstützt automatisch die folgenden Typen als Bindungsquellen: CLR-Objekte, ADO.NET-Datenobjekte, XML-Daten (aus XPath- oder LINQ to XML-Abfragen) oder ein anderes <xref:System.Windows.DependencyObject>.|
 |Quellpfad|Die Eigenschaft der Bindungsquelle, aus der sich der Wert oder der Satz von Werten herleitet, der bzw. die gebunden werden sollen.|
 
-Die Abhängigkeitseigenschaft ist ein WPF-spezifisches Konzept, das eine dynamisch berechnete Eigenschaft eines Benutzeroberflächenelements darstellt. So besitzen Abhängigkeitseigenschaften z. B. häufig Standardwerte oder Werte, die von einem übergeordneten Element bereitgestellt werden. Diese speziellen Eigenschaften werden von Instanzen der <xref:System.Windows.DependencyProperty>-Klasse (und nicht wie bei Standardeigenschaften von Feldern) gestützt. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+Die Abhängigkeitseigenschaft ist ein WPF-spezifisches Konzept, das eine dynamisch berechnete Eigenschaft eines Benutzeroberflächenelements darstellt. So besitzen Abhängigkeitseigenschaften z. B. häufig Standardwerte oder Werte, die von einem übergeordneten Element bereitgestellt werden. Diese speziellen Eigenschaften werden von Instanzen der <xref:System.Windows.DependencyProperty>-Klasse (und nicht wie bei Standardeigenschaften von Feldern) gestützt. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md).
 
 ### <a name="dynamic-data-binding-in-wpf"></a>Dynamische Datenbindung in WPF
 
@@ -89,6 +89,6 @@ Zur Implementierung der dynamischen WPF-Bindung werden die dynamischen Eigenscha
 
 - [WPF-Datenbindung mit LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Dynamische Eigenschaften in LINQ to XML](linq-to-xml-dynamic-properties.md)
-- [XAML in WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [XAML in WPF](../advanced/xaml-in-wpf.md)
 - [Datenbindung (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
 - [Verwenden von Workflowmarkup](https://go.microsoft.com/fwlink/?LinkId=98685)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 757af1e6-b9e8-49e7-b5db-342be3aa205f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16d146766786f129d6da38bde1126ce8afe5e70f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00ec0b92a9f7151ee9b831c85548c4f61d87af68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192037"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery-Methode
-Dient als logischer Wrapper für die entsprechende Win32-Funktion. Die Win32-Implementierung `VirtualQuery` von Ruft Informationen zu einem Seitenbereich im virtuellen Adressraum des aufrufenden Prozesses ab.  
+Dient als logischer Wrapper für die entsprechende Win32-Funktion. Die Win32-Implementierung von `VirtualQuery` Ruft Informationen zu einem Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +44,7 @@ HRESULT VirtualQuery (
  vorgenommen Ein Zeiger auf eine-Struktur, die Informationen über den angegebenen Speicherbereich enthält.  
   
  `dwLength`  
- in Die Größe (in Bytes) des Puffers `lpBuffer` , auf den verweist.  
+ in Die Größe (in Bytes) des Puffers, auf den `lpBuffer` zeigt.  
   
  `pResult`  
  vorgenommen Ein Zeiger auf die Anzahl der vom Informations Puffer zurückgegebenen Bytes.  
@@ -55,7 +53,7 @@ HRESULT VirtualQuery (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery`wurde erfolgreich zurückgegeben.|  
+|S_OK|`VirtualQuery` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -63,17 +61,17 @@ HRESULT VirtualQuery (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `VirtualQuery`stellt Informationen zu einem Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses bereit. Diese Implementierung legt den Wert des `pResult` -Parameters auf die Anzahl der im Informations Puffer zurückgegebenen Bytes fest und gibt einen HRESULT-Wert zurück. In der Win32 `VirtualQuery` -Funktion ist der Rückgabewert die Puffergröße. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
+ `VirtualQuery` stellt Informationen zu einem Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses bereit. Mit dieser Implementierung wird der Wert des `pResult`-Parameters auf die Anzahl der im Informations Puffer zurückgegebenen Bytes festgelegt, und es wird ein HRESULT-Wert zurückgegeben. In der Win32-`VirtualQuery` Funktion ist der Rückgabewert die Puffergröße. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
 > [!IMPORTANT]
-> Die Implementierung von `VirtualQuery` des Betriebssystems führt nicht zu einem Deadlock und kann mit zufälligen Threads ausgeführt werden, die im Benutzercode angehalten werden. Gehen Sie bei der Implementierung einer gehosteten Version dieser Methode sehr vorsichtig vor.  
+> Die Implementierung von `VirtualQuery` des Betriebssystems verursacht keinen Deadlock und kann mit zufälligen Threads abgeschlossen werden, die im Benutzercode angehalten werden. Gehen Sie bei der Implementierung einer gehosteten Version dieser Methode sehr vorsichtig vor.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

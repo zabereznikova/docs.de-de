@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 8a1b4869588c8dd030cf6276969063ec99b79e33
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0ace2b13473db30a4500648a67f6ce34edf3e587
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046582"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197563"
 ---
 # <a name="declared-element-names-visual-basic"></a>Namen deklarierter Elemente (Visual Basic)
-Jedes deklarierte Element weist einen Namen auf, derauch als Bezeichner bezeichnet wird. Dies ist der Inhalt, den der Code verwendet, um darauf zu verweisen.  
+Jedes deklarierte Element weist einen Namen auf, der auch als *Bezeichner*bezeichnet wird. Dies ist der Inhalt, den der Code verwendet, um darauf zu verweisen.  
   
 ## <a name="rules"></a>Regeln  
  Für einen Elementnamen in Visual Basic müssen die folgenden Regeln beachtet werden:  
@@ -44,7 +44,7 @@ Jedes deklarierte Element weist einen Namen auf, derauch als Bezeichner bezeichn
   
 - Er darf nicht mehr als 1023 Zeichen lang sein.  
   
- Das Längen Limit von 1023 Zeichen gilt auch für die gesamte Zeichenfolge eines voll qualifizierten Namens, z `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`. b.  
+ Die Längen Beschränkung von 1023 Zeichen gilt auch für die gesamte Zeichenfolge eines voll qualifizierten Namens, z. b. `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
  Das folgende Beispiel zeigt einige gültige Elementnamen.  
   
@@ -63,7 +63,7 @@ Jedes deklarierte Element weist einen Namen auf, derauch als Bezeichner bezeichn
  `xyz$wv`  
   
 > [!CAUTION]
-> Element Namen, die mit einem unter`_`Strich () beginnen, sind nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../../standard/language-independence-and-language-independent-components.md) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die solche Namen definiert. Ein Unterstrich an einer beliebigen anderen Position in einem Elementnamen ist jedoch CLS-kompatibel.  
+> Element Namen, die mit einem Unterstrich (`_`) beginnen, sind nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../../standard/language-independence-and-language-independent-components.md) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die solche Namen definiert. Ein Unterstrich an einer beliebigen anderen Position in einem Elementnamen ist jedoch CLS-kompatibel.  
   
 ### <a name="name-length-guidelines"></a>Namens Längen Richtlinien  
  Als praktische Angelegenheit sollte Ihr Name so kurz wie möglich sein, während er die Art des Elements eindeutig identifiziert. Dadurch wird die Lesbarkeit des Codes verbessert, und die Zeilen-und Quelldatei Größe wird reduziert.  
@@ -71,7 +71,7 @@ Jedes deklarierte Element weist einen Namen auf, derauch als Bezeichner bezeichn
  Auf der anderen Seite sollte Ihr Name nicht so kurz sein, dass er nicht genau beschreibt, was das Element darstellt und wie der Code es verwendet. Dies ist wichtig für die Lesbarkeit des Codes. Wenn eine andere Person versucht, dies zu verstehen, oder wenn Sie sich nach dem verfassen einen langen Zeitraum ansehen, können geeignete Elementnamen einen beträchtlichen Zeitraum sparen.  
   
 ## <a name="escaped-names"></a>Namens Escapezeichen  
- Im Allgemeinen darf ein Elementname keinem der Schlüsselwörter entsprechen, die von Visual Basic reserviert sind, `Case` z `Friend`. b. oder. Sie können jedoch einen *Namen*mit Escapezeichen definieren, der in eckige Klammern`[ ]`() eingeschlossen ist. Ein Name mit Escapezeichen kann mit einem beliebigen Visual Basic Schlüsselwort identisch sein, da die Klammern jegliche Mehrdeutigkeit Sie verwenden die Klammern auch, wenn Sie später in Ihrem Code auf den Namen verweisen.  
+ Im Allgemeinen darf ein Elementname keinem der Schlüsselwörter entsprechen, die von Visual Basic reserviert sind, z. b. `Case` oder `Friend`. Sie können jedoch einen *Namen*mit Escapezeichen definieren, der in eckige Klammern (`[ ]`) eingeschlossen ist. Ein Name mit Escapezeichen kann mit einem beliebigen Visual Basic Schlüsselwort identisch sein, da die Klammern jegliche Mehrdeutigkeit Sie verwenden die Klammern auch, wenn Sie später in Ihrem Code auf den Namen verweisen.  
   
  Im Allgemeinen sollten Sie Namen mit Escapezeichen nur dann verwenden, wenn:  
   
@@ -79,12 +79,12 @@ Jedes deklarierte Element weist einen Namen auf, derauch als Bezeichner bezeichn
   
 - Sie arbeiten mit Code, der in einer anderen Sprache geschrieben ist, in der das angegebene Schlüsselwort nicht reserviert ist.  
   
- Andernfalls sollten Sie das Umbenennen des Elements in Erwägung gezogen, wenn der Name mit einem Schlüsselwort in Konflikt steht. Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) bietet eine einfache Möglichkeit, dies zu erreichen. Weitere Informationen finden Sie unter [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
+ Andernfalls sollten Sie das Umbenennen des Elements in Erwägung gezogen, wenn der Name mit einem Schlüsselwort in Konflikt steht. Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) bietet eine einfache Möglichkeit, dies zu erreichen. Weitere Informationen finden Sie unter [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
   
 ## <a name="case-sensitivity-in-names"></a>Groß-/Kleinschreibung in Namen  
  Bei Element Namen in Visual Basic wird Groß-/Kleinschreibung nicht beachtet. Dies bedeutet Folgendes: Wenn der Compiler zwei Namen vergleicht, die sich nur in alphabetischer Schreibweise unterscheiden, interpretiert er Sie als denselben Namen. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
   
- Der Common Language Runtime (CLR) verwendet jedoch die Groß-/Kleinschreibung. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC`definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC`verweisen. Wenn Sie danach die Klasse erneut kompilieren und den Namen des Elements in ändern `abc`, können die anderen Assemblys, die Ihre Klasse verwenden, nicht mehr auf dieses Element zugreifen. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß-/Kleinschreibung öffentlicher Elemente nicht ändern.  
+ Der Common Language Runtime (CLR) verwendet jedoch die Groß-/Kleinschreibung. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC`definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC`verweisen. Wenn Sie danach die Klasse erneut kompilieren und den Namen des Elements in `abc`ändern, können die anderen Assemblys, die Ihre Klasse verwenden, nicht mehr auf dieses Element zugreifen. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß-/Kleinschreibung öffentlicher Elemente nicht ändern.  
   
 ## <a name="names-and-locales"></a>Namen und Gebiets Schemas  
  Der Vergleich von Namen ist unabhängig vom Gebiets Schema. Wenn zwei Namen in einem Gebiets Schema vorliegen, entsprechen Sie garantiert allen Gebiets Schemas.  

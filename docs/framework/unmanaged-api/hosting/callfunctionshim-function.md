@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192095"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim-Funktion
 Ruft eine Funktion mit dem angegebenen Namen und den angegebenen Parametern in der angegebenen Bibliothek auf.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,29 +41,29 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>Parameter  
  `szDllName`  
- [in] Der Name der Bibliothek, die die Funktion enthält.  
+ in Der Name der Bibliothek, die die Funktion enthält.  
   
  `szFunctionName`  
- [in] Der Name der Funktion.  
+ in Der Name der Funktion.  
   
  `lpvArgument1`  
- [in] Das erste Argument an die Funktion übergeben.  
+ in Das erste Argument, das an die Funktion übergeben werden soll.  
   
  `lpvArgument2`  
- [in] Das zweite Argument an die Funktion übergeben.  
+ in Das zweite Argument, das an die Funktion übergeben werden soll.  
   
  `szVersion`  
- [in] Die Version der Bibliothek, die die Funktion enthält.  
+ in Die Version der Bibliothek, die die Funktion enthält.  
   
  `pvReserved`  
- [in] Für die zukünftige Verwendung reserviert. Übergeben Sie 0 (null), in diesem Parameter.  
+ in Reserviert für zukünftige Verwendung. NULL in diesem Parameter übergeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

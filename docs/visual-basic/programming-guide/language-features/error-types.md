@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: ab554b60f7ba44ee0b92b76e1362ffdbb25f2afb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5be91162d5c178fc032fba32605107c3fcd4d16b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965366"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197211"
 ---
 # <a name="error-types-visual-basic"></a>Fehlertypen (Visual Basic)
 In Visual Basic fallen Fehler in eine von drei Kategorien: Syntax Fehler, Laufzeitfehler und logische Fehler.
@@ -24,15 +24,15 @@ In Visual Basic fallen Fehler in eine von drei Kategorien: Syntax Fehler, Laufze
  *Syntax Fehler* sind solche, die beim Schreiben von Code angezeigt werden. Wenn Sie Visual Studio verwenden, prüft Visual Basic Ihren Code, während Sie ihn im Code- **Editor** -Fenster eingeben, und warnt Sie, wenn Sie einen Fehler auftreten, z. b. falsche Schreibweise eines Worts oder ein sprach Element nicht ordnungsgemäß. Wenn Sie über die Befehlszeile kompilieren, zeigt Visual Basic einen Compilerfehler mit Informationen zum Syntax Fehler an. Syntax Fehler sind die häufigste Art von Fehlern. Sie können Sie problemlos in der Codierungs Umgebung beheben, sobald sie auftreten.
 
 > [!NOTE]
-> Die `Option Explicit` -Anweisung ist eine Möglichkeit, Syntax Fehler zu vermeiden. Sie zwingt Sie, im Voraus alle Variablen zu deklarieren, die in der Anwendung verwendet werden sollen. Wenn diese Variablen im Code verwendet werden, werden daher alle typografischen Fehler sofort abgefangen und können korrigiert werden.
+> Die `Option Explicit`-Anweisung ist eine Möglichkeit, Syntax Fehler zu vermeiden. Sie zwingt Sie, im Voraus alle Variablen zu deklarieren, die in der Anwendung verwendet werden sollen. Wenn diese Variablen im Code verwendet werden, werden daher alle typografischen Fehler sofort abgefangen und können korrigiert werden.
 
 ## <a name="run-time-errors"></a>Laufzeitfehler
  *Laufzeitfehler* sind solche, die erst angezeigt werden, nachdem Sie den Code kompiliert und ausgeführt haben. Dabei handelt es sich um Code, der möglicherweise korrekt erscheint, da er keine Syntax Fehler aufweist, die jedoch nicht ausgeführt werden. Beispielsweise können Sie ordnungsgemäß eine Codezeile schreiben, um eine Datei zu öffnen. Wenn die Datei jedoch nicht vorhanden ist, kann die Anwendung die Datei nicht öffnen, und es wird eine Ausnahme ausgelöst. Sie können die meisten Laufzeitfehler beheben, indem Sie den fehlerhaften Code umschreiben oder die [Ausnahmebehandlung](../../language-reference/statements/try-catch-finally-statement.md)verwenden und dann erneut kompilieren und wiederholen.
   
 ## <a name="logic-errors"></a>Logische Fehler
- *Logische Fehler* sind solche, die angezeigt werden, sobald die Anwendung verwendet wird. Sie sind am häufigsten fehlerhafte Annahmen des Entwicklers oder unerwünschte oder unerwartete Ergebnisse als Reaktion auf Benutzeraktionen. Beispielsweise kann eine falsch geschriebene Taste falsche Informationen für eine Methode bereitstellen, oder Sie gehen davon aus, dass ein gültiger Wert immer an eine Methode übergeben wird, wenn dies nicht der Fall ist. Obwohl Logikfehler durch die Verwendung der [Ausnahmebehandlung](../../language-reference/statements/try-catch-finally-statement.md) behandelt werden können (z. b. durch testen, `Nothing` ob ein Argument <xref:System.ArgumentNullException>ist und ein ausgelöst wird), sollten Sie am häufigsten adressiert werden, indem der Fehler in der Logik korrigiert und die Asyl.
+ *Logische Fehler* sind solche, die angezeigt werden, sobald die Anwendung verwendet wird. Sie sind am häufigsten fehlerhafte Annahmen des Entwicklers oder unerwünschte oder unerwartete Ergebnisse als Reaktion auf Benutzeraktionen. Beispielsweise kann eine falsch geschriebene Taste falsche Informationen für eine Methode bereitstellen, oder Sie gehen davon aus, dass ein gültiger Wert immer an eine Methode übergeben wird, wenn dies nicht der Fall ist. Obwohl logische Fehler durch die Verwendung der [Ausnahmebehandlung](../../language-reference/statements/try-catch-finally-statement.md) behandelt werden können (z. b. durch testen, ob ein Argument `Nothing` und ein <xref:System.ArgumentNullException>ausgelöst wird), sollten Sie in den meisten Fällen behoben werden, indem der Fehler in der Logik korrigiert und die Anwendung neu kompiliert wird. .
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Debugger – Grundlagen](/visualstudio/debugger/debugger-basics)
+- [Debugger – Grundlagen](/visualstudio/debugger/debugger-feature-tour)

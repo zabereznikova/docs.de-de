@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195962"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters-Struktur
 Speichert den Typnamen eines Ereignisses und die Parameter für die aktuelle Ausnahme, die dem Ereignis zugeordnet ist.  
@@ -40,14 +38,14 @@ typedef struct _BucketParameters {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`fInited`|`true`, wenn der Rest dieser Struktur gültig ist. andernfalls `false`.|  
-|`pszEventTypeName`|Der Name des Ereignistyps.|  
-|`pszParams`|Ein Array von Zeichenfolgen, von denen jede einen Parameter für die aktuelle Ausnahme, die dem Ereignis zugeordnete angibt.|  
+|`fInited`|`true`, wenn der Rest dieser Struktur gültig ist. Andernfalls `false`.|  
+|`pszEventTypeName`|Der Name des Ereignis Typs.|  
+|`pszParams`|Ein Array von Zeichen folgen, von denen jede einen Parameter für die aktuelle Ausnahme angibt, die dem Ereignis zugeordnet ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
