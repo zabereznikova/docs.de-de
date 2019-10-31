@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95cea4cb3e7e7df2b6b52256a440b9a8d544f2db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 587e085f6fe9f6c19d3605c673cd3bd6f68162f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127382"
 ---
 # <a name="next-function"></a>Next-Funktion
 Ruft die Next-Eigenschaft in einer Enumeration ab, die mit einem Aufrufen von [beginenumeration](beginenumeration.md)beginnt.
@@ -51,19 +49,19 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `lFlags`\
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `pstrName`\
-vorgenommen Ein neuer `BSTR` , der den Eigenschaftsnamen enthält. Sie können diesen Parameter auf festlegen `null` , wenn der Name nicht erforderlich ist.
+vorgenommen Ein neues `BSTR`, das den Eigenschaftsnamen enthält. Sie können diesen Parameter auf `null` festlegen, wenn der Name nicht erforderlich ist.
 
 `pVal`\
-vorgenommen Ein `VARIANT` , der mit dem Wert der-Eigenschaft ausgefüllt ist. Sie können diesen Parameter auf festlegen `null` , wenn der Wert nicht erforderlich ist. Wenn die Funktion einen Fehlercode zurückgibt, `VARIANT` bleibt der `pVal` an übergebenen unverändert unverändert.
+vorgenommen Ein `VARIANT` mit dem Wert der-Eigenschaft aufgefüllt. Sie können diesen Parameter auf `null` festlegen, wenn der Wert nicht erforderlich ist. Wenn die Funktion einen Fehlercode zurückgibt, bleibt die an `pVal` übergebenen `VARIANT` unverändert.
 
 `pvtType`\
-vorgenommen Ein Zeiger auf eine `CIMTYPE` Variable (ein `LONG` -Objekt, in das der Typ der Eigenschaft eingefügt wird). Der Wert dieser Eigenschaft kann sein. in `VT_NULL_VARIANT`diesem Fall muss der tatsächliche Typ der Eigenschaft bestimmt werden. Dieser Parameter kann auch sein `null`.
+vorgenommen Ein Zeiger auf eine `CIMTYPE` Variable (ein `LONG`, in den der Typ der Eigenschaft eingefügt wird). Der Wert dieser Eigenschaft kann ein `VT_NULL_VARIANT`sein. in diesem Fall muss der tatsächliche Typ der Eigenschaft bestimmt werden. Dieser Parameter kann auch `null`werden.
 
 `plFlavor`\
-vorgenommen `null`oder ein Wert, der Informationen über den Ursprung der Eigenschaft empfängt. Mögliche Werte finden Sie im Abschnitt [Hinweise].
+[out] `null`oder ein Wert, der Informationen über den Ursprung der Eigenschaft empfängt. Mögliche Werte finden Sie im Abschnitt [Hinweise].
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -85,21 +83,21 @@ Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject:: Next](
 
 Diese Methode gibt auch Systemeigenschaften zurück.
 
-Wenn der zugrunde liegende Typ der Eigenschaft ein Objekt Pfad, ein Datum oder eine Uhrzeit oder ein anderer spezieller Typ ist, enthält der zurückgegebene Typ nicht genügend Informationen. Der Aufrufer muss `CIMTYPE` die-Eigenschaft für die angegebene Eigenschaft überprüfen, um zu bestimmen, ob die Eigenschaft ein Objekt Verweis, ein Datum oder eine Uhrzeit oder ein anderer spezieller Typ ist.
+Wenn der zugrunde liegende Typ der Eigenschaft ein Objekt Pfad, ein Datum oder eine Uhrzeit oder ein anderer spezieller Typ ist, enthält der zurückgegebene Typ nicht genügend Informationen. Der Aufrufer muss die `CIMTYPE` für die angegebene Eigenschaft überprüfen, um zu bestimmen, ob die Eigenschaft ein Objekt Verweis, ein Datum oder eine Uhrzeit oder ein anderer spezieller Typ ist.
 
-Wenn `plFlavor` `LONG` nicht `null`ist, empfängt der Wert Informationen über den Ursprung der Eigenschaft wie folgt:
+Wenn `plFlavor` nicht `null`ist, erhält der `LONG` Wert Informationen zum Ursprung der Eigenschaft wie folgt:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Die-Eigenschaft ist eine Standardsystem Eigenschaft. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: Die Eigenschaft wird von der übergeordneten Klasse geerbt. <br> Für eine-Instanz: Die-Eigenschaft, die von der übergeordneten Klasse geerbt wurde, wurde von der-Instanz nicht geändert.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: Die-Eigenschaft gehört zur abgeleiteten Klasse. <br> Für eine-Instanz: Die-Eigenschaft wird von der-Instanz geändert. Das heißt, es wurde ein Wert angegeben, oder es wurde ein Qualifizierer hinzugefügt oder geändert. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: die Eigenschaft wird von der übergeordneten Klasse geerbt. <br> Für eine-Instanz: die-Eigenschaft wurde von der-Instanz nicht geändert, während Sie von der übergeordneten Klasse geerbt wurde.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: die Eigenschaft gehört zur abgeleiteten Klasse. <br> Für eine-Instanz: die-Eigenschaft wird von der-Instanz geändert. Das heißt, es wurde ein Wert angegeben, oder es wurde ein Qualifizierer hinzugefügt oder geändert. |
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

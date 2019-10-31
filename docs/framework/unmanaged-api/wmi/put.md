@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5aa629c2d07fb25db035cd80aba3c74413070e6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f1bb8aa09a269e3b8fd23f393d63a275d308a77c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798402"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127400"
 ---
 # <a name="put-function"></a>Put-Funktion
 
@@ -51,16 +49,16 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`\
-in Der Name der Eigenschaft. Dieser Parameter darf nicht `null`sein.
+in Der Name der Eigenschaft. Dieser Parameter kann nicht `null`werden.
 
 `lFlags`\
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `pVal`\
-in Ein Zeiger auf einen gültigen `VARIANT` , der zum neuen Eigenschafts Wert wird. Wenn `pVal` `VARIANT` ist `null` oder auf einen des Typs `VT_NULL`verweist, wird die-Eigenschaft auf `null`festgelegt.
+in Ein Zeiger auf einen gültigen `VARIANT`, der zum neuen Eigenschafts Wert wird. Wenn `pVal` `null` oder auf eine `VARIANT` vom Typ `VT_NULL`verweist, wird die-Eigenschaft auf `null`festgelegt.
 
 `vtType`\
-in Der Typ von `VARIANT` `pVal`, auf den verweist. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
+in Der Typ der `VARIANT` auf die von `pVal`verwiesen wird. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -72,22 +70,22 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Mindestens ein Parameter ist ungültig. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Der Eigenschaftentyp wird nicht erkannt. Dieser Wert wird zurückgegeben, wenn Klassen Instanzen erstellt werden, wenn die Klasse bereits vorhanden ist. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Für-Instanzen: Gibt an `pVal` , dass auf `VARIANT` einen von einem falschen Typ für die Eigenschaft verweist. <br/> Für Klassendefinitionen: Die Eigenschaft ist in der übergeordneten Klasse bereits vorhanden, und der neue com-Typ unterscheidet sich vom alten com-Typ. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 beim | Für-Instanzen: gibt an, dass `pVal` auf eine `VARIANT` eines falschen Typs für die-Eigenschaft verweist. <br/> Für Klassendefinitionen: die Eigenschaft ist bereits in der übergeordneten Klasse vorhanden, und der neue com-Typ unterscheidet sich vom alten com-Typ. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich. |
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) -Methode.
 
-Diese Funktion überschreibt immer den aktuellen-Eigenschafts Wert mit einem neuen. Wenn [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) auf eine Klassendefinition zeigt, `Put` erstellt oder aktualisiert den Eigenschafts Wert. Wenn [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) auf eine CIM-Instanz verweist `Put` , aktualisiert nur den Eigenschafts Wert. `Put` ein Eigenschafts Wert kann nicht erstellt werden.
+Diese Funktion überschreibt immer den aktuellen-Eigenschafts Wert mit einem neuen. Wenn [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) auf eine Klassendefinition zeigt, `Put` den Eigenschafts Wert erstellt oder aktualisiert. Wenn [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) auf eine CIM-Instanz verweist, `Put` nur den Eigenschafts Wert aktualisiert. ein Eigenschafts Wert `Put` kann nicht erstellt werden.
 
-Die `__CLASS` System Eigenschaft ist nur während der Klassen Erstellung beschreibbar, wenn Sie möglicherweise nicht leer ist. Alle anderen Systemeigenschaften sind schreibgeschützt.
+Die `__CLASS` System Eigenschaft ist während der Klassen Erstellung nur beschreibbar, wenn Sie möglicherweise nicht leer bleibt. Alle anderen Systemeigenschaften sind schreibgeschützt.
 
 Ein Benutzer kann keine Eigenschaften erstellen, deren Namen mit einem Unterstrich ("_") beginnen oder enden. Dies ist für System Klassen und-Eigenschaften reserviert.
 
-Wenn die von der `Put` Funktion festgelegte Eigenschaft in der übergeordneten Klasse vorhanden ist, wird der Standardwert der Eigenschaft geändert, es sei denn, der Eigenschaftentyp stimmt nicht mit dem Typ der übergeordneten Klasse identisch. Wenn die Eigenschaft nicht vorhanden ist und es sich nicht um einen Typen Konflikt handelt, wird die-Eigenschaft erstellt.
+Wenn die von der `Put`-Funktion festgelegte Eigenschaft in der übergeordneten Klasse vorhanden ist, wird der Standardwert der Eigenschaft geändert, es sei denn, der Eigenschaftentyp stimmt nicht mit dem übergeordneten Klassentyp. Wenn die Eigenschaft nicht vorhanden ist und es sich nicht um einen Typen Konflikt handelt, wird die-Eigenschaft erstellt.
 
-Verwenden Sie `vtType` den `pVal` `VARIANT` -Parameter`VT_NULL`nur, wenn neue Eigenschaften in einer CIM-Klassendefinition erstellt werden, oderverweistaufeinenvomTyp.`null` In diesem Fall gibt der `vType` Parameter den CIM-Typ der Eigenschaft an. In jedem anderen Fall `vtType` muss 0 sein. `vtType`muss auch 0 sein, wenn das zugrunde liegende Objekt eine Instanz ist ( `Val` auch `null`wenn ist), da der Typ der Eigenschaft korrigiert ist und nicht geändert werden kann.
+Verwenden Sie den `vtType`-Parameter nur, wenn Sie neue Eigenschaften in einer CIM-Klassendefinition erstellen und `pVal` `null` oder auf eine `VARIANT` vom Typ `VT_NULL`verweist. In diesem Fall gibt der `vType`-Parameter den CIM-Typ der Eigenschaft an. In allen anderen Fällen muss `vtType` 0 sein. `vtType` muss auch 0 sein, wenn das zugrunde liegende Objekt eine Instanz ist (auch wenn `Val` `null`ist), da der Typ der Eigenschaft korrigiert ist und nicht geändert werden kann.
 
 ## <a name="example"></a>Beispiel
 
@@ -95,9 +93,9 @@ Ein Beispiel finden Sie in der [IWbemClassObject::P UT](/windows/desktop/api/wbe
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

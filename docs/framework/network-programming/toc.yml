@@ -40,9 +40,6 @@
       items:
         - name: HTTP
           href: http.md
-          items:
-            - name: HttpListener
-              href: httplistener.md
         - name: 'Vorgehensweise: Zugreifen auf HTTP-spezifische Eigenschaften'
           href: how-to-access-http-specific-properties.md
         - name: Verwalten von Verbindungen

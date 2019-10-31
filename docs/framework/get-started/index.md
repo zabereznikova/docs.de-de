@@ -6,14 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: cb56097d49b194234031aba3ee9811b961ae6c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690189"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107722"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -75,7 +73,7 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-| Titel | Beschreibung |
+| Titel | BESCHREIBUNG |
 | ----- |------------ |
 | [Übersicht](overview.md) | Enthält ausführliche Informationen für Entwickler, die Apps für .NET Framework erstellen. |
 | [Installationshandbuch](../install/index.md) | Stellt Informationen zum Installieren von .NET Framework bereit. |  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f93b4fbd5429ed2bdae8fb707e61df024cd8fd6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107513"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance-Funktion
 Erstellt eine neue Instanz einer Klasse.    
@@ -47,10 +45,10 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `lFlags`  
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `ppNewInstance`  
-vorgenommen Empfängt den Zeiger auf die neue Instanz der-Klasse. Wenn ein Fehler auftritt, wird kein neues-Objekt zurückgegeben, `ppNewInstance` und es bleibt unverändert.
+vorgenommen Empfängt den Zeiger auf die neue Instanz der-Klasse. Wenn ein Fehler auftritt, wird kein neues Objekt zurückgegeben, und `ppNewInstance` bleibt unverändert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -58,7 +56,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`ist keine gültige Klassendefinition und kann keine neuen Instanzen erzeugen. Sie ist entweder unvollständig oder wurde nicht bei der Windows-Verwaltung durch Aufrufen von [putclasswmi](putclasswmi.md)registriert. |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` ist keine gültige Klassendefinition und kann keine neuen Instanzen erzeugen. Sie ist entweder unvollständig oder wurde nicht bei der Windows-Verwaltung durch Aufrufen von [putclasswmi](putclasswmi.md)registriert. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` ist `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
@@ -67,14 +65,14 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) -Methode.
 
-`ptr`muss eine Klassendefinition sein, die von der Windows-Verwaltung abgerufen wird. (Beachten Sie, dass das Erzeugen einer Instanz aus einer-Instanz unterstützt wird, aber die zurückgegebene-Instanz leer ist.) Anschließend verwenden Sie diese Klassendefinition, um neue Instanzen zu erstellen. Wenn Sie beabsichtigen, die Instanz in die Windows-Verwaltung zu schreiben, ist ein Rückruf der [putinstancewmi](putinstancewmi.md) -Funktion erforderlich.
+`ptr` muss eine Klassendefinition sein, die aus der Windows-Verwaltung abgerufen wird. (Beachten Sie, dass das Erzeugen einer Instanz aus einer-Instanz unterstützt wird, aber die zurückgegebene-Instanz leer ist.) Anschließend verwenden Sie diese Klassendefinition, um neue Instanzen zu erstellen. Wenn Sie beabsichtigen, die Instanz in die Windows-Verwaltung zu schreiben, ist ein Rückruf der [putinstancewmi](putinstancewmi.md) -Funktion erforderlich.
 
-Das neue-Objekt, `ppNewClass` das in zurückgegeben wird, wird automatisch zu einer Unterklasse des aktuellen-Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, mit der Unterklassen (abgeleitete Klassen) erstellt werden können.
+Das neue-Objekt, das in `ppNewClass` zurückgegeben wird, wird automatisch zu einer Unterklasse des aktuellen-Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, mit der Unterklassen (abgeleitete Klassen) erstellt werden können.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

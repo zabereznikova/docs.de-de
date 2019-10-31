@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738756"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122874"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase-Methode
 Ruft die Basis Speicheradresse des angegebenen Bilds ab.  
@@ -38,18 +36,18 @@ HRESULT GetImageBase (
   
 ## <a name="parameters"></a>Parameter  
  `imagePath`  
- [in] Der Dateiname des Bilds, einschließlich des Pfads.  
+ in Der Dateiname des Bilds, einschließlich des Pfads.  
   
  `baseAddress`  
- [out] Ein Zeiger auf eine CLRDATA_ADDRESS, die Basisadresse des Bilds speichert.  
+ vorgenommen Ein Zeiger auf ein CLRDATA_ADDRESS, in dem die Basisadresse des Bilds gespeichert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Namen der Abbilddatei kann oder möglicherweise keinen Pfad aufweisen. Wenn kein Pfad angegeben ist, erfolgt für den gesamten Pfad übereinstimmenden; andernfalls Übereinstimmung nur auf den Dateinamen erfolgt.  
+ Der Bild Dateiname darf keinen Pfad aufweisen. Wenn ein Pfad angegeben ist, wird der entsprechende Vorgang für den gesamten Pfad ausgeführt. Andernfalls erfolgt die Übereinstimmung nur mit dem Dateinamen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

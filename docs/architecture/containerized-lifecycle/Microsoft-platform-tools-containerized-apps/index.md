@@ -2,12 +2,12 @@
 title: Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 description: Lernen Sie die Microsoft-Lösungen für die Unterstützung des Lebenszyklus von Docker-Anwendungen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094453"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 
@@ -43,7 +43,7 @@ Die Microsoft-Plattform und die Tools für containerisierte Docker-Anwendungen, 
 
   - **Azure-Portal** Wenn Sie Open Source-Orchestratoren verwenden, helfen Ihnen Azure Kubernetes Service (AKS), Service Fabric und andere Orchestratoren beim Einrichten und Verwalten ihrer Docker-Umgebungen. Wenn Sie Azure Service Fabric verwenden, ermöglicht Ihnen das Tool Service Fabric Explorer die Visualisierung und Konfiguration Ihres Clusters.
 
-  - **Docker-Tools** : Sie können Ihre Containeranwendungen mit vertrauten Tools verwalten. Es besteht keine Notwendigkeit, Ihre vorhandenen Docker-Verwaltungsverfahren zu ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl. Sie können auch andere Tools von Drittanbietern verwenden, um Ihre Docker-Anwendungen zu verwalten, z.B. Docker Datacenter oder sogar CLI-Tools von Docker. 
+  - **Docker-Tools** : Sie können Ihre Containeranwendungen mit vertrauten Tools verwalten. Es besteht keine Notwendigkeit, Ihre vorhandenen Docker-Verwaltungsverfahren zu ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl. Sie können auch andere Tools von Drittanbietern verwenden, um Ihre Docker-Anwendungen zu verwalten, z.B. Docker Datacenter oder sogar CLI-Tools von Docker.
 
     Selbst wenn Sie mit Linux-Befehlen vertraut sind, können Sie Ihre Containeranwendungen mithilfe von Microsoft Windows und PowerShell mit einer Eingabeaufforderung des Linux-Subsystems und den Produktclients (Docker, Kubernetes…) verwenden, die in dieser Linux-Subsystemfunktionalität ausgeführt werden. Sie erfahren mehr über die Verwendung dieser Tools unter dem Linux-Subsystem mithilfe Ihres bevorzugten Microsoft Windows-Betriebssystems im weiteren Verlauf dieses Handbuchs.
 

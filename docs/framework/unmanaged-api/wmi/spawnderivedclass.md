@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120178"
 ---
 # <a name="spawnderivedclass-function"></a>Spawnderivedclass-Funktion
 Erstellt ein neu abgeleitetes Klassenobjekt aus einem angegebenen Objekt.    
@@ -47,10 +45,10 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `lFlags`  
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `ppNewClass`  
-vorgenommen Empfängt den Zeiger auf das neue Klassen Definitions Objekt. Wenn ein Fehler auftritt, wird kein neues-Objekt zurückgegeben, `ppNewClass` und es bleibt unverändert. Der Wert darf nicht `null`sein.
+vorgenommen Empfängt den Zeiger auf das neue Klassen Definitions Objekt. Wenn ein Fehler auftritt, wird kein neues Objekt zurückgegeben, und `ppNewClass` bleibt unverändert. Der Wert kann nicht `null`werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -69,14 +67,14 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject:: spawnderivedclass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) -Methode.
 
-`ptr`muss eine Klassendefinition sein, die zur übergeordneten Klasse des erzeugten Objekts wird. Das zurückgegebene-Objekt wird zu einer Unterklasse des aktuellen-Objekts.
+`ptr` muss eine Klassendefinition sein, die zur übergeordneten Klasse des erzeugten Objekts wird. Das zurückgegebene-Objekt wird zu einer Unterklasse des aktuellen-Objekts.
 
-Das neue-Objekt, `ppNewClass` das in zurückgegeben wird, wird automatisch zu einer Unterklasse des aktuellen-Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, mit der Unterklassen (abgeleitete Klassen) erstellt werden können.
+Das neue-Objekt, das in `ppNewClass` zurückgegeben wird, wird automatisch zu einer Unterklasse des aktuellen-Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, mit der Unterklassen (abgeleitete Klassen) erstellt werden können.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

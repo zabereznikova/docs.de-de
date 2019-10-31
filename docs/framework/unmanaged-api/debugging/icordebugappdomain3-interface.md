@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3676cb32ceaf6f241672751f0feafbd3cb83e05
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b238a953fa5cd57c8b7af9a0643bfc36ee1032e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088849"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3-Schnittstelle
 Stellt Methoden zum Abrufen von Informationen über die verwalteten Darstellungen von Windows-Runtime Typen bereit, die derzeit in einer Anwendungsdomäne geladen sind. Diese Schnittstelle ist eine Erweiterung der ICorDebugAppDomain-Schnittstelle und der ICorDebugAppDomain2-Schnittstelle.  
@@ -30,23 +28,23 @@ Stellt Methoden zum Abrufen von Informationen über die verwalteten Darstellunge
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Ruft einen Enumerator für alle zwischengespeicherten Windows-Runtime Typen ab.|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Ruft einen Enumerator für zwischengespeicherte Windows-Runtime Typen in einer Anwendungsdomäne auf der Grundlage ihrer Schnittstellen Bezeichner ab.|  
+|[ICorDebugAppDomain3:: getcachedwinrttypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Ruft einen Enumerator für alle zwischengespeicherten Windows-Runtime Typen ab.|  
+|[ICorDebugAppDomain3:: getcachedwinrttypesforiids](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Ruft einen Enumerator für zwischengespeicherte Windows-Runtime Typen in einer Anwendungsdomäne auf der Grundlage ihrer Schnittstellen Bezeichner ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle soll von einem Debugger in Verbindung mit einem Funktions Auswertungs Aufrufe `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`von verwendet werden. Wenn die-Methode die von einem Windows-Runtime Server-Objekt unterstützten Schnittstellen Bezeichner abruft, verwendet der Debugger möglicherweise die in dieser Schnittstelle definierten Methoden, um Sie verwalteten Typen zuzuordnen, die diesen Schnittstellen entsprechen.  
+ Diese Schnittstelle soll von einem Debugger in Verbindung mit einem Funktions Auswertungs Aufruf`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`verwendet werden. Wenn die-Methode die von einem Windows-Runtime Server-Objekt unterstützten Schnittstellen Bezeichner abruft, verwendet der Debugger möglicherweise die in dieser Schnittstelle definierten Methoden, um Sie verwalteten Typen zuzuordnen, die diesen Schnittstellen entsprechen.  
   
- Um eine Instanz dieser Schnittstelle abzurufen, führen `QueryInterface` Sie auf einer Instanz der ICorDebugAppDomain-oder ICorDebugAppDomain2-Schnittstelle aus.  
+ Um eine Instanz dieser Schnittstelle abzurufen, führen Sie `QueryInterface` für eine Instanz der ICorDebugAppDomain-oder ICorDebugAppDomain2-Schnittstelle aus.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Windows-Runtime  
+ **Plattformen:** Windows-Runtime  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

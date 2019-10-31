@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141723"
 ---
 # <a name="qualifierset_next-function"></a>QualifierSet_Next-Funktion
 Ruft den nächsten Qualifizierer in einer Enumeration ab, die durch einen Aufruf der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)-Funktion gestartet wurde.   
@@ -50,16 +48,16 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [iwbemqualifierset](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) -Instanz.
 
 `lFlags`   
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `pstrName`   
-vorgenommen Der Name des Qualifizierers. Wenn `null`der Wert ist, wird dieser Parameter ignoriert `pstrName` ; andernfalls sollte nicht auf einen `BSTR` gültigen oder ein Speicherfehler hindeuten. Wenn der Wert nicht NULL ist, ordnet die Funktion immer `BSTR` einen neuen zu `WBEM_S_NO_ERROR`, wenn Sie zurückgegeben wird.
+vorgenommen Der Name des Qualifizierers. Wenn `null`, wird dieser Parameter ignoriert. Andernfalls sollten `pstrName` nicht auf einen gültigen `BSTR` zeigen, oder es kommt zu einem Speicherfehler. Wenn der Wert nicht NULL ist, ordnet die Funktion immer eine neue `BSTR` zu, wenn Sie `WBEM_S_NO_ERROR`zurückgibt.
 
 `pVal`   
-vorgenommen Bei Erfolg der Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, `VARIANT` wird die, `pVal` auf die von verwiesen wird, nicht geändert. Wenn dieser Parameter ist `null`, wird der-Parameter ignoriert.
+vorgenommen Bei Erfolg der Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, wird die `VARIANT`, auf die `pVal` verweist, nicht geändert. Wenn dieser Parameter `null`ist, wird der-Parameter ignoriert.
 
 `plFlavor`   
-vorgenommen Ein Zeiger auf einen Long-Wert, der die qualifiziererkonfiguration empfängt. Wenn keine Informationen zur Konfiguration erwünscht sind, kann dieser Parameter `null`sein. 
+vorgenommen Ein Zeiger auf einen Long-Wert, der die qualifiziererkonfiguration empfängt. Wenn keine Informationen zur Konfiguration erwünscht sind, kann dieser Parameter `null`werden. 
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -77,14 +75,14 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 Diese Funktion umschließt einen aufzurufenden Befehl der [iwbemqualifierset:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) -Methode.
 
-Sie müssen die `QualifierSet_Next` Funktion wiederholt aufzählen, um alle Qualifizierer aufzulisten `WBEM_S_NO_MORE_DATA`, bis die Funktion zurückgibt. Um die Enumeration frühzeitig zu beenden, nennen Sie die [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) -Funktion.
+Sie können die `QualifierSet_Next`-Funktion wiederholt aufzählen, um alle Qualifizierer aufzulisten, bis die Funktion `WBEM_S_NO_MORE_DATA`zurückgibt. Um die Enumeration frühzeitig zu beenden, nennen Sie die [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) -Funktion.
 
 Die Reihenfolge der während der-Enumeration zurückgegebenen Qualifizierer ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c6ea58eca5ac635893a24b57ade261e04a69721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798688"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130434"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi-Funktion
 
@@ -53,7 +51,7 @@ HRESULT ExecQueryWmi (
 in Eine Zeichenfolge mit der gültigen von der Windows-Verwaltung unterstützten Abfragesprache. Der Wert muss "WQL" und das Akronym für WMI-Abfragesprache sein.
 
 `strQuery`\
-in Der Text der Abfrage. Dieser Parameter darf nicht `null`sein.
+in Der Text der Abfrage. Dieser Parameter kann nicht `null`werden.
 
 `lFlags`\
 in Eine Kombination von Flags, die sich auf das Verhalten dieser Funktion auswirken. Die folgenden Werte sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
@@ -64,14 +62,14 @@ in Eine Kombination von Flags, die sich auf das Verhalten dieser Funktion auswir
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das-Flag verursacht einen semisynchronen-Rückruf. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die-Funktion gibt einen vorwärts-Enumerator zurück. In der Regel sind vorwärts-Enumeratoren schneller und verbrauchen weniger Arbeitsspeicher als herkömmliche Enumeratoren, aber Sie erlauben keine Aufrufe von [Klonen](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI behält Zeiger auf Objekte in der-Enumeration bei, bis Sie freigegeben werden. |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Stellt sicher, dass alle zurückgegebenen Objekte über genügend Informationen verfügen, damit Systemeigenschaften, z. b. **__PATH**, **__RELPATH**und **__SERVER**, nicht `null`sind. |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Stellt sicher, dass alle zurückgegebenen Objekte über genügend Informationen verfügen, damit Systemeigenschaften, z. b. **__PATH**, **__RELPATH**und **__SERVER**, nicht `null`werden. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Dieses Flag wird für die Prototyperstellung verwendet. Die Abfrage wird nicht ausgeführt, sondern es wird ein Objekt zurückgegeben, das wie ein typisches Ergebnis Objekt aussieht. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Bewirkt, dass der direkte Zugriff auf den Anbieter für die angegebene Klasse ohne Berücksichtigung der zugehörigen übergeordneten Klasse oder Unterklassen verursacht wird. |
 
-Die empfohlenen Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_ONLY` , um eine optimale Leistung zu erzielen.
+Die empfohlenen Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_ONLY`, um eine optimale Leistung zu erzielen.
 
 `pCtx`\
-in Normalerweise ist `null`dieser Wert. Andernfalls handelt es sich um einen Zeiger auf eine [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, der die angeforderten Klassen bereitstellt.
+in In der Regel ist dieser Wert `null`. Andernfalls handelt es sich um einen Zeiger auf eine [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, der die angeforderten Klassen bereitstellt.
 
 `ppEnum`\
 vorgenommen Wenn kein Fehler auftritt, empfängt den Zeiger auf den Enumerator, der dem Aufrufer das Abrufen der Instanzen im Resultset der Abfrage ermöglicht. Die Abfrage kann ein Resultset mit 0 (null) Instanzen aufweisen. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
@@ -109,24 +107,24 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI wurde wahrscheinlich angehalten und neu gestartet. Ruft [connectserverwmi](connectserverwmi.md) erneut auf. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Fehler beim Remote Prozedur Aufruf (RPC)-Link zwischen dem aktuellen Prozess und WMI. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | Die Abfrage gibt eine Klasse an, die nicht vorhanden ist. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 angezeigt | Die Abfrage gibt eine Klasse an, die nicht vorhanden ist. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen aufzurufenden Befehl der [IWbemServices:: ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) -Methode.
 
-Diese Funktion verarbeitet die im- `strQuery` Parameter angegebene Abfrage und erstellt einen Enumerator, über den der Aufrufer auf die Abfrageergebnisse zugreifen kann. Der Enumerator ist ein Zeiger auf eine [ienumwbemclassobject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) -Schnittstelle. die Abfrageergebnisse sind Instanzen von Klassen Objekten, die über die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Schnittstelle verfügbar gemacht werden.
+Diese Funktion verarbeitet die im `strQuery`-Parameter angegebene Abfrage und erstellt einen Enumerator, über den der Aufrufer auf die Abfrageergebnisse zugreifen kann. Der Enumerator ist ein Zeiger auf eine [ienumwbemclassobject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) -Schnittstelle. die Abfrageergebnisse sind Instanzen von Klassen Objekten, die über die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Schnittstelle verfügbar gemacht werden.
 
-Die Anzahl der `AND` Schlüsselwörter und, die `OR` in WQL-Abfragen verwendet werden können, ist begrenzt. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, `WBEM_E_QUOTA_VIOLATION` kann dazu führen, dass WMI den Fehlercode ( `HRESULT` oder 0x8004106c) als-Wert zurückgibt. Das Limit von WQL-Schlüsselwörtern hängt von der Komplexität der Abfrage ab.
+Es gibt Grenzwerte für die Anzahl der `AND`-und `OR` Schlüsselwörter, die in WQL-Abfragen verwendet werden können. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den `WBEM_E_QUOTA_VIOLATION` Fehlercode (oder 0x8004106c) als `HRESULT` Wert zurückgibt. Das Limit von WQL-Schlüsselwörtern hängt von der Komplexität der Abfrage ab.
 
 Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, indem Sie die [GetErrorInfo](geterrorinfo.md) -Funktion aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

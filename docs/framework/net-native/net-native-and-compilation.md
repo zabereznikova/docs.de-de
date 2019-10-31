@@ -2,20 +2,18 @@
 title: .NET Native und Kompilierung
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128244"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
 
 Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in systemeigenen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von nativem Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.
 
-## <a name="net-native-generating-native-binaries"></a>.Net Native: Native Binärdateien werden generiert
+## <a name="net-native-generating-native-binaries"></a>.NET Native: Generieren von systemeigenen Binärdateien
 
 Eine Anwendung, die auf das .NET Framework ausgerichtet ist und nicht mithilfe der .NET Native-Toolkette kompiliert wurde, besteht aus Ihrer Anwendungsassembly, die Folgendes umfasst:
 
@@ -109,4 +107,4 @@ Der [Native Image Generator](../tools/ngen-exe-native-image-generator.md) (NGEN)
 - [Metadaten und selbstbeschreibende Komponenten](../../standard/metadata-and-self-describing-components.md)
 - [In .net Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Reflection and .NET Native (Reflektion und .NET Native)](reflection-and-net-native.md)
-- [.NET Native Allgemeine Problembehandlung](net-native-general-troubleshooting.md)
+- [.NET Native General Troubleshooting (Allgemeine Problembehandlung für .NET Native)](net-native-general-troubleshooting.md)

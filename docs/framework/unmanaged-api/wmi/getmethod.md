@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9cc185bf8cccb8ed3c24e28954afd86464602d7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48986f5ff1cbbb45840ec1a059aa86711848d717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798563"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102588"
 ---
 # <a name="getmethod-function"></a>GetMethod-Funktion
 
@@ -51,10 +49,10 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`\
-in Der Methodenname. Dieser Parameter darf nicht `null` sein und muss auf einen gültigen `LPCWSTR`verweisen.
+in Der Methodenname. Dieser Parameter kann nicht `null` werden und muss auf einen gültigen `LPCWSTR`zeigen.
 
 `lFlags`\
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `ppInSignature`\
 vorgenommen Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die die in den Parametern der Methode beschreibt. Dieser Parameter wird ignoriert, wenn er auf `null`festgelegt ist.
@@ -68,7 +66,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft wurde nicht gefunden. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 angezeigt | Die angegebene Eigenschaft wurde nicht gefunden. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
@@ -76,15 +74,15 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) -Methode.
 
-Die Windows-Verwaltung kann den [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) - `null` Zeiger auf festlegen, wenn die Methode über keine in-Parameter verfügt.
+Die Windows-Verwaltung kann den [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Zeiger auf `null` festlegen, wenn die Methode über keine in-Parameter verfügt.
 
-In `ppInSignature` `IWbemClassObject` und `ppOutSignature` beschreiben in und out-Parameter bzw. als Eigenschaften in einer Instanz der System Klasse [_Parameters](/windows/desktop/WmiSdk/--parameters). Die Eigenschaften in `ppInSignature` heißen `Param` *n*, wobei *n* die Position des Parameters in der Methoden Signatur (z `Param1`. b., `Param2`usw.) ist. Die Eigenschaften in `ppOutSignature` werden auch *n*genannt `ReturnValue` `Param`, und der Rückgabewert heißt. Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject:: GetMethod-Methode](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+In `ppInSignature` und `ppOutSignature` die in-bzw. out-Parameter als Eigenschaften in einer `IWbemClassObject` Instanz der System Klasse [_Parameters](/windows/desktop/WmiSdk/--parameters)beschrieben. Die Eigenschaften in `ppInSignature` werden `Param`*n*benannt, wobei *n* die Position des Parameters in der Methoden Signatur (z. b. `Param1`, `Param2`usw.) ist. Die Eigenschaften in `ppOutSignature` werden ebenfalls `Param`*n*benannt, und der Rückgabewert hat den Namen `ReturnValue`. Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject:: GetMethod-Methode](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
