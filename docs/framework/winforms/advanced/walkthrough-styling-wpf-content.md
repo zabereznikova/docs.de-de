@@ -9,24 +9,24 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8b9e2c5c05f1a4b263890c2d8ca8474abe07d836
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658485"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197413"
 ---
-# <a name="walkthrough-style-wpf-content"></a>Exemplarische Vorgehensweise: Stil von WPF-Inhalt
+# <a name="walkthrough-style-wpf-content"></a>Exemplarische Vorgehensweise: Formatieren von WPF-Inhalten
 
 In diesem Artikel erfahren Sie, wie Sie Formatierungen auf ein WPF-Steuerelement (Windows Presentation Foundation) anwenden, das in einem Windows Form gehostet wird.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 ## <a name="create-the-project"></a>Erstellen eines Projekts
 
-Öffnen Sie Visual Studio, und erstellen Sie ein neues Windows Forms-Anwendungsprojekt C# in `StylingWpfContent`Visual Basic oder Visual mit dem Namen.
+Öffnen Sie Visual Studio, und erstellen Sie ein neues Windows Forms-Anwendungsprojekt C# in Visual Basic oder Visual mit dem Namen `StylingWpfContent`.
 
 > [!NOTE]
 > Beim Hosten von WPF-Inhalt werden nur C#- und Visual Basic-Projekte unterstützt.
@@ -35,15 +35,15 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 Nachdem Sie dem Projekt ein WPF-Steuerelement hinzugefügt haben, können Sie dieses in einem <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement hosten.
 
-1. Fügen Sie der Projektmappe ein neues WPF-<xref:System.Windows.Controls.UserControl>-Projekt hinzu. Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines neuen WPF-Inhalts auf Windows Forms zur](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)Entwurfszeit.
+1. Fügen Sie der Projektmappe ein neues WPF-<xref:System.Windows.Controls.UserControl>-Projekt hinzu. Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Erstellen eines neuen WPF-Inhalts auf Windows Forms zur Entwurfszeit](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
 
 2. Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.
 
-3. Legen Sie im Fenster **Eigenschaften** den Wert <xref:System.Windows.FrameworkElement.Width%2A> der-Eigenschaft und der- <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaft auf 200 fest.
+3. Legen Sie im Fenster **Eigenschaften** den Wert der Eigenschaften <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> auf **200**fest.
 
-4. Fügen Sie <xref:System.Windows.Controls.Button?displayProperty=nameWithType> ein <xref:System.Windows.Controls.UserControl> -Steuerelement hinzu, und <xref:System.Windows.Controls.ContentControl.Content%2A> legen Sie den Wert der-Eigenschaft auf **Cancel**fest.
+4. Fügen Sie der <xref:System.Windows.Controls.UserControl> ein <xref:System.Windows.Controls.Button?displayProperty=nameWithType>-Steuerelement hinzu, und legen Sie den Wert der Eigenschaft <xref:System.Windows.Controls.ContentControl.Content%2A> auf **Abbrechen**fest.
 
-5. Fügen Sie ein <xref:System.Windows.Controls.Button?displayProperty=nameWithType> zweites <xref:System.Windows.Controls.UserControl> -Steuerelement hinzu, und <xref:System.Windows.Controls.ContentControl.Content%2A> legen Sie den Wert der-Eigenschaft auf **OK**fest.
+5. Fügen Sie der <xref:System.Windows.Controls.UserControl> ein zweites <xref:System.Windows.Controls.Button?displayProperty=nameWithType> Steuerelement hinzu, und legen Sie den Wert der Eigenschaft <xref:System.Windows.Controls.ContentControl.Content%2A> auf **OK**fest.
 
 6. Erstellen Sie das Projekt.
 
@@ -53,13 +53,13 @@ Sie können verschiedene Formatvorlagen auf ein WPF-Steuerelement anwenden, um s
 
 1. Öffnen Sie `Form1` im Windows Forms-Designer.
 
-1. DoppelklickenSie `UserControl1` in der Toolbox auf, um eine Instanz von `UserControl1` auf dem Formular zu erstellen.
+1. Doppelklicken Sie in der **Toolbox**auf `UserControl1`, um eine Instanz von `UserControl1` im Formular zu erstellen.
 
    Eine Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.
 
 1. Klicken Sie im smarttagpanel für `elementHost1`in der Dropdown Liste auf **gehosteten Inhalt bearbeiten** .
 
-   `UserControl1`wird im WPF-Designer geöffnet.
+   `UserControl1` wird im WPF-Designer geöffnet.
 
 1. Fügen Sie den folgenden XAML-Code in der XAML-Ansicht hinter dem `<UserControl>`-Starttag ein. Dieser XAML-Code erstellt einen Farbverlauf mit kontrastreichem Farbverlaufsrand. Wenn das Steuerelement angeklickt wird, werden die Farbverläufe geändert, um den Eindruck einer gedrückten Schaltfläche zu generieren. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../wpf/controls/styling-and-templating.md).
 
@@ -111,7 +111,7 @@ Sie können verschiedene Formatvorlagen auf ein WPF-Steuerelement anwenden, um s
    </UserControl.Resources>
    ```
 
-1. Wenden Sie den im vorherigen Schritt definierten `<Button>` StilaufdieSchaltflächeAbbrechenan,indemSiedenfolgendenXAML-Codeim-TagderSchaltflächeAbbrechen`SimpleButton` einfügen.
+1. Wenden Sie den im vorherigen Schritt definierten `SimpleButton` Stil auf die Schaltfläche Abbrechen an, indem Sie den folgenden XAML-Code in das `<Button>`-Tag der Schaltfläche **Abbrechen** einfügen.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -140,6 +140,6 @@ Sie können verschiedene Formatvorlagen auf ein WPF-Steuerelement anwenden, um s
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migration und Interoperabilität](../../wpf/advanced/migration-and-interoperability.md)
 - [Verwenden von WPF-Steuerelementen](using-wpf-controls.md)
-- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Übersicht über XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Erstellen von Formaten und Vorlagen](../../wpf/controls/styling-and-templating.md)
