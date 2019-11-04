@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107057"
 ---
 # <a name="program-with-assemblies"></a>Programmieren mit Assemblys
 Assemblys sind die Bausteine von .NET Framework; sie bilden das Fundament für Bereitstellung, Versionskontrolle, Wiederverwendung, Gültigkeitsbereiche für die Aktivierung und Sicherheitsberechtigungen. Eine Assembly stellt der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden.  

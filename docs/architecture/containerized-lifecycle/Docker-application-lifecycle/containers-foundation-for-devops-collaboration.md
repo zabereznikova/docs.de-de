@@ -2,12 +2,12 @@
 title: Container als Grundlage für die Zusammenarbeit mit DevOps
 description: Verstehen der Schlüsselrolle von Containern bei der Optimierung von DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094498"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die Zusammenarbeit mit DevOps
 
@@ -51,7 +51,7 @@ Durch diese Herausforderungen entstehen neue Anforderungen für den Einsatz von 
 
 - Wie können wir Open Source-Tools/-Plattformen für Container in Microsoft Azure verwenden?
 
-Wenn Sie alle diese Fragen beantworten, sind Sie besser darauf vorbereitet, Ihre Anwendungen (vorhandene oder neue) in Docker-Container zu verschieben. 
+Wenn Sie alle diese Fragen beantworten, sind Sie besser darauf vorbereitet, Ihre Anwendungen (vorhandene oder neue) in Docker-Container zu verschieben.
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Einführung in eine allgemeine Anwendungslebenszyklus-Workflow mit Docker
 

@@ -1,18 +1,16 @@
 ---
 title: „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017
 description: Erfahren Sie, wie Sie mithilfe von Visual Studio 2017 eine einfache .NET Core-Konsolenanwendung in Visual Basic erstellen.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100874"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit dem .NET Core SDK in Visual Studio 2017
 

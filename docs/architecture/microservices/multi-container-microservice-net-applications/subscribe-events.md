@@ -2,12 +2,12 @@
 title: Abonnieren von Ereignissen
 description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039783"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035635"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -105,7 +105,7 @@ Wie bereits im Abschnitt zur Architektur erwähnt, können Sie dieses Problem au
 
 - Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Sie können das [Muster „Postausgang“](http://gistlabs.com/2014/05/the-outbox/) verwenden. Dabei handelt es sich um eine Transaktionstabelle, die die Integrationsereignisse speichert (und so die lokale Transaktion erweitert).
+- Sie können das [Muster „Postausgang“](https://www.kamilgrzybek.com/design/the-outbox-pattern/) verwenden. Dabei handelt es sich um eine Transaktionstabelle, die die Integrationsereignisse speichert (und so die lokale Transaktion erweitert).
 
 Für dieses Szenario ist das vollständige Muster „Ereignissourcing“ (ES) einer der besten, wenn nicht *der* beste Ansatz. Es gibt jedoch viele Anwendungsszenarios, in denen das Implementieren des vollständigen ES-Systems nicht möglich ist. ES bedeutet, dass nur Domänenereignisse und keine aktuellen Statusdatendaten in Ihrer Transaktionsdatenbank gespeichert werden. Wenn nur Domänenereignisse gespeichert werden, kann dies viele Vorteile haben, wie z.B. die Verfügbarkeit des Systemverlaufs, wodurch Sie den Status Ihres Systems zu jedem zurückliegenden Zeitpunkt nachverfolgen können. Das Implementieren eines vollständigen ES-Systems erfordert jedoch das Neustrukturieren eines Großteils Ihres Systems und geht mit vielen anderen Komplexitäten und Anforderungen einher. Beispielsweise sollten Sie dann eine Datenbank speziell zum Ereignissourcing verwenden, wie z.B. [Event Store](https://eventstore.org/) oder dokumentorientierte Datenbanken wie Azure Cosmos DB, MongoDB, Cassandra, CouchDB oder RavenDB. ES ist eine sinnvolle Herangehensweise an dieses Problem, aber nicht die einfachste Lösung, wenn Sie sich noch nicht mit Ereignissourcing auskennen.
 
@@ -326,7 +326,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     <https://go.particular.net/eShopOnContainers>
 
 - **Event Driven Messaging (Ereignisgesteuertes Messaging)**  \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Jimmy Bogard. Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>

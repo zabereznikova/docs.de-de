@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894948"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196372"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -56,7 +56,7 @@ Fragen zu diesem Dokument können Sie im GitHub-Thema [Transport Layer Security 
 
 Für ASP.NET-Anwendungen überprüfen Sie das Element `<system.web><httpRuntime targetFramework>` von _web.config_, um sicherzustellen, dass Sie die beabsichtigte Version von .NET Framework verwenden.
 
-Für Windows Forms und andere Anwendungen lesen Sie [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Für Windows Forms und andere Anwendungen lesen Sie [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 Verwenden Sie die folgenden Abschnitte, um sicherzustellen, dass Sie keine bestimmte TLS- oder SSL-Version verwenden.
 

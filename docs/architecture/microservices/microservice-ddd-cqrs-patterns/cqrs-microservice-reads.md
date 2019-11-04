@@ -2,12 +2,12 @@
 title: Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung der Abfrageseite von CQRS im Microservice für Bestellungen in eShopOnContainers mit Dapper
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094063"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 
@@ -35,7 +35,7 @@ Die zurückgegebenen Daten (also die ViewModels) können das Ergebnis einer Verk
 
 Die ViewModels können als statische Typen in Klassen definiert werden. Alternativ lassen sie sich auch auf der Grundlage bereits durchgeführter Abfragen dynamisch erstellen, was im Microservice für Bestellungen implementiert wurde. Hierdurch wird die Entwicklungsagilität gefördert.
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Verwenden von Dapper als Micro-ORM zum Ausführen von Abfragen 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Verwenden von Dapper als Micro-ORM zum Ausführen von Abfragen
 
 Für Abfragen kann ein beliebiges Micro-ORM, Entity Framework Core oder sogar einfaches „ADO.NET für Abfragen“ verwendet werden. In der Beispielanwendung wurde Dapper für den Microservice für Bestellungen in eShopOnContainers ausgewählt, da dieses Tool ein gutes Beispiel für einen bekannten Micro-ORM ist. Da es sich um ein sehr schlankes Framework handelt, lassen sich mit diesen SQL-Abfragen leistungseffizient ausführen. Mit Dapper können Sie eine SQL-Abfrage schreiben, die auf mehrere Tabellen zugreifen und diese verknüpfen kann.
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 

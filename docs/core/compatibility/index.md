@@ -1,15 +1,13 @@
 ---
 title: Auswerten von Breaking Changes – .NET Core
 description: Erfahren Sie mehr darüber, wie .NET Core versucht, die Kompatibilität für Entwickler in allen .NET-Versionen aufrechtzuerhalten.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "67736556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089351"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Auswerten von Breaking Changes in .NET Core
 
@@ -26,7 +24,7 @@ Dieser Artikel beschreibt die Kategorien von Kompatibilitätsänderungen (oder B
 > [!NOTE]
 > Eine Definition von Kompatibilitätskategorien, wie z.B. Binärkompatibilität und Abwärtskompatibilität, finden Sie unter [Breaking Change-Kategorien](categories.md).
 
-In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET Core-APIs und deren Auswirkungen auf die Anwendungskompatibilität beschrieben. Das Symbol ✔️ zeigt an, dass eine bestimmte Art von Änderung erlaubt ist, ❌ zeigt an, dass sie nicht erlaubt ist, und ❓ zeigt an, dass eine Änderung möglicherweise zulässig ist. Bei Änderungen in dieser letzten Kategorie muss beurteilt und bewertet werden, wie vorhersehbar, offensichtlich und konsistent das bisherige Verhalten war.
+In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET Core-APIs und deren Auswirkungen auf die Anwendungskompatibilität beschrieben. Das Symbol ✔️ gibt an, dass eine bestimmte Art von Änderung zulässig ist. ❌ gibt an, dass sie nicht zulässig ist, und ❓ zeigt an, dass eine Änderung möglicherweise zulässig ist. Bei Änderungen in dieser letzten Kategorie muss beurteilt und bewertet werden, wie vorhersehbar, offensichtlich und konsistent das bisherige Verhalten war.
 
 > [!NOTE]
 > Bibliotheksentwickler können diese Kriterien nicht nur als Leitfaden für die Bewertung von Änderungen an .NET Core-Bibliotheken verwenden, sondern auch für die Bewertung von Änderungen an ihren Bibliotheken, die auf mehrere .NET-Implementierungen und -Versionen ausgerichtet sind.
@@ -79,13 +77,13 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Es gibt eine Ausnahme von der Regel zur Entfernung von Schnittstellen: Sie können die Implementierung einer Schnittstelle hinzufügen, die aus der entfernten Schnittstelle abgeleitet ist. Sie können beispielsweise <xref:System.IDisposable> entfernen, wenn der Typ oder die Schnittstelle nun <xref:System.ComponentModel.IComponent> implementiert, wodurch <xref:System.IDisposable> implementiert wird.
 
-- **❌ Ändern des Typs `readonly struct` in einen Typ [struct](../../csharp/language-reference/keywords/struct.md)**
+- **❌Ändern eines `readonly struct`-Typs in einen [struct](../../csharp/language-reference/keywords/struct.md)-Typ**
 
   Beachten Sie, dass ein `struct`-Typ nicht in einen `readonly struct`-Typ geändert werden darf.
 
-- **✔️ Ändern des Typs [struct](../../csharp/language-reference/keywords/struct.md) in einen Typ`ref struct` und umgekehrt**
+- **❌Ändern eines [struct](../../csharp/language-reference/keywords/struct.md)-Typs in einen `ref struct`-Typ (und umgekehrt)**
 
-- **✔️ Reduzieren der Sichtbarkeit eines Typs**
+- **❌ Reduzieren der Sichtbarkeit eines Typs**
 
    Die Sichtbarkeit eines Typs darf jedoch erhöht werden.
 
@@ -135,7 +133,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **❌ Hinzufügen, Entfernen oder Ändern der Reihenfolge von Parametern**
 
-- **❌ Hinzufügen oder Entfernen des Schlüsselworts [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) oder [ref](../../csharp/language-reference/keywords/ref.md) zu oder aus einem Parameter**
+- **❌ Hinzufügen oder Entfernen der Schlüsselwörter [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) oder [ref](../../csharp/language-reference/keywords/ref.md) zu oder aus einem Parameter**
 
 - **❌ Umbenennen eines Parameters (einschließlich der Änderung der Groß-/Kleinbuchschreibung)**
 
@@ -147,7 +145,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **❌ Wechseln von einem `ref`- zu einem `ref readonly`-Rückgabewert**
 
-- **❌️ Wechseln von einem `ref readonly`- zu einem `ref`-Rückgabewert bei einer virtuellen Methoden oder Schnittstelle**
+- **❌ Wechseln von einem `ref readonly`- zu einem `ref`-Rückgabewert bei einer virtuellen Methode oder Schnittstelle**
 
 - **❌ Hinzufügen oder Entfernen von [abstract](../../csharp/language-reference/keywords/abstract.md) zu oder aus einem Member**
 
@@ -160,7 +158,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
   
   Aus einer Methode eine virtuelle Methode zu machen bedeutet, dass der Consumercode sie oft nicht virtuell aufruft.
 
-- **❌ Hinzufügen des Schlüsselworts [virtual](../../csharp/language-reference/keywords/virtual.md) zu einem Member**
+- **❌ Hinzufügen des Schlüsselworts[ virtual](../../csharp/language-reference/keywords/virtual.md) zu einem Member**
 
 - **❌ Umwandeln eines virtuellen Members in einen abstrakten Member**
 
@@ -176,7 +174,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **❌ Hinzufügen eines Konstruktors zu einer Klasse, die bisher keine Konstruktoren hatte, ohne den parameterlosen Konstruktor hinzuzufügen**
 
-- **❌️ Hinzufügen von [readonly](../../csharp/language-reference/keywords/readonly.md) zu einem Feld**
+- **❌ Hinzufügen von [readonly](../../csharp/language-reference/keywords/readonly.md) zu einem Feld**
 
 - **❌ Reduzieren der Sichtbarkeit eines Members**
 
@@ -266,7 +264,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **✔️ Ändern des Werts eines Attributs, das *nicht* überwachbar ist**
 
-- **❌ Ändern des Werts eines Attributs, das überwachbar *ist***
+- **❌ Ändern des Werts eines Attributs, das *überwachbar* ist**
 
 - **❓ Entfernen eines Attributs**
 
@@ -276,7 +274,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **✔️ Unterstützen eines Vorgangs auf einer Plattform, der bisher nicht unterstützt wurde**
 
-- **❌ Kein Unterstützung oder das Erfordern eines bestimmten Service Packs für einen Vorgang, der zuvor auf einer Plattform unterstützt wurde**
+- **❌ Keine Unterstützung oder das Erfordern eines bestimmten Service Packs für einen Vorgang, der zuvor auf einer Plattform unterstützt wurde**
 
 ## <a name="internal-implementation-changes"></a>Änderungen an der internen Implementierung
 
@@ -302,7 +300,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **✔️ Hinzufügen von [params](../../csharp/language-reference/keywords/params.md) zu einem Parameter**
 
-- **✔️ Ändern einer [Struktur](../../csharp/language-reference/keywords/struct.md) in eine [Klasse](../../csharp/language-reference/keywords/class.md) und umgekehrt**
+- **❌ Ändern einer [Struktur](../../csharp/language-reference/keywords/struct.md) in eine [Klasse](../../csharp/language-reference/keywords/class.md) und umgekehrt**
 
 - **❌ Hinzufügen des Schlüsselworts [checked](../../csharp/language-reference/keywords/virtual.md) zu einem Codeblock**
 
@@ -318,4 +316,4 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **❌ Ändern, wie oft bestimmte Ereignisse aufgerufen werden**
 
-- **❌ Hinzufügen des <xref:System.FlagsAttribute> zu einem Enumerationstyp**
+- **❌ Hinzufügen von <xref:System.FlagsAttribute> zu einem Enumerationstyp**

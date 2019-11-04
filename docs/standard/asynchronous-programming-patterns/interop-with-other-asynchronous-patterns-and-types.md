@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457348"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123981"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilität mit anderen asynchronen Mustern und Typen
 Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt, das auch als [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)- oder `Begin/End` -Muster bekannt ist.  Mit .NET Framework 2.0 wurde das [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)hinzugefügt.  Ab .NET Framework 4 löst das [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) APM und EAP ab. Es bietet aber die Möglichkeit, leicht Migrationsroutinen aus früheren Mustern zu erstellen.  

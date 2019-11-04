@@ -20,14 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121702"
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effiziente Methode zur Verarbeitung von Text dar. Durch die umfangreiche Notation regulärer Ausdrücke für den Mustervergleich können folgende Tasks ausgeführt werden: schnelle Analyse großer Textmengen zur Suche nach speziellen Zeichenmustern; Validieren von Text, um sicherzustellen, dass er einem vordefinierten Muster entspricht (z. B. eine E-Mail-Adresse); Extrahieren, Bearbeiten, Ersetzen oder Löschen von Textzeichenfolgen; Hinzufügen der extrahierten Zeichenfolgen zu einer Auflistung, um einen Bericht zu erstellen. Für viele Anwendungen, die mit Zeichenfolgen arbeiten oder große Textblöcke analysieren, sind reguläre Ausdrücke ein unverzichtbares Tool.  

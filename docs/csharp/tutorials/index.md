@@ -2,18 +2,20 @@
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557166"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417110"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
 Willkommen bei den C#-Tutorials. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können. In späteren Tutorials und in weiterführenden Tutorials wird gezeigt, wie Sie die .NET-Entwicklungstools nutzen können, um C#-Programme auf Ihrem Computer zu erstellen.
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Einführung in interaktiven C#-Tutorials
+
+Wenn Sie Ihre Erkundung im Videoformat beginnen möchten, hält die [C# 101-Videoreihe](https://aka.ms/dotnet3-csharp) eine Einführung in C# für Sie bereit. Sie erfahren alles über die Konzepte, die Sie in diesen Tutorials kennenlernen können.
 
 In der ersten Lektion werden C#-Konzepte anhand kleiner Codeausschnitte erläutert. Sie lernen die Grundlagen der C#-Syntax kennen und wie Sie mit Datentypen wie Zeichenfolgen, Zahlen und booleschen Werten arbeiten. Komplett interaktiv, und Ihr Code ist innerhalb weniger Minuten geschrieben und zur Ausführung bereit. Diese erste Lektionen setzen keine Vorkenntnisse in der Programmierung oder C#-Sprache voraus.
 

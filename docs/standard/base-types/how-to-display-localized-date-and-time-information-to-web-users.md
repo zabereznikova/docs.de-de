@@ -13,14 +13,12 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138734"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Vorgehensweise: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  

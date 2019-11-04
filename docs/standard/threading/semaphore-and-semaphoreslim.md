@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968426"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127587"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar. Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.  

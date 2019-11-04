@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 670cdb369920663ffa62e224bdd5aa495fc7e622
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124306"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementieren des aufgabenbasierten asynchronen Entwurfsmusters
 Sie können das aufgabenbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP) auf drei Arten implementieren: mit C# und den Visual Basic-Compilern in Visual Studio, manuell oder mit einer Kombination von Compilermethoden und manuellen Methoden. In den folgenden Abschnitten wird jede dieser Methoden ausführlich erörtert. Mit dem TAP-Muster können sowohl rechnergebundene als auch E/A-gebundene asynchrone Vorgänge implementiert werden. Im Abschnitt [Workloads](#workloads) werden die einzelnen Vorgangstypen erläutert.

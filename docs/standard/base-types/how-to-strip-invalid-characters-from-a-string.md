@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Entfernen von ungültigen Zeichen aus einer Zeichenfolge'
+title: 'Vorgehensweise: Entfernen von ungültigen Zeichen aus einer Zeichenfolge'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,16 +16,14 @@ helpviewer_keywords:
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cc90e6609f9335b7e2f08271e5540b182901e8c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127650"
 ---
-# <a name="how-to-strip-invalid-characters-from-a-string"></a>Gewusst wie: Entfernen von ungültigen Zeichen aus einer Zeichenfolge
+# <a name="how-to-strip-invalid-characters-from-a-string"></a>Vorgehensweise: Entfernen von ungültigen Zeichen aus einer Zeichenfolge
 Im folgenden Beispiel wird die statische <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode verwendet, um ungültige Zeichen aus einer Zeichenfolge zu entfernen.  
   
 ## <a name="example"></a>Beispiel  

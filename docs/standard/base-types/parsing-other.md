@@ -13,14 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127575"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analysieren anderer Zeichenfolgen in .NET
 Neben den numerischen und den <xref:System.DateTime>-Zeichenfolgen können Sie auch Zeichenfolgen in Datentypen analysieren, die die Typen <xref:System.Char>, <xref:System.Boolean> und <xref:System.Enum> darstellen.  

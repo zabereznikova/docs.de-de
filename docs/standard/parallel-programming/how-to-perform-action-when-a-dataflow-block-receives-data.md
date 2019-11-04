@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124212"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Vorgehensweise: Ausführen einer Aktion, wenn ein Datenflussblock Daten empfängt
 *Ausführungsdatenflussblock*-Typen rufen einen vom Benutzer bereitgestellten Delegaten auf, wenn sie Daten empfangen. Die Klassen <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sind Typen von Ausführungsdatenflussblöcken. Sie können das Schlüsselwort `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> oder einen Lambdaausdruck verwenden, wenn Sie eine Arbeitsfunktion für einen Ausführungsdatenflussblock bereitstellen. In diesem Dokument wird beschrieben, wie <xref:System.Func%602> und Lambdaausdrücke verwendet werden, um Aktionen in Ausführungsblöcken auszuführen.  

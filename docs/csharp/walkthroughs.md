@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168969"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195486"
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -72,4 +72,4 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](./programming-guide/index.md)
-- [Visual Studio-Beispiele](/visualstudio/ide/visual-studio-samples)
+- [Visual Studio-Beispiele](/visualstudio/ide/visual-studio-ide)

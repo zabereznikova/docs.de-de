@@ -2,12 +2,12 @@
 title: Systemüberwachung
 description: Entdecken Sie eine Möglichkeit zum Implementieren der Systemüberwachung.
 ms.date: 01/07/2019
-ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094072"
 ---
 # <a name="health-monitoring"></a>Systemüberwachung
 
@@ -110,7 +110,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     //…
     app.UseHealthChecks("/hc");
     //…
-} 
+}
 ```
 
 Wenn der Endpunkt `<yourmicroservice>/hc` aufgerufen wird, werden alle Integritätsüberprüfungen ausgeführt, die in der Startklasse in der `AddHealthChecks()`-Methode konfiguriert sind, und das Ergebnis wird angezeigt.

@@ -2,14 +2,12 @@
 title: Breaking Changes bei der Kryptografie – .NET Core
 description: Listet die Breaking Changes bei der Kryptografie in .NET Core auf.
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80b62f9b32487e88a309ea7686f78d68af8f2e0a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093082"
 ---
 # <a name="cryptography-breaking-changes"></a>Breaking Changes bei der Kryptografie
 

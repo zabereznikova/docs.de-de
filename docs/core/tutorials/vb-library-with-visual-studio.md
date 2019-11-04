@@ -1,18 +1,16 @@
 ---
 title: Erstellen einer Visual Basic .NET Standard-Klassenbibliothek in Visual Studio 2017
 description: Erfahren Sie, wie Sie eine in Visual Basic geschriebene .NET Standard-Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157299"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100864"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer .NET Standard-Bibliothek mit Visual Basic und .NET Core SDK in Visual Studio 2017
 
@@ -39,7 +37,7 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Projektmappendatei **ClassLibraryProjects**, und wählen Sie im Kontextmenü **Hinzufügen** > **Neues Projekt** aus.
 
-1. Erweitern Sie den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**, klicken Sie dann auf den Knoten **.NET Standard** und anschließend auf die Projektvorlage **Klassenbibliothek (.NET Standard)**. Geben Sie im Textfeld **Name** „StringLibrary“ als Namen des Projekts ein. Wählen Sie **OK**, um das Klassenbibliotheksprojekt zu erstellen.
+1. Erweitern Sie den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**, klicken Sie dann auf den Knoten **.NET Standard** und anschließend auf die Projektvorlage **Klassenbibliothek (.NET Standard)** . Geben Sie im Textfeld **Name** „StringLibrary“ als Namen des Projekts ein. Wählen Sie **OK**, um das Klassenbibliotheksprojekt zu erstellen.
 
    ![Visual Studio-Dialogfeld „Neues Bibliotheksprojekt hinzufügen“](./media/vb-library-with-visual-studio/create-new-library-project.png)
 

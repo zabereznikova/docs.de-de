@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Lauschen auf Abbruchanforderungen durch Abruf'
+title: 'Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138026"
 ---
-# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Gewusst wie: Lauschen auf Abbruchanforderungen durch Abruf
+# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf
 Das folgende Beispiel zeigt eine Möglichkeit, wie Benutzercode ein Abbruchtoken in regelmäßigen Abständen abfragen kann, um festzustellen, ob vom aufrufenden Thread ein Abbruch angefordert wurde. In diesem Beispiel wird der <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Typ verwendet, aber das gleiche Muster gilt für asynchrone Vorgänge, die direkt vom <xref:System.Threading.ThreadPool?displayProperty=nameWithType>- oder <xref:System.Threading.Thread?displayProperty=nameWithType>-Typ erstellt werden.  
   
 ## <a name="example"></a>Beispiel  

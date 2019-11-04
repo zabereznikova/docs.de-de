@@ -2,19 +2,20 @@
 title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
 description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699935"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039673"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
 Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in einer Sequenz.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
 >

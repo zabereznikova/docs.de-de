@@ -7,19 +7,19 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 42d0f86dd6561806701d17846bae6d88252ce46a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68590702835e47e5f0f2e0380bc0fe4017d5eb15
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625485"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582670"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface-Anweisung (Visual Basic)
-Deklariert den Namen einer Schnittstelle, und führt die Definitionen der Elemente, die die Schnittstelle enthält.  
+Deklariert den Namen einer Schnittstelle und führt die Definitionen der Member ein, aus denen die Schnittstelle besteht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
 Interface name [ ( Of typelist ) ]  
     [ Inherits interfacenames ]  
@@ -37,80 +37,80 @@ End Interface
   
 |Begriff|Definition|  
 |---|---|  
-|`attributelist`|Dies ist optional. Finden Sie unter [Liste](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Dies ist optional. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [geschützt](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Privat geschützt](../../language-reference/modifiers/private-protected.md)<br /><br /> Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Dies ist optional. Finden Sie unter [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`attributelist`|Optional. Siehe [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Optional. Kann einen der folgenden Werte annehmen:<br /><br /> -   [öffentlich](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [geschützt](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   -[Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privat](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [geschützter Freund](../../language-reference/modifiers/protected-friend.md)<br/>-  ([Privat geschützt](../../language-reference/modifiers/private-protected.md) )<br /><br /> Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Optional. Siehe [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`name`|Erforderlich. Der Name dieser Schnittstelle. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Dies ist optional. Gibt an, dass dies eine generische Schnittstelle ist.|  
-|`typelist`|Erforderlich, wenn Sie die [von](../../../visual-basic/language-reference/statements/of-clause.md) Schlüsselwort. Die Liste der Typparameter für diese Schnittstelle. Optional, jeden von Typparameter kann deklariert werden Variante mit `In` und `Out` generische Modifizierer. Finden Sie unter [Liste](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Dies ist optional. Gibt an, dass diese Schnittstelle die Attribute und die Member einer anderen Schnittstelle oder Schnittstellen erbt. Finden Sie unter [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`interfacenames`|Erforderlich, wenn Sie die `Inherits`-Anweisung verwenden. Die Namen der Schnittstellen, die von denen diese Schnittstelle abgeleitet wird.|  
-|`modifiers`|Dies ist optional. Entsprechende Modifizierer für den Schnittstellenmember definiert wird.|  
-|`Property`|Dies ist optional. Definiert eine Eigenschaft, die ein Member der Schnittstelle ist.|  
-|`Function`|Dies ist optional. Definiert eine `Function` Prozedur, die ein Member der Schnittstelle ist.|  
-|`Sub`|Dies ist optional. Definiert eine `Sub` Prozedur, die ein Member der Schnittstelle ist.|  
-|`Event`|Dies ist optional. Definiert ein Ereignis, das ein Member der Schnittstelle ist.|  
-|`Interface`|Dies ist optional. Definiert eine Schnittstelle, die in dieser Schnittstelle geschachtelt ist. Die geschachtelte Schnittstellendefinition muss beendet, und ein `End Interface` Anweisung.|  
-|`Class`|Dies ist optional. Definiert eine Klasse, die ein Member der Schnittstelle ist. Die Definition der Member-Klasse muss beendet, und ein `End Class` Anweisung.|  
-|`Structure`|Dies ist optional. Definiert eine Struktur, die ein Member der Schnittstelle ist. Die Strukturdefinition des Members muss beendet, und ein `End Structure` Anweisung.|  
-|`membername`|Erforderlich für jede Eigenschaft, Prozedur, Ereignis, Schnittstelle, Klasse oder der Struktur, die als Member der Schnittstelle definiert. Der Name des Members.|  
+|`Of`|Optional. Gibt an, dass dies eine generische Schnittstelle ist.|  
+|`typelist`|Erforderlich, wenn Sie das [of](../../../visual-basic/language-reference/statements/of-clause.md) -Schlüsselwort verwenden. Liste der Typparameter für diese Schnittstelle. Optional kann jeder Typparameter als Variant deklariert werden, indem `In` und `Out` generische Modifizierer verwendet werden. Siehe [Typliste](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Optional. Gibt an, dass diese Schnittstelle die Attribute und Member einer anderen Schnittstelle oder Schnittstellen erbt. Siehe [erbt-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`interfacenames`|Erforderlich, wenn Sie die `Inherits`-Anweisung verwenden. Die Namen der Schnittstellen, von denen diese Schnittstelle abgeleitet ist.|  
+|`modifiers`|Optional. Geeignete modifiziererer für den Schnittstellenmember, der definiert wird.|  
+|`Property`|Optional. Definiert eine Eigenschaft, die ein Member der-Schnittstelle ist.|  
+|`Function`|Optional. Definiert eine `Function` Prozedur, die ein Member der-Schnittstelle ist.|  
+|`Sub`|Optional. Definiert eine `Sub` Prozedur, die ein Member der-Schnittstelle ist.|  
+|`Event`|Optional. Definiert ein Ereignis, das ein Member der-Schnittstelle ist.|  
+|`Interface`|Optional. Definiert eine Schnittstelle, die in dieser Schnittstelle geschachtelt ist. Die Definition der Definition für die-Schnittstelle muss mit einer `End Interface`-Anweisung beendet werden.|  
+|`Class`|Optional. Definiert eine Klasse, die ein Member der-Schnittstelle ist. Die Definition der Element Klasse muss mit einer `End Class`-Anweisung beendet werden.|  
+|`Structure`|Optional. Definiert eine-Struktur, die ein Member der-Schnittstelle ist. Die Definition der Elementstruktur muss mit einer `End Structure`-Anweisung beendet werden.|  
+|`membername`|Erforderlich für jede Eigenschaft, Prozedur, jedes Ereignis, jede Schnittstelle, jede Klasse oder Struktur, die als Member der-Schnittstelle definiert ist. Der Name des Members.|  
 |`End Interface`|Beendet die `Interface`-Definition.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein *Schnittstelle* definiert eine Menge von Elementen, aus, wie z. B. Eigenschaften und Prozeduren, die Klassen und Strukturen implementiert werden können. Die Schnittstelle definiert nur die Signaturen der Mitglieder und nicht die interne Funktionsweise.  
+ Eine *Schnittstelle* definiert einen Satz von Membern, z. b. Eigenschaften und Prozeduren, die von Klassen und Strukturen implementiert werden können. Die-Schnittstelle definiert nur die Signaturen der Elemente und nicht Ihre internen Abläufe.  
   
- Eine Klasse oder Struktur implementiert die Schnittstelle, indem Sie Code für jeden von der Schnittstelle definierten Member angeben. Schließlich, wenn die Anwendung eine Instanz von dieser Klasse oder Struktur erstellt, ein Objekt vorhanden ist und wird im Arbeitsspeicher ausgeführt. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) und [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Eine Klasse oder Struktur implementiert die-Schnittstelle durch Bereitstellen von Code für jeden von der-Schnittstelle definierten Member. Wenn die Anwendung schließlich eine Instanz aus dieser Klasse oder Struktur erstellt, ist ein Objekt vorhanden, das im Arbeitsspeicher ausgeführt wird. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) und [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- `Interface` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Schnittstelle, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ `Interface` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass der *Deklarations Kontext* für eine Schnittstelle eine Quelldatei, ein Namespace, eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle sein muss und keine Prozedur oder kein Block sein kann. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Der Standard für Schnittstellen [Friend](../../../visual-basic/language-reference/modifiers/friend.md) Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Schnittstellen haben standardmäßig den [Friend](../../../visual-basic/language-reference/modifiers/friend.md) -Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regeln  
   
-- **Schachteln von Schnittstellen.** Sie können eine Schnittstelle in einer anderen definieren. Die äußere Schnittstelle heißt die *, die Schnittstelle enthält*, und die interne Schnittstelle heißt eine *geschachtelte Schnittstelle*.  
+- **Schachtelungs Schnittstellen.** Sie können eine Schnittstelle innerhalb einer anderen definieren. Die äußere Schnittstelle wird als *enthaltende Schnitt*Stelle bezeichnet, und die innere Schnittstelle wird als geschachtelte *Schnitt*Stelle bezeichnet.  
   
-- **Memberdeklaration.** Wenn Sie eine Eigenschaft oder Prozedur als Member einer Schnittstelle deklarieren, definieren Sie nur die *Signatur* einer Eigenschaft oder Prozedur. Dies schließt den Elementtyp (Eigenschaft oder Prozedur), Parameter und Parametertypen und der Rückgabetyp. Aus diesem Grund verwendet der Elementdefinition nur eine Codezeile, und abschließende Anweisungen wie `End Function` oder `End Property` sind in einer Schnittstelle nicht gültig.  
+- **Member-Deklaration.** Wenn Sie eine Eigenschaft oder Prozedur als Member einer Schnittstelle deklarieren, definieren Sie nur die *Signatur* dieser Eigenschaft oder Prozedur. Dies schließt den Elementtyp (Eigenschaft oder Prozedur), seine Parameter und die Parametertypen und den Rückgabetyp ein. Aus diesem Grund wird in der Element Definition nur eine Codezeile verwendet, und abschließende Anweisungen, wie z. b. `End Function` oder `End Property`, sind in einer Schnittstelle nicht gültig.  
   
-     Wenn Sie eine Enumeration oder eine Struktur oder eine geschachtelte Klasse oder Schnittstelle definieren, ist es im Gegensatz dazu erforderlich, ihrer Datenmember enthalten.  
+     Wenn Sie hingegen eine Enumeration oder Struktur oder eine Klasse oder Schnittstelle definieren, ist es erforderlich, ihre Datenmember einzubeziehen.  
   
-- **Member-Modifizierer.** Sie können keine Zugriffsmodifizierer können nicht verwenden, beim definieren, können Sie auch angeben [Shared](../../../visual-basic/language-reference/modifiers/shared.md) oder einen anderen Prozedurmodifizierer außer [Überladungen](../../../visual-basic/language-reference/modifiers/overloads.md). Sie können einen beliebigen Member mit deklarieren [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), und Sie können [Standard](../../../visual-basic/language-reference/modifiers/default.md) beim Definieren einer Eigenschaft sowie [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) oder [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **Member-modifiziererer.** Sie können keine Zugriffsmodifizierer verwenden, wenn Sie Modulmember definieren, und Sie können auch keinen frei [gegebenen](../../../visual-basic/language-reference/modifiers/shared.md) oder einen Modifizierer mit Ausnahme von [über Ladungen](../../../visual-basic/language-reference/modifiers/overloads.md) Sie können einen beliebigen Member mit Shadowing deklarieren, und Sie können [Standard](../../../visual-basic/language-reference/modifiers/default.md) Werte [verwenden, wenn](../../../visual-basic/language-reference/modifiers/shadows.md)Sie eine Eigenschaft definieren, ebenso wie " [Schreib](../../../visual-basic/language-reference/modifiers/writeonly.md)geschützt [" oder "](../../../visual-basic/language-reference/modifiers/readonly.md) schreiben".  
   
-- **Vererbung.** Wenn die Schnittstelle verwendet die [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), Sie können einem oder mehreren Basisschnittstellen angeben. Sie können über zwei Schnittstellen erben, auch wenn sie jeweils einen Member mit demselben Namen definieren. Wenn Sie dies tun, muss der implementierende Code Namensqualifikation verwenden Sie zum Angeben von der Members implementiert wird.  
+- **Vererbung.** Wenn die Schnittstelle die [erbt-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)verwendet, können Sie eine oder mehrere Basis Schnittstellen angeben. Sie können von zwei Schnittstellen erben, auch wenn Sie jeweils einen Member mit demselben Namen definieren. Wenn Sie dies tun, muss der implementierende Code die namens Qualifizierung verwenden, um anzugeben, welcher Member implementiert wird.  
   
-     Eine Schnittstelle kann nicht von einer anderen Schnittstelle mit einer stärker einschränkende Zugriffsebene erben. Z. B. eine `Public` Schnittstelle kann nicht erben von einem `Friend` Schnittstelle.  
+     Eine Schnittstelle kann nicht von einer anderen Schnittstelle mit einer restriktiveren Zugriffsebene erben. Beispielsweise kann eine `Public`-Schnittstelle nicht von einer `Friend`-Schnittstelle erben.  
   
-     Eine Schnittstelle kann nicht von einer Schnittstelle, die in ihr geschachtelt ist, erben.  
+     Eine Schnittstelle kann nicht von einer Schnittstelle erben, die darin geschachtelt ist.  
   
-- **-Implementierung.** Wenn eine Klasse verwendet die [implementiert](../../../visual-basic/language-reference/statements/implements-clause.md) Anweisung, um diese Schnittstelle implementiert, muss jede in der Schnittstelle definierten Member implementieren. Darüber hinaus muss für jede Signatur in der implementierende Code genau die entsprechenden Signatur, die in der Schnittstelle definierten übereinstimmen. Allerdings muss der Name des Elements in der implementierende Code keine entsprechen den Namen des Members in der Schnittstelle definiert.  
+- **Ausführungs.** Wenn eine Klasse [die implementierte-Anweisung verwendet](../../../visual-basic/language-reference/statements/implements-clause.md) , um diese Schnittstelle zu implementieren, muss Sie jedes in der Schnittstelle definierte Element implementieren. Darüber hinaus muss jede Signatur im implementierenden Code genau mit der entsprechenden Signatur übereinstimmen, die in dieser Schnittstelle definiert ist. Allerdings muss der Name des Members im implementierenden Code nicht mit dem in der Schnittstelle definierten Elementnamen identisch sein.  
   
-     Beim Implementieren einer Klasse ist einer Prozedur, kann nicht es angeben, dass die Prozedur als `Shared`.  
+     Wenn eine Klasse eine Prozedur implementiert, kann Sie die Prozedur nicht als `Shared` festlegen.  
   
-- **Standardeigenschaft.** Geben Sie eine Schnittstelle kann höchstens eine Eigenschaft als seine *Standardeigenschaft*, die ohne den Eigenschaftennamen verwiesen werden kann. Sie geben eine solche Eigenschaft deklarieren Sie es mit der [Standard](../../../visual-basic/language-reference/modifiers/default.md) Modifizierer.  
+- **Standard Eigenschaft.** Eine Schnittstelle kann höchstens eine Eigenschaft als *Standard Eigenschaft*angeben, auf die ohne Verwendung des Eigenschafts namens verwiesen werden kann. Sie geben eine solche Eigenschaft an, indem Sie Sie mit dem [Standardmodifizierer](../../../visual-basic/language-reference/modifiers/default.md) deklarieren.  
   
-     Beachten Sie, dass dies bedeutet, dass eine Schnittstelle eine Standardeigenschaft definieren kann, nur dann, wenn sie keine erbt.  
+     Beachten Sie, dass eine Schnittstelle eine Standard Eigenschaft nur definieren kann, wenn Sie None erbt.  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Zugriffsebene.** Alle Schnittstellenmember verfügen implizit über [öffentliche](../../../visual-basic/language-reference/modifiers/public.md) Zugriff. Sie können keine Zugriffsmodifizierer nicht verwenden, wenn ein Element definieren. Allerdings kann eine Klasse implementiert die Schnittstelle eine Zugriffsebene für jeden implementierten Member deklarieren.  
+- **Zugriffsebene.** Alle Schnittstellenmember haben implizit [öffentlichen](../../../visual-basic/language-reference/modifiers/public.md) Zugriff. Sie können keinen Zugriffsmodifizierer verwenden, wenn Sie einen Member definieren. Allerdings kann eine Klasse, die die-Schnittstelle implementiert, eine Zugriffsebene für jedes implementierte Element deklarieren.  
   
-     Wenn Sie eine Instanz der Klasse zu einer Variablen zuweisen, kann die Zugriffsebene der Member davon abhängen, ob der Datentyp der Variablen für die zugrunde liegende Schnittstelle oder die implementierende Klasse ist. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+     Wenn Sie einer Variablen eine Klasseninstanz zuweisen, kann die Zugriffsebene der Member davon abhängen, ob der Datentyp der Variablen die zugrunde liegende Schnittstelle oder die implementierende Klasse ist. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     Wenn Sie Zugriff auf Klassenmember über `varAsInterface`, sie verfügen über öffentlichen Zugriff. Jedoch wenn Sie Zugriff auf Member über `varAsClass`, `Sub` Prozedur `doSomething` privaten Zugriff hat.  
+     Wenn Sie über `varAsInterface` auf Klassenmember zugreifen, haben Sie alle öffentlichen Zugriff. Wenn Sie jedoch über `varAsClass` auf Member zugreifen, hat die `Sub` Prozedur `doSomething` privaten Zugriff.  
   
-- **Bereich.** Eine Schnittstelle ist der Gültigkeitsbereich der Namespace, Klasse, Struktur oder Modul.  
+- **Umfang.** Eine Schnittstelle befindet sich im Gültigkeitsbereich des Namespace, der Klasse, der Struktur oder des Moduls.  
   
-     Der Gültigkeitsbereich jeder Schnittstellenmember ist die gesamte Schnittstelle.  
+     Der Gültigkeitsbereich aller Schnittstellenmember ist die gesamte Schnittstelle.  
   
-- **Lifetime.** Eine Schnittstelle ist nicht selbst haben eine Lebensdauer, noch ihre Member. Wenn eine Klasse eine Schnittstelle und einem Objekt implementiert wird, dass die Klasse, die das Objekt eine Lebensdauer innerhalb der Anwendung hat in dem er ausgeführt wird als eine Instanz erstellt. Weitere Informationen finden Sie unter "Lebensdauer" in [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **Amtszeit.** Eine Schnittstelle hat selbst keine Lebensdauer und auch keine Member. Wenn eine Klasse eine Schnittstelle implementiert und ein Objekt als Instanz dieser Klasse erstellt wird, verfügt das Objekt über eine Gültigkeitsdauer innerhalb der Anwendung, in der es ausgeführt wird. Weitere Informationen finden Sie unter "Lebensdauer" in [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Interface` Anweisung, um eine Schnittstelle, die mit dem Namen definieren `thisInterface`, die implementiert werden muss, mit einer `Property` Anweisung und eine `Function` Anweisung.  
+ Im folgenden Beispiel wird die `Interface`-Anweisung verwendet, um eine Schnittstelle mit dem Namen `thisInterface` zu definieren, die mit einer `Property`-Anweisung und einer `Function`-Anweisung implementiert werden muss.  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- Beachten Sie, dass die `Property` und `Function` Anweisungen führen Blöcke Endung `End Property` und `End Function` innerhalb der Schnittstelle. Die Schnittstelle definiert nur die Signaturen von Membern. Die vollständige `Property` und `Function` Blöcke angezeigt, in einer Klasse, die implementiert `thisInterface`.  
+ Beachten Sie, dass die `Property`-und `Function`-Anweisungen keine Blöcke mit `End Property` und `End Function` in der Schnittstelle bereitstellen. Die-Schnittstelle definiert nur die Signaturen ihrer Member. Die vollständigen `Property` und `Function` Blöcke werden in einer Klasse angezeigt, die `thisInterface` implementiert.  
   
 ## <a name="see-also"></a>Siehe auch
 

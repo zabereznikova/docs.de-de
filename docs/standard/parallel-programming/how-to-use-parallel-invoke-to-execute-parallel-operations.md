@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ausführen von parallelen Vorgängen mithilfe von Parallel.Invoke'
+title: 'Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0192e12c86b21eb126293bbd220e093b334768b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139728"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Gewusst wie: Ausführen von parallelen Vorgängen mithilfe von Parallel.Invoke
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“
 
 In diesem Beispiel wird veranschaulicht, wie Vorgänge parallelisiert werden können, indem <xref:System.Threading.Tasks.Parallel.Invoke%2A> in der Task Parallel Library verwendet wird. Es werden drei Vorgänge für eine freigegebene Datenquelle ausgeführt. Da die Quelle durch keinen der Vorgänge geändert wird, können diese auf einfache Weise parallel ausgeführt werden.
 
@@ -41,5 +39,5 @@ Kopieren Sie das gesamte Beispiel, fügen Sie es in ein Microsoft Visual Studio-
 ## <a name="see-also"></a>Siehe auch
 
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
-- [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

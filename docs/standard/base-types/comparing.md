@@ -18,14 +18,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101673"
 ---
 # <a name="comparing-strings-in-net"></a>Vergleichen von Zeichenfolgen in .NET
 .NET stellt mehrere Methoden bereit, um Werte von Zeichenfolgen zu vergleichen. In der folgenden Tabelle werden die Methoden zum Vergleichen von Werten aufgeführt und beschrieben.  

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622774"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120905"
 ---
 # <a name="latency-modes"></a>Latenzmodi
 Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads einer Anwendung beenden. In einigen Situationen, z. B. wenn eine Anwendung Daten abruft oder Inhalte anzeigt, kann eine vollständige Garbage Collection zu einem kritischen Zeitpunkt erfolgen und die Leistung beeinträchtigen. Sie können das Ausmaß der Garbage Collection anpassen, indem Sie die <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>-Werte festlegen.  

@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121692"
 ---
 # <a name="standard-timespan-format-strings"></a>TimeSpan-Standardformatzeichenfolgen
 <a name="Top"></a> Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -43,9 +41,9 @@ ms.locfileid: "69968549"
   
 |Formatbezeichner|name|BESCHREIBUNG|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen: [Der Konstantenformatbezeichner "c"](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Weitere Informationen: [Der allgemeine Kurzformatbezeichner "g"](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Allgemeines Langformat|Dieser Bezeichner gibt immer Tage und sieben Dezimalstellen aus. Es ist kulturabhängig und besitzt das Format `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Weitere Informationen: [Der allgemeine Langformatbezeichner "G"](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+|"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen finden Sie unter: [Der Konstantenformatbezeichner "c"](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Kurzformatbezeichner "g"](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Allgemeines Langformat|Dieser Bezeichner gibt immer Tage und sieben Dezimalstellen aus. Es ist kulturabhängig und besitzt das Format `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Langformatbezeichner "G"](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>Der Konstantenformatbezeichner "c"  

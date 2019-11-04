@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123149"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Datenstrukturen für die parallele Programmierung
 .NET Framework Version 4 führt mehrere neue Typen ein, die für die parallele Programmierung nützlich sind. Darunter eine Reihe von parallelen Auflistungsklassen, einfache Synchronisierungsprimitiven und Typen für die verzögerte Initialisierung. Sie können diese Typen mit jedem Multithreadanwendungscode verwenden, einschließlich der Task Parallel Library und PLINQ.  
@@ -22,7 +20,7 @@ ms.locfileid: "64625606"
   
  In der folgenden Tabelle sind die neuen parallelen Auflistungsklassen aufgeführt:  
   
-|Typ|Beschreibung|  
+|Typ|BESCHREIBUNG|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Stellt Sperr- und Begrenzungsfunktionen für threadsichere Auflistungen bereit, die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> implementieren. Producerthreads werden blockiert, wenn keine Zeitfenster verfügbar sind oder wenn die Auflistung voll ist. Consumerthreads werden blockiert, wenn die Auflistung leer ist. Dieser Typ unterstützt auch nicht blockierenden Zugriff durch Consumer und Producer. <xref:System.Collections.Concurrent.BlockingCollection%601> kann als Basisklasse oder Sicherungsspeicher verwendet werden, um das Blockieren und Binden für jede Auflistungsklasse zu ermöglichen, die <xref:System.Collections.Generic.IEnumerable%601> unterstützt.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Eine threadsichere Behälterimplementierung, die skalierbare Vorgänge zum Hinzufügen und Abrufen bietet.|  
@@ -37,7 +35,7 @@ ms.locfileid: "64625606"
   
  Die folgende Tabelle enthält die neuen Synchronisierungstypen:  
   
-|Typ|Beschreibung|  
+|Typ|BESCHREIBUNG|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Ermöglicht mehreren Threads, parallel an einem Algorithmus zu arbeiten, indem ein Punkt bereitgestellt wird, an dem jeder Task seine Ankunft signalisieren und dann blockieren kann, bis einige oder alle Tasks angekommen sind. Weitere Informationen finden Sie unter [Barrier](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Vereinfacht Fork- und Join-Szenarien durch einen einfachen Rendezvousmechanismus. Weitere Informationen finden Sie unter [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -57,7 +55,7 @@ ms.locfileid: "64625606"
   
  Die folgende Tabelle enthält eine Auflistung der Typen für eine verzögerte Initialisierung:  
   
-|Typ|Beschreibung|  
+|Typ|BESCHREIBUNG|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Stellt einfache, threadsichere verzögerte Initialisierung bereit.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Stellt einen Wert durch eine verzögerte Initialisierung auf Threadbasis bereit, wobei jeder Thread die Initialisierungsfunktion verzögert aufruft.|  

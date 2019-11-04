@@ -11,14 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131978"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen
 
@@ -85,7 +83,7 @@ Im folgenden Beispiel werden mehrere numerische Werte mit führenden Nullen form
 
     1. Wenn sie ein Dezimaltrennzeichen enthält, bestimmen Sie die Anzahl der Zeichen links des Dezimaltrennzeichens.
 
-         - oder - 
+         Oder
 
          Wenn sie kein Dezimaltrennzeichen enthält, bestimmen Sie die Länge der Zeichenfolge.
 

@@ -15,15 +15,13 @@ helpviewer_keywords:
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
-author: rpetrusha
-ms.author: ronpet
 ms.custom: updateeachrelease
-ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645011"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132809"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Übersicht: Common Language Runtime (CLR)
 
@@ -81,7 +79,7 @@ Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnum
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Der verwaltete Ausführungsprozess](managed-execution-process.md)|Enthält eine Beschreibung der Schritte, die erforderlich sind, um die Vorteile der Common Language Runtime nutzen zu können.|
 |[Automatische Speicherverwaltung](automatic-memory-management.md)|Erläutert, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.|

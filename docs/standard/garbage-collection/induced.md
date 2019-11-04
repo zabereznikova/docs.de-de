@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492121"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120918"
 ---
 # <a name="induced-collections"></a>Indizierte Auflistungen
 In den meisten Fällen können Sie es dem Garbage Collector überlassen, den am besten geeigneten Zeitpunkt für eine Collection zu bestimmen. In seltenen Fällen kann das Erzwingen einer Auflistung jedoch die Leistung der Anwendung erhöhen. In diesen Fällen können Sie die Garbage Collection auslösen, indem Sie die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode zum Erzwingen einer Garbage Collection wählen.  
@@ -22,7 +20,7 @@ In den meisten Fällen können Sie es dem Garbage Collector überlassen, den am 
 ## <a name="gc-collection-mode"></a>Der GC-Sammlungsmodus  
  Sie können eine der <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methodenüberladungen verwenden, die einen <xref:System.GCCollectionMode>-Wert enthält, um das Verhalten einer erzwungenen Auflistung wie folgt zu bestimmen.  
   
-|`GCCollectionMode`-Wert|Beschreibung|  
+|`GCCollectionMode`-Wert|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Verwendet die standardmäßige Garbage Collection-Einstellung für die ausgeführte .NET-Version.|  
 |<xref:System.GCCollectionMode.Forced>|Erzwingt die sofortige Durchführung der Garbage Collection. Dies entspricht dem Aufruf der <xref:System.GC.Collect?displayProperty=nameWithType>-Überladung. Dies führt zu einer vollständigen blockierenden Auflistung aller Generationen.<br /><br /> Sie können auch das große Objektheap komprimieren, indem Sie die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> festlegen, bevor Sie eine unmittelbare vollständige blockierende Garbage Collection erzwingen.|  

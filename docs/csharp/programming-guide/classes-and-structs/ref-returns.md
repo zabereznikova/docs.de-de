@@ -1,15 +1,13 @@
 ---
 title: Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)
 description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114480"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 

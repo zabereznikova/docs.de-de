@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09e128c98b61ecc4ac673d8c9911f4bac476d521
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 7bb4cc1b69f0b6b97c1cf6255ded5341304f3ee3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988429"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106771"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Vorgehensweise: Schreiben einer benutzerdefinierten PLINQ-Aggregatfunktion
 Dieses Beispiel zeigt, wie mit der <xref:System.Linq.ParallelEnumerable.Aggregate%2A>-Methode eine benutzerdefinierte Aggregatfunktion auf eine Quellsequenz angewendet wird.  

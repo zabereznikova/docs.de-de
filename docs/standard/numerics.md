@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091587"
 ---
 # <a name="numerics-in-net"></a>Numerische Ausdrücke in .NET
 
@@ -57,7 +55,7 @@ Die <xref:System.Numerics.BigInteger?displayProperty=nameWithType>-Struktur ist 
 |Typ|Größe (in Bytes)|Ungefährer Bereich|Genauigkeit|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1.5 × 10<sup>−45</sup> zu ±3.4 × 10<sup>38</sup>|~6–9 Stellen|  
-|<xref:System.Double?displayProperty=nameWithType>|8|±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup>|~15-17 Stellen|  
+|<xref:System.Double?displayProperty=nameWithType>|8|±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup>|~15–17 Stellen|  
 |<xref:System.Decimal?displayProperty=nameWithType>|16|±1.0 × 10<sup>-28</sup> to ±7.9228 × 10<sup>28</sup>|28-29 Stellen|  
   
 Die beiden Typen <xref:System.Single> und <xref:System.Double> unterstützen spezielle Werte, die „nicht numerisch“ und „unendlich“ darstellen. Der Typ <xref:System.Double> liefert beispielsweise die folgenden Werte: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> und <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Mit den Methoden <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> und <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> können Sie Tests für diese speziellen Werte ausführen.

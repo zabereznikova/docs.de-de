@@ -12,14 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972774"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122512"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 
@@ -66,7 +64,7 @@ Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert
 
 - Nicht verzögert signiert
 
-Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen](disable-strong-name-bypass-feature.md).
+Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert werden. Weitere Informationen finden Sie unter [How to: Deaktivieren des Features zur Umgehung von starken Namen](disable-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

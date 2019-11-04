@@ -4,16 +4,16 @@ description: Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093537"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Serverlose Apps: Architektur, Muster und Azure-Implementierung
 
-![Screenshot des Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/serverless-apps-cover.jpg)
+![Screenshot: Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/serverless-apps-cover.jpg)
 
 > DOWNLOAD verfügbar unter: <https://aka.ms/serverless-ebook>
 
@@ -43,17 +43,17 @@ Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , Sr. Cloud Developer Advocate, APEX, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , Senior Cloud Advocate, Microsoft Corp.
 
 Mitwirkender:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , Cloud Developer Advocate II, APEX, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)** , Senior Cloud Advocate, Microsoft Corp.
 
 Editoren:
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , Senior Content Developer, APEX, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)** , Senior Content Developer, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , Senior Content Developer, APEX, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)** , Senior Content Developer, Microsoft Corp.
 
 Teilnehmer und Prüfer:
 

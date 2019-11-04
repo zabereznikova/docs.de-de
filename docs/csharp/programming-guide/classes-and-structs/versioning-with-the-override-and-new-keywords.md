@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596009"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196205"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
@@ -56,7 +56,7 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../langua
   
  [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
- Wenn Sie nicht möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, gelten die folgenden Überlegungen. Sie können Ihre Methode umbenennen, um Verwechslungen zwischen den beiden Methoden zu vermeiden. Dies kann zeitaufwändig und fehleranfällig sein und ist in einigen Fällen einfach nicht praktikabel. Wenn das Projekt aber relativ klein ist, können Sie die Refactoring-Optionen von Visual Studio verwenden, um die Methode umzubenennen. Weitere Informationen finden Sie unter [Refactoring von Klassen und Typen (Klassen-Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
+ Wenn Sie nicht möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, gelten die folgenden Überlegungen. Sie können Ihre Methode umbenennen, um Verwechslungen zwischen den beiden Methoden zu vermeiden. Dies kann zeitaufwändig und fehleranfällig sein und ist in einigen Fällen einfach nicht praktikabel. Wenn das Projekt aber relativ klein ist, können Sie die Refactoring-Optionen von Visual Studio verwenden, um die Methode umzubenennen. Weitere Informationen finden Sie unter [Refactoring von Klassen und Typen (Klassen-Designer)](/visualstudio/ide/class-designer/refactoring-classes-and-types).  
   
  Alternativ können Sie die Warnung vermeiden, indem Sie in der Definition Ihrer abgeleiteten Klasse das Schlüsselwort `new` verwenden:  
   

@@ -2,13 +2,14 @@
 title: Musterabgleich – Leitfaden für C#
 description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
 ms.date: 04/10/2019
+ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 5ace3c4552184b848b90dee3516d549ca8fd5806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61652025"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039368"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 

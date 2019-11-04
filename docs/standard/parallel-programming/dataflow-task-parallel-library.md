@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924916"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134271"
 ---
 # <a name="dataflow-task-parallel-library"></a>Datenfluss (Task Parallel Library)
 <a name="top"></a> Die Task Parallel Library (TPL) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. Diese Datenflusskomponenten werden zusammen als *TPL-Datenflussbibliothek* bezeichnet. Dieses Datenflussmodell begünstigt die akteurbasierte Programmierung durch eine prozessinterne Nachrichtenübergabe für simple Datenfluss- und Pipelineaufgaben. Die Datenflusskomponenten basieren auf den Typen und der Planungsinfrastruktur der TPL und sind in die C#-, Visual Basic- und F#-Sprachunterstützung für asynchrone Programmierung integriert. Diese Datenflusskomponenten sind hilfreich, wenn mehrere Vorgänge vorliegen, die asynchron miteinander kommunizieren müssen, oder wenn Sie Daten verarbeiten möchten, die gerade verfügbar werden. Denken Sie beispielsweise an eine Anwendung, die Bilddaten von einer Webcam verarbeitet. Durch das Datenflussmodell kann die Anwendung Bildframes verarbeiten, sobald diese verfügbar sind. Wenn die Anwendung Bildframes beispielsweise durch Lichtkorrektur oder Rote-Augen-Reduktion aufbessert, können Sie eine *Pipeline* von Datenflusskomponenten erstellen. Jede Phase der Pipeline kann grober strukturierte Parallelitätsfunktionen verwenden, wie z. B. die von der TPL bereitgestellten Funktionen zum Transformieren des Bilds.  

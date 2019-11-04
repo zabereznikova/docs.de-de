@@ -2,12 +2,12 @@
 title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848865"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089913"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
@@ -15,16 +15,16 @@ ms.locfileid: "70848865"
 
 **EDITION v2.2**: auf ASP.NET Core 2.2 aktualisiert
 
-Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern. 
+Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.
 
 Um den Einstieg einfacher zu gestalten, konzentriert sich der Leitfaden auf eine auf Containern und Microservice basierende Referenzanwendung, die Sie erforschen können. Die Referenzanwendung ist im [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)-GitHub-Repository verfügbar.
 
 ## <a name="action-links"></a>Aktionslinks
 
-- Laden Sie dieses E-Book im Format Ihrer Wahl herunter: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- Laden Sie dieses E-Book im Format Ihrer Wahl herunter (nur in englischer Sprache): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - Klonen/forken Sie die Referenzanwendung [eShopOnContainers on GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
- 
+
 - Sehen Sie das [Einführungsvideo auf Channel 9](https://aka.ms/microservices-video) an.
 
 - Lernen Sie die [Microservicearchitektur](https://aka.ms/MicroservicesArchitecture) unmittelbar kennen.
@@ -47,7 +47,7 @@ Der nächste Schritt nach dem Durcharbeiten dieses Leitfadens ist der, mehr übe
 
 ## <a name="version"></a>Version
 
-Dieser Leitfaden wurde für die Version **.NET Core 2.2** überarbeitet und weist viele weitere Aktualisierungen auf, die sich auf die gleiche „Generation“ von Technologien beziehen (also Azure und ergänzende Technologien von Drittanbietern), die zeitlich mit .NET Core 2.2 zusammenfallen. Aus diesem Grund wurde auch die Versionsnummer des Buchs auf Version **2.2** aktualisiert. 
+Dieser Leitfaden wurde für die Version **.NET Core 2.2** überarbeitet und weist viele weitere Aktualisierungen auf, die sich auf die gleiche „Generation“ von Technologien beziehen (also Azure und ergänzende Technologien von Drittanbietern), die zeitlich mit .NET Core 2.2 zusammenfallen. Aus diesem Grund wurde auch die Versionsnummer des Buchs auf Version **2.2** aktualisiert.
 
 ## <a name="what-this-guide-does-not-cover"></a>Was in diesem Leitfaden nicht behandelt wird
 
@@ -72,7 +72,7 @@ Der zweite Teil dieses Leitfadens beginnt mit dem Abschnitt [Development Process
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Verknüpfte auf Microservice und Containern basierende Verweisanwendung: eShopOnContainers
 
-Bei der eShopOnContainers-Anwendung handelt es sich um eine Open-Source-Referenz-App für .NET Core und Microservices, die für die Bereitstellung mithilfe von Docker-Containern entwickelt wurde. Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der E-Store-Benutzeroberfläche (eine Web-MVC-App, eine Web-SPA und eine native mobile App). Sie enthält ebenfalls den Back-End-Microservice und Container für alle erforderlichen serverseitigen Vorgänge. 
+Bei der eShopOnContainers-Anwendung handelt es sich um eine Open-Source-Referenz-App für .NET Core und Microservices, die für die Bereitstellung mithilfe von Docker-Containern entwickelt wurde. Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der E-Store-Benutzeroberfläche (eine Web-MVC-App, eine Web-SPA und eine native mobile App). Sie enthält ebenfalls den Back-End-Microservice und Container für alle erforderlichen serverseitigen Vorgänge.
 
 Der Zweck der Anwendung besteht in der Präsentation von Architekturmustern. **SIE STELLT KEINE PRODUKTIONSBEREITE VORLAGE DAR**, die sich als Ausgangspunkt für reale Anwendungen eignet. Tatsächlich befindet sich die Anwendung in einem dauerhaften Betastadium, da sie ebenfalls zum Testen neuer, potenziell interessanter Technologien direkt bei ihrem Erscheinen verwendet wird.
 
