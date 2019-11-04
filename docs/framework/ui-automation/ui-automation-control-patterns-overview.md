@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131510"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458093"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131510"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Wird für Steuerelemente verwendet, die in einem Dockingcontainer angedockt werden können. Beispielsweise Symbolleisten oder Toolpaletten.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Wird für Steuerelemente verwendet, die erweitert oder reduziert werden können. Beispielsweise Menüelemente in einer Anwendung, etwa das Menü **Datei** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Wird für Steuerelemente verwendet, die Rasterfunktionen wie z. B. Größenanpassung und Verschieben in eine bestimmte Zelle unterstützen. Beispielsweise die große Symbolansicht in Windows-Explorer oder einfache Tabellen ohne Überschriften in [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Wird für Steuerelemente verwendet, die Rasterfunktionen wie z. B. Größenanpassung und Verschieben in eine bestimmte Zelle unterstützen. Beispielsweise die große Symbol Ansicht in Windows-Explorer oder einfache Tabellen ohne Header in Microsoft Word.|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Wird für Steuerelemente verwendet, die Zellen innerhalb von Rastern haben. Die einzelnen Zellen müssen das GridItem-Muster unterstützen. Beispielsweise jede Zelle in der Detailansicht von Microsoft Windows Explorer.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Wird für Steuerelemente verwendet, die aufgerufen werden können, etwa Schaltflächen.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Wird für Steuerelemente verwendet, die zwischen mehreren Darstellungen derselben Informationen, Daten oder untergeordneten Elemente wechseln können. Beispielsweise ein Listenansicht-Steuerelement, in dem Daten in einer Miniatur-, Kachel-, Symbol-, Listen- oder Detailansicht verfügbar sind.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131510"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Wird für Steuerelemente verwendet, die einzelne Elemente in einer Liste haben, die gescrollt werden kann. Beispielsweise ein Listensteuerelement, das einzelne Elementen in der Scrollliste hat, etwa ein Kombinationsfeld-Steuerelement.|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Wird für Auswahlcontainer-Steuerelemente verwendet. Beispielsweise Listen- und Kombinationsfelder.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Wird für einzelne Elemente in Auswahlcontainer-Steuerelementen verwendet, z. B. Listen- und Kombinationsfelder.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Wird für Steuerelemente verwendet, die sowohl ein Raster als auch Überschrifteninformationen haben. Beispielsweise [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] -Arbeitsblätter.|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Wird für Steuerelemente verwendet, die sowohl ein Raster als auch Überschrifteninformationen haben. Beispielsweise Microsoft Excel-Arbeitsblätter.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Wird für Elemente in einer Tabelle verwendet.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Wird für Bearbeitungssteuerelemente und Dokumente verwendet, die Textinformationen verfügbar machen.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Wird für Steuerelemente verwendet, deren Zustand umgeschaltet werden kann. Beispielsweise Kontrollkästchen und aktivierbare Menüeinträge.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Wird für Steuerelemente verwendet, die in der Größe geändert, verschoben und gedreht werden können. Typische Einsatzfälle für das Transform-Steuerelementmuster sind Designer, Formulare, Grafik-Editoren und Zeichnungsanwendung.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Ermöglicht Clients das Abrufen oder Festlegen eines Werts für ein Steuerelement, das keinen Wertebereich unterstützt. Beispielsweise eine Datums-/Zeitauswahl.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Macht für Windows spezifische Informationen verfügbar. Dies ist ein grundlegendes Konzept für das Microsoft Windows-Betriebssystem. Beispiele für Steuerelemente, die Fenster sind, sind Anwendungsfenster der obersten Ebene ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Microsoft Windows Explorer usw.), untergeordnete Fenster von Multiple Document Interface (MDI) und Dialogfelder.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Macht für Windows spezifische Informationen verfügbar. Dies ist ein grundlegendes Konzept für das Microsoft Windows-Betriebssystem. Beispiele für Steuerelemente, die Fenster sind, sind Anwendungsfenster der obersten Ebene (Microsoft Word, Microsoft Windows Explorer usw.), untergeordnete Fenster von Multiple Document Interface (MDI) und Dialogfelder.|  
   
 ## <a name="see-also"></a>Siehe auch
 

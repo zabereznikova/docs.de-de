@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934499"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459281"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Steuern der XML-Serialisierung mit Attributen
 
-Attribute können verwendet werden, um die XML-Serialisierung eines Objekts zu steuern oder um einen alternativen XML-Stream aus derselben Reihe von Klassen zu erstellen. Weitere Informationen zum Erstellen eines alternativen XML-Streams finden Sie unter [Vorgehensweise: Angeben ein alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Attribute können verwendet werden, um die XML-Serialisierung eines Objekts zu steuern oder um einen alternativen XML-Stream aus derselben Reihe von Klassen zu erstellen. Weitere Informationen zum Erstellen eines alternativen XML-Streams finden Sie unter [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Wenn der generierte XML-Abschnitt 5 des World Wide Web Consortium (W3C) Dokuments entsprechen soll [einfache Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), verwenden Sie die Attribute aufgeführt, die [Attribute, Steuerelement codierten SOAP Serialisierung](attributes-that-control-encoded-soap-serialization.md).
+> Wenn der generierte XML-Code Abschnitt 5 World Wide Web Consortium des W3C-Dokuments ( [Simple Object Access Protocol) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)entsprechen muss, verwenden Sie die in Attributen aufgeführten Attribute [, die die Serialisierung von codiertem SOAP Steuern](attributes-that-control-encoded-soap-serialization.md).
 
 Standardmäßig wird der Name eines XML-Elements durch den Klassen- oder Membernamen festgelegt. In einer einfachen Klasse namens `Book` wird, wie in folgendem Beispiel gezeigt, durch ein Feld mit der Bezeichnung `ISBN` ein XML-Elementtag \<ISBN> erstellt.
 
@@ -70,7 +70,7 @@ Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/s
 
 ## <a name="controlling-array-serialization"></a>Steuern der Serialisierung von Arrays
 
-Die Attribute <xref:System.Xml.Serialization.XmlArrayAttribute> und <xref:System.Xml.Serialization.XmlArrayItemAttribute> dienen zum Steuern der Serialisierung von Arrays. Mit diesen Attributen können Sie den Namen, Namespace und Datentyp für die XML-Schema (XSD) steuern (gemäß der World Wide Web Consortium [www.w3.org]-Dokument mit dem Titel "XML Schema Part 2: Datatypes"). Sie können auch die Typen angeben, die in einem Array enthalten sein können.
+Die Attribute <xref:System.Xml.Serialization.XmlArrayAttribute> und <xref:System.Xml.Serialization.XmlArrayItemAttribute> dienen zum Steuern der Serialisierung von Arrays. Mit diesen Attributen können Sie den Elementnamen, den Namespace und den XSD-Schemadatentyp steuern (wie im vom World Wide Web Consortium [www.w3.org] herausgegebenen Dokument mit dem Titel "XML Schema Part 2: Datatypes" definiert). Sie können auch die Typen angeben, die in einem Array enthalten sein können.
 
 Durch <xref:System.Xml.Serialization.XmlArrayAttribute> werden die Eigenschaften des einschließenden XML-Elements bestimmt, das aus der Serialisierung eines Arrays hervorgeht. So wird beispielsweise durch das Serialisieren des unten aufgeführten Arrays standardmäßig ein XML-Element mit der Bezeichnung `Employees` erzeugt. Das `Employees`-Element enthält eine Reihe von Elementen, die nach dem Arraytyp `Employee` benannt sind.
 
@@ -202,7 +202,7 @@ Eine serialisierte Instanz könnte etwa wie folgt aussehen.
     <Employee xsi:type = "Manager">
         <Name>Ann</Name>
         <Level>3</Level>
-    <Employee>
+    </Employee>
 </Employees>
 </Group>
 ```
@@ -241,7 +241,7 @@ Eine serialisierte Instanz könnte etwa wie folgt aussehen.
 </Group>
 ```
 
-Eine weitere Möglichkeit, die beiden XML-Streams zu unterscheiden, besteht in der Verwendung des Tools für die XML-Schemadefinition zur Generierung der XML-Schemadokumentdateien (XSD) aus dem kompilierten Code. (Nähere Informationen zur Verwendung dieses Tools finden Sie unter [Das XML Schema Definition-Tool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md).) Wenn keine Attribute auf das Feld angewendet werden, wird das Element auf die folgende Weise durch das Schema beschrieben.
+Eine weitere Möglichkeit, die beiden XML-Streams zu unterscheiden, besteht in der Verwendung des Tools für die XML-Schemadefinition zur Generierung der XML-Schemadokumentdateien (XSD) aus dem kompilierten Code. (Weitere Informationen zur Verwendung des Tools finden Sie [im XML Schema Definition-Tool und in der XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md).) Wenn kein Attribut auf das Feld angewendet wird, beschreibt das Schema das Element wie folgt.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -275,7 +275,7 @@ public class Group {
 
 ## <a name="controlling-serialization-of-classes-using-xmlrootattribute-and-xmltypeattribute"></a>Kontrollieren von Serialisierung von Klassen mit den Attributen XmlRootAttribute und XmlTypeAttribute
 
-Es gibt zwei Attribute, die (ausschließlich) auf Klassen angewendet werden können: <xref:System.Xml.Serialization.XmlRootAttribute> und <xref:System.Xml.Serialization.XmlTypeAttribute>. Diese Attribute sind sich sehr ähnlich. <xref:System.Xml.Serialization.XmlRootAttribute> kann nur auf eine einzige Klasse angewendet werden: auf die Klasse, die bei Serialisierung das öffnende und schließende Element, d.&amp;amp;#160;h. das Stammelement, darstellt. <xref:System.Xml.Serialization.XmlTypeAttribute> kann dagegen auf beliebige Klassen einschließlich der Stammklasse angewendet werden.
+Es gibt zwei Attribute, die (ausschließlich) auf Klassen angewendet werden können: <xref:System.Xml.Serialization.XmlRootAttribute> und <xref:System.Xml.Serialization.XmlTypeAttribute>. Diese Attribute sind sich sehr ähnlich. <xref:System.Xml.Serialization.XmlRootAttribute> kann nur auf eine einzige Klasse angewendet werden: auf die Klasse, die bei Serialisierung das öffnende und schließende Element, d.&#160;h. das Stammelement, darstellt. <xref:System.Xml.Serialization.XmlTypeAttribute> kann dagegen auf beliebige Klassen einschließlich der Stammklasse angewendet werden.
 
 So ist beispielsweise im vorigen Beispiel die `Group`-Klasse die Stammklasse, und alle ihre öffentlichen Felder und Eigenschaften werden zu XML-Elementen, die im XML-Dokument enthalten sind. Es kann daher nur eine Stammklasse geben. Durch die Anwendung von <xref:System.Xml.Serialization.XmlRootAttribute> können Sie den von <xref:System.Xml.Serialization.XmlSerializer> generierten XML-Stream steuern. Beispielsweise können Sie den Elementnamen und den Namespace ändern.
 

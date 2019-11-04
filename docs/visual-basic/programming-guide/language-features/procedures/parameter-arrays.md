@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 5a2813b81490e7c2fcf1abcf5fd36ca89d9d7929
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933859"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424621"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameterarrays (Visual Basic)
 In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen, als die Prozedur Deklaration angibt. Wenn Sie eine unbegrenzte Anzahl von Argumenten benötigen, können Sie ein *Parameter Array*deklarieren, das es einer Prozedur ermöglicht, ein Array von Werten für einen Parameter zu akzeptieren. Wenn Sie die Prozedur definieren, müssen Sie nicht die Anzahl der Elemente im Parameter Array kennen. Die Array Größe wird einzeln durch jeden aufzurufenden Vorgang bestimmt.  
@@ -34,7 +34,7 @@ In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen
 ## <a name="calling-a-paramarray"></a>Aufrufen eines ParamArray-Parametern  
  Wenn Sie eine Prozedur aufrufen, die ein Parameter Array definiert, können Sie das Argument auf eine der folgenden Arten angeben:  
   
-- Nothing – das heißt, Sie können das [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) -Argument weglassen. In diesem Fall wird ein leeres Array an die Prozedur übermittelt. Sie können auch das [Nothing](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort mit dem gleichen Effekt übergeben.  
+- Nothing – das heißt, Sie können das [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) -Argument weglassen. In diesem Fall wird ein leeres Array an die Prozedur übermittelt. Wenn Sie das [Nothing](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort explizit übergeben, wird ein NULL-Array an die Prozedur übergeben und kann zu einer NullReferenceException führen, wenn die aufgerufene Prozedur nicht auf diese Bedingung überprüft.
   
 - Eine Liste mit einer beliebigen Anzahl von Argumenten, die durch Kommas getrennt sind. Der Datentyp der einzelnen Argumente muss implizit in den `ParamArray` Elementtyp konvertierbar sein.  
   
@@ -46,7 +46,7 @@ In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen
 > Wenn Sie sich mit einem Array befassen, das unbegrenzt groß sein kann, besteht das Risiko, dass eine interne Kapazität der Anwendung überschritten wird. Wenn Sie ein Parameter Array akzeptieren, sollten Sie die Größe des Arrays testen, das dem aufrufenden Code übergeben wurde. Führen Sie die entsprechenden Schritte aus, wenn Sie für Ihre Anwendung zu groß sind. Weitere Informationen finden Sie unter [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die-Funktion `calcSum`definiert und aufgerufen. Der `ParamArray` -Modifizierer für `args` den-Parameter ermöglicht der-Funktion, eine Variable Anzahl von Argumenten zu akzeptieren.  
+ Im folgenden Beispiel wird die-Funktion `calcSum`definiert und aufgerufen. Der `ParamArray` Modifizierer für den Parameter `args` ermöglicht der Funktion, eine Variable Anzahl von Argumenten zu akzeptieren.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   

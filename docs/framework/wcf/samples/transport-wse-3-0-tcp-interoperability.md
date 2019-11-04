@@ -2,12 +2,12 @@
 title: 'Transport: WSE 3.0-TCP-Interoperabilität'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941031"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423871"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0-TCP-Interoperabilität
 Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine TCP-Duplex Sitzung als benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte zeigen, wie dieser benutzerdefinierte WCF-Transport erstellt wird:  
@@ -23,7 +23,7 @@ Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine
 5. Fügen Sie ein Bindungselement hinzu, das den benutzerdefinierten Transport einem Kanalstapel hinzufügt. Weitere Informationen finden Sie unter [Hinzufügen eines Bindungs Elements].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Erstellen von IDuplexSessionChannel  
- Der erste Schritt beim Schreiben des WSE 3.0-TCP-Interoperabilitätstransports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IDuplexSessionChannel> auf einem <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` wird von <xref:System.ServiceModel.Channels.ChannelBase> abgeleitet. Die Logik für das Senden einer Nachricht besteht aus zwei Hauptteilen: (1) codieren Sie die Nachricht in Bytes, und (2) umgestalten Sie diese Bytes, und senden Sie Sie bei der Übertragung.  
+ Der erste Schritt beim Schreiben des WSE 3.0-TCP-Interoperabilitätstransports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IDuplexSessionChannel> auf einem <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` wird von <xref:System.ServiceModel.Channels.ChannelBase> abgeleitet. Die Logik zum Senden von Nachrichten besteht aus zwei Hauptteilen: (1) dem Codieren der Nachricht in Bytes und (2) dem Einrahmen und Senden dieser Bytes über das Netzwerk.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -52,7 +52,7 @@ Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine
 ## <a name="channel-factory"></a>Kanalfactory  
  Der nächste Schritt beim Schreiben des TCP-Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle.  
   
-- `WseTcpChannelFactory`wird von <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel > abgeleitet. Das ist eine Factory, die `OnCreateChannel` überschreibt, um Clientkanäle zu erzeugen.  
+- `WseTcpChannelFactory` von <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel-> abgeleitet. Das ist eine Factory, die `OnCreateChannel` überschreibt, um Clientkanäle zu erzeugen.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,7 +62,7 @@ Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel`Fügt der Basis `WseTcpDuplexSessionChannel` Logik hinzu, um zum `channel.Open` Zeitpunkt eine Verbindung mit einem TCP-Server herzustellen. Zuerst wird der Hostname zu einer IP-Adresse aufgelöst, wie im folgenden Code dargestellt.  
+- `ClientWseTcpDuplexSessionChannel` fügt der Basis `WseTcpDuplexSessionChannel` Logik zum Herstellen einer Verbindung mit einem TCP-Server zu `channel.Open` Zeit hinzu. Zuerst wird der Hostname zu einer IP-Adresse aufgelöst, wie im folgenden Code dargestellt.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine
 ## <a name="channel-listener"></a>Kanallistener  
  Im nächsten Schritt wird eine Implementierung von <xref:System.ServiceModel.Channels.IChannelListener> zum Entgegennehmen von Serverkanälen erstellt.  
   
-- `WseTcpChannelListener`wird von <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > abgeleitet und überschreibt on [begin] Open und on [begin] Close, um die Lebensdauer des lausch Sockets zu steuern. In OnOpen wird ein Socket zum Lauschen an IP_ANY erstellt. Weiter fortgeschrittene Implementierungen können einen zweiten Socket erstellen, um auch an IPv6 zu lauschen. Sie können außerdem zulassen, dass die IP-Adresse im Hostnamen angegeben wird.  
+- `WseTcpChannelListener` von <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel abgeleitet > und überschreibt on [begin] Open und on [begin] Close, um die Lebensdauer des lausch Sockets zu steuern. In OnOpen wird ein Socket zum Lauschen an IP_ANY erstellt. Weiter fortgeschrittene Implementierungen können einen zweiten Socket erstellen, um auch an IPv6 zu lauschen. Sie können außerdem zulassen, dass die IP-Adresse im Hostnamen angegeben wird.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -135,7 +135,7 @@ Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine
   
  Client:  
   
-```  
+```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Symbol: FABRIKAM  
@@ -159,7 +159,7 @@ Press enter.
   
  Server:  
   
-```  
+```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Press any key to exit when done...  

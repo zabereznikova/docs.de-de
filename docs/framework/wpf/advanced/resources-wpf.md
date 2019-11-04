@@ -8,18 +8,18 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981889"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458710"
 ---
 # <a name="resources-wpf"></a>Ressourcen (WPF)
-Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. WPF unterstützt verschiedene Arten von Ressourcen. Diese Ressourcen sind in erster Linie auf zwei Arten von Ressourcen: XAML-Ressourcen und Data-Ressourcendateien. Beispiele für XAML-Ressourcen sind Pinsel und Stile. Data-Ressourcendateien sind nicht ausführbaren Datendateien, die eine Anwendung benötigt.  
+Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. WPF unterstützt verschiedene Arten von Ressourcen. Diese Ressourcen sind hauptsächlich zwei Arten von Ressourcen: XAML-Ressourcen und Ressourcen Datendateien. Beispiele für XAML-Ressourcen sind Pinsel und Stile. Ressourcen Datendateien sind nicht ausführbare Datendateien, die von einer Anwendung benötigt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [XAML-Ressourcen](xaml-resources.md)  
+ [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [WPF-Anwendungsressource, Inhalts- und Datendateien](../app-development/wpf-application-resource-content-and-data-files.md)  
  [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)  
   

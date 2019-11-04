@@ -1,33 +1,33 @@
 ---
-title: 'Vorgehensweise: Anwenden eines FocusVisualStyle auf ein Steuerelement'
+title: 'Gewusst wie: Anwenden eines FocusVisualStyle auf ein Steuerelement'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b44330ee7554f953389556bd62ff49db120b5db9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051324"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459810"
 ---
-# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Vorgehensweise: Anwenden eines FocusVisualStyle auf ein Steuerelement
-Dieses Beispiel zeigt Ihnen das Erstellen eines visuellen Fokusstils in Ressourcen und Anwenden der Formatvorlage auf ein Steuerelement, mit der <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft.  
+# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Gewusst wie: Anwenden eines FocusVisualStyle auf ein Steuerelement
+In diesem Beispiel wird gezeigt, wie Sie einen visuellen Fokus Stil in Ressourcen erstellen und den Stil auf ein Steuerelement anwenden, indem Sie die <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>-Eigenschaft verwenden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel definiert ein Format, das zusätzliche Zusammensetzung von Steuerelementen, die nur gültig, wenn das Steuerelement mit Fokus im Tastatur wird die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Dies erfolgt durch die Definition eines Stils mit einem <xref:System.Windows.Controls.ControlTemplate>, und klicken Sie dann diesen Stil als eine Ressource verweisen, beim Festlegen der <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft.  
+ Im folgenden Beispiel wird ein Stil definiert, mit dem zusätzliche Steuerelement Zusammensetzung erstellt werden, die nur angewendet wird, wenn sich das Steuerelement in der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]auf die Tastatur konzentriert Dies wird erreicht, indem ein Stil mit einem <xref:System.Windows.Controls.ControlTemplate>definiert und dann beim Festlegen der Eigenschaft <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> als Ressource referenziert wird.  
   
- Ein externes Rechteck, einem Rahmen ähnelt befindet sich außerhalb des rechteckigen Bereichs. Es sei denn, die andernfalls geändert wird, verwendet die Größe des Formats der <xref:System.Windows.FrameworkElement.ActualHeight%2A> und <xref:System.Windows.FrameworkElement.ActualWidth%2A> des rechteckigen-Steuerelements, in dem der visuelle Fokusstil angewendet wird. In diesem Beispiel wird die negative Werte für die <xref:System.Windows.FrameworkElement.Margin%2A> zu der Rahmen etwas außerhalb das Steuerelement mit Fokus dargestellt.  
+ Ein externes Rechteck, das einem Rahmen ähnelt, wird außerhalb des rechteckigen Bereichs platziert. Sofern nicht anders geändert, verwendet die Größe des Stils die <xref:System.Windows.FrameworkElement.ActualHeight%2A> und <xref:System.Windows.FrameworkElement.ActualWidth%2A> des rechteckigen Steuer Elements, auf das der visuelle Fokus Stil angewendet wird. In diesem Beispiel werden negative Werte für das <xref:System.Windows.FrameworkElement.Margin%2A> festgelegt, damit der Rahmen leicht außerhalb des Steuer Elements angezeigt wird.  
   
  [!code-xaml[FEFocusVisualStyle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
   
- Ein <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> wird auf alle Steuerelement-Vorlage-Format, das ist additiv expliziter Stil oder einem Designstil der primäre Stil für ein Steuerelement kann immer noch mit erstellt werden ein <xref:System.Windows.Controls.ControlTemplate> und diesen Stil auf die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft.  
+ Ein <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> ist ein Additiv zu einem Steuerelement Vorlagen Stil, der entweder aus einem expliziten Stil oder einem Design Stil stammt. der primäre Stil für ein Steuerelement kann weiterhin mithilfe eines <xref:System.Windows.Controls.ControlTemplate> erstellt und dieser Stil auf die <xref:System.Windows.FrameworkElement.Style%2A>-Eigenschaft festgelegt werden.  
   
- Fokus visuelle Stile konsistent werden, über ein Thema oder eine Benutzeroberfläche verwendet sollten, anstatt einen anderen Wert für jedes Element den Fokus erhalten kann. Weitere Informationen finden Sie unter [Fokusstile in Steuerelementen und FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
+ Visuelle Fokus Stile sollten konsistent für ein Design oder eine Benutzeroberfläche verwendet werden, anstatt für jedes Fokussier Bare Element einen anderen zu verwenden. Weitere Informationen finden Sie unter Formatieren [für den Fokus in Steuerelementen und Focus VisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Fokusstile in Steuerelementen und FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

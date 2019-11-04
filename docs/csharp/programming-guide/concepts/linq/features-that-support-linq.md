@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594405"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418559"
 ---
 # <a name="c-features-that-support-linq"></a>C#-Funktionen mit LINQ-Unterstützung
 
@@ -26,7 +26,7 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../linq-query-expressions/index.md).
+Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../linq/index.md).
 
 ## <a name="implicitly-typed-variables-var"></a>Implizit typisierte Variablen (var)
 

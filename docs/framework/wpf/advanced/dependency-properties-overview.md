@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401419"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458956"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
 Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#Properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
 
-## <a name="prerequisites"></a>Vorraussetzungen
-In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktop](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Anwendung.  
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Abhängigkeitseigenschaften und CLR-Eigenschaften
  Eigenschaften werden in der Regel als .NET-[Standardeigenschaften](../../../standard/base-types/common-type-system.md#Properties) verfügbar gemacht. Grundsätzlich können Sie direkt mit diesen Eigenschaften direkt interagieren, ohne zu wissen, dass sie als Abhängigkeitseigenschaft implementiert werden. Sie sollten aber mit einigen oder allen Funktionen des WPF-Eigenschaftensystems vertraut sein, damit Sie sie nutzen können.
@@ -40,11 +40,11 @@ Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funkti
 
 Nachfolgend ist die Terminologie aufgeführt, die mit Abhängigkeitseigenschaften verwendet wird:
 
-- **Abhängigkeits Eigenschaft:** Eine Eigenschaft, die von einem <xref:System.Windows.DependencyProperty>unterstützt wird.
+- **Abhängigkeitseigenschaft:** Eine Eigenschaft, die von einer <xref:System.Windows.DependencyProperty>-Klasse gesichert wird.
 
-- **Bezeichner der Abhängigkeits Eigenschaft:** Eine <xref:System.Windows.DependencyProperty> -Instanz, die beim Registrieren einer Abhängigkeits Eigenschaft als Rückgabewert abgerufen und dann als statischer Member einer Klasse gespeichert wird. Dieser Bezeichner wird als Parameter für viele der APIs verwendet, die mit dem WPF-Eigenschaftenssystem interagieren.
+- **Abhängigkeitseigenschaftenbezeichner:** Eine <xref:System.Windows.DependencyProperty>-Instanz, die als Rückgabewert beim Registrieren einer Abhängigkeitseigenschaft abgerufen und dann als statischer Member einer Klasse gespeichert wird. Dieser Bezeichner wird als Parameter für viele der APIs verwendet, die mit dem WPF-Eigenschaftenssystem interagieren.
 
-- **CLR "Wrapper":** Die tatsächlichen Get-und Set-Implementierungen für die-Eigenschaft. Diese Implementierungen beinhalten den Abhängigkeitseigenschaftenbezeichner, indem sie diesen in den Aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> verwenden und so die Sicherung für die Eigenschaft über das WPF-Eigenschaftensystem bereitstellen.
+- **CLR-Wrapper:** Die tatsächlichen Implementierungen zum Abrufen und Festlegen für die Eigenschaft. Diese Implementierungen beinhalten den Abhängigkeitseigenschaftenbezeichner, indem sie diesen in den Aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> verwenden und so die Sicherung für die Eigenschaft über das WPF-Eigenschaftensystem bereitstellen.
 
 Das folgende Beispiel definiert die `IsSpinning`-Abhängigkeitseigenschaft und zeigt die Beziehung zwischen dem <xref:System.Windows.DependencyProperty>-Bezeichner zur Eigenschaft, die er unterstützt.
 
@@ -61,7 +61,7 @@ Im folgende XAML-Beispiel wird die Hintergrundfarbe einer Schaltfläche als Rot 
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
-XAML unterstützt eine Vielzahl an Syntaxformen zum Festlegen von Eigenschaften. Welche Syntax für eine bestimmte Eigenschaft verwendet wird, hängt vom Werttyp ab, den eine Eigenschaft verwendet, sowie von anderen Faktoren wie dem Vorhandensein eines Typkonverters. Weitere Informationen zur XAML-Syntax zum Festlegen von Eigenschaften finden Sie unter [Übersicht über XAML (WPF)](xaml-overview-wpf.md) und [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md).
+XAML unterstützt eine Vielzahl an Syntaxformen zum Festlegen von Eigenschaften. Welche Syntax für eine bestimmte Eigenschaft verwendet wird, hängt vom Werttyp ab, den eine Eigenschaft verwendet, sowie von anderen Faktoren wie dem Vorhandensein eines Typkonverters. Weitere Informationen zur XAML-Syntax zum Festlegen von Eigenschaften finden Sie unter [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) und [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md).
 
 Im folgende XAML-Beispiel wird ein Beispiel für eine Syntax ohne Attribut und einen anderen Hintergrund für eine Schaltfläche. Diesmal wird nicht einfach eine Volltonfarbe, sondern der Hintergrund auf ein Bild mit einem Element festgelegt, das dieses Bild und die Bildquelle angegeben als Attribut des geschachtelten Elements darstellt. Dies ist ein Beispiel für Eigenschaftenelementsyntax.
 
@@ -80,7 +80,7 @@ Das Abrufen eines Eigenschaftswerts besteht auch im Grunde aus einem Aufruf der 
 
 Sie können auch die Eigenschaften System-APIs <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt aufzurufen. Dies ist in der Regel nicht erforderlich, wenn Sie vorhandene Eigenschaften verwenden (die Wrapper sind bequemer und bieten eine bessere Verfügbarkeit der Eigenschaft für Entwicklertools), aber der direkte Aufruf der APIs ist für bestimmte Szenarien geeignet.
 
-Eigenschaften können auch in XAML festgelegt und später über den Code (über die CodeBehind-Datei) darauf zugegriffen werden. Weitere Informationen finden Sie unter [CodeBehind und XAML in WPF](code-behind-and-xaml-in-wpf.md).
+Eigenschaften können auch in XAML festgelegt und später über den Code (über die CodeBehind-Datei) darauf zugegriffen werden. Weitere Informationen finden Sie unter [Code-Behind und XAML in WPF](code-behind-and-xaml-in-wpf.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Von einer Abhängigkeitseigenschaft bereitgestellte Eigenschaftenfunktionalität
 Eine Abhängigkeitseigenschaft stellt Funktionen bereit, die die Funktionalität einer Eigenschaft gegenüber einer Eigenschaft übertreffen, die durch ein Feld unterstützt wird. Oft stellt eine solche Funktion eine der folgenden spezifischen Features dar bzw. unterstützt es:
@@ -136,7 +136,7 @@ Im folgenden Beispiel wird ein recht einfacher Stil erstellt, der in einem <xref
 
 Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md).
 
-### <a name="animations"></a>Animationen
+### <a name="animations"></a>Animations
 Abhängigkeitseigenschaften können animiert werden. Wenn eine Animation angewendet wurde und ausgeführt wird, verfügt der animierte Wert über eine höhere Priorität als alle anderen Werte (z.B. ein lokaler Wert), über die die Eigenschaft sonst verfügt.
 
 Im folgenden Beispiel wird die <xref:System.Windows.Controls.Control.Background%2A>-Eigenschaft auf einer <xref:System.Windows.Controls.Button>-Eigenschaft animiert (genau genommen wird <xref:System.Windows.Controls.Control.Background%2A> über die Eigenschaftenelementsyntax animiert, um eine leere <xref:System.Windows.Media.SolidColorBrush>-Klasse als <xref:System.Windows.Controls.Control.Background%2A> anzugeben. Die <xref:System.Windows.Media.SolidColorBrush.Color%2A>-Eigenschaft dieser <xref:System.Windows.Media.SolidColorBrush> ist somit die Eigenschaft, die direkt animiert wird).
@@ -153,7 +153,7 @@ Das folgende Beispiel überschreibt Metadaten für eine <xref:System.Windows.Fra
 [!code-csharp[PropertiesOvwSupport#OverrideMetadata](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#overridemetadata)]
 [!code-vb[PropertiesOvwSupport#OverrideMetadata](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#overridemetadata)]
 
-Weitere Informationen über das Überschreiben oder Abrufen von Eigenschaftenmetadaten finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).
+Weitere Informationen zum Überschreiben oder Abrufen von Eigenschaftenmetadaten finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).
 
 ### <a name="property-value-inheritance"></a>Vererbung von Eigenschaftswerten
 Ein Element kann den Wert einer Abhängigkeitseigenschaft von seinem übergeordneten Element in der Objektstruktur erben.
@@ -165,7 +165,7 @@ Im folgenden Beispiel wird eine Bindung gezeigt und die <xref:System.Windows.Fra
 
 [!code-xaml[PropertiesOvwSupport#InheritanceContext](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#inheritancecontext)]
 
-Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).
+Weitere Informationen finden Sie unter [ Vererbung von Eigenschaftswerten](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>WPF-Designer-Integration
 Ein benutzerdefiniertes Steuerelement mit Eigenschaften, die als Abhängigkeitseigenschaften implementiert werden, erhalten entsprechenden [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]-Support. Ein Beispiel hierfür ist die Fähigkeit, direkte und angefügte Abhängigkeitseigenschaften mit dem **Eigenschaften**-Fenster zu bearbeiten. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).
@@ -200,5 +200,5 @@ In der Regel sollen Stile nicht immer gelten und sogar einen lokal festgelegten 
 
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
 - [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md)
-- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [WPF-Architektur](wpf-architecture.md)

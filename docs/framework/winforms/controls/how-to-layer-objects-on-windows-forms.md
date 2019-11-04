@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Überlagern von Objekten in Windows Forms'
+title: 'Gewusst wie: Überlagern von Objekten in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e4c6a3236b3a2a2afaad73fee21c3cf59b992b8
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987563"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458350"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Vorgehensweise: Ebenenobjekte auf Windows Forms
+# <a name="how-to-layer-objects-on-windows-forms"></a>Gewusst wie: Ebenenobjekte auf Windows Forms
 
 Beim Erstellen einer komplexen Benutzeroberfläche oder bei Verwendung eines MDI-Formulars (Multiple Document Interface) empfiehlt es sich, sowohl Steuerelemente als auch untergeordnete Formulare zu verlagern, um komplexere Benutzeroberflächen (UI) zu erstellen. Um Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe zu verschieben und zu verfolgen, bearbeiten Sie Ihre *z-Reihenfolge*. Die z-Reihenfolge ist das visuelle Schichten von Steuerelementen in einem Formular entlang der z-Achse (Tiefe) des Formulars. Das Fenster oben in der z-Reihenfolge überlappt alle anderen Fenster. Alle anderen Fenster überlappen das Fenster am unteren Rand der z-Reihenfolge.
 
@@ -34,9 +34,9 @@ Beim Erstellen einer komplexen Benutzeroberfläche oder bei Verwendung eines MDI
 
 ## <a name="to-layer-controls-programmatically"></a>Zum programmgesteuerten ebenensteuerelement
 
-Verwenden Sie <xref:System.Windows.Forms.Control.BringToFront%2A> die <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden und, um die z-Reihenfolge der Steuerelemente zu bearbeiten.
+Verwenden Sie die Methoden <xref:System.Windows.Forms.Control.BringToFront%2A> und <xref:System.Windows.Forms.Control.SendToBack%2A>, um die z-Reihenfolge der Steuerelemente zu bearbeiten.
 
-Wenn sich z. b <xref:System.Windows.Forms.TextBox> . ein `txtFirstName`Steuerelement,, unter einem anderen Steuerelement befindet und Sie es oben verwenden möchten, verwenden Sie den folgenden Code:
+Wenn sich z. b. ein <xref:System.Windows.Forms.TextBox> Steuerelement, `txtFirstName`, unter einem anderen Steuerelement befindet und Sie es oben verwenden möchten, verwenden Sie den folgenden Code:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,11 +51,11 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms unterstützt die Einschluss *Steuerung*. Die Einschluss Steuerung umfasst das Platzieren einer Reihe von Steuerelementen innerhalb eines enthaltenden Steuer Elements <xref:System.Windows.Forms.RadioButton> , z. <xref:System.Windows.Forms.GroupBox> b. eine Reihe von Steuerelementen in einem Steuerelement Anschließend können Sie die Steuerelemente innerhalb des enthaltenden Steuer Elements Schichten. Wenn Sie das Gruppenfeld verschieben, werden auch die Steuerelemente verschoben, da Sie darin enthalten sind.
+> Windows Forms unterstützt die Einschluss *Steuerung*. Die Kapselung von Steuerelementen umfasst das Platzieren einer Reihe von Steuerelementen innerhalb eines enthaltenden Steuer Elements, z. b. eine Reihe von <xref:System.Windows.Forms.RadioButton> Steuerelementen innerhalb <xref:System.Windows.Forms.GroupBox> eines Anschließend können Sie die Steuerelemente innerhalb des enthaltenden Steuer Elements Schichten. Wenn Sie das Gruppenfeld verschieben, werden auch die Steuerelemente verschoben, da Sie darin enthalten sind.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

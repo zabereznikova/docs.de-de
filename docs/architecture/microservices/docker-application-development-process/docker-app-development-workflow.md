@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/07/2019
-ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771497"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417250"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -117,7 +117,7 @@ Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfi
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Erstellen von Docker-Images für .NET Core-Anwendungen** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Build your own image (Entwickeln eines eigenen Images)** . In der offiziellen Docker-Dokumentation.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>

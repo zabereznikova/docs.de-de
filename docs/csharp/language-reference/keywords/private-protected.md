@@ -3,12 +3,12 @@ title: private protected – C#-Referenz
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: dfb2e754d81116012b9fc3f8fd4f6fe1ad0daef1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661673"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422626"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C#-Referenz)
 
@@ -76,7 +76,7 @@ Strukturmember können nicht vom Typ `private protected` sein, da die Struktur n
 - [C#-Schlüsselwörter](index.md)
 - [Zugriffsmodifizierer](access-modifiers.md)
 - [Zugriffsebenen](accessibility-levels.md)
-- [Modifizierer](modifiers.md)
+- [Modifizierer](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

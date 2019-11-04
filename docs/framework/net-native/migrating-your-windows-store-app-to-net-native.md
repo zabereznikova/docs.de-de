@@ -2,14 +2,14 @@
 title: Migrieren der Windows Store-App auf .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128311"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455611"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>Migrieren der Windows Store-App auf .NET Native
+# <a name="migrate-your-windows-store-app-to-net-native"></a>Migrieren Ihrer Windows Store-App zu .net Native
 
 .Net Native bietet eine statische Kompilierung von apps im Windows Store oder auf dem Computer des Entwicklers. Dies unterscheidet sich von der dynamischen Kompilierung für Windows Store-Apps durch den JIT-Compiler (Just-in-Time) oder den [Native Image Generator (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) auf dem Gerät. Trotz der Unterschiede wird von .net Native versucht, die Kompatibilität mit den [.net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)aufrechtzuerhalten. In den meisten Fällen funktionieren Dinge, die in .net für Windows Store-Apps funktionieren, auch mit .net Native.  In einigen Fällen können jedoch Verhaltensänderungen auftreten. In diesem Dokument werden diese Unterschiede zwischen den standardmäßigen .net für Windows Store-Apps und .net Native in den folgenden Bereichen erläutert:
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128311"
 
 Beispielsweise erfordert die Datenbindung, dass eine App Eigenschaftennamen Funktionen zuordnen kann. In .NET für Windows Store-Apps verwendet die Common Language Runtime automatisch Reflektion, um diese Funktion für verwaltete Typen und öffentlich verfügbare systemeigene Typen bereitzustellen. In .net Native schließt der Compiler automatisch Metadaten für Typen ein, an die Sie Daten binden.
 
-Der .net Native-Compiler kann auch häufig verwendete generische Typen verarbeiten, z. b. <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602>, die ohne Hinweise oder Anweisungen funktionieren. Das [dynamic](../../csharp/language-reference/keywords/dynamic.md) -Schlüsselwort wird ebenfalls innerhalb bestimmter Grenzen unterstützt.
+Der .net Native-Compiler kann auch häufig verwendete generische Typen verarbeiten, z. b. <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602>, die ohne Hinweise oder Anweisungen funktionieren. Das [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) -Schlüsselwort wird ebenfalls innerhalb bestimmter Grenzen unterstützt.
 
 > [!NOTE]
 > Sie sollten alle dynamischen Codepfade gründlich testen, wenn Sie Ihre APP auf .net Native portieren.

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Sortieren und Gruppieren von Daten mit einer Ansicht in XAML'
+title: 'Gewusst wie: Sortieren und Gruppieren von Daten mit einer Ansicht in XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e42dd330535f71438ab7af3dca9d078e9dfd8d3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020737"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460125"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Vorgehensweise: Sortieren und Gruppieren von Daten mit einer Ansicht in XAML
-In diesem Beispiel wird gezeigt, wie zum Erstellen einer Ansicht einer Datensammlung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Sichten können für die Funktionen von gruppieren, sortieren, Filtern und das Konzept eines aktuellen Elements.  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Gewusst wie: Sortieren und Gruppieren von Daten mit einer Ansicht in XAML
+Dieses Beispiel zeigt, wie eine Ansicht einer Datensammlung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]erstellt wird. Sichten ermöglichen das Gruppieren, sortieren, Filtern und das Konzept eines aktuellen Elements.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel die statische Ressource namens *platziert* ist definiert als eine Auflistung von *Ort* -Objekte, in denen die einzelnen *Ort* Objekt ist Bestand, der Namen einer Stadt und die Status. Das Präfix *Src* zugeordnet ist, auf den Namespace, in dem die Datenquelle *stellen* definiert ist. Das Präfix *Scm* ordnet `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` und *Dat* ordnet `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.  
+ Im folgenden Beispiel wird die statische Ressource mit dem Namen *Places* als eine Auflistung von *Place* -Objekten definiert, wobei jedes *Place* -Objekt aus einem Ortsnamen und dem-Zustand besteht. Das Präfix *src* wird dem Namespace zugeordnet, in dem die Datenquellen Speicher *Orte* definiert sind. Das Präfix *SCM* wird `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` zugeordnet, und *DAT* wird `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`zugeordnet.  
   
- Das folgende Beispiel erstellt einen Überblick über die Datensammlung, die durch den Namen der Stadt sortiert und gruppiert nach den Status an.  
+ Im folgenden Beispiel wird eine Ansicht der Datensammlung erstellt, die nach dem Namen der Stadt sortiert und nach dem-Status gruppiert ist.  
   
  [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- Die Ansicht kann dann eine Bindungsquelle, wie im folgenden Beispiel sein:  
+ Die Sicht kann dann eine Bindungs Quelle sein, wie im folgenden Beispiel gezeigt:  
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- Für Bindungen an XML-Daten, die definiert, die einer <xref:System.Windows.Data.XmlDataProvider> Ressource stellen vor den Namen der XML-ein @-Symbols.  
+ Für Bindungen an XML-Daten, die in einer <xref:System.Windows.Data.XmlDataProvider> Ressource definiert sind, muss dem XML-Namen ein @-Symbol vorangestellt sein.  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
@@ -42,5 +42,5 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer Ansicht einer Datensamm
 
 - <xref:System.Windows.Data.CollectionViewSource>
 - [Abrufen der Standardansicht einer Datenauflistung](how-to-get-the-default-view-of-a-data-collection.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

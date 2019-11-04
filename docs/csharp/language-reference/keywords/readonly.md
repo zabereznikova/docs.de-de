@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960850"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454957"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
@@ -27,13 +27,13 @@ Das Schlüsselwort `readonly` ist ein Modifizierer, der in vier Kontexten verwen
   - Da Verweistypen einen Verweis auf ihre Daten enthalten, muss ein Feld des Verweistyps `readonly` immer auf das gleiche Objekt verweisen. Dieses Objekt ist nicht unveränderlich. Der `readonly`-Modifizierer verhindert, dass das Feld durch eine andere Instanz des Verweistyps ersetzt wird. Der Modifizierer verhindert jedoch nicht, dass die Instanzdaten des Felds durch das schreibgeschützte Feld geändert werden.
 
   > [!WARNING]
-  > Ein extern sichtbarer Typ, der ein extern sichtbares schreibgeschütztes Feld enthält, bei dem es sich um einen änderbaren Verweistyp handelt, kann ein Sicherheitsrisiko darstellen und die folgende Warnung auslösen: [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types): „Schreibgeschützte änderbare Verweistypen nicht deklarieren.“
+  > Ein extern sichtbarer Typ, der ein extern sichtbares schreibgeschütztes Feld enthält, bei dem es sich um einen änderbaren Verweistyp handelt, kann ein Sicherheitsrisiko darstellen und die folgende Warnung auslösen: [CA2104](/visualstudio/code-quality/ca2104): „Schreibgeschützte änderbare Verweistypen nicht deklarieren.“
 
 - In einer [`readonly struct`-Definition](#readonly-struct-example) gibt `readonly` an, dass `struct` unveränderlich ist.
 - In einer [`readonly`-Memberdefinition](#readonly-member-examples) gibt `readonly` an, dass ein Member von `struct` den internen Zustand der Struktur nicht verändert.
 - In einer [`ref readonly`-Methodenrückgabe](#ref-readonly-return-example) gibt der `readonly`-Modifizierer an, dass die Methode eine Referenz zurückgibt, und Schreibvorgänge für diese Referenz nicht zulässig sind.
 
-Die `readonly sturct`- und `ref readonly`-Kontexte wurden in C# 7.2 hinzugefügt. `readonly`-Strukturmember wurden in C# 8.0 hinzugefügt.
+Die `readonly struct`- und `ref readonly`-Kontexte wurden in C# 7.2 hinzugefügt. `readonly`-Strukturmember wurden in C# 8.0 hinzugefügt.
 
 ## <a name="readonly-field-example"></a>Beispiel für ein readonly-Feld
 
@@ -161,6 +161,6 @@ Sehen Sie sich auch die Vorschläge zur Sprachspezifikation an:
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Modifizierer](modifiers.md)
+- [Modifizierer](index.md)
 - [const](const.md)
 - [Felder](../../programming-guide/classes-and-structs/fields.md)

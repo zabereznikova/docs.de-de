@@ -3,33 +3,33 @@ title: Erste Schritte mit Azure File Storage mit F#
 description: Speichern Sie Datei Daten mit Azure File Storage in der Cloud, und stellen Sie Ihre clouddateifreigabe über einen virtuellen Azure-Computer (VM) oder eine lokale Anwendung unter Windows bereit.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: a0e3cab56ba0f3db27335822616b4976a5d9de62
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9c25ab930abcbe7b358ae63c709aba4e97aed3be
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630491"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423860"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Einstieg in Azure File Storage mit F\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>Beginnen Sie mit der Verwendung von Azure File Storage mit F\#
 
 Azure File Storage ist ein Dienst, bei dem Dateifreigaben in der Cloud unter Verwendung des standardmäßigen [SMB-Protokolls (Server Message Block)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)angeboten werden. Sowohl SMB 2,1 als auch SMB 3,0 werden unterstützt. Mit Azure File Storage können Sie Legacy Anwendungen, die auf Dateifreigaben basieren, schnell und ohne aufwändige Umschreibungen migrieren. Anwendungen, die auf virtuellen Azure-Computern oder Clouddiensten oder von lokalen Clients ausgeführt werden, können eine Dateifreigabe in der Cloud einbinden, ebenso wie eine Desktop Anwendung eine typische SMB-Freigabe bereitstellt. Eine beliebige Anzahl von Anwendungskomponenten kann dann gleichzeitig auf die Dateispeicher Freigabe zugreifen und darauf zugreifen.
 
 Eine konzeptionelle Übersicht über den Dateispeicher finden Sie [im .net-Handbuch zum](/azure/storage/storage-dotnet-how-to-use-files)Speichern von Dateien.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
 Um dieses Handbuch verwenden zu können, müssen Sie zunächst [ein Azure Storage-Konto erstellen](/azure/storage/storage-create-storage-account).
 Sie benötigen auch ihren Speicherzugriffs Schlüssel für dieses Konto.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>F# Skript erstellen und interaktiv starten F#
 
-Die Beispiele in diesem Artikel können entweder in einer F# Anwendung oder in einem F# Skript verwendet werden. Um ein F# Skript zu erstellen, erstellen Sie `.fsx` F# eine Datei mit der Erweiterung, `files.fsx`z. b. in der Entwicklungsumgebung.
+Die Beispiele in diesem Artikel können entweder in einer F# Anwendung oder in einem F# Skript verwendet werden. Um ein F# Skript zu erstellen, erstellen Sie eine Datei mit der `.fsx`-Erweiterung, z. b F# . `files.fsx`, in Ihrer Entwicklungsumgebung.
 
-Verwenden Sie als nächstes [einen Paket-Manager](package-management.md) , z. b. [Paket](https://fsprojects.github.io/Paket/) oder `WindowsAzure.Storage` [nuget](https://www.nuget.org/) , um das Paket zu installieren `#r` , und verweisen `WindowsAzure.Storage.dll` Sie mithilfe einer-Anweisung in Ihrem Skript
+Verwenden Sie als nächstes einen [Paket-Manager](package-management.md) wie z. b. [Paket](https://fsprojects.github.io/Paket/) oder [nuget](https://www.nuget.org/) , um das `WindowsAzure.Storage`-Paket zu installieren, und verweisen Sie `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`-Direktive
 
 ### <a name="add-namespace-declarations"></a>Namespace Deklarationen hinzufügen
 
-Fügen Sie am `open` Anfang `files.fsx` der Datei die folgenden-Anweisungen ein:
+Fügen Sie am Anfang der Datei `files.fsx` die folgenden `open`-Anweisungen hinzu:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
 
@@ -47,7 +47,7 @@ Bei echten Anwendungen ist die beste Möglichkeit, Ihre Speicher Verbindungs Zei
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
 
-Die Verwendung von Azure Configuration Manager ist optional. Sie können auch eine API verwenden, z. b. `ConfigurationManager` den Typ der .NET Framework.
+Die Verwendung von Azure Configuration Manager ist optional. Sie können auch eine API verwenden, z. b. den `ConfigurationManager`-Typ der .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analysieren der Verbindungs Zeichenfolge
 
@@ -59,7 +59,7 @@ Dadurch wird eine `CloudStorageAccount`zurückgegeben.
 
 ### <a name="create-the-file-service-client"></a>Erstellen des Datei Dienst Clients
 
-Der `CloudFileClient` -Typ ermöglicht die programmgesteuerte Verwendung von Dateien, die in File Storage gespeichert sind. Dies ist eine Möglichkeit, den Dienst Client zu erstellen:
+Der `CloudFileClient`-Typ ermöglicht die programmgesteuerte Verwendung von Dateien, die in File Storage gespeichert sind. Dies ist eine Möglichkeit, den Dienst Client zu erstellen:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
 
@@ -91,7 +91,7 @@ Hier laden Sie die soeben erstellte Datei herunter und fügen die Inhalte an ein
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Festlegen der maximalen Größe für eine Dateifreigabe
 
-Das folgende Beispiel zeigt, wie Sie die aktuelle Nutzung einer Freigabe überprüfen und das Kontingent für die Freigabe festlegen. `FetchAttributes`muss aufgerufen werden, um den `Properties`zu füllen und `SetProperties` lokale Änderungen an Azure File Storage weiterzugeben.
+Das folgende Beispiel zeigt, wie Sie die aktuelle Nutzung einer Freigabe überprüfen und das Kontingent für die Freigabe festlegen. `FetchAttributes` müssen aufgerufen werden, um die `Properties`einer Freigabe aufzufüllen, und `SetProperties`, lokale Änderungen an Azure File Storage weiterzugeben.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -154,6 +154,6 @@ Weitere Informationen zu Azure File Storage finden Sie unter diesen Links.
 ### <a name="blog-posts"></a>Blog Beiträge
 
 - [Azure File Storage ist jetzt allgemein verfügbar](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
-- [In Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
+- [In Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Einführung in Microsoft Azure Datei Dienstanbieter](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
 - [Beibehalten von Verbindungen zu Microsoft Azure Dateien](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

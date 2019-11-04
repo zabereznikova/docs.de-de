@@ -2,13 +2,14 @@
 title: Grundlegende Typen | C#-Handbuch
 description: Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, Zeichenfolgen und Objekte) in allen C#-Programmen
 ms.date: 10/10/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834247"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420715"
 ---
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
@@ -65,7 +66,7 @@ Ein Typ kann mit einem oder mehreren *Typparametern* deklariert werden, die als 
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](language-reference/keywords/object.md) konvertieren zu müssen. Generische Auflistungsklassen werden als *stark typisierte Auflistungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Auflistung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `strings`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](programming-guide/generics/index.md).
+Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](language-reference/builtin-types/reference-types.md#the-object-type) konvertieren zu müssen. Generische Auflistungsklassen werden als *stark typisierte Auflistungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Auflistung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `strings`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Implizite Typen, anonyme Typen und Tupel-Typen
 
@@ -81,9 +82,9 @@ Sie sollten mit zwei grundlegenden Punkten des Typsystems in .NET Framework vert
   
 - Es unterstützt das Prinzip der Vererbung. Typen können von anderen Typen abgeleitet werden, die als *Basistypen* bezeichnet werden. Der abgeleitete Typ erbt (mit einigen Beschränkungen) die Methoden, Eigenschaften und anderen Member des Basistyps. Der Basistyp kann wiederum von einem anderen Typ abgeleitet sein. In diesem Fall erbt der abgeleitete Typ die Member beider Basistypen in der Vererbungshierarchie. Alle Typen, einschließlich integrierter numerischer Typen, z.B. <xref:System.Int32> (C#-Schlüsselwort: `int`), werden letztendlich von einem einzelnen Basistyp abgeleitet, nämlich <xref:System.Object> (C#-Schlüsselwort: `object`). Diese einheitliche Typhierarchie wird als [Allgemeines Typsystem](../standard/common-type-system.md) (Common Type System – CTS) bezeichnet. Weitere Informationen zur Vererbung in C# finden Sie unter [Vererbung](programming-guide/classes-and-structs/inheritance.md).  
   
-- Jeder Typ im CTS ist als *Werttyp* oder *Referenztyp* definiert. Dies betrifft auch alle benutzerdefinierten Typen in der .NET Framework-Klassenbibliothek und Ihre eigenen benutzerdefinierten Typen. Typen, die Sie mithilfe des [struct](language-reference/keywords/struct.md)-Schlüsselworts definieren, sind Werttypen. Alle integrierten numerischen Typen sind **structs**. Weitere Informationen über Werttypen finden Sie unter [Structs](structs.md). Typen, die Sie mithilfe des [class](language-reference/keywords/class.md)-Schlüsselworts definieren, sind Referenztypen. Weitere Informationen über Referenztypen finden Sie unter [Classes](classes.md). Für Referenztypen und Werttypen gelten unterschiedliche Kompilierzeitregeln und ein anderes Laufzeitverhalten.
+- Jeder Typ im CTS ist als *Werttyp* oder *Referenztyp* definiert. Dies betrifft auch alle benutzerdefinierten Typen in der .NET Framework-Klassenbibliothek und Ihre eigenen benutzerdefinierten Typen. Typen, die Sie mithilfe des [struct](language-reference/keywords/struct.md)-Schlüsselworts definieren, sind Werttypen. Alle integrierten numerischen Typen sind **structs**. Weitere Informationen über Werttypen finden Sie unter [Structs](structs.md). Typen, die Sie mithilfe des [class](language-reference/keywords/class.md)-Schlüsselworts definieren, sind Referenztypen. Weitere Informationen über Referenztypen finden Sie unter [Classes](programming-guide/classes-and-structs/classes.md). Für Referenztypen und Werttypen gelten unterschiedliche Kompilierzeitregeln und ein anderes Laufzeitverhalten.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Strukturen](structs.md)
-- [Klassen](classes.md)
+- [Klassen](programming-guide/classes-and-structs/classes.md)

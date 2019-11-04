@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern der Größe von Steuerelementen in Windows Forms'
+title: 'Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e659bf02ea079afc10561e1d83f7ab7cef29a2e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987053"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459557"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Vorgehensweise: Ändern der Größe von Steuerelementen auf Windows Forms
+# <a name="how-to-resize-controls-on-windows-forms"></a>Gewusst wie: Ändern der Größe von Steuerelementen auf Windows Forms
 
-Sie können die Größe einzelner Steuerelemente ändern, und Sie können die Größe mehrerer Steuerelemente derselben oder einer anderen Art ändern <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.GroupBox> z. b.-und-Steuerelemente.
+Sie können die Größe einzelner Steuerelemente ändern, und Sie können die Größe mehrerer Steuerelemente derselben oder einer anderen Art ändern, z. b. <xref:System.Windows.Forms.Button> und <xref:System.Windows.Forms.GroupBox> Steuerelementen.
 
 ## <a name="to-resize-a-control"></a>So ändern Sie die Größe eines Steuer Elements
 
 Wählen Sie in Visual Studio das Steuerelement aus, dessen Größe Sie ändern möchten, und ziehen Sie eines der acht Zieh Punkte.
 
 > [!NOTE]
-> Wählen Sie das Steuerelement aus, und drücken Sie die **Pfeil** Tasten, während Sie die **UMSCHALT** Taste gedrückt halten, um die Größe des Steuer Elements jeweils ein Pixel zu ändern. Drücken **Sie die nach-unten** -oder nach- **Rechts** -Taste, und halten Sie die **UMSCHALT** Taste gedrückt, um die Größe des Steuer Elements in großen Schritten zu ändern.
+> Wählen Sie das Steuerelement aus, und drücken Sie die **Pfeil** Tasten, während Sie die **UMSCHALT** Taste gedrückt halten, um die Größe des Steuer Elements jeweils ein Pixel zu ändern. Drücken **Sie die nach-unten** -oder nach- **Rechts** **-Taste,** und halten Sie die **UMSCHALT** Taste gedrückt, um die Größe des Steuer Elements in großen Schritten zu ändern.
 
 ## <a name="to-resize-multiple-controls-on-a-form"></a>So ändern Sie die Größe mehrerer Steuerelemente in einem Formular
 
@@ -40,6 +40,6 @@ Wählen Sie in Visual Studio das Steuerelement aus, dessen Größe Sie ändern m
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
-- [Vorgehensweise: Ändern der Größe Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Gewusst wie: Ändern der Größe von Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

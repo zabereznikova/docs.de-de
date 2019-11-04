@@ -3,14 +3,14 @@ title: Erste Schritte mit Azure Table Storage mit F#
 description: Speichern Sie strukturierte Daten mit Azure Table Storage oder Azure Cosmos DB in der Cloud.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395204"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424596"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit dem Azure-Tabellen Speicher und den Azure Cosmos DB Tabellen-API mit F @ no__t-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit dem Azure-Tabellen Speicher und den Azure Cosmos DB Tabellen-API mit F\#
 
 Azure Table Storage ist ein Dienst, mit dem strukturierte nosql-Daten in der Cloud gespeichert werden. Table Storage ist ein Schlüssel-/Attributspeicher mit einem Schema losen Design. Da der Tabellen Speicher Schema Reich ist, ist es einfach, Ihre Daten anzupassen, wenn sich die Anforderungen Ihrer Anwendung weiterentwickeln. Der Zugriff auf Daten ist für alle Arten von Anwendungen schnell und kostengünstig. Der Tabellen Speicher ist in der Regel erheblich niedriger als herkömmlicher SQL für ähnliche Datenmengen.
 
@@ -54,7 +54,7 @@ Wenn Sie eine Verbindung mit Azure Storage Tabellen Dienst herstellen, benötige
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB Verbindungs Zeichenfolge erhalten
 
-Wenn Sie eine Verbindung mit Azure Cosmos DB herstellen, benötigen Sie die Verbindungs Zeichenfolge für dieses Tutorial. Sie können die Verbindungs Zeichenfolge aus der Azure-Portal kopieren. Wechseln Sie in der Azure-Portal in Ihrem Cosmos DB Konto zu **Einstellungen** > **Verbindungs Zeichenfolge**, und klicken Sie auf die Schaltfläche " **Kopieren** ", um die primäre Verbindungs Zeichenfolge zu kopieren. 
+Wenn Sie eine Verbindung mit Azure Cosmos DB herstellen, benötigen Sie die Verbindungs Zeichenfolge für dieses Tutorial. Sie können die Verbindungs Zeichenfolge aus der Azure-Portal kopieren. Wechseln Sie in der Azure-Portal in Ihrem Cosmos DB Konto zu **Einstellungen** > **Verbindungs Zeichenfolge**, und klicken Sie auf die Schaltfläche " **Kopieren** ", um die primäre Verbindungs Zeichenfolge zu kopieren.
 
 Geben Sie für das Tutorial die Verbindungs Zeichenfolge in Ihrem Skript ein, wie im folgenden Beispiel gezeigt:
 

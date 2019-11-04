@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45f5b054b946e746e490c64b2b051bec80fc6b17
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932585"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459330"
 ---
 # <a name="listview"></a>ListView
-Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastruktur, um einen Satz von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen.  
+Das <xref:System.Windows.Controls.ListView>-Steuerelement stellt die Infrastruktur bereit, um einen Satz von Datenelementen in verschiedenen Layouts oder Sichten anzuzeigen.  
   
  Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.ListView>.  
   
- ![Screenshot mit einer ListView mit GridView-Ausgabe.](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![Screenshot, der eine ListView mit GridView-Ausgabe zeigt.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersichten](listview-overviews.md)  
+ [Overviews (Übersichten)](listview-overviews.md)  
  [Themen zu Vorgehensweisen](listview-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
@@ -31,5 +31,5 @@ Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastrukt
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht zur Datenbindung](../data/data-binding-overview.md)  
+ [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)  
   [Übersicht über Datenvorlagen](../data/data-templating-overview.md)

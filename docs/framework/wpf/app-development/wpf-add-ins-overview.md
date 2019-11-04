@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919728"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421091"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 
@@ -171,21 +171,21 @@ Add-Ins stellen häufig mehrere Benutzeroberflächen bereit, damit Host Anwendun
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Add-Ins und XAML-Browseranwendungen
 
-In den bisherigen Beispielen wurde die Hostanwendung als eigenständige Anwendung installiert. [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]-Browseranwendungen können jedoch auch Add-Ins hosten, wobei allerdings die folgenden zusätzlichen Erstellungs- und Implementierungsanforderungen gelten:
+In den bisherigen Beispielen wurde die Hostanwendung als eigenständige Anwendung installiert. XAML-Browser Anwendungen (XBAPs) können jedoch auch Add-Ins hosten, auch wenn die folgenden zusätzlichen Build-und Implementierungs Anforderungen erfüllt sind:
 
-- Das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Anwendungs Manifest muss speziell für das Herunterladen der Pipeline (Ordner und Assemblys) und der Add-in-Assembly in den ClickOnce-Anwendungscache auf dem Client Computer im selben Ordner wie die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]konfiguriert werden.
+- Das XBAP-Anwendungs Manifest muss speziell für das Herunterladen der Pipeline (Ordner und Assemblys) und der Add-in-Assembly in den ClickOnce-Anwendungscache auf dem Client Computer im selben Ordner wie die XBAP konfiguriert werden.
 
-- Der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Code zum Ermitteln und Laden von Add-Ins muss den ClickOnce-Anwendungscache für die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] als Pipeline-und Add-in-Speicherort verwenden.
+- Der XBAP-Code zum Ermitteln und Laden von Add-Ins muss den ClickOnce-Anwendungscache für die XBAP als Pipeline-und Add-in-Speicherort verwenden.
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] muss das Add-In in einen speziellen Sicherheitskontext laden, wenn das Add-In auf lose Dateien verweist, die sich auf der Ursprungssite befinden. Wenn sie von [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s gehostet werden, können Add-Ins nur auf lose Dateien verweisen, die auf der Ursprungssite der Hostanwendung gespeichert sind.
+- Die XBAP muss das Add-in in einen speziellen Sicherheitskontext laden, wenn das Add-in auf lose Dateien verweist, die sich auf der Ursprungs Site befinden. Wenn Sie von XBAPs gehostet werden, können Add-Ins nur auf lose Dateien verweisen, die sich auf der Ursprungs Site der Host Anwendung befinden.
 
 In den folgenden Unterabschnitten werden diese Aufgaben ausführlich beschrieben.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Konfigurieren der Pipeline und des Add-Ins für die ClickOnce-Bereitstellung
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] werden in einen sicheren Ordner im ClickOnce-Bereitstellungs Cache heruntergeladen und dort ausgeführt. Damit eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ein Add-In hosten kann, müssen auch Pipeline- und Add-In-Assembly in den sicheren Ordner heruntergeladen werden. Um dies zu erreichen, müssen Sie das Anwendungsmanifest so konfigurieren, dass sowohl die Pipeline- als auch die Add-In-Assembly heruntergeladen wird. Dies ist am einfachsten in Visual Studio möglich, obwohl sich die Pipeline-und Add-in-Assembly im Host [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Stamm Ordners des Projekts befinden muss, damit Visual Studio die Pipeline-Assemblys erkennen kann.
+XBAPs werden in einen sicheren Ordner im ClickOnce-Bereitstellungs Cache heruntergeladen und dort ausgeführt. Damit eine XBAP ein Add-in hosten kann, müssen die Pipeline-und die Add-in-Assembly ebenfalls in den sicheren Ordner heruntergeladen werden. Um dies zu erreichen, müssen Sie das Anwendungsmanifest so konfigurieren, dass sowohl die Pipeline- als auch die Add-In-Assembly heruntergeladen wird. Dies ist am einfachsten in Visual Studio möglich, obwohl sich die Pipeline-und Add-in-Assembly im Stamm Ordner des Host-XBAP-Projekts befinden muss, damit Visual Studio die Pipeline-Assemblys erkennen kann.
 
-Folglich muss der erste Schritt darin bestehen, die Pipeline- und Add-In-Assembly im Stammverzeichnis des [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Projekts zu erstellen. Dazu wird die Buildausgabe der einzelnen Pipelineassembly- und Add-In-Assemblyprojekte festgelegt. Die folgende Tabelle zeigt die Buildausgabepfade für die Pipelineassemblyprojekte und das Add-In-Assemblyprojekt, die sich in demselben Projektmappen- und Stammordner befinden wie das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Hostprojekt.
+Folglich besteht der erste Schritt darin, die Pipeline-und Add-in-Assembly in den Stamm des XBAP-Projekts zu erstellen, indem die Buildausgabe der einzelnen Pipeline-und Add-in-assemblyprojekte festgelegt wird. In der folgenden Tabelle werden die Buildausgabepfade für Pipeline-assemblyprojekte und das Add-in-Assemblyprojekt angezeigt, die sich in der gleichen Projekt Mappe und dem gleichen Stamm Ordner wie das
 
 Tabelle 1: Buildausgabepfade für die Pipelineassemblys, die von einer XBAP gehostet werden
 
@@ -197,21 +197,21 @@ Tabelle 1: Buildausgabepfade für die Pipelineassemblys, die von einer XBAP geho
 |Hostseitiger Adapter|`..\HostXBAP\HostSideAdapters\`|
 |Add-In|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-Der nächste Schritt besteht darin, die Pipelineassemblys und die Add-in-Assembly als [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Inhalts Dateien in Visual Studio anzugeben, indem Sie die folgenden Schritte ausführen:
+Der nächste Schritt besteht darin, die Pipeline-und Add-in-Assemblys als XBAPs-Inhalts Dateien in Visual Studio wie folgt anzugeben:
 
 1. Hinzufügen der Pipeline- und Add-In-Assembly zum Projekt, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf die einzelnen Pipelineordner klicken und die Option **Zu Projekt hinzufügen** auswählen.
 
 2. Festlegen des **Buildvorgangs** jeder Pipelineassembly und jeder Add-In-Assembly im **Eigenschaftenfenster** auf **Inhalt**.
 
-Im letzten Schritt muss das Anwendungsmanifest so konfiguriert werden, dass sowohl die Pipelineassemblydateien als auch die Add-In-Assemblydatei heruntergeladen werden. Die Dateien sollten sich in Ordnern befinden, die sich im Stammverzeichnis des Ordners im ClickOnce-Cache befinden, den die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Anwendung einnimmt. Die Konfiguration kann in Visual Studio wie folgt erreicht werden:
+Im letzten Schritt muss das Anwendungsmanifest so konfiguriert werden, dass sowohl die Pipelineassemblydateien als auch die Add-In-Assemblydatei heruntergeladen werden. Die Dateien sollten sich in Ordnern befinden, die sich im Stammverzeichnis des Ordners im ClickOnce-Cache befinden, den die XBAP-Anwendung einnimmt. Die Konfiguration kann in Visual Studio wie folgt erreicht werden:
 
-1. Klicken Sie mit der rechten Maustaste auf das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Projekt, klicken Sie auf **Eigenschaften**, auf **Veröffentlichen** und dann auf die Schaltfläche **Anwendungsdateien**.
+1. Klicken Sie mit der rechten Maustaste auf das Projekt XBAP, klicken Sie auf **Eigenschaften**, klicken Sie auf **veröffentlichen**und dann auf die Schaltfläche **Anwendungs Dateien** .
 
 2. Legen Sie im Dialogfeld **Anwendungsdateien** den **Veröffentlichungsstatus** der einzelnen Pipeline- und Add-In-DLLs auf **Einschließen (Auto)** und die **Downloadgruppe** für die Pipeline- und Add-In-DLLs auf **(Erforderlich)** fest.
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Verwenden der Pipeline und des Add-Ins von der Anwendungsbasis
 
-Wenn die Pipeline und das Add-in für die ClickOnce-Bereitstellung konfiguriert sind, werden Sie in denselben ClickOnce-Cache Ordner wie die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]heruntergeladen. Damit Pipeline und Add-In aus der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] verwendet werden können, müssen sie vom [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code aus der Anwendungsbasis abgerufen werden. Die verschiedenen Typen und Member des .NET Framework Add-in-Modells für die Verwendung von Pipelines und Add-Ins bieten besondere Unterstützung für dieses Szenario. Zuerst wird der Pfad durch den <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> Enumerationswert identifiziert. Diesen Wert verwenden Sie mit Überladungen der relevanten Add-In-Member, wenn Pipelines verwendet werden sollen, die Folgendes enthalten:
+Wenn die Pipeline und das Add-in für die ClickOnce-Bereitstellung konfiguriert sind, werden Sie in denselben ClickOnce-Cache Ordner wie die XBAP heruntergeladen. Um die Pipeline und das Add-in aus der XBAP zu verwenden, muss der XBAP-Code diese aus der Anwendungs Basis erhalten. Die verschiedenen Typen und Member des .NET Framework Add-in-Modells für die Verwendung von Pipelines und Add-Ins bieten besondere Unterstützung für dieses Szenario. Zuerst wird der Pfad durch den <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> Enumerationswert identifiziert. Diesen Wert verwenden Sie mit Überladungen der relevanten Add-In-Member, wenn Pipelines verwendet werden sollen, die Folgendes enthalten:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

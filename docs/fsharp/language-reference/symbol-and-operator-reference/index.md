@@ -1,13 +1,13 @@
 ---
 title: Symbol- und Operatorenreferenz
-description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache F# verwendet werden.
+description: Erfahren Sie mehr über die Symbole und Operatoren, die F# in der Programmiersprache verwendet werden.
 ms.date: 02/11/2019
-ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 0c177242991c39aa1a2b7566415b50385f3403d1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306187"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424062"
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
@@ -30,7 +30,7 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`$`|Es sind keine weiteren Informationen verfügbar.|<ul><li>Wird intern für bestimmte vom Compiler generierte Variablen- und Funktionsnamen verwendet.<br /></li></ul>|
 |`%`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Zitieren von Code](../code-quotations.md)|<ul><li>Berechnet den ganzzahligen Rest.<br /></li><li>Wird beim Splicing von Ausdrücken in typisierte Codequotationen verwendet.<br /></li></ul>|
 |`%%`|[Zitieren von Code](../code-quotations.md)|<ul><li>Wird beim Splicing von Ausdrücken in nicht typisierte Codequotationen verwendet.<br /></li></ul>|
-|`%?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet den ganzzahligen Rest an, wenn die rechte Seite ein nullable-Typ ist.<br /></li></ul>|
+|`%?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet den ganzzahligen Rest, wenn die Rechte Seite ein Typ ist, der NULL-Werte zulässt.<br /></li></ul>|
 |`&`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Berechnet die Adresse eines änderbaren Werts, der bei der Interoperation mit anderen Sprachen verwendet werden kann.<br /></li><li>Wird in AND-Mustern verwendet.<br /></li></ul>|
 |`&&`|[Boolesche Operatoren](boolean-operators.md)|<ul><li>Berechnet die boolesche AND-Operation.<br /></li></ul>|
 |`&&&`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Berechnet die bitweise AND-Operation.<br /></li></ul>|
@@ -49,9 +49,9 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`-`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Bei Verwendung als binärer Operator wird rechte Seite von der linken subtrahiert.<br /></li><li>Führt bei Verwendung als unärer Operator eine Negationsoperation aus.<br /></li></ul>|
 |`-?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Subtrahiert die rechte Seite von der linken, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`->`|[Funktionen](../functions/index.md)<br /><br />[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Begrenzt bei Funktionstypen die Argumente und Rückgabewerte.<br /></li><li>Ergibt einen Ausdruck (in Sequenzausdrücken); entspricht dem `yield`-Schlüsselwort.<br /></li><li>Wird in Übereinstimmungsausdrücken verwendet.<br /></li></ul>|
-|`.`|[Mitglieder](../members/index.md)<br /><br />[Primitive Typen](../primitive-types.md)|<ul><li>Greift auf einen Member zu und trennt einzelne Namen in einem vollqualifizierten Namen.<br /></li><li>Gibt ein Dezimaltrennzeichen in Gleitkommazahlen an.<br /></li></ul>|
-|`..`|[Schleifen: `for...in` Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich an.<br /></li></ul>|
-|`.. ..`|[Schleifen: `for...in` Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich zusammen mit einem Inkrement an.<br /></li></ul>|
+|`.`|[Mitglieder](../members/index.md)<br /><br />[Primitive Typen](../basic-types.md)|<ul><li>Greift auf einen Member zu und trennt einzelne Namen in einem vollqualifizierten Namen.<br /></li><li>Gibt ein Dezimaltrennzeichen in Gleitkommazahlen an.<br /></li></ul>|
+|`..`|[Schleifen: `for...in`-Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich an.<br /></li></ul>|
+|`.. ..`|[Schleifen: `for...in`-Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich zusammen mit einem Inkrement an.<br /></li></ul>|
 |`.[...]`|[Arrays](../arrays.md)|<ul><li>Greift auf ein Arrayelement zu.<br /></li></ul>|
 |`/`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Maßeinheiten](../units-of-measure.md)|<ul><li>Dividiert die linke Seite (Zähler) durch die rechte Seite (Nenner).<br /></li><li>Wird in Maßeinheittypen verwendet.<br /></li></ul>|
 |`/?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Dividiert die linke Seite durch die rechte, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
@@ -61,7 +61,7 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`::`|[Listen](../lists.md)<br /><br />[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Erstellt eine Liste. Das Element auf der linken Seite wird der Liste auf der rechten Seite vorangestellt.<br /></li><li>Wird im Musterabgleich verwendet, um die Teile einer Liste zu trennen.<br /></li></ul>|
 |`:=`|[Referenzzellen](../reference-cells.md)|<ul><li>Weist einer Verweiszelle einen Wert zu.<br /></li></ul>|
 |`:>`|[Umwandlung und Konvertierungen](../casting-and-conversions.md)|<ul><li>Konvertiert einen Typen in einen Typen, der in der Hierarchie höher ist.<br /></li></ul>|
-|`:?`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Gibt `true` Wenn der Wert entspricht den angegebenen Typ (einschließlich ist dies ein Untertyp); andernfalls `false` (Typtestoperator).<br /></li></ul>|
+|`:?`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Gibt `true` zurück, wenn der Wert mit dem angegebenen Typ übereinstimmt (einschließlich, wenn es sich um einen Untertyp handelt). Andernfalls wird `false` (Typtest Operator) zurückgegeben.<br /></li></ul>|
 |`:?>`|[Umwandlung und Konvertierungen](../casting-and-conversions.md)|<ul><li>Konvertiert einen Typen in einen Typen, der in der Hierarchie weiter unten ist.<br /></li></ul>|
 |`;`|[Ausführliche Syntax](../verbose-syntax.md)<br /><br />[Listen](../lists.md)<br /><br />[Datensätze](../records.md)|<ul><li>Trennt Ausdrücke (meist in ausführlicher Syntax verwendet).<br /></li><li>Trennt Elemente einer Liste.<br /></li><li>Trennt Felder eines Datensatzes.<br /></li></ul>|
 |`<`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Berechnet die Kleiner-als-Operation.<br /></li></ul>|
@@ -83,10 +83,10 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`=?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`==`|Nicht zutreffend.|<ul><li>Nicht in F# verwendet. Verwenden Sie `=` für Gleichheitsoperationen.<br /></li></ul>|
 |`>`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` zurück, wenn die linke Seite größer als die rechte Seite ist; andernfalls wird `false` zurückgegeben.<br /></li></ul>|
-|`>?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größere als"-Operation an, wenn die rechte Seite ein nullable-Typ ist.<br /></li></ul>|
+|`>?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größer als"-Operation, wenn die Rechte Seite ein Typ ist, der NULL-Werte zulässt.<br /></li></ul>|
 |`>>`|[Funktionen](../functions/index.md)|<ul><li>Verfasst zwei Funktionen (Vorwärtskompositionsoperator).<br /></li></ul>|
 |`>>>`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Verschiebt Bits in der Menge auf der linken Seite um die Anzahl der Bits nach rechts, die auf der rechten Seite angegeben wurde.<br /></li></ul>|
-|`>=`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` ist die linke Seite größer als oder gleich der rechten Seite ist; andernfalls `false`.<br /></li></ul>|
+|`>=`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` zurück, wenn die linke Seite größer oder gleich der rechten Seite ist. Andernfalls wird `false`zurückgegeben.<br /></li></ul>|
 |`>=?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größer gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`?`|[Parameter und Argumente](../parameters-and-arguments.md)|<ul><li>Gibt ein optionales Argument an.<br /></li><li>Wird als Operator für dynamische Methoden- und Eigenschaftenaufrufe verwendet. Sie müssen Ihre eigene Implementierung bereitstellen.<br /></li></ul>|
 |`? ... <- ...`|Es sind keine weiteren Informationen verfügbar.|<ul><li>Wird als Operator zum Festlegen von dynamischen Eigenschaften verwendet. Sie müssen Ihre eigene Implementierung bereitstellen.<br /></li></ul>|
@@ -100,7 +100,7 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`\`|[Zeichenfolgen](../strings.md)|<ul><li>Versieht das nächste Zeichen mit einem Escapezeichen; wird in Zeichen- und Zeichenfolgenliteralen verwendet.<br /></li></ul>|
 |`^`|[Statisch aufgelöste Typparameter](../generics/statically-resolved-type-parameters.md)<br /><br />[Zeichenfolgen](../strings.md)|<ul><li>Gibt die Typparameter an, die zum Zeitpunkt der Kompilierung, nicht zur Laufzeit aufgelöst werden müssen.<br /></li><li>Verkettet Zeichenfolgen.<br /></li></ul>|
 |`^^^`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Berechnet die bitweise XOR-Operation.<br /></li></ul>|
-|`_`|[Vergleichsausdrücke](../match-expressions.md)<br /><br />[Generika](../generics/index.md)|<ul><li>Gibt ein Platzhaltermuster an.<br /></li><li>Gibt einen anonymen generischen Parameter an.<br /></li></ul>|
+|`_`|[Vergleichsausdrücke](../match-expressions.md)<br /><br />[Generics](../generics/index.md)|<ul><li>Gibt ein Platzhaltermuster an.<br /></li><li>Gibt einen anonymen generischen Parameter an.<br /></li></ul>|
 |<code>&#96;</code>|[Automatische Verallgemeinerung](../generics/automatic-generalization.md)|<ul><li>Wird intern verwendet, um einen generischen Typparameter anzugeben.<br /></li></ul>|
 |`{...}`|[Sequenzen](../sequences.md)<br /><br />[Datensätze](../records.md)|<ul><li>Begrenzt Sequenzausdrücke und Berechnungsausdrücke.<br /></li><li>Wird in Datensatzdefinitionen verwendet.<br /></li></ul>|
 |<code>&#124;</code>|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Begrenzt einzelne Übereinstimmungsfälle, einzelne diskriminierte Union-Fälle und Enumerationswerte.<br /></li></ul>|
@@ -122,7 +122,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |--------|-------------|
 |`as`|Rechts|
 |`when`|Rechts|
-|<code>&#124;</code> (senkrechter Strich)|Links|
+|<code>&#124;</code> (Pipe)|Links|
 |`;`|Rechts|
 |`let`|Nicht assoziativ|
 |`function`, `fun`, `match`, `try`|Nicht assoziativ|
@@ -142,7 +142,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`*`*op*, `/`*op*, `%`*op*|Links|
 |`**`*op*|Rechts|
 |`f x` (Funktionsanwendung)|Links|
-|<code>&#124;</code> (Musterübereinstimmung)|Rechts|
+|<code>&#124;</code> (Muster Übereinstimmung)|Rechts|
 |Präfixoperatoren (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Links|
 |`.`|Links|
 |`f(x)`|Links|

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252976"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423158"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>String im Vergleich zu System.String  
- In C# ist das Schlüsselwort `string` ein Alias für <xref:System.String>. Aus diesem Grund sind `String` und `string` gleich, und Sie können eine beliebige Benennungskonvention verwenden. Die `String`-Klasse bietet viele Methoden zum sicheren Erstellen, Bearbeiten und Vergleichen von Zeichenfolgen. Außerdem überlädt die Programmiersprache C# einige Operatoren, um allgemeine Zeichenfolgenoperationen zu vereinfachen. Weitere Informationen über das Schlüsselwort finden Sie unter [String](../../language-reference/keywords/string.md). Weitere Informationen zum Typ und dessen Methoden finden Sie unter <xref:System.String>.  
+ In C# ist das Schlüsselwort `string` ein Alias für <xref:System.String>. Aus diesem Grund sind `String` und `string` gleich, und Sie können eine beliebige Benennungskonvention verwenden. Die `String`-Klasse bietet viele Methoden zum sicheren Erstellen, Bearbeiten und Vergleichen von Zeichenfolgen. Außerdem überlädt die Programmiersprache C# einige Operatoren, um allgemeine Zeichenfolgenoperationen zu vereinfachen. Weitere Informationen über das Schlüsselwort finden Sie unter [String](../../language-reference/builtin-types/reference-types.md). Weitere Informationen zum Typ und dessen Methoden finden Sie unter <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Deklarieren und Initialisieren von Zeichenfolgen  
  Sie können Zeichenfolgen auf verschiedene Weise deklarieren und Initialisieren, wie im folgenden Beispiel gezeigt:  

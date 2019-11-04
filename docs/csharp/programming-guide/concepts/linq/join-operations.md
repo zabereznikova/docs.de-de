@@ -2,12 +2,12 @@
 title: Verknüpfungsvorgänge (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592079"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423385"
 ---
 # <a name="join-operations-c"></a>Verknüpfungsvorgänge (C#)
 Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten einer Datenquelle zu den Objekten einer anderen Datenquelle, die ein Attribut gemeinsam haben.  
@@ -34,11 +34,11 @@ Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten ei
 - [Anonyme Typen](../../classes-and-structs/anonymous-types.md)
 - [Formulieren von Joins und produktübergreifenden Abfragen](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join-Klausel](../../../language-reference/keywords/join-clause.md)
-- [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../linq/join-by-using-composite-keys.md)
 - [Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Vorgehensweise: Sortieren der Ergebnisse einer Join-Klausel](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Vorgehensweise: Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../linq-query-expressions/how-to-perform-grouped-joins.md)
-- [Vorgehensweise: Ausführen von inneren Verknüpfungen](../../linq-query-expressions/how-to-perform-inner-joins.md)
-- [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [Vorgehensweise: Sortieren der Ergebnisse einer Join-Klausel](../../../linq/order-the-results-of-a-join-clause.md)
+- [Vorgehensweise: Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../../linq/perform-custom-join-operations.md)
+- [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../../linq/perform-grouped-joins.md)
+- [Vorgehensweise: Ausführen von inneren Verknüpfungen](../../../linq/perform-inner-joins.md)
+- [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../../linq/perform-left-outer-joins.md)
 - [Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

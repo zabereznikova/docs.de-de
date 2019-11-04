@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Abhängigkeitsinjektion, das Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771113"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454852"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -398,10 +398,10 @@ Hierbei handelt es sich um zusätzliche Schritte, die ein Befehlshandler ausfüh
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Commands and events (Befehle und Ereignisse)**  \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **What does a command handler do? (Wie funktioniert ein Befehlshandler?)** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard. Domain Command Patterns – Handlers (Domänenbefehlsmuster – Handler)**  \
   <https://jimmybogard.com/domain-command-patterns-handlers/>

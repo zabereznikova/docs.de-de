@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erben von der Control-Klasse'
+title: 'Gewusst wie: Erben von der Control-Klasse'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 02c40e310778bd476742f62ee8b9d8598b084a53
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 7af7d1fe8f14c71dfc90836d84023b98feb44961
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015858"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458382"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>Vorgehensweise: Erben von der Control-Klasse
+# <a name="how-to-inherit-from-the-control-class"></a>Gewusst wie: Erben von der Control-Klasse
 
-Wenn Sie ein vollständig benutzerdefiniertes Steuerelement erstellen möchten, das in einem Windows Form verwendet werden soll <xref:System.Windows.Forms.Control> , sollten Sie von der-Klasse erben. Obwohl die Vererbung von <xref:System.Windows.Forms.Control> der-Klasse erfordert, dass Sie mehr Planung und Implementierung durchführen, bietet Sie Ihnen auch die größte Palette von Optionen. Wenn Sie von <xref:System.Windows.Forms.Control>erben, erben Sie die grundlegende Funktionalität, mit der Steuerelemente funktionieren. Die Funktionalität, die in <xref:System.Windows.Forms.Control> der-Klasse enthalten ist, verarbeitet Benutzereingaben über Tastatur und Maus, definiert die Begrenzungen und die Größe des Steuer Elements, stellt ein Windows-Handle bereit und bietet Nachrichten Behandlung und Sicherheit. Sie enthält keine Zeichnungen, bei denen es sich in diesem Fall um das eigentliche Rendering der grafischen Benutzeroberfläche des Steuerelements handelt, und keine spezifische Funktionalität für Benutzerinteraktion. Sie müssen alle diese Aspekte über benutzerdefinierten Code bereitstellen.
+Wenn Sie ein vollständig benutzerdefiniertes Steuerelement erstellen möchten, das in einem Windows Form verwendet werden soll, sollten Sie von der <xref:System.Windows.Forms.Control>-Klasse erben. Obwohl die Vererbung von der <xref:System.Windows.Forms.Control>-Klasse erfordert, dass Sie mehr Planung und Implementierung durchführen, bietet Sie Ihnen auch die größte Auswahl von Optionen. Wenn Sie von <xref:System.Windows.Forms.Control>erben, erben Sie die grundlegende Funktionalität, die die Steuerung der Steuerelemente ermöglicht. Die Funktionalität, die in der <xref:System.Windows.Forms.Control>-Klasse enthalten ist, verarbeitet Benutzereingaben über Tastatur und Maus, definiert die Begrenzungen und die Größe des Steuer Elements, stellt ein Windows-Handle bereit und bietet Nachrichten Behandlung und-Sicherheit. Sie enthält keine Zeichnungen, bei denen es sich in diesem Fall um das eigentliche Rendering der grafischen Benutzeroberfläche des Steuerelements handelt, und keine spezifische Funktionalität für Benutzerinteraktion. Sie müssen alle diese Aspekte über benutzerdefinierten Code bereitstellen.
 
 ## <a name="to-create-a-custom-control"></a>So erstellen Sie ein benutzerdefiniertes Steuerelement
 
@@ -34,7 +34,7 @@ Wenn Sie ein vollständig benutzerdefiniertes Steuerelement erstellen möchten, 
 
 4. Drücken Sie **F7** , um den **Code-Editor** für das benutzerdefinierte Steuerelement zu öffnen.
 
-5. <xref:System.Windows.Forms.Control.OnPaint%2A> Suchen<xref:System.Windows.Forms.Control.OnPaint%2A> Sie die-Methode, die mit Ausnahme eines Aufrufes der-Methode der-Basisklasse leer ist.
+5. Suchen Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode, die mit Ausnahme eines Aufrufes der <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode der Basisklasse leer ist.
 
 6. Ändern Sie den Code so, dass er die gewünschte benutzerdefinierte Darstellung Ihres Steuerelements enthält.
 
@@ -46,9 +46,9 @@ Wenn Sie ein vollständig benutzerdefiniertes Steuerelement erstellen möchten, 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
-- [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
-- [Vorgehensweise: Von vorhandenen Windows Forms Steuerelementen erben](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Vorgehensweise: Steuerelemente für Windows Forms erstellen](how-to-author-controls-for-windows-forms.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)
+- [Gewusst wie: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
+- [Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)

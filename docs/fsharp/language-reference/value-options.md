@@ -1,26 +1,26 @@
 ---
 title: Wertoptionen
-description: Erfahren Sie mehr über die F# Option "Value"-Typ, der ist eine Version der Struktur des Typs Option.
+description: Erfahren Sie mehr F# über den Wert Optionstyp, bei dem es sich um eine Struktur Version des Options Typs handelt.
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982578"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424022"
 ---
 # <a name="value-options"></a>Wertoptionen
 
-Die Option "Value"-Typ in F# wird verwendet, wenn halten die folgenden Fällen:
+Der Wert Optionstyp in F# wird verwendet, wenn die folgenden beiden Bedingungen vorliegen:
 
-1. Ein Szenario eignet sich für ein [F#-Option](options.md).
-2. Verwenden eine Struktur bietet einen Leistungsvorteil in Ihrem Szenario.
+1. Ein Szenario ist für eine [ F# Option](options.md)geeignet.
+2. Die Verwendung einer Struktur bietet einen Leistungsvorteil in Ihrem Szenario.
 
-Nicht alle Szenarien die Leistung "gelöst" werden Strukturen. Berücksichtigen Sie die zusätzliche Kosten der kopieren, wenn sie anstelle von Verweistypen mit ein. Allerdings große F# Programme instanziieren häufig viele optionale Typen, die langsamsten Pfade durchlaufen und Strukturen können in diesen Fällen ergeben häufig eine bessere gesamtleistung während der Lebensdauer eines Programms.
+Nicht alle Leistungs sensiblen Szenarios werden mithilfe von Strukturen "gelöst". Sie müssen die zusätzlichen Kosten für das Kopieren in Erwägung gezogen, wenn Sie Sie anstelle von Verweis Typen verwenden. Große F# Programme instanziieren jedoch häufig viele optionale Typen, die durch heiße Pfade fließen, und in solchen Fällen können Strukturen im Laufe der Lebensdauer eines Programms häufig eine bessere Gesamtleistung erzielen.
 
 ## <a name="definition"></a>Definition
 
-Option "Value" ist definiert als eine [diskriminierte Union](discriminated-unions.md#struct-discriminated-unions) ähnelt der Option-Verweistyp. Auf diese Weise kann ihre Definition betrachtet werden:
+Die Value-Option ist als [Struktur](discriminated-unions.md#struct-discriminated-unions) Unterscheidungs-Union definiert, die dem Verweis Optionstyp ähnelt. Die Definition kann sich wie folgt vorstellen:
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-Option "Value" entspricht strukturelle Gleichheit und Vergleich. Der Hauptunterschied besteht darin, dass der kompilierte Name, Typnamen und Groß-/Kleinschreibung Namen anzugeben, dass es sich um einen Werttyp handelt.
+Die Option "Value" entspricht Struktur Gleichheit und Vergleich. Der Hauptunterschied besteht darin, dass der kompilierte Name, der Typname und die Fallnamen alle angeben, dass es sich um einen Werttyp handelt.
 
-## <a name="using-value-options"></a>Mithilfe der Wertoptionen
+## <a name="using-value-options"></a>Verwenden von Wert Optionen
 
-Wertoptionen wie dienen [Optionen](options.md). `ValueSome` wird verwendet, um anzugeben, dass ein Wert vorhanden ist und `ValueNone` wird verwendet, wenn ein Wert nicht vorhanden ist:
+Wert Optionen werden genau wie [Optionen](options.md)verwendet. `ValueSome` wird verwendet, um anzugeben, dass ein Wert vorhanden ist, und `ValueNone` verwendet, wenn kein Wert vorhanden ist:
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,23 +55,23 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-Wie bei [Optionen](options.md), die Namenskonvention für eine Funktion, die gibt `ValueOption` besteht darin, ihn mit Präfix `try`.
+Wie bei den [Optionen](options.md)wird die Benennungs Konvention für eine Funktion, die `ValueOption` zurückgibt, dem `try`vorangestellt.
 
-## <a name="value-option-properties-and-methods"></a>Werteigenschaften und Methoden
+## <a name="value-option-properties-and-methods"></a>Eigenschaften und Methoden für Wert Optionen
 
-Es gibt eine Eigenschaft für die Werte können zu diesem Zeitpunkt: `Value`. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn kein Wert vorhanden ist, wenn diese Eigenschaft aufgerufen wird.
+Zu diesem Zeitpunkt gibt es eine Eigenschaft für Wert Optionen: `Value`. Wenn diese Eigenschaft aufgerufen wird, wird ein <xref:System.InvalidOperationException> ausgelöst, wenn kein Wert vorhanden ist.
 
-## <a name="value-option-functions"></a>Wert der Option-Funktionen
+## <a name="value-option-functions"></a>Optionen für Wert Optionen
 
-Es gibt derzeit eine Modul-Bound-Funktion für Wertoptionen, `defaultValueArg`:
+Zurzeit gibt es eine Modul gebundene Funktion für Wert Optionen `defaultValueArg`:
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-Wie bei der `defaultArg` Funktion `defaultValueArg` zugrunde liegenden Wert der angegebenen Option "Value" zurückgegeben, falls es vorhanden ist; andernfalls wird den angegebene Standardwert zurückgegeben.
+Wie bei der `defaultArg`-Funktion gibt `defaultValueArg` den zugrunde liegenden Wert der angegebenen Wert Option zurück, wenn dieser vorhanden ist. Andernfalls wird der angegebene Standardwert zurückgegeben.
 
-Zu diesem Zeitpunkt müssen Sie keine anderen Modul-Bound-Funktionen für Wertoptionen vorhanden sind.
+Zurzeit sind keine weiteren Modul gebundenen Funktionen für Wert Optionen vorhanden.
 
 ## <a name="see-also"></a>Siehe auch
 

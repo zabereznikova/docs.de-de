@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421854"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
@@ -59,7 +58,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie eine geschweifte Klammer in eine Erg
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Ausführliche interpolierte Zeichenfolgen beginnen mit dem Zeichen `$`, gefolgt vom Zeichen `@`. Weitere Informationen zu ausführlichen Zeichenfolgen finden Sie in den Artikeln zu [Zeichenfolgen](../keywords/string.md) und [ausführlichen Bezeichnern](verbatim.md).
+Ausführliche interpolierte Zeichenfolgen beginnen mit dem Zeichen `$`, gefolgt vom Zeichen `@`. Weitere Informationen zu ausführlichen Zeichenfolgen finden Sie in den Artikeln zu [Zeichenfolgen](../builtin-types/reference-types.md) und [ausführlichen Bezeichnern](verbatim.md).
 
 > [!NOTE]
 > Ab C# 8.0 können Sie die Token `$` und `@` in beliebiger Reihenfolge verwenden: Sowohl `$@"..."` als auch `@$"..."` sind gültige interpolierte ausführliche Zeichenfolgen. In früheren C#-Versionen musste das Token `$` vor dem Token `@` vorhanden sein.

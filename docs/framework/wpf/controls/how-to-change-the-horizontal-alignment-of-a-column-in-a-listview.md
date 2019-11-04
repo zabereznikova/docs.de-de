@@ -1,35 +1,35 @@
 ---
-title: 'Vorgehensweise: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Objekt'
+title: 'Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5447f1a73b008b2ed4f345eba00f4d631e11e257
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911065"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458603"
 ---
-# <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Vorgehensweise: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Objekt
-Standardmäßig wird der Inhalt jeder Spalte in einer <xref:System.Windows.Controls.ListViewItem> wird linksbündig ausgerichtet. Sie können die Ausrichtung der einzelnen Spalten ändern, durch die Bereitstellung einer <xref:System.Windows.DataTemplate> und Einstellung der <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaft des Elements innerhalb der <xref:System.Windows.DataTemplate>. Dieses Thema wird gezeigt, wie eine <xref:System.Windows.Controls.ListView> richtet dessen Inhalt standardmäßig "und" Gewusst wie: Ändern Sie die Ausrichtung einer Spalte in eine <xref:System.Windows.Controls.ListView>.  
+# <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element
+Standardmäßig wird der Inhalt der einzelnen Spalten in einem <xref:System.Windows.Controls.ListViewItem> linksbündig ausgerichtet. Sie können die Ausrichtung der einzelnen Spalten ändern, indem Sie eine <xref:System.Windows.DataTemplate> bereitstellen und die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>-Eigenschaft für das Element innerhalb der <xref:System.Windows.DataTemplate>festlegen. In diesem Thema wird gezeigt, wie ein <xref:System.Windows.Controls.ListView> seinen Inhalt standardmäßig anpasst und wie die Ausrichtung einer Spalte in einer <xref:System.Windows.Controls.ListView>geändert wird.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel die Daten in die `Title` und `ISBN` Spalten wird linksbündig ausgerichtet.  
+ Im folgenden Beispiel werden die Daten in den Spalten `Title` und `ISBN` linksbündig ausgerichtet.  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- So ändern Sie die Ausrichtung des den `ISBN` Spalte müssen Sie angeben, dass die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> Eigenschaft der einzelnen <xref:System.Windows.Controls.ListViewItem> ist <xref:System.Windows.HorizontalAlignment.Stretch>, sodass Elemente in jedem <xref:System.Windows.Controls.ListViewItem> können umfassen oder auf die gesamte Breite der einzelnen Spalten positioniert werden. Da die <xref:System.Windows.Controls.ListView> gebunden ist mit einer Datenquelle, müssen Sie einen Stil zu erstellen, der festlegt der <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>. Als Nächstes müssen Sie verwenden eine <xref:System.Windows.DataTemplate> zum Anzeigen des Inhalts statt der <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> Eigenschaft. Zum Anzeigen der `ISBN` jeder Vorlage, die <xref:System.Windows.DataTemplate> darf nur eine <xref:System.Windows.Controls.TextBlock> , bei dem die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaft auf festgelegt <xref:System.Windows.HorizontalAlignment.Right>.  
+ Um die Ausrichtung der `ISBN` Spalte zu ändern, müssen Sie angeben, dass die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>-Eigenschaft der einzelnen <xref:System.Windows.Controls.ListViewItem> <xref:System.Windows.HorizontalAlignment.Stretch>ist, damit die Elemente in den einzelnen <xref:System.Windows.Controls.ListViewItem> entlang der gesamten Breite jeder Spalte angeordnet werden können. Da der <xref:System.Windows.Controls.ListView> an eine Datenquelle gebunden ist, müssen Sie einen Stil erstellen, der die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>festlegt. Als nächstes müssen Sie einen <xref:System.Windows.DataTemplate> verwenden, um den Inhalt anzuzeigen, anstatt die <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>-Eigenschaft zu verwenden. Um die `ISBN` der einzelnen Vorlagen anzuzeigen, kann die <xref:System.Windows.DataTemplate> nur einen <xref:System.Windows.Controls.TextBlock> enthalten, dessen <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>-Eigenschaft auf <xref:System.Windows.HorizontalAlignment.Right>festgelegt ist.  
   
- Das folgende Beispiel definiert das Format und <xref:System.Windows.DataTemplate> erforderlich, stellen die `ISBN` Spalte rechtsbündig ausgerichtet und Änderungen der <xref:System.Windows.Controls.GridViewColumn> zu verweisen die <xref:System.Windows.DataTemplate>.  
+ Im folgenden Beispiel werden der Stil und <xref:System.Windows.DataTemplate> definiert, die notwendig sind, um die `ISBN` Spalte rechtsbündig zu machen, und die <xref:System.Windows.Controls.GridViewColumn> so ändern, dass Sie auf die <xref:System.Windows.DataTemplate>verweist  
   
  [!code-xaml[ListViewHowTos#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
 [!code-xaml[ListViewHowTos#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
 - [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Übersicht über ListView](listview-overview.md)

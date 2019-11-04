@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920052"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460420"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
 <a name="introduction"></a>Ein-<xref:System.Windows.Controls.ControlTemplate> das die visuelle Struktur und das visuelle Verhalten eines-Steuer Elements angibt. Sie können die Darstellung eines Steuer Elements anpassen, indem Sie ihm eine neue <xref:System.Windows.Controls.ControlTemplate>geben. Wenn Sie eine <xref:System.Windows.Controls.ControlTemplate>erstellen, ersetzen Sie die Darstellung eines vorhandenen Steuer Elements, ohne seine Funktionalität zu ändern. Sie können z. b. die Schaltflächen in der Anwendungs Runde anstelle der standardmäßigen quadratischen Form erstellen, aber die Schaltfläche erhöht weiterhin das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.
@@ -262,4 +262,4 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

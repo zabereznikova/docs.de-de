@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73f36325a2621cc834e1bef8d2060dec1a8c133d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052052"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423774"
 ---
 # <a name="label"></a>Bezeichnung
-<xref:System.Windows.Controls.Label> Steuerelemente in der Regel geben Sie Informationen in den [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  In der Vergangenheit ein <xref:System.Windows.Controls.Label> hat nur Text enthalten, aber da die <xref:System.Windows.Controls.Label> , im Lieferumfang [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist eine <xref:System.Windows.Controls.ContentControl>, es kann entweder Text enthalten oder ein <xref:System.Windows.UIElement>.  
+<xref:System.Windows.Controls.Label> Steuerelemente stellen in der Regel Informationen im [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]bereit.  In der Vergangenheit enthielt eine <xref:System.Windows.Controls.Label> nur Text, aber da die <xref:System.Windows.Controls.Label>, die mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ausgeliefert wird, ein <xref:System.Windows.Controls.ContentControl>ist, kann Sie entweder Text oder eine <xref:System.Windows.UIElement>enthalten.  
   
- Ein <xref:System.Windows.Controls.Label> liefert funktionale und visuelle Unterstützung für Tastenkombinationen. Es wird häufig verwendet, um schnell den Zugriff auf Steuerelemente zu ermöglichen, z.B. eine <xref:System.Windows.Controls.TextBox>. Zuweisen einer <xref:System.Windows.Controls.Label> auf eine <xref:System.Windows.Controls.Control>legen die <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> Eigenschaft, um das Steuerelement, das Fokus erhalten soll, wenn der Benutzer die Zugriffstaste drückt.  
+ Eine <xref:System.Windows.Controls.Label> bietet funktionale und visuelle Unterstützung für Zugriffsschlüssel. Sie wird häufig verwendet, um schnell Tastatur Zugriff auf Steuerelemente zu ermöglichen, z. b. auf eine <xref:System.Windows.Controls.TextBox>. Um einer <xref:System.Windows.Controls.Control>eine <xref:System.Windows.Controls.Label> zuzuweisen, legen Sie die Eigenschaft <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> auf das Steuerelement fest, das den Fokus erhalten soll, wenn der Benutzer die Zugriffstaste drückt.  
   
- Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Label> "Designs", dessen Ziel eine <xref:System.Windows.Controls.ComboBox>.  Wenn der Benutzer drückt, die <xref:System.Windows.Controls.ComboBox> den Fokus erhält.  Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen der Zieleigenschaft einer Bezeichnung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Label> "Designs", die auf eine <xref:System.Windows.Controls.ComboBox>abzielt.  Wenn der Benutzer drückt, erhält der <xref:System.Windows.Controls.ComboBox> den Fokus.  Weitere Informationen finden Sie unter Gewusst [wie: Festlegen der Ziel Eigenschaft einer Bezeichnung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
- ![Anzeigeeigenschaften zeigen Beschriftung nach Verwendung](./media/labeledby.JPG "\"LabeledBy\"")  
+ ![Screenshot des Dialog Felds "Eigenschaften anzeigen" mit der Bezeichnung nach Verwendung.](./media/label/display-properties-labeled-by.png "LabeledBy")  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Erstellen Sie ein Steuerelement, das über eine Tastenkombination und Textumbruch verfügt](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
+ [Gewusst wie: Erstellen eines Steuer Elements, das über eine Zugriffstaste und Text Wrapping verfügt](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Label>

@@ -2,15 +2,15 @@
 title: Beispiel zur schwach typisierten JSON-Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: f41a71641ca655d9bf95104643385a56792b41bc
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1450a0e46ade615769d7ffdc1006102772dbc977
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045418"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424543"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Beispiel zur schwach typisierten JSON-Serialisierung
-Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragungsformat oder beim Deserialisieren eines Übertragungsformats zurück in einen benutzerdefinierten Typ muss der jeweilige benutzerdefinierte Typ für den Dienst und den Client verfügbar sein. Hierzu wird normalerweise das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf diese benutzerdefinierten Typen angewendet, und das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird auf ihre Member angewendet. Dieser Mechanismus wird auch beim Arbeiten mit JavaScript Object Notation (JSON)-Objekten angewendet, wie im Thema [Gewusst wie: Serialisieren und Deserialisieren von JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)-Daten.  
+Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragungsformat oder beim Deserialisieren eines Übertragungsformats zurück in einen benutzerdefinierten Typ muss der jeweilige benutzerdefinierte Typ für den Dienst und den Client verfügbar sein. Hierzu wird normalerweise das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf diese benutzerdefinierten Typen angewendet, und das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird auf ihre Member angewendet. Dieser Mechanismus wird auch beim Arbeiten mit JavaScript Object Notation (JSON)-Objekten verwendet, wie im Thema [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)beschrieben.  
   
  In einigen Szenarios muss ein Windows Communication Foundation (WCF)-Dienst oder-Client auf JSON-Objekte zugreifen, die von einem Dienst oder Client generiert werden, der sich außerhalb der Kontrolle des Entwicklers befindet. Da mehr Webdienste JSON-APIs öffentlich verfügbar machen, kann es für den WCF-Entwickler unpraktisch werden, lokale benutzerdefinierte Typen zu erstellen, in die beliebige JSON-Objekte deserialisiert werden. Dieses Beispiel stellt einen Mechanismus bereit, mit dem WCF-Entwickler mit deserialisierten, beliebigen JSON-Objekten arbeiten können, ohne benutzerdefinierte Typen zu erstellen. Dies wird als *schwach typisierte Deserialisierung* von JSON-Objekten bezeichnet, da der Typ, in den ein JSON-Objekt deserialisiert wird, zum Zeitpunkt der Kompilierung nicht bekannt ist.  
   
@@ -25,7 +25,7 @@ Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragung
   
  Zum Deserialisieren dieses Objekts muss ein WCF-Client die folgenden benutzerdefinierten Typen implementieren.  
   
-```  
+```csharp  
 [DataContract]  
  public class MemberProfile  
  {  
@@ -58,9 +58,9 @@ Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragung
   
  Dies kann aufwändig sein, insbesondere, wenn der Client mehrere Typen von JSON-Objekten behandeln muss.  
   
- Der in diesem Beispiel bereitgestellte `JsonObject` -Typ führt eine schwach typisierte Darstellung des deserialisierten JSON-Objekts ein. `JsonObject`basiert auf der natürlichen Zuordnung zwischen JSON-Objekten und .NET Framework Wörterbüchern und der Zuordnung zwischen JSON-Arrays und .NET Framework Arrays. Der folgende Code veranschaulicht den `JsonObject` -Typ:  
+ Der in diesem Beispiel bereitgestellte `JsonObject` -Typ führt eine schwach typisierte Darstellung des deserialisierten JSON-Objekts ein. `JsonObject` stützt sich auf die natürliche Zuordnung zwischen JSON-Objekten und .NET Framework Wörterbüchern und die Zuordnung zwischen JSON-Arrays und .NET Framework Arrays. Der folgende Code veranschaulicht den `JsonObject` -Typ:  
   
-```  
+```csharp  
 // Instantiation of JsonObject json omitted  
   
 string name = json["root"]["personal"]["name"];  
@@ -85,7 +85,7 @@ string[] favoriteBands = {
   
  Damit der `JsonObject` -Typ verwendet werden kann, muss der Clientvorgangsvertrag <xref:System.ServiceModel.Channels.Message> als Rückgabetyp verwenden.  
   
-```  
+```csharp  
 [ServiceContract]  
     interface IClientSideProfileService  
     {  
@@ -100,7 +100,7 @@ string[] favoriteBands = {
   
  `JsonObject` wird dann instanziiert, wie im folgenden Code dargestellt.  
   
-```  
+```csharp  
 // Code to instantiate IClientSideProfileService channel omitted…  
   
 // Make a request to the service and obtain the Json response  
@@ -114,7 +114,7 @@ JsonObject json = new JsonObject(reader);
   
  Das Programm erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Service listening at http://localhost:8000/.  
 To view the JSON output from the sample, navigate to http://localhost:8000/GetMemberProfile  
 This is Paul's page. I am 23 years old and I am 1.7 meters tall.  
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

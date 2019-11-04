@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Bindung in Code'
+title: 'Gewusst wie: Erstellen einer Bindung in Code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616487a16ebbe6e23fe067fb7ce72644aa3f919f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931624"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458843"
 ---
-# <a name="how-to-create-a-binding-in-code"></a>Vorgehensweise: Erstellen einer Bindung in Code
-Dieses Beispiel veranschaulicht das Erstellen und Festlegen einer <xref:System.Windows.Data.Binding> im Code.  
+# <a name="how-to-create-a-binding-in-code"></a>Gewusst wie: Erstellen einer Bindung in Code
+In diesem Beispiel wird gezeigt, wie eine <xref:System.Windows.Data.Binding> im Code erstellt und festgelegt wird.  
   
 ## <a name="example"></a>Beispiel  
- Die <xref:System.Windows.FrameworkElement> Klasse und die <xref:System.Windows.FrameworkContentElement> Klasse, die beide verfügbar machen, eine `SetBinding` Methode. Wenn Sie ein Element, die eine dieser Klassen erbt binden, können Sie rufen die <xref:System.Windows.FrameworkElement.SetBinding%2A> -Methode direkt.  
+ Die <xref:System.Windows.FrameworkElement>-Klasse und die <xref:System.Windows.FrameworkContentElement>-Klasse machen beide eine `SetBinding`-Methode verfügbar. Wenn Sie ein Element binden, das eine dieser Klassen erbt, können Sie die <xref:System.Windows.FrameworkElement.SetBinding%2A>-Methode direkt aufzurufen.  
   
- Das folgende Beispiel erstellt eine Klasse, die mit dem Namen `MyData`, enthält eine Eigenschaft namens `MyDataProperty`.  
+ Im folgenden Beispiel wird eine Klasse mit dem Namen `MyData`erstellt, die eine Eigenschaft mit dem Namen `MyDataProperty`enthält.  
   
  [!code-csharp[CodeOnlyBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
  [!code-vb[CodeOnlyBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
- Das folgende Beispiel zeigt, wie Sie erstellen ein Binding-Objekt, um die Quelle der Bindung festgelegt wird.  Im Beispiel wird <xref:System.Windows.FrameworkElement.SetBinding%2A> zum Binden der <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft `myText`, d.h. eine <xref:System.Windows.Controls.TextBlock> Steuerelements, auf `MyDataProperty`.  
+ Im folgenden Beispiel wird gezeigt, wie ein Bindungs Objekt erstellt wird, um die Quelle der Bindung festzulegen.  Im Beispiel wird <xref:System.Windows.FrameworkElement.SetBinding%2A> verwendet, um die <xref:System.Windows.Controls.TextBlock.Text%2A>-Eigenschaft von `myText`, die ein <xref:System.Windows.Controls.TextBlock> Steuerelement ist, an `MyDataProperty`zu binden.  
   
  [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- Das vollständige Codebeispiel finden Sie unter [nur ein Beispiel für die Bindung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90)).  
+ Das Codebeispiel für den gesamten Code finden Sie unter Beispiel für reine [Code Bindung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90)).  
   
- Statt <xref:System.Windows.FrameworkElement.SetBinding%2A>, können Sie die <xref:System.Windows.Data.BindingOperations.SetBinding%2A> statische Methode der <xref:System.Windows.Data.BindingOperations> Klasse. Das folgende Beispiel auszuführen, ruft <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> anstelle von <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> binden `myText` zu `myDataProperty`.  
+ Anstatt <xref:System.Windows.FrameworkElement.SetBinding%2A>aufrufen zu können, können Sie die <xref:System.Windows.Data.BindingOperations.SetBinding%2A> statische Methode der <xref:System.Windows.Data.BindingOperations>-Klasse verwenden. Im folgenden Beispiel wird <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> anstelle von <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> aufgerufen, um `myText` an `myDataProperty`zu binden.  
   
  [!code-csharp[CodeOnlyBinding#BOSetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

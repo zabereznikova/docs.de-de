@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799306"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423826"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -21,7 +21,7 @@ Es gibt verschiedene Möglichkeiten für die ersten Schritte mit .NET. Da .NET e
 
 * Die Artikel zu den [ersten Schritten mit C#](../csharp/getting-started/index.md) und die [C#-Tutorials](../csharp/tutorials/index.md) bieten eine Reihe von Möglichkeiten für die ersten Schritte unter Verwendung von C#.
 
-* Die Tutorials zu den [ersten Schritten mit F#](../fsharp/tutorials/getting-started/index.md) enthalten drei Hauptmethoden für die Verwendung von F#: mit Visual Studio, Visual Studio Code oder Befehlszeilentools.
+* Die Tutorials zu den [ersten Schritten mit F#](../fsharp/get-started/index.md) enthalten drei Hauptmethoden für die Verwendung von F#: mit Visual Studio, Visual Studio Code oder Befehlszeilentools.
 
 * Die Artikel mit den [ersten Schritten mit Visual Basic](../visual-basic/getting-started/index.md) bieten Anleitungen für die Verwendung von Visual Basic in Visual Studio.
 

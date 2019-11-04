@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Laden und Anzeigen von Metadateien'
+title: 'Gewusst wie: Laden und Anzeigen von Metadateien'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c17e0b2d023ccf80b0d32301b7ee6765edcae9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723221"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424822"
 ---
-# <a name="how-to-load-and-display-metafiles"></a>Vorgehensweise: Laden und Anzeigen von Metadateien
-Die <xref:System.Drawing.Imaging.Metafile> -Klasse, die erbt die <xref:System.Drawing.Image> Klasse, stellt Methoden zum Aufzeichnen, anzeigen und Überprüfen von Rasterbildern.  
+# <a name="how-to-load-and-display-metafiles"></a>Gewusst wie: Laden und Anzeigen von Metadateien
+Die <xref:System.Drawing.Imaging.Metafile>-Klasse, die von der <xref:System.Drawing.Image>-Klasse erbt, stellt Methoden zum Aufzeichnen, anzeigen und untersuchen von Vektorbildern bereit.  
   
 ## <a name="example"></a>Beispiel  
- Um einen Vektorbild (Metafile) auf dem Bildschirm anzuzeigen, müssen Sie eine <xref:System.Drawing.Imaging.Metafile> Objekt und ein <xref:System.Drawing.Graphics> Objekt. Übergeben Sie den Namen einer Datei (oder einen Stream) zu einem <xref:System.Drawing.Imaging.Metafile> Konstruktor. Nach der Erstellung einer <xref:System.Drawing.Imaging.Metafile> Objekt, und übergeben, die <xref:System.Drawing.Imaging.Metafile> -Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A> -Methode der ein <xref:System.Drawing.Graphics> Objekt.  
+ Zum Anzeigen eines Vektor Bilds (Metadatei) auf dem Bildschirm benötigen Sie ein <xref:System.Drawing.Imaging.Metafile>-Objekt und ein <xref:System.Drawing.Graphics>-Objekt. Übergeben Sie den Namen einer Datei (oder eines Datenstroms) an einen <xref:System.Drawing.Imaging.Metafile> Konstruktor. Nachdem Sie ein <xref:System.Drawing.Imaging.Metafile>-Objekt erstellt haben, übergeben Sie das <xref:System.Drawing.Imaging.Metafile>-Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A>-Methode eines <xref:System.Drawing.Graphics> Objekts.  
   
- Das Beispiel erstellt eine <xref:System.Drawing.Imaging.Metafile> Objekt aus einer Datei EMF (Erweiterte Metadatei) und anschließend zeichnet das Bild mit der linken oberen Ecke auf ("60", "10").  
+ Im Beispiel wird ein <xref:System.Drawing.Imaging.Metafile> Objekt aus einer EMF-Datei (Enhanced Metafile) erstellt und dann mit der linken oberen Ecke bei (60, 10) gezeichnet.  
   
- Die folgende Abbildung zeigt die Metadatei an der angegebenen Position gezeichnet.  
+ In der folgenden Abbildung ist die an der angegebenen Position gezeichnete Metadatendatei dargestellt.  
   
- ![Abbildung Position](./media/imageposition2.png "imageposition2")  
+ ![Screenshot der Bildposition](./media/how-to-load-and-display-metafiles/metafile-drawn-specified-location.png "imageposition2")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.WorkingWithImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+ Das vorherige Beispiel wurde für die Verwendung mit Windows Forms entwickelt und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, bei dem es sich um einen Parameter des <xref:System.Windows.Forms.Control.Paint> Ereignis Handlers handelt.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421132"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460917"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
 Microsoft Windows-Anwendungen sind häufig von Dateien abhängig, die nicht ausführbare Daten enthalten, z. b. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audiodaten. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das konfigurieren, identifizieren und Verwenden dieser Daten Dateitypen, die als Anwendungs Datendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
@@ -52,7 +52,7 @@ Microsoft Windows-Anwendungen sind häufig von Dateien abhängig, die nicht ausf
 - Die Anwendungs Datendatei muss lokalisiert werden können (Weitere Informationen finden Sie unter [Übersicht über WPF-Globalisierung und-Lokalisierung](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
-> Die in diesem Abschnitt beschriebenen Ressourcen Dateien unterscheiden sich von den in [XAML-Ressourcen](../advanced/xaml-resources.md) beschriebenen Ressourcen Dateien und unterscheiden sich von den in [Verwalten von Anwendungs Ressourcen (.net)](/visualstudio/ide/managing-application-resources-dotnet)beschriebenen eingebetteten oder verknüpften Ressourcen.  
+> Die in diesem Abschnitt beschriebenen Ressourcen Dateien unterscheiden sich von den in [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md) beschriebenen Ressourcen Dateien und unterscheiden sich von den in [Verwalten von Anwendungs Ressourcen (.net)](/visualstudio/ide/managing-application-resources-dotnet)beschriebenen eingebetteten oder verknüpften Ressourcen.  
   
 ### <a name="configuring-resource-files"></a>Konfigurieren von Ressourcendateien  
  In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]handelt es sich bei einer Ressourcen Datei um eine Datei, die in einem MSBuild-Projekt (Microsoft Build Engine) als `Resource` Element enthalten ist.  

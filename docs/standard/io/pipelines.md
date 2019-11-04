@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395938"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423678"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
 
@@ -311,8 +311,8 @@ Beim Schreiben von Hilfsprogrammen, die den Puffer lesen, sollte jede zurückgeg
 
 Der vorherige Code:
 
-* Fordert einen Puffer mit mindestens 5 Bytes von `PipeWriter` unter Verwendung von <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> an.
-* Schreibt Bytes für die ASCII-Zeichenfolge `"Hello"` in das zurückgegebene `Span<byte>`-Element.
+* Fordert einen Puffer mit mindestens 5 Bytes von `PipeWriter` unter Verwendung von <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> an.
+* Schreibt Bytes für die ASCII-Zeichenfolge `"Hello"` in das zurückgegebene `Memory<byte>`-Element.
 * Ruft <xref:System.IO.Pipelines.PipeWriter.Advance%2A> auf, um anzugeben, wie viele Bytes in den Puffer geschrieben wurden.
 * Leert das `PipeWriter`-Element, das die Bytes an das zugrunde liegende Gerät sendet.
 

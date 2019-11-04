@@ -7,15 +7,15 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f860f5ee42b5c1df43c4ec2b1003408bc1c0d8e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938722"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458796"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space-Behandlung in XAML
-Die `xml:space` -Attribut ist ein XML-definiertes Attribut, das das Verhalten der Verarbeitung von signifikanten Leerzeichen in einem Objektelement deklariert. Dieses Verhalten gilt für den gesamten Inhalt (inneren Text), die im Element enthalten, in denen `xml:space` wird deklariert, und auch Bereiche von untergeordneten Elementen.  
+Das `xml:space`-Attribut ist ein XML-definiertes Attribut, das das signifikante Verhalten der Leerraum Verarbeitung in einem Object-Element deklariert. Dieses Verhalten ist relevant für den gesamten Inhalt (inneren Text), der in dem Element enthalten ist, in dem `xml:space` deklariert ist, und auch Bereiche für untergeordnete Elemente.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -23,24 +23,24 @@ Die `xml:space` -Attribut ist ein XML-definiertes Attribut, das das Verhalten de
 <object xml:space="preserve" />  
 ```  
   
- \- oder –  
+ \- oder -  
   
 ```xaml  
 <object xml:space="default" />  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Definition für die `xml:space` -Attribut in XAML, einschließlich der zwei möglichen Werten ergibt sich aus `xml:space` W3C-Spezifikationen für XML als "spezielles Attribut" definiert.  
+ Die Definition für das `xml:space`-Attribut in XAML, einschließlich der beiden möglichen Werte, wird von `xml:space` abgeleitet, wie von den W3C-Spezifikationen für XML als "spezielles Attribut" definiert.  
   
- Der Standardwert der `xml:space` -Attribut ist der literale Wert `"default"`. Für den Wert `"default"`, oder wenn `xml:space` ist nicht angegeben, das Verhalten der signifikanten Leerzeichen Analyse wird die Standardbehandlung verwendet, wie im folgenden Thema beschrieben [White-Space-Verarbeitung in XAML](whitespace-processing-in-xaml.md).  
+ Der Standardwert des `xml:space` Attributs ist der Literalwert `"default"`. Für den Wert `"default"`oder wenn `xml:space` überhaupt nicht angegeben wird, ist das Verhalten der signifikanten Leerraum-Verarbeitung die Standardbehandlung, wie im Thema [Leerraum Verarbeitung in XAML](whitespace-processing-in-xaml.md)definiert.  
   
- Geben Sie zum Beibehalten von Leerraum im Elementinhalt Objekt `xml:space="preserve"` für dieses Objektelement.  
+ Um Leerraum im Inhalt von Objekt Elementen beizubehalten, geben Sie `xml:space="preserve"` für dieses Objekt Element an.  
   
- Bei den meisten Interpretationen der `xml:space` -Attributeffekte und der Wert des Attributs definiert und gelten für untergeordnete Elemente.  
+ Bei den meisten Interpretationen werden die Auswirkungen des `xml:space` Attributs und der Wert des Attributs auf untergeordnete Elemente beschränkt.  
   
- Eine vollständige Erläuterung der Leerzeichen in XAML verarbeitet, finden Sie unter [White-Space-Verarbeitung in XAML](whitespace-processing-in-xaml.md).  
+ Eine vollständige Erläuterung der Leerraum Verarbeitung in XAML finden Sie unter [Leerraum Verarbeitung in XAML](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Leerzeichen in XAML verarbeitet](whitespace-processing-in-xaml.md)
-- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Leerraum Verarbeitung in XAML](whitespace-processing-in-xaml.md)
+- [Übersicht über XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

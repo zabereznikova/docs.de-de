@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 7751e40762a99711302681f28a88d451087e4980
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5a2d190fe7dfd5305b47da0e6e67de822cfd695b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044508"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424461"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 In diesem Beispiel wird veranschaulicht, wie ein typischer Dienst und ein typischer Client mithilfe von Windows Communication Foundation (WCF) implementiert werden. Das Beispiel besteht aus einem Clientkonsolenprogramm (client.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Der Client stellt synchrone Anforderungen an eine gegebene mathematische Operation, und der Dienst antwortet mit dem Ergebnis. Die Clientaktivität ist im Konsolenfenster sichtbar.  
@@ -19,14 +19,14 @@ In diesem Beispiel wird veranschaulicht, wie ein typischer Dienst und ein typisc
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsHttp`  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Dieses Beispiel macht den `ICalculator` Vertrag mithilfe der [ \<WSHttpBinding-> verfügbar](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Die Konfiguration dieser Bindung wurde in der Datei „Web.config“ erweitert.  
+ Dieses Beispiel macht den `ICalculator` Vertrag mithilfe des [\<WSHttpBinding-> verfügbar](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Die Konfiguration dieser Bindung wurde in der Datei „Web.config“ erweitert.  
   
 ```xml
 <bindings>  
@@ -62,13 +62,13 @@ In diesem Beispiel wird veranschaulicht, wie ein typischer Dienst und ein typisc
   
  Im `binding`-Basiselement können Sie mit dem `maxReceivedMessageSize`-Wert die maximale Größe einer eingehenden Nachricht (in Bytes) konfigurieren. Mit dem `hostNameComparisonMode`-Wert können Sie konfigurieren, ob beim Demultiplexing von Nachrichten für den Dienst der Hostname eine Rolle spielt. Mit dem `messageEncoding`-Wert können Sie konfigurieren, ob Text- oder MTOM-Codierung für Nachrichten verwendet werden soll. Mit dem `textEncoding`-Wert können Sie die Zeichencodierung für Nachrichten konfigurieren. Mit dem `bypassProxyOnLocal`-Wert können Sie konfigurieren, ob ein HTTP-Proxy zur lokalen Kommunikation verwendet werden soll. Der `transactionFlow`-Wert konfiguriert, ob die aktuelle Transaktion übergeben wird (wenn ein Vorgang für den Transaktionsfluss konfiguriert ist).  
   
- Im ReliableSession-> Element konfiguriert der aktivierte boolesche Wert, ob zuverlässige Sitzungen aktiviert sind. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) Der `ordered`-Wert konfiguriert, ob die Nachrichtenreihenfolge beibehalten wird. Der `inactivityTimeout`-Wert konfiguriert, wie lange sich eine Sitzung im Leerlauf befinden darf, bevor sie einen Fehler verursacht.  
+ Im [\<ReliableSession->](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) Element konfiguriert der aktivierte boolesche Wert, ob zuverlässige Sitzungen aktiviert sind. Der `ordered`-Wert konfiguriert, ob die Nachrichtenreihenfolge beibehalten wird. Der `inactivityTimeout`-Wert konfiguriert, wie lange sich eine Sitzung im Leerlauf befinden darf, bevor sie einen Fehler verursacht.  
   
- Auf dem [ \<Sicherheits >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)konfiguriert der `mode` Wert, welcher Sicherheitsmodus verwendet werden soll. In diesem Beispiel wird die Nachrichten Sicherheit verwendet. aus diesem Grund wird die [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) in der [ \<Sicherheits >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)angegeben.  
+ Auf der [\<-Sicherheits >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)konfiguriert der `mode` Wert, welcher Sicherheitsmodus verwendet werden soll. In diesem Beispiel wird die Nachrichten Sicherheit verwendet. aus diesem Grund wird die [\<-Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) in der [\<Security->](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)angegeben.  
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -81,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

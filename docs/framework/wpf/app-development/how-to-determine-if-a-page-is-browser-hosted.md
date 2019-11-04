@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen, ob eine Seite im Browser gehostet wird'
+title: 'Gewusst wie: bestimmen, ob eine Seite Browser gehostet ist'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4cb1065807d16c1d1f5a95c8ac9c9cbe5a0fdab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947809"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424689"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Vorgehensweise: Bestimmen, ob eine Seite im Browser gehostet wird
-In diesem Beispiel wird veranschaulicht, wie Sie bestimmen, ob eine <xref:System.Windows.Controls.Page> in einem Browser gehostet wird.  
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Gewusst wie: bestimmen, ob eine Seite Browser gehostet ist
+In diesem Beispiel wird veranschaulicht, wie ermittelt wird, ob ein <xref:System.Windows.Controls.Page> in einem Browser gehostet wird.  
   
 ## <a name="example"></a>Beispiel  
- Ein <xref:System.Windows.Controls.Page> kann hostunabhängig und, folglich geladen werden, in verschiedene Arten von Hosts, einschließlich einer <xref:System.Windows.Controls.Frame>, ein <xref:System.Windows.Navigation.NavigationWindow>, oder einen Browser. Dies kann auftreten, wenn man eine Bibliotheksassembly, die eine oder mehrere Seiten enthält, und befindet sich auf die verwiesen wird durch mehrere eigenständige und durchsucht werden kann ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) Anwendungen hosten.  
+ Eine <xref:System.Windows.Controls.Page> kann Host agnostisch sein und daher in verschiedene Arten von Hosts geladen werden, einschließlich einer <xref:System.Windows.Controls.Frame>, eines <xref:System.Windows.Navigation.NavigationWindow>oder eines Browsers. Dies kann vorkommen, wenn eine Bibliotheksassembly vorhanden ist, die eine oder mehrere Seiten enthält und auf die von mehreren eigenständigen und durch suchbaren (XBAP) Host Anwendungen verwiesen wird.  
   
- Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> zu entscheiden, ob eine <xref:System.Windows.Controls.Page> in einem Browser gehostet wird.  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> verwendet wird, um zu bestimmen, ob ein <xref:System.Windows.Controls.Page> in einem Browser gehostet wird.  
   
  [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039498"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458192"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementieren des MultipleView-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039498"
   
  Das <xref:System.Windows.Automation.MultipleViewPattern> -Steuerelementmuster dient zur Unterstützung von Steuerelementen, die mehrere Darstellungen desselben Satzes von Informationen oder untergeordneten Steuerelementen bereitstellt und zwischen diesen wechseln kann.  
   
- Beispiele für Steuerelemente, die mehrere Ansichten darstellen können, sind die Listenansicht (die den Inhalt als Miniaturansichten, Kacheln, Symbole oder Details anzeigen kann), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Diagrammen (Kreis, Linie, Balken, Zellwert mit einer Formel) [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] Dokumente (normal, Weblayout, Drucklayout, Lesen von Layout, Gliederung), Microsoft Outlook-Kalender (Jahr, Monat, Woche, Tag) und Microsoft Windows Media Player Skins. Die unterstützten Ansichten werden vom Steuerelemententwickler bestimmt und sind für jedes Steuerelement spezifisch.  
+ Beispiele für Steuerelemente, die mehrere Ansichten darstellen können, sind die Listenansicht (die den Inhalt als Miniaturansichten, Kacheln, Symbole oder Details anzeigen kann), Microsoft Excel-Diagramme (Kreis, Linie, Balken, Zellwert mit einer Formel), Microsoft Word-Dokumente (normal, Weblayout, Drucken). Layout, Lese Layout, Umriss), Microsoft Outlook-Kalender (Jahr, Monat, Woche, Tag) und Microsoft Windows Media Player Skins. Die unterstützten Ansichten werden vom Steuerelemententwickler bestimmt und sind für jedes Steuerelement spezifisch.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  

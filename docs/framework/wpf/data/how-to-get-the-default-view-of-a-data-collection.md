@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abrufen der Standardansicht einer Datensammlung'
+title: 'Gewusst wie: Abrufen der Standardansicht einer Datenauflistung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e82d252ed82e4d2e6d641e8b60e890cc93bb0427
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931511"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459118"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Vorgehensweise: Abrufen der Standardansicht einer Datensammlung
-Sichten können die Datenerfassung auf unterschiedliche Weise je nach sortieren, filtern oder gruppieren die Kriterien angezeigt werden. Jede Sammlung verfügt über eine gemeinsame Standardansicht, die als die tatsächliche Bindung-Quelle verwendet wird, wenn eine Bindung eine Sammlung als Quelle angegeben. In diesem Beispiel veranschaulicht das Abrufen der Standardansicht einer Auflistung.  
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Gewusst wie: Abrufen der Standardansicht einer Datenauflistung
+In Sichten kann die gleiche Datensammlung je nach Sortier-, Filter-oder Gruppierungs Kriterien auf unterschiedliche Weise angezeigt werden. Jede Sammlung verfügt über eine freigegebene Standardansicht, die als tatsächliche Bindungs Quelle verwendet wird, wenn eine Bindung eine Auflistung als Quelle angibt. Dieses Beispiel zeigt, wie Sie die Standardansicht einer Auflistung erhalten.  
   
 ## <a name="example"></a>Beispiel  
- Um die Ansicht zu erstellen, benötigen Sie einen Objektverweis auf die Auflistung ein. Dieses Datenobjekt kann durch Verweisen auf Ihren eigenen Code-Behind-Objekt, durch den Datenkontext, abrufen, indem Abrufen einer Eigenschaft der Datenquelle oder Abrufen einer Eigenschaft der Bindung abgerufen werden. In diesem Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Windows.FrameworkElement.DataContext%2A> ein Datenobjekt und die Verwendung die standardauflistung direkt abrufen Anzeigeberechtigung für diese Sammlung.  
+ Um die Ansicht zu erstellen, benötigen Sie einen Objekt Verweis auf die Auflistung. Dieses Datenobjekt kann abgerufen werden, indem Sie auf Ihr eigenes Code-Behind-Objekt verweisen, indem Sie den Datenkontext erhalten, indem Sie eine Eigenschaft der Datenquelle erhalten oder eine Eigenschaft der Bindung erhalten. Dieses Beispiel zeigt, wie Sie die <xref:System.Windows.FrameworkElement.DataContext%2A> eines Datenobjekts abrufen und verwenden können, um die Standard Auflistungs Ansicht für diese Auflistung direkt abzurufen.  
   
  [!code-csharp[CollectionView#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#2)]
  [!code-vb[CollectionView#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#2)]  
   
- In diesem Beispiel ist das Stammelement ist ein <xref:System.Windows.Controls.StackPanel>. Die <xref:System.Windows.FrameworkElement.DataContext%2A> nastaven NA hodnotu *MyDataSource*, die bezieht sich auf einen Datenanbieter, die eine <xref:System.Collections.ObjectModel.ObservableCollection%601> von *Reihenfolge* Objekte.  
+ In diesem Beispiel ist das Stamm Element eine <xref:System.Windows.Controls.StackPanel>. Der <xref:System.Windows.FrameworkElement.DataContext%2A> wird auf *MyDatasource*festgelegt, was auf einen Datenanbieter verweist, bei dem es sich um einen <xref:System.Collections.ObjectModel.ObservableCollection%601> von *Order* -Objekten handelt.  
   
  [!code-xaml[CollectionView#CollectionViewDataContext](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml#collectionviewdatacontext)]  
   
- Alternativ können Sie instanziieren und Binden an eine eigene Auflistung Ansicht mithilfe der <xref:System.Windows.Data.CollectionViewSource> Klasse. Dieser Auflistungsansicht wird nur von Steuerelementen gemeinsam genutzt, die direkt an ihn binden. Ein Beispiel finden Sie unter Vorgehensweise erstellen Sie eine Ansicht im Abschnitt der [Übersicht über die Datenbindung](data-binding-overview.md).  
+ Alternativ können Sie mit der <xref:System.Windows.Data.CollectionViewSource>-Klasse instanziieren und an Ihre eigene Auflistungs Ansicht binden. Diese Auflistungs Ansicht wird nur von Steuerelementen gemeinsam genutzt, die direkt an Sie gebunden werden. Ein Beispiel finden Sie im Abschnitt How to Create a View in der [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md).  
   
- Beispiele für die Funktionalität einer Auflistungsansicht, finden Sie unter [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md), [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md), und [Navigieren durch die Objekte in einer Datenauflistungsansicht](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
+ Beispiele für die von einer Auflistungs Ansicht bereitgestellte Funktionalität finden Sie unter [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md), [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md)und [Navigieren durch die Objekte in einer Daten CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

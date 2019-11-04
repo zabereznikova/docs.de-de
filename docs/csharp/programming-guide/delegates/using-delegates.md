@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: f7ee014150a01fe0010048101576f2fece360146
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: a0422b5cd3083f351bde44deae5871599a649140
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423302"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 
-Ein [Delegat](../../language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../language-reference/keywords/string.md) als Argument übernimmt und [void](../../language-reference/keywords/void.md) zurückgibt:
+Ein [Delegat](../../language-reference/builtin-types/reference-types.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../language-reference/builtin-types/reference-types.md) als Argument übernimmt und [void](../../language-reference/keywords/void.md) zurückgibt:
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

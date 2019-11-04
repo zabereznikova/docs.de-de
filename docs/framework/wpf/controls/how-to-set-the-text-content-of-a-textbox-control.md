@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des Textinhalts eines TextBox-Steuerelements'
+title: 'Gewusst wie: Festlegen des Textinhalts eines TextBox-Steuerelements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: 2e2bc70b108991fd4e3c138bfac5bff942173e33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9b16f2d99295a28725255361b0be3ef7f4245fd2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856114"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459306"
 ---
-# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Vorgehensweise: Festlegen des Textinhalts eines TextBox-Steuerelements
+# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Gewusst wie: Festlegen des Textinhalts eines TextBox-Steuerelements
 
-In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Controls.TextBox.Text%2A> die-Eigenschaft verwendet wird, um den ursprünglichen <xref:System.Windows.Controls.TextBox> Text Inhalt eines-Steuer Elements festzulegen.
+Dieses Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.TextBox.Text%2A>-Eigenschaft verwenden, um den ursprünglichen Text Inhalt eines <xref:System.Windows.Controls.TextBox> Steuer Elements festzulegen.
 
 > [!NOTE]
-> <xref:System.Windows.Markup.ContentPropertyAttribute> <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox.Text%2A> Obwohl die- `<TextBox.Text>` [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Version des Beispiels die-Tags um den Text der einzelnen Schaltflächen Inhalte verwenden könnte, ist dies nicht notwendig, da das-Attribut auf die Eigenschaft anwendet. . Weitere Informationen finden Sie unter [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md).
+> Obwohl in der [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Version des Beispiels die `<TextBox.Text>` Tags um den Text der <xref:System.Windows.Controls.TextBox> Inhalte der Schaltfläche verwendet werden können, ist dies nicht notwendig, da das <xref:System.Windows.Markup.ContentPropertyAttribute>-Attribut von der <xref:System.Windows.Controls.TextBox> auf die <xref:System.Windows.Controls.TextBox.Text%2A>-Eigenschaft angewendet wird. Weitere Informationen finden Sie unter [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
 
 ## <a name="example"></a>Beispiel
 

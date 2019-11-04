@@ -3,12 +3,12 @@ title: Zahlen in C# – Einführung in das C#-Tutorial
 description: Machen Sie sich mit C# vertraut, indem Sie numerische Typen, ihre Eigenschaften und Methoden erkunden.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774022"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039695"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Bearbeiten von Ganzzahlen und Gleitkommazahlen in C\#
 
@@ -40,10 +40,16 @@ Sie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Za
 Erkunden Sie zunächst die anderen Operationen. Fügen Sie diese Zeilen nach der Zeile hinzu, die den Wert von `c` schreibt:
 
 ```csharp
+
+// subtraction
 c = a - b;
 Console.WriteLine(c);
+
+// multiplication
 c = a * b;
 Console.WriteLine(c);
+
+// division
 c = a / b;
 Console.WriteLine(c);
 ```
@@ -69,12 +75,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }
@@ -153,12 +167,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }

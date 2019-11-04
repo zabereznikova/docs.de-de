@@ -2,12 +2,12 @@
 title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a8a8713cd35e73b5126dadd7e0e17a3f8304188b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 835a158ba668a3aef749602c73fd9157e8d83a40
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045454"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425031"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein tokenauthentifikator in Windows Communication Foundation (WCF) wird zum Überprüfen des Tokens verwendet, das mit der Nachricht verwendet wird, um zu überprüfen, ob es selbst konsistent ist, und zum Authentifizieren der Identität, die dem Token zugeordnet ist.
@@ -108,7 +108,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tok
 
  Die Clientimplementierung legt den zu verwendenden Benutzernamen und das Kennwort fest.
 
-```
+```csharp
 static void Main()
 {
      ...
@@ -125,7 +125,7 @@ static void Main()
 
      Im Beispiel wird ein benutzerdefinierter Tokenauthentifizierer implementiert, der überprüft, ob der Benutzername ein gültiges E-Mail-Format hat. Er ermittelt den <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Die wichtigste Methode in dieser Klasse ist <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. In dieser Methode überprüft der Authentifizierer das Format des Benutzernamens und kontrolliert, ob der Hostname von einer nicht autorisierten Domäne stammt. Wenn beide Bedingungen erfüllt sind, gibt er eine schreibgeschützte Auflistung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück, mit der Ansprüche bereitgestellt werden, die die Informationen im Benutzernamentoken darstellen.
 
-    ```
+    ```csharp
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
     {
         if (!ValidateUserNameFormat(userName))
@@ -144,7 +144,7 @@ static void Main()
 
      Dieses Beispiel enthält seine eigene Implementierung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>, die als `UnconditionalPolicy` bezeichnet wird und Sätze von Ansprüchen und Identitäten zurückgibt, die in ihrem Konstruktor an sie übergeben wurden.
 
-    ```
+    ```csharp
     class UnconditionalPolicy : IAuthorizationPolicy
     {
         String id = Guid.NewGuid().ToString();
@@ -214,7 +214,7 @@ static void Main()
 
      Mit dem <xref:System.IdentityModel.Selectors.SecurityTokenManager> wird ein <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> für bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>-Objekte erstellt, die in der `CreateSecurityTokenAuthenticator`-Methode an ihn übergeben werden. Der Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenanbietern und Token-Serialisierungsprogrammen. Diese Vorgänge werden in diesem Beispiel jedoch nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> und überschreibt die Methode `CreateSecurityTokenAuthenticator`, um benutzerdefinierte Benutzernamen-Tokenauthentifizierer zurückzugeben, wenn die übergebenen Tokenanforderungen angeben, dass der Benutzernamenauthentifizierer angefordert wird.
 
-    ```
+    ```csharp
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
     {
         MyUserNameCredential myUserNameCredential;
@@ -244,7 +244,7 @@ static void Main()
 
      Die Klasse der Dienstanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Dienst konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.
 
-    ```
+    ```csharp
     public class MyUserNameCredential : ServiceCredentials
     {
 
@@ -270,7 +270,7 @@ static void Main()
 
      Damit der Dienst die benutzerdefinierten Dienstanmeldeinformationen verwenden kann, wird die standardmäßige Dienstanmeldeinformationen-Klasse nach dem Abrufen des in den standardmäßigen Dienstanmeldeinformationen vorkonfigurierten Dienstzertifikats gelöscht. Anschließend wird die neue Dienstanmeldeinformationen-Instanz zum Verwenden der vorkonfigurierten Dienstzertifikate konfiguriert und zum Dienstverhalten hinzugefügt.
 
-    ```
+    ```csharp
     ServiceCredentials sc = serviceHost.Credentials;
     X509Certificate2 cert = sc.ServiceCertificate.Certificate;
     MyUserNameCredential serviceCredential = new MyUserNameCredential();
@@ -281,7 +281,7 @@ static void Main()
 
  Um die Informationen zu den Aufrufern anzuzeigen, können Sie <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> verwenden, wie im folgenden Code gezeigt. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> enthält Informationen zu den Ansprüchen des aktuellen Aufrufers.
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",
@@ -301,7 +301,7 @@ static void DisplayIdentityInformation()
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Standardmäßig lautet die Variable in dieser Batchdatei localhost.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -315,7 +315,7 @@ static void DisplayIdentityInformation()
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 

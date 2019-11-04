@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: dfc66bd2bdc69d1236a635b30697bc1cd607821c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 93dbc711e38c17c2f502c4d04239d037ff015059
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120767"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425192"
 ---
 # <a name="net-guide"></a>Leitfaden für .NET
 
@@ -49,7 +49,7 @@ Wenn Sie Interesse an den Hauptkonzepten von .NET haben, können Sie sich hier i
 * [.NET-Architekturkomponenten](components.md)
 * [.NET-Standard](net-standard.md)
 * [Native Interoperabilität](native-interop/index.md)
-* [Garbage Collection](garbagecollection/index.md)
+* [Garbage Collection](garbage-collection/index.md)
 * [Basistypen in .NET](base-types/index.md)
 * [Sammlungen](collections/index.md)
 * [Datumsangaben, Uhrzeiten und Zeitzonen](datetime/index.md)

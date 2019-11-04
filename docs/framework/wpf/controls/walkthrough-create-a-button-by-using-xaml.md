@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920190"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458692"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 
@@ -92,7 +92,7 @@ Als nächstes legen wir einige Eigenschaften für diese Schaltflächen fest, um 
 
      ![Schaltflächen mit einer Breite von 90 und einem Rand von 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     Es gibt noch viel mehr Möglichkeiten mit Stilen, einschließlich einer Vielzahl von Möglichkeiten, um zu optimieren, welche Objekte als Ziel verwendet werden, wie komplexe Eigenschaftswerte angegeben werden, und sogar Stile als Eingabe für andere Stile verwendet werden. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).
+     Es gibt noch viel mehr Möglichkeiten mit Stilen, einschließlich einer Vielzahl von Möglichkeiten, um zu optimieren, welche Objekte als Ziel verwendet werden, wie komplexe Eigenschaftswerte angegeben werden, und sogar Stile als Eingabe für andere Stile verwendet werden. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 3. **Legen Sie einen Stil Eigenschafts Wert auf eine Ressource fest:** Ressourcen ermöglichen eine einfache Möglichkeit, häufig definierte Objekte und Werte wiederzuverwenden. Es ist besonders hilfreich, komplexe Werte mithilfe von Ressourcen zu definieren, um den Code modularer zu gestalten. Fügen Sie der Datei "App. XAML" das folgende hervorgehobene Markup hinzu.
 
@@ -439,7 +439,7 @@ Eine einfache Möglichkeit, Interaktivität hinzuzufügen (Mouseover, Mouseover,
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer Schaltfläche mit Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Übersicht über Animationen](../graphics-multimedia/animation-overview.md)
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [Übersicht über Bitmapeffekte](../graphics-multimedia/bitmap-effects-overview.md)

@@ -1,13 +1,13 @@
 ---
 title: Abfrageausdrücke
-description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache F#.
+description: Erfahren Sie mehr über die Unterstützung von Abfrage Ausdrücken F# für LINQ in der Programmiersprache.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6eaac16336cca752eaac355276300c6809c570a8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: f0c7245a930a06576487a61d73a1e5b94190ee59
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216813"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424883"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Hinweise
 
-Abfrage Ausdrücke sind eine Art von Berechnungs Ausdruck ähnlich Sequence Expressions. Ebenso wie Sie eine Sequenz durch Bereitstellen von Code in einem Sequenz Ausdruck angeben, geben Sie einen Satz von Daten an, indem Sie Code in einem Abfrage Ausdruck bereitstellen. In einem Sequenz Ausdruck identifiziert das `yield` -Schlüsselwort Daten, die als Teil der resultierenden Sequenz zurückgegeben werden sollen. In Abfrage Ausdrücken führt das `select` Schlüsselwort dieselbe Funktion aus. Zusätzlich zu den `select` Schlüsselwort F# unterstützt auch eine Anzahl von Abfrageoperatoren, die ähnlich wie die Teile einer SQL SELECT-Anweisung sind. Im folgenden finden Sie ein Beispiel für einen einfachen Abfrage Ausdruck sowie Code, der eine Verbindung mit der Northwind-odata-Quelle herstellt.
+Abfrage Ausdrücke sind eine Art von Berechnungs Ausdruck ähnlich Sequence Expressions. Ebenso wie Sie eine Sequenz durch Bereitstellen von Code in einem Sequenz Ausdruck angeben, geben Sie einen Satz von Daten an, indem Sie Code in einem Abfrage Ausdruck bereitstellen. In einem Sequenz Ausdruck identifiziert das `yield`-Schlüsselwort Daten, die als Teil der resultierenden Sequenz zurückgegeben werden sollen. In Abfrage Ausdrücken führt das `select`-Schlüsselwort dieselbe Funktion aus. Zusätzlich zum `select`-Schlüsselwort unter F# stützt auch eine Reihe von Abfrage Operatoren, die den Teilen einer SQL SELECT-Anweisung ähneln. Im folgenden finden Sie ein Beispiel für einen einfachen Abfrage Ausdruck sowie Code, der eine Verbindung mit der Northwind-odata-Quelle herstellt.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,17 +46,17 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-Im vorherigen Codebeispiel befindet sich der Abfrage Ausdruck in geschweiften Klammern. Die Bedeutung des Codes im-Ausdruck ist, dass alle Kunden in der Customers-Tabelle in der-Datenbank in den Abfrage Ergebnissen zurückgegeben werden. Abfrage Ausdrücke geben einen Typ zurück, <xref:System.Linq.IQueryable%601> der <xref:System.Collections.Generic.IEnumerable%601>und implementiert, sodass Sie mit dem- [Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) von "-" durchlaufen werden können, wie im Beispiel gezeigt.
+Im vorherigen Codebeispiel befindet sich der Abfrage Ausdruck in geschweiften Klammern. Die Bedeutung des Codes im-Ausdruck ist, dass alle Kunden in der Customers-Tabelle in der-Datenbank in den Abfrage Ergebnissen zurückgegeben werden. Abfrage Ausdrücke geben einen Typ zurück, der <xref:System.Linq.IQueryable%601> und <xref:System.Collections.Generic.IEnumerable%601>implementiert, und daher können Sie mit dem- [Modul "SQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) " durchlaufen werden, wie im Beispiel gezeigt.
 
-Alle Berechnungs Ausdrucks Typen werden aus einer Generator-Klasse erstellt. Die Builder-Klasse für den Abfrage Berechnungs Ausdruck `QueryBuilder`ist. Weitere Informationen finden Sie unter [Berechnungs Ausdrücke](computation-expressions.md) und [LINQ. QueryBuilder-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Alle Berechnungs Ausdrucks Typen werden aus einer Generator-Klasse erstellt. Die Builder-Klasse für den Abfrage Berechnungs Ausdruck ist `QueryBuilder`. Weitere Informationen finden Sie unter [Berechnungs Ausdrücke](computation-expressions.md) und [LINQ. QueryBuilder-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
 
 ## <a name="query-operators"></a>Abfrageoperatoren
 
-Abfrage Operatoren ermöglichen es Ihnen, die Details der Abfrage anzugeben, z. b., um Kriterien für zurück zugegende Datensätze zu platzieren, oder die Sortierreihenfolge der Ergebnisse anzugeben. Die Abfrage Quelle muss den Abfrage Operator unterstützen. Wenn Sie versuchen, einen nicht unterstützten Abfrage Operator zu `System.NotSupportedException` verwenden, wird ausgelöst.
+Abfrage Operatoren ermöglichen es Ihnen, die Details der Abfrage anzugeben, z. b., um Kriterien für zurück zugegende Datensätze zu platzieren, oder die Sortierreihenfolge der Ergebnisse anzugeben. Die Abfrage Quelle muss den Abfrage Operator unterstützen. Wenn Sie versuchen, einen nicht unterstützten Abfrage Operator zu verwenden, wird `System.NotSupportedException` ausgelöst.
 
-Nur Ausdrücke, die in SQL übersetzt werden können, sind in Abfrage Ausdrücken zulässig. Beispielsweise sind keine Funktionsaufrufe in den Ausdrücken zulässig, wenn Sie den `where` Abfrage Operator verwenden.
+Nur Ausdrücke, die in SQL übersetzt werden können, sind in Abfrage Ausdrücken zulässig. Beispielsweise sind keine Funktionsaufrufe in den Ausdrücken zulässig, wenn Sie den `where` Query-Operator verwenden.
 
-Tabelle 1 zeigt verfügbare Abfrage Operatoren. Weitere Informationen finden Sie weiter unten in diesem Thema unter Table2, in F# dem SQL-Abfragen und die entsprechenden Abfrage Ausdrücke verglichen werden. Einige Abfrage Operatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der odata-Typanbieter in den von ihm unterstützten Abfrage Operatoren aufgrund von Einschränkungen in odata eingeschränkt. Weitere Informationen finden Sie unter [ODataService-Typanbieter (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabelle 1 zeigt verfügbare Abfrage Operatoren. Weitere Informationen finden Sie weiter unten in diesem Thema unter Table2, in F# dem SQL-Abfragen und die entsprechenden Abfrage Ausdrücke verglichen werden. Einige Abfrage Operatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der odata-Typanbieter in den von ihm unterstützten Abfrage Operatoren aufgrund von Einschränkungen in odata eingeschränkt. Weitere Informationen finden Sie unter [odataservice-Typanbieter (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Diese Tabelle geht von einer Datenbank in der folgenden Form aus:
 
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in aufsteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus. Dieser Operator darf nur <code>sortBy</code>nach, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>verwendet werden.<br/><br/>
+<td><code>thenBy</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in aufsteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus. Dieser Operator kann nur nach einem <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>verwendet werden.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in absteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus. Dieser Operator darf nur <code>sortBy</code>nach, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>verwendet werden.<br/><br/>
+<td><code>thenByDescending</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in absteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus. Dieser Operator kann nur nach einem <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>verwendet werden.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>Korreliert zwei Sätze ausgewählter Werte basierend auf übereinstimmenden Schlüsseln. Beachten Sie, dass die Reihenfolge der Schlüssel um das =-Zeichen in einem Join-Ausdruck von Bedeutung ist. Wenn die Zeile in allen Joins nach dem <code>-&gt;</code> Symbol geteilt wird, muss der Einzug mindestens so weit wie das Schlüsselwort <code>for</code>eingezogen werden.<br/><br/>
+<td><code>join</code></td><td>Korreliert zwei Sätze ausgewählter Werte basierend auf übereinstimmenden Schlüsseln. Beachten Sie, dass die Reihenfolge der Schlüssel um das =-Zeichen in einem Join-Ausdruck von Bedeutung ist. Wenn die Zeile in allen Joins nach dem <code>-&gt;</code> Symbol aufgeteilt wird, muss der Einzug mindestens so weit eingezogen werden, wie das Schlüsselwort <code>for</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -353,7 +353,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     for student in db.Student do
     join selection in db.CourseSelection
         on (student.StudentID = selection.StudentID)
-    distinct       
+    distinct
 }
 </code></pre>
 
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in aufsteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus, der NULL-Werte zulässt. Dieser Operator kann nur unmittelbar nach <code>sortBy</code>einer, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>oder deren Varianten verwendet werden, die NULL-Werte zulassen.<br/><br/>
+<td><code>thenByNullable</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in aufsteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus, der NULL-Werte zulässt. Dieser Operator kann nur unmittelbar nach einer <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>oder der Varianten verwendet werden, die NULL-Werte zulassen.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in absteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus, der NULL-Werte zulässt. Dieser Operator kann nur unmittelbar nach <code>sortBy</code>einer, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>oder deren Varianten verwendet werden, die NULL-Werte zulassen.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Führt eine nachfolgende Sortierung der bisher ausgewählten Elemente in absteigender Reihenfolge nach dem angegebenen Sortierschlüssel aus, der NULL-Werte zulässt. Dieser Operator kann nur unmittelbar nach einer <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>oder <code>thenByDescending</code>oder der Varianten verwendet werden, die NULL-Werte zulassen.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -499,7 +499,8 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Vergleich von Transact-SQL und F#-Abfrageausdrücken
-Die folgende Tabelle zeigt einige allgemeinen Transact-SQL-Abfragen und deren Entsprechungen in F#. Der Code in dieser Tabelle nimmt auch die gleiche Datenbank wie die vorherige Tabelle und den gleichen anfänglichen Code zum Einrichten des Typanbieters an.
+
+In der folgenden Tabelle sind einige gängige Transact-SQL-Abfragen und Ihre F#Entsprechungen in aufgeführt. Der Code in dieser Tabelle nimmt auch die gleiche Datenbank wie die vorherige Tabelle und den gleichen anfänglichen Code zum Einrichten des Typanbieters an.
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabelle 2. Transact-SQL und F#-Abfrageausdrücke
 
@@ -533,7 +534,7 @@ Zählen von Datensätzen in einer Tabelle.<br/>
 
 <pre><code class="lang-fsharp">// Count of students.
 query {
-    for student in db.Student do       
+    for student in db.Student do
     count
 }
 </code></pre>
@@ -563,7 +564,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>Gruppierung<br/>
+<td>Gruppieren<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age
@@ -638,7 +639,7 @@ GROUP BY Student.Age
 <pre><code class="lang-fsharp">// Group students by age and sum ages.
 query {
     for student in db.Student do
-    groupBy student.Age into g       
+    groupBy student.Age into g
     let total =
         query {
             for student in g do
@@ -666,14 +667,14 @@ ORDER BY COUNT( * ) DESC
 query {
     for student in db.Student do
     groupBy student.Age into g
-    where (g.Count() > 1)       
+    where (g.Count() > 1)
     sortByDescending (g.Count())
     select (g.Key, g.Count())
 }
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>ein Satz angegebener Werte<br/>
+<code>IN</code> einen Satz angegebener Werte<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -714,7 +715,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>mit fest gelegster Muster Übereinstimmung<br/>
+<code>LIKE</code> mit fest gelegster Muster Übereinstimmung.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -726,12 +727,12 @@ WHERE Student.Name LIKE '[abc]%'
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
     where (SqlMethods.Like( student.Name, "[abc]%") )
-    select student 
+    select student
 }
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>mit dem Set-Ausschluss Muster.<br/>
+<code>LIKE</code> mit dem festgelegten Ausschluss Muster.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -750,7 +751,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>Wählen Sie in einem Feld ein anderes Feld aus.<br/>
+<code>LIKE</code> auf ein Feld, aber wählen Sie ein anderes Feld aus.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -761,11 +762,11 @@ WHERE Student.Name LIKE '[^abc]%'
 <pre><code class="lang-fsharp">query {
     for n in db.Student do
     where (SqlMethods.Like( n.Name, "[^abc]%") )
-    select n.StudentID   
+    select n.StudentID
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>, bei der Teil Zeichenfolgen-Suche.<br/>
+</td></tr><tr><td><code>LIKE</code>mit Teil Zeichenfolgen-Suche.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -782,7 +783,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Einfach <code>JOIN</code> mit zwei Tabellen.<br/>
+Einfache <code>JOIN</code> mit zwei Tabellen.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -800,7 +801,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>mit zwei Tabellen.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> mit zwei Tabellen.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -819,7 +820,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>entspricht<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> mit <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -902,7 +903,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>mit Reihenfolge<br/>
+</td></tr><tr><td><code>OR</code> mit Reihenfolge<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -920,7 +921,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>die <code>OR</code>Reihenfolge, und.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code>und Reihenfolge.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -942,7 +943,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>von zwei Abfragen.<br/>
+</td></tr><tr><td><code>UNION</code> von zwei Abfragen.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -991,7 +992,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>Anlage.<br/>
+</td></tr><tr><td><code>CASE</code> Bedingung.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1860,7 +1861,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-Und hier ist die vollständige Ausgabe, wenn dieser Code in F# Interactive ausgeführt wird.
+Und hier ist die vollständige Ausgabe, wenn dieser Code F# interaktiv ausgeführt wird.
 
 ```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

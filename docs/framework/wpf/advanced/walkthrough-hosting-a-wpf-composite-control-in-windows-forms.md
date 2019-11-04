@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4a0b15ded5050833d4e87a30b977139834b624d4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197932"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458931"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch eine beträchtliche Investition in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Code haben, kann es effektiver sein, Ihre vorhandene [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu erweitern, anstatt Sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie ein oder mehrere Steuerelemente einbetten möchten, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in Ihrer Windows Forms Anwendung implementiert werden. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Anpassung von Steuer](../controls/control-customization.md)Elementen.  
@@ -87,7 +87,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 #### <a name="styling-the-ui-elements"></a>Formatieren der Benutzeroberflächenelemente  
  Viele der Elemente auf dem Dateneingabeformular verfügen über ein ähnliches Erscheinungsbild, was bedeutet, dass viele ihrer Eigenschaften identische Einstellungen aufweisen. Anstatt die Attribute jedes Elements separat festzulegen, verwendet das vorherige XAML <xref:System.Windows.Style>-Elemente, um Standard Eigenschafts Einstellungen für Klassen von Elementen zu definieren. Dieser Ansatz reduziert die Komplexität des Steuerelements und ermöglicht es Ihnen, die Darstellung mehrerer Elemente durch ein einziges Stilattribut zu ändern.  
   
- Die <xref:System.Windows.Style> Elemente sind in der <xref:System.Windows.FrameworkElement.Resources%2A>-Eigenschaft des <xref:System.Windows.Controls.Grid> Elements enthalten, sodass Sie von allen Elementen im Steuerelement verwendet werden können. Wenn ein Stil benannt wird, wenden Sie ihn auf ein Element an, indem Sie ein <xref:System.Windows.Style> Element hinzufügen, das auf den Namen des Stils festgelegt ist. Unbenannte Stile werden zum Standardstil für das Element. Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stilen finden Sie unter Erstellen von Formaten [und](../controls/styling-and-templating.md)Vorlagen.  
+ Die <xref:System.Windows.Style> Elemente sind in der <xref:System.Windows.FrameworkElement.Resources%2A>-Eigenschaft des <xref:System.Windows.Controls.Grid> Elements enthalten, sodass Sie von allen Elementen im Steuerelement verwendet werden können. Wenn ein Stil benannt wird, wenden Sie ihn auf ein Element an, indem Sie ein <xref:System.Windows.Style> Element hinzufügen, das auf den Namen des Stils festgelegt ist. Unbenannte Stile werden zum Standardstil für das Element. Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stilen finden Sie unter Erstellen von Formaten [und](../../../desktop-wpf/fundamentals/styles-templates-overview.md)Vorlagen.  
   
  Der folgende XAML-Code zeigt die <xref:System.Windows.Style> Elemente für das zusammengesetzte Steuerelement an. Wie die Stile auf Elemente angewendet werden, können Sie dem vorherigen XAML-Code entnehmen. Das letzte <xref:System.Windows.Controls.TextBlock> Element hat z. b. den `inlineText` Stil, und das letzte <xref:System.Windows.Controls.TextBox> Element verwendet den Standardstil.  
   

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925943"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420842"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Lernen Sie mit diesen Tutorials .NET Core und die .NET Core SDK-Tools kennen.
 
@@ -49,6 +49,6 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Unittests mit MSTest und .NET Core](../testing/unit-testing-with-mstest.md)
 - [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](libraries.md)
 - [Hosten von .NET Core von nativem Code](netcore-hosting.md)
-- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten für „dotnet new“](create-custom-template.md)
+- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten für „dotnet new“](cli-templates-create-item-template.md)
 
 Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](/aspnet/core/).

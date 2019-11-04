@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790909"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459063"
 ---
 # <a name="styles-and-templates"></a>Stile und Vorlagen
-Windows Presentation Foundation (WPF)-Stile und Vorlagen finden Sie eine Sammlung von Funktionen (Stile, Vorlagen, Trigger und Storyboards) an, die eine Anwendung, ein Dokument oder eine Benutzeroberflächendesigner (UI) zum Erstellen von visuell ansprechende Anwendungen zu ermöglichen und als Standard ein individuelles Erscheinungsbild ihres Produkts.  
+Die Windows Presentation Foundation (WPF)-Stile und-Vorlagen beziehen sich auf eine Suite von Features (Stile, Vorlagen, Trigger und Storyboards), mit denen ein Anwendungs-, Dokument-oder Benutzeroberflächen Designer visuell ansprechende Anwendungen erstellen kann. standardisieren Sie nach einem bestimmten Produkt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)  
-  [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)  
+ [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [Gewusst wie: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Style>  

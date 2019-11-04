@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929040"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423992"
 ---
 # <a name="customizing-structure-marshaling"></a>Anpassen des Marshallings für Strukturen
 
@@ -26,7 +26,7 @@ Manchmal entsprechen die Standardregeln für das Marshallen nicht genau Ihren An
 
 **✔️ VERWENDEN SIE** `LayoutKind.Explicit` beim Marshallen nur dann, wenn die native Struktur ebenfalls ein explizites Layout aufweist, beispielsweise eine Union.
 
-**❌ VERMEIDEN SIE** die Verwendung von `LayoutKind.Explicit` beim Marshallen von Strukturen auf Nicht-Windows-Plattformen. Die .NET Core-Runtime bietet keine Unterstützung für die Übergabe expliziter Strukturen per Wert an native Funktionen auf Intel- oder AMD-Systemen (64 Bit), die nicht unter Windows ausgeführt werden. Die Runtime unterstützt jedoch auf allen Plattformen die Übergabe expliziter Strukturen per Verweis.
+**❌ vermeiden** Sie die Verwendung von `LayoutKind.Explicit` beim Marshalling von Strukturen auf nicht-Windows-Plattformen, wenn Sie Laufzeiten vor .net Core 3,0 ausrichten müssen. Die .net Core-Runtime vor 3,0 unterstützt nicht das Übergeben von expliziten Strukturen nach Wert an systemeigene Funktionen auf Intel-oder 64 AMD-nicht-Windows-Systemen. Die Runtime unterstützt jedoch auf allen Plattformen die Übergabe expliziter Strukturen per Verweis.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Anpassen des Marshallens boolescher Felder
 

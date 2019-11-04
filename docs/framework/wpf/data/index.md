@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400375"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460287"
 ---
 # <a name="data"></a>Daten
 Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von Common Language Runtime (CLR)-Objekten und XML gebunden werden. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet außerdem einen Mechanismus für die Übertragung von Daten durch Drag & Drop-Vorgänge.  
@@ -34,11 +34,11 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Steuerelemente](../controls/index.md)  
   
- [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)  
+ [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  [Datenbindung](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 061baf262342034299c47c22b2f2691f3a61b958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104222"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das Windows-Runtime-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die Windows-Runtime-Metadaten enthält. Obwohl .NET Framework-Assemblys und Windows-Runtime-Metadatendateien dasselbe physische Format haben, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, was bedeutet, dass .NET Framework-Assemblys nicht automatisch als Komponenten für Windows-Runtime verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine Komponente für Windows-Runtime wird als *Exportieren* bezeichnet. In .NET Framework 4.5 und .NET Framework 4.5.1 enthält die resultierende Windows-Metadatendatei (.winmd) sowohl die Metadaten als auch die Implementierung.  

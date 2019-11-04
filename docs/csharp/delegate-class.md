@@ -2,13 +2,14 @@
 title: System.Delegate und das `delegate`-Schlüsselwort
 description: Informationen zu den Klassen in .NET Framework, die Delegaten unterstützen, und wie diese zum Schlüsselwort „delegate“ zugeordnet werden.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465775"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420370"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
@@ -31,7 +32,7 @@ Wir verwenden die List.Sort()-Methode weiterhin als Beispiel. Der erste Schritt 
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Der Compiler generiert eine von `System.Delegate` abgeleitete Klasse, die der verwendeten Signatur entspricht (in diesem Fall eine Methode, die eine ganze Zahl zurückgibt und über zwei Argumente verfügt). Der Typ des Delegaten ist `Comparison`. Der Delegattyp `Comparison` ist ein generischer Typ. Weitere Informationen zu Generics finden Sie [hier](generics.md).
+Der Compiler generiert eine von `System.Delegate` abgeleitete Klasse, die der verwendeten Signatur entspricht (in diesem Fall eine Methode, die eine ganze Zahl zurückgibt und über zwei Argumente verfügt). Der Typ des Delegaten ist `Comparison`. Der Delegattyp `Comparison` ist ein generischer Typ. Weitere Informationen zu Generics finden Sie [hier](programming-guide/generics/index.md).
 
 Beachten Sie, dass es so scheinen kann, als ob die Syntax eine Variable deklariert, aber tatsächlich deklariert sie einen *Typ*. Sie können Delegattypen innerhalb von Klassen, direkt in Namespaces oder sogar im globalen Namespace definieren.
 

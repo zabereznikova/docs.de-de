@@ -3,16 +3,18 @@ title: Einführung in C# – interaktive Tutorials
 description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850766"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423100"
 ---
 # <a name="introduction-to-c"></a>Einführung in C\#
 
-Willkommen bei der Einführung in die C#-Tutorials. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können.
+Willkommen bei der Einführung in die C#-Tutorials. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können. Bevor Sie diese interaktiven Lektionen starten, können Sie die Grundlagen von C# in der [C# 101-Videoreihe](https://aka.ms/dotnet3-csharp) erlernen.
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 In der ersten Lektion werden C#-Konzepte anhand kleiner Codeausschnitte erläutert. Sie lernen die Grundlagen der C#-Syntax kennen und wie Sie mit Datentypen wie Zeichenfolgen, Zahlen und booleschen Werten arbeiten. Komplett interaktiv, und Ihr Code ist innerhalb weniger Minuten geschrieben und zur Ausführung bereit. Diese erste Lektionen setzen keine Vorkenntnisse in der Programmierung oder C#-Sprache voraus.
 

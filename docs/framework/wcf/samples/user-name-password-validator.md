@@ -2,12 +2,12 @@
 title: Benutzernamen- und Kennwort-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4db661e80663b7b5b22a17d244f0204717fef652
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 553ccd69a02e057c5131128378611a19502e713d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044565"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424158"
 ---
 # <a name="user-name-password-validator"></a>Benutzernamen- und Kennwort-Validierungssteuerelement
 Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten UserNamePassword-Validierungsmodi den Anforderungen der Anwendung entspricht (z. B. wenn Benutzername/Kennwort-Paare in externen Speichern wie einer Datenbank gespeichert werden). In diesem Beispiel wird ein Dienst gezeigt, der ein benutzerdefiniertes Validierungssteuerelement enthält, das auf zwei bestimmte Benutzername/Kennwort-Paare überprüft. Der Client verwendet solch ein Benutzername/Kennwort-Paar, um sich beim Dienst zu authentifizieren.
@@ -17,7 +17,7 @@ Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Va
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Va
 
 - Der Server wird mit dem X.509-Zertifikat des Servers authentifiziert.
 
- Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der Konfigurationsdatei "App.conf" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard konfiguriert `wsHttpBinding` , der standardmäßig WS-Security und username-Authentifizierung verwendet. Das Dienstverhalten gibt den `Custom`-Modus zum Überprüfen von Benutzername/Kennwort-Paaren zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem `serviceCertificate`-Element an. Das Serverzertifikat muss den gleichen Wert für den `SubjectName` `findValue` als im [ \<serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)enthalten.
+ Der Dienst macht einen einzelnen Endpunkt für die Kommunikation mit dem Dienst verfügbar, der mithilfe der Konfigurationsdatei "App. config" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard `wsHttpBinding` konfiguriert, der standardmäßig WS-Security und username-Authentifizierung verwendet. Das Dienstverhalten gibt den `Custom`-Modus zum Überprüfen von Benutzername/Kennwort-Paaren zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem `serviceCertificate`-Element an. Das Serverzertifikat muss den gleichen Wert für die `SubjectName` enthalten wie die `findValue` im [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -139,7 +139,7 @@ address="http://localhost:8001/servicemodelsamples/service/username"
 
  Die Clientimplementierung fordert den Benutzer auf, einen Benutzernamen und ein Kennwort einzugeben.
 
-```
+```csharp
 // Get the username and password
 Console.WriteLine("Username authentication required.");
 Console.WriteLine("Provide a username.");
@@ -199,7 +199,7 @@ try
 
  In diesem Beispiel wird ein benutzerdefinierter UserNamePasswordValidator verwendet, um Benutzername/Kennwort-Paare zu überprüfen. Das Beispiel implementiert `CustomUserNamePasswordValidator`, das von <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> abgeleitet ist. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Dieses Beispiel zu einem benutzerdefinierten Validierungssteuerelement implementiert die `Validate`-Methode zum Akzeptieren zweier bestimmter Benutzername/Kennwort-Paare, wie im folgenden Code gezeigt.
 
-```
+```csharp
 public class CustomUserNameValidator : UserNamePasswordValidator
 {
  // This method validates users. It allows in two users,
@@ -224,7 +224,7 @@ public class CustomUserNameValidator : UserNamePasswordValidator
 
  Nachdem das Validierungssteuerelement im Dienstcode implementiert ist, muss der Diensthost über die zu verwendende Validierungssteuerelementinstanz informiert werden. Dies wird mit dem folgenden Code durchgeführt.
 
-```
+```csharp
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator = new CustomUserNamePasswordValidator();
 ```
@@ -258,7 +258,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable %SERVER_NAME% gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert ist localhost.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -272,7 +272,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83ea398f18ab02840ea811c74a6053dba11a3baa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 3befdd0ec96856a62e5c3c603935303498758710
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490887"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423929"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Verwalten von Namespaces in einem XML-Dokument
 XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu. Um diese Zuordnungen zu erstellen, definieren Sie Präfixe für Namespace-URIs und verwenden diese zur Kennzeichnung von Element- und Attributnamen in XML-Daten. Namespaces verhindern Konflikte zwischen Element- und Attributnamen. Sie ermöglichen eine unterschiedliche Verarbeitung und Validierung von gleichnamigen Elementen und Attributen.  
@@ -63,11 +63,11 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
  Der Namespace-Manager führt keine Validierung der Namespaces durch, sondern setzt voraus, dass Präfixe und Namespaces bereits überprüft wurden und der [W3C](https://www.w3.org/TR/REC-xml-names/)-Spezifikation für Namespaces entsprechen.  
   
 > [!NOTE]
-> LINQ to XML in [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) und [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) verwenden nicht <xref:System.Xml.XmlNamespaceManager> zum Verwalten von Namespaces. Informationen zur Verwaltung von Namespaces bei der Verwendung von LINQ to XML finden Sie in der LINQ-Dokumentation unter [Arbeiten mit XML-Namespaces (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) und [Arbeiten mit XML-Namespaces (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+> LINQ to XML in [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) und [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) verwenden nicht <xref:System.Xml.XmlNamespaceManager> zum Verwalten von Namespaces. Informationen zur Verwaltung von Namespaces bei der Verwendung von LINQ to XML finden Sie in der LINQ-Dokumentation unter [Arbeiten mit XML-Namespaces (C#)](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) und [Arbeiten mit XML-Namespaces (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
  Im Folgenden finden Sie einige der Verwaltungs- und Suchaufgaben, die Sie mit der <xref:System.Xml.XmlNamespaceManager>-Klasse ausführen können. Weitere Informationen und Beispiele finden Sie, indem Sie den Links zur Referenzseite der einzelnen Methoden oder Eigenschaften folgen.  
   
-|Beschreibung|Verwendung|  
+|Beschreibung|Mit|  
 |--------|---------|  
 |Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>-Methode|  
 |Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>-Methode|  

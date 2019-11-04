@@ -1,13 +1,13 @@
 ---
 title: Funktionen
-description: Informationen Sie zu Funktionen in F# und wie F# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
+description: Erfahren Sie mehr über F# Funktionen in F# und wie allgemeine funktionale Programmierungskonstrukte unterstützt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630706"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423955"
 ---
 # <a name="functions"></a>Funktionen
 
@@ -38,7 +38,7 @@ Im vorherigen Beispiel ist der Funktionsname ist `f`, das Argument `x`, das den 
 
 Funktionen können als `inline` markiert werden. Informationen zu `inline` finden Sie unter [Inlinefunktionen](../functions/inline-functions.md).
 
-## <a name="scope"></a>Bereich
+## <a name="scope"></a>Umfang
 
 Auf jeder Ebene des Bereichs, der nicht der Modulbereich ist, ist es kein Fehler, einen Wert oder einen Namen einer Funktion Namen erneut zu verwenden. Wenn Sie einen Namen wiederverwenden, führt der später deklarierte Name zum Shadowing des früher deklarierten Namens. Im Bereich der obersten Ebene in einem Modul, müssen Namen jedoch eindeutig sein. Der folgende Code generiert z.B. einen Fehler, wenn er im Modulbereich erscheint, jedoch nicht, wenn er innerhalb einer Funktion angezeigt wird:
 
@@ -76,7 +76,7 @@ Ein Funktionsrumpf kann Definitionen von lokalen Variablen und Funktionen enthal
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Weitere Informationen finden Sie unter [Richtlinien für das Formatieren von Code](../code-formatting-guidelines.md) und [Ausführliche Syntax](../verbose-syntax.md).
+Weitere Informationen finden Sie unter [Richtlinien für das Formatieren von Code](../../style-guide/formatting.md) und [Ausführliche Syntax](../verbose-syntax.md).
 
 ## <a name="return-values"></a>Rückgabewerte
 
@@ -142,7 +142,7 @@ Ein *Lambdaausdruck* ist eine unbenannte Funktion. Im vorherigen Beispiel könnt
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden [Sie unter Lambda-Ausdrücke: Das `fun` Schlüssel](../functions/lambda-expressions-the-fun-keyword.md)Wort.
+Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden Sie unter [Lambda-Ausdrücke: Das `fun`-Schlüsselwort (F#)](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Funktionskomposition und Pipelining
 

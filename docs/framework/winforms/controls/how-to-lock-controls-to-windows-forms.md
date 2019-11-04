@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Sperren von Steuerelementen für Windows Forms'
+title: 'Gewusst wie: Sperren von Steuerelementen für Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6dd079331c6c1883839efe5c6cb127044380fd2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d157ddc8be4b5fa0057241b562e76b566e8dad99
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987472"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458342"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Vorgehensweise: Sperren von Steuerelementen auf Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Gewusst wie: Sperren von Steuerelementen auf Windows Forms
 
 Wenn Sie die Benutzeroberfläche der Windows-Anwendung entwerfen, können Sie die Steuerelemente nach der ordnungsgemäßen Positionierung sperren, damit Sie Sie nicht versehentlich verschieben oder ändern, wenn Sie andere Eigenschaften festlegen.
 
@@ -51,5 +51,5 @@ Wählen Sie im Fenster **Eigenschaften** die Eigenschaft **gesperrt** aus, und w
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

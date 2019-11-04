@@ -2,18 +2,18 @@
 title: Übersicht über die WCF-Suche
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: fce16038b4c9ab65047125be1881be4b86976aee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d19aa72cc5e7217a2135ef919d611c8b2c2f27
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931855"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424522"
 ---
 # <a name="wcf-discovery-overview"></a>Übersicht über die WCF-Suche
 Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröffentlichung von und zum Suchen nach Webdiensten bereit, wobei das WS-Suchprotokoll verwendet wird. Diese APIs ermöglichen es Diensten, sich selbst zu veröffentlichen, und Client das Suchen nach veröffentlichten Diensten. Nachdem ein Dienst erkennbar gemacht wurde, kann der Dienst Ankündigungsmeldungen senden sowie eine Überwachung auf Suchanforderungen durchführen und darauf antworten. Erkennbare Dienste können Hello-Nachrichten senden, um ihre Ankunft in einem Netzwerk anzukündigen, und Bye-Nachrichten, um das Verlassen eines Netzwerks anzukündigen. Um nach einem Dienst zu suchen, senden Clients eine `Probe`-Anforderung, die bestimmte Kriterien wie den Dienstvertragstyp, Schlüsselwörter und den Bereich des Netzwerks enthält. Dienste empfangen die `Probe`-Anforderung und bestimmen, ob diese den Kriterien entspricht. Wenn sich für einen Dienst eine Übereinstimmung ergibt, antwortet dieser mit dem Rücksenden einer `ProbeMatch`-Nachricht an den Client, in der die Informationen für die Kontaktaufnahme mit dem Dienst enthalten sind. Clients können auch `Resolve`-Anforderungen senden, mit deren Hilfe sie nach Diensten suchen können, die ggf. ihre Endpunktadresse geändert haben. Dienste, die Übereinstimmungen ergeben, antworten auf `Resolve`-Anforderungen, indem sie eine `ResolveMatch`-Nachricht zurück an den Client senden.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Ad-hoc-Modus und verwalteter Modus  
- Die Discovery-API unterstützt zwei verschiedene Modi: Verwaltet und Ad-hoc. Im Modus "Verwaltet" wird ein zentralisierter Server verwendet, der als Suchproxy bezeichnet wird und Informationen zu verfügbaren Diensten verwaltet. Der Suchproxy auf verschiedene Arten mit Informationen zu Diensten aufgefüllt werden. Dienste können z. B. während des Starts Ankündigungsmeldungen an den Suchproxy senden, oder der Proxy kann Daten aus einer Datenbank oder einer Konfigurationsdatei lesen, um zu ermitteln, welche Dienste verfügbar sind. Die Art und Weise, wie der Suchproxy aufgefüllt wird, hängt vollständig vom Entwickler ab. Clients verwenden den Suchproxy zum Abrufen von Informationen zu verfügbaren Diensten. Wenn ein Client nach einem Dienst sucht, sendet er eine `Probe`-Nachricht an den Suchproxy, und der Proxy ermittelt dann, ob einer der bekannten Dienste mit dem Dienst übereinstimmt, nach dem der Client sucht. Wenn Übereinstimmungen vorhanden sind, sendet der Suchproxy eine `ProbeMatch`-Antwort zurück an den Client. Der Client kann sich dann direkt an den Dienst wenden, indem er die vom Proxy zurückgegebenen Dienstinformationen verwendet. Das Hauptprinzip hinter dem Modus "Verwaltet" beruht darauf, dass die Suchanforderungen im Unicast-Format an eine Autorität, den Suchproxy, gesendet werden. .NET Framework enthält Hauptkomponenten, mit denen Sie einen eigenen Proxy erstellen können. Es gibt für Clients und Dienste mehrere Methoden, nach dem Proxy zu suchen:  
+ Die Such-API unterstützt zwei verschiedene Modi: Verwaltet und Ad-hoc. Im Modus "Verwaltet" wird ein zentralisierter Server verwendet, der als Suchproxy bezeichnet wird und Informationen zu verfügbaren Diensten verwaltet. Der Suchproxy auf verschiedene Arten mit Informationen zu Diensten aufgefüllt werden. Dienste können z. B. während des Starts Ankündigungsmeldungen an den Suchproxy senden, oder der Proxy kann Daten aus einer Datenbank oder einer Konfigurationsdatei lesen, um zu ermitteln, welche Dienste verfügbar sind. Die Art und Weise, wie der Suchproxy aufgefüllt wird, hängt vollständig vom Entwickler ab. Clients verwenden den Suchproxy zum Abrufen von Informationen zu verfügbaren Diensten. Wenn ein Client nach einem Dienst sucht, sendet er eine `Probe`-Nachricht an den Suchproxy, und der Proxy ermittelt dann, ob einer der bekannten Dienste mit dem Dienst übereinstimmt, nach dem der Client sucht. Wenn Übereinstimmungen vorhanden sind, sendet der Suchproxy eine `ProbeMatch`-Antwort zurück an den Client. Der Client kann sich dann direkt an den Dienst wenden, indem er die vom Proxy zurückgegebenen Dienstinformationen verwendet. Das Hauptprinzip hinter dem Modus "Verwaltet" beruht darauf, dass die Suchanforderungen im Unicast-Format an eine Autorität, den Suchproxy, gesendet werden. .NET Framework enthält Hauptkomponenten, mit denen Sie einen eigenen Proxy erstellen können. Es gibt für Clients und Dienste mehrere Methoden, nach dem Proxy zu suchen:  
   
 - Der Proxy kann auf Ad-hoc-Nachrichten reagieren.  
   
@@ -30,8 +30,7 @@ Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröf
  Um einen Dienst erkennbar zu machen, müssen Sie dem Diensthost ein <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hinzufügen. Außerdem müssen Sie einen Suchendpunkt hinzufügen, um anzugeben, welche Komponenten auf Suchnachrichten überwacht werden sollen. Im folgenden Codebeispiel wird gezeigt, wie Sie einen selbst gehosteten Dienst ändern können, um diesen erkennbar zu machen.  
   
 ```csharp  
-Uri baseAddress = new Uri(string.Format("http://{0}:8000/discovery/scenarios/calculatorservice/{1}/",  
-        System.Net.Dns.GetHostName(), Guid.NewGuid().ToString()));
+Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
 
 // Create a ServiceHost for the CalculatorService type.
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -62,8 +61,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
  Bei der Dienstveröffentlichung werden standardmäßig keine Ankündigungsnachrichten gesendet. Der Dienst muss so konfiguriert werden, dass er Ankündigungsnachrichten sendet. Dadurch können Dienstwriter flexibler arbeiten, weil sie den Dienst getrennt von der Überwachung auf Suchnachrichten ankündigen können. Die Dienstankündigung kann auch als Mechanismus zum Registrieren von Diensten bei einem Suchproxy oder anderen Dienstregistrierungen verwendet werden. Im folgenden Code wird gezeigt, wie Sie einen Dienst zum Senden von Ankündigungsnachrichten über eine UDP-Bindung konfigurieren.  
   
 ```csharp  
-Uri baseAddress = new Uri(string.Format("http://{0}:8000/discovery/scenarios/calculatorservice/{1}/",
-        System.Net.Dns.GetHostName(), Guid.NewGuid().ToString()));
+Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
 
 // Create a ServiceHost for the CalculatorService type.
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -155,7 +153,7 @@ class Client
   
 2. Verwenden eines Suchproxys zur Kommunikation im Namen des Diensts  
   
- Windows Server AppFabric verfügt über eine Autostart-Funktion, mit der ein Dienst gestartet werden kann, bevor Meldungen empfangen werden. Wenn die Autostart-Funktion festgelegt ist, kann ein von IIS/WAS gehosteter Dienst als erkennbar konfiguriert werden. Weitere Informationen zur automatischen Start Funktion finden Sie unter [Windows Server AppFabric Autostart Feature](https://go.microsoft.com/fwlink/?LinkId=205545). Wenn Sie die Autostart-Funktion aktivieren, müssen Sie den Dienst für die Suche konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Programm gesteuertes hinzufügen der Auffindbarkeit zu einem](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)WCF-Dienst und Client[Konfigurieren der Ermittlung in einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric verfügt über eine Autostart-Funktion, mit der ein Dienst gestartet werden kann, bevor Meldungen empfangen werden. Wenn die Autostart-Funktion festgelegt ist, kann ein von IIS/WAS gehosteter Dienst als erkennbar konfiguriert werden. Weitere Informationen zur automatischen Start Funktion finden Sie unter [Windows Server AppFabric Autostart Feature](https://go.microsoft.com/fwlink/?LinkId=205545). Wenn Sie die Autostart-Funktion aktivieren, müssen Sie den Dienst für die Suche konfigurieren. Weitere Informationen finden Sie unter Gewusst [wie: Programm gesteuertes hinzufügen der Auffindbarkeit zu einem WCF-Dienst und Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurieren der Ermittlung in einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Ein Suchproxy kann verwendet werden, um im Namen des WCF-Diensts zu kommunizieren, wenn der Dienst nicht ausgeführt wird. Der Proxy kann Überprüfungs- oder Auflösungsmeldungen abhören und dem Client antworten. Anschließend kann der Client Meldungen direkt an den Dienst senden. Wenn der Client eine Meldung an den Dienst sendet, wird dieser instanziiert, um auf die Meldung zu antworten. Weitere Informationen zum Implementieren eines Ermittlungs Proxys finden Sie unter [Implementieren eines Ermittlungs Proxys](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

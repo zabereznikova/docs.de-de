@@ -9,41 +9,41 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: c5f805c251d3f6b256035e568798cd6d252ea9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26989474f264161be12bcc14fed614fdc7f775b6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911731"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460326"
 ---
 # <a name="expander-styles-and-templates"></a>Expander-Stile und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.Expander> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Expander>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="expander-parts"></a>Expander-Teile  
- Die <xref:System.Windows.Controls.Expander> Steuerelement enthält keine benannten Teile.  
+ Das <xref:System.Windows.Controls.Expander>-Steuerelement verfügt über keine benannten Teile.  
   
 ## <a name="expander-states"></a>Expander-Zustände  
- Die folgende Tabelle enthält die visuellen Zustände für die <xref:System.Windows.Controls.Expander> Steuerelement.  
+ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.Expander>-Steuerelement aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
-|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
-|Erweitert|ExpansionStates|Das Steuerelement wird erweitert.|  
-|Reduziert|ExpansionStates|Das Steuerelement ist nicht erweitert.|  
-|ExpandDown|ExpandDirectionStates|Das Steuerelement wird nach unten erweitert.|  
-|ExpandUp|ExpandDirectionStates|Das Steuerelement ist nach oben erweitert.|  
-|ExpandLeft|ExpandDirectionStates|Das Steuerelement ist nach links erweitert.|  
-|ExpandRight|ExpandDirectionStates|Das Steuerelement ist nach rechts erweitert.|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Erweitert|Expansions Zustände|Das-Steuerelement ist erweitert.|  
+|Reduziert|Expansions Zustände|Das Steuerelement wird nicht erweitert.|  
+|Erweiterdown|Expanddirectionstates|Das Steuerelement wird nach unten erweitert.|  
+|Expansion|Expanddirectionstates|Das-Steuerelement wird erweitert.|  
+|Expandleft|Expanddirectionstates|Das Steuerelement wird nach links erweitert.|  
+|Expandright|Expanddirectionstates|Das Steuerelement wird nach rechts erweitert.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="expander-controltemplate-example"></a>Expander-ControlTemplate-Beispiel  
- Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.Expander> Steuerelement.  
+## <a name="expander-controltemplate-example"></a>Expander ControlTemplate-Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.Expander>-Steuerelement definiert wird.  
   
  [!code-xaml[ControlTemplateExamples#Expander](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
   
@@ -59,5 +59,5 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

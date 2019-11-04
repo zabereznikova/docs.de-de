@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168622"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422870"
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontextabhängige Schlüsselwörter (C#-Referenz)
 
@@ -21,7 +21,7 @@ Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code 
 |[add](./add.md)|Definiert einen benutzerdefinierten Ereignisaccessor, der aufgerufen wird, wenn der Clientcode das Ereignis abonniert|  
 |[async](./async.md)|Zeigt an, dass die geänderte Methode, der Lambdaausdruck oder die anonyme Methode asynchron ist.|  
 |[await](../operators/await.md)|Hält eine async-Methode an, bis ein erwarteter Task abgeschlossen ist|  
-|[dynamic](./dynamic.md)|Definiert einen Verweistyp, der Vorgänge ermöglicht, in denen er auftritt, um die Typüberprüfung zur Kompilierzeit zu umgehen|  
+|[dynamic](../builtin-types/reference-types.md)|Definiert einen Verweistyp, der Vorgänge ermöglicht, in denen er auftritt, um die Typüberprüfung zur Kompilierzeit zu umgehen|  
 |[get](./get.md)|Definiert eine Accessormethode für eine Eigenschaft oder einen Indexer|  
 |[global](../operators/namespace-alias-qualifier.md)|Alias des globalen Namespace, der andernfalls unbenannt ist.|  
 |[partial](./partial-type.md)|Definiert partielle Klassen, Strukturen und Schnittstellen innerhalb derselben Kompilierungseinheit|  

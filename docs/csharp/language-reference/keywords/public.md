@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: a68cbf3af2568cd3c197eaece9e2d5a25cdb4a6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dfb6e341ea0740225d7600f07af2813d39141b45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633711"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422557"
 ---
 # <a name="public-c-reference"></a>public (C#-Referenz)
 
@@ -40,7 +40,7 @@ Wenn Sie die Zugriffsebene `public` auf [private](private.md) (privat) oder [pro
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation  
 
-Weitere Informationen finden Sie unter [Deklarierte Barrierefreiheit](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in der [C#-Sprachspezifikation](../language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen finden Sie unter [Deklarierte Barrierefreiheit](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -50,7 +50,7 @@ Weitere Informationen finden Sie unter [Deklarierte Barrierefreiheit](~/_csharpl
 - [C#-Schlüsselwörter](index.md)
 - [Zugriffsmodifizierer](access-modifiers.md)
 - [Zugriffsebenen](accessibility-levels.md)
-- [Modifizierer](modifiers.md)
+- [Modifizierer](index.md)
 - [private](private.md)
 - [protected](protected.md)
 - [internal](internal.md)

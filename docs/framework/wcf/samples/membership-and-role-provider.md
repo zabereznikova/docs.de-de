@@ -2,12 +2,12 @@
 title: Mitgliedschafts- und Rollenanbieter
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039436"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424669"
 ---
 # <a name="membership-and-role-provider"></a>Mitgliedschafts- und Rollenanbieter
 Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein Dienst mithilfe der ASP.net-Mitgliedschafts-und Rollen Anbieter Clients authentifizieren und autorisieren kann.  
@@ -69,7 +69,7 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
 </system.web>  
 ```  
   
- Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet. In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll. Das Serverzertifikat muss den gleichen Wert für das `SubjectName` `findValue` -Attribut im [ \<serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Configuration-Element enthalten. Außerdem gibt das Verhalten an, dass die Authentifizierung von Benutzername/Kennwort-Paaren durch den ASP.net-Mitgliedschafts Anbieter und die Rollen Zuordnung durch den ASP.NET-Rollen Anbieter durch Angabe der für die beiden Anbieter definierten Namen ausgeführt wird.  
+ Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet. In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll. Das Serverzertifikat muss den gleichen Wert für die `SubjectName` enthalten wie das `findValue`-Attribut im [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Konfigurations Elements. Außerdem gibt das Verhalten an, dass die Authentifizierung von Benutzername/Kennwort-Paaren durch den ASP.net-Mitgliedschafts Anbieter und die Rollen Zuordnung durch den ASP.NET-Rollen Anbieter durch Angabe der für die beiden Anbieter definierten Namen ausgeführt wird.  
   
 ```xml  
 <system.serviceModel>  
@@ -114,7 +114,7 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
 </system.serviceModel>  
 ```  
   
- Wenn Sie das Beispiel ausführen, ruft der Client die verschiedenen Dienst Vorgänge unter drei verschiedenen Benutzerkonten auf: Alice, Bob und Charlie. Die Anforderungen und Antworten des Vorgangs werden im Clientkonsolenfenster angezeigt. Alle vier Aufrufe als Benutzer "Alice" sollten erfolgreich sein. Für Benutzer "Bob" sollte der Versuch, die Divide-Methode aufzurufen, zu einem Zugriffsverweigerungsfehler führen. Bei Benutzer "Charlie" sollte beim Versuch, die Multiply-Methode aufzurufen, ein Zugriffsverweigerungsfehler auftreten. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ Wenn Sie das Beispiel ausführen, ruft der Client die unterschiedlichen Dienstvorgänge unter drei verschiedenen Benutzerkonten auf: Alice, Bob und Charlie. Die Anforderungen und Antworten des Vorgangs werden im Clientkonsolenfenster angezeigt. Alle vier Aufrufe als Benutzer "Alice" sollten erfolgreich sein. Für Benutzer "Bob" sollte der Versuch, die Divide-Methode aufzurufen, zu einem Zugriffsverweigerungsfehler führen. Bei Benutzer "Charlie" sollte beim Versuch, die Multiply-Methode aufzurufen, ein Zugriffsverweigerungsfehler auftreten. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -150,9 +150,9 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
 4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
   
-5. Öffnen Sie auf dem-Server eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, `setup.bat service`und führen Sie aus. Wenn `setup.bat` Sie mit `service` dem-Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
+5. Öffnen Sie auf dem-Server eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie `setup.bat service`aus. Beim Ausführen von `setup.bat` mit dem `service`-Argument wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
   
-6. Bearbeiten Sie die Datei "Web. config" so, dass Sie `findValue` den neuen Zertifikat Namen (im-Attribut [ \<im serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) widerspiegelt, der mit dem voll qualifizierten Domänen Namen des Computers identisch ist.  
+6. Bearbeiten Sie die Datei Web. config so, dass Sie den neuen Zertifikat Namen (im `findValue`-Attribut im [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) anzeigt, der mit dem voll qualifizierten Domänen Namen des Computers identisch ist.  
   
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
@@ -167,7 +167,7 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
 - Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
   
 > [!NOTE]
-> Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, müssen Sie sicherstellen, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie hierzu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, müssen Sie sicherstellen, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Die Setupbatchdatei  
  Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
@@ -180,7 +180,7 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
      Das Zertifikat wird im persönlichen Speicher unter dem Speicherort LocalMachine gespeichert.  
   
-    ```  
+    ```console
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -194,6 +194,6 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
   
-    ```  
+    ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  

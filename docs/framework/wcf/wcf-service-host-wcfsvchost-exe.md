@@ -2,12 +2,12 @@
 title: WCF-Diensthost (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: fce7d2babdf05cb55c287b4c29e642a7dd16f76f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321246"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423836"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 
@@ -51,7 +51,7 @@ Um sicherzustellen, dass der WCF-Test Client verwendet wird, klicken Sie im Proj
 
 #### <a name="using-a-custom-client"></a>Verwenden eines benutzerdefinierten Clients
 
-Wenn Sie einen benutzerdefinierten Client verwenden möchten, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, **@no__t und wählen** Sie dann die Registerkarte **Debuggen** aus., um auf den benutzerdefinierten Client zu verweisen, wie im folgenden Beispiel gezeigt.
+Wenn Sie einen benutzerdefinierten Client verwenden möchten, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, **`/client` und wählen** Sie dann die Registerkarte **Debuggen** aus., um auf den benutzerdefinierten Client zu verweisen, wie im folgenden Beispiel gezeigt.
 
 `/client:"path/CustomClient.exe"`
 
@@ -115,7 +115,7 @@ Um Benutzern ohne Administratorrechte die Entwicklung von WCF-Diensten zu ermög
 
 Mit dem Tool netsh.exe in [!INCLUDE[wv](../../../includes/wv-md.md)] unter dem erweiterten Administratorkonto können Sie die Zugriffsberechtigung ändern. Das folgende Beispiel veranschaulicht die Verwendung des Tools netsh.exe.
 
-```
+```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 

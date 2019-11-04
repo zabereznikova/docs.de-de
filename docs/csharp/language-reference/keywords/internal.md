@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602081"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422727"
 ---
 # <a name="internal-c-reference"></a>internal (C#-Referenz)
 Das Schlüsselwort `internal` ist ein [Zugriffsmodifizierer](./access-modifiers.md) für Typen und Typmember. 
@@ -89,7 +89,7 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
-Weitere Informationen finden Sie unter [Deklarierte Barrierefreiheit](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in der [C#-Sprachspezifikation](../language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen finden Sie unter [Deklarierte Barrierefreiheit](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -98,7 +98,7 @@ Weitere Informationen finden Sie unter [Deklarierte Barrierefreiheit](~/_csharpl
 - [C#-Schlüsselwörter](./index.md)
 - [Zugriffsmodifizierer](./access-modifiers.md)
 - [Zugriffsebenen](./accessibility-levels.md)
-- [Modifizierer](./modifiers.md)
+- [Modifizierer](index.md)
 - [public](./public.md)
 - [private](./private.md)
 - [protected](./protected.md)

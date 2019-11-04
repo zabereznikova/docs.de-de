@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen'
+title: 'Gewusst wie: Erstellen von zusammengesetzten Steuerelementen'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 42ea424507b89576df8099fd4849dd2665135a55
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015936"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459436"
 ---
-# <a name="how-to-author-composite-controls"></a>Vorgehensweise: Zusammengesetzte Steuerelemente verfassen
+# <a name="how-to-author-composite-controls"></a>Gewusst wie: Erstellen von zusammengesetzten Steuerelementen
 
 Zusammengesetzte Steuerelemente können auf viele Arten eingesetzt werden. Sie können sie als Teil eines Desktopanwendungsprojekts von Windows erstellen und nur für Formulare im Projekt verwenden. Oder Sie können sie in einem Windows-Steuerelementbibliothek-Projekt erstellen, das Projekt in eine Assembly kompilieren und die Steuerelemente in anderen Projekten verwenden. Sie können sogar von Ihnen erben und visuelle Vererbung verwenden, um Sie schnell für spezielle Zwecke anzupassen.
 
@@ -80,7 +80,7 @@ Zusammengesetzte Steuerelemente können auf viele Arten eingesetzt werden. Sie k
 ## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Empfehlungen zum Typ von Steuerelementen](control-type-recommendations.md)
-- [Vorgehensweise: Steuerelemente für Windows Forms erstellen](how-to-author-controls-for-windows-forms.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
+- [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)

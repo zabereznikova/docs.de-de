@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: bb784528226c706417166025a2469ed9f72f9cc2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588666"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423168"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierhandbuch)
 Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sondern nur in Methodenaufrufen. Abfrageausdrücke können Methodenaufrufe enthalten. Einige Abfragevorgänge können nur in Methodensyntax ausgedrückt werden. Weitere Informationen zu den Unterschieden zwischen Abfragesyntax und Methodensyntax finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -28,7 +28,7 @@ Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sonder
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um diesen Code auszuführen, kopieren Sie die Methode, fügen Sie sie in die `StudentClass` ein, die in [Vorgehensweise: Abfragen einer Auflistung von Objekten](../linq-query-expressions/how-to-query-a-collection-of-objects.md) bereitgestellt wird, und rufen Sie sie von der `Main`-Methode auf.  
+ Um diesen Code auszuführen, kopieren Sie die Methode, fügen Sie sie in die `StudentClass` ein, die in [Vorgehensweise: Abfragen einer Auflistung von Objekten](../../linq/query-a-collection-of-objects.md) bereitgestellt wird, und rufen Sie sie von der `Main`-Methode auf.  
   
 ## <a name="see-also"></a>Siehe auch
 

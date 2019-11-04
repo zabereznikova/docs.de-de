@@ -2,12 +2,12 @@
 title: MTOM-Codierung
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: 52fe91e5ab4967190d7654b232143adbf0a49d65
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ab8abdf79304037f2b4039407115a3f64a0afa4e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039269"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424073"
 ---
 # <a name="mtom-encoding"></a>MTOM-Codierung
 Dieses Beispiel veranschaulicht die Verwendung der MTOM-Nachrichtencodierung (Message Transmission Optimization Mechanism) mit einer WSHttpBinding. MTOM ist ein Mechanismus zum Übertragen großer Binäranhänge mit SOAP-Nachrichten als unformatierte Bytes, was kleinere Nachrichten ermöglicht.  
@@ -17,7 +17,7 @@ Dieses Beispiel veranschaulicht die Verwendung der MTOM-Nachrichtencodierung (Me
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
@@ -42,7 +42,7 @@ Dieses Beispiel veranschaulicht die Verwendung der MTOM-Nachrichtencodierung (Me
   
  Der für dieses Beispiel gewählte Vertrag überträgt Binärdaten an den Dienst und empfängt die Anzahl der hochgeladenen Bytes als Rückgabewert. Wenn der Dienst installiert ist und der Client ausgeführt wird, gibt er die Zahl 1000 aus. Damit wird angezeigt, dass alle 1000 Bytes empfangen wurden. Der Rest der Ausgabe führt optimierte und nicht optimierte Nachrichtengrößen für verschiedene Nutzlasten auf.  
   
-```  
+```console
 Output:  
 1000  
   
@@ -70,7 +70,7 @@ Press <ENTER> to terminate client.
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

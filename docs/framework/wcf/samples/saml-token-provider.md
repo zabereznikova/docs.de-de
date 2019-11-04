@@ -2,12 +2,12 @@
 title: SAML-Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044766"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424235"
 ---
 # <a name="saml-token-provider"></a>SAML-Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird zum Bereitstellen von Anmelde Informationen für die Sicherheitsinfrastruktur verwendet. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. WCF wird mit dem standardmäßigen Anmelde Informations Manager-Tokenanbieter ausgeliefert. WCF ist auch mit einem CardSpace-Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
@@ -30,7 +30,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
 - Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
 
- Der Dienst macht zwei Endpunkte zur Kommunikation mit dem Dienst verfügbar, die mit der Konfigurationsdatei "App.conf" definiert werden. Jeder Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsFederationHttpBinding` konfiguriert, die Nachrichtensicherheit verwendet. Ein Endpunkt erwartet, dass der Client sich mit einem SAML-Token authentifiziert, das einen symmetrischen Prüfschlüssel verwendet, während der andere erwartet, dass sich der Client mit einem SAML-Token authentifiziert, das einen asymmetrischen Prüfschlüssel verwendet. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `serviceCredentials`-Verhalten können Sie ein Dienstzertifikat erstellen. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird (in den Setupanweisungen am Ende dieses Themas beschrieben). Das `serviceCredentials`-Verhalten ermöglicht es Ihnen außerdem, Zertifikate zu konfigurieren, die die Befugnis zum signieren von SAML-Token haben. Die folgende Konfiguration verweist auf das im Beispiel installierte Zertifikat "Alice".
+ Der Dienst macht zwei Endpunkte für die Kommunikation mit dem Dienst verfügbar, die mithilfe der Konfigurationsdatei "App. config" definiert werden. Jeder Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsFederationHttpBinding` konfiguriert, die Nachrichtensicherheit verwendet. Ein Endpunkt erwartet, dass der Client sich mit einem SAML-Token authentifiziert, das einen symmetrischen Prüfschlüssel verwendet, während der andere erwartet, dass sich der Client mit einem SAML-Token authentifiziert, das einen asymmetrischen Prüfschlüssel verwendet. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `serviceCredentials`-Verhalten können Sie ein Dienstzertifikat erstellen. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird (in den Setupanweisungen am Ende dieses Themas beschrieben). Das `serviceCredentials`-Verhalten ermöglicht es Ihnen außerdem, Zertifikate zu konfigurieren, die die Befugnis zum signieren von SAML-Token haben. Die folgende Konfiguration verweist auf das im Beispiel installierte Zertifikat "Alice".
 
 ```xml
 <system.serviceModel>
@@ -119,7 +119,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Zur Ausführung dieser Aufgabe wird der benutzerdefinierte Tokenanbieter aus der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse abgeleitet und setzt die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>-Methode außer Kraft. Diese Methode erstellt ein neues `SecurityToken`-Objekt und gibt es zurück.
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
      // Create a SamlSecurityToken from the provided assertion
@@ -160,7 +160,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Die <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse dient zur Erstellung von <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Ein Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und eines Token-Serialisierungsprogramms. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten SAML-Tokenanbieter zurückzugeben, wenn die übergebenen Sicherheitstokenanforderungen angeben, dass das SAML-Token angefordert wird. Wenn die Clientanmeldeinformationsklasse (siehe Schritt 3) keine Assertion angegeben hat, erstellt der Sicherheitstoken-Manager eine entsprechende Instanz.
 
-    ```
+    ```csharp
     public class SamlSecurityTokenManager :
      ClientCredentialsSecurityTokenManager
     {
@@ -232,7 +232,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Die Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.
 
-    ```
+    ```csharp
     public class SamlClientCredentials : ClientCredentials
     {
      ClaimSet claims;
@@ -275,7 +275,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Im Beispiel wird die Standardklasse für die Clientanmeldeinformationen gelöscht und die neue Klasse für Clientanmeldeinformationen angegeben, sodass der Client die benutzerdefinierten Clientanmeldeinformationen verwenden kann.
 
-    ```
+    ```csharp
     // Create new credentials class
     SamlClientCredentials samlCC = new SamlClientCredentials();
 
@@ -309,7 +309,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Das Zertifikat wird im persönlichen Speicher unter dem Speicherort LocalMachine gespeichert.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -323,7 +323,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -333,7 +333,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Das Zertifikat wird im persönlichen Speicher unter dem Speicherort CurrentUser gespeichert.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -347,7 +347,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Serverzertifikatspeichers mit dem Herausgeberzertifikat nicht erforderlich.
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 

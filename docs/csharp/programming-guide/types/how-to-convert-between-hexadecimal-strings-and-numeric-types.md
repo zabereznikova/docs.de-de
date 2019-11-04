@@ -8,17 +8,17 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: a7109945192fe1577cd1b96c8b4d6c05270d54e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5013891db827e27b3cda55135fff4ee287cfcb4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588372"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423138"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen (C#-Programmierhandbuch)
 In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:  
   
-- Abrufen des Hexadezimalwerts jedes Zeichens in einer [Zeichenfolge](../../language-reference/keywords/string.md)  
+- Abrufen des Hexadezimalwerts jedes Zeichens in einer [Zeichenfolge](../../language-reference/builtin-types/reference-types.md)  
   
 - Abrufen des [char](../../language-reference/keywords/char.md), das jedem Wert in einer Hexadezimalzeichenfolge entspricht  
   

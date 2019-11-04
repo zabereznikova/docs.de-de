@@ -2,12 +2,12 @@
 title: Dienstversionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321486"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423686"
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, wie Sie die Versionsverwaltung in Windows Communication Foundation (WCF) in Erwägung gezogen.  
@@ -132,7 +132,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
   
  Ein solcher Mechanismus besteht z.&#160;B. in der Verwendung der Schnittstellen für die Definition der Member eines Datenvertrags und im Schreiben eines internen Implementierungscodes für die Schnittstellen anstatt der Datenvertragsklassen, mit denen die Schnittstellen implementiert werden. Im folgenden Code für Version 1 eines Diensts werden eine `IPurchaseOrderV1`-Schnittstelle und eine `PurchaseOrderV1`-Schnittstelle dargestellt:  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  Während die Vorgänge des Dienstvertrags im Sinne von `PurchaseOrderV1` geschrieben werden würden, würde die tatsächliche Geschäftslogik `IPurchaseOrderV1` entsprechen. In Version 2 würde es dann eine neue `IPurchaseOrderV2`-Schnittstelle und eine neue `PurchaseOrderV2`-Klasse geben, wie im folgenden Code dargestellt:  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

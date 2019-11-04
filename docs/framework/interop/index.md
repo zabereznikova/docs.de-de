@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114238"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457964"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code
 
@@ -23,7 +23,7 @@ ms.locfileid: "73114238"
 
 Code, der unter der Kontrolle der Runtime ausgeführt wird, wird als verwalteter Code bezeichnet. Umgekehrt wird Code, der außerhalb der Runtime ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Windows API-Funktionen.
 
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)  
 Beschreibt, wie COM-Komponenten aus .NET Framework-Anwendungen verwendet werden
@@ -37,23 +37,25 @@ Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattf
 [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)  
 Beschreibt das Marshalling für COM-Interop sowie Plattformaufruf
 
-[Gewusst wie: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)  
+[Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)  
 Beschreibt die Zuordnung zwischen Ausnahmen und HRESULTs
-
-[COM-Wrapper](com-wrappers.md)  
-Beschreibt die von COM-Interop bereitgestellten Wrapper
 
 [Typäquivalenz und eingebettete Interop-Typen](type-equivalence-and-embedded-interop-types.md)  
 Beschreibt, wie die Typinformation für COM-Typen in Assemblys eingebettet wird und wie die Common Language Runtime die Äquivalenz von eingebetteten COM-Typen bestimmt
 
-[Gewusst wie: Generieren primärer Interopassemblys mit „Tlbimp.exe“](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Beschreibt, wie primäre Interop-Assemblys mit *Tlbimp.exe* (Type Library Importer-Tool) erstellt werden
 
-[Gewusst wie: Registrieren primärer Interopassemblys](how-to-register-primary-interop-assemblies.md)  
+[Vorgehensweise: Registrieren primärer Interopassemblys](how-to-register-primary-interop-assemblies.md)  
 Beschreibt, wie die primären Interop-Assemblys registriert werden, bevor Sie in Ihren Projekten auf diese verweisen können
 
 [COM-Interop ohne Registrierung](registration-free-com-interop.md)  
 Beschreibt, wie COM-Interop Komponenten aktivieren kann, ohne die Windows-Registrierung zu verwenden
 
-[Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung](configure-net-framework-based-com-components-for-reg.md)  
+[Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung](configure-net-framework-based-com-components-for-reg.md)  
 Beschreibt, wie ein Anwendungsmanifest erstellt wird und wie ein Komponentenmanifest erstellt und eingebettet wird
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[COM-Wrapper](../../standard/native-interop/com-wrappers.md)  
+Beschreibt die von COM-Interop bereitgestellten Wrapper

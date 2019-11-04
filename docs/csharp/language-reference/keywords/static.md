@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: b288e57d9241e294a0fa18edafe72eec675327a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cbd0f6b4ef7976ccc2da2a735ccbba2bf23177e4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633189"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422330"
 ---
 # <a name="static-c-reference"></a>static (C#-Referenz)
 
@@ -71,5 +71,5 @@ Dieses Beispiel zeigt, dass, obwohl Sie ein statisches Feld mit einem anderen no
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Modifizierer](modifiers.md)
+- [Modifizierer](index.md)
 - [Statische Klassen und statische Klassenmember](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

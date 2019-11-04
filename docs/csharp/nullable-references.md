@@ -1,13 +1,14 @@
 ---
 title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8.0 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846757"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039772"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -66,6 +67,12 @@ Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein
   - Variablen eines Verweistyps wie „string“ sind „non-nullable“ (nicht-nullable). Alle NULL-Zulässigkeitswarnungen sind „disabled“ (deaktiviert).
 - `disable`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **disabled** (deaktiviert).
   - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend), wie in früheren Versionen von C#. Alle NULL-Zulässigkeitswarnungen sind „disabled“ (deaktiviert).
+
+**Beispiel**:
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 Sie können auch Anweisungen verwenden, um diese Kontexte überall in Ihrem Projekt festzulegen:
 

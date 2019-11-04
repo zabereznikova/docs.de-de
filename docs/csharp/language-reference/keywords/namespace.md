@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039449"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422690"
 ---
 # <a name="namespace-c-reference"></a>Namespace (C#-Referenz)
 
@@ -36,7 +36,7 @@ Innerhalb eines Namespace können Sie 0 (null) oder mehr der folgenden Typen dek
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [delegate](../builtin-types/reference-types.md)
 
 Unabhängig davon, ob Sie einen Namespace in einer C#-Quelldatei explizit deklarieren, fügt der Compiler einen Standardnamespace hinzu. Dieser unbenannte Namespace, der manchmal auch als der globale Namespace bezeichnet wird, ist in jeder Datei vorhanden. Jeder Bezeichner im globalen Namespace ist für die Verwendung in einem benannten Namespace verfügbar.
 

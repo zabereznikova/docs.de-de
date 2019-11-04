@@ -9,34 +9,34 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 32d8aac99d40693e66c7b52a6c7d2c116d2f3baf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aae14299b3959e7d2122991954cc62505d2a19e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770655"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460203"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>NavigationWindow-Stile und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Navigation.NavigationWindow> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Navigation.NavigationWindow>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="navigationwindow-parts"></a>NavigationWindow-Teile  
- Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Navigation.NavigationWindow> Steuerelement.  
+ In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Navigation.NavigationWindow>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|Segment|Geben Sie Folgendes ein:|Beschreibung|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|Der Bereich für den Inhalt.|  
   
 ## <a name="navigationwindow-states"></a>NavigationWindow-Zustände  
- Die folgende Tabelle enthält die visuellen Zustände für die <xref:System.Windows.Navigation.NavigationWindow> Steuerelement.  
+ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Navigation.NavigationWindow>-Steuerelement aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="navigationwindow-controltemplate-example"></a>NavigationWindow-ControlTemplate-Beispiel  
- Obwohl in diesem Beispiel enthält alle Elemente, die definiert sind die <xref:System.Windows.Controls.ControlTemplate> von einer <xref:System.Windows.Navigation.NavigationWindow> standardmäßig die spezifischen Werte sollten als betrachtet werden Beispiele.  
+## <a name="navigationwindow-controltemplate-example"></a>Beispiel für NavigationWindow ControlTemplate  
+ Obwohl dieses Beispiel alle Elemente enthält, die standardmäßig im <xref:System.Windows.Controls.ControlTemplate> eines <xref:System.Windows.Navigation.NavigationWindow> definiert sind, sollten die spezifischen Werte als Beispiele betrachtet werden.  
   
  [!code-xaml[ControlTemplateExamples#NavigationWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/navigationwindow.xaml#navigationwindow)]  
   
@@ -53,5 +53,5 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353052"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458900"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Konfigurieren der Überwachung von Workflowdiensten
 
-Ein Workflow kann als WCF-Dienst verfügbar gemacht werden, wenn er im <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Dienst Host gehostet wird. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.
+Ein Workflow kann als WCF-Dienst verfügbar gemacht werden, wenn er im <xref:System.ServiceModel.Activities.WorkflowServiceHost> Dienst Host gehostet wird. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.
 
-Für einen Workflow Dienst, der in <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, können Sie den <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe des < `behavior` >-Elements in einer Konfigurationsdatei hinzufügen, wie im folgenden Beispiel gezeigt.
+Für einen in <xref:System.ServiceModel.WorkflowServiceHost>gehosteten Workflow Dienst können Sie die <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe des <`behavior`>-Elements in einer Konfigurationsdatei hinzufügen, wie im folgenden Beispiel gezeigt.
 
 ```xml
 <behaviors>
@@ -61,7 +61,7 @@ Für einen Workflow Dienst, der in <xref:System.ServiceModel.WorkflowServiceHost
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
 Alternativ können Sie einem Workflowdienst, der im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, die Erweiterung für das <xref:System.Activities.Tracking.EtwTrackingParticipant>-Verhalten über Code hinzufügen. Um einen benutzerdefinierten Überwachungsteilnehmer hinzuzufügen, erstellen Sie eine neue Verhaltenserweiterung, und fügen Sie diese dem <xref:System.ServiceModel.ServiceHost> hinzu, wie im folgenden Beispielcode gezeigt.
@@ -152,7 +152,7 @@ Es gibt zwei Ereignisanzeigeprotokolle, die bei der Nachverfolgung der WF-Ausfü
 
 Ereignisse zur Debugablaufverfolgung werden in das Debugprotokoll geschrieben. Um WF-Debugablaufverfolgungs-Ereignisse in der Ereignisanzeige zu sammeln, aktivieren Sie das Debugprotokoll.
 
-1. Klicken Sie zum Öffnen von Ereignisanzeige auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld "ausführen" `eventvwr` ein.
+1. Klicken Sie zum Öffnen von Ereignisanzeige auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld Ausführen `eventvwr`ein.
 
 2. Erweitern Sie im Dialogfeld Ereignisanzeige den Knoten **Anwendungs-und Dienst Protokolle** .
 
@@ -168,7 +168,7 @@ WF4 stellt einen Nachverfolgungsteilnehmer bereit, der Nachverfolgungsdatensätz
 
 Gehen Sie wie folgt vor, um Nachverfolgungsdatensätze anzuzeigen.
 
-1. Klicken Sie zum Öffnen von Ereignisanzeige auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld "ausführen" `eventvwr` ein.
+1. Klicken Sie zum Öffnen von Ereignisanzeige auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld Ausführen `eventvwr`ein.
 
 2. Erweitern Sie im Dialogfeld Ereignisanzeige den Knoten **Anwendungs-und Dienst Protokolle** .
 
@@ -196,7 +196,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
     </system.serviceModel>
     ```
 
-2. Kopieren Sie die Manifest-Datei aus%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie Sie in um. Microsoft. Windows. ApplicationServer. Applications_Provider1. man
+2. Kopieren Sie die Manifest-Datei aus%windir%\Microsoft.NET\Framework\\\<neuesten Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie Sie in um. Microsoft. Windows. ApplicationServer. Applications_Provider1. man
 
 3. Ändern Sie die GUID in der Manifestdatei in die neue GUID.
 

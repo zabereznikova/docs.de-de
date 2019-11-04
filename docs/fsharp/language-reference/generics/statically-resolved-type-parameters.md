@@ -1,13 +1,13 @@
 ---
 title: Statisch aufgelöste Typparameter
-description: Informationen zum Verwenden von F#-Statisch aufgelöste Typparameter, der durch einen tatsächlichen Typ zur Kompilierzeit statt zur Laufzeit ersetzt wurde.
+description: Erfahren Sie, wie ein F# statisch aufgelöster Typparameter verwendet wird, der zur Kompilierzeit anstelle der Laufzeit durch einen tatsächlichen Typ ersetzt wird.
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082926"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424999"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statisch aufgelöste Typparameter
 
@@ -57,12 +57,12 @@ Die Ausgabe lautet wie folgt.
 1.500000
 ```
 
-Ab F# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache konnte der Typname tatsächlich vom Compiler abgeleitet werden, konnte aber nicht in der Signatur angegeben werden.  Ab F# 4.1 können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
+Ab F# 4,1 können Sie auch konkrete Typnamen in statisch aufgelösten Typparameter Signaturen angeben.  In früheren Versionen der Sprache konnte der Typname tatsächlich vom Compiler abgeleitet werden, konnte aber nicht in der Signatur angegeben werden.  Ab F# 4,1 können Sie auch konkrete Typnamen in statisch aufgelösten Typparameter Signaturen angeben. Im Folgenden ein Beispiel:
 
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with
@@ -87,7 +87,7 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Generika](index.md)
+- [Generics](index.md)
 - [Typableitung](../type-inference.md)
 - [Automatische Verallgemeinerung](automatic-generalization.md)
 - [Einschränkungen](constraints.md)

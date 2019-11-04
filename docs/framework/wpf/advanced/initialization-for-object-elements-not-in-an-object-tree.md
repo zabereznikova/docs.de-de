@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 4f8ee4b31c135595770338831c23d8a0f419e8cd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 1a1d956ee7f41ac1ac0fc9bd051a18b9ff438930
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857008"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459835"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Initialisierung für Objektelemente außerhalb einer Objektstruktur
 Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Initialisierung werden für Prozesse zurückgestellt, die sich in der Regel darauf verlassen, dass das Element entweder mit einer logischen Struktur oder einer visuellen Struktur verbunden wird. Dieses Thema beschreibt die Schritte, die möglicherweise erforderlich sind, um ein Element zu initialisieren, das nicht mit einer dieser Strukturen verbunden ist.  
@@ -25,15 +25,15 @@ Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Die visuelle Struktur beteiligt sich auch an diesem Prozess. Elemente, die Teil der visuellen Struktur durch die Vorlagen sind, werden ebenfalls nicht vollständig instanziiert, bis sie verbunden sind.  
   
- Die Folgen dieses Verhaltens sind, dass bestimmte Vorgänge, die auf den fertigen visuellen Merkmalen eines Elements basieren, zusätzliche Schritte erfordern. Ein Beispiel ist, wenn Sie versuchen, visuelle Merkmale einer Klasse abzurufen, die erstellt aber noch nicht einer Struktur angefügt wurde. Z. B. Wenn Sie aufrufen möchten <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> auf eine <xref:System.Windows.Media.Imaging.RenderTargetBitmap> und das visuelle Element Sie übergeben ein Element, das keine Verbindung mit einer Struktur, dieses Element ist nicht visuell vollständig, bis zusätzliche Initialisierungsschritte abgeschlossen werden.  
+ Die Folgen dieses Verhaltens sind, dass bestimmte Vorgänge, die auf den fertigen visuellen Merkmalen eines Elements basieren, zusätzliche Schritte erfordern. Ein Beispiel ist, wenn Sie versuchen, visuelle Merkmale einer Klasse abzurufen, die erstellt aber noch nicht einer Struktur angefügt wurde. Wenn Sie z. b. <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> auf einem <xref:System.Windows.Media.Imaging.RenderTargetBitmap> aufzurufen haben und das visuelle Element, das Sie übergeben, ein Element ist, das nicht mit einer Struktur verbunden ist, ist dieses Element erst visuell abgeschlossen, wenn weitere Initialisierungs Schritte ausgeführt wurden.  
   
 ### <a name="using-begininit-and-endinit-to-initialize-the-element"></a>Verwenden von BeginInit und EndInit zum Initialisieren des Elements  
- Verschiedene Klassen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementieren die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle. Sie verwenden die <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> und <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> Methoden der Schnittstelle um eine Region in Ihrem Code anzugeben, die Schritte zur Initialisierung enthält (z. B. Festlegen der Eigenschaft den Werten, die das Rendering beeinflussen). Nach dem <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> wird aufgerufen, in der Sequenz, das Layoutsystem das Element verarbeiten kann, und Suchen nach implizitem Stil.  
+ Verschiedene Klassen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die <xref:System.ComponentModel.ISupportInitialize>-Schnittstelle implementieren. Verwenden Sie die Methoden <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> und <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> der-Schnittstelle, um einen Bereich im Code anzugeben, der Initialisierungs Schritte enthält (z. b. das Festlegen von Eigenschafts Werten, die sich auf das Rendering auswirken). Nachdem <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> in der Sequenz aufgerufen wurde, kann das Layoutsystem das Element verarbeiten und mit der Suche nach einem impliziten Stil beginnen.  
   
- Wenn das Element Sie Eigenschaften festlegen, wird eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleiteten Klasse, anschließend Sie die Versionen der Klasse der rufen <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> anstatt <xref:System.ComponentModel.ISupportInitialize>.  
+ Wenn das Element, für das Sie Eigenschaften festlegen, eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleitete Klasse ist, können Sie die Klassen Versionen von <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> anstelle von Umwandlungen in <xref:System.ComponentModel.ISupportInitialize>aufzurufen.  
   
 ### <a name="sample-code"></a>Beispielcode  
- Das folgende Beispiel ist Beispielcode für eine Konsolenanwendung, die verwendet wird, Rendern von APIs und <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> einer losen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei veranschaulicht die richtige Platzierung von <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> um andere API-Aufrufe, die Eigenschaften anpassen, auf das Rendering auswirken.  
+ Das folgende Beispiel zeigt Beispielcode für eine Konsolenanwendung, die Renderingerweiterungen und <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> einer losen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei verwendet, um die ordnungsgemäße Platzierung <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> von anderen API-aufrufen zu veranschaulichen, die Eigenschaften anpassen, die sich auf das Rendering auswirken.  
   
  Das Beispiel veranschaulicht nur die Hauptfunktion. Die Funktionen `Rasterize` und `Save` (nicht dargestellt) sind Hilfsfunktionen, die die Verarbeitung und E/A erledigen.  
   
@@ -44,4 +44,4 @@ Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 
 - [Strukturen in WPF](trees-in-wpf.md)
 - [Übersicht über das WPF-Grafikrendering](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

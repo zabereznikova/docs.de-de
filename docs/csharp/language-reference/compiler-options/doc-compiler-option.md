@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922480"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422972"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C#-Compileroptionen)
 Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei einfügen.  
@@ -35,13 +35,13 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
 ## <a name="remarks"></a>Anmerkungen  
  In Quellcodedateien können Dokumentationskommentare, die Folgendem vorausgehen, verarbeitet und der XML-Datei hinzugefügt werden:  
   
-- Benutzerdefinierte Typen wie eine [Klasse](../keywords/class.md), ein [Delegat](../keywords/delegate.md), oder eine [Schnittstelle](../keywords/interface.md)  
+- Benutzerdefinierte Typen wie eine [Klasse](../keywords/class.md), ein [Delegat](../builtin-types/reference-types.md#the-delegate-type), oder eine [Schnittstelle](../keywords/interface.md)  
   
 - Member wie ein Feld, ein [Ereignis](../keywords/event.md), eine [Eigenschaft](../../programming-guide/classes-and-structs/using-properties.md), oder eine Methode  
   
  Die Quellcodedatei, die Main enthält, wird zuerst in XML ausgegeben.  
   
- Lassen Sie den Dateinamen der XML-Datei mit der Assembly, die Sie unterstützen möchten, identisch sein, und stellen Sie sicher, dass sich die XML-Datei im gleichen Verzeichnis wie die Assembly befindet, um die generierte XML-Datei für die Verwendung mit der [IntelliSense](/visualstudio/ide/using-intellisense)-Funktion zu verwenden. Demnach wird auch die XML-Datei gefunden, wenn im Visual Studio-Projekt auf die Assembly verwiesen wird. Weitere Informationen finden Sie unter [Anzeigen von XML-Codekommentaren](/visualstudio/ide/supplying-xml-code-comments).  
+ Lassen Sie den Dateinamen der XML-Datei mit der Assembly, die Sie unterstützen möchten, identisch sein, und stellen Sie sicher, dass sich die XML-Datei im gleichen Verzeichnis wie die Assembly befindet, um die generierte XML-Datei für die Verwendung mit der [IntelliSense](/visualstudio/ide/using-intellisense)-Funktion zu verwenden. Demnach wird auch die XML-Datei gefunden, wenn im Visual Studio-Projekt auf die Assembly verwiesen wird. Weitere Informationen finden Sie unter [Anzeigen von XML-Codekommentaren](/visualstudio/ide/reference/generate-xml-documentation-comments).  
   
  Wenn Sie nicht mit [-target:module](./target-module-compiler-option.md) kompilieren, enthält `file` die Tags \<assembly>\</assembly>, die den Namen der Datei mit dem Assemblymanifest für die Ausgabedatei der Kompilierung angeben.  
   
