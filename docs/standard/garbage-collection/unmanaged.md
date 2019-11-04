@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662730"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423041"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Bereinigen von nicht verwalteten Ressourcen
 
@@ -27,7 +25,7 @@ Für die meisten von der App erstellten Objekte führt der Garbage Collector von
 
 Wenn Ihre Typen nicht verwaltete Ressourcen verwenden, gehen Sie wie folgt vor:
 
-- Implementieren Sie das [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md). Hierfür müssen Sie eine <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung bereitstellen, um die deterministische Freigabe von nicht verwalteten Ressourcen zu ermöglichen. Ein Consumer Ihres Typs ruft <xref:System.IDisposable.Dispose%2A> auf, wenn das Objekt (und die Ressourcen, die es verwendet), nicht mehr benötigt wird. Die <xref:System.IDisposable.Dispose%2A>-Methode gibt die nicht verwalteten Ressourcen sofort frei.
+- Implementieren Sie das [Dispose-Muster](implementing-dispose.md). Hierfür müssen Sie eine <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung bereitstellen, um die deterministische Freigabe von nicht verwalteten Ressourcen zu ermöglichen. Ein Consumer Ihres Typs ruft <xref:System.IDisposable.Dispose%2A> auf, wenn das Objekt (und die Ressourcen, die es verwendet), nicht mehr benötigt wird. Die <xref:System.IDisposable.Dispose%2A>-Methode gibt die nicht verwalteten Ressourcen sofort frei.
 
 - Sorgen Sie dafür, dass die nicht verwalteten Ressourcen freigegeben werden können, falls ein Consumer Ihres Typs vergisst, <xref:System.IDisposable.Dispose%2A> aufzurufen. Hierfür gibt es zwei Möglichkeiten:
 
@@ -41,7 +39,7 @@ Consumer Ihres Typs können dann die <xref:System.IDisposable.Dispose%2A?display
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Implementieren einer Dispose-Methode](../../../docs/standard/garbage-collection/implementing-dispose.md): Beschreibt, wie das [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) für die Freigabe von nicht verwalteten Ressourcen implementiert wird.
+[Implementieren einer Dispose-Methode](../../../docs/standard/garbage-collection/implementing-dispose.md): Beschreibt, wie das [Dispose-Muster](implementing-dispose.md) für die Freigabe von nicht verwalteten Ressourcen implementiert wird.
 
 [Verwenden von Objekten, die IDisposable implementieren](../../../docs/standard/garbage-collection/using-objects.md): Beschreibt, wie Consumer eines Typs sicherstellen, dass dessen <xref:System.IDisposable.Dispose%2A>-Implementierung aufgerufen wird. Es wird empfohlen, die `using`-Anweisung in C# oder die `Using`-Anweisung in Visual Basic zu verwenden, um dies durchzuführen.
 

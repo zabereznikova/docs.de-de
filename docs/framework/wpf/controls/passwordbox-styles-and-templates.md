@@ -9,43 +9,43 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770642"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458842"
 ---
 # <a name="passwordbox-styles-and-templates"></a>PasswordBox-Stile und -Vorlagen
 
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.PasswordBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
-## <a name="passwordbox-parts"></a>Teile der PasswordBox-Element
+## <a name="passwordbox-parts"></a>PasswordBox-Teile
 
-Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Controls.PasswordBox> Steuerelement.
+In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement aufgelistet.
 
-|Segment|Typ|Beschreibung|
+|Segment|Geben Sie Folgendes ein:|Beschreibung|
 |-|-|-|
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das enthalten einer <xref:System.Windows.FrameworkElement>. Der Text, der die <xref:System.Windows.Controls.PasswordBox> wird in diesem Element angezeigt.|
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das ein <xref:System.Windows.FrameworkElement>enthalten kann. Der Text des <xref:System.Windows.Controls.PasswordBox> wird in diesem Element angezeigt.|
 
-## <a name="passwordbox-states"></a>PasswordBox-Element-Zustände
+## <a name="passwordbox-states"></a>PasswordBox-Zustände
 
-Die folgende Tabelle enthält die visuellen Zustände für die <xref:System.Windows.Controls.PasswordBox> Steuerelement.
+In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement aufgelistet.
 
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|
 |-|-|-|
 |Normal|CommonStates|Der Standardzustand|
 |MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|
-|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|
+|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|
 
-## <a name="passwordbox-controltemplate-example"></a>PasswordBox-ControlTemplate-Beispiel
+## <a name="passwordbox-controltemplate-example"></a>Beispiel für eine PasswordBox-ControlTemplate
 
-Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.PasswordBox> Steuerelement.
+Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement definiert wird.
 
 [!code-xaml[ControlTemplateExamples#PasswordBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]
 
@@ -61,5 +61,5 @@ Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit Contro
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

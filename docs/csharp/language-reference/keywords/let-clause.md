@@ -9,12 +9,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: e9e10957e7ebe93a6dea9bbb6233ca7733f68e20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df3df279d2dbdb59a0a94d9afad37d1a7ddf7b57
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633461"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422696"
 ---
 # <a name="let-clause-c-reference"></a>let-Klausel (C#-Referenz)
 
@@ -35,5 +35,5 @@ Im folgenden Beispiel wird `let` auf zweierlei Weise verwendet:
 - [C#-Referenz](../../language-reference/index.md)
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)
 - [Language-Integrated Query (LINQ)](../../linq/index.md)
-- [Erste Schritte mit LINQ in C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Erste Schritte mit LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)
 - [Behandeln von Ausnahmen in Abfrageausdrücken](../../linq/handle-exceptions-in-query-expressions.md)

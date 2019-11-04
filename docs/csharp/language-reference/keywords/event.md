@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 4149663422908069b5b65ed3c32ccc6dbdfd7729
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6a62881f7205891bafe039a42da44eb8f8d03c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605813"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422830"
 ---
 # <a name="event-c-reference"></a>event (C#-Referenz)
 Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Klasse zu deklarieren.  
@@ -53,5 +53,5 @@ Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Kl
 - [C#-Schlüsselwörter](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)
-- [Modifizierer](./modifiers.md)
+- [Modifizierer](index.md)
 - [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

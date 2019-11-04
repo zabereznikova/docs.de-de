@@ -2,12 +2,12 @@
 title: Duale WS-Http-Verbindung
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 03cc5a2359c6430c04c6afb09f161b397fcb1afa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038489"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424547"
 ---
 # <a name="ws-dual-http"></a>Duale WS-Http-Verbindung
 
@@ -21,7 +21,7 @@ Im Beispiel zur dualen Http-Verbindung wird veranschaulicht, wie die `WSDualHttp
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -61,7 +61,7 @@ Auf dem Client muss, wie in der folgenden Beispielkonfiguration dargestellt, ein
 
 Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
-```
+```console
 Press <ENTER> to terminate client once the output is displayed.
 
 Result(100)
@@ -77,7 +77,7 @@ Wenn Sie das Beispiel ausführen, werden die vom Client zurückgegebenen Nachric
 
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -88,7 +88,7 @@ Wenn Sie das Beispiel ausführen, werden die vom Client zurückgegebenen Nachric
 4. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Beim Ausführen des Clients in einer Computer übergreifenden Konfiguration müssen Sie "localhost" sowohl `address` im-Attribut `clientBaseAddress` [ \<des Endpunkts > des \<Client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) -Elements als auch im-Attribut des [ binden\<Sie >](../../../../docs/framework/misc/binding.md) Element [ \<der WSDualHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) Element mit dem Namen des entsprechenden Computers, wie hier gezeigt:
+    > Beim Ausführen des Clients in einer Computer übergreifenden Konfiguration müssen Sie "localhost" sowohl im `address`-Attribut des [\<-Endpunkts > \<Client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) -Elements als auch im `clientBaseAddress`-Attribut der [\<Bindung ersetzen >](../../../../docs/framework/misc/binding.md) -Element des [\<WSDualHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) Element mit dem Namen des entsprechenden Computers, wie hier gezeigt:
 
     ```xml
     <client>

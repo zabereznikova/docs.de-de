@@ -2,12 +2,12 @@
 title: Abgewickelte MSMQ-Bindung
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf93ba5b7497d30ff7efceea3bd7ca827d5b502
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759985"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423906"
 ---
 # <a name="transacted-msmq-binding"></a>Abgewickelte MSMQ-Bindung
 
@@ -50,7 +50,7 @@ Das Dienstverhalten definiert ein Vorgangsverhalten, wobei `TransactionScopeRequ
 }
 ```
 
-Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst einen Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird verwendet, durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) auf den Proxy an den Dienst zu generieren.
+Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst einen Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird vom [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) verwendet, um den Proxy für den Dienst zu generieren.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -90,7 +90,7 @@ Der Name der MSMQ-Warteschlange wird im appSettings-Abschnitt der Konfigurations
 ```
 
 > [!NOTE]
-> Im Warteschlangennamen werden ein Punkt (.) für den lokalen Computer und umgekehrte Schrägstriche als Trennzeichen in der Pfadangabe verwendet, wenn die Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Der Windows Communication Foundation (WCF)-Endpunkt verwendet die Warteschlangenadresse mit dem net.msmq-Schema, "Localhost" verwendet, um anzugeben, den lokalen Computer und Schrägstriche im Pfad.
+> Im Warteschlangennamen werden ein Punkt (.) für den lokalen Computer und umgekehrte Schrägstriche als Trennzeichen in der Pfadangabe verwendet, wenn die Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Der Windows Communication Foundation (WCF)-Endpunkt verwendet die Warteschlangen Adresse mit dem Schema "net. MSMQ", verwendet "localhost", um den lokalen Computer anzugeben, und verwendet Schrägstriche im Pfad.
 
 Der Client erstellt einen Geltungsbereich für die Transaktion. Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der entweder alle oder keine Nachrichten an die Warteschlange gesendet werden. Für die Transaktion wird ein Commit ausgeführt, indem <xref:System.Transactions.TransactionScope.Complete%2A> im Geltungsbereich der Transaktion aufgerufen wird.
 
@@ -144,7 +144,7 @@ Da die Transaktion nicht abgeschlossen wird, werden die Nachrichten nicht an die
 
 Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, wie der Dienst Nachrichten vom Client empfängt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen. Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen. Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -159,23 +159,23 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
 2. Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:
 
     1. Öffnen Sie Server-Manager in Visual Studio 2012.
 
-    2. Erweitern Sie die **Features** Registerkarte.
+    2. Erweitern Sie die Registerkarte **Features** .
 
-    3. Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.
+    3. Klicken Sie mit der rechten Maustaste auf private Meldungs **Warteschlangen**, und wählen Sie **neu**, **private**
 
-    4. Überprüfen Sie die **transaktional** Feld.
+    4. Aktivieren Sie das Kontrollkästchen **transaktional** .
 
-    5. Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.
+    5. Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange ein.
 
 3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
-4. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für die MSMQ-Transportsicherheit, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Standardmäßig wird der Authentifizierungsmodus als `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion zur Verfügung stellt, muss es Teil einer Domäne sein, und die Option zur Active Directory-Integration muss für MSMQ installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, erhalten Sie eine Fehlermeldung.
 
@@ -235,6 +235,6 @@ Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transport
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

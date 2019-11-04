@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: dab8466b4d40e318bbb9915c06ce4ac836c0ead0
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: cb6a0befb9e2e628f066061282532513019c1419
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205433"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418735"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Verwenden von Konstruktoren (C#-Programmierhandbuch)
 
@@ -91,7 +91,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
-Weitere Informationen erhalten Sie unter [Instanzkonstruktoren](~/_csharplang/spec/classes.md#instance-constructors) und [Statische Konstruktoren](~/_csharplang/spec/classes.md#static-constructors) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen erhalten Sie unter [Instanzkonstruktoren](~/_csharplang/spec/classes.md#instance-constructors) und [Statische Konstruktoren](~/_csharplang/spec/classes.md#static-constructors) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596277"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419172"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 
@@ -164,11 +164,11 @@ partial void onNameChanged()
 
 - Partielle Methoden können generisch sein. Einschränkungen gelten für die definierende partielle Methodendeklaration und können optional für die implementierende wiederholt werden. Parameter- und Typparameternamen müssen in der implementierenden und definierenden Deklaration nicht gleich sein.
 
-- Sie können einen [Delegaten](../../language-reference/keywords/delegate.md) für eine partielle Methode erstellen, die definiert und implementiert wurde. Dies geht jedoch nicht für partielle Methoden, die nur definiert wurden.
+- Sie können einen [Delegaten](../../language-reference/builtin-types/reference-types.md) für eine partielle Methode erstellen, die definiert und implementiert wurde. Dies geht jedoch nicht für partielle Methoden, die nur definiert wurden.
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
-Weitere Informationen finden Sie unter [Partielle Datentypen](~/_csharplang/spec/classes.md#partial-types) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen finden Sie unter [Partielle Datentypen](~/_csharplang/spec/classes.md#partial-types) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
 
 ## <a name="see-also"></a>Siehe auch
 

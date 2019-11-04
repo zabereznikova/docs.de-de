@@ -2,12 +2,12 @@
 title: Abbrechen einer Async-Aufgabe oder einer Aufgabenliste (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353131"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419866"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Abbrechen einer Async-Aufgabe oder einer Aufgabenliste (Visual Basic)
 
@@ -24,7 +24,7 @@ Im ersten Beispiel wird die Schaltfläche **Abbrechen** einer Aufgabe mit einem 
 
 ### <a name="downloading-the-example"></a>Herunterladen des Beispiels
 
-Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
+Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
 
 1. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.
 
@@ -86,7 +86,7 @@ Fügen Sie dann die folgenden Änderungen der Datei "MainWindow. XAML. vb" des P
           Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
           resultsTextBox.Text &=
-              String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+              vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
           ' *** If cancellation is requested, an OperationCanceledException results.
       Catch ex As OperationCanceledException
@@ -107,8 +107,7 @@ Fügen Sie dann die folgenden Änderungen der Datei "MainWindow. XAML. vb" des P
 
         Dim client As HttpClient = New HttpClient()
 
-        resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+        resultsTextBox.Text &= vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -145,7 +144,7 @@ Sie können das vorherige Beispiel so erweitern, dass viele Aufgaben abgebrochen
 
 ### <a name="downloading-the-example"></a>Herunterladen des Beispiels
 
-Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
+Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
 
 1. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.
 
@@ -206,7 +205,7 @@ Um das Beispiel selbst zu erweitern, befolgen Sie Schritt für Schritt die Anwei
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+            vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
     Next
     ```
 
@@ -258,7 +257,7 @@ Um das Beispiel selbst zu erweitern, befolgen Sie Schritt für Schritt die Anwei
 
 Die folgenden Abschnitte enthalten den Code für jedes der vorherigen Beispiele. Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
-Sie können die Projekte hier herunterladen: [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
+Sie können die Projekte von [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
 
 ### <a name="cancel-a-task-example"></a>Beispiel zum Abbrechen einer Aufgabe
 
@@ -287,7 +286,7 @@ Class MainWindow
             Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+                vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
             ' *** If cancellation is requested, an OperationCanceledException results.
         Catch ex As OperationCanceledException
@@ -315,7 +314,7 @@ Class MainWindow
         Dim client As HttpClient = New HttpClient()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+            vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -413,7 +412,7 @@ Class MainWindow
             Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+                vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         Next
     End Function
 
@@ -470,4 +469,4 @@ End Class
 - <xref:System.Threading.CancellationToken>
 - [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung der Anwendung)

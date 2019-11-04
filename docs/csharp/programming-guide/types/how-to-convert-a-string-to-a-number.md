@@ -8,16 +8,16 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133708"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417643"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)
 
-Sie können eine [Zeichenfolge](../../language-reference/keywords/string.md) in eine Zahl umwandeln, indem Sie die Methode `Parse` oder `TryParse` in den verschiedenen numerischen Typen (`int`, `long`, `double` usw.) oder Methoden in der <xref:System.Convert?displayProperty=nameWithType>-Klasse aufrufen.  
+Sie können eine [Zeichenfolge](../../language-reference/builtin-types/reference-types.md) in eine Zahl umwandeln, indem Sie die Methode `Parse` oder `TryParse` in den verschiedenen numerischen Typen (`int`, `long`, `double` usw.) oder Methoden in der <xref:System.Convert?displayProperty=nameWithType>-Klasse aufrufen.  
   
  Bei einer Zeichenfolge ist es etwas effizienter und einfacher, eine `TryParse`-Methode (beispielsweise [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) oder eine `Parse`-Methode (beispielsweise [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) aufzurufen.  Die Verwendung einer <xref:System.Convert>-Methode eignet sich eher für allgemeine Objekte, die <xref:System.IConvertible> implementieren.  
   

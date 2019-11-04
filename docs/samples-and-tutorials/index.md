@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855773"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423569"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -49,7 +49,7 @@ Dieses Beispiel veranschaulicht die Syntax und die Funktionen zum Erstellen und 
 
 Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Indexer. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/indexers) finden Sie im dotnet/samples-Repository auf GitHub.
 
-**[Delegaten und Ereignisse](../csharp/delegates-events.md)**
+**[Delegaten und Ereignisse](../csharp/delegates-overview.md)**
 
 Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Delegaten und -Ereignisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) finden Sie im dotnet/samples-Repository auf GitHub. Im gleichen Repository finden Sie ein [zweites Beispiel](https://github.com/dotnet/samples/tree/master/csharp/events), bei dem es hauptsächlich um Ereignisse geht.
 
@@ -95,15 +95,11 @@ In diesem Tutorial erfahren Sie, wie Sie eine vollständige .NET Core-Projektmap
 
 In diesem Tutorial erfahren Sie, wie Sie eine einfache .NET Core-Anwendung erstellen, die eine Plug-In-Architektur unterstützt. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) finden Sie im dotnet/samples-Repository auf GitHub.
 
-## <a name="deploying-to-containers"></a>Bereitstellen in Containern
+## <a name="deploy-to-containers"></a>Bereitstellen in Containern
 
-**[Ausführen von ASP.NET-MVC-Anwendungen in Windows-Docker-Containern](../framework/docker/aspnetmvc.md)**
+**[Ausführen von ASP.NET-MVC-Anwendungen in Windows-Docker-Containern](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen ASP.NET-MVC-App in einem Windows-Docker-Container. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) finden Sie im dotnet/samples-Repository auf GitHub.
-
-**[Ausführen von .NET Framework-Konsolenanwendungen in Windows-Containern](../framework/docker/console.md)**
-
-Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen Konsolen-App in einem Windows-Container. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) finden Sie im dotnet/samples-Repository auf GitHub.
 
 ## <a name="viewing-and-downloading-samples"></a>Anzeigen und Herunterladen von Beispielen
 

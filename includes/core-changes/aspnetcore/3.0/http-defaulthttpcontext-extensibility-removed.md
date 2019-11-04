@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 177617569a93e09f4c2a05acc21dce362edd58bc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 7b5ae84d02b83a10a4b9e002fc2ed4ee0833b84c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394311"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198449"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: Erweiterbarkeit von DefaultHttpContext entfernt
 
 Im Rahmen der Leistungsverbesserungen in ASP.NET Core 3.0 wurde die Erweiterbarkeit von `DefaultHttpContext` aufgehoben. Die Klasse ist jetzt `sealed`. Weitere Informationen finden Sie unter [aspnet/AspNetCore#6504](https://github.com/aspnet/AspNetCore/pull/6504).
 
-Wenn Sie für Komponententests `Mock<DefaultHttpContext>` verwenden, nutzen Sie stattdessen `Mock<HttpContext>`. 
+Wenn Sie für Komponententests `Mock<DefaultHttpContext>` verwenden, nutzen Sie stattdessen `Mock<HttpContext>`.
 
 Weitere Informationen finden Sie unter [aspnet/AspNetCore#6534](https://github.com/aspnet/AspNetCore/issues/6534).
 
@@ -32,7 +32,7 @@ Die Erweiterbarkeit wurde anfänglich bereitgestellt, um das Pooling des `HttpCo
 
 #### <a name="recommended-action"></a>Empfohlene Maßnahme
 
-Wenn Sie in Komponententests `Mock<DefaultHttpContext>` verwenden, nutzen Sie stattdessen `Mock<HttpContext>`. 
+Wenn Sie in Komponententests `Mock<DefaultHttpContext>` verwenden, nutzen Sie stattdessen `Mock<HttpContext>`.
 
 #### <a name="category"></a>Kategorie
 

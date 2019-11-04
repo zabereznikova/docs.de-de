@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 84f838645bed6facc8b59ebf596d16373a9c6f86
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833346"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422373"
 ---
 # <a name="sealed-c-reference"></a>sealed (C#-Referenz)
 
@@ -76,6 +76,6 @@ Sie sollten generell die folgenden zwei Punkte in Betracht ziehen, um festzustel
 - [Statische Klassen und statische Klassenmember](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Abstrakte und versiegelte Klassen und Klassenmember](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Zugriffsmodifizierer](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [Modifizierer](modifiers.md)
+- [Modifizierer](index.md)
 - [override](override.md)
 - [virtual](virtual.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596385"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419270"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
@@ -64,7 +64,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [object](../../language-reference/keywords/object.md)
+- [object](../../language-reference/builtin-types/reference-types.md)
 - [Vererbung](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

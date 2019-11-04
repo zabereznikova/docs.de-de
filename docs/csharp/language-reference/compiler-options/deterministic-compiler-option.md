@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202924"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455189"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -48,7 +46,7 @@ Der Compiler berücksichtigt die folgenden Eingaben für den Determinismus:
   - Zusätzliche Dateien, die möglicherweise von Analyzern verwendet werden
 - Die aktuelle Kultur (für die Sprache, in der die Diagnose und die Ausnahmenachrichten erstellt werden).
 - Die Standardcodierung (oder die aktuelle Codeseite), wenn die Codierung nicht angegeben ist.
-- Das Vorhandensein, Nichtvorhandensein und die Inhalte der Dateien auf den Suchpfaden des Compilers (z.B. von `/lib` oder `/recurse` angegeben).
+- Das Vorhandensein, Nichtvorhandensein und die Inhalte der Dateien auf den Suchpfaden des Compilers (z.B. von `-lib` oder `-recurse` angegeben).
 - Die CLR-Plattform, auf der der Compiler ausgeführt wird.
 - Der Wert von `%LIBPATH%`, der das Abhängigkeitsladen des Analyzers beeinträchtigen kann.
 

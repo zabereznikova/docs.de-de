@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040864"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424940"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen mithilfe der <xref:System.Windows.Window>-Klasse ihre eigenen Fenster bereit. In diesem Thema wird <xref:System.Windows.Window> vorgestellt, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
   
 > [!NOTE]
-> Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und losen [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
+> Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich XAML-Browser Anwendungen (XBAPs) und losen [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
@@ -471,7 +471,7 @@ Die Standarddarstellung eines Fensters umfasst eine Task leisten Schaltfläche, 
   
  Dies liegt jedoch außerhalb der Berechtigungs Sätze, die Anwendungen gewährt werden, die über die Internet-oder lokale Intranetzone mithilfe von ClickOnce gestartet werden. Folglich erhalten Benutzer eine ClickOnce-Sicherheitswarnung und müssen den Berechtigungs Satz für die Anwendung auf Full Trust erhöhen.  
   
- Außerdem können [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] standardmäßig keine Fenster oder Dialogfelder anzeigen. Eine Erläuterung zu den Sicherheitsüberlegungen für eigenständige Anwendungen finden Sie unter [WPF-Sicherheitsstrategie-Plattformsicherheit](../wpf-security-strategy-platform-security.md).  
+ Außerdem können in XBAPs standardmäßig keine Fenster oder Dialogfelder angezeigt werden. Eine Erläuterung zu den Sicherheitsüberlegungen für eigenständige Anwendungen finden Sie unter [WPF-Sicherheitsstrategie-Plattformsicherheit](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Andere Fenstertypen  

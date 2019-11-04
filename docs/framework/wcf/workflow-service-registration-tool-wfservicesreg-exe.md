@@ -2,19 +2,19 @@
 title: Registrierungstool für Workflow Services (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916824"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425286"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Registrierungstool für Workflow Services (WFServicesReg.exe)
 Beim Registrierungstool für Workflow Services (WFServicesReg.exe) handelt es sich um ein eigenständiges Tool zum Hinzufügen, Entfernen oder Reparieren der Konfigurationselemente für Windows Workflow Foundation (WF)-Dienste.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
@@ -56,11 +56,11 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Auch XOML und RULES-Skriptzuordnungen und -Handler werden in der IIS-Metabasis registriert.  
   
- Auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] - [!INCLUDE[wxp](../../../includes/wxp-md.md)] und-Computern (IIS 5,1 und IIS 6,0) werden ein Satz von XOML-und Rules-Skript Zuordnungen registriert.  
+ Auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]-und [!INCLUDE[wxp](../../../includes/wxp-md.md)] Computern (IIS 5,1 und IIS 6,0) werden ein Satz von XOML-und Rules-Skript Zuordnungen registriert.  
   
  Auf 64-Bit-Computern werden bei aktiviertem `Enable32BitAppOnWin64`-Schalter WOW-Modus-Skriptzuordnungen registriert, bei aktiviertem `Enable32BitAppOnWin64`-Schalter werden systemeigene 64-Bit-Skriptzuordnungen registriert.  
   
- Auf [!INCLUDE[wv](../../../includes/wv-md.md)] Computern unter und Windows Server 2008 (IIS 7,0 und höher) werden zwei Sätze von XOML-und Rules-Handlern registriert: eine für den integrierten Modus und eine für den klassischen Modus.  
+ Auf [!INCLUDE[wv](../../../includes/wv-md.md)]-und Windows Server 2008-Computern (IIS 7,0 und höher) werden zwei Sätze von XOML-und Rules-Handlern registriert: eine für den integrierten Modus und eine für den klassischen Modus.  
   
  Auf 64-Bit-Computern werden drei Handlersätze registriert (unabhängig vom Zustand des `Enable32BitAppOnWin64`-Schalters): einer für den integrierten Modus, einer für den klassischen WOW-Modus und einer für den systemeigenen klassischen 64-Bit-Modus.  
   

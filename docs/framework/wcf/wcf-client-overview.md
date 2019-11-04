@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321343"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420660"
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
 In diesem Abschnitt wird beschrieben, was Client Anwendungen tun, wie ein Windows Communication Foundation (WCF)-Client konfiguriert, erstellt und verwendet wird und wie Client Anwendungen gesichert werden.  
@@ -43,7 +43,7 @@ In diesem Abschnitt wird beschrieben, was Client Anwendungen tun, wie ein Window
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Abrufen von Dienstvertrag, Bindungen und Adressen  
  In WCF modellieren Dienste und Clients Verträge mithilfe verwalteter Attribute, Schnittstellen und Methoden. Soll eine Verbindung zu einem Dienst in einer Clientanwendung hergestellt werden, muss der Informationstyp für den Dienstvertrag abgerufen werden. In der Regel verwenden Sie hierfür das [Service Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), das Metadaten aus dem Dienst herunterlädt, Sie in eine verwaltete Quell Code Datei in der Sprache Ihrer Wahl umwandelt und eine Client Anwendungs Konfigurationsdatei erstellt. die Sie zum Konfigurieren des WCF-Client Objekts verwenden können. Wenn Sie z. b. ein WCF-Client Objekt erstellen, um eine `MyCalculatorService` aufzurufen, und Sie wissen, dass die Metadaten für diesen Dienst auf `http://computerName/MyCalculatorService/Service.svc?wsdl` veröffentlicht werden, wird im folgenden Codebeispiel veranschaulicht, wie mit Svcutil. exe eine `ClientCode.vb`-Datei abgerufen wird, die den Dienst enthält. Vertrag in verwaltetem Code.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
@@ -64,7 +64,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Wenn Sie Visual Studio nicht verwenden, überprüfen Sie den generierten Vertrags Code, um den Typ zu finden, der <xref:System.ServiceModel.ClientBase%601> und die Dienstvertragschnittstelle `ISampleService` erweitert. In diesem Fall entspricht der Typ dem folgenden Code:  
+ Wenn Sie Visual Studio nicht verwenden, überprüfen Sie den generierten Vertrags Code, um den Typ zu finden, der <xref:System.ServiceModel.ClientBase%601> und die Dienstvertragschnittstelle `ISampleService`erweitert. In diesem Fall entspricht der Typ dem folgenden Code:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
@@ -169,7 +169,7 @@ End Interface
  Die Art und Weise eines Vorgangsaufrufs ist ausschließlich Angelegenheit des Cliententwicklers. Dies liegt daran, dass die Nachrichten, aus denen sich ein Vorgang zusammensetzt, bei der Darstellung in verwaltetem Code entweder synchronen oder asynchronen Methoden zugeordnet werden können. Wenn Sie einen Client erstellen möchten, mit dem Vorgänge asynchron aufgerufen werden, können Sie daher mit Svcutil.exe und der Option `/async` asynchronen Clientcode generieren. Weitere Informationen finden Sie unter Vorgehensweise [: Asynchrones Abrufen von Dienst Vorgängen](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Aufrufen von Diensten mithilfe der WCF-Clientkanäle.  
- WCF-Client Typen erweitern <xref:System.ServiceModel.ClientBase%601>, das wiederum von <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>-Schnittstelle abgeleitet wird, um das zugrunde liegende Kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF-Client Architektur](./feature-details/client-architecture.md).  
+ WCF-Client Typen erweitern <xref:System.ServiceModel.ClientBase%601>, der selbst von <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> Schnittstelle abgeleitet ist, um das zugrunde liegende Kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF-Client Architektur](./feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

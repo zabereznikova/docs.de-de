@@ -1,21 +1,21 @@
 ---
 title: Ausführliche Syntax
-description: Erfahren Sie, den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache F#.
+description: Informieren Sie sich über den Unterschied zwischen ausführlicher und schlanker F# Syntax in der Programmiersprache.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214037"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421183"
 ---
 # <a name="verbose-syntax"></a>Ausführliche Syntax
 
-Es gibt zwei Formen der Syntax für viele Konstrukte in F# verfügbar: *ausführliche Syntax* und *einfache Syntax*. Die ausführliche Syntax wird nicht wie üblich verwendet, hat jedoch den Vorteil, dass der Einzug weniger sensibel ist. Die Lightweight-Syntax ist kürzer und verwendet Einzüge, um den Anfang und das Ende der Konstrukte zu signalisieren, `begin`anstatt `end`zusätzliche `in`Schlüsselwörter wie,, usw. Die Standard Syntax ist die Lightweight-Syntax. Dieses Thema beschreibt die Syntax für F#-Konstrukte, wenn die einfacher Syntax nicht aktiviert ist. Die ausführliche Syntax ist immer aktiviert. auch wenn Sie die Lightweight-Syntax aktivieren, können Sie für einige Konstrukte weiterhin ausführliche Syntax verwenden. Sie können die Lightweight-Syntax deaktivieren, `#light "off"` indem Sie die-Anweisung verwenden.
+Es gibt zwei Arten von Syntax für viele Konstrukte in der F# Sprache: Ausführliche *Syntax* und *Lightweight-Syntax*. Die ausführliche Syntax wird nicht wie üblich verwendet, hat jedoch den Vorteil, dass der Einzug weniger sensibel ist. Die Lightweight-Syntax ist kürzer und verwendet Einzüge, um den Anfang und das Ende der Konstrukte anstelle von zusätzlichen Schlüsselwörtern wie `begin`, `end`, `in`usw. zu signalisieren. Die Standard Syntax ist die Lightweight-Syntax. In diesem Thema wird die Syntax F# für Konstrukte beschrieben, wenn die Lightweight-Syntax nicht aktiviert ist. Die ausführliche Syntax ist immer aktiviert. auch wenn Sie die Lightweight-Syntax aktivieren, können Sie für einige Konstrukte weiterhin ausführliche Syntax verwenden. Sie können die Lightweight-Syntax deaktivieren, indem Sie die `#light "off"`-Anweisung verwenden.
 
 ## <a name="table-of-constructs"></a>Tabelle der Konstrukte
 
-Die folgende Tabelle zeigt die ausführliche und ausführliche Syntax für F# Sprachkonstrukte in Kontexten, in denen es einen Unterschied zwischen den beiden Formularen gibt. In dieser Tabelle schließen eckige Klammern (&lt;&gt;) die vom Benutzer bereitgestellten Syntax Elemente ein. Ausführlichere Informationen zur Syntax, die in diesen Konstrukten verwendet wird, finden Sie in der Dokumentation zu den einzelnen sprach Konstrukten.
+Die folgende Tabelle zeigt die ausführliche und ausführliche Syntax für F# Sprachkonstrukte in Kontexten, in denen es einen Unterschied zwischen den beiden Formularen gibt. In dieser Tabelle schließen eckige Klammern (&lt;&gt;) vom Benutzer bereitgestellte Syntax Elemente ein. Ausführlichere Informationen zur Syntax, die in diesen Konstrukten verwendet wird, finden Sie in der Dokumentation zu den einzelnen sprach Konstrukten.
 
 <table>
 <tr>
@@ -189,7 +189,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td>class
+<tr><td>Klasse
 </td><td>
 
 ```fsharp
@@ -354,4 +354,4 @@ module <module-name> =
 
 - [F#-Sprachreferenz](index.md)
 - [Compileranweisungen](compiler-directives.md)
-- [Richtlinien für das Formatieren von Code](code-formatting-guidelines.md)
+- [Richtlinien für das Formatieren von Code](../style-guide/formatting.md)

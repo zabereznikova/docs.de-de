@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 5013738e74aaa260ab6f5bcd4d73904cfbdcc3c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 895f561c15941d851980ea9b392d2e86db2462f3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590277"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423285"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Ausnahmebehandlung (C#-Programmierhandbuch)
 Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Programmierern verwendet, um Code zu partitionieren, der von einer Ausnahme betroffen sein könnte. Zugeordnete [catch](../../language-reference/keywords/try-catch.md)-Blöcke werden verwendet, um die sich ergebenden Ausnahmen zu behandeln. Ein [finally](../../language-reference/keywords/try-finally.md)-Block enthält Code, der ausgeführt wird, unabhängig davon, ob eine Ausnahme im `try`-Block ausgelöst wird, z.B. das Freigeben von Ressourcen, die im `try`-Block zugeordnet werden. Ein `try`-Block erfordert einen oder mehrere zugeordnete `catch`-Blöcke oder ein `finally`-Block oder beides.  
@@ -54,7 +54,7 @@ Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Prog
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
-Weitere Informationen finden Sie unter [Ausnahmen](~/_csharplang/spec/exceptions.md) und [Die try-Anweisung](~/_csharplang/spec/statements.md#the-try-statement) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen finden Sie unter [Ausnahmen](~/_csharplang/spec/exceptions.md) und [Die try-Anweisung](~/_csharplang/spec/statements.md#the-try-statement) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
 ## <a name="see-also"></a>Siehe auch
 

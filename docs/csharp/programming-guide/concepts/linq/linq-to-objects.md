@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418175"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 Die Bezeichnung „LINQ to Objects“ bezieht sich auf die direkte Verwendung von LINQ-Abfragen mit einer beliebigen <xref:System.Collections.IEnumerable>- oder <xref:System.Collections.Generic.IEnumerable%601>-Auflistung, ohne einen LINQ-Zwischenanbieter oder eine API wie [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) oder [LINQ to XML](./linq-to-xml-overview.md) zu verwenden. Sie können LINQ zur Abfrage beliebiger aufzählbarer Auflistungen wie <xref:System.Collections.Generic.List%601>, <xref:System.Array> oder <xref:System.Collections.Generic.Dictionary%602> verwenden. Die Auflistung kann entweder benutzerdefiniert sein oder von einer .NET Framework-API zurückgegeben werden.  
@@ -30,7 +30,7 @@ Die Bezeichnung „LINQ to Objects“ bezieht sich auf die direkte Verwendung vo
  [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)  
  Erläutert, wie LINQ zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden kann. Dieser Abschnitt umfasst auch Links zu Themen, die diese Prinzipien veranschaulichen.  
   
- [LINQ and Reflection (C#) (LINQ und Reflektion (C#))](./linq-and-reflection.md)  
+ [LINQ and Reflection (C#) (LINQ und Reflektion (C#))](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  Verweist auf ein Beispiel, das darstellt, wie LINQ die Reflektion verwendet.  
   
  [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)  

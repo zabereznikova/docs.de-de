@@ -6,15 +6,15 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 9df143fb183ef2fc7e951b2cee47d18ce4b11942
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590650"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418029"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegaten mit benannten im Vergleich zu Anonyme Methoden (C#-Programmierhandbuch)
-Ein [Delegat](../../language-reference/keywords/delegate.md) kann einer benannten Methode zugeordnet werden. Wenn Sie einen Delegaten mit einer benannten Methode instanziieren, wird die Methode als Parameter übergeben:  
+Ein [Delegat](../../language-reference/builtin-types/reference-types.md) kann einer benannten Methode zugeordnet werden. Wenn Sie einen Delegaten mit einer benannten Methode instanziieren, wird die Methode als Parameter übergeben:  
   
  [!code-csharp[csProgGuideDelegates#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#1)]  
   

@@ -2,16 +2,15 @@
 title: Frameworkbibliotheken
 description: Erfahren Sie, wie diese Bibliotheken Implementierungen für viele allgemeine und App-spezifische Typen, Algorithmen und Hilfsprogrammfunktionen bereitstellen.
 author: richlander
-ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 494ac194fe8dc9554c6e0d1d87ba2ed613d1d16b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663228"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424972"
 ---
 # <a name="framework-libraries"></a>Frameworkbibliotheken
 
@@ -27,7 +26,7 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 
 .NET umfasst eine Reihe primitiver Typen, die (in unterschiedlichem Maß) in allen Programmen verwendet werden. Diese Typen enthalten Daten, beispielsweise Zahlen, Zeichenfolgen, Bytes und beliebige Objekte. Die Sprache C# enthält Schlüsselwörter für diese Typen. Unten finden Sie einen Beispielsatz dieser Typen, zusammen mit den entsprechenden C#-Schlüsselwörtern.
 
-* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen <xref:System.UInt16>-Typ ohne Vorzeichen.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): Ein 32-Bit-Ganzzahltyp mit Vorzeichen Es gibt auch einen [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)-Typ ohne Vorzeichen.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): Ein 32-Bit-Gleitkommatyp
@@ -35,7 +34,7 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte des Arbeitsspeichers darstellt
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): Ein boolescher Typ, der `true` oder `false` darstellt
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): Ein numerischer 16-Bit-Typ, der ein Unicodezeichen darstellt
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.
 
 ## <a name="data-structures"></a>Datenstrukturen
 

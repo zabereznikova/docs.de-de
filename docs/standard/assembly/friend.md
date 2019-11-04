@@ -5,12 +5,12 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6387e93bcd4efeec57ada9228dcaf015d053dbf7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: bf1cb28a6e3096a42aae1c777f6d2d6f9cc16c49
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972702"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774328"
 ---
 # <a name="friend-assemblies"></a>Friend-Assemblys
 
@@ -25,7 +25,7 @@ Eine *Friend-Assembly* ist eine Assembly, die auf die [Friend-](../../visual-bas
 Sie können das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> verwenden, um eine oder mehrere Friend-Assemblys für eine angegebene Assembly zu identifizieren. Im folgenden Beispiel wird das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> in *Assembly A* verwendet, und *Assembly B* wird als Friend-Assembly angegeben. Dadurch erhält *Assembly B* Zugriff auf alle Typen und Member in *Assembly A*, die als `internal` (C#) oder `Friend` (Visual Basic) markiert sind.
 
 > [!NOTE]
-> Wenn Sie eine Assembly wie *Assembly B* kompilieren, die auf interne Typen oder Member einer anderen Assembly wie *Assembly A* zugreift, müssen Sie den Namen der Ausgabedatei ( *.exe* oder *.dll*) explizit mithilfe der Compileroption **/out** festlegen. Dies ist erforderlich, da der Compiler den Namen für die Assembly, die er erstellt, noch nicht generiert hat, wenn er Bindungen an externe Referenzen vornimmt. Weitere Informationen hierzu finden Sie unter [/out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) oder [/out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> Wenn Sie eine Assembly wie *Assembly B* kompilieren, die auf interne Typen oder Member einer anderen Assembly wie *Assembly A* zugreift, müssen Sie den Namen der Ausgabedatei ( *.exe* oder *.dll*) explizit mithilfe der Compileroption **-out** festlegen. Dies ist erforderlich, da der Compiler den Namen für die Assembly, die er erstellt, noch nicht generiert hat, wenn er Bindungen an externe Referenzen vornimmt. Weitere Informationen hierzu finden Sie unter [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) oder [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -93,7 +93,7 @@ Der Compiler führt eine grundlegende Prüfung des Namens der Friend-Assembly du
 
 - Bei Verwendung von <xref:System.Security.Permissions.StrongNameIdentityPermission> müssen die Typen, die Sie freigeben möchten, als öffentlich deklariert werden. Wenn Sie eine Friend-Assembly verwenden, werden die freigegebenen Typen in `internal` (C#) oder `Friend` (Visual Basic) deklariert.
 
-Informationen darüber, wie Sie über eine Moduldatei (eine Datei mit der Dateierweiterung *.netmodule*) auf die Typen und Methoden `internal` (C#) oder `Friend` (Visual Basic) zugreifen, finden Sie unter [/moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) oder [/moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+Informationen darüber, wie Sie über eine Moduldatei (eine Datei mit der Dateierweiterung *.netmodule*) auf die Typen und Methoden `internal` (C#) oder `Friend` (Visual Basic) zugreifen, finden Sie unter [-moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) oder [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
 
 ## <a name="see-also"></a>Siehe auch
 

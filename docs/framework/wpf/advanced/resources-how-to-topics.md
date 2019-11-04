@@ -7,15 +7,15 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 568ff84c6de2d80527921fe6f3179e6bb123f72f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053482"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458722"
 ---
 # <a name="resources-how-to-topics"></a>Gewusst-wie-Themen zu Ressourcen
-Die Themen in diesem Abschnitt wird beschrieben, wie Windows Presentation Foundation (WPF)-Ressourcen verwenden.  
+In den Themen in diesem Abschnitt wird beschrieben, wie Sie Windows Presentation Foundation (WPF)-Ressourcen verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren einer Ressource und Verweisen auf eine Ressource](how-to-define-and-reference-a-resource.md)  
@@ -35,4 +35,4 @@ Die Themen in diesem Abschnitt wird beschrieben, wie Windows Presentation Founda
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [XAML-Ressourcen](xaml-resources.md)
+ [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md)

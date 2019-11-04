@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106890"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424334"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
 Sie implementieren eine <xref:System.IDisposable.Dispose%2A>-Methode, um nicht verwaltete Ressourcen freizugeben, die von Ihrer Anwendung verwendet werden. Der .NET-Garbage Collector ordnet nicht verwalteten Arbeitsspeicher weder zu noch gibt er diesen frei.  
   
-Das Muster für das Verwerfen eines Objekts, [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md) genannt, legt die Ordnung für die Lebensdauer eines Objekts fest. Das Dispose-Muster wird nur für Objekte verwendet, die auf nicht verwaltete Ressourcen zugreifen, wie etwa Datei- und Pipehandles, Registrierungshandles, Wait-Handles oder Zeiger auf Blöcke nicht verwalteten Speichers. Dies liegt daran, dass der Garbage Collector beim Freigeben nicht verwendeter verwalteter Objekte sehr effizient ist, nicht verwaltete Objekt jedoch nicht freigeben kann.  
+Das Muster für das Verwerfen eines Objekts, [Dispose-Muster](implementing-dispose.md) genannt, legt die Ordnung für die Lebensdauer eines Objekts fest. Das Dispose-Muster wird nur für Objekte verwendet, die auf nicht verwaltete Ressourcen zugreifen, wie etwa Datei- und Pipehandles, Registrierungshandles, Wait-Handles oder Zeiger auf Blöcke nicht verwalteten Speichers. Dies liegt daran, dass der Garbage Collector beim Freigeben nicht verwendeter verwalteter Objekte sehr effizient ist, nicht verwaltete Objekt jedoch nicht freigeben kann.  
   
 Das Dispose-Muster weist zwei Varianten auf:  
   
@@ -169,4 +167,4 @@ Das folgende Beispiel zeigt das Dispose-Muster für eine abgeleitete Klasse, `Di
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Vorgehensweise: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Dispose-Muster](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Dispose-Muster](implementing-dispose.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608370"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771733"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Arithmetische Operatoren (C#-Referenz)
 
@@ -49,13 +49,13 @@ Der unäre Inkrementoperator (`++`) erhöht seinen Operanden um 1. Der Operand m
 
 Der Inkrementoperator wird in zwei Formen unterstützt: als Postfix-Inkrementoperator `x++` und als Präfix-Inkrementoperator `++x`.
 
-### <a name="postfix-increment-operator"></a>Postfix-Inkrementoperator
+### <a name="postfix-increment-operator"></a>Postfix-Operator für Inkrement
 
 Das Ergebnis von `x++` ist der Wert von `x` *vor* dem Vorgang, wie das folgende Beispiel zeigt:
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
-### <a name="prefix-increment-operator"></a>Präfix-Inkrementoperator
+### <a name="prefix-increment-operator"></a>Präfixinkrement-Operator
 
 Das Ergebnis von `++x` ist der Wert von `x` *nach* dem Vorgang, wie das folgende Beispiel zeigt:
 
@@ -67,7 +67,7 @@ Der unäre Dekrementoperator `--` verringert seinen Operanden um 1. Der Operand 
 
 Der Dekrementoperator wird in zwei Formen unterstützt: als Postfix-Dekrementoperator `x--` und als Präfix-Dekrementoperator `--x`.
 
-### <a name="postfix-decrement-operator"></a>Postfix-Dekrementoperator
+### <a name="postfix-decrement-operator"></a>Postfix-Operator für Dekrement
 
 Das Ergebnis von `x--` ist der Wert von `x` *vor* dem Vorgang, wie das folgende Beispiel zeigt:
 
@@ -115,7 +115,7 @@ Für die Typen `float`, `double` oder `decimal` ist das Ergebnis des `/`-Operato
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-Wenn einer der Operanden `decimal` lautet, kann ein anderer Operand weder `float` noch `double` sein, weil weder `float` noch `double` implizit zu `decimal` konvertiert werden können. Sie müssen den Operanden `float` oder `double` explizit zum Typ `decimal` konvertieren. Weitere Informationen zu impliziten Konvertierungen zwischen numerischen Typen finden Sie unter [Tabelle für implizite numerische Konvertierungen](../keywords/implicit-numeric-conversions-table.md).
+Wenn einer der Operanden `decimal` lautet, kann ein anderer Operand weder `float` noch `double` sein, weil weder `float` noch `double` implizit zu `decimal` konvertiert werden können. Sie müssen den Operanden `float` oder `double` explizit zum Typ `decimal` konvertieren. Weitere Informationen zu Konvertierungen zwischen numerischen Typen finden Sie unter [Built-in numeric conversions](../builtin-types/numeric-conversions.md) (Integrierte numerischer Konvertierungen).
 
 ## <a name="remainder-operator-"></a>Restoperator %
 
@@ -137,7 +137,7 @@ Für die Operanden `float` und `double` entspricht das Ergebnis von `x % y` für
 - der absolute Wert von `z` dem von `|x| - n * |y|` erzeugten Wert entspricht, wobei `n` der größtmöglichen Ganzzahl entspricht, die kleiner oder gleich `|x| / |y|` ist. Hierbei sind `|x|` und `|y|` jeweils die absoluten Werte von `x` und `y`.
 
 > [!NOTE]
-> Diese Methode zum Berechnen des Rests ist analog zu der Methode, die für ganzzahlige Operanden verwendet wird, unterscheidet sich jedoch von der Norm IEEE 754. Wenn Sie die Restberechnung benötigen, die der Norm IEEE 754 entspricht, verwenden Sie die Methode <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
+> Diese Methode zum Berechnen des Rests ist analog zu der Methode, die für ganzzahlige Operanden verwendet wird, unterscheidet sich jedoch von der Norm IEEE 754. Wenn Sie den Restvorgang benötigen, der der Norm IEEE 754 entspricht, verwenden Sie die Methode <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
 
 Weitere Informationen zum Verhalten des `%`-Operators bei nicht begrenzten Operanden finden Sie im Abschnitt [Restoperator](~/_csharplang/spec/expressions.md#remainder-operator) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
@@ -165,13 +165,13 @@ Der `-`-Operator kann auch für die Delegatentfernung verwendet werden. Weitere 
 
 ## <a name="compound-assignment"></a>Verbundzuweisung
 
-Bei einem binären Operator `op` ist ein Verbundzuweisungsausdruck in der Form
+Bei einem binären Operator `op` entspricht ein Verbundzuweisungsausdruck der Form
 
 ```csharp
 x op= y
 ```
 
-gleichbedeutend mit
+für die folgende Syntax:
 
 ```csharp
 x = x op y
@@ -191,7 +191,7 @@ Die Operatoren `+=` und `-=` können auch zum Abonnieren von Ereignissen und zum
 
 ## <a name="operator-precedence-and-associativity"></a>Operatorrangfolge und Assoziativität
 
-In der folgenden Liste sind die arithmetischen Operatoren in absteigender Reihenfolge der Priorität sortiert:
+In der folgenden Liste sind die arithmetischen Operatoren beginnend mit dem höchsten Rangfolgenoperator absteigend sortiert:
 
 - Postfixinkrementoperator `x++` und Postfixdekrementoperator `x--`
 - Präfixinkrementoperator `++x` und Präfixdekrementoperator `--x` sowie unäre `+`- und `-`-Operatoren
@@ -212,7 +212,7 @@ Liegt das Ergebnis einer arithmetischen Operation außerhalb des Bereichs mögli
 
 ### <a name="integer-arithmetic-overflow"></a>Arithmetischer Überlauf bei ganzen Zahlen
 
-Die Division ganzer Zahlen durch null löst immer eine <xref:System.DivideByZeroException> aus.
+Division ganzer Zahlen durch Null löst immer eine <xref:System.DivideByZeroException> aus.
 
 Im Fall eines arithmetischen Überlaufs bei ganzen Zahlen steuert ein Kontext für Überlaufprüfungen, der [aktiviert oder deaktiviert (Checked oder Unchecked)](../keywords/checked-and-unchecked.md) sein kann, das resultierende Verhalten:
 

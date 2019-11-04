@@ -2,12 +2,12 @@
 title: Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 9f008204c6ff8d3d134dbb17fc445b460f757f13
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6971a70e633f7768c165ee6171fd83f0eefc4183
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038747"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425120"
 ---
 # <a name="token-provider"></a>Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird zum Bereitstellen von Anmelde Informationen für die Sicherheitsinfrastruktur verwendet. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. WCF wird mit dem standardmäßigen Anmelde Informations Manager-Tokenanbieter ausgeliefert. WCF ist auch mit einem CardSpace-Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
@@ -223,7 +223,7 @@ static void DisplayIdentityInformation()
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert in dieser Batchdatei lautet localhost.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -237,7 +237,7 @@ static void DisplayIdentityInformation()
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 

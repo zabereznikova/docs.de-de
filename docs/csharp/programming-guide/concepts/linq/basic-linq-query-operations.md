@@ -17,17 +17,17 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924392"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418721"
 ---
 # <a name="basic-linq-query-operations-c"></a>Grundlegende LINQ-Abfragevorgänge (C#)
 Dieses Thema gibt einen kurzen Überblick über [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke und einige der geläufigsten Vorgänge, die Sie in einer Abfrage durchführen können. Ausführlichere Informationen finden Sie unter den folgenden Themen:  
   
- [LINQ-Abfrageausdrücke](../../linq-query-expressions/index.md)  
+ [LINQ-Abfrageausdrücke](../../../linq/index.md)  
   
  [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)  
   
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ-Abfrageausdrücke](../../linq-query-expressions/index.md)
+- [LINQ-Abfrageausdrücke](../../../linq/index.md)
 - [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](./walkthrough-writing-queries-linq.md)
 - [Abfrageschlüsselwörter (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Anonyme Typen](../../classes-and-structs/anonymous-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a39d25f03583ab9020878b7a659bc99489231ff9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053901"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458887"
 ---
 # <a name="xamlname-grammar"></a>XamlName-Grammatik
 Die XamlName-Grammatik ist eine bestimmte Grammatik, die in der XAML-Sprachspezifikation [MS-XAML] definiert ist, die zur einfacheren Wiedergabe hier reproduziert wird.  
@@ -46,7 +46,7 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
 | Nd                 | Zahl, Decimal               |
 | Nl                 | Number, Letter (Zahl, Buchstabe)                |
  
- XAML definiert eine zweite Grammatik (DottedXamlName), die für Eigenschafts-und Ereignis qualifizierte Verweise und auch für angefügte Member verwendet wird. Weitere Informationen finden <xref:System.Windows.DependencyProperty> Sie unter und [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
+ XAML definiert eine zweite Grammatik (DottedXamlName), die für Eigenschafts-und Ereignis qualifizierte Verweise und auch für angefügte Member verwendet wird. Weitere Informationen finden Sie unter <xref:System.Windows.DependencyProperty> und [Übersicht über XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md).  
   
  Zeichen folgen Werte vom Typ "DottedXamlName" müssen der folgenden Grammatik entsprechen:  
   
@@ -55,4 +55,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die vollständige Spezifikation finden [ \[Sie unter MS-\]XAML](https://go.microsoft.com/fwlink/?LinkId=114525).
+ Die vollständige Spezifikation finden Sie unter [\[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525).

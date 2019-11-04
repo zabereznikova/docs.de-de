@@ -2,22 +2,22 @@
 title: Befehl „dotnet new“
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117660"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420478"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet new`: Erstellt ein neues Projekt, eine Konfigurationsdatei oder eine Lösung auf Grundlage der angegebenen Vorlage.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 <!-- markdownlint-disable MD025 -->
 
@@ -74,7 +74,7 @@ Wenn der Wert `TEMPLATE` nicht genau mit dem Text in der Spalte **Vorlagen** ode
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -l`, um eine Liste der verfügbaren Vorlagen abzurufen. In der folgenden Tabelle sind die Vorlagen angegeben, die bereits mit dem .NET Core SDK 2.2.100 vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-| Vorlagen                                    | Kurzname        | Sprache     | `Tags`                                  |
+| Vorlagen                                    | Kurzname        | Sprache     | Tags                                  |
 |----------------------------------------------|-------------------|--------------|---------------------------------------|
 | Konsolenanwendung                          | `console`         | [C#], F#, VB | Common/Console                        |
 | Klassenbibliothek                                | `classlib`        | [C#], F#, VB | Common/Library                        |
@@ -93,16 +93,16 @@ Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -
 | ASP.NET Core mit React.js und Redux         | `reactredux`      | [C#]         | Web/MVC/SPA                           |
 | Razor-Klassenbibliothek                          | `razorclasslib`   | [C#]         | Web/Razor/Library/Razor Class Library |
 | ASP.NET Core-Web-API                         | `webapi`          | [C#], F#     | Web/WebAPI                            |
-| global.json-Datei                             | `globaljson`      |              | Konfiguration                                |
-| NuGet-Konfiguration                                 | `nugetconfig`     |              | Konfiguration                                |
-| Webkonfiguration                                   | `webconfig`       |              | Konfiguration                                |
+| global.json-Datei                             | `globaljson`      |              | Konfigurationen                                |
+| NuGet-Konfiguration                                 | `nugetconfig`     |              | Konfigurationen                                |
+| Webkonfiguration                                   | `webconfig`       |              | Konfigurationen                                |
 | Projektmappendatei                                | `sln`             |              | Lösung                              |
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -l`, um eine Liste der verfügbaren Vorlagen abzurufen. In der folgenden Tabelle werden die Vorlagen gezeigt, die bereits mit dem .NET Core SDK 2.1.300 vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-| Vorlagen                                    | Kurzname      | Sprache     | `Tags`                                  |
+| Vorlagen                                    | Kurzname      | Sprache     | Tags                                  |
 |----------------------------------------------|-----------------|--------------|---------------------------------------|
 | Konsolenanwendung                          | `console`       | [C#], F#, VB | Common/Console                        |
 | Klassenbibliothek                                | `classlib`      | [C#], F#, VB | Common/Library                        |
@@ -119,16 +119,16 @@ Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -
 | ASP.NET Core mit React.js und Redux         | `reactredux`    | [C#]         | Web/MVC/SPA                           | 
 | Razor-Klassenbibliothek                          | `razorclasslib` | [C#]         | Web/Razor/Library/Razor Class Library |
 | ASP.NET Core-Web-API                         | `webapi`        | [C#], F#     | Web/WebAPI                            |
-| global.json-Datei                             | `globaljson`    |              | Konfiguration                                |
-| NuGet-Konfiguration                                 | `nugetconfig`   |              | Konfiguration                                |
-| Webkonfiguration                                   | `webconfig`     |              | Konfiguration                                |
+| global.json-Datei                             | `globaljson`    |              | Konfigurationen                                |
+| NuGet-Konfiguration                                 | `nugetconfig`   |              | Konfigurationen                                |
+| Webkonfiguration                                   | `webconfig`     |              | Konfigurationen                                |
 | Projektmappendatei                                | `sln`           |              | Lösung                              |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -l`, um eine Liste der verfügbaren Vorlagen abzurufen. In der folgenden Tabelle sind die Vorlagen angegeben, die bereits mit dem .NET Core SDK 2.0.0 vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-| Vorlagen                                    | Kurzname    | Sprache     | `Tags`                |
+| Vorlagen                                    | Kurzname    | Sprache     | Tags                |
 |----------------------------------------------|---------------|--------------|---------------------|
 | Konsolenanwendung                          | `console`     | [C#], F#, VB | Common/Console      |
 | Klassenbibliothek                                | `classlib`    | [C#], F#, VB | Common/Library      |
@@ -141,9 +141,9 @@ Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -
 | ASP.NET Core mit React.js                   | `react`       | [C#]         | Web/MVC/SPA         |
 | ASP.NET Core mit React.js und Redux         | `reactredux`  | [C#]         | Web/MVC/SPA         |
 | ASP.NET Core-Web-API                         | `webapi`      | [C#], F#     | Web/WebAPI          |
-| global.json-Datei                             | `globaljson`  |              | Konfiguration              |
-| NuGet-Konfiguration                                 | `nugetconfig` |              | Konfiguration              |
-| Webkonfiguration                                   | `webconfig`   |              | Konfiguration              |
+| global.json-Datei                             | `globaljson`  |              | Konfigurationen              |
+| NuGet-Konfiguration                                 | `nugetconfig` |              | Konfigurationen              |
+| Webkonfiguration                                   | `webconfig`   |              | Konfigurationen              |
 | Projektmappendatei                                | `sln`         |              | Lösung            |
 | Seite „Razor“                                   | `page`        |              | Web/ASP.NET         |
 | MVC ViewImports                              | `viewimports` |              | Web/ASP.NET         |
@@ -153,7 +153,7 @@ Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -all`, um eine Liste der verfügbaren Vorlagen abzurufen. In der folgenden Tabelle sind die Vorlagen angegeben, die bereits mit dem .NET Core SDK 1.0.1 vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-| Vorlagen            | Kurzname    | Sprache | `Tags`           |
+| Vorlagen            | Kurzname    | Sprache | Tags           |
 |----------------------|---------------|----------|----------------|
 | Konsolenanwendung  | `console`     | [C#], F# | Common/Console |
 | Klassenbibliothek        | `classlib`    | [C#], F# | Common/Library |
@@ -162,8 +162,8 @@ Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -
 | ASP.NET Core leer   | `web`         | [C#]     | Web/Empty      |
 | ASP.NET Core-Web-App | `mvc`         | [C#], F# | Web/MVC        |
 | ASP.NET Core-Web-API | `webapi`      | [C#]     | Web/WebAPI     |
-| NuGet-Konfiguration         | `nugetconfig` |          | Konfiguration         |
-| Webkonfiguration           | `webconfig`   |          | Konfiguration         |
+| NuGet-Konfiguration         | `nugetconfig` |          | Konfigurationen         |
+| Webkonfiguration           | `webconfig`   |          | Konfigurationen         |
 | Projektmappendatei        | `sln`         |          | Lösung       |
 
 ---
@@ -381,7 +381,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp2.2`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard2.0`, um eine .NET Standard-Klassenbibliothek zu erstellen. Standardwert: `netstandard2.0`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp2.2`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard2.0`, um eine .NET Standard-Klassenbibliothek zu erstellen. Der Standardwert ist `netstandard2.0`sein.
 
 `--langVersion <VERSION_NUMBER>`: Legt die `LangVersion`-Eigenschaft in der erstellten Projektdatei fest. Verwenden Sie beispielsweise `--langVersion 7.3` für C# 7.3. Wird für F# nicht unterstützt.
 
@@ -395,7 +395,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **nunit**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Standardwert: `netcoreapp2.1`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Der Standardwert ist `netcoreapp2.1`sein.
 
 `-p|--enable-pack`: ermöglicht das Verpacken des Projekts mit [dotnet pack](dotnet-pack.md).
 
@@ -403,13 +403,13 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Standardwert: `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Der Standardwert ist `MyApp.Namespace`sein.
 
 `-np|--no-pagemodel`: erstellt die Seite ohne ein Seitenmodell
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Standardwert: `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Der Standardwert ist `MyApp.Namespace`sein.
 
 **web**
 
@@ -421,7 +421,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **mvc, webapp**
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte:
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
 - `None`: keine Authentifizierung (Standard)
 - `Individual`: einzelne Authentifizierung
@@ -430,7 +430,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 - `MultiOrg`: Organisationauthentifizierung für mehrere Mandanten
 - `Windows`: Windows-Authentifizierung
 
-`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/tfp/`sein.
 
 `-ssp|--susi-policy-id <ID>`: die ID der Anmelde- und Registrierungsrichtlinien für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
 
@@ -438,15 +438,15 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 `-ep|--edit-profile-policy-id <ID>`: Die Richtlinien-ID zum Bearbeiten des Profils für dieses Projekt Mit der `IndividualB2C`-Authentifizierung verwenden
 
-`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`- oder `MultiOrg`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`- oder `MultiOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`sein.
 
-`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`-, `SingleOrg`-oder `MultiOrg`-Authentifizierung verwenden Standardwert: `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`-, `SingleOrg`-oder `MultiOrg`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`sein.
 
-`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `qualified.domain.name`.
+`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`sein.
 
-`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`sein.
 
-`--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `/signin-oidc`.
+`--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `/signin-oidc`sein.
 
 `-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
 
@@ -460,24 +460,24 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **webapi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte:
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
 - `None`: keine Authentifizierung (Standard)
 - `IndividualB2C`: einzelne Authentifizierung mit Azur AD B2C
 - `SingleOrg`: Organisationauthentifizierung für einzelne Mandanten
 - `Windows`: Windows-Authentifizierung
 
-`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/tfp/`sein.
 
 `-ssp|--susi-policy-id <ID>`: die ID der Anmelde- und Registrierungsrichtlinien für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
 
-`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`sein.
 
-`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`- oder `SingleOrg`-Authentifizierung verwenden Standardwert: `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`- oder `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`sein.
 
-`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `qualified.domain.name`.
+`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`sein.
 
-`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`sein.
 
 `-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
 
@@ -501,7 +501,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp2.1`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard2.0`, um eine .NET Standard-Klassenbibliothek zu erstellen. Standardwert: `netstandard2.0`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp2.1`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard2.0`, um eine .NET Standard-Klassenbibliothek zu erstellen. Der Standardwert ist `netstandard2.0`sein.
 
 `--no-restore`: führt keine implizite Wiederherstellung während der Projekterstellung durch.
 
@@ -525,24 +525,24 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **webapi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte:
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
 - `None`: keine Authentifizierung (Standard)
 - `IndividualB2C`: einzelne Authentifizierung mit Azur AD B2C
 - `SingleOrg`: Organisationauthentifizierung für einzelne Mandanten
 - `Windows`: Windows-Authentifizierung
 
-`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/tfp/`sein.
 
 `-ssp|--susi-policy-id <ID>`: die ID der Anmelde- und Registrierungsrichtlinien für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
 
-`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`sein.
 
-`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`- oder `SingleOrg`-Authentifizierung verwenden Standardwert: `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`- oder `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`sein.
 
-`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `qualified.domain.name`.
+`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`sein.
 
-`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`sein.
 
 `-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
 
@@ -556,7 +556,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **mvc, razor**
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte:
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
 - `None`: keine Authentifizierung (Standard)
 - `Individual`: einzelne Authentifizierung
@@ -565,7 +565,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 - `MultiOrg`: Organisationauthentifizierung für mehrere Mandanten
 - `Windows`: Windows-Authentifizierung
 
-`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/tfp/`sein.
 
 `-ssp|--susi-policy-id <ID>`: die ID der Anmelde- und Registrierungsrichtlinien für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
 
@@ -573,15 +573,15 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 `-ep|--edit-profile-policy-id <ID>`: Die Richtlinien-ID zum Bearbeiten des Profils für dieses Projekt Mit der `IndividualB2C`-Authentifizierung verwenden
 
-`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`- oder `MultiOrg`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`- oder `MultiOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`sein.
 
-`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`-, `SingleOrg`-oder `MultiOrg`-Authentifizierung verwenden Standardwert: `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`-, `SingleOrg`-oder `MultiOrg`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`sein.
 
-`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `qualified.domain.name`.
+`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`sein.
 
-`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`sein.
 
-`--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `/signin-oidc`.
+`--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `/signin-oidc`sein.
 
 `-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
 
@@ -597,13 +597,13 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Standardwert: `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Der Standardwert ist `MyApp.Namespace`sein.
 
 `-np|--no-pagemodel`: erstellt die Seite ohne ein Seitenmodell
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Standardwert: `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>`: Gibt den Namespace für den generierten Code an. Der Standardwert ist `MyApp.Namespace`sein.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -613,7 +613,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp2.0`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard2.0`, um eine .NET Standard-Klassenbibliothek zu erstellen. Standardwert: `netstandard2.0`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp2.0`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard2.0`, um eine .NET Standard-Klassenbibliothek zu erstellen. Der Standardwert ist `netstandard2.0`sein.
 
 `--no-restore`: führt keine implizite Wiederherstellung während der Projekterstellung durch.
 
@@ -635,24 +635,24 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **webapi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte:
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
 - `None`: keine Authentifizierung (Standard)
 - `IndividualB2C`: einzelne Authentifizierung mit Azur AD B2C
 - `SingleOrg`: Organisationauthentifizierung für einzelne Mandanten
 - `Windows`: Windows-Authentifizierung
 
-`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/tfp/`sein.
 
 `-ssp|--susi-policy-id <ID>`: die ID der Anmelde- und Registrierungsrichtlinien für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
 
-`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`sein.
 
-`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`- oder `SingleOrg`-Authentifizierung verwenden Standardwert: `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`- oder `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`sein.
 
-`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `qualified.domain.name`.
+`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`sein.
 
-`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`sein.
 
 `-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung
 
@@ -664,7 +664,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **mvc, razor**
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte:
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
 - `None`: keine Authentifizierung (Standard)
 - `Individual`: einzelne Authentifizierung
@@ -673,7 +673,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 - `MultiOrg`: Organisationauthentifizierung für mehrere Mandanten
 - `Windows`: Windows-Authentifizierung
 
-`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>`: Die Azure AD B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/tfp/`sein.
 
 `-ssp|--susi-policy-id <ID>`: die ID der Anmelde- und Registrierungsrichtlinien für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
 
@@ -681,15 +681,15 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 `-ep|--edit-profile-policy-id <ID>`: Die Richtlinien-ID zum Bearbeiten des Profils für dieses Projekt Mit der `IndividualB2C`-Authentifizierung verwenden
 
-`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`- oder `MultiOrg`-Authentifizierung verwenden Standardwert: `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>`: Die Azure AD-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`- oder `MultiOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`sein.
 
-`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`-, `SingleOrg`-oder `MultiOrg`-Authentifizierung verwenden Standardwert: `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>`: Die Client-ID für dieses Projekt. Mit der `IndividualB2C`-, `SingleOrg`-oder `MultiOrg`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`sein.
 
-`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `qualified.domain.name`.
+`--domain <DOMAIN>`: Die Domäne für den Verzeichnismandanten Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`sein.
 
-`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Standardwert: `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`sein.
 
-`--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Standardwert: `/signin-oidc`.
+`--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `/signin-oidc`sein.
 
 `-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung
 
@@ -703,31 +703,31 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>`: gibt den Namespace für den generierten Code an. Standardwert: `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>`: gibt den Namespace für den generierten Code an. Der Standardwert ist `MyApp.Namespace`sein.
 
 `-np|--no-pagemodel`: erstellt die Seite ohne ein Seitenmodell
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>`: gibt den Namespace für den generierten Code an. Standardwert: `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>`: gibt den Namespace für den generierten Code an. Der Standardwert ist `MyApp.Namespace`sein.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **console, xunit, mstest, web, webapi**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0` oder `netcoreapp1.1` Standardwert: `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0` oder `netcoreapp1.1` Der Standardwert ist `netcoreapp1.0`sein.
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0`, `netcoreapp1.1` oder `netstandard1.0` bis `netstandard1.6` Standardwert: `netstandard1.4`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0`, `netcoreapp1.1` oder `netstandard1.0` bis `netstandard1.6` Der Standardwert ist `netstandard1.4`sein.
 
 **mvc**
 
-`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0` oder `netcoreapp1.1` Standardwert: `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>`: Gibt an, welches [Framework](../../standard/frameworks.md) verwendet werden soll. Werte: `netcoreapp1.0` oder `netcoreapp1.1` Der Standardwert ist `netcoreapp1.0`sein.
 
-`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Werte: `None` oder `Individual` Standardwert: `None`.
+`-au|--auth <AUTHENTICATION_TYPE>`: Der zu verwendende Authentifizierungstyp. Werte: `None` oder `Individual` Der Standardwert ist `None`sein.
 
-`-uld|--use-local-db`: Gibt an, ob LocalDB anstelle von SQLite verwendet werden soll. Werte: `true` oder `false` Standardwert: `false`.
+`-uld|--use-local-db`: Gibt an, ob LocalDB anstelle von SQLite verwendet werden soll. Werte: `true` oder `false` Der Standardwert ist `false`sein.
 
 ---
 
@@ -776,6 +776,6 @@ Erstellen Sie eine *global.json* im aktuellen Verzeichnis, und legen Sie die SDK
 ## <a name="see-also"></a>Siehe auch
 
 - [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)
-- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](../tutorials/create-custom-template.md)
+- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
 - [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

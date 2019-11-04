@@ -2,12 +2,12 @@
 title: Berechnungsausdrücke
 description: Erfahren Sie, wie Sie eine bequeme Syntax zum Schreiben von F# Berechnungen in erstellen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können.
 ms.date: 03/15/2019
-ms.openlocfilehash: ea560bb6eec82672544c7c442b671b63e405474c
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799056"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424744"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -304,7 +304,7 @@ module Eventually =
     // This is boilerplate in terms of "result", "catch", and "bind".
     let tryFinally expr compensation =
         catch (expr)
-        |> bind (fun res -> 
+        |> bind (fun res ->
             compensation();
             match res with
             | Ok value -> result value
@@ -335,9 +335,9 @@ module Eventually =
     // This is boilerplate in terms of "catch", "result", and "bind".
     let forLoop (collection:seq<_>) func =
         let ie = collection.GetEnumerator()
-        tryFinally 
-            (whileLoop 
-                (fun () -> ie.MoveNext()) 
+        tryFinally
+            (whileLoop
+                (fun () -> ie.MoveNext())
                 (delay (fun () -> let value = ie.Current in func value)))
             (fun () -> ie.Dispose())
 
@@ -375,7 +375,7 @@ comp |> step |> step
 // prints "x = 1"
 // prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step 
+comp |> step |> step |> step |> step
 ```
 
 Ein Berechnungs Ausdruck verfügt über einen zugrunde liegenden Typ, der vom Ausdruck zurückgegeben wird. Der zugrunde liegende Typ kann ein berechnetes Ergebnis oder eine verzögerte Berechnung darstellen, die durchgeführt werden kann, oder es kann eine Möglichkeit bieten, einen Auflistungstyp zu durchlaufen. Im vorherigen Beispiel war der zugrunde liegende Typ **schließlich**. Bei einem Sequenz Ausdruck ist der zugrunde liegende Typ <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bei einem Abfrage Ausdruck ist der zugrunde liegende Typ <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Bei einem asynchronen Workflow ist der zugrunde liegende Typ [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Das `Async`-Objekt stellt die Arbeit dar, die zum Berechnen des Ergebnisses ausgeführt werden soll. Beispielsweise wird [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) aufgerufen, um eine Berechnung auszuführen und das Ergebnis zurückzugeben.

@@ -4,16 +4,16 @@ description: Erfahren Sie, wie Sie mit .NET Core-CLI-Tools .NET-Bibliotheken ers
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117411"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420456"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 
-Dieser Artikel behandelt, wie man mithilfe von plattformübergreifenden CLI-Tools Bibliotheken für .NET schreibt. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](libraries-with-vs.md).
+Dieser Artikel behandelt, wie man mithilfe von plattformübergreifenden CLI-Tools Bibliotheken für .NET schreibt. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -29,8 +29,8 @@ Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außer
 | 4.6                    | Paket zur Festlegung von Zielversionen für .NET Framework 4.6                      |
 | 4.5.2                  | .NET Framework 4.5.2 Entwicklerpaket                    |
 | 4.5.1                  | .NET Framework 4.5.1 Entwicklerpaket                    |
-| 4,5                    | Windows Software Development Kit für Windows 8         |
-| 4,0                    | Windows SDK für Windows 7 und .NET Framework 4         |
+| 4.5                    | Windows Software Development Kit für Windows 8         |
+| 4.0                    | Windows SDK für Windows 7 und .NET Framework 4         |
 | 2.0, 3.0 und 3.5      | .NET Framework 3.5 SP1-Runtime (oder Windows 8+-Version) |
 
 ## <a name="how-to-target-the-net-standard"></a>So legen Sie .NET Standard als Ziel fest
@@ -258,7 +258,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
 
-Das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
+Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
 
 1. Nehmen Sie Änderungen an Ihrer Bibliothek vor.
 1. Führen Sie mit dem Befehl `dotnet test` in Ihrem Testverzeichnis Tests über die Befehlszeile aus.

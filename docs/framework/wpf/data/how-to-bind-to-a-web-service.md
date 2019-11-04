@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040907"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454460"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Gewusst wie: Erstellen einer Bindung an einen Webdienst
 Dieses Beispiel zeigt, wie Sie eine Bindung an Objekte herstellen, die von Webdienst Methoden aufrufen zurückgegeben werden.  
@@ -47,6 +47,6 @@ Dieses Beispiel zeigt, wie Sie eine Bindung an Objekte herstellen, die von Webdi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Übersicht über Bindungsquellen](binding-sources-overview.md)
 - [Bereitstellen von Daten für die Bindung in XAML](how-to-make-data-available-for-binding-in-xaml.md)

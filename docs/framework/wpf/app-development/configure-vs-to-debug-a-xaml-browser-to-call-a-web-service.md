@@ -8,18 +8,18 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 7730ab452e227b11e5a9dd69cdabec51f333ce4f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: MT
+ms.openlocfilehash: 27319179a9a30c5693f47039bf1e24c59adf0e68
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321199"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424658"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Gewusst wie: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] wird in einer teilweise vertrauenswürdigen Sicherheits Sandbox ausgeführt, die auf den Berechtigungs Satz für die Internet Zone beschränkt ist. Dieser Berechtigungs Satz schränkt Webdienst Aufrufe nur auf Webdienste ein, die sich auf der Ursprungs Site der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Anwendung befinden. Wenn eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] aus Visual Studio 2005 deentschlbelt wird, wird Sie nicht als dieselbe Ursprungs Site wie der Webdienst betrachtet, auf den Sie verweist. Dies bewirkt, dass Sicherheits Ausnahmen ausgelöst werden, wenn die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] versucht, den Webdienst aufzurufen. Ein Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]-Projekt kann jedoch so konfiguriert werden, dass es die gleiche Ursprungs Site wie der Webdienst simuliert, der beim Debuggen aufgerufen wird. Dies ermöglicht es dem [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], den Webdienst sicher aufzurufen, ohne Sicherheits Ausnahmen zu verursachen.
+XAML-Browser Anwendungen (XBAPs) werden in einer teilweise vertrauenswürdigen Sicherheits Sandbox ausgeführt, die auf den Berechtigungs Satz für die Internet Zone beschränkt ist. Dieser Berechtigungs Satz schränkt Webdienst Aufrufe nur auf Webdienste ein, die sich auf der Ursprungs Site der XBAP-Anwendung befinden. Wenn eine XBAP aus Visual Studio 2005 deentschlbelt wird, wird Sie jedoch nicht als dieselbe Ursprungs Site wie der Webdienst betrachtet, auf den Sie verweist. Dies bewirkt, dass Sicherheits Ausnahmen ausgelöst werden, wenn die XBAP versucht, den Webdienst aufzurufen. Ein Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]-Projekt kann jedoch so konfiguriert werden, dass es die gleiche Ursprungs Site wie der Webdienst simuliert, der beim Debuggen aufgerufen wird. Dies ermöglicht es der XBAP, den Webdienst sicher aufzurufen, ohne Sicherheits Ausnahmen zu verursachen.
 
 ## <a name="configuring-visual-studio"></a>Konfigurieren von Visual Studio 2017
- So konfigurieren Sie Visual Studio 2005 zum Debuggen einer [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], die einen Webdienst aufruft:
+ So konfigurieren Sie Visual Studio 2005 zum Debuggen einer XBAP, die einen Webdienst aufruft:
 
 1. Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**.
 
@@ -50,7 +50,7 @@ ms.locfileid: "72321199"
 
      Der *URL* -Wert für den **-DebugSecurityZoneURL-** Parameter ist die URL für den Speicherort, den Sie als Ursprungs Site der Anwendung simulieren möchten.
 
- Angenommen, ein [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] verwendet einen Webdienst mit der folgenden URL:
+ Stellen Sie sich als Beispiel eine XAML-Browser Anwendung (XBAP) vor, die einen Webdienst mit der folgenden URL verwendet:
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 

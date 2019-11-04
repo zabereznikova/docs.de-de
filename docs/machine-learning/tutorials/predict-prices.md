@@ -4,18 +4,18 @@ description: In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein Regress
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 298dd4aa97518bcfdb0c5c4f00e0135a328b3b9a
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957381"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774420"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Vorhersagen von Preisen per Regression mit ML.NET
 
 In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein [Regressionsmodell](../resources/glossary.md#regression) für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > * Vorbereiten und Verstehen der Daten
@@ -27,7 +27,7 @@ In diesem Tutorial lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+* [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
 ## <a name="create-a-console-application"></a>Erstellen einer Konsolenanwendung
 
@@ -130,7 +130,7 @@ Für ML.NET wird die [IDataView-Klasse](xref:Microsoft.ML.IDataView) als flexibl
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-Da Sie den Preis der Taxifahrt vorhersagen möchten, ist die Spalte `FareAmount` das `Label`-Element für die Vorhersage (Ausgabe des Modells). Verwenden Sie die `CopyColumnsEstimator`-Transformationsklasse, um `FareAmount` zu kopieren, und fügen Sie den folgenden Code hinzu: 
+Da Sie den Preis der Taxifahrt vorhersagen möchten, ist die Spalte `FareAmount` das `Label`-Element für die Vorhersage (Ausgabe des Modells). Verwenden Sie die `CopyColumnsEstimator`-Transformationsklasse, um `FareAmount` zu kopieren, und fügen Sie den folgenden Code hinzu:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -150,7 +150,7 @@ Fügen Sie die Machine Learning-Aufgabe [FastTreeRegressionTrainer](xref:Microso
 
 [!code-csharp[FastTreeRegressionTrainer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
-## <a name="train-the-model"></a>Modelltraining
+## <a name="train-the-model"></a>Trainieren des Modells
 
 Fügen Sie die folgende Codezeile in der `Train()`-Methode hinzu, um das Modell an die `dataview`-Daten für das Trainieren anzupassen und das trainierte Modell zurückzugeben:
 
@@ -162,7 +162,7 @@ Geben Sie das trainierte Modell mit der folgenden Codezeile in der Methode `Trai
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
-## <a name="evaluate-the-model"></a>Auswerten des Modells
+## <a name="evaluate-the-model"></a>Evaluieren des Modells
 
 Evaluieren Sie als Nächstes die Leistung Ihres Modells mit Ihren Testdaten zur Qualitätssicherung und Validierung. Erstellen Sie mit dem folgenden Code die `Evaluate()`-Methode direkt nach `Train()`:
 
@@ -194,7 +194,7 @@ Fügen Sie als Nächstes `Evaluate()` den folgenden Code hinzu, um die `Test`-Da
 
 Mit der [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A)-Methode werden Vorhersagen für die Eingabezeilen des Testdatasets getroffen.
 
-Die `RegressionContext.Evaluate`-Methode berechnet die Qualitätsmetriken für das `PredictionModel` mit dem angegebenen Dataset. Das zurückgegebene <xref:Microsoft.ML.Data.RegressionMetrics>-Objekt enthält alle von Regressionsauswertern berechneten Metriken. 
+Die `RegressionContext.Evaluate`-Methode berechnet die Qualitätsmetriken für das `PredictionModel` mit dem angegebenen Dataset. Das zurückgegebene <xref:Microsoft.ML.Data.RegressionMetrics>-Objekt enthält alle von Regressionsauswertern berechneten Metriken.
 
 Um diese zur Bestimmung der Qualität des Modells anzuzeigen, müssen Sie die Metriken zuerst abzurufen. Fügen Sie der `Evaluate`-Methode folgenden Code als nächste Zeile hinzu:
 
@@ -245,7 +245,7 @@ Fügen Sie `TestSinglePrediction()` den folgenden Code hinzu, um mit `Prediction
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
+Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
 
 > [!NOTE]
 > Die `PredictionEnginePool`-Diensterweiterung ist derzeit als Vorschauversion verfügbar.
@@ -270,7 +270,7 @@ Herzlichen Glückwunsch! Hiermit haben Sie ein Machine Learning-Modell erfolgrei
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Folgendes gelernt:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
 >

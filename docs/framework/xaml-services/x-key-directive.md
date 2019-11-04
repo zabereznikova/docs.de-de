@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: eb9f9cc1dfdb802e340123d0d39e9c9ebaa457f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b00218623add052e135bc5815d615fe7cdf002ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053751"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459960"
 ---
 # <a name="xkey-directive"></a>x:Key-Anweisung
 Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erstellt und referenziert werden. Einem XAML-Objektelement einen `x:Key`-Wert hinzuzufügen, ist der üblichste Weg, um eine Ressource in einem Ressourcenwörterbuch, beispielsweise in einem WPF- <xref:System.Windows.ResourceDictionary> zu identifizieren.  
@@ -45,14 +45,14 @@ Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erste
 |||  
 |-|-|  
 |`stringKeyValue`|Eine Textzeichenfolge, die als Schlüssel verwendet werden soll. Die Text Zeichenfolge muss der [XamlName-Grammatik](xamlname-grammar.md)entsprechen.|  
-|`markupExtensionUsage`|Innerhalb der Markup Erweiterungs {}Trennzeichen eine Markup Erweiterungs Verwendung, die ein Objekt bereitstellt, das als Schlüssel verwendet werden soll. Siehe Hinweise.|  
+|`markupExtensionUsage`|Innerhalb der Markup Erweiterungs Trennzeichen {}eine Markup Erweiterungs Verwendung, die ein Objekt bereitstellt, das als Schlüssel verwendet werden soll. Siehe Hinweise.|  
   
 ## <a name="remarks"></a>Hinweise  
- `x:Key` unterstützt das XAML-Ressourcenwörterbuchkonzept. XAML als Sprache definiert keine Ressourcenwörterbuchimplementierung, die spezifischen Benutzeroberflächen-Frameworks vorbehalten bleibt. Weitere Informationen dazu, wie XAML-Ressourcen Wörterbücher in WPF implementiert werden, finden Sie unter [XAML-Ressourcen](../wpf/advanced/xaml-resources.md).  
+ `x:Key` unterstützt das XAML-Ressourcenwörterbuchkonzept. XAML als Sprache definiert keine Ressourcenwörterbuchimplementierung, die spezifischen Benutzeroberflächen-Frameworks vorbehalten bleibt. Weitere Informationen dazu, wie XAML-Ressourcen Wörterbücher in WPF implementiert werden, finden Sie unter [XAML-Ressourcen](../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
- In XAML 2006 und WPF `x:Key` muss als Attribut angegeben werden. Sie können immer noch Nichtzeichenfolgeschlüssel verwenden, aber dies erfordert eine Markuperweiterungsverwendung, um den Nichtzeichenfolgenwert in Attributform bereitzustellen. Wenn Sie XAML 2009 verwenden, `x:Key` kann als-Element angegeben werden, um explizit von anderen Objekttypen als Zeichen folgen verschlüsselte Wörterbücher zu unterstützen, ohne dass eine Markup Erweiterungs zwischen Datei erforderlich ist. Weitere Informationen finden Sie im Abschnitt "XAML 2009" in diesem Thema. Der Rest des Abschnitts "Hinweise" bezieht sich speziell auf die XAML 2006-Implementierung.  
+ In XAML 2006 und WPF müssen `x:Key` als Attribut bereitgestellt werden. Sie können immer noch Nichtzeichenfolgeschlüssel verwenden, aber dies erfordert eine Markuperweiterungsverwendung, um den Nichtzeichenfolgenwert in Attributform bereitzustellen. Wenn Sie XAML 2009 verwenden, kann `x:Key` als-Element angegeben werden, um explizit von anderen Objekttypen als Zeichen folgen verschlüsselte Wörter zu unterstützen, ohne dass eine Markup Erweiterung erforderlich ist. Weitere Informationen finden Sie im Abschnitt "XAML 2009" in diesem Thema. Der Rest des Abschnitts "Hinweise" bezieht sich speziell auf die XAML 2006-Implementierung.  
   
- Der-Attribut Wert `x:Key` von kann eine beliebige Zeichenfolge sein, die in der [XamlName-Grammatik](xamlname-grammar.md) definiert ist, oder ein Objekt, das durch eine Markup Erweiterung ausgewertet wird. Ein Beispiel aus WPF finden Sie unter "Hinweise zur WPF-Verwendung".  
+ Der-Attribut Wert von `x:Key` kann eine beliebige Zeichenfolge sein, die in der [XamlName-Grammatik](xamlname-grammar.md) definiert ist, oder ein Objekt, das durch eine Markup Erweiterung ausgewertet wird. Ein Beispiel aus WPF finden Sie unter "Hinweise zur WPF-Verwendung".  
   
  Untergeordnete Elemente eines übergeordneten Elements, bei dem es sich um eine <xref:System.Collections.IDictionary>-Implementierung handelt, müssen im Allgemeinen ein `x:Key`-Attribut enthalten, das einen eindeutigen Schlüsselwert in diesem Wörterbuch angibt. Frameworks könnten als Alias definierte Schlüsseleigenschaften implementieren, um `x:Key` bei bestimmten Typen zu vertreten; Typen, die solche Eigenschaften definieren, sollten mit dem Attribut <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> versehen werden.  
   
@@ -73,16 +73,16 @@ Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erste
   
  Schlüssel und Namen verwenden unterschiedliche Direktiven und Sprachelemente (`x:Key` gegenüber `x:Name`) in der grundlegenden XAML-Definition. Schlüssel und Namen werden auch in unterschiedlichen Situationen von der WPF-Definition und Anwendung dieser Konzepte genutzt. Weitere Informationen finden Sie unter [WPF-XAML-Namescopes](../wpf/advanced/wpf-xaml-namescopes.md).  
   
- Wie zuvor angegeben, kann der Wert eines Schlüssels durch eine Markuperweiterung angegeben werden und braucht kein Zeichenfolgenwert zu sein. Ein Beispiel für ein WPF-Szenario ist, `x:Key` dass der Wert von ein " [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)" sein kann. Bestimmte Steuerelemente machen einen Stilschlüssel dieses Typs verfügbar, mit dem eine benutzerdefinierte Stilressource erstellt werden kann, die einen Teil des Aussehens und Verhaltens dieses Steuerelements beeinflusst, ohne den Stil vollständig zu ersetzen. Ein Beispiel für einen solchen Schlüssel ist <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Wie zuvor angegeben, kann der Wert eines Schlüssels durch eine Markuperweiterung angegeben werden und braucht kein Zeichenfolgenwert zu sein. Ein Beispiel für ein WPF-Szenario ist, dass der Wert von `x:Key` ein " [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)" sein kann. Bestimmte Steuerelemente machen einen Stilschlüssel dieses Typs verfügbar, mit dem eine benutzerdefinierte Stilressource erstellt werden kann, die einen Teil des Aussehens und Verhaltens dieses Steuerelements beeinflusst, ohne den Stil vollständig zu ersetzen. Ein Beispiel für einen solchen Schlüssel ist <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  Die zusammengeführte Wörterbuchfunktion von WPF führt weitere Überlegungen zur Schlüsseleindeutigkeit und zum Schlüsselsuchverhalten ein. Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenverzeichnisse](../wpf/advanced/merged-resource-dictionaries.md).  
   
 ## <a name="xaml-2009"></a>XAML 2009  
- XAML 2009 lockert die Einschränkung, `x:Key` die immer in Attribut Form bereitgestellt wird.  
+ Mit XAML 2009 wird die Einschränkung entspannt, dass `x:Key` immer in Attribut Form bereitgestellt werden.  
   
  In WPF können Sie XAML 2009-Funktionen verwenden, jedoch nur für XAML, das nicht Markup kompiliert ist. Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.  
   
- Unter XAML 2009 können Sie Elemente mithilfe `x:Key` der folgenden Syntax angeben:  
+ Unter XAML 2009 können Sie `x:Key` Elemente mithilfe der folgenden Syntax angeben:  
   
 ### <a name="xaml-element-usage-xaml-2009-only"></a>XAML-Elementverwendung (nur XAML 2009)  
   
@@ -108,10 +108,10 @@ keyObject
 - bei " *keyObject* " kann es sich auch um eine Markup Erweiterungs Verwendung im Objekt Element Formular anstelle einer direkten Objektinstanz handeln.  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight-Verwendungshinweise  
- `x:Key` für Silverlight wird separat dokumentiert. Weitere Informationen finden [Sie unter XAML-Namespace (x:). Sprach Features (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
+ `x:Key` für Silverlight wird separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:). Sprach Features (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XAML-Ressourcen](../wpf/advanced/xaml-resources.md)
+- [XAML-Ressourcen](../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Ressourcen und Code](../wpf/advanced/resources-and-code.md)
 - [StaticResource-Markuperweiterung](../wpf/advanced/staticresource-markup-extension.md)

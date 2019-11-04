@@ -1,15 +1,15 @@
 ---
-title: Abbrechen der verbleibende asynchrone Aufgaben nach einer vollständigen (Visual Basic)
+title: Verbleibende asynchrone Aufgaben nach Abschluss eines Vorgangs Abbrechen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 587c863ba110f035ace5207d8404fd70b3befe37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755832"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419805"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Abbrechen der verbleibende asynchrone Aufgaben nach einer vollständigen (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Verbleibende asynchrone Aufgaben nach Abschluss eines Vorgangs Abbrechen (Visual Basic)
 
 Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>-Methode zusammen mit einem <xref:System.Threading.CancellationToken> können Sie alle verbleibenden Aufgaben abbrechen, wenn eine Aufgabe abgeschlossen wurde. Die `WhenAny`-Methode akzeptiert ein Argument, das eine Auflistung von Aufgaben ist. Die Methode startet alle Aufgaben und gibt eine einzelne Aufgabe zurück. Die einzelne Aufgabe ist abgeschlossen, wenn eine beliebige Aufgabe in der Auflistung abgeschlossen ist.
 
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Abbruchtoken in Verbindung mit 
 
 ## <a name="downloading-the-example"></a>Herunterladen des Beispiels
 
-Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
+Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
 
 1. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.
 
@@ -40,11 +40,11 @@ Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich die Datei �
 
 ## <a name="building-the-example"></a>Erstellen des Beispiels
 
-Im Beispiel in diesem Thema wird das Projekt, das in entwickelt wird hinzugefügt [eine asynchrone Aufgabe oder Aufgabenliste Abbrechen](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) um eine Liste von Aufgaben abzubrechen. Im Beispiel wird die gleiche UI verwendet, obwohl die Schaltfläche **Abbrechen** nicht explizit verwendet wird.
+Das Beispiel in diesem Thema wird dem Projekt hinzugefügt, das in [Abbrechen einer asynchronen Aufgabe oder einer Liste von Aufgaben](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) zum Abbrechen einer Aufgabenliste entwickelt wurde. Im Beispiel wird die gleiche UI verwendet, obwohl die Schaltfläche **Abbrechen** nicht explizit verwendet wird.
 
 Um das Beispiel selbst schrittweise zu erstellen, befolgen Sie die Anweisungen im Abschnitt „Herunterladen des Beispiels“. Wählen Sie als **Startprojekt** aber **CancelAListOfTasks** aus. Fügen Sie diesem Projekt die Änderungen in diesem Thema hinzu.
 
-In der Datei "MainWindow.Xaml.vb", der die **CancelAListOfTasks** Projekt, starten Sie den Übergang, indem verschieben die Verarbeitungsschritte für jede Website, von der Schleife in `AccessTheWebAsync` zur folgenden asynchronen Methode.
+Starten Sie in der Datei "MainWindow. XAML. vb" des Projekts **cancelalistoftasks** den Übergang, indem Sie die Verarbeitungsschritte für jede Website aus der Schleife in `AccessTheWebAsync` in die folgende Async-Methode verschieben.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -100,7 +100,7 @@ Nehmen Sie in `AccessTheWebAsync` die folgenden Änderungen vor. Die Änderungen
 
     ```vb
     Dim length = Await firstFinishedTask
-    resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)
+    resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     ```
 
 Führen Sie das Programm mehrmals aus, um zu überprüfen, dass unterschiedliche Downloads als erste beendet werden.
@@ -111,7 +111,7 @@ Der folgende Code besteht aus der vollständigen Datei "MainWindow.xaml.cs" oder
 
 Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
-Sie können das Projekt hier herunterladen: [Async Sample: Fine Tuning Your Application (Async-Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Sie können das Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -175,7 +175,7 @@ Class MainWindow
         ''    Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         ''    resultsTextBox.Text &=
-        ''        String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+        ''        vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         ''Next
 
         ' ***Create a query that, when executed, returns a collection of tasks.
@@ -196,7 +196,7 @@ Class MainWindow
         ' Run the program several times to demonstrate that different
         ' websites can finish first.
         Dim length = Await firstFinishedTask
-        resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)
+        resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     End Function
 
     ' ***Bundle the processing steps for a website into one async method.
@@ -241,4 +241,4 @@ End Class
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
 - [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung der Anwendung)

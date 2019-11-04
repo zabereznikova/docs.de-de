@@ -2,13 +2,14 @@
 title: Strukturen - Leitfaden für C#
 description: Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen erstellen
 ms.date: 10/12/2016
+ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396125"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423120"
 ---
 # <a name="structs"></a>Strukturen
 
@@ -70,5 +71,5 @@ Gewöhnliche Werttypen können den Wert [NULL](language-reference/keywords/null.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Klassen](classes.md)
+- [Klassen](programming-guide/classes-and-structs/classes.md)
 - [Grundlegende Typen](basic-types.md)

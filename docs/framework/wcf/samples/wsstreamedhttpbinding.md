@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: aa2acc7228f802f69e8692ed747af0382345c1d6
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: e684a5157d5510d22cfdd14d7b0d930c3b40c476
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016078"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423704"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -21,7 +21,7 @@ Das Beispiel veranschaulicht, wie eine Bindung erstellt wird, die Streamingszena
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`
 
@@ -53,7 +53,7 @@ Das Beispiel veranschaulicht, wie eine Bindung erstellt wird, die Streamingszena
 
 2. Hinzufügen von Konfigurationsunterstützung
 
-    Im Beispiel werden zwei weitere Klassen – `WSStreamedHttpBindingConfigurationElement` und `WSStreamedHttpBindingSection` – implementiert, um den Transport durch Konfiguration verfügbar zu machen. Die- `WSStreamedHttpBindingSection` Klasse ist <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> eine, `WSStreamedHttpBinding` die für das WCF-Konfigurationssystem verfügbar macht. Der Großteil der Implementierung wird dem `WSStreamedHttpBindingConfigurationElement` übertragen, das von <xref:System.ServiceModel.Configuration.StandardBindingElement> abgeleitet wird. Die Klasse `WSStreamedHttpBindingConfigurationElement` verfügt über Eigenschaften, die mit den Eigenschaften von `WSStreamedHttpBinding` übereinstimmen, sowie über Funktionen, um jedes Konfigurationselement einer Bindung zuzuordnen.
+    Im Beispiel werden zwei weitere Klassen – `WSStreamedHttpBindingConfigurationElement` und `WSStreamedHttpBindingSection` – implementiert, um den Transport durch Konfiguration verfügbar zu machen. Die-Klasse `WSStreamedHttpBindingSection` ist eine <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, die `WSStreamedHttpBinding` für das WCF-Konfigurationssystem verfügbar macht. Der Großteil der Implementierung wird dem `WSStreamedHttpBindingConfigurationElement` übertragen, das von <xref:System.ServiceModel.Configuration.StandardBindingElement> abgeleitet wird. Die Klasse `WSStreamedHttpBindingConfigurationElement` verfügt über Eigenschaften, die mit den Eigenschaften von `WSStreamedHttpBinding` übereinstimmen, sowie über Funktionen, um jedes Konfigurationselement einer Bindung zuzuordnen.
 
     Registrieren Sie den Handler mit dem Konfigurationssystem, indem Sie den folgenden Abschnitt zur Konfigurationsdatei des Diensts hinzufügen.
 
@@ -89,7 +89,7 @@ Das Beispiel veranschaulicht, wie eine Bindung erstellt wird, die Streamingszena
 
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -137,7 +137,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Der WSStreamedHttpBinding-Beispielclient
 
-Der Client, der für die Interaktion mit dem Dienst über `WSStreamedHttpBinding` verwendet wird, befindet sich im Clientunterverzeichnis. Da es sich bei dem in diesem Beispiel verwendeten Zertifikat um ein Test Zertifikat handelt, das mit Makecert. exe erstellt wurde, wird eine Sicherheitswarnung angezeigt, wenn Sie versuchen, https://localhost/servicemodelsamples/service.svc auf eine HTTPS-Adresse in Ihrem Browser zuzugreifen, z.b. Damit der WCF-Client mit einem vorhandenen Test Zertifikat arbeiten kann, wurde dem Client zusätzlicher Code hinzugefügt, um die Sicherheitswarnung zu unterdrücken. Der Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.
+Der Client, der für die Interaktion mit dem Dienst über `WSStreamedHttpBinding` verwendet wird, befindet sich im Clientunterverzeichnis. Da es sich bei dem in diesem Beispiel verwendeten Zertifikat um ein mit Makecert. exe erstelltes Test Zertifikat handelt, wird eine Sicherheitswarnung angezeigt, wenn Sie versuchen, auf eine HTTPS-Adresse in Ihrem Browser zuzugreifen, z. b. https://localhost/servicemodelsamples/service.svc. Damit der WCF-Client mit einem vorhandenen Test Zertifikat arbeiten kann, wurde dem Client zusätzlicher Code hinzugefügt, um die Sicherheitswarnung zu unterdrücken. Der Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

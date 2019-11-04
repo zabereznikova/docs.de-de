@@ -2,15 +2,15 @@
 title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 5853a791a92535c970f8010dd08d42e10292ffa8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8653bfd12df8eaf422797197cfcc58e9a46274bf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039028"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424291"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
-In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF)-Erweiterbarkeits Punkte verwendet werden können, um Nachrichten Daten in einem anderen Format als in WCF zuzulassen. Standardmäßig erwarten WCF-Formatierer, dass Methoden Parameter unter dem `soap:body` -Element enthalten sind. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
+In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF)-Erweiterbarkeits Punkte verwendet werden können, um Nachrichten Daten in einem anderen Format als in WCF zuzulassen. Standardmäßig erwarten WCF-Formatierer, dass Methoden Parameter unter das `soap:body` Element eingeschlossen werden. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
   
  Das Beispiel basiert auf den ersten [Schritten, die](../../../../docs/framework/wcf/samples/getting-started-sample.md)den `ICalculator` Dienstvertrag implementieren. Es zeigt, wie Add-, Subtract-, Multiply- und Divide-Nachrichten so geändert werden können, dass für Client-an-Server-Anforderungen HTTP GET und für Server-zu-Client-Antworten HTTP POST mit POX-Nachrichten verwendet werden.  
   
@@ -30,7 +30,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="key-concepts"></a>Grundbegriffe  
- `QueryStringFormatter`-Der Vorgangs Formatierer ist die Komponente in WCF, die für das umrechnen einer Nachricht in ein Array von Parameter Objekten und ein Array von Parameter Objekten in eine Nachricht zuständig ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
+ `QueryStringFormatter`: der Vorgangs Formatierer ist die Komponente in WCF, die für das umrechnen einer Nachricht in ein Array von Parameter Objekten und ein Array von Parameter Objekten in eine Nachricht zuständig ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
   
  In diesem Beispiel implementiert `QueryStringFormatter` beide Schnittstellen und wird sowohl auf dem Client als auch auf dem Server implementiert.  
   
@@ -60,7 +60,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
   
  Der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> wird auf die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierung festgelegt.  
   
- Standardmäßig verwendet WCF einen exakten Adress Filter. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Hierfür wird WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> verwendet.  
+ Standardmäßig verwendet WCF einen exakten Adress Filter. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Zu diesem Zweck wird die WCF-<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> verwendet.  
   
 ### <a name="installing-operation-formatters"></a>Installieren von Vorgangsformatierern  
  Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines Ersetzungs Verhaltens muss die-Implementierung nach bestimmten Formatiererverhalten suchen, die vom WCF-typlader standardmäßig installiert werden, und entweder ersetzen oder ein kompatibles Verhalten hinzufügen, das nach dem Standardverhalten ausgeführt wird.  
@@ -73,7 +73,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
   
  Es muss vor dem Aufruf von `CreateChannel` durchgeführt werden.  
   
-```  
+```csharp  
 void ReplaceFormatterBehavior(OperationDescription operationDescription, EndpointAddress address)  
 {  
     // Remove the DataContract behavior if it is present.  
@@ -166,7 +166,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   

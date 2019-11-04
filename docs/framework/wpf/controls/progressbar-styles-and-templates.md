@@ -9,38 +9,38 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: f948cf2b4f4cd2a4cb73b0cd5fc754240c850b83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1bea39ba9b6d2cff9937a3fee1d1de41daf16b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770525"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459870"
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar-Formate und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ProgressBar> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ProgressBar>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="progressbar-parts"></a>ProgressBar-Teile  
- Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Controls.ProgressBar> Steuerelement.  
+ In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ProgressBar>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|Segment|Geben Sie Folgendes ein:|Beschreibung|  
 |-|-|-|  
-|PART_Indicator|<xref:System.Windows.FrameworkElement>|Das Objekt, das Status angibt.|  
-|PART_Track|<xref:System.Windows.FrameworkElement>|Das Objekt, das den Pfad der Statusanzeige definiert.|  
-|PART_GlowRect|<xref:System.Windows.FrameworkElement>|Ein Objekt, das Darstellung der Statusanzeige verbessert.|  
+|PART_Indicator|<xref:System.Windows.FrameworkElement>|Das Objekt, das den Fortschritt angibt.|  
+|PART_Track|<xref:System.Windows.FrameworkElement>|Das-Objekt, das den Pfad der Statusanzeige definiert.|  
+|PART_GlowRect|<xref:System.Windows.FrameworkElement>|Ein-Objekt, das die Statusanzeige verschönert.|  
   
 ## <a name="progressbar-states"></a>ProgressBar-Zustände  
- Die folgende Tabelle enthält die visuellen Zustände für die <xref:System.Windows.Controls.ProgressBar> Steuerelement.  
+ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.ProgressBar>-Steuerelement aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
-|Bestimmte|CommonStates|<xref:System.Windows.Controls.ProgressBar> meldet den Fortschritt basierend auf den <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft.|  
-|Unbestimmt|CommonStates|<xref:System.Windows.Controls.ProgressBar> meldet den generischen Fortschritt mit einer sich wiederholenden.|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Bestimmte|CommonStates|<xref:System.Windows.Controls.ProgressBar> meldet den Fortschritt basierend auf der <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>-Eigenschaft.|  
+|Unbestimmten|CommonStates|<xref:System.Windows.Controls.ProgressBar> meldet den generischen Fortschritt mit einem sich wiederholenden Muster.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="progressbar-controltemplate-example"></a>ProgressBar-ControlTemplate-Beispiel  
- Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ProgressBar> Steuerelement.  
+## <a name="progressbar-controltemplate-example"></a>ProgressBar ControlTemplate-Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.ProgressBar>-Steuerelement definiert wird.  
   
  [!code-xaml[ControlTemplateExamples#ProgressBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
   
@@ -56,5 +56,5 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -4,24 +4,24 @@ description: Erfahren Sie hier, wie Sie mit ML.NET in einem Szenario zur Multikl
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: a6d158d51e6775feaed669c678bb9a36984f08f3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698985"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774486"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Kategorisieren von Supportproblemen unter Verwendung von Multiklassenklassifizierung mit ML.NET
 
 In diesem Beispieltutorial wird veranschaulicht, wie Sie ML.NET zum Erstellen eines Klassifizierers für GitHub-Issues über eine .NET Core-Konsolenanwendung mithilfe von C# in Visual Studio verwenden können, um ein Modell zu trainieren, dass die Bereichsbezeichnung für ein GitHub-Issue klassifiziert und vorhersagt.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > * Vorbereiten Ihrer Daten
 > * Transformieren der Daten
-> * Modelltraining
-> * Auswerten des Modells
+> * Trainieren des Modells
+> * Evaluieren des Modells
 > * Vorhersagen treffen mit dem trainierten Modell
 > * Bereitstellen eines geladenen Modells und Vorhersagen mit diesem treffen
 
@@ -29,7 +29,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+* [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
 * Die [durch Tabstopp getrennte Datei mit Github-Issues (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * Die [durch Tabstopp getrennte Testdatei für Github-Issues (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
@@ -204,7 +204,7 @@ Fügen Sie den unten aufgeführten Code als erste Codezeilen in `BuildAndTrainMo
 
 Der [SdcaMaximumEntropy](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer) Algorithmus für die Multiklassenklassifizierung. Dieser wird an die `pipeline` angefügt und akzeptiert die mit Features ausgestatteten `Title`- und `Description`-Parameter (`Features`) sowie die `Label`-Eingabeparameter, um aus den historischen Daten zu lernen.
 
-### <a name="train-the-model"></a>Modelltraining
+### <a name="train-the-model"></a>Trainieren des Modells
 
 Fügen Sie den unten aufgeführten Code als nächste Codezeilen in die `BuildAndTrainModel()`-Methode ein, um das Modell an die `splitTrainSet`-Daten anzupassen und das trainierte Modell zurückzugeben:
 
@@ -288,7 +288,7 @@ Verwenden Sie den folgenden Code, um die Metriken anzuzeigen, die Ergebnisse fre
 
 ### <a name="save-the-model-to-a-file"></a>Speichern des Modells in einer Datei
 
-Wenn Sie mit Ihrem Modell zufrieden sind, speichern Sie es in einer Datei, um Vorhersagen zu einem späteren Zeitpunkt oder in einer anderen Anwendung zu treffen. Fügen Sie der `Evaluate` -Methode den folgenden Code hinzu. 
+Wenn Sie mit Ihrem Modell zufrieden sind, speichern Sie es in einer Datei, um Vorhersagen zu einem späteren Zeitpunkt oder in einer anderen Anwendung zu treffen. Fügen Sie der `Evaluate` -Methode folgenden Code hinzu.
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
@@ -340,7 +340,7 @@ Erstellen Sie wie zuvor eine `PredictionEngine`-Instanz mit dem folgenden Code:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
 
-Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
+Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
 
 > [!NOTE]
 > Die `PredictionEnginePool`-Diensterweiterung ist derzeit als Vorschauversion verfügbar.
@@ -376,13 +376,13 @@ Herzlichen Glückwunsch! Sie haben jetzt erfolgreich ein Machine Learning-Modell
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Folgendes gelernt:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > * Vorbereiten Ihrer Daten
 > * Transformieren der Daten
-> * Modelltraining
-> * Auswerten des Modells
+> * Trainieren des Modells
+> * Evaluieren des Modells
 > * Vorhersagen treffen mit dem trainierten Modell
 > * Bereitstellen eines geladenen Modells und Vorhersagen mit diesem treffen
 

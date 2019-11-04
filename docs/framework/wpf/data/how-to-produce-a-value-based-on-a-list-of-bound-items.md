@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erzeugen eines Werts auf Grundlage einer Liste gebundener Elemente'
+title: 'Gewusst wie: Erzeugen eines Werts auf Grundlage einer Liste gebundener Elemente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da183a34eb85de54b1e3f54f8d14c09e25640165
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931389"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459691"
 ---
-# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Vorgehensweise: Erzeugen eines Werts auf Grundlage einer Liste gebundener Elemente
-<xref:System.Windows.Data.MultiBinding> können Sie eine Eigenschaft eines Bindungsziels an eine Liste von Quelleigenschaften binden und anschließend Logik anwenden, um einen Wert mit den angegebenen Eingaben zu erzeugen. In diesem Beispiel wird veranschaulicht, wie <xref:System.Windows.Data.MultiBinding>.  
+# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Gewusst wie: Erzeugen eines Werts auf Grundlage einer Liste gebundener Elemente
+mit <xref:System.Windows.Data.MultiBinding> können Sie eine Bindungs Ziel Eigenschaft an eine Liste von Quell Eigenschaften binden und dann die Logik anwenden, um einen Wert mit den angegebenen Eingaben zu erhalten. In diesem Beispiel wird die Verwendung <xref:System.Windows.Data.MultiBinding>veranschaulicht.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel verweist `NameListData` auf eine Auflistung von `PersonName`-Objekten, bei denen es sich um Objekte handelt, die zwei Eigenschaften enthalten, `firstName` und `lastName`. Im folgenden Beispiel wird eine <xref:System.Windows.Controls.TextBlock> , die die ersten und letzten Namen einer Person mit dem Nachnamen ersten zeigt.  
+ Im folgenden Beispiel verweist `NameListData` auf eine Auflistung von `PersonName`-Objekten, bei denen es sich um Objekte handelt, die zwei Eigenschaften enthalten, `firstName` und `lastName`. Im folgenden Beispiel wird eine <xref:System.Windows.Controls.TextBlock> erstellt, die zuerst den vor-und Nachnamen einer Person mit dem Nachnamen anzeigt.  
   
  [!code-xaml[MultiBinding#Resources1](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources1)]  
 [!code-xaml[MultiBinding#Resources2](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources2)]  
@@ -31,10 +31,10 @@ ms.locfileid: "61931389"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` implementiert die <xref:System.Windows.Data.IMultiValueConverter>-Schnittstelle. `NameConverter` übernimmt die Werte aus den einzelnen Bindungen und speichert sie im Werteobjektarray. Die Reihenfolge, in der <xref:System.Windows.Data.Binding> Elemente angezeigt werden, unter der <xref:System.Windows.Data.MultiBinding> Element ist die Reihenfolge, in dem diese Werte im Array gespeichert sind. Der Wert des der <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> Parameterargument Attribut verweist die <xref:System.Windows.Data.MultiBinding.Converter%2A> -Methode, die mit einen Switch für den Parameter, um zu bestimmen, wie der Name formatiert ausführt.  
+ `NameConverter` implementiert die <xref:System.Windows.Data.IMultiValueConverter>-Schnittstelle. `NameConverter` übernimmt die Werte aus den einzelnen Bindungen und speichert sie im Werteobjektarray. Die Reihenfolge, in der die <xref:System.Windows.Data.Binding> Elemente unter dem <xref:System.Windows.Data.MultiBinding>-Element angezeigt werden, ist die Reihenfolge, in der diese Werte im Array gespeichert werden. Auf den Wert des <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> Attributs wird durch das Parameter-Argument der <xref:System.Windows.Data.MultiBinding.Converter%2A>-Methode verwiesen, die einen Schalter für den-Parameter ausführt, um zu bestimmen, wie der Name formatiert werden soll.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Konvertieren von gebundenen Daten](how-to-convert-bound-data.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

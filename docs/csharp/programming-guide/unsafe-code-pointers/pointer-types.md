@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588188"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423125"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -23,7 +23,7 @@ void* identifier; //allowed but not recommended
 
 Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** bezeichnet. Nur ein [nicht verwalteter Typ](../../language-reference/builtin-types/unmanaged-types.md) kann ein Verweistyp sein.
 
-Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../language-reference/keywords/object.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
+Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../language-reference/builtin-types/reference-types.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
 
 Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Beispiel:
 
@@ -87,5 +87,5 @@ Weitere Informationen finden Sie im Abschnitt [Zeigertypen](~/_csharplang/spec/u
 - [C#-Programmierhandbuch](../index.md)
 - [Unsicherer Code und Zeiger](index.md)
 - [Zeigerkonvertierungen](pointer-conversions.md)
-- [Typen](../../language-reference/keywords/types.md)
+- [Typen](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

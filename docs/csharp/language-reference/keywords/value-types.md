@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353750"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422201"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
@@ -54,7 +54,7 @@ Die einfachen Typen unterscheiden sich von anderen Strukturtypen dadurch, dass s
 
 - Konstante Ausdrücke, deren Operanden alle einfache Typkonstanten sind, werden zur Kompilierzeit ausgewertet.
 
-Weitere Informationen finden Sie im Abschnitt [Einfache Typen](~/_csharplang/spec/types.md#simple-types) der [C#-Sprachspezifikation](../language-specification/index.md).
+Weitere Informationen finden Sie im Abschnitt [Einfache Typen](~/_csharplang/spec/types.md#simple-types) der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="initializing-value-types"></a>Initialisieren von Werttypen
 
@@ -107,6 +107,6 @@ Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Typen](types.md)
+- [Typen](/dotnet/csharp/language-reference/keywords)
 - [Verweistypen](reference-types.md)
 - [Auf NULL festlegbare Werttypen](../../programming-guide/nullable-types/index.md)

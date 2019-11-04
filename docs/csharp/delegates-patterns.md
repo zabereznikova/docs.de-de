@@ -3,12 +3,12 @@ title: Gängige Muster für Delegate
 description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095697"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454081"
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
@@ -58,7 +58,7 @@ Fangen wir klein an: Die anfängliche Implementierung akzeptiert neue Meldungen,
 
 Die statische Klasse oben ist die einfachste Sache, die funktionieren kann. Wir müssen die einzelne Implementierung für die Methode schreiben, die Meldungen in die Konsole schreibt: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Abschließend müssen Sie den Delegaten verknüpfen, indem Sie ihn an den WriteMessage-Delegaten anfügen, der in der Protokollierung deklariert wurde:
 
@@ -107,13 +107,13 @@ Diese beiden schließen einander nicht aus. Sie können beide Protokollmethoden 
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 Später können Sie auch in derselben Anwendung einen Delegaten ohne andere Probleme auf dem System entfernen:
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>Methoden

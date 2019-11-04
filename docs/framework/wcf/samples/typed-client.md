@@ -2,12 +2,12 @@
 title: Typisierter Client
 ms.date: 03/30/2017
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-ms.openlocfilehash: a1c3337bdc5ab9ff4df7f0158584b6d4e47a1058
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 97362d5ae88d237253eb8eaba015b8e5f99adaac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044648"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424193"
 ---
 # <a name="typed-client"></a>Typisierter Client
 Das Beispiel veranschaulicht, wie Informationen von einem typisierten Client abgerufen werden, der mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)generiert wurde. Dieses Beispiel basiert auf den ersten [Schritten, mit](../../../../docs/framework/wcf/samples/getting-started-sample.md) denen ein Rechner Dienst implementiert wird. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
@@ -35,7 +35,7 @@ client.Close();
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -63,6 +63,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\TypedClient`  

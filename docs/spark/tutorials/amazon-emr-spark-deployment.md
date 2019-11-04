@@ -4,25 +4,25 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Amaz
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117956"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454938"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Amazon EMR Spark
 
 In diesem Tutorial erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Amazon EMR Spark bereitstellen.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
 >
 > * Vorbereiten von Microsoft.Spark.Worker
 > * Veröffentlichen einer .NET für Apache Spark-Anwendung
 > * Bereitstellen einer App in Amazon EMR Spark
-> * Führen Sie Ihre App aus.
+> * Ausführen der App
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -71,7 +71,7 @@ Führen Sie zunächst folgende Schritte aus:
 
 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) ist eine verwaltete Clusterplattform, die die Ausführung von Big-Data-Frameworks in AWS vereinfacht.
 
-> [!NOTE] 
+> [!NOTE]
 > Amazon EMR Spark basiert auf Linux. Wenn Sie Ihre App in Amazon EMR Spark bereitstellen möchten, müssen Sie darauf achten, dass diese mit .NET Standard kompatibel ist und dass Sie den [.NET Core-Compiler](https://dotnet.microsoft.com/download) zum Kompilieren Ihrer App verwenden.
 
 ### <a name="deploy-microsoftsparkworker"></a>Bereitstellen von Microsoft.Spark.Worker
@@ -94,7 +94,7 @@ aws emr create-cluster \
 --bootstrap-actions Path=s3://mybucket/<some dir>/install-worker.sh,Name="Install Microsoft.Spark.Worker",Args=["aws","s3://mybucket/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz","/usr/local/bin"]
 ```
 
-## <a name="run-your-app"></a>Führen Sie Ihre App aus.
+## <a name="run-your-app"></a>Ausführen der App
 
 Sie können Ihre App in Amazon EMR Spark entweder mit „spark-submit“ oder mit Amazon EMR-Schritten ausführen.
 
@@ -104,7 +104,7 @@ Mit dem Befehl [spark-submit](https://spark.apache.org/docs/latest/submitting-ap
 
 1. Stellen Sie mit `ssh` eine Verbindung mit einem Knoten Ihres Clusters her.
 
-2. Führen Sie `spark-submit`aus.
+2. Führen Sie aus `spark-submit`.
 
    ```bash
    spark-submit \

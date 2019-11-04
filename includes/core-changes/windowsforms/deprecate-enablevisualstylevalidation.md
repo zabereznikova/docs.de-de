@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6bb1d53cbe1883b8faef75bd22942bd4f65a5e6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71181769"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198436"
 ---
 ### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Kompatibilitätsswitch „Switch.System.Windows.Forms.EnableVisualStyleValidation“ wird nicht unterstützt
 
@@ -12,7 +12,7 @@ Der Kompatibilitätsswitch `Switch.System.Windows.Forms.EnableVisualStyleValidat
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-In .NET Framework ist es mit dem Kompatibilitätsswitch `Switch.System.Windows.Forms.EnableVisualStyleValidation` möglich, dass eine Anwendung die Prüfung von visuellen Elementen abstellt, die in einer numerischen Form bereitgestellt werden. 
+In .NET Framework ist es mit dem Kompatibilitätsswitch `Switch.System.Windows.Forms.EnableVisualStyleValidation` möglich, dass eine Anwendung die Prüfung von visuellen Elementen abstellt, die in einer numerischen Form bereitgestellt werden.
 
 In .NET Core wird der Switch `Switch.System.Windows.Forms.EnableVisualStyleValidation` nicht unterstützt.
 

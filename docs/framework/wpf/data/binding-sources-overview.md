@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920287"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459016"
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.
@@ -54,7 +54,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 ## <a name="using-entire-objects-as-a-binding-source"></a>Verwenden von gesamten Objekten als Bindungsquelle
  Sie können das gesamte Objekt als Bindungsquelle verwenden. Sie können eine Bindungs Quelle angeben, indem Sie die <xref:System.Windows.Data.Binding.Source%2A> oder die <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft verwenden und dann eine leere Bindungs Deklaration angeben: `{Binding}`. Diese Vorgehensweise eignet sich zum Beispiel für Szenarien, bei denen die Bindung an „string“-Objekte, an Objekte mit mehreren relevanten Eigenschaften oder an Auflistungsobjekte erfolgt. Ein Beispiel für die Bindung an ein gesamtes Auflistungsobjekt finden Sie unter [Verwenden des Master/Detail-Musters mit hierarchischen Daten](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Beachten Sie, dass Sie ggf. benutzerdefinierte Logik anwenden müssen, damit die Daten für die gebundene Zieleigenschaft sinnvoll sind. Die benutzerdefinierte Logik kann ein benutzerdefinierter Konverter sein (wenn keine standardmäßige Typkonvertierung vorhanden ist) oder eine <xref:System.Windows.DataTemplate>. Weitere Informationen zu Konvertern finden Sie im Abschnitt „Datenkonvertierung“ in der [Übersicht über die Datenbindung](data-binding-overview.md). Weitere Informationen zu Datenvorlagen finden Sie in der [Übersicht über Datenvorlagen](data-templating-overview.md).
+ Beachten Sie, dass Sie ggf. benutzerdefinierte Logik anwenden müssen, damit die Daten für die gebundene Zieleigenschaft sinnvoll sind. Die benutzerdefinierte Logik kann ein benutzerdefinierter Konverter sein (wenn keine standardmäßige Typkonvertierung vorhanden ist) oder eine <xref:System.Windows.DataTemplate>. Weitere Informationen zu Konvertern finden Sie im Abschnitt „Datenkonvertierung“ in der [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md). Weitere Informationen zu Datenvorlagen finden Sie in der [Übersicht über Datenvorlagen](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Verwenden von Auflistungsobjekten als Bindungsquelle
@@ -64,7 +64,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 
  Die <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse ist eine integrierte Implementierung einer Datensammlung, die die <xref:System.Collections.Specialized.INotifyCollectionChanged>-Schnittstelle verfügbar macht. Die einzelnen Datenobjekte in der Auflistung müssen die zuvor beschriebenen Anforderungen erfüllen. Ein Beispiel finden Sie unter [Erstellen und Binden an ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Bevor Sie eine eigene Auflistung implementieren, erwägen Sie <xref:System.Collections.ObjectModel.ObservableCollection%601> oder einer vorhandenen Sammlung Klassen, z. B. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, und <xref:System.ComponentModel.BindingList%601>, a.
 
- WPF wird nie direkt an eine Auflistung gebunden. Wenn Sie eine Auflistung als Bindungsquelle angeben, wird WPF an die Standardansicht der Auflistung gebunden. Weitere Informationen zu Standardansichten finden Sie in der [Übersicht über die Datenbindung](data-binding-overview.md).
+ WPF wird nie direkt an eine Auflistung gebunden. Wenn Sie eine Auflistung als Bindungsquelle angeben, wird WPF an die Standardansicht der Auflistung gebunden. Weitere Informationen zu Standardansichten finden Sie in der [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md).
 
  Wenn Sie ein erweitertes Szenario haben und eine eigene Sammlung implementieren möchten, sollten Sie die Verwendung der <xref:System.Collections.IList>-Schnittstelle in Erwägung gezogen. <xref:System.Collections.IList> bietet eine nicht generische Auflistung von Objekten, auf die einzeln über einen Index zugegriffen werden kann. Dies kann die Leistung verbessern.
 
@@ -97,6 +97,6 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Angeben der Bindungsquelle](how-to-specify-the-binding-source.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Übersicht über WPF-Datenbindung mit LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Optimieren der Daten bindungsleistung](../advanced/optimizing-performance-data-binding.md)

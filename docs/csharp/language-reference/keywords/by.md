@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: 23daf2aaf5d9456c76c5b2ac889243b1ed31b077
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9f888f170f749eb5aac5cd39cd7c733920581542
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602223"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422886"
 ---
 # <a name="by-c-reference"></a>by (C#-Referenz)
 
@@ -27,4 +27,4 @@ Im folgenden Beispiel wird gezeigt, wie das Kontextschlüsselwort `by` in einer 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ-Abfrageausdrücke](../../programming-guide/linq-query-expressions/index.md)
+- [LINQ in C#](../../linq/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: af4850b4c33727c818fb5a67d17fb6146627fa06
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9c1521f39dea72b51801a81b13e8a0203956731c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267731"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422800"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C#-Referenz)
 
@@ -47,7 +47,7 @@ Im folgenden Beispiel wird eine `ref`-Iterationsvariable verwendet, um die Werte
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie im Abschnitt [Die foreach-Anweisung](~/_csharplang/spec/statements.md#the-foreach-statement) der [C#-Sprachspezifikation](../language-specification/index.md).
+Weitere Informationen finden Sie im Abschnitt [Die foreach-Anweisung](~/_csharplang/spec/statements.md#the-foreach-statement) der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Siehe auch
 

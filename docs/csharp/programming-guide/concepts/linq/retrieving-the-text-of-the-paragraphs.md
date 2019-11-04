@@ -2,12 +2,12 @@
 title: Abrufen des Texts der Absätze (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253060"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423338"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Abrufen des Texts der Absätze (C#)
 Dieses Beispiel baut auf dem vorherigen Beispiel [Retrieving the Paragraphs and Their Styles (C#) (Abrufen der Absätze und deren Formate (C#))](./retrieving-the-paragraphs-and-their-styles.md) auf. Dieses neue Beispiel ruft den Text jedes einzelnen Absatzes als Zeichenfolge ab  
@@ -18,7 +18,7 @@ Dieses Beispiel baut auf dem vorherigen Beispiel [Retrieving the Paragraphs and 
   
  Natürlich wäre es auch möglich, eine einzelne Abfrage zu schreiben, die die Funktionalität zum Abrufen der Absätze, der Formatvorlagen der einzelnen Absätze und des Texts in den Absätzen enthält. Häufig ist es aber sinnvoll, eine kompliziertere Abfrage in mehrere Abfragen aufzuteilen, weil der resultierende Code dann modularer und einfacher zu verwalten ist. Wenn Sie einen Teil der Abfrage wiederverwenden müssen und die Abfragen auf diese Weise geschrieben sind, können Sie den entsprechenden Abfrageteil auch einfacher umgestalten.  
   
- Diese miteinander verketteten Abfragen verwenden das Verarbeitungsmodell, das im Thema [Tutorial: Verketten von Abfragen (C#)](./tutorial-chaining-queries-together.md) näher erläutert wird.  
+ Diese miteinander verketteten Abfragen verwenden das Verarbeitungsmodell, das im Thema [Tutorial: Verketten von Abfragen (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) näher erläutert wird.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es den Elementknoten, die Namen der Formatvorlagen und den Text der einzelnen Absätze bestimmt. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf. Die neue Abfrage wird im Code unten durch entsprechende Kommentare gekennzeichnet.  
@@ -144,5 +144,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](shape-of-wordprocessingml-documents.md)
 - [Deferred Execution and Lazy Evaluation in LINQ to XML (C#) (Verzögerte Ausführung und Auswertung in LINQ to XML (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

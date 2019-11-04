@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424127"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422295"
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
 
@@ -44,7 +44,7 @@ Der Vergleichsausdruck stellt den Wert bereit, mit dem die Muster in den Bezeich
 In C# 6 und früher muss der Vergleichsausdruck ein Ausdruck sein, der einen Wert der folgenden Typen zurückgibt:
 
 - Ein [char](char.md)
-- Eine [Zeichenfolge](string.md)
+- Eine [Zeichenfolge](../builtin-types/reference-types.md)
 - Ein [bool](bool.md)
 - Ein ganzzahliger Wert wie [int](../builtin-types/integral-numeric-types.md) oder [long](../builtin-types/integral-numeric-types.md)
 - Ein [Enumerations](enum.md)wert
@@ -125,7 +125,7 @@ wobei *constant* der zu testende Wert ist. *constant* kann eine der folgenden ko
 - Der Name einer deklarierten `const`-Variablen
 - Eine Enumerationskonstante.
 - Ein [char](char.md)-Literal
-- Ein [Zeichenfolgenliteral](string.md).
+- Ein [Zeichenfolgenliteral](../builtin-types/reference-types.md).
 
 Der Konstantenausdruck wird wie folgt ausgewertet:
 
@@ -195,7 +195,7 @@ Beachten Sie, dass in diesem Beispiel die `when`-Klausel, die zu prüfen versuch
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie unter [Die switch-Anweisung](~/_csharplang/spec/statements.md#the-switch-statement) in der [C#-Sprachspezifikation](../language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen finden Sie unter [Die switch-Anweisung](~/_csharplang/spec/statements.md#the-switch-statement) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
 
 ## <a name="see-also"></a>Siehe auch
 

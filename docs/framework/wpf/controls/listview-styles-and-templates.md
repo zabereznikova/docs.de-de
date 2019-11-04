@@ -9,56 +9,56 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: 813e7425b944ce9a7480cc45ab7d1f61cc0dc6d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f5a9d9f747246ee9b72b42a45291a42bb04cb88
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932183"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459376"
 ---
 # <a name="listview-styles-and-templates"></a>ListView-Stile und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ListView> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ListView>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="listview-parts"></a>ListView-Komponenten  
- Die <xref:System.Windows.Controls.ListView> Steuerelement enthält keine benannten Teile.  
+## <a name="listview-parts"></a>ListView-Teile  
+ Das <xref:System.Windows.Controls.ListView>-Steuerelement verfügt über keine benannten Teile.  
   
- Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ListView>, Ihrer Vorlage enthalten möglicherweise ein <xref:System.Windows.Controls.ItemsPresenter> innerhalb einer <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> stellt jedes Element in der <xref:System.Windows.Controls.ListView>; die <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen innerhalb des Steuerelements).  Wenn die <xref:System.Windows.Controls.ItemsPresenter> ist kein direkte untergeordnetes Element von der <xref:System.Windows.Controls.ScrollViewer>, geben Sie die <xref:System.Windows.Controls.ItemsPresenter> den Namen, `ItemsPresenter`.  
+ Wenn Sie einen <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ListView>erstellen, enthält die Vorlage möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb eines <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element in der <xref:System.Windows.Controls.ListView>an; das <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen im Steuerelement).  Wenn das <xref:System.Windows.Controls.ItemsPresenter> nicht das direkt untergeordnete Element des <xref:System.Windows.Controls.ScrollViewer>ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.  
   
-## <a name="listview-states"></a>ListView-Status  
- Die folgende Tabelle enthält die visuellen Zustände für die <xref:System.Windows.Controls.ListView> Steuerelement.  
+## <a name="listview-states"></a>ListView-Zustände  
+ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.ListView>-Steuerelement aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="listviewitem-parts"></a>ListViewItem Teilen  
- Die <xref:System.Windows.Controls.ListViewItem> Steuerelement enthält keine benannten Teile.  
+## <a name="listviewitem-parts"></a>ListViewItem-Teile  
+ Das <xref:System.Windows.Controls.ListViewItem>-Steuerelement verfügt über keine benannten Teile.  
   
 ## <a name="listviewitem-states"></a>ListViewItem-Zustände  
- Die folgende Tabelle enthält die Zustände für die <xref:System.Windows.Controls.ListViewItem> Steuerelement.  
+ In der folgenden Tabelle sind die Zustände für das <xref:System.Windows.Controls.ListViewItem>-Steuerelement aufgeführt.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet, über die <xref:System.Windows.Controls.ComboBox> Steuerelement.|  
-|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
+|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
-|Ausgewählt|SelectionStates|Derzeit ist das Element ausgewählt.|  
+|Ausgewählt|SelectionStates|Das Element ist zurzeit ausgewählt.|  
 |Nicht markiert|SelectionStates|Das Element ist nicht ausgewählt.|  
 |SelectedUnfocused|SelectionStates|Das Element ist ausgewählt, besitzt jedoch keinen Fokus.|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="listview-controltemplate-examples"></a>ListView-ControlTemplate-Beispiele  
- Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ListView> -Steuerelement und seine zugehörigen Typen.  
+## <a name="listview-controltemplate-examples"></a>ListView ControlTemplate-Beispiele  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.ListView>-Steuerelement und die zugehörigen Typen definiert werden.  
   
  [!code-xaml[ControlTemplateExamples#ListView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
   
- Die <xref:System.Windows.Controls.ControlTemplate> Beispiele verwenden eine oder mehrere der folgenden Ressourcen.  
+ In den <xref:System.Windows.Controls.ControlTemplate> Beispielen wird mindestens eine der folgenden Ressourcen verwendet.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
@@ -70,5 +70,5 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

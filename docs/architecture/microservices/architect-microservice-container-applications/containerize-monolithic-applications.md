@@ -2,12 +2,12 @@
 title: Containerisieren monolithischer Anwendungen
 description: Das Containerisieren monolithischer Anwendungen bietet zwar nicht alle Vorteile der Microservicearchitektur, dafür jedoch wichtige Vorteile beim Bereitstellen, von denen Sie direkt profitieren können.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673217"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771475"
 ---
 # <a name="containerizing-monolithic-applications"></a>Containerisieren monolithischer Anwendungen
 
@@ -23,7 +23,7 @@ Sie können, wie in Abbildung 4-1 veranschaulicht, mehrere Komponenten, Biblioth
 
 Der Nachteil dieses Ansatzes wird offensichtlich, wenn die Anwendung wächst und skaliert werden muss. Wenn die gesamte Anwendung skaliert werden kann, ist es kein Problem. In den meisten Fällen sind jedoch nur einige Teile der Anwendung Engpässe, die Skalierung erfordern, während andere Komponente weniger häufig verwendet werden.
 
-Beispielsweise müssen Sie in einer typischen E-Commerceanwendung mit höherer Wahrscheinlichkeit das Subsystem der Produktinformationen skalieren, da viel mehr Kunden nach Produkten suchen, als Kunden Produkte erwerben. Mehr Kunden verwenden Ihren Warenkorb als die Zahlungspipeline. Weniger Kunden fügen Kommentare hinzu oder zeigen ihren Bestellungsverlauf an. Und Sie haben möglicherweise nur eine Handvoll Mitarbeiter, die den Inhalt und die Marketingkampagnen verwalten müssen. Wenn Sie den monolithischen Entwurf skalieren, wird der gesamte Code für diese verschiedenen Aufgaben mehrmals bereitgestellt und zum gleichen Grad skaliert.
+Beispielsweise müssen Sie in einer typischen E-Commerceanwendung mit höherer Wahrscheinlichkeit das Subsystem der Produktinformationen skalieren, da viel mehr Kunden nach Produkten suchen, als Kunden Produkte erwerben. Mehr Kunden verwenden Ihren Warenkorb als die Zahlungspipeline. Weniger Kunden fügen Kommentare hinzu oder zeigen ihren Bestellungsverlauf an. Zudem haben Sie möglicherweise nur eine Handvoll Mitarbeiter, die den Inhalt und die Marketingkampagnen verwalten müssen. Wenn Sie den monolithischen Entwurf skalieren, wird der gesamte Code für diese verschiedenen Aufgaben mehrmals bereitgestellt und zum gleichen Grad skaliert.
 
 Es gibt mehrere Möglichkeiten zum Skalieren einer Anwendung – horizontale Duplizierung, Teilen unterschiedlicher Bereiche der Anwendung und die Partitionierung ähnlicher Geschäftskonzepte oder -daten. Zusätzlich zu den Problemen der Skalierung aller Komponenten erfordern Änderungen einer einzelnen Komponente einen erneuten Test der gesamten Anwendung und eine vollständig neue Bereitstellung aller Instanzen.
 

@@ -4,20 +4,20 @@ description: Erfahren Sie etwas über Apache Spark in Big Data-Szenarien.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583484"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458178"
 ---
 # <a name="what-is-apache-spark"></a>Was ist Apache Spark?
 
-[Apache Spark](https://spark.apache.org/) ist ein Open-Source-Framework für die Parallelverarbeitung, das die arbeitsspeicherinterne Verarbeitung unterstützt, um die Leistung von Anwendungen zur Big Data-Analyse zu steigern. Big Data-Lösungen sind so konzipiert, dass sie Daten verarbeiten können, die für herkömmliche Datenbanken zu groß oder zu komplex sind. Spark verarbeitet große Datenmengen im Arbeitsspeicher, da dies eine erheblich höhere Geschwindigkeit als datenträgerbasierte Alternativen bietet. 
+[Apache Spark](https://spark.apache.org/) ist ein Open-Source-Framework für die Parallelverarbeitung, das die arbeitsspeicherinterne Verarbeitung unterstützt, um die Leistung von Anwendungen zur Big Data-Analyse zu steigern. Big Data-Lösungen sind so konzipiert, dass sie Daten verarbeiten können, die für herkömmliche Datenbanken zu groß oder zu komplex sind. Spark verarbeitet große Datenmengen im Arbeitsspeicher, da dies eine erheblich höhere Geschwindigkeit als datenträgerbasierte Alternativen bietet.
 
 ## <a name="common-big-data-scenarios"></a>Allgemeine Big Data-Szenarien
 
-Sie sollten eine Big Data-Architektur in Erwägung ziehen, wenn Sie große Datenmengen speichern und verarbeiten, unstrukturierte Daten transformieren oder Streamingdaten verarbeiten müssen. Bei Spark handelt es sich um eine allgemeine verteilte Verarbeitungs-Engine, die für verschiedene Big Data-Szenarien verwendet werden kann. 
+Sie sollten eine Big Data-Architektur in Erwägung ziehen, wenn Sie große Datenmengen speichern und verarbeiten, unstrukturierte Daten transformieren oder Streamingdaten verarbeiten müssen. Bei Spark handelt es sich um eine allgemeine verteilte Verarbeitungs-Engine, die für verschiedene Big Data-Szenarien verwendet werden kann.
 
 ### <a name="extract-transform-and-load-etl"></a>Extrahieren, Transformieren und Laden (ETL)
 
@@ -33,7 +33,7 @@ Beim [Extrahieren, Transformieren und Laden (ETL)](/azure/architecture/data-guid
 
 ### <a name="real-time-data-stream-processing"></a>Verarbeiten von Datenströmen in Echtzeit
 
-Streaming- oder Echtzeitdaten sind Daten in Bewegung. Telemetriedaten von IoT-Geräten, Weblogs und Clickstreams sind Beispiele für Streamingdaten. Durch die Verarbeitung von Echtzeitdaten können nützliche Informationen gewonnen werden, z. B. für georäumliche Analysen, Remoteüberwachung und Anomalieerkennung. Ebenso wie bei relationalen Daten können Sie Streamingdaten filtern, aggregieren und vorbereiten, bevor Sie die Daten in eine Ausgabesenke verschieben. Apache Spark unterstützt die [Echtzeitverarbeitung von Datenströmen](/azure/architecture/data-guide/big-data/real-time-processing) über [Spark Streaming](https://spark.apache.org/streaming/). 
+Streaming- oder Echtzeitdaten sind Daten in Bewegung. Telemetriedaten von IoT-Geräten, Weblogs und Clickstreams sind Beispiele für Streamingdaten. Durch die Verarbeitung von Echtzeitdaten können nützliche Informationen gewonnen werden, z. B. für georäumliche Analysen, Remoteüberwachung und Anomalieerkennung. Ebenso wie bei relationalen Daten können Sie Streamingdaten filtern, aggregieren und vorbereiten, bevor Sie die Daten in eine Ausgabesenke verschieben. Apache Spark unterstützt die [Echtzeitverarbeitung von Datenströmen](/azure/architecture/data-guide/big-data/real-time-processing) über [Spark Streaming](https://spark.apache.org/streaming/).
 
 ### <a name="batch-processing"></a>Batchverarbeitung
 

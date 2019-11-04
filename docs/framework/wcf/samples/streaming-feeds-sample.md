@@ -2,12 +2,12 @@
 title: Beispiel zum Streaming von Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: f37e7791bc407a57432fb9f6900ad8f19ff4eb52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044693"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425361"
 ---
 # <a name="streaming-feeds-sample"></a>Beispiel zum Streaming von Feeds
 In diesem Beispiel wird veranschaulicht, wie Syndication-Feeds verwaltet werden, die eine große Anzahl von Elementen enthalten. Auf dem Server zeigt das Beispiel, wie die Erstellung einzelner <xref:System.ServiceModel.Syndication.SyndicationItem>-Objekte innerhalb des Feeds bis unmittelbar vor den Zeitpunkt verzögert werden kann, zu dem das Element in den Netzwerkstream geschrieben wird.  
@@ -16,12 +16,12 @@ In diesem Beispiel wird veranschaulicht, wie Syndication-Feeds verwaltet werden,
   
  Um die Streamingfähigkeiten der Syndication-API am besten demonstrieren zu können, verwendet dieses Beispiel ein etwas unwahrscheinliches Szenario, in dem der Server einen Feed zugänglich macht, der eine unbegrenzte Anzahl von Elementen enthält. In diesem Fall generiert der Server so lange neue Elemente und fügt sie in den Feed ein, bis er feststellt, dass der Client eine bestimmte Anzahl von Elementen (in der Standardeinstellung 10) aus dem Feed gelesen hat. Der Einfachheit halber werden sowohl der Client als auch der Server im gleichen Prozess implementiert und verfolgen mithilfe eines freigegebenen `ItemCounter`-Objekts, wie viele Elemente der Client produziert hat. Der `ItemCounter`-Typ ist nur zu dem Zweck vorhanden, damit das Beispielszenario sauber beendet werden kann. Für das Muster, das hier demonstriert wird, ist dieses Element nicht von Bedeutung.  
   
- Die Demonstration nutzt visuelle C# Iteratoren (mit dem `yield return` Schlüsselwort Konstrukt). Weitere Informationen zu Iteratoren finden Sie im Thema "using Iterators" auf der MSDN-Website.  
+ Die Demonstration nutzt visuelle C# Iteratoren (mit dem `yield return`-Schlüsselwort Konstrukt). Weitere Informationen zu Iteratoren finden Sie im Thema "using Iterators" auf der MSDN-Website.  
   
 ## <a name="service"></a>Dienst  
  Der Dienst implementiert einen grundlegenden <xref:System.ServiceModel.Web.WebGetAttribute>-Vertrag, der aus einem Vorgang besteht, wie im folgenden Code gezeigt.  
   
-```  
+```csharp  
 [ServiceContract]  
 interface IStreamingFeedService  
 {  
@@ -33,7 +33,7 @@ interface IStreamingFeedService
   
  Diesen Vertrag implementiert der Dienst mittels einer `ItemGenerator`-Klasse zum Erstellen eines potentiell unendlichen Streams von <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanzen mithilfe eines Iterators, wie im folgenden Code gezeigt.  
   
-```  
+```csharp  
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -51,7 +51,7 @@ class ItemGenerator
   
  Beim Erstellen des Feeds verwendet die Dienstimplementierung statt einer gepufferten Auflistung von Elementen die Ausgabe von `ItemGenerator.GenerateItems()`.  
   
-```  
+```csharp  
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  
@@ -65,12 +65,12 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- Infolgedessen wird der Elementstream nie vollständig im Arbeitsspeicher gepuffert. Sie können dieses Verhalten beobachten, indem Sie einen Haltepunkt in `yield return` der-Anweisung innerhalb `ItemGenerator.GenerateItems()` der-Methode festlegen und feststellen, dass dieser Haltepunkt zum ersten Mal erreicht wird, nachdem der Dienst das `StreamedFeed()` Ergebnis der-Methode zurückgegeben hat.  
+ Infolgedessen wird der Elementstream nie vollständig im Arbeitsspeicher gepuffert. Sie können dieses Verhalten beobachten, indem Sie in der `yield return`-Anweisung in der `ItemGenerator.GenerateItems()`-Methode einen Haltepunkt festlegen und feststellen, dass dieser Haltepunkt zum ersten Mal erreicht wird, nachdem der Dienst das Ergebnis der `StreamedFeed()`-Methode zurückgegeben hat.  
   
 ## <a name="client"></a>Client  
  Der Client in diesem Beispiel verwendet eine benutzerdefinierte <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Implementierung, die die Materialisierung einzelner Elemente im Feed verzögert, anstatt sie im Arbeitsspeicher zu puffern. Die benutzerdefinierte `StreamedAtom10FeedFormatter`-Instanz wird wie folgt verwendet:  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create("http://localhost:8000/Service/Feeds/StreamedFeed");  
 StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter);  
   
@@ -79,7 +79,7 @@ SyndicationFeed feed = formatter.ReadFrom(reader);
   
  Normalerweise wird bei einem Aufruf von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> die Steuerung erst dann zurückgegeben, wenn der gesamte Inhalt des Feeds aus dem Netzwerk gelesen und im Arbeitsspeicher gepuffert wurde. Allerdings setzt das `StreamedAtom10FeedFormatter`-Objekt <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> so außer Kraft, dass statt einer gepufferten Auflistung ein Iterator zurückgegeben wird, wie im folgenden Code gezeigt.  
   
-```  
+```csharp  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
 {  
     areAllItemsRead = false;  
@@ -97,7 +97,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- Demzufolge werden die einzelnen Elemente erst dann aus dem Netzwerk gelesen, wenn die Clientanwendung, die die Ergebnisse von `ReadItems()` durchläuft, bereit ist, sie zu verwenden. Sie können dieses Verhalten beobachten, indem Sie einen Haltepunkt in `yield return` der-Anweisung `StreamedAtom10FeedFormatter.DelayReadItems()` innerhalb von festlegen und bemerken, dass dieser Haltepunkt zum ersten Mal gefunden wird, `ReadFrom()` nachdem der Aufruf von abgeschlossen wurde.  
+ Demzufolge werden die einzelnen Elemente erst dann aus dem Netzwerk gelesen, wenn die Clientanwendung, die die Ergebnisse von `ReadItems()` durchläuft, bereit ist, sie zu verwenden. Sie können dieses Verhalten beobachten, indem Sie einen Haltepunkt für die `yield return`-Anweisung in `StreamedAtom10FeedFormatter.DelayReadItems()` festlegen und bemerken, dass dieser Haltepunkt zum ersten Mal gefunden wird, nachdem der Aufruf von `ReadFrom()` abgeschlossen wurde.  
   
  Die folgenden Anweisungen zeigen, wie das Beispiel erstellt und ausgeführt wird. Obwohl der Server keine Elemente mehr generiert, nachdem der Client 10 Elemente gelesen hat, zeigt die Ausgabe, dass der Client bedeutend mehr als 10 Elemente liest. Das liegt daran, dass die im Beispiel verwendete Netzwerkbindung Daten in Vier-Kilobyte-Segmenten übermittelt. Daher empfängt der Client 4&#160;KB Elementdaten, bevor er die Gelegenheit hat, auch nur ein einziges Element zu lesen. Dieses Verhalten ist normal (wenn gestreamte HTTP-Daten in Segmenten einer vernünftigen Größe gesendet werden, ist das Leistungsverhalten besser).  
   
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291596"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421577"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -37,7 +37,7 @@ Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visua
 
 ## <a name="automatic-memory-management"></a>Automatische Speicherverwaltung
 
-.NET verwendet [Garbage Collection (GC)](garbagecollection/index.md), um eine automatische Speicherverwaltung für Programme bereitzustellen. Der Garbage Collector arbeitet bei der Speicherverwaltung mit dem Prinzip der Verzögerung und gibt dem App-Durchsatz den Vorzug vor dem sofortigen Erfassen von Arbeitsspeicher. Weitere Informationen zur Garbage Collection in .NET finden Sie unter [Grundlagen der Garbage Collection (GC)](garbagecollection/fundamentals.md).
+.NET verwendet [Garbage Collection (GC)](garbage-collection/index.md), um eine automatische Speicherverwaltung für Programme bereitzustellen. Der Garbage Collector arbeitet bei der Speicherverwaltung mit dem Prinzip der Verzögerung und gibt dem App-Durchsatz den Vorzug vor dem sofortigen Erfassen von Arbeitsspeicher. Weitere Informationen zur Garbage Collection in .NET finden Sie unter [Grundlagen der Garbage Collection (GC)](garbage-collection/fundamentals.md).
 
 Die beiden folgenden Zeilen weisen Speicher zu:
 

@@ -1,17 +1,17 @@
 ---
 title: Module
-description: Erfahren Sie, wie eine F#-Modul eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm.
+description: Erfahren Sie, F# wie ein Modul eine Gruppierung F# von Code (z. b. Werte, Typen und Funktions Werte) F# in einem Programm ist.
 ms.date: 04/24/2017
-ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fbde0c8b001d88614ba2de49c4aa7bfa098c6945
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627428"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425055"
 ---
 # <a name="modules"></a>Module
 
-Im Rahmen der Sprache F# eine *Modul* ist eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm. Das Gruppieren von Code in Modulen hilft dabei, verwandten Code zusammen zu halten und Namenskonflikte in Ihrem Programm zu vermeiden.
+Im Kontext der F# Sprache ist ein *Modul* eine Gruppierung von F# Code (z. b. Werte, Typen und Funktions Werte) in einem F# Programm. Das Gruppieren von Code in Modulen hilft dabei, verwandten Code zusammen zu halten und Namenskonflikte in Ihrem Programm zu vermeiden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Hinweise
 
-Eine F#-Modul ist eine Gruppierung von F#-Code-Konstrukte wie Typen, Werte, Werte von Funktionen und -Code in `do` Bindungen. Sie wird als Common Language Runtime (CLR)-Klasse implementiert, die nur statische Member aufweist. Je nachdem, ob die gesamte Datei im Modul enthalten ist, gibt es zwei Arten von Modul Deklarationen: eine Modul Deklaration der obersten Ebene und eine lokale Modul Deklaration. Eine Modul Deklaration der obersten Ebene enthält die gesamte Datei im Modul. Eine Modul Deklaration der obersten Ebene kann nur als erste Deklaration in einer Datei angezeigt werden.
+Ein F# Modul ist eine Gruppierung von F# Codekonstrukten, z. b. Typen, Werte, Funktions Werte und Code in `do` Bindungen. Sie wird als Common Language Runtime (CLR)-Klasse implementiert, die nur statische Member aufweist. Je nachdem, ob die gesamte Datei im Modul enthalten ist, gibt es zwei Arten von Modul Deklarationen: eine Modul Deklaration der obersten Ebene und eine lokale Modul Deklaration. Eine Modul Deklaration der obersten Ebene enthält die gesamte Datei im Modul. Eine Modul Deklaration der obersten Ebene kann nur als erste Deklaration in einer Datei angezeigt werden.
 
 In der Syntax für die Modul Deklaration der obersten Ebene ist der optionale *qualified-Namespace* die Sequenz von Namen in den Namen des in der Tabelle enthaltenen Namespace, die das Modul enthält. Der qualifizierte Namespace muss nicht zuvor deklariert werden.
 
@@ -40,13 +40,13 @@ Diese Datei würde so kompiliert werden, als ob Sie auf diese Weise geschrieben 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Wenn Sie über mehrere Module in einer Datei verfügen, müssen Sie für jedes Modul eine lokale Modul Deklaration verwenden. Wenn ein einschließender Namespace deklariert wird, sind diese Module Teil des einschließenden Namespace. Wenn kein einschließender Namespace deklariert wird, werden die Module Teil des implizit erstellten Moduls der obersten Ebene. Das folgende Codebeispiel zeigt eine Codedatei, die mehrere Module enthält. Der Compiler erstellt implizit ein Modul der obersten Ebene mit `Multiplemodules`dem Namen `MyModule1` , `MyModule2` und und sind in diesem Modul der obersten Ebene eingebettet.
+Wenn Sie über mehrere Module in einer Datei verfügen, müssen Sie für jedes Modul eine lokale Modul Deklaration verwenden. Wenn ein einschließender Namespace deklariert wird, sind diese Module Teil des einschließenden Namespace. Wenn kein einschließender Namespace deklariert wird, werden die Module Teil des implizit erstellten Moduls der obersten Ebene. Das folgende Codebeispiel zeigt eine Codedatei, die mehrere Module enthält. Der Compiler erstellt implizit ein Modul der obersten Ebene mit dem Namen `Multiplemodules`, und `MyModule1` und `MyModule2` sind in diesem Modul der obersten Ebene eingebettet.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
 Wenn Sie über mehrere Dateien in einem Projekt oder einer einzelnen Kompilierung verfügen oder wenn Sie eine Bibliothek erstellt haben, müssen Sie am Anfang der Datei eine Namespace Deklaration oder Modul Deklaration einschließen. Der F# Compiler bestimmt einen Modulnamen nur implizit, wenn sich nur eine Datei in einer Projekt-oder Kompilierungs Befehlszeile befindet und Sie eine Anwendung erstellen.
 
-Der Zugriffsmodifizierer kann eine der folgenden `public`sein `private`: `internal`,,. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md). Der Standardwert ist „öffentlich“.
+Der Zugriffsmodifizierer kann eine der folgenden sein: `public`, `private``internal`. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md). Der Standardwert ist „öffentlich“.
 
 ## <a name="referencing-code-in-modules"></a>Verweisen auf Code in Modulen
 
@@ -54,7 +54,7 @@ Wenn Sie auf Funktionen, Typen und Werte eines anderen Moduls verweisen, müssen
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Sie können das Modul oder einen oder mehrere Namespaces öffnen, um den Code zu vereinfachen. Weitere Informationen zum Öffnen von Namespaces und Modulen finden [Sie unter Importieren von Deklarationen: Das `open` Schlüssel](import-declarations-the-open-keyword.md)Wort.
+Sie können das Modul oder einen oder mehrere Namespaces öffnen, um den Code zu vereinfachen. Weitere Informationen zum Öffnen von Namespaces und Modulen finden Sie unter [Import Deklarationen: das `open`-Schlüsselwort](import-declarations-the-open-keyword.md).
 
 Das folgende Codebeispiel zeigt ein Modul der obersten Ebene, das den gesamten Code bis zum Ende der Datei enthält.
 
@@ -66,14 +66,14 @@ Wenn Sie diesen Code aus einer anderen Datei im selben Projekt verwenden möchte
 
 ## <a name="nested-modules"></a>Geduckte Module
 
-Module können eingebettet werden. Innere Module müssen in den Deklarationen äußerer Module eingezogen werden, um anzugeben, dass es sich um interne Module, nicht um neue Module handelt. Vergleichen Sie beispielsweise die folgenden beiden Beispiele. Das `Z` Modul ist ein internes Modul im folgenden Code.
+Module können eingebettet werden. Innere Module müssen in den Deklarationen äußerer Module eingezogen werden, um anzugeben, dass es sich um interne Module, nicht um neue Module handelt. Vergleichen Sie beispielsweise die folgenden beiden Beispiele. Module `Z` ist ein internes Modul im folgenden Code.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Das Modul `Z` ist aber ein `Y` gleich geordnetes Modul im folgenden Code.
+Modul `Z` ist jedoch ein gleich geordnetes Element des Moduls `Y` im folgenden Code.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
-Das `Z` Modul ist auch ein gleich geordnetes Modul im folgenden Code, da es nicht in das Modul eingefügt wird, das nicht in das `Y`Modul eingefügt wird.
+Das Modul `Z` ist auch ein gleich geordnetes Modul im folgenden Code, da es nicht in das Modul `Y`eingefügt wird, das nicht mit anderen Deklarationen eingezogen ist.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
 Wenn das äußere Modul keine Deklarationen hat und unmittelbar eine andere Modul Deklaration folgt, wird angenommen, dass es sich bei der neuen Modul Deklaration um ein internes Modul handelt, aber der Compiler warnt Sie, wenn die zweite Modul Definition nicht weiter eingerückt wird. erstes.
@@ -88,7 +88,7 @@ Wenn sich der gesamte Code in einer Datei in einem einzelnen äußeren Modul bef
 
 ## <a name="recursive-modules"></a>Rekursive Module
 
-F#4,1 führt das Konzept von Modulen ein, die es ermöglichen, dass der gesamte enthaltene Code gegenseitig rekursiv ist.  Dies erfolgt über `module rec`.  Die Verwendung `module rec` von kann einige Probleme verringern, die sich nicht gegenseitig referenziellen Code zwischen Typen und Modulen schreiben können.  Im folgenden finden Sie ein Beispiel hierfür:
+F#4,1 führt das Konzept von Modulen ein, die es ermöglichen, dass der gesamte enthaltene Code gegenseitig rekursiv ist.  Dies erfolgt über `module rec`.  Die Verwendung von `module rec` kann einige Probleme verringern, die sich nicht gegenseitig referenziellen Code zwischen Typen und Modulen schreiben können.  Im folgenden finden Sie ein Beispiel hierfür:
 
 ```fsharp
 module rec RecursiveModule =
@@ -112,7 +112,7 @@ module rec RecursiveModule =
         let peel (b: Banana) =
             let flip (banana: Banana) =
                 match banana.Orientation with
-                | Up -> 
+                | Up ->
                     banana.Orientation <- Down
                     banana
                 | Down -> banana
@@ -128,9 +128,9 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Beachten Sie, dass `DontSqueezeTheBananaException` die Ausnahme und `Banana` die Klasse beide aufeinander verweisen.  Darüber hinaus verweisen das `BananaHelpers` Modul und die `Banana` Klasse auch aufeinander.  Dies ist nicht möglich, die in F# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `RecursiveModule` Modul.
+Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die-Klasse `Banana` beide aufeinander verweisen.  Außerdem verweisen das Modul `BananaHelpers` und die Klasse `Banana` auch aufeinander.  Dies wäre nicht möglich, F# Wenn Sie das `rec`-Schlüsselwort aus dem `RecursiveModule` Modul entfernt haben.
 
-Diese Funktion ist auch möglich, im [Namespaces](namespaces.md) mit F# 4.1.
+Diese Funktion ist auch in [Namespaces](namespaces.md) mit F# 4,1 möglich.
 
 ## <a name="see-also"></a>Siehe auch
 
