@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 2a2e4bb45d21708ea3971d2f5b784280b9d13d0d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 81660e6a56efe5737600122d4ff7e182654f9a9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605895"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422891"
 ---
-# <a name="const-c-reference"></a><span data-ttu-id="c738b-102">const (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="c738b-102">const (C# Reference)</span></span>
+# <a name="const-c-reference"></a><span data-ttu-id="95fee-102">const (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="95fee-102">const (C# Reference)</span></span>
 
-<span data-ttu-id="c738b-103">Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="c738b-103">You use the `const` keyword to declare a constant field or a constant local.</span></span> <span data-ttu-id="c738b-104">Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="c738b-104">Constant fields and locals aren't variables and may not be modified.</span></span> <span data-ttu-id="c738b-105">Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein.</span><span class="sxs-lookup"><span data-stu-id="c738b-105">Constants can be numbers, Boolean values, strings, or a null reference.</span></span> <span data-ttu-id="c738b-106">Erstellen Sie keine Konstante, um Informationen darzustellen, bei denen Sie davon ausgehen, dass sie sich einmal ändern.</span><span class="sxs-lookup"><span data-stu-id="c738b-106">Don’t create a constant to represent information that you expect to change at any time.</span></span> <span data-ttu-id="c738b-107">Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern.</span><span class="sxs-lookup"><span data-stu-id="c738b-107">For example, don’t use a constant field to store the price of a service, a product version number, or the brand name of a company.</span></span> <span data-ttu-id="c738b-108">Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden.</span><span class="sxs-lookup"><span data-stu-id="c738b-108">These values can change over time, and because compilers propagate constants, other code compiled with your libraries will have to be recompiled to see the changes.</span></span> <span data-ttu-id="c738b-109">Weitere Informationen finden Sie auch unter dem [readonly](./readonly.md)-Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="c738b-109">See also the [readonly](./readonly.md) keyword.</span></span> <span data-ttu-id="c738b-110">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="c738b-110">For example:</span></span>
+<span data-ttu-id="95fee-103">Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="95fee-103">You use the `const` keyword to declare a constant field or a constant local.</span></span> <span data-ttu-id="95fee-104">Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="95fee-104">Constant fields and locals aren't variables and may not be modified.</span></span> <span data-ttu-id="95fee-105">Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein.</span><span class="sxs-lookup"><span data-stu-id="95fee-105">Constants can be numbers, Boolean values, strings, or a null reference.</span></span> <span data-ttu-id="95fee-106">Erstellen Sie keine Konstante, um Informationen darzustellen, bei denen Sie davon ausgehen, dass sie sich einmal ändern.</span><span class="sxs-lookup"><span data-stu-id="95fee-106">Don’t create a constant to represent information that you expect to change at any time.</span></span> <span data-ttu-id="95fee-107">Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern.</span><span class="sxs-lookup"><span data-stu-id="95fee-107">For example, don’t use a constant field to store the price of a service, a product version number, or the brand name of a company.</span></span> <span data-ttu-id="95fee-108">Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden.</span><span class="sxs-lookup"><span data-stu-id="95fee-108">These values can change over time, and because compilers propagate constants, other code compiled with your libraries will have to be recompiled to see the changes.</span></span> <span data-ttu-id="95fee-109">Weitere Informationen finden Sie auch unter dem [readonly](./readonly.md)-Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="95fee-109">See also the [readonly](./readonly.md) keyword.</span></span> <span data-ttu-id="95fee-110">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="95fee-110">For example:</span></span>
 
 ```csharp
 const int X = 0;
@@ -25,21 +25,21 @@ public const double GravitationalConstant = 6.673e-11;
 private const string ProductName = "Visual C#";
 ```
 
-## <a name="remarks"></a><span data-ttu-id="c738b-111">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="c738b-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="95fee-111">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="95fee-111">Remarks</span></span>
 
-<span data-ttu-id="c738b-112">Der Typ einer Konstantendeklaration gibt den Typ der Member an, die durch die Deklaration eingeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c738b-112">The type of a constant declaration specifies the type of the members that the declaration introduces.</span></span> <span data-ttu-id="c738b-113">Der Initialisierer einer konstanten lokalen Variable oder eines konstanten Felds muss ein konstanter Ausdruck sein, der implizit in den Zieltyp konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="c738b-113">The initializer of a constant local or a constant field must be a constant expression that can be implicitly converted to the target type.</span></span>
+<span data-ttu-id="95fee-112">Der Typ einer Konstantendeklaration gibt den Typ der Member an, die durch die Deklaration eingeführt werden.</span><span class="sxs-lookup"><span data-stu-id="95fee-112">The type of a constant declaration specifies the type of the members that the declaration introduces.</span></span> <span data-ttu-id="95fee-113">Der Initialisierer einer konstanten lokalen Variable oder eines konstanten Felds muss ein konstanter Ausdruck sein, der implizit in den Zieltyp konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="95fee-113">The initializer of a constant local or a constant field must be a constant expression that can be implicitly converted to the target type.</span></span>
 
-<span data-ttu-id="c738b-114">Ein konstanter Ausdruck ist ein Ausdruck, der während der Kompilierung vollständig ausgewertet werden kann.</span><span class="sxs-lookup"><span data-stu-id="c738b-114">A constant expression is an expression that can be fully evaluated at compile time.</span></span> <span data-ttu-id="c738b-115">Daher sind `string` und ein NULL-Verweis die einzig möglichen Werte für Verweistypkonstanten.</span><span class="sxs-lookup"><span data-stu-id="c738b-115">Therefore, the only possible values for constants of reference types are `string` and a null reference.</span></span>
+<span data-ttu-id="95fee-114">Ein konstanter Ausdruck ist ein Ausdruck, der während der Kompilierung vollständig ausgewertet werden kann.</span><span class="sxs-lookup"><span data-stu-id="95fee-114">A constant expression is an expression that can be fully evaluated at compile time.</span></span> <span data-ttu-id="95fee-115">Daher sind `string` und ein NULL-Verweis die einzig möglichen Werte für Verweistypkonstanten.</span><span class="sxs-lookup"><span data-stu-id="95fee-115">Therefore, the only possible values for constants of reference types are `string` and a null reference.</span></span>
 
-<span data-ttu-id="c738b-116">In der Konstantendeklaration können mehrere Konstanten deklariert werden, z. B.:</span><span class="sxs-lookup"><span data-stu-id="c738b-116">The constant declaration can declare multiple constants, such as:</span></span>
+<span data-ttu-id="95fee-116">In der Konstantendeklaration können mehrere Konstanten deklariert werden, z. B.:</span><span class="sxs-lookup"><span data-stu-id="95fee-116">The constant declaration can declare multiple constants, such as:</span></span>
 
 ```csharp
 public const double X = 1.0, Y = 2.0, Z = 3.0;
 ```
 
-<span data-ttu-id="c738b-117">Der `static`-Modifizierer ist in einer Konstantendeklaration nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="c738b-117">The `static` modifier is not allowed in a constant declaration.</span></span>
+<span data-ttu-id="95fee-117">Der `static`-Modifizierer ist in einer Konstantendeklaration nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="95fee-117">The `static` modifier is not allowed in a constant declaration.</span></span>
 
-<span data-ttu-id="c738b-118">Eine Konstante kann wie folgt einen Teil eines konstanten Ausdrucks darstellen:</span><span class="sxs-lookup"><span data-stu-id="c738b-118">A constant can participate in a constant expression, as follows:</span></span>
+<span data-ttu-id="95fee-118">Eine Konstante kann wie folgt einen Teil eines konstanten Ausdrucks darstellen:</span><span class="sxs-lookup"><span data-stu-id="95fee-118">A constant can participate in a constant expression, as follows:</span></span>
 
 ```csharp
 public const int C1 = 5;
@@ -47,26 +47,26 @@ public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c738b-119">Das [readonly](./readonly.md)-Schlüsselwort unterscheidet sich vom `const`-Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="c738b-119">The [readonly](./readonly.md) keyword differs from the `const` keyword.</span></span> <span data-ttu-id="c738b-120">Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="c738b-120">A `const` field can only be initialized at the declaration of the field.</span></span> <span data-ttu-id="c738b-121">Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="c738b-121">A `readonly` field can be initialized either at the declaration or in a constructor.</span></span> <span data-ttu-id="c738b-122">Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen.</span><span class="sxs-lookup"><span data-stu-id="c738b-122">Therefore, `readonly` fields can have different values depending on the constructor used.</span></span> <span data-ttu-id="c738b-123">Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld für Laufzeitkonstanten verwendet werden kann, wie in der folgenden Codezeile: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`.</span><span class="sxs-lookup"><span data-stu-id="c738b-123">Also, although a `const` field is a compile-time constant, the `readonly` field can be used for run-time constants, as in this line: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`</span></span>
+> <span data-ttu-id="95fee-119">Das [readonly](./readonly.md)-Schlüsselwort unterscheidet sich vom `const`-Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="95fee-119">The [readonly](./readonly.md) keyword differs from the `const` keyword.</span></span> <span data-ttu-id="95fee-120">Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="95fee-120">A `const` field can only be initialized at the declaration of the field.</span></span> <span data-ttu-id="95fee-121">Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="95fee-121">A `readonly` field can be initialized either at the declaration or in a constructor.</span></span> <span data-ttu-id="95fee-122">Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen.</span><span class="sxs-lookup"><span data-stu-id="95fee-122">Therefore, `readonly` fields can have different values depending on the constructor used.</span></span> <span data-ttu-id="95fee-123">Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld für Laufzeitkonstanten verwendet werden kann, wie in der folgenden Codezeile: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`.</span><span class="sxs-lookup"><span data-stu-id="95fee-123">Also, although a `const` field is a compile-time constant, the `readonly` field can be used for run-time constants, as in this line: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`</span></span>
 
-## <a name="example"></a><span data-ttu-id="c738b-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c738b-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="95fee-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="95fee-124">Example</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#5)]
 
-## <a name="example"></a><span data-ttu-id="c738b-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c738b-125">Example</span></span>
+## <a name="example"></a><span data-ttu-id="95fee-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="95fee-125">Example</span></span>
 
-<span data-ttu-id="c738b-126">In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demonstriert.</span><span class="sxs-lookup"><span data-stu-id="c738b-126">This example demonstrates how to use constants as local variables.</span></span>
+<span data-ttu-id="95fee-126">In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demonstriert.</span><span class="sxs-lookup"><span data-stu-id="95fee-126">This example demonstrates how to use constants as local variables.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#6)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="c738b-127">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="c738b-127">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="95fee-127">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="95fee-127">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="c738b-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c738b-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95fee-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="95fee-128">See also</span></span>
 
-- [<span data-ttu-id="c738b-129">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="c738b-129">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="c738b-130">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="c738b-130">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="c738b-131">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="c738b-131">C# Keywords</span></span>](./index.md)
-- [<span data-ttu-id="c738b-132">Modifizierer</span><span class="sxs-lookup"><span data-stu-id="c738b-132">Modifiers</span></span>](./modifiers.md)
-- [<span data-ttu-id="c738b-133">readonly</span><span class="sxs-lookup"><span data-stu-id="c738b-133">readonly</span></span>](./readonly.md)
+- [<span data-ttu-id="95fee-129">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="95fee-129">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="95fee-130">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="95fee-130">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="95fee-131">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="95fee-131">C# Keywords</span></span>](./index.md)
+- [<span data-ttu-id="95fee-132">Modifizierer</span><span class="sxs-lookup"><span data-stu-id="95fee-132">Modifiers</span></span>](index.md)
+- [<span data-ttu-id="95fee-133">readonly</span><span class="sxs-lookup"><span data-stu-id="95fee-133">readonly</span></span>](./readonly.md)
