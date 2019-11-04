@@ -4,12 +4,12 @@ description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliot
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895215"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775311"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -84,7 +84,7 @@ NuGet-Pakete mit einem Versionssuffix gelten als [Vorabversion](/nuget/create-pa
 > [!NOTE]
 > Ein stabiles Paket kann nicht von einem Vorabversionspaket abhängen. Sie müssen entweder Ihr eigenes Paket vorab veröffentlichen oder eine ältere stabile Version verwenden.
 
-![NuGet-Vorabversions-Paketabhängigkeit](./media/nuget/nuget-prerelease-package.png "NuGet-Vorabversions-Paketabhängigkeit")
+![Vorabrelease der NuGet-Paketabhängigkeit](./media/nuget/nuget-prerelease-package.png "Vorabrelease der NuGet-Paketabhängigkeit")
 
 **✔️ Veröffentlichen** Sie ein Vorabversionspaket für Tests und Vorschauen.
 
@@ -99,7 +99,7 @@ NuGet.org hostet sein eigenes [Symbolserverrepository](/nuget/create-packages/sy
 > [!IMPORTANT]
 > Der NuGet.org-Symbolserver unterstützt nur die neuen [portierbaren Symboldateien](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`), die von SDK-Projekten erstellt wurden.
 >
-> Um beim Debuggen einer .NET-Bibliothek den NuGet.org-Symbolserver zu verwenden, benötigen Entwickler Visual Studio 2017 15.9 oder höher.
+> Entwickler benötigen Visual Studio 2017 Version 15.9 oder höher, um beim Debuggen einer .NET-Bibliothek den NuGet.org-Symbolserver zu verwenden.
 
 Eine Alternative zum Erstellen eines Symbolpakets ist das Einbetten von Symboldateien in das NuGet-Hauptpaket. Das NuGet-Hauptpaket ist zwar größer, doch da die Symboldateien eingebettet sind, müssen Entwickler den NuGet.org-Symbolserver nicht konfigurieren. Wenn Sie Ihr NuGet-Paket mit einem SDK-Projekt erstellen, können Sie Symboldateien einbetten, indem Sie die Eigenschaft `AllowedOutputExtensionsInPackageBuildOutputFolder` festlegen:
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131495"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -44,7 +42,7 @@ Mit der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>-Met
 
 In der folgenden Tabelle werden einige <xref:System.Threading.Thread>-Eigenschaften aufgeführt:  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Gibt `true` zurück, wenn dieser Thread gestartet und ordnungsgemäß beendet bzw. abgebrochen wurde.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Es wird ein boolescher Wert abgerufen oder festgelegt, der angibt, ob ein Thread ein Hintergrundthread ist. Hintergrundthreads sind wie Vordergrundthreads, aber ein Hintergrundthread verhindert nicht, dass ein Prozess beendet wird. Sobald alle zu einem Prozess gehörenden Vordergrundthreads beendet wurden, beendet die Common Language Runtime den Prozess, indem die Methode <xref:System.Threading.Thread.Abort%2A> in Hintergrundthreads aufgerufen wird, die noch aktiv sind. Weitere Informationen finden Sie im Artikel zu [Vordergrund- und Hintergrundthreads](foreground-and-background-threads.md).|  

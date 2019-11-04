@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cfea1d5ee19d9fb61094b60e0175ddfd2f120494
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053724"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774281"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -628,7 +628,7 @@ Ab .NET Framework 4.7.1 enthält Windows Forms Folgendes:
 
 ### <a name="aspnet-web-controls"></a>ASP.NET-Websteuerelemente
 
-Ab .NET Framework 4.7.1 und Visual Studio 2017 15.3 arbeiten .ASP.NET-Websteuerelemente effizienter mit den Funktionen für die Barrierefreiheit in Visual Studio zusammen. Dazu gehören folgende Änderungen:
+Ab .NET Framework 4.7.1 und Visual Studio 2017 Version 15.3 arbeiten ASP.NET-Websteuerelemente effizienter mit den Funktionen für die Barrierefreiheit in Visual Studio zusammen. Dazu gehören folgende Änderungen:
 
 - Änderungen, durch die fehlende Barrierefreiheitsmuster für Steuerelemente der Benutzeroberfläche implementiert werden. Zu diesen Steuerelementen zählen z.B. das Dialogfeld **Feld hinzufügen** im **Detailansicht-Assistenten** oder das Dialogfeld **ListView konfigurieren** im **ListView**-Assistenten.
 

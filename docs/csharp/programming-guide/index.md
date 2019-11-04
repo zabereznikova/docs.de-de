@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392430"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423250"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
   
  In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie Einsteiger beim Programmieren oder bei C# sind, sind die [Tutorials zur Einführung in C#](../tutorials/intro-to-csharp/index.md) oder das [Tutorial zu .NET im Browser](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) am besten für Sie geeignet, da für diese keine Programmierkenntnisse erforderlich sind.  
   
- Informationen zu bestimmten Schlüsselwörtern, Operatoren und Präprozessordirektiven finden Sie in der [C#-Referenz](../language-reference/index.md). Informationen zur Spezifikation für C# finden Sie unter [C#-Sprachspezifikation](../language-reference/language-specification/index.md).  
+ Informationen zu bestimmten Schlüsselwörtern, Operatoren und Präprozessordirektiven finden Sie in der [C#-Referenz](../language-reference/index.md). Informationen zur Spezifikation für C# finden Sie unter [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Programmabschnitte
 
@@ -56,7 +56,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
   
  [Iteratoren](./concepts/iterators.md)
   
- [LINQ-Abfrageausdrücke](./linq-query-expressions/index.md)  
+ [LINQ-Abfrageausdrücke](../linq/index.md)  
   
  [Lambda-Ausdrücke](./statements-expressions-operators/lambda-expressions.md)  
   

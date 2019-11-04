@@ -3,12 +3,12 @@ title: 'Gewusst wie: Verwenden der automatisierten ML-API von ML.NET'
 description: Die automatisierte ML-API von ML.NET automatisiert das Erstellen von Modellen und generiert ein zur Bereitstellung geeignetes Modell. Erfahren Sie, welche Optionen Sie verwenden können, um automatisierte Machine Learning-Aufgaben zu konfigurieren.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332723"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774550"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Gewusst wie: Verwenden der automatisierten ML-API von ML.NET
 
@@ -89,7 +89,7 @@ Beispiele:
     ```
 
 1. Die `CacheDirectory`-Einstellung ist ein Zeiger auf ein Verzeichnis, in dem alle während der AutoML-Aufgabe trainierten Modelle gespeichert werden. Wenn `CacheDirectory` auf NULL festgelegt ist, werden Modelle im Arbeitsspeicher gehalten und nicht auf den Datenträger geschrieben.
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ Die Metrikoptimierung, wie im obigen Beispiel dargestellt, bestimmt, welche Metr
 ## <a name="data-pre-processing-and-featurization"></a>Datenvorverarbeitung und Featurebereitstellung
 
 > [!NOTE]
-> Die Featurespalte unterstützt nur die Typen [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) und [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
+> Die Featurespalte unterstützt nur die Typen <xref:System.Boolean>, <xref:System.Single> und <xref:System.String>.
 
 Die Datenvorverarbeitung erfolgt standardmäßig, und die folgenden Schritte werden automatisch für Sie ausgeführt:
 
@@ -141,9 +141,9 @@ Die Datenvorverarbeitung erfolgt standardmäßig, und die folgenden Schritte wer
     Füllen Sie fehlende Wertzellen mit dem Standardwert für den Datentyp auf. Fügen Sie Indikatorfeatures mit der gleichen Anzahl von Slots wie die Eingabespalte an. Der Wert in den angefügten Indikatorfeatures ist `1`, falls der Wert in der Eingabespalte fehlt, und andernfalls `0`.
 
 1. Generieren zusätzlicher Features
-    
+
     Für Textfeatures: Bag-of-Word-Features mit Monogrammen und Trigrammen.
-    
+
     Für kategorische Features: One-Hot-Codierung für Features mit niedriger Kardinalität Funktionen und One-Hot-Hash-Codierung für kategorische Features mit hoher Kardinalität.
 
 1. Transformationen und Codierungen
@@ -191,7 +191,7 @@ Untersuchen Sie andere Überladungen für `Execute()`, wenn Validierungsdaten, S
 AutoML bietet eine Methode zur Ausführung eines überladenen Experiments, mit der Sie Trainingsdaten bereitstellen können. Die automatisierte ML unterteilt die Daten intern in „Trainieren-Überprüfen“-Unterteilungen.
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>Benutzerdefiniertes Validierungsdataset
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 Verwenden Sie benutzerdefinierte Validierungsdatasets, wenn die Zufallsaufteilung nicht akzeptabel ist, was in der Regel auf Zeitreihendaten zutrifft. Sie können Ihr eigenes Validierungsdataset angeben. Das Modell wird anhand des angegebenen Validierungsdatasets anstatt eines oder mehrerer zufälliger Datasets ausgewertet.
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>Untersuchen von Modellmetriken

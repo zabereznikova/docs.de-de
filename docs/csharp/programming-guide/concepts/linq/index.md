@@ -2,12 +2,12 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: d75c34cd63eb439203ef6757e62e18936eb3606a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773919"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418239"
 ---
 # <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
@@ -40,7 +40,7 @@ Die folgende Abbildung aus Visual Studio zeigt eine teilweise abgeschlossene LIN
 
 Um mehr zu LINQ zu erfahren, machen Sie sich zunächst unter [Grundlagen zu Abfrageausdrücken](../../../linq/query-expression-basics.md) mit einigen grundlegenden Konzepten vertraut, und lesen Sie dann die Dokumentation für die LINQ-Technologie, die Sie interessiert:
 
-- XML-Dokumente: [LINQ to XML](linq-to-xml.md)  
+- XML-Dokumente: [LINQ to XML](linq-to-xml-overview.md)  
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - .NET-Collections, -Dateien, -Zeichenfolgen usw.: [LINQ to Objects](linq-to-objects.md)
 

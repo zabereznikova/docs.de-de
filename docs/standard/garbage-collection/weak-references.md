@@ -8,14 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 246e6572deefaf4546afe6fb5326ecc2286215a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141331"
 ---
 # <a name="weak-references"></a>Schwache Verweise
 Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwendet wird, während der Anwendungscode dieses Objekt erreichen kann. Dies wird als starker Verweis der Anwendung auf das Objekt bezeichnet.  

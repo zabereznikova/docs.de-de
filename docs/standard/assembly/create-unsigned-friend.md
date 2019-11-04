@@ -5,12 +5,12 @@ ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9d5699f772dba994b10408d15422faa3c5931f45
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991683"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774347"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>Vorgehensweise: Erstellen von unsignierten Friend-Assemblys
 
@@ -136,7 +136,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   Der Name der vom Compiler generierten Assembly muss mit dem Namen der Friend-Assembly übereinstimmen, die an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird. Sie müssen den Namen der Ausgabeassembly ( *.exe* oder *.dll*) explizit mit der `/out`-Compileroption angeben. Weitere Informationen finden Sie unter [/out (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/out-compiler-option.md) oder [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+   Der Name der vom Compiler generierten Assembly muss mit dem Namen der Friend-Assembly übereinstimmen, die an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird. Sie müssen den Namen der Ausgabeassembly ( *.exe* oder *.dll*) explizit mit der `-out`-Compileroption angeben. Weitere Informationen finden Sie unter [-out (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/out-compiler-option.md) oder [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 6. Führen Sie die Datei *friend_unsigned_B.exe* aus.
 

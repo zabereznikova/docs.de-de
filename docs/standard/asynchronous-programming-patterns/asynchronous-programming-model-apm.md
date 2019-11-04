@@ -11,14 +11,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140137"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Asynchrones Programmiermodell (APM)
 Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwendet, wird als zwei Methoden namens `BeginOperationName` und `EndOperationName` implementiert, die den asynchronen Vorgang *OperationName* starten bzw. beenden. Die <xref:System.IO.FileStream> -Klasse stellt z. B. die Methoden <xref:System.IO.FileStream.BeginRead%2A> und <xref:System.IO.FileStream.EndRead%2A> zum asynchronen Lesen von Bytes aus einer Datei bereit. Diese Methoden implementieren die asynchrone Version der <xref:System.IO.FileStream.Read%2A> -Methode.  

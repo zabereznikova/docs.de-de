@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044016"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773965"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das Windows-Runtime-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die Windows-Runtime-Metadaten enthält. Obwohl .NET Framework-Assemblys und Windows-Runtime-Metadatendateien dasselbe physische Format haben, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, was bedeutet, dass .NET Framework-Assemblys nicht automatisch als Komponenten für Windows-Runtime verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine Komponente für Windows-Runtime wird als *Exportieren* bezeichnet. In .NET Framework 4.5 und .NET Framework 4.5.1 enthält die resultierende Windows-Metadatendatei (.winmd) sowohl die Metadaten als auch die Implementierung.  
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |Argument oder Option|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|`winmdmodule`|Gibt das zu exportierende Modul (.winmdobj) an. Nur ein Modul ist erlaubt. Um dieses Modul zu erstellen, verwenden Sie die `/target`-Compileroption mit dem `winmdobj`-Ziel. Weitere Informationen finden Sie unter [/target:winmdobj (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) oder [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`winmdmodule`|Gibt das zu exportierende Modul (.winmdobj) an. Nur ein Modul ist erlaubt. Um dieses Modul zu erstellen, verwenden Sie die `/target`-Compileroption mit dem `winmdobj`-Ziel. Weitere Informationen finden Sie unter [-target:winmdobj (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) oder [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Gibt die XML-Dokumentations-Ausgabedatei an, die "Winmdexp.exe" erzeugt. In .NET Framework 4.5 entspricht die Ausgabedatei im Wesentlichen der XML-Dokumentationseingabedatei.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Gibt den Namen der XML-Dokumentationsdatei an, die der Compiler mit `winmdmodule` produzierte.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Gibt den Namen der Programmdatenbankdatei (PDB-Datei) an, die Symbole für `winmdmodule` enthält.|  

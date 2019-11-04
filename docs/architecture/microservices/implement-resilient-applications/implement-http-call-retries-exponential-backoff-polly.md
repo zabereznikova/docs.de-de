@@ -2,12 +2,12 @@
 title: Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit Polly
 description: Erfahren Sie, wie Sie HTTP-Fehler mit Polly und HttpClientFactory verarbeiten können.
 ms.date: 01/07/2019
-ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318408"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798817"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit HttpClientFactory und Polly-Richtlinien
 
@@ -53,17 +53,20 @@ Mit Polly können Sie eine Wiederholungsrichtlinie definieren, die die Anzahl vo
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Hinzufügen einer Jitterstrategie zur Wiederholungsrichtlinie
 
-Eine reguläre Wiederholungsrichtlinie kann ein System negativ beeinflussen, falls hohe Parallelität, hohe Skalierbarkeit und ein hohes Konfliktpotenzial vorhanden sind. Um mit Spitzenlasten umgehen zu können, die bei ähnlichen Wiederholungsanforderungen von vielen Clients bei einem Teilausfall auftreten, empfiehlt es sich als Notlösung, den Wiederholungsalgorithmus oder die Wiederholungsrichtlinie um eine Jitterstrategie zu ergänzen. Wenn für den exponentiellen Backoff der Jitter zufällig festgelegt wird, kann dies die Gesamtleistung des End-to-End-Systems verbessern. Dadurch lassen sich beim Auftreten von Problemen Lastspitzen verteilen. Wenn Sie eine einfache Polly-Richtlinie verwenden, könnte der Code zum Implementieren des Jitters wie folgt aussehen:
+Eine reguläre Wiederholungsrichtlinie kann ein System negativ beeinflussen, falls hohe Parallelität, hohe Skalierbarkeit und ein hohes Konfliktpotenzial vorhanden sind. Um mit Spitzenlasten umgehen zu können, die bei ähnlichen Wiederholungsanforderungen von vielen Clients bei einem Teilausfall auftreten, empfiehlt es sich als Notlösung, den Wiederholungsalgorithmus oder die Wiederholungsrichtlinie um eine Jitterstrategie zu ergänzen. Wenn für den exponentiellen Backoff der Jitter zufällig festgelegt wird, kann dies die Gesamtleistung des End-to-End-Systems verbessern. Dadurch lassen sich beim Auftreten von Problemen Lastspitzen verteilen. Das Prinzip wird im folgenden Beispiel dargestellt:
 
 ```csharp
 Random jitterer = new Random(); 
-Policy
-  .Handle<HttpResponseException>() // etc
-  .WaitAndRetry(5,    // exponential back-off plus some jitter
-      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
-  );
+var retryWithJitterPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
+        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+    );
 ```
+
+Polly stellt über die Projektwebsite produktionsreife Jitteralgorithmen zur Verfügung.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -75,6 +78,9 @@ Policy
 
 - **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**  
   <https://github.com/App-vNext/Polly>
+
+- **Polly: Wiederholen mit Jitter**  
+  <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
 - **Marc Brooker. Jitter: Making Things Better With Randomness** (Marc Brooker. Jitter: Dinge durch Zufall verbessern)  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>

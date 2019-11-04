@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921804"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774183"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Überläufe
 
- Numerische Ausdrücke können zu Überläufen führen, wenn der Wert größer als der Maximalwert des Typs des Werts ist. Weitere Informationen finden Sie [Checked und Unchecked](../../language-reference/keywords/checked-and-unchecked.md) und [Tabelle für explizite numerische Konvertierungen](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Numerische Ausdrücke können zu Überläufen führen, wenn der Wert größer als der Maximalwert des Typs des Werts ist. Weitere Informationen finden Sie unter [Checked und Unchecked](../../language-reference/keywords/checked-and-unchecked.md) und dem Abschnitt [Explizite numerische Konvertierungen](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) des Artikels [Integrierte numerische Konvertierungen](../../language-reference/builtin-types/numeric-conversions.md).
   
 ## <a name="operator-precedence-and-associativity"></a>Operatorrangfolge und Assoziativität
 

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f88f2035fb27567e56792cae8289140129e9c557
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647727"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129011"
 ---
 # <a name="merge-options-in-plinq"></a>Mergeoptionen in PLINQ
 Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellsequenz, sodass mehrere Threads gleichzeitig an verschiedenen Teilen arbeiten können, in der Regel an separaten Threads. Wenn die Ergebnisse in einem einzelnen Thread verarbeitet werden sollen, z.B. in einer `foreach`-Schleife (`For Each` in Visual Basic), müssen die Ergebnisse der einzelnen Threads wieder zu einer einzigen Sequenz zusammengeführt werden. Welche Art der Zusammenführung PLINQ ausführt, hängt von den Operatoren ab, die in der Abfrage vorhanden sind. Beispielsweise müssen Operatoren, die die Ergebnisse in eine neue Reihenfolge stellen, alle Elemente aus allen Threads puffern. Aus der Perspektive des nutzenden Threads (die mit der des Anwendungsbenutzers identisch ist) könnte eine vollständig gepufferte Abfrage für einen beachtlichen Zeitraum ausgeführt werden, bevor sie das erste Ergebnis liefert. Andere Operatoren sind standardmäßig teilweise gepuffert. Sie stellen ihre Ergebnisse batchweise bereit. Ein Operator, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, wird nicht standardmäßig gepuffert. Er stellt alle Elemente aus allen Threads sofort bereit.  
@@ -49,17 +47,17 @@ Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellse
   
 |Operator|Beschränkungen|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Keiner|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Keiner|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Keine|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Keine|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Nicht geordnete Abfragen, die nur über eine Array- oder Listenquelle verfügen.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Keiner|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Keiner|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Keine|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Keine|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Nicht geordnete Abfragen, die nur über eine Array- oder Listenquelle verfügen.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Keiner|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Keine|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|Keiner|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Keiner|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Keine|  
   
  Alle anderen PLINQ-Abfrageoperatoren werden möglicherweise von durch den Benutzer bereitgestellten Mergeoptionen ignoriert. Einige Abfrageoperatoren, z.B. <xref:System.Linq.ParallelEnumerable.Reverse%2A> und <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, können erst dann Elemente bereitstellen, wenn alle erzeugt und neu angeordnet wurden. Wenn <xref:System.Linq.ParallelMergeOptions> in einer Abfrage verwendet wird, die auch einen Operator wie z.B. <xref:System.Linq.ParallelEnumerable.Reverse%2A> enthält, wird darum das Zusammenführungsverhalten erst dann in der Abfrage angewendet, nachdem dieser Operator seine Ergebnisse erzeugt hat.  
   

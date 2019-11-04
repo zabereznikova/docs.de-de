@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579137"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960832"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -28,7 +28,7 @@ C# 8.0 fügt der Sprache C# die folgenden Features und Verbesserungen hinzu:
 - [Indizes und Bereiche](#indices-and-ranges)
 - [NULL-Coalescing-Zuweisung](#null-coalescing-assignment)
 - [Nicht verwaltete konstruierte Typen](#unmanaged-constructed-types)
-- [„stackalloc“ in geschachtelten Ausdrücken](#stackalloc-in-nested-expressions)
+- [Stackalloc in geschachtelten Ausdrücken](#stackalloc-in-nested-expressions)
 - [Erweiterung von interpolierten ausführlichen Zeichenfolgen](#enhancement-of-interpolated-verbatim-strings)
 
 Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Artikel verfügbar sind, werden Links zu diesen Tutorials und Übersichten bereitgestellt. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
@@ -40,7 +40,7 @@ Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Ar
 
 ## <a name="readonly-members"></a>Readonly-Member
 
-Sie können den `readonly`-Modifikator auf jedes Member einer Struktur anwenden. Damit wird angezeigt, dass das Element den Zustand nicht ändert. Dies ist granularer als das Anwenden des `readonly`-Modifikators auf eine `struct`-Deklaration.  Betrachten Sie folgende veränderliche Struktur:
+Sie können den `readonly`-Modifizierer auf jeden Member einer Struktur anwenden. Damit wird angezeigt, dass der Member den Zustand nicht ändert. Dies ist granularer als das Anwenden des `readonly`-Modifikators auf eine `struct`-Deklaration.  Betrachten Sie folgende veränderliche Struktur:
 
 ```csharp
 public struct Point
@@ -54,7 +54,7 @@ public struct Point
 }
 ```
 
-Wie die meisten Strukturen ändert die `ToString()`-Methode den Zustand nicht. Sie könnten dies durch Hinzufügen des `readonly`-Modifikators zur Deklaration von `ToString()` angeben:
+Wie bei den meisten Strukturen verändert die `ToString()`-Methode den Zustand nicht. Sie könnten dies durch Hinzufügen des `readonly`-Modifikators zur Deklaration von `ToString()` angeben:
 
 ```csharp
 public readonly override string ToString() =>
@@ -67,13 +67,15 @@ Die vorhergehende Änderung generiert eine Compilerwarnung, weil `ToString` auf 
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-Der Compiler warnt Sie, wenn er eine Defensivkopie erstellen muss.  Die `Distance`-Eigenschaft ändert den Zustand nicht, sodass Sie diese Warnung beheben können, indem Sie den `readonly`-Modifikator zur Deklaration hinzufügen:
+Der Compiler warnt Sie, wenn er eine Defensivkopie erstellen muss.  Die `Distance`-Eigenschaft verändert nicht den Zustand, sodass Sie diese Warnung aufheben können, indem Sie der Deklaration den `readonly`-Modifizierer hinzufügen:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Beachten Sie, dass der `readonly`-Modifikator bei einer schreibgeschützten Eigenschaft notwendig ist. Der Compiler geht nicht davon aus, dass `get`-Zugriffsmethoden den Zustand nicht ändern; Sie müssen `readonly` explizit deklarieren. Der Compiler erzwingt die Regel, dass `readonly`-Member den Zustand nicht ändern. Die folgende Methode wird nicht kompiliert, es sei denn, Sie entfernen den `readonly`-Modifikator:
+Beachten Sie, dass der `readonly`-Modifizierer bei einer schreibgeschützten Eigenschaft erforderlich ist. Der Compiler geht nicht davon aus, dass `get`-Zugriffsmethoden den Zustand nicht ändern. Sie müssen `readonly` explizit deklarieren. Automatisch implementierte Eigenschaften sind eine Ausnahme; der Compiler sieht alle automatisch implementierten Getter als schreibgeschützt an, sodass es hier nicht notwendig ist, den `readonly`-Modifizierer zu den `X`- und `Y`-Eigenschaften hinzuzufügen.
+
+Der Compiler erzwingt die Regel, dass `readonly`-Member den Status nicht ändern. Die folgende Methode wird nicht kompiliert, es sei denn, Sie entfernen den `readonly`-Modifizierer:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -83,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Mit diesem Feature können Sie Ihre Designabsicht angeben, damit der Compiler sie erzwingen und Optimierungen basierend auf dieser Absicht vornehmen kann.
+Mit diesem Feature können Sie Ihre Designabsicht angeben, damit der Compiler sie erzwingen und Optimierungen basierend auf dieser Absicht vornehmen kann. Erfahren Sie mehr über schreibgeschützte Member in dem Artikel [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples).
 
 ## <a name="default-interface-methods"></a>Standardschnittstellenmethoden
 
@@ -99,7 +101,7 @@ C# 8.0 erweitert dieses Vokabular, sodass Sie mehr Musterausdrücke an mehreren 
 
 Zusätzlich zu neuen Mustern an neuen Orten fügt C# 8.0 **rekursive Muster** hinzu. Das Ergebnis eines beliebigen Musterausdrucks ist ein Ausdruck. Ein rekursives Muster ist einfach ein Musterausdruck, der auf die Ausgabe eines anderen Musterausdrucks angewendet wird.
 
-### <a name="switch-expressions"></a>switch-Ausdrücke
+### <a name="switch-expressions"></a>Switch-Ausdrücke
 
 Häufig liefert eine [`switch`](../language-reference/keywords/switch.md)-Anweisung in jedem ihrer `case`-Blöcke einen Wert. Mit **switch-Ausdrücken** können Sie eine präzisere Ausdruckssyntax verwenden. Es gibt weniger repetitive `case`- und `break`-Schlüsselwörter und weniger geschweifte Klammern.  Betrachten Sie als Beispiel die folgende Enumeration, die die Farben des Regenbogens enumeriert:
 
@@ -252,11 +254,11 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-Das Ausschussmuster im vorherigen Switch stimmt überein, wenn entweder `x` oder `y` 0 ist, jedoch nicht beide. Ein switch-Ausdruck muss entweder einen Wert erzeugen oder eine Ausnahme auslösen. Wenn keiner der Fälle übereinstimmt, löst der switch-Ausdruck eine Ausnahme aus. Der Compiler erzeugt für Sie eine Warnung, wenn Sie nicht alle möglichen Fälle in Ihrem switch-Ausdruck abdecken.
+Das Ausschussmuster im vorherigen Switch stimmt überein, wenn entweder `x` oder `y` 0 ist, jedoch nicht beide. Ein switch-Ausdruck muss entweder einen Wert erzeugen oder eine Ausnahme auslösen. Wenn keiner der Fälle übereinstimmt, löst der switch-Ausdruck eine Ausnahme aus. Der Compiler erzeugt für Sie eine Warnung, wenn Sie nicht alle möglichen Fälle in Ihrem Switch-Ausdruck abdecken.
 
 In diesem [erweiterten Tutorial zum Musterabgleich](../tutorials/pattern-matching.md) erhalten Sie weitere Informationen zu Musterabgleichverfahren.
 
-## <a name="using-declarations"></a>using-Deklarationen
+## <a name="using-declarations"></a>Using-Deklarationen
 
 Eine **using-Deklaration** ist eine Variablendeklaration, der das Schlüsselwort `using` vorangestellt ist. Es teilt dem Compiler mit, dass die zu deklarierende Variable am Ende des umschließenden Bereichs angeordnet werden soll. Sehen Sie sich beispielsweise den folgenden Code an, der eine Textdatei schreibt:
 
@@ -345,7 +347,7 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Verwerfbare Referenzstrukturen
 
-Ein mit dem `ref`-Modifikator deklarierter `struct` darf keine Schnittstellen und damit auch keine <xref:System.IDisposable> implementieren. Aus diesem Grund Aktivieren einer `ref struct` um verworfen werden, muss eine zugängliche `void Dispose()` Methode. Dies gilt auch für `readonly ref struct`-Deklarationen.
+Ein mit dem `ref`-Modifizierer deklarierter `struct` darf keine Schnittstellen und damit auch keine <xref:System.IDisposable> implementieren. Aus diesem Grund Aktivieren einer `ref struct` um verworfen werden, muss eine zugängliche `void Dispose()` Methode. Dieses Feature gilt auch für `readonly ref struct`-Deklarationen.
 
 ## <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -402,7 +404,7 @@ Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatore
 
 Beginnen wir mit den Regeln für Indizes. Betrachten Sie einen Array `sequence`. Der `0`-Index entspricht `sequence[0]`. Der `^0`-Index entspricht `sequence[sequence.Length]`. Beachten Sie, dass `sequence[^0]` genau wie `sequence[sequence.Length]` eine Ausnahme auslöst. Für eine beliebige Zahl `n` ist der Index `^n` identisch mit `sequence.Length - n`.
 
-Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Der Beginn des Bereichs ist inklusiv, das Ende des Bereichs ist jedoch exklusiv. Das bedeutet dass der *Beginn* im Bereich enthalten ist, das *Ende* aber nicht. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar.
+Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Der Beginn des Bereichs ist inklusiv, das Ende des Bereichs ist jedoch exklusiv. Das bedeutet, dass der *Beginn* im Bereich enthalten ist, das *Ende* aber nicht. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar.
 
 Schauen wir uns einige Beispiele an. Betrachten Sie das folgende Array, kommentiert mit seinem Index „from the start“ und „from the end“:
 
@@ -429,7 +431,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-Der folgende Code erzeugt einen Teilbereich mit den Worten „quick“, „brown“ und „fox“. Er enthält `words[1]` bis `words[3]`. Das Element `words[4]` gehört nicht zum Bereich.
+Der folgende Code erzeugt einen Teilbereich mit den Worten „quick“, „brown“ und „fox“. Er enthält `words[1]` bis `words[3]`. Das Element `words[4]` befindet sich nicht im Bereich.
 
 ```csharp
 var quickBrownFox = words[1..4];
@@ -510,7 +512,7 @@ Span<Coords<int>> coordinates = stackalloc[]
 
 Weitere Informationen finden Sie unter [Nicht verwaltete Typen](../language-reference/builtin-types/unmanaged-types.md).
 
-## <a name="stackalloc-in-nested-expressions"></a>„stackalloc“ in geschachtelten Ausdrücken
+## <a name="stackalloc-in-nested-expressions"></a>Stackalloc in geschachtelten Ausdrücken
 
 Ab C# 8.0 können Sie, wenn das Ergebnis eines [stackalloc](../language-reference/operators/stackalloc.md)-Ausdrucks vom Typ <xref:System.Span%601?displayProperty=nameWithType> oder <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> ist, den `stackalloc`-Ausdruck in anderen Ausdrücken verwenden:
 

@@ -2,12 +2,12 @@
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522758"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454236"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -77,7 +77,7 @@ Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur f
 
 - Verwenden des [Musters „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
-- Verwenden des [Musters „Postausgang“](http://www.kamilgrzybek.com/design/the-outbox-pattern/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
+- Verwenden des [Musters „Postausgang“](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
 
 Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Idempotenz und die Deduplizierung von Nachrichten berücksichtigt werden. Diese Themen werden an anderer Stelle in diesem Leitfaden unter [Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignissen)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) behandelt.
 

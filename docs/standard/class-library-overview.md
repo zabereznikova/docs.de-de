@@ -37,14 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132847"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -66,7 +64,7 @@ ms.locfileid: "65593507"
   
  In .NET stehen neben zahlreichen Schnittstellen abstrakte und konkrete (nicht abstrakte) Klassen zur Verfügung. Sie können die konkreten Klassen unverändert verwenden oder eigene Klassen von ihnen ableiten. Sie können entweder eine Klasse erstellen, die die Schnittstelle implementiert, oder eine Klasse von einer der .NET-Klassen ableiten, die die Schnittstelle implementiert, um die Funktionen einer Schnittstelle zu verwenden.  
   
-## <a name="naming-conventions"></a>Namenskonventionen 
+## <a name="naming-conventions"></a>Namenskonventionen
 
  Für .NET-Typen wird ein Benennungsschema mit Punktsyntax verwendet, das der hierarchischen Struktur entspricht. Bei diesem Verfahren werden verwandte Typen in Namespaces zusammengefasst, wodurch Suchvorgänge und Verweise vereinfacht werden. Der erste Teil des vollständigen Namens, bis zum letzten Punkt, gibt den Namen des Namespaces wieder. Der letzte Teil ist der Name des Typs. `System.Collections.Generic.List<T>` stellt beispielsweise den Typ `List<T>` dar, der zum Namespace `System.Collections.Generic` gehört. Die Typen in <xref:System.Collections.Generic> können mit generischen Sammlungen verwendet werden.  
   
@@ -86,15 +84,15 @@ ms.locfileid: "65593507"
   
  In der folgenden Tabelle sind die in .NET verfügbaren Basistypen mit einer Kurzbeschreibung der einzelnen Typen und den entsprechenden Typen in Visual Basic, C#, C++ und F# aufgeführt.  
   
-|Kategorie|Klassenname|Beschreibung|Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
+|Kategorie|Klassenname|BESCHREIBUNG|Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Ganze Zahl|<xref:System.Byte>|Eine 8-Bit-Ganzzahl ohne Vorzeichen.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder - <br /> **char** **mit Vorzeichen**|**sbyte**|  
+||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> Oder<br /> **char** **mit Vorzeichen**|**sbyte**|  
 ||<xref:System.Int16>|Eine 16-Bit-Ganzzahl mit Vorzeichen.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Eine 32-Bit-Ganzzahl mit Vorzeichen.|**Integer**|**int**|**int**<br /><br /> - oder - <br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Eine 32-Bit-Ganzzahl mit Vorzeichen.|**Integer**|**int**|**int**<br /><br /> Oder<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Eine 64-Bit-Ganzzahl mit Vorzeichen.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Eine 16-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Eine 32-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**UInteger**|**uint**|**unsigned int**<br /> - oder - <br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Eine 32-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**UInteger**|**uint**|**unsigned int**<br /> Oder<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Eine 64-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**ULong**|**ulong**|**__int64 ohne Vorzeichen**|**uint64**|  
 |Gleitkomma|<xref:System.Single>|Eine Gleitkommazahl einfacher Genauigkeit (32 Bit).|**Single**|**float**|**float**|**float32**<br> oder<br>**single**|  
 ||<xref:System.Double>|Eine Gleitkommazahl doppelter Genauigkeit (64 Bit).|**Double**|**double**|**double**|**float**<br> oder <br> **double**|  

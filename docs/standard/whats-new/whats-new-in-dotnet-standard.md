@@ -6,18 +6,18 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117863"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775218"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Neuerungen im .NET Standard
 
 .NET Standard ist eine formale Spezifikation, die mehrere APIs mit Versionsangabe definiert, die in .NET-Implementierungen verfügbar sein müssen, die dieser Version des Standards entsprechen. .NET Standard ist auf Bibliotheksentwickler ausgerichtet. Eine Bibliothek, die auf eine .NET Standard-Version abzielt, kann in jeder .NET Framework-, .NET Core- oder Xamarin-Implementierung verwendet werden, die diese Version des Standards unterstützt.
 
-Die neueste Version von .NET Standard ist 2.0. Diese Version ist im .NET Core 2.0 SDK und in der Visual Studio 2017-Version 15.3 mit installierter .NET Core-Workload enthalten.
+Die neueste Version von .NET Standard ist 2.0. Diese Version ist in .NET Core 2.0 SDK und in Visual Studio 2017 Version 15.3 mit installierter .NET Core-Workload enthalten.
 
 ## <a name="supported-net-implementations"></a>Unterstützte .NET-Implementierungen
 
@@ -61,7 +61,7 @@ Die einzige Anforderung besteht darin, dass die von der .NET Framework-Klassenbi
 
 ### <a name="support-for-visual-basic"></a>Unterstützung für Visual Basic
 
-Sie können jetzt .NET Standard-Bibliotheken in Visual Basic entwickeln. Für Visual Basic-Entwickler, die Visual Studio 2017 Version 15.3 oder höher mit installierter .NET Core-Workload verwenden, enthält Visual Studio jetzt eine Vorlage für die .NET Standard-Klassenbibliothek. Visual Basic-Entwickler, die andere Entwicklungstools und -umgebungen verwenden, können den Befehl [dotnet new](../../core/tools/dotnet-new.md) verwenden, um ein Projekt für die .NET Standard-Bibliothek zu erstellen. Weitere Informationen finden Sie unter [Toolunterstützung für .NET Standard-Bibliotheken](#tooling-support-for-net-standard-libraries).
+Sie können jetzt .NET Standard-Bibliotheken in Visual Basic entwickeln. Für Visual Basic-Entwickler, die Visual Studio 2017 Version 15.3 oder höher mit installierter .NET Core-Workload verwenden, enthält Visual Studio jetzt eine Vorlage für die .NET Standard-Klassenbibliothek. Visual Basic-Entwickler, die andere Entwicklungstools und -umgebungen verwenden, können den Befehl [dotnet new](../../core/tools/dotnet-new.md) verwenden, um ein Projekt für die .NET Standard-Bibliothek zu erstellen. Weitere Informationen finden Sie unter [Toolunterstützung für .NET Standard-Bibliotheken](#tooling-support-for-net-standard-libraries).
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Toolunterstützung für .NET Standard-Bibliotheken
 

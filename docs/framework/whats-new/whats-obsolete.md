@@ -7,14 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690474"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140599"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 
@@ -39,7 +37,7 @@ Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres 
 
 - Ändern Sie, falls möglich, den Code durch Entfernen der Verwendung des Typs oder des Members.
 
-     - oder -
+     Oder
 
 - Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.
 

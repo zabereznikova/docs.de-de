@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Abhängigkeitsinjektion, das Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249747"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771113"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 

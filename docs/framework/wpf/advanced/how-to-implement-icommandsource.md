@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Implementieren von ICommandSource'
+title: 'Gewusst wie: Implementieren von "ICommandSource"'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,53 +7,53 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 974b145a125a158bcafff93f8e9bc11001e00bf1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107366"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453578"
 ---
-# <a name="how-to-implement-icommandsource"></a>Vorgehensweise: Implementieren von ICommandSource
-Dieses Beispiel zeigt, wie eine Befehlsquelle implementieren <xref:System.Windows.Input.ICommandSource>.  Eine Befehlsquelle ist ein Objekt, das weiß, wie Sie einen Befehl aufzurufen.  Die <xref:System.Windows.Input.ICommandSource> Schnittstelle verfügt über drei Methoden: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, und <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der aufgerufen wird. Die <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ein benutzerdefinierten Datentyp, der von der Befehlsquelle an die Methode übergeben wird, die den Befehl verarbeitet wird. Die <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, das auf der Befehl ausgeführt wird.  
+# <a name="how-to-implement-icommandsource"></a>Gewusst wie: Implementieren von "ICommandSource"
+In diesem Beispiel wird gezeigt, wie eine Befehls Quelle durch Implementieren von <xref:System.Windows.Input.ICommandSource>erstellt wird.  Eine Befehls Quelle ist ein Objekt, das weiß, wie ein Befehl aufgerufen wird.  Die <xref:System.Windows.Input.ICommandSource>-Schnittstelle macht drei Member verfügbar: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>und <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der aufgerufen wird. Der <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ist ein benutzerdefinierter Datentyp, der von der Befehls Quelle an die Methode, die den Befehl verarbeitet, übermittelt wird. Der <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, auf dem der Befehl ausgeführt wird.  
   
- In diesem Beispiel ist eine Klasse erstellt, die die <xref:System.Windows.Controls.Slider> -Steuerelement und implementiert <xref:System.Windows.Input.ICommandSource>.  
+ In diesem Beispiel wird eine-Klasse erstellt, die das <xref:System.Windows.Controls.Slider>-Steuerelement Unterklassen und <xref:System.Windows.Input.ICommandSource>implementiert.  
   
 ## <a name="example"></a>Beispiel  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine Reihe von Klassen, die implementieren <xref:System.Windows.Input.ICommandSource>, z. B. <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, und <xref:System.Windows.Controls.ListBoxItem>.  Eine Befehlsquelle definiert, wie sie einen Befehl aufruft.   <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.MenuItem> einen Befehl aufrufen, wenn darauf geklickt wird.  Ein <xref:System.Windows.Controls.ListBoxItem> Ruft einen Befehl aus, wenn es doppelt geklickt wird. Diese Klassen nur dann an einen Befehl Datenquelle ihrer <xref:System.Windows.Input.ICommandSource.Command%2A> festgelegt wird.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von Klassen bereit, die <xref:System.Windows.Input.ICommandSource>implementieren, z. b. <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>und <xref:System.Windows.Controls.ListBoxItem>.  Eine Befehls Quelle definiert, wie Sie einen Befehl aufruft.   <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.MenuItem> einen Befehl aufrufen, wenn auf Sie geklickt wird.  Ein <xref:System.Windows.Controls.ListBoxItem> Ruft einen Befehl auf, wenn auf ihn Doppel geklickt wird. Diese Klassen werden nur dann zu einer Befehls Quelle, wenn Ihre <xref:System.Windows.Input.ICommandSource.Command%2A>-Eigenschaft festgelegt ist.  
   
- In diesem Beispiel werden wir den Befehl aufrufen, wenn der Schieberegler verschoben wird oder genauer gesagt, wenn die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> -Eigenschaft geändert wird.  
+ In diesem Beispiel rufen wir den Befehl auf, wenn der Schieberegler verschoben wird, oder genauer, wenn die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>-Eigenschaft geändert wird.  
   
- Im folgenden finden die Definition der Klasse.  
+ Im folgenden finden Sie die Klassendefinition.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- Der nächste Schritt besteht zum Implementieren der <xref:System.Windows.Input.ICommandSource> Member.  In diesem Beispiel werden die Eigenschaften als implementiert <xref:System.Windows.DependencyProperty> Objekte.  Dadurch können die Eigenschaften, die Datenbindung verwendet.  Weitere Informationen zu den <xref:System.Windows.DependencyProperty> Klasse, finden Sie unter den [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).  Weitere Informationen zur Datenbindung finden Sie unter den [Übersicht über die Datenbindung](../data/data-binding-overview.md).  
+ Der nächste Schritt besteht darin, die <xref:System.Windows.Input.ICommandSource> Member zu implementieren.  In diesem Beispiel werden die-Eigenschaften als <xref:System.Windows.DependencyProperty>-Objekte implementiert.  Dadurch können die Eigenschaften die Datenbindung verwenden.  Weitere Informationen zum <xref:System.Windows.DependencyProperty>-Klasse finden Sie unter [Übersicht über Abhängigkeits Eigenschaften](dependency-properties-overview.md).  Weitere Informationen zur Datenbindung finden Sie unter Übersicht über die [Datenbindung](../../../desktop-wpf/data/data-binding-overview.md).  
   
- Nur die <xref:System.Windows.Input.ICommandSource.Command%2A> Eigenschaft ist im folgenden dargestellt.  
+ Hier wird nur die <xref:System.Windows.Input.ICommandSource.Command%2A>-Eigenschaft angezeigt.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
   
- Im folgenden finden Sie die <xref:System.Windows.DependencyProperty> Rückruf zu ändern.  
+ Im folgenden finden Sie den <xref:System.Windows.DependencyProperty> Änderungs Rückruf.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- Der nächste Schritt ist zum Hinzufügen und entfernen den Befehl aus, der die Befehlsquelle zugeordnet ist.  Die <xref:System.Windows.Input.ICommandSource.Command%2A> Eigenschaft kann nicht einfach überschrieben werden, wenn ein neuer Befehl hinzugefügt wird, da die Ereignishandler mit dem vorherigen Befehl verknüpft ist. sofern vorhanden, muss zuerst entfernt werden.  
+ Der nächste Schritt besteht darin, den Befehl hinzuzufügen und zu entfernen, der der Befehls Quelle zugeordnet ist.  Die <xref:System.Windows.Input.ICommandSource.Command%2A>-Eigenschaft kann nicht einfach überschrieben werden, wenn ein neuer Befehl hinzugefügt wird, da die dem vorherigen Befehl zugeordneten Ereignishandler (sofern vorhanden) zuerst entfernt werden müssen.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
- Der letzte Schritt ist die Erstellung von Logik für die <xref:System.Windows.Input.ICommand.CanExecuteChanged> Handler und die <xref:System.Windows.Input.ICommand.Execute%2A> Methode.  
+ Der letzte Schritt besteht im Erstellen von Logik für den <xref:System.Windows.Input.ICommand.CanExecuteChanged> Handler und die <xref:System.Windows.Input.ICommand.Execute%2A>-Methode.  
   
- Die <xref:System.Windows.Input.ICommand.CanExecuteChanged> -Ereignis benachrichtigt die Befehlsquelle, die die Fähigkeit des Befehls zum Ausführen auf das aktuelle Befehlsziel möglicherweise geändert wurde.  Wenn eine Befehlsquelle das Ereignis empfängt, ruft er in der Regel die <xref:System.Windows.Input.ICommand.CanExecute%2A> -Methode für den Befehl.  Wenn der Befehl nicht auf das aktuelle Befehlsziel ausgeführt werden kann, wird die Befehlsquelle selbst in der Regel deaktiviert.  Wenn der Befehl für das aktuelle Befehlsziel ausgeführt werden kann, wird die Befehlsquelle in der Regel selbst aktivieren.  
+ Das Ereignis <xref:System.Windows.Input.ICommand.CanExecuteChanged> benachrichtigt die Befehls Quelle, dass die Fähigkeit des Befehls, der für das aktuelle Befehls Ziel ausgeführt werden kann, möglicherweise geändert wurde.  Wenn eine Befehls Quelle dieses Ereignis empfängt, ruft Sie in der Regel die <xref:System.Windows.Input.ICommand.CanExecute%2A>-Methode für den Befehl auf.  Wenn der Befehl nicht für das aktuelle Befehls Ziel ausgeführt werden kann, wird die Befehls Quelle in der Regel deaktiviert.  Wenn der Befehl für das aktuelle Befehls Ziel ausgeführt werden kann, wird die Befehls Quelle in der Regel selbst aktiviert.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
   
- Der letzte Schritt ist die <xref:System.Windows.Input.ICommand.Execute%2A> Methode.  Wenn der Befehl ist ein <xref:System.Windows.Input.RoutedCommand>, wird die <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode aufgerufen wird; andernfalls der <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> Methode wird aufgerufen.  
+ Der letzte Schritt ist die <xref:System.Windows.Input.ICommand.Execute%2A> Methode.  Wenn der Befehl ein <xref:System.Windows.Input.RoutedCommand>ist, wird die <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A>-Methode aufgerufen. Andernfalls wird die <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A>-Methode aufgerufen.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  

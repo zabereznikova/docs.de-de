@@ -1,26 +1,26 @@
 ---
-title: 'Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags für Windows Forms-Steuerelemente'
+title: 'Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34c14c0afd9632b06947fd72e46ddbda070cfb0f
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015762"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459578"
 ---
 # <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Smarttags
 
 Wenn Sie Formulare und Steuerelemente für Ihre Windows Forms-Anwendung erstellen, gibt es viele Aufgaben, die Sie wiederholt ausführen werden. Dies sind einige der häufig ausgeführten Aufgaben, die Sie ausführen werden:
 
-- Hinzufügen oder Entfernen einer Registerkarte <xref:System.Windows.Forms.TabControl>auf einem.
+- Hinzufügen oder Entfernen einer Registerkarte auf einem <xref:System.Windows.Forms.TabControl>.
 
 - Andocken eines Steuer Elements an das übergeordnete Element.
 
@@ -42,17 +42,17 @@ Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.
 
 Smarttags sind immer zur Entwurfszeit für Steuerelemente verfügbar, die Sie bieten.
 
-1. Ziehen Sie <xref:System.Windows.Forms.TabControl> ein aus der **Toolbox** auf das Formular. Beachten Sie das Smarttagsymbol (![smarttagglyphe](./media/vs-winformsmttagglyph.gif)), das <xref:System.Windows.Forms.TabControl>auf der Seite von angezeigt wird.
+1. Ziehen Sie eine <xref:System.Windows.Forms.TabControl> aus der **Toolbox** auf das Formular. Beachten Sie das Smarttag-Symbol (![smarttagglyphe](./media/vs-winformsmttagglyph.gif)), das auf der Seite des <xref:System.Windows.Forms.TabControl>angezeigt wird.
 
-2. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Registerkarte hinzufügen** aus. Beachten Sie, dass der <xref:System.Windows.Forms.TabControl>eine neue Registerkarte hinzugefügt wird.
+2. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Registerkarte hinzufügen** aus. Beachten Sie, dass dem <xref:System.Windows.Forms.TabControl>eine neue Registerkarte hinzugefügt wird.
 
 3. Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.
 
-4. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Spalten hinzufügen** aus. Beachten Sie, dass dem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement eine neue Spalte hinzugefügt wird.
+4. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Spalten hinzufügen** aus. Beachten Sie, dass dem <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement eine neue Spalte hinzugefügt wird.
 
 5. Ziehen Sie ein <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox** auf das Formular.
 
-6. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **horizontale Splitter Ausrichtung** aus. Beachten Sie, <xref:System.Windows.Forms.SplitContainer> dass die Splitter Leiste des Steuer Elements nun horizontal ausgerichtet ist.
+6. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **horizontale Splitter Ausrichtung** aus. Beachten Sie, dass die Splitter Leiste des <xref:System.Windows.Forms.SplitContainer> Steuer Elements nun horizontal ausgerichtet ist.
 
 ## <a name="see-also"></a>Siehe auch
 

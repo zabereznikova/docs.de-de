@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608632"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422667"
 ---
 # <a name="new-modifier-c-reference"></a>new-Modifizierer (C#-Referenz)
 
@@ -63,6 +63,6 @@ Weitere Informationen finden Sie im Abschnitt [Der new-Modifizierer](~/_csharpla
 - [C#-Referenz](../../language-reference/index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Modifizierer](modifiers.md)
+- [Modifizierer](index.md)
 - [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
 - [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

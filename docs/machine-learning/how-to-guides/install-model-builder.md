@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306323"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774567"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Installieren des ML.NET-Modell-Generators
 
@@ -21,7 +21,7 @@ Erfahren Sie, wie Sie den ML.NET-Modell-Generator installieren, um Ihre .NET-Anw
 
 ## <a name="pre-requisites"></a>Voraussetzungen
 
-- Visual Studio 2017 15.9.12 oder höher/ Visual Studio 2019
+- Visual Studio 2017 Version 15.9.12 oder höher/Visual Studio 2019
 - .NET Core 2.1 oder ein höheres SDK
 
 ## <a name="limitations"></a>Einschränkungen
@@ -33,7 +33,7 @@ Erfahren Sie, wie Sie den ML.NET-Modell-Generator installieren, um Ihre .NET-Anw
 
 ## <a name="install"></a>Installieren
 
-Der ML.NET-Modell-Generator kann entweder über den Visual Studio Marketplace oder aus Visual Studio heraus installiert werden. 
+Der ML.NET-Modell-Generator kann entweder über den Visual Studio Marketplace oder aus Visual Studio heraus installiert werden.
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
 

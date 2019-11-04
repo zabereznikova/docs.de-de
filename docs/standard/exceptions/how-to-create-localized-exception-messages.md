@@ -2,14 +2,13 @@
 title: 'Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen mit lokalisierten Ausnahmemeldungen'
 description: Erfahren Sie, wie benutzerdefinierte Ausnahmen mit lokalisierten Ausnahmemeldungen erstellt werden.
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696714"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141528"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen mit lokalisierten Ausnahmemeldungen
 

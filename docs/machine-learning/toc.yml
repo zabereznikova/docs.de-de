@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: Klassifizieren von Stimmungen mithilfe von TensorFlow (Textklassifizierung)
           href: tutorials/text-classification-tf.md
-    - name: Tools
+    - name: Modellgenerator und CLI
       items:
-        - name: Vorhersagen von Preisen mit dem Modellgenerator
+        - name: Vorhersagen von Preisen (Modellgenerator und Regression)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
           href: tutorials/mlnet-cli.md
-        - name: Analysieren der Stimmung mit dem Modellgenerator und Razor Pages
+        - name: Analysieren der Stimmung in Razor Pages (Modellgenerator und binäre Klassifizierung)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Kategorisieren von Integritätsverstößen (Modellgenerator und Mehrklassenklassifizierung)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Probabilistische Programmierung mit Infer.NET

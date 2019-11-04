@@ -2,12 +2,12 @@
 title: Implementieren von API-Gateways mit Ocelot
 description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren und Ocelot in einer containerbasierten Umgebung verwenden.
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676187"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771174"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 

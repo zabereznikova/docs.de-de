@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523805"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774213"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
 Der Assemblylinker generiert eine Datei mit einem Assemblymanifest aus einer oder mehreren Dateien, bei denen es sich um Module oder Ressourcendateien handelt. Ein Modul ist eine IL-Datei (Intermediate Language, Zwischensprache), die nicht über ein Assemblymanifest verfügt.
 
 > [!NOTE]
-> Ab Visual Studio 2008 wird sowohl vom C#- als auch vom Visual Basic-Compiler automatisch ein Win32-Manifest in die Assembly eingebettet. Weitere Informationen finden Sie unter [/win32manifest (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Ab Visual Studio 2008 wird sowohl vom C#- als auch vom Visual Basic-Compiler automatisch ein Win32-Manifest in die Assembly eingebettet. Weitere Informationen finden Sie unter [-win32manifest (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 

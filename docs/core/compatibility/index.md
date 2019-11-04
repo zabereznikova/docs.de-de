@@ -2,12 +2,12 @@
 title: Auswerten von Breaking Changes – .NET Core
 description: Erfahren Sie mehr darüber, wie .NET Core versucht, die Kompatibilität für Entwickler in allen .NET-Versionen aufrechtzuerhalten.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089351"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416677"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Auswerten von Breaking Changes in .NET Core
 
@@ -139,7 +139,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Dies gilt aus zwei Gründen als Unterbrechung:
   
-  - Damit werden spät gebundene Szenarien wie die späte Bindungsfunktion in Visual Basic und [dynamic](../../csharp/language-reference/keywords/dynamic.md) in C# unterbrochen.
+  - Damit werden spät gebundene Szenarien wie die späte Bindungsfunktion in Visual Basic und [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) in C# unterbrochen.
   
   - Es unterbricht die [Quellenkompatibilität](categories.md#source-compatibility), wenn Entwickler [benannte Argumente](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments) verwenden.
 

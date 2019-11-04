@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 400668e51fda4a728b42679c37a07399d1f73326
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7f18539dba17f9fcb8769ca56d977908c58e6579
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595071"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418676"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (C#)
 Ausdrucksbaumstrukturen werden in LINQ dazu verwendet, strukturierte Abfragen für Datenquellen zu repräsentieren, die <xref:System.Linq.IQueryable%601> implementieren. Der LINQ-Anbieter implementiert z.B. die <xref:System.Linq.IQueryable%601>-Schnittstelle, um relationale Datenspeicher abzufragen. Die Compiler für C# kompilieren Abfragen solcher Datenquellen in Code, der zur Laufzeit eine Ausdrucksbaumstruktur erzeugt. Anschließend kann der Abfrageanbieter die Datenstruktur der Ausdrucksbaumstruktur durchlaufen und in eine für die Datenquelle geeignete Abfragesprache übersetzen.  
@@ -109,4 +109,4 @@ foreach (string company in results)
 
 - [Ausdrucksbaumstrukturen (C#)](./index.md)
 - [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md)
-- [Vorgehensweise: Dynamisches Festlegen von Prädikatfiltern zur Laufzeit](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Vorgehensweise: Dynamisches Festlegen von Prädikatfiltern zur Laufzeit](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

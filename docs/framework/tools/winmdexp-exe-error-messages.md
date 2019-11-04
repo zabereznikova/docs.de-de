@@ -157,14 +157,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043979"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104193"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe-Fehlermeldungen
 Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) auf, wenn Sie die Vorlage **Komponente für Windows-Runtime** in Visual Studio 2012 verwenden, sodass Winmdexp.exe-Fehlermeldungen in der **Fehlerliste** angezeigt werden. Winmdexp.exe arbeitet auf einem Modul, das mit der `/target:winmdobj`-Option kompiliert ist. Da ein kompiliertes Modul als Eingabe erforderlich ist, erscheinen die Fehlermeldungen nicht, bis die Kompilierung erfolgreich war.  

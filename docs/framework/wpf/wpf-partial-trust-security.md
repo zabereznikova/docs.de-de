@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962805"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455317"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
-<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig können HTML-und Client seitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Windows Presentation Foundation da vom Browser gehostete WPF-Anwendungen (WPF) über den Browser gestartet werden können, sollten Sie einen ähnlichen Satz von Einschränkungen einhalten. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , stützt sich sowohl auf die Code Zugriffssicherheit (CAS) als auch auf ClickOnce (siehe [WPF Security Strategy-Platform Security](wpf-security-strategy-platform-security.md)). Standardmäßig fordern von einem Browser gehostete Anwendungen den Berechtigungs Satz für Internet Zonen-CAS an, unabhängig davon, ob Sie über das Internet, das lokale Intranet oder den lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
+<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig können HTML-und Client seitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Windows Presentation Foundation da vom Browser gehostete WPF-Anwendungen (WPF) über den Browser gestartet werden können, sollten Sie einen ähnlichen Satz von Einschränkungen einhalten. Um diese Einschränkungen zu erzwingen, sind [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sowohl von der Code Zugriffssicherheit (CAS) als auch von ClickOnce abhängig (siehe [WPF Security Strategy-Platform Security](wpf-security-strategy-platform-security.md)). Standardmäßig fordern von einem Browser gehostete Anwendungen den Berechtigungs Satz für Internet Zonen-CAS an, unabhängig davon, ob Sie über das Internet, das lokale Intranet oder den lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]stellt eine Vielzahl von Unterstützung bereit, um sicherzustellen, dass so viele Funktionen wie möglich sicher bei teilweiser Vertrauenswürdigkeit verwendet werden können, und bietet zusätzliche Unterstützung für teilweise vertrauenswürdige Programmierung.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bietet eine Vielzahl von Unterstützung, um sicherzustellen, dass so viele Funktionen wie möglich sicher bei teilweiser Vertrauenswürdigkeit eingesetzt werden können, und bietet zusätzliche Unterstützung für teilweise vertrauenswürdige Programmierung.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -50,23 +50,23 @@ ms.locfileid: "69962805"
 |Bearbeiten|Rechtschreibprüfung<br /><br /> RichTextBox<br /><br /> Unterstützung der Zwischenablage bei Nur-Text und Freihand<br /><br /> Vom Benutzer initiiertes Einfügen<br /><br /> Kopieren von markiertem Inhalt|  
 |Steuerelemente|Allgemeine Steuerelemente|  
   
- In dieser Tabelle werden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] die Features auf hoher Ebene behandelt. Ausführlichere Informationen finden Sie in der-Windows SDK, in der die Berechtigungen dokumentiert werden, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]die für jedes Mitglied in erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
+ In dieser Tabelle werden die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Features auf hoher Ebene behandelt. Ausführliche Informationen finden Sie in der Windows SDK werden die Berechtigungen dokumentiert, die für jedes Element in [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](siehe [Übersicht über XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (siehe [Übersicht über XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
 - Popups (siehe <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
 - Drag & Drop (siehe [Übersicht über Drag & Drop](./advanced/drag-and-drop-overview.md)).  
   
-- Zwischenablage ( <xref:System.Windows.Clipboard?displayProperty=nameWithType>siehe).  
+- Zwischenablage (siehe <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
-- Abbild Erstellung <xref:System.Windows.Controls.Image?displayProperty=nameWithType>(siehe).  
+- Abbild Erstellung (siehe <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
-- Serialisierung (siehe <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serialisierung (siehe <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType><xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
-- Datei öffnen (Dialog Feld) <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>(siehe).  
+- Datei öffnen (Dialog Feld) (siehe <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- In der folgenden Tabelle werden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] die Funktionen beschrieben, die nicht sicher innerhalb der Grenzen des Berechtigungs Satzes für die Internet Zone ausgeführt werden können.  
+ In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Features beschrieben, die innerhalb der Grenzen des Berechtigungs Satzes für die Internet Zone nicht sicher ausgeführt werden können.  
   
  Tabelle 2: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit nicht sicher sind  
   
@@ -78,7 +78,7 @@ ms.locfileid: "69962805"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programmieren für teilweise Vertrauenswürdigkeit  
- Bei [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] -Anwendungen hat Code, der den Standard Berechtigungs Satz überschreitet, abhängig von der Sicherheitszone ein anderes Verhalten. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
+ Bei XBAP-Anwendungen hat Code, der den Standard Berechtigungs Satz überschreitet, abhängig von der Sicherheitszone ein anderes Verhalten. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
   
 |Sicherheitszone|Verhalten|Erhalten der vollen Vertrauenswürdigkeit|  
 |-------------------|--------------|------------------------|  
@@ -89,18 +89,18 @@ ms.locfileid: "69962805"
 > [!NOTE]
 > Das in der vorherigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce-Modell für vertrauenswürdige Bereitstellung entsprechen.  
   
- Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. CAS und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten mehrere Verfahren für die Verwaltung dieses Szenarios.  
+ Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. CAS und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten verschiedene Verfahren für die Verwaltung dieses Szenarios.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Erkennen von Berechtigungen mit CAS  
- In einigen Situationen kann der freigegebene Code in Bibliotheksassemblys sowohl von eigenständigen Anwendungen als auch [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]von verwendet werden. In diesen Fällen werden im Code möglicherweise Funktionen ausgeführt, die mehr Berechtigungen erfordern, als der Berechtigungssatz zulässt, der der Anwendung zugewiesen ist. Die Anwendung kann erkennen, ob Sie über eine bestimmte Berechtigung verfügt, indem Sie die Microsoft .NET Framework-Sicherheit verwendet. Insbesondere kann überprüft werden, ob Sie über eine bestimmte Berechtigung verfügt, indem <xref:System.Security.CodeAccessPermission.Demand%2A> die-Methode für die Instanz der gewünschten Berechtigung aufgerufen wird. Dies wird im folgenden Beispiel gezeigt, das Code enthält, der überprüft, ob er eine Datei auf dem lokalen Datenträger speichern darf:  
+ In einigen Situationen ist es möglich, dass frei gegebener Code in Bibliotheksassemblys sowohl von eigenständigen Anwendungen als auch von XBAPs verwendet wird. In diesen Fällen werden im Code möglicherweise Funktionen ausgeführt, die mehr Berechtigungen erfordern, als der Berechtigungssatz zulässt, der der Anwendung zugewiesen ist. Die Anwendung kann erkennen, ob Sie über eine bestimmte Berechtigung verfügt, indem Sie die Microsoft .NET Framework-Sicherheit verwendet. Insbesondere kann überprüft werden, ob Sie über eine bestimmte Berechtigung verfügt, indem die <xref:System.Security.CodeAccessPermission.Demand%2A>-Methode für die Instanz der gewünschten Berechtigung aufgerufen wird. Dies wird im folgenden Beispiel gezeigt, das Code enthält, der überprüft, ob er eine Datei auf dem lokalen Datenträger speichern darf:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Wenn eine Anwendung nicht über die gewünschte Berechtigung verfügt, löst der- <xref:System.Security.CodeAccessPermission.Demand%2A> Aufrufvorgang eine Sicherheits Ausnahme aus. Andernfalls wurde die Berechtigung erteilt. `IsPermissionGranted`kapselt dieses Verhalten und gibt `true` oder `false` nach Bedarf zurück.  
+ Wenn eine Anwendung nicht über die gewünschte Berechtigung verfügt, löst der <xref:System.Security.CodeAccessPermission.Demand%2A>-Aufrufe eine Sicherheits Ausnahme aus. Andernfalls wurde die Berechtigung erteilt. `IsPermissionGranted` kapselt dieses Verhalten und gibt `true` oder `false` nach Bedarf zurück.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Sinnvolle Herabstufung der Funktionalität  
@@ -113,20 +113,20 @@ ms.locfileid: "69962805"
   
  In vielen Fällen sollte es Ihnen möglich sein, eine Alternative zu teilweiser Vertrauenswürdigkeit zu finden.  
   
- In einer kontrollierten Umgebung (z. b. in einem Intranet) können benutzerdefinierte verwaltete Frameworks über die Client Basis im globalen Assemblycache (GAC) installiert werden. Diese Bibliotheken können Code ausführen, der volle Vertrauenswürdigkeit erfordert, und von Anwendungen, denen nur teilweise Vertrauenswürdigkeit unterstützt <xref:System.Security.AllowPartiallyTrustedCallersAttribute> wird, auf Sie verwiesen wird (Weitere Informationen finden Sie unter [Sicherheit](security-wpf.md) und [WPF-Sicherheitsstrategie-Plattformsicherheit](wpf-security-strategy-platform-security.md)).  
+ In einer kontrollierten Umgebung (z. b. in einem Intranet) können benutzerdefinierte verwaltete Frameworks über die Client Basis im globalen Assemblycache (GAC) installiert werden. Diese Bibliotheken können Code ausführen, der volle Vertrauenswürdigkeit erfordert, und von Anwendungen, die nur teilweise vertrauenswürdig sind, mithilfe von <xref:System.Security.AllowPartiallyTrustedCallersAttribute> referenziert werden. Weitere Informationen finden Sie unter [Sicherheit](security-wpf.md) und [WPF-Sicherheitsstrategie-Plattformsicherheit](wpf-security-strategy-platform-security.md).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Browserhosterkennung  
- Die Verwendung von CAS zum Überprüfen von Berechtigungen ist ein geeignetes Verfahren, wenn Sie eine Berechtigungs Basis überprüfen müssen. Allerdings ist für dieses Verfahren das Abfangen von Ausnahmen als Teil der normalen Verarbeitung erforderlich, was grundsätzlich nicht empfehlenswert ist und Leistungsprobleme verursachen kann. Stattdessen können Sie die [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> -Eigenschaft verwenden, die für [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]den Wert true zurückgibt, wenn Sie nur innerhalb der Internet Zonen Sandbox ausgeführt wird.  
+ Die Verwendung von CAS zum Überprüfen von Berechtigungen ist ein geeignetes Verfahren, wenn Sie eine Berechtigungs Basis überprüfen müssen. Allerdings ist für dieses Verfahren das Abfangen von Ausnahmen als Teil der normalen Verarbeitung erforderlich, was grundsätzlich nicht empfehlenswert ist und Leistungsprobleme verursachen kann. Wenn Ihre XAML-Browser Anwendung (XBAP) nur innerhalb der Zone der Internet Zone ausgeführt wird, können Sie stattdessen die <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>-Eigenschaft verwenden, die für XAML-Browser Anwendungen (XBAPs) "true" zurückgibt.  
   
 > [!NOTE]
-> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>unterscheidet nur, ob eine Anwendung in einem Browser ausgeführt wird, und nicht, mit welchem Berechtigungs Satz eine Anwendung ausgeführt wird.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> nur unterscheiden, ob eine Anwendung in einem Browser ausgeführt wird, und nicht, mit welchem Berechtigungs Satz eine Anwendung ausgeführt wird.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Verwalten von Berechtigungen  
- Standardmäßig wird [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] mit teilweiser Vertrauenswürdigkeit ausgeführt (standardmäßiger Berechtigungs Satz für die Internet Zone). Je nach Anforderungen der Anwendung ist es jedoch möglich, den Standardberechtigungssatz durch einen anderen Berechtigungssatz zu ersetzen. Wenn z. b. [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ein aus einem lokalen Intranet gestartet wird, kann ein erhöhter Berechtigungs Satz genutzt werden, der in der folgenden Tabelle aufgeführt ist.  
+ Standardmäßig wird XBAPs mit teilweiser Vertrauenswürdigkeit ausgeführt (standardmäßiger Berechtigungs Satz für die Internet Zone). Je nach Anforderungen der Anwendung ist es jedoch möglich, den Standardberechtigungssatz durch einen anderen Berechtigungssatz zu ersetzen. Wenn z. b. ein XBAPs von einem lokalen Intranet aus gestartet wird, kann ein erhöhter Berechtigungs Satz genutzt werden, der in der folgenden Tabelle aufgeführt ist.  
   
- Tabelle 3: LocalIntranet-und Internet Berechtigungen  
+ Tabelle 3: LocalIntranet- und Internetberechtigungen  
   
 |Berechtigung|Attribut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
@@ -159,7 +159,7 @@ ms.locfileid: "69962805"
   
 - [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications)  
   
- Wenn Ihr [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] volle Vertrauenswürdigkeit erfordert, können Sie dieselben Tools verwenden, um die angeforderten Berechtigungen zu erhöhen. Eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] erhält zwar nur dann volle Vertrauenswürdigkeit, wenn Sie auf dem lokalen Computer, im Intranet oder über eine URL, die in den vertrauenswürdigen oder zulässigen Websites des Browsers aufgeführt ist, installiert und gestartet wird. Wird die Anwendung aus dem Intranet oder einer vertrauenswürdigen Website installiert, wird der Benutzer durch die Standard-ClickOnce-Eingabeaufforderung über die erhöhten Berechtigungen informiert. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll.  
+ Wenn Ihre XBAP volle Vertrauenswürdigkeit erfordert, können Sie dieselben Tools verwenden, um die angeforderten Berechtigungen zu erhöhen. Eine XBAP erhält zwar nur dann volle Vertrauenswürdigkeit, wenn Sie auf dem lokalen Computer, im Intranet oder über eine URL, die in den vertrauenswürdigen oder zulässigen Websites des Browsers aufgeführt ist, installiert und gestartet wird. Wird die Anwendung aus dem Intranet oder einer vertrauenswürdigen Website installiert, wird der Benutzer durch die Standard-ClickOnce-Eingabeaufforderung über die erhöhten Berechtigungen informiert. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll.  
   
  Alternativ können Sie das ClickOnce-Modell für vertrauenswürdige Bereitstellung für eine Bereitstellung mit voller Vertrauenswürdigkeit aus einer beliebigen Sicherheitszone verwenden. Weitere Informationen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview) und [Sicherheit](security-wpf.md).  
   

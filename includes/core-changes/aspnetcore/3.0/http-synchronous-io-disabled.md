@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab7c097f6b65d539117e5a6ef38eb67b24695a32
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393923"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198441"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: Synchrones E/A auf allen Servern deaktiviert
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [aspnet/AspNetCore#7644](https://github.c
 
 #### <a name="new-behavior"></a>Neues Verhalten
 
-Diese synchronen APIs sind nun standardmäßig nicht mehr zulässig: 
+Diese synchronen APIs sind nun standardmäßig nicht mehr zulässig:
 
 Erwartbare Fehler:
 

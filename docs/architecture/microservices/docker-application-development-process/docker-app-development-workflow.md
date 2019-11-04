@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031880"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771497"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -23,7 +23,7 @@ Jeder Container (eine Instanz eines Docker-Images) umfasst die folgenden Kompone
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Workflow für die Entwicklung von Docker-Container-basierten Anwendungen
 
-In diesem Abschnitt wird der *Entwicklungsworkflow* für Docker-Container-basierte Anwendungen beschrieben. Der innere Entwicklungsworkflow berücksichtigt nicht den breiteren DevOps-Workflow, der bis zur Produktionsbereitstellung reichen kann. Stattdessen liegt der Fokus nur auf die Entwicklungsarbeit, die auf dem Computer des Entwicklers vorgenommen wird. Die ersten Schritte zum Einrichten der Umgebung wurden nicht berücksichtigt, da diese nur einmal durchgeführt werden.
+In diesem Abschnitt wird der *Entwicklungsworkflow* für Docker-Container-basierte Anwendungen beschrieben. Der innere Entwicklungsworkflow berücksichtigt nicht den breiteren DevOps-Workflow, der bis zur Produktionsbereitstellung reichen kann. Stattdessen liegt der Fokus nur auf der Entwicklungsarbeit, die auf dem Computer des Entwicklers vorgenommen wird. Die ersten Schritte zum Einrichten der Umgebung wurden nicht berücksichtigt, da diese nur einmal durchgeführt werden.
 
 Eine Anwendung besteht aus Ihren eigenen Diensten sowie zusätzlichen Bibliotheken (Abhängigkeiten). Im Folgenden sind die grundlegenden Schritte dargestellt, die Sie normalerweise beim Erstellen einer Docker-Anwendung ausführen, wie in Abbildung 5-1 dargestellt.
 

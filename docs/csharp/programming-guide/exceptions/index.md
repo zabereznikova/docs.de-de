@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 1442daf646a29c3822d06d0b649f462b37523fe2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002113"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423255"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
 
@@ -53,7 +53,7 @@ Weitere Informationen zu Ausnahmen und zur Ausnahmebehandlung finden Sie in den 
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
-Weitere Informationen erhalten Sie unter [Ausnahmen](~/_csharplang/spec/exceptions.md) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen erhalten Sie unter [Ausnahmen](~/_csharplang/spec/exceptions.md) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
 
 ## <a name="see-also"></a>Siehe auch
 

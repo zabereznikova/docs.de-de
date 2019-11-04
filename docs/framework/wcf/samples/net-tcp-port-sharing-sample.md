@@ -2,12 +2,12 @@
 title: Beispiel zur Net.TCP-Portfreigabe
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039187"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416756"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Beispiel zur Net.TCP-Portfreigabe
 Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) zwischen Verbindungen mit mehreren Netzwerkanwendungen unterschieden, die auf demselben Computer ausgeführt werden. Wenn eine Anwendung einen Port überwacht, wird der gesamte TCP-Verkehr für diesen Port an die entsprechende Anwendung geleitet. Andere Anwendungen können nicht gleichzeitig an diesem Port lauschen.  
@@ -17,7 +17,7 @@ Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
@@ -25,9 +25,9 @@ Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) 
   
  Bei der NetTcp-Port Freigabe handelt es sich um ein Windows Communication Foundation (WCF)-Feature, mit dem mehrere Netzwerkanwendungen einen einzelnen Port gemeinsam nutzen können. Der NetTcp-Portfreigabedienst nimmt Verbindungen mithilfe des net.tcp-Protokolls an und leitet Nachrichten auf Grundlage ihrer Zieladresse weiter.  
   
- Der NetTcp-Portfreigabedienst ist standardmäßig nicht aktiviert. Vor dem Ausführen dieses Beispiels müssen Sie den Dienst manuell aktivieren. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Net. TCP-Port](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)Freigabe Dienst. Wenn der Dienst deaktiviert ist, wird beim Starten der Serveranwendung eine Ausnahme ausgelöst.  
+ Der NetTcp-Portfreigabedienst ist standardmäßig nicht aktiviert. Vor dem Ausführen dieses Beispiels müssen Sie den Dienst manuell aktivieren. Weitere Informationen finden Sie unter Gewusst [wie: Aktivieren des net. TCP-Port Freigabe Dienstanbieter](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Wenn der Dienst deaktiviert ist, wird beim Starten der Serveranwendung eine Ausnahme ausgelöst.  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
@@ -51,7 +51,7 @@ host.Open();
 
  Wenn die Portfreigabe aktiviert ist, können Sie den Dienst mehrmals ausführen, ohne dass es zu einem Konflikt aufgrund der Portnummer kommt. Wenn Sie den Code ändern, um die Portfreigabe zu deaktivieren, führt das Starten zweier Kopien des Diensts bei der zweiten Kopie zu einem Fehler mit einer <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  Jede Instanz des Diensts gibt ihre eindeutige Nummer und Adresse aus. Wenn Sie service.exe ausführen, kann beispielsweise der folgende Text angezeigt werden:  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  Geben Sie beim Ausführen von client.exe die hier angegebene Dienstnummer ein.  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

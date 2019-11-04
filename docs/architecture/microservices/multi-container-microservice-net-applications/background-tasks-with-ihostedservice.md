@@ -2,12 +2,12 @@
 title: Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über neue Optionen zum Implementieren von Hintergrundtasks in Microservices in .NET Core mit IHostedService und BackgroundService
 ms.date: 01/07/2019
-ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318686"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770120"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 
@@ -45,7 +45,7 @@ SignalR ist ein Beispiel für ein Artefakt, das gehostete Dienste verwendet. Sie
 
 Alle Aktionen lassen sich in einen Hintergrundtask auslagern, der auf IHostedService basiert.
 
-Sie können einem `WebHost` oder `Host` ein oder mehrere `IHostedServices` hinzufügen, indem Sie sie über den standardmäßigen Dependency Injection-Vorgang in einem ASP.NET Core-`WebHost` (oder in einem `Host` in .NET Core 2.1 oder höher) registrieren. Dabei müssen Sie die gehosteten Dienste in der bekannten `ConfigureServices()`-Methode der `Startup`-Klasse registrieren, was im folgenden Codeausschnitt einer typischen ASP.NET-WebHost-Klasse demonstriert wird.
+Sie können einem `WebHost` oder `Host` ein oder mehrere `IHostedServices` hinzufügen, indem Sie sie über die <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> -Erweiterungsmethode in einem ASP.NET Core-`WebHost` (oder in einem `Host` in .NET Core 2.1 oder höher) registrieren. Dabei müssen Sie die gehosteten Dienste in der bekannten `ConfigureServices()`-Methode der `Startup`-Klasse registrieren, was im folgenden Codeausschnitt einer typischen ASP.NET-WebHost-Klasse demonstriert wird.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -53,9 +53,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     //Other DI registrations;
 
     // Register Hosted Services
-    services.AddSingleton<IHostedService, GracePeriodManagerService>();
-    services.AddSingleton<IHostedService, MyHostedServiceB>();
-    services.AddSingleton<IHostedService, MyHostedServiceC>();
+    services.AddHostedService<GracePeriodManagerService>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -232,19 +232,19 @@ In der folgenden Abbildung werden zusammenfassend die Klassen und Schnittstellen
 
 Sie sollten beachten, dass die konkrete Bereitstellung von ASP.NET Core-`WebHost` oder .NET Core-`Host` Ihre finale Lösung beeinflussen kann. Wenn Sie `WebHost` beispielsweise auf IIS oder in der regulären Azure App Service-Lösung bereitstellen, kann der Host durch den Neustart eines Anwendungspools heruntergefahren werden. Wenn Sie den Host jedoch als Container in einem Orchestrator wie Kubernetes oder Service Fabric bereitstellen, können Sie die zugesicherte Anzahl der aktiven Hostinstanzen anpassen. Darüber hinaus ist es empfehlenswert, sich mit anderen cloudbasierten Lösungen wie Azure Functions zu befassen, die speziell für derartige Szenarios entworfen wurden. Wenn Sie möchten, dass der Dienst permanent ausgeführt und auf einer Windows Server-Instanz bereitgestellt wird, verwenden Sie einen Windows-Dienst.
 
-Auch wenn `WebHost` in einem Anwendungspool bereitgestellt würde, müssten andere Szenarios wie das Leeren oder erneute Auffüllen des speicherinternen Anwendungscaches berücksichtigt werden.
+Auch wenn ein `WebHost` in einem Anwendungspool bereitgestellt würde, müssten andere Szenarios wie das Leeren oder nochmalige Auffüllen des speicherinternen Anwendungscaches berücksichtigt werden.
 
 Die `IHostedService`-Schnittstelle bietet eine einfache Möglichkeit, Hintergrundtasks in einer ASP.NET Core-Webanwendung (.NET 2.0 Core) oder in einem Prozess oder Host zu starten (ab .NET Core 2.1 mit `IHost`). Der Hauptvorteil besteht darin, dass Sie durch einen ordnungsgemäßen Abbruch Bereinigungscode in Ihren Hintergrundtasks ausführen können, wenn der Host heruntergefahren wird.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0 (Erstellen eines geplanten Tasks in ASP.NET Core/Standard 2.0)**  
+- **Erstellen eines geplanten Tasks in ASP.NET Core/Standard 2.0**
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementing IHostedService in ASP.NET Core 2.0 (Implementieren von IHostedService in ASP.NET Core 2.0)**  
+- **Implementieren von IHostedService in ASP.NET Core 2.0**
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **GenericHost Sample using ASP.NET Core 2.1 (GenericHost-Beispiel mithilfe von ASP.NET Core 2.1)**  
+- **GenericHost-Beispiel mithilfe von ASP.NET Core 2.1**
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

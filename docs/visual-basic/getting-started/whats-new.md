@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581963"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774916"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -21,45 +21,45 @@ In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von 
 
 ## <a name="current-version"></a>Aktuelle Version
 
-Visual Basic 16.0/Visual Studio 2019 Version 16.0  
+Visual Basic 16.0/Visual Studio 2019 Version 16.0
 Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Frühere Versionen
 
-Die aktuelle Version ist Visual Basic 15.8/Visual Studio 2017, Version 15.8.  
+Visual Basic 15.8/Visual Studio 2017 Version 15.8
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5/Visual Studio 2017 Version 15.5  
+Visual Basic 15.5/Visual Studio 2017 Version 15.5
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3/Visual Studio 2017 Version 15.3  
+Visual Basic 15.3/Visual Studio 2017 Version 15.3
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017
 Informationen zu neuen Features finden Sie unter [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015  
+Visual Basic/Visual Studio 2015
 Informationen zu neuen Features finden Sie unter [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013  
+Visual Basic/Visual Studio 2013
 Technologievorschau von .NET Compiler Platform („Roslyn“)
 
-Visual Basic/Visual Studio 2012  
+Visual Basic/Visual Studio 2012
 Die Schlüsselwörter `Async` und `await`, Iteratoren, Aufruferinformationsattribute
 
-Visual Basic, Visual Studio 2010  
+Visual Basic/Visual Studio 2010
 Automatisch implementierte Eigenschaften, Auflistungsinitialisierer, implizite Zeilenfortsetzung, dynamische, generische Ko-/Kontravarianz, Zugriff auf globalen Namespace
 
-Visual Basic/Visual Studio 2008  
+Visual Basic/Visual Studio 2008
 Language Integrated Query (LINQ), XML-Literale, lokaler Typrückschluss, Objektinitialisierer, anonyme Typen, Erweiterungsmethoden, lokaler `var`-Typrückschluss, Lambda-Ausdrücke, `if`-Operator, partielle Methoden, auf NULL festlegbare Werttypen
 
-Visual Basic/Visual Studio 2005  
+Visual Basic/Visual Studio 2005
 Der `My`-Typ und Hilfstypen (Zugriff auf App, Computer, Dateisystem, Netzwerk)
 
-Visual Basic / Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003
 Bitschiebeoperatoren, Deklaration von Schleifenvariablen
 
-Visual Basic / Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002
 Die erste Version von Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 Beachten Sie, dass diese Option die Gleitkommawerte kürzt und nicht rundet.
@@ -237,7 +236,7 @@ Datumsliterale im Format jjjj-mm-tt sind möglich, z. B. `#2015-03-17 16:10 PM#`
 
 **Schreibgeschützte Schnittstelleneigenschaften**
 
-Sie können mithilfe einer Readwrite-Eigenschaft schreibgeschützte Schnittstelleneigenschaften implementieren.  Die Schnittstelle garantiert Mindestfunktionalität und hindert eine Implementierungsklasse nicht daran, die Festlegung der Eigenschaft zuzulassen.
+Sie können mithilfe einer Readwrite-Eigenschaft schreibgeschützte Schnittstelleneigenschaften implementieren. Die Schnittstelle garantiert Mindestfunktionalität und hindert eine Implementierungsklasse nicht daran, die Festlegung der Eigenschaft zuzulassen.
 
 [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

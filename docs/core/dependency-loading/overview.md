@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303665"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416652"
 ---
 # <a name="dependency-loading-in-net-core"></a>Laden von Abhängigkeiten in .NET Core
 
@@ -39,4 +39,4 @@ Im Tutorial [Erstellen einer .NET Core-Anwendung mit Plug-Ins](../tutorials/crea
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core
 
-Der Artikel [Verwenden und Debuggen der Entladbarkeit von Assemblys in .NET Core](../../standard/assembly/unloadability-howto.md) enthält ein ausführliches Tutorial. Darin wird gezeigt, wie Sie eine .NET Core-Anwendung laden, ausführen und dann entladen. Der Artikel enthält auch Tipps zum Debuggen.
+Der Artikel [Verwenden und Debuggen der Entladbarkeit von Assemblys in .NET Core](../../standard/assembly/unloadability.md) enthält ein ausführliches Tutorial. Darin wird gezeigt, wie Sie eine .NET Core-Anwendung laden, ausführen und dann entladen. Der Artikel enthält auch Tipps zum Debuggen.

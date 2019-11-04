@@ -2,16 +2,16 @@
 title: NamedPipe-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 9d1f7c599f16b0974fb327888c080957c5cd9cee
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487550"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417080"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe-Aktivierung
 
-In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services (WAS) zum Aktivieren eines Diensts verwendet, der über benannte Pipes kommuniziert. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und erfordert [!INCLUDE[wv](../../../../includes/wv-md.md)] ausgeführt.
+In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services (WAS) zum Aktivieren eines Diensts verwendet, der über benannte Pipes kommuniziert. Dieses Beispiel basiert [auf den ersten](../../../../docs/framework/wcf/samples/getting-started-sample.md) Schritten und muss [!INCLUDE[wv](../../../../includes/wv-md.md)] ausgeführt werden.
 
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
@@ -21,7 +21,7 @@ In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Pr
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -159,19 +159,19 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass IIS 7.0 installiert ist. IIS 7.0 ist zur WAS-Aktivierung erforderlich.
+1. Stellen Sie sicher, dass IIS 7,0 installiert ist. IIS 7,0 ist für die was-Aktivierung erforderlich.
 
-2. Stellen Sie sicher, die von Ihnen ausgeführte der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
-    Darüber hinaus müssen Sie die WCF-nicht-HTTP-Aktivierung-Komponenten installieren:
+    Außerdem müssen Sie die WCF-nicht-http-Aktivierungs Komponenten installieren:
 
     1. Wählen Sie im Menü **Start** die **Systemsteuerung** aus.
 
-    2. Wählen Sie **Programme und Funktionen**.
+    2. Wählen Sie **Programme und Funktionen**aus.
 
-    3. Klicken Sie auf **aktivieren oder Deaktivieren von Windows-Komponenten**.
+    3. Klicken Sie **auf Windows-Komponenten ein-oder ausschalten**.
 
-    4. Erweitern Sie die **Microsoft .NET Framework 3.0** Knoten und überprüfen Sie die **Windows Communication Foundation-nicht-HTTP-Aktivierung** Feature.
+    4. Erweitern Sie den Knoten **Microsoft .NET Framework 3,0** , und überprüfen Sie die Funktion **Windows Communication Foundation nicht-HTTP-Aktivierung** .
 
 3. Konfigurieren Sie den Windows Process Activation Service (WAS), um die Aktivierung benannter Pipes zu unterstützen.
 
@@ -179,7 +179,7 @@ Press <ENTER> to terminate client.
 
     1. Zur Unterstützung der net.pipe-Aktivierung muss die Standardwebsite zuerst an das net.pipe-Protokoll gebunden werden. Sie können hierzu das Tool "appcmd.exe" verwenden, das mit dem IIS 7.0-Verwaltungstoolset installiert wird. Führen Sie an einer Eingabeaufforderung auf höherer Ebene (Administrator) den folgenden Befehl aus.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
         -+bindings.[protocol='net.pipe',bindingInformation='*']
         ```
@@ -191,14 +191,14 @@ Press <ENTER> to terminate client.
 
     2. Alle Anwendungen innerhalb einer Site nutzen zwar eine gemeinsame net.pipe-Bindung, aber jede Anwendung kann die net.pipe-Unterstützung unabhängig von den anderen Anwendungen aktivieren. Um net.pipe für die Anwendung /servicemodelsamples zu aktivieren, führen Sie den folgenden Befehl in einer Eingabeaufforderung mit erweiterten Berechtigungen (Administrator) aus.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe
         ```
 
         > [!NOTE]
         > Dieser Befehl ist eine einzelne Textzeile.
 
-        Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden kann sowohl `http://localhost/servicemodelsamples` und `net.tcp://localhost/servicemodelsamples`.
+        Dieser Befehl ermöglicht den Zugriff auf die Anwendung/ServiceModelSamples-Anwendung mit `http://localhost/servicemodelsamples` und `net.tcp://localhost/servicemodelsamples`.
 
 4. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
@@ -208,7 +208,7 @@ Press <ENTER> to terminate client.
 
     1. Entfernen Sie net.tcp aus der Liste der aktivierten Protokolle, indem Sie den folgenden Befehl an einer Eingabeaufforderung mit erweiterten Berechtigungen (Administrator) ausführen.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http
         ```
 
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
 
     2. Entfernen Sie die net.tcp-Sitebindung, indem Sie den folgenden Befehl an einer Eingabeaufforderung mit erweiterten Berechtigungen ausführen.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']
         ```
 
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und-persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

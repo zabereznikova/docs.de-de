@@ -2,12 +2,12 @@
 title: Was ist Docker?
 description: Beim tieferen Einstieg in Ihre Docker-Kenntnisse kann Ihnen vielleicht eine einfache Analogie helfen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673427"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770720"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -35,7 +35,7 @@ Die Images für diese Container werden genauso erstellt und funktionieren auch s
 
 In Abbildung 1–3 wird ein Vergleich zwischen virtuellen Computern und Docker Containern dargestellt.
 
-![Bei VMs gibt es drei Basisebenen auf dem Host-Server. Unten beginnend sind dies: Infrastruktur, Hostbetriebssystem und Hypervisor, und auf all dem aufsetzend weist jede VM ihr eigenes Betriebssystem und alle erforderlichen Bibliotheken auf. Andererseits hat der Hostserver für Docker nur die Infrastruktur und das Betriebssystem, und darüber arbeitet das Containermodul, das die Container isoliert, aber die grundlegenden Betriebssystemdienste teilt.](./media/image3.png)
+![Bei VMs gibt es drei Basisebenen auf dem Host-Server. Unten beginnend sind dies: Infrastruktur, Hostbetriebssystem und Hypervisor, und auf all dem aufsetzend weist jede VM ihr eigenes Betriebssystem und alle erforderlichen Bibliotheken auf. Andererseits verfügt der Hostserver bei Docker nur über die Infrastruktur und das Betriebssystem, sowie auch über eine Container-Engine, die die Container isoliert, aber die grundlegenden Betriebssystemdienste teilt.](./media/image3.png)
 
 **Abbildung 1–3**. Vergleichen der herkömmlichen virtuellen Computer mit Docker-Containern
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 44f3beb9de8c9d339c42db26bb9c510998abc7d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 212fdde3a5ecc8b0a43e33bec3537bd57b1387e9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597133"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419403"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Automatisch implementierte Eigenschaften (C#-Programmierhandbuch)
 In C# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch implementierte Eigenschaften präziser, wenn in den Eigenschaftenzugriffsmethoden keine zusätzliche Logik erforderlich ist. Zudem ermöglichen sie Clientcode das Erstellen von Objekten. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, erstellt der Compiler ein privates, anonymes, dahinter liegendes Feld, auf das nur über `get` und `set`-Accessoren zugegriffen werden kann.  
@@ -32,4 +32,4 @@ public string FirstName { get; set; } = "Jane";
 ## <a name="see-also"></a>Siehe auch
 
 - [Eigenschaften](./properties.md)
-- [Modifizierer](../../language-reference/keywords/modifiers.md)
+- [Modifizierer](/dotnet/csharp/language-reference/keywords)

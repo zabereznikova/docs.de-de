@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: a4cb85eb94584cff20c9ff26b4aa6bacee4f9883
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252965"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417573"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)
 
@@ -22,7 +22,7 @@ Dynamische Objekte machen Member wie etwa Eigenschaften und Methoden zur Laufzei
   
  Dynamische Objekte bieten außerdem einfachen Zugriff auf dynamische Sprachen wie IronPython und IronRuby. Sie können ein dynamisches Objekt verwenden, um sich auf ein dynamisches Skript zu beziehen, das zur Laufzeit ausgeführt wird.  
   
- Sie verweisen auf ein dynamisches Objekt mithilfe der späten Bindung. Geben Sie in C# den Typ eines spät gebundenen Objekts als `dynamic` an. Geben Sie in Visual Basic den Typ eines spät gebundenen Objekts als `Object` an. Weitere Informationen finden Sie unter [dynamic](../../language-reference/keywords/dynamic.md) und [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Sie verweisen auf ein dynamisches Objekt mithilfe der späten Bindung. Geben Sie in C# den Typ eines spät gebundenen Objekts als `dynamic` an. Geben Sie in Visual Basic den Typ eines spät gebundenen Objekts als `Object` an. Weitere Informationen finden Sie unter [dynamic](../../language-reference/builtin-types/reference-types.md) und [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  Sie können benutzerdefinierte dynamische Objekte erstellen, indem Sie die Klassen im <xref:System.Dynamic?displayProperty=nameWithType>-Namespace verwenden. Sie können z.B. ein <xref:System.Dynamic.ExpandoObject> erstellen und die Member dieses Objekts zur Laufzeit angeben. Sie können auch einen eigenen Typ erstellen, der die <xref:System.Dynamic.DynamicObject>-Klasse erbt. Sie können die Member dieser <xref:System.Dynamic.DynamicObject>-Klasse anschließend außer Kraft setzen, um dynamische Funktionen zur Laufzeit bereitzustellen.  
   
@@ -164,5 +164,5 @@ Das nächste Projekt, das Sie in dieser exemplarischen Vorgehensweise erstellen,
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
 - [Verwenden von dynamischen Typen](./using-type-dynamic.md)
 - [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Implementing Dynamic Interfaces (downloadable PDF from Microsoft TechNet) (Implementieren von dynamischen Schnittstellen (PDF von Microsoft TechNet zum Download))](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

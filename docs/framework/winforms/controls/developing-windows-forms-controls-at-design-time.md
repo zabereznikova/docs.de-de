@@ -9,15 +9,15 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1eebca72b8c564e6d846eba69b6b59139754738e
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015981"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460082"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit
 
@@ -30,49 +30,49 @@ Informationen zum Erstellen benutzerdefinierter Steuerelemente zur Verwendung in
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+Exemplarische Vorgehensweise [: Erstellen eines zusammengesetzten Steuer](walkthrough-authoring-a-composite-control-with-visual-csharp.md) Elements\
 Veranschaulicht das Erstellen eines einfachen zusammengesetzten Steuerelements in Visual C#.
 
-[Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+Exemplarische Vorgehensweise [: Vererben von einem Windows Forms-Steuer](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md) Element\
 Veranschaulicht, wie ein einfaches Windows Forms-Steuerelement unter Verwendung der Vererbung in Visual C# erstellt wird.
 
-[Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Smarttags auf Windows Forms Steuerelementen](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+Exemplarische Vorgehensweise [: Ausführen allgemeiner Aufgaben mit Smarttags auf Windows Forms Steuerelementen](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
 Veranschaulicht, wie das Smarttagfeature auf Windows Forms-Steuerelemente angewendet wird.
 
-[Exemplarische Vorgehensweise: Serialisieren von Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)\
-Zeigt, wie das <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> -Attribut verwendet wird, um eine Auflistung zu serialisieren.
+Exemplarische Vorgehensweise [: Serialisieren von Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md) -\
+Zeigt, wie das <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType>-Attribut verwendet wird, um eine Auflistung zu serialisieren.
 
-[Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+[Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
 Veranschaulicht das Debuggen des Verhaltens eines Windows Forms-Steuerelements zur Entwurfszeit.
 
-[Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen nutzt](creating-a-wf-control-design-time-features.md)\
+Exemplarische Vorgehensweise [: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen](creating-a-wf-control-design-time-features.md) nutzt\
 Zeigt, wie ein zusammengesetztes Steuerelement nahtlos in die Entwurfsumgebung integriert wird.
 
-[Vorgehensweise: Steuerelemente für Windows Forms erstellen](how-to-author-controls-for-windows-forms.md)\
+[Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](how-to-author-controls-for-windows-forms.md)\
 Bietet einen Überblick über die Aspekte der Implementierung eines Windows Forms-Steuerelements.
 
-[Vorgehensweise: Zusammengesetzte Steuerelemente verfassen](how-to-author-composite-controls.md)\
+[Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](how-to-author-composite-controls.md)\
 Veranschaulicht, wie ein Steuerelement durch Vererbung von einem zusammengesetzten Steuerelement erstellt wird.
 
 [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)\
 Bietet eine Übersicht über das Verfahren zum Erstellen eines zusammengesetzten Steuerelements.
 
-[Vorgehensweise: Von vorhandenen Windows Forms Steuerelementen erben](how-to-inherit-from-existing-windows-forms-controls.md)\
-Zeigt, wie ein erweitertes Steuerelement durch Erben von der <xref:System.Windows.Forms.Button> Control-Klasse erstellt wird.
+[Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)\
+Zeigt, wie ein erweitertes Steuerelement erstellt wird, indem von der <xref:System.Windows.Forms.Button> Steuerelement Klasse geerbt wird.
 
 [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)\
 Bietet eine Übersicht über das Erstellen eines erweiterten Steuerelements.
 
-[Vorgehensweise: Ausrichten eines Steuer Elements an den Kanten von Formularen zur Entwurfszeit](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
-Zeigt, wie Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft verwenden, um das Steuerelement an der Kante des Formulars auszurichten, das es einnimmt.
+Gewusst [wie: Ausrichten eines Steuer Elements an den Kanten von Formularen zur Entwurfszeit](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
+Zeigt, wie Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft verwenden, um das Steuerelement an der Kante des Formulars auszurichten, das es einnimmt.
 
-[Vorgehensweise: Anzeigen eines Steuer Elements im Dialog Feld "Toolbox Elemente auswählen"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
+[Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
 Veranschaulicht das Verfahren, in dem das Steuerelement so installiert wird, dass es im Dialogfeld **Toolbox anpassen** angezeigt wird.
 
-[Vorgehensweise: Bereitstellen einer Toolbox Bitmap für ein Steuerelement](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
-Zeigt, wie das <xref:System.Drawing.ToolboxBitmapAttribute> verwendet wird, um ein Symbol neben dem benutzerdefinierten Steuerelement in der **Toolbox**anzuzeigen.
+Gewusst [wie: Bereitstellen einer Toolbox Bitmap für ein Steuer](how-to-provide-a-toolbox-bitmap-for-a-control.md) Element\
+Zeigt, wie die <xref:System.Drawing.ToolboxBitmapAttribute> verwendet wird, um ein Symbol neben dem benutzerdefinierten Steuerelement in der **Toolbox**anzuzeigen.
 
-[Vorgehensweise: Testen des Lauf Zeit Verhaltens eines UserControl-Steuer Elements](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
+[Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
 Veranschaulicht, wie der **UserControl-Testcontainer** verwendet wird, um das Verhalten eines zusammengesetzten Steuerelements zu testen.
 
 [Entwurfszeitfehler im Windows Forms-Designer](design-time-errors-in-the-windows-forms-designer.md)\
@@ -95,5 +95,5 @@ Erörtert, wie Sie mit .NET Framework eigene benutzerdefinierte Steuerelemente e
 [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
 Bietet eine Einführung in die Common Language Runtime, die zum Vereinfachen der Erstellung und Verwendung von Komponenten entworfen wurde. Ein wichtiger Aspekt dieser Vereinfachung ist die verbesserte Interoperabilität zwischen Komponenten, die mit verschiedenen Programmiersprachen geschrieben wurden. Durch die Common Language Specification (CLS) wird das Erstellen von Tools und Komponenten ermöglicht, die für mehrere Programmiersprachen ausgelegt sind.
 
-[Exemplarische Vorgehensweise: Automatisches Auffüllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
+[Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
 Erläutert, wie Sie vorgehen müssen, damit eine Komponente oder ein Steuerelement im Dialogfeld **Toolbox anpassen** angezeigt wird.

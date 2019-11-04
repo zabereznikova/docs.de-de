@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 57ab0282c88a85b59c8fed7506ef811c8cced58f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2eda5a44d4c2dfd9a745871bdc345b7c50e6af49
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924449"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418798"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
 
@@ -87,7 +87,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
-Weitere Informationen erhalten Sie unter [Statische Klassen](~/_csharplang/spec/classes.md#static-classes) und [Statische und Instanzmember](~/_csharplang/spec/classes.md#static-and-instance-members) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen erhalten Sie unter [Statische Klassen](~/_csharplang/spec/classes.md#static-classes) und [Statische und Instanzmember](~/_csharplang/spec/classes.md#static-and-instance-members) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
 ## <a name="see-also"></a>Siehe auch
 

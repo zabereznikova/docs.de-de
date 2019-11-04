@@ -1,17 +1,17 @@
 ---
 title: Ergebnisse
-description: Erfahren Sie, wie Sie mit der F# "Result" Geben Sie fehlertoleranten Code schreiben können.
+description: Erfahren Sie, wie Sie F# den Ergebnistyp verwenden, um fehlertoleranten Code zu schreiben.
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645324"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424849"
 ---
 # <a name="results"></a>Ergebnisse
 
-Ab F# 4.1, es ist ein `Result<'T,'TFailure>` geben, die Sie verwenden können, für das Schreiben von fehlertoleranten Code, der zusammengesetzt werden kann.
+Ab F# 4,1 gibt es einen `Result<'T,'TFailure>` Typ, den Sie zum Schreiben von fehlertoleranter Code verwenden können, der zusammengesetzt werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -20,20 +20,20 @@ Ab F# 4.1, es ist ein `Result<'T,'TFailure>` geben, die Sie verwenden können, f
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass der Rückgabetyp einer [diskriminierte Union](discriminated-unions.md#struct-discriminated-unions), dies ist ein weiteres Feature, die in F# 4.1 eingeführt.  Strukturelle Gleichheitssemantik gelten hier.
+Beachten Sie, dass der Ergebnistyp eine von der Struktur Unterscheidungs- [Union](discriminated-unions.md#struct-discriminated-unions)ist F# , die eine andere in 4,1 eingeführte Funktion ist.  Strukturelle Gleichheits Semantik wird hier angewendet.
 
-Die `Result` Typ wird normalerweise verwendet, bei der monadische-Fehlerbehandlung, die häufig als bezeichnet wird [Eisenbahn objektorientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) innerhalb der F# Community.  Das folgende einfache Beispiel veranschaulicht diesen Ansatz.
+Der `Result` Typ wird in der Regel in der monadische-Fehlerbehandlung verwendet, die in der F# Community häufig als [Bahn orientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) bezeichnet wird.  Diese Vorgehensweise wird im folgenden trivialen Beispiel veranschaulicht.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,7 +80,7 @@ let test() =
 test()
 ```
 
-Wie Sie sehen können, ist es recht einfach, verschiedene Validierungsfunktionen miteinander zu verketten, wenn Sie sie alle zurückgeben Erzwingen einer `Result`.  So können Sie Funktionen wie folgt in kleine Teile aufteilen sind als zusammensetzbar, wie Sie diese benötigen.  Dies hat auch dem Mehrwert des *erzwingen* die Verwendung von [Musterabgleich](pattern-matching.md) am Ende einer Rundung der Überprüfung, das wiederum ein höheres Maß an Richtigkeit des Programms erzwingt.
+Wie Sie sehen können, ist es recht einfach, verschiedene Validierungs Funktionen zu verketten, wenn Sie erzwingen, dass Sie eine `Result`zurückgeben.  Auf diese Weise können Sie Funktionen wie diese in kleine Teile aufteilen, die so zusammensetzbar sind, wie Sie es benötigen.  Dies hat auch den zusätzlichen Wert, um die Verwendung des [Muster](pattern-matching.md) Abgleich am Ende einer überprüfungsrunde zu *erzwingen* , die wiederum einen höheren Grad an Programm Richtigkeit erzwingt.
 
 ## <a name="see-also"></a>Siehe auch
 

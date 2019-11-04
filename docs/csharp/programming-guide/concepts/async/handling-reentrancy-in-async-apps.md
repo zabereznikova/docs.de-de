@@ -2,12 +2,12 @@
 title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204299"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772034"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 
@@ -29,6 +29,9 @@ Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintret
 
 > [!NOTE]
 > Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
+
+> [!NOTE]
+> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App auf eine .NET Framework-Version vor 4.7 ausgerichtet ist, lesen Sie den Artikel [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../../framework/network-programming/tls.md). 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Erkennen von Ablaufinvarianz
 
@@ -581,7 +584,7 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 4. Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.
 
-5. Weisen Sie dem Projekt den Namen `WebsiteDownloadWPF` zu, und wählen Sie dann die Schaltfläche **OK** aus.
+5. Benennen Sie das Projekt `WebsiteDownloadWPF`, wählen Sie die .NET Framework-Version 4.6 oder höher aus, und klicken Sie dann auf die Schaltfläche **OK**.
 
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.
 
@@ -609,7 +612,9 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
      Ein einfaches Fenster, das ein Textfeld und eine Schaltfläche enthält, wird in der **Entwurfsansicht** der Datei „MainWindow.xaml“ angezeigt.
 
-8. Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.
+8. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und klicken Sie anschließend auf **Verweis hinzufügen**.
+
+     Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu, sofern dieser nicht bereits ausgewählt ist.
 
 9. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für „MainWindow.xaml.cs“, und wählen Sie dann **Code anzeigen** aus.
 
@@ -641,6 +646,7 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
         {
             public MainWindow()
             {
+                System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
                 InitializeComponent();
             }
 

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 324cd42a2781202f19e7e1cb5055d571f0c58cf5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127634"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  

@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 417abb5052df95c8496d97894d3e11d2956d7a1a
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700936"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774396"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Analysieren der Stimmung von Filmkritiken mithilfe eines vortrainierten TensorFlow-Modells in ML.NET
 
@@ -19,7 +19,7 @@ In diesem Tutorial wird gezeigt, wie Sie ein vortrainiertes TensorFlow-Modell ve
 
 Das in diesem Tutorial verwendete TensorFlow-Modell wurde mithilfe der Filmkritiken aus der IMDB-Datenbank trainiert. Sobald Sie die Entwicklung der Anwendung abgeschlossen haben, können Sie Filmkritiktext bereitstellen. Die Anwendung informiert Sie dann, ob die Rezension eine positive oder negative Stimmung hat.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > * Laden eines vortrainierten TensorFlow-Modells
@@ -30,9 +30,9 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+* [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
-## <a name="setup"></a>Einrichtung
+## <a name="setup"></a>Setup
 
 ### <a name="create-the-application"></a>Erstellen der Anwendung
 
@@ -81,16 +81,16 @@ Filmkritiken sind Freiformtext. Ihre Anwendung konvertiert den Text in das vom M
 
 Der erste besteht darin, den Text in separate Wörter aufzuteilen und die bereitgestellte Zuordnungsdatei zu verwenden, um jedes Wort einer ganzzahligen Codierung zuzuordnen. Das Ergebnis dieser Transformation ist ein Intergerarray variabler Länge mit einer Länge, die der Anzahl der Wörter im Satz entspricht.
 
-|Eigenschaft| Wert|type|
+|Eigenschaft| Wert|Typ|
 |-------------|-----------------------|------|
-|ReviewText|this film is really good|Zeichenfolge|
+|ReviewText|this film is really good|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 
 Die Größe des Merkmalsarrays variabler Länge wird dann in eine feste Länge von 600 geändert. Dies ist die Länge, die das TensorFlow-Modell erwartet.
 
-|Eigenschaft| Wert|type|
+|Eigenschaft| Wert|Typ|
 |-------------|-----------------------|------|
-|ReviewText|this film is really good|Zeichenfolge|
+|ReviewText|this film is really good|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 |Features|14,22,9,66,78,... |int[600]|
 
@@ -211,7 +211,7 @@ Die [MLContext-Klasse](xref:Microsoft.ML.MLContext) ist der Ausgangspunkt für a
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
+    Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
 
     > [!NOTE]
     > Die `PredictionEnginePool`-Diensterweiterung ist derzeit als Vorschauversion verfügbar.
@@ -226,7 +226,7 @@ Die [MLContext-Klasse](xref:Microsoft.ML.MLContext) ist der Ausgangspunkt für a
 
 1. Die [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A)-Funktion trifft eine Vorhersage für eine einzelne Datenzeile:
 
-    |Eigenschaft| Wert|type|
+    |Eigenschaft| Wert|Typ|
     |-------------|-----------------------|------|
     |Vorhersage|[0,5459937, 0,454006255]|float[]|
 
@@ -253,7 +253,7 @@ Herzlichen Glückwunsch! Sie haben jetzt erfolgreich ein Machine Learning-Modell
 
 Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-In diesem Tutorial haben Sie Folgendes gelernt:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > * Laden eines vortrainierten TensorFlow-Modells

@@ -1,16 +1,15 @@
 ---
 title: Methoden (Leitfaden für C#)
 description: Übersicht über Methoden, Methodenparameter und Methodenrückgabewerte
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168515"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101486"
 ---
 # <a name="methods"></a>Methoden
 
@@ -18,22 +17,6 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
 
 > [!NOTE]
 > In diesem Thema werden benannte Methoden erläutert. Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](programming-guide/statements-expressions-operators/anonymous-functions.md).
-
-Dieses Thema enthält folgende Abschnitte:
-
-- [Methodensignaturen](#signatures)
-- [Methodenaufruf](#invocation)
-- [Geerbte und überschriebene Methoden](#inherited)
-- [Übergeben von Parametern](#passing)
-  - [Übergeben von Parametern als Wert](#byval)
-  - [Übergeben von Parametern durch einen Verweis](#byref)
-  - [Parameterarrays](#paramarray)
-- [Optionale Funktionsparameter und Argumente](#optional)
-- [Rückgabewert](#return)
-- [Erweiterungsmethoden](#extension)
-- [Asynchrone Methoden](#async)
-- [Ausdruckskörpermember](#expr)
-- [Iteratoren](#iterators)
 
 <a name="signatures"></a>
 
@@ -157,7 +140,7 @@ Eine Methodendefinition kann angeben, dass seine Parameter erforderlich oder opt
 Der Standardwert des Parameters muss von einer der folgenden Ausdrucksarten zugewiesen werden:
 
 - Eine Konstante, z.B. eine Zeichenfolgenliteral oder eine Zahl
-- Ein Ausdruck in Form von `new ValType`, wobei `ValType` ein Werttyp ist Beachten Sie, dass dies den impliziten parameterlosen Konstruktor des Werttyps aufruft, der eigentlich kein Member des Typs ist.
+- Ein Ausdruck in Form von `new ValType()`, wobei `ValType` ein Werttyp ist Beachten Sie, dass dies den impliziten parameterlosen Konstruktor des Werttyps aufruft, der eigentlich kein Member des Typs ist.
 - Ein Ausdruck in Form von `default(ValType)`, wobei `ValType` ein Werttyp ist
 
 Wenn eine Methode erforderliche und optionale Parameter enthält, werden optionale Parameter nach allen benötigten Parametern am Ende der Parameterliste definiert.

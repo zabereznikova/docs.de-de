@@ -35,14 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664661"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124815"
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
 <a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  
@@ -91,7 +89,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `^\d{3}-\d{2}-\d{4}$` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`^`|Entsprechung für den Anfang der Eingabezeichenfolge finden.|  
 |`\d{3}`|Entsprechung für drei Dezimalstellen finden.|  
@@ -109,7 +107,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\W+(\1)\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -131,7 +129,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `\b\d+\.\d{2}\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -154,7 +152,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `\b\d{1,2}\.\s` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\d{1,2}`|Entsprechung für eine oder zwei Dezimalstellen finden.|  
@@ -217,7 +215,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `\b\d+(,\d{3})*\.\d{2}\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -248,7 +246,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -277,7 +275,7 @@ ms.locfileid: "64664661"
   
  Das Muster für reguläre Ausdrücke `^(?<name>\w+):(?<value>\w+)` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|  
 |`(?<name>\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Der Name dieser Erfassungsgruppe ist `name`.|  
@@ -341,7 +339,7 @@ ms.locfileid: "64664661"
   
  Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`(\s\w+)*`|Entsprechung für null oder mehr Vorkommen eines Leerstellenzeichens finden, auf das mindestens ein Wortzeichen folgt. Dieses Muster entspricht Ortsnamen, die aus mehreren Wörtern bestehen. Dies ist die dritte Erfassungsgruppe.|  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9052f509ec6df4e4b911e2f33b5c8197adb9a2c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237364"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198439"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Änderung der JsonFactoryConverter.CreateConverter-Signatur
 
@@ -12,7 +12,7 @@ Um die Komposition von <xref:System.Text.Json.Serialization.JsonConverterFactory
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-Die Signatur der `CreateConverter`-Methode in .NET Core vor Preview 8 von Version 3.0 lautete wie folgt: 
+Die Signatur der `CreateConverter`-Methode in .NET Core vor Preview 8 von Version 3.0 lautete wie folgt:
 
 ```csharp
 namespace System.Text.Json.Serialization

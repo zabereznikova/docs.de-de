@@ -3,12 +3,12 @@ title: Das aktualisierte .NET Core-Ereignismuster
 description: Erfahren Sie, wie das .NET Core-Ereignismuster die Flexibilität mit Abwärtskompabilität erhöht und wie Sie sichere Ereignisverarbeitung mit asynchronen Abonnenten implementieren können.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751789"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798879"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Das aktualisierte .NET Core-Ereignismuster
 
@@ -71,7 +71,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-Beachten Sie, dass der Handler als ein asynchroner Handler markiert ist. Da er einem Ereignishandler-Delegattyp zugewiesen wurde, weist er den Rückgabetyp „Void“ auf. Das bedeutet, dass Sie dem im Handler angezeigten Muster folgen müssen und nicht zulassen dürfen, dass Ausnahmen ausgelöst werden, die nicht zum Kontext des asynchronen Handlers gehören. Da der Handler keine Aufgabe zurückgibt, gibt es keine Aufgabe, die einen Fehler berichten kann, indem sie in den Fehlerzustand tritt. Da die Methode asynchron ist, kann sie die Ausnahme nicht einfach auslösen. (Die aufrufende Methode wird weiterhin ausgeführt, weil sie `async` (asynchron) ist.) Das tatsächliche Laufzeitverhalten wird für unterschiedliche Umgebungen unterschiedlich definiert. Sie kann den Thread oder das Programm beenden oder das Programm in einem unbestimmten Zustand belassen. Keine dieser Verhaltensweisen erzielt gute Ergebnisse.
+Beachten Sie, dass der Handler als ein asynchroner Handler markiert ist. Da er einem Ereignishandler-Delegattyp zugewiesen wurde, weist er den Rückgabetyp „Void“ auf. Das bedeutet, dass Sie dem im Handler angezeigten Muster folgen müssen und nicht zulassen dürfen, dass Ausnahmen ausgelöst werden, die nicht zum Kontext des asynchronen Handlers gehören. Da der Handler keine Aufgabe zurückgibt, gibt es keine Aufgabe, die einen Fehler berichten kann, indem sie in den Fehlerzustand tritt. Da die Methode asynchron ist, kann sie die Ausnahme nicht einfach auslösen. (Die aufrufende Methode wird weiterhin ausgeführt, weil sie `async` (asynchron) ist.) Das tatsächliche Laufzeitverhalten wird für unterschiedliche Umgebungen unterschiedlich definiert. Sie kann den Thread oder den Prozess, der den Thread besitzt, beenden oder den Prozess in einem unbestimmten Zustand belassen. Alle diese potenziellen Ergebnisse sind jedoch unerwünscht.
 
 Deshalb sollten Sie die Await-Anweisung für die asynchrone Aufgabe in Ihrem eigenen try-Block umschließen. Wenn sie einen fehlerhaften Vorgang verursacht, können Sie den Fehler protokollieren. Wenn es sich um einen Fehler handelt, aus dem sich Ihre Anwendung nicht wiederherstellen lässt, können Sie das Programm schnell und problemlos beenden.
 

@@ -3,12 +3,12 @@ title: Einführung in Ereignisse
 description: Erfahren Sie in diesem Überblick etwas über Ereignisse in .NET Core und über Ziele beim Sprachentwurf für Ereignisse.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051943"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771921"
 ---
 # <a name="introduction-to-events"></a>Einführung in Ereignisse
 
@@ -49,7 +49,7 @@ public event EventHandler<FileListArgs> Progress;
 
 Der Typ des Ereignisses (`EventHandler<FileListArgs>` in diesem Beispiel) muss ein Delegattyp sein. Es gibt eine Reihe von Konventionen, die Sie befolgen sollten, wenn Sie ein Ereignis deklarieren. Normalerweise verfügt der Delegattyp des Ereignisses über einen „void“-Rückgabetyp.
 Ereignisdeklarationen sollten ein Verb oder eine Verbalphrase sein.
-Verwenden Sie die Vergangenheitsform (wie in diesem Beispiel), wenn das Ereignis meldet, dass etwas geschehen ist. Verwenden Sie ein Gegenwartsverb (z.B. `Closing`) um etwas zu melden, das geschehen wird. Häufig gibt die Verwendung der Gegenwartsform an, dass die Klasse eine Art der Anpassung des Verhaltens unterstützt. Eines der häufigsten Szenarios ist die Unterstützung des Abbruchs. Angenommen, ein `Closing`-Ereignis enthält ein Argument, das angeben würde, ob der Schließvorgang fortgesetzt werden soll oder nicht.  Andere Szenarios ermöglichen es Aufrufern, das Verhalten zu ändern, indem die Eigenschaften der Ereignisargumente aktualisiert werden. Sie können ein Ereignis auslösen, um eine vorgeschlagene nächste Aktion anzugeben, die einen Algorithmus auslösen wird. Der Ereignishandler kann eine andere Aktion vorgeben, indem er die Eigenschaften des Ereignisarguments ändert.
+Verwenden Sie die Vergangenheitsform, wenn das Ereignis meldet, dass etwas geschehen ist. Verwenden Sie ein Gegenwartsverb (z.B. `Closing`) um etwas zu melden, das geschehen wird. Häufig gibt die Verwendung der Gegenwartsform an, dass die Klasse eine Art der Anpassung des Verhaltens unterstützt. Eines der häufigsten Szenarios ist die Unterstützung des Abbruchs. Angenommen, ein `Closing`-Ereignis enthält ein Argument, das angeben würde, ob der Schließvorgang fortgesetzt werden soll oder nicht.  Andere Szenarios ermöglichen es Aufrufern, das Verhalten zu ändern, indem die Eigenschaften der Ereignisargumente aktualisiert werden. Sie können ein Ereignis auslösen, um eine vorgeschlagene nächste Aktion anzugeben, die einen Algorithmus auslösen wird. Der Ereignishandler kann eine andere Aktion vorgeben, indem er die Eigenschaften des Ereignisarguments ändert.
 
 Wenn Sie das Ereignis auslösen möchten, rufen Sie mithilfe der Aufrufsyntax des Delegaten den Ereignishandler auf:
 

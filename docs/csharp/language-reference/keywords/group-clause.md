@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534890"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422767"
 ---
 # <a name="group-clause-c-reference"></a>group-Klausel (C#-Referenz)
 
@@ -54,7 +54,7 @@ Das folgende Beispiel zeigt die Verwendung eines booleschen Werts für einen Sch
 
 ### <a name="grouping-by-numeric-range"></a>Gruppieren nach numerischen Bereich
 
-Das nächste Beispiel verwendet einen Ausdruck, um einen nummerischen Gruppenschlüssel zu erstellen, der einen Prozentbereich darstellt. Beachten Sie, dass [let](let-clause.md) an einer geeigneten Position eingesetzt wird, um Ergebnisse eines Methodenaufrufs zu speichern, damit Sie die Methode nicht zweimal in der `group`-Klausel aufrufen müssen. Weitere Informationen zur sicheren Verwendung von Methoden in Abfrageausdrücken finden Sie unter [Vorgehensweise: Behandeln von Ausnahmen in Abfrageausdrücken](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+Das nächste Beispiel verwendet einen Ausdruck, um einen nummerischen Gruppenschlüssel zu erstellen, der einen Prozentbereich darstellt. Beachten Sie, dass [let](let-clause.md) an einer geeigneten Position eingesetzt wird, um Ergebnisse eines Methodenaufrufs zu speichern, damit Sie die Methode nicht zweimal in der `group`-Klausel aufrufen müssen. Weitere Informationen zur sicheren Verwendung von Methoden in Abfrageausdrücken finden Sie unter [Vorgehensweise: Behandeln von Ausnahmen in Abfrageausdrücken](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -82,7 +82,7 @@ Dieses Beispiel zeigt, wie zusätzliche Logik auf die Gruppen ausgeführt wird, 
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 `group`-Klauseln werden zur Kompilierzeit in Aufrufe der <xref:System.Linq.Enumerable.GroupBy%2A>-Methode übersetzt.
 

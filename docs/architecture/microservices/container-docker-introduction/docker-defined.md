@@ -2,12 +2,12 @@
 title: Was ist Docker?
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Was ist Docker?
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674857"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771345"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -37,7 +37,7 @@ In Abbildung 2-3 wird einen Vergleich zwischen virtuellen Computern und die Dock
 
 | Virtuelle Computer | Docker-Container |
 | -----------------| ------------------|
-|![Bei VMs gibt es drei Basisebenen auf dem Host-Server. Unten beginnend sind dies: Infrastruktur, Hostbetriebssystem und Hypervisor, und auf all dem aufsetzend weist jede VM ihr eigenes Betriebssystem und alle erforderlichen Bibliotheken auf.](./media/image3.png)|![Bei Docker bietet der Hostserver nur die Infrastruktur und das Betriebssystem, und darüber arbeitet das Containermodul, das die Container isoliert, aber die grundlegenden Betriebssystemdienste teilt.](./media/image4.png)|
+|![Bei VMs gibt es drei Basisebenen auf dem Host-Server. Unten beginnend sind dies: Infrastruktur, Hostbetriebssystem und Hypervisor, und auf all dem aufsetzend weist jede VM ihr eigenes Betriebssystem und alle erforderlichen Bibliotheken auf.](./media/image3.png)|![Bei Docker verfügt der Hostserver nur über die Infrastruktur und das Betriebssystem, sowie auch über eine Container-Engine, die die Container isoliert, aber die grundlegenden Betriebssystemdienste teilt.](./media/image4.png)|
 |Virtuelle Computer enthalten die Anwendung, die erforderlichen Bibliotheken oder Binärdateien und ein vollständiges Gastbetriebssystem. Eine vollständige Virtualisierung erfordert mehr Ressourcen als die Containerisierung. | Container enthalten die Anwendung und alle ihre Abhängigkeiten. Sie teilen den Betriebssystemkernel jedoch mit anderen Containern, die als isolierte Prozesse im Benutzerbereich des Hostbetriebssystems ausgeführt werden. (Die einzige Ausnahme stellen Hyper-V-Container dar, wo jeder Container auf einem speziellen virtuellen Computer pro Container ausgeführt wird.) |
 
 **Abbildung 2-3:** Vergleichen der herkömmlichen virtuellen Computer mit Docker-Containern

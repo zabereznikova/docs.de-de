@@ -2,12 +2,12 @@
 title: Monolithische Anwendungen
 description: Verstehen der grundlegenden Konzepte für das Containerisieren monolithischer Anwendungen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394720"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771035"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 

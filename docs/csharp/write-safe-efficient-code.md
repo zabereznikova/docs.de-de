@@ -3,12 +3,12 @@ title: Schreiben von sicherem und effizientem C#-Code
 description: Durch Verbesserungen, die kürzlich an C# vorgenommen wurden, können Sie nun überprüfbaren sicheren Code schreiben, dessen Leistung vorher nur mit unsicherem Code zu erzielen war.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832942"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960843"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Schreiben von sicherem und effizientem C#-Code
 
@@ -21,9 +21,10 @@ In diesem Artikel stehen Vorgehensweisen für die effiziente Ressourcenverwaltun
 Folgende Empfehlungen zur Ressourcenverwaltung werden behandelt:
 
 - Deklarieren Sie einen [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example)-Typ, um einen Typ als **unveränderlich** festzulegen. Dadurch muss der Compiler weniger Kopien erstellen, wenn [`in`](language-reference/keywords/in-parameter-modifier.md)-Parameter verwendet werden.
+- Wenn ein Typ nicht so festgelegt werden kann, dass er nicht veränderbar ist, deklarieren Sie `struct`-Member als `readonly`, um anzuzeigen, dass der Member den Zustand nicht ändert.
 - Verwenden Sie einen [`ref readonly`](language-reference/keywords/ref.md#reference-return-values)-Verweisrückgabewert, wenn der Rückgabewert ein `struct`-Typ und größer als <xref:System.IntPtr.Size?displayProperty=nameWithType> ist und die Speicherlebensdauer die der Methode überschreitet, die den Wert zurückgibt.
 - Übergeben Sie aus Leistungsgründen einen `readonly struct`-Typ als `in`-Parameter, wenn die Größe des Typs <xref:System.IntPtr.Size?displayProperty=nameWithType> überschreitet.
-- Übergeben Sie nur dann einen `struct`-Typ als `in`-Parameter, wenn dieser Typ mit dem Modifizierer `readonly` deklariert wird. Andernfalls kann dies die Leistung beeinträchtigen und unerwartetes Verhalten zur Folge haben.
+- Übergeben Sie niemals einen `struct`-Member als einen `in`-Parameter, es sei denn, er ist mit dem `readonly`-Modifikator deklariert, oder die Methode ruft nur `readonly`-Member der Struktur auf. Ein Verstoß gegen diese Anleitung kann die Leistung negativ beeinflussen und zu einem unklaren Verhalten führen.
 - Verwenden Sie einen [`ref struct`](language-reference/keywords/ref.md#ref-struct-types)- oder `readonly ref struct`-Typ wie <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>, um mit Speicher als Bytesequenz zu arbeiten.
 
 Durch diese Techniken müssen Sie im Hinblick auf **Verweise** und **Werte** zwei konkurrierende Ziele abwägen. Variablen, die [Verweistypen](programming-guide/types/index.md#reference-types) sind, enthalten einen Verweis auf den Speicherort. Variablen, die [Werttypen](programming-guide/types/index.md#value-types) sind, enthalten den tatsächlichen Wert. Diese Unterschiede sind für die Verwaltung von Speicherressourcen entscheidend. **Werttypen** werden üblicherweise kopiert, wenn sie einer Methode übergeben oder von dieser zurückgegeben werden. Bei diesem Verhalten wird der Wert von `this` kopiert, wenn Member eines Werttyps aufgerufen werden. Der Kopieraufwand steht im Zusammenhang mit der Größe des Typs. Für **Verweistypen** wird auf dem verwalteten Heap Speicher belegt. Für jedes neue Objekt ist eine erneute Speicherbelegung erforderlich. Anschließend muss für dieses der Speicher wieder freigegeben werden. Beide Vorgänge nehmen Zeit in Anspruch. Der Verweis wird kopiert, wenn ein Verweistyp als Argument einer Methode übergeben oder von dieser zurückgegeben wird.
@@ -67,6 +68,51 @@ readonly public struct ReadonlyPoint3D
 ```
 
 Sie sollten sich immer dann an diese Empfehlung halten, wenn die Entwurfsabsicht darin besteht, einen unveränderlichen Werttyp zu erstellen. Ein weiterer Vorteil ergibt sich aus eventuellen Leistungsverbesserungen. Mit `readonly struct` bringen Sie Ihre Entwurfsabsicht deutlich zum Ausdruck.
+
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Deklarieren von schreibgeschützten Member, wenn eine Struktur nicht so festgelegt werden kann, dass sie nicht veränderbar ist
+
+Wenn ein Strukturtyp in C# 8.0 und höher veränderbar ist, sollten Sie Member, die nicht verändert werden können, mit `readonly` deklarieren. Im Folgenden finden Sie beispielsweise eine veränderbare Variation der 3D-Punktstruktur:
+
+```csharp
+public struct Point3D
+{
+    public Point3D(double x, double y, double z)
+    {
+        this.X = x;
+        this.Y = y;
+        this.Z = z;
+    }
+
+    private double _x;
+    public double X 
+    { 
+        readonly get { return _x;}; 
+        set { _x = value; }
+    }
+    
+    private double _y;
+    public double Y 
+    { 
+        readonly get { return _y;}; 
+        set { _y = value; }
+    }
+
+    private double _z;
+    public double Z 
+    { 
+        readonly get { return _z;}; 
+        set { _z = value; }
+    }
+
+    public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
+
+    public readonly override string ToString() => $"{X, Y, Z }";
+}
+```
+
+Das vorhergehende Beispiel zeigt viele der Stellen, an denen Sie den `readonly`-Modifizierer anwenden können: Methoden, Eigenschaften und Eigenschaftenaccessoren. Wenn Sie automatisch implementierte Eigenschaften verwenden, fügt der Compiler dem `get`-Zugriff den `readonly`-Modifizierer für Lese- und Schreibeigenschaften hinzu. Der Compiler fügt den `readonly`-Modifizierer zu den automatisch implementierten Eigenschaftendeklarationen für Eigenschaften mit nur einem `get`-Zugriff hinzu.
+
+Das Hinzufügen des `readonly`-Modifizierers zu Membern, die den Zustand nicht verändern, bietet zwei damit verbundene Vorteile: Der erste Vorteil ist, dass Sie mithilfe des Compilers die Umsetzung Ihrer Absicht erzwingen können. Dieser Member kann weder den Zustand der Struktur verändern, noch kann er auf ein Member zugreifen, der nicht ebenfalls mit `readonly` markiert ist. Der zweite Vorteil ist, dass der Compiler beim Zugriff auf einen `readonly`-Member keine defensiven Kopien von `in`-Parametern erstellt. Der Compiler kann diese Optimierung sicher durchführen, da er garantiert, dass der `struct`-Member nicht von einem `readonly`-Member verändert wird.
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Verwenden von `ref readonly return`-Anweisungen für große Strukturen (wo möglich)
 
@@ -175,13 +221,13 @@ In den bisher beschriebenen Strategien wurde erläutert, wie sich Kopien durch d
 
 Die `Point3D`-Struktur ist *keine* schreibgeschützte Struktur. Im Methodenkörper werden sechs Aufrufe zum Zugriff auf die Eigenschaften ausgeführt. Diese Zugriffe erscheinen möglicherweise auf den ersten Blick sicher. Die `get`-Zugriffsmethode sollte schließlich nicht den Zustand eines Objekts ändern. Dies wird jedoch von keiner Programmiersprachregel erzwungen. Es handelt sich nur um eine Konvention. Jeder Typ könnte eine `get`-Zugriffsmethode implementieren, die den internen Zustand ändert. Ohne eine Garantie der Programmiersprache muss der Compiler eine temporäre Kopie des Arguments erstellen, bevor er einen Member aufruft. Der temporäre Speicher wird auf dem Stapel erstellt, die Werte des Arguments werden in den temporären Speicher kopiert, und der Wert wird bei jedem Memberzugriff als `this`-Argument in den Stapel kopiert. In vielen Situationen beeinträchtigen die Kopien die Leistung so, dass die Übergabe als Wert schneller als die Übergabe als schreibgeschützter Verweis ist, wenn der Argumenttyp nicht `readonly struct` ist.
 
-Wenn stattdessen zur Abstandsberechnung die unveränderliche Struktur `ReadonlyPoint3D` verwendet wird, werden keine temporären Objekte benötigt:
+Wenn stattdessen zur Abstandsberechnung die unveränderliche Struktur `ReadonlyPoint3D` verwendet wird, werden temporäre Objekte nicht benötigt:
 
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Der Compiler generiert effizienteren Code, wenn Member vom Typ `readonly struct` aufgerufen werden: Im Gegensatz zur Kopie des Empfängers ist der `this`-Verweis immer ein `in`-Parameter, der als Verweis der Membermethode übergeben wird. Durch diese Optimierung werden Kopien vermieden, wenn Sie `readonly struct` als `in`-Argument verwenden.
 
-Übergeben Sie keinen Nullwerte zulassenden Typ als `in`-Argument. Der <xref:System.Nullable%601>-Typ wird nicht als schreibgeschützte Struktur deklariert. Dies bedeutet, dass der Compiler defensive Kopien für jedes Nullwerte zulassende Typargument generieren muss, das einer Methode mit dem `in`-Modifizierer in der Parameterdeklaration übergeben wird.
+Übergeben Sie keinen Nullwerte zulassenden Typ als ein `in`-Argument. Der Typ <xref:System.Nullable%601> ist nicht als schreibgeschützte Struktur deklariert. Dies bedeutet, dass der Compiler defensive Kopien für jedes Nullwerte zulassende Typargument generieren muss, das einer Methode mit dem `in`-Modifizierer in der Parameterdeklaration übergeben wird.
 
 In einem Beispielprogramm, das sich im entsprechenden [GitHub-Repository](https://www.nuget.org/packages/BenchmarkDotNet/) befindet, können Sie sich die Leistungsunterschiede ansehen, die mit [BenchmarkDotNet](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) erfasst werden. Dabei wird die Übergabe einer veränderlichen Struktur als Wert und Verweis mit der Übergabe einer unveränderlichen Struktur als Wert und Verweis verglichen. Am schnellsten ist die Übergabe einer unveränderlichen Struktur als Verweis.
 

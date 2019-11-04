@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597310"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419529"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Eindimensionale Arrays (C#-Programmierhandbuch)
 
@@ -55,7 +55,7 @@ Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie 
   
  Das Ergebnis dieser Anweisung hängt davon ab, ob `SomeType` ein Werttyp oder ein Verweistyp ist. Bei einem Werttyp wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes den Typ `SomeType` besitzt. Stellt `SomeType` einen Verweistyp dar, wird durch die Anweisung ein Array aus 10 Elementen erstellt, von denen jedes mit einem NULL-Verweis initialisiert wird.  
   
- Weitere Informationen zu Werttypen und Verweistypen finden Sie unter [Typen](../../language-reference/keywords/types.md).  
+ Weitere Informationen zu Werttypen und Verweistypen finden Sie unter [Typen](/dotnet/csharp/language-reference/keywords).  
   
 ## <a name="see-also"></a>Siehe auch
 

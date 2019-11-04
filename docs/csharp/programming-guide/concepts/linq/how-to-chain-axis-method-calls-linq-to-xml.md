@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verketten von Achsenmethodenaufrufen (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 573efb50dd889d1e10fc3a74bb5c7d9a8ac30eab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594078"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418414"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Vorgehensweise: Verketten von Achsenmethodenaufrufen (LINQ to XML) (C#)
 Eine gebräuchliche Vorgehensweise im Code besteht darin, erst eine Achsenmethode und dann eine der Erweiterungsmethodenachsen aufzurufen.  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](./linq-to-xml-axes.md)
+- [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](linq-to-xml-axes-overview.md)

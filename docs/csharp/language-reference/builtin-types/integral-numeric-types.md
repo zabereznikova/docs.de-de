@@ -1,7 +1,7 @@
 ---
 title: Integrale numerische Typen – C#-Referenz
 description: Erfahren Sie mehr über den Bereich, die Speichergröße und die Verwendung für jeden integralen numerischen Typen.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579192"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773864"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integrale numerische Typen (C#-Referenz)
 
@@ -100,7 +100,7 @@ Der Typ eines integralen Literals wird wie folgt durch sein Suffix bestimmt:
 
 Wenn der von einem Integer-Literal dargestellte Wert <xref:System.UInt64.MaxValue?displayProperty=nameWithType> überschreitet, tritt der Compilerfehler [CS1021](../../misc/cs1021.md) auf.
 
-Der durch ein Ganzzahlliteral dargestellte Wert kann implizit in einen Typ mit einem kleineren Bereich als der festgelegte Typ des Literals konvertiert werden. Dies ist möglich, wenn der Wert innerhalb des Bereichs des Zieltyps liegt:
+Wenn der festgelegte Typ eines Ganzzahlliterals `int` ist und der Wert innerhalb des Bereichs des Zieltyps liegt, kann der durch das Literal dargestellte Wert implizit in `sbyte`, `byte`, `short`, `ushort`, `uint` oder `ulong` konvertiert werden:
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Konvertierungen
 
-Zwischen zwei beliebigen integralen Typen gibt es eine implizite Konvertierung (*verbreiternde Konvertierung* genannt), bei der der Zieltyp alle Werte des Quelltyps speichern kann. Zum Beispiel gibt es eine implizite Konvertierung von `int` nach `long`, da der Bereich der `int`-Werte eine korrekte Teilmenge von `long` ist. Es gibt implizite Konvertierungen von einem kleineren integral Typ ohne Vorzeichen in einen größeren integralen Typ mit Vorzeichen. Es gibt auch eine implizite Konvertierung von einem beliebigen integralen Typ in einen beliebigen Gleitkommatyp.  Es gibt keine implizite Konvertierung von einem beliebigen integralen Typ mit Vorzeichen in einen beliebigen integralen Typ ohne Vorzeichen.
-
-Sie müssen eine explizite Umwandlung verwenden, um einen integralen Typ in einen anderen integralen Typ zu konvertieren, wenn eine implizite Konvertierung vom Quelltyp in den Zieltyp nicht definiert ist. Dies wird als *einschränkende Konvertierung* bezeichnet. Die explizite Anwendung ist erforderlich, da die Konvertierung zu Datenverlust führen kann.
+Sie können beliebige ganzzahlige numerische Typen in beliebige andere ganzzahlige numerische Typen konvertieren. Wenn der Zieltyp alle Werte des Quelltyps speichern kann, handelt es sich um eine implizite Konvertierung. Andernfalls müssen Sie den [cast-Operator `()`](../operators/type-testing-and-cast.md#cast-operator-) verwenden, um eine explizite Konvertierung aufzurufen. Weitere Informationen finden Sie unter [Built-in numeric conversions](numeric-conversions.md) (Integrierte numerische Konvertierungen).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -132,8 +130,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [Gleitkommatypen](floating-point-numeric-types.md)
-- [Tabelle für Standardwerte](../keywords/default-values-table.md)
-- [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
 - [Tabelle integrierter Typen](../keywords/built-in-types-table.md)
+- [Gleitkommatypen](floating-point-numeric-types.md)
+- [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)

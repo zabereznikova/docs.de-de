@@ -3,12 +3,12 @@ title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117801"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420882"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -18,7 +18,7 @@ Sie können benutzerdefinierte Vorlagen aus NuGet-Paketen in jedem NuGet-Feed in
 
 Die Vorlagen-Engine ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Navigieren Sie zum Repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples), wo sie Beispielvorlagen finden. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
 
-Eine exemplarische Vorgehensweise zum Erstellen einer Vorlage finden Sie im Tutorial [Create a custom template for dotnet new (in englischer Sprache)](../tutorials/create-custom-template.md).
+Eine exemplarische Vorgehensweise zum Erstellen einer Vorlage finden Sie im Tutorial [Create a custom template for dotnet new (in englischer Sprache)](../tutorials/cli-templates-create-item-template.md).
 
 ### <a name="net-default-templates"></a>.NET-Standardvorlagen
 
@@ -52,14 +52,14 @@ Dateien, die anhand der Vorlage generiert werden, können basierend auf der Logi
 
 Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichnis der Vorlage platziert. Die Datei bietet der Vorlagen-Engine Konfigurationsinformationen. Die Mindestkonfiguration erfordert die in der folgenden Tabelle aufgelisteten Member, was zum Erstellen einer funktionsfähigen Vorlage ausreicht.
 
-| Member            | type          | BESCHREIBUNG |
+| Member            | Typ          | BESCHREIBUNG |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Das JSON-Schema für die Datei *template.json*. Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
-| `author`          | Zeichenfolge        | Der Autor der Vorlage. |
+| `author`          | string        | Der Autor der Vorlage. |
 | `classifications` | array(string) | Null (0) oder mehr Merkmale der Vorlage, die ein Benutzer verwenden kann, um die Vorlage zu finden. Die Klassifizierungen werden auch in der Spalte *Tags* angezeigt, wenn diese in einer Liste von Vorlagen angezeigt wird, die mit dem `dotnet new -l|--list`-Befehl erzeugt wurden. |
-| `identity`        | Zeichenfolge        | Ein eindeutiger Namen für diese Vorlage |
-| `name`            | Zeichenfolge        | Der Name der Vorlage, der Benutzern angezeigt wird |
-| `shortName`       | Zeichenfolge        | Ein Standardkurzname zum Auswählen der Vorlage, die für Umgebungen gilt, in denen der Vorlagenname vom Benutzer angegeben wird und nicht über eine grafische Benutzeroberfläche. Die Kurzform kann z.B. nützlich sein, wenn Sie Vorlagen aus einer Eingabeaufforderung mit CLI-Befehlen verwenden. |
+| `identity`        | string        | Ein eindeutiger Namen für diese Vorlage |
+| `name`            | string        | Der Name der Vorlage, der Benutzern angezeigt wird |
+| `shortName`       | string        | Ein Standardkurzname zum Auswählen der Vorlage, die für Umgebungen gilt, in denen der Vorlagenname vom Benutzer angegeben wird und nicht über eine grafische Benutzeroberfläche. Die Kurzform kann z.B. nützlich sein, wenn Sie Vorlagen aus einer Eingabeaufforderung mit CLI-Befehlen verwenden. |
 
 Das vollständige Schema für die Datei *template.json* finden Sie im [JSON-Schemaspeicher](http://json.schemastore.org/template). Weitere Informationen zur Datei *template.json* finden Sie im [Wiki zur Erstellung von .NET-Vorlagen](https://github.com/dotnet/templating/wiki).
 
@@ -250,7 +250,7 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/create-custom-template.md)
+- [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
 - [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)

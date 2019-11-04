@@ -2,12 +2,12 @@
 title: Debuggen von Ausdrucksbäumen in Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 2b858597a01f4d7ce460460956d3efcad856531d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 30f538712881e41b4fd0e62d06f74373d755ea40
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319013"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195685"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debuggen von Ausdrucksbäumen in Visual Studio (C#)
 Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um eine Übersicht über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die Ausdrucksbaumstrukturen mit einer [speziellen Syntax](debugview-syntax.md) darstellt. (Beachten Sie, dass `DebugView` nur im Debugmodus verfügbar ist.)  
@@ -41,6 +41,6 @@ Alternativ dazu können Sie eine [benutzerdefinierte Schnellansicht](https://doc
 ## <a name="see-also"></a>Siehe auch
 
 - [Ausdrucksbaumstrukturen (C#)](./index.md)
-- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debuggen in Visual Studio](/visualstudio/debugger/debugger-feature-tour)
 - [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView`-Syntax](debugview-syntax.md)

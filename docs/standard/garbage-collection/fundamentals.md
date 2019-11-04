@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180191"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775326"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 
@@ -125,7 +125,7 @@ Garbage Collections finden für bestimmte Generationen statt, wenn die Bedingung
 
 Objekte, die bei einer Garbage Collection nicht freigegeben werden, werden als beibehaltene Objekte bezeichnet und werden auf die nächste Generation höher gestuft. Objekte, die nach einer Garbage Collection in Generation 0 noch vorhanden sind, werden auf Generation 1 höher gestuft; Objekte, die nach einer Garbage Collection in Generation 1 noch vorhanden sind, werden auf Generation 2 höher gestuft. Objekte, die nach einer Garbage Collection Generation 2 noch vorhanden sind, bleiben in Generation 2.
 
-Wenn der Garbage Collector erkennt, dass die Rate der beibehaltenden Objekte in einer Generation hoch ist, erhöht er den Schwellenwert von Speicherbelegungen für diese Generation, sodass bei der nächsten Garbage Collection eine beträchtliche Menge an Speicher freigegeben wird. Die CLR wägt ständig zwei Prioritäten gegeneinander ab: Zum einen soll das Workingset einer Anwendung nicht zu groß werden, und zum anderen soll die Garbage Collection nicht zu viel Zeit in Anspruch nehmen.
+Wenn der Garbage Collector erkennt, dass die Rate der beibehaltenden Objekte in einer Generation hoch ist, erhöht er den Schwellenwert von Speicherbelegungen für diese Generation, sodass bei der nächsten Garbage Collection eine beträchtliche Menge an Speicher freigegeben wird. Die CLR wägt ständig zwei Prioritäten gegeneinander ab: Zum einen soll das Workingset einer Anwendung durch die Verzögerung der Garbage Collection nicht zu groß werden, und zum anderen soll die Garbage Collection nicht zu häufig ausgeführt werden.
 
 ### <a name="ephemeral-generations-and-segments"></a>Kurzlebige Generationen und Segmente
 
@@ -208,7 +208,7 @@ Der Garbage Collector optimiert sich selbst und kann in einer Vielzahl von Szena
 
 Die folgende Abbildung zeigt die dedizierten Threads an, die die Garbage Collection auf einem Server ausführen.
 
-![Garbage Collection-Threads auf dem Server](../../../docs/standard/garbage-collection/media/gc-server.png "Garbage Collection-Threads auf dem Server")
+![Threads für Garbage Collection auf dem Server](../../../docs/standard/garbage-collection/media/gc-server.png "Threads für Garbage Collection auf dem Server")
 
 ### <a name="configuring-garbage-collection"></a>Konfigurieren der Garbage Collection
 
@@ -262,7 +262,7 @@ Die gleichzeitige Garbage Collection hat ein etwas größeres Workingset (vergli
 
 Die folgende Abbildung zeigt eine parallele Garbage Collection für einen separaten dedizierten Thread.
 
-![Gleichzeitige Garbage Collection-Threads auf dem Server](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Gleichzeitige Garbage Collection-Threads auf dem Server")
+![Threads für parallele Garbage Collection](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Threads für parallele Garbage Collection")
 
 [Zurück nach oben](#top)
 
@@ -283,7 +283,7 @@ Die Garbage Collection im Hintergrund beseitigt die von der gleichzeitigen Garba
 
 Die folgende Abbildung zeigt eine Garbage Collection im Hintergrund für einen separaten dedizierten Thread auf einer Arbeitsstation:
 
-![Abbildung, die Garbage Collection der Arbeitsstation im Hintergrund zeigt.](./media/fundamentals/background-workstation-garbage-collection.png "Abbildung, die Garbage Collection der Arbeitsstation im Hintergrund zeigt.")
+![Abbildung zur Garbage Collection auf Arbeitsstationen im Hintergrund](./media/fundamentals/background-workstation-garbage-collection.png "Abbildung zur Garbage Collection auf Arbeitsstationen im Hintergrund.")
 
 [Zurück nach oben](#top)
 
@@ -295,7 +295,7 @@ Ab .NET Framework 4.5 ist Garbage Collection im Hintergrund der Standardmodus f�
 
 Die folgende Abbildung zeigt eine Garbage Collection im Hintergrund für einen separaten dedizierten Thread auf einem Server:
 
-![Abbildung, die Garbage Collection auf dem Server im Hintergrund zeigt.](./media/fundamentals/background-server-garbage-collection.png "Abbildung, die Garbage Collection auf dem Server im Hintergrund zeigt.")
+![Abbildung zur Garbage Collection auf dem Server im Hintergrund](./media/fundamentals/background-server-garbage-collection.png "Abbildung zur Garbage Collection auf dem Server im Hintergrund.")
 
 ## <a name="see-also"></a>Siehe auch
 

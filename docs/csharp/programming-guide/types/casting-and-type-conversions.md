@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588429"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774114"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -30,7 +30,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Implizite Konvertierungen**: Es ist keine besondere Syntax erforderlich, da die Konvertierung typsicher ist und keine Daten verloren gehen. Beispiele sind Konvertierungen von kleinere in größere Ganzzahltypen und Konvertierungen von abgeleiteten in Basisklassen.  
   
-- **Explizite Konvertierungen (Umwandlungen)** : Für explizite Konvertierungen ist ein Umwandlungsoperator erforderlich. Eine Umwandlung ist erforderlich, wenn Informationen bei einer Konvertierung verloren gehen können oder wenn die Konvertierung aus anderen Gründen fehlschlagen könnte.  Häufig auftretende Beispiele sind u.a. numerische Konvertierungen in einen Typen, der eine geringere Genauigkeit oder einen kleineren Bereich aufweist, oder Konvertierungen einer Instanz einer Basisklasse in eine abgeleitete Klasse.  
+- **Explizite Konvertierungen (Umwandlungen)** : Für explizite Konvertierungen ist ein [Umwandlungsoperator`()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-) erforderlich. Eine Umwandlung ist erforderlich, wenn Informationen bei einer Konvertierung verloren gehen können oder wenn die Konvertierung aus anderen Gründen fehlschlagen könnte. Häufig auftretende Beispiele sind u.a. numerische Konvertierungen in einen Typen, der eine geringere Genauigkeit oder einen kleineren Bereich aufweist, oder Konvertierungen einer Instanz einer Basisklasse in eine abgeleitete Klasse.  
   
 - **Benutzerdefinierte Konvertierungen**: Benutzerdefinierte Konvertierungen werden anhand spezieller Methoden durchgeführt, die Sie definieren können, um explizite und implizite Konvertierungen zwischen benutzerdefinierten Typen zu ermöglichen, die nicht in einer Beziehung „Basisklasse – abgeleitete Klasse“ zueinander stehen. Weitere Informationen finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](../../language-reference/operators/user-defined-conversion-operators.md).  
   
@@ -42,7 +42,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Eine vollständige Liste aller impliziten numerischen Konvertierungen finden Sie unter [Tabelle für implizite numerische Konvertierungen](../../language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Eine vollständige Liste aller impliziten numerischen Konvertierungen finden Sie unter [Implicit numeric conversions](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) (Implizite numerische Konvertierungen) im Artikel [Built-in numeric conversions](../../language-reference/builtin-types/numeric-conversions.md) (Integrierte numerische Konvertierungen).
   
  Eine implizite Konvertierungen für Verweistypen von einer Klasse in jede ihrer direkten oder indirekten Basisklassen oder Schnittstellen ist immer möglich. Es ist keine spezielle Syntax erforderlich, da eine abgeleitete Klasse immer alle Member der Basisklasse enthält.  
   
@@ -57,7 +57,7 @@ Base b = d; // Always OK.
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- Eine Liste der zulässigen expliziten numerischen Konvertierungen finden Sie unter [Tabelle für explizite numerische Konvertierungen](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Eine vollständige Liste der expliziten numerischen Konvertierungen finden Sie unter [Explicit numeric conversions](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) (Explizite numerische Konvertierungen) im Artikel [Built-in numeric conversions](../../language-reference/builtin-types/numeric-conversions.md) (Integrierte numerische Konvertierungen).
   
  Eine explizite Umwandlung ist für Verweistypen erforderlich, wenn Sie von einer Basisklasse in eine abgeleitete Klasse konvertieren möchten:  
   

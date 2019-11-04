@@ -1,7 +1,7 @@
 ---
 title: Numerische Gleitkommatypen – C#-Referenz
 description: Übersicht über die integrierten C#-Gleitkommatypen
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579371"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771901"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Numerische Gleitkommatypen (C#-Referenz)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Konvertierungen
 
-Es gibt eine implizite Konvertierung (als *erweiternde Konvertierung* bezeichnet) von `float` nach `double`, da der Bereich der `float`-Werte eine korrekte Teilmenge von `double` ist. Es entsteht kein Präzisionsverlust von `float` nach `double`.
-
-Sie müssen eine explizite Umwandlung verwenden, um einen Gleitkommatyp in einen anderen Gleitkommatyp zu konvertieren, wenn keine implizite Konvertierung vom Quelltyp in den Zieltyp definiert ist. Dies wird als *einschränkende Konvertierung* bezeichnet. Die explizite Anwendung ist erforderlich, da die Konvertierung zu Datenverlust führen kann. Es gibt keine implizite Konvertierung zwischen anderen Gleitkommatypen und dem `decimal`-Typ, da der `decimal`-Typ eine höhere Genauigkeit als `float` oder `double` aufweist.
-
-Weitere Informationen zu impliziten numerischen Konvertierungen finden Sie unter [Tabelle für implizite numerische Konvertierungen](../keywords/implicit-numeric-conversions-table.md).
-
-Weitere Informationen zu expliziten numerischen Konvertierungen finden Sie unter [Tabelle für explizite numerische Konvertierungen](../keywords/explicit-numeric-conversions-table.md).
+Es gibt nur eine implizite Konvertierung zwischen numerischen Gleitkommatypen: von `float` zu `double`. Allerdings können Sie einen Gleitkommatyp mit der [expliziten Umwandlung](../operators/type-testing-and-cast.md#cast-operator-)in beliebige andere Gleitkommatypen konvertieren. Weitere Informationen finden Sie unter [Built-in numeric conversions](numeric-conversions.md) (Integrierte numerische Konvertierungen).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -124,10 +118,9 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [Integrale Typen](integral-numeric-types.md)
 - [Tabelle integrierter Typen](../keywords/built-in-types-table.md)
-- [Numerische Ausdrücke in .NET](../../../standard/numerics.md)
-- [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Integrale Typen](integral-numeric-types.md)
 - [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
 - [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Numerische Ausdrücke in .NET](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

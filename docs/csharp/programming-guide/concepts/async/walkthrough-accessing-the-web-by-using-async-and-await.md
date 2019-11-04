@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168354"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195650"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)
 
@@ -62,7 +62,7 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie [Asynchron
 
 6. Positionieren Sie das Textfeld und die Schaltfläche so, dass beide im Fenster **MainWindow** angezeigt werden.
 
-     Weitere Informationen über den WPF-XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).
+     Weitere Informationen über den WPF-XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio).
 
 ## <a name="add-a-reference"></a>Hinzufügen eines Verweises
 

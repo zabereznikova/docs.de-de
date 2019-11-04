@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924111"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418057"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
 Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.  
@@ -185,4 +185,4 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
 ## <a name="see-also"></a>Siehe auch
 
 - [Language Integrated Query (LINQ) (C#)](./index.md)
-- [LINQ-Abfrageausdrücke](../../linq-query-expressions/index.md)
+- [LINQ-Abfrageausdrücke](../../../linq/index.md)

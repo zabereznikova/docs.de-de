@@ -2,12 +2,12 @@
 title: Konvertieren von Datentypen (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ddd9407c3b7e25dbfb8fc0bddb5daab7db2e4e53
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594617"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418619"
 ---
 # <a name="converting-data-types-c"></a>Konvertieren von Datentypen (C#)
 Konvertierungsmethoden ändern den Typ von Eingabeobjekten.  
@@ -79,5 +79,5 @@ static void Cast()
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [from-Klausel](../../../language-reference/keywords/from-clause.md)
-- [LINQ-Abfrageausdrücke](../../linq-query-expressions/index.md)
+- [LINQ-Abfrageausdrücke](../../../linq/index.md)
 - [Vorgehensweise: Abfragen der ArrayList-Klasse mit LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)

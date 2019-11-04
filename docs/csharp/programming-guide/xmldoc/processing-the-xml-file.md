@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523374"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846937"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
 
 Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Weitere Informationen darüber, wie Code mit Tags versehen werden kann, finden Sie unter [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können mithilfe der ID-Zeichenfolge das entsprechende .NET Framework-Metadaten-/Reflektionselement identifizieren, für das die Dokumentation gilt.
 
- Die XML-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine flache Liste mit einer generierten ID für jedes Element.
+Die XML-Datei enthält keine hierarchische Darstellung des Codes. Es handelt sich um eine flache Liste mit einer generierten ID für jedes Element.
 
- Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
+Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
 
 - Es befindet sich kein Leerraum in der Zeichenfolge.
 
@@ -41,7 +41,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 
   - Basistypen. Reguläre Typen (ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE) werden als vollqualifizierter Name des Typs dargestellt.
 
-  - Systeminterne Typen (z.B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF und ELEMENT_TYPE_VOID) werden als vollqualifizierter Name des entsprechenden vollständigen Typs dargestellt. Als Beispiel sei hier System.Int32 oder System.TypedReference genannt.
+  - Intrinsische Typen (z. B. ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF, und ELEMENT_TYPE_VOID) werden als vollqualifizierter Name des entsprechenden vollständigen Typnamens dargestellt. Als Beispiel sei hier System.Int32 oder System.TypedReference genannt.
 
   - ELEMENT_TYPE_PTR wird als \* dargestellt, das auf den geänderten Typ folgt.
 

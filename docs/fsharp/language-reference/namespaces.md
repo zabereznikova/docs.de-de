@@ -2,12 +2,12 @@
 title: Namespaces
 description: Erfahren Sie, F# wie ein Namespace Ihnen ermöglicht, Code in Bereichen verwandter Funktionalität zu organisieren, indem Sie einen Namen an eine Gruppierung von Programmelementen anfügen können.
 ms.date: 12/08/2018
-ms.openlocfilehash: d295f25cae81bc28b4fcb522bdcacde862f9517a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a55da1592b04c64576b4c66de61b5ca137289a6f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627377"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425046"
 ---
 # <a name="namespaces"></a>Namespaces
 
@@ -31,7 +31,7 @@ Namespaces können explizit mit dem Namespace-Schlüsselwort oder implizit beim 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-Wenn sich der gesamte Inhalt der Datei in einem Modul befindet, können Sie Namespaces auch implizit deklarieren, indem `module` Sie das-Schlüsselwort verwenden und den neuen Namespace Namen im voll qualifizierten Modulnamen angeben. Das folgende Beispiel zeigt eine Codedatei, die einen Namespace `Widgets` und ein Modul `WidgetsModule`deklariert, das eine Funktion enthält.
+Wenn sich der gesamte Inhalt der Datei in einem Modul befindet, können Sie Namespaces auch implizit deklarieren, indem Sie das `module`-Schlüsselwort verwenden und den neuen Namespace Namen im voll qualifizierten Modulnamen angeben. Das folgende Beispiel zeigt eine Codedatei, die einen Namespace deklariert `Widgets` und ein Modul `WidgetsModule`, das eine Funktion enthält.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
@@ -39,7 +39,7 @@ Der folgende Code entspricht dem vorangehenden Code, aber das Modul ist eine lok
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-Wenn mehr als ein Modul in derselben Datei in einem oder mehreren Namespaces erforderlich ist, müssen Sie lokale Modul Deklarationen verwenden. Wenn Sie lokale Modul Deklarationen verwenden, kann der qualifizierte Namespace in den Modul Deklarationen nicht verwendet werden. Der folgende Code zeigt eine Datei mit einer Namespace Deklaration und zwei Deklarationen von lokalen Modulen. In diesem Fall sind die Module direkt im-Namespace enthalten. Es ist kein implizit erstelltes Modul vorhanden, das denselben Namen wie die Datei hat. Jeder andere Code in der Datei, z. b `do` . eine Bindung, befindet sich im-Namespace, jedoch nicht in den inneren Modulen. Daher müssen Sie den `widgetFunction` Modulmember mithilfe des Modul namens qualifizieren.
+Wenn mehr als ein Modul in derselben Datei in einem oder mehreren Namespaces erforderlich ist, müssen Sie lokale Modul Deklarationen verwenden. Wenn Sie lokale Modul Deklarationen verwenden, kann der qualifizierte Namespace in den Modul Deklarationen nicht verwendet werden. Der folgende Code zeigt eine Datei mit einer Namespace Deklaration und zwei Deklarationen von lokalen Modulen. In diesem Fall sind die Module direkt im-Namespace enthalten. Es ist kein implizit erstelltes Modul vorhanden, das denselben Namen wie die Datei hat. Jeder andere Code in der Datei, z. b. eine `do` Bindung, befindet sich im-Namespace, jedoch nicht in den inneren Modulen. Daher müssen Sie das Modulmember `widgetFunction` mithilfe des Modul namens qualifizieren.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
@@ -62,11 +62,11 @@ Im folgenden Beispiel wird gezeigt, wie ein schsted Namespace deklariert wird.
 
 ## <a name="namespaces-in-files-and-assemblies"></a>Namespaces in Dateien und Assemblys
 
-Namespaces können mehrere Dateien in einem einzelnen Projekt oder einer Kompilierung umfassen. Der Begriff *Namespace Fragment* beschreibt den Teil eines Namespace, der in einer Datei enthalten ist. Namespaces können sich auch über mehrere Assemblys erstrecken. Der `System` -Namespace enthält z. b. die gesamte .NET Framework, die sich über viele Assemblys erstreckt und viele eingefügte Namespaces enthält.
+Namespaces können mehrere Dateien in einem einzelnen Projekt oder einer Kompilierung umfassen. Der Begriff *Namespace Fragment* beschreibt den Teil eines Namespace, der in einer Datei enthalten ist. Namespaces können sich auch über mehrere Assemblys erstrecken. Der `System`-Namespace enthält z. b. den gesamten .NET Framework, der sich über viele Assemblys erstreckt und viele eingefügte Namespaces enthält.
 
 ## <a name="global-namespace"></a>Globaler Namespace
 
-Sie verwenden den vordefinierten Namespace `global` , um Namen in den .NET-Namespace auf oberster Ebene zu platzieren.
+Sie verwenden den vordefinierten Namespace `global`, um Namen in den .NET-Namespace auf oberster Ebene zu platzieren.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
@@ -76,7 +76,7 @@ Sie können auch global verwenden, um auf den .NET-Namespace der obersten Ebene 
 
 ## <a name="recursive-namespaces"></a>Rekursive Namespaces
 
-Namespaces können auch als rekursiv deklariert werden, damit der gesamte enthaltene Code gegenseitig rekursiv ist.  Dies erfolgt über `namespace rec`. Die Verwendung `namespace rec` von kann einige Probleme verringern, die sich nicht gegenseitig referenziellen Code zwischen Typen und Modulen schreiben können. Im folgenden finden Sie ein Beispiel hierfür:
+Namespaces können auch als rekursiv deklariert werden, damit der gesamte enthaltene Code gegenseitig rekursiv ist.  Dies erfolgt über `namespace rec`. Die Verwendung von `namespace rec` kann einige Probleme verringern, die sich nicht gegenseitig referenziellen Code zwischen Typen und Modulen schreiben können. Im folgenden finden Sie ein Beispiel hierfür:
 
 ```fsharp
 namespace rec MutualReferences
@@ -101,7 +101,7 @@ module BananaHelpers =
     let peel (b: Banana) =
         let flip (banana: Banana) =
             match banana.Orientation with
-            | Up -> 
+            | Up ->
                 banana.Orientation <- Down
                 banana
             | Down -> banana
@@ -117,7 +117,7 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Beachten Sie, dass `DontSqueezeTheBananaException` die Ausnahme und `Banana` die Klasse beide aufeinander verweisen.  Darüber hinaus verweisen das `BananaHelpers` Modul und die `Banana` Klasse auch aufeinander. Dies wäre in F# nicht möglich, wenn Sie das `rec` -Schlüsselwort aus dem `MutualReferences` -Namespace entfernt haben.
+Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die-Klasse `Banana` beide aufeinander verweisen.  Außerdem verweisen das Modul `BananaHelpers` und die Klasse `Banana` auch aufeinander. Dies wäre nicht möglich, F# Wenn Sie das `rec`-Schlüsselwort aus dem `MutualReferences`-Namespace entfernt haben.
 
 Diese Funktion ist auch für [Module](modules.md)der obersten Ebene verfügbar.
 

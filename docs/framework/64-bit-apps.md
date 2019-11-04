@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1d7e6e098b6ce497dfe74f0afe2322b33a787c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8aaa74eee5372dd7ba1ed145632f718d9ecce8ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053260"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773977"
 ---
 # <a name="64-bit-applications"></a>64-Bit-Anwendungen
 Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem Windows-Betriebssystem mit 64 Bit entweder als systemeigene Anwendung oder unter WOW64 (Windows-32-Bit-On-Windows-64-Bit) ausgeführt werden soll. WOW64 ist eine Kompatibilitätsumgebung, die die Ausführung einer 32-Bit-Anwendung auf einem 64-Bit-System ermöglicht. WOW64 ist allen in 64-Bit-Versionen des Windows-Betriebssystems enthalten.  
@@ -56,9 +56,9 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
   
 |Compiler|Compileroption|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform (C# Compileroptionen)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Sie können plattformagnostische Microsoft Intermediate Language (MSIL)-Anwendungen erstellen, indem Sie **/clr:safe** verwenden. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ enthält einen gesonderten Compiler für jedes 64-Bit-Betriebssystem. Weitere Informationen zur Verwendung von Visual C++ für die Erstellung von nativen Anwendungen, die auf einem 64-Bit-Windows-Betriebssystem ausgeführt werden, finden Sie unter [64-Bit-Programmierung](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
+|Visual Basic|[-Plattform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[-platform (C#-Compileroptionen)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual C++|Sie können plattformagnostische Microsoft Intermediate Language (MSIL)-Anwendungen erstellen, indem Sie **/clr:safe** verwenden. Weitere Informationen finden Sie unter [-clr (Common Language Runtime-Kompilierung)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ enthält einen gesonderten Compiler für jedes 64-Bit-Betriebssystem. Weitere Informationen zur Verwendung von Visual C++ für die Erstellung von nativen Anwendungen, die auf einem 64-Bit-Windows-Betriebssystem ausgeführt werden, finden Sie unter [64-Bit-Programmierung](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bestimmen des Status einer EXE- oder DLL-Datei  
  Um zu bestimmen, ob eine EXE- oder DLL-Datei nur auf einer bestimmten Plattform oder unter WOW64 ausgeführt werden soll, verwenden Sie das [CorFlags.exe (Konvertierungstool CorFlags)](./tools/corflags-exe-corflags-conversion-tool.md) ohne Optionen. Weiterhin können Sie mit "CorFlags.exe" auch den Plattformstatus einer EXE- oder DLL-Datei ändern. Im CLR-Header einer Visual Studio-Assembly ist die Nummer der Hauptversion der Laufzeit auf 2 und die Nummer der Nebenversion auf 5 festgelegt. Anwendungen, für die die Nebenversionsnummer der Laufzeit auf 0 festgelegt ist, werden als ältere Anwendungen behandelt und auf 64-Bit-Computern unter WOW64 ausgeführt.  

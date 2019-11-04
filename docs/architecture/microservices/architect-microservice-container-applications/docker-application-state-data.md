@@ -2,18 +2,18 @@
 title: Zustand und Daten in Docker-Anwendungen
 description: Zustands- und Datenverwaltung in Docker-Anwendungen. Microservice-Instanzen sind erweiterbar, DATEN jedoch NICHT. Wie lässt sich dieser Tatsache mithilfe von Microservices Rechnung tragen?
 ms.date: 09/20/2018
-ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834428"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771438"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
 In den meisten Fällen können Sie sich einen Container als Instanz eines Prozesses vorstellen. Ein Prozess behält keinen persistenten Zustand bei. Während ein Container in den lokalen Speicher schreiben kann, gleicht die Annahme, dass eine Instanz auf unbestimmte Zeit vorhanden ist, der Annahme, dass ein Speicherort im Arbeitsspeicher dauerhaft ist. Sie müssen davon ausgehen, dass Containerimages ebenso wie Prozesse über mehrere Instanzen verfügen oder letztendlich gelöscht werden. Wenn sie mit einem Containerorchestrator verwaltet werden, müssen Sie davon ausgehen, dass sie zwischen Knoten oder virtuellen Computern verschoben werden.
 
-Die folgenden Lösungen werden verwendet, um persistente Daten in Docker-Anwendungen zu verwalten:
+Die folgenden Lösungen werden verwendet, um Daten in Docker-Anwendungen zu verwalten:
 
 Über den Docker-Host als [Docker-Volumes](https://docs.docker.com/engine/admin/volumes/):
 
@@ -31,9 +31,9 @@ Die folgenden Lösungen werden verwendet, um persistente Daten in Docker-Anwendu
 
 Über den Docker-Container:
 
-> Docker bietet ein Feature mit dem Namen *Overlay File System* (Dateisystem überlagern). Dadurch wird ein copy-on-write-Task (Bei Schreibvorgang kopieren) implementiert, die aktualisierte Informationen in das Stammdateisystem des Containers speichert. Diese Informationen kommen zum ursprünglichen Image hinzu, auf dem der Container basiert. Wenn der Container aus dem System gelöscht wird, gehen diese Änderungen verloren. Aus diesem Grund ist es zwar möglich, den Zustand eines Containers in seinem lokalen Speicher zu speichern, doch das Entwerfen eines umgehenden Systems würde mit der Prämisse des Containerdesigns kollidieren, das standardmäßig zustandslos ist.
->
-> Die zuvor eingeführten Docker-Volumes sind jetzt jedoch die bevorzugte Möglichkeit zum Verarbeiten lokaler Daten-Docker. Wenn Sie weitere Informationen zu Speichern in Container benötigen, lesen Sie [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver/) (Docker-Speichertreiber) und [About storage drivers](https://docs.docker.com/storage/storagedriver/) (Über Speichertreiber).
+- **Overlay File System**. Dieses Docker-Feature implementiert ein Copy-on-Write-Task, der aktualisierte Informationen im Stammdateisystem des Containers speichert. Diese Information befindet sich „über“ dem ursprünglichen Image, auf dem der Container basiert. Wenn der Container aus dem System gelöscht wird, gehen diese Änderungen verloren. Aus diesem Grund ist es zwar möglich, den Zustand eines Containers in seinem lokalen Speicher zu speichern, doch das Entwerfen eines umgehenden Systems würde mit der Prämisse des Containerdesigns kollidieren, das standardmäßig zustandslos ist.
+
+Allerdings stellt die Verwendung von Docker-Volumes mittlerweile das bevorzugte Verfahren zum Verwalten von lokalen Daten in Docker dar. Wenn Sie weitere Informationen zu Speichern in Container benötigen, lesen Sie [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver/) (Docker-Speichertreiber) und [About storage drivers](https://docs.docker.com/storage/storagedriver/) (Über Speichertreiber).
 
 Nachfolgend erhalten Sie weitere Details zu diesen Optionen:
 
@@ -43,7 +43,7 @@ Volumes können benannt oder anonym sein (letzteres ist die Standardeinstellung)
 
 **Einbindungen über „Bind“** sind schon lange verfügbar und ermöglichen die Zuordnung jedes Ordners zu einem Bereitstellungspunkt in einem Container. Einbindungen über „Bind“ weisen mehr Einschränkungen als Volumes sowie einige erhebliche Sicherheitsprobleme auf, daher sind Volumes die empfohlene Option.
 
-**Einbindungen über tmpfs** sind im Grunde virtuelle Ordner, die nur im Arbeitsspeicher des Hosts vorhanden sind und nie in das Dateisystem geschrieben werden. Sie sind schnell und sicher, verbrauchen aber Arbeitsspeicher und sind nur für nicht persistente Daten vorgesehen.
+**Einbindungen über tmpfs** sind im Grunde virtuelle Ordner, die nur im Arbeitsspeicher des Hosts vorhanden sind und nie in das Dateisystem geschrieben werden. Sie sind schnell und sicher, verbrauchen aber Arbeitsspeicher und sind nur für temporäre, nicht persistente Daten vorgesehen.
 
 Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder virtuellen Computer aus auf ein Volume auf einem anderen Hostserver oder virtuellen Computer zugreifen. Anders gesagt: Bei diesen Volumes ist es nicht möglich, Daten zu verwalten, die von auf verschiedenen Docker-Hosts ausgeführten Containern gemeinsam verwendet werden. Dieses Szenario ließe sich allerdings mit einem Volumetreiber umsetzen, der Remotehosts unterstützt.
 

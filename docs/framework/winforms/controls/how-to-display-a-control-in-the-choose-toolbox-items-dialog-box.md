@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“'
+title: 'Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld "Toolboxelemente auswählen"'
 ms.date: 08/23/2019
 helpviewer_keywords:
 - global assembly cache [Windows Forms], Choose Toolbox Items dialog box
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 86ec8f9ae76f010ebbc3be393d8d257ba5cfc6b6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: db4b3ac020e967a6a0c291103d825ac71cebda23
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834617"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458280"
 ---
-# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“
+# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld "Toolboxelemente auswählen"
 
 Wenn Sie Steuerelemente entwickeln und verteilen, möchten Sie möglicherweise, dass diese Steuerelemente im Dialogfeld **Toolbox Elemente auswählen** von Visual Studio angezeigt werden, das angezeigt wird, wenn Sie mit der rechten Maustaste auf die **Toolbox** klicken und **Elemente auswählen**auswählen. Sie können das Steuerelement in diesem Dialogfeld mithilfe der AssemblyFoldersEx-Registrierungs Prozedur anzeigen lassen.
 
 So zeigen Sie das Steuerelement im Dialogfeld Toolbox Elemente auswählen an:
 
-- Installieren Sie die steuerungsassembly im globalen Assemblycache. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../app-domains/install-assembly-into-gac.md).
+- Installieren Sie die steuerungsassembly im globalen Assemblycache. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren einer Assembly in den globalen Assemblycache](../../app-domains/install-assembly-into-gac.md).
 
   - oder -
 
@@ -33,5 +33,5 @@ So zeigen Sie das Steuerelement im Dialogfeld Toolbox Elemente auswählen an:
 ## <a name="see-also"></a>Siehe auch
 
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)
-- [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../app-domains/install-assembly-into-gac.md)
-- [Exemplarische Vorgehensweise: Automatisches Auffüllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Gewusst wie: Installieren einer Assembly in den globalen Assemblycache](../../app-domains/install-assembly-into-gac.md)
+- [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

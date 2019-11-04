@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: f4329c525995b8246427072d1f537d91d875ef95
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596265"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419040"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Übergeben von Verweistypparametern (C#-Programmierhandbuch)
 Eine Variable eines [Verweistyps](../../language-reference/keywords/reference-types.md) enthält direkt keine Daten. Sie enthält einen Verweis auf die Daten. Wenn Sie einen Verweistypparameter nach Wert übergeben, ist es möglich, die Daten zu ändern, die zu dem Objekt gehören, auf das verwiesen wird, z.B. den Wert eines Klassenmembers. Sie können jedoch nicht den Wert des Verweises selbst ändern.Zum Beispiel. können Sie nicht mit dem gleichen Verweis eines neuen Objekts Arbeitsspeicher zuweisen und ihn außerhalb der Methode beibehalten. Dazu müssen Sie den Parameter mit den Schlüsselwörtern [ref](../../language-reference/keywords/ref.md) oder [out](../../language-reference/keywords/out-parameter-modifier.md) übergeben. Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.  
@@ -37,7 +37,7 @@ Eine Variable eines [Verweistyps](../../language-reference/keywords/reference-ty
   
  In diesem Beispiel müssen die Parameter nach Verweis übergeben werden, damit die Variablen im aufrufenden Programm beeinflusst werden. Wenn Sie das `ref`-Schlüsselwort aus dem Methodenheader und dem Methodenaufruf entfernen, erfolgen keine Änderungen im aufrufenden Programm.  
   
- Weitere Informationen zu Zeichenfolgen finden Sie unter [string](../../language-reference/keywords/string.md).  
+ Weitere Informationen zu Zeichenfolgen finden Sie unter [string](../../language-reference/builtin-types/reference-types.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

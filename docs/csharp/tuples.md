@@ -3,12 +3,12 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319758"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774061"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen
 
@@ -77,7 +77,7 @@ Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name pro
 
 Es gibt zwei Bedingungen, unter denen die Feldnamen von Kandidaten nicht auf das Tupelfeld projiziert werden:
 
-1. Wenn es sich beim Namen des Kandidaten um einen reservierten Tupelnamen handelt. Beispiele sind `Item3`, `ToString` oder `Rest`.
+1. Wenn es sich beim Namen des Kandidaten um einen reservierten Tupelnamen handelt. Die Beispiele umfassen `Item3`, `ToString` oder `Rest`.
 1. Wenn es sich beim Namen des Kandidaten um das Duplikat des expliziten oder impliziten Feldnamens eines anderen Tupels handelt.
 
 Durch diese Bedingungen wird Mehrdeutigkeit vermieden. Diese Namen würden eine Mehrdeutigkeit verursachen, wenn sie als Feldnamen für das Feld eines Tupels verwendet würden. Keine dieser Bedingungen verursacht Kompilierzeitfehler. Stattdessen werden für die Elemente, die nicht über projizierte Namen verfügen, keine semantischen Namen projiziert.  In den folgenden Beispielen werden diese Bedingungen veranschaulicht:

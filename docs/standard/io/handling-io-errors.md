@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120741"
 ---
 # <a name="handling-io-errors-in-net"></a>Behandeln von E/A-Fehlern in .NET
 
@@ -37,11 +35,11 @@ ms.locfileid: "53126874"
 
 ## <a name="mapping-error-codes-to-exceptions"></a>Zuordnen von Fehlercodes zu Ausnahmen
 
-Da das Dateisystem eine Betriebssystemressource ist, umschließen E/A-Methoden sowohl in .NET Core als auch in .NET Framework Aufrufe an das zugrundeliegende Betriebssystem. Wenn in Code, der vom Betriebssystem ausgeführt wird, ein E/A-Fehler auftritt, gibt das Betriebssystem Fehlerinformationen an die .NET-E/A-Methode zurück. Die Methode übersetzt dann die Fehlerinformationen, normalerweise in Form eines Fehlercodes, in einen .NET-Ausnahmetyp. In den meisten Fällen erfolgt dies durch direktes Übersetzen des Fehlercodes in den entsprechenden Ausnahmetyp; es wird keine besondere Zuordnung des Fehlers auf der Grundlage des Kontexts des Methodenaufrufs vorgenommen.
+Da das Dateisystem eine Betriebssystemressource ist, umschließen E/A-Methoden sowohl in .NET Core als auch in .NET Framework Aufrufe an das zugrundeliegende Betriebssystem. Wenn in Code, der vom Betriebssystem ausgeführt wird, ein E/A-Fehler auftritt, gibt das Betriebssystem Fehlerinformationen zu der .NET-E/A-Methode zurück. Die Methode übersetzt dann die Fehlerinformationen, normalerweise in Form eines Fehlercodes, in einen .NET-Ausnahmetyp. In den meisten Fällen erfolgt dies durch direktes Übersetzen des Fehlercodes in den entsprechenden Ausnahmetyp; es wird keine besondere Zuordnung des Fehlers auf der Grundlage des Kontexts des Methodenaufrufs vorgenommen.
 
 Beispielsweise wird im Windows-Betriebssystem ein Methodenaufruf, der den Fehlercode `ERROR_FILE_NOT_FOUND` (oder 0x02) zurückgibt, einer <xref:System.IO.FileNotFoundException> zugeordnet, und der Fehlercode `ERROR_PATH_NOT_FOUND` (oder 0x03) wird einer <xref:System.IO.DirectoryNotFoundException> zugeordnet.
 
-Die genauen Umstände, unter denen das Betriebssystem bestimmte Fehlercodes zurückgibt, sind aber häufig schlecht oder gar nicht dokumentiert. Daher können unerwartete Ausnahmen auftreten. Wenn Sie beispielsweise mit einem Verzeichnis anstelle einer Datei arbeiten, könnten Sie annehmen, dass die Angabe eines falschen Verzeichnispfads für den <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType>-Konstruktor eine <xref:System.IO.DirectoryNotFoundException> auslöst. Es kann aber ebenso gut eine <xref:System.IO.FileNotFoundException> auslösen.
+Die genauen Umstände, unter denen das Betriebssystem bestimmte Fehlercodes zurückgibt, sind aber häufig undokumentiert oder schlecht dokumentiert. Daher können unerwartete Ausnahmen auftreten. Wenn Sie beispielsweise mit einem Verzeichnis anstelle einer Datei arbeiten, könnten Sie annehmen, dass die Angabe eines falschen Verzeichnispfads für den <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType>-Konstruktor eine <xref:System.IO.DirectoryNotFoundException> auslöst. Es kann aber ebenso gut eine <xref:System.IO.FileNotFoundException> auslösen.
 
 ## <a name="exception-handling-in-io-operations"></a>Ausnahmebehandlung in E/A-Vorgängen
 

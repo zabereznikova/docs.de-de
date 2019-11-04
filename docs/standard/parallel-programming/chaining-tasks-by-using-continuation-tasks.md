@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630114"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123172"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben
 Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. In der Vergangenheit wurden für diese Fortsetzungen vor allem Rückrufmethoden genutzt. In der Task Parallel Library wird die gleiche Funktionalität durch *Fortsetzungsaufgaben*bereitgestellt. Eine Fortsetzungsaufgabe (auch kurz als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe, die wiederum als *Vorgänger*bezeichnet wird, nach deren Beendigung aufgerufen wird.  
