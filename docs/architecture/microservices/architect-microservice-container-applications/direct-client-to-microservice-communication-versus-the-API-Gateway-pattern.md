@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522950"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090132"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -132,7 +132,7 @@ Je nach Implementierung bedienen verschiedene API-Gatewayprodukte viele weitere 
 
 **Abbildung 4-14.** Verwenden von Azure API Management für das API-Gateway
 
-Azure API Management löst die Anforderungen von API-Gateway und Management wie Protokollierung, Sicherheit, Messung usw. In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte. 
+Azure API Management löst die Anforderungen von API-Gateway und Management wie Protokollierung, Sicherheit, Messung usw. In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte.
 
 Die API-Gatewayprodukte fungieren in der Regel wie ein Reverseproxy für die eingehende Kommunikation – hier können Sie auch die APIs der internen Microservices filtern und Autorisierungsfunktionen auf die veröffentlichten APIs auf dieser einzelnen Ebene anwenden.
 

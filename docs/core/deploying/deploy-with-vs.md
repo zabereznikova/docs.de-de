@@ -1,19 +1,17 @@
 ---
 title: Bereitstellen von .NET Core-Apps mit Visual Studio
 description: Erfahren Sie, wie Sie eine .NET Core-App mit Visual Studio bereitstellen.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fd6861a71bdaac2d3500be52ae29c9fdb383a574
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216236"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092709"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -194,7 +192,7 @@ Führen Sie die folgenden Schritte für jede Zielplattform der Anwendung durch:
   
 1. Wählen Sie aus, wo Ihre Anwendung von Visual Studio veröffentlicht werden soll.
 
-   Wenn Sie die Anwendung auf einer einzigen Plattform veröffentlichen, können Sie den Standardwert im Textfeld **Ordner auswählen** bestätigen. Die Framework-abhängige Bereitstellung Ihrer Anwendung wird dann im Verzeichnis *\<Projektverzeichnis>\bin\Release\netcoreapp2.1\publish\* veröffentlicht.
+   Wenn Sie die Anwendung auf einer einzigen Plattform veröffentlichen, können Sie den Standardwert im Textfeld **Ordner auswählen** bestätigen. Die frameworkabhängige Bereitstellung Ihrer Anwendung wird dann im Verzeichnis *\<Projektverzeichnis>\bin\Release\netcoreapp2.1\publish* veröffentlicht.
 
    Wenn Sie die Anwendung auf mehreren Plattformen veröffentlichen, fügen Sie eine Zeichenfolge an, mit der die Zielplattform identifiziert wird. Wenn Sie beispielsweise die Zeichenfolge „linux“ an den Dateipfad anfügen, veröffentlicht Visual Studio die Framework-abhängige Bereitstellung Ihrer Anwendung im Verzeichnis *\<Projektverzeichnis>\bin\Release\netcoreapp2.1\publish\linux*.
 

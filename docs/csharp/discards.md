@@ -1,15 +1,14 @@
 ---
 title: 'Ausschüsse: Leitfaden für C#'
 description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es sich um nicht zugewiesene, verwerfbare Variablen handelt, und die Möglichkeiten, wie Ausschüsse verwendet werden können.
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
-ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100636"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 

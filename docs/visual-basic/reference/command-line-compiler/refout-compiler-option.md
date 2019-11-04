@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582870"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775551"
 ---
 # <a name="-refout-visual-basic"></a>-reout (Visual Basic)
 
@@ -35,9 +35,7 @@ Der Pfad und der Dateiname der Verweisassembly. Er sollte sich in der Regel in e
 
 Visual Basic unterstützt den `-refout` Switch ab Version 15,3.
 
-Verweisassemblys sind reine Metadatenassemblys, die Metadaten, aber keinen Implementierungs Code enthalten. Sie enthalten Informationen über den Typ und den Member für alles außer anonyme Typen. Ihre Methoden Texte werden durch eine einzelne `throw null`-Anweisung ersetzt. Der Grund für die Verwendung `throw null` Methoden Texts (im Gegensatz zu keinem Text) ist, dass "Peer verify" ausgeführt und bestanden werden kann (wodurch die Vollständigkeit der Metadaten überprüft wird).
-
-Verweisassemblys enthalten ein [referenceassembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) -Attribut auf Assemblyebene. Dieses Attribut kann in der Quelle angegeben werden (dann muss der Compiler es nicht künstlich erstellen). Aufgrund dieses Attributs verweigern Laufzeiten das Laden von Verweisassemblys für die Ausführung (Sie können jedoch dennoch in einen reflektionsbasierten Kontext geladen werden). Tools, die Assemblys reflektieren, müssen sicherstellen, dass Sie Verweisassemblys als Reflektion laden. Andernfalls löst die Laufzeit eine <xref:System.BadImageFormatException> aus.
+Verweisassemblys sind eine besondere Art von Assembly, die nur die Mindestanzahl von Metadaten enthält, die zur Darstellung der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie enthalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools signifikant sind, aber alle Member-Implementierungen und-Deklarationen von privaten Membern ausschließen, die keine Observable-Auswirkung auf Ihren API-Vertrag haben. Weitere Informationen finden Sie im [Leitfaden zu Verweisassemblys in .net](../../../standard/assembly/reference-assemblies.md).
 
 Die Optionen `-refout` und [`-refonly`](refonly-compiler-option.md) schließen sich gegenseitig aus.
 

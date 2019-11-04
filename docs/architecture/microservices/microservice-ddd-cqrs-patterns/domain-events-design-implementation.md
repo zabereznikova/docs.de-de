@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031840"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093959"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -145,9 +145,9 @@ eShopOnContainers verwendet den verzögerten Ansatz. Sie fügen zunächst die Er
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ Mit dem Code verteilen Sie die Entitätsereignisse an die entsprechenden Ereigni
 
 Insgesamt gesehen haben Sie das Auslösen eines Domänenereignisses (einfaches Hinzufügen zu einer Liste im Speicher) vom Versand an einen Ereignishandler abgekoppelt. Darüber hinaus haben Sie abhängig von der Art des von Ihnen verwendeten Verteilers die Möglichkeit, die Ereignisse synchron oder asynchron zu verwenden.
 
-Bedenken Sie, dass hier transaktionale Grenzen eine gewichtige Rolle spielen. Wenn Arbeitseinheit und Transaktion mehrere Aggregate umfassen können (wie bei Verwendung von EF Core und einer relationalen Datenbank), kann dies gut funktionieren. Wenn jedoch die Transaktion keine Aggregate umfassen kann, z.B. wenn Sie eine NoSQL-Datenbank wie CosmosDB verwenden, implementieren Sie zusätzliche Schritte, um Konsistenz zu gewährleisten. Dies ist ein weiterer Grund, weshalb das Ignorieren der Persistenz nicht universell ist. Es richtet sich vielmehr nach dem von Ihnen verwendeten Speichersystem. 
+Bedenken Sie, dass hier transaktionale Grenzen eine gewichtige Rolle spielen. Wenn Arbeitseinheit und Transaktion mehrere Aggregate umfassen können (wie bei Verwendung von EF Core und einer relationalen Datenbank), kann dies gut funktionieren. Wenn jedoch die Transaktion keine Aggregate umfassen kann, z.B. wenn Sie eine NoSQL-Datenbank wie CosmosDB verwenden, implementieren Sie zusätzliche Schritte, um Konsistenz zu gewährleisten. Dies ist ein weiterer Grund, weshalb das Ignorieren der Persistenz nicht universell ist. Es richtet sich vielmehr nach dem von Ihnen verwendeten Speichersystem.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Einzelne Transaktion über Aggregate im Vergleich zu „Eventual Consistency“ über Aggregate
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork

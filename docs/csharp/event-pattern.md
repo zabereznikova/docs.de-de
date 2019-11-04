@@ -2,13 +2,14 @@
 title: Standardereignismuster in .NET
 description: Erfahren Sie etwas über Ereignismuster in .NET und wie Sie standardmäßige Ereignisquellen erstellen und Standardereignisse in Ihrem Code abonnieren und verarbeiten können.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062970"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037174"
 ---
 # <a name="standard-net-event-patterns"></a>Standardereignismuster in .NET
 

@@ -1,15 +1,13 @@
 ---
 title: Neuigkeiten in .NET Core 2.0
 description: Informationen zu den neuen Funktionen in .NET Core.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100844"
 ---
 # <a name="whats-new-in-net-core-20"></a>Neuigkeiten in .NET Core 2.0
 

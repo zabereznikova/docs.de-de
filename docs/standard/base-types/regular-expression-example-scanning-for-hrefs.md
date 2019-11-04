@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084222"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für regulären Ausdruck: Suchen nach HREFs
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
@@ -38,7 +36,7 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
   
  Das Muster für reguläre Ausdrücke `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`href`|Sucht nach der Literalzeichenfolge „href“. Die Groß- und Kleinschreibung wird bei der Übereinstimmung nicht berücksichtigt.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
