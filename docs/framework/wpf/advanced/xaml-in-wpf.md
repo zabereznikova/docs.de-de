@@ -7,42 +7,42 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672018"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459561"
 ---
-# <a name="xaml-in-wpf"></a><span data-ttu-id="8f536-102">XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="8f536-102">XAML in WPF</span></span>
+# <a name="xaml-in-wpf"></a><span data-ttu-id="e237b-102">XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="e237b-102">XAML in WPF</span></span>
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="8f536-103">ist eine Markup Sprache für die deklarative Anwendungsprogrammierung.</span><span class="sxs-lookup"><span data-stu-id="8f536-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="8f536-104">implementiert eine XAML-Prozessor Implementierung und bietet Unterstützung für XAML-Sprache.</span><span class="sxs-lookup"><span data-stu-id="8f536-104">implements a XAML processor implementation and provides XAML language support.</span></span> <span data-ttu-id="8f536-105">Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typen werden so implementiert, dass Sie die erforderliche Typunterstützung für eine XAML-Darstellung bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="8f536-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="8f536-106">Im Allgemeinen können Sie den Großteil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungs Benutzeroberfläche in XAML-Markup erstellen.</span><span class="sxs-lookup"><span data-stu-id="8f536-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <span data-ttu-id="e237b-103">ist eine Markup Sprache für die deklarative Anwendungsprogrammierung.</span><span class="sxs-lookup"><span data-stu-id="e237b-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="e237b-104">implementiert eine XAML-Prozessor Implementierung und bietet Unterstützung für XAML-Sprache.</span><span class="sxs-lookup"><span data-stu-id="e237b-104">implements a XAML processor implementation and provides XAML language support.</span></span> <span data-ttu-id="e237b-105">Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typen werden so implementiert, dass Sie die für eine XAML-Darstellung erforderliche Typunterstützung bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="e237b-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="e237b-106">Im Allgemeinen können Sie den Großteil ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungs Benutzeroberfläche in XAML-Markup erstellen.</span><span class="sxs-lookup"><span data-stu-id="e237b-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8f536-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="8f536-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e237b-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e237b-107">In This Section</span></span>  
 
-[<span data-ttu-id="8f536-108">Übersicht über XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="8f536-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
-[<span data-ttu-id="8f536-109">Ausführliche Erläuterung der XAML-Syntax</span><span class="sxs-lookup"><span data-stu-id="8f536-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
-[<span data-ttu-id="8f536-110">Code-Behind und XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="8f536-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
-[<span data-ttu-id="8f536-111">XAML- und benutzerdefinierte Klassen für WPF</span><span class="sxs-lookup"><span data-stu-id="8f536-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
-[<span data-ttu-id="8f536-112">Markuperweiterungen und WPF-XAML</span><span class="sxs-lookup"><span data-stu-id="8f536-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
-[<span data-ttu-id="8f536-113">XAML-Namespaces und Namespacezuordnung für WPF-XAML</span><span class="sxs-lookup"><span data-stu-id="8f536-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
-[<span data-ttu-id="8f536-114">WPF-XAML-Namescopes</span><span class="sxs-lookup"><span data-stu-id="8f536-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
-[<span data-ttu-id="8f536-115">Inlinestile und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="8f536-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
-[<span data-ttu-id="8f536-116">Leerraum Verarbeitung in XAML</span><span class="sxs-lookup"><span data-stu-id="8f536-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
-[<span data-ttu-id="8f536-117">TypeConverter und XAML</span><span class="sxs-lookup"><span data-stu-id="8f536-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
-[<span data-ttu-id="8f536-118">XML-Zeichenentitäten und XAML</span><span class="sxs-lookup"><span data-stu-id="8f536-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
-[<span data-ttu-id="8f536-119">XAML-Namespace (x:) Sprach Features</span><span class="sxs-lookup"><span data-stu-id="8f536-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
-[<span data-ttu-id="8f536-120">WPF-XAML-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="8f536-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
-[<span data-ttu-id="8f536-121">Markup Kompatibilität (MC:) Sprach Features</span><span class="sxs-lookup"><span data-stu-id="8f536-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
+[<span data-ttu-id="e237b-108">Übersicht über XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="e237b-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
+[<span data-ttu-id="e237b-109">Ausführliche Erläuterung der XAML-Syntax</span><span class="sxs-lookup"><span data-stu-id="e237b-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
+[<span data-ttu-id="e237b-110">Code-Behind und XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="e237b-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
+[<span data-ttu-id="e237b-111">XAML- und benutzerdefinierte Klassen für WPF</span><span class="sxs-lookup"><span data-stu-id="e237b-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
+[<span data-ttu-id="e237b-112">Markuperweiterungen und WPF-XAML</span><span class="sxs-lookup"><span data-stu-id="e237b-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
+[<span data-ttu-id="e237b-113">XAML-Namespaces und Namespacezuordnung für WPF-XAML</span><span class="sxs-lookup"><span data-stu-id="e237b-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+[<span data-ttu-id="e237b-114">WPF-XAML-Namescopes</span><span class="sxs-lookup"><span data-stu-id="e237b-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
+[<span data-ttu-id="e237b-115">Inlinestile und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="e237b-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
+[<span data-ttu-id="e237b-116">Leerraum Verarbeitung in XAML</span><span class="sxs-lookup"><span data-stu-id="e237b-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
+[<span data-ttu-id="e237b-117">TypeConverter und XAML</span><span class="sxs-lookup"><span data-stu-id="e237b-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
+[<span data-ttu-id="e237b-118">XML-Zeichenentitäten und XAML</span><span class="sxs-lookup"><span data-stu-id="e237b-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
+[<span data-ttu-id="e237b-119">Sprachfunktionen des XAML-Namespace (x:)</span><span class="sxs-lookup"><span data-stu-id="e237b-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
+[<span data-ttu-id="e237b-120">WPF-XAML-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="e237b-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
+[<span data-ttu-id="e237b-121">Markupkompatibilität (mc:) – Sprachfeatures</span><span class="sxs-lookup"><span data-stu-id="e237b-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="8f536-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="8f536-122">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="e237b-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="e237b-122">Related Sections</span></span>  
 
-[<span data-ttu-id="8f536-123">WPF-Architektur</span><span class="sxs-lookup"><span data-stu-id="8f536-123">WPF Architecture</span></span>](wpf-architecture.md)  
-[<span data-ttu-id="8f536-124">Basiselemente</span><span class="sxs-lookup"><span data-stu-id="8f536-124">Base Elements</span></span>](base-elements.md)  
-[<span data-ttu-id="8f536-125">Elementstruktur und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="8f536-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-[<span data-ttu-id="8f536-126">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="8f536-126">Properties</span></span>](properties-wpf.md)  
-[<span data-ttu-id="8f536-127">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="8f536-127">Events</span></span>](events-wpf.md)  
-[<span data-ttu-id="8f536-128">Eingabe</span><span class="sxs-lookup"><span data-stu-id="8f536-128">Input</span></span>](input-wpf.md)  
-[<span data-ttu-id="8f536-129">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="8f536-129">Resources</span></span>](resources-wpf.md)  
-[<span data-ttu-id="8f536-130">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="8f536-130">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-[<span data-ttu-id="8f536-131">Threadmodell</span><span class="sxs-lookup"><span data-stu-id="8f536-131">Threading Model</span></span>](threading-model.md)
+[<span data-ttu-id="e237b-123">WPF-Architektur</span><span class="sxs-lookup"><span data-stu-id="e237b-123">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="e237b-124">Basiselemente</span><span class="sxs-lookup"><span data-stu-id="e237b-124">Base Elements</span></span>](base-elements.md)  
+[<span data-ttu-id="e237b-125">Elementstruktur und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="e237b-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="e237b-126">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e237b-126">Properties</span></span>](properties-wpf.md)  
+[<span data-ttu-id="e237b-127">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="e237b-127">Events</span></span>](events-wpf.md)  
+[<span data-ttu-id="e237b-128">Eingabe</span><span class="sxs-lookup"><span data-stu-id="e237b-128">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="e237b-129">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="e237b-129">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="e237b-130">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="e237b-130">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+[<span data-ttu-id="e237b-131">Threadmodell</span><span class="sxs-lookup"><span data-stu-id="e237b-131">Threading Model</span></span>](threading-model.md)
