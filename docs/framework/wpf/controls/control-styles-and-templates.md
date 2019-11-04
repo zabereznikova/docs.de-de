@@ -10,15 +10,15 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017656"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460413"
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
-Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> des Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen; um die visuelle Struktur eines Steuerelements zu ändern, Sie festlegen müssen, die <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements auf dessen neues und vollständiges <xref:System.Windows.Controls.ControlTemplate>.  
+Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate>, die die visuelle Struktur dieses Steuer Elements enthält. Sie können die Struktur und die Darstellung eines Steuer Elements ändern, indem Sie die <xref:System.Windows.Controls.ControlTemplate> dieses Steuer Elements ändern. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuer Elements zu ersetzen. um die visuelle Struktur eines Steuer Elements zu ändern, müssen Sie die <xref:System.Windows.Controls.Control.Template%2A>-Eigenschaft des Steuer Elements auf den neuen und den gesamten <xref:System.Windows.Controls.ControlTemplate>festlegen.  
   
  Die Desktopdesigns bestimmen, welches Ressourcenverzeichnis verwendet wird. Die Ressourcenwörterbücher für die Desktopdesigns finden Sie unter [Default WPF Themes (Standard-WPF-Designs)](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
@@ -61,7 +61,7 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
  [TabControl-Stile und -Vorlagen](tabcontrol-styles-and-templates.md)  
  [TextBox-Stile und -Vorlagen](textbox-styles-and-templates.md)  
  [Thumb-Stile und-Vorlagen](thumb-styles-and-templates.md)  
- [ToggleButton-Stile und-Vorlagen](togglebutton-styles-and-templates.md)  
+ [Stilvorlagen und Vorlagen für "ongglebutton"](togglebutton-styles-and-templates.md)  
  [ToolBar-Stile und -Vorlagen](toolbar-styles-and-templates.md)  
  [ToolTip-Stile und -Vorlagen](tooltip-styles-and-templates.md)  
  [TreeView-Stile und -Vorlagen](treeview-styles-and-templates.md)  
@@ -75,4 +75,4 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Übersicht über das Erstellen von Steuerelementen](control-authoring-overview.md)  
   
- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+ [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

@@ -9,65 +9,65 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 8f29039185e7171d799543fb1d43e2fa460a97e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b5c351031b799c148c1e4f525e7bdcf96480bb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912356"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460771"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox-Stile und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ComboBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ComboBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="combobox-parts"></a>ComboBox-Teile  
- Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Controls.ComboBox> Steuerelement.  
+ In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ComboBox>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|Segment|Geben Sie Folgendes ein:|Beschreibung|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Enthält den Text der <xref:System.Windows.Controls.ComboBox>.|  
-|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Die Dropdownliste mit den Elementen im Kombinationsfeld.|  
+|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Das Dropdown-Element, das die Elemente im Kombinations Feld enthält.|  
   
- Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ComboBox>, Ihrer Vorlage enthalten möglicherweise ein <xref:System.Windows.Controls.ItemsPresenter> innerhalb einer <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> stellt jedes Element in der <xref:System.Windows.Controls.ComboBox>; die <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen innerhalb des Steuerelements).  Wenn die <xref:System.Windows.Controls.ItemsPresenter> ist kein direkte untergeordnetes Element von der <xref:System.Windows.Controls.ScrollViewer>, geben Sie die <xref:System.Windows.Controls.ItemsPresenter> den Namen, `ItemsPresenter`.  
+ Wenn Sie einen <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ComboBox>erstellen, enthält die Vorlage möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb eines <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element in der <xref:System.Windows.Controls.ComboBox>an; das <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen im Steuerelement).  Wenn das <xref:System.Windows.Controls.ItemsPresenter> nicht das direkt untergeordnete Element des <xref:System.Windows.Controls.ScrollViewer>ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.  
   
 ## <a name="combobox-states"></a>ComboBox-Zustände  
- Die folgende Tabelle enthält die Zustände für die <xref:System.Windows.Controls.ComboBox> Steuerelement.  
+ In der folgenden Tabelle sind die Zustände für das <xref:System.Windows.Controls.ComboBox>-Steuerelement aufgeführt.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet, über die <xref:System.Windows.Controls.ComboBox> Steuerelement.|  
-|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
+|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
-|FocusedDropDown|FocusStates|Die Dropdownliste für die <xref:System.Windows.Controls.ComboBox> den Fokus besitzt.|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
-|Bearbeitet werden|EditStates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `true`.|  
-|Nicht bearbeitbare|EditStates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `false`.|  
+|Focuseddropdown|FocusStates|Der Dropdown-Vorgang für die <xref:System.Windows.Controls.ComboBox> hat den Fokus.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
+|bearbeitet|Editstates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `true`.|  
+|Editierbar|Editstates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `false`.|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem-Teile  
- Die <xref:System.Windows.Controls.ComboBoxItem> Steuerelement enthält keine benannten Teile.  
+ Das <xref:System.Windows.Controls.ComboBoxItem>-Steuerelement verfügt über keine benannten Teile.  
   
 ## <a name="comboboxitem-states"></a>ComboBoxItem-Zustände  
- Die folgende Tabelle enthält die Zustände für die <xref:System.Windows.Controls.ComboBoxItem> Steuerelement.  
+ In der folgenden Tabelle sind die Zustände für das <xref:System.Windows.Controls.ComboBoxItem>-Steuerelement aufgeführt.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet, über die <xref:System.Windows.Controls.ComboBox> Steuerelement.|  
-|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
+|Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
-|Ausgewählt|SelectionStates|Derzeit ist das Element ausgewählt.|  
+|Ausgewählt|SelectionStates|Das Element ist zurzeit ausgewählt.|  
 |Nicht markiert|SelectionStates|Das Element ist nicht ausgewählt.|  
 |SelectedUnfocused|SelectionStates|Das Element ist ausgewählt, besitzt jedoch keinen Fokus.|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="combobox-controltemplate-example"></a>ComboBox-ControlTemplate-Beispiel  
- Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox> Steuerelement und die zugehörigen Typen.  
+## <a name="combobox-controltemplate-example"></a>ComboBox ControlTemplate-Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie Sie eine <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.ComboBox> Steuerelement und die zugehörigen Typen definieren.  
   
  [!code-xaml[ControlTemplateExamples#ComboBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
@@ -83,5 +83,5 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

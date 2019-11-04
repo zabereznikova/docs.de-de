@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962436"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460468"
 ---
 # <a name="element-tree-and-serialization"></a>Elementstruktur und Serialisierung
 WPF-Programmierelemente stehen häufig in einer hierarchischen Form der Beziehung zueinander. Eine in XAML erstellte Anwendungsbenutzeroberfläche kann beispielsweise als Objektstruktur entworfen werden. Die Elementstruktur kann noch weiter in zwei getrennte Strukturen unterteilt werden, die trotzdem manchmal parallel angeordnet sein können: die logische Struktur und die visuelle Struktur. Serialisierung in WPF beinhaltet das Speichern des Zustands dieser beiden Strukturen sowie des Zustands der Anwendung, die in eine Datei, potenziell als XAML, geschrieben werden.  
@@ -39,5 +39,5 @@ WPF-Programmierelemente stehen häufig in einer hierarchischen Form der Beziehun
   [Ereignisse](events-wpf.md)  
   [Eingabe](input-wpf.md)  
   [Ressourcen](resources-wpf.md)  
-  [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)  
+  [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Threadmodell](threading-model.md)

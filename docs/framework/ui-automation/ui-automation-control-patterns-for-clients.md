@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039445"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458103"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039445"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Steuerelemente mit Variablenmustern  
- Einige Steuerelementtypen unterstützen unterschiedliche Muster, abhängig vom entsprechenden Status oder der Art und Weise, wie das Steuerelement verwendet wird. Beispiele für Steuerelemente, die über Variablen Muster verfügen können, sind Listen Sichten (Miniaturansichten, Kacheln, Symbole, Liste, Details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Diagramme (Kreis, Linie, Balken, Zellwert mit einer Formel), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]Dokumentbereich (normal, Weblayout, Gliederung, Druck Layout, Druckvorschau) und Microsoft Windows Media Player Skins.  
+ Einige Steuerelementtypen unterstützen unterschiedliche Muster, abhängig vom entsprechenden Status oder der Art und Weise, wie das Steuerelement verwendet wird. Beispiele für Steuerelemente, die über Variablen Muster verfügen können, sind Listen Sichten (Miniaturansichten, Kacheln, Symbole, Liste, Details), Microsoft Excel-Diagramme (Kreis, Linie, Balken, Zellwert mit einer Formel), Microsoft Word-Dokumentbereich (normal, Weblayout, Gliederung, Druck Layout, Drucken). Vorschau) und Microsoft Windows Media Player Skins.  
   
  Steuerelemente, die benutzerdefinierte Steuerelementtypen implementieren, können über einen beliebigen Satz von Steuerelementmustern verfügen, die zur Darstellung der entsprechenden Funktionalität erforderlich sind.  
   

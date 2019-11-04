@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425274"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459768"
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 
@@ -742,7 +742,7 @@ Wie <xref:System.Windows.Controls.Frame> erfordert die Navigation zu HTML mithil
 
 ### <a name="navigating-to-custom-objects"></a>Navigieren zu benutzerdefinierten Objekten
 
-Wenn Sie über Daten verfügen, die als benutzerdefinierte Objekte gespeichert sind, besteht eine Möglichkeit zum Anzeigen dieser Daten darin, eine <xref:System.Windows.Controls.Page> mit Inhalt zu erstellen, der an diese Objekte gebunden ist (siehe [Übersicht über die Datenbindung](../data/data-binding-overview.md)). Wenn Sie eine ganze Seite nicht nur zu dem Zweck erstellen möchten, die Objekte anzuzeigen, können Sie stattdessen direkt zu ihnen navigieren.
+Wenn Sie über Daten verfügen, die als benutzerdefinierte Objekte gespeichert sind, besteht eine Möglichkeit zum Anzeigen dieser Daten darin, eine <xref:System.Windows.Controls.Page> mit Inhalt zu erstellen, der an diese Objekte gebunden ist (siehe [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)). Wenn Sie eine ganze Seite nicht nur zu dem Zweck erstellen möchten, die Objekte anzuzeigen, können Sie stattdessen direkt zu ihnen navigieren.
 
 Beachten Sie die `Person`-Klasse, die im folgenden Code implementiert ist.
 

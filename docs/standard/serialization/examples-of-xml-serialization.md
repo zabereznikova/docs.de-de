@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922524"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459247"
 ---
 # <a name="examples-of-xml-serialization"></a>Beispiele für die XML-Serialisierung
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serialisieren von XmlElement und XmlNode
 
-Sie können auch Instanzen von serialisieren eine <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Klasse, wie im folgenden Codebeispiel gezeigt.
+Sie können auch Instanzen einer <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Klasse serialisieren, wie im folgenden Codebeispiel gezeigt.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -192,11 +192,11 @@ Wenn zwei Elemente angefordert wurden, könnte die serialisierte Klasseninstanz 
         <Item>
             <ItemID>aaa111</ItemID>
             <ItemPrice>34.22</ItemPrice>
-        <Item>
+        </Item>
         <Item>
             <ItemID>bbb222</ItemID>
             <ItemPrice>2.89</ItemPrice>
-        <Item>
+        </Item>
     </ItemsOrders>
 </PurchaseOrder>
 ```
@@ -370,7 +370,7 @@ In diesem Beispiel wird eine Klasse namens `PurchaseOrder` serialisiert und dann
 
 Durch die `CreatePO`-Methode werden das `PurchaseOrder`-Klassenobjekt, das `Address`-Klassenobjekt und das `OrderedItem` Klassenobjekt erstellt und die Werte für die öffentlichen Felder festgelegt. Die Methode erstellt außerdem eine Instanz der <xref:System.Xml.Serialization.XmlSerializer>-Klasse, die zum Serialisierenn und Deserialisieren des `PurchaseOrder`-Objekts verwendet wird. Beachten Sie, dass der Typ der Klasse, die serialisiert wird, durch den Code an den Konstruktor übergeben wird. Zudem wird durch den Code ein `FileStream` erstellt, mit dem der XML-Stream in ein XML-Dokument geschrieben wird.
 
-Die `ReadPo`-Methode ist etwas einfacher. Sie erstellt nur Objekte, die deserialisiert werden sollen, und liest ihre Werte aus. Wie bei der `CreatePo` -Methode müssen Sie zuerst erstellen eine <xref:System.Xml.Serialization.XmlSerializer>, den Typ der Klasse, die deserialisiert werden, an den Konstruktor übergibt. Zum Lesen des XML-Dokuments ist zudem ein <xref:System.IO.FileStream>-Objekt erforderlich. Um die Objekte zu deserialisieren, rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode mit dem <xref:System.IO.FileStream>-Objekt als Argument auf. Das deserialisierte Objekt muss in eine Objektvariable des Typs `PurchaseOrder` umgewandelt werden. Im Code werden dann die Werte der deserialisierten `PurchaseOrder`-Objektvariablen gelesen. Beachten Sie, dass Sie auch die Datei PO.xml lesen können, die zur Darstellung der tatsächlichen XML-Ausgabe erstellt wurde.
+Die `ReadPo`-Methode ist etwas einfacher. Sie erstellt nur Objekte, die deserialisiert werden sollen, und liest ihre Werte aus. Wie bei der `CreatePo`-Methode müssen Sie zunächst eine <xref:System.Xml.Serialization.XmlSerializer>erstellen und dabei den Typ der Klasse, die deserialisiert werden soll, an den-Konstruktor übergeben. Zum Lesen des XML-Dokuments ist zudem ein <xref:System.IO.FileStream>-Objekt erforderlich. Um die Objekte zu deserialisieren, rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode mit dem <xref:System.IO.FileStream>-Objekt als Argument auf. Das deserialisierte Objekt muss in eine Objektvariable des Typs `PurchaseOrder` umgewandelt werden. Im Code werden dann die Werte der deserialisierten `PurchaseOrder`-Objektvariablen gelesen. Beachten Sie, dass Sie auch die Datei PO.xml lesen können, die zur Darstellung der tatsächlichen XML-Ausgabe erstellt wurde.
 
 ```vb
 Imports System
@@ -771,9 +771,9 @@ Die XML-Ausgabe könnte wie folgt aussehen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Steuern der XML-Serialisierung mit Attributen](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
+- [Steuern der XML-Serialisierung mit Attributen](controlling-xml-serialization-using-attributes.md)
+- [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md)
 - [XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer)
-- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)
+- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)

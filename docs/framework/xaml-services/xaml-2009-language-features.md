@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac18be4732d223561d3a0afcef0e650587385822
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938802"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459894"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009-Sprachfunktionen
-XAML 2009 ist der Kurzbegriff für neue XAML-Sprachfunktionen, die die vorhandene XAML-Sprachspezifikation erweitern. XAML 2009 führt mehrere neue Richtlinien und Konstrukte ein. Dazu gehören die [X: Arguments-Direktive](x-arguments-directive.md); die [X: FactoryMethod-Direktive](x-factorymethod-directive.md); die [X: Reference Markup Extension](x-reference-markup-extension.md); die [X: TypeArguments-Direktive ](x-typearguments-directive.md); und integrierte Typen für häufige Sprachprimitive (z. B. `x:Char`).  
+XAML 2009 ist der Kurzbegriff für neue XAML-Sprachfunktionen, die die vorhandene XAML-Sprachspezifikation erweitern. XAML 2009 führt mehrere neue Richtlinien und Konstrukte ein. Hierzu gehören die [x:Arguments-Direktive](x-arguments-directive.md). die [x:factorymethod-Direktive](x-factorymethod-directive.md); die [x:Reference-Markuperweiterung](x-reference-markup-extension.md); die [x:TypeArguments-Direktive](x-typearguments-directive.md); und integrierte Typen für allgemeine sprach primitive (z. b. `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>XAML 2009-Unterstützung in WPF und Visual Studio  
@@ -34,4 +34,4 @@ XAML 2009 ist der Kurzbegriff für neue XAML-Sprachfunktionen, die die vorhanden
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

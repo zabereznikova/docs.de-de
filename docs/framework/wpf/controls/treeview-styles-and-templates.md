@@ -9,60 +9,60 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: 01841bb828594dd4cac0c179d70495fe392c8de5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761298"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460189"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView-Format und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.TreeView> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.TreeView>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="treeview-parts"></a>TreeView-Teile  
- Die <xref:System.Windows.Controls.TreeView> Steuerelement enthält keine benannten Teile.  
+ Das <xref:System.Windows.Controls.TreeView>-Steuerelement verfügt über keine benannten Teile.  
   
- Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate> für ein <xref:System.Windows.Controls.TreeView>, Ihrer Vorlage enthalten möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb einer <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> stellt jedes Element in der <xref:System.Windows.Controls.TreeView>; die <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen innerhalb des Steuerelements).  Wenn die <xref:System.Windows.Controls.ItemsPresenter> ist kein direkte untergeordnetes Element von der <xref:System.Windows.Controls.ScrollViewer>, geben Sie die <xref:System.Windows.Controls.ItemsPresenter> den Namen, `ItemsPresenter`.  
+ Wenn Sie einen <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.TreeView>erstellen, enthält die Vorlage möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb eines <xref:System.Windows.Controls.ScrollViewer>. (Die <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element in der <xref:System.Windows.Controls.TreeView>an; das <xref:System.Windows.Controls.ScrollViewer> ermöglicht das Scrollen im Steuerelement).  Wenn das <xref:System.Windows.Controls.ItemsPresenter> nicht das direkt untergeordnete Element des <xref:System.Windows.Controls.ScrollViewer>ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.  
   
 ## <a name="treeview-states"></a>TreeView-Zustände  
- Die folgende Tabelle enthält die visuellen Zustände für die <xref:System.Windows.Controls.TreeView> Steuerelement.  
+ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.TreeView>-Steuerelement aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="treeviewitem-parts"></a>"TreeViewItem" Teilen  
- Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Controls.TreeViewItem> Steuerelement.  
+## <a name="treeviewitem-parts"></a>TreeViewItem-Teile  
+ In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.TreeViewItem>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|Segment|Geben Sie Folgendes ein:|Beschreibung|  
 |----------|----------|-----------------|  
-|PART_Header|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das diesen Inhalt der Header enthält den <xref:System.Windows.Controls.TreeView> Steuerelement.|  
+|PART_Header|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das den Header Inhalt des <xref:System.Windows.Controls.TreeView> Steuer Elements enthält.|  
   
-## <a name="treeviewitem-states"></a>"TreeViewItem"-Status  
- Die folgende Tabelle enthält die visuellen Zustände <xref:System.Windows.Controls.TreeViewItem> Steuerelement.  
+## <a name="treeviewitem-states"></a>TreeViewItem-Zustände  
+ In der folgenden Tabelle werden die visuellen Zustände für <xref:System.Windows.Controls.TreeViewItem>-Steuerelement aufgelistet.  
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|Der Standardzustand|  
-|MouseOver|CommonStates|Befindet sich der Mauszeiger über die <xref:System.Windows.Controls.TreeViewItem>.|  
-|Deaktiviert|CommonStates|Die <xref:System.Windows.Controls.TreeViewItem> ist deaktiviert.|  
-|Focused|FocusStates|Die <xref:System.Windows.Controls.TreeViewItem> den Fokus besitzt.|  
-|Ohne Fokus|FocusStates|Die <xref:System.Windows.Controls.TreeViewItem> keinen Fokus besitzt.|  
-|Erweitert|ExpansionStates|Die <xref:System.Windows.Controls.TreeViewItem> Steuerelement erweitert ist.|  
-|Reduziert|ExpansionStates|Die <xref:System.Windows.Controls.TreeViewItem> -Steuerelement reduziert ist.|  
-|HasItems|HasItemsStates|Die <xref:System.Windows.Controls.TreeViewItem> über Elemente verfügt.|  
-|NoItems|HasItemsStates|Die <xref:System.Windows.Controls.TreeViewItem> verfügt über keine Elemente.|  
-|Ausgewählt|SelectionStates|Die <xref:System.Windows.Controls.TreeViewItem> ausgewählt ist.|  
-|SelectedInactive|SelectionStates|Die <xref:System.Windows.Controls.TreeViewItem> ist ausgewählt, aber nicht aktiv.|  
-|Nicht markiert|SelectionStates|Die <xref:System.Windows.Controls.TreeViewItem> nicht ausgewählt ist.|  
-|Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.TreeViewItem>.|  
+|Deaktiviert|CommonStates|Der <xref:System.Windows.Controls.TreeViewItem> ist deaktiviert.|  
+|Mit Fokus|FocusStates|Der <xref:System.Windows.Controls.TreeViewItem> hat den Fokus.|  
+|Ohne Fokus|FocusStates|Der <xref:System.Windows.Controls.TreeViewItem> hat keinen Fokus.|  
+|Erweitert|Expansions Zustände|Das <xref:System.Windows.Controls.TreeViewItem> Steuerelement ist erweitert.|  
+|Reduziert|Expansions Zustände|Das <xref:System.Windows.Controls.TreeViewItem> Steuerelement ist reduziert.|  
+|"HasItems"|Hasitemsstates|Der <xref:System.Windows.Controls.TreeViewItem> verfügt über Elemente.|  
+|NoItems|Hasitemsstates|Der <xref:System.Windows.Controls.TreeViewItem> weist keine Elemente auf.|  
+|Ausgewählt|SelectionStates|Der <xref:System.Windows.Controls.TreeViewItem> ist ausgewählt.|  
+|Selectedinactive|SelectionStates|Der <xref:System.Windows.Controls.TreeViewItem> ist ausgewählt, aber nicht aktiv.|  
+|Nicht markiert|SelectionStates|Der <xref:System.Windows.Controls.TreeViewItem> ist nicht ausgewählt.|  
+|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
   
-## <a name="treeview-controltemplate-example"></a>TreeView-ControlTemplate-Beispiel  
- Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.TreeView> -Steuerelement und seine zugehörigen Typen.  
+## <a name="treeview-controltemplate-example"></a>TreeView ControlTemplate-Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.TreeView>-Steuerelement und die zugehörigen Typen definiert werden.  
   
  [!code-xaml[ControlTemplateExamples#TreeView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
@@ -78,5 +78,5 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

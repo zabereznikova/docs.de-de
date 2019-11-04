@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664000"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424868"
 ---
 # <a name="xml-documents-and-data"></a>XML-Dokumente und XML-Daten
 
@@ -62,7 +62,7 @@ Die XML-Klassen in .NET Framework bieten folgende Vorteile:
 
 [XML-Verarbeitungsoptionen](../../../../docs/standard/data/xml/xml-processing-options.md) Erläutert die Optionen zum Verarbeiten von XML-Daten
 
-[Verarbeiten von XML-Daten im Arbeitsspeicher](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Erläutert die drei Modelle für die Verarbeitung von XML-Daten im Arbeitsspeicher: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) und [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), die (auf dem W3C-Dokumentobjektmodell basierende) <xref:System.Xml.XmlDocument>-Klasse und die (auf dem XPath-Datenmodell) basierende <xref:System.Xml.XPath.XPathDocument>-Klasse.
+[Verarbeiten von XML-Daten im Arbeitsspeicher](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Erläutert die drei Modelle für die Verarbeitung von XML-Daten im Arbeitsspeicher: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) und [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), die (auf dem W3C-Dokumentobjektmodell basierende) <xref:System.Xml.XmlDocument>-Klasse und die (auf dem XPath-Datenmodell) basierende <xref:System.Xml.XPath.XPathDocument>-Klasse.
 
 [XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)\
 In diesem Abschnitt wird die Verwendung des XSLT-Prozessors beschrieben.

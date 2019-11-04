@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920258"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460093"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
 
@@ -255,7 +255,7 @@ Im Zuge der Anpassung einer Schaltflächen Vorlage haben Sie in Microsoft Expres
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer Schaltfläche mit XAML](walkthrough-create-a-button-by-using-xaml.md)
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Übersicht über Animationen](../graphics-multimedia/animation-overview.md)
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [Übersicht über Bitmapeffekte](../graphics-multimedia/bitmap-effects-overview.md)

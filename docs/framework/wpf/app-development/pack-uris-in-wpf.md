@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580617"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459669"
 ---
 # <a name="pack-uris-in-wpf"></a>Paket-URI in WPF
 
@@ -139,7 +139,7 @@ Das folgende Beispiel zeigt den Paket-URI für eine [!INCLUDE[TLA2#tla_xaml](../
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Beachten Sie, dass die Paket-URI-Syntax für referenzierte assemblyressourcendateien nur mit der Application:///Authority verwendet werden kann. Beispielsweise wird Folgendes in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nicht unterstützt.
+Beachten Sie, dass die Paket-URI-Syntax für referenzierte assemblyressourcendateien nur mit der Application:///Authority verwendet werden kann. Beispielsweise wird Folgendes in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]nicht unterstützt.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -265,7 +265,7 @@ Um den Typ der Datei zu bestimmen, auf die ein Paket-URI verweist, löst [!INCLU
 
 Die URI-Auflösung gilt nicht für URIs, die Folgendes bezeichnen:
 
-- Inhalts Dateien in referenzierten Assemblys: diese Dateitypen werden von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nicht unterstützt.
+- Inhalts Dateien in referenzierten Assemblys: diese Dateitypen werden von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]nicht unterstützt.
 
 - Eingebettete Dateien in referenzierten Assemblys: URIs, die diese identifizieren, sind eindeutig, da Sie sowohl den Namen der referenzierten Assembly als auch das `;component` Suffix enthalten.
 
@@ -397,7 +397,7 @@ Tabelle 4: Relative Paket-URIs im Code
 
 ### <a name="common-pack-uri-scenarios"></a>Häufige Szenarien mit Paket-URIs
 
-In den vorherigen Abschnitten wurde erläutert, wie Paket-URIs zum Identifizieren von Ressourcen, Inhalten und Ursprungs Dateien erstellt werden. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] werden diese Konstruktionen auf verschiedene Weise verwendet, und in den folgenden Abschnitten werden verschiedene gängige Verwendungen behandelt.
+In den vorherigen Abschnitten wurde erläutert, wie Paket-URIs zum Identifizieren von Ressourcen, Inhalten und Ursprungs Dateien erstellt werden. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]werden diese Konstruktionen auf verschiedene Weise verwendet, und in den folgenden Abschnitten werden verschiedene gängige Verwendungen behandelt.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
@@ -407,11 +407,11 @@ In den vorherigen Abschnitten wurde erläutert, wie Paket-URIs zum Identifiziere
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-Eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] können auch eine Seite als anfängliche Benutzeroberfläche angeben, wie im folgenden Beispiel gezeigt.
+Eigenständige Anwendungen und XAML-Browser Anwendungen (XBAPs) können auch eine Seite als anfängliche Benutzeroberfläche angeben, wie im folgenden Beispiel gezeigt.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Wenn es sich bei der Anwendung um eine eigenständige Anwendung handelt und eine Seite mit <xref:System.Windows.Application.StartupUri%2A> angegeben wird, wird [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ein <xref:System.Windows.Navigation.NavigationWindow> zum Hosten der Seite geöffnet. Für [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] wird die Seite im Host Browser angezeigt.
+Wenn es sich bei der Anwendung um eine eigenständige Anwendung handelt und eine Seite mit <xref:System.Windows.Application.StartupUri%2A>angegeben wird, wird [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ein <xref:System.Windows.Navigation.NavigationWindow> zum Hosten der Seite geöffnet. Für XBAPs wird die Seite im Host Browser angezeigt.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Im folgenden Beispiel wird das Navigieren zu einer Seite veranschaulicht.
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Weitere Informationen zu den verschiedenen Möglichkeiten zum Navigieren in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] finden Sie unter [Übersicht](navigation-overview.md)über die Navigation.
+Weitere Informationen zu den verschiedenen Möglichkeiten zum Navigieren in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]finden Sie unter [Übersicht](navigation-overview.md)über die Navigation.
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -457,7 +457,7 @@ Ressourcen Wörterbücher (<xref:System.Windows.ResourceDictionary>) können ver
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Eine Übersicht über die Designs in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] finden Sie unter Erstellen von Formaten [und](../controls/styling-and-templating.md)Vorlagen.
+Eine Übersicht über die Designs in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]finden Sie unter Erstellen von Formaten [und](../../../desktop-wpf/fundamentals/styles-templates-overview.md)Vorlagen.
 
 ## <a name="see-also"></a>Siehe auch
 

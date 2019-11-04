@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761338"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458293"
 ---
 # <a name="treeview"></a>TreeView
-Die <xref:System.Windows.Controls.TreeView> -Steuerelement zeigt Informationen in einer hierarchischen Struktur mit reduzierbaren Knoten.  
+Das <xref:System.Windows.Controls.TreeView>-Steuerelement zeigt Informationen in einer hierarchischen Struktur mithilfe von redusible-Knoten an.  
   
- Die folgende Abbildung ist ein Beispiel für eine <xref:System.Windows.Controls.TreeView> -Steuerelement, das geschachtelte <xref:System.Windows.Controls.TreeViewItem> Steuerelemente:  
+ Die folgende Abbildung ist ein Beispiel für ein <xref:System.Windows.Controls.TreeView> Steuerelement, das über <xref:System.Windows.Controls.TreeViewItem>-Steuerelemente verfügt:  
   
- ![Abbildung der geschachtelte TreeViewItem-Steuerelementen.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![Abbildung, die die in einem Diagramm dargestellten TreeViewItem-Steuerelemente zeigt.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über TreeView](treeview-overview.md)  
@@ -31,5 +31,5 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement zeigt Informationen i
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht zur Datenbindung](../data/data-binding-overview.md)  
+ [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)  
   [Übersicht über Datenvorlagen](../data/data-templating-overview.md)

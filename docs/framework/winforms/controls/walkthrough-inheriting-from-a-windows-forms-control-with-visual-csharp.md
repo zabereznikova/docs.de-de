@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#'
+title: 'Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015665"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460595"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit C\#
 
-Mit Visual C#können Sie durch *Vererbung*leistungsstarke benutzerdefinierte Steuerelemente erstellen. Durch Vererbung können Sie Steuerelemente erstellen, die die gesamte Funktionalität der standardmäßigen Windows Forms-Steuerelemente, aber auch benutzerdefinierte Funktionen enthalten. In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit dem Namen `ValueButton`. Diese Schaltfläche erbt Funktionen vom Standard Windows Forms <xref:System.Windows.Forms.Button> -Steuerelement und macht eine benutzerdefinierte Eigenschaft `ButtonValue`mit dem Namen verfügbar.
+Mit Visual C#können Sie durch *Vererbung*leistungsstarke benutzerdefinierte Steuerelemente erstellen. Durch Vererbung können Sie Steuerelemente erstellen, die die gesamte Funktionalität der standardmäßigen Windows Forms-Steuerelemente, aber auch benutzerdefinierte Funktionen enthalten. In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit dem Namen `ValueButton`. Diese Schaltfläche erbt Funktionen von der Standard Windows Forms <xref:System.Windows.Forms.Button>-Steuerelement und macht eine benutzerdefinierte Eigenschaft mit dem Namen `ButtonValue`verfügbar.
 
 ## <a name="create-the-project"></a>Erstellen des Projekts
 
@@ -36,16 +36,16 @@ Geben Sie beim Erstellen des Projekts den Namen an, um den Stammnamespace, Assem
 
 3. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **ValueButton.cs**, und wählen Sie **Code anzeigen** aus.
 
-4. Suchen Sie `class` die Anweisungs `public partial class ValueButton`Zeile,, und ändern Sie den Typ, von dem dieses <xref:System.Windows.Forms.UserControl> Steuer <xref:System.Windows.Forms.Button>Element erbt, von in. Dadurch kann das geerbte Steuerelement sämtliche Funktionen des <xref:System.Windows.Forms.Button> Steuer Elements erben.
+4. Suchen Sie die `class` Anweisungs Zeile, `public partial class ValueButton`, und ändern Sie den Typ, von dem dieses Steuerelement erbt, von <xref:System.Windows.Forms.UserControl> in <xref:System.Windows.Forms.Button>. Dadurch kann das geerbte Steuerelement die gesamte Funktionalität des <xref:System.Windows.Forms.Button> Steuer Elements erben.
 
 5. Öffnen Sie im **Projektmappen-Explorer** den Knoten **ValueButton.cs**, um die vom Designer generierte Codedatei **ValueButton.Designer.cs** anzuzeigen. Öffnen Sie diese Datei im **Code-Editor**.
 
-6. Suchen Sie `InitializeComponent` die-Methode, und entfernen Sie die <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> Zeile, die die Eigenschaft zuweist. Diese Eigenschaft ist im <xref:System.Windows.Forms.Button> Steuerelement nicht vorhanden.
+6. Suchen Sie die `InitializeComponent` Methode, und entfernen Sie die Zeile, die die <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>-Eigenschaft zuweist. Diese Eigenschaft ist im <xref:System.Windows.Forms.Button> Steuerelement nicht vorhanden.
 
 7. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.
 
     > [!NOTE]
-    > Ein visueller Designer ist nicht mehr verfügbar. Da das <xref:System.Windows.Forms.Button> Steuerelement seine eigene Zeichnung durchführt, können Sie seine Darstellung im Designer nicht ändern. Die visuelle Darstellung ist identisch mit der der Klasse, von der Sie erbt (d. h.) <xref:System.Windows.Forms.Button>, es sei denn, Sie wird im Code geändert. Sie können trotzdem Komponenten, die über keine Benutzeroberflächenelemente verfügen, zur Entwurfsoberfläche hinzufügen.
+    > Ein visueller Designer ist nicht mehr verfügbar. Da das <xref:System.Windows.Forms.Button> Steuerelement seine eigene Zeichnung durchführt, können Sie seine Darstellung im Designer nicht ändern. Die visuelle Darstellung ist identisch mit der der Klasse, von der Sie erbt (d. h. <xref:System.Windows.Forms.Button>), sofern Sie nicht im Code geändert wird. Sie können trotzdem Komponenten, die über keine Benutzeroberflächenelemente verfügen, zur Entwurfsoberfläche hinzufügen.
 
 ## <a name="add-a-property-to-your-inherited-control"></a>Hinzufügen einer Eigenschaft zu einem geerbten Steuerelement
 
@@ -117,7 +117,7 @@ Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**. Der Build sol
 
 5. Legen Sie die Eigenschaft **ButtonValue** auf **5**fest.
 
-6. Doppelklicken Sie auf der Registerkarte **alle Windows Forms** der **Toolbox**auf **Bezeichnung** , um dem <xref:System.Windows.Forms.Label> Formular ein Steuerelement hinzuzufügen.
+6. Doppelklicken Sie auf der Registerkarte **alle Windows Forms** der **Toolbox**auf **Bezeichnung** , um dem Formular ein <xref:System.Windows.Forms.Label>-Steuerelement hinzuzufügen.
 
 7. Verschieben Sie die Bezeichnung in die Mitte des Formulars.
 
@@ -143,5 +143,5 @@ Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**. Der Build sol
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Anzeigen eines Steuer Elements im Dialog Feld "Toolbox Elemente auswählen"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

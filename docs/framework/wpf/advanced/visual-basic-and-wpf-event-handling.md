@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920338"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458304"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic- und WPF-Ereignisbehandlung
 Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspezifische `Handles`-Schlüsselwort verwenden, um Ereignishandler Instanzen zuzuordnen, anstatt Ereignishandler mit Attributen anzufügen oder die <xref:System.Windows.UIElement.AddHandler%2A>-Methode zu verwenden. Allerdings weist die `Handles`-Technik für das Anfügen von Handlern an Instanzen einige Einschränkungen auf, da die `Handles`-Syntax einige der spezifischen Funktionen von Routingereignissen des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems nicht unterstützt.  
@@ -47,4 +47,4 @@ Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspez
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md)
 - [Übersicht über Routingereignisse](routed-events-overview.md)
-- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

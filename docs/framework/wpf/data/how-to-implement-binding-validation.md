@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 245b05d9cfa7ca66dec310bd9a5291def0101d19
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920157"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459111"
 ---
 # <a name="how-to-implement-binding-validation"></a>Gewusst wie: Implementieren der Bindungsvalidierung
 
@@ -41,9 +41,9 @@ Wie im folgenden Beispiel gezeigt, wird der <xref:System.Windows.Controls.ToolTi
 
 Das komplette Beispiel finden Sie unter Beispiel für die [Bind-Validierung](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
   
-Beachten Sie Folgendes: Wenn Sie keine benutzerdefinierte <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bereitstellen, wird die Standardfehler Vorlage angezeigt, um dem Benutzer beim Auftreten eines Validierungs Fehlers visuelles Feedback zu geben. Weitere Informationen finden Sie unter „Datenvalidierung“ in [Übersicht über die Datenbindung](data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet außerdem eine integrierte Validierungsregel, die die während der Aktualisierung der Bindungsquelleneigenschaft ausgelöste Ausnahmen abfängt. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.ExceptionValidationRule>.
+Beachten Sie Folgendes: Wenn Sie keine benutzerdefinierte <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bereitstellen, wird die Standardfehler Vorlage angezeigt, um dem Benutzer beim Auftreten eines Validierungs Fehlers visuelles Feedback zu geben. Weitere Informationen finden Sie unter „Datenvalidierung“ in [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet außerdem eine integrierte Validierungsregel, die die während der Aktualisierung der Bindungsquelleneigenschaft ausgelöste Ausnahmen abfängt. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.ExceptionValidationRule>.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
