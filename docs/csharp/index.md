@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191810"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416736"
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
 Der Leitfaden für C# enthält viele Ressourcen zu C#. Diese Site weist viele verschiedene Zielgruppen auf. Je nach Ihrer Erfahrung mit der Programmierung bzw. mit der Programmiersprache C# und .NET können Sie auch andere Abschnitte dieses Handbuchs erkunden.
 
 - Für gänzlich unerfahrene Entwickler:
+  - Sehen Sie sich die [C# 101-Videoreihe](https://aka.ms/dotnet3-csharp) an. Sie bietet eine Einführung in die wichtigen Konzepte, die Sie in diesem Tutorial kennenlernen.
+
   - Beginnen Sie mit der [Einführung in die C#-Tutorials](tutorials/intro-to-csharp/index.md). Mit diesen Tutorials können Sie die C#-Sprache in Ihrem Browser interaktiv untersuchen. Daran anschließend können Sie zu anderen [Tutorials](tutorials/index.md) wechseln. Diese Tutorials zeigen Ihnen, wie Sie C#-Programme von Grund auf neu erstellen. Die Tutorials enthalten einen detaillierten Prozess zum Erstellen von Programmen. Die Konzepte der Programmiersprache und das eigenständige Erstellen von C#-Programmen werden in diesen Tutorials erklärt. Wenn Sie zunächst lieber allgemeine Informationen lesen möchten, sehen Sie sich die [Einführung in C#](tour-of-csharp/index.md) an. Sie erläutert die Konzepte der C#-Sprache. Danach verfügen Sie über grundlegende Kenntnisse der Sprache und sind bereit, die Tutorials zu testen oder selbst etwas zu erstellen.
 
 - Für neue C#-Entwickler:
@@ -61,7 +63,7 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
 - [Sprachreferenz](language-reference/index.md)
   - Dieser Abschnitt enthält das Referenzmaterial zur C#-Sprache. Dieses Material hilft Ihnen beim Verständnis der Syntax und der Semantik von C#. Sie erhalten auch Referenzmaterialien zu Typen, Operatoren, Attributen, Präprozessoranweisungen, Compilerschaltern, Compilerfehlern und Compilerwarnungen.
 
-- [C#-Programmiersprachenspezifikation](./language-reference/language-specification/index.md)
+- [C#-Programmiersprachenspezifikation](/dotnet/csharp/language-reference/language-specification/introduction)
   - Links zu den neuesten Versionen der C#-Sprachspezifikation.
 
 ## <a name="see-also"></a>Siehe auch
