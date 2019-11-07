@@ -298,10 +298,10 @@ Sie können ein eigenes Docker-Basisimage von Grund auf neu erstellen. Dieses Sz
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Multi-arch .NET Core images (.NET Core-Images für mehrere Architekturen)**
+- **Multi-arch .NET Core images** (.NET Core-Images für mehrere Architekturen).\
   <https://github.com/dotnet/announcements/issues/14>
 
-- **Create a base image (Erstellen eines Basisimages)** . Offizielle Docker-Dokumentation.
+- **Create a base image (Erstellen eines Basisimages)** . Offizielle Docker-Dokumentation.\
   <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3\. Erstellen von in Dockerfiles definierten Images](./media/image7.png)
@@ -570,7 +570,7 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **aspnet-docker/Dockerfile.** PowerShell-Beispielbefehle, die über Dockerfile-Dateien ausgeführt werden, um Windows-Features zu berücksichtigen
+- **aspnet-docker/Dockerfile.** PowerShell-Beispielbefehle, die über Dockerfile-Dateien ausgeführt werden, um Windows-Features zu berücksichtigen.\
   <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
