@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417721"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739205"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -174,7 +174,7 @@ Wie bereits zuvor erläutert, können Sie eine lokale Variable (jedoch keine Kla
 
 In einigen Fällen ist es unpraktisch, einen benannten Typ für einfache Sätze verwandter Werte zu erstellen, die nicht außerhalb von Methodengrenzen gespeichert oder übergeben werden sollen. Sie können für diesen Zweck *anonyme Typen* erstellen. Weitere Informationen finden Sie unter [Anonyme Typen](../classes-and-structs/anonymous-types.md).
 
-Gewöhnliche Werttypen können den Wert [NULL](../../language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](../../language-reference/keywords/null.md) aufweisen kann. Werttypen, die Nullwerte zulassen, sind Instanzen vom generischen Strukturtyp <xref:System.Nullable%601?displayProperty=nameWithType>. Werttypen, die Nullwerte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Werttypen, die Nullwerte zulassen](../nullable-types/index.md).
+Gewöhnliche Werttypen können den Wert [NULL](../../language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](../../language-reference/keywords/null.md) aufweisen kann. Werttypen, die Nullwerte zulassen, sind Instanzen vom generischen Strukturtyp <xref:System.Nullable%601?displayProperty=nameWithType>. Werttypen, die Nullwerte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Werttypen, die Nullwerte zulassen](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

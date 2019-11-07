@@ -2,14 +2,14 @@
 title: Erstellen Sie robuste Dienste, die für die Cloud bereit sind. Beheben vorübergehender Fehler in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Erstellen Sie robuste Dienste, die für die Cloud bereit sind. Beheben vorübergehender Fehler in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373972"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739394"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Dienste, die für die Cloud bereit sind: vorübergehende Ausfälle in der Cloud
 
 Als Stabilität wird die Fähigkeit zum Wiederherstellen nach Fehlern und zum Fortsetzen der Funktionsweise bezeichnet. Bei der Resilienz geht es nicht darum, Ausfälle zu vermeiden, sondern die Tatsache zu akzeptieren, dass Fehler auftreten, und dann auf eine Weise darauf zu reagieren, dass Ausfallzeiten oder Datenverluste vermieden werden. Das Ziel der Stabilität ist, die Anwendung nach einem Fehler wieder in einen voll funktionsfähigen Zustand zu versetzen.
 
@@ -27,7 +27,7 @@ Ein ähnliches Szenario kann in einer APP auftreten, die HTTP-Dienste nutzt. Das
 
 Eine robuste Anwendung, wie die in Abbildung 4-9 gezeigt, sollte Verfahren wie "Wiederholungs Versuche mit exponentiellem Backoff" implementieren, um der Anwendung die Möglichkeit zu geben, vorübergehende Fehler in Ressourcen zu verarbeiten. Sie sollten auch "Trennschalter" in Ihren Anwendungen verwenden. Ein Trennschalter hindert eine Anwendung daran, auf eine Ressource zuzugreifen, wenn es sich um einen langfristigen Fehler handelt. Durch die Verwendung eines Trenn Schalters vermeidet die Anwendung einen Denial-of-Service-Angriff auf sich selbst.
 
-![Teil Fehler, die von Wiederholungen mit exponentiellem Backoff behandelt werden](./media/image9.png)
+![Diagramm der Teil Fehler, die von Wiederholungen mit exponentiellem Backoff behandelt werden.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
 
 **Abbildung 4-9.** Teil Fehler, die von Wiederholungen mit exponentiellem Backoff behandelt werden
 

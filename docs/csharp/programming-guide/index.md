@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423250"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739191"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
+
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
   
  In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie Einsteiger beim Programmieren oder bei C# sind, sind die [Tutorials zur Einführung in C#](../tutorials/intro-to-csharp/index.md) oder das [Tutorial zu .NET im Browser](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) am besten für Sie geeignet, da für diese keine Programmierkenntnisse erforderlich sind.  
@@ -28,8 +29,9 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
 [Einblicke in ein C#-Programm](./inside-a-program/index.md)  
   
 [Main() und Befehlszeilenargumente](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>Abschnitte zur Sprache  
+
+## <a name="language-sections"></a>Abschnitte zur Sprache
+
 [Anweisungen, Ausdrücke und Operatoren](./statements-expressions-operators/index.md)  
 
  [Typen](./types/index.md)  
@@ -41,7 +43,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
  [Enumerationstypen](./enumeration-types.md)  
   
  [Delegaten](./delegates/index.md)  
- 
+
  [Arrays](./arrays/index.md)  
   
  [Zeichenfolgen](./strings/index.md)  
@@ -62,13 +64,12 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
   
  [Namespaces](./namespaces/index.md)  
   
- [Auf NULL festlegbare Werttypen](./nullable-types/index.md)  
-  
  [Unsicherer Code und Zeiger](./unsafe-code-pointers/index.md)  
   
  [XML-Dokumentationskommentare](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Abschnitte zur Plattform  
+## <a name="platform-sections"></a>Abschnitte zur Plattform
+
  [Anwendungsdomänen](../../framework/app-domains/application-domains.md)  
   
  [Assemblys in .NET](../../standard/assembly/index.md)  

@@ -2,12 +2,12 @@
 title: Auswerten von Breaking Changes – .NET Core
 description: Erfahren Sie mehr darüber, wie .NET Core versucht, die Kompatibilität für Entwickler in allen .NET-Versionen aufrechtzuerhalten.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416677"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739352"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Auswerten von Breaking Changes in .NET Core
 
@@ -52,7 +52,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 - **✔️ Ändern des Typs [struct](../../csharp/language-reference/keywords/struct.md) in einen Typ`readonly struct`**
 
   Beachten Sie, dass ein `readonly struct`-Typ nicht in einen `struct`-Typ geändert werden darf.
-  
+
 - **✔️ Hinzufügen des Schlüsselworts [sealed](../../csharp/language-reference/keywords/sealed.md) oder [abstract](../../csharp/language-reference/keywords/abstract.md) zu einem Typ, wenn keine *zugänglichen* (öffentlichen oder geschützten) Konstruktoren vorhanden sind**
 
 - **✔️ Erweitern der Sichtbarkeit eines Typs**
@@ -138,9 +138,9 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 - **❌ Umbenennen eines Parameters (einschließlich der Änderung der Groß-/Kleinbuchschreibung)**
 
   Dies gilt aus zwei Gründen als Unterbrechung:
-  
+
   - Damit werden spät gebundene Szenarien wie die späte Bindungsfunktion in Visual Basic und [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) in C# unterbrochen.
-  
+
   - Es unterbricht die [Quellenkompatibilität](categories.md#source-compatibility), wenn Entwickler [benannte Argumente](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments) verwenden.
 
 - **❌ Wechseln von einem `ref`- zu einem `ref readonly`-Rückgabewert**
@@ -153,9 +153,9 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Obwohl dies oft keinen Breaking Change darstellt, da der C#-Compiler dazu tendiert, zum Aufrufen nicht virtueller Methoden Intermediate Language (IL)-Anweisungen [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) auszugeben (`callvirt` führt eine Prüfung auf NULL durch, was bei einem normalen Aufruf nicht der Fall ist), ist dieses Verhalten aus verschiedenen Gründe nicht unveränderlich:
   - C# ist nicht die einzige Sprache, auf die .NET ausgerichtet ist.
-  
+
   - Der C#-Compiler versucht zunehmend, `callvirt` für einen normalen Aufruf zu optimieren, wenn die Zielmethode nicht virtuell und wahrscheinlich nicht Null ist (z.B. eine Methode, auf die über den [NULL-bedingten Operator „?“](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-) zugegriffen wird).
-  
+
   Aus einer Methode eine virtuelle Methode zu machen bedeutet, dass der Consumercode sie oft nicht virtuell aufruft.
 
 - **❌ Hinzufügen des Schlüsselworts[ virtual](../../csharp/language-reference/keywords/virtual.md) zu einem Member**

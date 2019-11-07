@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: 'Gewusst wie: Verwenden des My-Namespaces'
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: Auf NULL festlegbare Werttypen
-      items:
-        - name: Übersicht
-          href: programming-guide/nullable-types/index.md
-        - name: 'Verwenden von Werttypen, die Nullwerte zulassen'
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: 'Vorgehensweise: Identifizieren eines Werttyps, der Nullwerte zulässt'
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: Unsicherer Code und Zeiger
       items:
         - name: Übersicht und Einschränkungen
@@ -1314,6 +1306,9 @@
                   href: language-reference/keywords/enum.md
                 - name: struct
                   href: language-reference/keywords/struct.md
+                - name: Auf NULL festlegbare Werttypen
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: Verweistypen
               items:
                 - name: Funktionen von Verweistypen
