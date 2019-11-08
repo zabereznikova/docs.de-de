@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c2d0a5729aeea3cd30e07ce1cfa485bda7b8ed20
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: a3d5b87bc53ca541776d9f131204868fbe25d5b1
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400137"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738798"
 ---
-# <a name="nettcpbinding"></a>\<netTcpBinding>
+# <a name="nettcpbinding"></a>\<"NetTcpBinding" >
 
 Gibt eine sichere, zuverlässige und optimierte Bindung an, die computerübergreifende Kommunikation unterstützt. Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit Windows-Sicherheit für die Nachrichtensicherheit und die Authentifizierung, TCP für die Nachrichtenübermittlung sowie binäre Nachrichtencodierung.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<NetTcpBinding->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<NetTcpBinding >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -77,7 +77,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |`portSharingEnabled`|Ein boolescher Wert, der angibt, ob die TCP-Anschlussfreigabe für diese Verbindung aktiviert ist. Wenn dies `false` ist, verwendet jede Bindung ihren eigenen Anschluss. Diese Einstellung ist nur für Dienste relevant, da Clients nicht betroffen sind.|  
 |`receiveTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:10:00.|  
 |`sendTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|`transactionFlow`|Ein boolescher Wert, der angibt, ob die Bindung geleitete WS-Transaktionen unterstützt. Die Standardeinstellung ist `false`.|  
+|`transactionFlow`|Ein boolescher Wert, der angibt, ob die Bindung geleitete WS-Transaktionen unterstützt. Der Standardwert ist `false`.|  
 |`transactionProtocol`|Gibt das Transaktionsprotokoll an, das mit dieser Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> Der Standardwert ist OleTransactions. Dieses Attribut ist vom Typ <xref:System.ServiceModel.TransactionProtocol>.|  
 |`transferMode`|Ein <xref:System.ServiceModel.TransferMode>-Wert, der angibt, ob Nachrichten bei einer Anforderung oder Antwort gepuffert oder per Stream übertragen werden.|  
   
@@ -85,21 +85,21 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](security-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Gibt an, ob zuverlässige Sitzungen zwischen Kanalendpunkten aufgebaut werden.|  
+|[\<Security >](security-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
+|[\<von Readerkontingenten >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<ReliableSession->](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Gibt an, ob zuverlässige Sitzungen zwischen Kanalendpunkten aufgebaut werden.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
+|[\<-Bindungen >](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise
 
 Diese Bindung generiert standardmäßig eine Laufzeitkommunikation, die Transportsicherheit, TCP zur Nachrichtenübermittlung und eine binäre Nachrichtencodierung verwendet. Diese Bindung ist eine geeignete von einem System bereitgestellte Windows Communication Foundation (WCF) für die Kommunikation über ein Intranet.  
   
- Die Standardkonfiguration für `netTcpBinding` ist schneller als die `wsHttpBinding`von bereitgestellte Konfiguration, Sie ist jedoch nur für die WCF-Kommunikation vorgesehen. Das Sicherheitsverhalten ist mit dem optionalen `securityMode`-Attribut konfigurierbar. Die Verwendung von WS-ReliableMessaging ist mit dem optionalen `reliableSessionEnabled`-Attribut konfigurierbar. Zuverlässiges Messaging ist jedoch standardmäßig deaktiviert. Die vom System bereitgestellten HTTP-Bindungen, wie z.&#160;B. `wsHttpBinding` und `basicHttpBinding`, sind im Allgemeinen so konfiguriert, dass Funktionen standardmäßig aktiviert werden ,während die `netTcpBinding`-Bindung Funktionen standardmäßig deaktiviert, sodass Sie die Unterstützung für eine der WS-*-Spezifikationen explizit übernehmen müssen. Das bedeutet, dass die Standardkonfiguration für TCP Meldungen zwischen Endpunkten schneller austauscht als die standardmäßig für die HTTP-Bindungen festgelegten Konfigurationen.  
+ Die Standardkonfiguration für die `netTcpBinding` ist schneller als die vom `wsHttpBinding`bereitgestellte Konfiguration, Sie ist jedoch nur für die WCF-Kommunikation vorgesehen. Das Sicherheitsverhalten ist mit dem optionalen `securityMode`-Attribut konfigurierbar. Die Verwendung von WS-ReliableMessaging ist mit dem optionalen `reliableSessionEnabled`-Attribut konfigurierbar. Zuverlässiges Messaging ist jedoch standardmäßig deaktiviert. Die vom System bereitgestellten HTTP-Bindungen, wie z.&#160;B. `wsHttpBinding` und `basicHttpBinding`, sind im Allgemeinen so konfiguriert, dass Funktionen standardmäßig aktiviert werden ,während die `netTcpBinding`-Bindung Funktionen standardmäßig deaktiviert, sodass Sie die Unterstützung für eine der WS-*-Spezifikationen explizit übernehmen müssen. Das bedeutet, dass die Standardkonfiguration für TCP Meldungen zwischen Endpunkten schneller austauscht als die standardmäßig für die HTTP-Bindungen festgelegten Konfigurationen.  
   
 ## <a name="example"></a>Beispiel
 
@@ -154,4 +154,4 @@ Die Bindung wird in den Konfigurationsdateien für den Client und Dienst angegeb
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

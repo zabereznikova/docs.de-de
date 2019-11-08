@@ -2,20 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 79c3c68d69bf3cf5a018e6cf62f34e5ec2ce0cd5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397821"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738935"
 ---
-# <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
+# <a name="mexhttpsbinding"></a>\<mexhttpsbinding >
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über HTTPS verwendet wird.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexhttpsbinding->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexhttpsbinding >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,10 +50,10 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
+|[\<-Bindungen >](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Bindung ist im Grunde eine `WSHttpBinding`-Bindung, die mit Zertifikaten Sicherheit auf Transportebene unterstützt. Weitere Informationen zum Konfigurieren und Verwenden eines solchen Metadatenendpunkts finden [Sie unter Gewusst wie: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)Bindung [, Vorgehensweise: Rufen Sie Metadaten über eine nicht-MEX](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)-Bindung und den [benutzerdefinierten Beispiel Endpunkt für sichere Metadaten](../../../wcf/samples/custom-secure-metadata-endpoint.md)ab.  
+ Diese Bindung ist im Grunde eine `WSHttpBinding`-Bindung, die mit Zertifikaten Sicherheit auf Transportebene unterstützt. Weitere Informationen zum Konfigurieren und Verwenden eines solchen Metadatenendpunkts finden Sie unter Gewusst [wie: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange Bindung](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), Gewusst [wie: Abrufen von Metadaten über eine nicht-MEX-Bindung](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)und das Beispiel für einen [benutzerdefinierten sicheren Metadatenendpunkt](../../../wcf/samples/custom-secure-metadata-endpoint.md) . .  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -61,11 +61,11 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
 - [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange Bindung](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Vorgehensweise: Abrufen von Metadaten über eine nicht-MEX-Bindung](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange-Bindung](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Vorgehensweise: Abrufen von Metadaten über eine Nicht-MEX-Bindung](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [Benutzerdefinierter sicherer Metadatenendpunkt](../../../wcf/samples/custom-secure-metadata-endpoint.md)
 - [Metadaten](../../../wcf/feature-details/metadata.md)
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

@@ -2,22 +2,22 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 9b7092878c604142c29dcd8d27e3c458d203f9fa
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399529"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738596"
 ---
-# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
+# <a name="sslstreamsecurity"></a>\<sslStreamSecurity->
 Stellt ein benutzerdefiniertes Bindungselement dar, das die Kanalsicherheit mit einem SSL-Stream unterstützt.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding->** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sslStreamSecurity->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sslStreamSecurity >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ Stellt ein benutzerdefiniertes Bindungselement dar, das die Kanalsicherheit mit 
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|requireClientCertificate|Ein boolescher Wert, der angibt, ob ein Clientzertifikat für diese Bindung erforderlich ist. Die Standardeinstellung ist `false`.|  
+|requireClientCertificate|Ein boolescher Wert, der angibt, ob ein Clientzertifikat für diese Bindung erforderlich ist. Der Standardwert ist `false`.|  
 |sslProtocols|Ein SslProtocols Enum-Flagwert, der angibt, welche SslProtocols unterstützt werden. Der Standardwert ist&#124;Ssl3&#124;TLS&#124;Tls11 Tls12.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -43,7 +43,7 @@ Stellt ein benutzerdefiniertes Bindungselement dar, das die Kanalsicherheit mit 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding >](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -53,4 +53,4 @@ Stellt ein benutzerdefiniertes Bindungselement dar, das die Kanalsicherheit mit 
 - [Bindungen](../../../wcf/bindings.md)
 - [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding >](custombinding.md)

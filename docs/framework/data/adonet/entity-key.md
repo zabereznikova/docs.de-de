@@ -2,12 +2,12 @@
 title: Entitätsschlüssel
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: db867b3a853bd29f1faf1be2faf77776e48be2d2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 39a7500f088aa85baf0244005d6a804b3bf0b521
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795141"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737796"
 ---
 # <a name="entity-key"></a>Entitätsschlüssel
 Ein *Entitäts Schlüssel* ist eine [Eigenschaft](property.md) oder ein Satz von Eigenschaften eines [Entitäts Typs](entity-type.md) , die zur Bestimmung der Identität verwendet werden. Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt. Die Werte von Entitäts Schlüsseleigenschaften müssen eine Entitätstyp Instanz innerhalb einer [Entitätenmenge](entity-set.md) zur Laufzeit eindeutig identifizieren. Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  
@@ -20,14 +20,14 @@ Ein *Entitäts Schlüssel* ist eine [Eigenschaft](property.md) oder ein Satz von
   
 - Die Eigenschaften, die einen Entitätsschlüssel für einen bestimmten Entitätstyp bilden, können sich nicht ändern. Sie können nicht mehr als einen möglichen Entitätsschlüssel für einen bestimmte Entitätstyp zulassen. Ersatzschlüssel werden nicht unterstützt.  
   
-- Wenn eine Entität an einer Vererbungshierarchie beteiligt ist, muss die Stammentität alle Eigenschaften enthalten, die den Entitätsschlüssel bilden, und der Entitätsschlüssel muss für den Stammentitätstyp definiert sein. Weitere Informationen finden [Sie unter Entity Data Model: Vererbung](entity-data-model-inheritance.md).  
+- Wenn eine Entität an einer Vererbungshierarchie beteiligt ist, muss die Stammentität alle Eigenschaften enthalten, die den Entitätsschlüssel bilden, und der Entitätsschlüssel muss für den Stammentitätstyp definiert sein. Weitere Informationen finden Sie unter [Entity Data Model: Vererbung](entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Beispiel  
  Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit drei Entitätstypen: `Book`, `Publisher` und `Author`. Die Eigenschaften jedes Entitätstyps, die den entsprechenden Entitätsschlüssel bilden, werden mit "(Schlüssel)" angegeben. Beachten Sie, dass der Entitätstyp `Author` über einen Entitätsschlüssel verfügt, der aus zwei Eigenschaften besteht: `Name` und `Address`.  
   
  ![Beispielmodell mit drei Entitäts Typen](./media/entity-key/example-model-three-entity-types.gif)  
   
- Der [ADO.NET-Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) mit der Bezeichnung konzeptionelle Schema Definitions Sprache ([CSDL](./ef/language-reference/csdl-specification.md)), um konzeptionelle Modelle zu definieren. Die nachfolgende CSDL definiert den in der Abbildung oben gezeigten `Book`-Entitätstyp. Der Entitätsschlüssel wird definiert, indem auf die `ISBN`-Eigenschaft des Entitätstyps verwiesen wird.  
+ Der [ADO.NET-Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) mit der Bezeichnung konzeptionelle Schema Definitions Sprache ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)), um konzeptionelle Modelle zu definieren. Die nachfolgende CSDL definiert den in der Abbildung oben gezeigten `Book`-Entitätstyp. Der Entitätsschlüssel wird definiert, indem auf die `ISBN`-Eigenschaft des Entitätstyps verwiesen wird.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

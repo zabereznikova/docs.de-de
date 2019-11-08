@@ -2,12 +2,12 @@
 title: Zuordnungssatz
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 43ab6cf9f1ee8cb971810add6b9a89467726f3e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e279322f9e950cd4359db8c6dce39bfc46d188f6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785031"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732379"
 ---
 # <a name="association-set"></a>Zuordnungssatz
 Ein Zuordnungs *Satz* ist ein logischer Container [für](association-type.md) Zuordnungs Instanzen desselben Typs. Ein Zuordnungssatz ist keine Datenmodellkonstruktion; das heißt, er beschreibt nicht die Struktur von Daten oder Beziehungen. Vielmehr stellt ein Zuordnungssatz eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Zuordnungsinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
@@ -27,11 +27,11 @@ Ein Zuordnungs *Satz* ist ein logischer Container [für](association-type.md) Zu
   
  ![Beispielmodell mit drei Entitäts Typen](./media/association-set/example-model-three-entity-types.gif)  
   
- Das folgende Beispiel zeigt einen Zuordnungssatz (`PublishedBy`) und zwei Entitätenmengen (`Books` und `Publishers`), basierend auf dem oben gezeigten Modell. BI in der `Books` Entitätenmenge stellt zur Laufzeit `Book` eine Instanz des Entitäts Typs dar. Ebenso stellt PJ eine `Publisher` -Instanz in der `Publishers` Entitätenmenge dar. Bipj stellt eine Instanz der `PublishedBy` Zuordnung `PublishedBy` im Zuordnungs Satz dar.  
+ Das folgende Beispiel zeigt einen Zuordnungssatz (`PublishedBy`) und zwei Entitätenmengen (`Books` und `Publishers`), basierend auf dem oben gezeigten Modell. BI in der `Books` Entitätenmenge stellt eine Instanz des `Book` Entitäts Typs zur Laufzeit dar. Ebenso stellt PJ eine `Publisher` Instanz in der `Publishers` Entitätenmenge dar. Bipj stellt eine Instanz der `PublishedBy` Zuordnung im `PublishedBy` Zuordnungs Satz dar.  
   
  ![Screenshot, der ein Beispiel für eine Reihe anzeigt.](./media/association-set/sets-example-association.gif)  
   
- Der [ADO.NET-Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) mit der Bezeichnung konzeptionelle Schema Definitions Sprache ([CSDL](./ef/language-reference/csdl-specification.md)), um konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen Entitätscontainer mit einem Zuordnungssatz für jede Zuordnung in der oben gezeigten Abbildung. Beachten Sie, dass der Name und die Zuordnung für jeden Zuordnungssatz mit XML-Attributen definiert werden.  
+ Der [ADO.NET-Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) mit der Bezeichnung konzeptionelle Schema Definitions Sprache ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)), um konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen Entitätscontainer mit einem Zuordnungssatz für jede Zuordnung in der oben gezeigten Abbildung. Beachten Sie, dass der Name und die Zuordnung für jeden Zuordnungssatz mit XML-Attributen definiert werden.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   

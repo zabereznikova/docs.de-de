@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 9fa9e51e66af6df4d1a6b1ec94c5010651bbb21d
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: bf94f1d61ee3080c9d3582e55e0695b269801c80
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401505"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733357"
 ---
 # <a name="xstatic-markup-extension"></a>x:Statische Markuperweiterung
 Verweist auf eine beliebige statische Code Entität, die in einer Common Language Specification (CLS) – kompatiblen Weise definiert ist. Die statische Eigenschaft, auf die verwiesen wird, kann verwendet werden, um den Wert einer Eigenschaft in XAML bereitzustellen.  
@@ -30,7 +30,7 @@ Verweist auf eine beliebige statische Code Entität, die in einer Common Languag
   
 | | |  
 |-|-|  
-|`prefix`|Optional. Ein Präfix, das auf einen zugeordneten, nicht standardmäßigen XAML-Namespace verweist. `prefix`wird explizit in der Verwendung angezeigt, da Sie selten auf statische Eigenschaften verweisen, die von einem XAML-Standard Namespace stammen. Siehe Hinweise.|  
+|`prefix`|Dies ist optional. Ein Präfix, das auf einen zugeordneten, nicht standardmäßigen XAML-Namespace verweist. `prefix` wird explizit in der Verwendung angezeigt, da Sie selten auf statische Eigenschaften verweisen, die von einem XAML-Standard Namespace stammen. Siehe Hinweise.|  
 |`typeName`|Erforderlich. Der Name des Typs, der den gewünschten statischen Member definiert.|  
 |`staticMemberName`|Erforderlich. Der Name des gewünschten statischen Wertmembers (eine Konstante, eine statische Eigenschaft, ein Feld oder ein Enumerationswert).|  
   
@@ -45,11 +45,11 @@ Die Code Entität, auf die verwiesen wird, muss eine der folgenden sein:
 
 Das Angeben einer anderen Code Entität, z. b. einer nicht statischen Eigenschaft, verursacht einen Kompilierzeitfehler, wenn XAML Markup kompiliert ist, oder eine XAML-Auslastungs Analyse Ausnahme.  
 
-Sie können Verweise `x:Static` auf statische Felder oder Eigenschaften erstellen, die sich nicht im XAML-Standard Namespace für das aktuelle XAML-Dokument befinden; dies erfordert jedoch eine Präfix Zuordnung. XAML-Namespaces werden fast immer für das Stamm Element des XAML-Dokuments definiert.  
+Sie können `x:Static` Verweise auf statische Felder oder Eigenschaften erstellen, die sich nicht im XAML-Standard Namespace für das aktuelle XAML-Dokument befinden; Dies erfordert jedoch eine Präfix Zuordnung. XAML-Namespaces werden fast immer für das Stamm Element des XAML-Dokuments definiert.  
 
-Die Suchvorgänge für statische Eigenschaften können .NET Framework XAML-Diensten und deren XAML-Readern und XAML-Writern ausgeführt werden, wenn Sie mit dem standardmäßigen XAML-Schema Kontext ausgeführt werden. Dieser XAML-Schema Kontext kann die CLR-Reflektion verwenden, um die erforderlichen statischen Werte für die Objekt Diagramm Erstellung bereitzustellen. Der `typeName` von Ihnen angegebene ist tatsächlich ein XAML-Typname und kein CLR-Typname, obwohl diese im Wesentlichen denselben Namen haben, wenn Sie den standardmäßigen XAML-Schema Kontext verwenden oder alle vorhandenen CLR-basierten XAML-implementierenden Frameworks verwenden.  
+Die Suchvorgänge für statische Eigenschaften können .NET Framework XAML-Diensten und deren XAML-Readern und XAML-Writern ausgeführt werden, wenn Sie mit dem standardmäßigen XAML-Schema Kontext ausgeführt werden. Dieser XAML-Schema Kontext kann die CLR-Reflektion verwenden, um die erforderlichen statischen Werte für die Objekt Diagramm Erstellung bereitzustellen. Der `typeName`, den Sie angeben, ist tatsächlich ein XAML-Typname und kein CLR-Typname, obwohl diese im Wesentlichen denselben Namen haben, wenn Sie den XAML-Standardschema Kontext verwenden oder alle vorhandenen CLR-basierten XAML-implementierenden Frameworks verwenden.  
 
-Gehen Sie vorsichtig vor, `x:Static` Wenn Sie Verweise erstellen, die nicht direkt der Typ des Eigenschafts Werts sind. In der XAML-Verarbeitungssequenz rufen bereitgestellte Werte aus einer Markup Erweiterung keine zusätzliche Wert Konvertierung auf. Dies gilt auch, wenn der `x:Static` Verweis eine Text Zeichenfolge erstellt und eine Wert Konvertierung für Attributwerte, die auf der Text Zeichenfolge basieren, in der Regel entweder für dieses bestimmte Element oder für beliebige Element Werte des Rückgabe Typs auftritt.  
+Gehen Sie vorsichtig vor, wenn Sie `x:Static` Verweise erstellen, die nicht direkt der Typ des Eigenschafts Werts sind. In der XAML-Verarbeitungssequenz rufen bereitgestellte Werte aus einer Markup Erweiterung keine zusätzliche Wert Konvertierung auf. Dies gilt auch, wenn der `x:Static` Verweis eine Text Zeichenfolge erstellt und eine Wert Konvertierung für Attributwerte, die auf der Text Zeichenfolge basieren, in der Regel entweder für dieses bestimmte Element oder für beliebige Element Werte des Rückgabe Typs auftritt.  
 
 Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax. Das Zeichenfolgentoken, das auf die `x:Static`-Bezeichnerzeichenfolge folgt, wird als <xref:System.Windows.Markup.StaticExtension.Member%2A>-Wert der zugrunde liegenden <xref:System.Windows.Markup.StaticExtension>-Erweiterungsklasse zugeordnet.  
 
@@ -67,18 +67,18 @@ Es gibt zwei andere XAML-Verwendungen, die technisch möglich sind. Diese Verwen
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />
     ```
 
-In der .NET Framework XAML-Dienst Implementierung wird die Handhabung dieser Markup Erweiterung durch die <xref:System.Windows.Markup.StaticExtension> -Klasse definiert.  
+In der .NET Framework XAML-Dienste-Implementierung wird die Handhabung dieser Markup Erweiterung durch die <xref:System.Windows.Markup.StaticExtension>-Klasse definiert.  
 
-`x:Static` ist eine Markuperweiterung. Alle Markup Erweiterungen in XAML verwenden die `{` Zeichen `}` und in der Attribut Syntax. Dies ist die Konvention, mit der ein XAML-Prozessor erkennt, dass eine Markup Erweiterung einen Wert bereitstellen muss. Weitere Informationen zur Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
+`x:Static` ist eine Markuperweiterung. Alle Markup Erweiterungen in XAML verwenden die `{` und `}` Zeichen in der Attribut Syntax. Dies ist die Konvention, mit der ein XAML-Prozessor erkennt, dass eine Markup Erweiterung einen Wert bereitstellen muss. Weitere Informationen zur Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
- Der standardmäßige XAML-Namespace, den Sie für die WPF-Programmierung verwenden, enthält nicht viele nützliche statische Eigenschaften, und die meisten nützlichen statischen Eigenschaften haben Unterstützung, wie z. `{x:Static}` b. Typkonverter, die die Verwendung ohne Anforderung vereinfachen. Für statische Eigenschaften müssen Sie ein Präfix für einen XAML-Namespace zuordnen, wenn einer der folgenden Punkte zutrifft:  
+ Der XAML-Standard Namespace, den Sie für die WPF-Programmierung verwenden, enthält nicht viele nützliche statische Eigenschaften, und die meisten nützlichen statischen Eigenschaften unterstützen z. b. Typkonverter, die die Verwendung vereinfachen, ohne dass `{x:Static}` erforderlich ist. Für statische Eigenschaften müssen Sie ein Präfix für einen XAML-Namespace zuordnen, wenn einer der folgenden Punkte zutrifft:  
   
-- Sie verweisen auf einen Typ, der in WPF vorhanden ist, aber nicht Teil des standardmäßigen XAML-Namespace für WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]) ist. Dies ist ein gängiges Szenario für die `x:Static`Verwendung von. Sie können z. b. einen `x:Static` Verweis mit einer XAML-Namespace Zuordnung <xref:System> zur CLR-Namespace-und mscorlib-Assembly verwenden, um auf <xref:System.Environment> die statischen Eigenschaften der-Klasse zu verweisen.  
+- Sie verweisen auf einen Typ, der in WPF vorhanden ist, aber nicht Teil des standardmäßigen XAML-Namespace für WPF (`http://schemas.microsoft.com/winfx/2006/xaml/presentation`) ist. Dies ist ein gängiges Szenario für die Verwendung von `x:Static`. Beispielsweise können Sie einen `x:Static` Verweis mit einer XAML-Namespace Zuordnung zum <xref:System> CLR-Namespace und der mscorlib-Assembly verwenden, um auf die statischen Eigenschaften der <xref:System.Environment>-Klasse zu verweisen.  
   
 - Sie verweisen auf einen Typ aus einer benutzerdefinierten Assembly.  
   
-- Sie verweisen auf einen Typ, der in einer WPF-Assembly vorhanden ist. dieser Typ befindet sich jedoch innerhalb eines CLR-Namespace, der nicht als Teil des WPF-XAML-Standard Namespace zugeordnet wurde. Die Zuordnung von CLR-Namespaces in den XAML-Standard Namespace für WPF erfolgt durch Definitionen in den verschiedenen WPF-Assemblys (Weitere Informationen zu diesem Konzept finden Sie unter [XAML-Namespaces und Namespace Zuordnung für WPF-XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Nicht zugeordnete CLR-Namespaces können vorhanden sein, wenn dieser CLR-Namespace hauptsächlich aus Klassendefinitionen besteht, die in der Regel nicht für XAML vorgesehen sind, z <xref:System.Windows.Threading>. b.  
+- Sie verweisen auf einen Typ, der in einer WPF-Assembly vorhanden ist. dieser Typ befindet sich jedoch innerhalb eines CLR-Namespace, der nicht als Teil des WPF-XAML-Standard Namespace zugeordnet wurde. Die Zuordnung von CLR-Namespaces in den XAML-Standard Namespace für WPF erfolgt durch Definitionen in den verschiedenen WPF-Assemblys (Weitere Informationen zu diesem Konzept finden Sie unter [XAML-Namespaces und Namespace Zuordnung für WPF-XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Nicht zugeordnete CLR-Namespaces können vorhanden sein, wenn dieser CLR-Namespace hauptsächlich aus Klassendefinitionen besteht, die in der Regel nicht für XAML vorgesehen sind, wie z. b. <xref:System.Windows.Threading>.  
   
  Weitere Informationen zur Verwendung von Präfixen und XAML-Namespaces für WPF finden Sie unter [XAML-Namespaces und Namespace Zuordnung für WPF-XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   

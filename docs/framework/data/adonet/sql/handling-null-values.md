@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 091fde9a6149f72577e0cf38c8ebf1536abdf6ea
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040219"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738202"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
   
 > [!NOTE]
-> Neu in .NET Framework 2.0 ist die Unterstützung für Typen, die NULL-Werte zulassen. Programmierer können damit einen Werttyp so erweitern, dass dieser alle Werte des zugrunde liegenden Typs darstellen kann. Die CLR-Typen, die NULL-Werte zulassen, stellen eine Instanz der <xref:System.Nullable>-Struktur dar. Diese Funktion erweist sich vor allem dann als hilfreich, wenn Werttypen geschachtelt und nicht geschachtelt sind, wodurch sich die Kompatibilität mit Objekttypen verbessert. CLR-Typen, die NULL-Werte zulassen, sind nicht zum Speichern von Datenbank-NULL-Werten gedacht, weil sich ein ANSI-SQL-NULL-Wert anders als ein `null`-Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI SQL-Datenbank-NULL-Werten statt <xref:System.Data.SqlTypes> lieber <xref:System.Nullable>-NULL-Werte. Weitere Informationen zum Arbeiten mit CLR- [Typen, die NULL-Werte zulassen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), C# finden [Sie](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)Visual Basic unter.  
+> Neu in .NET Framework 2.0 ist die Unterstützung für Typen, die NULL-Werte zulassen. Programmierer können damit einen Werttyp so erweitern, dass dieser alle Werte des zugrunde liegenden Typs darstellen kann. Die CLR-Typen, die NULL-Werte zulassen, stellen eine Instanz der <xref:System.Nullable>-Struktur dar. Diese Funktion erweist sich vor allem dann als hilfreich, wenn Werttypen geschachtelt und nicht geschachtelt sind, wodurch sich die Kompatibilität mit Objekttypen verbessert. CLR-Typen, die NULL-Werte zulassen, sind nicht zum Speichern von Datenbank-NULL-Werten gedacht, weil sich ein ANSI-SQL-NULL-Wert anders als ein `null`-Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI SQL-Datenbank-NULL-Werten statt <xref:System.Data.SqlTypes> lieber <xref:System.Nullable>-NULL-Werte. Weitere Informationen zum Arbeiten mit CLR- C# [Typen, die NULL-Werte zulassen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) [, finden Sie Visual Basic unter.](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)  
   
 ## <a name="nulls-and-three-valued-logic"></a>NULL-Werte und dreiwertige Logik  
  Wenn in Spaltendefinitionen NULL-Werte zugelassen werden, wird dreiwertige Logik in die Anwendung eingeführt. Eine Vergleichsoperation wird mit einer der drei nachfolgenden Bedingungen ausgewertet:  

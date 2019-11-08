@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460579"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740652"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML-Namespaces und Namespacezuordnung für WPF-XAML
 Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden XAML-Namespacezuordnungen, die häufig im Stammelement einer WPF XAML-Datei zu finden sind. Es wird ebenfalls beschrieben, wie Sie ähnliche Zuordnungen für Elemente in Ihrem eigenen Code und/oder separaten Assemblys erstellen können.  
@@ -39,7 +39,7 @@ Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden
   
  Die Beziehung zwischen diesen beiden Deklaration ist, dass die `x:`-Präfix-Zuordnung die in der XAML-Sprache definierten Basiselemente auszeichnet, während [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eine Implementierung ist, die XAML als Sprache nutzt und ein Vokabular seiner eigenen Objekte für XAML definiert. Da die Verwendung von WPF-Vokabular weitaus häufiger als die Verwendung von XAML-Interna sein wird, wird das WPF-Vokabular als Standard zugeordnet.  
   
- Nach der `x:`-Präfix-Konvention für die Zuordnung der Unterstützung für die systeminternen Funktionen der XAML-Sprache folgen Projektvorlagen, Beispielcode und die Dokumentation der Sprachfeatures in diesem [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Der XAML-Namespace definiert viele häufig verwendete Funktionen, die auch für einfache WPF-Anwendung erforderlich sind. Um beispielsweise CodeBehind mittels einer partiellen Klasse zu einer XAML-Datei hinzuzufügen, müssen Sie diese Klasse als `x:Class`-Attribut im Stammelement der relevanten XAML-Datei benennen. Genauer: Sie müssen für jedes in einer XAML-Seite definierte Element, auf das Sie als mit einem Schlüssel versehene Ressource zugreifen möchten, ein entsprechendes `x:Key`-Attribut setzen. Weitere Informationen zu diesen und anderen Aspekten von XAML finden Sie unter [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) oder [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md).  
+ Die `x:` Präfix Konvention für die Zuordnung der systeminternen Unterstützung der XAML-Sprache folgt den Projektvorlagen, Beispielcode und der Dokumentation der Sprachfunktionen in diesem SDK. Der XAML-Namespace definiert viele häufig verwendete Funktionen, die auch für einfache WPF-Anwendung erforderlich sind. Um beispielsweise CodeBehind mittels einer partiellen Klasse zu einer XAML-Datei hinzuzufügen, müssen Sie diese Klasse als `x:Class`-Attribut im Stammelement der relevanten XAML-Datei benennen. Genauer: Sie müssen für jedes in einer XAML-Seite definierte Element, auf das Sie als mit einem Schlüssel versehene Ressource zugreifen möchten, ein entsprechendes `x:Key`-Attribut setzen. Weitere Informationen zu diesen und anderen Aspekten von XAML finden Sie unter [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) oder [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Zuordnen von Benutzerdefinierten Klassen und Assemblys  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Zuordnen von CLR-Namespaces zu XML-Namespaces in einer Assembly  
- WPF definiert ein CLR-Attribut, das von XAML-Prozessoren verwendet wird, um mehrere CLR-Namespaces einem einzigen XAML-Namespace zuzuordnen. Dieses Attribut, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, wird auf Assemblyebene im Quellcode platziert, der die Assembly erstellt. Der Quellcode der WPF-Assembly verwendet dieses Attribut, um die verschiedenen allgemeinen Namespaces, z. b. <xref:System.Windows> und <xref:System.Windows.Controls>, dem [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]-Namespace zuzuordnen.  
+ WPF definiert ein CLR-Attribut, das von XAML-Prozessoren verwendet wird, um mehrere CLR-Namespaces einem einzigen XAML-Namespace zuzuordnen. Dieses Attribut, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, wird auf Assemblyebene im Quellcode platziert, der die Assembly erstellt. Der Quellcode der WPF-Assembly verwendet dieses Attribut, um die verschiedenen allgemeinen Namespaces, z. b. <xref:System.Windows> und <xref:System.Windows.Controls>, dem `http://schemas.microsoft.com/winfx/2006/xaml/presentation`-Namespace zuzuordnen.  
   
  Der <xref:System.Windows.Markup.XmlnsDefinitionAttribute> nimmt zwei Parameter an: den XML/XAML-Namespace Namen und den Namen des CLR-Namespace. Es können mehrere <xref:System.Windows.Markup.XmlnsDefinitionAttribute> vorhanden sein, um dem gleichen XML-Namespace mehrere CLR-Namespaces zuzuordnen. Sind diese einmal zugeordnet, kann in der CodeBehind-Seite der partiellen Klasse auf Mitglieder dieser Namespaces auf Wunsch auch ohne vollqualifizierten Bezeichner durch Angabe des entsprechenden `using`-Statements verwiesen werden. Weitere Informationen finden Sie unter <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   

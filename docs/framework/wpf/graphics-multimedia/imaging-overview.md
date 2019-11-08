@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039882"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733565"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die Microsoft Windows Presentation Foundation Imaging-Komponente. WPF-Imaging ermöglicht Entwicklern das anzeigen, Transformieren und Formatieren von Bildern.  
@@ -165,7 +165,7 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
 ## <a name="image-metadata"></a>Bildmetadaten  
  Einige Bilddateien enthalten Metadaten, die den Inhalt oder die Eigenschaften der Datei beschreiben. Die meisten Digitalkameras erstellen z.B. Bilder, die Metadaten zum Fabrikat und Modell der Kamera enthalten, mit der das Bild aufgenommen wurde. Jedes Bildformat verarbeitet Metadaten anders, aber WPF-Imaging bietet eine einheitliche Möglichkeit zum Speichern und Abrufen von Metadaten für jedes unterstützte Bildformat.  
   
- Der Zugriff auf Metadaten wird durch die <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>-Eigenschaft eines <xref:System.Windows.Media.Imaging.BitmapSource> Objekts bereitgestellt. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> gibt ein <xref:System.Windows.Media.Imaging.BitmapMetadata> Objekt zurück, das alle im Bild enthaltenen Metadaten enthält. Diese Daten können in einem Metadatenschema oder einer Kombination aus unterschiedlichen Schemas vorliegen. Die WPF-Abbild Erstellung unterstützt die folgenden Abbild-Metadatenschemas: austauschbare Bilddatei (EXIF), Text (PNG-Textdaten), BDS (Image File Directory), International Press Telekommunikations Council (IPTC) und [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Der Zugriff auf Metadaten wird durch die <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>-Eigenschaft eines <xref:System.Windows.Media.Imaging.BitmapSource> Objekts bereitgestellt. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> gibt ein <xref:System.Windows.Media.Imaging.BitmapMetadata> Objekt zurück, das alle im Bild enthaltenen Metadaten enthält. Diese Daten können in einem Metadatenschema oder einer Kombination aus unterschiedlichen Schemas vorliegen. Die WPF-Abbild Erstellung unterstützt die folgenden Bild Metadatenschemas: austauschbare Bilddatei (EXIF), Text (PNG-Textdaten), das Image Dateiverzeichnis (IFD), International Press Telekommunikations Council (IPTC) und erweiterbare metadatenplattform (XMP).  
   
  Um den Prozess des Lesens von Metadaten zu vereinfachen, stellt <xref:System.Windows.Media.Imaging.BitmapMetadata> mehrere benannte Eigenschaften bereit, auf die leicht zugegriffen werden kann, z. b. <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>und <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Viele dieser benannten Eigenschaften können auch verwendet werden, um Metadaten zu schreiben. Zusätzliche Unterstützung für das Lesen von Metadaten wird vom Metadaten-Abfragereader bereitgestellt. Die <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>-Methode wird zum Abrufen eines Metadatenabfrage-Readers verwendet, indem eine Zeichen folgen Abfrage wie *"/app1/exif/"* bereitgestellt wird. Im folgenden Beispiel wird <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> verwendet, um den am Speicherort *"/Text/Description"* gespeicherten Text abzurufen.  
   

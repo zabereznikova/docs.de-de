@@ -2,22 +2,22 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 5a402ce3a4b793c6b50a3702b56d593b64d2f58d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 82a221c549efb68532a7a6f85446c5774d4a4d6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399223"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732487"
 ---
-# <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
+# <a name="unrecognizedpolicyassertion"></a>\<unerkenzedpolicyassert >
 Stellt ein Bindungselement dar, das die Richtlinienassertion angibt. Dieses Element verfügt über kein Attribut und ist als leerer Schalter vorhanden.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding->** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<unerkenzedpolicyassert->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<unerkenzedpolicyassert >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -25,7 +25,7 @@ Stellt ein Bindungselement dar, das die Richtlinienassertion angibt. Dieses Elem
 <unrecognizedPolicyAssertion />
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>Geben Sie Folgendes ein:  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -35,13 +35,13 @@ Stellt ein Bindungselement dar, das die Richtlinienassertion angibt. Dieses Elem
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding >](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -49,4 +49,4 @@ Stellt ein Bindungselement dar, das die Richtlinienassertion angibt. Dieses Elem
 - [Bindungen](../../../wcf/bindings.md)
 - [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding >](custombinding.md)

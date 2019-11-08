@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 0758a537ee457a8fe5a778e2a2c24a8ba13c263b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460862"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740814"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
 Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Presentation Foundation (WPF) verwenden, über einen umfangreichen neuen Satz von Druck-und drucksystemverwaltungs-APIs. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Der Kern dieser neuen Funktionalität ist das neue XPS-Dateiformat (XML Paper Specification) und der XPS-Druckpfad.  
@@ -29,7 +29,7 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>Info über XPS  
- XPS ist ein elektronisches Dokumentformat, ein spooldateiformat und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat, das [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], Open Packaging Conventions (OPC) und andere Industriestandards verwendet, um plattformübergreifende Dokumente zu erstellen. XPS vereinfacht den Prozess, mit dem digitale Dokumente erstellt, freigegeben, gedruckt, angezeigt und archiviert werden. Weitere Informationen zu XPS finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
+ XPS ist ein elektronisches Dokumentformat, ein spooldateiformat und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat, in dem XML, Open Packaging Conventions (OPC) und andere Industriestandards zum Erstellen von plattformübergreifenden Dokumenten verwendet werden. XPS vereinfacht den Prozess, mit dem digitale Dokumente erstellt, freigegeben, gedruckt, angezeigt und archiviert werden. Weitere Informationen zu XPS finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
   
  Verschiedene Verfahren zum Drucken von XPS-basiertem Inhalt mithilfe von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] werden in Programm gesteuertes [Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md)veranschaulicht. Es kann sinnvoll sein, diese Beispiele beim Durcharbeiten der in diesem Thema enthaltenen Inhalte hinzuzuziehen. (Entwicklern von nicht verwaltetem Code sollte die Dokumentation für die [MXDC_ESCAPE-Funktion](/windows/desktop/printdocs/mxdc-escape)angezeigt werden. Windows Forms Entwickler müssen die API im <xref:System.Drawing.Printing>-Namespace verwenden, der nicht den vollständigen XPS-Druckpfad unterstützt, aber einen Hybriden GDI-zu-XPS-Druckpfad unterstützt. Weitere Informationen finden Sie unter **Druckpfadarchitektur** unten.)  
   
@@ -78,7 +78,7 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
  Für den Zugriff auf den vollständigen Satz von XPS-Funktionen muss die erweiterte Druck-API verwendet werden. Einige relevante APIs werden im folgenden ausführlicher beschrieben. Eine vollständige Liste der XPS-Druckpfad-APIs finden Sie in den <xref:System.Windows.Xps>-und <xref:System.Printing>-Namespace verweisen.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket und PrintCapabilities  
- Die Klassen <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> sind die Grundlage der erweiterten XPS-Funktionen. Beide Objekttypen sind [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] formatierte Strukturen von Druck orientierten Funktionen, wie z. b. Sortierung, zweiseitiger Druck, Heftung usw. Diese Strukturen werden durch das Druck Schema definiert. Ein <xref:System.Printing.PrintTicket> weist einen Drucker an, wie ein Druckauftrag verarbeitet werden muss. Die <xref:System.Printing.PrintCapabilities> -Klasse definiert die Fähigkeiten eines Druckers. Durch Abfragen der Funktionen eines Druckers kann ein <xref:System.Printing.PrintTicket> erstellt werden, das die von einem Drucker unterstützten Funktionen in vollem Umfang nutzt. Analog dazu können nicht unterstützte Funktionen vermieden werden.  
+ Die Klassen <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> sind die Grundlage der erweiterten XPS-Funktionen. Beide Objekttypen sind XML-formatierte Strukturen von Druck orientierten Features, wie z. b. Sortierung, zweiseitiger Druck, Heftung usw. Diese Strukturen werden durch das Druck Schema definiert. Ein <xref:System.Printing.PrintTicket> weist einen Drucker an, wie ein Druckauftrag verarbeitet werden muss. Die <xref:System.Printing.PrintCapabilities> -Klasse definiert die Fähigkeiten eines Druckers. Durch Abfragen der Funktionen eines Druckers kann ein <xref:System.Printing.PrintTicket> erstellt werden, das die von einem Drucker unterstützten Funktionen in vollem Umfang nutzt. Analog dazu können nicht unterstützte Funktionen vermieden werden.  
   
  Im folgenden Beispiel wird das Abfragen der <xref:System.Printing.PrintCapabilities> eines Druckers und das Erstellen eines <xref:System.Printing.PrintTicket> mithilfe von Code gezeigt.  
   

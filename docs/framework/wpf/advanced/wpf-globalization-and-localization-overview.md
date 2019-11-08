@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035784"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740710"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Übersicht über WPF-Globalisierung und -Lokalisierung
 
@@ -70,7 +70,7 @@ Wenn Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 
 ## <a name="localize-a-wpf-application"></a>Lokalisieren einer WPF-Anwendung
 
-Wenn Sie eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung lokalisieren, haben Sie mehrere Optionen. Beispielsweise können Sie die lokalisierbaren Ressourcen in der Anwendung an eine [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Datei binden, lokalisierbaren Text in RESX-Tabellen speichern oder den Lokalisierer verwenden, um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dateien zu verwenden. In diesem Abschnitt wird ein Lokalisierungs Workflow beschrieben, der die BAML-Form von XAML verwendet, die mehrere Vorteile bietet:
+Wenn Sie eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung lokalisieren, haben Sie mehrere Optionen. Beispielsweise können Sie die lokalisierbaren Ressourcen in der Anwendung an eine XML-Datei binden, lokalisierbaren Text in RESX-Tabellen speichern oder den Lokalisierer verwenden, um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dateien zu verwenden. In diesem Abschnitt wird ein Lokalisierungs Workflow beschrieben, der die BAML-Form von XAML verwendet, die mehrere Vorteile bietet:
 
 - Sie können lokalisieren, nachdem Sie erstellt haben.
 

@@ -2,23 +2,23 @@
 title: <message> von <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: bce80d96b1bcec0d580f2de3fe88d5fd6ad0a3b5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 748a734af8cf6767ce47cfffce9aec3ef627cb44
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400261"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736744"
 ---
-# <a name="message-of-basichttpbinding"></a>\<Nachrichten > von \<BasicHttpBinding >
-Definiert die Einstellungen für die [ \<Sicherheit auf Nachrichten Ebene des BasicHttpBinding->](basichttpbinding.md).  
+# <a name="message-of-basichttpbinding"></a>\<-Nachrichten > von \<BasicHttpBinding >
+Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene der [\<BasicHttpBinding->](basichttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BasicHttpBinding->** ](basichttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-basichttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Message >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BasicHttpBinding >** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheit >** ](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Meldung** >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,24 +34,24 @@ Definiert die Einstellungen für die [ \<Sicherheit auf Nachrichten Ebene des Ba
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|algorithmSuite|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> und gibt die Algorithmen und Schlüsselgrößen an. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Der Standardwert ist `Basic256`.|  
-|clientCredentialType|Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mithilfe von nachrichtenbasierter Sicherheit verwendet werden. Die Standardeinstellung ist `UserName`.|  
+|algorithmSuite|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> und gibt die Algorithmen und Schlüsselgrößen an. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Der Standardwert ist `Basic256`sein.|  
+|clientCredentialType|Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mithilfe von nachrichtenbasierter Sicherheit verwendet werden. Der Standardwert ist `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|UserName|: Erfordert, dass der Client mit Benutzernamen-Anmelde Informationen auf dem Server authentifiziert wird. Diese Anmelde Informationen müssen mithilfe des [ \<clientCredential->](clientcredentials.md)angegeben werden.<br />-WCF unterstützt nicht das Senden eines Kenn Wort Hashwerts oder das Ableiten von Schlüsseln mit Kenn Wörtern und die Verwendung solcher Schlüssel für die Nachrichten Sicherheit. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen Anmelde Informationen verwendet werden. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
-|Zertifikat|Erfordert, dass der Client über ein Zertifikat beim Server authentifiziert wird. Die Client [ \<Anmelde](clientcredentials.md) Informationen müssen in diesem Fall mithilfe der clientCredential-> und des [ \<ClientCertificate->](clientcertificate-of-servicecredentials.md)angegeben werden. Außerdem muss für den Fall, dass der Nachrichtensicherheitsmodus verwendet wird, dem Client das Dienstzertifikat bereitgestellt werden. Die Dienst Anmelde Informationen müssen in diesem Fall mithilfe <xref:System.ServiceModel.Description.ClientCredentials> der-Klasse oder `ClientCredentials` dem Behavior-Element angegeben werden und das Dienst Zertifikat mithilfe des [ \<serviceCertificate->](servicecertificate-of-servicecredentials.md)angegeben werden.|  
+|UserName|: Erfordert, dass der Client mit Benutzernamen-Anmelde Informationen auf dem Server authentifiziert wird. Diese Anmelde Informationen müssen mit den [\<clientCredential->](clientcredentials.md)angegeben werden.<br />-WCF unterstützt nicht das Senden eines Kenn Wort Hashwerts oder das Ableiten von Schlüsseln mit Kenn Wörtern und die Verwendung solcher Schlüssel für die Nachrichten Sicherheit. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen Anmelde Informationen verwendet werden. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
+|Zertifikat|Erfordert, dass der Client über ein Zertifikat beim Server authentifiziert wird. Die Client Anmelde Informationen müssen in diesem Fall mit [\<clientCredential->](clientcredentials.md) und dem [\<ClientCertificate](clientcertificate-of-servicecredentials.md)angegeben werden. Außerdem muss für den Fall, dass der Nachrichtensicherheitsmodus verwendet wird, dem Client das Dienstzertifikat bereitgestellt werden. Die Dienst Anmelde Informationen müssen in diesem Fall mit <xref:System.ServiceModel.Description.ClientCredentials>-Klasse oder `ClientCredentials` Behavior-Element angegeben werden und das Dienst Zertifikat mit dem [\<serviceCertificate->](servicecertificate-of-servicecredentials.md)angegeben werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](security-of-basichttpbinding.md)|Definiert die Sicherheitsfunktionen für die [ \<BasicHttpBinding->](basichttpbinding.md).|  
+|[\<Security >](security-of-basichttpbinding.md)|Definiert die Sicherheitsfunktionen für den [\<BasicHttpBinding->](basichttpbinding.md).|  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, die basicHttpBinding und Nachrichtensicherheit verwendet. Im folgenden Konfigurationsbeispiel für einen Dienst gibt die Endpunktdefinition die basicHttpBinding an und verweist auf die Bindungskonfiguration `Binding1`. Das Zertifikat, das der Dienst zur Authentifizierung beim Client verwendet, wird im `behaviors`-Abschnitt der Konfigurationsdatei im `serviceCredentials`-Element festgelegt. Der Prüfungsmodus für das Zertifikat, das der Client zum Authentifizieren beim Dienst verwendet, ist auch im `behaviors`-Abschnitt im `clientCertificate`-Element festgelegt.  
@@ -130,4 +130,4 @@ Definiert die Einstellungen für die [ \<Sicherheit auf Nachrichten Ebene des Ba
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

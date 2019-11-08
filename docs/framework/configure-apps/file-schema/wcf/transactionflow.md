@@ -2,22 +2,22 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: 8247dd62f4dda853487fe52f00f8f548b627c075
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: f5bcd142fb2b032ea179bcbba68fee53b98d2d77
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399397"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736312"
 ---
-# <a name="transactionflow"></a>\<transactionFlow>
+# <a name="transactionflow"></a>\<transaktionflow >
 Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding->** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transaktionflow->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transaktionflow >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding >](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Hinweise  
  Mit diesem Element können Sie den eingehenden Transaktionsfluss in den Bindungseinstellungen eines Endpunkts aktivieren oder deaktivieren und das gewünschte Protokollformat für eingehende Transaktionen angeben. Weitere Informationen zur Verwendung dieses Konfigurations Elements finden Sie unter [Service Model Transaction Configuration](../../../wcf/feature-details/servicemodel-transaction-configuration.md) und [Aktivieren des Transaktions Flusses](../../../wcf/feature-details/enabling-transaction-flow.md).  
@@ -59,4 +59,4 @@ Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.
 - [Bindungen](../../../wcf/bindings.md)
 - [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding >](custombinding.md)

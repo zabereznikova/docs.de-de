@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118179"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739087"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames>-Element
 
@@ -72,7 +72,7 @@ Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert
 - Nicht verzögert signiert
 
 > [!NOTE]
-> Wenn das Umgehungs Feature für alle Anwendungen auf dem Computer mithilfe eines Registrierungsschlüssels ausgeschaltet wurde, hat diese Einstellung keine Auswirkungen. Weitere Informationen finden Sie unter Gewusst [wie: Deaktivieren des Strong-Name-Bypass-Features](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).
+> Wenn das Umgehungs Feature für alle Anwendungen auf dem Computer mithilfe eines Registrierungsschlüssels ausgeschaltet wurde, hat diese Einstellung keine Auswirkungen. Weitere Informationen finden Sie unter Gewusst [wie: Deaktivieren des Strong-Name-Bypass-Features](../../../../standard/assembly/disable-strong-name-bypass-feature.md).
 
 ## <a name="example"></a>Beispiel
 

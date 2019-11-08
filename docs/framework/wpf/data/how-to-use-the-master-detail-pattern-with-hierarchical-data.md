@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 2e7d9ceed3ab8385f07d87ecdb92c0a99d410b40
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e4183ddc3868a1568662853b46e05348df129092
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459084"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733481"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Gewusst wie: Verwenden des Master/Detail-Musters mit hierarchischen Daten
 Dieses Beispiel zeigt, wie das Master/Detail-Szenario implementiert wird.  
@@ -31,7 +31,7 @@ Dieses Beispiel zeigt, wie das Master/Detail-Szenario implementiert wird.
   
 2. Sie müssen die <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>-Eigenschaft auf `true` für die <xref:System.Windows.Controls.ListBox> Steuerelemente festlegen, deren Auswahl Sie nachverfolgen. Durch Festlegen dieser Eigenschaft wird sichergestellt, dass das ausgewählte Element immer als <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>festgelegt ist. Wenn das <xref:System.Windows.Controls.ListBox> die Daten aus einer <xref:System.Windows.Data.CollectionViewSource>abruft, werden die Auswahl und die Währung Alternativ automatisch synchronisiert.  
   
- Das Verfahren unterscheidet sich geringfügig, wenn Sie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten verwenden. Ein Beispiel finden Sie unter [Verwenden des Master/Detail-Musters mit hierarchischen XML-Daten](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ Das Verfahren unterscheidet sich geringfügig bei der Verwendung von XML-Daten. Ein Beispiel finden Sie unter [Verwenden des Master/Detail-Musters mit hierarchischen XML-Daten](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458829"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740824"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable-Attribut
-Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace Präfixe, die in einer Markup Datei gefunden werden, von einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor ignoriert werden können. Das `mc:Ignorable`-Attribut unterstützt Markup Kompatibilität sowohl für die Zuordnung von benutzerdefinierten Namespaces als auch für [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Versionsverwaltung.  
+Gibt an, welche XML-Namespace Präfixe, die in einer Markup Datei vorkommen, von einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor ignoriert werden. Das `mc:Ignorable`-Attribut unterstützt Markup Kompatibilität sowohl für die Zuordnung von benutzerdefinierten Namespaces als auch für [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Versionsverwaltung.  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>Verwendung von XAML-Attributen (einzelnes Präfix)  
   
@@ -51,7 +51,7 @@ Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
 |*ThisElementCanBeIgnored*|Ein Element, das von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Prozessor Implementierungen ignoriert werden kann, wenn der zugrunde liegende Typ nicht aufgelöst werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace-Präfix ist die empfohlene Präfix Konvention, die beim Mapping des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Compatibility-Namespace `http://schemas.openxmlformats.org/markup-compatibility/2006`verwendet wird.  
+ Das `mc` XML-Namespace Präfix ist die empfohlene Präfix Konvention, die beim Mapping des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Compatibility-Namespace `http://schemas.openxmlformats.org/markup-compatibility/2006`verwendet werden soll.  
   
  Elemente oder Attribute, bei denen der Präfix Teil des Element namens als `mc:Ignorable` identifiziert wird, werden bei der Verarbeitung durch einen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor keine Fehler hervorrufen. Wenn dieses Attribut nicht in einen zugrunde liegenden Typ oder ein zugrunde liegendes Programmierkonstrukt aufgelöst werden konnte, wird dieses Element ignoriert. Beachten Sie jedoch, dass ignorierte Elemente möglicherweise weiterhin zusätzliche Analyse-Fehler für zusätzliche Element Anforderungen generieren, die Nebeneffekte dieses Elements sind, die nicht verarbeitet werden. Beispielsweise kann ein bestimmtes Element Inhalts Modell genau ein untergeordnetes Element erfordern, aber wenn das angegebene untergeordnete Element in einem `mc:Ignorable` Präfix war und das angegebene untergeordnete Element nicht in einen Typ aufgelöst werden konnte, kann der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor einen Fehler hervorrufen.  
   

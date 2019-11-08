@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458975"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740848"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458975"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Koersion, Animationen und Basiswert  
- Sowohl Koersion als auch Animation wirken auf einen Wert, der in diesem [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] als „Basiswert“ bezeichnet wird. Der Basiswert ist daher der Wert, der dadurch bestimmt wird, dass in den Elementen von unten nach oben geprüft wird, bis das Element 2 erreicht wird.  
+ Die Umwandlung und Animation agieren beide auf einen Wert, der in diesem SDK als "Basiswert" bezeichnet wird. Der Basiswert ist daher der Wert, der dadurch bestimmt wird, dass in den Elementen von unten nach oben geprüft wird, bis das Element 2 erreicht wird.  
   
  Bei einer Animation kann sich der Basiswert auf den animierten Wert auswirken, wenn diese Animation nicht sowohl „From“ (Von) als auch „To“ (Zu) für bestimmte Verhalten angibt, oder wenn die Animation nach Abschluss bewusst auf den Basiswert zurücksetzt. Um dies in der Praxis nachzuvollziehen, führen Sie das [Beispiel für From-, To- und By-Animationszielwerte](https://go.microsoft.com/fwlink/?LinkID=159988) aus. Versuchen Sie, die lokalen Werte für die Höhe des Rechtecks im Beispiel so festzulegen, dass sich der ursprüngliche lokale Wert von jedem „From“-Wert in der Animation unterscheidet. Sie werden feststellen, dass die Animationen sofort starten, die „From“-Werte verwenden und den Basiswert ersetzen. Die Animation gibt ggf. an, dass der Wert vor der Animation wiedergegeben werden soll, nachdem er durch Angabe des <xref:System.Windows.Media.Animation.FillBehavior>beendet wurde. Anschließend wird die normale Rangfolge für die Bestimmung des Basiswerts verwendet.  
   

@@ -1,23 +1,23 @@
 ---
-title: <security>Element von<ws2007FederationHttpBinding>
+title: <security> Element von <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 450b2403b8cd4ec43a41fd27bccb3b77202820bb
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: b85c54c6507313522286e0c66504cfd0c8afb2b0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399904"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738721"
 ---
-# <a name="security-element-of-ws2007federationhttpbinding"></a>\<Security > Element von \<WS2007FederationHttpBinding >
-Definiert die Sicherheitseinstellungen des [ \<WS2007FederationHttpBinding->](ws2007federationhttpbinding.md) Elements.  
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<Sicherheits > Element von \<WS2007FederationHttpBinding >
+Definiert die Sicherheitseinstellungen des [\<WS2007FederationHttpBinding->](ws2007federationhttpbinding.md) Elements.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WS2007FederationHttpBinding >** ](ws2007federationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheit >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,27 +43,27 @@ Definiert die Sicherheitseinstellungen des [ \<WS2007FederationHttpBinding->](ws
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`mode`|Optional. Gibt den angewendeten Sicherheitstyp an. Der Standardwert ist `Message`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|`mode`|Dies ist optional. Gibt den angewendeten Sicherheitstyp an. Der Standardwert ist `Message`sein. Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>mode-Attribut  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|None|Die SOAP-Nachricht ist während der Übertragung nicht sicher.|  
-|Meldung|Integrität, Vertraulichkeit, Serverauthentifizierung und Clientauthentifizierung werden mittels SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Der Dienst muss mit einem Zertifikat konfiguriert werden. Die Clientauthentifizierung basiert auf dem Token, das von einem Sicherheitstokendienst für den Client ausgestellt wird.|  
+|Keiner|Die SOAP-Nachricht ist während der Übertragung nicht sicher.|  
+|Nachricht|Integrität, Vertraulichkeit, Serverauthentifizierung und Clientauthentifizierung werden mittels SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Der Dienst muss mit einem Zertifikat konfiguriert werden. Die Clientauthentifizierung basiert auf dem Token, das von einem Sicherheitstokendienst für den Client ausgestellt wird.|  
 |TransportWithMessageCredential|Integrität, Vertraulichkeit und Serverauthentifizierung werden über HTTPS bereitgestellt. Der Dienst muss mit einem Zertifikat konfiguriert werden. Die Clientauthentifizierung wird mittels SOAP-Nachrichtensicherheit bereitgestellt und basiert auf dem Token, das von einem Sicherheitstokendienst für den Client ausgestellt wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<message>](message-of-ws2007httpbinding.md)|Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<message >](message-of-ws2007httpbinding.md)|Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsfunktionen der [ \<WSDualHttpBinding->](wsdualhttpbinding.md).|  
+|[\<binding >](bindings.md)|Definiert alle Bindungsfunktionen des [\<WSDualHttpBinding->](wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -77,4 +77,4 @@ Definiert die Sicherheitseinstellungen des [ \<WS2007FederationHttpBinding->](ws
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

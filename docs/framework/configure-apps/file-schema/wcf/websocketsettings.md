@@ -2,22 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399132"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732557"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings>
+# <a name="websocketsettings"></a>\<websocketsettings >
 Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> "netthttpbinding"** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<websocketsettings->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<websocketsettings >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,13 +61,13 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 |Nie|Verwendet niemals das WebSocket-Protokoll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|\<netHttpBinding>|Gibt das NetHttpBinding-Element an.|  
+|\<">".|Gibt das NetHttpBinding-Element an.|  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie das \<websocketsettings >-Element verwendet wird.  
@@ -96,4 +96,4 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

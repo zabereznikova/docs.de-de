@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 2bfd9809a6ad487a7e706366dc6bce8fe951c940
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97e878e4932ca9122bf27f76c32d1a56e69f253a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459761"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740606"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Gewusst wie: Bereitstellen von Daten, um diese in XAML zu binden
 In diesem Thema werden verschiedene Möglichkeiten erläutert, wie Sie Daten in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]für die Bindung zur Verfügung stellen können, je nach den Anforderungen Ihrer Anwendung.  
@@ -38,7 +38,7 @@ In diesem Thema werden verschiedene Möglichkeiten erläutert, wie Sie Daten in 
  [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- Informationen zum Zugreifen auf [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten für die Bindung mithilfe der <xref:System.Windows.Data.XmlDataProvider>-Klasse finden Sie unter [binden an XML-Daten mithilfe von XmlDataProvider und XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Informationen zum Zugreifen auf [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten für die Bindung mithilfe der <xref:System.Windows.Data.ObjectDataProvider>-Klasse finden Sie unter [binden an XDocument, XElement oder LINQ für XML Query Ergebnisse](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
+ Informationen zum Zugreifen auf XML-Daten für die Bindung mithilfe der <xref:System.Windows.Data.XmlDataProvider>-Klasse finden Sie unter [binden an XML-Daten mithilfe von XmlDataProvider-und XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Informationen zum Zugreifen auf XML-Daten für die Bindung mithilfe der <xref:System.Windows.Data.ObjectDataProvider>-Klasse finden Sie unter [binden an XDocument, XElement oder LINQ für XML Query Ergebnisse](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
   
  Informationen zu vielen Möglichkeiten, wie Sie die Daten angeben können, an die die Bindung erfolgen soll, finden Sie unter [angeben der Bindungs Quelle](how-to-specify-the-binding-source.md). Informationen zu den Datentypen, an die Sie binden können, oder zum Implementieren eigener Common Language Runtime (CLR)-Objekte für die Bindung finden Sie unter [Übersicht über Bindungs Quellen](binding-sources-overview.md).  
   

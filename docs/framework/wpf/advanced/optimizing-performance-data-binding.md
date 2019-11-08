@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458550"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740797"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimieren der Leistung: Datenbindung
-Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von CLR-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]gebunden werden.  
+Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von CLR-Objekten und XML gebunden werden.  
   
  In diesem Thema erhalten Sie Empfehlungen bezüglich der Datenbindung.  
 
@@ -69,7 +69,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Konvertieren Sie CLR-Objekte nicht nur für die Datenbindung in XML  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht es Ihnen, Daten an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Inhalt zu binden. die Datenbindung an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Inhalt ist jedoch langsamer als die Datenbindung an CLR-Objekte. Konvertieren Sie CLR-Objektdaten nicht in XML, wenn der einzige Zweck für die Datenbindung besteht.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht es Ihnen, Daten an XML-Inhalt zu binden. die Datenbindung an XML-Inhalt ist jedoch langsamer als die Datenbindung an CLR-Objekte. Konvertieren Sie CLR-Objektdaten nicht in XML, wenn der einzige Zweck für die Datenbindung besteht.  
   
 ## <a name="see-also"></a>Siehe auch
 

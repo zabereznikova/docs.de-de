@@ -2,23 +2,23 @@
 title: <security> von <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 890cee3271c410a921b3a88f78d0705ba8718252
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399846"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736480"
 ---
-# <a name="security-of-nethttpbinding"></a>\<Sicherheits > von \<"netthttpbinding" >
+# <a name="security-of-nethttpbinding"></a>\<Sicherheits > der \<"netthttpbinding" >
 
-Definiert die Sicherheitsfunktionen des [ \<> "netthttpbinding](nethttpbinding.md)".
+Definiert die Sicherheitsfunktionen des [\<">](nethttpbinding.md)".
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> "netthttpbinding"** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheit >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,15 +40,15 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|Modus|Optional. Gibt den verwendeten Sicherheitstyp an. Die Standardeinstellung ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|
+|Modus|Dies ist optional. Gibt den verwendeten Sicherheitstyp an. Der Standardwert ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|
 
 ## <a name="mode-attribute"></a>Mode-Attribut
 
-|Wert|Description|
+|Wert|Beschreibung|
 |-----------|-----------------|
-|None|-Nachrichten werden während der Übertragung nicht gesichert.|
+|Keiner|-Nachrichten werden während der Übertragung nicht gesichert.|
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Die SOAP-Nachrichten werden über HTTPS gesichert. Der Dienst wird über das X.509-Zertifikat beim Client authentifiziert. Der Client wird über ClientCredentialType authentifiziert.|
-|Meldung|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out-of-band zur Verfügung gestellt wird. Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.|
+|Nachricht|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out-of-band zur Verfügung gestellt wird. Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.|
 |TransportWithMessageCredential|Integrität, Vertraulichkeit und Serverauthentifizierung werden über die Transportsicherheit bereitgestellt. Die Clientauthentifizierung wird über die SOAP-Nachrichtensicherheit bereitgestellt. Dieser Modus ist relevant, wenn sich der Benutzer mit Benutzername/Kennwort authentifiziert und eine vorhandene HTTP-Bereitstellung für die Absicherung der Nachrichtenübertragung vorhanden ist.|
 |TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit. Er bietet dagegen HTTP-basierte Clientauthentifizierung. Dieser Modus sollte mit Vorsicht angewendet werden. Er sollte in Umgebungen verwendet werden, in denen die Transportsicherheit auf andere Weise (z. b. IPSec) bereitgestellt wird und nur die Client Authentifizierung von der WCF-Infrastruktur bereitgestellt wird.|
 
@@ -56,14 +56,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<transport>](transport-of-nethttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|
-|[\<message>](message-of-nethttpbinding.md)|Definiert die Nachrichtensicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.BasicHttpMessageSecurity>.|
+|[\<Transport >](transport-of-nethttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|
+|[\<message >](message-of-nethttpbinding.md)|Definiert die Nachrichtensicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.BasicHttpMessageSecurity>.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|Bindung|Das Bindungs Element des [ \<BasicHttpBinding->](basichttpbinding.md).|
+|Bindung|Das Bindungs Element der [\<BasicHttpBinding->](basichttpbinding.md).|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -78,4 +78,4 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459026"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740738"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Folglich müssen die meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Entwickler keine Schnittstelle schreiben, die mehr als einen Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.  
@@ -49,7 +49,7 @@ ms.locfileid: "73459026"
   
  Wie interagieren Hintergrundthreads mit dem Benutzer, wenn nur ein Thread die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ändern kann? Ein Hintergrund Thread kann den [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread bitten, einen Vorgang in seinem Auftrag auszuführen. Dies erfolgt durch das Registrieren eines Arbeits Elements mit dem <xref:System.Windows.Threading.Dispatcher> des [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Threads. Die <xref:System.Windows.Threading.Dispatcher>-Klasse stellt zwei Methoden zum Registrieren von Arbeits Elementen bereit: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> und <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Beide Methoden planen einen Delegaten für die Ausführung ein. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ist ein synchroner Aufruf – das heißt, er wird erst zurückgegeben, wenn der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread die Ausführung des Delegaten tatsächlich abgeschlossen hat. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> ist asynchron und wird sofort zurückgegeben.  
   
- Der <xref:System.Windows.Threading.Dispatcher> ordnet die Elemente in der Warteschlange nach Priorität an. Es gibt zehn Ebenen, die beim Hinzufügen eines Elements zur <xref:System.Windows.Threading.Dispatcher> Warteschlange angegeben werden können. Diese Prioritäten werden in der <xref:System.Windows.Threading.DispatcherPriority>-Enumeration beibehalten. Ausführliche Informationen zu <xref:System.Windows.Threading.DispatcherPriority> Ebenen finden Sie in der [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]-Dokumentation.  
+ Der <xref:System.Windows.Threading.Dispatcher> ordnet die Elemente in der Warteschlange nach Priorität an. Es gibt zehn Ebenen, die beim Hinzufügen eines Elements zur <xref:System.Windows.Threading.Dispatcher> Warteschlange angegeben werden können. Diese Prioritäten werden in der <xref:System.Windows.Threading.DispatcherPriority>-Enumeration beibehalten. Ausführliche Informationen zu <xref:System.Windows.Threading.DispatcherPriority> Ebenen finden Sie in der Windows SDK-Dokumentation.  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>Threads in Aktion: Beispiele  

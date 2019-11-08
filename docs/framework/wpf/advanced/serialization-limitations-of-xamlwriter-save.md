@@ -6,12 +6,12 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582596"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740744"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Serialisierungseinschränkungen für XamlWriter.Save
 Die API-<xref:System.Windows.Markup.XamlWriter.Save%2A> kann verwendet werden, um den Inhalt einer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung als [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Datei zu serialisieren. Es gibt jedoch einige wichtige Einschränkungen darin, was genau serialisiert wird. Diese Einschränkungen und einige allgemeine Aspekte werden in diesem Thema dokumentiert.  
@@ -40,4 +40,4 @@ Die API-<xref:System.Windows.Markup.XamlWriter.Save%2A> kann verwendet werden, u
   
 - Rich-Text und Flussdokumente: Text und alle darin enthaltenen Elementformatierungen und Elementeinschlüsse werden in der Ausgabe beibehalten. Dies kann für Mechanismen nützlich sein, die einer Zwischenablagefunktionalität ähneln.  
   
-- Erhalten von Daten für Geschäftsobjekte: Wenn Sie Daten in benutzerdefinierten Elementen wie z.B. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Daten gespeichert haben, können diese Geschäftsobjekte durch Serialisierung beibehalten werden. Voraussetzung hierfür ist, dass bei den Geschäftsobjekten grundlegende [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Regeln befolgt werden, wie z.B. das Bereitstellen von benutzerdefinierten Konstruktoren und das Konvertieren für durch Verweis übergebene Eigenschaftswerte.
+- Beibehalten von Geschäftsobjekt Daten: Wenn Sie Daten in benutzerdefinierten Elementen (z. b. XML-Daten) gespeichert haben, sofern Ihre Geschäftsobjekte grundlegenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Regeln folgen, wie z. b. das Bereitstellen von benutzerdefinierten Konstruktoren und die Konvertierung für durch verweisende Eigenschaftswerte, Objekte können durch Serialisierung fortgeführt werden.

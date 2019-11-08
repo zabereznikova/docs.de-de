@@ -2,20 +2,20 @@
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: b26201064aad3a8a09d8604a9706fe3c149cbf58
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: be538274636b519600d87b1d3be2faaa2e161cd0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400234"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738925"
 ---
-# <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
+# <a name="mexnamedpipebinding"></a>\<mexnamedpipebinding >
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über eine benannte Pipe verwendet wird.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexnamedpipebinding->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexnamedpipebinding >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
+|[\<-Bindungen >](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -62,4 +62,4 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960975"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740773"
 ---
 # <a name="sample-opentype-font-pack"></a>OpenType-Beispielschriftartenpaket
-Dieses Thema enthält eine Übersicht über die OpenType-Beispiel Schriftarten, die mit [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]dem verteilt werden. Die Beispiel Schriftarten unterstützen erweiterte OpenType-Funktionen, die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] von Anwendungen verwendet werden können.  
+Dieses Thema enthält eine Übersicht über die OpenType-Beispiel Schriftarten, die mit dem Windows SDK verteilt werden. Die Beispiel Schriftarten unterstützen erweiterte OpenType-Funktionen, die von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen verwendet werden können.  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>Schriftarten im OpenType-Schriftartenpaket  
- Bietet eine Reihe von OpenType-Beispiel Schriftarten, die Sie beim Erstellen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] von-Anwendungen verwenden können. [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Die Beispielschriftarten werden unter der Lizenz von Ascender Corporation bereitgestellt. Diese Schriftarten implementieren nur eine Teilmenge der gesamten Features, die im OpenType-Format definiert sind. In der folgenden Tabelle sind die Namen der OpenType-Beispiel Schriftarten aufgeführt.  
+ Der Windows SDK bietet eine Reihe von OpenType-Beispiel Schriftarten, die Sie beim Erstellen von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwenden können. Die Beispielschriftarten werden unter der Lizenz von Ascender Corporation bereitgestellt. Diese Schriftarten implementieren nur eine Teilmenge der gesamten Features, die im OpenType-Format definiert sind. In der folgenden Tabelle sind die Namen der OpenType-Beispiel Schriftarten aufgeführt.  
   
-|**Name**|**File**|  
+|**Name**|**Datei**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -44,7 +44,7 @@ Dieses Thema enthält eine Übersicht über die OpenType-Beispiel Schriftarten, 
 ## <a name="installing-the-fonts"></a>Installieren der Schriftarten  
  Sie haben die Möglichkeit, die OpenType-Beispiel Schriftarten im Standardverzeichnis "Windows-Schriftarten" ( **\Windows\Fonts**) zu installieren. Verwenden Sie die Systemsteuerung „Schriftarten“, um die Schriftarten zu installieren. Sobald sich diese Schriftarten auf dem Computer befinden, sind Sie für alle Anwendungen verfügbar, die auf standardmäßige Windows-Schriftarten verweisen. Sie können eine repräsentative Anzahl an Zeichen in mehreren Schriftgraden anzeigen, indem Sie doppelt auf die Schriftartendatei klicken. Der folgende Screenshot zeigt die Schriftartendatei Lindsey, Linds.ttf.  
   
- ![Lindsey Schriftart &#40;OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Schriftart Lindsey &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Anzeigen der Schriftart Lindsey  
   
 <a name="using_the_fonts"></a>   

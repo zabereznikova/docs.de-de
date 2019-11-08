@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459768"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733742"
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 
@@ -85,7 +85,7 @@ Mithilfe von <xref:System.Windows.Controls.Page>können Sie eine Navigier Bare S
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-Eine <xref:System.Windows.Controls.Page>, die in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementiert ist, hat `Page` als Stamm Element und erfordert die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Namespace Deklaration. Das `Page`-Element enthält den Inhalt, zu dem Sie navigieren und den Sie anzeigen möchten. Sie fügen Inhalt hinzu, indem Sie das `Page.Content`-Eigenschafts Element festlegen, wie im folgenden Markup gezeigt.
+Eine <xref:System.Windows.Controls.Page>, die in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementiert ist, hat `Page` als Stamm Element und erfordert die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]XML-Namespace Deklaration. Das `Page`-Element enthält den Inhalt, zu dem Sie navigieren und den Sie anzeigen möchten. Sie fügen Inhalt hinzu, indem Sie das `Page.Content`-Eigenschafts Element festlegen, wie im folgenden Markup gezeigt.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -106,7 +106,7 @@ Ein nur-Markup-<xref:System.Windows.Controls.Page> ist zum Anzeigen von Inhalten
 
 Damit eine Markup- und eine Code-Behind-Datei zusammenarbeiten können, ist die folgende Konfiguration erforderlich:
 
-- Im Markup muss das `Page`-Element das `x:Class`-Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden sein von `x:Class` in der Markup Datei, dass Microsoft Build Engine (MSBuild) eine `partial` Klasse erstellt, die von <xref:System.Windows.Controls.Page> abgeleitet ist und über den Namen verfügt, der durch das `x:Class`-Attribut angegeben wird. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Namespace Deklaration für das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Die generierte `partial` Klasse implementiert `InitializeComponent`, das aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.
+- Im Markup muss das `Page`-Element das `x:Class`-Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden sein von `x:Class` in der Markup Datei, dass Microsoft Build Engine (MSBuild) eine `partial` Klasse erstellt, die von <xref:System.Windows.Controls.Page> abgeleitet ist und über den Namen verfügt, der durch das `x:Class`-Attribut angegeben wird. Dies erfordert das Hinzufügen einer XML-Namespace Deklaration für das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Die generierte `partial` Klasse implementiert `InitializeComponent`, das aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.
 
 - Bei Code-Behind muss die Klasse eine `partial` Klasse mit demselben Namen sein, der im Markup durch das `x:Class`-Attribut angegeben ist, und Sie muss von <xref:System.Windows.Controls.Page> abgeleitet werden. Dadurch kann die Code-Behind-Datei mit der `partial`-Klasse verknüpft werden, die beim Erstellen der Anwendung für die Markup Datei generiert wird (siehe [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).
 

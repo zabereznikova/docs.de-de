@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453875"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740939"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Übersicht über bidirektionale Features in WPF
 
@@ -98,7 +98,7 @@ Die folgende Grafik zeigt ein weiteres Beispiel, in dem Zahlen und arithmetische
 
 Benutzer dieser Anwendung werden von der Ausgabe enttäuscht, auch wenn die <xref:System.Windows.FlowDirection> richtig ist, werden die Zahlen nicht so strukturiert, dass arabische Zahlen formatiert werden sollen.
 
-XAML-Elemente können ein [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Attribut (`xml:lang`) enthalten, das die Sprache der einzelnen Elemente definiert. XAML unterstützt auch ein [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] sprach Prinzip, bei dem `xml:lang` Werte, die auf übergeordnete Elemente in der Struktur angewendet werden, von untergeordneten Elementen verwendet werden. Im vorherigen Beispiel wurde die Standard `xml:lang` verwendet, die für XAML `en-US` ist, da keine Sprache für das <xref:System.Windows.Documents.Run>-Element oder eines seiner Elemente der obersten Ebene definiert wurde. Der interne Zahlen Strukturierungs Algorithmus von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wählt Zahlen in der entsprechenden Sprache aus – in diesem Fall Englisch. Zum ordnungsgemäßen Rendering der arabischen Zahlen `xml:lang` muss festgelegt werden.
+XAML-Elemente können ein XML-Attribut (`xml:lang`) enthalten, das die Sprache der einzelnen Elemente definiert. XAML unterstützt auch ein XML-sprach Prinzip, wobei `xml:lang` Werte, die auf übergeordnete Elemente in der Struktur angewendet werden, von untergeordneten Elementen verwendet werden. Im vorherigen Beispiel wurde die Standard `xml:lang` verwendet, die für XAML `en-US` ist, da keine Sprache für das <xref:System.Windows.Documents.Run>-Element oder eines seiner Elemente der obersten Ebene definiert wurde. Der interne Zahlen Strukturierungs Algorithmus von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wählt Zahlen in der entsprechenden Sprache aus – in diesem Fall Englisch. Zum ordnungsgemäßen Rendering der arabischen Zahlen `xml:lang` muss festgelegt werden.
 
 Die folgende Abbildung zeigt das Beispiel mit hinzugefügten `xml:lang`.
 

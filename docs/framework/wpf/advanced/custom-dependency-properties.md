@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458989"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740886"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -35,7 +35,7 @@ In diesem Thema wird vorausgesetzt, dass Sie sich mit Abhängigkeitseigenschafte
 
 ## <a name="what-is-a-dependency-property"></a>Was ist eine Abhängigkeitseigenschaft?
 
-Sie können aktivieren, was andernfalls eine Common Language Runtime (CLR)-Eigenschaft wäre, um Formatierung, Datenbindung, Vererbung, Animationen und Standardwerte zu unterstützen, indem Sie Sie als Abhängigkeits Eigenschaft implementieren. Abhängigkeits Eigenschaften sind Eigenschaften, die beim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaften System durch Aufrufen der <xref:System.Windows.DependencyProperty.Register%2A>-Methode (oder <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) registriert sind und durch ein <xref:System.Windows.DependencyProperty> Bezeichnerfeld unterstützt werden. Abhängigkeits Eigenschaften können nur von <xref:System.Windows.DependencyObject> Typen verwendet werden, aber <xref:System.Windows.DependencyObject> ist in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassenhierarchie sehr hoch, sodass die Mehrzahl der in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügbaren Klassen Abhängigkeits Eigenschaften unterstützen können. Weitere Informationen zu Abhängigkeitseigenschaften und zur Terminologie und den Konventionen für die Beschreibung in [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
+Sie können aktivieren, was andernfalls eine Common Language Runtime (CLR)-Eigenschaft wäre, um Formatierung, Datenbindung, Vererbung, Animationen und Standardwerte zu unterstützen, indem Sie Sie als Abhängigkeits Eigenschaft implementieren. Abhängigkeits Eigenschaften sind Eigenschaften, die beim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaften System durch Aufrufen der <xref:System.Windows.DependencyProperty.Register%2A>-Methode (oder <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) registriert sind und durch ein <xref:System.Windows.DependencyProperty> Bezeichnerfeld unterstützt werden. Abhängigkeits Eigenschaften können nur von <xref:System.Windows.DependencyObject> Typen verwendet werden, aber <xref:System.Windows.DependencyObject> ist in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassenhierarchie sehr hoch, sodass die Mehrzahl der in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügbaren Klassen Abhängigkeits Eigenschaften unterstützen können. Weitere Informationen zu Abhängigkeits Eigenschaften und einigen der Begriffe und Konventionen, die für die Beschreibung in diesem SDK verwendet werden, finden Sie unter [Übersicht über Abhängigkeits Eigenschaften](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
 

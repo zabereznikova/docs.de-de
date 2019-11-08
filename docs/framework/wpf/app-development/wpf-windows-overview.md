@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424940"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740681"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen mithilfe der <xref:System.Windows.Window>-Klasse ihre eigenen Fenster bereit. In diesem Thema wird <xref:System.Windows.Window> vorgestellt, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
@@ -88,7 +88,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Folgendes ist erforderlich, damit eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup Datei und eine Code-Behind-Datei zusammenarbeiten können:  
   
-- Im Markup muss das `Window`-Element das `x:Class`-Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden sein von `x:Class` in der Markup Datei, dass Microsoft Build Engine (MSBuild) eine `partial` Klasse erstellt, die von <xref:System.Windows.Window> abgeleitet ist und über den Namen verfügt, der durch das `x:Class`-Attribut angegeben wird. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Namespace Deklaration für das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Die generierte `partial` Klasse implementiert die `InitializeComponent`-Methode, die aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.  
+- Im Markup muss das `Window`-Element das `x:Class`-Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden sein von `x:Class` in der Markup Datei, dass Microsoft Build Engine (MSBuild) eine `partial` Klasse erstellt, die von <xref:System.Windows.Window> abgeleitet ist und über den Namen verfügt, der durch das `x:Class`-Attribut angegeben wird. Dies erfordert das Hinzufügen einer XML-Namespace Deklaration für das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Die generierte `partial` Klasse implementiert die `InitializeComponent`-Methode, die aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.  
   
 - Bei Code-Behind muss die Klasse eine `partial` Klasse mit demselben Namen sein, der im Markup durch das `x:Class`-Attribut angegeben ist, und Sie muss von <xref:System.Windows.Window>abgeleitet werden. Dadurch kann die Code-Behind-Datei mit der `partial`-Klasse verknüpft werden, die beim Erstellen der Anwendung für die Markup Datei generiert wird (siehe [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
   

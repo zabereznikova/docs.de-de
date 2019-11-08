@@ -1,24 +1,24 @@
 ---
-title: <message>Element von<wsFederationHttpBinding>
+title: <message> Element von <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400284"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738980"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<Message >-Element \<von WSFederationHttpBinding >
-Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für die [ \<WSFederationHttpBinding->](wsfederationhttpbinding.md).  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<Message > Element von \<WSFederationHttpBinding >
+Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für die [\<WSFederationHttpBinding->](wsfederationhttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WSFederationHttpBinding->** ](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Message >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WSFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheit >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Meldung** >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -87,9 +87,9 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für die [
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|algorithmSuite|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. In der Tabelle "algorithmSuite-Attribut" sind die für dieses Attribut gültigen Werte zusammengestellt. Der Standardwert ist `Basic256`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.|  
-|issuedKeyType|Gibt den Typ des auszustellenden Schlüssels an. Folgende Werte sind gültig:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Die Standardeinstellung ist `SymmetricKey`. Dieses Attribut ist vom Typ <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|issuedTokenType|Eine Zeichenfolge mit einem URI, die den Typ des auszustellenden Tokens angibt. Die Standardeinstellung ist `null`.|  
+|algorithmSuite|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. In der Tabelle "algorithmSuite-Attribut" sind die für dieses Attribut gültigen Werte zusammengestellt. Der Standardwert ist `Basic256`sein.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.|  
+|issuedKeyType|Gibt den Typ des auszustellenden Schlüssels an. Folgende Werte sind gültig:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Der Standardwert ist `SymmetricKey`. Dieses Attribut ist vom Typ <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedTokenType|Eine Zeichenfolge mit einem URI, die den Typ des auszustellenden Tokens angibt. Der Standardwert ist `null`.|  
 |negotiateServiceCredential|Ein boolescher Wert, der angibt, ob die Dienstanmeldeinformationen als Teil der Aushandlung ausgetauscht werden sollen oder ob sie out-of-band zur Verfügung stehen. Der Standardwert ist `true`, was bedeutet, dass die Dienstanmeldeinformationen ausgehandelt werden.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite-Attribut  
@@ -117,16 +117,16 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für die [
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Gibt eine Auflistung von Anspruchstypen für diese Bindung an. Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<claimtyperequirequirements >](claimtyperequirements-element.md)|Gibt eine Auflistung von Anspruchstypen für diese Bindung an. Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |issuer|Gibt einen Endpunkt an, der ein Sicherheitstoken ausstellt. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Gibt die Endpunktadresse des Ausstellers an.|  
-|[\<tokenRequestParameters>](tokenrequestparameters.md)|Eine Auflistung von Tokenanforderungsparametern. Jeder Parameter ist ein XML-Element.|  
+|[\<TokenRequestParameters >](tokenrequestparameters.md)|Eine Auflistung von Tokenanforderungsparametern. Jeder Parameter ist ein XML-Element.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](security-of-wsfederationhttpbinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
+|[\<Security >](security-of-wsfederationhttpbinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -138,4 +138,4 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für die [
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

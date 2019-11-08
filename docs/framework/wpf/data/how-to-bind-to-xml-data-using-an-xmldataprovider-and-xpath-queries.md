@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459214"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733562"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Gewusst wie: Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen
-In diesem Beispiel wird gezeigt, wie mithilfe eines <xref:System.Windows.Data.XmlDataProvider>eine Bindung an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Daten hergestellt wird.  
+In diesem Beispiel wird gezeigt, wie mithilfe einer <xref:System.Windows.Data.XmlDataProvider>eine Bindung an XML-Daten hergestellt wird.  
   
- Bei einer <xref:System.Windows.Data.XmlDataProvider>können die zugrunde liegenden Daten, auf die über die Datenbindung in der Anwendung zugegriffen werden kann, jede Struktur von [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Knoten sein. Mit anderen Worten: eine <xref:System.Windows.Data.XmlDataProvider> stellt eine bequeme Möglichkeit dar, jede Struktur von [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Knoten als Bindungs Quelle zu verwenden.  
+ Bei einer <xref:System.Windows.Data.XmlDataProvider>können die zugrunde liegenden Daten, auf die über die Datenbindung in Ihrer Anwendung zugegriffen werden kann, jede beliebige Struktur von XML-Knoten sein. Mit anderen Worten: eine <xref:System.Windows.Data.XmlDataProvider> stellt eine bequeme Möglichkeit dar, jede beliebige Struktur von XML-Knoten als Bindungs Quelle zu verwenden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die Daten direkt als [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *Daten Insel* innerhalb des <xref:System.Windows.FrameworkElement.Resources%2A> Abschnitts eingebettet. Eine [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Dateninsel muss mit `<x:XData>`-Tags umschlossen sein und immer über einen einzelnen Stammknoten, in diesem Beispiel *Inventory*, verfügen.  
+ Im folgenden Beispiel werden die Daten direkt als XML- *Daten Insel* innerhalb des <xref:System.Windows.FrameworkElement.Resources%2A> Abschnitts eingebettet. Eine XML-Daten Insel muss `<x:XData>` Tags umschließen und immer über einen einzelnen Stamm Knoten verfügen, bei dem es sich um eine *Inventur* in diesem Beispiel handelt.  
   
 > [!NOTE]
-> Der Stammknoten der [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Daten verfügt über ein **xmlns**-Attribut, das den [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Namespace auf eine leere Zeichenfolge festlegt. Dies ist eine Anforderung für die Anwendung von XPath-Abfragen auf eine Dateninsel, die sich inline innerhalb der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seite befindet. In diesem Inline Fall erbt die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]und somit die Daten Insel den <xref:System.Windows>-Namespace. Aus diesem Grund müssen Sie den Namespace leer festlegen, um zu verhindern, dass XPath-Abfragen durch den <xref:System.Windows> Namespace qualifiziert werden, was die Abfragen falsch leiten würde.  
+> Der Stamm Knoten der XML-Daten verfügt über ein **xmlns** -Attribut, mit dem der XML-Namespace auf eine leere Zeichenfolge festgelegt wird. Dies ist eine Anforderung für die Anwendung von XPath-Abfragen auf eine Dateninsel, die sich inline innerhalb der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seite befindet. In diesem Inline Fall erbt die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]und somit die Daten Insel den <xref:System.Windows>-Namespace. Aus diesem Grund müssen Sie den Namespace leer festlegen, um zu verhindern, dass XPath-Abfragen durch den <xref:System.Windows> Namespace qualifiziert werden, was die Abfragen falsch leiten würde.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ In diesem Beispiel wird gezeigt, wie mithilfe eines <xref:System.Windows.Data.Xm
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- In bestimmten Anwendungen ist das Einbetten von [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] als Dateninsel in die Quelle der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seite nicht geeignet, da zur Kompilierzeit der genaue Inhalt der Daten bekannt sein muss. Aus diesem Grund wird das Abrufen von Daten aus einer externen [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Datei ebenso unterstützt, was im folgenden Beispiel veranschaulicht wird:  
+ In einigen Anwendungen kann das Einbetten von XML als Daten Insel innerhalb der Quelle der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite unpraktisch sein, da der genaue Inhalt der Daten zum Zeitpunkt der Kompilierung bekannt sein muss. Daher wird auch das Abrufen der Daten aus einer externen XML-Datei unterstützt, wie im folgenden Beispiel gezeigt:  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- Wenn sich die [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten in einer Remote [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Datei befinden, definieren Sie den Zugriff auf die Daten, indem Sie dem <xref:System.Windows.Data.XmlDataProvider.Source%2A>-Attribut wie folgt eine entsprechende URL zuweisen:  
+ Wenn sich die XML-Daten in einer XML-Remote Datei befinden, definieren Sie den Zugriff auf die Daten, indem Sie dem <xref:System.Windows.Data.XmlDataProvider.Source%2A>-Attribut wie folgt eine entsprechende URL zuweisen:  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

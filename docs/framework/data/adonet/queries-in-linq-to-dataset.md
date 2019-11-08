@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794534"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735411"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formate hinweg. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  
   
  Eine [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrageoperation besteht aus drei Aktionen: Abrufen der Datenquelle(n), Erstellen der Abfrage und Ausführen der Abfrage.  
   
- Datenquellen, die die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren, können über [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] abgefragt werden. Beim <xref:System.Data.DataTableExtensions.AsEnumerable%2A> Aufrufen von <xref:System.Data.DataTable> für einen wird ein Objekt zurückgegeben <xref:System.Collections.Generic.IEnumerable%601> , das die generische-Schnittstelle implementiert, die als Datenquelle für LINQ to DataSet Abfragen dient.  
+ Datenquellen, die die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren, können über [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] abgefragt werden. Beim Aufrufen von <xref:System.Data.DataTableExtensions.AsEnumerable%2A> auf einem <xref:System.Data.DataTable> wird ein Objekt zurückgegeben, das die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, die als Datenquelle für LINQ to DataSet Abfragen dient.  
   
  In der Abfrage geben Sie genau die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. In [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wird eine Abfrage in einer Variablen gespeichert. Wenn die Abfrage so eingerichtet ist, dass sie eine Sequenz von Werten zurückgibt, muss die Abfragevariable selbst ein aufzählbarer Typ sein. Diese Abfragevariable führt keine Aktion aus und gibt keine Daten zurück. Sie dient lediglich zur Speicherung der Abfrageinformationen. Nachdem Sie eine Abfrage erstellt haben, müssen Sie sie ausführen, damit Daten abgerufen werden.  
   
@@ -39,7 +39,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Methodenbasierte Abfragesyntax  
- Die andere Möglichkeit, LINQ to DataSet Abfragen zu formulieren, ist die Verwendung von Methoden basierten Abfragen. Dabei handelt es sich um eine Abfolge direkter Methodenaufrufe der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatormethoden, wobei als Parameter Lambdaausdrücke übergeben werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Die andere Möglichkeit, LINQ to DataSet Abfragen zu formulieren, ist die Verwendung von Methoden basierten Abfragen. Dabei handelt es sich um eine Abfolge direkter Methodenaufrufe der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatormethoden, wobei als Parameter Lambdaausdrücke übergeben werden. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  In diesem Beispiel wird <xref:System.Linq.Enumerable.Select%2A> verwendet, um alle Zeilen aus der `Product`-Tabelle zurückzugeben und die Produktnamen anzuzeigen.  
   
@@ -52,7 +52,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- Nach Ausführung der Abfrage können keine weiteren Abfragen mehr verfasst werden. Alle nachfolgenden Abfragen verwenden die im Arbeitsspeicher abgelegten [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatoren. Die Abfrage Ausführung tritt auf, wenn Sie die Abfrage Variable in einer `foreach` -oder `For Each` -Anweisung durchlaufen oder einen der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Konvertierungs Operatoren aufzurufen, die eine sofortige Ausführung bewirken. Dabei kann es sich um einen der folgenden Operatoren handeln: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> und <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ Nach Ausführung der Abfrage können keine weiteren Abfragen mehr verfasst werden. Alle nachfolgenden Abfragen verwenden die im Arbeitsspeicher abgelegten [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatoren. Die Abfrage Ausführung tritt auf, wenn Sie die Abfrage Variable in einer `foreach`-oder `For Each`-Anweisung durchlaufen oder einen der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Konvertierungs Operatoren aufruft, die eine sofortige Ausführung bewirken. Dabei kann es sich um einen der folgenden Operatoren handeln: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> und <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
  Im folgenden Beispiel gibt die erste Abfrage alle Produkte zurück und sortiert sie nach dem Listenpreis. Um die sofortige Abfrageausführung zu erzwingen, wird die <xref:System.Linq.Enumerable.ToArray%2A>-Methode verwendet:  
   
@@ -63,5 +63,5 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
 
 - [Programmierhandbuch](programming-guide-linq-to-dataset.md)
 - [Abfragen von DataSets](querying-datasets-linq-to-dataset.md)
-- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

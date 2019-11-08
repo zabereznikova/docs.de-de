@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d803bd053acd876b3a38cfc52eb29818219e9423
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040545"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739585"
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -72,7 +72,7 @@ Die Benutzeroberflächen Automatisierung bietet vollständige Funktionalität f�
 > [!NOTE]
 > Es gibt keine 1:1-Entsprechung zwischen Steuerelementtypen und Steuerelementmustern. Ein Steuerelementmuster kann von mehreren Steuerelementtypen unterstützt werden, und ein Steuerelement kann mehrere Steuerelementmuster unterstützen, von denen jedes einen anderen Aspekt des Verhaltens verfügbar macht. Ein Kombinationsfeld hat beispielsweise mindestens zwei Steuerelementmuster: eines mit der Fähigkeit zum Erweitern und Reduzieren und ein anderes, das den Auswahlmechanismus darstellt. Weitere Informationen finden Sie unter [UI Automation Control Types](ui-automation-control-types.md).  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gibt durch Ereignisse Informationen an Clientanwendungen weiter. Im Gegensatz zu [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]basieren [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse nicht auf einem Übertragungsmechanismus. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Clients melden sich für bestimmte Ereignisbenachrichtigungen an und können anfordern, dass spezifische [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften und Steuerelementmuster-Informationen an den Ereignishandler übergeben werden. Außerdem enthält ein [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis einen Verweis auf das Element, das es ausgelöst hat. Anbieter können die Leistung verbessern, indem sie Ereignisse selektiv abhängig davon auslösen, ob Clients zuhören.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gibt durch Ereignisse Informationen an Clientanwendungen weiter. Im Gegensatz zu WinEvents basieren [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ereignisse nicht auf einem Übertragungsmechanismus. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Clients melden sich für bestimmte Ereignisbenachrichtigungen an und können anfordern, dass spezifische [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften und Steuerelementmuster-Informationen an den Ereignishandler übergeben werden. Außerdem enthält ein [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis einen Verweis auf das Element, das es ausgelöst hat. Anbieter können die Leistung verbessern, indem sie Ereignisse selektiv abhängig davon auslösen, ob Clients zuhören.  
   
 ## <a name="see-also"></a>Siehe auch
 

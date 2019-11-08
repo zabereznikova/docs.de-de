@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459991"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740640"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elemente der XAML-Syntax zu beschreiben. Diese Begriffe werden im restlichen Teil dieser Dokumentation häufig verwendet, sowohl für die WPF-Dokumentation als auch für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte verwenden, die von der XAML-Sprachunterstützung auf der System. XAML-Ebene aktiviert werden. Dieses Thema erweitert die grundlegende Terminologie, die im Thema [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)vorgestellt wurde.  
@@ -52,7 +52,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
 #### <a name="members-of-types-and-class-inheritance"></a>Member von Typen und Klassen Vererbung  
  Eigenschaften und Ereignisse, die als XAML-Member eines [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typs angezeigt werden, werden oft von Basis Typen geerbt. Sehen Sie sich z. b. das folgende Beispiel an: `<Button Background="Blue" .../>`. Die <xref:System.Windows.Controls.Control.Background%2A>-Eigenschaft ist keine sofort deklarierte Eigenschaft für die <xref:System.Windows.Controls.Button> Klasse, wenn Sie die Klassendefinition, die Reflektionsergebnisse oder die Dokumentation betrachten. Stattdessen wird <xref:System.Windows.Controls.Control.Background%2A> von der Basis <xref:System.Windows.Controls.Control> Klasse geerbt.  
   
- Das Klassen Vererbungs Verhalten von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML-Elementen ist eine bedeutende Abkehr von der durch das Schema erzwungene Interpretation von XML-Markup. Die Klassen Vererbung kann komplex werden, insbesondere dann, wenn zwischen Basisklassen abstrakt sind oder wenn Schnittstellen beteiligt sind. Dies ist ein Grund, warum der Satz von XAML-Elementen und deren zulässige Attribute schwierig und vollständig mit den Schema Typen dargestellt werden, die in der Regel für [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Programmierung verwendet werden, wie z. b. DTD oder XSD-Format. Ein weiterer Grund ist, dass Erweiterbarkeits-und Typmapping-Features der XAML-Sprache selbst die Vollständigkeit jeder festgelegten Darstellung der zulässigen Typen und Member ausschließen.  
+ Das Klassen Vererbungs Verhalten von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML-Elementen ist eine bedeutende Abkehr von der durch das Schema erzwungene Interpretation von XML-Markup. Die Klassen Vererbung kann komplex werden, insbesondere dann, wenn zwischen Basisklassen abstrakt sind oder wenn Schnittstellen beteiligt sind. Dies ist ein Grund, warum der Satz von XAML-Elementen und deren zulässige Attribute schwierig und vollständig mit den Schema Typen, die normalerweise für die XML-Programmierung verwendet werden, wie z. b. DTD oder XSD-Format, darstellen kann. Ein weiterer Grund ist, dass Erweiterbarkeits-und Typmapping-Features der XAML-Sprache selbst die Vollständigkeit jeder festgelegten Darstellung der zulässigen Typen und Member ausschließen.  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>Objektelementsyntax  

@@ -2,23 +2,23 @@
 title: <transport> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399270"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732760"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<Transport > von \<WS2007HttpBinding >
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WS2007HttpBinding >** ](ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Transport >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheit >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Transport >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,7 +28,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
            realm="string" />
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>Geben Sie Folgendes ein:  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -44,10 +44,10 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|None|Die Sicherheitsfunktionen sind deaktiviert.|  
-|Einfach|Verwendet die Standardauthentifizierung.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Standard|Verwendet die Standardauthentifizierung.|  
 |Digest|Verwendet Digestauthentifizierung.|  
 |Ntlm|Verwendet als Ausweichlösung die NTLM-Authentifizierung für eine Windows-Domäne.|  
 |Windows|Verwendet die integrierte Windows-Authentifizierung.|  
@@ -55,23 +55,23 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType-Attribut  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|None|Die Sicherheitsfunktionen sind deaktiviert.|  
-|Einfach|Verwendet die Standardauthentifizierung.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Standard|Verwendet die Standardauthentifizierung.|  
 |Digest|Verwendet Digestauthentifizierung.|  
 |Ntlm|Verwendet als Ausweichlösung NTLM für eine Windows-Domäne.|  
 |Windows|Verwendet die integrierte Windows-Authentifizierung.|  
 |Zertifikat|Verwendet X.509-Zertifikate zum Authentifizieren des Clients.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](security-of-ws2007httpbinding.md)|Stellt die Sicherheitsfunktionen des [ \<WS2007HttpBinding->](ws2007httpbinding.md) Elements dar.|  
+|[\<Security >](security-of-ws2007httpbinding.md)|Stellt die Sicherheitsfunktionen des [\<WS2007HttpBinding->](ws2007httpbinding.md) Elements dar.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -83,4 +83,4 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

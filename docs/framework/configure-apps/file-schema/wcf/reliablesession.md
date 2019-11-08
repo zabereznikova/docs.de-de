@@ -2,22 +2,22 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: ef9416b2031bd457322b33dfa491d3fae766bf8c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400007"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738749"
 ---
-# <a name="reliablesession"></a>\<reliableSession>
+# <a name="reliablesession"></a>\<ReliableSession->
 Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer benutzerdefinierten Bindung hinzugefügt wird, kann der resultierende Kanal ExactlyOnce-Zustellungszusicherungen unterstützen.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding->** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ReliableSession->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ReliableSession >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +40,22 @@ Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer 
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |acknowledgementInterval|Eine <xref:System.TimeSpan>, die angibt, wie lange der Kanal maximal wartet, bis eine Bestätigung für die bis zu diesem Zeitpunkt erhaltenen Nachrichten gesendet wird. Der Standardwert ist 00:00:0.2.|  
-|flowControlEnabled|Eine boolescher Wert, der angibt, ob die erweiterte Flusssteuerung, eine Microsoft-spezifische Implementierung der Flusssteuerung für WS-Reliable Messaging, aktiviert ist. Die Standardeinstellung ist `true`.|  
-|inactivityTimeout|Eine <xref:System.TimeSpan>, die die maximale Dauer angibt, die der Kanal dem anderen Kommunikationsteilnehmer für das ausbleibende Senden von Nachrichten einräumt, bevor im Kanal ein Fehler ausgelöst wird. Der Standardwert ist 00:10:00.<br /><br /> Aktivität auf einem Kanal wird als Empfang einer Anwendungs- oder Infrastrukturnachricht definiert. Diese Eigenschaft steuert die maximale Menge an Zeit, um eine inaktive Sitzung am Leben zu erhalten. Bei längeren Zeiten ohne Aktivität wird die Sitzung durch die Infrastruktur beendet, und im Kanal wird ein Fehler ausgelöst. **Hinweis**:  Es ist jedoch nicht erforderlich, dass die Anwendung regelmäßig Nachrichten sendet, um die Verbindung aufrechtzuerhalten.|  
+|flowControlEnabled|Eine boolescher Wert, der angibt, ob die erweiterte Flusssteuerung, eine Microsoft-spezifische Implementierung der Flusssteuerung für WS-Reliable Messaging, aktiviert ist. Der Standardwert ist `true`.|  
+|inactivityTimeout|Eine <xref:System.TimeSpan>, die die maximale Dauer angibt, die der Kanal dem anderen Kommunikationsteilnehmer für das ausbleibende Senden von Nachrichten einräumt, bevor im Kanal ein Fehler ausgelöst wird. Der Standardwert ist 00:10:00.<br /><br /> Aktivität auf einem Kanal wird als Empfang einer Anwendungs- oder Infrastrukturnachricht definiert. Diese Eigenschaft steuert die maximale Menge an Zeit, um eine inaktive Sitzung am Leben zu erhalten. Bei längeren Zeiten ohne Aktivität wird die Sitzung durch die Infrastruktur beendet, und im Kanal wird ein Fehler ausgelöst. **Hinweis:**  Es ist nicht erforderlich, dass die Anwendung regelmäßig Nachrichten sendet, um die Verbindung aufrechtzuerhalten.|  
 |maxPendingChannels|Eine ganze Zahl, die die maximale Anzahl an Kanälen angibt, die im Listener warten können, um akzeptiert zu werden. Dieser Wert sollte zwischen 1 und einschließlich 16384 liegen. Der Standardwert ist&#160;4.<br /><br /> Kanäle sind ausstehend, wenn sie darauf warten, akzeptiert zu werden. Wenn dieser Grenzwert einmal erreicht ist, werden keine Kanäle erstellt. Sie werden dagegen in den ausstehenden Modus versetzt, bis diese Zahl sinkt (durch das Akzeptieren ausstehender Kanäle). Dieser Grenzwert wird pro Factory festgelegt.<br /><br /> Wenn der Schwellenwert erreicht wird und eine Remoteanwendung versucht, eine neue zuverlässige Sitzung herzustellen, wird die Anforderung abgelehnt und der Öffnungsvorgang, der dies angefordert hat, schlägt fehl. Dieser Grenzwert gilt nicht für die Anzahl an ausstehenden ausgehenden Kanälen.|  
 |maxRetryCount|Eine ganze Zahl, die angibt, wie oft ein zuverlässiger Kanal maximal versucht, eine Nachricht, für die keine Bestätigung empfangen wurde, erneut zu übertragen (durch Aufrufen von Send im zugrunde liegenden Kanal).<br /><br /> Dieser Wert muss größer als null sein. Der Standard ist 8.<br /><br /> Dieser Wert sollte eine ganze Zahl größer null sein. Wenn nach der letzten Übertragung keine Bestätigung empfangen wurde, tritt ein Fehler im Kanal auf.<br /><br /> Eine Nachricht wird als übertragen betrachtet, wenn die Zustellung vom Empfänger bestätigt wurde.<br /><br /> Wenn die Bestätigung nicht innerhalb einer bestimmten Zeit eingegangen ist, überträgt die Infrastruktur die Nachricht automatisch neu. Die Infrastruktur versucht die Nachricht maximal so oft erneut zu senden, wie durch diese Eigenschaft festgelegt. Wenn nach der letzten Übertragung keine Bestätigung empfangen wurde, tritt ein Fehler im Kanal auf.<br /><br /> Die Infrastruktur verwendet einen exponentiellen Backoff-Algorithmus um den Zeitpunkt für die Neuübertragung zu ermitteln. Dabei wird eine berechnete durchschnittliche Round Trip Time zugrunde gelegt. Der Zeitpunkt liegt zunächst 1 Sekunde vor der Neuübertragung. Bei jedem erneuten Versuch wird die Verzögerung verdoppelt. Zwischen dem ersten Übertragungsversuch und dem letzten Übertragungsversuch liegen somit ca. 8,5 Minuten. Der Zeitpunkt für den ersten Neuübertragungsversuch wird gemäß der berechneten Round Trip Time angepasst, und die daraus resultierende Zeitspanne für die Übertragungsversuche variiert entsprechend. Dadurch können die Zeitpunkte für die Neuübertragung dynamisch an die unterschiedlichen Netzwerkbedingungen angepasst werden.|  
 |maxTransferWindowSize|Eine ganze Zahl, die die maximale Größe des Puffers angibt. Gültige Werte reichen von 1 bis 4096 einschließlich.<br /><br /> Auf dem Client definiert dieses Attribut die maximale Größe des Puffers, in dem ein zuverlässiger Kanal die noch nicht vom Empfänger bestätigten Nachrichten speichert. Die Einheit dieses Kontingents ist eine Nachricht. Ist der Puffer voll, werden weitere SEND-Vorgänge blockiert.<br /><br /> Beim Empfänger definiert dieses Attribut die maximale Größe des Puffers, in dem ein Kanal eingehende Nachrichten speichert, die noch nicht an die Anwendung zugestellt wurden. Ist der Puffer voll, werden weitere Nachrichten vom Empfänger automatisch verworfen und müssen vom Client erneut übertragen werden.|  
-|geordnete|Ein boolescher Wert, der angibt, ob Nachrichten auf jeden Fall in der Reihenfolge ihres Versands eintreffen. Lautet diese Einstellung `false`, können Nachrichten außerhalb der Reihenfolge eintreffen. Die Standardeinstellung ist `true`.|  
+|geordnete|Ein boolescher Wert, der angibt, ob Nachrichten auf jeden Fall in der Reihenfolge ihres Versands eintreffen. Lautet diese Einstellung `false`, können Nachrichten außerhalb der Reihenfolge eintreffen. Der Standardwert ist `true`.|  
 |reliableMessagingVersion|Ein gültiger Wert von <xref:System.ServiceModel.ReliableMessagingVersion>, der die zu verwendende WS-ReliableMessaging-Version angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding >](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Hinweise  
  Zuverlässige Sitzungen bieten Funktionen für zuverlässiges Messaging. Beim zuverlässigen Messaging wird die Kommunikation bei Fehlern erneut gestartet, und es werden Zustellungszusicherungen, wie Prüfung der Nachrichtenreihenfolge beim Eingang, vorgenommen. Die Sitzungen erhalten den Status von Clients im Verlauf der verschiedenen Aufrufe aufrecht. Dieses Element stellt auch optional sortierte Nachrichtenübermittlung bereit. Diese implementierte Sitzung kann SOAP und Transportvermittler überqueren.  
@@ -129,4 +129,4 @@ Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer 
 - [Bindungen](../../../wcf/bindings.md)
 - [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding >](custombinding.md)

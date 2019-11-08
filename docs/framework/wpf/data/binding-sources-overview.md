@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459016"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740614"
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.
@@ -25,7 +25,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 |Common Language Runtime (CLR)-Objekte|Sie können an die öffentlichen Eigenschaften, unter Eigenschaften und Indexer eines beliebigen Common Language Runtime (CLR)-Objekts binden. Die Bindungs-Engine verwendet die CLR-Reflektion, um die Werte der Eigenschaften zu erhalten. Alternativ können Objekte, die <xref:System.ComponentModel.ICustomTypeDescriptor> oder ein registriertes <xref:System.ComponentModel.TypeDescriptionProvider> implementieren, auch mit der Bindungs-Engine verwendet werden.<br /><br /> Weitere Informationen zum Implementieren einer Klasse, die als Bindungsquelle dienen kann, finden Sie weiter unten in diesem Thema unter [Implementieren einer Klasse als Bindungsquelle](#classes).|
 |Dynamische Objekte|Sie können eine Bindung an verfügbare Eigenschaften und Indexer eines Objekts herstellen, das die <xref:System.Dynamic.IDynamicMetaObjectProvider>-Schnittstelle implementiert. Wenn Sie auf den Member im Code zugreifen können, kann daran eine Bindung erfolgen. Wenn Sie z. B. mithilfe eines dynamischen Objekts auf einen Member im Code über `someObjet.AProperty` zugreifen können, können Sie durch Festlegen des Bindungspfads auf `AProperty` eine Bindung herstellen.|
 |ADO.NET-Objekte|Sie können an ADO.NET-Objekte binden, z. b. <xref:System.Data.DataTable>. Die ADO.net-<xref:System.Data.DataView> implementiert die <xref:System.ComponentModel.IBindingList>-Schnittstelle, die Änderungs Benachrichtigungen bereitstellt, auf die die Bindungs-Engine lauscht.|
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Objekte|Sie können eine Bindung an eine <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>oder <xref:System.Xml.XmlElement>an `XPath` Abfragen ausführen und diese ausführen. Eine bequeme Möglichkeit, auf [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten zuzugreifen, die die Bindungs Quelle im Markup ist, ist die Verwendung eines <xref:System.Windows.Data.XmlDataProvider> Objekts. Weitere Informationen finden Sie unter [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Sie können auch eine Bindung an eine <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument>oder an die Ergebnisse von Abfragen, die für Objekte dieser Typen ausgeführt werden, mithilfe von LINQ to XML binden. Eine bequeme Möglichkeit, LINQ to XML für den Zugriff auf XML-Daten zu verwenden, die die Bindungs Quelle im Markup ist, ist die Verwendung eines <xref:System.Windows.Data.ObjectDataProvider> Objekts. Weitere Informationen finden Sie unter [Binden an XDocument, XElement oder LINQ für XML-Abfrageergebnisse](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
+|XML-Objekte|Sie können eine Bindung an eine <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>oder <xref:System.Xml.XmlElement>an `XPath` Abfragen ausführen und diese ausführen. Eine bequeme Möglichkeit, auf XML-Daten zuzugreifen, die die Bindungs Quelle im Markup ist, ist die Verwendung eines <xref:System.Windows.Data.XmlDataProvider> Objekts. Weitere Informationen finden Sie unter [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Sie können auch eine Bindung an eine <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument>oder an die Ergebnisse von Abfragen, die für Objekte dieser Typen ausgeführt werden, mithilfe von LINQ to XML binden. Eine bequeme Möglichkeit, LINQ to XML für den Zugriff auf XML-Daten zu verwenden, die die Bindungs Quelle im Markup ist, ist die Verwendung eines <xref:System.Windows.Data.ObjectDataProvider> Objekts. Weitere Informationen finden Sie unter [Binden an XDocument, XElement oder LINQ für XML-Abfrageergebnisse](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
 |<xref:System.Windows.DependencyObject>-Objekte|Sie können eine Bindung an Abhängigkeits Eigenschaften beliebiger <xref:System.Windows.DependencyObject>herstellen. Ein Beispiel finden Sie unter [Binden der Eigenschaften von zwei Steuerelementen](how-to-bind-the-properties-of-two-controls.md).|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 
 - Eine Bindung an Abhängigkeitseigenschaften ist immer möglich.
 
- Die erforderlichen Berechtigungen für [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Bindungen sind ähnlich. In einer teilweise vertrauenswürdigen sandbox schlägt <xref:System.Windows.Data.XmlDataProvider> fehl, wenn er nicht über Berechtigungen für den Zugriff auf die angegebenen Daten verfügt.
+ Die Berechtigungs Anforderung für die XML-Bindung ist ähnlich. In einer teilweise vertrauenswürdigen sandbox schlägt <xref:System.Windows.Data.XmlDataProvider> fehl, wenn er nicht über Berechtigungen für den Zugriff auf die angegebenen Daten verfügt.
 
  Objekte mit einem anonymen Typ sind intern. Eine Bindung an Eigenschaften anonymer Typen kann nur bei der Ausführung mit voller Vertrauenswürdigkeit hergestellt werden. Weitere Informationen zu anonymen Typen finden Sie unter [Anonyme Typen (C#-Programmierhandbuch)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) oder [Anonyme Typen (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 

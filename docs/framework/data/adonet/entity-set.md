@@ -2,15 +2,15 @@
 title: Entitätenmenge
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: b74d6bf373925ac90a998e2c4425c053e533f82a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5a2465801c270813dd7bca2144d05fa202571153
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783993"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738421"
 ---
 # <a name="entity-set"></a>Entitätenmenge
-Eine *Entitätenmenge* ist ein logischer Container für Instanzen eines [Entitäts Typs](entity-type.md) und Instanzen eines beliebigen Typs, der von diesem Entitätstyp abgeleitet wird. (Informationen zu abgeleiteten Typen finden [Sie unter Entity Data Model: Vererbung](entity-data-model-inheritance.md).) Die Beziehung zwischen einem Entitätstyp und einer Entitätenmenge entspricht der Beziehung zwischen einer Zeile und einer Tabelle in einer relationalen Datenbank: Wie eine Zeile beschreibt ein Entitätstyp die Datenstruktur, und wie eine Tabelle enthält eine Entitätenmenge Instanzen einer bestimmten Struktur. Eine Entitätenmenge ist keine Datenmodellkonstruktion, sie beschreibt keine Datenstruktur. Vielmehr stellt eine Entitätenmenge eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Entitätstypinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
+Eine *Entitätenmenge* ist ein logischer Container für Instanzen eines [Entitäts Typs](entity-type.md) und Instanzen eines beliebigen Typs, der von diesem Entitätstyp abgeleitet wird. (Informationen zu abgeleiteten Typen finden Sie unter [Entity Data Model: Vererbung](entity-data-model-inheritance.md).) Die Beziehung zwischen einem Entitätstyp und einer Entitätenmenge entspricht der Beziehung zwischen einer Zeile und einer Tabelle in einer relationalen Datenbank: wie eine Zeile beschreibt ein Entitätstyp die Datenstruktur, und wie eine Tabelle enthält eine Entitätenmenge Instanzen einer bestimmten Struktur. Eine Entitätenmenge ist keine Datenmodellkonstruktion, sie beschreibt keine Datenstruktur. Vielmehr stellt eine Entitätenmenge eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Entitätstypinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
   
  Eine Entitätenmenge wird innerhalb eines [Entitätencontainers](entity-container.md)definiert, einer logischen Gruppierung von Entitätenmengen und Zuordnungs [Sätzen](association-set.md).  
   
@@ -32,11 +32,11 @@ Eine *Entitätenmenge* ist ein logischer Container für Instanzen eines [Entitä
   
  ![Beispielmodell mit drei Entitäts Typen](./media/entity-set/example-model-three-entity-types.gif)  
   
- Die folgende Abbildung zeigt zwei Entitätenmengen (`Books` und `Publishers`) und einen Zuordnungssatz (`PublishedBy`) auf Grundlage des oben gezeigten konzeptionellen Modells. BI in der `Books` Entitätenmenge stellt zur Laufzeit `Book` eine Instanz des Entitäts Typs dar. Ebenso stellt PJ eine `Publisher` -Instanz in der `Publishers` Entitätenmenge dar. Bipj stellt eine Instanz der `PublishedBy` Zuordnung `PublishedBy` im Zuordnungs Satz dar.  
+ Die folgende Abbildung zeigt zwei Entitätenmengen (`Books` und `Publishers`) und einen Zuordnungssatz (`PublishedBy`) auf Grundlage des oben gezeigten konzeptionellen Modells. BI in der `Books` Entitätenmenge stellt eine Instanz des `Book` Entitäts Typs zur Laufzeit dar. Ebenso stellt PJ eine `Publisher` Instanz in der `Publishers` Entitätenmenge dar. Bipj stellt eine Instanz der `PublishedBy` Zuordnung im `PublishedBy` Zuordnungs Satz dar.  
   
  ![Screenshot, der ein Beispiel für eine Reihe anzeigt.](./media/entity-set/sets-example-association.gif)  
   
- Der [ADO.NET-Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) mit der Bezeichnung konzeptionelle Schema Definitions Sprache ([CSDL](./ef/language-reference/csdl-specification.md)), um konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen Entitätscontainer mit einer Entitätenmenge für jeden Entitätstyp im oben gezeigten konzeptionellen Modell. Beachten Sie, dass der Name und der Entitätstyp für jede Entitätenmenge mit XML-Attributen definiert werden.  
+ Der [ADO.NET-Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) mit der Bezeichnung konzeptionelle Schema Definitions Sprache ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)), um konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen Entitätscontainer mit einer Entitätenmenge für jeden Entitätstyp im oben gezeigten konzeptionellen Modell. Beachten Sie, dass der Name und der Entitätstyp für jede Entitätenmenge mit XML-Attributen definiert werden.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   

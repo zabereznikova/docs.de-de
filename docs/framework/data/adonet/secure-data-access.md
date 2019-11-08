@@ -2,12 +2,12 @@
 title: Sicherer Datenzugriff
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782779"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735280"
 ---
 # <a name="secure-data-access"></a>Sicherer Datenzugriff
 Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsmechanismen kennen, die im zugrunde liegenden Datenspeicher oder der zugrundeliegenden Datenbank verfügbar sind. Außerdem müssen Sie die Auswirkungen anderer in Ihrer Anwendung enthaltenen Funktionen oder Komponenten auf die Sicherheit berücksichtigen.  
@@ -55,7 +55,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Grundlagen der Ausnahmebehandlung](../../../standard/exceptions/exception-handling-fundamentals.md)|Beschreibt die grundlegenden Formen der Behandlung von Ausnahmen mit der "try/catch/finally"-Struktur.|  
+|[Behandeln und Auslösen von Ausnahmen in .NET](../../../standard/exceptions/index.md)|Beschreibt die grundlegenden Formen der Behandlung von Ausnahmen mit der "try/catch/finally"-Struktur.|  
 |[Bewährte Methoden für Ausnahmen](../../../standard/exceptions/best-practices-for-exceptions.md)|Beschreibt bewährte Vorgehensweisen bei der Behandlung von Ausnahmen.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Schützen von Microsoft Access- und Excel-Datenquellen  

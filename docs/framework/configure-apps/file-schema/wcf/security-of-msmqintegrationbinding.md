@@ -2,22 +2,22 @@
 title: <security> von <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: e4f10ab994429c6cbb690caef38114b8340e6839
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2268bf48a2b86c3b3b25db006e6f8f55ea33af73
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399868"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738681"
 ---
-# <a name="security-of-msmqintegrationbinding"></a>\<security> of \<msmqIntegrationBinding>
+# <a name="security-of-msmqintegrationbinding"></a>\<Sicherheits > \<"MsmqIntegrationBinding" >
 Definiert die Transportsicherheitseinstellungen für den Message Queuing (MSMQ)-Integrationskanal.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MsmqIntegrationBinding->** ](msmqintegrationbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<"MsmqIntegrationBinding**](msmqintegrationbinding.md) " >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheit >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,19 +44,19 @@ Definiert die Transportsicherheitseinstellungen für den Message Queuing (MSMQ)-
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Modus|Gibt den Sicherheitstyp an, der Integrität, Vertraulichkeit und Authentifizierung mit dem Message Queuing-Integrationskanal steuert. Folgende Werte sind gültig:<br /><br /> Gar Dadurch wird die Sicherheit deaktiviert.<br />Personen Schutz und Authentifizierung werden vom Transport bereitgestellt. Dies bezieht sich auf die Nachrichtensicherheit zwischen beiden Warteschlangen-Managern. Es besteht keine Sicherheit zwischen der Anwendung und dem Warteschlangen-Manager. Vorhandene Msmq-Anwendungen sind mit diesem Typ des Sicherheitsmodus funktional äquivalent.<br /><br /> Der Standardwert ist `Transport`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|Modus|Gibt den Sicherheitstyp an, der Integrität, Vertraulichkeit und Authentifizierung mit dem Message Queuing-Integrationskanal steuert. Folgende Werte sind gültig:<br /><br /> -None: Dadurch wird die Sicherheit deaktiviert.<br />-Transport: Schutz und Authentifizierung werden vom Transport bereitgestellt. Dies bezieht sich auf die Nachrichtensicherheit zwischen beiden Warteschlangen-Managern. Es besteht keine Sicherheit zwischen der Anwendung und dem Warteschlangen-Manager. Vorhandene Msmq-Anwendungen sind mit diesem Typ des Sicherheitsmodus funktional äquivalent.<br /><br /> Der Standardwert ist `Transport`sein. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<transport>](transport-of-msmqintegrationbinding.md)|Definiert die Sicherheitseinstellungen für Message Queuing-Integration und -Transport. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<Transport >](transport-of-msmqintegrationbinding.md)|Definiert die Sicherheitseinstellungen für Message Queuing-Integration und -Transport. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Das Bindungs Element der [ \<MsmqIntegrationBinding->](msmqintegrationbinding.md).|  
+|[\<binding >](bindings.md)|Das Bindungs Element der [\<MsmqIntegrationBinding->](msmqintegrationbinding.md).|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -69,5 +69,5 @@ Definiert die Transportsicherheitseinstellungen für den Message Queuing (MSMQ)-
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)
 - [\<msmqIntegrationBinding>](msmqintegrationbinding.md)

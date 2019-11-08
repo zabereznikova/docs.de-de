@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453675"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740904"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-Behind und XAML in WPF
 <a name="introduction"></a>Code Behind ist ein Begriff, der verwendet wird, um den Code zu beschreiben, der mit Markup definierten Objekten verknüpft ist, wenn eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite Markup kompiliert wird. In diesem Thema werden die Anforderungen für Code Behind und ein alternativer Inline Code Mechanismus für Code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]beschrieben.  
@@ -50,7 +50,7 @@ ms.locfileid: "73453675"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) ist ein Direktivenelement, das in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]definiert ist. Ein `x:Code` Direktivenelement kann Inline Programmierungs Code enthalten. Der Inline definierte Code kann mit dem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf derselben Seite interagieren. Im folgenden Beispiel wird Inline C# Code veranschaulicht. Beachten Sie, dass sich der Code innerhalb des `x:Code`-Elements befindet und dass der Code von `<CDATA[`...`]]>` eingeschlossen werden muss, um den Inhalt für [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]mit Escapezeichen zu versehen, damit ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor (interpretiert entweder das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema oder das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Schema) nicht versuchen Sie, die Inhalte buchstäblich als [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]zu interpretieren.  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) ist ein Direktivenelement, das in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]definiert ist. Ein `x:Code` Direktivenelement kann Inline Programmierungs Code enthalten. Der Inline definierte Code kann mit dem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf derselben Seite interagieren. Im folgenden Beispiel wird Inline C# Code veranschaulicht. Beachten Sie, dass sich der Code innerhalb des `x:Code`-Elements befindet und dass der Code von `<CDATA[`...`]]>` eingeschlossen werden muss, um den Inhalt von XML mit Escapezeichen zu versehen, damit ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor (der entweder das [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema oder das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Schema interpretiert) nicht versucht. interpretieren Sie den Inhalt buchstäblich als XML.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

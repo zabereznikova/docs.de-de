@@ -2,21 +2,21 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: fb974492dee6b2a4244cedc06e3f5e40334dd02a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 0dc667f392595d895bd4f2773ab69777d7369446
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399985"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738744"
 ---
 # <a name="resolver"></a>\<Resolver >
 Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netpertcpbinding->** ](netpeertcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netpeer ertcpbinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Bindungs >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Resolver >**  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,13 +41,13 @@ Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz vo
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<headers>](headers.md)|Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.|  
+|[\<Header >](headers.md)|Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsfunktionen des [ \<netpeer ertcpbinding->](netpeertcpbinding.md).|  
+|[\<binding >](bindings.md)|Definiert alle Bindungsfunktionen der [\<netpeer ertcpbinding->](netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Peernamensresolver ist ein Ermittlungsdienst, der von Peerkanälen zum Suchen von Peerknoten in einem Peermesh verwendet wird. Außerdem wird er verwendet, um einen Knoten in einem Peermesh zu registrieren, wodurch der Peerknoten erkannt und im Peermesh verfügbar wird. Weitere Informationen zu peerresolvern finden Sie unter [Peerresolver](../../../wcf/feature-details/peer-resolvers.md).  

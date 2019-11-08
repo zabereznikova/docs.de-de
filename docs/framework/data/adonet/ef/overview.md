@@ -2,12 +2,12 @@
 title: Übersicht über Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854339"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738510"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
@@ -34,7 +34,7 @@ Der Entity Framework ermöglicht Entwicklern die Arbeit mit Daten in Form von do
 
 Das Speichermodell und die Zuordnungen können sich bei Bedarf ändern, ohne dass Änderungen am konzeptionellen Modell, den Datenklassen oder dem Anwendungscode erforderlich werden. Da Speichermodelle anbieterspezifisch sind, können Sie mit einem konsistenten konzeptionellen Modell bei verschiedenen Datenquellen arbeiten.
 
-Der Entity Framework verwendet diese Modell-und Zuordnungsdateien zum Erstellen, lesen, aktualisieren und Löschen von Vorgängen für Entitäten und Beziehungen im konzeptionellen Modell zu äquivalenten Vorgängen in der Datenquelle. Der Entity Framework unterstützt sogar das Mapping von Entitäten im konzeptionellen Modell zu gespeicherten Prozeduren in der Datenquelle. Weitere Informationen finden Sie unter [CSDL-, SSDL-und MSL-Spezifikationen](./language-reference/csdl-ssdl-and-msl-specifications.md).
+Der Entity Framework verwendet diese Modell-und Zuordnungsdateien zum Erstellen, lesen, aktualisieren und Löschen von Vorgängen für Entitäten und Beziehungen im konzeptionellen Modell zu äquivalenten Vorgängen in der Datenquelle. Der Entity Framework unterstützt sogar das Mapping von Entitäten im konzeptionellen Modell zu gespeicherten Prozeduren in der Datenquelle. Weitere Informationen finden Sie unter [CSDL-, SSDL-und MSL-Spezifikationen](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Zuordnen von Objekten zu Daten
  Die objektorientierte Programmierung stellt eine Herausforderung für die Interaktion mit Datenspeichersystemen dar. Obwohl die Organisation der Klassen häufig den Aufbau relationaler Datenbanktabellen sehr genau widerspiegelt, passen diese Strukturen nicht perfekt zusammen. Häufig entsprechen mehrere normalisierte Tabellen einer einzigen Klasse, und Beziehungen zwischen Klassen werden oft anders dargestellt als Beziehungen zwischen Tabellen. Um beispielsweise den Kunden für einen Auftrag darzustellen, verwendet die `Order`-Klasse möglicherweise eine Eigenschaft, die einen Verweis auf eine Instanz einer `Customer`-Klasse enthält, während eine Zeile in der `Order`-Tabelle in einer Datenbank jedoch eine Fremdschlüsselspalte (oder mehrere Spalten als Fremdschlüssel) mit einem Wert enthält, der einem Primärschlüsselwert in der `Customer`-Tabelle entspricht. Eine `Customer`-Klasse kann über eine Eigenschaft mit dem Namen `Orders` verfügen, die eine Auflistung von Instanzen der `Order`-Klasse enthält, während die `Customer`-Tabelle in einer Datenbank nicht über eine vergleichbare Spalte verfügt. Der Entity Framework bietet Entwicklern die Flexibilität, Beziehungen auf diese Weise darzustellen, oder um Beziehungen genauer zu modellieren, wie Sie in der Datenbank dargestellt werden.
@@ -47,7 +47,7 @@ Entity Framework ist mehr als nur eine weitere objektrelationale Mappinglösung.
 
 - LINQ to Entities. Bietet LINQ (Language-Integrated Query)-Unterstützung zum Abfragen von Entitäts Typen, die in einem konzeptionellen Modell definiert sind. Weitere Informationen finden Sie unter [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Ein Speicher unabhängiger Dialekt von SQL, der direkt mit Entitäten im konzeptionellen Modell arbeitet und Entity Data Model Konzepte unterstützt. [!INCLUDE[esql](../../../../../includes/esql-md.md)]wird sowohl für Objekt Abfragen als auch für Abfragen verwendet, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Entity SQL Übersicht](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Ein Speicher unabhängiger Dialekt von SQL, der direkt mit Entitäten im konzeptionellen Modell arbeitet und Entity Data Model Konzepte unterstützt. [!INCLUDE[esql](../../../../../includes/esql-md.md)] wird sowohl für Objekt Abfragen als auch für Abfragen verwendet, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Entity SQL Übersicht](./language-reference/entity-sql-overview.md).
 
 Die Entity Framework enthält den EntityClient-Datenanbieter. Dieser Anbieter verwaltet Verbindungen, übersetzt Entitäts Abfragen in Datenquellen spezifische Abfragen und gibt einen Daten Leser zurück, den der Entity Framework verwendet, um Entitäts Daten in Objekte zu materialisieren. Wenn die Umsetzung in Objekte nicht erforderlich ist, kann der EntityClient-Anbieter auch wie ein ADO.NET-Standarddatenanbieter verwendet werden, indem er Anwendungen das Ausführen von [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen und die Verarbeitung des zurückgegebenen schreibgeschützten Datenlesers ermöglicht. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
@@ -59,7 +59,7 @@ Die Entity Data Model-Tools können eine von `System.Data.Objects.ObjectContext`
 
 ## <a name="data-providers"></a>Datenanbieter
 
-Der `EntityClient` Anbieter erweitert das ADO.NET-Anbieter Modell durch den Zugriff auf Daten in Bezug auf konzeptionelle Entitäten und Beziehungen. Es führt Abfragen aus, die [!INCLUDE[esql](../../../../../includes/esql-md.md)] verwenden. [!INCLUDE[esql](../../../../../includes/esql-md.md)] stellt die zugrunde liegende Abfragesprache bereit, die `EntityClient` ermöglicht, mit der Datenbank zu kommunizieren. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](entityclient-provider-for-the-entity-framework.md).
+Der `EntityClient`-Anbieter erweitert das ADO.NET-Anbieter Modell durch den Zugriff auf Daten in Bezug auf konzeptionelle Entitäten und Beziehungen. Es führt Abfragen aus, die [!INCLUDE[esql](../../../../../includes/esql-md.md)] verwenden. [!INCLUDE[esql](../../../../../includes/esql-md.md)] stellt die zugrunde liegende Abfragesprache bereit, die `EntityClient` ermöglicht, mit der Datenbank zu kommunizieren. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 Die Entity Framework enthält einen aktualisierten SqlClient-Datenanbieter, der kanonische Befehlsstrukturen unterstützt. Weitere Informationen finden Sie unter [SqlClient für die Entity Framework](sqlclient-for-the-entity-framework.md).
 
