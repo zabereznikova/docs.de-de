@@ -2,17 +2,14 @@
 title: Breaking Changes bei Windows Forms – .NET Core
 description: Listet die Breaking Changes bei Windows Forms für .NET Core auf.
 ms.date: 09/20/2019
-ms.openlocfilehash: 2aac8c81372a36f00df1b7f3ccd3432409f6c834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bdf17911ccefd19c5a3458f328b6ee41352acd9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092902"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739756"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
-
-> [!IMPORTANT]
-> Dieser Artikel wird aktuell überarbeitet. Nicht alle Breaking Changes für .NET Core werden hier aufgeführt. Weitere Informationen zu Breaking Changes für .NET Core finden Sie in den jeweiligen [Issues zu Breaking Changes](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) im Repository „dotnet/docs“ auf GitHub.
 
 Im Folgenden sind die Breaking Changes bei Windows Forms in .NET Core aufgeführt.
 

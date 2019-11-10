@@ -2,22 +2,22 @@
 title: 'Breaking-Change-Kategorien: .NET Core'
 description: Erfahren Sie mehr über die Kategorisierung von Breaking Changes in .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 058f2c2cdeed1e3e984f1de8ab493971d3937876
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089441"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739367"
 ---
 # <a name="breaking-change-categories"></a>Breaking Change-Kategorien
 
-*Kompatibilität* bezieht sich auf die Kompilierung oder Ausführung von Code in einer Version einer .NET-Implementierung, die nicht mit dem ursprünglich entwickelten Code zusammenhängt. Eine bestimmte Änderung kann die Kompatibilität auf sechs verschiedene Arten beeinträchtigen. Die [einzelnen Arten von Änderungen, die beim Auswerten der Kompatibilität berücksichtigt werden](index.md), fallen in die ersten fünf Kategorien. 
+*Kompatibilität* bezieht sich auf die Kompilierung oder Ausführung von Code in einer Version einer .NET-Implementierung, die nicht mit dem ursprünglich entwickelten Code zusammenhängt. Eine bestimmte Änderung kann die Kompatibilität auf sechs verschiedene Arten beeinträchtigen. Die [einzelnen Arten von Änderungen, die beim Auswerten der Kompatibilität berücksichtigt werden](index.md), fallen in die ersten fünf Kategorien.
 
 ## <a name="behavioral-change"></a>Behavior Change
 
 Ein Behavior Change stellt eine Verhaltensänderung eines Members dar. Die Änderung kann extern sichtbar sein (eine Methode kann beispielsweise eine andere Ausnahme auslösen) oder eine geänderte Implementierung darstellen (beispielsweise eine Änderung in der Art und Weise, wie ein Rückgabewert berechnet wird, das Hinzufügen oder Entfernen interner Methodenaufrufe oder sogar eine beträchtliche Leistungsverbesserung).
 
-Wenn Behavior Changes extern sichtbar sind und der öffentliche Vertrag eines Typs geändert wird, können sie leicht ausgewertet werden, da sie sich auf die binäre Kompatibilität auswirken. Das Auswerten von Implementierungsänderungen ist weitaus schwieriger. Abhängig von der Art der Änderung und der Häufigkeit und der Verwendungsmuster der API können die Auswirkungen einer Änderung von harmlos bis schwerwiegend reichen.  
+Wenn Behavior Changes extern sichtbar sind und der öffentliche Vertrag eines Typs geändert wird, können sie leicht ausgewertet werden, da sie sich auf die binäre Kompatibilität auswirken. Das Auswerten von Implementierungsänderungen ist weitaus schwieriger. Abhängig von der Art der Änderung und der Häufigkeit und der Verwendungsmuster der API können die Auswirkungen einer Änderung von harmlos bis schwerwiegend reichen.
 
 ## <a name="binary-compatibility"></a>Binärkompatibilität
 
@@ -25,7 +25,7 @@ Die Binärkompatibilität bezieht sich auf die Fähigkeit eines Consumers einer 
 
 ## <a name="source-compatibility"></a>Quellkompatibilität
 
- Die Quellkompatibilität bezieht sich auf die Fähigkeit vorhandener Consumer einer API, die Neukompilierung für eine neuere Version ohne Quelländerungen vorzunehmen. Eine *inkompatible Quelländerung* tritt auf, wenn ein Consumer den Quellcode ändern muss, damit er erfolgreich für eine neuere Version einer API erstellt werden kann.
+Die Quellkompatibilität bezieht sich auf die Fähigkeit vorhandener Consumer einer API, die Neukompilierung für eine neuere Version ohne Quelländerungen vorzunehmen. Eine *inkompatible Quelländerung* tritt auf, wenn ein Consumer den Quellcode ändern muss, damit er erfolgreich für eine neuere Version einer API erstellt werden kann.
 
 ## <a name="design-time-compatibility"></a>Entwurfszeitkompatibilität
 
@@ -39,9 +39,9 @@ Da Entwickler in neueren Versionen einer API standardmäßig Abwärtskompatibili
 
 ## <a name="forward-compatibility"></a>Aufwärtskompatibilität
 
-Die Aufwärtskompatibilität bezieht sich auf die Fähigkeit, dass ein vorhandener Consumer einer API für eine ältere Version ausgeführt werden kann, während er sich auf die gleiche Weise verhält. Wenn ein Consumer nicht für eine ältere Version der API ausgeführt werden kann oder sich anders verhält, ist die API *aufwärtskompatibel*. 
+Die Aufwärtskompatibilität bezieht sich auf die Fähigkeit, dass ein vorhandener Consumer einer API für eine ältere Version ausgeführt werden kann, während er sich auf die gleiche Weise verhält. Wenn ein Consumer nicht für eine ältere Version der API ausgeführt werden kann oder sich anders verhält, ist die API *aufwärtskompatibel*.
 
-Durch die Beibehaltung der Aufwärtskompatibilität werden alle Änderungen oder Ergänzungen von Version zu Version praktisch ausgeschlossen, da diese Änderungen verhindern, dass ein Consumer, der eine höhere Version als Ziel hat, unter einer früheren Version ausgeführt wird. Entwickler erwarten, dass ein Consumer, der auf einer neueren API basiert, möglicherweise nicht ordnungsgemäß mit der älteren API funktioniert. 
+Durch die Beibehaltung der Aufwärtskompatibilität werden alle Änderungen oder Ergänzungen von Version zu Version praktisch ausgeschlossen, da diese Änderungen verhindern, dass ein Consumer, der eine höhere Version als Ziel hat, unter einer früheren Version ausgeführt wird. Entwickler erwarten, dass ein Consumer, der auf einer neueren API basiert, möglicherweise nicht ordnungsgemäß mit der älteren API funktioniert.
 
 Die Beibehaltung der Aufwärtskompatibilität ist kein Ziel von .NET Core.
 

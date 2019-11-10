@@ -2,17 +2,14 @@
 title: Breaking Changes bei Visual Basic – .NET Core
 description: Listet die Breaking Changes bei Visual Basic in .NET Core auf.
 ms.date: 09/20/2019
-ms.openlocfilehash: c4db31079098ca48dfd0ef4708a55049dde619fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cd5160631ac696d542084a71dc44e65a94cabf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092800"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739337"
 ---
 # <a name="visual-basic-breaking-changes"></a>Breaking Changes bei Visual Basic
-
-> [!IMPORTANT]
-> Dieser Artikel wird aktuell überarbeitet. Nicht alle Breaking Changes für .NET Core werden hier aufgeführt. Weitere Informationen zu Breaking Changes für .NET Core finden Sie in den jeweiligen [Issues zu Breaking Changes](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) im Repository „dotnet/docs“ auf GitHub.
 
 Im Folgenden sind die Breaking Changes bei Visual Basic in .NET Core aufgeführt.
 

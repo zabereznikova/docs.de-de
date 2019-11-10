@@ -2,17 +2,14 @@
 title: Breaking Changes bei CoreFx – .NET Core
 description: Listet die Breaking Changes in der Basisklassenbibliothek .NET CoreFx auf.
 ms.date: 09/20/2019
-ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093431"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739786"
 ---
 # <a name="corefx-breaking-changes"></a>Breaking Changes bei CoreFx
-
-> [!IMPORTANT]
-> Dieser Artikel wird aktuell überarbeitet. Nicht alle Breaking Changes für .NET Core werden hier aufgeführt. Weitere Informationen zu Breaking Changes für .NET Core finden Sie in den jeweiligen [Issues zu Breaking Changes](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) im Repository „dotnet/docs“ auf GitHub.
 
 Im Folgenden sind die Breaking Changes bei CoreFx in .NET Core aufgeführt. CoreFx stellt die von .NET Core verwendeten Primitiven und andere allgemeine Typen bereit.
 
