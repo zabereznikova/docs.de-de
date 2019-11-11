@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 945d4b060dd9d08f6f16013b27980f66e804ad45
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392451"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739231"
 ---
 # <a name="structs-c-programming-guide"></a>Strukturen (C#-Programmierhandbuch)
 
@@ -36,7 +36,7 @@ Strukturen weisen größtenteils die gleiche Syntax wie Klassen auf. Der Name de
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](index.md)
 - [Klassen](classes.md)
-- [Auf NULL festlegbare Werttypen](../nullable-types/index.md)
+- [Auf NULL festlegbare Werttypen](../../language-reference/builtin-types/nullable-value-types.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
 - [Verwenden von Strukturen](using-structs.md)
 - [Vorgehensweise: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

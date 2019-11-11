@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 74d13de78369b13fbf970dce9a3ef5ae7cbaac7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698882"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736894"
 ---
 # <a name="null-c-reference"></a>null (C#-Referenz)
 
-Das Schlüsselwort `null` ist ein Literal, das einen NULL-Verweis darstellt, der auf kein Objekt verweist. `null` ist der Standardwert einer Verweistypvariablen. Normale Werttypen dürfen nicht NULL sein, mit Ausnahme von [Nullable-Werttypen](../../programming-guide/nullable-types/index.md).
+Das Schlüsselwort `null` ist ein Literal, das einen NULL-Verweis darstellt, der auf kein Objekt verweist. `null` ist der Standardwert einer Verweistypvariablen. Normale Werttypen dürfen nicht NULL sein, mit Ausnahme von [Nullable-Werttypen](../builtin-types/nullable-value-types.md).
 
 Im folgenden Beispiel werden einige Verhalten des NULL-Schlüsselworts gezeigt:
 

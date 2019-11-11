@@ -4,22 +4,22 @@ description: Erfahren Sie mehr über Verweisassemblys, eine spezielle Art von As
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: f509397f5cb48a004b800014b2b071721e0d68b8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c38f208c2daac914176bbeedbde9e69fd68f55c6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584119"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740490"
 ---
 # <a name="reference-assemblies"></a>Verweisassemblys
 
-*Verweisassemblys*  sind eine besondere Art von Assembly, die nur die Mindestmenge an Metadaten enthalten, die zum Darstellen der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie beinhalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools von Bedeutung sind (daher der Name), schließen aber alle Memberimplementierungen sowie Deklarationen privater Member aus, die keine beobachtbaren Auswirkungen auf ihren API-Vertrag haben. Im Gegensatz dazu werden reguläre Assemblys als *Implementierungsassemblys*  bezeichnet. 
+*Verweisassemblys*  sind eine besondere Art von Assembly, die nur die Mindestmenge an Metadaten enthalten, die zum Darstellen der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie beinhalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools von Bedeutung sind (daher der Name), schließen aber alle Memberimplementierungen sowie Deklarationen privater Member aus, die keine beobachtbaren Auswirkungen auf ihren API-Vertrag haben. Im Gegensatz dazu werden reguläre Assemblys als *Implementierungsassemblys*  bezeichnet.
 
 Verweisassemblys können nicht zur Ausführung geladen werden, sie können jedoch auf die gleiche Weise wie Implementierungsassemblys als Compilereingaben übergeben werden. Verweisassemblys werden in der Regel mit dem Software Development Kit (SDK) einer bestimmten Plattform oder Bibliothek verteilt, einer speziellen Softwarekomponente, die nur auf Entwicklercomputern installiert ist.
 
 Die Verwendung einer Verweisassembly ermöglicht Entwicklern das Erstellen von Programmen für eine bestimmte Bibliotheksversion, ohne dass die vollständige Implementierungsassembly für diese Version vorhanden ist. Angenommen, Sie haben nur die neueste Version einer Bibliothek auf Ihrem Computer, aber Sie möchten ein Programm erstellen, das auf einen Computer mit einer früheren Version dieser Bibliothek abzielt. Wenn Sie direkt mit der Implementierungsassembly kompilieren, verwenden Sie möglicherweise versehentlich API-Member, die in der früheren Version nicht verfügbar sind, und Sie finden diesen Fehler nur, wenn Sie das Programm auf dem Zielcomputer testen. Wenn Sie eine Kompilierung mit der Verweisassembly für die frühere Version ausführen, erhalten Sie sofort einen Kompilierzeitfehler.
 
-Darüber hinaus kann eine Verweisassembly einen Vertrag darstellen, d.h. einen Satz von APIs, der nicht der konkreten Implementierungsassembly entspricht. Eine solche Verweisassembly, die als *Vertragsassembly* bezeichnet wird, kann verwendet werden, um mehrere Plattformen als Ziel festzulegen, die denselben Satz von APIs unterstützen. .NET Standard stellt z.B. die Vertragsassembly *netstandard.dll* bereit, die den Satz allgemeiner APIs darstellt, die von verschiedenen .NET-Plattformen gemeinsam verwendet werden. Die Implementierungen dieser APIs sind in verschiedenen Assemblys auf unterschiedlichen Plattformen enthalten, z.B. *mscorlib.dll* für .NET Framework oder *System.Private.CoreLib.dll* für .NET Core. Eine Bibliothek für .NET Standard kann auf allen Plattformen ausgeführt werden, die .NET Standard unterstützen. 
+Darüber hinaus kann eine Verweisassembly einen Vertrag darstellen, d.h. einen Satz von APIs, der nicht der konkreten Implementierungsassembly entspricht. Eine solche Verweisassembly, die als *Vertragsassembly* bezeichnet wird, kann verwendet werden, um mehrere Plattformen als Ziel festzulegen, die denselben Satz von APIs unterstützen. .NET Standard stellt z.B. die Vertragsassembly *netstandard.dll* bereit, die den Satz allgemeiner APIs darstellt, die von verschiedenen .NET-Plattformen gemeinsam verwendet werden. Die Implementierungen dieser APIs sind in verschiedenen Assemblys auf unterschiedlichen Plattformen enthalten, z.B. *mscorlib.dll* für .NET Framework oder *System.Private.CoreLib.dll* für .NET Core. Eine Bibliothek für .NET Standard kann auf allen Plattformen ausgeführt werden, die .NET Standard unterstützen.
 
 ## <a name="using-reference-assemblies"></a>Verwenden von Verweisassemblys
 
@@ -35,7 +35,7 @@ Da sie keine Implementierung enthalten, können Verweisassemblys nicht zur Ausf�
 
 Die Generierung von Verweisassemblys für Ihre Bibliotheken kann nützlich sein, wenn Ihre Bibliotheksconsumer ihre Programme häufig auf der Grundlage vieler verschiedener Versionen der Bibliothek erstellen müssen (wenn Sie also eine Funktion implementieren müssen, die den oben genannten .NET Framework Targeting Packs für Ihr eigenes Projekt ähnelt). Die Verteilung von Implementierungsassemblys für alle diese Versionen ist aufgrund ihrer Größe möglicherweise nicht praktikabel. Verweisassemblys sind kleiner, sodass die Verteilung als Teil des SDK Ihrer Bibliothek die Downloadgröße verringert und Speicherplatz spart.
 
-IDEs und Buildtools können ebenfalls Verweisassemblys nutzen, um Buildzeiten bei umfangreichen Lösungen zu reduzieren, die aus mehreren Klassenbibliotheken bestehen. Normalerweise wird ein Projekt in inkrementellen Buildszenarien neu erstellt, wenn eine seiner Eingabedateien geändert wird, einschließlich der Assemblys, von denen es abhängt. Die Implementierungsassembly ändert sich immer dann, wenn der Programmierer die Implementierung eines beliebigen Members ändert. Die Verweisassembly ändert sich nur, wenn ihre öffentliche API betroffen ist. Daher ermöglicht die Verwendung der Verweisassembly als Eingabedatei anstelle der Implementierungsassembly in einigen Fällen das Überspringen des Buildvorgangs des abhängigen Projekts. 
+IDEs und Buildtools können ebenfalls Verweisassemblys nutzen, um Buildzeiten bei umfangreichen Lösungen zu reduzieren, die aus mehreren Klassenbibliotheken bestehen. Normalerweise wird ein Projekt in inkrementellen Buildszenarien neu erstellt, wenn eine seiner Eingabedateien geändert wird, einschließlich der Assemblys, von denen es abhängt. Die Implementierungsassembly ändert sich immer dann, wenn der Programmierer die Implementierung eines beliebigen Members ändert. Die Verweisassembly ändert sich nur, wenn ihre öffentliche API betroffen ist. Daher ermöglicht die Verwendung der Verweisassembly als Eingabedatei anstelle der Implementierungsassembly in einigen Fällen das Überspringen des Buildvorgangs des abhängigen Projekts.
 
 Sie können Verweisassemblys folgendermaßen generieren:
 
@@ -59,9 +59,9 @@ Die Metadaten in Verweisassemblys behalten die folgenden Informationen bei:
 - Alle Typen, einschließlich privater und geschachtelter Typen.
 - Alle Attribute, selbst interne.
 - Alle virtuellen Methoden.
-- Explizite Schnittstellenimplementierungen. 
+- Explizite Schnittstellenimplementierungen.
 - Explizit implementierte Eigenschaften und Ereignisse, weil ihre Accessoren virtuell sind.
-- Alle Felder von Strukturen. 
+- Alle Felder von Strukturen.
 
 Verweisassemblys enthalten ein [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)-Attribut auf Assemblyebene. Dieses Attribut kann in der Quelle angegeben werden (dann muss der Compiler es nicht synthetisch erstellen). Durch dieses Attribut wird die Laufzeit das Ausführen von Verweisassemblys verweigert (sie können aber dennoch im reflektionsbezogenen Modus geladen werden).
 
@@ -73,6 +73,5 @@ Genaue Details der Verweisassemblystruktur hängen von der Compilerversion ab. N
 ## <a name="see-also"></a>Siehe auch
 
 - [Assemblys in .NET](index.md)
-- [Programmieren mit Assemblys](program.md)
 - [Übersicht über Frameworkziele](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Vorgehensweise: Hinzufügen oder Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)

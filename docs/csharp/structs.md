@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen e
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423120"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739175"
 ---
 # <a name="structs"></a>Strukturen
 
@@ -53,21 +53,9 @@ Strukturen teilen sich einen großen Teil der Syntax mit Klassen, obwohl Struktu
   
 - Eine Struktur kann Schnittstellen implementieren.
 
-## <a name="literal-values"></a>Literalwerte
-
-In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler den `double`-Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie auf den Referenzseiten für einzelne Typen unter [Werttypen](./language-reference/keywords/value-types.md).  
-  
-Da Literale typisiert sind und alle Typen letztlich von <xref:System.Object> abgeleitet werden, können Sie Code der folgenden Art erstellen und kompilieren:  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-Die letzten beiden Beispiele veranschaulichen die Sprachfunktionen, die in C# 7.0 eingeführt wurden. Mit dem Ersten können Sie ein Unterstrichzeichen als eine *Zeichentrennlinie* in numerischen Literalen verwenden. Sie können es beliebig zwischen Zahlen setzen, um die Lesbarkeit zu verbessern. Es hat keine Auswirkung auf den Wert.
-
-Im zweiten Beispiel werden *binäre Literale* veranschaulicht, mit denen Sie ein Bitmuster direkt angeben können, anstatt Hexadezimalnotation zu verwenden.
-
 ## <a name="nullable-value-types"></a>Auf NULL festlegbare Werttypen
 
-Gewöhnliche Werttypen können den Wert [NULL](language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) aufweisen kann. Nullable-Werttypen sind Instanzen des generischen Strukturtyps <xref:System.Nullable%601>. Nullable-Werttypen sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL oder nicht definiert sein können. Weitere Informationen finden Sie unter [Nullable-Werttypen](programming-guide/nullable-types/index.md).
+Gewöhnliche Werttypen können den Wert [NULL](language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) aufweisen kann. Nullable-Werttypen sind Instanzen des generischen Strukturtyps <xref:System.Nullable%601>. Nullable-Werttypen sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL oder nicht definiert sein können. Weitere Informationen finden Sie unter [Nullable-Werttypen](language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="see-also"></a>Siehe auch
 

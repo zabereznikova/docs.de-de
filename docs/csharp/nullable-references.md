@@ -3,12 +3,12 @@ title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8.0 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039772"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737836"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -28,7 +28,7 @@ Dieses neue Feature bietet große Vorteile hinsichtlich der Verarbeitung von Ver
 
 Durch das Hinzufügen von Nullable-Verweistypen können Sie Ihre Absicht klarer deklarieren. Der `null`-Wert ist die richtige Wahl, um darzustellen, dass eine Variable auf keinen Wert verweist. Verwenden Sie dieses Feature nicht dazu, alle `null`-Werte aus Ihrem Code zu entfernen. Stattdessen sollten Sie Ihre Absicht gegenüber dem Compiler und anderen Entwicklern deklarieren, die Ihren Code lesen. Indem Sie Ihre Absicht deklarieren, werden Sie vom Compiler informiert, sobald Sie Code schreiben, der dieser Absicht widerspricht.
 
-Ein **Nullable-Verweistyp** wird mithilfe der gleichen Syntax wie [Nullable-Werttypen](programming-guide/nullable-types/index.md) aufgeführt: Ein `?` wird an den Variablentyp angefügt. Beispielsweise stellt die folgende Variablendeklaration eine Nullable-Zeichenfolgenvariable, `name`, dar:
+Ein **Nullable-Verweistyp** wird mithilfe der gleichen Syntax wie [Nullable-Werttypen](language-reference/builtin-types/nullable-value-types.md) aufgeführt: Ein `?` wird an den Variablentyp angefügt. Beispielsweise stellt die folgende Variablendeklaration eine Nullable-Zeichenfolgenvariable, `name`, dar:
 
 ```csharp
 string? name;

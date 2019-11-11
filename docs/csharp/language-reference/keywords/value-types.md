@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422201"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739679"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
@@ -32,7 +32,7 @@ Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=nameWi
 
 Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten. Strukturen können aber wie Verweistypen Schnittstellen implementieren.
 
-Werttypvariablen können nicht standardmäßig `null` sein. Variablen der entsprechenden [Nullable-Werttypen](../../programming-guide/nullable-types/index.md) können jedoch `null` sein.
+Werttypvariablen können nicht standardmäßig `null` sein. Variablen der entsprechenden [Nullable-Werttypen](../builtin-types/nullable-value-types.md) können jedoch `null` sein.
 
 Jeder Werttyp hat einen impliziten parameterlosen Konstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
 
@@ -105,8 +105,6 @@ Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Typen](/dotnet/csharp/language-reference/keywords)
 - [Verweistypen](reference-types.md)
-- [Auf NULL festlegbare Werttypen](../../programming-guide/nullable-types/index.md)
+- [Auf NULL festlegbare Werttypen](../builtin-types/nullable-value-types.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353722"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739686"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und die Operatoren „is“ und „as“
 
@@ -23,7 +23,7 @@ Im folgenden Code wird der Musterabgleich mit der `is`-Anweisung veranschaulicht
 
 Im vorhergehenden Beispiel werden einige Features der Syntax für den Musterabgleich veranschaulicht. Die Anweisungen `if (a is Mammal m)` und `if (o is Mammal m)` kombinieren den Test mit einer Initialisierungszuweisung. Die Zuweisung tritt nur auf, wenn der Test erfolgreich ist. Die Variable `m` befindet sich nur im Bereich der eingebetteten `if`-Anweisung, dem sie zugewiesen wurde. Sie können in der gleichen Methode später nicht auf `m` zugreifen. Probieren Sie dies im interaktiven Fenster aus.
 
-Sie können die gleiche Syntax zum Testen verwenden, wenn ein [Nullable-Werttyp](../programming-guide/nullable-types/index.md) wie im folgenden Beispielcode über einen Wert verfügt:
+Sie können die gleiche Syntax zum Testen verwenden, wenn ein [Nullable-Werttyp](../language-reference/builtin-types/nullable-value-types.md) wie im folgenden Beispielcode über einen Wert verfügt:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 

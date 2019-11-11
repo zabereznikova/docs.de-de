@@ -2,12 +2,12 @@
 title: Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)
 description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können.
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114480"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736822"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -25,7 +25,7 @@ Es gibt einige Einschränkungen für den Ausdruck, den eine Methode als Verweisr
 
 - Der Rückgabewert darf nicht das `null`-Literal sein. Bei der Rückgabe von `null` tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
-   Eine Methode mit einer Verweisrückgabe kann einen Alias an eine Variable zurückgeben, deren Wert derzeit NULL ist (nicht instanziiert) oder ein [Nullable-Werttyp](../nullable-types/index.md) für einen Werttyp darstellt.
+   Eine Methode mit einer Verweisrückgabe kann einen Alias an eine Variable zurückgeben, deren Wert derzeit NULL ist (nicht instanziiert) oder ein [Nullable-Werttyp](../../language-reference/builtin-types/nullable-value-types.md) für einen Werttyp darstellt.
 
 - Der Rückgabewert darf keine Konstante, kein Enumerationsmember, nicht der by-value-Rückgabewert einer Eigenschaft und keine Methode einer `class` oder `struct` sein. Wenn gegen diese Regel verstoßen wird, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
