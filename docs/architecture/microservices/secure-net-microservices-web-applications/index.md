@@ -4,12 +4,12 @@ description: Sicherheit in .NET-Microservices und -Webanwendungen – Lernen Sie
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798856"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736958"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Erstellen sicherer .NET-Microservices und -Webanwendungen
 
@@ -21,15 +21,17 @@ Ressourcen und APIs, die durch einen Dienst veröffentlicht wurden, müssen oftm
 
 In Microservice-Szenarios wird die Authentifizierung in der Regel zentral verarbeitet. Wenn Sie ein API-Gateway verwenden, ist dieses Gateway ein guter Ort, um die Authentifizierung durchzuführen, so wie in Abbildung 9-1 dargestellt. Wenn Sie nach diesem Ansatz vorgehen, stellen Sie sicher, dass die einzelnen Microservices nicht direkt (ohne das API-Gateway) erreicht werden können, außer es kann zusätzliche Sicherheit garantiert werden, um Benachrichtigen danach zu authentifizieren, ob sie vom Gateway stammen oder nicht.
 
-![Wenn die Authentifizierung im API-Gateway zentralisiert ist, fügt dieses Anforderungen beim Weiterleiten an die Microservices Benutzerinformationen hinzu.](./media/image1.png)
+![Das folgenden Diagramm zeigt, wie die mobile Client-App mit dem Back-End interagiert.](./media/index/api-gateway-centralized-authentication.png)
 
 **Abbildung 9-1**. Zentrale Authentifizierung mit einem API-Gateway
 
-Wenn auf Dienste direkt zugegriffen werden kann, kann ein Authentifizierungsdienst wie Azure Active Directory oder ein dedizierter Authentifizierungs-Microservice, der als Sicherheitstokendienst (STS) fungiert, zum Authentifizieren von Benutzern verwendet werden. Entscheidungen über die Vertrauenswürdigkeit werden zwischen Diensten mit Sicherheitstoken oder Cookies freigegeben. (Diese Token können bei Bedarf zwischen ASP.NET Core-Anwendungen durch Implementierung der [gemeinsamen Nutzung von Cookies](/aspnet/core/security/cookie-sharing) freigegeben werden.) Dieses Muster ist in Abbildung 9-2 dargestellt.
+Wenn die Authentifizierung im API-Gateway zentralisiert ist, fügt dieses Anforderungen beim Weiterleiten an die Microservices Benutzerinformationen hinzu. Wenn auf Dienste direkt zugegriffen werden kann, kann ein Authentifizierungsdienst wie Azure Active Directory oder ein dedizierter Authentifizierungs-Microservice, der als Sicherheitstokendienst (STS) fungiert, zum Authentifizieren von Benutzern verwendet werden. Entscheidungen über die Vertrauenswürdigkeit werden zwischen Diensten mit Sicherheitstoken oder Cookies freigegeben. (Diese Token können bei Bedarf zwischen ASP.NET Core-Anwendungen durch Implementierung der [gemeinsamen Nutzung von Cookies](/aspnet/core/security/cookie-sharing) freigegeben werden.) Dieses Muster ist in Abbildung 9-2 dargestellt.
 
-![Beim direkten Zugriff auf Microservices wird die Vertrauensstellung, die Authentifizierung und Autorisierung beinhaltet, mithilfe eines Sicherheitstokens behandelt, das von einem von den Microservices gemeinsam verwendeten, dedizierten Microservice herausgegeben wird.](./media/image2.png)
+![Das folgende Diagramm zeigt die Authentifizierung durch Back-End-Microservices.](./media/index/identity-microservice-authentication.png)
 
 **Abbildung 9-2:** Authentifizierung durch Identitäts-Microservice; das Vertrauen ist mithilfe eines Autorisierungstokens freigegeben.
+
+Beim direkten Zugriff auf Microservices wird die Vertrauensstellung, die Authentifizierung und Autorisierung beinhaltet, mithilfe eines Sicherheitstokens behandelt, das von einem von den Microservices gemeinsam verwendeten, dedizierten Microservice herausgegeben wird.
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Authentifizierung mit ASP.NET Core Identity
 
@@ -121,7 +123,7 @@ else
 
 Wenn Sie die Authentifizierungsoption **Individual User Account** (Einzelbenutzerkonto) auswählen, wenn Sie das ASP.NET Code-Webanwendungsprojekt in Visual Studio erstellen, befindet sich der Code, der zur Anmeldung mit einem externen Anbieter benötigt wird, bereits im Projekt. Dies ist in Abbildung 9-3 dargestellt.
 
-![Dialogfeld für die neue ASP.NET Core-Webanwendung mit hervorgehobener Schaltfläche zum Ändern der Authentifizierung.](./media/image3.png)
+![Screenshot des Dialogfelds „Neue ASP.NET Core-Webanwendung“](./media/index/select-external-authentication-option.png)
 
 **Abbildung 9-3.** Auswählen einer Option zur Verwendung der externen Authentifizierung beim Erstellen eines Webanwendungsprojekts
 
@@ -285,10 +287,10 @@ Die Middleware für die JWT-Bearerauthentifizierung kann auch erweiterte Szenari
 - **Rick Anderson. Zweistufige Authentifizierung mit SMS** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
-- **Enabling authentication using Facebook, Google and other external providers (Ermöglichen der Authentifizierung mit Facebook, Google und anderen externen Anbietern)**  \
+- **Enabling authentication using Facebook, Google and other external providers (Ermöglichen der Authentifizierung mit Facebook, Google und anderen externen Anbietern)** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. An Introduction to OAuth 2 (Einführung in OAuth 2)**  \
+- **Michell Anicas. An Introduction to OAuth 2 (Einführung in OAuth 2)** \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (GitHub repo for ASP.NET OAuth providers) \

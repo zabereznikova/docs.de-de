@@ -2,12 +2,12 @@
 title: Umgang mit komplexen Geschäftsabläufen in einem Microservice mit DDD- und CQRS-Mustern
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Grundlegendes zum Umgang mit komplexen Geschäftsabläufen in einem Microservice mit DDD- und CQRS-Mustern
 ms.date: 10/08/2018
-ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295102"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739829"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Umgang mit komplexen Geschäftsabläufen in einem Microservice mit DDD- und CQRS-Mustern
 
@@ -15,7 +15,9 @@ ms.locfileid: "70295102"
 
 Dieser Abschnitt konzentriert sich auf erweiterte Microservices, die Sie implementieren, wenn Sie es mit komplexen Subsystemen oder Microservices zu tun haben, die von den Kenntnissen von Domänenexperten mit sich stetig ändernden Geschäftsregeln abgeleitet sind. Die Architekturmuster, die in diesem Abschnitt verwendet werden, basieren wie in Abbildung 7-1 dargestellt auf dem domänengesteuerten Design (Domain-Driven Design, DDD) und auf Zuständigkeitstrennung für Befehle und Abfragen (Command and Query Responsibility Segregation, CQRS).
 
-![Unterschied zwischen externer Architektur mit Microservicemustern, API-Gateways, resilienter Kommunikation, Pub/Sub usw. und interner Architektur: datengesteuert/CRUD, DDD-Muster, Abhängigkeitsinjektion, mehrere Bibliotheken usw.](./media/image1.png)
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagramm, das den Vergleich von externen und internen Architekturmustern zeigt.":::
+Unterschied zwischen externer Architektur mit Microservicemustern, API-Gateways, resilienter Kommunikation, Pub/Sub usw. und interner Architektur: datengesteuert/CRUD, DDD-Muster, Abhängigkeitsinjektion, mehrere Bibliotheken usw.
+:::image-end:::
 
 **Abbildung 7-1**. Externe Microservice-Architektur im Vergleich zu internen Architekturmustern für jeden Microservice
 

@@ -2,12 +2,12 @@
 title: Einführung in Container und Docker
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Einführung in Container und Docker
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295144"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740064"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Einführung in Container und Docker
 
@@ -19,7 +19,7 @@ Container isolieren Anwendungen auf einem gemeinsamen Betriebssystem außerdem v
 
 Jeder Container kann wie in Abbildung 2-1 gezeigt eine gesamte Webanwendung oder einen gesamten Dienst ausführen. In diesem Beispiel ist Docker-Host ein Containerhost und App1, App2, Svc1 und Svc2 sind die Containeranwendungen oder -dienste.
 
-![Zwei Anwendungen und zwei Dienste, die unter dem Betriebssystem in einer VM oder auf einem physischen Server ausgeführt werden.](./media/image1.png)
+![Diagramm, das vier Container zeigt, die auf einem virtuellen Computer oder einem Server ausgeführt werden.](./media/index/multiple-containers-single-host.png)
 
 **Abbildung 2-1**. Mehrere Container, die auf einem Containerhost ausgeführt werden
 

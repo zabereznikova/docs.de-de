@@ -7,6 +7,8 @@
           href: system-text-json-overview.md
         - name: 'Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten'
           href: system-text-json-how-to.md
+        - name: Schreiben von benutzerdefinierten Konvertern
+          href: system-text-json-converters-how-to.md
     - name: Binäre Serialisierung
       href: binary-serialization.md
       items:
@@ -24,9 +26,9 @@
           href: version-tolerant-serialization.md
         - name: Serialisierungsrichtlinien
           href: serialization-guidelines.md
-        - name: 'Gewusst wie: Segmentieren serialisierter Daten'
+        - name: 'Vorgehensweise: Segmentieren serialisierter Daten'
           href: how-to-chunk-serialized-data.md
-        - name: 'Gewusst wie: Ermitteln, ob ein .NET Standard-Objekt serialisierbar ist'
+        - name: 'Vorgehensweise: Ermitteln, ob ein .NET Standard-Objekt serialisierbar ist'
           href: how-to-determine-if-netstandard-object-is-serializable.md
         - name: Proben
           href: samples-binary.md
@@ -45,7 +47,7 @@
           href: examples-of-xml-serialization.md
         - name: Das XML Schema Definition-Tool und die XML-Serialisierung
           href: the-xml-schema-definition-tool-and-xml-serialization.md
-        - name: 'Gewusst wie: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool'
+        - name: 'Vorgehensweise: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool'
           href: xml-schema-def-tool-gen.md
         - name: Steuern der XML-Serialisierung mit Attributen
           href: controlling-xml-serialization-using-attributes.md
