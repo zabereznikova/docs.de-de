@@ -1,68 +1,66 @@
 - name: Assemblys in .NET
   href: index.md
+- name: Assemblyinhalte
+  href: contents.md
+- name: Manifest
+  href: manifest.md
+- name: Sicherheitsüberlegungen
+  href: security-considerations.md
+- name: Versionskontrolle
+  href: versioning.md
+- name: Parallele Ausführung
+  href: side-by-side-execution.md
+- name: Assemblydateiformat
+  href: file-format.md
+- name: Entladbarkeit in .NET Core
+  href: unloadability.md
+- name: Verweisassemblys
+  href: reference-assemblies.md
+- name: Auflösen von Assemblyladevorgängen
+  href: resolve-loads.md
+- name: Erstellen von Assemblys
+  href: create.md
+- name: Assemblynamen
+  href: names.md
+- name: Ermitteln des vollqualifizierten Namens einer Assembly
+  href: find-fully-qualified-name.md
+- name: Assemblyspeicherort
+  href: location.md
+- name: Festlegen von Assemblyattributen
+  href: set-attributes.md
+- name: Assemblys mit starkem Namen
   items:
-    - name: Assemblyinhalte
-      href: contents.md
-    - name: Assemblymanifest
-      href: manifest.md
-    - name: Assemblys mit starkem Namen
+    - name: Übersicht
       href: strong-named.md
-    - name: Überlegungen zur Assemblysicherheit
-      href: security-considerations.md
-    - name: Versionsverwaltung für Assemblys
-      href: versioning.md
-    - name: Assemblys und parallele Ausführung
-      href: side-by-side-execution.md
-    - name: Assemblydateiformat
-      href: file-format.md
-    - name: "Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET\_Core"
-      href: unloadability.md
-    - name: Verweisassemblys
-      href: reference-assemblies.md
-    - name: Auflösen von Assemblyladevorgängen
-      href: resolve-loads.md
-    - name: Programmieren mit Assemblys
-      href: program.md
-      items:
-        - name: Erstellen von Assemblys
-          href: create.md
-        - name: Assemblynamen
-          href: names.md
-        - name: 'Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly'
-          href: find-fully-qualified-name.md
-        - name: Assemblyspeicherort
-          href: location.md
-        - name: Festlegen von Assemblyattributen
-          href: set-attributes.md
-        - name: Erstellen und Verwenden von Assemblys mit starkem Namen
-          href: create-use-strong-named.md
-          items:
-            - name: 'Vorgehensweise: Erstellen eines Schlüsselpaars aus öffentlichem und privatem Schlüssel'
-              href: create-public-private-key-pair.md
-            - name: 'Vorgehensweise: Signieren einer Assembly mit einem starken Namen'
-              href: sign-strong-name.md
-            - name: Erweiterte starke Namen
-              href: enhanced-strong-naming.md
-            - name: 'Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen'
-              href: reference-strong-named.md
-            - name: 'Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen'
-              href: disable-strong-name-bypass-feature.md
-        - name: Verzögertes Signieren einer Assembly
-          href: delay-sign.md
-        - name: 'Vorgehensweise: Anzeigen des Assemblyinhalts'
-          href: view-contents.md
-        - name: "Typweiterleitung in der Common\_Language\_Runtime"
-          href: type-forwarding.md
-        - name: Friend-Assemblys
-          href: friend.md
-          items:
-            - name: 'Gewusst wie: Erstellen von unsignierten Friend-Assemblys'
-              href: create-unsigned-friend.md
-            - name: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys'
-              href: create-signed-friend.md
-        - name: 'Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist'
-          href: identify.md
-        - name: 'Gewusst wie: Laden und Entladen von Assemblys'
-          href: load-unload.md
-        - name: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio'
-          href: embed-types-visual-studio.md
+    - name: Erstellen und Verwenden von Assemblys mit starkem Namen
+      href: create-use-strong-named.md
+    - name: Erstellen eines Schlüsselpaars aus öffentlichem und privatem Schlüssel
+      href: create-public-private-key-pair.md
+    - name: Signieren einer Assembly mit einem starken Namen
+      href: sign-strong-name.md
+    - name: Verbesserte starke Namen
+      href: enhanced-strong-naming.md
+    - name: Verweisen auf eine Assembly mit starkem Namen
+      href: reference-strong-named.md
+    - name: Bypass-Funktion mit starkem Namen deaktivieren
+      href: disable-strong-name-bypass-feature.md
+- name: Verzögertes Signieren einer Assembly
+  href: delay-sign.md
+- name: Anzeigen des Assemblyinhalts
+  href: view-contents.md
+- name: Typweiterleitung in der CLR
+  href: type-forwarding.md
+- name: Friend-Assemblys
+  items:
+    - name: Übersicht
+      href: friend.md
+    - name: Erstellen von unsignierten Friend-Assemblys
+      href: create-unsigned-friend.md
+    - name: Erstellen von signierten Friend-Assemblys
+      href: create-signed-friend.md
+- name: 'Bestimmen, ob eine Datei eine Assembly ist'
+  href: identify.md
+- name: Laden und Entladen von Assemblys
+  href: load-unload.md
+- name: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio'
+  href: embed-types-visual-studio.md
