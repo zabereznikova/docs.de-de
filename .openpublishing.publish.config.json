@@ -65,12 +65,14 @@
     {
       "path_to_root": "_csharplang",
       "url": "https://github.com/dotnet/csharplang.de-de",
-      "branch": "live-sxs"
+      "branch": "live-sxs",
+      "include_in_build": true
     },
     {
       "path_to_root": "_vblang",
       "url": "https://github.com/dotnet/vblang.de-de",
-      "branch": "live-sxs"
+      "branch": "live-sxs",
+      "include_in_build": true
     },
     {
       "path_to_root": "_repo.en-us",
