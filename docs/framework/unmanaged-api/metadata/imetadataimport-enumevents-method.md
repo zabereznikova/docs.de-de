@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780708"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440009"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents-Methode
 Zählt Ereignisdefinitionstoken für das angegebene TypeDef-Token auf.  
@@ -41,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] Die TypeDef-Token, dessen Ereignisdefinitionen sind, aufgelistet werden sollen.  
+ [in] The TypeDef token whose event definitions are to be enumerated.  
   
  `rEvents`  
- [out] Das Array der zurückgegebenen Ereignisse an.  
+ [out] The array of returned events.  
   
  `cMax`  
  [in] Die maximale Größe des `rEvents`-Arrays.  
   
  `pcEvents`  
- [out] Die tatsächliche Anzahl der Ereignisse, die in zurückgegebenen `rEvents`.  
+ [out] The actual number of events returned in `rEvents`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Ereignisse aufgelistet werden. In diesem Fall `pcEvents` ist 0 (null).|  
+|`S_OK`|`EnumEvents` returned successfully.|  
+|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

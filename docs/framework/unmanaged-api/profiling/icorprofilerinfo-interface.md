@@ -14,72 +14,70 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3b82d9ac610cb393696ef94fb797a48b737b0231
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0af990930e8c30307e9da3b586621ca8ddb95d0c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965749"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438751"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo-Schnittstelle
-Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (CLR) kommunizieren können, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
+Provides methods for use by code profilers to communicate with the common language runtime (CLR) to control event monitoring and request information.  
   
 > [!NOTE]
-> Jede Methode in der `ICorProfilerInfo` Schnittstelle gibt ein HRESULT zurück, um einen Erfolg oder Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
+> Each method in the `ICorProfilerInfo` interface returns an HRESULT to indicate success or failure. See CorError.h for a list of possible return codes.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[BeginInprocDebugging-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md)|Initialisiert die Prozess interne Debugunterstützung. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
-|[EndInprocDebugging-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-endinprocdebugging-method.md)|Beendet eine in-Process-Debuggingsitzung. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
-|[ForceGC-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-forcegc-method.md)|Erzwingt, dass Garbage Collection innerhalb der Laufzeit auftritt.|  
-|[GetAppDomainInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getappdomaininfo-method.md)|Ruft Informationen über die angegebene Anwendungsdomäne ab.|  
-|[GetAssemblyInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getassemblyinfo-method.md)|Ruft Informationen über die angegebene Assembly ab.|  
-|[GetClassFromObject-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassfromobject-method.md)|Ruft den `ClassID` eines ab.<br /><br /> Objekt, bei dem `ObjectID`angegeben ist.|  
-|[GetClassFromToken-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassfromtoken-method.md)|Ruft die ID der Klasse ab, wenn das Metadatentoken angegeben wird. Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: getclassfromdekenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) -Methode.|  
-|[GetClassIDInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md)|Ruft das übergeordnete Modul und das Metadatentoken für die angegebene Klasse ab.|  
-|[GetCodeInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcodeinfo-method.md)|Ruft den Wertebereich des nativen Codes ab, der der angegebenen Funktions-ID zugeordnet ist. Diese Methode ist veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) -Methode.|  
-|[GetCurrentThreadID-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcurrentthreadid-method.md)|Ruft die ID des aktuellen Threads ab, wenn es sich um einen verwalteten Thread handelt.|  
-|[GetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)|Ruft die aktuellen Ereignis Kategorien ab, für die der Profiler Ereignis Benachrichtigungen von der CLR empfangen möchte.|  
-|[GetFunctionFromIP-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md)|Ordnet einen Anweisungs Zeiger für verwalteten Code `FunctionID`einem zu.|  
-|[GetFunctionFromToken-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromtoken-method.md)|Ruft die ID einer Funktion ab. Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: getfunctionfromdekenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) -Methode.|  
-|[GetFunctionInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctioninfo-method.md)|Ruft die übergeordnete Klasse und das Metadatentoken für die angegebene Funktion ab.|  
-|[GetHandleFromThread-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-gethandlefromthread-method.md)|Ordnet die ID eines Threads einem Win32-Thread Handle zu.|  
-|[GetILFunctionBody-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md)|Ruft einen Zeiger auf den Text einer Methode im MSIL-Code (Microsoft Intermediate Language) ab, beginnend bei der Kopfzeile.|  
-|[GetILFunctionBodyAllocator-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)|Ruft eine-Schnittstelle ab, die eine Methode zum Zuordnen von Arbeitsspeicher bereitstellt, der zum Austauschen des Texts einer Methode im MSIL-Code verwendet werden soll.|  
-|[GetILToNativeMapping-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)|Ruft eine Zuordnung von MSIL-Offsets zu systemeigenen Offsets für den Code ab, der in der angegebenen Funktion enthalten ist.|  
-|[GetInprocInspectionInterface-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getinprocinspectioninterface-method.md)|Ruft ein Objekt ab, das für eine ICorDebugProcess-Schnittstelle abgefragt werden kann. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
-|[GetInprocInspectionIThisThread-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getinprocinspectionithisthread-method.md)|Ruft ein Objekt ab, das für die ICorDebugThread-Schnittstelle abgefragt werden kann. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
+|[BeginInprocDebugging-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md)|Initializes in-process debugging support. This method is obsolete in the .NET Framework version 2.0.|  
+|[EndInprocDebugging-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-endinprocdebugging-method.md)|Shuts down an in-process debugging session. This method is obsolete in the .NET Framework version 2.0.|  
+|[ForceGC-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-forcegc-method.md)|Forces garbage collection to occur within the runtime.|  
+|[GetAppDomainInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getappdomaininfo-method.md)|Gets information about the specified application domain.|  
+|[GetAssemblyInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getassemblyinfo-method.md)|Gets information about the specified assembly.|  
+|[GetClassFromObject-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassfromobject-method.md)|Gets the `ClassID` of an<br /><br /> object, given its `ObjectID`.|  
+|[GetClassFromToken-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassfromtoken-method.md)|Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use the [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) method instead.|  
+|[GetClassIDInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md)|Gets the parent module and the metadata token for the specified class.|  
+|[GetCodeInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcodeinfo-method.md)|Ruft den Wertebereich des nativen Codes ab, der der angegebenen Funktions-ID zugeordnet ist. Diese Methode ist veraltet. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.|  
+|[GetCurrentThreadID-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcurrentthreadid-method.md)|Gets the ID of the current thread, if it is a managed thread.|  
+|[GetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)|Gets the current event categories for which the profiler wants to receive event notifications from the CLR.|  
+|[GetFunctionFromIP-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md)|Maps a managed code instruction pointer to a `FunctionID`.|  
+|[GetFunctionFromToken-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromtoken-method.md)|Gets the ID of a function. This method is obsolete in the .NET Framework version 2.0. Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.|  
+|[GetFunctionInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctioninfo-method.md)|Gets the parent class and metadata token for the specified function.|  
+|[GetHandleFromThread-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-gethandlefromthread-method.md)|Maps the ID of a thread to a Win32 thread handle.|  
+|[GetILFunctionBody-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md)|Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.|  
+|[GetILFunctionBodyAllocator-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)|Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in MSIL code.|  
+|[GetILToNativeMapping-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)|Gets a map from MSIL offsets to native offsets for the code contained in the specified function.|  
+|[GetInprocInspectionInterface-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getinprocinspectioninterface-method.md)|Gets an object that can be queried for an ICorDebugProcess interface. This method is obsolete in the .NET Framework version 2.0.|  
+|[GetInprocInspectionIThisThread-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getinprocinspectionithisthread-method.md)|Gets an object that can be queried for the ICorDebugThread interface. This method is obsolete in the .NET Framework version 2.0.|  
 |[GetModuleInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)|Gibt für die übergebene Modul-ID den Dateinamen des Moduls und die ID der übergeordneten Assembly des Moduls zurück.|  
-|[GetModuleMetaData-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)|Ruft eine Instanz der Metadatenschnittstelle ab, die dem angegebenen Modul zugeordnet wird.|  
-|[GetObjectSize-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md)|Ruft die Größe eines angegebenen-Objekts ab.|  
-|[GetThreadContext-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadcontext-method.md)|Ruft die Kontext Identität ab, die dem angegebenen Thread zurzeit zugeordnet ist.|  
-|[GetThreadInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadinfo-method.md)|Ruft die aktuelle Win32-Thread Identität für den angegebenen Thread ab.|  
-|[GetTokenAndMetadataFromFunction-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-gettokenandmetadatafromfunction-method.md)|Ruft das Metadatentoken und eine Instanz der Metadatenschnittstelle ab, die für das Token für die angegebene Funktion verwendet werden kann.|  
-|[IsArrayClass-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-isarrayclass-method.md)|Bestimmt, ob die angegebene Klasse eine Array Klasse ist.|  
-|[SetEnterLeaveFunctionHooks-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md)|Gibt vom Profiler implementierte Funktionen an, die für die "Enter"-, "Leave"-und "Tailcall"-Hooks von verwalteten Funktionen aufgerufen werden.|  
-|[SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)|Legt einen Wert fest, der die Ereignis Typen angibt, für die der Profiler Benachrichtigungen von der CLR empfangen möchte.|  
+|[GetModuleMetaData-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)|Gets a metadata interface instance that maps to the specified module.|  
+|[GetObjectSize-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md)|Gets the size of a specified object.|  
+|[GetThreadContext-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadcontext-method.md)|Gets the context identity currently associated with the specified thread.|  
+|[GetThreadInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadinfo-method.md)|Gets the current Win32 thread identity for the specified thread.|  
+|[GetTokenAndMetadataFromFunction-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-gettokenandmetadatafromfunction-method.md)|Gets the metadata token and an instance of the metadata interface that can be used against the token for the specified function.|  
+|[IsArrayClass-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-isarrayclass-method.md)|Determines whether the specified class is an array class.|  
+|[SetEnterLeaveFunctionHooks-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md)|Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.|  
+|[SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)|Sets a value that specifies the types of events for which the profiler wants to receive notification from the CLR.|  
 |[SetFunctionIDMapper-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)|Gibt die vom Profiler implementierte Funktion an, die aufgerufen wird, um die `FunctionID`-Werte alternativen Werten zuzuordnen, die an die Funktionseinstiegs-/-exithooks des Profilers übergeben werden.|  
 |[SetFunctionReJIT-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionrejit-method.md)|Nicht implementiert. Nicht verwenden.|  
-|[SetILFunctionBody-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)|Ersetzt den Text der angegebenen Funktion im angegebenen Modul.|  
-|[SetILInstrumentedCodeMap-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)|Gibt an, wie die Offsets der ursprünglichen MSIL einer angegebenen Funktion den neuen Offsets der vom Profiler geänderten MSIL der Funktion zugeordnet werden.|  
+|[SetILFunctionBody-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)|Replaces the body of the specified function in the specified module.|  
+|[SetILInstrumentedCodeMap-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)|Specifies how the offsets of a specified function's original MSIL map to the new offsets of the function's profiler-modified MSIL.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Profiler Ruft eine Methode in der `ICorProfilerInfo` -Schnittstelle auf, um mit der CLR zu kommunizieren, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
+ A profiler calls a method in the `ICorProfilerInfo` interface to communicate with the CLR to control event monitoring and request information.  
   
- Die Methoden der `ICorProfilerInfo` -Schnittstelle werden von der CLR mithilfe des frei Hand Thread Modells implementiert. Jede Methode gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
+ The methods of the `ICorProfilerInfo` interface are implemented by the CLR using the free-threaded model. Jede Methode gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. See CorError.h for a list of possible return codes.  
   
- Die CLR übergibt über die Implementierung von [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)des Profilers eine `ICorProfilerInfo` Schnittstelle für jeden Codeprofiler während der Initialisierung. Ein Codeprofiler kann dann Methoden der `ICorProfilerInfo` -Schnittstelle aufzurufen, um Informationen zu verwaltetem Code abzurufen, der unter der Kontrolle der CLR ausgeführt wird.  
+ The CLR passes, via the profiler's implementation of [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md), an `ICorProfilerInfo` interface to each code profiler during initialization. A code profiler can then call methods of the `ICorProfilerInfo` interface to get information about managed code being executed under the control of the CLR.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corprof. idl, Corprof. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

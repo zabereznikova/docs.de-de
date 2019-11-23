@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1ccafea78aa2497c52442a10ad1af1c05771df7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737105"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445462"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps-Methode
-Legt fest oder aktualisiert den Standardwert für das Feld auf die durch das angegebene Feld-Token verwiesen wird.  
+Sets or updates the default value for the field referenced by the specified field token.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,26 +39,26 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>Parameter  
  `fd`  
- [in] Das Token für das Feld "Ziel".  
+ [in] The token for the target field.  
   
  `dwFieldFlags`  
- [in] Feldattribute. Dies ist eine Bitmaske der `CorFieldAttr` Werte.  
+ [in] Field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist eine `CorElementType` Wert. Wenn eine Konstante nicht definiert ist, legen Sie diesen Wert auf `ELEMENT_TYPE_END`.  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] Der Konstante Wert für das Feld.  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in] Die Größe in Unicode-Zeichen von `pValue`.  
+ [in] The size, in Unicode characters, of `pValue`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

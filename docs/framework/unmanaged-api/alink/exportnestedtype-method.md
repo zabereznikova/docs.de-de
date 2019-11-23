@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777275"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438421"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
-Gibt die zu exportierenden Typen als exportierbar an. Die [ExportType-Methode](exporttype-method.md) kann auch die in die Liste eingefügten Typen exportieren, diese Methode ist jedoch schneller.  
+Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +41,31 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der zu exportierenden Assembly.  
+ ID of assembly to export from.  
   
  `FileToken`  
- Dateitoken oder Assemblydatei, die den Typ definiert, der exportierbar gemacht werden soll.  
+ File token or Assembly of file that defines the type to be made exportable.  
   
  `TypeToken`  
- Typtoken vom Typ, das als exportierbar erstellt werden soll.  
+ Type token of type to be made exportable.  
   
  `ParentType`  
- Token des übergeordneten Typs.  
+ Token of parent type.  
   
  `pszTypename`  
- Der voll qualifizierte Typname, der exportiert werden soll.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`Flags wie `tdPublic` oder `tdNested`. Dieser Wert kann an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Empfängt das Token für den exportierten Typ.  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert "Alink. h"  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Siehe auch
 

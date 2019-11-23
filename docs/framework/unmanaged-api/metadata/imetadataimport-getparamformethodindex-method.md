@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec3bfa95-1920-4511-932e-3ff23d76fcb8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fdb3def9574f4442a22b370323dfdf044170542b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a70691b9c519bc59ae7df7a86d5d6697db565575
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778941"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437165"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex-Methode
-Ruft das Token ab, das einen angegebenen Parameter, der durch das angegebene MethodDef-Token dargestellten Methode darstellt.  
+Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +37,20 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>Parameter  
  `md`  
- [in] Ein Token, das die Methode zum Zurückgeben der ParameterToken für darstellt.  
+ [in] A token that represents the method to return the parameter token for.  
   
  `ulParamSeq`  
- [in] Die Ordnungsposition in der Parameterliste, in dem der angeforderte Parameter auftritt. Parameter sind nummeriert, beginnend bei eins, mit der Methodenrückgabewert an Position 0 (null).  
+ [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
   
  `ppd`  
- [out] Ein Zeiger auf ein ParamDef-Token, das den angeforderten Parameter darstellt.  
+ [out] A pointer to a ParamDef token that represents the requested parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

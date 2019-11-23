@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782448"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437782"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout-Methode
 Ruft Layoutinformationen für die Klasse ab, auf die vom angegebenen TypeDef-Token verwiesen wird.  
@@ -42,29 +40,29 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] Die TypeDef-Token für die Klasse mit dem Layout zurückgegeben werden soll.  
+ [in] The TypeDef token for the class with the layout to return.  
   
  `pdwPackSize`  
- [out] Einer der Werte 1, 2, 4, 8 oder 16 ist, werden die Paketgröße der Klasse darstellt.  
+ [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
   
  `rFieldOffset`  
- [out] Ein Array von [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) Werte.  
+ [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
   
  `cMax`  
  [in] Die maximale Größe des `rFieldOffset`-Arrays.  
   
  `pcFieldOffset`  
- [out] Die Anzahl der Elemente, die in zurückgegebenen `rFieldOffset`.  
+ [out] The number of elements returned in `rFieldOffset`.  
   
  `pulClassSize`  
- [out] Die Größe in Bytes der durch dargestellten Klasse `td`.  
+ [out] The size in bytes of the class represented by `td`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

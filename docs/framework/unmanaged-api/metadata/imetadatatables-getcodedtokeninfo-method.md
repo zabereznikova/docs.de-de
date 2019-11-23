@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 577a4f6bb8315cfb1cb462703dd0cb9b23b60704
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781523"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434057"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo-Methode
-Ruft einen Zeiger auf ein Array von Token mit dem angegebenen Zeilenindex verknüpft ist.  
+Gets a pointer to an array of tokens associated with the specified row index.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,23 +38,23 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Parameter  
  `ixCdTkn`  
- [in] Die Art des codierten Token zurückgegeben.  
+ [in] The kind of coded token to return.  
   
  `pcTokens`  
- [out] Ein Zeiger auf die Länge des `ppTokens`.  
+ [out] A pointer to the length of `ppTokens`.  
   
  `ppTokens`  
- [out] Ein Zeiger auf einen Zeiger auf ein Array, das die Liste der zurückgegebenen Token enthält.  
+ [out] A pointer to a pointer to an array that contains the list of returned tokens.  
   
  `ppName`  
- [out] Ein Zeiger auf einen Zeiger auf den Namen des Tokens an `ixCdTkn`.  
+ [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

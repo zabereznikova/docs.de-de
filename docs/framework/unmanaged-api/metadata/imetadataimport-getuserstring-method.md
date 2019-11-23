@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: edeaefd0792a5cc03ae6d4385ff669a343ffdfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778811"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436686"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString-Methode
 Ruft das Zeichenfolgenliteral ab, das durch das angegebene Metadatentoken dargestellt wird.  
@@ -40,23 +38,23 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>Parameter  
  `stk`  
- [in] Das Zeichenfolgentoken, das an die zugeordnete Zeichenfolge zurückgegeben.  
+ [in] The String token to return the associated string for.  
   
  `szString`  
- [out] Eine Kopie der angeforderten Zeichenfolge.  
+ [out] A copy of the requested string.  
   
  `cchString`  
- [in] Die maximale Größe in Breitzeichen des angeforderten `szString`.  
+ [in] The maximum size in wide characters of the requested `szString`.  
   
  `pchString`  
- [out] Die Größe in Breitzeichen des zurückgegebenen `szString`.  
+ [out] The size in wide characters of the returned `szString`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

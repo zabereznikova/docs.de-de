@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85ebddf4ef96be2a583e54082e4d4405b30adf46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d974b7368dd01062d2d310d076dce05e102eb81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777766"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442291"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly-Methode
-Diese Methode ist nicht implementiert. Wird aufgerufen, gibt E_NOTIMPL zurück.  
+Diese Methode ist nicht implementiert. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,32 +41,32 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>Parameter  
  `szAppBase`  
- [in] Nicht verwendet.  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in] Nicht verwendet.  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in] Nicht verwendet.  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in] Die Assembly gefunden werden.  
+ [in] The assembly to be found.  
   
  `szName`  
- [out] Der einfache Name der Assembly.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Die Größe in Bytes, des `szName`.  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out] Die Anzahl der Zeichen im tatsächlich zurückgegebenen `szName`.  
+ [out] The number of characters actually returned in `szName`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

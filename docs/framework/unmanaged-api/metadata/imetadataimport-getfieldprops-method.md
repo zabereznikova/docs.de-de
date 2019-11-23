@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782391"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437997"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps-Methode
 Ruft Metadaten ab, die dem Feld zugeordnet sind, auf das durch das angegebene FieldDef-Token verwiesen wird.  
@@ -47,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parameter  
  `mb`  
- [in] Ein FieldDef-Token, das Feld zum Abrufen der zugehörigen Metadaten für darstellt.  
+ [in] A FieldDef token that represents the field to get associated metadata for.  
   
  `pClass`  
- [out] Ein Zeiger auf ein TypeDef-Token, das den Typ der Klasse darstellt, das Feld gehört.  
+ [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
   
  `szField`  
- [out] Der Name des Felds.  
+ [out] The name of the field.  
   
  `cchField`  
- [in] Die Größe in Zeichen des Puffers für *SzField*.  
+ [in] The size in wide characters of the buffer for *szField*.  
   
  `pchField`  
- [out] Die tatsächliche Größe des zurückgegebenen Puffers.  
+ [out] The actual size of the returned buffer.  
   
  `pdwAttr`  
- [out] Flags, die mit den Metadaten des Felds.  
+ [out] Flags associated with the field's metadata.  
   
  `ppvSigBlob`  
- [in] Ein Zeiger auf die binäre Metadatenwert, der die Felder beschrieben werden.  
+ [in] A pointer to the binary metadata value that describes the field.  
   
  `pcbSigBlob`  
- [out] Die Größe in Bytes der `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] Ein Flag, das den Wert des Felds angibt.  
+ [out] A flag that specifies the value type of the field.  
   
  `ppValue`  
- [out] Ein konstanter Wert für das Feld.  
+ [out] A constant value for the field.  
   
  `pcchValue`  
- [out] Die Größe in Zeichen des `ppValue`, oder NULL, wenn keine Zeichenfolge vorhanden ist.  
+ [out] The size in chars of `ppValue`, or zero if no string exists.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d58c8c0413346536c3e61e67ca0077c08c2b387
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781656"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436488"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr-Enumeration
 Enthält Werte, die die Metadaten eines Methodenparameters beschreiben.  
@@ -48,16 +46,16 @@ typedef enum CorParamAttr {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`pdIn`|Gibt an, dass der Parameter in den Aufruf der Methode übergeben wird.|  
-|`pdOut`|Gibt an, dass der Parameter der Methode zurück übergeben wird.|  
-|`pdOptional`|Gibt an, dass der Parameter optional ist.|  
-|`pdReservedMask`|Durch die common Language Runtime können Sie für die interne Verwendung reserviert.|  
-|`pdHasDefault`|Gibt an, dass der Parameter einen Standardwert verfügt.|  
-|`pdHasFieldMarshal`|Gibt an, dass der Parameter über Marshallinginformationen verfügt.|  
+|`pdIn`|Specifies that the parameter is passed into the method call.|  
+|`pdOut`|Specifies that the parameter is passed from the method return.|  
+|`pdOptional`|Specifies that the parameter is optional.|  
+|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`pdHasDefault`|Specifies that the parameter has a default value.|  
+|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
 |`pdUnused`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

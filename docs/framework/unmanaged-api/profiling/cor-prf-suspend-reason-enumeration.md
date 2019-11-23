@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745525"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447703"
 ---
-# <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON-Enumeration
-Gibt den Grund, dass die Laufzeit angehalten wird.  
+# <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON-Enumeration
+Indicates the reason that the runtime is suspended.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,20 +42,20 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|Die Laufzeit ist aus Unbekannter Ursache unterbrochen.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Die Laufzeit wird angehalten, um eine Garbage Collection-Anforderung zu bedienen.<br /><br /> Die Rückrufe für die Garbage Collection-bezogene treten zwischen den [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) und [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) Rückrufe.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Die Laufzeit wird angehalten, damit ein `AppDomain` heruntergefahren werden kann.<br /><br /> Während die Laufzeit angehalten ist, die Laufzeit wird festzulegen, welche Threads im werden die `AppDomain` , heruntergefahren wird, und legen Sie sie Abbrechen, wenn sie fortsetzen. Es gibt keine `AppDomain`-spezifische Rückrufe während dieses Aussetzens.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Die Laufzeit wird unterbrochen, sodass Codepitching auftreten kann.<br /><br /> Codepitching erfolgt nur, wenn der just-in-Time-Compiler (JIT) aktiv ist und Codepitching aktiviert. Codepitchingrückrufe treten zwischen den `ICorProfilerCallback::RuntimeSuspendFinished` und `ICorProfilerCallback::RuntimeResumeStarted` Rückrufe. **Hinweis**:  Die CLR-JIT ist nicht Funktionen in .NET Framework, Version 2.0, präsentieren, damit dieser Wert nicht in 2.0 verwendet wird.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Die Laufzeit wird unterbrochen, sodass er heruntergefahren werden kann. Sie müssen alle Threads zum Abschließen des Vorgangs anzuhalten.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Die Laufzeit wird für das prozessinterne Debuggen angehalten.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Die Laufzeit wird angehalten, um für eine Garbagecollection vorzubereiten.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Die Laufzeit wird für die JIT-Neukompilierung unterbrochen.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Threads mit Common Language Runtime, die in nicht verwaltetem Code dürfen weiterhin ausgeführt, bis sie versuchen, die Runtime erneut eingeben, an welcher, die Stelle sie auch angehalten werden, bis die Laufzeit fortgesetzt wird. Dies gilt auch für neue Threads, die die Laufzeit eingeben. Alle Threads in der Laufzeit sind entweder sofort angehalten, wenn sie in der unterbrechbare Code sind, oder aufgefordert, anhalten, wenn sie unterbrechbaren Code erreichen.  
+ All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

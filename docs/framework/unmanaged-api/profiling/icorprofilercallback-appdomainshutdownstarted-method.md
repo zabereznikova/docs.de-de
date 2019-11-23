@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9d1cf182eaf6f245baa5d898bac3ca7d3190234
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763091"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445181"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted-Methode
-Benachrichtigt den Profiler, dass von einem Prozess, eine Anwendungsdomäne entladen wird.  
+Notifies the profiler that an application domain is being unloaded from a process.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +34,13 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Parameter  
  `appDomainId`  
- [in] Identifiziert die Domäne, in der die Assemblys der Anwendung gespeichert sind.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert des `appDomainId` gilt nicht für jede informationsanforderung nach der `AppDomainShutdownStarted` Methodenrückgabe – Dies ist der Profiler letzte Gelegenheit zum Abrufen von Informationen zu dieser Anwendungsdomäne.  
+ The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

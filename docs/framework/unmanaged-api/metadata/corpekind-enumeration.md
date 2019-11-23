@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74670a1477546066145bd4bbf2f123a252e10b55
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781672"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436475"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind-Enumeration
-Enthält Werte, die beschreiben, eine Datei (portable Executable)-Datei von einem Aufruf zurückgegeben [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,18 +43,18 @@ typedef enum CorPEKind {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`peNot`|Gibt an, dass es sich nicht um eine PE-Datei handelt.|  
-|`peILOnly`|Gibt an, dass diese PE-Datei enthält nur verwalteten Code.|  
-|`pe32BitRequired`|Gibt an, dass diese PE-Datei mit Win32-Aufrufe ausführt.|  
-|`pe32Plus`|Gibt an, dass diese PE-Datei auf einer 64-Bit-Plattform ausgeführt wird.|  
-|`pe32Unmanaged`|Gibt an, dass diese PE-Datei mit systemeigenem Code ist.|  
-|pe32BitPreferred|Gibt an, dass diese PE-Datei plattformunabhängig ist und zieht es vor, die in einer 32-Bit-Umgebung geladen werden.|  
+|`peNot`|Indicates that this is not a PE file.|  
+|`peILOnly`|Indicates that this PE file contains only managed code.|  
+|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
+|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
+|`pe32Unmanaged`|Indicates that this PE file is native code.|  
+|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Werte können in bitweise Kombinationen verwendet werden.  
+ These values can be used in bitwise combinations.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

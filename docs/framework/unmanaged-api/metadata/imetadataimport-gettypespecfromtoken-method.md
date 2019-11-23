@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e7e060d2f72609b470dbd5060746a1458f5eed9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782309"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436691"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken-Methode
 Ruft die binäre Metadatensignatur der Typspezifikation ab, die durch das angegebene Token dargestellt wird.  
@@ -39,23 +37,23 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>Parameter  
  `typespec`  
- [in] Das TypeSpec-Token, das die Signatur für die angeforderten Metadaten zugeordnet ist.  
+ [in] The TypeSpec token associated with the requested metadata signature.  
   
  `ppvSig`  
- [out] Ein Zeiger auf die binäre Metadatensignatur.  
+ [out] A pointer to the binary metadata signature.  
   
  `pcbSig`  
- [out] Die Größe in Byte der Signatur der Metadaten.  
+ [out] The size, in bytes, of the metadata signature.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, der Erfolg oder Misserfolg angibt. Fehler können mit dem Makro FAILED getestet werden.  
+ An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

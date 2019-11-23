@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48cd62f89f1112a1007a5661dc55fe2977dace2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a020a0343eecceb4a85ebbddffe323c7f7bdca3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778916"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437108"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps-Methode
-Ruft ab, die zugeordneten Metadaten den <xref:System.Security.PermissionSet?displayProperty=nameWithType> durch das angegebene Berechtigungstoken dargestellt wird.  
+Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,23 +38,23 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parameter  
  `pm`  
- [in] Das Metadatentoken, das die Berechtigungen zum Abrufen der Metadateneigenschaften für darstellt.  
+ [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
   
  `pdwAction`  
- [out] Ein Zeiger auf den Berechtigungssatz auf.  
+ [out] A pointer to the permission set.  
   
  `ppvPermission`  
- [out] Ein Zeiger auf die binäre Metadatensignatur des Berechtigungssatzes.  
+ [out] A pointer to the binary metadata signature of the permission set.  
   
  `pcbPermission`  
- [out] Die Größe in Bytes der `ppvPermission`.  
+ [out] The size in bytes of `ppvPermission`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

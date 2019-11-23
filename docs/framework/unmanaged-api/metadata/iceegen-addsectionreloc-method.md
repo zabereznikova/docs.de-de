@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: da3b83191ce1acdf40e27c5ee1d843a1fb4a54f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5940f229e86b46bb8c5d5b2f9920a8261359f65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750677"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436407"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc-Methode
-Fügt eine .reloc-Anweisung in die Codebasis.  
+Adds a .reloc instruction to the code base.  
   
- Diese Methode ist veraltet und sollte nicht verwendet werden.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,23 +40,23 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] Der Codeabschnitt im Speicher, der eine .reloc-Anweisung hinzugefügt.  
+ [in] The section of in-memory code to which to add a .reloc instruction.  
   
  `offset`  
- [in] Der Offset des Abschnitts.  
+ [in] The offset of the section.  
   
  `relativeTo`  
- [in] Der Abschnitt, dem `offset` verweist.  
+ [in] The section to which `offset` refers.  
   
  `relocType`  
- [in] Eines der [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) Werte, der die Art der .reloc-Anweisung hinzufügen.  
+ [in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

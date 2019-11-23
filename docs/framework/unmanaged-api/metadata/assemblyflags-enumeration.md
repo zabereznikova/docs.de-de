@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffb5953c843a338b4548253457a0c3b1ca0c20f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776447"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444299"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags-Enumeration
-Enthält Werte, die Laufzeitfunktionen einer Assembly zu beschreiben.  
+Contains values that describe run-time features of an assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,21 +40,21 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Gibt an, dass exportierte Typdefinitionen implizit in den Dateien, aus denen die Assembly besteht. In der .NET Framework-Versionen 1.0 und 1.1 wird immer davon ausgegangen, dass dieser Wert festgelegt werden.|  
-|`afImplicitResources`|Gibt an, dass Ressourcendefinitionen implizit in den Dateien, aus denen die Assembly besteht. In .NET Framework 1.0 und 1.1 wird immer davon ausgegangen, dass dieser Wert festgelegt werden.|  
-|`afNonSideBySideAppDomain`|Gibt an, dass die Assembly nicht mit anderen Versionen ausgeführt werden kann, wenn sie in der gleichen Anwendungsdomäne ausgeführt werden.|  
-|`afNonSideBySideProcess`|Gibt an, dass die Assembly nicht mit anderen Versionen ausgeführt werden kann, wenn sie in demselben Prozess ausgeführt werden.|  
-|`afNonSideBySideMachine`|Gibt an, dass die Assembly nicht mit anderen Versionen ausgeführt werden kann, wenn sie auf dem gleichen Computer ausgeführt werden.|  
+|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
+|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
+|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
+|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
+|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Werte zwischen 0 x 0010 und 0x0070, einschließlich werden verwendet, um Kompatibilitätsfeatures von Seite-an-Seite der referenzierten Assembly zu beschreiben. Wenn keiner dieser Werte festgelegt sind, wird angenommen, dass die Assembly-Seite-an-Seite-kompatibel sein.  
+ The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MsCorEE.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

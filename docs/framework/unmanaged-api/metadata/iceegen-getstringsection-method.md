@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 68dc80c657c3794a416f6e142f70cfb05bee2c77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ba8da686d1834c81111828e9856525b96f575b93
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745896"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443264"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection-Methode
-Ruft eine Zeichenfolgendarstellung der Codeabschnitt, der auf die verwiesen wird durch das angegebene Handle ab.  
+Gets a string representation of the code section referenced by the specified handle.  
   
- Diese Methode ist veraltet und sollte nicht verwendet werden.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +37,14 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in, out] Das Handle für den Codeabschnitt.  
+ [in, out] The handle to the code section.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

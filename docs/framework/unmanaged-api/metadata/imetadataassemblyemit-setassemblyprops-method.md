@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34335321207e98a518ff3e0fdb5ea1dc3ac68b75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f79320d5b7d2ad4ad44a79fae063ce6718490a70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776266"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431949"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps-Methode
 Ändert die angegebene `Assembly`-Metadatenstruktur.  
@@ -43,35 +41,35 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>Parameter  
  `pma`  
- [in] Das Metadatentoken, der angibt, die `Assembly` Metadatenstruktur geändert werden.  
+ [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
   
  `pbPublicKey`  
- [in] Ein Zeiger auf den öffentlichen Schlüssel des Herausgebers der Assembly.  
+ [in] A pointer to the public key of the publisher of the assembly.  
   
  `cbPublicKey`  
- [in] Die Größe in Bytes der `pbPublicKey`.  
+ [in] The size in bytes of `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in] Der Bezeichner für die Hash-Algorithmus verwendet, um die Assemblydateien hash.  
+ [in] The identifier for the hash algorithm used to hash the assembly files.  
   
  `szName`  
- [in] Der Benutzer lesbarer Textname der Assembly.  
+ [in] The human-readable text name of the assembly.  
   
  `pMetaData`  
- [in] Ein Zeiger auf ASSEMBLYMETADATA, Version, Plattform und Gebietsschema-Informationen für die Assembly enthält.  
+ [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
   
  `dwAssemblyFlags`  
- [in] Eine bitweise Kombination von [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) Werte, die verschiedenen Attribute der Assembly angeben.  
+ [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
   
 ## <a name="remarks"></a>Hinweise  
- Zum Erstellen einer `Assembly` Metadatenstruktur, verwenden die [IMetaDataAssemblyEmit:: DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) Methode.  
+ To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

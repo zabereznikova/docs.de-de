@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746116"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434878"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock-Methode
-Ruft einen Abschnittsblock im des Codes ab.  
+Gets a section block of the code base.  
   
- Diese Methode ist veraltet und sollte nicht verwendet werden.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,26 +40,26 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] Der Abschnitt aus dem Sie einen Block, der CodeBase abrufen.  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in] Die Länge des Blocks abgerufen werden sollen.  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in] Das Byte, relativ zum Anfang des Abschnitts, mit der das erste Byte des Blocks ausgerichtet. Dies ist die Position des Blocks innerhalb des Abschnitts.  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out] Ein Zeiger auf einen Speicherort, der die Adresse des abgerufenen Blocks empfängt.  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie `GetSectionBlock` nur dann, wenn Sie Anforderungen an die speziellen Bereich verfügen, die nicht von anderen Methoden behandelt werden.  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

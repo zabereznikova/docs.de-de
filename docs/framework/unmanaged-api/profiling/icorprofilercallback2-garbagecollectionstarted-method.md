@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4f639f9794002748e1019821514c546e4f4429f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed2553f2d971deefd85f731dd39f383cd096c5b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746865"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439815"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted-Methode
-Benachrichtigt den Profiler an, dass der Garbagecollection gestartet wurde.  
+Notifies the code profiler that garbage collection has started.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,23 +36,23 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>Parameter  
  `cGenerations`  
- [in] Die Gesamtanzahl von Einträgen in der `generationCollected` Array.  
+ [in] The total number of entries in the `generationCollected` array.  
   
  `generationCollected`  
- [in] Ein Array von booleschen Werten, die `true` Wenn die Generation, die Index des Arrays entspricht, von diese Garbagecollection gesammelt werden, andernfalls wird `false`.  
+ [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
   
- Das Array wird indiziert, durch den Wert der [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) -Enumeration, die die Generierung angibt.  
+ The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
   
  `reason`  
- [in] Der Wert der [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) -Enumeration, der gibt an, die Ursache der Garbagecollection ausgelöst wurde.  
+ [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Rückrufe, die diese Garbagecollection betreffen, treten zwischen den `GarbageCollectionStarted` Rückruf und dem entsprechenden [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) Rückruf. Diese Rückrufe müssen nicht auf dem gleichen Thread erfolgen.  
+ All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
   
- Es ist sicher für den Profiler zum Überprüfen von Objekten in ihren ursprünglichen Speicherorten während der die `GarbageCollectionStarted` Rückruf. Der Garbage collection beginnt das Verschieben von Objekten nach der Rückgabe von `GarbageCollectionStarted`. Nachdem der Profiler von diesem Rückruf zurückgegeben wurde, sollten der Profiler alle Objekt-IDs ungültig werden, bis er erhält eine `ICorProfilerCallback2::GarbageCollectionFinished` Rückruf.  
+ It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

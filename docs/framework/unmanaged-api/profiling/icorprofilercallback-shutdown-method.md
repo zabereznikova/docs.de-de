@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747172"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446946"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown-Methode
-Benachrichtigt den Profiler an, dass die Anwendung heruntergefahren wird.  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,14 +32,14 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Profilercode kann nicht sicher Methoden zum Aufrufen der [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) Schnittstelle nach der `Shutdown` Methode wird aufgerufen. Alle Aufrufe von `ICorProfilerInfo` Methoden zu nicht definiertem Verhalten nach der `Shutdown` Methodenrückgabe. Bestimmte unveränderliche Ereignisse können weiterhin nach dem Herunterfahren auftreten. der Profiler sollte sorgfältig und zurückgeben, sofort, wenn dies der Fall.  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- Die `Shutdown` Methode wird nur aufgerufen, wenn die verwaltete Anwendung, die ein Profil erstellt wird als verwalteter Code gestartet wurde (d. h. der erste Frame im Stapel Prozess verwaltet wird). Wenn die Anwendung gestartet wird, als nicht verwalteter Code, aber später erfolgte ein in verwaltetem Code Sprung, wodurch eine Instanz von die common Language Runtime (CLR), klicken Sie dann `Shutdown` wird nicht aufgerufen werden. In diesen Fällen sollte der Profiler in der Bibliothek enthalten eine `DllMain` Routine, die das DLL_PROZESS_DETACH verwendet Wert, um alle Ressourcen freizugeben und verarbeiten Sie die Bereinigung seiner Daten, z.B. das Leeren der ablaufverfolgungen auf dem Datenträger und so weiter.  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- Im Allgemeinen muss der Profiler mit unerwartetem Herunterfahren umgehen können. Beispielsweise kann ein Prozess angehalten werden, von einer Win32 `TerminateProcess` Methode (deklariert in Winbase.h). In anderen Fällen wird die CLR bestimmte verwaltete Threads (Hintergrundthreads) angehalten, ohne die ordnungsgemäße Zerstörung Nachrichten für diese Bereitstellung verwendet wird.  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

@@ -14,26 +14,24 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940399"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440971"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2-Schnittstelle
-Deklariert Methoden, die für die Senke-Benachrichtigung.  
+Declares methods for sink notification.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[OnSyncCallEnter-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Wird aufgerufen, wenn einen Aufruf eingeben.|  
-|[OnSyncCallExit-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Wird aufgerufen, wenn ein Aufruf beendet wird.|  
-|[OnSyncCallOut-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Wird aufgerufen, wenn ein Aufruf ausgegeben wird.|  
-|[OnSyncCallReturn-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Wird aufgerufen, wenn ein Aufruf zurückgibt.|  
+|[OnSyncCallEnter-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Gets invoked when entering a call.|  
+|[OnSyncCallExit-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Gets invoked when exiting a call.|  
+|[OnSyncCallOut-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Gets invoked when a call is out.|  
+|[OnSyncCallReturn-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Gets invoked when a call returns.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ProtocolNotify2.idl  

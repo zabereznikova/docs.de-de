@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be4408758db1cbf7839c12cb66ff395625925f69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779018"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437320"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps-Methode
 Ruft den Namen des Moduls ab, auf das vom angegebenen Metadatentoken verwiesen wird.  
@@ -40,23 +38,23 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parameter  
  `mur`  
- [in] Das ModuleRef-Metadatentoken, das das Modul zum Abrufen von Metadateninformationen für verweist.  
+ [in] The ModuleRef metadata token that references the module to get metadata information for.  
   
  `szName`  
- [out] Ein Puffer, die den Namen des Moduls enthalten soll.  
+ [out] A buffer to hold the module name.  
   
  `cchName`  
- [in] Die angeforderte Größe des `szName` in Breitzeichen.  
+ [in] The requested size of `szName` in wide characters.  
   
  `pchName`  
- [out] Die zurückgegebene Größe von `szName` in Breitzeichen.  
+ [out] The returned size of `szName` in wide characters.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1f657957d42cef1421ab3aa19f297bd04b0cacd8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440368"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum-Methode
-Ruft die Anzahl der Elemente in der Enumeration, die von den angegebenen Enumerator abgerufen wurde.  
+Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +36,20 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>Parameter  
  `hEnum`  
- [in] Das Handle für den Enumerator.  
+ [in] The handle for the enumerator.  
   
  `pulCount`  
- [out] Die Anzahl der aufgelisteten Elemente.  
+ [out] The number of elements enumerated.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Handle, das vom angegebenen `hEnum` abgerufen wird, von einer früheren `Enum` *Namen* aufrufen (z. B. [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

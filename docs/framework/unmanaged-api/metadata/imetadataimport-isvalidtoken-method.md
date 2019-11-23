@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 753449924f3415eb826b59d3a887eb69b9efba39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: edf24de8ae38aab97e41a53cc86ae5aa6c592c50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778787"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434693"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken-Methode
 Ruft einen Wert ab, der angibt, ob das angegebene Token einen gültigen Verweis auf ein Codeobjekt enthält.  
@@ -37,17 +35,17 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] Das Token überprüft die Gültigkeit des Verweises.  
+ [in] The token to check the reference validity for.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn `tk` ist ein gültiges Metadatentoken im aktuellen Gültigkeitsbereich. Andernfalls `false`.  
+ `true` if `tk` is a valid metadata token within the current scope. Andernfalls `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

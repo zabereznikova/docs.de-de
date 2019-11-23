@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777367"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428035"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField-Methode
-Definiert eine einzelne Variable, die nicht innerhalb einer Methode ist. Diese Methode ist für bestimmte Felder in Klassen, Bitfelder usw. verwendet.  
+Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,34 +42,34 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parameter  
  `parent`  
- [in] Der Metadatentyp oder die Methode token.  
+ [in] The metadata type or method token.  
   
  `name`  
- [in] Der Name des Felds.  
+ [in] The field name.  
   
  `attributes`  
- [in] Die Attribute des Felds.  
+ [in] The field attributes.  
   
  `cSig`  
- [in] Ein `ULONG32` d. h. die Größe in Zeichen des Puffers erforderlich, um die Feldsignatur.  
+ [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
   
  `signature`  
- [in] Das Array von Feldsignaturen.  
+ [in] The array of field signatures.  
   
  `addrKind`  
- [in] Der Adresstyp.  
+ [in] The address type.  
   
  `addr1`  
- [in] Die erste Adresse für die Feldangabe.  
+ [in] The first address for the field specification.  
   
  `addr2`  
- [in] Die zweite Adresse für die Feldangabe.  
+ [in] The second address for the field specification.  
   
  `addr3`  
- [in] Die dritte Adresse für die Feldangabe.  
+ [in] The third address for the field specification.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777226"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447245"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken-Methode
-Ruft das Token des öffentlichen Schlüssels für eine angegebene keyfile oder einen Schlüssel Container ab.  
+Retrieves the public key token for a given keyfile or key container.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +37,22 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Parameter  
  `pszKeyFile`  
- Der Dateiname des Schlüssels.  
+ Filename of the key.  
   
  `pszKeyContainer`  
- Der Name des Schlüssel Containers.  
+ Name of the key container.  
   
  `pvPublicKeyToken`  
- Adresse, an der das Schlüssel Token gespeichert werden soll.  
+ Address where key token is to be stored.  
   
  `pcbPublicKeyToken`  
- Gibt die Größe (in Bytes) des Puffers an, `pvPublicKeyToken`der durch angegeben wird. Enthält bei der Rückgabe die tatsächliche Anzahl der verwendeten Bytes.  
+ Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert Alink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781720"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436617"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType-Enumeration
 Stellt Werte bereit, die den im systemeigenen Code verknüpften Typ angeben.  
@@ -44,19 +42,19 @@ typedef enum
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`nltNone`|Gibt an, dass keines der Schlüsselwörter angegeben sind.|  
-|`nltAnsi`|Gibt an, dass ein ANSI-Schlüsselwort angegeben ist.|  
-|`nltUnicode`|Gibt an, dass ein Unicode-Schlüsselwort angegeben wird|  
-|`nltAuto`|Gibt an, dass ein Schlüsselwort "Auto" angegeben ist.|  
-|`nltOle`|Gibt an, dass ein OLE-Schlüsselwort angegeben ist.|  
+|`nltNone`|Indicates that none of the keywords are specified.|  
+|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
+|`nltUnicode`|Indicates that a Unicode keyword is specified|  
+|`nltAuto`|Indicates that an auto keyword is specified.|  
+|`nltOle`|Indicates that an OLE keyword is specified.|  
 |`nltMaxValue`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

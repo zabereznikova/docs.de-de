@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 017c8ab4-4c09-4754-9935-5b0b49cabecb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1e7181f50d94fa417bf9d00c3531747cefca82c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 145fdde302e7e942ea77049b3faeabf60894dd94
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781474"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448412"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob-Methode
-Ruft den Index des nächsten binary large Object (BLOB) in der Tabelle ab.  
+Gets the index of the next binary large object (BLOB) in the table.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +36,17 @@ HRESULT GetNextBlob (
   
 ## <a name="parameters"></a>Parameter  
  `ixBlob`  
- [in] Der Index, wie aus einem BLOB-Spalte zurückgegeben.  
+ [in] The index, as returned from a column of BLOBs.  
   
  `pNext`  
- [out] Ein Zeiger auf den Index des nächsten BLOB.  
+ [out] A pointer to the index of the next BLOB.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
