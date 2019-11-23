@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 14ea8dab2c4258fe490ef362fd527d80bd8a0178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c8ecab9d957e72bb6c0817af07c863fcff97cde
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746103"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436328"
 ---
-# <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="c9304-102">ICeeGen::GetMethodBuffer-Methode</span><span class="sxs-lookup"><span data-stu-id="c9304-102">ICeeGen::GetMethodBuffer Method</span></span>
-<span data-ttu-id="c9304-103">Ruft einen Puffer von geeigneter Größe für die Methode an der angegebenen relativen virtuellen Adresse an.</span><span class="sxs-lookup"><span data-stu-id="c9304-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  
+# <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="5355e-102">ICeeGen::GetMethodBuffer-Methode</span><span class="sxs-lookup"><span data-stu-id="5355e-102">ICeeGen::GetMethodBuffer Method</span></span>
+<span data-ttu-id="5355e-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span><span class="sxs-lookup"><span data-stu-id="5355e-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  
   
- <span data-ttu-id="c9304-104">Diese Methode ist veraltet und sollte nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c9304-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="5355e-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="5355e-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9304-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c9304-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5355e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="5355e-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodBuffer (  
@@ -38,22 +36,22 @@ HRESULT GetMethodBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9304-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="c9304-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5355e-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="5355e-106">Parameters</span></span>  
  `RVA`  
- <span data-ttu-id="c9304-107">[in] Die relative virtuelle Adresse der Methode für den Puffer zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="c9304-107">[in] The relative virtual address of the method for which to return a buffer.</span></span>  
+ <span data-ttu-id="5355e-107">[in] The relative virtual address of the method for which to return a buffer.</span><span class="sxs-lookup"><span data-stu-id="5355e-107">[in] The relative virtual address of the method for which to return a buffer.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="c9304-108">[out] Ein Zeiger auf die zurückgegebene Puffer.</span><span class="sxs-lookup"><span data-stu-id="c9304-108">[out] A pointer to the returned buffer.</span></span>  
+ <span data-ttu-id="5355e-108">[out] A pointer to the returned buffer.</span><span class="sxs-lookup"><span data-stu-id="5355e-108">[out] A pointer to the returned buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9304-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c9304-109">Requirements</span></span>  
- <span data-ttu-id="c9304-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9304-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5355e-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5355e-109">Requirements</span></span>  
+ <span data-ttu-id="5355e-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5355e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9304-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c9304-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5355e-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5355e-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c9304-112">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="c9304-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5355e-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5355e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c9304-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9304-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5355e-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5355e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9304-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9304-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5355e-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5355e-114">See also</span></span>
 
-- [<span data-ttu-id="c9304-115">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c9304-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="5355e-115">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5355e-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

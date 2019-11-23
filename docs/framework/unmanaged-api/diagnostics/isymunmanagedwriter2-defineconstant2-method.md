@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c194cea21901015153626dc5aead49ed1b2c3df7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6600ca7e70ac77ffba0c75812f27d388c354ece6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438328"
 ---
-# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="8b54d-102">ISymUnmanagedWriter2::DefineConstant2-Methode</span><span class="sxs-lookup"><span data-stu-id="8b54d-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
-<span data-ttu-id="8b54d-103">Definiert einen Namen für einen konstanten Wert.</span><span class="sxs-lookup"><span data-stu-id="8b54d-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="17cb2-102">ISymUnmanagedWriter2::DefineConstant2-Methode</span><span class="sxs-lookup"><span data-stu-id="17cb2-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
+<span data-ttu-id="17cb2-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="17cb2-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b54d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8b54d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17cb2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="17cb2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant2(  
@@ -36,23 +34,23 @@ HRESULT DefineConstant2(
     [in] mdSignature  sigToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8b54d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8b54d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17cb2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="17cb2-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="8b54d-106">[in] Den Namen der Konstante.</span><span class="sxs-lookup"><span data-stu-id="8b54d-106">[in] The constant name.</span></span>  
+ <span data-ttu-id="17cb2-106">[in] The constant name.</span><span class="sxs-lookup"><span data-stu-id="17cb2-106">[in] The constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="8b54d-107">[in] Der Wert der Konstanten.</span><span class="sxs-lookup"><span data-stu-id="8b54d-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="17cb2-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="17cb2-107">[in] The value of the constant.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="8b54d-108">[in] Das Metadatentoken der Konstante.</span><span class="sxs-lookup"><span data-stu-id="8b54d-108">[in] The metadata token of the constant.</span></span>  
+ <span data-ttu-id="17cb2-108">[in] The metadata token of the constant.</span><span class="sxs-lookup"><span data-stu-id="17cb2-108">[in] The metadata token of the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8b54d-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="8b54d-109">Return Value</span></span>  
- <span data-ttu-id="8b54d-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="8b54d-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="17cb2-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="17cb2-109">Return Value</span></span>  
+ <span data-ttu-id="17cb2-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="17cb2-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b54d-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8b54d-111">Requirements</span></span>  
- <span data-ttu-id="8b54d-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8b54d-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17cb2-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="17cb2-111">Requirements</span></span>  
+ <span data-ttu-id="17cb2-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="17cb2-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b54d-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8b54d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17cb2-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="17cb2-113">See also</span></span>
 
-- [<span data-ttu-id="8b54d-114">ISymUnmanagedWriter2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8b54d-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="8b54d-115">DefineConstant-Methode</span><span class="sxs-lookup"><span data-stu-id="8b54d-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+- [<span data-ttu-id="17cb2-114">ISymUnmanagedWriter2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="17cb2-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="17cb2-115">DefineConstant-Methode</span><span class="sxs-lookup"><span data-stu-id="17cb2-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

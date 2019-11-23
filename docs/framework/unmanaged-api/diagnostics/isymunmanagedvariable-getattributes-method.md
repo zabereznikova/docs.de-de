@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 80f168af-a6a6-4c8f-b9e6-8a82dc834ed5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7e71315b5ff99a550ae4a59f3b0d444093dac01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cfc28dfcda7bf4b3d1fc6fe3530a212ee76fadd2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778279"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446085"
 ---
-# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="cc496-102">ISymUnmanagedVariable::GetAttributes-Methode</span><span class="sxs-lookup"><span data-stu-id="cc496-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
-<span data-ttu-id="cc496-103">Ruft die Attributflags für diese Variable ab.</span><span class="sxs-lookup"><span data-stu-id="cc496-103">Gets the attribute flags for this variable.</span></span>  
+# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="81073-102">ISymUnmanagedVariable::GetAttributes-Methode</span><span class="sxs-lookup"><span data-stu-id="81073-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
+<span data-ttu-id="81073-103">Gets the attribute flags for this variable.</span><span class="sxs-lookup"><span data-stu-id="81073-103">Gets the attribute flags for this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc496-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cc496-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81073-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="81073-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAttributes(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cc496-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="cc496-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81073-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="81073-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="cc496-106">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Attribute.</span><span class="sxs-lookup"><span data-stu-id="cc496-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="cc496-107">Der zurückgegebene Wert werden die Werte in definierten die [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) Enumeration.</span><span class="sxs-lookup"><span data-stu-id="cc496-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="81073-106">[out] A pointer to a `ULONG32` that receives the attributes.</span><span class="sxs-lookup"><span data-stu-id="81073-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="81073-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span><span class="sxs-lookup"><span data-stu-id="81073-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cc496-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="cc496-108">Return Value</span></span>  
- <span data-ttu-id="cc496-109">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="cc496-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81073-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="81073-108">Return Value</span></span>  
+ <span data-ttu-id="81073-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="81073-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc496-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cc496-110">Requirements</span></span>  
- <span data-ttu-id="cc496-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cc496-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81073-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="81073-110">Requirements</span></span>  
+ <span data-ttu-id="81073-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="81073-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc496-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc496-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81073-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81073-112">See also</span></span>
 
-- [<span data-ttu-id="cc496-113">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="cc496-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="81073-113">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="81073-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

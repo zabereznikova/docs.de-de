@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767016"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443786"
 ---
-# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="59e59-102">CorCheckDuplicatesFor-Enumeration</span><span class="sxs-lookup"><span data-stu-id="59e59-102">CorCheckDuplicatesFor Enumeration</span></span>
-<span data-ttu-id="59e59-103">Gibt an, die Metadatentoken, die auf Duplikate überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="59e59-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
+# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="b0fbf-102">CorCheckDuplicatesFor-Enumeration</span><span class="sxs-lookup"><span data-stu-id="b0fbf-102">CorCheckDuplicatesFor Enumeration</span></span>
+<span data-ttu-id="b0fbf-103">Specifies the metadata tokens that will be checked for duplicates.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59e59-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="59e59-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0fbf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b0fbf-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCheckDuplicatesFor {  
@@ -66,45 +64,45 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="59e59-105">Member</span><span class="sxs-lookup"><span data-stu-id="59e59-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b0fbf-105">Member</span><span class="sxs-lookup"><span data-stu-id="b0fbf-105">Members</span></span>  
   
-|<span data-ttu-id="59e59-106">Member</span><span class="sxs-lookup"><span data-stu-id="59e59-106">Member</span></span>|<span data-ttu-id="59e59-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="59e59-107">Description</span></span>|  
+|<span data-ttu-id="b0fbf-106">Member</span><span class="sxs-lookup"><span data-stu-id="b0fbf-106">Member</span></span>|<span data-ttu-id="b0fbf-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b0fbf-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDDupAll`|<span data-ttu-id="59e59-108">Überprüfen Sie alle Metadatentoken für Duplikate an.</span><span class="sxs-lookup"><span data-stu-id="59e59-108">Check all metadata tokens for duplicates.</span></span>|  
-|`MDDupENC`|<span data-ttu-id="59e59-109">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="59e59-109">Not used.</span></span>|  
-|`MDNoDupChecks`|<span data-ttu-id="59e59-110">Metadatentoken für die Duplikate werden nicht überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="59e59-110">Do not check metadata tokens for duplicates.</span></span>|  
-|`MDDupTypeDef`|<span data-ttu-id="59e59-111">Duplikate von `mdTypeDef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
-|`MDDupInterfaceImpl`|<span data-ttu-id="59e59-112">Duplikate von `mdInterfaceImpl` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
-|`MDDupMethodDef`|<span data-ttu-id="59e59-113">Duplikate von `mdMethodDef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
-|`MDDupTypeRef`|<span data-ttu-id="59e59-114">Duplikate von `mdTypeRef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
-|`MDDupMemberRef`|<span data-ttu-id="59e59-115">Duplikate von `mdMemberRef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
-|`MDDupCustomAttribute`|<span data-ttu-id="59e59-116">Duplikate von `mdCustomAttribute` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
-|`MDDupParamDef`|<span data-ttu-id="59e59-117">Duplikate von `mdParamDef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
-|`MDDupPermission`|<span data-ttu-id="59e59-118">Duplikate von `mdPermission` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
-|`MDDupProperty`|<span data-ttu-id="59e59-119">Duplikate von `mdProperty` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
-|`MDDupEvent`|<span data-ttu-id="59e59-120">Duplikate von `mdEvent` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
-|`MDDupFieldDef`|<span data-ttu-id="59e59-121">Duplikate von `mdFieldDef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
-|`MDDupSignature`|<span data-ttu-id="59e59-122">Duplikate von `mdSignature` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
-|`MDDupModuleRef`|<span data-ttu-id="59e59-123">Duplikate von `mdModuleRef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
-|`MDDupTypeSpec`|<span data-ttu-id="59e59-124">Duplikate von `mdTypeSpec` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
-|`MDDupImplMap`|<span data-ttu-id="59e59-125">Duplikate von `mdImplMap` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
-|`MDDupAssemblyRef`|<span data-ttu-id="59e59-126">Duplikate von `mdAssemblyRef` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
-|`MDDupFile`|<span data-ttu-id="59e59-127">Duplikate von `mdFile` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-127">Check for duplicates of `mdFile` tokens.</span></span>|  
-|`MDDupExportedType`|<span data-ttu-id="59e59-128">Duplikate von `mdExportedType` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
-|`MDDupManifestResource`|<span data-ttu-id="59e59-129">Duplikate von `mdManifestResource` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
-|`MDDupGenericParam`|<span data-ttu-id="59e59-130">Duplikate von `mdGenericParam` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
-|`MDDupMethodSpec`|<span data-ttu-id="59e59-131">Duplikate von `mdMethodSpec` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
-|`MDDupGenericParamConstraint`|<span data-ttu-id="59e59-132">Duplikate von `mdGenericParamConstraint` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
-|`MDDupAssembly`|<span data-ttu-id="59e59-133">Duplikate von `mdAssembly` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
-|`MDDupDefault`|<span data-ttu-id="59e59-134">Duplikate von `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, und `mdMethodSpec` Token.</span><span class="sxs-lookup"><span data-stu-id="59e59-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
+|`MDDupAll`|<span data-ttu-id="b0fbf-108">Check all metadata tokens for duplicates.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-108">Check all metadata tokens for duplicates.</span></span>|  
+|`MDDupENC`|<span data-ttu-id="b0fbf-109">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-109">Not used.</span></span>|  
+|`MDNoDupChecks`|<span data-ttu-id="b0fbf-110">Do not check metadata tokens for duplicates.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-110">Do not check metadata tokens for duplicates.</span></span>|  
+|`MDDupTypeDef`|<span data-ttu-id="b0fbf-111">Check for duplicates of `mdTypeDef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
+|`MDDupInterfaceImpl`|<span data-ttu-id="b0fbf-112">Check for duplicates of `mdInterfaceImpl` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
+|`MDDupMethodDef`|<span data-ttu-id="b0fbf-113">Check for duplicates of `mdMethodDef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
+|`MDDupTypeRef`|<span data-ttu-id="b0fbf-114">Check for duplicates of `mdTypeRef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
+|`MDDupMemberRef`|<span data-ttu-id="b0fbf-115">Check for duplicates of `mdMemberRef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
+|`MDDupCustomAttribute`|<span data-ttu-id="b0fbf-116">Check for duplicates of `mdCustomAttribute` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
+|`MDDupParamDef`|<span data-ttu-id="b0fbf-117">Check for duplicates of `mdParamDef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
+|`MDDupPermission`|<span data-ttu-id="b0fbf-118">Check for duplicates of `mdPermission` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
+|`MDDupProperty`|<span data-ttu-id="b0fbf-119">Check for duplicates of `mdProperty` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
+|`MDDupEvent`|<span data-ttu-id="b0fbf-120">Check for duplicates of `mdEvent` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
+|`MDDupFieldDef`|<span data-ttu-id="b0fbf-121">Check for duplicates of `mdFieldDef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
+|`MDDupSignature`|<span data-ttu-id="b0fbf-122">Check for duplicates of `mdSignature` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
+|`MDDupModuleRef`|<span data-ttu-id="b0fbf-123">Check for duplicates of `mdModuleRef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
+|`MDDupTypeSpec`|<span data-ttu-id="b0fbf-124">Check for duplicates of `mdTypeSpec` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
+|`MDDupImplMap`|<span data-ttu-id="b0fbf-125">Check for duplicates of `mdImplMap` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
+|`MDDupAssemblyRef`|<span data-ttu-id="b0fbf-126">Check for duplicates of `mdAssemblyRef` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
+|`MDDupFile`|<span data-ttu-id="b0fbf-127">Check for duplicates of `mdFile` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-127">Check for duplicates of `mdFile` tokens.</span></span>|  
+|`MDDupExportedType`|<span data-ttu-id="b0fbf-128">Check for duplicates of `mdExportedType` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
+|`MDDupManifestResource`|<span data-ttu-id="b0fbf-129">Check for duplicates of `mdManifestResource` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
+|`MDDupGenericParam`|<span data-ttu-id="b0fbf-130">Check for duplicates of `mdGenericParam` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
+|`MDDupMethodSpec`|<span data-ttu-id="b0fbf-131">Check for duplicates of `mdMethodSpec` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
+|`MDDupGenericParamConstraint`|<span data-ttu-id="b0fbf-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
+|`MDDupAssembly`|<span data-ttu-id="b0fbf-133">Check for duplicates of `mdAssembly` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
+|`MDDupDefault`|<span data-ttu-id="b0fbf-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span><span class="sxs-lookup"><span data-stu-id="b0fbf-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="59e59-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="59e59-135">Requirements</span></span>  
- <span data-ttu-id="59e59-136">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59e59-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0fbf-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b0fbf-135">Requirements</span></span>  
+ <span data-ttu-id="b0fbf-136">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0fbf-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59e59-137">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="59e59-137">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="b0fbf-137">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b0fbf-137">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="59e59-138">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59e59-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b0fbf-138">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0fbf-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59e59-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="59e59-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0fbf-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0fbf-139">See also</span></span>
 
-- [<span data-ttu-id="59e59-140">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="59e59-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="b0fbf-140">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="b0fbf-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

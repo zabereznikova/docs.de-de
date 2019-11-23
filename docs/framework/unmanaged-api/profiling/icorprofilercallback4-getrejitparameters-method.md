@@ -15,49 +15,47 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03b7ca218318df517832d198e72d4f79d30827b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d81d7275d197de1dfc99b135377459f509c2651f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779239"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439437"
 ---
-# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="48754-102">ICorProfilerCallback4::GetReJITParameters-Methode</span><span class="sxs-lookup"><span data-stu-id="48754-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
-<span data-ttu-id="48754-103">Ermöglicht den Codeprofiler alternativen codeerstellungskennzeichen für einen neuen Methodentext für die neu kompilierte festgelegt.</span><span class="sxs-lookup"><span data-stu-id="48754-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
+# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="a49d0-102">ICorProfilerCallback4::GetReJITParameters-Methode</span><span class="sxs-lookup"><span data-stu-id="a49d0-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
+<span data-ttu-id="a49d0-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span><span class="sxs-lookup"><span data-stu-id="a49d0-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48754-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="48754-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a49d0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a49d0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48754-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="48754-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a49d0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a49d0-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="48754-106">[in] Das Modul, das die Methode enthält, für die die CLR die JIT-Neukompilierung-Parameter benötigt.</span><span class="sxs-lookup"><span data-stu-id="48754-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="a49d0-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span><span class="sxs-lookup"><span data-stu-id="a49d0-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `methodId`  
- <span data-ttu-id="48754-107">[in] Die `MethodDef` der Methode für die die CLR die JIT-Neukompilierung-Parameter benötigt.</span><span class="sxs-lookup"><span data-stu-id="48754-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="a49d0-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span><span class="sxs-lookup"><span data-stu-id="a49d0-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `pFunctionControl`  
- <span data-ttu-id="48754-108">[in] Ein Zeiger auf ein [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) -Schnittstelle, die der Profiler verwendet werden kann, um JIT-Neukompilierung Informationen für die Methode erneut kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="48754-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
+ <span data-ttu-id="a49d0-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span><span class="sxs-lookup"><span data-stu-id="a49d0-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="48754-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="48754-109">Remarks</span></span>  
- <span data-ttu-id="48754-110">Die Probleme bei der CLR eine `GetReJITParameters` Rückruf, damit der Profiler die Parameter für die erneute Kompilierung einer bestimmten Methode angeben kann.</span><span class="sxs-lookup"><span data-stu-id="48754-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="48754-111">Die `GetReJITParameters` Rückruf wird nur einmal pro Funktion ausgegeben, die Parameter, die vom Profiler bereitgestellte gelten für alle Instanzen dieser Funktion.</span><span class="sxs-lookup"><span data-stu-id="48754-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a49d0-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a49d0-109">Remarks</span></span>  
+ <span data-ttu-id="a49d0-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span><span class="sxs-lookup"><span data-stu-id="a49d0-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="a49d0-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span><span class="sxs-lookup"><span data-stu-id="a49d0-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48754-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="48754-112">Requirements</span></span>  
- <span data-ttu-id="48754-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48754-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a49d0-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a49d0-112">Requirements</span></span>  
+ <span data-ttu-id="a49d0-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a49d0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48754-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="48754-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a49d0-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a49d0-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="48754-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="48754-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a49d0-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a49d0-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="48754-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48754-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="a49d0-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a49d0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48754-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48754-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a49d0-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a49d0-117">See also</span></span>
 
-- [<span data-ttu-id="48754-118">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="48754-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="48754-119">ICorProfilerCallback4-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="48754-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="48754-120">JITCompilationStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="48754-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="48754-121">ReJITCompilationStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="48754-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [<span data-ttu-id="a49d0-118">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a49d0-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="a49d0-119">ICorProfilerCallback4-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a49d0-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="a49d0-120">JITCompilationStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="a49d0-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="a49d0-121">ReJITCompilationStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="a49d0-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

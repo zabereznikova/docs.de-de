@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1f657957d42cef1421ab3aa19f297bd04b0cacd8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440368"
 ---
-# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="d6a96-102">IMetaDataImport::CountEnum-Methode</span><span class="sxs-lookup"><span data-stu-id="d6a96-102">IMetaDataImport::CountEnum Method</span></span>
-<span data-ttu-id="d6a96-103">Ruft die Anzahl der Elemente in der Enumeration, die von den angegebenen Enumerator abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="d6a96-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
+# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="a9122-102">IMetaDataImport::CountEnum-Methode</span><span class="sxs-lookup"><span data-stu-id="a9122-102">IMetaDataImport::CountEnum Method</span></span>
+<span data-ttu-id="a9122-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span><span class="sxs-lookup"><span data-stu-id="a9122-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6a96-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d6a96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9122-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a9122-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CountEnum (  
@@ -36,26 +34,26 @@ HRESULT CountEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d6a96-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d6a96-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9122-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a9122-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="d6a96-106">[in] Das Handle für den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="d6a96-106">[in] The handle for the enumerator.</span></span>  
+ <span data-ttu-id="a9122-106">[in] The handle for the enumerator.</span><span class="sxs-lookup"><span data-stu-id="a9122-106">[in] The handle for the enumerator.</span></span>  
   
  `pulCount`  
- <span data-ttu-id="d6a96-107">[out] Die Anzahl der aufgelisteten Elemente.</span><span class="sxs-lookup"><span data-stu-id="d6a96-107">[out] The number of elements enumerated.</span></span>  
+ <span data-ttu-id="a9122-107">[out] The number of elements enumerated.</span><span class="sxs-lookup"><span data-stu-id="a9122-107">[out] The number of elements enumerated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d6a96-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d6a96-108">Remarks</span></span>  
- <span data-ttu-id="d6a96-109">Das Handle, das vom angegebenen `hEnum` abgerufen wird, von einer früheren `Enum` *Namen* aufrufen (z. B. [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="d6a96-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9122-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a9122-108">Remarks</span></span>  
+ <span data-ttu-id="a9122-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="a9122-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6a96-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d6a96-110">Requirements</span></span>  
- <span data-ttu-id="d6a96-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6a96-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9122-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a9122-110">Requirements</span></span>  
+ <span data-ttu-id="a9122-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9122-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6a96-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d6a96-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a9122-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a9122-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d6a96-113">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d6a96-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a9122-113">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a9122-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d6a96-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6a96-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a9122-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9122-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6a96-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6a96-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9122-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a9122-115">See also</span></span>
 
-- [<span data-ttu-id="d6a96-116">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d6a96-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="d6a96-117">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d6a96-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a9122-116">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a9122-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a9122-117">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a9122-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
