@@ -1,6 +1,6 @@
 ---
 title: Zusätzliche Klassenbibliotheken und APIs
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 472a315aae3085f9d6a41fe6ff626188ddd82b9f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847079"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281746"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
 Die .NET Framework wird ständig weiterentwickelt. Um die plattformübergreifende Entwicklung zu verbessern und frühzeitig neue Funktionen einzuführen, werden neue Features out-of-Band (OOB) veröffentlicht. In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.  
   
-Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Beispielsweise macht die Klasse <xref:System.Text.CodePagesEncodingProvider> Code Page Codierungen für UWP-apps verfügbar, die mithilfe des .NET Framework entwickelt wurden. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
+Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Beispielsweise macht die <xref:System.Text.CodePagesEncodingProvider>-Klasse Code Page Codierungen für UWP-apps verfügbar, die mithilfe des .NET Framework entwickelt wurden. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
   
 ## <a name="oob-projects"></a>OOB-Projekte
   
@@ -56,13 +56,14 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 * [System. Data. SqlTypes. SqlStreamChars. Seek-Methode](system.data.sqltypes.sqlstreamchars.seek.md)
 * [System. Data. SqlTypes. SqlStreamChars. SetLength-Methode](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [System. Data. SqlTypes. SqlStreamChars. Write-Methode](system.data.sqltypes.sqlstreamchars.write.md)
+* [System. IO. MemoryStream. internalgetoriginandlength-Methode](system.io.memorystream.internalgetoriginandlength.md)
 * [System .net. Connection-Klasse](connection.md)
 * [System .net. Connection. m\_beschreitelist-Feld](m_writelist.md)
 * [System .net. connectiongroup-Klasse](connectiongroup.md)
-* [System .net. connectiongroup. m\_connectionlist-Feld](m_connectionlist.md)
+* [System.Net.ConnectionGroup.m\_ConnectionList Field](m_connectionlist.md)
 * [System .net. connectstream. Connection-Eigenschaft](system.net.connectstream.connection.md)
 * [System .net. coreresponabdata-Klasse](coreresponsedata.md)
-* [System .net. coreresponabdata. m\_Response Headers-Feld](coreresponsedata_m_responseheaders.md)
+* [System.Net.CoreResponseData.m\_ResponseHeaders Field](coreresponsedata_m_responseheaders.md)
 * [System .net. coreresponsedata. m\_Feld "Statuscode"](coreresponsedata_m_statuscode.md)
 * [System .net. HttpWebRequest.\_autoreumleitungen-Feld](_autoredirects.md)
 * [Feld "System .net. HttpWebRequest.\_coreresponse"](httpwebrequest__coreresponse.md)
@@ -72,9 +73,9 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 * [Feld "System .net. ServicePointManager. s\_servicepoin\"](s_servicepointtable.md)
 * [System .net. tlsstream. m_Worker-Feld](system.net.tlsstream.m_worker.md)
 * [System .net. Security. sslstate. SslProtocol (Eigenschaft)](system.net.security.sslstate.sslprotocol.md)
-* [System. Windows. Diagnostics. visualdiagnostics. s\_isdebuggercheckdisabledfortesttargets-Feld](s-isdebuggercheckdisabledfortestpurposes-field.md)
-* [System. Windows. Forms. Design. DataMemberFieldEditor-Klasse](datamemberfieldeditor-class.md)
-* [System. Windows. Forms. Design. datamemberlisteditor-Klasse](datamemberlisteditor-class.md)
+* [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [System.Windows.Forms.Design.DataMemberFieldEditor Class](datamemberfieldeditor-class.md)
+* [System.Windows.Forms.Design.DataMemberListEditor Class](datamemberlisteditor-class.md)
 * [System. Xml. XmlReader. kreatesqlreader-Methode](system.xml.xmlreader.createsqlreader.md)
 * [ADODB. Verbindungsschnittstelle](adodb.connection.md)
 * [ADODB. Eventreason-Aufzählung](adodb.eventreasonenum.md)
