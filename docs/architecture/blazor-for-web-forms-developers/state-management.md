@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840784"
 ---
-# <a name="state-management"></a><span data-ttu-id="00fa1-103">Zustandsverwaltung</span><span class="sxs-lookup"><span data-stu-id="00fa1-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="f6200-103">Zustandsverwaltung</span><span class="sxs-lookup"><span data-stu-id="f6200-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="00fa1-104">*Dieser Inhalt wird in Kürze verfügbar sein.*</span><span class="sxs-lookup"><span data-stu-id="00fa1-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="f6200-104">*Dieser Inhalt wird in Kürze verfügbar sein.*</span><span class="sxs-lookup"><span data-stu-id="f6200-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +25,6 @@ ms.locfileid: "73840784"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="00fa1-105">[Zurück](pages-routing-layouts.md)
->[Weiter](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="00fa1-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="f6200-105">[Zurück](pages-routing-layouts.md)
+>[Weiter](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="f6200-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>

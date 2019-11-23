@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840826"
 ---
-# <a name="app-configuration"></a><span data-ttu-id="82a4c-103">App-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="82a4c-103">App configuration</span></span>
+# <a name="app-configuration"></a><span data-ttu-id="11d67-103">App-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="11d67-103">App configuration</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="82a4c-104">*Dieser Inhalt wird in Kürze verfügbar sein.*</span><span class="sxs-lookup"><span data-stu-id="82a4c-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="11d67-104">*Dieser Inhalt wird in Kürze verfügbar sein.*</span><span class="sxs-lookup"><span data-stu-id="11d67-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="82a4c-105">[Zurück](middleware.md)
->[Weiter](security-authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="82a4c-105">[Previous](middleware.md)
+><span data-ttu-id="11d67-105">[Zurück](middleware.md)
+>[Weiter](security-authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="11d67-105">[Previous](middleware.md)
 [Next](security-authentication-authorization.md)</span></span>
