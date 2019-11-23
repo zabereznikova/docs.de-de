@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c402b20f9d7f0d370cfa6ec8376603efa8c3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777985"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443547"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles-Methode
-Listet die Dateien, die in der aktuellen Assemblymanifest verwiesen wird.  
+Enumerates the files referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,30 +38,30 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss für den ersten Aufruf dieser Methode einen null-Wert sein.  
+ [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
   
  `rFiles`  
- [out] Das Array zum Speichern der `mdFile` Metadatentoken.  
+ [out] The array used to store the `mdFile` metadata tokens.  
   
  `cMax`  
- [in] Die maximale Anzahl von `mdFile` Token, die in eingefügt werden können `rFiles`.  
+ [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
   
  `pcTokens`  
- [out] Die Anzahl der `mdFile` Token, die tatsächlich in `rFiles`.  
+ [out] The number of `mdFile` tokens actually placed in `rFiles`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTokens` auf 0 (null) festgelegt ist.|  
+|`S_OK`|`EnumFiles` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

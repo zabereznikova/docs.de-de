@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952901"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440818"
 ---
 # <a name="functionenter-function"></a>FunctionEnter-Funktion
-Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übermittelt wird.  
+Notifies the profiler that control is being passed to a function.  
   
 > [!NOTE]
-> Die `FunctionEnter` Funktion ist in der .NET Framework Version 2,0 veraltet, und ihre Verwendung führt zu einer Leistungs Einbuße. Verwenden Sie stattdessen die [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) -Funktion.  
+> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parameter  
  `funcID`  
- in Der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.  
+ [in] The identifier of the function to which control is passed.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FunctionEnter` Funktion ist ein Rückruf. Sie müssen Sie implementieren. Die-Implementierung muss das `__declspec`Speicher`naked`Klassen Attribut () verwenden.  
+ The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
+ The execution engine does not save any registers before calling this function.  
   
-- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- Die Implementierung von `FunctionEnter` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit `FunctionEnter` blockiert, bis von zurückgegeben wird.  
+ The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
   
- Außerdem darf die `FunctionEnter` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
+ Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** 1,1, 1,0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Siehe auch
 

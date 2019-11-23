@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75711b3d87699ff5db21a04351ff0acaccabb5aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777641"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431860"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember-Methode
-Erstellt einen Verweis auf den angegebenen Member eines Typs oder ein Modul, das außerhalb des aktuellen Bereichs definiert ist, und definiert ein Token für diesen Verweis.  
+Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,46 +42,46 @@ HRESULT DefineImportMember (
   
 ## <a name="parameters"></a>Parameter  
  `pAssemImport`  
- [in] Ein [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) -Schnittstelle, die die Assembly darstellt, aus dem der Zielmember importiert wird.  
+ [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target member is imported.  
   
  `pbHashValue`  
- [in] Ein Array, das den Hash für die Assembly, die anhand des enthält `pAssemImport`.  
+ [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
   
  `cbHashValue`  
  [in] Die Anzahl der Bytes im `pbHashValue`-Array.  
   
  `pImport`  
- [in] Ein [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Schnittstelle, die den Metadatenbereich darstellt, aus dem der Zielmember importiert wird.  
+ [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target member is imported.  
   
  `mbMember`  
- [in] Das Metadatentoken, das die Ziel-Element angibt. Das Token kann sein ein `mdMethodDef` (für eine Membermethode) `mdProperty` (für einen Membereigenschaft), oder `mdFieldDef` (für ein Memberfeld) token.  
+ [in] The metadata token that specifies the target member. The token can be an `mdMethodDef` (for a member method), `mdProperty` (for a member property), or `mdFieldDef` (for a member field) token.  
   
  `pAssemEmit`  
- [in] Ein [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) -Schnittstelle, die die Assembly darstellt, in dem der Zielmember importiert wird.  
+ [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target member is imported.  
   
  `tkParent`  
- [in] Die `mdTypeRef` oder `mdModuleRef` token für den Typ oder Modul bzw., besitzt das Target-Element.  
+ [in] The `mdTypeRef` or `mdModuleRef` token for the type or module, respectively, that owns the target member.  
   
  `pmr`  
- [out] Die `mdMemberRef` Token, das in den aktuellen Bereich für den Parameterverweis definiert ist.  
+ [out] The `mdMemberRef` token that is defined in the current scope for the member reference.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `DefineImportMember` Methode sucht das Element vom angegebenen `mbMember`, d. h. in einem anderen Bereich von angegebenen definiert `pImport`, und ruft dessen Eigenschaften. Sie verwendet diese Informationen zum Aufrufen der [DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) -Methode in der aktuellen Bereich für den Parameterverweis zu erstellen.  
+ The `DefineImportMember` method looks up the member, specified by `mbMember`, that is defined in another scope, specified by `pImport`, and retrieves its properties. It uses this information to call the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method in the current scope to create the member reference.  
   
- Im Allgemeinen, bevor Sie verwenden die `DefineImportMember` -Methode, Sie müssen erstellen, den aktuellen Bereich ein Typverweis oder eine Modul-Referenz für des Zielmembers übergeordnete Klasse, Schnittstelle oder Moduls. Das Metadatentoken für diesen Verweis dann übergeben die `tkParent` Argument. Sie müssen sich nicht um einen Verweis auf den Zielmember übergeordnete zu erstellen, wenn sie später vom Compiler oder Linker aufgelöst wird. Zusammenfassung:  
+ Generally, before you use the `DefineImportMember` method, you must create, in the current scope, a type reference or module reference for the target member's parent class, interface, or module. The metadata token for this reference is then passed in the `tkParent` argument. You do not need to create a reference to the target member's parent if it will be resolved later by the compiler or linker. Zusammenfassung:  
   
-- Wenn der Zielmember ein Feld oder eine Methode ist, verwenden Sie entweder die [IMetaDataEmit:: DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) oder [IMetaDataEmit:: DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) Methode erstellen Sie einen Typverweis, im aktuellen Bereich, für die übergeordnete Klasse oder Schnittstelle des Members.  
+- If the target member is a field or method, use either the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) or the [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) method to create a type reference, in the current scope, for the member's parent class or parent interface.  
   
-- Wenn der Zielmember eine globale Variable oder Funktion (d. h. nicht Mitglied einer Klasse oder Schnittstelle) ist, verwenden die [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) Methode, um einen Modulverweis im aktuellen Bereich, für das Element übergeordneten Elements erstellen Modul.  
+- If the target member is a global variable or global function (that is, not a member of a class or interface), use the [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) method to create a module reference, in the current scope, for the member's parent module.  
   
-- Wenn der Zielmember übergeordneten später vom Compiler oder Linker aufgelöst wird, übergeben Sie `mdTokenNil` in `tkParent`. Ist das einzige Szenario, in dem dies gilt, wenn eine globale Funktion oder globale Variable wird aus einer OBJ-Datei, die letztendlich in das aktuelle Modul verknüpft werden, wird importiert, und die Metadaten zusammengeführt.  
+- If the target member's parent will be resolved later by the compiler or linker, then pass `mdTokenNil` in `tkParent`. The only scenario in which this applies is when a global function or global variable is being imported from a .obj file that will ultimately be linked into the current module and the metadata merged.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

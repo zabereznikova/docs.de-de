@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9ff680b337334bdb9a3994daaebf92a966e2fe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775189"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442688"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next-Methode
 Ruft die angegebene Anzahl von zusammenhängenden Modulen aus einer sequenziellen Auflistung von Modulen ab der Position ab, die der Enumerator aktuell in der Sequenz hat.  
@@ -55,7 +53,7 @@ HRESULT Next([in]  ULONG      celt,
 |S_FALSE|Es wurden weniger als `celt`-Elemente zurückgegeben, wodurch angegeben ist, dass die Enumeration abgeschlossen ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

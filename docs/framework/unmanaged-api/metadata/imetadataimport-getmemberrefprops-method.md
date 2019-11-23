@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fadc54d74ce6027bd021e148a14cb0c432eb41fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782341"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437489"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps-Methode
 Ruft Metadaten ab, die dem Element zugeordnet sind, auf das durch das angegebene Token verwiesen wird.  
@@ -43,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parameter  
  `mr`  
- [in] Das MemberRef-Token für die zugeordneten Metadaten zurückgegeben werden soll.  
+ [in] The MemberRef token to return associated metadata for.  
   
  `ptk`  
- [out] Eine TypeDef oder TypeRef oder TypeSpec-Token, die die Klasse, die deklariert darstellt, das Element oder ein ModuleRef-Token, das die Modulklasse darstellt, die deklariert, das Element oder ein MethodDef, der den Member darstellt.  
+ [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
   
  `szMember`  
- [out] Einen Zeichenfolgenpuffer für den Namen des Mitglieds.  
+ [out] A string buffer for the member's name.  
   
  `cchMember`  
- [in] Die angeforderte Größe in Breitzeichen `szMember`.  
+ [in] The requested size in wide characters of `szMember`.  
   
  `pchMember`  
- [out] Die zurückgegebene Größe in Breitzeichen `szMember`.  
+ [out] The returned size in wide characters of `szMember`.  
   
  `ppvSibBlob`  
- [out] Ein Zeiger auf die binäre Metadatensignatur für das Element.  
+ [out] A pointer to the binary metadata signature for the member.  
   
  `pbSig`  
- [out] Die Größe in Bytes der `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

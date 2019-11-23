@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb3f5926677577bbc0bb14413c5d70150ef25152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778037"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446240"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants-Methode
-Ruft ab, die lokalen Konstanten, die innerhalb dieses Bereichs definiert.  
+Gets the local constants defined within this scope.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>Parameter  
  `cConstants`  
- [in] Die Länge des Puffers, der die `pcConstants` -Parameter zeigt.  
+ [in] The length of the buffer that the `pcConstants` parameter points to.  
   
  `pcConstants`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe in Zeichen des Puffers erforderlich, um die Konstanten enthalten.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
   
  `constants`  
- [out] Der Puffer, der die Konstanten gespeichert.  
+ [out] The buffer that stores the constants.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

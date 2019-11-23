@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 683cec06cd4c2fdef310126adc2921c858ca5687
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef5122d49c428af4faa27f3827a5c60721ef0f74
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776027"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435828"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound-Methode
-Wird aufgerufen, wenn eine `catch` -Block für eine Ausnahme in der common Language Runtime (CLR) selbst gefunden wird. Diese Methode ist in .NET Framework, Version 2.0, veraltet.  
+Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +32,7 @@ HRESULT ExceptionCLRCatcherFound();
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

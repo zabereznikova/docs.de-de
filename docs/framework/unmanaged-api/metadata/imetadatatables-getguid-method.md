@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1075643bbd17765bf33a26038fc6beaf32d0aebb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f0c52efd4b55d19cbd7b2407c4b2d7c893b1009
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436085"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid-Methode
-Ruft eine GUID aus der Zeile am angegebenen Index ab.  
+Gets a GUID from the row at the specified index.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +36,20 @@ HRESULT GetGuid (
   
 ## <a name="parameters"></a>Parameter  
  `ixGuid`  
- [in] Der Index der Zeile aus der die GUID abgerufen werden soll.  
+ [in] The index of the row from which to get the GUID.  
   
  `ppGuid`  
- [out] Ein Zeiger auf einen Zeiger auf die GUID.  
+ [out] A pointer to a pointer to the GUID.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Verwendung von dieser Methode wird nicht empfohlen, da es keine konsistente Ergebnisse zurückgibt. Informationen über den GUID-Tabelle finden Sie unter der Common Language Infrastructure (CLI)-Dokumentation, insbesondere "Partition II: Metadatendefinition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](https://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](https://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](https://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](https://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

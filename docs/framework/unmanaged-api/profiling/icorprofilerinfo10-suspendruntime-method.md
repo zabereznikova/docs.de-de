@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo10:: suspendruntime'
+title: ICorProfilerInfo10::SuspendRuntime
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 74300a12d000565a63cd7ea862c759d47b87bbe1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f5104c779f99ef9f26a9eccc00008ded62336d8e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665697"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426960"
 ---
-# <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: suspendruntime-Methode
+# <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10::SuspendRuntime Method
 
-Hält die Laufzeit an, ohne eine GC auszuführen.
+Suspends the runtime without performing a GC.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,14 +30,14 @@ HRESULT SuspendRuntime();
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** Corprof. idl, Corprof. h
+**Header:** CorProf.idl, CorProf.h
 
-**Fern** CorGuids.lib
+**Bibliothek:** CorGuids.lib
 
-**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

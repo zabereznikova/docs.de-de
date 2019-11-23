@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b64275def01d7b62f9a461de69a286769094305e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777583"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445259"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl-Methode
-Erstellt eine Definition für die Implementierung einer Methode, die von einer Schnittstelle geerbt, und ein Token an dieser Definition der Implementierung der Methode zurück.  
+Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +37,20 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] Die `mdTypedef` token von der implementierenden Klasse.  
+ [in] The `mdTypedef` token of the implementing class.  
   
  `tkBody`  
- [in] Die `mdMethodDef` oder `mdMemberRef` des Codetexts token.  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
   
  `tkDecl`  
- [in] Die `mdMethodDef` oder `mdMemberRef` token der Schnittstellenmethode implementiert wird.  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

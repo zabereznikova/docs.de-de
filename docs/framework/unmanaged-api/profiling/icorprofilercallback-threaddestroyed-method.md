@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f114d32432cccd88e36ff76ed49c610bd03f873e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 35b87b3a2c0230b26fb68af44dc1aa864a6449e0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747012"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439928"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed-Methode
-Benachrichtigt den Profiler, dass ein Thread zerstört wurde.  
+Notifies the profiler that a thread has been destroyed.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +34,13 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>Parameter  
  `threadId`  
- [in] Die ID des Threads, die zerstört wurde.  
+ [in] The ID of the thread that has been destroyed.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `threadId` Wert ist zum Zeitpunkt des Aufrufs nicht mehr gültig.  
+ The `threadId` value is no longer valid at the time of this call.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

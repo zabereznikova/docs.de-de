@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 080c16d3a7baceaa277b3418ac2e17391090f00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34636f1ca8e42c452aa41f6145d439a26f01b0a7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750596"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436392"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer-Methode
-Erstellt einen Puffer mit der angegebenen Größe für eine Methode und ruft die relative virtuelle Adresse der Methode.  
+Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.  
   
- Diese Methode ist veraltet und sollte nicht verwendet werden.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +39,20 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Parameter  
  `cchBuffer`  
- [in] Die Länge des zu erstellenden Puffers.  
+ [in] The length of the buffer to create.  
   
  `lpBuffer`  
- [out] Der zurückgegebene Puffer.  
+ [out] The returned buffer.  
   
  `RVA`  
- [out] Die relative virtuelle Adresse der Methode.  
+ [out] The relative virtual address of the method.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

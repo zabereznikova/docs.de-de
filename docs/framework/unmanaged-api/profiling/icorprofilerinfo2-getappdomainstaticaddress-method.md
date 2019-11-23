@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a9e0ea7-a9e2-4817-b1c4-fcf15b215ea9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e68178a71d7ba73b4956a7d23854c23300301d8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12c9b30dc72d1ccf7bfa79ca0745ba3f2c2290c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747862"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435875"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress-Methode
-Ruft die Adresse des angegebenen Anwendung Domäne statischen Felds, das im Bereich der angegebenen Anwendungsdomäne.  
+Gets the address of the specified application domain-static field that is in the scope of the specified application domain.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,28 +37,28 @@ RESULT GetAppDomainStaticAddress(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] Die Klassen-ID der Klasse, die die angeforderte Domäne statischen Feld enthält.  
+ [in] The class ID of the class that contains the requested application domain-static field.  
   
  `fieldToken`  
- [in] Das Metadatentoken für die angeforderte Domäne statischen Feld.  
+ [in] The metadata token for the requested application domain-static field.  
   
  `appDomainId`  
- [in] Die ID der Anwendungsdomäne, die den Bereich für die angeforderte statische Feld.  
+ [in] The ID of the application domain that is the scope for the requested static field.  
   
  `ppAddress`  
- [out] Ein Zeiger auf die Adresse eines statischen Felds, das innerhalb der angegebenen Anwendungsdomäne ist.  
+ [out] A pointer to the address of the static field that is within the specified application domain.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetAppDomainStaticAddress` Methode gibt möglicherweise einen der folgenden zurück:  
+ The `GetAppDomainStaticAddress` method may return one of the following:  
   
-- Ein HRESULT CORPROF_E_DATAINCOMPLETE, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Die Adressen von Objekten, die möglicherweise in die Garbage Collection-Heap. Diese Adressen können nach der Garbagecollection, ungültig werden. daher nach der Garbagecollection, Profiler nicht davon auszugehen, dass sie gültig sind.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- Vor dem Abschluss einer Klasse Klassenkonstruktor `GetAppDomainStaticAddress` CORPROF_E_DATAINCOMPLETE zurück für alle seine statische Felder, obwohl einige der statischen Felder bereits initialisiert werden kann und rooting-Garbage Collection-Objekten.  
+ Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

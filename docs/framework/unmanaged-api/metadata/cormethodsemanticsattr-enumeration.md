@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bab215a8221696a0e43e228278085fcef52a40e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781754"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442821"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr-Enumeration
 Enthält Werte, die die Beziehung zwischen einer Methode und einer zugeordneten Eigenschaft oder einem zugeordneten Ereignis beschreiben.  
@@ -45,15 +43,15 @@ typedef enum CorMethodSemanticsAttr {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`msSetter`|Gibt an, dass die Methode ist eine `set` Accessor für eine Eigenschaft.|  
-|`msGetter`|Gibt an, dass die Methode ist eine `get` Accessor für eine Eigenschaft.|  
-|`msOther`|Gibt an, dass die Methode eine Beziehung auf eine Eigenschaft oder ein Ereignis als die hier definiert.|  
-|`msAddOn`|Gibt an, dass die Methode Handlermethoden für ein Ereignis hinzugefügt.|  
-|`msRemoveOn`|Gibt an, dass die Methode Handlermethoden für ein Ereignis entfernt.|  
-|`msFire`|Gibt an, dass die Methode löst ein Ereignis aus.|  
+|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
+|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
+|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
+|`msAddOn`|Specifies that the method adds handler methods for an event.|  
+|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
+|`msFire`|Specifies that the method raises an event.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

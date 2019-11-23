@@ -9,16 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042160"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441495"
 ---
 # <a name="ui-automation-events-overview"></a>Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  Die[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Ereignisbenachrichtigung ist ein wesentliches Feature für Hilfstechnologien wie Sprachausgabe und Bildschirmlupe. Diese Benutzeroberflächenautomatisierungs-Clients überwachen Ereignisse, die von den Benutzeroberflächenautomatisierungs-Anbietern ausgelöst werden, wenn etwas auf der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] passiert, und verwenden diese Informationen dann, um Endbenutzer zu benachrichtigen.  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09238b9b-9359-4780-89dc-2f5e4f57920e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d9167b35556fafb33e61e1dc050488aec2b7fa01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3088308e75fb7cbffcc439ab4440255ed0fb2b9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776010"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444912"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a>ICorProfilerCallback::ExceptionOSHandlerEnter-Methode
-Nicht implementiert. Ein Profiler, der nicht verwaltete Ausnahmeinformationen benötigt, muss diese Informationen mithilfe anderer Methoden abrufen.  
+Nicht implementiert. A profiler that needs unmanaged exception information must obtain this information through other means.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +33,7 @@ HRESULT ExceptionOSHandlerEnter(
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e686e332cf1d35537e5d4306a3a9cbf9d46c47e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752367"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438121"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2-Methode
-Öffnet eine Methode, und bietet die echten Abschnittoffset im Bild.  
+Opens a method and provides its real section offset in the image.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parameter  
  `method`  
- [in] Das Metadatentoken für die Methode, die geöffnet werden.  
+ [in] The metadata token for the method to be opened.  
   
  `isect`  
- [in] Der Abschnittoffset im Bild.  
+ [in] The section offset in the image.  
   
  `offset`  
- [in] Der Offset im Bild.  
+ [in] The offset in the image.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

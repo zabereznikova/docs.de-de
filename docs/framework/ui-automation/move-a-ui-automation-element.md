@@ -9,16 +9,16 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-ms.openlocfilehash: 43b1e005cdb499fae920a0999feaa56c5409f653
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a23280c38da55b8d5f0bd8011f9c172b0e173744
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964694"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438543"
 ---
 # <a name="move-a-ui-automation-element"></a>Verschieben eines Benutzeroberflächenautomatisierungs-Elements
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  In diesem Beispiel wird das Verschieben eines [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Elements an eine angegebene Bildschirmposition veranschaulicht.  
   
@@ -32,4 +32,4 @@ ms.locfileid: "69964694"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WindowPattern-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)
+- [WindowPattern Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)

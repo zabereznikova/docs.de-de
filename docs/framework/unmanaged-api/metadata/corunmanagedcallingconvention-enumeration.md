@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9206fbde13f457d4b2e2941ee744d645c6df9774
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781997"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442441"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention-Enumeration
-Gibt an, die Aufrufkonventionen für nicht verwalteten Code.  
+Specifies the calling conventions for unmanaged code.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,20 +46,20 @@ typedef enum CorUnmanagedCallingConvention {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Die C-Sprache-Aufrufkonvention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Die herkömmliche Aufrufkonventionen.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|Die "this" Aufrufkonvention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|Die "schnellen" Aufrufkonvention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Nicht verwendet.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Nicht verwendet.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Nicht verwendet.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Nicht verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die "schnelle" Aufrufkonvention in .NET Framework, Version 1.0 wird von der CLR nicht unterstützt.  
+ The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

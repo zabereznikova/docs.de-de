@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: bf617279b16f53164209f5ae7605830dabda4c2e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043927"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433943"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  In diesem Thema wird das Zwischenspeichern von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] s-Eigenschaften und -Steuerelementmustern erläutert.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bedeutet Zwischenspeichern, dass Daten vorab abgerufen werden. Auf die Daten kann dann ohne weitere prozessübergreifende Kommunikation zugegriffen werden. Zwischenspeichern wird normalerweise von Benutzeroberflächenautomatisierungs-Client-Anwendungen verwendet, um Eigenschaften und Steuerelementmuster in großen Mengen abzurufen. Informationen werden dann nach Bedarf aus dem Cache abgerufen. Der Cache wird von der Anwendung regelmäßig aktualisiert, üblicherweise als Reaktion auf Ereignisse, die signalisieren, dass in der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] irgendeine Änderung vorgenommen wurde.  
   
- Die Vorteile der Zwischenspeicherung sind besonders mit Windows Presentation Foundation (WPF)-Steuerelementen und benutzerdefinierten Steuerelementen mit serverseitigen Benutzeroberflächenautomatisierungs-Anbietern erkennbar. Die Vorteile sind geringer, wenn auf clientseitige Anbieter zugegriffen wird, beispielsweise die Standardanbieter für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Steuerelemente.  
+ The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. Die Vorteile sind geringer, wenn auf clientseitige Anbieter zugegriffen wird, beispielsweise die Standardanbieter für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Steuerelemente.  
   
  Zwischenspeichern findet statt, wenn die Anwendung ein <xref:System.Windows.Automation.CacheRequest> aktiviert und anschließend eine beliebige Methode oder Eigenschaft verwendet, die ein <xref:System.Windows.Automation.AutomationElement>zurückgibt, zum Beispiel <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Eine Ausnahme sind die Methoden der <xref:System.Windows.Automation.TreeWalker> -Klasse. Bei ihnen findet Zwischenspeichern nur statt, wenn als Parameter ein <xref:System.Windows.Automation.CacheRequest> angegeben ist (zum Beispiel <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71043927"
 ## <a name="activating-the-cacherequest"></a>Aktivieren von CacheRequest  
  Ein Zwischenspeichern wird nur ausgeführt, wenn <xref:System.Windows.Automation.AutomationElement> -Objekte abgerufen werden, während für den aktuellen Thread ein <xref:System.Windows.Automation.CacheRequest> aktiv ist. Es gibt zwei Möglichkeiten, ein <xref:System.Windows.Automation.CacheRequest>-Objekt zu aktivieren.  
   
- Die übliche Methode besteht darin, <xref:System.Windows.Automation.CacheRequest.Activate%2A>aufzurufen. Diese Methode gibt ein Objekt zurück, das <xref:System.IDisposable>implementiert. Die Anforderung bleibt aktiv, solange das <xref:System.IDisposable> -Objekt vorhanden ist. Die einfachste Möglichkeit, die Lebensdauer des Objekts zu steuern, besteht darin, den-Befehl `using` inC#einem- `Using` Block () oder-Block (Visual Basic) einzuschließen. Dadurch wird sichergestellt, dass die Anforderung selbst dann aus dem Stapel entfernt wird, wenn eine Ausnahme ausgelöst wird.  
+ Die übliche Methode besteht darin, <xref:System.Windows.Automation.CacheRequest.Activate%2A>aufzurufen. Diese Methode gibt ein Objekt zurück, das <xref:System.IDisposable>implementiert. Die Anforderung bleibt aktiv, solange das <xref:System.IDisposable> -Objekt vorhanden ist. The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. Dadurch wird sichergestellt, dass die Anforderung selbst dann aus dem Stapel entfernt wird, wenn eine Ausnahme ausgelöst wird.  
   
  Eine weitere Möglichkeit, die nützlich ist, wenn Sie Cacheanforderungen schachteln möchten, besteht darin, <xref:System.Windows.Automation.CacheRequest.Push%2A>aufzurufen. Dadurch wird die Anforderung auf einem Stapel abgelegt und aktiviert. Die Anforderung bleibt aktiv, bis sie mit <xref:System.Windows.Automation.CacheRequest.Pop%2A>aus dem Stapel entfernt wird. Die Anforderung wird vorübergehend inaktiv, wenn eine andere Anforderung auf dem Stapel abgelegt wurde. Nur die oberste Anforderung auf dem Stapel ist aktiv.  
   
@@ -105,4 +105,4 @@ ms.locfileid: "71043927"
 
 - [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](ui-automation-events-for-clients.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)
-- [FetchTimer-Beispiel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

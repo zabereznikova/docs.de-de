@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1be6079ed382b8ab27d0aec16bd725f5c5b9cb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778907"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437097"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap-Methode
 Ruft ein ModuleRef-Token zum Darstellen der Zielassembly eines PInvoke-Aufrufs ab.  
@@ -42,29 +40,29 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] Ein FieldDef oder MethodDef-Token zum Abrufen von Metadaten die PInvoke-Zuordnung für.  
+ [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
   
  `pdwMappingFlags`  
- [out] Ein Zeiger auf Bitflags, die für die Zuordnung. Dieser Wert ist eine Bitmaske aus der [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) Enumeration.  
+ [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
   
  `szImportName`  
- [out] Der Name des nicht verwalteten Ziel-DLL.  
+ [out] The name of the unmanaged target DLL.  
   
  `cchImportName`  
- [in] Die Größe in Breitzeichen `szImportName`.  
+ [in] The size in wide characters of `szImportName`.  
   
  `pchImportName`  
- [out] Die Anzahl der Breitzeichen, die in zurückgegebenen `szImportName`.  
+ [out] The number of wide characters returned in `szImportName`.  
   
  `pmrImportDLL`  
- [out] Ein Zeiger auf ein ModuleRef-Token, die nicht verwaltete Objekt Zielbibliothek darstellt.  
+ [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

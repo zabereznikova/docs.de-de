@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783054"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436022"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout-Methode
-Ruft Informationen über die auf dem sich der angegebene Werttyp befindet, wenn sie mittels Boxing konvertiert wird.  
+Gets information about where the specified value type is located when it is boxed.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +35,16 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] Die ID der Klasse, die den Werttyp beschreibt, der mittels Boxing konvertiert wird.  
+ [in] The ID of the class that describes the value type that is boxed.  
   
  `pBufferOffset`  
- [out] Eine ganze Zahl, die der Offset relativ zu der geschachteltes Objekt-ID-Zeiger, der den Werttyp ist.  
+ [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `pBufferOffset` Wert ist der Speicherort des Werttyps innerhalb eines Felds. Nach dem `pBufferOffset` wird angewendet, in ein geschachteltes Objekt Klassenlayout des Werttyps verwendet werden kann, um den Wert des Objekts zu interpretieren.  
+ The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

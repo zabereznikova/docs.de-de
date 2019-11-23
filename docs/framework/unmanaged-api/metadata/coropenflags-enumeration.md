@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781686"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436508"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags-Enumeration
 Enthält Flagwerte, die das Verhalten von Metadaten beim Öffnen von Manifestdateien steuern.  
@@ -58,16 +56,16 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|Gibt an, dass die Datei in den Arbeitsspeicher gelesen werden muss. Metadaten müssen eine eigene Kopie verwalten.|  
 |`ofCacheImage`|Veraltet. Dieses Flag wird ignoriert.|  
 |`ofManifestMetadata`|Veraltet. Dieses Flag wird ignoriert.|  
-|`ofReadOnly`|Gibt an, dass die Datei zum Lesen und, die geöffnet werden darf einen Aufruf von `QueryInterface` für eine [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) kann nicht hergestellt werden.|  
-|`ofTakeOwnership`|Gibt an, dass der Speicher belegt wurde über einen Aufruf an [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) und von den Metadaten freigegeben wird.|  
+|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
+|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
 |`ofNoTypeLib`|Veraltet. Dieses Flag wird ignoriert.|  
-|`ofNoTransform`|Gibt an, dass automatische Transformationen von .winmd-Dateien deaktiviert sein sollten. Anders ausgedrückt: Die Projektion eines Windows Runtime-Typs auf einen .NET Framework-Typ sollte deaktiviert sein. Weitere Informationen finden Sie unter [Windows-Runtime und CLR - darunter das System mit .NET und die Windows-Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Gibt an, dass automatische Transformationen von .winmd-Dateien deaktiviert sein sollten. Anders ausgedrückt: Die Projektion eines Windows Runtime-Typs auf einen .NET Framework-Typ sollte deaktiviert sein. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
 |`ofReserved1`|Für die interne Verwendung vorgesehen.|  
 |`ofReserved2`|Für die interne Verwendung vorgesehen.|  
 |`ofReserved`|Für die interne Verwendung vorgesehen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

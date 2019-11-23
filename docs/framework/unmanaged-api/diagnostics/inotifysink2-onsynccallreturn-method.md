@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1bda761-6292-4750-a14b-7d5db8f33456
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84fd40dbecf9a866a4ec0889cbb62c475c063475
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d90d33ce7a8135f40a0fb4039a2418dd1987ac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736220"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435968"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn-Methode
-Wird aufgerufen, wenn ein Aufruf zurückgibt.  
+Gets invoked when a call returns.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT OnSyncCallReturn
   
 ## <a name="parameters"></a>Parameter  
  `in_CallID`  
- [in] Die ID des Aufrufs von zurückgegeben wird. Finden Sie unter [CALL_ID-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] ID of the call being returned from. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Rufen Sie die Puffer.  
+ [in] Call buffer.  
   
  `in_BufferSize`  
- [in] Größe des Aufrufpuffers in Bytes.  
+ [in] Size of the call buffer, in bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ProtocolNotify2.idl  

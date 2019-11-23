@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6508c989b143780090d582fd4175fe20bedeb770
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745435"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445116"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished-Methode
-Benachrichtigt den Profiler, dass eine Klasse vollständig geladen wurde.  
+Notifies the profiler that a class has finished loading.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,18 +35,18 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] Identifiziert die Klasse, die geladen wurde.  
+ [in] Identifies the class that was loaded.  
   
  `hrStatus`  
- [in] Ein HRESULT, der angibt, ob die Klasse wurde erfolgreich geladen.  
+ [in] An HRESULT that indicates whether the class loaded successfully.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert des `classId` gilt nicht für eine Anforderung von Informationen bis der `ClassLoadFinished` Methode wird aufgerufen.  
+ The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
   
- Laden Sie die Klasse möglicherweise weiterhin nach den `ClassLoadFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings einen HRESULT-Erfolg in `hrStatus` gibt nur an, dass der erste Teil, das Laden der Klasse erfolgreich war.  
+ Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
