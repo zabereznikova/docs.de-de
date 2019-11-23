@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f114d32432cccd88e36ff76ed49c610bd03f873e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 35b87b3a2c0230b26fb68af44dc1aa864a6449e0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747012"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439928"
 ---
-# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="e29a4-102">ICorProfilerCallback::ThreadDestroyed-Methode</span><span class="sxs-lookup"><span data-stu-id="e29a4-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
-<span data-ttu-id="e29a4-103">Benachrichtigt den Profiler, dass ein Thread zerstört wurde.</span><span class="sxs-lookup"><span data-stu-id="e29a4-103">Notifies the profiler that a thread has been destroyed.</span></span>  
+# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="89d7c-102">ICorProfilerCallback::ThreadDestroyed-Methode</span><span class="sxs-lookup"><span data-stu-id="89d7c-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
+<span data-ttu-id="89d7c-103">Notifies the profiler that a thread has been destroyed.</span><span class="sxs-lookup"><span data-stu-id="89d7c-103">Notifies the profiler that a thread has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e29a4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e29a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89d7c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="89d7c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e29a4-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e29a4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="89d7c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="89d7c-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="e29a4-106">[in] Die ID des Threads, die zerstört wurde.</span><span class="sxs-lookup"><span data-stu-id="e29a4-106">[in] The ID of the thread that has been destroyed.</span></span>  
+ <span data-ttu-id="89d7c-106">[in] The ID of the thread that has been destroyed.</span><span class="sxs-lookup"><span data-stu-id="89d7c-106">[in] The ID of the thread that has been destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e29a4-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e29a4-107">Remarks</span></span>  
- <span data-ttu-id="e29a4-108">Die `threadId` Wert ist zum Zeitpunkt des Aufrufs nicht mehr gültig.</span><span class="sxs-lookup"><span data-stu-id="e29a4-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89d7c-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="89d7c-107">Remarks</span></span>  
+ <span data-ttu-id="89d7c-108">The `threadId` value is no longer valid at the time of this call.</span><span class="sxs-lookup"><span data-stu-id="89d7c-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e29a4-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e29a4-109">Requirements</span></span>  
- <span data-ttu-id="e29a4-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e29a4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89d7c-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="89d7c-109">Requirements</span></span>  
+ <span data-ttu-id="89d7c-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89d7c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e29a4-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e29a4-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="89d7c-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="89d7c-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e29a4-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e29a4-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89d7c-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89d7c-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e29a4-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e29a4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="89d7c-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89d7c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e29a4-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e29a4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89d7c-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89d7c-114">See also</span></span>
 
-- [<span data-ttu-id="e29a4-115">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e29a4-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="e29a4-116">ThreadCreated-Methode</span><span class="sxs-lookup"><span data-stu-id="e29a4-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+- [<span data-ttu-id="89d7c-115">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="89d7c-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="89d7c-116">ThreadCreated-Methode</span><span class="sxs-lookup"><span data-stu-id="89d7c-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

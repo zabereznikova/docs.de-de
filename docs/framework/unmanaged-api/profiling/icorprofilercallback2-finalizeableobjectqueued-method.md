@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dcfdb417cb43c819f21f66611129135ad0beb42b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746914"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439862"
 ---
-# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="2f9e8-102">ICorProfilerCallback2::FinalizeableObjectQueued-Methode</span><span class="sxs-lookup"><span data-stu-id="2f9e8-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
-<span data-ttu-id="2f9e8-103">Benachrichtigt Sie den Profiler, dass ein Objekt mit einem Finalizer an den Finalizerthread für die Ausführung von in die Warteschlange gestellt hat seine `Finalize` Methode.</span><span class="sxs-lookup"><span data-stu-id="2f9e8-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
+# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="4fdfd-102">ICorProfilerCallback2::FinalizeableObjectQueued-Methode</span><span class="sxs-lookup"><span data-stu-id="4fdfd-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
+<span data-ttu-id="4fdfd-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span><span class="sxs-lookup"><span data-stu-id="4fdfd-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f9e8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2f9e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fdfd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4fdfd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FinalizeableObjectQueued(  
@@ -35,23 +33,23 @@ HRESULT FinalizeableObjectQueued(
     [in] ObjectID objectID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2f9e8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2f9e8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4fdfd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4fdfd-105">Parameters</span></span>  
  `finalizerFlags`  
- <span data-ttu-id="2f9e8-106">[in] Der Wert der [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) Enumeration, die Aspekte des Finalizers beschreibt.</span><span class="sxs-lookup"><span data-stu-id="2f9e8-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
+ <span data-ttu-id="4fdfd-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span><span class="sxs-lookup"><span data-stu-id="4fdfd-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
   
  `objectID`  
- <span data-ttu-id="2f9e8-107">[in] Die ID des Objekts, das in die Warteschlange gestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="2f9e8-107">[in] The ID of the object that has been queued.</span></span>  
+ <span data-ttu-id="4fdfd-107">[in] The ID of the object that has been queued.</span><span class="sxs-lookup"><span data-stu-id="4fdfd-107">[in] The ID of the object that has been queued.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2f9e8-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2f9e8-108">Requirements</span></span>  
- <span data-ttu-id="2f9e8-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2f9e8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fdfd-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4fdfd-108">Requirements</span></span>  
+ <span data-ttu-id="4fdfd-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fdfd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2f9e8-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2f9e8-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4fdfd-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4fdfd-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2f9e8-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2f9e8-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4fdfd-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4fdfd-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2f9e8-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f9e8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4fdfd-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fdfd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f9e8-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2f9e8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fdfd-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4fdfd-113">See also</span></span>
 
-- [<span data-ttu-id="2f9e8-114">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2f9e8-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="2f9e8-115">ICorProfilerCallback2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2f9e8-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="4fdfd-114">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4fdfd-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="4fdfd-115">ICorProfilerCallback2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4fdfd-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

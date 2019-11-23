@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89d2f9c9cfa7d4c2498710b36796f3e2605bcbf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb9fcc4c6e1fd495e95caa1d2200d9fd516a7748
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763647"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444282"
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="6f37a-102">COINITICOR-Enumeration</span><span class="sxs-lookup"><span data-stu-id="6f37a-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="6f37a-103">Gibt Konstanten an, die von verwendet [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) bei der Initialisierung der common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="6f37a-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="784bb-102">COINITICOR-Enumeration</span><span class="sxs-lookup"><span data-stu-id="784bb-102">COINITICOR Enumeration</span></span>
+<span data-ttu-id="784bb-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="784bb-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f37a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6f37a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="784bb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="784bb-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITCOR  
@@ -35,21 +33,21 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6f37a-105">Member</span><span class="sxs-lookup"><span data-stu-id="6f37a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="784bb-105">Member</span><span class="sxs-lookup"><span data-stu-id="784bb-105">Members</span></span>  
   
-|<span data-ttu-id="6f37a-106">Member</span><span class="sxs-lookup"><span data-stu-id="6f37a-106">Member</span></span>|<span data-ttu-id="6f37a-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6f37a-107">Description</span></span>|  
+|<span data-ttu-id="784bb-106">Member</span><span class="sxs-lookup"><span data-stu-id="784bb-106">Member</span></span>|<span data-ttu-id="784bb-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="784bb-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="6f37a-108">Gibt den Standardmodus für die Initialisierung an.</span><span class="sxs-lookup"><span data-stu-id="6f37a-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="784bb-108">Indicates the default initialization mode.</span><span class="sxs-lookup"><span data-stu-id="784bb-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6f37a-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6f37a-109">Requirements</span></span>  
- <span data-ttu-id="6f37a-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f37a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="784bb-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="784bb-109">Requirements</span></span>  
+ <span data-ttu-id="784bb-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="784bb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f37a-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6f37a-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="784bb-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="784bb-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6f37a-112">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="6f37a-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="784bb-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="784bb-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6f37a-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f37a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="784bb-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="784bb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f37a-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6f37a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="784bb-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="784bb-114">See also</span></span>
 
-- [<span data-ttu-id="6f37a-115">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="6f37a-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="784bb-115">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="784bb-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
