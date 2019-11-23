@@ -30,7 +30,7 @@ Beginnen wir mit einer Prüfung der Features und Anforderungen der Anwendung. Di
 - Elemente nach Marke Filtern
 - Elemente zum Warenkorb hinzufügen
 - Bearbeiten oder Entfernen von Elementen aus dem Warenkorb
-- Auschecken
+- Zur Kasse
 - Konto registrieren
 - Anmelden
 - Abmelden

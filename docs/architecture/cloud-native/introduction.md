@@ -38,9 +38,9 @@ Herzlichen Glückwunsch!  Sie haben soeben eine monolithische Anwendung erstellt
 
 Nicht alle ist schlecht. Monolithen bieten einige unterschiedliche Vorteile. Sie sind z. b. unkompliziert...
 
-- Build
+- build
 - Test
-- Etablieren
+- Bereitstellen
 - Problembehandlung
 - Dezimalstellen
 

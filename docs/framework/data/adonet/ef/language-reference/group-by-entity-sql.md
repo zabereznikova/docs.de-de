@@ -23,7 +23,7 @@ Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](select-entity-sql.
  Jeder gültige Abfrageausdruck, der gruppiert wird. `expression` kann eine Eigenschaft oder ein nicht aggregierter Ausdruck sein, der auf eine von der FROM-Klausel zurückgegebene Eigenschaft verweist. Die Auswertung jedes Ausdrucks in einer GROUP BY-Klausel muss einen Typ ergeben, der auf Gleichheit überprüft werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. Nach einer Auflistung kann nicht gruppiert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Aggregatfunktionen in der SELECT-Klausel \<select List > enthalten sind, berechnet Group by einen Zusammenfassungs Wert für jede Gruppe. Wenn GROUP BY angegeben wird, muss jeder Eigenschaftsname jedes Nichtaggregatausdrucks in der Auswahlliste in der GROUP BY-Liste eingeschlossen sein, oder der GROUP BY-Ausdruck muss dem Auswahllistenausdruck genau entsprechen.  
+ Wenn Aggregatfunktionen in der SELECT-Klausel enthalten sind \<Select List >, Group by berechnet einen Zusammenfassungs Wert für jede Gruppe. Wenn GROUP BY angegeben wird, muss jeder Eigenschaftsname jedes Nichtaggregatausdrucks in der Auswahlliste in der GROUP BY-Liste eingeschlossen sein, oder der GROUP BY-Ausdruck muss dem Auswahllistenausdruck genau entsprechen.  
   
 > [!NOTE]
 > Falls die ORDER BY-Klausel nicht angegeben wird, haben die von der GROUP BY-Klausel zurückgegebenen Gruppen keine feste Reihenfolge. Es wird empfohlen, dass Sie die ORDER BY-Klausel zum Angeben einer bestimmten Reihenfolge von Daten verwenden.  
@@ -62,7 +62,7 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der GROUP BY-Operator verwendet, um Gruppen anzugeben, in die Objekte von einer Abfrage zurückgegeben werden. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse @ no__t-0 zurückgibt.  
+1. Befolgen Sie das Verfahren unter Gewusst [wie: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   

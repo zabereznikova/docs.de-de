@@ -30,7 +30,7 @@ FUNCTION function-name
   
 ## <a name="arguments"></a>Argumente  
  `function-name`  
- Der Name der Funktion.  
+ Name der Funktion.  
   
  `parameter-name`  
  Der Name eines Parameters in der Funktion.  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Die benutzerdefinierte Funktion "@ no__t-0" aufzurufen.  
+ Weitere Informationen finden Sie unter [Gewusst wie: Aufrufen einer benutzerdefinierten Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  Funktionen können auch im Modell selbst deklariert werden. Im Modell deklarierte Funktionen werden auf die gleiche Weise ausgeführt wie Funktionen, die inline im Befehl deklariert wurden. Weitere Informationen finden Sie unter [benutzerdefinierte Funktionen](user-defined-functions-entity-sql.md).  
   

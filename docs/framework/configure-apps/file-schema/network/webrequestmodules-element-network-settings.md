@@ -15,12 +15,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697460"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webrequestmodules >-Element (Netzwerkeinstellungen)
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules >-Element (Netzwerkeinstellungen)
 Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webrequestmodules >  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,10 +30,10 @@ Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -52,7 +52,7 @@ Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet
 ## <a name="remarks"></a>Hinweise  
  Das `webRequestModules`-Element registriert Nachfolger der <xref:System.Net.WebRequest>-Klasse, um Informationsanforderungen an Netzwerk Hosts zu verarbeiten. Webanforderungs Module müssen die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren.  
   
- Die .NET Framework enthält Webanforderungs Module für URIs, die mit `http://`, `https://` und `file://` beginnen. Sie können die Standardmodule nur überschreiben, indem Sie ein benutzerdefiniertes Modul in der Konfigurationsdatei registrieren.  
+ Die .NET Framework enthält Webanforderungs Module für URIs, die mit `http://`, `https://`und `file://`beginnen. Sie können die Standardmodule nur überschreiben, indem Sie ein benutzerdefiniertes Modul in der Konfigurationsdatei registrieren.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

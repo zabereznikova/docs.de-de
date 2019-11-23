@@ -9,13 +9,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698162"
 ---
-# <a name="idn-element-uri-settings"></a>\<idn > Element (URI-Einstellungen)
+# <a name="idn-element-uri-settings"></a>\<IDN-> Element (URI-Einstellungen)
 
 Gibt an, ob die IDN (Internationalized Domain Name)-Verarbeitung auf einen Domänen Namen angewendet wird.
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<idn >**  
+&nbsp;&nbsp;[ **\<-URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<IDN >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,7 +26,7 @@ Gibt an, ob die IDN (Internationalized Domain Name)-Verarbeitung auf einen Domä
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
 
@@ -36,7 +36,7 @@ Gibt an, ob die IDN (Internationalized Domain Name)-Verarbeitung auf einen Domä
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keine
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -46,7 +46,7 @@ None
 
 ## <a name="remarks"></a>Hinweise
 
-Die vorhandene <xref:System.Uri>-Klasse wurde in .NET Framework 3,5 erweitert. 3,0 SP1 und 2,0 SP1 mit Unterstützung für International Resource Identifier (IRI) und Internationalized Domain Names (IDN). Aktuelle Benutzer sehen keine Änderung des Verhaltens von .NET Framework 2,0, es sei denn, Sie aktivieren speziell IRI-und IDN-Unterstützung. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.
+Die vorhandene <xref:System.Uri> Klasse wurde in .NET Framework 3,5 erweitert. 3,0 SP1 und 2,0 SP1 mit Unterstützung für International Resource Identifier (IRI) und Internationalized Domain Names (IDN). Aktuelle Benutzer sehen keine Änderung des Verhaltens von .NET Framework 2,0, es sei denn, Sie aktivieren speziell IRI-und IDN-Unterstützung. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.
 
 Die folgenden beiden Änderungen sind erforderlich, um die Unterstützung für IRI zu aktivieren:
 
@@ -80,7 +80,7 @@ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkon
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, um die IRI-Verarbeitung und IDN-Namen zu unterstützen:
+Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse zur Unterstützung der IRI-Verarbeitung und IDN-Namen verwendet wird:
 
 ```xml
 <configuration>

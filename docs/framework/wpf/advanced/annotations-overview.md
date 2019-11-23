@@ -19,7 +19,7 @@ ms.locfileid: "72004044"
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
   
- In diesem Thema werden verschiedene häufige Typen von Anmerkungen, insbesondere kurz Notizen und Highlights, behandelt. Außerdem wird veranschaulicht, wie das Microsoft Anmerkungen Framework diese Arten von Anmerkungen in Anwendungen über die Windows Presentation Foundation (WPF) vereinfacht. ) Dokument Anzeige Steuerelemente.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Dokument Anzeige Steuerelemente, die Anmerkungen unterstützen, enthalten <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> sowie Steuerelemente, die von <xref:System.Windows.Controls.Primitives.DocumentViewerBase> abgeleitet werden, z. b. <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ In diesem Thema werden verschiedene häufige Typen von Anmerkungen, insbesondere kurz Notizen und Highlights, behandelt. Außerdem wird veranschaulicht, wie das Microsoft Anmerkungen Framework diese Arten von Anmerkungen in Anwendungen über die Windows Presentation Foundation (WPF) vereinfacht. ) Dokument Anzeige Steuerelemente.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Dokument Anzeige Steuerelemente, die Anmerkungen unterstützen, enthalten <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer>sowie Steuerelemente, die von <xref:System.Windows.Controls.Primitives.DocumentViewerBase> wie <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>abgeleitet werden.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Kurznotizen  
@@ -35,14 +35,14 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>Markierungen  
- Personen, die kreative Methoden verwenden, können Aufmerksamkeit auf Elemente ziehen, wenn Sie ein Papierdokument beschreiben, z.B. Wörter in einem Satz unterstreichen, markieren, einkreisen oder Markierungen oder Notationen am Rand hinzufügen.  Hervorhebungs Anmerkungen im Microsoft Anmerkungen Framework bieten ein ähnliches Feature zum Markieren von Informationen, die in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dokument Anzeige Steuerelementen angezeigt werden.  
+## <a name="highlights"></a>Highlights  
+ Personen, die kreative Methoden verwenden, können Aufmerksamkeit auf Elemente ziehen, wenn Sie ein Papierdokument beschreiben, z.B. Wörter in einem Satz unterstreichen, markieren, einkreisen oder Markierungen oder Notationen am Rand hinzufügen.  Hervorhebungs Anmerkungen im Microsoft Anmerkungen Framework bieten ein ähnliches Feature zum Markieren von Informationen, die in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Steuerelementen zum Anzeigen von Dokumenten angezeigt werden.  
   
  In der folgenden Abbildung ist ein Beispiel einer markierten Anmerkung dargestellt:  
   
  ![Anmerkung hervorheben](./media/caf-callouts.png "CAF_Callouts")  
   
- Benutzer erstellen in der Regel Anmerkungen, indem Sie zuerst Text oder ein interessantes Element auswählen und dann mit der rechten Maustaste klicken, um eine <xref:System.Windows.Controls.ContextMenu> von Anmerkung-Optionen anzuzeigen.  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], die Sie verwenden können, um eine <xref:System.Windows.Controls.ContextMenu> mit Routing Befehlen zu deklarieren, auf die Benutzer zugreifen können, um Anmerkungen zu erstellen und zu verwalten.  
+ Benutzer erstellen in der Regel Anmerkungen, indem Sie zuerst Text oder ein interessantes Element auswählen und dann mit der rechten Maustaste klicken, um ein <xref:System.Windows.Controls.ContextMenu> von Anmerkung-Optionen anzuzeigen.  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], die Sie verwenden können, um eine <xref:System.Windows.Controls.ContextMenu> mit Routing Befehlen zu deklarieren, auf die Benutzer zugreifen können, um Anmerkungen zu erstellen und zu verwalten.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -75,4 +75,4 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
 - [Übersicht über ContextMenu](../controls/contextmenu-overview.md)
 - [Befehlsübersicht](commanding-overview.md)
 - [Übersicht über Flussdokumente](flow-document-overview.md)
-- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem @ no__t-0
+- [How to: Add a Command to a MenuItem (Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

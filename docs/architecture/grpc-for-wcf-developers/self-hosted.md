@@ -1,14 +1,13 @@
 ---
 title: 'Selbstgeh ostete GrpC-Anwendungen: GrpC für WCF-Entwickler'
 description: Bereitstellen von ASP.net Core GrpC-Anwendungen als selbstgeh ostete Dienste
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4983cad1dd075480c6d83a5350a323ab348cdaaf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841366"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967213"
 ---
 # <a name="self-hosted-grpc-applications"></a>Selbstgeh ostete GrpC-Anwendungen
 

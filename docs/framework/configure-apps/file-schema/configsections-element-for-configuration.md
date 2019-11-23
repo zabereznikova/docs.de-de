@@ -21,11 +21,11 @@ ms.locfileid: "73119020"
 Enthält Konfigurations Abschnitts-und Namespace Deklarationen.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configabschnitts aus >**
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>Attribute
 
-Keiner
+Keine
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,7 +38,7 @@ Keiner
 |     | Beschreibung |
 | --- | ----------- |
 | [ **\<Abschnitt >** ](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
-| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurations Abschnitte. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurations Abschnitte. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen. |
 

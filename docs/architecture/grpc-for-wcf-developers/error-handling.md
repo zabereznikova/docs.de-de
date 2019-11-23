@@ -1,14 +1,13 @@
 ---
 title: 'Fehlerbehandlung: GrpC für WCF-Entwickler'
 description: ZU SCHREIBEND
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 91f5789d8ed0f01f3ce2f3f9a6c6ccf14f245290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842002"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967792"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 
@@ -22,7 +21,7 @@ Leider fehlt in der aktuellen Version von GrpC die Komplexität, die mit WCF gef
 | `GRPC_STATUS_UNAVAILABLE` | Problem mit dem gesamten Dienst. |
 | `GRPC_STATUS_UNKNOWN` | Ungültige Antwort. |
 | `GRPC_STATUS_INTERNAL` | Problem beim Codieren/Decodieren. |
-| `GRPC_STATUS_UNAUTHENTICATED` | Fehler bei der Authentifizierung. |
+| `GRPC_STATUS_UNAUTHENTICATED` | Bei der Authentifizierung ist ein Fehler aufgetreten. |
 | `GRPC_STATUS_PERMISSION_DENIED` | Autorisierungs Fehler. |
 | `GRPC_STATUS_CANCELLED` | Der Aufruf wurde abgebrochen, normalerweise durch den Aufrufer. |
 

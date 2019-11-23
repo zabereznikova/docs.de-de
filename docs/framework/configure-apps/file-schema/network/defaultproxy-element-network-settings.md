@@ -15,12 +15,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698206"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > Element (Netzwerkeinstellungen)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy >-Element (Netzwerkeinstellungen)
 Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultproxy >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,14 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|`enabled`|Gibt an, ob ein Webproxy verwendet wird. Der Standardwert ist `true`sein.|  
-|`useDefaultCredentials`|Gibt an, ob die Standardanmeldeinformationen für diesen Host für den Zugriff auf den Webproxy verwendet werden. Der Standardwert ist `false`sein.|  
+|`enabled`|Gibt an, ob ein Webproxy verwendet wird. Der Standardwert ist `true`.|  
+|`useDefaultCredentials`|Gibt an, ob die Standardanmeldeinformationen für diesen Host für den Zugriff auf den Webproxy verwendet werden. Der Standardwert ist `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -61,7 +61,7 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 ## <a name="remarks"></a>Hinweise  
  Wenn das defaultProxy-Element leer ist, werden die Proxyeinstellungen von Internet Explorer verwendet. Dieses Verhalten unterscheidet sich von .NET Framework 1.1.  
   
- Eine-Ausnahme wird ausgelöst, wenn das [Module](module-element-network-settings.md) -Element einen nicht öffentlichen Typ angibt, der Typ nicht von der <xref:System.Net.IWebProxy> -Klasse abgeleitet wird, eine Ausnahme vom Parameter losen Konstruktor dieses Objekts aufgetreten ist oder beim Abrufen von eine Ausnahme aufgetreten ist. vom System angegebener Standard Proxy. Die <xref:System.Exception.InnerException%2A>-Eigenschaft für die Ausnahme muss zusätzliche Informationen zur Fehlerursache enthalten.  
+ Eine Ausnahme wird ausgelöst, wenn das [Modul](module-element-network-settings.md) Element einen nicht öffentlichen Typ angibt, der Typ nicht von der <xref:System.Net.IWebProxy> Klasse abgeleitet wird, eine Ausnahme vom Parameter losen Konstruktor dieses Objekts aufgetreten ist oder beim Abrufen des vom System angegebenen Standard Proxys eine Ausnahme aufgetreten ist. Die <xref:System.Exception.InnerException%2A>-Eigenschaft für die Ausnahme muss zusätzliche Informationen zur Fehlerursache enthalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

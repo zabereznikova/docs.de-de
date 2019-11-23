@@ -52,7 +52,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- Sie können zusätzlich Verweisparameter verwenden, um einen Parameter sowohl zu einem Teil der Anforderungs- als auch der Antwortnachricht zu machen. Die Parameter müssen Typen angehören, die serialisiert (zu XML konvertiert) werden können. Standardmäßig verwendet WCF eine Komponente namens "<xref:System.Runtime.Serialization.DataContractSerializer>", um diese Konvertierung durchzuführen. Die meisten primitiven Typen (z. B. `int`, `string`, `float` und `DateTime`) werden unterstützt. Benutzerdefinierte Typen müssen normalerweise einen Datenvertrag aufweisen. Weitere Informationen finden Sie unter [Verwenden von Daten Verträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Sie können zusätzlich Verweisparameter verwenden, um einen Parameter sowohl zu einem Teil der Anforderungs- als auch der Antwortnachricht zu machen. Die Parameter müssen Typen angehören, die serialisiert (zu XML konvertiert) werden können. Standardmäßig verwendet WCF eine Komponente, die als <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse bezeichnet wird, um diese Konvertierung durchzuführen. Die meisten primitiven Typen (z. B. `int`, `string`, `float` und `DateTime`) werden unterstützt. Benutzerdefinierte Typen müssen normalerweise einen Datenvertrag aufweisen. Weitere Informationen finden Sie unter [Verwenden von Daten Verträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Gelegentlich ist der `DataContractSerializer` nicht zur Serialisierung der Typen geeignet. WCF unterstützt ein alternatives Serialisierungsmodul, das <xref:System.Xml.Serialization.XmlSerializer>, das Sie auch zum Serialisieren von Parametern verwenden können. Das <xref:System.Xml.Serialization.XmlSerializer> bietet mehr Kontrolle über den resultierenden XML-Code durch Verwendung von Attributen, wie z. B. `XmlAttributeAttribute`. Um zur Verwendung von <xref:System.Xml.Serialization.XmlSerializer> für einen bestimmten Vorgang oder den gesamten Dienst überzugehen, wenden Sie das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf einen Vorgang oder einen Dienst an. Zum Beispiel:  
+ Gelegentlich ist der `DataContractSerializer` nicht zur Serialisierung der Typen geeignet. WCF unterstützt ein alternatives Serialisierungsmodul, das-<xref:System.Xml.Serialization.XmlSerializer>, das Sie auch zum Serialisieren von Parametern verwenden können. Das <xref:System.Xml.Serialization.XmlSerializer> bietet mehr Kontrolle über den resultierenden XML-Code durch Verwendung von Attributen, wie z. B. `XmlAttributeAttribute`. Um zur Verwendung von <xref:System.Xml.Serialization.XmlSerializer> für einen bestimmten Vorgang oder den gesamten Dienst überzugehen, wenden Sie das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf einen Vorgang oder einen Dienst an. Beispiel:  
   
 ```csharp  
 [ServiceContract]  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Angeben der Verwendung und des Stils  
  Bei der Beschreibung von Diensten mithilfe von Web Services Description Language (WSDL) sind die beiden am häufigsten verwendeten Stile der Dokumentstil und der Remoteprozeduraufruf (RPC, remote procedure call). Beim Dokumentstil wird der gesamte Nachrichtentext mithilfe des Schemas beschrieben, und WSDL beschreibt die verschiedenen Nachrichtentextteile durch Verweisen auf Elemente innerhalb dieses Schemas. Beim RPC-Stil verweist WSDL auf einen Schematyp für jeden Nachrichtenteil statt auf ein Element. In einigen Fällen müssen Sie einen dieser Stile manuell auswählen. Zu diesem Zweck können Sie das <xref:System.ServiceModel.DataContractFormatAttribute>-Attribut anwenden und die `Style`-Eigenschaft festlegen (wenn das <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird), oder Sie legen `Style` in dem <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut fest (wenn das <xref:System.Xml.Serialization.XmlSerializer> verwendet wird).  
   
- Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`. `Literal` ist die am häufigsten akzeptierte Form und die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird. `Encoded` ist eine Legacyform, die in Abschnitt 5 der SOAP-Spezifikation beschrieben wird. Sie wird für neue Dienste nicht empfohlen. Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.  
+ Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`. `Literal` ist das am häufigsten akzeptierte Formular und ist die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird. `Encoded` ist eine Legacy Form, die in Abschnitt 5 der SOAP-Spezifikation beschrieben wird, und wird für neue Dienste nicht empfohlen. Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.  
   
  In den meisten Fällen sollten Sie die Standardeinstellungen für die `Style`- und die `Use`-Eigenschaft nicht ändern.  
   
@@ -464,7 +464,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>Serialisierungsverhalten  
- In WCF sind zwei Verhalten verfügbar: die <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> und die <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>, die automatisch eingebunden werden, je nachdem, welches Serialisierungsprogramm für einen bestimmten Vorgang verwendet wird. Da diese Arten von Verhalten automatisch angewendet werden, müssen Sie sie normalerweise nicht beachten.  
+ In WCF sind zwei Verhaltensweisen verfügbar, die <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> und die <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>, die automatisch eingebunden werden, je nachdem, welches Serialisierungsprogramm für einen bestimmten Vorgang verwendet wird. Da diese Arten von Verhalten automatisch angewendet werden, müssen Sie sie normalerweise nicht beachten.  
   
  `DataContractSerializerOperationBehavior` weist jedoch die `MaxItemsInObjectGraph`-, die `IgnoreExtensionDataObject`- und die `DataContractSurrogate`-Eigenschaften auf, die Sie zur Anpassung des Serialisierungsprozesses verwenden können. Die ersten beiden Eigenschaften haben die gleiche Bedeutung, wie im vorherigen Abschnitt erläutert. Sie können die `DataContractSurrogate`-Eigenschaft verwenden, um Datenvertrag-Ersatzzeichen zu aktivieren, die ein leistungsfähiges Werkzeug zum Anpassen und Erweitern des Serialisierungsprozesses darstellen. Weitere Informationen finden Sie unter [Data Contract Surrogates](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
@@ -577,5 +577,5 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ## <a name="see-also"></a>Siehe auch
 
 - [Verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Vorgehensweise: Streaming aktivieren](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [Vorgehensweise: Erstellen eines grundlegenden Daten Vertrags für eine Klasse oder Struktur @ no__t-0
+- [Vorgehensweise: Aktivieren von Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

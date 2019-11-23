@@ -19,7 +19,7 @@ ms.locfileid: "71697510"
 Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3System. net >**  
+&nbsp;&nbsp; **\<System. net >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,10 +29,10 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -53,7 +53,7 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 |[configuration](../configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das [@no__t -1System. net >](system-net-element-network-settings.md) -Element enthält Einstellungen für Klassen in den <xref:System.Net> und verwandten untergeordneten Namespaces. Die Einstellungen konfigurieren Authentifizierungs Module, Verbindungs Verwaltung, e-Mail-Einstellungen, den Proxy Server und Internet Anforderungs Module zum Empfangen von Informationen von Internet Hosts.  
+ Das [\<System. net >](system-net-element-network-settings.md) -Element enthält Einstellungen für Klassen im <xref:System.Net> und verwandten untergeordneten Namespaces. Die Einstellungen konfigurieren Authentifizierungs Module, Verbindungs Verwaltung, e-Mail-Einstellungen, den Proxy Server und Internet Anforderungs Module zum Empfangen von Informationen von Internet Hosts.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine typische Konfiguration, die von <xref:System.Net>-Klassen verwendet wird.  

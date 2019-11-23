@@ -23,12 +23,12 @@ FLATTEN ( collection )
  Jeder gültige Ausdruck, der eine zu einer einzigen Auflistung zu vereinfachende Auflistung von Werten zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- `FLATTEN` ist einer der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren. Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet. Weitere [Informationen](except-entity-sql.md) zu den [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Mengen Operatoren finden Sie unter.  
+ `FLATTEN` ist einer der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren. Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet. Weitere Informationen finden Sie unter [Ausnahme](except-entity-sql.md) der Rang folgen Informationen für die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Mengen Operatoren  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den `FLATTEN` -Operator, um eine Auflistung von Auflistungen in eine vereinfachte Auflistung zu konvertieren. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die die StructuralType-Ergebnisse @ no__t-0 zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   

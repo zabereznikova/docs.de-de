@@ -17,15 +17,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697897"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<remove >-Element für bypasslist (Netzwerkeinstellungen)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<>-Element für bypasslist (Netzwerkeinstellungen) entfernen
 
 Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxy Umgehungs Liste.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<entfernen >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxy Umgehungs Liste.
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 
@@ -47,7 +47,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+None.
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 

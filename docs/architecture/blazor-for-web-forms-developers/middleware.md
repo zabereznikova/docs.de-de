@@ -21,7 +21,7 @@ Eine ASP.net Core-App basiert auf einer Reihe von Middleware. Middlewares sind H
 
 Die ASP.NET Core-Anforderungspipeline besteht aus einer Sequenz von Anforderungsdelegaten, die nacheinander aufgerufen werden. Das Konzept wird im folgenden Diagramm veranschaulicht. Der Ausführungsthread folgt den schwarzen Pfeilen.
 
-![ine](media/middleware/request-delegate-pipeline.png)
+![Pipeline](media/middleware/request-delegate-pipeline.png)
 
 Im vorangehenden Diagramm fehlt ein Konzept von Lebenszyklus Ereignissen. Dieses Konzept ist grundlegend für die Behandlung von ASP.net-Web Forms Anforderungen. Dieses System erleichtert das Auftreten des Vorgangs und ermöglicht das Einfügen von Middleware zu jedem beliebigen Zeitpunkt. Die Middleware wird in der Reihenfolge ausgeführt, in der Sie der Anforderungs Pipeline hinzugefügt wird. Sie werden auch im Code anstelle von Konfigurationsdateien hinzugefügt, normalerweise in *Startup.cs*.
 

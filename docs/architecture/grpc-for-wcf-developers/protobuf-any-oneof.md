@@ -1,14 +1,13 @@
 ---
 title: 'Protobuf any-und oneof-Felder für Variant-Typen: GrpC für WCF-Entwickler'
 description: Erfahren Sie, wie Sie mit jedem Typ und dem oneof-Schlüsselwort Variant-Objekttypen in Nachrichten darstellen.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841474"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971618"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf any-und oneof-Felder für Variant-Typen
 

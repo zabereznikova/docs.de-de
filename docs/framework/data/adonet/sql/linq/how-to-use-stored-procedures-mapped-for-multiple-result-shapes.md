@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von gespeicherten Prozeduren, die mehreren Ergebnisformen zugeordnet sind'
+title: 'Gewusst wie: Verwenden von gespeicherten Prozeduren, die mehreren Ergebnisformen zugeordnet sind'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,10 +12,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003269"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Vorgehensweise: Verwenden von gespeicherten Prozeduren, die mehreren Ergebnisformen zugeordnet sind
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Gewusst wie: Verwenden von gespeicherten Prozeduren, die mehreren Ergebnisformen zugeordnet sind
 Wenn eine gespeicherte Prozedur mehrere Ergebnisformen zurückgeben kann, lässt sich der Rückgabetyp nicht auf eine einzige Projektionsform festlegen. Obwohl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] alle möglichen Projektions Typen generieren kann, ist es nicht möglich, die Reihenfolge zu kennen, in der Sie zurückgegeben werden.  
   
- Vergleichen Sie dieses Szenario mit gespeicherten Prozeduren, die sequenziell mehrere Ergebnisformen erzeugen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie gespeicherte Prozeduren, die sequenziellen Ergebnis Formen @ no__t-0 zugeordnet sind.  
+ Vergleichen Sie dieses Szenario mit gespeicherten Prozeduren, die sequenziell mehrere Ergebnisformen erzeugen. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden von gespeicherten Prozeduren, die sequenziellen Ergebnis Formen zugeordnet](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)sind.  
   
  Das <xref:System.Data.Linq.Mapping.ResultTypeAttribute>-Attribut wird auf gespeicherte Prozeduren angewendet, die mehrere Ergebnistypen zurückgeben, um den Typsatz anzugeben, den die Prozedur zurückgeben kann.  
   

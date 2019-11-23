@@ -23,18 +23,18 @@ value [ NOT ] IN expression
  Jeder gültige Ausdruck, der den auf Übereinstimmung zu prüfenden Wert zurückgibt.  
   
  [ NOT ]  
- Legt fest, dass das `Boolean`-Ergebnis von IN negiert werden soll.  
+ Legt fest, dass das `Boolean`-Ergebnis von {2}IN{3} negiert werden soll.  
   
  `expression`  
  Jeder gültige Ausdruck, der die auf Übereinstimmung zu prüfende Auflistung zurückgibt. Alle Ausdrücke müssen vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ sein wie `value`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`, wenn der Wert in der Auflistung gefunden wurde, null, wenn der Wert oder die Auflistung NULL ist, anderenfalls `false`. Mit NOT IN wird das Ergebnis von IN negiert.  
+ `true`, wenn der Wert in der Auflistung gefunden wird. NULL, wenn der Wert NULL ist oder die Auflistung NULL ist. Andernfalls `false`. Mit NOT IN wird das Ergebnis von IN negiert.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den IN-Operator, um zu bestimmen, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die die StructuralType-Ergebnisse @ no__t-0 zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   

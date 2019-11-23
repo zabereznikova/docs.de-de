@@ -13,11 +13,11 @@ ms.locfileid: "72180259"
 
 In diesem Thema wird das Verfahren zum Hosting einer Instanz des [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in einer Windows Presentation Foundation (WPF)-Anwendung beschrieben.
 
-Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthält, erstellt Programm gesteuert eine Instanz des <xref:System.Activities.Presentation.WorkflowDesigner>, das eine standardmäßige <xref:System.Activities.Statements.Sequence>-Aktivität enthält, registriert die Designer Metadaten, um Designer Unterstützung für alle integrierten Aktivitäten und hosten die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in der WPF-Anwendung.
+Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthält, erstellt Programm gesteuert eine Instanz der <xref:System.Activities.Presentation.WorkflowDesigner>, die eine standardmäßige <xref:System.Activities.Statements.Sequence> Aktivität enthält, registriert die Designer Metadaten, um Designer Unterstützung für alle integrierten Aktivitäten bereitzustellen, und hostet die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in der WPF-Anwendung.
 
 ## <a name="to-host-the-workflow-designer"></a>So hosten Sie den Workflow-Designer
 
-1. Öffnen Sie das HostingApplication-Projekt, das Sie in [task 1 erstellt haben: Erstellen Sie eine neue Windows Presentation Foundation Anwendung @ no__t-0.
+1. Öffnen Sie das HostingApplication-Projekt, das Sie in [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation Anwendung](task-1-create-a-new-wpf-app.md)erstellt haben.
 
 2. Passen Sie die Fenstergröße an, um die Verwendung des [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] einfacher zu machen. Wählen Sie hierzu im Designer **MainWindow** , drücken Sie F4, um das **Eigenschaften** Fenster anzuzeigen, und legen Sie im Abschnitt **Layout** die **Breite** auf den Wert 600 und die **Höhe** auf 350 fest.
 
@@ -25,11 +25,11 @@ Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthäl
 
 4. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte ( **...** ) neben der `ColumnDefinitions`-Eigenschaft, um das Dialogfeld Auflistungs- **Editor** zu öffnen.
 
-5. Klicken Sie im Dialogfeld Auflistungs- **Editor** drei Mal auf die Schaltfläche **Hinzufügen** , um drei Spalten in das Layout einzufügen. Die erste Spalte enthält die **Toolbox**, in der zweiten Spalte wird die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] gehostet, und die dritte Spalte wird für die Eigenschaften Analyse verwendet.
+5. Klicken Sie im Dialogfeld Auflistungs- **Editor** drei Mal auf die Schaltfläche **Hinzufügen** , um drei Spalten in das Layout einzufügen. Die erste Spalte enthält die **Toolbox**, die zweite Spalte hostet die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], und die dritte Spalte wird für die Eigenschaften Analyse verwendet.
 
 6. Legen Sie die `Width`-Eigenschaft der mittleren Spalte auf den Wert "4 *" fest.
 
-7. Klicken Sie auf **OK** , um die Änderungen zu speichern. Der folgenden XAML-Code wird der Datei " *MainWindow. XAML* " hinzugefügt:
+7. Klicken Sie auf **OK**, um die Änderungen zu speichern. Der folgenden XAML-Code wird der Datei " *MainWindow. XAML* " hinzugefügt:
 
     ```xaml
     <Grid Name="grid1">
@@ -55,7 +55,7 @@ Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthäl
         using System.ComponentModel;
         ```
 
-    2. Fügen Sie der `MainWindow`-Klasse den folgenden Code hinzu, um ein privates Element Feld zu deklarieren, das eine Instanz von <xref:System.Activities.Presentation.WorkflowDesigner> enthalten soll:
+    2. Fügen Sie der `MainWindow`-Klasse den folgenden Code hinzu, um ein privates Member-Feld zu deklarieren, das eine Instanz des <xref:System.Activities.Presentation.WorkflowDesigner>enthalten soll:
 
         ```csharp
         public partial class MainWindow : Window
@@ -69,7 +69,7 @@ Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthäl
         }
         ```
 
-    3. Fügen Sie die folgende `AddDesigner`-Methode zu der `MainWindow`-Klasse hinzu. Die-Implementierung erstellt eine Instanz des-<xref:System.Activities.Presentation.WorkflowDesigner>, fügt ihr eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzu und platziert Sie in der mittleren Spalte des grid1- **Rasters**.
+    3. Fügen Sie die folgende `AddDesigner`-Methode zu der `MainWindow`-Klasse hinzu. Die-Implementierung erstellt eine Instanz des <xref:System.Activities.Presentation.WorkflowDesigner>, fügt ihr eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzu und platziert Sie in der mittleren Spalte des grid1- **Rasters**.
 
         ```csharp
         private void AddDesigner()
@@ -98,7 +98,7 @@ Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthäl
         }
         ```
 
-        Weitere Informationen zum Registrieren von Aktivitäts Designern finden Sie unter [gewusst wie: Erstellen Sie einen benutzerdefinierten Aktivitäts Designer @ no__t-0.
+        Weitere Informationen zum Registrieren von Aktivitäts Designern finden Sie unter Gewusst [wie: Erstellen eines benutzerdefinierten Aktivitäts Designers](how-to-create-a-custom-activity-designer.md).
 
     5. Fügen Sie im `MainWindow`-Klassenkonstruktor den zuvor deklarierten Methoden Aufrufe hinzu, um die Metadaten für die Designerunterstützung zu registrieren und das <xref:System.Activities.Presentation.WorkflowDesigner>-Objekt zu erstellen.
 
@@ -120,10 +120,10 @@ Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthäl
 
 9. Drücken Sie <kbd>F5</kbd> , um die Projekt Mappe zu erstellen und auszuführen.
 
-10. Weitere Informationen finden Sie unter [task 3: Erstellen Sie die Toolbox-und PropertyGrid-Bereiche @ no__t-0, um zu erfahren, wie Sie den neu gehosteten Workflow-Designer Unterstützung für **Toolbox** und **PropertyGrid** hinzufügen.
+10. Weitere Informationen zum Hinzufügen von **Toolbox** -und **PropertyGrid** -Unterstützung zu Ihrem neu gehosteten Workflow-Designer finden Sie unter [Aufgabe 3: Erstellen der Toolbox-und PropertyGrid-](task-3-create-the-toolbox-and-propertygrid-panes.md) Bereiche.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
-- [aufgabe 1: Erstellen einer neuen Windows Presentation Foundation Anwendung @ no__t-0
-- [aufgabe 3: Erstellen der Toolbox-und PropertyGrid-Bereiche @ no__t-0
+- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
+- [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](task-3-create-the-toolbox-and-propertygrid-panes.md)

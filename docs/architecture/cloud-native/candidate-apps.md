@@ -3,18 +3,18 @@ title: Kandidaten-Apps für die native Cloud
 description: Erfahren Sie, welche Arten von Anwendungen von einem cloudbasierten Ansatz profitieren.
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841858"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968298"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Kandidaten-Apps für die native Cloud
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Sehen Sie sich die apps in Ihrem Portfolio an. Wie viele von Ihnen sind für eine Cloud-Native Architektur qualifiziert? Alle? Vielleicht etwas?
+Sehen Sie sich die apps in Ihrem Portfolio an. Wie viele von Ihnen sind für eine Cloud-Native Architektur qualifiziert? Alle genannten? Vielleicht etwas?
 
 Wenn Sie eine Kosten-/Nutzungsanalyse durch nehmen, besteht die Möglichkeit, dass die meisten nicht das heftige Preis Kennzeichen unterstützen, das in der Cloud System eigen sein muss. Die Kosten für eine native Cloud würden den Geschäftswert der Anwendung weit überschreiten.
 
@@ -89,8 +89,6 @@ Mit der Einführung hinter sehen wir uns nun einen ausführlicheren Überblick �
 - [Bereitstellen von Code durch Netflix](https://www.infoq.com/news/2013/06/netflix/)
 
 - [Überladungs Steuerelement zum Skalieren von WeChat-mikrodiensten](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [Raygun-Fallstudie](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[Zurück](definition.md)

@@ -1,20 +1,19 @@
 ---
 title: 'Protobuf-skalare Datentypen: GrpC für WCF-Entwickler'
 description: Erfahren Sie mehr über die grundlegenden und bekannten Datentypen, die von protobuf und GrpC in .net Core unterstützt werden.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841456"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971555"
 ---
 # <a name="protobuf-scalar-data-types"></a>Skalare Datentypen für Protobuf
 
 Protobuf unterstützt einen Bereich von systemeigenen skalaren Werttypen. In der folgenden Tabelle sind alle Elemente mit dem C# entsprechenden Typ aufgeführt:
 
-| Protobuf-Typ | C#-Typ      | Notizen |
+| Protobuf-Typ | C#-Typ      | Hinweise |
 | ------------- | ------------ | ----- |
 | `double`      | `double`     |       |
 | `float`       | `float`      |       |
@@ -32,7 +31,7 @@ Protobuf unterstützt einen Bereich von systemeigenen skalaren Werttypen. In der
 | `string`      | `string`     | 3     |
 | `bytes`       | `ByteString` | 4     |
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
 1. Beim Arbeiten mit signierten Werten ist die Standard Codierung für `int32` und `int64` ineffizient. Wenn das Feld wahrscheinlich negative Zahlen enthält, verwenden Sie stattdessen `sint32` oder `sint64`. Beide Typen werden den C# Typen `int` und `long` zugeordnet.
 2. Die `fixed` Felder verwenden immer dieselbe Anzahl von Bytes, unabhängig davon, was der Wert ist. Dieses Verhalten macht die Serialisierung und Deserialisierung bei größeren Werten schneller.
@@ -41,7 +40,7 @@ Protobuf unterstützt einen Bereich von systemeigenen skalaren Werttypen. In der
 
 ## <a name="other-net-primitive-types"></a>Andere .net-primitive Typen
 
-### <a name="dates-and-times"></a>Datumsangaben und Uhrzeiten
+### <a name="dates-and-times"></a>Datums- und Uhrzeitwerte
 
 Die System C#eigenen skalaren Typen bieten keine Datums-und Uhrzeitwerte, die den <xref:System.DateTimeOffset>, <xref:System.DateTime>und <xref:System.TimeSpan>entsprechen. Diese Typen können mithilfe einiger der "Well Known Types"-Erweiterungen von Google angegeben werden, die die Codegenerierung und Laufzeitunterstützung für komplexere Feldtypen auf den unterstützten Plattformen bereitstellen. In der folgenden Tabelle werden die Datums-und Uhrzeit Typen angezeigt:
 

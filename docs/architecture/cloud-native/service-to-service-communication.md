@@ -3,12 +3,12 @@ title: Kommunikation zwischen Dienst und Dienst
 description: Erfahren Sie, wie Back-End-cloudnative-mikrodienste mit anderen Back-End-Webdiensten kommunizieren.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842014"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087596"
 ---
 # <a name="service-to-service-communication"></a>Kommunikation zwischen Dienst und Dienst
 
@@ -34,7 +34,7 @@ Bei der Ausführung von Vorgängen, die eine Dienst übergreifende Interaktion e
 
 Häufig muss ein mikrodienst eine andere *Abfrage* ausführen, die eine sofortige Antwort benötigt, um einen Vorgang abzuschließen. Ein Einkaufskorb-microservice benötigt möglicherweise Produktinformationen und einen Preis, um dem Warenkorb ein Element hinzuzufügen. Es gibt eine Reihe von Ansätzen zum Implementieren von Abfrage Vorgängen.
 
-### <a name="requestresponse-messaging"></a>Anforderungs-/Antwort-Messaging
+### <a name="requestresponse-messaging"></a>Messaging vom Typ 'Anforderungsantwort'
 
 Eine Möglichkeit zum Implementieren dieses Szenarios besteht darin, dass der aufrufende Back-End-Dienst direkte HTTP-Anforderungen an die für die Abfrage erforderlichen mikrodienste stellt, wie in Abbildung 4-8 dargestellt.
 
@@ -208,7 +208,7 @@ Event Grid ist ein vollständig verwalteter Server loser clouddienst. Die Skalie
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Streaming von Nachrichten in der Azure-Cloud
 
-Azure Service Bus und Event Grid bieten hervorragend Unterstützung für Anwendungen, die einzelne, diskrete Ereignisse wie ein neues Dokument verfügbar machen, das in eine Cosmos DB eingefügt wurde. Aber was geschieht, wenn Ihr System eigenes System einen *Stream verwandter Ereignisse*verarbeiten muss? [Ereignisstreams](https://msdn.microsoft.com/magazine/dn904671) sind komplexer. Sie sind in der Regel zeitlich geordnet, interverwandt und müssen als Gruppe verarbeitet werden.
+Azure Service Bus und Event Grid bieten hervorragend Unterstützung für Anwendungen, die einzelne, diskrete Ereignisse wie ein neues Dokument verfügbar machen, das in eine Cosmos DB eingefügt wurde. Aber was geschieht, wenn Ihr System eigenes System einen *Stream verwandter Ereignisse*verarbeiten muss? [Ereignisstreams](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) sind komplexer. Sie sind in der Regel zeitlich geordnet, interverwandt und müssen als Gruppe verarbeitet werden.
 
 [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) ist eine datenstreamingplattform und ein Ereignis Erfassungs Dienst, der Ereignisse sammelt, transformiert und speichert. Sie ist darauf abgestimmt, Streamingdaten zu erfassen, wie z. b. kontinuierliche Ereignis Benachrichtigungen, die von einem telemetriekontext ausgegeben werden. Der Dienst ist hochgradig skalierbar und kann [Millionen von Ereignissen pro Sekunde](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)speichern und verarbeiten. In Abbildung 4-18 ist es häufig eine Tür für eine Ereignis Pipeline, bei der der Erfassungsdaten Strom vom Ereignis Verbrauch entkoppelt wird.
 
@@ -220,7 +220,7 @@ Event Hub unterstützt niedrige Latenz und konfigurierbare Zeit Aufbewahrung. Im
 
 Event Hub unterstützt allgemeine Ereignis Veröffentlichungs Protokolle, einschließlich HTTPS und AMQP. Außerdem wird Kafka 1,0 unterstützt. [Vorhandene Kafka-Anwendungen können mit dem Event Hub](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) über das Kafka-Protokoll kommunizieren, das eine Alternative zur Verwaltung großer Kafka-Cluster bereitstellt. Viele Open-Source-cloudnative Systeme nehmen Kafka vor.
 
-Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht eine enorme horizontale Skalierung für die Ereignisverarbeitung und bietet andere Streamorientierte Features, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub gespeichert wird. Wenn neuere Ereignisse eintreffen, werden Sie am Ende dieser Sequenz hinzugefügt. Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
+Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub gespeichert wird. Wenn neuere Ereignisse eintreffen, werden Sie am Ende dieser Sequenz hinzugefügt. Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
 
 ![Event Hub-Partitionierung](./media/event-hub-partitioning.png)
 

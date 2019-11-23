@@ -9,12 +9,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697768"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<schemesettings > Element (URI-Einstellungen)
+# <a name="schemesettings-element-uri-settings"></a>\<SchemeSettings > Element (URI-Einstellungen)
 Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemesettings >**  
+&nbsp;&nbsp;[ **\<-URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<SchemeSettings >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -24,10 +24,10 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- None  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -44,7 +44,7 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 |[uri](uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse vor dem Ausführen der Pfad Komprimierung die Prozentwerte für Prozent codierte Pfad Trennzeichen aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
+ Standardmäßig wird die <xref:System.Uri?displayProperty=nameWithType>-Klasse vor dem Ausführen der Pfad Komprimierung in Prozent codierte Pfad Trennzeichen aufheben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem Grund werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse zunächst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an den <xref:System.Uri?displayProperty=nameWithType>-Klassenkonstruktor führt zum folgenden URI:  
+ Aus diesem Grund werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse zunächst Pfad Trennzeichen aufgehoben, und dann wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an <xref:System.Uri?displayProperty=nameWithType> Klassenkonstruktor führt zum folgenden URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, um das Escapezeichen für Prozent codierte Pfad Trennzeichen für das http-Schema zu unterstützen.  
+ Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, um das Escapezeichen für Prozent codierte Pfade für das http-Schema zu unterstützen.  
   
 ```xml  
 <configuration>  

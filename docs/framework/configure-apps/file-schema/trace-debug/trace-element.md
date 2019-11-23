@@ -17,12 +17,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699183"
 ---
-# <a name="trace-element"></a>\<trace >-Element
+# <a name="trace-element"></a>\<Trace >-Element
 Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Ablauf Verfolgung >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
@@ -71,7 +71,7 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<trace>`-Element verwendet wird, um den Listener `MyListener` der `Listeners`-Auflistung hinzuzufügen. `MyListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei. Das `useGlobalLock`-Attribut ist auf `false` festgelegt. Dies bewirkt, dass die globale Sperre nicht verwendet wird, wenn der Ablaufverfolgungslistener Thread sicher ist. Das `autoflush`-Attribut ist auf `true` festgelegt, was bewirkt, dass der Ablaufverfolgungslistener in die Datei schreibt, unabhängig davon, ob die <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Das `indentsize`-Attribut wird auf 0 (null) festgelegt, was bewirkt, dass der Listener beim Aufrufen der <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>-Methode NULL Leerzeichen eingibt.  
+ Im folgenden Beispiel wird gezeigt, wie das `<trace>`-Element verwendet wird, um die Listener`MyListener` der `Listeners` Auflistung hinzuzufügen. `MyListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei. Das `useGlobalLock`-Attribut ist auf `false`festgelegt, was bewirkt, dass die globale Sperre nicht verwendet wird, wenn der Ablaufverfolgungslistener Thread sicher ist. Das `autoflush`-Attribut ist auf `true`festgelegt, wodurch der Ablaufverfolgungslistener in die Datei schreibt, unabhängig davon, ob die <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Das `indentsize`-Attribut wird auf 0 (null) festgelegt, wodurch der Listener beim Aufrufen der <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>-Methode NULL Leerzeichen eingibt.  
   
 ```xml  
 <configuration>  

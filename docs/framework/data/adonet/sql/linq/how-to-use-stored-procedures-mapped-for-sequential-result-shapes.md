@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von gespeicherten Prozeduren, die sequenziellen Ergebnisformen zugeordnet sind'
+title: 'Gewusst wie: Verwenden von gespeicherten Prozeduren, die sequenziellen Ergebnisformen zugeordnet sind'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003222"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Vorgehensweise: Verwenden von gespeicherten Prozeduren, die sequenziellen Ergebnisformen zugeordnet sind
-Diese Art von gespeicherten Prozeduren kann mehr als eine Ergebnisform erstellen. Sie wissen jedoch, in welcher Reihenfolge die Ergebnisse zurückgegeben werden. Stellen Sie dieses Szenario dem Szenario gegenüber, bei dem Sie die Rückgabereihenfolge nicht kennen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie gespeicherte Prozeduren, die mehreren Ergebnis Formen @ no__t-0 zugeordnet sind.  
+# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Gewusst wie: Verwenden von gespeicherten Prozeduren, die sequenziellen Ergebnisformen zugeordnet sind
+Diese Art von gespeicherten Prozeduren kann mehr als eine Ergebnisform erstellen. Sie wissen jedoch, in welcher Reihenfolge die Ergebnisse zurückgegeben werden. Stellen Sie dieses Szenario dem Szenario gegenüber, bei dem Sie die Rückgabereihenfolge nicht kennen. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden von gespeicherten Prozeduren, die mehreren Ergebnis Formen zugeordnet](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)sind.  
   
 ## <a name="example"></a>Beispiel  
  Es folgt das T-SQL einer gespeicherten Prozedur, die mehrere Ergebnisformen sequenziell zurückgibt:  

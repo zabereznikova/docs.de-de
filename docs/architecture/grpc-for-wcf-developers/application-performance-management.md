@@ -1,14 +1,13 @@
 ---
 title: 'Anwendungs Leistungsverwaltung: GrpC für WCF-Entwickler'
 description: Protokollierung, Metriken und Ablauf Verfolgung für ASP.net Core GrpC-Anwendungen.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968176"
 ---
 # <a name="application-performance-management"></a>Application Performance Management
 
@@ -66,8 +65,8 @@ Die meisten metrikplattformen unterstützen fünf Grundtypen von Metriken, die i
 
 | Metriktyp | Beschreibung |
 | ----------- | ----------- |
-| Zähler     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen, Fehler usw. |
-| Mess Gerät       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
+| Leistungsindikator     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen, Fehler usw. |
+| Messgerät       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
 | Histogramm   | Misst eine Verteilung von Werten über beliebige Grenzen hinweg. Ein Histogramm könnte z. b. die Größe des Datasets verfolgen und zählen, wie viele < 10 Datensätze enthalten sind, wie viele 11-100 und 101-1000, und > 1000 Datensätze. |
 | Messen       | Misst die Rate, mit der ein Ereignis in verschiedenen Zeitspannen auftritt. |
 | Zeitgeber       | Verfolgt die Dauer der Ereignisse und die Rate, mit der es eintritt, als Histogramm gespeichert. |
@@ -160,7 +159,7 @@ public class Startup
 
 Das opentracing-Paket ist eine Abstraktionsschicht und erfordert daher eine Back-End-spezifische Implementierung. Opentrace-API-Implementierungen sind für die folgenden Open Source-Back-Ends verfügbar.
 
-| -Name | Package | Website |
+| Name | Paket | Website |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | Elastisches apm | [Elastisches apm. netcoreall](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

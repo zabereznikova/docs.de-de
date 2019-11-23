@@ -15,11 +15,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699192"
 ---
-# <a name="systemdiagnostics-element"></a>\<system. Diagnostics >-Element
+# <a name="systemdiagnostics-element"></a>\<System. Diagnostics >-Element
 Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<System. Diagnostics >**  
+&nbsp;&nbsp; **\<System. Diagnostics >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,10 +29,10 @@ Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterle
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -52,10 +52,10 @@ Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterle
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie ein Ablauf Verfolgungs Schalter und ein Ablaufverfolgungslistener in das **>-Element \<System. Diagnostics** eingebettet werden. Der `General`-Ablauf Verfolgungs Schalter ist auf <xref:System.Diagnostics.TraceLevel>-Ebene festgelegt. Der Ablaufverfolgungslistener `myListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei.  
+ Im folgenden Beispiel wird gezeigt, wie ein Ablauf Verfolgungs Schalter und ein Ablaufverfolgungslistener in das **\<System. Diagnostics->** Element eingebettet werden. Der Schalter für die `General` Ablauf Verfolgung ist auf <xref:System.Diagnostics.TraceLevel> Ebene festgelegt. Der Ablaufverfolgungslistener `myListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei.  
   
 > [!NOTE]
-> In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Beispielsweise können Sie `true` für einen <xref:System.Diagnostics.BooleanSwitch> angeben oder den Text, der einen Enumerationswert wie `Error` für eine <xref:System.Diagnostics.TraceSwitch> darstellt. Die Zeile `<add name="myTraceSwitch" value="Error" />` ist gleichbedeutend mit `<add name="myTraceSwitch" value="1" />`.  
+> In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Sie können z. b. `true` für eine <xref:System.Diagnostics.BooleanSwitch> angeben oder den Text verwenden, der einen Enumerationswert darstellt, z. b. `Error` für einen <xref:System.Diagnostics.TraceSwitch>. Die Zeile `<add name="myTraceSwitch" value="Error" />` ist gleichbedeutend mit `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

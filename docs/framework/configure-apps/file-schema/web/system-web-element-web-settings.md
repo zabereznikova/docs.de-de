@@ -15,11 +15,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699089"
 ---
-# <a name="systemweb-element-web-settings"></a>@no__t -0system. Web >-Element (Webeinstellungen)
+# <a name="systemweb-element-web-settings"></a>\<System. Web >-Element (Webeinstellungen)
 Enthält Informationen dazu, wie die ASP.net-hostingschicht Prozess weites Verhalten verwaltet.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3System. Web >**  
+&nbsp;&nbsp; **\<System. Web >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,11 +30,11 @@ Enthält Informationen dazu, wie die ASP.net-hostingschicht Prozess weites Verha
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
 
-In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
 
-Keine  
+None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -50,7 +50,7 @@ Keine
   
 ## <a name="remarks"></a>Hinweise  
 
-Das `system.web`-Element und sein untergeordnetes `applicationPool`-Element wurden dem .NET Framework ab .NET Framework 3,5 SP1 hinzugefügt. Wenn Sie IIS 7,0 oder höhere Versionen im integrierten Modus ausführen, können Sie mit dieser Element Kombination konfigurieren, wie ASP.NET Threads verwaltet und wie Anforderungen in die Warteschlange eingereiht werden, wenn ASP.net in einem IIS-Anwendungs Pool gehostet wird. Wenn Sie IIS 7,0 oder höhere Versionen im klassischen oder ISAPI-Modus ausführen, werden diese Einstellungen ignoriert.  
+Das `system.web`-Element und sein untergeordnetes `applicationPool` Element wurden dem .NET Framework ab .NET Framework 3,5 SP1 hinzugefügt. Wenn Sie IIS 7,0 oder höhere Versionen im integrierten Modus ausführen, können Sie mit dieser Element Kombination konfigurieren, wie ASP.NET Threads verwaltet und wie Anforderungen in die Warteschlange eingereiht werden, wenn ASP.net in einem IIS-Anwendungs Pool gehostet wird. Wenn Sie IIS 7,0 oder höhere Versionen im klassischen oder ISAPI-Modus ausführen, werden diese Einstellungen ignoriert.  
   
 ## <a name="example"></a>Beispiel  
 

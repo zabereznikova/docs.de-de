@@ -41,12 +41,12 @@ Stellt die `ImeMode`-Eigenschaft zum Steuern des Eingabetyps vor, der von Window
 
 - [Exemplarische Vorgehensweise: Herunterladen von Satellitenassemblys bei Bedarf mit der API für die ClickOnce-Bereitstellung](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Vorgehensweise: Festlegen der Kultur und Benutzeroberflächen Kultur für die Windows Forms Globalisierung @ no__t-0
+- [Vorgehensweise: Festlegen der Kultur und Benutzeroberflächen Kultur für die Windows Forms Globalisierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [Vorgehensweise: Erstellen von gespiegelten Windows Forms und Steuerelementen @ no__t-0
+- [Gewusst wie: Erstellen von gespiegelten Windows Forms und Steuerelementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [Vorgehensweise: Unterstützung der Lokalisierung auf Windows Forms mithilfe von AutoSize und dem TableLayoutPanel-Steuerelement @ no__t-0
+- [Vorgehensweise: Unterstützen der Lokalisierung in Windows Forms mithilfe von AutoSize und dem TableLayoutPanel-Steuerelement](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms @ no__t-0
+- [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [Exemplarische Vorgehensweise: Erstellen eines Layouts, das den Anteil an der Lokalisierung anpasst @ no__t-0
+- [Exemplarische Vorgehensweise: Erstellen eines Layouts, das den Anteil an der Lokalisierung anpasst](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

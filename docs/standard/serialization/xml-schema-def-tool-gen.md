@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool'
+title: 'Gewusst wie: Mit dem XML Schema Definition-Tool Klassen und XML-Schemadokumente generieren'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392865"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Vorgehensweise: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Gewusst wie: Mit dem XML Schema Definition-Tool Klassen und XML-Schemadokumente generieren
 Mit dem XML-Schema Definition-Tool (Xsd.exe) können Sie ein XML-Schema generieren, das eine Klasse beschreibt, oder die Klasse generieren, die durch ein XML-Schema definiert wird. Die folgenden Verfahren zeigen, wie diese Vorgänge ausgeführt werden.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>So generieren Sie Klassen, die einem bestimmten Schema entsprechen  
@@ -27,7 +27,7 @@ Mit dem XML-Schema Definition-Tool (Xsd.exe) können Sie ein XML-Schema generier
     xsd mySchema.xsd  
     ```  
   
-     Das Tool kann nur Schemas verarbeiten, die auf die World Wide Web Consortium-XML-Spezifikation vom 16. März 2001 verweisen. Anders ausgedrückt: der XML-Schema Namespace muss "http://www.w3.org/2001/XMLSchema" lauten, wie im folgenden Beispiel gezeigt.  
+     Das Tool kann nur Schemas verarbeiten, die auf die World Wide Web Consortium-XML-Spezifikation vom 16. März 2001 verweisen. Anders ausgedrückt: der XML-Schema Namespace muss wie im folgenden Beispiel "http://www.w3.org/2001/XMLSchema" lauten.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -59,5 +59,5 @@ Mit dem XML-Schema Definition-Tool (Xsd.exe) können Sie ein XML-Schema generier
 - [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML Schema Definition-Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Vorgehensweise: Serialisieren eines Objekts @ no__t-0
-- [Vorgehensweise: Deserialisieren eines Objekts @ no__t-0
+- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

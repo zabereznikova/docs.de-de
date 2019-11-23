@@ -27,15 +27,15 @@ Weitere Informationen finden Sie [unter Microsoft Enterprise Library](https://do
 
 ## <a name="dealing-with-expected-exceptions"></a>Umgang mit erwarteten Ausnahmen
 
-Die richtige Vorgehensweise ist das Abfangen erwarteter Ausnahmen in jedem Vorgang oder relevanten Erweiterbarkeits Punkt, die Entscheidung, ob Sie von wieder hergestellt werden können, und das Zurückgeben des richtigen benutzerdefinierten Fehlers in einem FaultException @ no__t-0t->.
+Die richtige Vorgehensweise ist das Abfangen erwarteter Ausnahmen in jedem Vorgang oder relevanten Erweiterbarkeits Punkt, die Entscheidung, ob Sie von wieder hergestellt werden können, und das Zurückgeben des richtigen benutzerdefinierten Fehlers in einer FaultException-\<t->.
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Umgang mit unerwarteten Ausnahmen mit einem IErrorHandler
 
-Um unerwartete Ausnahmen zu behandeln, wird empfohlen, einen IErrorHandler als "Hook" zu erhalten. Fehlerhandler fangen nur Ausnahmen auf der WCF-Lauf Zeit Ebene (der Dienstmodell Ebene) und nicht auf der Kanal Ebene ab. Die einzige Möglichkeit, einen IErrorHandler auf Kanalebene zu verknüpfen, ist das Erstellen eines benutzerdefinierten Kanals, und dies wird in den meisten Szenarien nicht empfohlen.
+Um unerwartete Ausnahmen zu behandeln, wird empfohlen, einen IErrorHandler als "Hook" zu erhalten. Fehlerhandler fangen nur Ausnahmen auf der WCF-Lauf Zeit Ebene (der Dienstmodell Ebene) und nicht auf der Kanal Ebene ab. Die einzige Möglichkeit, einen {1}IErrorHandler{2} auf Kanalebene zu verknüpfen, ist das Erstellen eines benutzerdefinierten Kanals, und dies wird in den meisten Szenarien nicht empfohlen.
 
-Eine "unerwartete Ausnahme" ist im allgemeinen weder eine nicht behebbare Ausnahme noch eine Verarbeitungs Ausnahme. Es handelt sich vielmehr um eine unerwartete Benutzer Ausnahme. Eine nicht BEHEB Bare Ausnahme (z. b. eine Ausnahme aufgrund ungenügenden Arbeitsspeichers) – eine, die im Allgemeinen vom [Dienstmodell-Ausnahme Handler](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automatisch verarbeitet wird – kann im Allgemeinen nicht ordnungsgemäß behandelt werden, und der einzige Grund für die Behandlung einer solchen Ausnahme ist möglicherweise. zusätzliche Protokollierung oder, um eine Standard Ausnahme an den Client zurückzugeben. Eine Verarbeitungsausnahme tritt meist beim Verarbeiten der Nachricht auf, beispielsweise auf Serialisierungs-, Encoder- oder Formatiererebene, und kann im Allgemeinen nicht von einem "IErrorHandler" behandelt werden, weil die Fehlerbehandlung noch nicht oder nicht mehr eingreifen kann, wenn diese Ausnahmen auftreten. Ebenso können Transportausnahmen nicht von einem IErrorHandler behandelt werden.
+Eine "unerwartete Ausnahme" ist im allgemeinen weder eine nicht behebbare Ausnahme noch eine Verarbeitungs Ausnahme. Es handelt sich vielmehr um eine unerwartete Benutzer Ausnahme. Eine nicht BEHEB Bare Ausnahme (z. b. eine Ausnahme aufgrund ungenügenden Arbeitsspeichers) – eine, die im Allgemeinen vom [Dienstmodell-Ausnahme Handler](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automatisch verarbeitet wird – kann im Allgemeinen nicht ordnungsgemäß behandelt werden, und der einzige Grund für die Behandlung einer solchen Ausnahme ist möglicherweise eine zusätzliche Protokollierung oder die Rückgabe einer Standard Ausnahme an den Client. Eine Verarbeitungsausnahme tritt meist beim Verarbeiten der Nachricht auf, beispielsweise auf Serialisierungs-, Encoder- oder Formatiererebene, und kann im Allgemeinen nicht von einem "IErrorHandler" behandelt werden, weil die Fehlerbehandlung noch nicht oder nicht mehr eingreifen kann, wenn diese Ausnahmen auftreten. Ebenso können Transportausnahmen nicht von einem {1}IErrorHandler{2} behandelt werden.
 
-Mit einem IErrorHandler können Sie das Verhalten der Anwendung explizit steuern, wenn eine Ausnahme ausgelöst wird. Sie haben folgende Möglichkeiten:  
+Mit einem {1}IErrorHandler{2} können Sie das Verhalten der Anwendung explizit steuern, wenn eine Ausnahme ausgelöst wird. Sie haben folgende Möglichkeiten:  
 
 1. Entscheiden Sie, ob ein Fehler an den Client gesendet werden soll oder nicht.
 
@@ -49,11 +49,11 @@ Mit einem IErrorHandler können Sie das Verhalten der Anwendung explizit steuern
 
 Sie können einen benutzerdefinierten Fehlerhandler installieren, indem Sie ihn der ErrorHandlers-Eigenschaft der Kanalverteiler für den Dienst hinzufügen.  Es ist zulässig, mehrere Fehlerhandler zu verwenden. Sie werden in der Reihenfolge aufgerufen, in der sie der Auflistung hinzugefügt wurden.
 
-IErrorHandler.ProvideFault steuert die Fehlermeldung, die an den Client gesendet wird. Diese Methode wird unabhängig vom Typ der Ausnahme aufgerufen, die durch einen Vorgang im Dienst ausgelöst wird. Wenn hier kein Vorgang ausgeführt wird, nimmt WCF das Standardverhalten an und wird so fortgesetzt, als wären keine benutzerdefinierten Fehlerhandler vorhanden.
+{1}IErrorHandler.ProvideFault{2} steuert die Fehlermeldung, die an den Client gesendet wird. Diese Methode wird unabhängig vom Typ der Ausnahme aufgerufen, die durch einen Vorgang im Dienst ausgelöst wird. Wenn hier kein Vorgang ausgeführt wird, nimmt WCF das Standardverhalten an und wird so fortgesetzt, als wären keine benutzerdefinierten Fehlerhandler vorhanden.
 
 Sie können diese Herangehensweise beispielsweise verwenden, wenn Ausnahmen an einer zentralen Stelle in Fehler umgewandelt werden sollen, bevor sie an den Client gesendet werden (um sicherzustellen, dass die Instanz nicht verworfen wird und der Kanal nicht in den Faulted-Zustand wechselt).
 
-Die "IErrorHandler.HandleError"-Methode wird in der Regel verwendet, um Verhalten für Fehler zu implementieren, z. B. Fehlerprotokollierung, Systembenachrichtigungen, Beenden der Anwendung usw. IErrorHandler.HandleError kann an mehreren Stellen im Dienst aufgerufen werden, und je nachdem, wo der Fehler ausgelöst wird, kann die HandleError-Methode von demselben Thread wie der Vorgang oder von einem anderen Thread aufgerufen werden. Dies lässt sich nicht eindeutig festlegen.
+Die IErrorHandler. Handler Error-Methode wird normalerweise verwendet, um Fehler bedingte Verhalten zu implementieren, z. b. Fehler Protokollierung, System Benachrichtigungen, Herunterfahren der Anwendung usw. IErrorHandler. Handler Error kann an mehreren Stellen im Dienst aufgerufen werden. je nachdem, wo der Fehler ausgelöst wird, kann die Methode "Lenker Error" vom gleichen Thread wie der Vorgang aufgerufen werden. in dieser Hinsicht werden keine Garantien gestellt.
 
 ## <a name="dealing-with-exceptions-outside-wcf"></a>Behandeln von Ausnahmen außerhalb von WCF
 
@@ -63,9 +63,9 @@ Häufig treten Konfigurationsausnahmen, Ausnahmen im Hinblick auf Datenbankverbi
 
 Die Ablauf Verfolgung ist die einzige "Catch-All"-Stelle, bei der potenziell alle Ausnahmen angezeigt werden können. Weitere Informationen zur Ablaufverfolgung und Protokollierung von Ausnahmen finden Sie unter "Ablaufverfolgung und Protokollierung".
 
-## <a name="uri-template-errors-when-using-webgetattribute-and-webinvokeattribute"></a>URI-Vorlagenfehler bei Verwendung von WebGetAttribute und WebInvokeAttribute
+## <a name="uri-template-errors-when-using-webgetattribute-and-webinvokeattribute"></a>URI-Vorlagenfehler bei Verwendung von {1}WebGetAttribute{2} und {3}WebInvokeAttribute{4}
 
-Mit dem WebGet-Attribut und dem WebInvoke-Attribut können Sie eine URI-Vorlage angeben, die Vorgangsparametern Komponenten der Anforderungsadresse zuordnet. Beispielsweise ordnet die URI-Vorlage "weather/{state}/{city}" die Anforderungsadresse als Literaltoken, als Parameter mit dem Namen state und als Parameter mit dem Namen city zu. Diese Parameter können dann nach Name an einige der formalen Parameter des Vorgangs gebunden werden.
+Mit dem WebGet-Attribut und dem WebInvoke-Attribut können Sie eine URI-Vorlage angeben, die Vorgangsparametern Komponenten der Anforderungsadresse zuordnet. Beispielsweise ordnet die URI-Vorlage "weather/{state}/{city}" die Anforderungsadresse als Literaltoken, als Parameter mit dem Namen {1}state{2} und als Parameter mit dem Namen {3}city{4} zu. Diese Parameter können dann nach Name an einige der formalen Parameter des Vorgangs gebunden werden.
 
 Die Vorlagenparameter werden im URI als Zeichenfolgen angezeigt, während die formalen Parameter eines typisierten Vertrags möglicherweise nicht vom Typ String sind. Daher muss eine Konvertierung erfolgen, bevor der Vorgang aufgerufen werden kann. Eine [Tabelle mit Konvertierungs Formaten](wcf-web-http-programming-model-overview.md) ist verfügbar.
 

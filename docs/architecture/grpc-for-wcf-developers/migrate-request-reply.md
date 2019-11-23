@@ -1,14 +1,13 @@
 ---
 title: Migrieren eines WCF-Anforderungs-/antwortdienstanbieter zu GrpC-GrpC für WCF-Entwickler
 description: Erfahren Sie, wie Sie einen einfachen Anforderungs-Antwort-Dienst von WCF zu GrpC migrieren.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841504"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971786"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Migrieren eines WCF-Anforderungs-Antwort-Dienstanbieter zu einem unären GrpC-RPC
 

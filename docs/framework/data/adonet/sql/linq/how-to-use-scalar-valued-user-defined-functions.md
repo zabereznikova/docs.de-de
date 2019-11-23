@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von benutzerdefinierten Skalarwertfunktionen'
+title: 'Gewusst wie: Verwenden von benutzerdefinierten Skalarwertfunktionen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,11 +12,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003238"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Vorgehensweise: Verwenden von benutzerdefinierten Skalarwertfunktionen
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Gewusst wie: Verwenden von benutzerdefinierten Skalarwertfunktionen
 Sie können eine Clientmethode für eine Klasse einer benutzerdefinierten Funktion zuweisen. Verwenden Sie hierfür das <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut. Beachten Sie, dass der Hauptteil der Methode einen Ausdruck erstellt, der die Absicht des Methodenaufrufs erfasst und diesen Ausdruck zur Übersetzung und Ausführung an den <xref:System.Data.Linq.DataContext> weiterleitet.  
   
 > [!NOTE]
-> Die direkte Ausführung tritt nur auf, wenn die Funktion außerhalb einer Abfrage aufgerufen wird. Weitere Informationen finden Sie unter [Vorgehensweise: Aufrufe von benutzerdefinierten Funktionen Inline @ no__t-0.  
+> Die direkte Ausführung tritt nur auf, wenn die Funktion außerhalb einer Abfrage aufgerufen wird. Weitere Informationen finden Sie unter Gewusst [wie: Inline-aufzurufen von benutzerdefinierten Funktionen](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Beispiel  
  Der folgende SQL-Code zeigt eine benutzerdefinierte Skalarwertfunktion: `ReverseCustName()`.  

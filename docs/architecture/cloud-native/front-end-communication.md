@@ -63,9 +63,9 @@ Wie jedes beliebige API-Gateway besteht seine primäre Funktionalität darin, ei
 | :-------- | :-------- |
 | Routing | Authentifizierung |
 | Aggregations Anforderung | Autorisierung |
-| Dienst Ermittlung (mit Konsul und EUREKA) | Einschränkung |
+| Dienst Ermittlung (mit Konsul und EUREKA) | Drosselung |
 | Lastenausgleich | Protokollierung, Ablauf Verfolgung |
-| Zwischenspeicherung | Header/Abfrage Zeichenfolgen-Transformation |
+| Zwischenspeichern | Header/Abfrage Zeichenfolgen-Transformation |
 | Korrelations Pass-Through | Benutzerdefinierte Middleware |
 | Servicequalität | Wiederholungs Richtlinien |
 
@@ -118,9 +118,9 @@ Azure-API Management können Back-End-Dienste verfügbar machen, die überall ge
 Azure-API Management ist in [vier verschiedenen](https://azure.microsoft.com/pricing/details/api-management/)Tarifen verfügbar:
 
 - Entwickler
+- Basic
 - Standard
-- Standard
-- Aufschlag/Rabatt
+- Premium
 
 Der Entwickler-Arbeitsbereich ist für nicht produktive Workloads und die Auswertung vorgesehen. Die anderen Tarife bieten progressivere Stromversorgung, Features und höhere Vereinbarungen zum Service Level (Service Level Agreements, SLAs). Der Premium-Tarif bietet Unterstützung für [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) und [mehrere Regionen](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region). Alle Ebenen haben einen festes Preis pro Stunde.
 

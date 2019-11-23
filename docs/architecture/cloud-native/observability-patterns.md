@@ -24,10 +24,10 @@ Unabhängig davon, wie sorgfältig wir sind, Verhalten sich Anwendungen fast imm
 Jede Programmiersprache verfügt über Tools, die das Schreiben von Protokollen erlauben, und in der Regel ist der Aufwand für das Schreiben dieser Protokolle gering. Viele der Protokollierungs Bibliotheken ermöglichen das Protokollieren verschiedener Arten von criticalities, die zur Laufzeit optimiert werden können. Die Bibliothek "serilog" ist beispielsweise eine beliebte strukturierte Protokollierungs Bibliothek für .net, die die folgenden Protokolliergrade bereitstellt.
 
 * Ausführlich
-* Debug
+* Debuggen
 * Information
 * Warnung
-* Fehler
+* Error
 * FAT
 
 Diese verschiedenen Protokoll Ebenen bieten Granularität bei der Protokollierung. Wenn die Anwendung in der Produktionsumgebung ordnungsgemäß funktioniert, kann Sie so konfiguriert werden, dass nur wichtige Nachrichten protokolliert werden. Wenn sich die Anwendung nicht verhält, kann die Protokollebene erweitert werden, sodass ausführlichere Protokolle gesammelt werden. Dadurch wird die Leistung gegenüber dem einfachen Debuggen ausgeglichen.
@@ -63,7 +63,7 @@ Abfragen können in den Protokoll Aggregations Tools erstellt werden, um nach be
 
 Wenn Sie auf Probleme mit Ihrer Anwendung reagieren müssen, benötigen Sie eine Möglichkeit, die richtigen Mitarbeiter zu benachrichtigen. Dies ist das dritte in der Cloud Native Anwendungs Wahrnehmbarkeit-Muster, das von der Protokollierung und Überwachung abhängig ist. Die Anwendung muss über eine Protokollierung verfügen, damit Probleme diagnostiziert werden können, und in einigen Fällen müssen Sie in die Überwachungstools einfließen. Es muss überwacht werden, um anwendungsmetriken und Integritäts Daten an einem Ort zusammenzufassen. Nachdem dies festgelegt wurde, können Regeln erstellt werden, mit denen Warnungen ausgelöst werden, wenn bestimmte Metriken außerhalb der zulässigen Werte liegen.
 
-## <a name="alerts"></a>Benachrichtigungen
+## <a name="alerts"></a>Warnungen
 
 Sie können Abfragen für die Überwachungstools erstellen, um nach bekannten Fehlerbedingungen zu suchen. Abfragen können beispielsweise die eingehenden Protokolle nach Hinweisen zum HTTP-Statuscode 500 durchsuchen, was auf ein Problem auf einem Webserver hinweist. Sobald eine dieser Informationen erkannt wird, könnte eine e-Mail oder eine SMS an den Besitzer des Ursprungs dienstanders gesendet werden, der mit der Untersuchung beginnen kann.
 

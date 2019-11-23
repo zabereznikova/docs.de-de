@@ -23,11 +23,11 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 `instance-expression` eine Instanz einer Entität.
 
-`relationship-type` den Typnamen der Beziehung aus der CSDL-Datei (konzeptionelle Schema Definitions Sprache). Der `relationship-type` wird als \<namespace >. \<beziehungstyp Name > gekennzeichnet.
+`relationship-type` den Typnamen der Beziehung aus der CSDL-Datei (konzeptionelle Schema Definitions Sprache). Der `relationship-type` wird als \<Namespace > qualifiziert.\<Beziehungstyp Name >.
 
 `to` das Ende der Beziehung.
 
-`from` den Anfang der Beziehung.
+`from` den Anfang der Beziehung ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Dabei ist "OrderCustomer" die `relationship`, und "Customer" und "Order" sind das `to-end` bzw. das `from-end` der Beziehung. Wenn "OrderCustomer" eine n:1-Beziehung war, ist der Ergebnistyp des Navigations Ausdrucks Ref @ no__t-0CUSTOMER >.
+Dabei ist "OrderCustomer" die `relationship`, und "Customer" und "Order" sind das `to-end` bzw. das `from-end` der Beziehung. Wenn "OrderCustomer" eine n:1-Beziehung war, ist der Ergebnistyp des Navigations Ausdrucks Ref\<Kunden >.
 
 Eine einfachere Form dieses Ausdrucks ist die Folgende:
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Entsprechend erzeugt der Navigate-Ausdruck in einer Abfrage der folgenden Form eine Auflistung < Ref @ no__t-0order > >.
+Entsprechend erzeugt der Navigate-Ausdruck in einer Abfrage der folgenden Form eine Auflistung < Ref\<Order > >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)

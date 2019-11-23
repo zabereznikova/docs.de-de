@@ -11,7 +11,7 @@ ms.locfileid: "72031895"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung
 
-In dieser Aufgabe erstellen Sie eine leere Windows Presentation Foundation (WPF)-Anwendung mithilfe der Visual Studio-Vorlage WPF-Anwendung und fügen Verweise auf die entsprechenden [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflowassemblys hinzu.  
+In dieser Aufgabe erstellen Sie eine leere Windows Presentation Foundation (WPF)-Anwendung, indem Sie die Visual Studio-Vorlage der WPF-Anwendung verwenden und Verweise auf die entsprechenden [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflowassemblys hinzufügen.  
   
 ## <a name="to-create-the-wpf-application-project"></a>So erstellen Sie das WPF-Anwendungsprojekt
 
@@ -37,9 +37,9 @@ In dieser Aufgabe erstellen Sie eine leere Windows Presentation Foundation (WPF)
     - System.Activities.Presentation
     - System.Activities.Core.Presentation
 
-10. Weitere Informationen finden Sie unter [task 2: Hosten Sie den Workflow-Designer @ no__t-0, um zu erfahren, wie Sie den Workflow Designer-Entwurfs Bereich hosten.
+10. Weitere Informationen zum Hosten des Entwurfs Canvas des Workflow-Designers finden Sie unter [Aufgabe 2: Hosten der Workflow-Designer](task-2-host-the-workflow-designer.md) .
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
-- [aufgabe 2: Hosten des Workflow-Designer @ no__t-0
+- [Aufgabe 2: Hosten des Workflow-Designers](task-2-host-the-workflow-designer.md)

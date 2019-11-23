@@ -35,11 +35,11 @@ Die folgenden Benennungs Richtlinien gelten für die allgemeine Typbenennung.
   
  **✓ CONSIDER** endet der Name der abgeleiteten Klassen mit dem Namen der Basisklasse.  
   
- Dies ist sehr lesbar und erläutert die Beziehung eindeutig. Einige Beispiele hierfür sind: `ArgumentOutOfRangeException`, eine Art `Exception` und `SerializableAttribute`, eine Art `Attribute`. Es ist jedoch wichtig, bei der Anwendung dieser Richtlinie ein vernünftiges Urteil zu verwenden. die `Button`-Klasse ist beispielsweise eine Art `Control`-Ereignisses, obwohl `Control` nicht im Namen angezeigt wird.  
+ Dies ist sehr lesbar und erläutert die Beziehung eindeutig. Einige Beispiele hierfür sind: `ArgumentOutOfRangeException`, eine Art `Exception`und `SerializableAttribute`, bei der es sich um eine Art `Attribute`handelt. Es ist jedoch wichtig, bei der Anwendung dieser Richtlinie ein vernünftiges Urteil zu verwenden. die `Button`-Klasse ist beispielsweise eine Art `Control` Ereignisses, obwohl `Control` nicht im Namen angezeigt wird.  
   
  **✓ DO** Schnittstellennamen als Präfix mit dem Buchstaben I, um anzugeben, dass der Typ eine Schnittstelle ist.  
   
- Beispielsweise sind `IComponent` (beschreibendes Substantiv), `ICustomAttributeProvider` (nominaler Ausdruck) und `IPersistable` (Adjektiv) geeignete Schnittstellennamen. Vermeiden Sie Abkürzungen wie andere Typnamen.  
+ Beispielsweise sind `IComponent` (Beschreibungs Substantiv), `ICustomAttributeProvider` (nominaler Ausdruck) und `IPersistable` (Adjektiv) geeignete Schnittstellennamen. Vermeiden Sie Abkürzungen wie andere Typnamen.  
   
  **✓ DO** stellen Sie sicher, dass die Namen unterscheiden sich nur durch "I" auf der Schnittstellenname Präfix, wenn Sie ein paar Klassenschnittstelle – definieren, wenn die Klasse einer standardmäßigen Implementierung der Schnittstelle befindet.  
   
@@ -66,7 +66,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **✓ CONSIDER** , der angibt, Einschränkungen für einen Typparameter, den Namen der Parameter platziert.  
   
- Beispielsweise kann ein Parameter, der auf `ISession` beschränkt ist, `TSession` genannt werden.  
+ Beispielsweise kann ein Parameter, der auf `ISession` eingeschränkt ist, `TSession`aufgerufen werden.  
   
 ## <a name="names-of-common-types"></a>Namen allgemeiner Typen  
  **✓ DO** beim Benennen von Typen abgeleitet wurde, oder implementieren bestimmte .NET Framework-Typen in der folgenden Tabelle beschriebenen Richtlinien folgen.  
@@ -78,7 +78,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.EventArgs`|**✓ DO** fügen Sie das Suffix "EventArgs".|  
 |`System.Enum`|**X DO NOT** von dieser Klasse abgeleitet werden; verwenden Sie das Schlüsselwort stattdessen von der Sprache unterstützt; beispielsweise in c# verwenden das `enum` Schlüsselwort.<br /><br /> **X DO NOT** fügen Sie das Suffix "Enum" oder "Flag für"."|  
 |`System.Exception`|**✓ DO** fügen Sie das Suffix "Ausnahme".|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** fügen Sie das Suffix "Wörterbuch". Beachten Sie, dass "`IDictionary`" ein bestimmter Sammlungstyp ist, aber diese Richtlinie hat Vorrang vor den folgenden allgemeinen Auflistungs Richtlinien.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** fügen Sie das Suffix "Wörterbuch". Beachten Sie, dass `IDictionary` eine bestimmte Art von Sammlung ist, aber diese Richtlinie hat Vorrang vor den folgenden allgemeinen Auflistungs Richtlinien.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** fügen Sie das Suffix "Collection".|  
 |`System.IO.Stream`|**✓ DO** fügen Sie das Suffix "Stream".|  
 |`CodeAccessPermission IPermission`|**✓ DO** fügen Sie das Suffix "Berechtigung".|  
@@ -96,9 +96,9 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X DO NOT** ein Präfix auf Enumeration Wertnamen (z. B. "Ad" für ADO-Enumerationen.), "Rtf" für rich-Text-Enumerationen usw. verwenden.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *reprint von der Berechtigung "Pearson Education, Inc." aus [framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition @ no__t-0 von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungsreihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

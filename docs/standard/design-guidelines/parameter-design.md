@@ -22,7 +22,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
   
  **✓ DO** verwenden, der am wenigsten abgeleiteten Parametertyp, die die Funktionen für das Element bereitstellt.  
   
- Angenommen, Sie möchten eine Methode entwerfen, die eine Auflistung auflistet und jedes Element in der Konsole ausgibt. Eine solche Methode sollte beispielsweise <xref:System.Collections.IEnumerable> als Parameter annehmen, nicht <xref:System.Collections.ArrayList> oder <xref:System.Collections.IList>.  
+ Angenommen, Sie möchten eine Methode entwerfen, die eine Auflistung auflistet und jedes Element in der Konsole ausgibt. Eine solche Methode sollte z. b. <xref:System.Collections.IEnumerable> als Parameter, nicht jedoch <xref:System.Collections.ArrayList> oder <xref:System.Collections.IList>annehmen.  
   
  **X DO NOT** reservierte Parameter verwenden.  
   
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
   
  **✓ DO** platzieren Sie alle `out` Parameter, die alle per-Wert und `ref` Parameter (ausgenommen Parameterarrays), auch wenn dies zu einer Inkonsistenz der Sortierung zwischen Überladungen Parameter führt (finden Sie unter [Member Überladen von](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- Die `out`-Parameter können als zusätzliche Rückgabewerte angesehen werden, und durch Gruppierung werden die Methoden Signaturen leichter zu verstehen.  
+ Die `out` Parameter können als zusätzliche Rückgabewerte angesehen werden, und durch Gruppierung werden die Methoden Signaturen leichter zu verstehen.  
   
  **✓ DO** benennen Parameter aus, wenn Sie Member überschreiben oder Implementieren von Schnittstellenmembern konsistent sein.  
   
@@ -50,7 +50,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
  **✓ CONSIDER** mit boolesche Werte für Konstruktorparameter, die tatsächlich zwei-Status-Werte sind und zur Initialisierung von boolescher Eigenschaften, die einfach verwendet werden.  
   
 ### <a name="validating-arguments"></a>Validieren von Argumenten  
- **✓ DO** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Lösen Sie <xref:System.ArgumentException?displayProperty=nameWithType> oder eine der zugehörigen Unterklassen aus, wenn die Validierung fehlschlägt.  
+ **✓ DO** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Lösen Sie <xref:System.ArgumentException?displayProperty=nameWithType>oder eine der zugehörigen Unterklassen aus, wenn die Validierung fehlschlägt.  
   
  Beachten Sie, dass die tatsächliche Validierung nicht unbedingt im öffentlichen oder geschützten Member selbst erfolgen muss. Dies kann in einer privaten oder internen Routine auf einer niedrigeren Ebene vorkommen. Der Hauptgrund dafür ist, dass die gesamte Oberfläche, die den Endbenutzern zur Verfügung gestellt wird, die Argumente prüft.  
   
@@ -67,24 +67,24 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
  Wenn der Member Sicherheits sensibel ist, wird empfohlen, eine Kopie zu erstellen und dann das Argument zu validieren und zu verarbeiten.  
   
 ### <a name="parameter-passing"></a>Parameterübergabe  
- Aus Sicht eines Framework-Designers gibt es drei Hauptgruppen von Parametern: nach Wert Parameter, `ref`-Parametern und `out`-Parametern.  
+ Aus Sicht eines Framework-Designers gibt es drei Hauptgruppen von Parametern: nach Wert Parameter, `ref` Parameter und `out` Parameter.  
   
  Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Die gängigsten CLR-Sprachen, C#wie z. b C++., VB.net und, übergeben standardmäßig Parameter nach Wert.  
   
- Wenn ein Argument über einen `ref`-Parameter übergeben wird, empfängt der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref`-Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.  
+ Wenn ein Argument über einen `ref`-Parameter übergeben wird, empfängt der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref` Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.  
   
- `Out`-Parameter ähneln `ref`-Parametern mit einigen kleinen unterschieden. Der-Parameter wird anfänglich als nicht zugewiesen betrachtet und kann nicht im Element Text gelesen werden, bevor ihm ein Wert zugewiesen wird. Außerdem muss dem-Parameter ein Wert zugewiesen werden, bevor der Member zurückgegeben wird.  
+ `Out` Parameter ähneln `ref` Parametern, mit einigen kleinen unterschieden. Der-Parameter wird anfänglich als nicht zugewiesen betrachtet und kann nicht im Element Text gelesen werden, bevor ihm ein Wert zugewiesen wird. Außerdem muss dem-Parameter ein Wert zugewiesen werden, bevor der Member zurückgegeben wird.  
   
  **X AVOID** mit `out` oder `ref` Parameter.  
   
- Die Verwendung von `out`-oder `ref`-Parametern erfordert die Verwendung von Zeigern, die Unterschiede zwischen Werttypen und Verweis Typen sowie die Behandlung von Methoden mit mehreren Rückgabe Werten. Außerdem wird der Unterschied `out` zwischen `ref` -und-Parametern nicht häufig verstanden. Framework-Architekten, die für eine allgemeine Zielgruppe entwerfen, sollten nicht erwarten, dass Benutzer mit `out`-oder `ref`-Parametern arbeiten.  
+ Die Verwendung von `out`-oder `ref`-Parametern erfordert die Verwendung von Zeigern, das Verständnis der Unterschiede zwischen Werttypen und Verweis Typen sowie die Behandlung von Methoden mit mehreren Außerdem wird der Unterschied zwischen `out`-und `ref`-Parametern nicht weitgehend verstanden. Frameworkarchitekten, die für eine allgemeine Zielgruppe entwerfen, sollten nicht erwarten, dass Benutzer mit `out`-oder `ref`-Parametern arbeiten.  
   
  **X DO NOT** Verweistypen als Verweis übergeben.  
   
  Es gibt einige begrenzte Ausnahmen für die Regel, z. b. eine Methode, die zum Austauschen von Verweisen verwendet werden kann.  
   
 ### <a name="members-with-variable-number-of-parameters"></a>Elemente mit variabler Anzahl von Parametern  
- Member, die eine Variable Anzahl von Argumenten annehmen können, werden durch Angabe eines Array Parameters ausgedrückt. @No__t-0 stellt z. b. die folgende Methode bereit:  
+ Member, die eine Variable Anzahl von Argumenten annehmen können, werden durch Angabe eines Array Parameters ausgedrückt. <xref:System.String> stellt z. b. die folgende Methode bereit:  
   
 ```csharp  
 public class String {  
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** verwenden die `varargs` Methoden, sogenannten mit den Auslassungspunkten.  
   
- Einige CLR-Sprachen, wie C++z. b., unterstützen eine alternative Konvention zum Übergeben von Variablen Parameterlisten, die `varargs`-Methoden genannt werden Die Konvention sollte nicht in Frameworks verwendet werden, da Sie nicht CLS-kompatibel ist.  
+ Einige CLR-Sprachen, wie C++z. b., unterstützen eine alternative Konvention zum Übergeben von Variablen Parameterlisten, die als `varargs` Methoden bezeichnet Die Konvention sollte nicht in Frameworks verwendet werden, da Sie nicht CLS-kompatibel ist.  
   
 ### <a name="pointer-parameters"></a>Zeigerparameter  
  Im Allgemeinen sollten Zeiger nicht in der öffentlichen Oberfläche eines gut entworfenen verwalteten Code-Frameworks angezeigt werden. In den meisten Fällen sollten Zeiger gekapselt werden. In einigen Fällen sind Zeiger aber aus Interoperabilitäts Gründen erforderlich, und die Verwendung von Zeigern in solchen Fällen ist angemessen.  
@@ -151,9 +151,9 @@ public class String {
   
  Beispielsweise ist es nicht erforderlich, den Start Index zu übergeben, da einfache Zeigerarithmetik verwendet werden kann, um das gleiche Ergebnis zu erzielen.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *reprint von der Berechtigung "Pearson Education, Inc." aus [framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition @ no__t-0 von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungsreihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

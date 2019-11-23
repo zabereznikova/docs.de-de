@@ -52,7 +52,7 @@ Nachdem eine Komponente ein Ereignis verarbeitet hat, rendert die Komponente und
 
 ![Blazor-DOM-Interaktion](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Komponenten können auch manuell angeben, dass Sie gerendert werden sollen, wenn sich Ihr Status außerhalb eines normalen Benutzeroberflächen Ereignisses ändert. Blazor verwendet einen `SynchronizationContext`, um einen einzelnen logischen Ausführungs Thread zu erzwingen. Die Lebenszyklus Methoden einer Komponente und alle Ereignis Rückrufe, die von blazor ausgelöst werden, werden auf diesem `SynchronizationContext` ausgeführt.
+Komponenten können auch manuell angeben, dass Sie gerendert werden sollen, wenn sich Ihr Status außerhalb eines normalen Benutzeroberflächen Ereignisses ändert. Blazor verwendet einen `SynchronizationContext`, um einen einzelnen logischen Ausführungs Thread zu erzwingen. Die Lebenszyklus Methoden einer Komponente und alle Ereignis Rückrufe, die von blazor ausgelöst werden, werden in dieser `SynchronizationContext`ausgeführt.
 
 >[!div class="step-by-step"]
 >[Zurück](introduction.md)

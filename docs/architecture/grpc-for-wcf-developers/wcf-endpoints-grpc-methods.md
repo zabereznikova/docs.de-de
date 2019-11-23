@@ -1,14 +1,13 @@
 ---
 title: 'WCF-Endpunkte und GrpC-Methoden: GrpC für WCF-Entwickler'
 description: Vergleich von WCF-Endpunkten, die mit den Attributen ServiceContract und OperationContract deklariert wurden, und den in protobuf deklarierten GrpC-Methoden
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1cb7fedf1fbb632438134375306801f356d7b921
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 763862a363afc6aab72335050cf4822754816c7a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841300"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966933"
 ---
 # <a name="wcf-endpoints-and-grpc-methods"></a>WCF-Endpunkte und GrpC-Methoden
 
@@ -34,7 +33,7 @@ Kapitel 3 zeigte, dass protobuf-Nachrichten Definitionen verwendet werden, um Da
 
 Das [OperationContract](xref:System.ServiceModel.OperationContractAttribute) -Attribut verfügt über Eigenschaften zum Steuern oder verfeinern der Funktionsweise. GrpC-Methoden bieten diese Art von Kontrolle nicht. In der folgenden Tabelle werden diese `OperationContract` Eigenschaften festgelegt, und es wird erläutert, wie die von Ihnen angegebene Funktionalität in GrpC behandelt wird:
 
-| `OperationContract` -Eigenschaft | gRPC                                             |
+| `OperationContract`-Eigenschaft | gRPC                                             |
 | ---------------------------- | ------------------------------------------------ |
 | <xref:System.ServiceModel.OperationContractAttribute.Action>             | Der URI, der den Vorgang identifiziert. GrpC verwendet den Namen der `package`, `service` und `rpc` aus der `.proto` Datei. |
 | <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern>       | Alle GrpC-Dienst Methoden geben `Task` Objekte zurück. |

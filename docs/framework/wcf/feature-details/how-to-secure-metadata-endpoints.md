@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Sichern von Metadatenendpunkten'
+title: 'Gewusst wie: Sichere Metadatenendpunkte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834680"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Vorgehensweise: Sichern von Metadatenendpunkten
+# <a name="how-to-secure-metadata-endpoints"></a>Gewusst wie: Sichere Metadatenendpunkte
 
 Metadaten für einen Dienst können vertrauliche Informationen über Ihre Anwendung enthalten, die böswillige Benutzer für ihre Zwecke missbrauchen können. Die Consumer Ihres Diensts benötigen möglicherweise auch einen sicheren Mechanismus für den Zugriff auf Metadaten über Ihren Dienst. Deshalb ist es manchmal notwendig, die Metadaten mit einem sicheren Endpunkt zu veröffentlichen.
 
@@ -22,7 +22,7 @@ In diesem Thema sind die Schritte zur Erstellung eines Endpunkts beschrieben, de
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>So erstellen Sie einen sicheren HTTPS-GET-Metadatenendpunkt in Code
 
-1. Konfigurieren Sie einen Anschluss mit einem entsprechenden X.509-Zertifikat. Das Zertifikat muss von einer vertrauenswürdigen Stelle stammen und für die Verwendung zum Zwecke der Dienstautorisierung beabsichtigt sein. Sie müssen das Tool HttpCfg.exe verwenden, um das Zertifikat an den Anschluss anzufügen. Weitere Informationen finden Sie unter [How to: Konfigurieren Sie einen Port mit einem SSL-Zertifikat @ no__t-0.
+1. Konfigurieren Sie einen Anschluss mit einem entsprechenden X.509-Zertifikat. Das Zertifikat muss von einer vertrauenswürdigen Stelle stammen und für die Verwendung zum Zwecke der Dienstautorisierung beabsichtigt sein. Sie müssen das Tool HttpCfg.exe verwenden, um das Zertifikat an den Anschluss anzufügen. Weitere Informationen finden [Sie unter Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).
 
     > [!IMPORTANT]
     > Der Betreff des Zertifikats oder das DNS (Domain Name System) muss mit dem Namen des Computers übereinstimmen. Dies ist deshalb wichtig, weil einer der ersten Schritte des HTTPS-Mechanismus darin besteht, zu überprüfen, ob das Zertifikat für denselben URI (Uniform Resource Identifier) ausgestellt wurde wie die Adresse, von der aus es aufgerufen wird.
@@ -40,21 +40,21 @@ In diesem Thema sind die Schritte zur Erstellung eines Endpunkts beschrieben, de
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>So erstellen Sie einen sicheren HTTPS-GET-Metadatenendpunkt in der Konfiguration
 
-1. Fügen Sie dem [\<System. Service Model->](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei für den Dienst ein [>-Element \<verhaltensweisen](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) hinzu.
+1. Fügen Sie dem [\<System. Service Model->](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei für den Dienst ein [\<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) -Element hinzu.
 
-2. Fügen Sie ein [\<serviceverhaltens>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) -Element dem [\<verhalten>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) -Element hinzu.
+2. Fügen Sie dem [\<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element ein [\<serviceverhaltens>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) -Element hinzu.
 
-3. Fügen Sie ein [\<behavior >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) -Element dem `<serviceBehaviors>`-Element hinzu.
+3. Fügen Sie ein [\<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element dem `<serviceBehaviors>`-Element hinzu.
 
 4. Legen Sie einen angemessenen Wert für das `name`-Attribut des `<behavior>`-Elements fest. Das `name`-Attribut ist erforderlich. Das nachstehende Beispiel verwendet den Wert `mySvcBehavior`.
 
-5. Fügen Sie dem `<behavior>`-Element [\<servicemetadata->](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) hinzu.
+5. Fügen Sie dem `<behavior>`-Element einen [\<serviceMetadata->](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) hinzu.
 
 6. Legen Sie das `httpsGetEnabled`-Attribut des `<serviceMetadata>`-Elements auf `true` fest.
 
 7. Legen Sie einen angemessenen Wert für das `httpsGetUrl`-Attribut des `<serviceMetadata>`-Elements fest. Beachten Sie, dass die URL mit dem Schema "https://" beginnen muss, wenn Sie eine absolute Adresse angeben. Wenn Sie eine relative Adresse angeben, müssen Sie eine HTTPS-Basisadresse für den Diensthost angeben. Wenn diese Eigenschaft nicht festgelegt ist, lautet die Standardadresse "" oder befindet sich direkt an der HTTPS-Basisadresse für den Dienst.
 
-8. Um das Verhalten mit einem Dienst zu verwenden, legen Sie das `behaviorConfiguration`-Attribut des [\<service-Elements >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) auf den Wert des Name-Attributs des Behavior-Elements fest. Der folgende Konfigurationscode zeigt ein vollständiges Beispiel.
+8. Um das Verhalten mit einem Dienst zu verwenden, legen Sie das `behaviorConfiguration`-Attribut des [\<Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) -Elements auf den Wert des Name-Attributs des Behavior-Elements fest. Der folgende Konfigurationscode zeigt ein vollständiges Beispiel.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -100,7 +100,7 @@ Das Codebeispiel verwendet die folgenden Namespaces:
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat @ no__t-0
+- [Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

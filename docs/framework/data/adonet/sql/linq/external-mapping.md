@@ -16,18 +16,18 @@ ms.locfileid: "72003044"
   
 - Eine externe Zuordnungsdatei kann in etwa wie eine Konfigurationsdatei behandelt werden. Beispielsweise können Sie das Anwendungsverhalten aktualisieren, nachdem die Binärdateien bereits ausgeliefert wurden, indem Sie einfach die externe Zuordnungsdatei austauschen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  Die Zuordnungsdatei muss eine XML-Datei sein, und die Datei muss anhand einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Schema Definitionsdatei (. xsd) überprüft werden.  
   
  Dabei gelten folgende Regeln:  
   
 - Die Zuordnungsdatei muss eine XML-Datei sein.  
   
-- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Validieren Sie die DBML-und externen Mapping-Dateien @ no__t-0.  
+- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter Gewusst wie: Überprüfen von [DBML-und externen Mapping-Dateien](how-to-validate-dbml-and-external-mapping-files.md).  
   
 - Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die kombinierte Verwendung beider Zuordnungsarten (attributbasiert und extern).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die Hybrid Verwendung der beiden zuder Zuordnung (Attribut basiert und extern).  
   
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
  Die externe Zuordnung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muss gegenüber der folgenden XML-Schemadefinition gültig sein.  
@@ -35,7 +35,7 @@ ms.locfileid: "72003044"
  Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer DBML-Datei verwendet wird. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "linqdesqlmapping. xsd". Informationen dazu, wie Sie diese Datei ordnungsgemäß zum Überprüfen einer externen Mapping-Datei verwenden, finden Sie unter [gewusst wie: Validieren Sie die DBML-und externen Mapping-Dateien @ no__t-0.  
+> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "linqdesqlmapping. xsd". Informationen dazu, wie Sie diese Datei ordnungsgemäß zum Überprüfen einer externen Datei verwenden, finden Sie unter Gewusst wie: Überprüfen von [DBML-und externen Mapping-Dateien](how-to-validate-dbml-and-external-mapping-files.md)  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Codegenerierung in LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Verweis](reference.md)
-- [Vorgehensweise: Generieren des Objektmodells als externe Datei @ no__t-0
+- [Vorgehensweise: Generieren des Objektmodells als externe Datei](how-to-generate-the-object-model-as-an-external-file.md)

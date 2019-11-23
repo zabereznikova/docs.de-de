@@ -1,14 +1,13 @@
 ---
 title: Dienst-Netzen-GrpC für WCF-Entwickler
 description: Verwenden eines Dienst Netzes zum Weiterleiten und Ausgleichen von Anforderungen an GrpC-Dienste in einem Kubernetes-Cluster.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841990"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966968"
 ---
 # <a name="service-meshes"></a>Dienst-Netzen
 
@@ -17,7 +16,7 @@ Ein Dienst Netz ist eine Infrastrukturkomponente, die die Steuerung der Routing 
 - Dienst Ermittlung
 - Lastenausgleich
 - Fehlertoleranz
-- Verschlüsselungs
+- Verschlüsselung
 - Überwachung
 
 Kubernetes Service-Netzen arbeiten durch Hinzufügen eines zusätzlichen Containers ( *Sidecar Proxy*) zu jedem Pod, der im Mesh enthalten ist. Der Proxy übernimmt die Verarbeitung aller eingehenden und ausgehenden Netzwerk Anforderungen, sodass die Konfiguration und Verwaltung von Netzwerken von den Anwendungs Containern getrennt gehalten werden und in vielen Fällen, ohne dass Änderungen am Anwendungscode erforderlich sind.

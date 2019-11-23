@@ -26,12 +26,12 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
  Der Wert der Entität, auf die verwiesen wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der DEREF-Operator dereferenziert einen Verweiswert und erstellt das Ergebnis dieser Dereferenzierung. Wenn `r` z. b. ein Verweis vom Typ Ref @ no__t-1T > ist, `Deref(r)` ein Ausdruck vom Typ `T`, der die Entität ergibt, auf die von `r` verwiesen wird. Wenn der Verweiswert NULL ist oder das Ziel des Verweises nicht existiert, hat das Ergebnis des DEREF-Operators den Wert NULL.  
+ Der DEREF-Operator dereferenziert einen Verweiswert und erstellt das Ergebnis dieser Dereferenzierung. Wenn `r` z. b. ein Verweis vom Typ Ref\<t > ist, ist `Deref(r)` ein Ausdruck vom Typ `T`, der die Entität ergibt, auf die von `r`verwiesen wird. Wenn der Verweiswert NULL ist oder das Ziel des Verweises nicht existiert, hat das Ergebnis des DEREF-Operators den Wert NULL.  
   
 ## <a name="example"></a>Beispiel  
  In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage wird der DEREF-Operator verwendet, um einen Verweiswert zu dereferenzieren und das Ergebnis dieser Dereferenzierung zu erstellen. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse @ no__t-0 zurückgibt.  
+1. Befolgen Sie das Verfahren unter Gewusst [wie: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die ExecutePrimitiveTypeQuery-Methode:  
   

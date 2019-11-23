@@ -11,7 +11,7 @@ ms.locfileid: "72291489"
 ---
 # <a name="debugging-workflows"></a>Debuggen von Workflows
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bietet mehrere Optionen für das Debuggen ausgeführter Workflows über die Entwicklungsumgebung. Das Debugging von Workflows kann im Designer, in XAML und in Code erfolgen.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bietet verschiedene Optionen zum Debuggen von Workflows in der Entwicklungsumgebung. Das Debugging von Workflows kann im Designer, in XAML und in Code erfolgen.
 
 ## <a name="debugging-in-the-workflow-designer"></a>Debuggen des Workflow-Designers
 
@@ -19,7 +19,7 @@ Haltepunkte können für Aktivitäten im Workflow-Designer festgelegt werden, in
 
 ## <a name="debugging-in-xaml"></a>Debugging in XAML
 
-Wenn ein Workflow an einem Haltepunkt im Designer angehalten wird, kann das Debugging des Workflows auch in XAML erfolgen. Um den Ausführungs Punkt in XAML anzuzeigen, wählen Sie **XAML-Ansicht** im Workflow-Designer aus, wenn die Workflow Ausführung angehalten wird. Das Debugging kann erneut vom Designer übernommen werden, indem der Workflow aus dem Projektmappen-Explorer erneut im Designer geöffnet wird. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen Sie XAML mit dem Workflow-Designer @ no__t-0.
+Wenn ein Workflow an einem Haltepunkt im Designer angehalten wird, kann das Debugging des Workflows auch in XAML erfolgen. Um den Ausführungs Punkt in XAML anzuzeigen, wählen Sie **XAML-Ansicht** im Workflow-Designer aus, wenn die Workflow Ausführung angehalten wird. Das Debugging kann erneut vom Designer übernommen werden, indem der Workflow aus dem Projektmappen-Explorer erneut im Designer geöffnet wird. Weitere Informationen finden Sie unter Gewusst [wie: Debuggen von XAML mit dem Workflow-Designer](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).
 
 ## <a name="debugging-in-code"></a>Debugging in Code
 
@@ -29,12 +29,12 @@ Um einen Haltepunkt festzulegen, klicken Sie auf den linken Rand des Code Bereic
 
 Das Debugging von Workflows unterstützt auch die Verwendung der Visual Studio-Infrastruktur zum Anfügen an einen Prozess. Dies ermöglicht es dem Workflowautor, einen Workflow zu debuggen, der in einer anderen Hostumgebung ausgeführt wird, z. B. in Internetinformationsdienste (IIS) 7.0.
 
-## <a name="remote-debugging"></a>Remote Debugging
+## <a name="remote-debugging"></a>Remotedebuggen
 
-Das Remote Debuggen von Windows Workflow Foundation (WF) funktioniert genauso wie das Remote Debuggen für andere Visual Studio-Komponenten. Weitere Informationen zur Verwendung des Remote Debuggens finden Sie unter [gewusst wie: Aktivieren Sie Remote Debugging @ no__t-0.
+Das Remote Debuggen von Windows Workflow Foundation (WF) funktioniert genauso wie das Remote Debuggen für andere Visual Studio-Komponenten. Weitere Informationen zur Verwendung des Remote Debuggens finden Sie unter Gewusst [wie: Aktivieren des Remote Debuggens](https://go.microsoft.com/fwlink/?LinkId=196257).
 
 > [!NOTE]
-> Wenn die Workflow Anwendung die x86-Architektur als Ziel verwendet und auf einem Computer gehostet wird, auf dem ein 64-Bit-Betriebssystem ausgeführt wird, funktioniert das Remote Debuggen nur dann, wenn Visual Studio auf dem Remote Computer installiert ist oder das Ziel für die Workflow Anwendung in geändert wird. **Beliebige CPU**.
+> Wenn die Workflow Anwendung die x86-Architektur als Ziel verwendet und auf einem Computer gehostet wird, auf dem ein 64-Bit-Betriebssystem ausgeführt wird, funktioniert das Remote Debuggen nur dann, wenn Visual Studio auf dem Remote Computer installiert ist oder das Ziel für die Workflow Anwendung in eine **beliebige CPU**geändert wird.
 
 ## <a name="extending-the-workflow-debugging-service"></a>Erweitern der Debugdienste für Workflows
 

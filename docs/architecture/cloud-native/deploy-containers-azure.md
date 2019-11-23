@@ -22,7 +22,7 @@ Mit Azure Container Registry (ACR) können Sie Images für alle Ihre Container B
 Sie [erstellen eine Container Registrierung über das Azure-Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal) oder [mithilfe der Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) oder [PowerShell-Tools](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Zum Erstellen einer neuen Container Registrierung sind nur ein Azure-Abonnement, eine Ressourcengruppe und ein eindeutiger Name erforderlich. In Abbildung 3-11 werden die grundlegenden Optionen zum Erstellen einer Registrierung gezeigt, die unter " *registryname*. azurecr.IO" gehostet werden.
 
 ![Erstellen der Container Registrierung](./media/create-container-registry.png)
-**Abbildung 3-11**. Erstellen einer Container Registrierung
+**Abbildung 3-11**. Containerregistrierung erstellen
 
 Nachdem Sie eine Registrierung erstellt haben, müssen Sie sich damit authentifizieren, bevor Sie Sie verwenden können. In der Regel melden Sie sich mit dem Azure CLI Befehl bei der Registrierung an:
 
@@ -71,7 +71,7 @@ Diese Informationen sind für den Einstieg ausreichend. Im Rahmen des Erstellung
 - Authentifizierung
 - Netzwerk
 - Überwachung
-- Tags
+- Kategorien
 
 In dieser Schnellstartanleitung wird die Bereitstellung [eines AKS-Clusters mithilfe der Azure-Portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)erläutert.
 

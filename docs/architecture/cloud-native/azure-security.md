@@ -105,7 +105,7 @@ Virtuelle Netzwerke können auch beim Einrichten der Kommunikation zwischen loka
 
 RBAC ist ein System, das eine Identität für Anwendungen bereitstellt, die in Azure ausgeführt werden. Anwendungen können auf Ressourcen zugreifen, die diese Identität anstelle von oder zusätzlich zur Verwendung von Schlüsseln oder Kenn Wörtern verwenden.
 
-## <a name="security-principals"></a>Sicherheits Prinzipale
+## <a name="security-principals"></a>Sicherheitsprinzipale
 
 Die erste Komponente in RBAC ist ein Sicherheits Prinzipal. Ein Sicherheits Prinzipal kann ein Benutzer, eine Gruppe, ein Dienst Prinzipal oder eine verwaltete Identität sein.
 

@@ -25,7 +25,7 @@ MULTISET ( expression [{, expression }] )
  Eine beliebige Liste gültiger Werte.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Eine Auflistung vom Typ Multiset @ no__t-0t >.  
+ Eine Auflistung vom Typ Multiset\<t >.  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt drei Arten von Konstruktoren bereit: Zeilenkonstruktoren, Objektkonstruktoren und Multimengenkonstruktoren (oder Auflistungen). Weitere Informationen finden Sie unter [Konstruieren von Typen](constructing-types-entity-sql.md).  

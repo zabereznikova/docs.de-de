@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausblenden einer geerbten Variablen (Visual Basic)'
+title: 'Gewusst wie: Ausblenden einer geerbten Variablen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f575830df44076f694c1dfb2f68379594240fb80
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c20c36b26c90c82da4e8836799f499498ccc40e4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004846"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345357"
 ---
-# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Vorgehensweise: Ausblenden einer geerbten Variablen (Visual Basic)
+# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Gewusst wie: Ausblenden einer geerbten Variablen (Visual Basic)
 
-Eine abgeleitete Klasse erbt alle Definitionen ihrer Basisklasse. Wenn Sie eine Variable mit demselben Namen wie ein Element der Basisklasse definieren möchten, können Sie dieses Basisklassen Element beim Definieren der Variablen in der abgeleiteten Klasse ausblenden oder über *Schatten*. Wenn Sie dies tun, greift der Code in der abgeleiteten Klasse auf Ihre Variable zu, es sei denn, der shadodown-Mechanismus wird explizit umgangen.
+A derived class inherits all the definitions of its base class. If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class. If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.
 
-Ein weiterer Grund, warum Sie eine geerbte Variable ausblenden möchten, ist der Schutz vor der Basisklassen Revision. Die Basisklasse wird möglicherweise einer Änderung unterzogen, die das erbende Element ändert. In diesem Fall erzwingt der `Shadows`-Modifizierer, dass Verweise von der abgeleiteten Klasse in Ihre Variable aufgelöst werden, anstatt in das Basisklassen Element.
+Another reason you might want to hide an inherited variable is to protect against base class revision. The base class might undergo a change that alters the element you are inheriting. If this happens, the `Shadows` modifier forces references from the derived class to be resolved to your variable, instead of to the base class element.
 
-## <a name="to-hide-an-inherited-variable"></a>So blenden Sie eine geerbte Variable aus
+## <a name="to-hide-an-inherited-variable"></a>To hide an inherited variable
 
-1. Stellen Sie sicher, dass die Variable, die Sie ausblenden möchten, auf Klassenebene (außerhalb der Prozeduren) deklariert wird. Andernfalls müssen Sie Sie nicht ausblenden.
+1. Be sure the variable you want to hide is declared at class level (outside any procedure). Otherwise, you do not need to hide it.
   
-2. Schreiben Sie in der abgeleiteten Klasse eine [Dim-Anweisung](../../../language-reference/statements/dim-statement.md) , die die Variable deklariert. Verwenden Sie den gleichen Namen wie für die geerbte Variable.
+2. Inside your derived class, write a [Dim Statement](../../../language-reference/statements/dim-statement.md) declaring your variable. Use the same name as that of the inherited variable.
 
-3. Schließt das [Shadows](../../../language-reference/modifiers/shadows.md) -Schlüsselwort in die Deklaration ein.
+3. Include the [Shadows](../../../language-reference/modifiers/shadows.md) keyword in the declaration.
 
-     Wenn sich der Code in der abgeleiteten Klasse auf den Variablennamen bezieht, löst der Compiler den Verweis auf die Variable auf.
+     When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-     Das folgende Beispiel veranschaulicht Shadowings einer geerbten Variablen:
+     The following example illustrates shadowing of an inherited variable:
   
     ```vb  
     Public Class ShadowBaseClass  
@@ -50,19 +50,19 @@ Ein weiterer Grund, warum Sie eine geerbte Variable ausblenden möchten, ist der
     End Class  
     ```  
   
-     Im vorangehenden Beispiel wird die Variable `shadowString` in der Basisklasse deklariert und in der abgeleiteten Klasse als Schatten angegeben. Die Prozedur `ShowStrings` in der abgeleiteten Klasse zeigt die Shadowingversion der Zeichenfolge an, wenn der Name `shadowString` nicht qualifiziert ist. Daraufhin wird die Schatten Version angezeigt, wenn `shadowString` mit dem Schlüsselwort `MyBase` qualifiziert ist.  
+     The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `ShowStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung
 
-Mit shadowingwird mehr als eine Version einer Variablen mit demselben Namen eingeführt. Wenn sich eine Code Anweisung auf den Variablennamen bezieht, hängt die Version, auf die der Compiler den Verweis auflöst, von Faktoren wie dem Speicherort der Code Anweisung und dem vorhanden sein einer qualifizierenden Zeichenfolge ab. Dadurch kann das Risiko erhöht werden, dass auf eine unbeabsichtigte Version einer schattiert-Variablen verwiesen wird. Sie können dieses Risiko verringern, indem Sie alle Verweise auf eine Schatten Variable vollständig qualifizieren.
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Verweise auf deklarierte Elemente](references-to-declared-elements.md)
-- [Shadodown in Visual Basic](shadowing.md)
+- [Shadowing in Visual Basic](shadowing.md)
 - [Unterschiede zwischen Shadowing und Überschreiben](differences-between-shadowing-and-overriding.md)
-- [Vorgehensweise: Blenden Sie eine Variable mit dem gleichen Namen wie die Variable @ no__t-0 aus.
-- [Vorgehensweise: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird @ no__t-0
+- [Gewusst wie: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Gewusst wie: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird](how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase und MyClass](../../program-structure/me-my-mybase-and-myclass.md)
 - [Grundlagen der Vererbung](../objects-and-classes/inheritance-basics.md)

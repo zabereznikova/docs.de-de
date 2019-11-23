@@ -16,11 +16,11 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunk
 
 ## <a name="avgexpression"></a>AVG (Ausdruck)
 
-Gibt den Durchschnitt aller Werte in einer Auflistung zurück. NULL-Werte werden ignoriert.
+Gibt den Durchschnitt aller Werte in einer Auflistung zurück. Nullwerte werden ignoriert.
 
 **Argumente**
 
-Ein `Int32`, `Int64`, `Double` und `Decimal`.
+Eine `Int32`, `Int64`, `Double`und `Decimal`.
 
 **Rückgabewert**
 
@@ -32,7 +32,7 @@ Der `expression`-Typ.
 
 ## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (Sammlung)
  
- Gibt die Prüfsumme der Werte in einer Auflistung zurück. NULL-Werte werden ignoriert.
+ Gibt die Prüfsumme der Werte in einer Auflistung zurück. Nullwerte werden ignoriert.
  
  **Argumente**
  
@@ -40,7 +40,7 @@ Der `expression`-Typ.
  
  **Rückgabewert**
  
- Eine `Int32`.
+ Ein `Int32`.
  
  **Beispiel**
  
@@ -52,16 +52,16 @@ Gibt die Anzahl der Elemente in einer Auflistung als `Int32` zurück.
 
 **Argumente**
 
-Eine Auflistung @ no__t-0t >, wobei t einer der folgenden Typen ist:
+Eine Auflistung\<t >, wobei t einer der folgenden Typen ist:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (wird in SQL Server 2000 nicht zurückgegeben)|
+|`Time`|`String`|`Binary`|`Guid` (nicht zurückgegeben in SQL Server 2000)|
 
 **Rückgabewert**
 
-Eine `Int32`.
+Ein `Int32`.
 
 **Beispiel**
 
@@ -78,11 +78,11 @@ Gibt die Anzahl der Elemente in einer Auflistung als `bigint` zurück.
  |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (wird in SQL Server 2000 nicht zurückgegeben)|
+|`Time`|`String`|`Binary`|`Guid` (nicht zurückgegeben in SQL Server 2000)|
 
 **Rückgabewert**
 
-Eine `Int64`.
+Ein `Int64`.
 
 **Beispiel**
 

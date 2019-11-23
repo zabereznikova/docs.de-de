@@ -18,12 +18,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699300"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedlistener >-Element
+# <a name="sharedlisteners-element"></a>\<sharedlistener-> Element
 Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.  Diese Listener empfangen standardmäßig keine Ablauf Verfolgungen, und es ist nicht möglich, diese Listener zur Laufzeit abzurufen. Listener, die als freigegebene Listener identifiziert werden, können Quellen oder Ablauf Verfolgungen anhand des Namens hinzugefügt werden.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedlistener >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedlistener >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -58,7 +58,7 @@ Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen 
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<sharedListeners>`-Element verwendet wird, um der `Listeners`-Auflistung für die Klassen <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> den Listener `console` hinzuzufügen. Der Ablaufverfolgungslistener der Konsole schreibt Ablauf Verfolgungs Informationen in die Konsole, indem er entweder <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace> aufruft.  
+ Im folgenden Beispiel wird gezeigt, wie das `<sharedListeners>`-Element verwendet wird, um der `Listeners`-Auflistung für die Klassen <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> die Listener`console` hinzuzufügen. Der Ablaufverfolgungslistener der Konsole schreibt Ablauf Verfolgungs Informationen über Aufrufe von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace>in die Konsole.  
   
 ```xml  
 <configuration>  

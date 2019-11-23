@@ -14,7 +14,7 @@ Dieses Thema enthält eine Kurzreferenz zu [!INCLUDE[esql](../../../../../../inc
   
 ## <a name="literals"></a>Literale  
   
-### <a name="string"></a>Zeichenfolge  
+### <a name="string"></a>String  
  Es gibt Zeichenfolgenliterale, die aus Unicode-, und solche, die aus Nicht-Unicode-Zeichen bestehen. Unicode-Zeichen folgen wird N vorangesteht. Beispielsweise `N'hello'`.  
   
  Im Folgenden ist ein Beispiel für ein nicht-Unicode-Zeichenfolgenliteral abgebildet:  
@@ -32,7 +32,7 @@ Dieses Thema enthält eine Kurzreferenz zu [!INCLUDE[esql](../../../../../../inc
 |hello|  
   
 ### <a name="datetime"></a>DateTime  
- In DateTime-Literalen sind sowohl das Datum als auch die Uhrzeit erforderlich. Es gibt keine Standardwerte.  
+ In {1}DateTime{2}-Literalen sind sowohl das Datum als auch die Uhrzeit erforderlich. Es gibt keine Standardwerte.  
   
  Beispiel:  
   
@@ -66,8 +66,8 @@ DATETIME '2006-12-25 01:01'
 |2|  
 |3|  
   
-### <a name="other"></a>Andere  
- Andere von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützte Literale sind Guid`null`, Binary, Float/Double, Decimal und . NULL-Literale werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] als mit allen anderen Typen im kozeptionellen Modell kompatibel aufgefasst.  
+### <a name="other"></a>Sonstige  
+ Andere von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützte Literale sind `null`Guid{3}, {4}Binary{5}, {6}Float/Double{7}, {8}Decimal{9} und {10}. NULL-Literale werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] als mit allen anderen Typen im kozeptionellen Modell kompatibel aufgefasst.  
   
 ## <a name="type-constructors"></a>Typkonstruktoren  
   
@@ -107,7 +107,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Objekt  
+### <a name="object"></a>Object  
  [Konstruktorkonstrukte benannter Typen](named-type-constructor-entity-sql.md) (benannte) benutzerdefinierte Objekte, z. b. `person("abc", 12)`.  
   
  Beispiel:  
@@ -203,7 +203,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
   
 ## <a name="functions"></a>Funktionen  
   
-### <a name="canonical"></a>Kanonische Funktionen  
+### <a name="canonical"></a>Canonical  
  Der Namespace für [kanonische Funktionen](canonical-functions.md) ist EDM, wie in `Edm.Length("string")`. Der Namespace muss nur dann angegeben werden, wenn ein anderer Namespace importiert wurde, der eine Funktion mit dem gleichen Namen wie eine kanonische Funktion enthält. Wenn zwei Namespaces über die gleiche Funktion verfügen, sollte der Benutzer den vollständigen Namen angeben.  
   
  Beispiel:  
@@ -274,7 +274,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
 |11|Agcaoili|  
 |12|Aguilar|  
   
-## <a name="grouping"></a>Gruppieren  
+## <a name="grouping"></a>Gruppierung  
  [Gruppieren nach](group-by-entity-sql.md) gibt Gruppen an, in die von einem Abfrage Ausdruck ([Select](select-entity-sql.md)) zurückgegebene Objekte eingefügt werden sollen.  
   
  Beispiel:  
@@ -286,7 +286,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
   
  Ausgabe:  
   
-|NAME|  
+|Name|  
 |----------|  
 |LL Mountain Seat Assembly|  
 |ML Mountain Seat Assembly|  
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>Navigation  
- Der Beziehungsnavigationsoperator ermöglicht die Navigation der Beziehung von einer Entität (an einem Ende) zu einer anderen Entität (am anderen Ende). [Navigate](navigate-entity-sql.md) übernimmt den Beziehungstyp als \<namespace >. \<beziehungstyp Name >. Navigate gibt Ref @ no__t-0t zurück > Wenn die Kardinalität des to-Endes 1 ist. Wenn die Kardinalität des "to"-Endes "n" ist, wird die Auflistung < Ref @ no__t-0t-> > zurückgegeben.  
+ Der Beziehungsnavigationsoperator ermöglicht die Navigation der Beziehung von einer Entität (an einem Ende) zu einer anderen Entität (am anderen Ende). [Navigate](navigate-entity-sql.md) übernimmt den Beziehungstyp, der als \<Namespace > qualifiziert ist.\<Beziehungstyp Name >. Navigate gibt Ref\<t > zurück, wenn die Kardinalität des "to"-Endes "1" ist. Wenn die Kardinalität des "to"-Endes "n" ist, wird die Auflistung < Ref\<t > > zurückgegeben.  
   
  Beispiel:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE UND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt die SELECT VALUE-Klausel bereit, um die implizite Zeilenkonstruktion zu überspringen. In einer SELECT VALUE-Klausel kann nur ein Element angegeben werden. Wenn eine solche Klausel verwendet wird, wird kein Zeilen Wrapper um die Elemente in der SELECT-Klausel erstellt, und eine Auflistung der gewünschten Form kann erstellt werden, z. b.: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt die SELECT VALUE-Klausel bereit, um die implizite Zeilen Konstruktion zu überspringen. In einer {1}SELECT VALUE{2}-Klausel kann nur ein Element angegeben werden. Wenn eine solche Klausel verwendet wird, wird kein Zeilen Wrapper um die Elemente in der SELECT-Klausel erstellt, und eine Auflistung der gewünschten Form kann erstellt werden, z. b. `SELECT VALUE a`.  
   
  Beispiel:  
   
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt auch den Zeilenkonstruktor zum Erstellen beliebiger Zeilen bereit. SELECT`SELECT a, b, c` werden ein oder mehrere Elemente in der Projektion übergeben, und das Ergebnis ist ein Datensatz mit Feldern, z. B.: .  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet auch den Zeilenkonstruktor, um beliebige Zeilen zu erstellen. `SELECT a, b, c`SELECT{2} werden ein oder mehrere Elemente in der Projektion übergeben, und das Ergebnis ist ein Datensatz mit Feldern, z. B.: {3}.  
   
  Beispiel:  
   
@@ -360,7 +360,7 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 |Wert|  
 |-----------|  
-|true|  
+|TRUE|  
   
 ## <a name="see-also"></a>Siehe auch
 

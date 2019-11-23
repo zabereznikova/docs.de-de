@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsi
 </configuration>  
 ```  
   
- Das `performanceCounters`-Attribut kann dafür festgelegt werden, dass ein bestimmter Typ von Leistungsindikatoren aktiviert wird. Folgende Werte sind gültig:  
+ Das `performanceCounters`-Attribut kann dafür festgelegt werden, dass ein bestimmter Typ von Leistungsindikatoren aktiviert wird. Gültige Werte sind  
   
 - All: Alle Kategorieindikatoren (ServiceModelService, ServiceModelEndpoint und ServiceModelOperation) werden aktiviert.  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Anzeigen von Leistungsdaten  
- Wenn Sie von den Leistungsindikatoren erfasste Daten anzeigen möchten, verwenden Sie den in Windows integrierten Leistungsmonitor (Perfmon.exe). Sie können dieses Tool starten, indem Sie auf "ausführen" klicken und **dann auf "** **Ausführen** " klicken und im Dialogfeld `perfmon.exe` eingeben.  
+ Wenn Sie von den Leistungsindikatoren erfasste Daten anzeigen möchten, verwenden Sie den in Windows integrierten Leistungsmonitor (Perfmon.exe). Sie können dieses Tool starten, indem Sie auf " **Start**" klicken und dann auf " **Ausführen** " klicken und im Dialogfeld `perfmon.exe` eingeben.  
   
 > [!NOTE]
 > Leistungsindikatorinstanzen werden möglicherweise freigegeben, bevor die letzten Nachrichten vom Endpunktverteiler verarbeitet wurden. Dies kann dazu führen, dass Leistungsdaten für einige Nachrichten nicht erfasst werden.  
@@ -74,7 +74,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>Leistungsindikatortypen  
  Leistungsindikatoren werden für drei verschiedene Ebenen festgelegt: Dienst, Endpunkt und Vorgang.  
   
- Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Ein auf ein Objekt angewendeter  
+ Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Beispiel:  
   
 - Der Instanzname des Dienst Indikators kann über die "CounterInstanceName"-Eigenschaft der WMI- [Dienst](../wmi/service.md) Instanz abgerufen werden.  
   
@@ -85,7 +85,7 @@ config.Save();
  Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Dienstleistungsindikatoren  
- Mit Dienst-Leistungsindikatoren wird das Dienstverhalten insgesamt gemessen und die Leistung des gesamten Diensts geprüft. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelService 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden nach dem folgenden Schema benannt:  
+ Dienstleistungsindikatoren messen das Dienstverhalten als Ganzes und können für die Diagnose der Leistung des gesamten Diensts herangezogen werden. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelService 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden anhand des folgenden Musters benannt:  
   
 `ServiceName@ServiceBaseAddress`
   
@@ -94,7 +94,7 @@ config.Save();
  Leistungsindikatoren zur Dienstinstanzerstellung werden inkrementiert, wenn ein neuer InstanceContext erstellt wird. Beachten Sie, dass auch dann ein neuer InstanceContext erstellt wird, wenn eine nicht aktivierende Nachricht empfangen wird (mit einem vorhandenen Dienst), oder wenn Sie von einer Sitzung aus eine Verbindung zu einer Instanz herstellen, die Sitzung beenden und dann von einer anderen Sitzung aus die Verbindung wieder herstellen.  
   
 ### <a name="endpoint-performance-counters"></a>Endpunktleistungsindikatoren  
- Endpunktleistungsindikatoren ermöglichen das Anzeigen von Daten, die das Akzeptieren von Nachrichten durch einen Endpunkt widerspiegeln. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelEndpoint 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden nach dem folgenden Schema benannt:  
+ Endpunktleistungsindikatoren ermöglichen das Untersuchen der Daten hinsichtlich der Nachrichtenannahme durch einen Endpunkt. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelEndpoint 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden anhand des folgenden Musters benannt:  
   
 `(ServiceName).(ContractName)@(endpoint listener address)`
   
@@ -121,11 +121,11 @@ config.Save();
 
 Im SDK-Installationsordner werden mehrere Dateien installiert, sodass Sie Programm gesteuert auf die WCF-Leistungsindikatoren zugreifen können. Diese Dateien werden wie folgt aufgelistet:
   
-- *@no__t -1Service Model endpointperfcounters. VRG*
-- *@no__t -1Service Model operationperfcounters. VRG*
-- *@no__t -1Service Model Service PerfCounters. VRG*  
-- *@no__t -1smsvchostperfcounters. VRG*
-- *@no__t -1transaktionbridgeperfcounters. VRG*
+- *\_Service Model endpointperfcounters. VRG*
+- *\_servicemodeloperationperfcounters. VRG*
+- *\_Service Model Service PerfCounters. VRG*  
+- *\_smsvchostperfcounters. VRG*
+- *\_transaktionbridgeperfcounters. VRG*
   
 Weitere Informationen zum programmgesteuerten Zugreifen auf die Leistungsindikatoren finden Sie unter [Architektur der Leistungsindikator Programmierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   

@@ -20,7 +20,7 @@ ms.locfileid: "73118837"
 Definiert Einstellungen in einem benutzerdefinierten Konfigurations Abschnitt, der von einem \<Abschnitt >-Element definiert wird und die <xref:System.Configuration.SingleTagSectionHandler>-Klasse verwendet.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Attribute und Attributwerte sind Benutzer definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="remarks"></a>Hinweise
 

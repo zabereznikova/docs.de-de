@@ -77,15 +77,15 @@ Razor-Direktiven beginnen mit dem `@` Zeichen und werden in der Regel am Anfang 
 
 In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in blazor verwendet werden, und deren Web Forms ASP.NET-Entsprechungen zusammengefasst, sofern vorhanden
 
-|Anweisung    |Beschreibung|Beispiel|Web Forms Äquivalent|
+|Directive    |Beschreibung|Beispiel|Web Forms Äquivalent|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Fügt der Komponente ein Attribut auf Klassenebene hinzu.|`@attribute [Authorize]`|Keiner|
+|`@attribute` |Fügt der Komponente ein Attribut auf Klassenebene hinzu.|`@attribute [Authorize]`|Keine|
 |`@code`      |Fügt der Komponente Klassenmember hinzu.|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Implementiert die angegebene Schnittstelle.|`@implements IDisposable`|Code Behind verwenden|
 |`@inherits`  |Erbt von der angegebenen Basisklasse|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Fügt einen Dienst in die Komponente ein.|`@inject IJSRuntime JS`|Keiner|
+|`@inject`    |Fügt einen Dienst in die Komponente ein.|`@inject IJSRuntime JS`|Keine|
 |`@layout`    |Gibt eine Layoutkomponente für die Komponente an.|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Legt den Namespace für die Komponente fest.|`@namespace MyNamespace`|Keiner|
+|`@namespace` |Legt den Namespace für die Komponente fest.|`@namespace MyNamespace`|Keine|
 |`@page`      |Gibt die Route für die Komponente an.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Gibt einen generischen Typparameter für die Komponente an.|`@typeparam TItem`|Code Behind verwenden|
 |`@using`     |Gibt einen Namespace an, der in den Gültigkeitsbereich|`@using MyComponentNamespace`|Namespace in der Datei " *Web. config* " hinzufügen|
@@ -110,12 +110,12 @@ Die verschiedenen von blazor verwendeten Direktivenattribute (`@onclick`, `@bind
 
 Viele der Syntaxen, die in *aspx* -und *ASCX* -Dateien verwendet werden, haben eine parallele Syntax in Razor. Im folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.net Web Forms und Razor.
 
-|Feature                      |Web Forms           |Syntax               |Razor         |Syntax |
+|Funktion                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Anweisungen                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Code Blöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |Ausdrücke<br>(HTML-codiert)|`<%: %>`            |`<%:DateTime.Now %>` |Implizit: `@`<br>Explizit: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|Kommentare                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|Comments                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Datenbindung                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Verwenden Sie die `@code`-Direktive, um der Razor-Komponenten Klasse Elemente hinzuzufügen. Diese Vorgehensweise ähnelt der Verwendung eines `<script runat="server">...</script>` Blocks in einem Web Forms ASP.NET-Steuerelement oder einer Seite des Benutzer Steuer Elements.
@@ -379,7 +379,7 @@ Um eine Bindung an einen Komponenten Parameter herzustellen, verwenden Sie ein `
 }
 ```
 
-## <a name="state-changes"></a>Statusänderungen
+## <a name="state-changes"></a>Zustandsänderungen
 
 Wenn sich der Zustand der Komponente außerhalb eines normalen UI-Ereignisses oder Ereignis Rückrufs geändert hat, muss die Komponente manuell signalisieren, dass Sie erneut gerendert werden muss. Um zu signalisieren, dass sich der Status einer Komponente geändert hat, müssen Sie die `StateHasChanged`-Methode für die Komponente aufzurufen.
 
@@ -639,7 +639,7 @@ public class CounterBase : ComponentBase
 
 Die Sichtbarkeit der Komponenten Elemente in der Basisklasse muss `protected` oder `public` sein, damit Sie für die Komponenten Klasse sichtbar ist.
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 Das vorherige ist keine umfassende Behandlung aller Aspekte von blazor-Komponenten. Weitere Informationen zum [Erstellen und Verwenden von ASP.net Core Razor-Komponenten](/aspnet/core/blazor/components)finden Sie in der blazor-Dokumentation.
 

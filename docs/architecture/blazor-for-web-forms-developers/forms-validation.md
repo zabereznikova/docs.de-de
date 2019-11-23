@@ -125,7 +125,7 @@ Die folgende Komponente veranschaulicht das Erstellen eines Formulars in blazor 
 
 Nach der Übermittlung des Formulars wurden die Modell gebundenen Daten nicht in einem Datenspeicher gespeichert, wie z. b. einer Datenbank. In einer blazor Webassembly-App müssen die Daten an den Server gesendet werden. Beispielsweise mithilfe einer HTTP POST-Anforderung. In einer blazor-Server-App befinden sich die Daten bereits auf dem Server, müssen jedoch persistent gespeichert werden. Die Handhabung des Datenzugriffs in blazor-Apps ist der Betreff des Abschnitts [Umgang mit Daten](data.md) .
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 Weitere Informationen zu [Formularen und zur Validierung](/aspnet/core/blazor/forms-validation) in blazor-apps finden Sie in der blazor-Dokumentation.
 

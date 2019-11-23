@@ -53,9 +53,9 @@ public static class Console {
   
  Standardargumente sind nicht CLS-kompatibel.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *reprint von der Berechtigung "Pearson Education, Inc." aus [framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition @ no__t-0 von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungsreihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

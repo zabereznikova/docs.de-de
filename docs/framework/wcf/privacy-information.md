@@ -149,7 +149,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \- für xmlns: SAML = "urn: Oasis: names: TC: SAML: 1.0: Assert": die fett formatierten Elemente (unten) werden entfernt:  
   
- \<assert  
+ \<-Assertionen  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  >  
   
- \<conditions NotBefore = "[DateTime]" NotOnOrAfter = "[DateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<audiencerestrictioncondition >  
+ \<AudienceRestrictionCondition>  
   
- \<audience > [URI] \</Audience > +  
+ \<Audience > [URI]\</Audience > +  
   
- \</audiencerestrictioncondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<donotcachecondition/> *  
   
- < @ no__t-1--abstrakter Basistyp  
+ <\!--abstrakter Basistyp  
   
- \<condition/> *  
+ \<Bedingung/> *  
   
  -->  
   
- \</Bedingungen >?  
+ \</Conditions >?  
   
- \<advice >  
+ \<Ratschläge >  
   
- \<assertionidreferenzierung > [ID] \</assertionidreferenzierung > *  
+ \<assertionidreferenzierung > [ID]\</AssertionIDReference > *  
   
- \<assert > [Assert] \</Assert > *  
+ \<Assert > [Assert]\</Assertion > *  
   
  [any]*  
   
- \</Ratschläge >?  
+ \</Advice >?  
   
- < @ no__t-1--abstrakte Basis Typen  
+ <\!--abstrakte Basis Typen  
   
- \<statement/> *  
+ \<-Anweisung/> *  
   
- \<subjetstatement >  
+ \<"subjetstatement" >  
   
- \<subject >  
+ \<Betreff >  
   
  `<NameIdentifier`  
   
@@ -211,23 +211,23 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `</NameIdentifier>?`  
   
- \<subjetconfirmation >  
+ \<"subjetconfirmation" >  
   
- \<confirmationmethod > [anyURI] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
- \<subjetconfirmationdata > [any] \</subjetconfirmationdata >?  
+ \<' subjetconfirmationdata ' > [any]\</SubjectConfirmationData >?  
   
- \<DS: KeyInfo >... \</DS: KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</subjetconfirmation >?  
+ \</SubjectConfirmation >?  
   
- \</Betreff >  
+ \</Subject >  
   
- \</subjetstatement > *  
+ \</SubjectStatement > *  
   
  -->  
   
- \<authenticationstatement  
+ \<AuthenticationStatement  
   
  AuthenticationMethod="[uri]"  
   
@@ -257,7 +257,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</AuthenticationStatement > *  
   
- \<attributestatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -271,9 +271,9 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribut > +  
+ \</Attribute > +  
   
- \</attributestatement > *  
+ \</AttributeStatement>*  
   
  \<authorizationdecisionstatement  
   
@@ -285,19 +285,19 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  [Subject]  
   
- \<action Namespace = "[URI]" > [String] \</Action > +  
+ \<Action Namespace = "[URI]" > [String]\</Action > +  
   
- \<evidence >  
+ \<Beweis >  
   
- \<assertionidreferenzierung > [ID] \</assertionidreferenzierung > +  
+ \<assertionidreferenzierung > [ID]\</AssertionIDReference > +  
   
- \<assert > [Assert] \</Assertion > +  
+ \<Assert > [Assert]\</Assertion > +  
   
- \</Beweis >?  
+ \</Evidence >?  
   
- \</authorizationdecisionstatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</Assertionen >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Aus Nachrichtentext bei der Protokollierung entschlüsselter/unverschlüsselter Nachrichten entfernte Informationen  
  Wie bereits beschrieben, entfernt WCF Schlüssel und bekannte potenziell persönliche Informationen aus Nachrichten Headern für protokollierte entschlüsselte/unverschlüsselte Nachrichten. Außerdem entfernt WCF Schlüssel und bekannte potenziell persönliche Informationen aus Nachrichten Textteilen für die Textelemente und Aktionen in der folgenden Liste, in denen die an den Schlüsselaustausch beteiligten Sicherheitsmeldungen beschrieben werden.  

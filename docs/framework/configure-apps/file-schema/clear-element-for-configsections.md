@@ -21,7 +21,7 @@ ms.locfileid: "73119082"
 Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configabschnitts >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<löschen >**
 
 ## <a name="syntax"></a>Syntax
@@ -40,11 +40,11 @@ Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [ **\<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="remarks"></a>Hinweise
 

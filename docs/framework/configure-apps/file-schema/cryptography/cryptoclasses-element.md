@@ -15,14 +15,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699752"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoclasses >-Element
+# <a name="cryptoclasses-element"></a>\<cryptoClasses >-Element
 Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [\<nameEntry>](nameentry-element.md) zugeordnet sind.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographysettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptonamemapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<cryptoclasses >**  
+&nbsp;&nbsp;[ **\<mscorlib->** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**cryptoClasses >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,10 +32,10 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -50,10 +50,10 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`cryptoNameMapping`|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|`mscorlib`|Enthält das `cryptographySettings` -Element.|  
+|`mscorlib`|Enthält das `cryptographySettings` Element.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<cryptoclass->** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<cryptoClass >** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
 - <xref:System.Security.Cryptography>
 - [Konfigurationsdateischema](../index.md)
 - [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

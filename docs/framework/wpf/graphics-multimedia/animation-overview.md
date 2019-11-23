@@ -213,11 +213,11 @@ Da Animationen Eigenschaftswerte generieren, gibt es verschiedene Animationstype
 
   Die Beispiele in dieser Übersicht verwenden diese Animationen, da sie am einfachsten zu verwenden sind. From/to/by-Animationen werden in der Übersicht über from/to/by-Animationen ausführlich beschrieben.
 
-- \<*Typ*> AnimationUsingKeyFrames
+- \<*Type*>AnimationUsingKeyFrames
 
   Keyframe-Animationen sind leistungsstärker als From-/To-/By-Animationen, da Sie eine beliebige Anzahl an Zielwerten angeben und sogar die Interpolationsmethode steuern können. Einige Typen können nur mit Keyframe-Animationen animiert werden. Keyframe-Animationen werden in der [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)ausführlich beschrieben.
 
-- \<*Typ*> animationusingpath
+- \<*Type*>AnimationUsingPath
 
   Pfadanimationen ermöglichen Ihnen einen geometrischen Pfad zu verwenden, um animierte Werte zu erzeugen.
 
@@ -231,10 +231,10 @@ Die folgende Tabelle zeigt mehrere allgemeine Animationstypen und einige Eigensc
 
 |Eigenschaftentyp|Zugehörige Basisanimation (From/To/By)|Zugehörige Keyframe-Animation|Zugehörige Pfadanimation|Beispiel für die Verwendung|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Keiner|Animieren des <xref:System.Windows.Media.SolidColorBrush.Color%2A> einer <xref:System.Windows.Media.SolidColorBrush> oder eines <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Keine|Animieren des <xref:System.Windows.Media.SolidColorBrush.Color%2A> einer <xref:System.Windows.Media.SolidColorBrush> oder eines <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animieren Sie den <xref:System.Windows.FrameworkElement.Width%2A> einer <xref:System.Windows.Controls.DockPanel> oder die <xref:System.Windows.FrameworkElement.Height%2A> einer <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> Position eines <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Keiner|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Keiner|Animieren Sie den <xref:System.Windows.Controls.TextBlock.Text%2A> einer <xref:System.Windows.Controls.TextBlock> oder die <xref:System.Windows.Controls.ContentControl.Content%2A> einer <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|Keine|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Keine|Animieren Sie den <xref:System.Windows.Controls.TextBlock.Text%2A> einer <xref:System.Windows.Controls.TextBlock> oder die <xref:System.Windows.Controls.ContentControl.Content%2A> einer <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -380,14 +380,14 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 |[Übersicht über Storyboards](storyboards-overview.md)|Beschreibt, wie Storyboards mit mehreren Zeitachsen zum Erstellen komplexer Animationen verwendet werden.|
 |[Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)|Beschreibt die <xref:System.Windows.Media.Animation.Timeline> Typen und Eigenschaften, die in Animationen verwendet werden.|
 |[Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)|Beschreibt die Ereignisse, die auf dem <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekten zum Ausführen von Code an Punkten in der Zeitachse verfügbar sind, wie z. b. Begin, Pause, Resume, Skip oder Break.|
-|[Themen zu Vorgehensweisen](animation-and-timing-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Animationen und Zeitachsen in der Anwendung.|
+|[Themen zur Vorgehensweise zu einem Expander](animation-and-timing-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Animationen und Zeitachsen in der Anwendung.|
 |[Clocks How-to Topics (Themen zur Vorgehensweise zu Uhren)](clocks-how-to-topics.md)|Enthält Codebeispiele für die Verwendung des <xref:System.Windows.Media.Animation.Clock>-Objekts in der Anwendung.|
-|[Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Keyframe-Animationen in Ihrer Anwendung.|
-|[Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Pfadanimationen in Ihrer Anwendung.|
+|[Gewusst-wie-Themen zu Keyframes](key-frame-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Keyframe-Animationen in Ihrer Anwendung.|
+|[Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Pfadanimationen in Ihrer Anwendung.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

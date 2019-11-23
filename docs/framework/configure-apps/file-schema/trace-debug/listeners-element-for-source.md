@@ -14,14 +14,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697301"
 ---
-# <a name="listeners-element-for-source"></a>\<listener >-Element für \<source->
-Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A>-Auflistung für einen <xref:System.Diagnostics.TraceSource> hinzu oder entfernt Sie. Ein Listener leitet die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel, z. b. ein Protokoll, ein Fenster oder eine Textdatei.  
+# <a name="listeners-element-for-source"></a>\<Listener > Element für \<Quelle >
+Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A>-Auflistung für eine <xref:System.Diagnostics.TraceSource>hinzu oder entfernt Sie. Ein Listener leitet die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel, z. b. ein Protokoll, ein Fenster oder eine Textdatei.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listener >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Quellen >** ](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **Quelle** >](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Listener >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,17 +34,17 @@ Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A>-Auflist
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners`-Auflistung.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners` Auflistung.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -62,7 +62,7 @@ Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A>-Auflist
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<listeners>`-Element verwendet wird, um der `mySource`-Quelle einen Ablaufverfolgungslistener hinzuzufügen und um den standardablaufverfolgungsli  
+ Im folgenden Beispiel wird gezeigt, wie das `<listeners>`-Element verwendet wird, um der `mySource` Quelle einen Ablaufverfolgungslistener hinzuzufügen und um den standardablaufverfolgungsli  
   
 ```xml  
 <configuration>  

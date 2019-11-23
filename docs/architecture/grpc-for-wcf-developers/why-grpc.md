@@ -1,14 +1,13 @@
 ---
 title: 'Warum GrpC für WCF-Entwickler empfohlen wird: GrpC für WCF-Entwickler'
 description: Eine Erläuterung dazu, warum GrpC für WCF-Entwickler geeignet ist, die zu modernen Architekturen und Plattformen migrieren möchten.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: da712e1ceee92f0a1a2661252dcda602f5dde9a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841306"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966947"
 ---
 # <a name="why-grpc-is-recommended-for-wcf-developers"></a>Gründe für die Empfehlung von gRPC für WCF-Entwickler
 

@@ -20,7 +20,7 @@ Gibt eine Suchbedingung für eine Gruppe oder ein Aggregat an.
   
 ## <a name="arguments"></a>Argumente  
  `search_condition`  
- Gibt die Suchbedingung für die Gruppe oder das Aggregat an. Wenn HAVING mit GROUP BY ALL verwendet wird, setzt die HAVING-Klausel ALL außer Kraft.  
+ Gibt die Suchbedingung für die zu erfüllende Gruppe oder das Aggregat an. Wenn HAVING mit GROUP BY ALL verwendet wird, setzt die HAVING-Klausel ALL außer Kraft.  
   
 ## <a name="remarks"></a>Hinweise  
  Mit der HAVING-Klausel kann für das Ergebnis einer Gruppierung eine zusätzliche Filterbedingung angegeben werden. Wenn Sie im Abfrageausdruck keine GROUP BY-Klausel angeben, wird eine implizite einzelne Gruppe angenommen.  
@@ -40,7 +40,7 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird mit dem HAVING-Operator und dem GROUP BY-Operator eine Suchbedingung für eine Gruppe oder ein Aggregat angegeben. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse @ no__t-0 zurückgibt.  
+1. Befolgen Sie das Verfahren unter Gewusst [wie: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   

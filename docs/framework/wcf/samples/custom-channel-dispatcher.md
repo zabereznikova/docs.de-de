@@ -29,7 +29,7 @@ In diesem Beispiel wird gezeigt, wie der Kanalstapel auf benutzerdefinierte Weis
   
  Sie haben das HTTP-GET-Verb in diesem Fall besonders behandelt und eine benutzerdefinierte HTML-Nachricht zurückgegeben, damit Sie den Dienst in einem Browser durchsuchen können, um sicherzustellen, dass er ordnungsgemäß kompiliert wurde. Wenn die SOAP-Aktion nicht richtig ist, senden Sie eine Fehlermeldung zurück, die angibt, dass die Anforderung nicht unterstützt wird.  
   
- Bei dem Client dieses Beispiels handelt es sich um einen normalen WCF-Client, der nicht von dem Dienst ausgeht. Daher ist der Dienst speziell so konzipiert, dass er dem entspricht, was Sie von einer normalen WCF @ no__t-0-Implementierung erhalten. Infolgedessen ist auf dem Client nur ein Dienstvertrag erforderlich.  
+ Bei dem Client dieses Beispiels handelt es sich um einen normalen WCF-Client, der nicht von dem Dienst ausgeht. Daher ist der Dienst speziell so konzipiert, dass er dem entspricht, was Sie von einer normalen WCF<xref:System.ServiceModel.ServiceHost>-Implementierung erhalten. Infolgedessen ist auf dem Client nur ein Dienstvertrag erforderlich.  
   
 ## <a name="using-the-sample"></a>Verwenden des Beispiels  
  Wenn Sie die Clientanwendung ausführen, wird die folgende Ausgabe direkt erzeugt.  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

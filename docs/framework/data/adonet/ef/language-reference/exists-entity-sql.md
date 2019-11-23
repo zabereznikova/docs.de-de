@@ -22,19 +22,19 @@ Bestimmt, ob eine Auflistung leer ist.
  `expression`  
  Jeder gültige Ausdruck, der eine Auflistung zurückgibt.  
   
- NICHT  
+ NOT  
  Gibt an, dass das Ergebnis von EXISTS negiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`, wenn die Auflistung nicht leer ist, andernfalls `false`.  
+ `true`, wenn die Auflistung nicht leer ist. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- EXISTS[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist einer der -Mengenoperatoren. Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet. Informationen zu Rang folgen Informationen für die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Mengen Operatoren finden Sie unter [Ausnahme](except-entity-sql.md)von.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]EXISTS{2} ist einer der {3}-Mengenoperatoren. Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet. Informationen zur Rangfolge der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Mengen Operatoren finden Sie unter [Ausnahme](except-entity-sql.md)von.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den EXISTS-Operator, um festzustellen, ob die Auflistung leer ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die die StructuralType-Ergebnisse @ no__t-0 zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   

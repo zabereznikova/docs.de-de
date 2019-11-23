@@ -21,7 +21,7 @@ ms.locfileid: "73119270"
 Enthält benutzerdefinierte Anwendungseinstellungen. Dies ist ein vordefinierter Konfigurations Abschnitt, der vom .NET Framework bereitgestellt wird.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>Syntax
 

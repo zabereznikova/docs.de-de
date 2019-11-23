@@ -25,7 +25,7 @@ Normalerweise wurden die meisten Anwendungen als eine Einheit bereitgestellt. So
 
 Obwohl Sie den Vorteil der Einfachheit haben, stellen monolithische Architekturen eine Reihe von Herausforderungen dar:
 
-### <a name="deployments"></a>Bereit Stellungen
+### <a name="deployments"></a>Bereitstellungen
 
 Das Bereitstellen von in monolithischen Anwendungen erfordert in der Regel einen Neustart der gesamten Anwendung, auch wenn nur ein kleines Modul ersetzt wird. Abhängig von der Anzahl der Computer, auf denen die Anwendung gehostet wird, kann dies bei bereit Stellungen zu Ausfallzeiten führen.
 
@@ -137,7 +137,7 @@ Was ist minikube? Das minikube-Projekt besagt "minikube implementiert einen loka
 - Dashboards
 - Container Laufzeiten: docker, RKT, CRI-O und containerd
 - Aktivieren der Container Netzwerkschnittstelle (CNI)
-- Eingangs
+- Eingang
 
 Nachdem Sie minikube installiert haben, können Sie diese schnell verwenden, indem Sie den `minikube start` Befehl ausführen, der ein Image herunterlädt und den lokalen Kubernetes-Cluster startet. Nachdem der Cluster gestartet wurde, interagieren Sie mit dem `kubectl` Kubernetes-Standardbefehl.
 

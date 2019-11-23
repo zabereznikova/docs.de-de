@@ -1,14 +1,13 @@
 ---
 title: 'WCF-Bindungen und-Transporte: GrpC für WCF-Entwickler'
 description: Erfahren Sie, wie die verschiedenen WCF-Bindungen und-Transporte mit GrpC verglichen werden.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 233e3d030bc1f4450bd5cd6a7d7770486ca9e95a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841318"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966905"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF-Bindungen und Transporte
 
@@ -22,7 +21,7 @@ Die NetTcp-Bindung von WCF ermöglicht persistente Verbindungen, kleine Nachrich
 
 BasicHttpBinding von WCF ist in der Regel Text basiert und verwendet SOAP als Wire-Format und ist im Vergleich zur NetTcp-Bindung langsam. Es wird im Allgemeinen verwendet, um plattformübergreifende Interoperabilität oder eine Verbindung über die Internetinfrastruktur bereitzustellen. Die Entsprechung in GrpC – da Sie http/2 als zugrunde liegende Transportschicht mit dem binären protobuf-Übertragungsformat für Nachrichten verwendet – kann die Leistungsstufe "NetTcp Service Level" bieten, aber mit vollständiger plattformübergreifender Interoperabilität mit allen modernen Programmiersprachen und-Frameworks.
 
-## <a name="named-pipes"></a>Benannte Pipes
+## <a name="named-pipes"></a>Named Pipes
 
 WCF hat eine Named Pipes-Bindung für die Kommunikation zwischen Prozessen auf demselben physischen Computer bereitgestellt. Named Pipes werden von der ersten Version von ASP.net Core GrpC nicht unterstützt. Das Hinzufügen von Client-und Serverunterstützung für Named Pipes (und UNIX-Domänen Sockets) ist ein Ziel für eine zukünftige Version.
 

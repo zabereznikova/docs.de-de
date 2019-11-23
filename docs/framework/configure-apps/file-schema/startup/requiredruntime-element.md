@@ -16,13 +16,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697490"
 ---
-# <a name="requiredruntime-element"></a>> Element \<requirements druntime
+# <a name="requiredruntime-element"></a>\<> Element "Requirements druntime"
 
-Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Stattdessen sollte das Element [`supportedRuntime`](supportedruntime-element.md) verwendet werden.
+Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Stattdessen sollte das [`supportedRuntime`](supportedruntime-element.md) -Element verwendet werden.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requirements druntime >**  
+&nbsp;&nbsp;[ **\<Start >** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<"Requirements druntime" >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ safemode="true|false"/>
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 
@@ -52,14 +52,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+None.
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
 |Element|Beschreibung|
 |-------------|-----------------|
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
-|`startup`|Enthält das `<requiredRuntime>` -Element.|
+|`startup`|Enthält das `<requiredRuntime>` Element.|
 
 ## <a name="remarks"></a>Hinweise
  Anwendungen, die zur Unterstützung von nur Version 1,0 der Laufzeit erstellt wurden, müssen das `<requiredRuntime>`-Element verwenden. Anwendungen, die mit Version 1,1 oder höher der Laufzeit erstellt wurden, müssen das `<supportedRuntime>`-Element verwenden.
@@ -67,10 +67,10 @@ Keine
 > [!NOTE]
 > Wenn Sie die [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) -Funktion verwenden, um die Konfigurationsdatei anzugeben, müssen Sie das `<requiredRuntime>`-Element für alle Versionen der Laufzeit verwenden. Das `<supportedRuntime>`-Element wird ignoriert, wenn Sie [corbindtoriuntimebycfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)verwenden.
 
- Die Attribut Zeichenfolge `version` muss mit dem Namen des Installations Ordners für die angegebene Version des .NET Framework identisch sein. Diese Zeichenfolge wird nicht interpretiert. Wenn der Startcode der Laufzeit keinen übereinstimmenden Ordner findet, wird die Laufzeit nicht geladen. der Startcode zeigt eine Fehlermeldung an und beendet den Vorgang.
+ Die `version`-Attribut Zeichenfolge muss mit dem Namen des Installations Ordners für die angegebene Version des .NET Framework identisch sein. Diese Zeichenfolge wird nicht interpretiert. Wenn der Startcode der Laufzeit keinen übereinstimmenden Ordner findet, wird die Laufzeit nicht geladen. der Startcode zeigt eine Fehlermeldung an und beendet den Vorgang.
 
 > [!NOTE]
-> Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert das `<requiredRuntime>`-Element.
+> Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert das `<requiredRuntime>` Element.
 
 ## <a name="example"></a>Beispiel
 
@@ -88,4 +88,4 @@ Im folgenden Beispiel wird gezeigt, wie die Laufzeitversion in einer Konfigurati
 
 - [Startup Settings Schema (Schema für Starteinstellungen)](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Gewusst wie: Konfigurieren einer APP für die Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

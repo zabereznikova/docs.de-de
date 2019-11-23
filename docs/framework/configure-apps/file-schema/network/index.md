@@ -22,7 +22,7 @@ ms.locfileid: "71698148"
 # <a name="network-settings-schema"></a>Netzwerkeinstellungsschema
 Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem Internet hergestellt werden.
 
-Die @no__t -0system. net > Einstellungen geben an, wie der .NET Framework eine Verbindung mit dem Netzwerk herstellt. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<system.Net>-Elements (Netzwerkeinstellungen)](system-net-element-network-settings.md).  
+Die \<System. net > Einstellungen geben an, wie der .NET Framework eine Verbindung mit dem Netzwerk herstellt. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<system.Net>-Elements (Netzwerkeinstellungen)](system-net-element-network-settings.md).  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
@@ -33,7 +33,7 @@ Die @no__t -0system. net > Einstellungen geben an, wie der .NET Framework eine V
 |[\<requestCaching>-Element (Netzwerkeinstellungen)](requestcaching-element-network-settings.md)|Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.|  
 |[\<webRequestModules>-Element (Netzwerkeinstellungen)](webrequestmodules-element-network-settings.md)|Gibt die Module an, die zum Anfordern von Informationen von Internethosts verwendet werden.|  
   
-Die \<uri-> Einstellungen geben an, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden. In der folgenden Tabelle wird die Funktion der einzelnen untergeordneten Konfigurationselemente unter dem [>-Element \<uri beschrieben (URI-Einstellungen)](uri-element-uri-settings.md).  
+Die \<-URI-> Einstellungen geben an, wie die .NET Framework Webanwendungen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden. In der folgenden Tabelle wird die Funktion der einzelnen untergeordneten Konfigurationselemente unter dem [\<-URI >-Element (URI-Einstellungen)](uri-element-uri-settings.md)beschrieben.  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  

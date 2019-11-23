@@ -11,7 +11,7 @@ ms.locfileid: "71351584"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Vorgehensweise: Implementieren eines Suchproxys
 
-In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zur Ermittlungsfunktion in Windows Communication Foundation (WCF) finden Sie unter [Übersicht über die WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)-Ermittlung. Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System. iasynkresult-Schnittstelle](xref:System.IAsyncResult).
+In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zur Ermittlungsfunktion in Windows Communication Foundation (WCF) finden Sie unter [Übersicht über die WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)-Ermittlung. Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult`und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System. iasynkresult-Schnittstelle](xref:System.IAsyncResult).
 
  Das Implementieren eines Suchproxys ist in diesem Thema in drei Hauptteile aufgegliedert:
 
@@ -546,7 +546,7 @@ Die OnBegin/ / OnEnd. -Methoden stellen die Logik für die nachfolgenden Suchvor
     }
     ```
 
-Sie haben die Implementierung des Suchproxys abgeschlossen. Fahren Sie mit [gewusst wie: Implementieren Sie einen sichtbaren Dienst, der mit dem suchproxy @ no__t-0 registriert wird.
+Sie haben die Implementierung des Suchproxys abgeschlossen. Weitere Informationen finden Sie unter Gewusst [wie: Implementieren eines erkennbaren Dienstanbieter, der beim suchproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -976,6 +976,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Vorgehensweise: Implementieren Sie einen sichtbaren Dienst, der mit dem suchproxy @ no__t-0 registriert wird.
-- [Vorgehensweise: Implementieren Sie eine Client Anwendung, die den suchproxy verwendet, um einen Dienst zu suchen @ no__t-0
-- [Vorgehensweise: Testen des Ermittlungs Proxys @ no__t-0
+- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Vorgehensweise: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

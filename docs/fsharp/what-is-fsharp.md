@@ -1,5 +1,5 @@
 ---
-title: Was ist F#
+title: Was ist F#?
 description: Erfahren Sie, was die F#-Programmiersprache ausmacht und wie in F# programmiert wird. Hier finden Sie Informationen zu umfangreichen Datentypen, Funktionen und deren Anpassung.
 ms.date: 08/03/2018
 ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332731"
 ---
-# <a name="what-is-f"></a>Was ist F @ no__t-0
+# <a name="what-is-f"></a>Was ist F\#
 
 F# ist eine funktionale Programmiersprache, die das Schreiben von korrektem und verwaltbarem Code erleichtert.
 
@@ -118,7 +118,7 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Anstatt objektorientierten Code zu schreiben, werden Sie in F# Code schreiben, der Objekte wie einen weiteren Datentyp behandelt, der durch Funktionen bearbeitet wird. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objektausdrücke](./language-reference/object-expressions.md) und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F#-Programmen verwendet.
+Anstatt das Schreiben von Code, der objektorientiert, in F# ist, Schreiben häufig Sie Code, die behandelt werden, wie ein anderer Datentyp für die Funktionen zum Bearbeiten. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objektausdrücke](./language-reference/object-expressions.md) und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F#-Programmen verwendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

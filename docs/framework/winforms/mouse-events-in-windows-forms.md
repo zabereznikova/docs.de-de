@@ -28,9 +28,9 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
 
 ## <a name="mouse-information"></a>Mausinformationen
 
-Ein <xref:System.Windows.Forms.MouseEventArgs> wird an Handler von Mausereignissen gesendet, die beim Drücken einer Maustaste und Verfolgen von Mausbewegungen ausgelöst werden. <xref:System.Windows.Forms.MouseEventArgs> enthält Informationen zum aktuellen Zustand der Maus, z. B. die Position des Mauszeigers in Clientkoordinaten, welche Maustasten gedrückt werden und ob das Mausrad bewegt wurde. Zahlreiche Mausereignisse, beispielsweise Ereignisse, die lediglich darüber informieren, dass der Mauszeiger die Grenzen eines Steuerelements überschritten hat, senden ein <xref:System.EventArgs> ohne weitere Informationen an den Ereignishandler.
+Ein <xref:System.Windows.Forms.MouseEventArgs> wird an Handler von Mausereignissen gesendet, die beim Drücken einer Maustaste und Verfolgen von Mausbewegungen ausgelöst werden. <xref:System.Windows.Forms.MouseEventArgs> stellt Informationen zum aktuellen Zustand der Maus bereit, einschließlich der Position des Mauszeigers in Client Koordinaten, der Maustasten, die gedrückt werden, und der Angabe, ob das Mausrad einen Rollup durchgeführt hat. Zahlreiche Mausereignisse, beispielsweise Ereignisse, die lediglich darüber informieren, dass der Mauszeiger die Grenzen eines Steuerelements überschritten hat, senden ein <xref:System.EventArgs> ohne weitere Informationen an den Ereignishandler.
 
-Wenn Sie den aktuellen Zustand der Maustasten oder die Position des Mauszeigers erfahren möchten, ohne ein Mausereignis zu behandeln, können Sie auch die <xref:System.Windows.Forms.Control.MouseButtons%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.MousePosition%2A>-Eigenschaft der <xref:System.Windows.Forms.Control>-Klasse verwenden. <xref:System.Windows.Forms.Control.MouseButtons%2A> gibt Informationen darüber zurück, welche Maustasten aktuell gedrückt werden. <xref:System.Windows.Forms.Control.MousePosition%2A> gibt die Bildschirmkoordinaten des Mauszeigers zurück, was dem von <xref:System.Windows.Forms.Cursor.Position%2A> zurückgegebenen Wert entspricht.
+Wenn Sie den aktuellen Zustand der Maustasten oder die Position des Mauszeigers erfahren möchten, ohne ein Mausereignis zu behandeln, können Sie auch die <xref:System.Windows.Forms.Control.MouseButtons%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.MousePosition%2A>-Eigenschaft der <xref:System.Windows.Forms.Control>-Klasse verwenden. <xref:System.Windows.Forms.Control.MouseButtons%2A> gibt Informationen darüber zurück, welche Maustasten zurzeit gedrückt werden. <xref:System.Windows.Forms.Control.MousePosition%2A> gibt die Bildschirmkoordinaten des Mauszeigers zurück, was dem von <xref:System.Windows.Forms.Cursor.Position%2A> zurückgegebenen Wert entspricht.
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>Konvertieren zwischen Bildschirm- und Clientkoordinaten
 
@@ -66,7 +66,7 @@ Im folgenden finden Sie die Reihenfolge der Ereignisse, die bei einem doppelten 
 
 8. <xref:System.Windows.Forms.Control.MouseUp> -Ereignis.
 
-Ein Codebeispiel, das die Reihenfolge der Maus Klick Ereignisse veranschaulicht, finden Sie unter [gewusst wie: Behandeln von Benutzereingabe Ereignissen in Windows Forms-Steuerelementen @ no__t-0.
+Ein Codebeispiel, das die Reihenfolge der Maus Klick Ereignisse veranschaulicht, finden [Sie unter Gewusst wie: Behandeln von Benutzereingabe Ereignissen in Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md)-Steuerelementen.
 
 ### <a name="individual-controls"></a>Einzelne Steuerelemente
 
@@ -82,24 +82,24 @@ Die folgenden Steuerelemente weisen nicht das Standardverhalten bei Mausklickere
 
   - Klick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Mit der rechten Maustaste: Es wurden keine Klick Ereignisse ausgelöst.
+  - Klick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.
 
   - Doppelklick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Doppelklicken Sie mit der rechten Maustaste: Es wurden keine Klick Ereignisse ausgelöst.
+  - Doppelklick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.
 
-- <xref:System.Windows.Forms.TextBox>-Steuerelement, <xref:System.Windows.Forms.RichTextBox>-Steuerelement, <xref:System.Windows.Forms.ListBox>-Steuerelement, <xref:System.Windows.Forms.MaskedTextBox>-Steuerelement und <xref:System.Windows.Forms.CheckedListBox>-Steuerelement
+- <xref:System.Windows.Forms.TextBox>-, <xref:System.Windows.Forms.RichTextBox>-, <xref:System.Windows.Forms.ListBox>-, <xref:System.Windows.Forms.MaskedTextBox>-und <xref:System.Windows.Forms.CheckedListBox>-Steuerelemente
 
   > [!NOTE]
   > Das im Folgenden beschriebene Verhalten tritt auf, wenn der Benutzer innerhalb dieser Steuerelemente auf eine beliebige Stelle klickt.
 
   - Klick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Mit der rechten Maustaste: Es wurden keine Klick Ereignisse ausgelöst.
+  - Klick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.
 
   - Doppelklick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - Doppelklicken Sie mit der rechten Maustaste: Es wurden keine Klick Ereignisse ausgelöst.
+  - Doppelklick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.
 
 - <xref:System.Windows.Forms.ListView>-Steuerelement
 

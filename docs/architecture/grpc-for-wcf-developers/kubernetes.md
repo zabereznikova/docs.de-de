@@ -1,14 +1,13 @@
 ---
 title: Kubernetes-GrpC für WCF-Entwickler
 description: Ausführen ASP.net Core GrpC-Dienste in einem Kubernetes-Cluster.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841576"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967570"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -51,7 +50,7 @@ Pods sind die grundlegenden Ausführungs Einheiten in Kubernetes. Sie können me
 
 Dienste sind Metadatenobjekte, die Pods (oder Gruppen von Pods) beschreiben und eine Möglichkeit bieten, auf diese innerhalb des Clusters zuzugreifen, wie z. b. das Mapping eines Dienst namens zu einem Satz von Pod-IP-Adressen mithilfe des Cluster-DNS-Diensts.
 
-### <a name="deployments"></a>Bereit Stellungen
+### <a name="deployments"></a>Bereitstellungen
 
 Bereit Stellungen sind die *beschriebenen Zustands* Objekte für Pods. Wenn Sie einen Pod manuell erstellen, wird er beim Beenden nicht neu gestartet. Mithilfe von bereit Stellungen wird dem Cluster mitgeteilt, welche Pods und wie viele Replikate dieser Pods zum aktuellen Zeitpunkt ausgeführt werden sollen.
 

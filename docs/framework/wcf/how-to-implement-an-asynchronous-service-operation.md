@@ -38,7 +38,7 @@ In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang as
   
     2. Einem asynchronen `BeginSampleMethod`-Vorgang.  
   
-    3. Ein asynchrones `BeginServiceAsyncMethod` @ no__t-1 @ no__t-2-Vorgangs Paar.  
+    3. Ein asynchrones `BeginServiceAsyncMethod`/`EndServiceAsyncMethod` Vorgangs Paar.  
   
 2. Einer Dienstimplementierung mit einem <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekt.  
   

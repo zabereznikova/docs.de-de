@@ -18,7 +18,7 @@ ms.locfileid: "72291342"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie unter [Windows Automation-API: UI-Automatisierung @ no__t-0.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Szenarien und Codebeispiele zum Veranschaulichen, wie und wann Sie die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwenden können, um ein Element in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur zu suchen.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "72291342"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Suchen eines bestimmten Elements in der Benutzeroberflächenautomatisierungs-Struktur anhand einer eindeutigen und erkennbaren AutomationID  
   
-- Verwenden Sie ein Tool wie "UI Spy", um den <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines relevanten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elements zu melden. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
+- Verwenden Sie ein Tool wie z. b. UI Spy, um die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] relevanten Elements zu melden. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
   
 > [!CAUTION]
 > Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  

@@ -1,14 +1,13 @@
 ---
 title: 'Einführung: GrpC für WCF-Entwickler'
 description: Einführung
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841570"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967620"
 ---
 # <a name="introduction"></a>Einführung
 
@@ -18,7 +17,7 @@ Mit der Veröffentlichung von .net Core 3,0 wird eine Umstellung auf die Art und
 
 GrpC ist ein beliebtes Framework in der umfassenderen Software Community, das von Entwicklern für viele Programmiersprachen in modernen RPC-Szenarien verwendet wird. Die Community und das Ökosystem sind aktiv und aktiv, und es wird Unterstützung für das GrpC-Protokoll zu Infrastrukturkomponenten wie Kubernetes, Service Meshes, Load Balancer und mehr hinzugefügt. Diese Faktoren sowie die Leistung, Effizienz und plattformübergreifende Kompatibilität machen GrpC eine natürliche Wahl für neue apps und WCF-apps, die auf .net Core umgestellt werden.
 
-## <a name="history"></a>Versionsgeschichte
+## <a name="history"></a>Verlauf
 
 Das Grundprinzip eines Computernetzwerks ist nicht mehr als eine Gruppe von Computern, die Daten untereinander austauschen, um eine Reihe von zusammenhängenden Aufgaben zu erreichen, die sich seit der Inbetriebnahme nicht geändert haben. Komplexität, Skalierung und Erwartungen wurden jedoch exponentiell vergrößert.  
 
@@ -62,7 +61,7 @@ Im letzten Abschnitt des Buchs wird erläutert, wie Sie das beste von GrpC in de
 
 ## <a name="whom-this-guide-is-for"></a>Für wen dieses Handbuch gilt
 
-Dieses Handbuch wurde für Entwickler entwickelt, die in .NET Framework oder .net Core arbeiten und bereits WCF verwendet haben und die Ihre Anwendungen zu einer modernen RPC-Umgebung für .net Core 3,0 und höhere Versionen migrieren möchten. Das Handbuch kann auch eher für Entwickler verwendet werden, die das Upgrade auf .net Core 3,0 durchführen oder ein Upgrade auf .net Core durchführen möchten, die die integrierten GrpC-Tools verwenden möchten.
+Dieser Leitfaden richtet sich an Entwickler, die in .NET Framework oder.NET Core arbeiten, die zuvor WCF verwendet haben und ihre Anwendungen auf eine moderne RPC-Umgebung für .NET Core 3.0 und spätere Versionen migrieren möchten. Der Leitfaden richtet sich auch an Entwickler, die ein Upgrade auf .NET Core 3.0 in Betracht ziehen und die integrierten gRPC-Tools verwenden möchten.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

@@ -23,17 +23,17 @@ ms.locfileid: "73118928"
 Das Schema für Konfigurations Abschnitte enthält Elemente, die benutzerdefinierte Einstellungen in Konfigurationsdateien definieren. Allgemeine Informationen zu Konfigurationsdateien und-Schemas finden Sie unter [Schema der Konfigurationsdatei für die .NET Framework](index.md).
 
 [ **\<configuration>** ](configuration-element.md)   
-[ **\<configabschnitts >** ](configsections-element-for-configuration.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
 [ **\<> Löschen**](clear-element-for-configsections.md)   
 [ **\<> entfernen**](remove-element-for-configsections.md)   
 [ **\<Abschnitt >** ](section-element.md)   
-[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<** für **\<configabschnitts löschen >** ](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen. |
+| [ **\<>** für **\<configabschnitts löschen >** ](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen. |
-| [ **\<configabschnitts >** ](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
-| [ **\<** für **\<configabschnitts entfernen >** ](remove-element-for-configsections.md) | Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe. |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [ **\<>** für **\<configabschnitts entfernen >** ](remove-element-for-configsections.md) | Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe. |
 | [ **\<Abschnitt >** für **\<configabschnitts >** und **\<sectionGroup >** ](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
 | [ **\<sectionGroup >** für **\<configabschnitts aus >** ](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurations Abschnitte. |

@@ -1,14 +1,13 @@
 ---
 title: 'Wiederholte Felder für Listen und Arrays: GrpC für WCF-Entwickler'
 description: Erfahren Sie, wie Sammlungen von protobuf behandelt werden und wie Sie mit .NET-Auflistungen in Beziehung stehen.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 740af8af39af9bf31be17ad831f481176e30d81f
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 17c579bc98ba62ea74b9452bdb28efd96fc51406
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841396"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967365"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>Wiederholte Felder für Listen und Arrays
 

@@ -15,11 +15,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699743"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > Element für Kryptografieeinstellungen
-Enthält das [> Element \<cryptographysettings](cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib-> Element für Kryptografieeinstellungen
+Enthält die [\<cryptographySettings-> Element](cryptographysettings-element.md).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<mscorlib >**  
+&nbsp;&nbsp; **\<mscorlib->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,10 +29,10 @@ Enthält das [> Element \<cryptographysettings](cryptographysettings-element.md)
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ None.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -47,7 +47,7 @@ Enthält das [> Element \<cryptographysettings](cryptographysettings-element.md)
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<mscorlib->** Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<mscorlib->** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
   
 ```xml  
 <configuration>  
@@ -74,5 +74,5 @@ Enthält das [> Element \<cryptographysettings](cryptographysettings-element.md)
 - <xref:System.Security.Cryptography>
 - [Konfigurationsdateischema](../index.md)
 - [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

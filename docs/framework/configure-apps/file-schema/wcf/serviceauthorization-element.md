@@ -9,16 +9,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834021"
 ---
-# <a name="serviceauthorization-element"></a>\<serviceauthorization > Element
+# <a name="serviceauthorization-element"></a>\<ServiceAuthorization >-Element
 
 Gibt Einstellungen an, die den Zugriff auf Dienstvorgänge autorisieren.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<verhaltensweisen >** ](behaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<serviceverhaltensweisen >** ](servicebehaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0behavior >** ](behavior-of-servicebehaviors.md)1
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1serviceauthorization >**  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhalten**](behaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**serviceverhaltensweisen**](servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**Verhalten >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ServiceAuthorization >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und über
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|Ein boolescher Wert, der angibt, ob alle Vorgänge im Dienst die Identität des Aufrufers annehmen. Die Standardeinstellung ist `false`.<br /><br /> Wenn ein bestimmter Dienstvorgang die Identität des Aufrufers annimmt, wird der Threadkontext zum Aufruferkontext geändert, bevor der angegebene Dienst ausgeführt wird.|  
-|principalPermissionMode|Legt den Prinzipal fest, der verwendet wird, um Vorgänge auf dem Server auszuführen. Folgende Werte sind gültig:<br /><br /> -None<br />-UseWindowsGroups<br />-Useaspnettroles<br />-Benutzer definiert<br /><br /> Der Standardwert ist UseWindowsGroups. Der Wert ist vom Typ <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Weitere Informationen zur Verwendung dieses Attributs finden Sie unter [gewusst wie: Beschränken Sie den Zugriff mit der PrincipalPermissionAttribute-Klasse @ no__t-0.|  
+|principalPermissionMode|Legt den Prinzipal fest, der verwendet wird, um Vorgänge auf dem Server auszuführen. Folgende Werte sind gültig:<br /><br /> -None<br />-UseWindowsGroups<br />-Useaspnettroles<br />-Benutzer definiert<br /><br /> Der Standardwert ist UseWindowsGroups. Der Wert ist vom Typ <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Weitere Informationen zur Verwendung dieses Attributs finden Sie unter Gewusst [wie: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Eine Zeichenfolge, die den Namen des Rollenanbieters angibt, der Rolleninformationen für eine Windows Communication Foundation (WCF)-Anwendung bereitstellt. Der Standardwert ist eine leere Zeichenfolge.|  
 |ServiceAuthorizationManagerType|Eine Zeichenfolge, die den Typ des Dienstautorisierungs-Managers angibt. Weitere Informationen finden Sie unter <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
 
@@ -62,7 +62,7 @@ In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und über
 
 Dieser Abschnitt enthält Elemente, die die Autorisierung, benutzerspezifische Rollenanbieter und den Identitätswechsel beeinflussen.  
   
-Das `principalPermissionMode`-Attribut gibt die Benutzergruppen an, mit denen die Verwendung einer geschützten Methode autorisiert wird. Der Standardwert lautet `UseWindowsGroups`. Er gibt an, das in Windows-Gruppen wie "Administratoren" oder "Benutzer" nach einer Identität gesucht wird, die versucht, auf eine Ressource zuzugreifen. Sie können auch `UseAspNetRoles` angeben, um einen benutzerdefinierten Rollen Anbieter zu verwenden, der unter dem @no__t -1System. Web >-Element konfiguriert ist, wie im folgenden Code gezeigt:
+Das `principalPermissionMode`-Attribut gibt die Benutzergruppen an, mit denen die Verwendung einer geschützten Methode autorisiert wird. Der Standardwert lautet `UseWindowsGroups`. Er gibt an, das in Windows-Gruppen wie "Administratoren" oder "Benutzer" nach einer Identität gesucht wird, die versucht, auf eine Ressource zuzugreifen. Sie können auch angeben, `UseAspNetRoles` einen benutzerdefinierten Rollen Anbieter verwenden möchten, der unter dem \<System. Web >-Element konfiguriert ist, wie im folgenden Code gezeigt:
 
 ```xml
 <system.web>
@@ -85,7 +85,7 @@ Das `principalPermissionMode`-Attribut gibt die Benutzergruppen an, mit denen di
 </system.web>
 ```
   
-Der folgende Code zeigt den `roleProviderName`-Wert, der mit dem `principalPermissionMode`-Attribut verwendet wird:
+Der folgende Code zeigt die `roleProviderName`, die mit dem Attribut `principalPermissionMode` verwendet werden:
   
 ```xml
 <behaviors>
@@ -105,6 +105,6 @@ Ein ausführliches Beispiel für die Verwendung dieses Konfigurations Elements f
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [Sicherheitsverhalten](../../../wcf/feature-details/security-behaviors-in-wcf.md)
 - [Zugriffsautorisierung für Dienstvorgänge](../../../wcf/samples/authorizing-access-to-service-operations.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst @ no__t-0
-- [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse @ no__t-0
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [Autorisierungsrichtlinie](../../../wcf/samples/authorization-policy.md)
