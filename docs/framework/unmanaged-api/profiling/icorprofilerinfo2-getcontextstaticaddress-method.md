@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c5c8165d44cc3a305820f8e97c07da37f2a0693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5d7da343148d5f1c2aa9b2b639b094f8269199b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775809"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433204"
 ---
-# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="af3f3-102">ICorProfilerInfo2::GetContextStaticAddress-Methode</span><span class="sxs-lookup"><span data-stu-id="af3f3-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
-<span data-ttu-id="af3f3-103">Ruft die Adresse für das angegebene kontextstatische-Feld, das im Rahmen des angegebenen Kontexts.</span><span class="sxs-lookup"><span data-stu-id="af3f3-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
+# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="63e3a-102">ICorProfilerInfo2::GetContextStaticAddress-Methode</span><span class="sxs-lookup"><span data-stu-id="63e3a-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
+<span data-ttu-id="63e3a-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span><span class="sxs-lookup"><span data-stu-id="63e3a-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af3f3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="af3f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63e3a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="63e3a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContextStaticAddress(  
@@ -37,38 +35,38 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af3f3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="af3f3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63e3a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="63e3a-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="af3f3-106">[in] Die ID der Klasse, die das angeforderte kontextstatische-Feld enthält.</span><span class="sxs-lookup"><span data-stu-id="af3f3-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
+ <span data-ttu-id="63e3a-106">[in] The ID of the class that contains the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="63e3a-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="af3f3-107">[in] Das Metadatentoken für das angeforderte kontextstatische-Feld.</span><span class="sxs-lookup"><span data-stu-id="af3f3-107">[in] The metadata token for the requested context-static field.</span></span>  
+ <span data-ttu-id="63e3a-107">[in] The metadata token for the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="63e3a-107">[in] The metadata token for the requested context-static field.</span></span>  
   
  `contextId`  
- <span data-ttu-id="af3f3-108">[in] Die ID des Kontexts, der den Bereich für die angeforderte statische Feld des Kontexts ist.</span><span class="sxs-lookup"><span data-stu-id="af3f3-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
+ <span data-ttu-id="63e3a-108">[in] The ID of the context that is the scope for the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="63e3a-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="af3f3-109">[out] Ein Zeiger auf die Adresse eines statischen Felds, das innerhalb des angegebenen Kontexts.</span><span class="sxs-lookup"><span data-stu-id="af3f3-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
+ <span data-ttu-id="63e3a-109">[out] A pointer to the address of the static field that is within the specified context.</span><span class="sxs-lookup"><span data-stu-id="63e3a-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af3f3-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="af3f3-110">Remarks</span></span>  
- <span data-ttu-id="af3f3-111">Die `GetContextStaticAddress` Methode gibt möglicherweise einen der folgenden zurück:</span><span class="sxs-lookup"><span data-stu-id="af3f3-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63e3a-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="63e3a-110">Remarks</span></span>  
+ <span data-ttu-id="63e3a-111">The `GetContextStaticAddress` method may return one of the following:</span><span class="sxs-lookup"><span data-stu-id="63e3a-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="af3f3-112">Ein HRESULT CORPROF_E_DATAINCOMPLETE, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.</span><span class="sxs-lookup"><span data-stu-id="af3f3-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="63e3a-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span><span class="sxs-lookup"><span data-stu-id="63e3a-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="af3f3-113">Die Adressen von Objekten, die möglicherweise in die Garbage Collection-Heap.</span><span class="sxs-lookup"><span data-stu-id="af3f3-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="af3f3-114">Diese Adressen können nach der Garbagecollection, ungültig werden. daher nach der Garbagecollection, Profiler nicht davon auszugehen, dass sie gültig sind.</span><span class="sxs-lookup"><span data-stu-id="af3f3-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="63e3a-113">The addresses of objects that may be in the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="63e3a-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="63e3a-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span><span class="sxs-lookup"><span data-stu-id="63e3a-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="af3f3-115">Vor dem Abschluss einer Klasse Klassenkonstruktor `GetContextStaticAddress` CORPROF_E_DATAINCOMPLETE zurück für alle seine statische Felder, obwohl einige der statischen Felder bereits initialisiert werden kann und rooting-Garbage Collection-Objekten.</span><span class="sxs-lookup"><span data-stu-id="af3f3-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="63e3a-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span><span class="sxs-lookup"><span data-stu-id="63e3a-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af3f3-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="af3f3-116">Requirements</span></span>  
- <span data-ttu-id="af3f3-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af3f3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63e3a-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="63e3a-116">Requirements</span></span>  
+ <span data-ttu-id="63e3a-117">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63e3a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af3f3-118">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="af3f3-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="63e3a-118">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="63e3a-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="af3f3-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af3f3-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="63e3a-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63e3a-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="af3f3-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af3f3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="63e3a-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63e3a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af3f3-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af3f3-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63e3a-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="63e3a-121">See also</span></span>
 
-- [<span data-ttu-id="af3f3-122">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="af3f3-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="af3f3-123">ICorProfilerInfo2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="af3f3-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="63e3a-122">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="63e3a-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="63e3a-123">ICorProfilerInfo2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="63e3a-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

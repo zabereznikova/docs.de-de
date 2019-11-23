@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: d42bea4e-5848-4e43-a883-69af7a313ce9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 87dd6db9624c2216ab13e77b04cfa63f95aee7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26f76f94d9b2d82240150a852d2bfc3ae10b97c2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939450"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448360"
 ---
-# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="783a6-102">ISymUnmanagedNamespace-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="783a6-102">ISymUnmanagedNamespace Interface</span></span>
-<span data-ttu-id="783a6-103">Stellt einen Namespace dar.</span><span class="sxs-lookup"><span data-stu-id="783a6-103">Represents a namespace.</span></span>  
+# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="d5f20-102">ISymUnmanagedNamespace-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d5f20-102">ISymUnmanagedNamespace Interface</span></span>
+<span data-ttu-id="d5f20-103">Represents a namespace.</span><span class="sxs-lookup"><span data-stu-id="d5f20-103">Represents a namespace.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="783a6-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="783a6-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d5f20-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="d5f20-104">Methods</span></span>  
   
-|<span data-ttu-id="783a6-105">Methode</span><span class="sxs-lookup"><span data-stu-id="783a6-105">Method</span></span>|<span data-ttu-id="783a6-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="783a6-106">Description</span></span>|  
+|<span data-ttu-id="d5f20-105">Methode</span><span class="sxs-lookup"><span data-stu-id="d5f20-105">Method</span></span>|<span data-ttu-id="d5f20-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d5f20-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="783a6-107">GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="783a6-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="783a6-108">Ruft den Namen des Namespace.</span><span class="sxs-lookup"><span data-stu-id="783a6-108">Gets the name of this namespace.</span></span>|  
-|[<span data-ttu-id="783a6-109">GetNamespaces-Methode</span><span class="sxs-lookup"><span data-stu-id="783a6-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="783a6-110">Ruft die untergeordneten Elemente dieses Namespaces ab.</span><span class="sxs-lookup"><span data-stu-id="783a6-110">Gets the children of this namespace.</span></span>|  
-|[<span data-ttu-id="783a6-111">GetVariables-Methode</span><span class="sxs-lookup"><span data-stu-id="783a6-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="783a6-112">Gibt alle Variablen, die im globalen Gültigkeitsbereich innerhalb dieses Namespace definiert.</span><span class="sxs-lookup"><span data-stu-id="783a6-112">Returns all variables defined at global scope within this namespace.</span></span>|  
+|[<span data-ttu-id="d5f20-107">GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="d5f20-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="d5f20-108">Gets the name of this namespace.</span><span class="sxs-lookup"><span data-stu-id="d5f20-108">Gets the name of this namespace.</span></span>|  
+|[<span data-ttu-id="d5f20-109">GetNamespaces-Methode</span><span class="sxs-lookup"><span data-stu-id="d5f20-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="d5f20-110">Gets the children of this namespace.</span><span class="sxs-lookup"><span data-stu-id="d5f20-110">Gets the children of this namespace.</span></span>|  
+|[<span data-ttu-id="d5f20-111">GetVariables-Methode</span><span class="sxs-lookup"><span data-stu-id="d5f20-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="d5f20-112">Returns all variables defined at global scope within this namespace.</span><span class="sxs-lookup"><span data-stu-id="d5f20-112">Returns all variables defined at global scope within this namespace.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="783a6-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="783a6-113">Requirements</span></span>  
- <span data-ttu-id="783a6-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="783a6-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5f20-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d5f20-113">Requirements</span></span>  
+ <span data-ttu-id="d5f20-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d5f20-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="783a6-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="783a6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5f20-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d5f20-115">See also</span></span>
 
-- [<span data-ttu-id="783a6-116">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="783a6-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="d5f20-116">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d5f20-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

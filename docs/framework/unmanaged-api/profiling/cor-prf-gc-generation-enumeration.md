@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74e70f58600205d44a9ba052981b2cc67b3a44ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d01b864be231e5b0a3fd72dc2f3636a87c8cae83
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753806"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448627"
 ---
-# <a name="corprfgcgeneration-enumeration"></a><span data-ttu-id="cb0c0-102">COR_PRF_GC_GENERATION-Enumeration</span><span class="sxs-lookup"><span data-stu-id="cb0c0-102">COR_PRF_GC_GENERATION Enumeration</span></span>
-<span data-ttu-id="cb0c0-103">Identifiziert eine Garbage Collection-Generation.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-103">Identifies a garbage-collection generation.</span></span>  
+# <a name="cor_prf_gc_generation-enumeration"></a><span data-ttu-id="f769c-102">COR_PRF_GC_GENERATION-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f769c-102">COR_PRF_GC_GENERATION Enumeration</span></span>
+<span data-ttu-id="f769c-103">Identifies a garbage-collection generation.</span><span class="sxs-lookup"><span data-stu-id="f769c-103">Identifies a garbage-collection generation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb0c0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cb0c0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f769c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f769c-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -37,31 +35,31 @@ typedef enum {
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cb0c0-105">Member</span><span class="sxs-lookup"><span data-stu-id="cb0c0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f769c-105">Member</span><span class="sxs-lookup"><span data-stu-id="f769c-105">Members</span></span>  
   
-|<span data-ttu-id="cb0c0-106">Member</span><span class="sxs-lookup"><span data-stu-id="cb0c0-106">Member</span></span>|<span data-ttu-id="cb0c0-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cb0c0-107">Description</span></span>|  
+|<span data-ttu-id="f769c-106">Member</span><span class="sxs-lookup"><span data-stu-id="f769c-106">Member</span></span>|<span data-ttu-id="f769c-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f769c-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|<span data-ttu-id="cb0c0-108">Das Objekt wird als Generation 0 gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-108">The object is stored as generation 0.</span></span>|  
-|`COR_PRF_GC_GEN_1`|<span data-ttu-id="cb0c0-109">Das Objekt wird als Generation 1 gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-109">The object is stored as generation 1.</span></span>|  
-|`COR_PRF_GC_GEN_2`|<span data-ttu-id="cb0c0-110">Das Objekt wird als Generation 2 gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-110">The object is stored as generation 2.</span></span>|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="cb0c0-111">Das Objekt befindet sich im Heap für große Objekte.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-111">The object is stored in the large-object heap.</span></span>|  
+|`COR_PRF_GC_GEN_0`|<span data-ttu-id="f769c-108">The object is stored as generation 0.</span><span class="sxs-lookup"><span data-stu-id="f769c-108">The object is stored as generation 0.</span></span>|  
+|`COR_PRF_GC_GEN_1`|<span data-ttu-id="f769c-109">The object is stored as generation 1.</span><span class="sxs-lookup"><span data-stu-id="f769c-109">The object is stored as generation 1.</span></span>|  
+|`COR_PRF_GC_GEN_2`|<span data-ttu-id="f769c-110">The object is stored as generation 2.</span><span class="sxs-lookup"><span data-stu-id="f769c-110">The object is stored as generation 2.</span></span>|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="f769c-111">The object is stored in the large-object heap.</span><span class="sxs-lookup"><span data-stu-id="f769c-111">The object is stored in the large-object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cb0c0-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cb0c0-112">Remarks</span></span>  
- <span data-ttu-id="cb0c0-113">Der Garbage Collector verbessert die speicherleistung für die Verwaltung durch Division Objekte in Generationen, die basierend auf dem Alter.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="cb0c0-114">Der Garbage Collector verwendet derzeit drei Generationen: 0, 1 und 2 sowie einem besonderen Heap-Segment, das für große Objekte verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span></span> <span data-ttu-id="cb0c0-115">Objekte, deren Größe einen bestimmten Wert übersteigt, werden in den großen Objektheap gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span></span> <span data-ttu-id="cb0c0-116">Andere zugeordneten Objekte beginnen, die Sie die Generation 0 gehören.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-116">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="cb0c0-117">Alle Objekte, die vorhanden sind, nachdem die Garbagecollection in Generation 0 tritt werden auf Generation 1 höher gestuft.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="cb0c0-118">Objekte, die vorhanden sind, nachdem die Garbagecollection in Generation 1 tritt, in Generation 2 verschieben.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f769c-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f769c-112">Remarks</span></span>  
+ <span data-ttu-id="f769c-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span><span class="sxs-lookup"><span data-stu-id="f769c-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="f769c-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span><span class="sxs-lookup"><span data-stu-id="f769c-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span></span> <span data-ttu-id="f769c-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span><span class="sxs-lookup"><span data-stu-id="f769c-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span></span> <span data-ttu-id="f769c-116">Other allocated objects start out belonging to generation 0.</span><span class="sxs-lookup"><span data-stu-id="f769c-116">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="f769c-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span><span class="sxs-lookup"><span data-stu-id="f769c-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="f769c-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span><span class="sxs-lookup"><span data-stu-id="f769c-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
   
- <span data-ttu-id="cb0c0-119">Die Verwendung von Generationen bedeutet, dass der Garbage Collector zu jedem Zeitpunkt nur eine Teilmenge der zugeordneten Objekte zusammenarbeiten.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
+ <span data-ttu-id="f769c-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span><span class="sxs-lookup"><span data-stu-id="f769c-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
   
- <span data-ttu-id="cb0c0-120">Die `COR_PRF_GC_GENERATION` Enumeration wird verwendet, durch die [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) Struktur.</span><span class="sxs-lookup"><span data-stu-id="cb0c0-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span></span>  
+ <span data-ttu-id="f769c-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span><span class="sxs-lookup"><span data-stu-id="f769c-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb0c0-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cb0c0-121">Requirements</span></span>  
- <span data-ttu-id="cb0c0-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb0c0-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f769c-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f769c-121">Requirements</span></span>  
+ <span data-ttu-id="f769c-122">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f769c-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb0c0-123">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cb0c0-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f769c-123">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f769c-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cb0c0-124">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb0c0-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f769c-124">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f769c-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb0c0-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb0c0-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f769c-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f769c-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb0c0-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb0c0-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f769c-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f769c-126">See also</span></span>
 
-- [<span data-ttu-id="cb0c0-127">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="cb0c0-127">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="f769c-127">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="f769c-127">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

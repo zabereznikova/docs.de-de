@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a04bf93a2b2809198673d15f29714f52c9435b68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8d0145b9dffe1c0ff6ed3281c90f3bcec082ab8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767844"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428060"
 ---
-# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="c95d0-102">ISymUnmanagedWriter::DefineConstant-Methode</span><span class="sxs-lookup"><span data-stu-id="c95d0-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
-<span data-ttu-id="c95d0-103">Definiert einen Namen für einen konstanten Wert.</span><span class="sxs-lookup"><span data-stu-id="c95d0-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="db60f-102">ISymUnmanagedWriter::DefineConstant-Methode</span><span class="sxs-lookup"><span data-stu-id="db60f-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
+<span data-ttu-id="db60f-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="db60f-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c95d0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c95d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db60f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="db60f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant(  
@@ -37,26 +35,26 @@ HRESULT DefineConstant(
     [in, size_is(cSig)] unsigned char signature[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c95d0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c95d0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db60f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="db60f-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="c95d0-106">[in] Ein Zeiger auf eine `WCHAR` , die den Namen den Konstanten definiert.</span><span class="sxs-lookup"><span data-stu-id="c95d0-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
+ <span data-ttu-id="db60f-106">[in] A pointer to a `WCHAR` that defines the constant name.</span><span class="sxs-lookup"><span data-stu-id="db60f-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="c95d0-107">[in] Der Wert der Konstanten.</span><span class="sxs-lookup"><span data-stu-id="c95d0-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="db60f-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="db60f-107">[in] The value of the constant.</span></span>  
   
  `cSig`  
- <span data-ttu-id="c95d0-108">[in] Die Größe des `signature`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="c95d0-108">[in] The size of the `signature` array.</span></span>  
+ <span data-ttu-id="db60f-108">[in] Die Größe des `signature`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="db60f-108">[in] The size of the `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="c95d0-109">[in] Die Typsignatur für die Konstante.</span><span class="sxs-lookup"><span data-stu-id="c95d0-109">[in] The type signature for the constant.</span></span>  
+ <span data-ttu-id="db60f-109">[in] The type signature for the constant.</span><span class="sxs-lookup"><span data-stu-id="db60f-109">[in] The type signature for the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c95d0-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c95d0-110">Return Value</span></span>  
- <span data-ttu-id="c95d0-111">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="c95d0-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="db60f-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="db60f-110">Return Value</span></span>  
+ <span data-ttu-id="db60f-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="db60f-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c95d0-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c95d0-112">Requirements</span></span>  
- <span data-ttu-id="c95d0-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c95d0-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db60f-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="db60f-112">Requirements</span></span>  
+ <span data-ttu-id="db60f-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="db60f-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c95d0-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c95d0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db60f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="db60f-114">See also</span></span>
 
-- [<span data-ttu-id="c95d0-115">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c95d0-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="c95d0-116">DefineConstant2-Methode</span><span class="sxs-lookup"><span data-stu-id="c95d0-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+- [<span data-ttu-id="db60f-115">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="db60f-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="db60f-116">DefineConstant2-Methode</span><span class="sxs-lookup"><span data-stu-id="db60f-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

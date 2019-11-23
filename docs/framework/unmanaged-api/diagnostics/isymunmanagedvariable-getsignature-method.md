@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abd4bb00f5c1e703740462f1709407616ac8a8e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778240"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446050"
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="94a70-102">ISymUnmanagedVariable::GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="94a70-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="94a70-103">Ruft die Signatur dieser Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="94a70-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="c3894-102">ISymUnmanagedVariable::GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="c3894-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="c3894-103">Gets the signature of this variable.</span><span class="sxs-lookup"><span data-stu-id="c3894-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94a70-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="94a70-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3894-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c3894-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -37,22 +35,22 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="94a70-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="94a70-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3894-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c3894-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="94a70-106">[in] Die Länge des Puffers verweist die `sig` Parameter.</span><span class="sxs-lookup"><span data-stu-id="94a70-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="c3894-106">[in] The length of the buffer pointed to by the `sig` parameter.</span><span class="sxs-lookup"><span data-stu-id="c3894-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="94a70-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Signatur enthalten, die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="94a70-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="c3894-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span><span class="sxs-lookup"><span data-stu-id="c3894-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="94a70-108">[out] Der Puffer, in dem die Signatur gespeichert.</span><span class="sxs-lookup"><span data-stu-id="94a70-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="c3894-108">[out] The buffer that stores the signature.</span><span class="sxs-lookup"><span data-stu-id="c3894-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="94a70-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="94a70-109">Return Value</span></span>  
- <span data-ttu-id="94a70-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="94a70-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c3894-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c3894-109">Return Value</span></span>  
+ <span data-ttu-id="c3894-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="c3894-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94a70-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="94a70-111">Requirements</span></span>  
- <span data-ttu-id="94a70-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="94a70-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3894-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c3894-111">Requirements</span></span>  
+ <span data-ttu-id="c3894-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c3894-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94a70-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="94a70-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3894-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3894-113">See also</span></span>
 
-- [<span data-ttu-id="94a70-114">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="94a70-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="c3894-114">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c3894-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

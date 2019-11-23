@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777309"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427960"
 ---
-# <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="ae2f5-102">ISymUnmanagedWriter::GetDebugInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="ae2f5-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
-<span data-ttu-id="ae2f5-103">Gibt Informationen zurück, das für ein Compiler das Debugverzeichniseintrag im portierbare ausführbare Datei (PE)-Header zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="ae2f5-104">Alle Felder mit Ausnahme von füllt der Symbolwriter `TimeDateStamp` und `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="ae2f5-105">(Der Compiler ist zuständig für das diese zwei Felder entsprechend festlegen.)</span><span class="sxs-lookup"><span data-stu-id="ae2f5-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  
+# <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="7321e-102">ISymUnmanagedWriter::GetDebugInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="7321e-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
+<span data-ttu-id="7321e-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span><span class="sxs-lookup"><span data-stu-id="7321e-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="7321e-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="7321e-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="7321e-105">(The compiler is responsible for setting these two fields appropriately.)</span><span class="sxs-lookup"><span data-stu-id="7321e-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  
   
- <span data-ttu-id="ae2f5-106">Ein Compiler sollte diese Methode aufrufen, der Daten-Blob in der PE-Datei ausgeben, Festlegen von der `PointerToRawData` Feld IMAGE_DEBUG_DIRECTORY zeigen Sie auf die ausgegebenen Daten und das IMAGE_DEBUG_DIRECTORY in der PE-Datei schreiben.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span></span> <span data-ttu-id="ae2f5-107">Der Compiler sollte ebenfalls festgelegt. die `TimeDateStamp` -Feld auf die `TimeDateStamp` der PE-Datei generiert wird.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span></span>  
+ <span data-ttu-id="7321e-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span><span class="sxs-lookup"><span data-stu-id="7321e-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span></span> <span data-ttu-id="7321e-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span><span class="sxs-lookup"><span data-stu-id="7321e-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae2f5-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="ae2f5-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7321e-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="7321e-108">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDebugInfo(  
@@ -40,25 +38,25 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ae2f5-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae2f5-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7321e-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="7321e-109">Parameters</span></span>  
  `pIDD`  
- <span data-ttu-id="ae2f5-110">[in, out] Ein Zeiger auf ein IMAGE_DEBUG_DIRECTORY, die der Symbolwriter ausgefüllt wird.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span></span>  
+ <span data-ttu-id="7321e-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span><span class="sxs-lookup"><span data-stu-id="7321e-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span></span>  
   
  `cData`  
- <span data-ttu-id="ae2f5-111">[in] Ein `DWORD` , die die Größe der Debug-Daten enthält.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-111">[in] A `DWORD` that contains the size of the debug data.</span></span>  
+ <span data-ttu-id="7321e-111">[in] A `DWORD` that contains the size of the debug data.</span><span class="sxs-lookup"><span data-stu-id="7321e-111">[in] A `DWORD` that contains the size of the debug data.</span></span>  
   
  `pcData`  
- <span data-ttu-id="ae2f5-112">[out] Ein Zeiger auf eine `DWORD` , empfängt die Größe des Puffers erforderlich, um die Debug-Daten enthalten.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span></span>  
+ <span data-ttu-id="7321e-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span><span class="sxs-lookup"><span data-stu-id="7321e-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span></span>  
   
  `data`  
- <span data-ttu-id="ae2f5-113">[out] Ein Zeiger auf einen Puffer, der groß genug zum Speichern der Debugdaten für den Symbolspeicher.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span></span>  
+ <span data-ttu-id="7321e-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span><span class="sxs-lookup"><span data-stu-id="7321e-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ae2f5-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ae2f5-114">Return Value</span></span>  
- <span data-ttu-id="ae2f5-115">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="ae2f5-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7321e-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7321e-114">Return Value</span></span>  
+ <span data-ttu-id="7321e-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="7321e-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae2f5-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ae2f5-116">Requirements</span></span>  
- <span data-ttu-id="ae2f5-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ae2f5-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7321e-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7321e-116">Requirements</span></span>  
+ <span data-ttu-id="7321e-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7321e-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae2f5-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ae2f5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7321e-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7321e-118">See also</span></span>
 
-- [<span data-ttu-id="ae2f5-119">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ae2f5-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="7321e-119">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7321e-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
