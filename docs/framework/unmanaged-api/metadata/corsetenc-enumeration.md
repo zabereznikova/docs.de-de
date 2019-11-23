@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772326"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432776"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC-Enumeration
 Enthält Werte, mit denen das Verhalten während der Generierung von Metadaten beeinflusst wird.  
@@ -50,15 +48,15 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Veraltet.|  
 |`MDSetENCOff`|Veraltet.|  
-|`MDUpdateENC`|Gibt an, dass die Metadaten aktualisiert werden kann, Token nicht verschoben werden können.|  
-|`MDUpdateFull`|Gibt an, dass das Token, die während eines Updates verschoben werden können.|  
-|`MDUpdateExtension`|Gibt an, dass Updates nur aus Hinzufügungen bestehen können. Token können nicht verschoben werden.|  
-|`MDUpdateIncremental`|Gibt an, dass die Kompilierung inkrementell ist.|  
-|`MDUpdateDelta`|Gibt an, dass nur geänderte Metadaten gespeichert werden soll.|  
-|`MDUpdateMask`|Enthält `MDUpdateENC`, `MDUpdateFull` und `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
+|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
+|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
+|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
+|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
+|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

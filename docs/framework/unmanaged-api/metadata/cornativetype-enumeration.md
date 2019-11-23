@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781708"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436511"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType-Enumeration
 Enthält Werte, die systemeigene, nicht verwaltete Typen beschreiben.  
@@ -93,54 +91,54 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Veraltet.|  
 |`NATIVE_TYPE_VOID`|Veraltet.|  
-|`NATIVE_TYPE_BOOLEAN`|Ein 4-Byte-boolescher Wert, wobei "true" nicht 0 (null) und "false" ist, wird 0 (null).|  
-|`NATIVE_TYPE_I1`|Eine 8-Bit-Ganzzahlwert mit Vorzeichen.|  
-|`NATIVE_TYPE_U1`|Eine 8-Bit-Ganzzahlwert ohne Vorzeichen.|  
-|`NATIVE_TYPE_I2`|Eine 16-Bit-Ganzzahlwert mit Vorzeichen.|  
-|`NATIVE_TYPE_U2`|Eine 16-Bit-Ganzzahlwert ohne Vorzeichen.|  
+|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
+|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
+|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
+|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
+|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
 |`NATIVE_TYPE_I4`|Ein 32-Bit-Ganzzahlwert mit Vorzeichen.|  
 |`NATIVE_TYPE_U4`|Ein 32-Bit-Ganzzahlwert ohne Vorzeichen.|  
-|`NATIVE_TYPE_I8`|Eine 64-Bit-Ganzzahlwert mit Vorzeichen.|  
-|`NATIVE_TYPE_U8`|Eine 64-Bit-Ganzzahlwert ohne Vorzeichen.|  
-|`NATIVE_TYPE_R4`|Ein 4-Byte-Gleitkommazahl numerischer Wert.|  
-|`NATIVE_TYPE_R8`|Eine 8-Byte-Gleitkommazahl numerischer Wert.|  
+|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
+|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
+|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
+|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
 |`NATIVE_TYPE_SYSCHAR`|Veraltet.|  
 |`NATIVE_TYPE_VARIANT`|Veraltet.|  
-|`NATIVE_TYPE_CURRENCY`|Ein numerischer COM-Typ, der die verwaltete entspricht <xref:System.Decimal> Typ.|  
+|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|Veraltet.|  
 |`NATIVE_TYPE_DECIMAL`|Veraltet.|  
 |`NATIVE_TYPE_DATE`|Veraltet.|  
-|`NATIVE_TYPE_BSTR`|COM-Interop.|  
-|`NATIVE_TYPE_LPSTR`|Ein Zeichenfolgenwert des LPSTR.|  
-|`NATIVE_TYPE_LPWSTR`|Ein Zeichenfolgenwert des LPWSTR.|  
-|`NATIVE_TYPE_LPTSTR`|Ein Zeichenfolgenwert des LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Ein fester, vom System definierten Zeichenfolgenwert.|  
+|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
+|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
+|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
 |`NATIVE_TYPE_OBJECTREF`|Veraltet.|  
-|`NATIVE_TYPE_IUNKNOWN`|COM-Interop.|  
-|`NATIVE_TYPE_IDISPATCH`|COM-Interop.|  
-|`NATIVE_TYPE_STRUCT`|Der Wert einer systemeigenen Struktur.|  
-|`NATIVE_TYPE_INTF`|COM-Interop.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM-Interop.|  
-|`NATIVE_TYPE_FIXEDARRAY`|Ein Array fester Länge-Wert.|  
-|`NATIVE_TYPE_INT`|Eine native 16-Bit-Ganzzahlwert mit Vorzeichen.|  
-|`NATIVE_TYPE_UINT`|Eine native 16-Bit-Ganzzahlwert ohne Vorzeichen.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|Veraltet.<br /><br /> Verwenden Sie NATIVE_TYPE_STRUCT.|  
-|`NATIVE_TYPE_BYVALSTR`|COM-Interop.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM-Interop.|  
-|`NATIVE_TYPE_TBSTR`|COM-Interop.<br /><br /> Wählen Sie BSTR oder ANSIBSTR, abhängig von der Plattform.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Ein boolescher 2-Byte-Wert, wobei "true" ist-1 und "false" ist 0 (null).|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
+|`NATIVE_TYPE_STRUCT`|A native structure value.|  
+|`NATIVE_TYPE_INTF`|COM Interop.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
+|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
+|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|Veraltet.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
 |`NATIVE_TYPE_FUNC`|Ein Funktionszeiger.|  
-|`NATIVE_TYPE_ASANY`|Ein Verweis auf einen beliebigen systemeigenen Typ.|  
-|`NATIVE_TYPE_ARRAY`|Ein Verweis auf ein Array mit Elementen eines nicht angegebenen Typs.|  
-|`NATIVE_TYPE_LPSTRUCT`|Eine ganze 32-Bit-Zeiger auf eine Struktur.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Ein systemeigener Typ des benutzerdefinierten Marshallers.<br /><br /> Dies muss eine Zeichenfolge im folgenden Format folgen: "Systemeigener Typ Name/0Name Marshaller type/0Optionaler Cookie/0" oder "{Native geben GUID} / 0Name Marshaller type/0Optionaler Cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM-Interop.<br /><br /> Ordnet diesen Typ mit ELEMENT_TYPE_I4 VT_HRESULT zugeordnet.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Ein systemeigenes `IInspectable` Typ.|  
-|`NATIVE_TYPE_HSTRING`|Ein systemeigenes `HString`.|  
-|`NATIVE_TYPE_MAX`|Ein ungültiger Wert.|  
+|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
+|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
+|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
+|`NATIVE_TYPE_MAX`|An invalid value.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

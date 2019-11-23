@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22af95ef4bd1fca0a8253faa6ce0e1c7a862054d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0cd2071d4410615a08e774ba30e0e8fe8d1fa7c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782658"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436177"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping-Methode
-Ruft den Arbeitsspeicherbereich von der zugeordneten Datei und den Typ der Zuordnung ab.  
+Gets the memory region of the mapped file, and the type of mapping.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,37 +37,37 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>Parameter  
  `ppvData`  
- [out] Ein Zeiger auf den Anfang der zugeordneten Datei.  
+ [out] A pointer to the start of the mapped file.  
   
  `pcbData`  
- [out] Die Größe des zugeordneten Bereichs. Wenn `pdwMappingType` ist `fmFlat`, dies ist die Größe der Datei.  
+ [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
   
  `pdwMappingType`  
- [out] Ein [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) Wert, der den Typ der Zuordnung angibt. Die aktuelle Implementierung der common Language Runtime (CLR) gibt immer `fmFlat`. Andere Werte sind für die zukünftige Verwendung reserviert. Allerdings sollten Sie den zurückgegebenen Wert, immer überprüfen, da andere Werte werden, in zukünftigen Versionen aktiviert können oder service Releases.  
+ [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|Alle Ausgaben werden aufgefüllt.|  
-|`E_INVALIDARG`|NULL wurde als Argumentwert übergeben.|  
-|`COR_E_NOTSUPPORTED`|Die CLR-Implementierung kann keine Informationen zu den Arbeitsspeicherbereich bieten. Dies kann aus den folgenden Gründen geschehen:<br /><br /> – Der Metadatenbereich wurde geöffnet, mit der `ofWrite` oder `ofCopyMemory` Flag.<br />-Der Metadatenbereich geöffnet wurde, ohne die `ofReadOnly` Flag.<br />– Die [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) Methode wurde verwendet, um nur die Metadatenteil der Datei zu öffnen.<br />-Die Datei ist keiner PE (portable Executable)-Datei. **Hinweis**:  Diese Bedingungen hängen von der CLR-Implementierung, und Sie werden wahrscheinlich in zukünftigen Versionen der CLR herabgesetzt werden.|  
+|`S_OK`|All outputs are filled.|  
+|`E_INVALIDARG`|NULL was passed as an argument value.|  
+|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Arbeitsspeicher, `ppvData` verweist, ist gültig, nur so lange im zugrunde liegenden Metadatenbereich geöffnet ist.  
+ The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
   
- In der Reihenfolge für diese Methode funktioniert, wenn Sie die Metadaten einer Datei auf dem Datenträger durch den Aufruf in den Arbeitsspeicher zuordnen die [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) -Methode, die Sie angeben müssen die `ofReadOnly` Flag und Sie müssen nicht angeben. die `ofWrite` oder `ofCopyMemory` Flag.  
+ In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
   
- Die Auswahl der Zuordnung der Dateityp für jeden Bereich bezieht sich auf eine Implementierung der CLR. Es kann nicht vom Benutzer festgelegt werden. Gibt die aktuelle Implementierung der CLR immer `fmFlat` in `pdwMappingType`, aber dies kann sich in zukünftigen Versionen der CLR oder in Zukunft Service Releases von einer bestimmten Version ändern. Sie sollten immer den zurückgegebenen Wert überprüfen, `pdwMappingType`, da verschiedene Typen unterschiedliche Layouts und Offsets haben.  
+ The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
   
- Übergeben NULL für eine beliebige der drei Parameter wird nicht unterstützt. Gibt die Methode zurück `E_INVALIDARG`, und keine Ausgabe wird ausgefüllt. Ignorieren den Zuordnungstyp oder die Größe des Bereichs kann dazu führen, dass nicht normale programmbeendigung.  
+ Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

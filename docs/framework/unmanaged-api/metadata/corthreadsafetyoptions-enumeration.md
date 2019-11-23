@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045226"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442465"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions-Enumeration
 
@@ -41,13 +39,13 @@ typedef enum CorThreadSafetyOptions {
 
 |Member|Beschreibung|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Der Standardwert. Wie in `MDThreadSafetyOff`.|
-|`MDThreadSafetyOff`|Gibt an, dass eine Reader-/Writer-Sperre kann nicht festgelegt werden.|
-|`MDThreadSafetyOn`|Gibt an, dass eine Reader-/Writer-Sperre festgelegt werden kann.|
+|`MDThreadSafetyDefault`|Default value. Wie in `MDThreadSafetyOff`.|
+|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
+|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorHdr.h
 

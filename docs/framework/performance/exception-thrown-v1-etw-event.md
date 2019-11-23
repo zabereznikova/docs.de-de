@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91abd9e6f31380b7e8cd3df1a14aa5c5722901ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3f0e968053c87319bf90bf3de0f21d750ec899ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046513"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447632"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>ExceptionThrown_V1-ETW-Ereignis
 Dieses Ereignis erfasst Informationen über die ausgelösten Ausnahmen.  
@@ -29,15 +29,15 @@ Dieses Ereignis erfasst Informationen über die ausgelösten Ausnahmen.
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Eine verwaltete Ausnahme wird ausgelöst.|  
   
- In der folgenden Tabelle finden Sie die Ereignisdaten.  
+ Die folgende Tabelle zeigt die Ereignisdaten an.  
   
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
 |Ausnahmetyp|win:UnicodeString|Typ der Ausnahme, z.B. `System.NullReferenceException`.|  
 |Ausnahmemeldung|win:UnicodeString|Tatsächliche Ausnahmemeldung.|  
 |EIPCodeThrow|win:Pointer|Anweisungszeiger an der Stelle, an der die Ausnahme aufgetreten ist.|  
-|ExceptionHR|win:UInt32|Ausnahme [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|win:UInt16|0x01 Hasinnerexception (siehe [CLR-ETW-Ereignisse](clr-etw-events.md) in der Visual Basic-Dokumentation).<br /><br /> 0x02 IsNestedException.<br /><br /> 0x04 Isrethrownexception.<br /><br /> 0x08 Isbeschätedstateexception (gibt an, dass der Prozessstatus beschädigt ist; weitere Informationen finden Sie unter [Behandlung von beschädigten Zustands Ausnahmen](https://go.microsoft.com/fwlink/?LinkId=179681) auf MSDN).<br /><br /> 0x10 Isclscompliance (eine Ausnahme, die von <xref:System.Exception> abgeleitet ist, ist CLS-kompatibel, andernfalls ist Sie nicht CLS-kompatibel).|  
+|ExceptionHR|win:UInt32|Ausnahme [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (siehe [CLR ETW Events (CLR-ETW-Ereignisse)](clr-etw-events.md) in der Visual Basic-Dokumentation).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant (eine Ausnahme, die von <xref:System.Exception> ableitet, ob eine CLS-Kompatibilität vorliegt, andernfalls ist sie nicht CLS-kompatibel).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ## <a name="see-also"></a>Siehe auch

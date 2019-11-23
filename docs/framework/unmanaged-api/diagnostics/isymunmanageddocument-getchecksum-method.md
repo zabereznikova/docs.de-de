@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776764"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449204"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum-Methode
 Ruft die Prüfsumme ab.  
@@ -38,16 +36,16 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parameter  
  `cData`  
- [in] Die Länge des Puffers bereitgestellt. durch die `data` Parameter  
+ [in] The length of the buffer provided by the `data` parameter  
   
  `pcData`  
- [out] Die Größe und die Länge der Prüfsumme in Bytes.  
+ [out] The size and length of the checksum, in bytes.  
   
  `data`  
- [out] Der Puffer, der die Prüfsumme empfängt.  
+ [out] The buffer that receives the checksum.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>Siehe auch
 

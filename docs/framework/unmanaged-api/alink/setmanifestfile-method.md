@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b33de4c-19cb-4a36-a93f-8675b2a36d58
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df97f4c37d8f335ce183685debd7c0933be910ed
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787210"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445559"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile-Methode
-Ermöglicht es Ihnen, die Manifest-Datei anzugeben oder zurückzusetzen, die der Linker beim Erstellen der Assembly verwendet.  
+Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +35,16 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parameter  
  `pszFile`  
   
- Der Name der Manifest-Datei, deren Inhalt in das Win32-Ressourcen-BLOB eingefügt wird.  
+ The name of the manifest file whose contents are put into the Win32 resources blob.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="remarks"></a>Hinweise  
- Nennen Sie dies, bevor Sie die Win32ResBlob anfordern. Der Wert des `pszFile` -Parameters ist der Name der Manifest-Datei, deren Inhalt in den Win32-Ressourcen mit der ID RT_MANIFEST gelesen und abgelegt wird. Wenn Sie mit einem Parameter von NULL aufgerufen wird, werden alle zuvor gelesenen Manifeste gelöscht. Dadurch kann der Zustand des Linker auf den Zeitpunkt der Initialisierung zurückgesetzt werden.  
+ Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert "Alink. h"  
+ Requires aLink.h  
   
 ## <a name="see-also"></a>Siehe auch
 

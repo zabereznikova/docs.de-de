@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer Mehrfachdateiassembly'
+title: 'How to: Build a multifile assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119941"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429565"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Gewusst wie: Erstellen einer Mehrfachdateiassembly
+# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
 
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.
 
@@ -72,8 +72,6 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
 
    ```vb
    ' Assembly building example in the .NET Framework.
-   Imports System
-
    Namespace myStringer
        Public Class Stringer
            Public Sub StringerMethod()
@@ -144,7 +142,6 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
    ```
 
    ```vb
-   Imports System
    Imports myStringer
 
    Class MainClientApp
@@ -227,6 +224,6 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Assemblys](../../standard/assembly/create.md)
-- [Vorgehensweise: Anzeigen des assemblyinhalts](../../standard/assembly/view-contents.md)
+- [How to: View assembly contents](../../standard/assembly/view-contents.md)
 - [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Mehrfachdateiassemblys](multifile-assemblies.md)

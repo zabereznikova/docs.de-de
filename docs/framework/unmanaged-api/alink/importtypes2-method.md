@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445663"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2-Methode
-Initiiert den Import von-Typen. Mit dieser Methode können Sie beginnen, Typen aus jedem Bereich zu importieren, der über die [ImportFile-Methode](importfile-method.md)importiert wird  
+Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der Assembly, in die importiert werden soll.  
+ ID of assembly into which to import.  
   
  `FileToken`  
- Die ID der Datei, aus der importiert werden soll.  
+ ID of file to from which to import.  
   
  `dwScope`  
- NULL basierter Bereich, aus dem importiert werden soll.  
+ Zero-based scope from which to import.  
   
  `phEnum`  
- Empfängt das Enumeratorhandle für die Typen im angegebenen Bereich.  
+ Receives enumerator handle for the types in the given scope.  
   
  `ppImportScope`  
- Empfängt optional die [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) -Schnittstelle.  
+ Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
   
  `pdwCountOfTypes`  
- Empfängt optional die Anzahl der Typen im angegebenen Bereich.  
+ Optionally receives count of types in the specified scope.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert "Alink. h"  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Siehe auch
 

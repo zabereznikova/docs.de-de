@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f5a736d80f36afb8d0a643d4a4e36c9abff01995
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781567"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445427"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob-Methode
-Ruft einen Zeiger auf das binary large Object (BLOB) am Index angegebene Spalte ab.  
+Gets a pointer to the binary large object (BLOB) at the specified column index.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +37,20 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>Parameter  
  `ixBlob`  
- [in] Die Speicheradresse, von dem abzurufenden `ppData`.  
+ [in] The memory address from which to get `ppData`.  
   
  `pcbData`  
- [out] Ein Zeiger auf die Größe in Bytes, des `ppData`.  
+ [out] A pointer to the size, in bytes, of `ppData`.  
   
  `ppData`  
- [out] Ein Zeiger auf einen Zeiger auf die binären Daten abgerufen werden.  
+ [out] A pointer to a pointer to the binary data retrieved.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

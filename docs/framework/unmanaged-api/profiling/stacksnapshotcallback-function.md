@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6140ecda1d12c26e1936daee4eaad11cbd9b6ba4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c0cec9eb7bb8bbc94b255152a9b4d79108bdd1b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781222"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427077"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback-Funktion
-Stellt Informationen über jeden verwalteten Frame und die Ausführung von nicht verwalteten Frames im Stapel während eines Stackwalks, der von initiiert wird der Profiler die [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode.  
+Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,32 +39,32 @@ HRESULT __stdcall StackSnapshotCallback (
   
 ## <a name="parameters"></a>Parameter  
  `funcId`  
- [in] Dieser Wert 0 (null) ist, ist dieser Rückruf für eine Ausführung von nicht verwalteten Frames; Andernfalls ist der Bezeichner einer verwalteten Funktion aus, und dieser Rückruf ist für einen verwalteten Frame.  
+ [in] If this value is zero, this callback is for a run of unmanaged frames; otherwise, it is the identifier of a managed function and this callback is for a managed frame.  
   
  `ip`  
- [in] Der Wert des Anweisungszeigers systemeigenem Code im Frame.  
+ [in] The value of the native code instruction pointer in the frame.  
   
  `frameInfo`  
- [in] Ein `COR_PRF_FRAME_INFO` -Wert, der Informationen über den Stapelrahmen verweist. Dieser Wert ist nur während dieses Rückrufs für die Verwendung gültig.  
+ [in] A `COR_PRF_FRAME_INFO` value that references information about the stack frame. This value is valid for use only during this callback.  
   
  `contextSize`  
- [in] Die Größe des der `CONTEXT` -Struktur, die verweist die `context` Parameter.  
+ [in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.  
   
  `context`  
- [in] Ein Zeiger auf eine Win32- `CONTEXT` -Struktur, die den Zustand der CPU für diesen Frame darstellt.  
+ [in] A pointer to a Win32 `CONTEXT` structure that represents the state of the CPU for this frame.  
   
- Die `context` Parameter ist nur gültig, wenn das Flag COR_PRF_SNAPSHOT_CONTEXT übergebene `ICorProfilerInfo2::DoStackSnapshot`.  
+ The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in `ICorProfilerInfo2::DoStackSnapshot`.  
   
  `clientData`  
- [in] Ein Zeiger auf die Clientdaten, das direkt vom übergeben wird `ICorProfilerInfo2::DoStackSnapshot`.  
+ [in] A pointer to the client data, which is passed straight through from `ICorProfilerInfo2::DoStackSnapshot`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `StackSnapshotCallback` Funktion wird von der Profilerwriter implementiert. Sie müssen die Komplexität der Arbeit in begrenzen `StackSnapshotCallback`. Beispielsweise wird bei Verwendung `ICorProfilerInfo2::DoStackSnapshot` auf asynchrone Weise, der Zielthread belegt sperren. Wenn code in `StackSnapshotCallback` erfordert die Sperren, kann ein Deadlock zur Folge haben.  
+ The `StackSnapshotCallback` function is implemented by the profiler writer. You must limit the complexity of work done in `StackSnapshotCallback`. For example, when using `ICorProfilerInfo2::DoStackSnapshot` in an asynchronous manner, the target thread may be holding locks. If code within `StackSnapshotCallback` requires the same locks, a deadlock could ensue.  
   
- Die `ICorProfilerInfo2::DoStackSnapshot` Methodenaufrufe der `StackSnapshotCallback` Funktion einmal pro verwalteten Frame oder einmal pro Ausführung nicht verwalteter Frames. Wenn `StackSnapshotCallback` wird aufgerufen, für eine Ausführung von nicht verwalteten Frames, kann der Profiler den Registerkontext verwenden (Verweis durch die `context` Parameter), einen eigenen nicht verwalteten Stapeldurchlauf durchführen. In diesem Fall die Win32 `CONTEXT` Struktur darstellt, die CPU-Status für den zuletzt abgelegte Frame in der Ausführung von nicht verwalteten Frames. Obwohl die Win32 `CONTEXT` Struktur enthält Werte für alle Register, sollten Sie eine verlassen nur auf die Werte der Stapelzeigerregister, Framezeigerregister, Anweisungszeigerregister und die permanenten (der beibehalten wird) Ganzzahl-Register.  
+ The `ICorProfilerInfo2::DoStackSnapshot` method calls the `StackSnapshotCallback` function once per managed frame or once per run of unmanaged frames. If `StackSnapshotCallback` is called for a run of unmanaged frames, the profiler may use the register context (referenced by the `context` parameter) to perform its own unmanaged stack walk. In this case, the Win32 `CONTEXT` structure represents the CPU state for the most recently pushed frame within the run of unmanaged frames. Although the Win32 `CONTEXT` structure includes values for all registers, you should rely only on the values of the stack pointer register, frame pointer register, instruction pointer register, and the nonvolatile (that is, preserved) integer registers.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e91d990a8f23335248043c59eb210e8c4155e3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776947"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445629"
 ---
 # <a name="linkresource-method"></a>LinkResource-Methode
-Verknüpfungen in einer Ressource.  
+Links in a resource.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,25 +38,25 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der Assembly.  
+ ID of the assembly.  
   
  `pszFileName`  
  Der Name der Datei.  
   
  `pszNewLocation`  
- Optionaler neuer Dateiname. Wenn der Wert ungleich NULL `pszFileName` ist, wird in pszNewLocation kopiert.  
+ Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
   
  `pszResourceName`  
  Name der Ressource.  
   
  `dwFlags`  
- Barrierefreiheits Flags wie `mrPublic` und `mrPrivate`. Dieser Parameter kann an die [DefineManifestResource-Methode](../metadata/imetadataassemblyemit-definemanifestresource-method.md)übergeben werden.  
+ Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert Alink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Siehe auch
 

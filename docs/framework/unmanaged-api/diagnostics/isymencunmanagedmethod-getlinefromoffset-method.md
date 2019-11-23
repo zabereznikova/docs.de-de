@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776883"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448641"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset-Methode
-Ruft die Zeileninformationen, die ein Offset zugeordnet. Wenn der Offsetparameter (`dwOffset`) ein Sequenzpunkt ist diese Methode ruft die Zeileninformationen ab dem Offset des vorherigen zugeordnet.  
+Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,25 +39,25 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parameter  
  `dwOffset`  
- [in] Ein `ULONG32` , der den Offset enthält.  
+ [in] A `ULONG32` that contains the offset.  
   
  `pline`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Zeile.  
+ [out] A pointer to a `ULONG32` that receives the line.  
   
  `pcolumn`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Spalte.  
+ [out] A pointer to a `ULONG32` that receives the column.  
   
  `pendLine`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Zeile.  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
  `pendColumn`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Spalte.  
+ [out] A pointer to a `ULONG32` that receives the end column.  
   
  `pdwStartOffset`  
- [out] Ein Zeiger auf eine `ULONG32` , das den zugeordneten Sequenzpunkt empfängt.  
+ [out] A pointer to a `ULONG32` that receives the associated sequence point.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777441"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446510"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute-Methode
-Aufgerufen, um benutzerdefinierte Attribute auf Assemblyebene festzulegen.  
+Call to set assembly-level custom attributes.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der Assembly.  
+ ID of the assembly.  
   
  `FileToken`  
- Die Datei, die das Attribut deaktiviert. Kann NULL sein, `AssemblyID` wenn kein ungebundenes NetModule angibt.  
+ File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `tkType`  
- Der Typ des benutzerdefinierten Attributs.  
+ Type of the custom attribute.  
   
  `pCustomValue`  
- Benutzerdefinierte Wertdaten.  
+ Custom value data.  
   
  `cbCustomValue`  
- Länge von benutzerdefinierten Wertdaten.  
+ Length of custom value data.  
   
  `bSecurity`  
- TRUE, wenn das benutzerdefinierte Attribut mit der Assemblysignatur verknüpft ist.  
+ TRUE if the custom attribute is related to assembly signing.  
   
  `bAllowMulti`  
- TRUE, wenn mehrere Attribute ausgegeben werden sollen.  
+ TRUE if multiple attributes are to be emitted.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert "Alink. h"  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Siehe auch
 

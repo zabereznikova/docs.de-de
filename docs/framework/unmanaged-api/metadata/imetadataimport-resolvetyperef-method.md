@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 800b15bb75e74898cee9d838900ea14b60620940
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951878"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431470"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef-Methode
-Löst einen <xref:System.Type> Verweis auf, der durch das angegebene TypeRef-Token dargestellt wird.  
+Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,32 +38,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parameter  
  `tr`  
- in Das TypeRef-Metadatentoken zum Zurückgeben der referenzierten Typinformationen für.  
+ [in] The TypeRef metadata token to return the referenced type information for.  
   
  `riid`  
- in Die IID der Schnittstelle, die in `ppIScope`zurückgegeben werden soll. Normalerweise ist dies IID_IMetaDataImport.  
+ [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
   
  `ppIScope`  
- vorgenommen Eine Schnittstelle zum Modul Bereich, in dem der referenzierte Typ definiert ist.  
+ [out] An interface to the module scope in which the referenced type is defined.  
   
  `ptd`  
- vorgenommen Ein Zeiger auf ein TypeDef-Token, das den referenzierten Typ darstellt.  
+ [out] A pointer to a TypeDef token that represents the referenced type.  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]
-> Verwenden Sie diese Methode nicht, wenn mehrere Anwendungs Domänen geladen werden. Die-Methode respektiert Anwendungs Domänen Grenzen nicht. Wenn mehrere Versionen einer Assembly geladen werden und der gleiche Typ mit demselben Namespace enthalten ist, gibt die Methode den Modul Bereich des ersten gefundenen Typs zurück.  
+> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
   
- Die `ResolveTypeRef` -Methode sucht in anderen Modulen nach der Typdefinition. Wenn die Typdefinition gefunden wird, `ResolveTypeRef` gibt eine Schnittstelle zu diesem Modul Bereich und das TypeDef-Token für den Typ zurück.  
+ The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
   
- Wenn der zu lösende Typverweis einen Auflösungs Bereich von AssemblyRef hat, sucht `ResolveTypeRef` die Methode nur nach einer Entsprechung in den Metadatenbereichen, die bereits mit Aufrufen der [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) -Methode geöffnet wurden, oder der [ IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) -Methode. Dies liegt daran `ResolveTypeRef` , dass von nur der AssemblyRef-Bereich bestimmt werden kann, in dem die Assembly auf der Festplatte oder im globalen Assemblycache gespeichert ist.  
+ If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Header:** Cor.h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777296"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427987"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints-Methode
-Definiert eine Gruppe von Sequenzpunkten in der aktuellen Methode. Jede Startzeile und die Anfangsspalte definieren den Start einer Anweisung innerhalb einer Methode. Jede Zeile endet und die Endspalte definieren eine Anweisung innerhalb einer Methode. Die Arrays sollten in aufsteigender Reihenfolge der Offsets sortiert werden. Der Offset wird immer vom Anfang der Methode, in Byte gemessen.  
+Definiert eine Gruppe von Sequenzpunkten in der aktuellen Methode. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,28 +40,28 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Parameter  
  `document`  
- [in] Das Document-Objekt, das für das Sequenzpunkte definiert werden.  
+ [in] The document object for which the sequence points are being defined.  
   
  `spCount`  
- [in] Ein `ULONG32` , der angibt, dass der Größe der einzelnen der `offsets`, `lines`, `columns`, `endLines`, und `endColumns` Puffer.  
+ [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
   
  `offsets`  
- [in] Der Offset der Sequenzpunkte gemessen vom Anfang der Methode.  
+ [in] The offset of the sequence points measured from the beginning of the method.  
   
  `lines`  
- [in] Die Anfangszeile Zahlen der Sequenzpunkte.  
+ [in] The starting line numbers of the sequence points.  
   
  `columns`  
- [in] Die die Nummern der Anfangsspalten der Sequenzpunkte.  
+ [in] The starting column numbers of the sequence points.  
   
  `endLines`  
- [in] Die Nummern der Endzeilen der Sequenzpunkte. Dieser Parameter ist optional.  
+ [in] The ending line numbers of the sequence points. Dieser Parameter ist optional.  
   
  `endColumns`  
- [in] Die Nummern der Endspalten der Sequenzpunkte. Dieser Parameter ist optional.  
+ [in] The ending column numbers of the sequence points. Dieser Parameter ist optional.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750720"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436430"
 ---
 # <a name="cvstruct-structure"></a>CVStruct-Struktur
 Enthält Informationen, die bei der Installation eines Moduls oder eines zusammengesetzten Abbilds verwendet werden.  
@@ -41,17 +39,17 @@ typedef struct {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|Hauptversion|Buildnummer der Hauptversion.|  
-|Gering|Nummer der Nebenversion erstellen.|  
-|Sub|Sub-Buildnummer.|  
-|Build|Build-Nummer.|  
+|Major|Major version build number.|  
+|Minor|Minor version build number.|  
+|Sub|Sub-build number.|  
+|Build|Build number.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

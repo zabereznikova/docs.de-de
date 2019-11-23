@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 753c3b38187dd69593dcb0520acef9ce4b137039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40efe81f72a2043503bf521e3e47dad1a7f4530c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751896"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448455"
 ---
-# <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE-Enumeration
-Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt. Diese Werte können kombiniert werden, die bitweise OR-Operation verwenden, um anzugeben, dass das Feld mehrere verschiedene statische Eigenschaften.  
+# <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE-Enumeration
+Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt. These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,14 +40,14 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|Das Feld ist nicht statisch.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Das Feld ist die Anwendung statischen Domäne.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|Das Feld ist threadstatischen.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|Das Feld ist kontextstatische.|  
-|`COR_PRF_FIELD_RVA_STATIC`|Das Feld ist die relative virtuelle Adresse (RVA) – statisch.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
+|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

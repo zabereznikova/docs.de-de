@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777207"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447206"
 ---
 # <a name="getscope-method"></a>GetScope-Methode
-Ruft einen Import Bereich ab.  
+Gets an import scope.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Eindeutige ID der Assembly, in die importiert werden soll.  
+ Unique ID of assembly to import to.  
   
  `FileToken`  
- Eindeutige ID der Datei, aus der importiert werden soll.  
+ Unique ID of the file to import from.  
   
  `dwScope`  
- NULL basierter Gültigkeitsbereich, der importiert werden soll.  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- Empfängt die [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) -Schnittstelle für den Bereich.  
+ Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert "Alink. h"  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Siehe auch
 

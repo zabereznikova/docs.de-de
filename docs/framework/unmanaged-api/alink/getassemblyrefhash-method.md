@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777194"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433872"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash-Methode
-Ruft ein hashblob für eine angegebene Assembly ab.  
+Retrieves a hash blob for a given assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parameter  
  `FileToken`  
- Die ID der Assembly, auf die der Hash verweist.  
+ ID of assembly to which the hash will refer.  
   
  `ppvHash`  
- Empfängt das resultierende hashblob.  
+ Receives the resulting hash blob.  
   
  `pcbHash`  
- Empfängt die Größe des hashblobs in Byte.  
+ Receives size, in bytes, of hash blob.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert "Alink. h"  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Siehe auch
 

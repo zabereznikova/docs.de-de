@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8ac12d5b6bc2911e3bd879285a9a12f65c426f0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd362beb9f8fd7a1f2076eb6490a96c0358520e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745859"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432151"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map-Methode
-Ordnet eine Beziehung zwischen den Signaturen von Metadaten mit Assemblys.  
+Maps a relationship between the assemblies using metadata signatures.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +36,20 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parameter  
  `tkImp`  
- [in] Das Metadatentoken, das das importierte Codeobjekt darstellt.  
+ [in] The metadata token that represents the imported code object.  
   
  `tkEmit`  
- [in] Das Metadatentoken, das ausgegebene Code darstellt.  
+ [in] The metadata token that represents the emitted code object.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn das token neu zuordnen während eines Merge auftritt, bezieht sich das ursprüngliche Token im Metadatenbereich importiert (Quelle) und das neue Token im Metadatenbereich ausgegeben (Ziel) ausgerichtet ist.  
+ When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afc2192fe46ed75ed6fb75e0d58268152856b746
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770782"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434318"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig-Methode
-Ruft ein Token für die angegebenen Metadaten-Signatur ab.  
+Gets a token for the specified metadata signature.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +37,20 @@ HRESULT GetTokenFromSig (
   
 ## <a name="parameters"></a>Parameter  
  `pvSig`  
- [in] Die Signatur, die beibehalten und gespeichert werden.  
+ [in] The signature to be persisted and stored.  
   
  `cbSig`  
- [in] Die Anzahl der Bytes im `pvSig`.  
+ [in] The count of bytes in `pvSig`.  
   
  `pmsig`  
- [out] Die `mdSignature` zugewiesene Token.  
+ [out] The `mdSignature` token assigned.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

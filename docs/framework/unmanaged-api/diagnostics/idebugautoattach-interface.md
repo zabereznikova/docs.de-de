@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64e9d5e4bf43c8dac39850dafcd58a547191fc99
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445511"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach-Schnittstelle
-Definiert die Schnittstelle an, für AutoAttach-Debuggers.  
+Defines the interface for server-invoked debugger auto attach.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[AutoAttach-Methode](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|AutoAttach Debuggers führt anfügen.|  
+|[AutoAttach-Methode](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** DbgAutoAttach.idl  

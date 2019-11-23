@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bfdc9d58a86bb4cf945f0c8106bcfc00f3743e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760313"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448658"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset-Methode
-Ruft den Dateinamen für die Zeile, die ein Offset zugeordnet.  
+Gets the file name for the line associated with an offset.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +38,19 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parameter  
  `dwOffset`  
- [in] Ein `ULONG32` , der den Offset enthält.  
+ [in] A `ULONG32` that contains the offset.  
   
  `cchName`  
- [in] Ein `ULONG32` , der angibt, dass der Größe des der `szName` Puffer.  
+ [in] A `ULONG32` that indicates the size of the `szName` buffer.  
   
  `pcchName`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe in Zeichen des Puffers erforderlich, um die Dateinamen enthalten.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
   
  `szName`  
- [out] Der Puffer, der die Dateinamen enthält.  
+ [out] The buffer that contains the file names.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

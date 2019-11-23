@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c87f2212c761dc31a75addabca6970c5497aa2a0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782426"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437585"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps-Methode
-Ruft Metadateninformationen für das Ereignis durch, einschließlich der deklarierende Typ, hinzufügen und Entfernungsmethoden für Delegaten, und alle Flags und sonstigen zugeordneten Daten das angegebene Ereignistoken dargestellt wird.  
+Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parameter  
  `ev`  
- [in] Das Ereignis-Metadatentoken, das das Ereignis, das Abrufen von Metadaten für darstellt.  
+ [in] The event metadata token representing the event to get metadata for.  
   
  `pClass`  
- [out] Ein Zeiger auf das TypeDef-Token, die die Klasse darstellt, die das Ereignis deklariert.  
+ [out] A pointer to the TypeDef token representing the class that declares the event.  
   
  `szEvent`  
- [out] Der Name des Ereignisses verweist `ev`.  
+ [out] The name of the event referenced by `ev`.  
   
  `pchEvent`  
- [in] Die angeforderte Länge in Breitzeichen `szEvent`.  
+ [in] The requested length in wide characters of `szEvent`.  
   
  `pdwEventFlags`  
- [out] Die zurückgegebene Länge in Breitzeichen `szEvent`.  
+ [out] The returned length in wide characters of `szEvent`.  
   
  `ptkEventType`  
- [out] Ein Zeiger auf ein TypeRef oder TypeDef Metadaten token, die <xref:System.Delegate> der Ereignistyp.  
+ [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
   
  `pmdAddOn`  
- [out] Ein Zeiger auf das Metadatentoken, das die Methode, die fügt Handler für das Ereignis darstellt.  
+ [out] A pointer to the metadata token representing the method that adds handlers for the event.  
   
  `pmdRemoveOn`  
- [out] Ein Zeiger auf das Metadatentoken, das die Methode, die Handler für das Ereignis entfernt darstellt.  
+ [out] A pointer to the metadata token representing the method that removes handlers for the event.  
   
  `pmdFire`  
- [out] Ein Zeiger auf das Metadatentoken, das die Methode, die das Ereignis auslöst darstellt.  
+ [out] A pointer to the metadata token representing the method that raises the event.  
   
  `rmdOtherMethod`  
- [out] Ein Array von Sicherheitstoken Verweise auf andere Methoden, die dem Ereignis zugeordnet werden soll.  
+ [out] An array of token pointers to other methods associated with the event.  
   
  `cMax`  
  [in] Die maximale Größe des `rmdOtherMethod`-Arrays.  
   
  `pcOtherMethod`  
- [out] Die Anzahl der in zurückgegebenen Token `rmdOtherMethod`.  
+ [out] The number of tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

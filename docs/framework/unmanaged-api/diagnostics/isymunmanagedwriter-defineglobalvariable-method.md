@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5bc14c36563badb73ac9f9d955ea0c00f5330b4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777358"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428022"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable-Methode
-Definiert eine einzelne globale Variable.  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +41,31 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- [in] Ein Zeiger auf eine `WCHAR` , der Name den globalen Variablen definiert.  
+ [in] A pointer to a `WCHAR` that defines the global variable name.  
   
  `attributes`  
- [in] Der globalen Variablenattribute.  
+ [in] The global variable attributes.  
   
  `cSig`  
- [in] Ein `ULONG32` , die Größe in Zeichen angibt, der die `signature` Puffer.  
+ [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
   
  `signature`  
- [in] Die Signatur der globalen Variablen.  
+ [in] The global variable signature.  
   
  `addrKind`  
- [in] Der Adresstyp.  
+ [in] The address type.  
   
  `addr1`  
- [in] Die erste Adresse für die Parameterangabe.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Die zweite Adresse für die Parameterangabe.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Die dritte Adresse für die Parameterangabe.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

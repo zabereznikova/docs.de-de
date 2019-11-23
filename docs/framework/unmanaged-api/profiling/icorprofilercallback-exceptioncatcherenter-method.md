@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a90ae67a7d264273bd0e07a42aa6195122a06ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c9cd0b042dc22f35c38e349ab8881dafc602731
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776140"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445015"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter-Methode
-Benachrichtigt den Profiler, das Steuerelement an den entsprechenden übergebenen `catch` Block.  
+Notifies the profiler that control is being passed to the appropriate `catch` block.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +35,20 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>Parameter  
  `functionId`  
- [in] Der Bezeichner der Funktion mit dem `catch` Block.  
+ [in] The identifier of the function containing the `catch` block.  
   
  `objectId`  
- [in] Der Bezeichner der Ausnahme behandelt wird.  
+ [in] The identifier of the exception being handled.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ExceptionCatcherEnter` Methode wird aufgerufen, nur dann, wenn der Catch-Punkt im Code, der mit dem Compiler just-in-Time (JIT) kompiliert ist. Kein Aufruf eine Ausnahme, die in nicht verwaltetem Code oder in den internen Code der Laufzeit abgefangen wird diese Benachrichtigung. Die `objectId` erneut Wert übergeben wird, da eine Garbagecollection verschoben wurden, das Objekt seit konnte die `ExceptionThrown` Benachrichtigung.  
+ The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
   
- Der Profiler sollte die Implementierung dieser Methode nicht blockieren, da der Stapel nicht in einem Zustand handeln, der Garbagecollection zulässt, und daher die Präemptive Garbagecollection kann nicht aktiviert werden kann. Wenn der Profiler hier blockiert und Garbagecollection wird versucht, die Laufzeit blockiert, bis dieser Rückruf zurückgegeben.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Der Profiler Implementierung dieser Methode sollte nicht in verwaltetem Code oder in einer verwalteten Speicher reservieren aufrufen.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

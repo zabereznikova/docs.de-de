@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777841"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428057"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument-Methode
-Definiert ein Quelldokument. GUIDs werden für bekannte Sprachen, Lieferanten und Dokumenttypen bereitgestellt.  
+Definiert ein Quelldokument. GUIDs are provided for known languages, vendors, and document types.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +38,22 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parameter  
  `url`  
- [in] Ein Zeiger auf eine `WCHAR` , definiert den uniform Resource Locator (URL), die das Dokument kennzeichnet.  
+ [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
   
  `language`  
- [in] Ein Zeiger auf eine GUID, die Sprache des Dokuments definiert.  
+ [in] A pointer to a GUID that defines the document language.  
   
  `languageVendor`  
- [in] Ein Zeiger auf eine GUID, die Identität des Herstellers für die Sprache des Dokuments definiert.  
+ [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
   
  `documentType`  
- [in] Ein Zeiger auf eine GUID, die den Typ des Dokuments definiert.  
+ [in] A pointer to a GUID that defines the type of the document.  
   
  `pRetVal`  
- [out] Ein Zeiger auf das zurückgegebene [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) Schnittstelle.  
+ [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
