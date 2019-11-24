@@ -3,12 +3,12 @@ title: Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 description: Informieren Sie sich über allgemeine Probleme beim Ausführen von .NET Core-Tools sowie über mögliche Lösungen.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318288"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282502"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 
@@ -25,7 +25,7 @@ Wenn die Ausführung eines .NET Core-Tools fehlschlägt, ist sehr wahrscheinlich
 
 Wenn die ausführbare Datei nicht gefunden wird, wird eine Meldung angezeigt, die in etwa wie folgt lautet:
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -101,7 +101,7 @@ Wenn Sie das .NET Core SDK an einem nicht standardmäßigen Speicherort installi
 
 Es gibt verschiedene Gründe, warum bei der Installation eines globalen oder lokalen .NET Core-Tools möglicherweise ein Fehler auftritt. Wenn bei der Installation eines Tools ein Fehler auftritt, wird eine Meldung angezeigt, die in etwa wie folgt lautet:
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.

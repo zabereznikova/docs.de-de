@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 97902bbfb035d3403d3e7236a0c67fa60d7d9d94
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4776916c316e18de954c8ccaa985075dc2ea0fc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428734"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 
@@ -47,8 +47,6 @@ dotnet new classlib -lang VB
 Benennen Sie *Class1.VB* in *PrimeService.VB* um. Sie erstellen eine fehlerhafte Implementierung der `PrimeService`-Klasse:
 
 ```vb
-Imports System
-
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
