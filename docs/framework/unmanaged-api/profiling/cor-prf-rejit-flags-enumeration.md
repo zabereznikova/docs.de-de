@@ -15,17 +15,17 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c616cb45eadab3a55aa76526d530cb2841e6d5fa
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 66933b3778807b40f1d39d8b4c565c334328812f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450402"
 ---
-# <a name="cor_prf_rejit_flags-enumeration"></a><span data-ttu-id="981d3-102">COR_PRF_REJIT_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="981d3-102">COR_PRF_REJIT_FLAGS Enumeration</span></span>
-<span data-ttu-id="981d3-103">Enthält Werte, die angeben, wie sich die [ICorProfilerInfo10:: requestrejitwithinliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) -API Verhalten soll.</span><span class="sxs-lookup"><span data-stu-id="981d3-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span></span>  
+# <a name="cor_prf_rejit_flags-enumeration"></a><span data-ttu-id="07064-102">COR_PRF_REJIT_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="07064-102">COR_PRF_REJIT_FLAGS Enumeration</span></span>
+<span data-ttu-id="07064-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span><span class="sxs-lookup"><span data-stu-id="07064-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="981d3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="981d3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07064-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="07064-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -35,22 +35,22 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="981d3-105">Member</span><span class="sxs-lookup"><span data-stu-id="981d3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="07064-105">Member</span><span class="sxs-lookup"><span data-stu-id="07064-105">Members</span></span>  
   
-|<span data-ttu-id="981d3-106">Member</span><span class="sxs-lookup"><span data-stu-id="981d3-106">Member</span></span>|<span data-ttu-id="981d3-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="981d3-107">Description</span></span>|  
+|<span data-ttu-id="07064-106">Member</span><span class="sxs-lookup"><span data-stu-id="07064-106">Member</span></span>|<span data-ttu-id="07064-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="07064-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| <span data-ttu-id="981d3-108">Die Verwendung von rejitted-Methoden in anderen Methoden wird blockiert.</span><span class="sxs-lookup"><span data-stu-id="981d3-108">ReJITted methods will be blocked from being inlined in other methods.</span></span> |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| <span data-ttu-id="981d3-109">Rufen `GetFunctionParameters` Sie Rückrufe für alle Methoden ab, die Inline-Methoden für die erneute kompizierer Anforderung angefordert haben.</span><span class="sxs-lookup"><span data-stu-id="981d3-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span></span> |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| <span data-ttu-id="07064-108">ReJITted methods will be blocked from being inlined in other methods.</span><span class="sxs-lookup"><span data-stu-id="07064-108">ReJITted methods will be blocked from being inlined in other methods.</span></span> |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| <span data-ttu-id="07064-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span><span class="sxs-lookup"><span data-stu-id="07064-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span></span> |  
 
-## <a name="requirements"></a><span data-ttu-id="981d3-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="981d3-110">Requirements</span></span>  
- <span data-ttu-id="981d3-111">**Formen** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).</span><span class="sxs-lookup"><span data-stu-id="981d3-111">**Platforms:** See [.NET Core supported operating systems](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07064-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="07064-110">Requirements</span></span>  
+ <span data-ttu-id="07064-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="07064-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>  
   
- <span data-ttu-id="981d3-112">**Header:** Corprof. idl, Corprof. h</span><span class="sxs-lookup"><span data-stu-id="981d3-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="07064-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="07064-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="981d3-113">**Fern** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="981d3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="07064-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="07064-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="981d3-114">**.NET Framework-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span><span class="sxs-lookup"><span data-stu-id="981d3-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span></span> 
+ <span data-ttu-id="07064-114">**.NET Framework-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07064-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span></span> 
   
-## <a name="see-also"></a><span data-ttu-id="981d3-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="981d3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07064-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07064-115">See also</span></span>
 
-- [<span data-ttu-id="981d3-116">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="981d3-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="07064-116">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="07064-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
