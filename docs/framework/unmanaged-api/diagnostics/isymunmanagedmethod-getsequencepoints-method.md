@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759448"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448876"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints-Methode
-Ruft die Sequenzpunkte innerhalb dieser Methode ab.  
+Gets all the sequence points within this method.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +41,31 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parameter  
  `cPoints`  
- [in] Ein `ULONG32` , empfängt die Größe der `offsets`, `documents`, `lines`, `columns`, `endLines`, und `endColumns` Arrays.  
+ [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
   
  `pcPoints`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Länge des Puffers erforderlich, um die Sequenzpunkte.  
+ [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
   
  `offsets`  
- [in] Ein Array zum Speichern der Microsoft intermediate Language (MSIL)-vom Anfang der Methode für die Sequenzpunkte Offsets.  
+ [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
   
  `documents`  
- [in] Ein Array zum Speichern der Dokumente, in denen sich die Sequenzpunkte befinden.  
+ [in] An array in which to store the documents in which the sequence points are located.  
   
  `lines`  
- [in] Ein Array, in dem die Zeilen in den Dokumenten gespeichert, in denen sich die Sequenzpunkte befinden.  
+ [in] An array in which to store the lines in the documents at which the sequence points are located.  
   
  `columns`  
- [in] Ein Array zum Speichern der Spalten in den Dokumenten, in denen sich die Sequenzpunkte befinden.  
+ [in] An array in which to store the columns in the documents at which the sequence points are located.  
   
  `endLines`  
- [in] Das Array von Zeilen in den Dokumenten, in denen die Sequenzpunkte enden.  
+ [in] The array of lines in the documents at which the sequence points end.  
   
  `endColumns`  
- [in] Das Array von Spalten in den Dokumenten, in denen die Sequenzpunkte enden.  
+ [in] The array of columns in the documents at which the sequence points end.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

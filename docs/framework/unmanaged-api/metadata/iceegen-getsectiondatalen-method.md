@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: febf952dbfd80a37017cb165aec4a6b207052d1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 277e2584049fae397cf91281a65d05b0b49d9454
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745943"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448086"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen-Methode
-Ruft die Länge des angegebenen Abschnitts.  
+Gets the length of the specified section.  
   
- Diese Methode ist veraltet und sollte nicht verwendet werden.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +38,20 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] Der Datenabschnitt, deren Länge abgerufen werden.  
+ [in] The data section whose length will be retrieved.  
   
  `dataLen`  
- [out] Die zurückgegebene Länge des angegebenen Abschnitts.  
+ [out] The returned length of the specified section.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie `GetSectionDataLen` nur dann, wenn Sie Anforderungen an die speziellen Bereich verfügen, die nicht von anderen Methoden behandelt werden.  
+ Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

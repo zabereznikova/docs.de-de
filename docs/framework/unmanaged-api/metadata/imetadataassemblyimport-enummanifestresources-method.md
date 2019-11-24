@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777953"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449552"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources-Methode
-Ruft einen Zeiger auf einen Enumerator für die Ressourcen, die in der aktuellen Assemblymanifest verwiesen wird.  
+Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,30 +38,30 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert sein Wert fest, wenn die `EnumManifestResources` Methode zum ersten Mal aufgerufen wird.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
   
  `rManifestResources`  
- [out] Das Array zum Speichern der `mdManifestResource` Metadatentoken.  
+ [out] The array used to store the `mdManifestResource` metadata tokens.  
   
  `cMax`  
- [in] Die maximale Anzahl von `mdManifestResource` Token, die in eingefügt werden können `rManifestResources`.  
+ [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
   
  `pcTokens`  
- [out] Die Anzahl der `mdManifestResource` Token, die tatsächlich in `rManifestResources`.  
+ [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTokens` auf 0 (null) festgelegt ist.|  
+|`S_OK`|`EnumManifestResources` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777922"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449449"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName-Methode
-Ruft einen Zeiger auf einem exportierten Typ, erhält seinen Namen und der einschließende Typ ab.  
+Gets a pointer to an exported type, given its name and enclosing type.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- [in] Der Name des exportierten Typs.  
+ [in] The name of the exported type.  
   
  `mdtExportedType`  
- [in] Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert ist `mdExportedTypeNil` Wenn der angeforderte exportierte Typ nicht geschachtelter Typ ist.  
+ [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
   
  `ptkExportedType`  
- [out] Ein Zeiger auf die `mdExportedType` Token, das den exportierten Typ darstellt.  
+ [out] A pointer to the `mdExportedType` token that represents the exported type.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FindExportedTypeByName` -Methode verwendet die Standardregeln, die von der common Language Runtime zum Auflösen von verweisen.  
+ The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

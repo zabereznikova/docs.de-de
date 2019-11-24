@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed4c46ea7e31177ac0446c8fae7805535323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759425"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448862"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd-Methode
-Ruft die Dokumentpositionen für Start- und Endzeit für die Quelle dieser Methode ab. Die Arrayposition des erste ist der Anfang und die zweite Arrayposition ist.  
+Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +37,19 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>Parameter  
  `docs`  
- [in] Das Anfangs- und Endquelldokumente.  
+ [in] The starting and ending source documents.  
   
  `lines`  
- [in] Die Anfangs- und Endzeilen in den entsprechenden Quelldokumenten.  
+ [in] The starting and ending lines in the corresponding source documents.  
   
  `columns`  
- [in] Die Anfangs- und Endspalten in den entsprechenden Quelldokumenten.  
+ [in] The starting and ending columns in the corresponding source documents.  
   
  `pRetVal`  
- [out] `true` wäre Positionen definiert ist, andernfalls `false`.  
+ [out] `true` if positions were defined; otherwise, `false`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

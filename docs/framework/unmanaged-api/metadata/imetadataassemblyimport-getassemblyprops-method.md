@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ec04588bd1cc21e585d89c734c152a86fb835b15
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3c57074ae53e2e1d8d41aa04cb6eb6089db58b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772732"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449443"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps-Methode
-Ruft den Satz von Eigenschaften für die Assembly mit der angegebenen Metadaten-Signatur ab.  
+Gets the set of properties for the assembly with the specified metadata signature.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,38 +43,38 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parameter  
  `mda`  
- [in]. Die `mdAssembly` Metadatentoken, das die Assembly für das Abrufen der Eigenschaften darstellt.  
+ [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
   
  `ppbPublicKey`  
- [out] Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKey`  
- [out] Die Anzahl der Bytes in den zurückgegebenen öffentlichen Schlüssel.  
+ [out] The number of bytes in the returned public key.  
   
  `pulHashAlgId`  
- [out] Ein Zeiger auf den Algorithmus für die Dateien in der Assembly zu hashen.  
+ [out] A pointer to the algorithm used to hash the files in the assembly.  
   
  `szName`  
- [out] Der einfache Name der Assembly.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Die Größe in Breitzeichen von `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Die Anzahl der tatsächlich zurückgegebenen Breitzeichen `szName`.  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out] Ein Zeiger auf ein ASSEMBLYMETADATA-Struktur, die die Metadaten der Assembly an.  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `pdwAssemblyFlags`  
- [out] Flags, die auf eine Assembly angewendete Metadaten beschreiben. Dieser Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) Werte.  
+ [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

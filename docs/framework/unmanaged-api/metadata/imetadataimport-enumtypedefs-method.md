@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774614"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449993"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs-Methode
 Zählt TypeDef-Token auf, die alle Typen innerhalb des aktuellen Bereichs darstellen.  
@@ -40,33 +38,33 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [out] Ein Zeiger auf den neuen Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
+ [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
   
  `rTypeDefs`  
- [in] Das Array zum Speichern der TypeDef-Token verwendet wird.  
+ [in] The array used to store the TypeDef tokens.  
   
  `cMax`  
  [in] Die maximale Größe des `rTypeDefs`-Arrays.  
   
  `pcTypeDefs`  
- [out] Die Anzahl der zurückgegebenen TypeDef-Token `rTypeDefs`.  
+ [out] The number of TypeDef tokens returned in `rTypeDefs`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTypeDefs` ist 0 (null).|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das TypeDef-Token stellt dar, einen Typ wie z. B. eine Klasse oder eine Schnittstelle als auch einen beliebigen Typ, der über keinen Erweiterbarkeitsmechanismus hinzugefügt.  
+ The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

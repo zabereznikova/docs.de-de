@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781600"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450096"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize-Enumeration
 Enthält Werte, die den Genauigkeitsgrad angeben, der beim Abfragen der Größe eines Speichervorgangs erforderlich ist.  
@@ -40,16 +38,16 @@ typedef enum CorSaveSize {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`cssAccurate`|Gibt an, dass der zurückgegebene Wert genau sein soll.|  
-|`cssQuick`|Gibt an, dass der Rückgabewert geschätzt werden sollte.|  
-|`cssDiscardTransientCAs`|Gibt an, dass es sich bei entfernbare Typ entfernt werden soll.|  
+|`cssAccurate`|Specifies that the return value should be exact.|  
+|`cssQuick`|Specifies that the return value should be estimated.|  
+|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

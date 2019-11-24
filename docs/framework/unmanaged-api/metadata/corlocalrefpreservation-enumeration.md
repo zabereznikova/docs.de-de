@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 706ea37101f9f961e92d8cef2cf508c1dd0d56c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781790"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450242"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation-Enumeration
 Enthält Flagwerte für die Behandlung von lokalen Verweisen.  
@@ -41,12 +39,12 @@ typedef enum CorLocalRefPreservation
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Behalten Sie keine lokalen verweisen.|  
-|`MDPreserveLocalTypeRef`|Verweise auf lokale Typen zu erhalten.|  
-|`MDPreserveLocalMemberRef`|Behalten Sie die lokalen Elementverweise.|  
+|`MDPreserveLocalRefsNone`|Preserve no local references.|  
+|`MDPreserveLocalTypeRef`|Preserve local type references.|  
+|`MDPreserveLocalMemberRef`|Preserve local member references.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

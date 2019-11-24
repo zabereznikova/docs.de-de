@@ -6,69 +6,67 @@ helpviewer_keywords:
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d1d9b0a4c61ce7c3f8f9792046fb4bddf0fdfa05
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457475"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447431"
 ---
 # <a name="profiling-global-static-functions"></a>Profilerstellung für globale statische Funktionen
-In diesem Abschnitt wird beschrieben, die nicht verwalteten API-Funktionen, die die profilerstellungs-API verwendet wird.  
+This section describes the unmanaged API functions that the profiling API uses.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-## <a name="net-framework-version-1-profiling-functions"></a>Profilerstellung für .NET Framework Version 1-Funktionen  
+## <a name="net-framework-version-1-profiling-functions"></a>.NET Framework version 1 Profiling Functions  
  [FunctionEnter-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
- Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übergeben wird. In .NET Framework 2.0 veraltet.  
+ Notifies the profiler that control is being passed to a function. Deprecated in the .NET Framework 2.0.  
   
  [FunctionLeave-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
- Benachrichtigt den Profiler, dass eine Funktion zum an den Aufrufer zurückgeben. In .NET Framework 2.0 veraltet.  
+ Notifies the profiler that a function is about to return to the caller. Deprecated in the .NET Framework 2.0.  
   
  [FunctionTailcall-Funktion](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
- Benachrichtigt den Profiler an, die gegenwärtig ausgeführte Funktion ist einen Endeaufruf an eine andere Funktion ausführen. In .NET Framework 2.0 veraltet.  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function. Deprecated in the .NET Framework 2.0.  
   
-## <a name="net-framework-version-2-profiling-functions"></a>Profilerstellung für .NET Framework Version 2-Funktionen  
+## <a name="net-framework-version-2-profiling-functions"></a>.NET Framework version 2 Profiling Functions  
  [FunctionIDMapper-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- Benachrichtigt Sie den Profiler, dass der angegebene Bezeichner einer Funktion einer alternativen ID zu verwendende zugeordnet werden kann die [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), und [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) Rückrufe für diese Funktion. Außerdem ermöglicht es dem Profiler, um anzugeben, ob er Rückrufe für diese Funktion empfangen will.  
+ Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function  
   
  [FunctionEnter2-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Benachrichtigt den Profiler an, dass Steuerelement an eine Funktion übergeben wird und Informationen über den Stapelrahmen und die Funktionsargumente enthält. In .NET Framework 4 als veraltet markiert.  
+ Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. Deprecated in the .NET Framework 4.  
   
  [FunctionLeave2-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Benachrichtigt den Profiler, dass eine Funktion an den Aufrufer zurückgegeben wird, und Informationen über den Stapel Frame und Funktion-Rückgabewert enthält. In .NET Framework 4 als veraltet markiert.  
+ Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value. Deprecated in the .NET Framework 4.  
   
  [FunctionTailcall2-Funktion](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Benachrichtigt den Profiler an, die gerade ausgeführte Funktion ist einen Endeaufruf an eine andere Funktion ausführen und enthält Informationen zu den Stapelrahmen. In .NET Framework 4 als veraltet markiert.  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame. Deprecated in the .NET Framework 4.  
   
  [StackSnapshotCallback-Funktion](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- Stellt Informationen über jeden verwalteten Frame und die Ausführung von nicht verwalteten Frames im Stapel während eines Stackwalks, der von initiiert wird der Profiler die [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode.  
+ Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
   
-## <a name="net-framework-version-4-profiling-functions"></a>Profilerstellung für .NET Framework Version 4-Funktionen  
+## <a name="net-framework-version-4-profiling-functions"></a>.NET Framework version 4 Profiling Functions  
  [FunctionIDMapper2-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- Benachrichtigt Sie den Profiler, dass der angegebene Bezeichner einer Funktion einer alternativen ID zu verwendende zugeordnet werden kann die [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), und [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), oder[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), und [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) Rückrufe für diese Funktion. Außerdem ermöglicht es dem Profiler, um anzugeben, ob er Rückrufe für diese Funktion empfangen will ein.  
+ Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. Also enables the profiler to indicate whether it wants to receive callbacks for that function.  
   
- `FunctionIDMapper2` Erweitert die [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) -Funktion mit einem `clientData` -Parameter, der Profiler verwenden, um Mehrdeutigkeiten zwischen Laufzeiten aufzulösen.  
+ `FunctionIDMapper2` extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with a `clientData` parameter, which profilers may use to disambiguate among runtimes.  
   
  [FunctionEnter3-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übergeben wird.  
+ Notifies the profiler that control is being passed to a function.  
   
  [FunctionEnter3WithInfo-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- Benachrichtigt den Profiler, dass Steuerelement an eine Funktion übergeben wird, und stellt ein Handle, das übergeben werden kann [ICorProfilerInfo3:: Getfunctionenter3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) zum Abrufen der Stapel und die Funktionsargumente.  
+ Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
   
  [FunctionLeave3-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- Benachrichtigt den Profiler, dass das Steuerelement aus einer Funktion zurückgegeben werden.  
+ Notifies the profiler that control is being returned from a function.  
   
  [FunctionLeave3WithInfo-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- Benachrichtigt den Profiler, dass Steuerelement aus einer Funktion zurückgegeben werden, und stellt ein Handle, das übergeben werden kann [ICorProfilerInfo3:: Getfunctionleave3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) den Stapelrahmen und den Rückgabewert abrufen.  
+ Notifies the profiler that control is being returned from a function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) to retrieve the stack frame and the return value.  
   
  [FunctionTailcall3-Funktion](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- Benachrichtigt den Profiler an, die gegenwärtig ausgeführte Funktion ist einen Endeaufruf an eine andere Funktion ausführen.  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
   
  [FunctionTailcall3WithInfo-Funktion](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- Benachrichtigt den Profiler, der aktuell ausgeführte Funktion einen Endeaufruf an eine andere Funktion auszuführen, und stellt ein Handle, das übergeben werden kann [ICorProfilerInfo3:: Getfunctiontailcall3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) zum Abrufen des Stapelrahmens.  
+ Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to [ICorProfilerInfo3::GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Übersicht über die Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

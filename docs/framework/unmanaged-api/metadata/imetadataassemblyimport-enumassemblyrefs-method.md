@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c7b512de76b5ada882b1d81c2968b4ead5c8c20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06b81615565a04db7d6cfef4da9b5372a85afd68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775932"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450345"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs-Methode
-Listet die `mdAssemblyRef` Instanzen, die im Assemblymanifest definiert sind.  
+Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,30 +38,30 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert sein Wert fest, wenn die `EnumAssemblyRefs` Methode zum ersten Mal aufgerufen wird.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
   
  `rAssemblyRefs`  
- [out] Die Enumeration von `mdAssemblyRef` Metadatentoken.  
+ [out] The enumeration of `mdAssemblyRef` metadata tokens.  
   
  `cMax`  
- [in] Die maximale Anzahl von Token, die in platziert werden, kann die `rAssemblyRefs` Array.  
+ [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
   
  `pcTokens`  
- [out] Die Anzahl der Token, die tatsächlich in `rAssemblyRefs`.  
+ [out] The number of tokens actually placed in `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTokens` auf 0 (null) festgelegt ist.|  
+|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -9,57 +9,55 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdb691570a9a2bf7bd2bb21af500b06c10b0bc53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787893"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448526"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Diagnosesymbolspeicher-Schnittstellen
-In diesem Thema wird beschrieben, die nicht verwalteten Schnittstellen, mit denen einen Compiler Symbolinformationen für die Verwendung von einem Debugger zu generieren.  
+This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [IBindingDisplay-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- Enthält Methoden, die aktuelle Bindungsinformationen über die ausgeführte Anwendung anzuzeigen.  
+ Provides methods that display current binding information about the running application.  
   
  [IDebugAutoAttach-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
- Definiert die Schnittstelle an, für eine AutoAttach-Debuggers.  
+ Defines the interface for a server-invoked debugger auto attach.  
   
  [INotifyConnection2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- Deklariert Methoden, die für das Registrieren und Aufheben der Registrierung eine Benachrichtigung Verbindungsquelle.  
+ Declares methods for registering and unregistering a connection notification source.  
   
  [INotifySink2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- Deklariert Methoden, die für die Senke-Benachrichtigung.  
+ Declares methods for sink notification.  
   
  [INotifySource2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- Deklariert eine Methode zum Festlegen von Benachrichtigung filtern.  
+ Declares a method for setting notification filters.  
   
  [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)  
- Enthält Informationen für die Funktion bearbeiten und fortfahren.  
+ Provides information for the Edit and Continue feature.  
   
  [ISymUnmanagedAsyncMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
- Diese Schnittstelle ist die Ergänzung lesen [ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
+ This interface is the reading complement to [ISymUnmanagedAsyncMethodPropertiesWriter Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Ermöglicht die Definition der optionalen Async-Methodeninformationen pro methodensymbol. Müssen mit einer geöffneten-Methode verwenden (d. h. zwischen den Aufrufen der [OpenMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)und [CloseMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Allows definition of optional async method information per method symbol. Must use with an opened method (that is, between calls to the [OpenMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)and the [CloseMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- Stellt einen Symbolbinder für nicht verwalteten Code dar.  
+ Represents a symbol binder for unmanaged code.  
   
  [ISymUnmanagedBinder2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- Stellt einen Symbolbinder für nicht verwalteten Code dar, und erweitert die `ISymUnmanagedBinder` Schnittstelle.  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedBinder3-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- Stellt einen Symbolbinder für nicht verwalteten Code dar, und erweitert die `ISymUnmanagedBinder` Schnittstelle.  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedConstant-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
- Bietet Zugriff auf nicht verwalteten Konstanten.  
+ Provides access to unmanaged constants.  
   
  [ISymUnmanagedDispose-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)  
- Gibt nicht verwaltete Ressourcen frei.  
+ Disposes of unmanaged resources.  
   
  [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)  
  Stellt ein Dokument dar, auf das von einem Symbolspeicher verwiesen wird.  
@@ -68,52 +66,52 @@ In diesem Thema wird beschrieben, die nicht verwalteten Schnittstellen, mit dene
  Stellt Methoden zum Schreiben in ein Dokument bereit, auf das ein Symbolspeicher verweist.  
   
  [ISymUnmanagedENCUpdate-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)  
- Stellt Methoden für die Funktion bearbeiten und fortfahren.  
+ Provides methods for the Edit and Continue feature.  
   
  [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
- Stellt eine Methode in den Symbolspeicher.  
+ Represents a method within the symbol store.  
   
  [ISymUnmanagedNamespace-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
- Stellt einen Namespace dar.  
+ Represents a namespace.  
   
  [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- Stellt einen Symbolreader den Zugriff auf Dokumente, Methoden und Variablen in einem Symbolspeicher dar.  
+ Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.  
   
  [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Ruft ein Methodenobjekt des Symbolreaders erhält ein Methodentoken und eine Versionsnummer für bearbeiten und kopieren.  
+ Gets a symbol reader method given a method token and an edit-and-copy version number.  
   
  [ISymUnmanagedReaderSymbolSearchInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- Bietet Methoden, die Symbolinformationen für die Suche zu erhalten.  
+ Provides methods that get symbol search information.  
   
  [ISymUnmanagedScope-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- Stellt einen lexikalischen Gültigkeitsbereich innerhalb einer Methode dar.  
+ Represents a lexical scope within a method.  
   
  [ISymUnmanagedScope2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- Stellt einen lexikalischen Gültigkeitsbereich innerhalb einer Methode und erweitert die `ISymUnmanagedScope` Schnittstelle mit Methoden, die Informationen zu definierten Konstanten innerhalb des Bereichs abrufen...  
+ Represents a lexical scope within a method, and extends the `ISymUnmanagedScope` interface with methods that get information about constants defined within the scope..  
   
  [ISymUnmanagedSourceServerModule-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
- Quelldaten für die Server bereitstellt für ein Modul.  
+ Provides source server data for a module.  
   
  [ISymUnmanagedSymbolSearchInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Enthält Methoden, die Informationen zu den Suchpfad zu erhalten.  
+ Provides methods that get information about the search path.  
   
  [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- Stellt eine Variable ein, z. B. ein Parameter, eine lokale Variable oder ein Feld dar.  
+ Represents a variable, such as a parameter, a local variable, or a field.  
   
  [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- Stellt einen Symbolwriter dar und bietet Methoden, um Dokumente, Sequenzpunkte, lexikalischen Gültigkeitsbereiche und Variablen zu definieren.  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.  
   
  [ISymUnmanagedWriter2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- Stellt einen Symbolwriter dar und bietet Methoden, um Dokumente, Sequenzpunkte, lexikalischen Gültigkeitsbereiche und Variablen zu definieren. Erweitert die `ISymUnmanagedWriter` Schnittstelle.  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter3-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- Stellt einen Symbolwriter dar und bietet Methoden, um Dokumente, Sequenzpunkte, lexikalischen Gültigkeitsbereiche und Variablen zu definieren. Erweitert die `ISymUnmanagedWriter` Schnittstelle.  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter4-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
- ISymUnmanagedWriter4-Schnittstelle.  
+ ISymUnmanagedWriter4 interface.  
   
  [ISymUnmanagedWriter5-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)  
- ISymUnmanagedWriter5-Schnittstelle.  
+ ISymUnmanagedWriter5 interface.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Diagnosesymbolspeicher-Enumerationen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  

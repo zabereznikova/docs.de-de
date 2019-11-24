@@ -7,30 +7,28 @@ helpviewer_keywords:
 - diagnostics symbol store enumerations [.NET Framework]
 - enumerations [.NET Framework debugging]
 ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ff50994f707dbd7eb9a55c05fe2b4540759aac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756181"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448539"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Diagnosesymbolspeicher-Enumerationen
-In diesem Thema wird beschrieben, die nicht verwalteten Enumerationen, die die Diagnosesymbolspeicher-API verwendet wird.  
+This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [CorSymAddrKind-Enumeration](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Gibt den Typ der Speicheradresse.  
+ Indicates the type of memory address.  
   
  [CorSymSearchPolicyAttributes-Enumeration](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Gibt die Richtlinie beim Ausführen einer Suche für einen Symbolreader verwendet werden.  
+ Specifies the policy to be used when doing a search for a symbol reader.  
   
  [CorSymVarFlag-Enumeration](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Gibt an, ob eine Variable vom Compiler generierter ist.  
+ Indicates whether a variable is compiler-generated.  
   
  [NOTIFY_FILTER-Enumeration](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifiziert die Rückrufe für Debugger-Funktionen.  
+ Identifies callbacks for debugger functions.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

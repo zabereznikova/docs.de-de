@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2f96f3c7261882af58cd10038d729c4e723d6fa0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042146"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447953"
 ---
 # <a name="ui-automation-properties-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  Benutzeroberflächenautomatisierungs-Anbieter machen Eigenschaften von [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Elementen verfügbar. Diese Eigenschaften ermöglichen es Benutzeroberflächenautomatisierungs-Clientanwendungen, Informationen zu Bestandteilen der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)](insbesondere Steuerelemente) zu ermitteln, wobei diese Informationen sowohl statische als auch dynamische Daten umfassen können.  
   
@@ -26,11 +26,11 @@ ms.locfileid: "71042146"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Eigenschaftsbezeichner  
- Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Anbieter verwenden die numerischen IDs, um eingehende Eigenschaften Anforderungen zu identifizieren. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
+ Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Providers use the numeric IDs to identify incoming property requests. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
   
  <xref:System.Windows.Automation.AutomationProperty> -Objekte, die bestimmte Eigenschaften darstellen, sind als Felder in verschiedenen Klassen verfügbar. Aus Sicherheitsgründen rufen Benutzeroberflächenautomatisierungs-Anbieter diese Objekte aus einem separaten Satz von Klassen ab, die in „Uiautomationtypes.dll“ enthalten sind.  
   
- In der folgenden Tabelle werden die Eigenschaften durch die Klassen, die <xref:System.Windows.Automation.AutomationProperty>die IDs enthalten, kategorisiert.  
+ The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
   
 |Arten von Eigenschaften|Clients rufen IDs ab von|Anbieter rufen IDs ab von|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "71042146"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>Eigenschaften nach Kategorie  
- In den folgenden Tabellen sind die Eigenschaften kategorisiert, deren IDs <xref:System.Windows.Automation.AutomationElement> in <xref:System.Windows.Automation.AutomationElementIdentifiers>und enthalten sind. Diese Eigenschaften hat jedes der Steuerelemente. Bis auf einige Ausnahmen sind wahrscheinlich alle diese Eigenschaften während der gesamten Lebensdauer der Anbieteranwendung statisch. Die meisten dynamischen Eigenschaften sind mit Steuerelementmustern verknüpft.  
+ The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. Diese Eigenschaften hat jedes der Steuerelemente. Bis auf einige Ausnahmen sind wahrscheinlich alle diese Eigenschaften während der gesamten Lebensdauer der Anbieteranwendung statisch. Die meisten dynamischen Eigenschaften sind mit Steuerelementmustern verknüpft.  
   
  In der Spalte **Eigenschaftenzugriff** werden zusätzlich zu <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> und <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>alle weiteren Accessoren für jede Eigenschaft aufgeführt. Weitere Informationen zum Abrufen von Eigenschaften in einer Clientanwendung finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81d7c86f-d062-4eed-8df3-448091ce8c49
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 39446289f8197a14ab1d67ea2e80c16777e9bb56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd9f8614fa7b4fb77c566cc3ed9ebff01efa2804
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781105"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447586"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset-Methode
 Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.  
@@ -34,7 +32,7 @@ HRESULT Reset();
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

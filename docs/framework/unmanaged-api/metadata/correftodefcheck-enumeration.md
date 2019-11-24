@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6c3c9b842bd823e8975661964480fd801779b2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781618"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450122"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck-Enumeration
 Gibt Flags an, mit denen gesteuert wird, welche Elemente, auf die verwiesen wird, zur Optimierung des Codes in ihre Definitionen konvertiert werden.  
@@ -42,14 +40,14 @@ typedef enum CorRefToDefCheck {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Gibt an, dass Verweise auf Typen und memberverweisen auf Definitionen konvertiert werden sollen. Dies ist der Standardwert (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Gibt an, dass alle referenzierten Elemente in Definitionen konvertiert werden soll.|  
-|`MDRefToDefNone`|Gibt an, dass keine Elemente auf die verwiesen wird, die in Definitionen konvertiert werden soll.|  
-|`MDTypeRefToDef`|Gibt an, dass nur Verweise auf Typen um zu Typdefinitionen konvertiert werden sollen.|  
-|`MDMemberRefToDef`|Gibt an, dass nur memberverweisen auf Definitionen konvertiert werden sollen. D. h. sollen Elementverweise Methodendefinitionen oder Felddefinitionen konvertiert werden.|  
+|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
+|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
+|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
+|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
