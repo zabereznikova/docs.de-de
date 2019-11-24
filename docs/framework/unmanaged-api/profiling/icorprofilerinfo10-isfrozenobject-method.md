@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo10:: isfrozenobject'
+title: ICorProfilerInfo10::IsFrozenObject
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d212c06c7ddc9f22095c0b95f19fd1083482435c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661224"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449828"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: isfrozenobject-Methode
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
 
-Bestimmt bei Angabe einer ObjectID, ob das Objekt ein Schreib geschütztes Segment ist.
+Given an ObjectID, determines whether the object is in a read-only segment.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>Parameter
 
 `objectId` \
-in Das zu überprüfende Objekt.
+[in] The object to examine.
 
 `pbFrozen` \
-vorgenommen Ein `BOOL` Wert, der angibt, ob das Objekt ein Schreib geschütztes Segment ist.
+[out] A `BOOL` indicating if the object is in a read-only segment.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** Corprof. idl, Corprof. h
+**Header:** CorProf.idl, CorProf.h
 
-**Fern** CorGuids.lib
+**Bibliothek:** CorGuids.lib
 
-**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

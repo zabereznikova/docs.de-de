@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34fb03cc-2285-4a45-ac48-ad993b7a921a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3a66ef090a205019493e099919739867e3936873
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b36d63101c1e9550a979d858764e9052cf45792
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447932"
 ---
 # <a name="imetadataassemblyemit-interface"></a>IMetaDataAssemblyEmit-Schnittstelle
 Stellt Methoden bereit, die das Selbstbeschreibungsmodell unterstützen, das von der Common Language Runtime zum Auflösen und Verwenden von Ressourcen verwendet wird.  
@@ -44,11 +42,11 @@ Stellt Methoden bereit, die das Selbstbeschreibungsmodell unterstützen, das von
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

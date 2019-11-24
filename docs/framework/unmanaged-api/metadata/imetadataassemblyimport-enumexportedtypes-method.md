@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751150"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450331"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes-Methode
-Listet die exportierten Typen in das Assemblymanifest im aktuellen Metadatenbereich verwiesen wird.  
+Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,30 +38,30 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert sein Wert fest, wenn die `EnumExportedTypes` Methode zum ersten Mal aufgerufen wird.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
   
  `rExportedTypes`  
- [out] Die Enumeration von `mdExportedType` Metadatentoken.  
+ [out] The enumeration of `mdExportedType` metadata tokens.  
   
  `cMax`  
- [in] Die maximale Anzahl von `mdExportedType` Token, die in platziert werden, können die `rExportedTypes` Array.  
+ [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
   
  `pcTokens`  
- [out] Die Anzahl der `mdExportedType` Token, die tatsächlich in `rExportedTypes`.  
+ [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTokens` auf 0 (null) festgelegt ist.|  
+|`S_OK`|`EnumExportedTypes` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

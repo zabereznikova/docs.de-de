@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782547"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449956"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods-Methode
 Zählt MemberDef-Token auf, die die nicht aufgelösten Methoden im aktuellen Metadatenbereich darstellen.  
@@ -40,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rMethods`  
- [out] Das Array zum Speichern der MemberDef-Token verwendet wird.  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] Die maximale Größe des `rMethods`-Arrays.  
   
  `pcTokens`  
- [out] Die Anzahl der zurückgegebenen MemberDef-Token `rMethods`.  
+ [out] The number of MemberDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
+|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine nicht aufgelöste Methode ist, der deklariert, aber nicht implementiert wurde. Eine Methode ist in der Enumeration enthalten, wenn die Methode markiert ist `miForwardRef` und entweder `mdPinvokeImpl` oder `miRuntime` auf 0 (null) festgelegt ist. Das heißt, eine nicht aufgelöste Methode ist die Methode einer Klasse, die markiert ist `miForwardRef` , aber das ist nicht implementiert, die in nicht verwaltetem Code (über PInvoke erreicht) oder intern von der Laufzeit selbst implementiert  
+ An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
   
- Die Enumeration schließt alle Methoden, die entweder im Modulbereich (Global) oder in Schnittstellen oder abstrakten Klassen definiert sind.  
+ The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

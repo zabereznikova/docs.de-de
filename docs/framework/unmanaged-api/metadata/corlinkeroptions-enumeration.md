@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 906b5ef2795d8fad996185f66f145a8cd3618c41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 086e17185df9caa823b44b51cf027f95d635c48d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781809"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450269"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions-Enumeration
 Gibt Flags für die Auswahl von Optionen für den Metadatenlinker an.  
@@ -39,11 +37,11 @@ typedef enum CorLinkerOptions {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDAssembly`|Die private Typen und globale Funktionen werden nicht beibehalten.|  
-|`MDNetModule`|Die private Typen und globale Funktionen bleiben erhalten.|  
+|`MDAssembly`|The private types and global functions are not preserved.|  
+|`MDNetModule`|The private types and global functions are preserved.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   

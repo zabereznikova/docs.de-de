@@ -6,14 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc90743fb348c31bd2f7487c1573ec38a43bd3af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757572"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447450"
 ---
 # <a name="profiling-enumerations"></a>Profilerstellungsenumerationen
 Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profilerstellungs-API verwendet.  
@@ -23,7 +21,7 @@ Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profile
  Zeigt den Typ der Ausnahmeklausel an, die der Code gerade eben eingegeben oder zurückgelassen hat.  
   
  [COR_PRF_CODEGEN_FLAGS-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- Definiert die codeerstellungskennzeichen, die mit festgelegt werden, können die [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) Methode.  
+ Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
   
  [COR_PRF_FINALIZER_FLAGS-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
  Beschreibt den Finalizer für ein Objekt.  
@@ -38,10 +36,10 @@ Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profile
  Zeigt die Eigenschaften eines Garbage Collector-Stamms.  
   
  [COR_PRF_GC_ROOT_KIND-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Gibt die Art der Garbage Collector-Stamms an, die verfügbar gemacht werden an die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) Rückruf.  
+ Indicates the kind of garbage collector root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
   
  [COR_PRF_HIGH_MONITOR-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Stellt Kennzeichen neben denen in der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration, die der Profiler, um angeben kann die [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) Methode, wenn es geladen wird.  
+ Provides flags in addition to those found in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration that the profiler can specify to the [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method when it is loading.  
   
  [COR_PRF_JIT_CACHE-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  

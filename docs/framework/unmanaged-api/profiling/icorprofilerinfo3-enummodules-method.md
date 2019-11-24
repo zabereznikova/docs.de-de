@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ea379befab7711d1c6bc2d6005cb62d853acce9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bb2ba56ed93af7861e53d683a0a777107578a6b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756965"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449750"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules-Methode
 Gibt einen Enumerator zurück, der Methoden zum sequenziellen Iterieren durch eine Auflistung von verwalteten Modulen bereitstellt, die in die Anwendung geladen werden.  
@@ -35,12 +33,12 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
   
 ## <a name="parameters"></a>Parameter  
  `ppEnum`  
- [out] Ein Zeiger auf ein [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) Schnittstelle.  
+ [out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

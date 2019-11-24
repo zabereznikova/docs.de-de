@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0777151d10149ec7311a7761bc7f6bff5ba98e0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777490"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450214"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef-Methode
-Erstellt eine Typdefinition für einen Typ der common Language Runtime und ruft ein Metadatentoken für diese Typdefinition.  
+Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,33 +39,33 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parameter  
  `szTypeDef`  
- [in] Der Name des Typs im Unicode-Format.  
+ [in] The name of the type in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` Attribute. Dies ist eine Bitmaske der `CoreTypeAttr` Werte.  
+ [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
   
  `tkExtends`  
- [in] Das Token der Basisklasse. Es muss entweder eine `mdTypeDef` oder `mdTypeRef` token.  
+ [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
   
  `rtkImplements`  
- [in] Ein Array von Token, die die Schnittstellen, die diese Klasse oder Schnittstelle implementiert angeben.  
+ [in] An array of tokens specifying the interfaces that this class or interface implements.  
   
  `ptd`  
- [out] Die `mdTypeDef` zugewiesene Token.  
+ [out] The `mdTypeDef` token assigned.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Flag in `dwTypeDefFlags` angibt, ob der erstellte Typ wird ein common Type System Verweistyp (Klasse oder Schnittstelle) oder ein common Type System-Werttyp ist.  
+ A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
   
- Je nach den angegebenen Parametern kann diese Methode eine nebenerscheinung erstellt auch möglicherweise eine `mdInterfaceImpl` Datensatz für jede Schnittstelle, die von diesem Typ implementiert oder geerbt. Aber diese Methode gibt nicht zurück um eines dieser `mdInterfaceImpl` Token. Wenn ein Client zum später hinzufügen oder ändern möchte ein `mdInterfaceImpl` token ist, darf Sie verwenden die `IMetaDataImport` Schnittstelle, um diese aufzulisten. Wenn Sie COM-Semantik der verwenden möchten die `[default]` -Schnittstelle, sollten Sie die Standard-Schnittstelle bereitstellen, als das erste Element im `rtkImplements`; ein benutzerdefiniertes Attribut für die Klasse festgelegt wird, dass die Klasse eine Standardschnittstelle angegeben (der wird immer als die zuerst `mdInterfaceImpl` Token für die Klasse deklariert).  
+ Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
   
- Jedes Element der `rtkImplements` Arrays enthält ein `mdTypeDef` oder `mdTypeRef` token. Das letzte Element im Array muss `mdTokenNil`.  
+ Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
