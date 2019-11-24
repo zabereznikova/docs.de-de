@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b410ef46e96f75d98ee750c760b19d2a77eec2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f3d9bc94d25ca70e0589e1beb86b8ef96807a71
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780219"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448165"
 ---
-# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="e7974-102">ICorProfilerInfo::GetAssemblyInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="e7974-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
-<span data-ttu-id="e7974-103">Akzeptiert eine Assembly-ID und gibt den Namen der Assembly und die ID ihres Manifestmoduls zurück.</span><span class="sxs-lookup"><span data-stu-id="e7974-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
+# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="8a8c6-102">ICorProfilerInfo::GetAssemblyInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="8a8c6-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
+<span data-ttu-id="8a8c6-103">Akzeptiert eine Assembly-ID und gibt den Namen der Assembly und die ID ihres Manifestmoduls zurück.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7974-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e7974-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a8c6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8a8c6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyInfo(  
@@ -40,41 +38,41 @@ HRESULT GetAssemblyInfo(
     [out] ModuleID    *pModuleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7974-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e7974-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8a8c6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8a8c6-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="e7974-106">[in] Der Bezeichner der Assembly.</span><span class="sxs-lookup"><span data-stu-id="e7974-106">[in] The identifier of the assembly.</span></span>  
+ <span data-ttu-id="8a8c6-106">[in] Der Bezeichner der Assembly.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-106">[in] The identifier of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="e7974-107">[in] Die Länge von `szName` als Anzahl von Zeichen.</span><span class="sxs-lookup"><span data-stu-id="e7974-107">[in] The length, in characters, of `szName`.</span></span>  
+ <span data-ttu-id="8a8c6-107">[in] Die Länge von `szName` als Anzahl von Zeichen.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-107">[in] The length, in characters, of `szName`.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="e7974-108">[out] Ein Zeiger auf die Gesamtzeichenanzahl des Assemblynamens.</span><span class="sxs-lookup"><span data-stu-id="e7974-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
+ <span data-ttu-id="8a8c6-108">[out] Ein Zeiger auf die Gesamtzeichenanzahl des Assemblynamens.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
   
  `szName`  
- <span data-ttu-id="e7974-109">[out] Ein vom Aufrufer bereitgestellter Breitzeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="e7974-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="e7974-110">Bei Rückgabe der Funktion enthält er den Namen der Assembly.</span><span class="sxs-lookup"><span data-stu-id="e7974-110">When the function returns, it will contain the assembly's name.</span></span>  
+ <span data-ttu-id="8a8c6-109">[out] Ein vom Aufrufer bereitgestellter Breitzeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="8a8c6-110">Bei Rückgabe der Funktion enthält er den Namen der Assembly.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-110">When the function returns, it will contain the assembly's name.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="e7974-111">[out] Ein Zeiger auf die ID der Anwendungsdomäne, die die Assembly enthält.</span><span class="sxs-lookup"><span data-stu-id="e7974-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
+ <span data-ttu-id="8a8c6-111">[out] Ein Zeiger auf die ID der Anwendungsdomäne, die die Assembly enthält.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="e7974-112">[out] Ein Zeiger auf die ID des Manifestmoduls der Assembly.</span><span class="sxs-lookup"><span data-stu-id="e7974-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
+ <span data-ttu-id="8a8c6-112">[out] Ein Zeiger auf die ID des Manifestmoduls der Assembly.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e7974-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e7974-113">Remarks</span></span>  
- <span data-ttu-id="e7974-114">Nach der Methodenrückgabe müssen Sie überprüfen, ob der `szName`-Puffer groß genug war, um den vollständigen Namen der Assembly aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="e7974-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="e7974-115">Vergleichen Sie zu diesem Zweck den Wert, auf den `pcchName` verweist, mit dem Wert des Parameters `cchName`.</span><span class="sxs-lookup"><span data-stu-id="e7974-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="e7974-116">Wenn `pcchName` auf einen Wert verweist, der größer als `cchName` ist, weisen Sie einen größeren `szName`-Puffer zu, aktualisieren Sie `cchName` mit der neuen Größe, und rufen Sie `GetAssemblyInfo` erneut auf.</span><span class="sxs-lookup"><span data-stu-id="e7974-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a8c6-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8a8c6-113">Remarks</span></span>  
+ <span data-ttu-id="8a8c6-114">Nach der Methodenrückgabe müssen Sie überprüfen, ob der `szName`-Puffer groß genug war, um den vollständigen Namen der Assembly aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="8a8c6-115">Vergleichen Sie zu diesem Zweck den Wert, auf den `pcchName` verweist, mit dem Wert des Parameters `cchName`.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="8a8c6-116">Wenn `pcchName` auf einen Wert verweist, der größer als `cchName` ist, weisen Sie einen größeren `szName`-Puffer zu, aktualisieren Sie `cchName` mit der neuen Größe, und rufen Sie `GetAssemblyInfo` erneut auf.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
   
- <span data-ttu-id="e7974-117">Alternativ können Sie zuerst `GetAssemblyInfo` mit einem `szName`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="e7974-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="e7974-118">Sie können die Puffergröße dann auf Basis des Werts anpassen, der von `pcchName` zurückgegeben wurde, und `GetAssemblyInfo` erneut aufrufen.</span><span class="sxs-lookup"><span data-stu-id="e7974-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
+ <span data-ttu-id="8a8c6-117">Alternativ können Sie zuerst `GetAssemblyInfo` mit einem `szName`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="8a8c6-118">Sie können die Puffergröße dann auf Basis des Werts anpassen, der von `pcchName` zurückgegeben wurde, und `GetAssemblyInfo` erneut aufrufen.</span><span class="sxs-lookup"><span data-stu-id="8a8c6-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7974-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e7974-119">Requirements</span></span>  
- <span data-ttu-id="e7974-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7974-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a8c6-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8a8c6-119">Requirements</span></span>  
+ <span data-ttu-id="8a8c6-120">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a8c6-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7974-121">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e7974-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8a8c6-121">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8a8c6-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e7974-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7974-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8a8c6-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a8c6-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7974-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7974-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8a8c6-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a8c6-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7974-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7974-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a8c6-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8a8c6-124">See also</span></span>
 
-- [<span data-ttu-id="e7974-125">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e7974-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="e7974-126">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="e7974-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="e7974-127">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="e7974-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="8a8c6-125">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8a8c6-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="8a8c6-126">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="8a8c6-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="8a8c6-127">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="8a8c6-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

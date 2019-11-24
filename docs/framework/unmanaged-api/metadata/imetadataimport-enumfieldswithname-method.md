@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780469"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449511"
 ---
-# <a name="imetadataimportenumfieldswithname-method"></a><span data-ttu-id="d3fe0-102">IMetaDataImport::EnumFieldsWithName-Methode</span><span class="sxs-lookup"><span data-stu-id="d3fe0-102">IMetaDataImport::EnumFieldsWithName Method</span></span>
-<span data-ttu-id="d3fe0-103">Zählt FieldDef-Token des angegebenen Typs mit dem angegebenen Namen auf.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-103">Enumerates FieldDef tokens of the specified type with the specified name.</span></span>  
+# <a name="imetadataimportenumfieldswithname-method"></a><span data-ttu-id="0cbdd-102">IMetaDataImport::EnumFieldsWithName-Methode</span><span class="sxs-lookup"><span data-stu-id="0cbdd-102">IMetaDataImport::EnumFieldsWithName Method</span></span>
+<span data-ttu-id="0cbdd-103">Zählt FieldDef-Token des angegebenen Typs mit dem angegebenen Namen auf.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-103">Enumerates FieldDef tokens of the specified type with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3fe0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d3fe0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cbdd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0cbdd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
@@ -40,45 +38,45 @@ HRESULT EnumFieldsWithName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d3fe0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d3fe0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0cbdd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0cbdd-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="d3fe0-106">[in, out] Ein Zeiger auf den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="0cbdd-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="d3fe0-107">[in] Das Token des Typs, deren Felder sind, aufgelistet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-107">[in] The token of the type whose fields are to be enumerated.</span></span>  
+ <span data-ttu-id="0cbdd-107">[in] The token of the type whose fields are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-107">[in] The token of the type whose fields are to be enumerated.</span></span>  
   
  `szName`  
- <span data-ttu-id="d3fe0-108">[in] Der Name des Felds, das den Bereich der Enumeration einschränkt.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-108">[in] The field name that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="0cbdd-108">[in] The field name that limits the scope of the enumeration.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-108">[in] The field name that limits the scope of the enumeration.</span></span>  
   
  `rFields`  
- <span data-ttu-id="d3fe0-109">[out] Array zum Speichern der FieldDef-Token verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-109">[out] Array used to store the FieldDef tokens.</span></span>  
+ <span data-ttu-id="0cbdd-109">[out] Array used to store the FieldDef tokens.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-109">[out] Array used to store the FieldDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="d3fe0-110">[in] Die maximale Größe des `rFields`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-110">[in] The maximum size of the `rFields` array.</span></span>  
+ <span data-ttu-id="0cbdd-110">[in] Die maximale Größe des `rFields`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-110">[in] The maximum size of the `rFields` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="d3fe0-111">[out] Die tatsächliche Anzahl der zurückgegebenen FieldDef-Token `rFields`.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-111">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
+ <span data-ttu-id="0cbdd-111">[out] The actual number of FieldDef tokens returned in `rFields`.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-111">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d3fe0-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d3fe0-112">Remarks</span></span>  
- <span data-ttu-id="d3fe0-113">Im Gegensatz zu [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` verwirft alle Feld-Token, die nicht mit den angegebenen Namen verfügen.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-113">Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0cbdd-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0cbdd-112">Remarks</span></span>  
+ <span data-ttu-id="0cbdd-113">Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-113">Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d3fe0-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d3fe0-114">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0cbdd-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0cbdd-114">Return Value</span></span>  
   
-|<span data-ttu-id="d3fe0-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d3fe0-115">HRESULT</span></span>|<span data-ttu-id="d3fe0-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d3fe0-116">Description</span></span>|  
+|<span data-ttu-id="0cbdd-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0cbdd-115">HRESULT</span></span>|<span data-ttu-id="0cbdd-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0cbdd-116">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="d3fe0-117">`EnumFieldsWithName` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-117">`EnumFieldsWithName` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="d3fe0-118">Es gibt keine Felder aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="d3fe0-118">There are no fields to enumerate.</span></span> <span data-ttu-id="d3fe0-119">In diesem Fall `pcTokens` ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="d3fe0-119">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="0cbdd-117">`EnumFieldsWithName` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-117">`EnumFieldsWithName` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="0cbdd-118">There are no fields to enumerate.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-118">There are no fields to enumerate.</span></span> <span data-ttu-id="0cbdd-119">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="0cbdd-119">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3fe0-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d3fe0-120">Requirements</span></span>  
- <span data-ttu-id="d3fe0-121">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3fe0-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0cbdd-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0cbdd-120">Requirements</span></span>  
+ <span data-ttu-id="0cbdd-121">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cbdd-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3fe0-122">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d3fe0-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0cbdd-122">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0cbdd-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d3fe0-123">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d3fe0-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0cbdd-123">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0cbdd-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d3fe0-124">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3fe0-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0cbdd-124">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cbdd-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3fe0-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3fe0-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cbdd-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0cbdd-125">See also</span></span>
 
-- [<span data-ttu-id="d3fe0-126">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d3fe0-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="d3fe0-127">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d3fe0-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="0cbdd-126">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0cbdd-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0cbdd-127">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0cbdd-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

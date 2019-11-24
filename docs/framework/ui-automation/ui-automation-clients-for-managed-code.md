@@ -7,30 +7,30 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6b71b620c5e41a6d16ca11370010c8353cdbd6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042513"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448801"
 ---
-# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="45cd5-102">Benutzeroberflächenautomatisierungs-Clients für verwalteten Code</span><span class="sxs-lookup"><span data-stu-id="45cd5-102">UI Automation Clients for Managed Code</span></span>
+# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="a0e4b-102">Benutzeroberflächenautomatisierungs-Clients für verwalteten Code</span><span class="sxs-lookup"><span data-stu-id="a0e4b-102">UI Automation Clients for Managed Code</span></span>
 > [!NOTE]
-> <span data-ttu-id="45cd5-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="45cd5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="45cd5-104">Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="45cd5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="a0e4b-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="a0e4b-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a0e4b-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="a0e4b-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="45cd5-105">Dieser Abschnitt enthält Übersichten und Gewusst wie-Themen über das Entwickeln von Benutzeroberflächenautomatisierungs-Clients.</span><span class="sxs-lookup"><span data-stu-id="45cd5-105">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
+ <span data-ttu-id="a0e4b-105">Dieser Abschnitt enthält Übersichten und Gewusst wie-Themen über das Entwickeln von Benutzeroberflächenautomatisierungs-Clients.</span><span class="sxs-lookup"><span data-stu-id="a0e4b-105">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="45cd5-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="45cd5-106">In This Section</span></span>  
- [<span data-ttu-id="45cd5-107">Benutzeroberflächenautomatisierung und Bildschirmskalierung</span><span class="sxs-lookup"><span data-stu-id="45cd5-107">UI Automation and Screen Scaling</span></span>](ui-automation-and-screen-scaling.md)  
- [<span data-ttu-id="45cd5-108">Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="45cd5-108">UI Automation Support for Standard Controls</span></span>](ui-automation-support-for-standard-controls.md)  
- [<span data-ttu-id="45cd5-109">Benutzeroberflächenautomatisierungs-Ereignisse für Clients</span><span class="sxs-lookup"><span data-stu-id="45cd5-109">UI Automation Events for Clients</span></span>](ui-automation-events-for-clients.md)  
- [<span data-ttu-id="45cd5-110">Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients</span><span class="sxs-lookup"><span data-stu-id="45cd5-110">Caching in UI Automation Clients</span></span>](caching-in-ui-automation-clients.md)  
- [<span data-ttu-id="45cd5-111">Benutzeroberflächenautomatisierungs-Eigenschaften für Clients</span><span class="sxs-lookup"><span data-stu-id="45cd5-111">UI Automation Properties for Clients</span></span>](ui-automation-properties-for-clients.md)  
- [<span data-ttu-id="45cd5-112">Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients</span><span class="sxs-lookup"><span data-stu-id="45cd5-112">Control Pattern Mapping for UI Automation Clients</span></span>](control-pattern-mapping-for-ui-automation-clients.md)  
- [<span data-ttu-id="45cd5-113">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="45cd5-113">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)  
- [<span data-ttu-id="45cd5-114">Abrufen von Benutzeroberflächenautomatisierungs-Elementen</span><span class="sxs-lookup"><span data-stu-id="45cd5-114">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)  
- [<span data-ttu-id="45cd5-115">Threadingprobleme bei der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="45cd5-115">UI Automation Threading Issues</span></span>](ui-automation-threading-issues.md)  
- [<span data-ttu-id="45cd5-116">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="45cd5-116">How-to Topics</span></span>](ui-automation-clients-for-managed-code-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a0e4b-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a0e4b-106">In This Section</span></span>  
+ [<span data-ttu-id="a0e4b-107">Benutzeroberflächenautomatisierung und Bildschirmskalierung</span><span class="sxs-lookup"><span data-stu-id="a0e4b-107">UI Automation and Screen Scaling</span></span>](ui-automation-and-screen-scaling.md)  
+ [<span data-ttu-id="a0e4b-108">Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="a0e4b-108">UI Automation Support for Standard Controls</span></span>](ui-automation-support-for-standard-controls.md)  
+ [<span data-ttu-id="a0e4b-109">Benutzeroberflächenautomatisierungs-Ereignisse für Clients</span><span class="sxs-lookup"><span data-stu-id="a0e4b-109">UI Automation Events for Clients</span></span>](ui-automation-events-for-clients.md)  
+ [<span data-ttu-id="a0e4b-110">Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients</span><span class="sxs-lookup"><span data-stu-id="a0e4b-110">Caching in UI Automation Clients</span></span>](caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="a0e4b-111">Benutzeroberflächenautomatisierungs-Eigenschaften für Clients</span><span class="sxs-lookup"><span data-stu-id="a0e4b-111">UI Automation Properties for Clients</span></span>](ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="a0e4b-112">Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients</span><span class="sxs-lookup"><span data-stu-id="a0e4b-112">Control Pattern Mapping for UI Automation Clients</span></span>](control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="a0e4b-113">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="a0e4b-113">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="a0e4b-114">Abrufen von Benutzeroberflächenautomatisierungs-Elementen</span><span class="sxs-lookup"><span data-stu-id="a0e4b-114">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)  
+ [<span data-ttu-id="a0e4b-115">Threadingprobleme bei der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="a0e4b-115">UI Automation Threading Issues</span></span>](ui-automation-threading-issues.md)  
+ [<span data-ttu-id="a0e4b-116">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="a0e4b-116">How-to Topics</span></span>](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="45cd5-117">Referenz</span><span class="sxs-lookup"><span data-stu-id="45cd5-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a0e4b-117">Referenz</span><span class="sxs-lookup"><span data-stu-id="a0e4b-117">Reference</span></span>  
  <xref:System.Windows.Automation>
