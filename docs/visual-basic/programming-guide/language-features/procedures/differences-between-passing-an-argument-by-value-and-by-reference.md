@@ -1,5 +1,5 @@
 ---
-title: Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
+title: Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ec3bac2532b2cef72ddda347251bc987801c3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864545"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341232"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
-Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jedes Argument im aufrufenden Code eine zugrunde liegende Programmierelement ein Element. Sie können entweder den Wert dieses Elements zugrunde liegenden oder einen Verweis darauf übergeben. Dies bezeichnet man als den *Übergabemechanismus*.  
+When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
   
 ## <a name="passing-by-value"></a>Übergeben als Wert  
- Übergeben Sie ein Argument *nach Wert* durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition. Wenn Sie dieses Übergabemechanismus verwenden, kopiert Visual Basic den Wert des zugrunde liegenden Programmierelements in eine lokale Variable in der Prozedur. Der Code der Prozedur wird im aufrufenden Code keinen Zugriff auf das zugrunde liegende Element.  
+ You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
   
-## <a name="passing-by-reference"></a>Übergeben als Verweis  
- Übergeben Sie ein Argument *als Verweis* durch Angabe der [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort für den entsprechenden Parameter in der Prozedurdefinition. Wenn Sie dieses Übergabemechanismus verwenden, bietet Visual Basic im aufrufenden Code einen direkten Verweis auf das zugrunde liegende Programmierelement an der Prozedur.  
+## <a name="passing-by-reference"></a>Passing by Reference  
+ You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
   
-## <a name="passing-mechanism-and-element-type"></a>Übergabemechanismus und Elementtyp  
- Die Wahl des Übergabemechanismus ist nicht identisch mit der Klassifizierung des zugrunde liegenden Elementtyps. Übergeben als Wert oder Verweis bezieht sich auf was Visual Basic zum Code Prozedur bereitstellt. Ein Werttyp oder Verweistyp verweist, wie ein Programmierelement im Arbeitsspeicher gespeichert ist.  
+## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
+ The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
   
- Allerdings stehen die Übergabemechanismus und den Elementtyp in wechselseitiger Beziehung. Der Wert eines Verweistyps ist ein Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher. Dies bedeutet, dass wenn Sie einen Verweistyp als Wert übergeben, der Code der Prozedur einen Zeiger auf die zugrunde liegenden Daten des Elements, obwohl das zugrunde liegende Element selbst nicht darauf zugreifen können. Wenn das Element eine Arrayvariable, z. B. der Code der Prozedur keinen Zugriff auf die Variable selbst, aber kann Sie auf die Array-Elemente zugreifen.  
+ However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
   
-## <a name="ability-to-modify"></a>Fähigkeit zum Ändern  
- Wenn Sie ein nicht veränderbares Element als Argument übergeben, die Prozedur kann nie geändert es im aufrufenden Code Übergabe `ByVal` oder `ByRef`.  
+## <a name="ability-to-modify"></a>Ability to Modify  
+ When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
   
- Nach einem änderbaren Element werden in der folgende Tabelle die Interaktion zwischen den Typ des Elements und dem Übergabemechanismus zusammengefasst.  
+ For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
   
-|Elementtyp|Übergeben `ByVal`|Übergeben `ByRef`|  
+|Elementtyp|Passed `ByVal`|Passed `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Werttyp (enthält nur einen Wert)|Die Prozedur kann nicht auf die Variable oder eines ihrer Elemente ändern.|Die Prozedur kann die Variable und ihre Mitglieder ändern.|  
-|Verweistyp (enthält einen Zeiger auf eine Klasse oder Struktur-Instanz)|Die Prozedur kann die Variable kann nicht geändert werden jedoch ändern Membern der Instanz auf der er verweist.|Die Variable und den Membern der Instanz auf der er verweist, kann die Prozedur ändern.|  
+|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
+|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
-- [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
+- [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
 - [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
 - [Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](./differences-between-modifiable-and-nonmodifiable-arguments.md)
-- [Vorgehensweise: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Vorgehensweise: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Vorgehensweise: Erzwingen, dass ein Argument als Wert übergeben wird](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Gewusst wie: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

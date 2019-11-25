@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Analysieren einer Zeichenfolge (Visual Basic)'
+title: 'Gewusst wie: Parsen einer Zeichenfolge'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956375"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344499"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysieren einer Zeichenfolge (Visual Basic)
-In diesem Thema wird gezeigt, wie eine XML- C#Struktur in erstellt wird.  
+# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
+This topic shows how to create an XML tree in C#.  
   
 ## <a name="example"></a>Beispiel  
- Sie können eine Zeichenfolge in Visual Basic analysieren, indem Sie `XElement.Parse` die-Methode verwenden. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
+ You can parse a string in Visual Basic by using the `XElement.Parse` method. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
   
- Mithilfe von XML-Literalen können Sie den XML-Code einfach kopieren und in das Visual Basic Programm einfügen.  
+ By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
   
 > [!NOTE]
 > Das Analysieren von Text oder das Laden eines XML-Dokuments aus einer Textdatei ist weniger effizient als die funktionale Konstruktion. Wenn Sie eine XML-Struktur aus Code initialisieren, verbraucht die funktionale Konstruktion weniger Verarbeitungszeit als das Analysieren des Textes.  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

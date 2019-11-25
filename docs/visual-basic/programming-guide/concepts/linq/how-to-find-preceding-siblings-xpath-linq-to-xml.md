@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Vorhergehende neben geordnete Elemente suchen (XPath-LINQ to XML) (Visual Basic)'
+title: 'Gewusst wie: Suchen nach vorangehenden Nebengeordneten (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 1ad57c1b6f06843bd757257c8ecda637ad0e71b6
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: be6c546465f659eb633017e47434c86b9f036bf2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250087"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344691"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Vorhergehende neben geordnete Elemente suchen (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird die XPath-`preceding-sibling`-Achse mit der untergeordneten [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>-Achse verglichen.  
   
  Der XPath-Ausdruck lautet:  
@@ -57,4 +57,4 @@ Results are identical
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML für XPath-Benutzer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

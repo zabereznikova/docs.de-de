@@ -1,22 +1,22 @@
 ---
-title: Generierungsvorgänge (Visual Basic)
+title: Generierungsvorgänge
 ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
-ms.openlocfilehash: cbc3de23fc8ef691c0342b318728c035db9a36b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d1170349762d8475d8862a01f8152143072b000
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927704"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353395"
 ---
-# <a name="generation-operations-visual-basic"></a>Generierungsvorgänge (Visual Basic)
+# <a name="generation-operations-visual-basic"></a>Generation Operations (Visual Basic)
 Die Generierung bezieht sich auf das Erstellen einer neuen Sequenz von Werten.  
   
  Die Methoden des Standardabfrageoperators, die Generierung ausführen, sind im folgenden Abschnitt aufgeführt.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung|Visual Basic-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |DefaultIfEmpty|Ersetzt eine leere Auflistung durch eine Standardwert-Singeltonauflistung.|Nicht zutreffend.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
 |Empty|Gibt eine leere Auflistung zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Konvertieren von Hexadezimalzeichenfolgen in Zahlen (Visual Basic)'
+title: 'Gewusst wie: Konvertieren von Hexadezimalzeichenfolgen in Zahlen'
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: ddb7b39f7a47234c003ca16e1d7ea013e113c108
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0a97a0c212a64bfa4db4606ee526b666f07877a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054041"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347174"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Vorgehensweise: Konvertieren von Hexadezimalzeichenfolgen in Zahlen (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Gewusst wie: Konvertieren von Hexadezimalzeichenfolgen in Zahlen (Visual Basic)
 
-In diesem Beispiel wird eine hexadezimale Zeichenfolge konvertiert, um eine ganze Zahl mit dem <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> Methode.
+This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Zum Konvertieren einer hexadezimalen Zeichenfolge in eine Zahl
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
 
-- Verwenden der <xref:System.Convert.ToInt32(System.String,System.Int32)> Methode, um die Anzahl, ausgedrückt in Base-16 in eine ganze Zahl zu konvertieren.
+- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
 
-  Das erste Argument von der <xref:System.Convert.ToInt32(System.String,System.Int32)> Methode ist die zu konvertierende Zeichenfolge. Das zweite Argument wird beschrieben, welche Basis der Zahl ausgedrückt wird; hexadezimale Basis 16 ist.
+  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Beachten Sie, dass die hexadezimale Zeichenfolge die folgenden Einschränkungen:
+- Note that the hexadecimal string has the following restrictions:
 
-  - Es darf keine enthalten die `&h` Präfix.
-  - Es darf keine enthalten die `_` Zifferntrennzeichen.
+  - It cannot include the `&h` prefix.
+  - It cannot include the `_` digit separator.
 
-  Wenn das Präfix oder Zifferntrennzeichen vorhanden ist, den Aufruf der <xref:System.Convert.ToInt32(System.String,System.Int32)> -Methode löst eine <xref:System.FormatException>.
+  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
 
 ## <a name="see-also"></a>Siehe auch
 

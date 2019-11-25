@@ -1,5 +1,5 @@
 ---
-title: Await-Operator (Visual Basic)
+title: Await-Operator
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Await
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: ac1e56ae8b78277c8c8c5687598b97e6764dac0c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580404"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336265"
 ---
 # <a name="await-operator-visual-basic"></a>Await-Operator (Visual Basic)
 
 Sie wenden den Operator `Await` auf einen Operanden in einer asynchronen Methode oder einem Lambda-Ausdruck an, um die Ausführung der Methode anzuhalten, bis die erwartete Aufgabe ausgeführt wurde. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.
 
-Die Methode, in der `Await` verwendet wird, muss einen [Async](../../../visual-basic/language-reference/modifiers/async.md) -Modifizierer aufweisen. Eine solche mit dem `Async`-Modifizierer definierte Methode, die in der Regel mindestens einen `Await`-Ausdruck enthält, wird als *async-Methode* bezeichnet.
+The method in which `Await` is used must have an [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier. Eine solche mit dem `Async`-Modifizierer definierte Methode, die in der Regel mindestens einen `Await`-Ausdruck enthält, wird als *async-Methode* bezeichnet.
 
 > [!NOTE]
-> Die Schlüsselwörter `Async` und `Await` wurden in Visual Studio 2012 eingeführt. Eine Einführung in die asynchrone Programmierung finden Sie unter [asynchrone Programmierung mit Async und warten](../../../visual-basic/programming-guide/concepts/async/index.md).
+> Die Schlüsselwörter `Async` und `Await` wurden in Visual Studio 2012 eingeführt. For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
 
-In der Regel ist die Aufgabe, auf die Sie den `Await`-Operator anwenden, der Rückgabewert eines Aufrufes einer Methode, die das [aufgabenbasierte asynchrone Muster](https://go.microsoft.com/fwlink/?LinkId=204847)implementiert, d. h. eine <xref:System.Threading.Tasks.Task> oder eine <xref:System.Threading.Tasks.Task%601>.
+Typically, the task to which you apply the `Await` operator is the return value from a call to a method that implements the [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), that is, a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601>.
 
 Im folgenden Code gibt die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>`getContentsTask`, eine `Task(Of Byte())` zurück. Die Aufgabe enthält das Versprechen, das tatsächliche Bytearray zu erzeugen, wenn die Operation abgeschlossen ist. Der Operator `Await` wird auf `getContentsTask` angewendet, um die Ausführung in `SumPageSizesAsync` anzuhalten, bis `getContentsTask` abgeschlossen wurde. In der Zwischenzeit wird die Steuerung wieder an den Aufrufer von `SumPageSizesAsync` übergeben. Wenn `getContentsTask` beendet ist, wird der `Await`-Ausdruck in ein Bytearray ausgewertet.
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 Ein `Await`-Ausdruck oder eine Await-Anweisung blockiert nicht den Thread, auf dem sie ausgeführt wird. Stattdessen wird damit verursacht, dass der Compiler den Rest der asynchronen Methode nach dem `Await`-Ausdruck als Fortsetzung der erwarteten Aufgabe registriert. Die Steuerung wird dann wieder an den Aufrufer der Async-Methode übergeben. Wenn die Aufgabe abgeschlossen ist, löst sie ihre Fortsetzung aus, und die Ausführung der asynchronen Methode wird da fortgesetzt, wo sie angehalten wurde.
 
-Ein `Await`-Ausdruck kann nur im Text einer unmittelbar einschließenden Methode oder eines Lambda-Ausdrucks auftreten, die oder der durch einen `Async`-Modifizierer gekennzeichnet ist. Der Begriff " *warten* " dient nur in diesem Kontext als Schlüsselwort. In anderen Kontexten wird er als Bezeichner interpretiert. Innerhalb der Async-Methode oder des Lambda-Ausdrucks kann ein `Await` Ausdruck nicht in einem Abfrage Ausdruck auftreten, im `catch` oder `finally` Block eines [try... Catch... Schließlich](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) Anweisung im Schleifen Steuerungsvariablen Ausdruck einer `For`-oder `For Each` Schleife oder im Text einer [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) -Anweisung.
+Ein `Await`-Ausdruck kann nur im Text einer unmittelbar einschließenden Methode oder eines Lambda-Ausdrucks auftreten, die oder der durch einen `Async`-Modifizierer gekennzeichnet ist. The term *Await* serves as a keyword only in that context. In anderen Kontexten wird er als Bezeichner interpretiert. Within the async method or lambda expression, an `Await` expression cannot occur in a query expression, in the `catch` or `finally` block of a [Try…Catch…Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) statement, in the loop control variable expression of a `For` or `For Each` loop, or in the body of a [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) statement.
 
 ## <a name="exceptions"></a>Ausnahmen
 
@@ -70,7 +70,7 @@ Wenn Sie eine asynchrone Methode erwarten, die eine Aufgabe zurückgibt und abge
 
 Eine einzelne Aufgabe, die einen Fehlerzustand aufweist, kann verschiedene Ausnahmen auslösen.  Beispielsweise kann die Aufgabe das Ergebnis eines Aufrufs an <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> sein. Wenn Sie auf eine solche Aufgabe warten, löst die await-Operation nur eine der Ausnahmen erneut aus. Sie können jedoch nicht vorhersagen, welche der Ausnahmen erneut ausgelöst wird.
 
-Beispiele für die Fehlerbehandlung in Async-Methoden finden [Sie unter try... Catch... Abschließend-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+For examples of error handling in async methods, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
 ## <a name="example"></a>Beispiel
 

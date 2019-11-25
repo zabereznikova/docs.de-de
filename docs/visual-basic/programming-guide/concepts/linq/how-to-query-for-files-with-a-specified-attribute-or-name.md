@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)'
+title: 'Gewusst wie: Abfragen von Dateien mit einem angegebenen Attribut oder Namen'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586487"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347689"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
 In diesem Beispiel wird veranschaulicht, wie nach allen Dateien mit einem angegebenen Suffix (z.B. „.txt“) in einer angegebenen Verzeichnisstruktur gesucht wird. Es wird auch gezeigt, wie basierend auf dem Zeitpunkt der Erstellung entweder die neueste oder älteste Datei in der Struktur zurückgegeben wird.  
   
 ## <a name="example"></a>Beispiel  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
-Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Siehe auch
 

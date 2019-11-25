@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bezeichnungs Anweisungen (Visual Basic)'
+title: 'Gewusst wie: Bezeichnen von Anweisungen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054050"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347382"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Vorgehensweise: Bezeichnungs Anweisungen (Visual Basic)
+# <a name="how-to-label-statements-visual-basic"></a>Gewusst wie: Label-Anweisungen (Visual Basic)
 
-Anweisungsblöcke bestehen aus Codezeilen, die durch Doppelpunkte getrennt sind. Codezeilen, denen eine identifizierende Zeichenfolge oder eine ganze Zahl vorangestellt ist, werden *als bezeichnet*. Mithilfe von Anweisungs Bezeichnungen wird eine Codezeile gekennzeichnet, um Sie für die Verwendung mit Anweisungen wie `On Error Goto`zu kennzeichnen.
+Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
 
-Bezeichnungen können entweder gültige Visual Basic Bezeichner sein – z. b. diejenigen, die Programmier Elemente identifizieren – oder ganzzahlige Literale. Eine Bezeichnung muss am Anfang einer Zeile des Quellcodes vorhanden sein, und es muss ein Doppelpunkt folgen, unabhängig davon, ob auf Sie eine-Anweisung in derselben Zeile folgt.
+Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
 
-Der Compiler identifiziert Bezeichnungen, indem er überprüft, ob der Anfang der Zeile mit einem bereits definierten Bezeichner übereinstimmt. Andernfalls geht der Compiler davon aus, dass es sich um eine Bezeichnung handelt.
+The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
 
-Bezeichnungen verfügen über einen eigenen Deklarations Bereich und stören andere Bezeichner nicht. Der Gültigkeitsbereich einer Bezeichnung ist der Text der Methode. Die Bezeichnungs Deklaration hat in jeder mehrdeutigen Situation Vorrang.
+Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
 
 > [!NOTE]
-> Bezeichnungen können nur für ausführbare Anweisungen innerhalb von Methoden verwendet werden.
+> Labels can be used only on executable statements inside methods.
 
-## <a name="to-label-a-line-of-code"></a>So bezeichnen Sie eine Codezeile
+## <a name="to-label-a-line-of-code"></a>To label a line of code
 
-Platzieren Sie einen Bezeichner, gefolgt von einem Doppelpunkt, am Anfang der Zeile des Quellcodes.
+Place an identifier, followed by a colon, at the beginning of the line of source code.
 
-Die folgenden Codezeilen werden z. b. mit `Jump` `120`bzw. gekennzeichnet:
+For example, the following lines of code are labeled with `Jump` and `120`, respectively:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 

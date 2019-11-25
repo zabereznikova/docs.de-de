@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)'
+title: 'Gewusst wie: Lesen von Objektdaten aus einer XML-Datei'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624366"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346425"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
   
 ## <a name="example"></a>Beispiel  
@@ -30,7 +30,7 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Namen der Datei, die die serialisierten Daten enthält. Weitere Informationen zum Serialisieren von Daten finden Sie unter [Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Namen der Datei, die die serialisierten Daten enthält. For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
   
@@ -51,6 +51,6 @@ End Sub
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO.StreamWriter>
-- [Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
 - [Serialisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)

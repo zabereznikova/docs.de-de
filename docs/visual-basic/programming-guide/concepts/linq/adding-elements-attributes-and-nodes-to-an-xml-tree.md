@@ -1,15 +1,15 @@
 ---
-title: Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (Visual Basic)
+title: Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d3d3a27194bb022434f09778dbf3960bd0b9853
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021855"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345816"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (Visual Basic)
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)
 Sie können einer vorhandenen XML-Struktur Inhalt (Elemente, Attribute, Kommentare, Verarbeitungsanweisungen, Text und CDATA) hinzufügen.  
   
 ## <a name="methods-for-adding-content"></a>Methoden zum Hinzufügen von Inhalt  
@@ -82,4 +82,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ändern von XML-Bäumen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

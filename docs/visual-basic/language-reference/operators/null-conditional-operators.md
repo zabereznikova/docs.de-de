@@ -1,23 +1,23 @@
 ---
-title: NULL-bedingte Operatoren (Visual Basic)
+title: Null-conditional Operators
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 40cb63705eda563b4c3cfd30fa9836a8f632dccf
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581638"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348284"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. immer? () NULL-bedingte Operatoren (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. and ?() null-conditional operators (Visual Basic)
 
-Testet den Wert des linken Operanden für NULL (`Nothing`) vor dem Ausführen eines Element Zugriffs (`?.`) oder eines Index Vorgangs (`?()`). gibt `Nothing` zurück, wenn der linke Operand als `Nothing` ausgewertet wird. Beachten Sie, dass der NULL bedingte Operator in Ausdrücken, die normalerweise Werttypen zurückgeben, eine <xref:System.Nullable%601> zurückgibt.
+Tests the value of the left-hand operand for null (`Nothing`) before performing a member access (`?.`) or index (`?()`) operation; returns `Nothing` if the left-hand operand evaluates to `Nothing`. Note that in expressions that ordinarily return value types, the null-conditional operator returns a <xref:System.Nullable%601>.
 
-Diese Operatoren helfen Ihnen, weniger Code zum Behandeln von Null-Überprüfungen zu schreiben, insbesondere beim absteigend in Datenstrukturen. Beispiel:
+These operators help you write less code to handle null checks, especially when descending into data structures. Beispiel:
 
 ```vb
 ' Nothing if customers is Nothing
@@ -30,7 +30,7 @@ Dim first As Customer = customers?(0)
 Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-Der Alternative Code für den ersten dieser Ausdrücke ohne einen NULL bedingten Operator lautet zum Vergleich:
+For comparison, the alternative code for the first of these expressions without a null-conditional operator is:
 
 ```vb
 Dim length As Integer
@@ -39,7 +39,7 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Manchmal müssen Sie eine Aktion für ein Objekt durchführen, das möglicherweise NULL ist. Dies basiert auf dem Wert eines booleschen Elements auf diesem Objekt (wie z. b. die boolesche Eigenschaft `IsAllowedFreeShipping` im folgenden Beispiel):
+Sometimes you need to take an action on an object that may be null, based on the value of a Boolean member on that object (like the Boolean property `IsAllowedFreeShipping` in the following example):
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -49,7 +49,7 @@ If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
 End If
 ```
 
-Sie können den Code verkürzen und die manuelle Überprüfung auf NULL vermeiden, indem Sie den NULL-bedingten Operator wie folgt verwenden:
+You can shorten your code and avoid manually checking for null by using the null-conditional operator as follows:
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Die NULL-bedingten Operatoren sind Kurzschlussoperatoren.  Wenn ein Vorgang in einer Kette von bedingtem Element Zugriff und Index Vorgängen `Nothing` zurückgibt, wird der Rest der Ausführung der Kette angehalten.  Im folgenden Beispiel wird `C(E)` nicht ausgewertet, wenn `A`, `B` oder `C` als `Nothing` ausgewertet wird.
+Die NULL-bedingten Operatoren sind Kurzschlussoperatoren.  If one operation in a chain of conditional member access and index operations returns `Nothing`, the rest of the chain’s execution stops.  In the following example, `C(E)` isn't evaluated if `A`, `B`, or `C` evaluates to `Nothing`.
 
 ```vb
-A?.B?.C?(E);
+A?.B?.C?(E)
 ```
 
-Eine andere Verwendung für den Zugriff auf NULL bedingte Member besteht darin, Delegaten auf Thread sichere Weise mit wesentlich geringerem Code aufzurufen.  Im folgenden Beispiel werden zwei Typen definiert: eine `NewsBroadcaster` und eine `NewsReceiver`. News Items werden vom `NewsBroadcaster.SendNews` Delegaten an den Empfänger gesendet.
+Another use for null-conditional member access is to invoke delegates in a thread-safe way with much less code.  The following example defines two types, a `NewsBroadcaster` and a `NewsReceiver`. News items are sent to the receiver by the `NewsBroadcaster.SendNews` delegate.
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-Wenn die `SendNews` Aufruf Liste keine Elemente enthält, löst der `SendNews` Delegat eine <xref:System.NullReferenceException> aus. Vor bedingten NULL-Operatoren hat Code wie der folgende sichergestellt, dass die Aufruf Liste des Delegaten nicht `Nothing` wurde:
+If there are no elements in the `SendNews` invocation list, the `SendNews` delegate throws a <xref:System.NullReferenceException>. Before null conditional operators, code like the following ensured that the delegate invocation list was not `Nothing`:
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -111,6 +111,6 @@ Die neue Methode ist threadsicher, da der Compiler Code zum Auswerten von `SendN
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Operatoren (Visual Basic)](index.md)
+- [Operators (Visual Basic)](index.md)
 - [Visual Basic-Programmierhandbuch](../../../visual-basic/programming-guide/index.md)
 - [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)

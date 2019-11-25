@@ -1,32 +1,32 @@
 ---
-title: COM-Interoperabilität in .NET Framework-Anwendungen (Visual Basic)
+title: COM-Interoperabilität in .NET Framework-Anwendungen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 758f065d2e0e7f8200529ef171dc89f94950b46e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1c484ae948c247a97dd57539e3b0be263736aceb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627089"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348746"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-Interoperabilität in .NET Framework-Anwendungen (Visual Basic)
 
-Wenn Sie COM-Objekte und .NET Framework-Objekte in derselben Anwendung verwenden möchten, müssen Sie die Unterschiede in der Art und Weise berücksichtigen, in der die Objekte im Arbeitsspeicher vorhanden sind. Ein .NET Framework-Objekt befindet sich im verwalteten Speicher – der vom Common Language Runtime gesteuerte Arbeitsspeicher – und kann ggf. von der Laufzeit verschoben werden. Ein COM-Objekt befindet sich im nicht verwalteten Speicher und wird nicht erwartet, dass es an einen anderen Speicherort verschoben wird. Visual Studio und die .NET Framework bieten Tools, mit denen Sie die Interaktion dieser verwalteten und nicht verwalteten Komponenten steuern können. Weitere Informationen zu verwaltetem Code finden Sie unter [Common Language Runtime](../../../standard/clr.md).
+When you want to use COM objects and .NET Framework objects in the same application, you need to address the differences in how the objects exist in memory. A .NET Framework object is located in managed memory—the memory controlled by the common language runtime—and may be moved by the runtime as needed. A COM object is located in unmanaged memory and is not expected to move to another memory location. Visual Studio and the .NET Framework provide tools to control the interaction of these managed and unmanaged components. For more information about managed code, see [Common Language Runtime](../../../standard/clr.md).
 
-Zusätzlich zur Verwendung von COM-Objekten in .NET-Anwendungen möchten Sie möglicherweise auch Visual Basic verwenden, um Objekte zu entwickeln, auf die von nicht verwaltetem Code über com zugegriffen werden kann.
+In addition to using COM objects in .NET applications, you may also want to use Visual Basic to develop objects accessible from unmanaged code through COM.
 
-Die Links auf dieser Seite bieten Details zu Interaktionen zwischen com-und .NET Framework Objekten.
+The links on this page provide details on the interactions between COM and .NET Framework objects.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
 | | |
 |---------|---------|
-| [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Enthält Links zu Themen, die die COM-Interoperabilität in Visual Basic abdecken, einschließlich COM-Objekte, ActiveX-Steuerelementen, Win32-DLLs, verwalteten Objekten und Vererbung von COM-Objekten. |
-| [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md) | Beschreibt kurz einige Interaktions Probleme zwischen verwaltetem und nicht verwaltetem Code und stellt Links zur weiteren Untersuchung bereit. |
-| [COM-Wrapper](../../../standard/native-interop/com-wrappers.md) | Erläutert Runtime Callable Wrapper, die es verwaltetem Code ermöglichen, com-Methoden und COM Callable Wrapper aufzurufen, die com-Clients das Aufrufen von .net-Objektmethoden ermöglichen. |
-| [Erweiterte COM-Interoperabilität](../../../framework/interop/index.md) | Enthält Links zu Themen, in denen die COM-Interoperabilität in Bezug auf Wrapper, Ausnahmen, Vererbung, Threading, Ereignisse, Konvertierungen und Marshalling behandelt wird. |
-| [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Erläutert das Tool, das Sie verwenden können, um die in einer COM-Typbibliothek gefundenen Typdefinitionen in äquivalente Definitionen in einer Common Language Runtime Assembly zu konvertieren. |
+| [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Provides links to topics covering COM interoperability in Visual Basic, including COM objects, ActiveX controls, Win32 DLLs, managed objects, and inheritance of COM objects. |
+| [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md) | Briefly describes some of the interaction issues between managed and unmanaged code, and provides links for further study. |
+| [COM-Wrapper](../../../standard/native-interop/com-wrappers.md) | Discusses runtime callable wrappers, which allow managed code to call COM methods, and COM callable wrappers, which allow COM clients to call .NET object methods. |
+| [Erweiterte COM-Interoperabilität](../../../framework/interop/index.md) | Provides links to topics covering COM interoperability with respect to wrappers, exceptions, inheritance, threading, events, conversions, and marshaling. |
+| [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Discusses the tool you can use to convert the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly. |

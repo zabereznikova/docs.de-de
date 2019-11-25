@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)'
+title: 'Gewusst wie: Schreiben von XML-Abfragen in Namespaces'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 496cf8daf5136e8aafff000312bbd730a5152e9f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835008"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344470"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>How to: Write Queries on XML in Namespaces (Visual Basic)
 Wenn Sie eine Abfrage für XML in einem Namespace schreiben möchten, müssen Sie <xref:System.Xml.Linq.XName>-Objekte verwenden, die den richtigen Namespace enthalten.  
   
  In Visual Basic wird meist ein globaler Namespace definiert, und anschließend werden XML-Literale und XML-Eigenschaften verwendet, die den globalen Namespace nutzen. Sie können einen globalen Standardnamespace definieren. Die Elemente in den XML-Literalen sind dann standardmäßig im Namespace vorhanden. Stattdessen können Sie auch einen globalen Namespace mit einem Präfix definieren und dann das Präfix den Anforderungen entsprechend in den XML-Literalen und in den XML-Eigenschaften verwenden. Wie bei anderen XML-Formen auch befinden sich Attribute standardmäßig nicht in einem Namespace.  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

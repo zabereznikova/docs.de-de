@@ -1,5 +1,5 @@
 ---
-title: -reout (Visual Basic)
+title: -refout
 ms.date: 03/16/2018
 f1_keywords:
 - /refout
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3649a24a52cc6a448ea7cf4d850915adf02147fb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775551"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348656"
 ---
-# <a name="-refout-visual-basic"></a>-reout (Visual Basic)
+# <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
 Die Option **-refout** gibt einen Dateipfad an, an den die Verweisassembly ausgegeben werden soll.
 
@@ -29,13 +29,13 @@ Die Option **-refout** gibt einen Dateipfad an, an den die Verweisassembly ausge
 ## <a name="arguments"></a>Argumente
 
 `filepath`  
-Der Pfad und der Dateiname der Verweisassembly. Er sollte sich in der Regel in einem Unterordner der primären Assembly befinden. Die empfohlene Konvention (von MSBuild verwendet) ist die, die Verweisassembly in einem „ref/“-Unterordner zu platzieren, der relativ zur primären Assembly ist. Alle Ordner in `filepath` müssen vorhanden sein. der Compiler erstellt diese nicht.
+The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. Die empfohlene Konvention (von MSBuild verwendet) ist die, die Verweisassembly in einem „ref/“-Unterordner zu platzieren, der relativ zur primären Assembly ist. All folders in `filepath` must exist; the compiler does not create them.
 
 ## <a name="remarks"></a>Hinweise
 
-Visual Basic unterstützt den `-refout` Switch ab Version 15,3.
+Visual Basic supports the `-refout` switch starting with version 15.3.
 
-Verweisassemblys sind eine besondere Art von Assembly, die nur die Mindestanzahl von Metadaten enthält, die zur Darstellung der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie enthalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools signifikant sind, aber alle Member-Implementierungen und-Deklarationen von privaten Membern ausschließen, die keine Observable-Auswirkung auf Ihren API-Vertrag haben. Weitere Informationen finden Sie im [Leitfaden zu Verweisassemblys in .net](../../../standard/assembly/reference-assemblies.md).
+Verweisassemblys sind eine besondere Art von Assembly, die nur die Mindestmenge an Metadaten enthalten, die zum Darstellen der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie beinhalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools von Bedeutung sind, schließen aber alle Memberimplementierungen und Deklarationen privater Member aus, die keine beobachtbaren Auswirkungen auf ihren API-Vertrag haben. Weitere Informationen finden Sie unter [Verweisassemblys](../../../standard/assembly/reference-assemblies.md) im .NET-Leitfaden.
 
 Die Optionen `-refout` und [`-refonly`](refonly-compiler-option.md) schließen sich gegenseitig aus.
 

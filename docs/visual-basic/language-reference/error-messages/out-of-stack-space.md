@@ -1,32 +1,32 @@
 ---
-title: Nicht genügend Stapelspeicher (Visual Basic)
+title: Nicht genügend Stapelspeicher
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ae604a9727413f2705d42a4b68f5a50b7dd3feb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925579"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349184"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Nicht genügend Stapelspeicher (Visual Basic)
-Der Stapel ist ein Arbeitsbereich des Arbeitsspeichers, der wächst oder schrumpft dynamisch mit den Anforderungen des ausgeführten Programms an. Seine Grenzen wurden überschritten.  
+The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Überprüfen Sie, dass die Prozeduren nicht zu tief geschachtelt sind.  
+1. Check that procedures are not nested too deeply.  
   
-2. Stellen Sie sicher, dass rekursive Prozeduren ordnungsgemäß zu beenden.  
+2. Make sure recursive procedures terminate properly.  
   
-3. Wenn lokale Variablen mehr Speicherplatz als verfügbar ist erforderlich, versuchen Sie es deklarieren einige Variablen auf Modulebene. Sie können alle Variablen in der Prozedur auch statische deklarieren, abgrenzen, indem Sie die `Property`, `Sub`, oder `Function` Schlüsselwort mit `Static`. Sie können auch die `Static` Anweisung, um einzelne statische Variablen innerhalb von Prozeduren deklarieren.  
+3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
   
-4. Definieren Sie einige Ihrer Zeichenfolgen fester Länge, als Zeichenfolgen variabler Länge aus, wie Zeichenfolgen mit fester Länge mehr Stapelspeicher als Zeichenfolgen variabler Länge verwenden. Sie können auch die Zeichenfolge auf Modulebene definieren, in denen es keine Stapelspeicher erfordert.  
+4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
   
-5. Überprüfen Sie die Anzahl der geschachtelten `DoEvents` Funktionsaufrufe, mit der `Calls` Dialogfeld anzeigen, welche Prozeduren auf dem Stapel aktiv sind.  
+5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
   
-6. Stellen Sie sicher, dass Sie nicht "Ereignisfolge" dazu führte, durch Auslösen eines Ereignisses, das eine Ereignisprozedur bereits auf dem Stapel aufruft. Eine Ereigniskette ist vergleichbar mit einer nicht abgeschlossenen rekursiven Prozeduraufruf, aber es ist weniger offensichtlich, da der Aufruf von Visual Basic, anstatt einen expliziten Aufruf im Code ausgeführt wird. Verwenden der `Calls` Dialogfeld anzeigen, welche Prozeduren auf dem Stapel aktiv sind.  
+6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
   
 ## <a name="see-also"></a>Siehe auch
 

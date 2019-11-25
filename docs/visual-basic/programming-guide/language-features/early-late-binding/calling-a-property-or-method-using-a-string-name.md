@@ -1,5 +1,5 @@
 ---
-title: Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen (Visual Basic)
+title: Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - passing operators [Visual Basic]
@@ -12,39 +12,39 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 0683047865f520a09b2d2fe196096286b7d78714
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb584f0dfbd905ca071f9a86b1eab231f3017538
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965394"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345212"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen (Visual Basic)
-In den meisten Fällen können Sie die Eigenschaften und Methoden eines Objekts zur Entwurfszeit ermitteln und Code schreiben, um Sie zu behandeln. In einigen Fällen wissen Sie jedoch möglicherweise nicht, welche Eigenschaften und Methoden eines Objekts im voraus sind, oder Sie möchten, dass ein Endbenutzer die Möglichkeit bietet, Eigenschaften anzugeben oder Methoden zur Laufzeit auszuführen.  
+In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
   
-## <a name="callbyname-function"></a>CallByName-Funktion  
- Stellen Sie sich z. b. eine Client Anwendung vor, die vom Benutzer eingegebene Ausdrücke auswertet, indem Sie einen Operator an eine COM-Komponente übergeben. Angenommen, Sie fügen der Komponente, die neue Operatoren erfordert, ständig neue Funktionen hinzu. Wenn Sie standardmäßige Objekt Zugriffs Verfahren verwenden, müssen Sie die Client Anwendung erneut kompilieren und verteilen, bevor Sie die neuen Operatoren verwenden können. Um dies zu vermeiden, können Sie die `CallByName` -Funktion verwenden, um die neuen Operatoren als Zeichen folgen zu übergeben, ohne die Anwendung zu ändern.  
+## <a name="callbyname-function"></a>CallByName Function  
+ Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
   
- Mit `CallByName` der-Funktion können Sie zur Laufzeit eine Eigenschaft oder Methode mit einer Zeichenfolge angeben. Die Signatur für die `CallByName` -Funktion sieht wie folgt aus:  
+ The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
   
- Result = (Object, prozebauname, CallType, Arguments ())`CallByName`  
+ *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
   
- Das erste Argument, *Objekt*, nimmt den Namen des Objekts an, auf das Sie reagieren möchten. Das *prozedurename* -Argument nimmt eine Zeichenfolge an, die den Namen der aufzurufenden Methode oder Eigenschaften Prozedur enthält. Das *CallType* -Argument nimmt eine Konstante an, die den aufzurufenden Aufgabentyp`Microsoft.VisualBasic.CallType.Method`darstellt: eine Methode ()`Microsoft.VisualBasic.CallType.Get`, eine Eigenschaften Lesemethode ()`Microsoft.VisualBasic.CallType.Set`oder ein Eigenschaften Satz (). Das Argument Argument, das optional ist, nimmt ein Array vom Typ `Object` an, das Argumente der Prozedur enthält.  
+ The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
   
- Sie können mit `CallByName` Klassen in der aktuellen Projekt Mappe verwenden, aber es wird am häufigsten verwendet, um auf COM-Objekte oder-Objekte aus .NET Framework Assemblys zuzugreifen.  
+ You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
   
- Angenommen, Sie fügen einen Verweis auf eine Assembly hinzu, die eine `MathClass`Klasse mit dem Namen enthält, die `SquareRoot`eine neue Funktion mit dem Namen aufweist, wie im folgenden Code gezeigt:  
+ Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- Die Anwendung kann Textfeld-Steuerelemente verwenden, um zu steuern, welche Methode und ihre Argumente aufgerufen werden. Wenn `TextBox1` z. b. den auszuwertenden Ausdruck enthält und `TextBox2` zur Eingabe des Namens der Funktion verwendet wird, können Sie den folgenden Code verwenden, um die `SquareRoot` Funktion für den Ausdruck in `TextBox1`aufzurufen:  
+ Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- Wenn Sie " `TextBox1`64" in, "quaderoot" in `TextBox2`eingeben und dann die `CallMath` Prozedur aufzurufen, wird die Quadratwurzel der Zahl in `TextBox1` ausgewertet. Der Code im Beispiel ruft die `SquareRoot` -Funktion auf (die eine Zeichenfolge, die den Ausdruck enthält, als erforderliches Argument ausgewertet) und "8" in `TextBox1` (die Quadratwurzel von 64) zurückgibt. Wenn der Benutzer natürlich in eine ungültige Zeichenfolge eingibt, wenn die Zeichenfolge den Namen einer Eigenschaft anstelle einer Methode enthält, oder wenn die Methode über ein zusätzliches erforderliches Argument verfügt, tritt ein Laufzeitfehler auf `TextBox2`. Sie müssen robusten Fehler Behandlungs Code hinzufügen, wenn Sie verwenden `CallByName` , um diese oder andere Fehler vorherzusagen.  
+ If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
   
 > [!NOTE]
-> Obwohl die `CallByName` Funktion in einigen Fällen nützlich sein kann, müssen Sie Ihre Nützlichkeit gegen die Auswirkungen auf die Leistung abwägen `CallByName` – die Verwendung von zum Aufrufen einer Prozedur ist etwas langsamer als ein spät gebundener Aufruf. Wenn Sie eine Funktion aufrufen, die wiederholt aufgerufen wird, wie z. b. `CallByName` innerhalb einer-Schleife, kann sich die Leistung stark negativ auf die Leistung auswirken.  
+> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
   
 ## <a name="see-also"></a>Siehe auch
 

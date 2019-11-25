@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei Arrays (Visual Basic)
+title: Problembehandlung bei Arrays
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting arrays
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 3c50c68c2a39aa04cff2dd43b5dfde709aec290f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913467"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349067"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Problembehandlung bei Arrays (Visual Basic)
-Diese Seite listet einige der häufigsten Probleme, die bei der Arbeit mit Arrays auftreten können.  
+This page lists some common problems that can occur when working with arrays.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Kompilierungsfehler deklarieren und Initialisieren eines Arrays  
- Kompilierungsfehler können von Missverständnissen Regeln zum Deklarieren, erstellen und Initialisieren von Arrays auftreten. Die häufigsten Ursachen von Fehlern sind die folgenden:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
+ Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
   
-- Angeben einer [neuer Operator](../../../../visual-basic/language-reference/operators/new-operator.md) -Klausel nach der Angabe der Längen der Dimension in der Deklaration der Arrayvariablen. Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs.  
+- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Diese Seite listet einige der häufigsten Probleme, die bei der Arbeit mit Array
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Angeben von Längen der Dimension für mehr als Arrays der obersten Ebene eines verzweigten Arrays. Die folgende Codezeile zeigt eine ungültige Deklaration dieses Typs.  
+- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Das Auslassen der `New` Schlüsselwort, wenn Sie die Elementwerte angeben. Die folgende Codezeile zeigt eine ungültige Deklaration dieses Typs.  
+- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Angeben einer `New` -Klausel ohne geschweifte Klammern (`{}`). Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs.  
+- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ Diese Seite listet einige der häufigsten Probleme, die bei der Arbeit mit Array
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Zugreifen auf ein Array außerhalb des gültigen Bereichs  
- Bei der Initialisieren eines Arrays wird eine Obergrenze und einer unteren Grenze für jede Dimension zugewiesen. Jeder Zugriff auf ein Element des Arrays muss einen gültigen Index oder Feldindex, für eine Dimension angeben. Wenn ein Index unter der unteren Grenze oder über die Obergrenze ist ein <xref:System.IndexOutOfRangeException> Ausnahme führt. Der Compiler kann solche Fehler, nicht erkennen, damit zur Laufzeit ein Fehler auftritt.  
+## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
+ The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
   
-### <a name="determining-bounds"></a>Bestimmen von Grenzen  
- Wenn ein Array mit Ihrem Code eine andere Komponente übergeben wird, wissen z. B. als Prozedurargument, Sie nicht die Größe des Arrays oder der Länge seiner Dimensionen. Sie sollten immer die obere Grenze jeder Dimension eines Arrays bestimmen, bevor Sie versuchen, den Zugriff auf alle Elemente. Wenn das Array mit der eine Visual Basic erstellt wurde `New` -Klausel, die untere Grenze kann einen anderen Wert als 0 sein, und es ist am sichersten, sowie die Untergrenze bestimmen.  
+### <a name="determining-bounds"></a>Determining Bounds  
+ If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
   
-### <a name="specifying-the-dimension"></a>Die Dimension angeben  
- Wenn Sie die Grenzen eines mehrdimensionalen Arrays zu bestimmen, achten Sie wie Sie die Dimension angeben. Die `dimension` Parameter von der <xref:System.Array.GetLowerBound%2A> und <xref:System.Array.GetUpperBound%2A> Methoden sind 0-basiert, während die `Rank` Parameter der Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> und <xref:Microsoft.VisualBasic.Information.UBound%2A> Funktionen sind 1-basiert.  
+### <a name="specifying-the-dimension"></a>Specifying the Dimension  
+ When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Vorgehensweise: Initialisieren einer Arrayvariablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)

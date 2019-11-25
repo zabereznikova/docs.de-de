@@ -1,28 +1,28 @@
 ---
-title: 'Vorgehensweise: Überprüfen von Zeichenfolgen, Datumsangaben oder Uhrzeiten darstellen (Visual Basic)'
+title: 'Gewusst wie: Überprüfen von Zeichenfolgen, die Datumsangaben oder Uhrzeiten darstellen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34af6dffeb0d05eaeed38354f8007554b60e91b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024611"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344355"
 ---
-# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Vorgehensweise: Überprüfen von Zeichenfolgen, Datumsangaben oder Uhrzeiten darstellen (Visual Basic)
-Im folgenden Codebeispiel wird eine `Boolean` Wert, der angibt, ob eine Zeichenfolge ein gültiger Datums- oder Zeitwert darstellt.  
+# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Gewusst wie: Überprüfen von Zeichenfolgen, die Datumsangaben oder Uhrzeiten darstellen (Visual Basic)
+The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Ersetzen Sie dies `("01/01/03")` und `"9:30 PM"` mit Datum und Uhrzeit, die Sie überprüfen möchten. Können Sie die Zeichenfolge mit einer anderen Zeichenfolge, die hartcodiert und durch Ersetzen einer `String` Variablen, oder mit einer Methode, die eine Zeichenfolge zurückgibt, z. B. `InputBox`.  
+ Replace `("01/01/03")` and `"9:30 PM"` with the date and time you want to validate. You can replace the string with another hard-coded string, with a `String` variable, or with a method that returns a string, such as `InputBox`.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Mit dieser Methode können Sie um die Zeichenfolge zu überprüfen, bevor Sie versuchen, konvertieren die `String` zu einem `DateTime` Variable. Überprüfen Sie zuerst das Datum oder Uhrzeit, können Sie vermeiden, zur Laufzeit eine Ausnahme generiert.  
+ Use this method to validate the string before trying to convert the `String` to a `DateTime` variable. By checking the date or time first, you can avoid generating an exception at run time.  
   
 ## <a name="see-also"></a>Siehe auch
 

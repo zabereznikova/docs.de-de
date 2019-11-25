@@ -1,15 +1,15 @@
 ---
-title: Bereich von Standardnamespaces in Visual Basic
+title: Bereich von Standardnamespaces
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8ba4d13b6d40180a88651f0503d1323f2b78f36c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581885"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343647"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Bereich von Standardnamespaces in Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
 Standardnamespaces, wie sie in der XML-Struktur dargestellt werden, befinden sich bei Abfragen nicht innerhalb des gültigen Bereichs. Bei XML, das sich in einem Standardnamespace befindet, müssen Sie weiterhin eine <xref:System.Xml.Linq.XNamespace>-Variable deklarieren und diese Variable mit dem lokalen Namen kombinieren, um einen qualifizierten Namen zu erhalten, der in der Abfrage verwendet werden kann.  
   
  Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Erstellung von XML in einem Namespace und eine Abfrage, die korrekt codiert ist.  
   
- Im Gegensatz zum falsch codierten Beispiel oben besteht der richtige Ansatz bei der Verwendung Visual Basic darin, einen globalen Standard Namespace zu deklarieren und zu initialisieren. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.  
+ In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.  
   
 ### <a name="code"></a>Code  
   
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

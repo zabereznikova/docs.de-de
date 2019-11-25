@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Element Namen (Visual Basic)'
+title: 'Gewusst wie: Suchen nach Nachfolgern mit einem bestimmten Elementnamen'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 1a8aa07a79d05e62e0d5517c1675bc715e87de42
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249681"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344403"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Element Namen (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>How to: Find Descendants with a Specific Element Name (Visual Basic)
 Es kann vorkommen, dass Sie alle Nachfolgerelemente mit einem bestimmten Namen ermitteln möchten. Dazu könnten Sie Code schreiben, der alle Nachfolgerelemente durchläuft, einfacher ist es aber, die <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achse zu verwenden.  
   
 ## <a name="example"></a>Beispiel  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -103,4 +103,4 @@ Some text that is broken up into multiple segments.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

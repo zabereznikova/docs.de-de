@@ -1,5 +1,5 @@
 ---
-title: CType-Funktion (Visual Basic)
+title: CType Function
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CType
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: 4a0391b0a5d76f36803b433369d4832c02b05e09
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 18b2d5a28cd6ef885ba8d237da6764dbbd108b59
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592096"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348100"
 ---
 # <a name="ctype-function-visual-basic"></a>CType-Funktion (Visual Basic)
 
@@ -28,17 +28,17 @@ CType(expression, typename)
 
 ## <a name="parts"></a>Teile
 
-`expression` jeder gültige Ausdruck. Wenn der Wert von `expression` außerhalb des von `typename` definierten Bereichs liegt, wird von Visual Basic eine Ausnahme ausgelöst.
+`expression` Any valid expression. Wenn der Wert von `expression` außerhalb des von `typename` definierten Bereichs liegt, wird von Visual Basic eine Ausnahme ausgelöst.
 
-`typename` beliebiger Ausdruck, der in einer `As`-Klausel in einer `Dim`-Anweisung zulässig ist, d. h. der Name eines beliebigen Datentyps, Objekts, Struktur, Klasse oder Schnittstelle.
+`typename` Any expression that is legal within an `As` clause in a `Dim` statement, that is, the name of any data type, object, structure, class, or interface.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!TIP]
 > Sie können die folgenden Funktionen auch zum Ausführen einer Typkonvertierung verwenden:
 >
-> - Typkonvertierungsfunktionen, wie `CByte`, `CDbl` und `CInt`, mit denen eine Konvertierung in einen bestimmten Datentyp ausgeführt werden kann. Weitere Informationen finden Sie unter [Typkonvertierungs Funktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
-> - [DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) oder [TryCast-Operator](../../../visual-basic/language-reference/operators/trycast-operator.md). Diese Operatoren erfordern, dass ein Typ von dem Anderen erbt oder diesen implementiert. Sie können etwas bessere Leistung beim Konvertieren in und aus dem `CType`-Datentyp bieten, als `Object`.
+> - Typkonvertierungsfunktionen, wie `CByte`, `CDbl` und `CInt`, mit denen eine Konvertierung in einen bestimmten Datentyp ausgeführt werden kann. For more information, see [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
+> - [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) or [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md). Diese Operatoren erfordern, dass ein Typ von dem Anderen erbt oder diesen implementiert. Sie können etwas bessere Leistung beim Konvertieren in und aus dem `CType`-Datentyp bieten, als `Object`.
 
 `CType` wird inline kompiliert. Das bedeutet, dass der Konvertierungscode Bestandteil des Codes für die Auswertung des Ausdrucks ist. In einigen Fällen wird der Code schneller ausgeführt, da keine Prozeduren zum Ausführen der Konvertierung aufgerufen werden.
 
@@ -46,7 +46,7 @@ Wenn keine Konvertierung von `expression` in `typename` (zum Beispiel von `Integ
 
 Falls eine Konvertierung zur Laufzeit fehlschlägt, wird die entsprechende Ausnahme ausgelöst. Ist eine einschränkende Konvertierung fehlerhaft, wird meist ein <xref:System.OverflowException>-Fehler verursacht. Wenn die Konvertierung nicht definiert ist, wird eine <xref:System.InvalidCastException> ausgelöst. Dies kann z. B. der Fall sein, wenn `expression` vom Typ `Object` ist und für seinen Laufzeittyp keine Konvertierung in `typename` definiert ist.
 
-Handelt es sich beim Datentyp von `expression` oder `typename` um eine von Ihnen definierte Klasse oder Struktur, können Sie `CType` für diese Klasse oder Struktur als Konvertierungsoperator definieren. Dadurch wird `CType` als *überladener Operator*fungieren. Wenn Sie einen Konvertierungsoperator definieren, können Sie nicht nur das Verhalten von Konvertierungen in und aus der Klasse oder Struktur steuern, sondern auch die ausgelösten Ausnahmen bestimmen.
+Handelt es sich beim Datentyp von `expression` oder `typename` um eine von Ihnen definierte Klasse oder Struktur, können Sie `CType` für diese Klasse oder Struktur als Konvertierungsoperator definieren. This makes `CType` act as an *overloaded operator*. Wenn Sie einen Konvertierungsoperator definieren, können Sie nicht nur das Verhalten von Konvertierungen in und aus der Klasse oder Struktur steuern, sondern auch die ausgelösten Ausnahmen bestimmen.
 
 ## <a name="overloading"></a>Überladen
 
@@ -62,7 +62,7 @@ In diesem Beispiel wird die `CType`-Funktion zum Konvertieren eines Ausdrucks in
 
 [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]
 
-Weitere Beispiele finden Sie unter [implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).
+For additional examples, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -71,5 +71,5 @@ Weitere Beispiele finden Sie unter [implizite und explizite Konvertierungen](../
 - [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Konvertierungsfunktionen](../../../visual-basic/language-reference/functions/conversion-functions.md)
 - [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Vorgehensweise: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Gewusst wie: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
 - [Typkonvertierung in .NET Framework](../../../standard/base-types/type-conversion.md)

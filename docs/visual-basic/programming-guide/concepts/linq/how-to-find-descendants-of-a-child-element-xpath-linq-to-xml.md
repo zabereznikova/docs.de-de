@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Suchen nach Nachfolgern eines untergeordneten Elements (XPath-LINQ to XML) (Visual Basic)'
+title: 'Gewusst wie: Suchen nach Nachfolgern von untergeordneten Elementen (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: e5f92e645a06a93cee95d439fc858d82ebb6b240
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291671"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344669"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach Nachfolgern eines untergeordneten Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie die Nachfolgerelemente untergeordneter Elemente mit einem bestimmten Namen ermitteln können.  
   
  Der XPath-Ausdruck lautet:  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML für XPath-Benutzer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

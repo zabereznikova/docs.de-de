@@ -1,22 +1,22 @@
 ---
-title: Debuggen von Ausdrucks Baumstrukturen in Visual Studio (Visual Basic)
+title: Debuggen von Ausdrucksbäumen in Visual Studio
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: b27ab41f3c3d9bd488fd0f7aaa5010f2997946de
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ff56a10b6c25f3165066edb727829cc460f3e96c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198269"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344727"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debuggen von Ausdrucks Baumstrukturen in Visual Studio (Visual Basic)
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debugging Expression Trees in Visual Studio (Visual Basic)
 Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um eine Übersicht über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die Ausdrucksbaumstrukturen mit einer [speziellen Syntax](debugview-syntax.md) darstellt. (Beachten Sie, dass `DebugView` nur im Debugmodus verfügbar ist.)  
 
-![Screenshot der Debug-Ansicht der Ausdrucks Baumstruktur.](media/debugging-expression-trees-in-visual-studio/debugview-visual-basic.png)
+![Screenshot of the DebugView of expression tree.](media/debugging-expression-trees-in-visual-studio/debugview-visual-basic.png)
 
 Da `DebugView` eine Zeichenfolge ist, können Sie die [integrierte Text-Schnellansicht](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) verwenden, um eine Ansicht mit mehreren Zeilen zu erhalten. Wählen Sie hierzu über das Lupensymbol neben `DebugView` die Option **Text-Schnellansicht**.
 
- ![Screenshot der Text Schnellansicht, die auf die Ergebnisse von DebugView angewendet wird.](media/debugging-expression-trees-in-visual-studio/string-visualizer-vb.png)
+ ![Screenshot of Text Visualizer applied to results of DebugView.](media/debugging-expression-trees-in-visual-studio/string-visualizer-vb.png)
 
 Alternativ dazu können Sie eine [benutzerdefinierte Schnellansicht](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) für Ausdrucksbaumstrukturen installieren und verwenden, wie z.B.:
 
@@ -24,9 +24,9 @@ Alternativ dazu können Sie eine [benutzerdefinierte Schnellansicht](https://doc
 
   ![Screenshot der Schnellansicht für lesbare Ausdrücke.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
-- [Ausdrucks Baum](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) Struktur-Schnellansicht ([mit-Lizenz](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), stellt eine grafische Ansicht der Ausdrucks Baumstruktur, der zugehörigen Eigenschaften und verknüpften Objekte bereit. und können die Ausdrucks Baumstruktur mithilfe Visual Basic Codes Rendering:
+- [Expression Tree Visualizer](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT license](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), provides a graphical view of the expression tree, its properties, and related objects; and can render the expression tree using Visual Basic code:
 
-  ![Screenshot der expressionto String-Schnellansicht.](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
+  ![Screenshot of the ExpressionToString visualizer.](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
 
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>So öffnen Sie eine Schnellansicht für eine Ausdrucksbaumstruktur  
   
@@ -34,7 +34,7 @@ Alternativ dazu können Sie eine [benutzerdefinierte Schnellansicht](https://doc
   
     Eine Liste mit den verfügbaren Schnellansichten wird angezeigt: 
 
-    ![Screenshot der Benutzer, die Visualisierungen aus Visual Studio öffnen](media/debugging-expression-trees-in-visual-studio/expression-tree-visualizers-vb.png)
+    ![Screenshot of the user opening visualizers from Visual Studio.](media/debugging-expression-trees-in-visual-studio/expression-tree-visualizers-vb.png)
 
 2. Klicken Sie auf die gewünschte Schnellansicht.  
 

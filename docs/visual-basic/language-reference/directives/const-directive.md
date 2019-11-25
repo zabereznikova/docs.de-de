@@ -1,5 +1,5 @@
 ---
-title: '#Konstanten Direktive (Visual Basic)'
+title: '#Const-Anweisung'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,15 +15,16 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 031f35df24fd52aeeafcb7b4c0208806d7fc5fc4
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774758"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343846"
 ---
 # <a name="const-directive"></a>#Const-Anweisung
-Definiert bedingte Compilerkonstanten für Visual Basic.  
+
+Defines conditional compiler constants for Visual Basic.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,18 +33,21 @@ Definiert bedingte Compilerkonstanten für Visual Basic.
 ```  
   
 ## <a name="parts"></a>Teile  
+
  `constname`  
- Erforderlich. Der Name der Konstanten, die definiert wird.  
+ Erforderlich. Name of the constant being defined.  
   
  `expression`  
- Erforderlich. Literale, andere Bedingte Compilerkonstante oder eine beliebige Kombination, die beliebige oder alle arithmetischen oder logischen Operatoren mit Ausnahme von `Is` enthält.  
+ Erforderlich. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
   
 ## <a name="remarks"></a>Hinweise  
- Bedingte Compilerkonstanten sind immer privat für die Datei, in der Sie angezeigt werden. Sie können keine öffentlichen Compilerkonstanten mithilfe der `#Const`-Direktive erstellen; Sie können nur auf der Benutzeroberfläche oder mit der `/define`-Compileroption erstellt werden.  
+
+ Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
   
- In `expression` können nur bedingte Compilerkonstanten und Literale verwendet werden. Wenn eine mit `Const` definierte Standard Konstante verwendet wird, wird ein Fehler verursacht. Umgekehrt können Sie mit dem `#Const`-Schlüsselwort definierte Konstanten nur für die bedingte Kompilierung verwenden. Konstanten können ebenfalls nicht definiert werden. in diesem Fall haben Sie den Wert `Nothing`.  
+ You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
   
 ## <a name="example"></a>Beispiel  
+
  Dieses Beispiel verwendet die `#Const`-Anweisung.  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  

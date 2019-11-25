@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (Visual Basic)'
+title: 'Gewusst wie: Abrufen eines einzelnes Attributs (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321315"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347566"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen Attributs eines Elements anhand des Attributsnamens erläutert. Diese Vorgehensweise eignet sich für das Schreiben von Abfrageausdrücken, mit denen Sie nach einem Element mit einem bestimmten Attribut suchen möchten.  
   
  Die <xref:System.Xml.Linq.XElement.Attribute%2A>-Methode der <xref:System.Xml.Linq.XElement>-Klasse gibt das <xref:System.Xml.Linq.XAttribute> mit dem angegebenen Namen zurück.  
@@ -63,7 +63,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet explizite Umwandlungsoperatoren für die Umwandlung der <xref:System.Xml.Linq.XAttribute>-Klasse in `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` und `GUID?`.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält denselben Code für ein Attribut, das sich in einem Namespace befindet. Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Das folgende Beispiel enthält denselben Code für ein Attribut, das sich in einem Namespace befindet. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

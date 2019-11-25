@@ -1,5 +1,5 @@
 ---
-title: UInteger-Datentyp (Visual Basic)
+title: UInteger-Datentyp
 ms.date: 01/31/2018
 f1_keywords:
 - vb.uinteger
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 1ae0cbd3a518bf863a3c57f50934837a486d2901
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ccff61608aed797734cb4f5ca0571d7ed73ba98b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583133"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343890"
 ---
 # <a name="uinteger-data-type"></a>UInteger-Datentyp
 
-Enthält nicht signierte 32-Bit-Ganzzahlen (4 Bytes) mit einem Wert von 0 bis 4.294.967.295.
+Holds unsigned 32-bit (4-byte) integers ranging in value from 0 through 4,294,967,295.
 
 ## <a name="remarks"></a>Hinweise
 
-Der `UInteger`-Datentyp stellt den größten Wert ohne Vorzeichen in der effizientesten Daten Breite bereit.
+The `UInteger` data type provides the largest unsigned value in the most efficient data width.
 
 Der Standardwert von `UInteger` lautet 0.
 
-## <a name="literal-assignments"></a>Literalzuweisungen
+## <a name="literal-assignments"></a>Literal assignments
 
-Sie können eine `UInteger` Variable deklarieren und initialisieren, indem Sie Ihr ein dezimales Literalzeichen, ein hexadezimales Literalzeichen, ein Oktalliterale oder (beginnend mit Visual Basic 2017) ein binäres Literalzeichen zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `UInteger` befindet – sprich, wenn es kleiner als <xref:System.UInt32.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt32.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+You can declare and initialize a `UInteger` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `UInteger` befindet – sprich, wenn es kleiner als <xref:System.UInt32.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt32.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 3.000.000.000, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `UInteger`-Werten zugewiesen.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
 > [!NOTE]
-> Sie verwenden das Präfix `&h` oder `&H`, um eine hexadezimale Literale anzugeben, das Präfix `&b` oder `&B`, um ein binäres Literal anzugeben, und das Präfix `&o` oder `&O`, um ein Oktalliteral anzugeben. Dezimale Literale haben kein Präfix.
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Dezimale Literale haben kein Präfix.
 
-Ab Visual Basic 2017 können Sie auch den Unterstrich (`_`) als Ziffern Trennzeichen verwenden, um die Lesbarkeit zu verbessern, wie im folgenden Beispiel gezeigt.
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich (`_`) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Beispiel:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numerische Literale können auch das `UI` oder `ui` [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `UInteger` Datentyp anzugeben, wie im folgenden Beispiel gezeigt.
+Numeric literals can also include the `UI` or `ui` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UInteger` data type, as the following example shows.
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,19 +64,19 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-Die Datentypen "`UInteger`" und "`Integer`" bieten eine optimale Leistung für einen 32-Bit-Prozessor, da die kleineren ganzzahligen Typen (`UShort`, `Short`, `Byte` und `SByte`), auch wenn weniger Bits verwendet werden, mehr Zeit zum Laden benötigen. , speichern und abrufen.
+The `UInteger` and `Integer` data types provide optimal performance on a 32-bit processor, because the smaller integer types (`UShort`, `Short`, `Byte`, and `SByte`), even though they use fewer bits, take more time to load, store, and fetch.
 
-- **Negative Zahlen.** Da `UInteger` ein nicht signierter Typ ist, kann er keine negative Zahl darstellen. Wenn Sie den unären Minus-Operator (`-`) für einen Ausdruck verwenden, der als Typ `UInteger` ausgewertet wird, konvertiert Visual Basic den Ausdruck zuerst in `Long`.
+- **Negative Numbers.** Because `UInteger` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UInteger`, Visual Basic converts the expression to `Long` first.
 
-- **CLS-Kompatibilität.** Der `UInteger`-Datentyp ist nicht Teil des [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die ihn verwendet.
+- **CLS Compliance.** The `UInteger` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **Interop-Überlegungen.** Wenn Sie mit Komponenten interagieren, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass Typen wie `uint` in anderen Umgebungen eine andere Daten Breite (16 Bits) aufweisen können. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `UShort`, anstatt `UInteger` in Ihrem verwalteten Visual Basic-Code zu verwenden.
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `uint` can have a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.
 
-- **Tet.** Der `UInteger`-Datentyp wird auf `Long`, `ULong`, `Decimal`, `Single` und `Double` erweitert. Dies bedeutet, dass Sie `UInteger` in einen dieser Typen konvertieren können, ohne dass <xref:System.OverflowException?displayProperty=nameWithType> Fehler auftreten.
+- **Widening.** The `UInteger` data type widens to `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UInteger` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Geben Sie Zeichen ein.** Durch das Anfügen der literalzeichenzeichen, die an ein Literalzeichen `UI` werden, wird der Datentyp `UInteger` `UInteger` hat kein Bezeichnertyp Zeichen.
+- **Type Characters.** Appending the literal type characters `UI` to a literal forces it to the `UInteger` data type. `UInteger` has no identifier type character.
 
-- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt32?displayProperty=nameWithType>-Struktur.
+- **Framework Type.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt32?displayProperty=nameWithType>-Struktur.
 
 ## <a name="see-also"></a>Siehe auch
 

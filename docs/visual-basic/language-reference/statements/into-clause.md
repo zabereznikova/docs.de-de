@@ -1,21 +1,21 @@
 ---
-title: Into-Klausel (Visual Basic)
+title: Into-Klausel
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 8a94309b27ae3ad0c4fb6b13ae4824e4d5dece73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 038cf9b812d3fbdb54afaca072694bbde4bfb600
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784175"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348042"
 ---
 # <a name="into-clause-visual-basic"></a>Into-Klausel (Visual Basic)
-Bezeichnet die Aggregatfunktionen oder Gruppierungen, die auf Auflistungen angewendet werden.  
+Identifies aggregate functions or groupings to apply to a collection.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Each` -Schlüsselwort wird in den folgenden Kontexten verwendet:  
+ The `Each` keyword is used in the following contexts:  
   
  [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -25,4 +25,4 @@ Bezeichnet die Aggregatfunktionen oder Gruppierungen, die auf Auflistungen angew
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
