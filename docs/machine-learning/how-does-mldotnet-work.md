@@ -1,25 +1,29 @@
 ---
 title: Was ist ML.NET, und wie funktioniert es?
 description: ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offlineszenarien mit Machine Learning zu versehen. Mit dieser Funktion können Sie automatische Vorhersagen unter Verwendung der Daten treffen, die für Ihre Anwendung verfügbar sind, ohne für die Verwendung von ML.NET mit einem Netzwerk verbunden sein zu müssen. In diesem Artikel werden die Grundlagen von Machine Learning in ML.NET erläutert.
-ms.date: 09/27/2019
+ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592048"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976739"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Was ist ML.NET, und wie funktioniert es?
 
-ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offlineszenarien mit Machine Learning zu versehen. Mit dieser Funktion können Sie automatische Vorhersagen unter Verwendung der Daten treffen, die für Ihre Anwendung verfügbar sind, ohne mit einem Netzwerk verbunden sein zu müssen. In diesem Artikel werden die Grundlagen von Machine Learning in ML.NET erläutert.
+ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offlineszenarien mit Machine Learning zu versehen. Mit dieser Funktion können Sie automatische Vorhersagen unter Verwendung der Daten treffen, die für Ihre Anwendung verfügbar sind.
+
+Zentraler Bestandteil von ML.NET ist ein Machine Learning-**Modell**. Das Modell gibt die Schritte an, die erforderlich sind, um Ihre Eingabedaten in eine Vorhersage umzuwandeln. Mit ML.NET können Sie ein benutzerdefiniertes Modell trainieren, indem Sie einen Algorithmus angeben, oder Sie können bereits trainierte TensorFlow- und ONNX-Modelle importieren.
+
+Sobald Sie über ein Modell verfügen, können Sie es Ihrer Anwendung hinzufügen, um Vorhersagen zu treffen.
 
 ML.NET kann unter Windows, Linux und macOS mit .NET Core oder unter Windows mit .NET Framework ausgeführt. 64-Bit wird auf allen Plattformen unterstützt. 32-Bit wird unter Windows unterstützt (mit Ausnahme der Funktionen TensorFlow, LightGBM und ONNX).
 
-Zu den Beispielen für den Typ von Vorhersagen, die Sie mit ML.NET treffen können, zählen:
+Beispiele für den Typ von Vorhersagen, die Sie mit ML.NET treffen können:
 
 |||
 |-|-|
@@ -27,16 +31,18 @@ Zu den Beispielen für den Typ von Vorhersagen, die Sie mit ML.NET treffen könn
 |Regression/Vorhersagen kontinuierlicher Werte|Vorhersagen des Hauspreises basierend auf Größe und Standort|
 |Anomalieerkennung|Erkennen von betrügerischen Banktransaktionen |
 |Empfehlungen|Empfehlen von Produkten, die Onlinekäufern basierend auf ihren vorherigen Käufen wahrscheinlich gerne erwerben würden|
+|Zeitreihen/sequenzielle Daten|Wettervorhersagen/Produktumsatz-Vorhersagen|
+|Bildklassifizierung|Kategorisieren von Pathologien in medizinischen Bildern|
 
 ## <a name="hello-mlnet-world"></a>Hallo ML.NET-Welt
 
-Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwendung. In diesem Beispiel erstellt ein Modell der linearen Regression Hauspreisvorhersagen auf der Basis von Größe- und Preisdaten. In realen Anwendungen sind Daten und Modell wesentlich komplexer.
+Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwendung. In diesem Beispiel erstellt ein Modell der linearen Regression Hauspreisvorhersagen auf der Basis von Größe- und Preisdaten. 
 
  ```csharp
     using System;
     using Microsoft.ML;
     using Microsoft.ML.Data;
-    
+
     class Program
     {
         public class HouseData
@@ -44,17 +50,17 @@ Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwen
             public float Size { get; set; }
             public float Price { get; set; }
         }
-    
+
         public class Prediction
         {
             [ColumnName("Score")]
             public float Price { get; set; }
         }
-    
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
-    
+
             // 1. Import or create training data
             HouseData[] houseData = {
                 new HouseData() { Size = 1.1F, Price = 1.2F },
@@ -66,10 +72,10 @@ Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwen
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
                 .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
-    
+
             // 3. Train model
             var model = pipeline.Fit(trainingData);
-    
+
             // 4. Make a prediction
             var size = new HouseData() { Size = 2.5F };
             var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(size);
@@ -78,7 +84,7 @@ Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwen
 
             // Predicted price for size: 2500 sq ft= $261.98k
         }
-    } 
+    }
 ```
 
 ## <a name="code-workflow"></a>Codeworkflow
@@ -93,7 +99,7 @@ Im folgenden Diagramm werden die Anwendungscodestruktur und der iterative Prozes
 - Rückladen des Modells in ein **ITransformer**-Objekt
 - Treffen von Vorhersagen durch Aufrufen von **CreatePredictionEngine.Predict()**
 
-![ML.NET-Anwendungsentwicklungsfluss einschließlich Komponenten für Datengenerierung, Pipelineentwicklung, Modelltraining, Modellauswertung und Modellverwendung](./media/mldotnet-annotated-workflow.png) 
+![ML.NET-Anwendungsentwicklungsfluss einschließlich Komponenten für Datengenerierung, Pipelineentwicklung, Modelltraining, Modellauswertung und Modellverwendung](./media/mldotnet-annotated-workflow.png)
 
 Wir werden diese Konzepte nun näher betrachten.
 
@@ -103,7 +109,7 @@ Ein ML.NET-Modell ist ein Objekt, das Transformationen enthält, die auf Ihre Ei
 
 ### <a name="basic"></a>Standard
 
-Das einfachste Modell ist die zweidimensionale lineare Regression, wobei wie im obigen Hauspreisbeispiel eine kontinuierliche Menge zu einer anderen proportional ist. 
+Das einfachste Modell ist die zweidimensionale lineare Regression, wobei wie im obigen Hauspreisbeispiel eine kontinuierliche Menge zu einer anderen proportional ist.
 
 ![Modell der linearen Regression mit Trend- und Gewichtungsparametern](./media/linear-regression-model.svg)
 
@@ -113,7 +119,7 @@ Das Modell ist einfach: $Price = b + Size * w$. Die Parameter „$b$“ und „$
 
 Ein komplexeres Modell klassifiziert finanzielle Transaktionen mithilfe der Transaktionstextbeschreibung in Kategorien.
 
-Jede Transaktionsbeschreibung wird durch Entfernen redundante Wörter und Zeichen und Zählen von Kombinationen aus Word und Zeichen in einen Satz von Features aufgeschlüsselt. Die Featuregruppe wird zum Trainieren eines linearen Modells auf der Basis des Kategoriensatzes in den Trainingsdaten verwendet. Je mehr eine neue Beschreibung denjenigen im Trainingssatz ähnelt, desto eher wird sie derselben Kategorie zugewiesen. 
+Jede Transaktionsbeschreibung wird durch Entfernen redundante Wörter und Zeichen und Zählen von Kombinationen aus Word und Zeichen in einen Satz von Features aufgeschlüsselt. Die Featuregruppe wird zum Trainieren eines linearen Modells auf der Basis des Kategoriensatzes in den Trainingsdaten verwendet. Je mehr eine neue Beschreibung denjenigen im Trainingssatz ähnelt, desto eher wird sie derselben Kategorie zugewiesen.
 
 ![Textklassifizierungsmodell](./media/text-classification-model.svg)
 
@@ -131,7 +137,7 @@ Im Ressourcenabschnitt finden Sie einen Anhang mit allen [verfügbaren Transform
 
 ## <a name="model-evaluation"></a>Modellauswertung
 
-Wie können Sie nach dem Trainieren Ihres Modells wissen, wie gut es zukünftige Vorhersagen treffen wird? Mit ML.NET können Sie Ihr Modell anhand einiger neuer Testdaten auswerten. 
+Wie können Sie nach dem Trainieren Ihres Modells wissen, wie gut es zukünftige Vorhersagen treffen wird? Mit ML.NET können Sie Ihr Modell anhand einiger neuer Testdaten auswerten.
 
 Jede Art von Machine Learning-Aufgabe verfügt über Metriken zum Auswerten der Genauigkeit des Modells anhand eines Testdatasets.
 
@@ -148,7 +154,7 @@ In unserem Hauspreisbeispiel haben wir die **Regressionsaufgabe** verwendet. Um 
 
         var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
-                
+
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
@@ -225,7 +231,7 @@ Sie können Eingabedaten in einem Massenvorgang in Vorhersagen umwandeln oder je
     var predEngine = mlContext.CreatePredictionEngine<HouseData, Prediction>(model);
     var price = predEngine.Predict(size);
 ```
- 
+
 Die `CreatePredictionEngine()`-Methode nimmt eine Eingabe- und eine Ausgabeklasse entgegen. Die Feldnamen und/oder Codeattribute bestimmen die Namen der Datenspalten, die beim Trainieren des Modells und der Vorhersage verwendet werden. Weitere Informationen finden Sie unter [Treffen von Vorhersagen mit einem trainierten Modell](./how-to-guides/single-predict-model-ml-net.md).
 
 ### <a name="data-models-and-schema"></a>Datenmodelle und Schema
@@ -254,7 +260,7 @@ Alle Algorithmen erstellen auch neue Spalten, nachdem sie eine Vorhersage ausgef
         [ColumnName("Score")]
         public float Price { get; set; }
     }
-```    
+```
 
 Weitere Informationen über Ausgabespalten anderer Machine Learning-Aufgaben finden Sie im Handbuch [Machine Learning-Aufgaben in ML.NET](resources/tasks.md).
 
@@ -270,14 +276,14 @@ Sie können die `debug`-Variable im Debugger beobachten und ihren Inhalt untersu
 
 In realen Anwendungen sind Ihr Modelltrainings- und Auswertungscode von Ihrer Vorhersage getrennt. Diese beiden Aktivitäten werden in der Tat häufig durch separate Teams ausgeführt. Ihr Modellbereitstellungsteam kann das Modell zur Verwendung in der Vorhersageanwendung speichern.
 
-```csharp   
+```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a>Weitere Themen
+## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie in den [Tutorials](./tutorials/index.md), wie Sie mit anderen Machine Learning-Aufgaben Anwendungen mit realistischeren Datasets erstellen.
+* Erfahren Sie in den [Tutorials](./tutorials/index.md), wie Sie mit anderen Machine Learning-Aufgaben Anwendungen mit realistischeren Datasets erstellen.
 
-Sie können sich auch in den [Schrittanleitungen für .NET Machine Learning](./how-to-guides/index.md) ausführlicher über bestimmte Themen informieren.
+* Informieren Sie sich in den [Schrittanleitungen](./how-to-guides/index.md) ausführlicher über bestimmte Themen.
 
-Und wenn Sie extrem interessiert sind, können Sie direkt in die [API-Referenzdokumentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) eintauchen!
+* Wenn Sie extrem interessiert sind, können Sie direkt in die [API-Referenzdokumentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) eintauchen.

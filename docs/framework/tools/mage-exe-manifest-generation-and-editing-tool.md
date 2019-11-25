@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044511"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449424"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
@@ -65,7 +65,7 @@ In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `
 |**-pu,** **-ProviderURL** `url`||Bereitstellungsmanifeste|Gibt die URL an, die ClickOnce auf Anwendungsupdates überprüft.|
 |**-pub, -Publisher** `publisherName`||Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Fügt den Herausgebernamen zum Beschreibungselement des Bereitstellungs- oder Anwendungsmanifests hinzu. Bei Verwendung mit einem Anwendungsmanifest muss **-UseManifestForTrust** zudem mit dem Wert TRUE oder T angegeben werden. Andernfalls verursacht dieser Parameter einen Fehler.|
 |**-s, -SupportURL**  `url`||Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Gibt den Link an, der unter "Software" für die ClickOnce-Anwendung angezeigt wird.|
-|**-ti, -TimestampUri** `uri`||Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Die URL eines digitalen Zeitstempeldiensts. Der Zeitstempel für Manifeste verhindert, dass Sie ein Manifest neu signieren müssen, wenn das digitale Zertifikat abläuft, bevor Sie die nächste Version der Anwendung bereitstellen. Weitere Informationen finden Sie unter [Mitglieder des Windows-Programms für Stammzertifikate](https://go.microsoft.com/fwlink/?LinkId=159000).|
+|**-ti, -TimestampUri** `uri`||Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Die URL eines digitalen Zeitstempeldiensts. Der Zeitstempel für Manifeste verhindert, dass Sie ein Manifest neu signieren müssen, wenn das digitale Zertifikat abläuft, bevor Sie die nächste Version der Anwendung bereitstellen. Weitere Informationen finden Sie unter [Mitglieder des Windows-Programms für Stammzertifikate](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).|
 |**-t, -ToFile** `filePath`|-   New:<br />-   Deployment: deploy.application<br />-   Application: application.exe.manifest<br />-   Update:<br />-   Die Eingabedatei.|Alle Dateitypen|Gibt den Ausgabepfad der Datei an, die erstellt oder geändert wurde.<br /><br /> Wenn **-ToFile** bei Verwendung von **-New**nicht angegeben wird, wird die Ausgabe in das aktuelle Arbeitsverzeichnis geschrieben. Wenn **-ToFile** bei Verwendung von **-Update** nicht angegeben wird, schreibt *Mage.exe* die Datei zurück in die Eingabedatei.|
 |**-tr, -TrustLevel** `level`|Auf Grundlage der Zone, in der sich die Anwendungs-URL befindet|Anwendungsmanifeste,|Die Vertrauensebene, die der Anwendung auf Clientcomputern gewährt wird. Zu den gültigen Werten zählen "Internet", "Intranet" und "FullTrust".|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|Anwendungsmanifeste,|Gibt an, ob für Entscheidungen über die Vertrauenswürdigkeit die digitale Signatur des Anwendungsmanifests verwendet wird, wenn die Anwendung auf dem Client ausgeführt wird. Wenn Sie "true" oder "t" angeben, wird das Anwendungsmanifest für Entscheidungen über die Vertrauenswürdigkeit verwendet. Bei Angabe von "false" oder "f" wird die Signatur des Bereitstellungsmanifests verwendet.|

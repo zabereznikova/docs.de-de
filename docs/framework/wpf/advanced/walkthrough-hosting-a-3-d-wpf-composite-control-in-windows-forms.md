@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: 748ab027fa8206c163578c89b94460665563cbce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197866"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976557"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten 3D-WPF-Steuerelements in Windows Forms
 
@@ -40,7 +40,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 1. Erstellen Sie ein **WPF-Benutzer Steuer** Element-Bibliotheksprojekt namens `HostingWpfUserControlInWf`.
 
-2. Öffnen Sie UserControl1. XAML im [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+2. Öffnen Sie UserControl1. XAML im WPF-Designer.
 
 3. Ersetzen Sie den generierten Code durch den folgenden Code:
 

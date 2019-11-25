@@ -1,5 +1,5 @@
 ---
-title: <filter>-Element für <add> für <sharedListeners>
+title: <filter> Element für <add> für <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697323"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088883"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<filter >-Element für \<ADD-> für \<sharedlistener >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<> Element filtern, \<um > für \<sharedlistener hinzuzufügen >
 Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sharedlistener >** ](sharedlisteners-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<ADD >** ](add-element-for-sharedlisteners.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sharedlistener >** ](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> hinzufügen**](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Filter >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -40,7 +40,7 @@ Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**Typ**|Erforderliches Attribut.<br /><br /> Gibt den Filtertyp an. Sie können nur den vollständigen Namen des Typs (im Format der <xref:System.Type.FullName%2A?displayProperty=nameWithType>-Eigenschaft) verwenden, oder Sie können den voll qualifizierten Typnamen einschließlich der Assemblyinformationen (im Format der Eigenschaft <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>) verwenden. Weitere Informationen zum Erstellen eines voll qualifizierten Typnamens finden Sie unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**Typ**|Erforderliches Attribut.<br /><br /> Gibt den Filtertyp an. Sie können nur den vollständigen Namen des Typs (im Format der <xref:System.Type.FullName%2A?displayProperty=nameWithType>-Eigenschaft) verwenden, oder Sie können den voll qualifizierten Typnamen einschließlich der Assemblyinformationen verwenden (im Format der <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>-Eigenschaft). Weitere Informationen zum Erstellen eines voll qualifizierten Typnamens finden Sie unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Optionales Attribut.<br /><br /> Die Zeichenfolge, die an den Konstruktor für die angegebene Klasse übergeben wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -61,7 +61,7 @@ Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<filter>`-Element verwendet wird, um dem Ablaufverfolgungslistener `console` in der `sharedListeners`-Auflistung einen Filter hinzuzufügen.  
+ Im folgenden Beispiel wird gezeigt, wie Sie mit dem `<filter>`-Element dem Ablaufverfolgungslistener `console` in der `sharedListeners`-Auflistung einen Filter hinzufügen.  
   
 ```xml  
 <configuration>  

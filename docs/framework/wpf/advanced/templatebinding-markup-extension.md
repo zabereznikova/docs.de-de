@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458673"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976672"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding-Markuperweiterung
 Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er der Wert einer anderen Eigenschaft des Steuerelements mit Vorlagen ist.  
@@ -38,7 +38,7 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
 |`sourceProperty`|Eine weitere Abhängigkeitseigenschaft für den auf Vorlagen basierenden Typ, die durch ihren <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> angegeben wird.<br /><br /> - oder -<br /><br /> Ein Eigenschaftenname in Punktnotation, der durch einen anderen Typ als den auf Vorlagen basierenden Zieltyp definiert wird. Hierbei handelt es sich eigentlich um einen <xref:System.Windows.PropertyPath>. Siehe [PropertyPath-XAML-Syntax](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine `TemplateBinding` ist eine optimierte Form einer [Bindung](binding-markup-extension.md) für Vorlagen Szenarien, analog zu einer mit `{Binding RelativeSource={RelativeSource TemplatedParent}}`erstellten `Binding`. Eine `TemplateBinding` ist immer eine unidirektionale Bindung, auch wenn die betroffenen Eigenschaften standardmäßig bidirektionale Bindungen sind. Beide betroffenen Eigenschaften müssen Abhängigkeitseigenschaften sein. Um eine bidirektionale Bindung mit einem übergeordneten Element zu erreichen, verwenden Sie stattdessen die folgende Bindungs Anweisung `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
+ Eine `TemplateBinding` ist eine optimierte Form einer [Bindung](binding-markup-extension.md) für Vorlagen Szenarien, analog zu einer mit `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`erstellten `Binding`. Eine `TemplateBinding` ist immer eine unidirektionale Bindung, auch wenn die betroffenen Eigenschaften standardmäßig bidirektionale Bindungen sind. Beide betroffenen Eigenschaften müssen Abhängigkeitseigenschaften sein. Um eine bidirektionale Bindung mit einem übergeordneten Element zu erreichen, verwenden Sie stattdessen die folgende Bindungs Anweisung `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
   
  [RelativeSource](relativesource-markupextension.md) ist eine andere Markup Erweiterung, die manchmal in Verbindung mit oder anstelle von `TemplateBinding` verwendet wird, um eine relative Eigenschaften Bindung innerhalb einer Vorlage auszuführen.  
   

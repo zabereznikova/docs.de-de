@@ -1,17 +1,18 @@
 ---
-title: 'Vorgehensweise: Verschieben von Dateien in Visual Basic'
+title: 'Vorgehensweise: Verschieben einer Datei'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: e529e263353b08778eba338b20aef34762e66824
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628853"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335361"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Vorgehensweise: Verschieben von Dateien in Visual Basic
+
 Mit der `My.Computer.FileSystem.MoveFile` -Methode kann eine Datei in einen anderen Ordner verschoben werden. Wenn die Zielstruktur nicht vorhanden ist, wird sie erstellt.  
   
 ### <a name="to-move-a-file"></a>So verschieben Sie eine Datei  
@@ -27,6 +28,7 @@ Mit der `My.Computer.FileSystem.MoveFile` -Methode kann eine Datei in einen ande
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  

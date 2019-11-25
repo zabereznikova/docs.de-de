@@ -1,22 +1,24 @@
 ---
-title: Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
+title: Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348000"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348929"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
+
 In den folgenden Tabellen sind die Klassen aufgelistet, die häufig für .NET Framework-Datei-E/A verwendet werden, kategorisiert in Datei-E/A-Klassen, Klassen zum Erstellen von Streams und Klassen zum Lesen und Schreiben in Streams.  
   
 Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibliothek](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Grundlegende E/A-Klassen für Dateien, Laufwerke und Verzeichnisse  
+
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die für Datei-E/A verwendet werden.  
   
 |Klasse|BESCHREIBUNG|  
@@ -34,6 +36,7 @@ Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibli
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Steuert den Zugriff von Dateien und Ordnern durch Definieren der Berechtigungen <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> und <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Klassen zum Erstellen von Streams  
+
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die zum Erstellen von Streams verwendet werden.  
   
 |Klasse|BESCHREIBUNG|  
@@ -45,6 +48,7 @@ Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibli
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Definiert einen Stream, der Datenstreams mit kryptografischen Transformationen verknüpft.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Klassen, die zum Lesen aus und Schreiben an Streams verwendet werden  
+
  Die folgende Tabelle zeigt die spezifischen Klassen, die zum Lesen aus und Schreiben an Dateien mit Streams verwendet werden.  
   
 |**Klasse**|**Beschreibung**|  

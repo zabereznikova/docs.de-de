@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106996"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347252"
 ---
 # <a name="resolve-assembly-loads"></a>Auflösen von Assemblyladevorgängen
 .NET stellt das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> für Anwendungen bereit, die mehr Kontrolle beim Laden von Assemblys benötigen. Durch das Behandeln dieses Ereignisses kann Ihre Anwendung eine Assembly außerhalb der Prüfpfade in einen Kontext laden, vor dem Laden zwischen verschiedenen Assemblyversionen wählen, eine dynamische Assembly ausgeben und diese zurückgeben und so weiter. In diesem Thema erhalten Sie eine Anleitung zum Behandeln des Ereignisses <xref:System.AppDomain.AssemblyResolve>.  
@@ -160,7 +160,6 @@ Process is terminated due to StackOverflowException.
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class BadExample

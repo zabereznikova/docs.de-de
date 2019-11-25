@@ -1,13 +1,13 @@
 ---
 title: Schlüsselwortreferenz
 description: Hier finden Sie Links zu Informationen über alle F# sprach Schlüsselwörter.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425087"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976624"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -87,7 +87,7 @@ In der folgenden Tabelle werden F# Alle Schlüsselwörter in alphabetischer Reih
 |`when`|[Einschränkungen](./generics/constraints.md)|Wird für boolesche Bedingungen (*Wenn Wächter*) für Muster Übereinstimmungen verwendet und eine Einschränkungs Klausel für einen generischen Typparameter eingeführt.|
 |`while`|[Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)|Führt ein Schleifen Konstrukt ein.|
 |`with`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Objektausdrücke](object-expressions.md)<br /><br />[Kopieren und Aktualisieren von Datensatzausdrücken](copy-and-update-record-expressions.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausnahmen: Der `try...with`-Ausdruck](./exception-handling/the-try-with-expression.md)|Wird in Übereinstimmung mit dem `match`-Schlüsselwort in Muster Vergleichs Ausdrücken verwendet. Wird auch in Objekt Ausdrücken verwendet, das Kopieren von Ausdrücken und die Typerweiterungen zum Einführen von Element Definitionen und das Einführen von Ausnahme Handlern.|
-|`yield`|[Sequenzen](sequences.md)|Wird in einem Sequenz Ausdruck verwendet, um einen Wert für eine Sequenz zu erhalten.|
+|`yield`|[Listen](lists.md), [Arrays](arrays.md), [Sequenzen](sequences.md)|Wird in einem Listen-, Array-oder Sequenz Ausdruck verwendet, um einen Wert für eine Sequenz zu erhalten. In der Regel kann weggelassen werden, da Sie in den meisten Fällen implizit ist.|
 |`yield!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Wird in einem Berechnungs Ausdruck verwendet, um das Ergebnis eines angegebenen Berechnungs Ausdrucks an eine Auflistung von Ergebnissen für den enthaltenden Berechnungs Ausdruck anzufügen.|
 
 Die folgenden Token sind in F# reserviert, weil Sie Schlüsselwörter in der ocaml-Sprache sind:

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 2c31c044aa50a74255a61da1675037ab3d09f615
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053453"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976521"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF
 
@@ -22,11 +22,11 @@ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgab
 
 - Importieren Sie den von Direct3D9-Inhalt.
 
-- Zeigen Sie den von Direct3D9-Inhalt mithilfe <xref:System.Windows.Interop.D3DImage> der-Klasse an.
+- Zeigen Sie den von Direct3D9-Inhalt mit der <xref:System.Windows.Interop.D3DImage>-Klasse an.
 
  Wenn Sie fertig sind, wissen Sie, wie Sie von Direct3D9-Inhalte in einer WPF-Anwendung hosten.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
@@ -34,7 +34,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 - DirectX SDK 9 oder höher.
 
-- Eine DLL, die von Direct3D9-Inhalt in einem WPF-kompatiblen Format enthält. Weitere Informationen finden Sie unter [WPF und von Direct3D9 Interoperation](wpf-and-direct3d9-interoperation.md) und [Exemplarische Vorgehensweise: Erstellen von von Direct3D9-Inhalt für das Hosting](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)in WPF.
+- Eine DLL, die von Direct3D9-Inhalt in einem WPF-kompatiblen Format enthält. Weitere Informationen finden Sie unter [WPF und von Direct3D9 Interoperation](wpf-and-direct3d9-interoperation.md) und Exemplarische Vorgehensweise [: Erstellen von von Direct3D9-Inhalten für das Hosting in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).
 
 ## <a name="creating-the-wpf-project"></a>Erstellen des WPF-Projekts
 
@@ -42,13 +42,13 @@ Der erste Schritt besteht darin, das Projekt für die WPF-Anwendung zu erstellen
 
 ### <a name="to-create-the-wpf-project"></a>So erstellen Sie das WPF-Projekt
 
-Erstellen Sie ein neues WPF-Anwendungsprojekt C# im `D3DHost`visuellen Element mit dem Namen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktop](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Anwendung.
+Erstellen Sie ein neues WPF-Anwendungsprojekt C# in Visual namens `D3DHost`. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-Die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]Datei "MainWindow. XAML" wird im geöffnet.
+Die Datei "MainWindow. XAML" wird im WPF-Designer geöffnet.
 
 ## <a name="importing-the-direct3d9-content"></a>Importieren des von Direct3D9-Inhalts
 
-Der von Direct3D9-Inhalt wird mithilfe des `DllImport` -Attributs aus einer nicht verwalteten DLL importiert.
+Mit dem `DllImport`-Attribut importieren Sie den von Direct3D9-Inhalt aus einer nicht verwalteten DLL.
 
 ### <a name="to-import-direct3d9-content"></a>So importieren Sie von Direct3D9-Inhalt
 
@@ -60,7 +60,7 @@ Der von Direct3D9-Inhalt wird mithilfe des `DllImport` -Attributs aus einer nich
 
 ## <a name="hosting-the-direct3d9-content"></a>Hosting des von Direct3D9-Inhalts
 
-Verwenden Sie abschließend die <xref:System.Windows.Interop.D3DImage> -Klasse, um den von Direct3D9-Inhalt zu hosten.
+Verwenden Sie abschließend die <xref:System.Windows.Interop.D3DImage>-Klasse, um den von Direct3D9-Inhalt zu hosten.
 
 ### <a name="to-host-the-direct3d9-content"></a>So hosten Sie den von Direct3D9-Inhalt
 

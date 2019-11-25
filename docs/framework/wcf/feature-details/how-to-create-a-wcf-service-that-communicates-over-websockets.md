@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970003"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977137"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert
 WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-Bindung verwenden, um über WebSockets zu kommunizieren.  WebSockets werden verwendet, wenn die <xref:System.ServiceModel.NetHttpBinding> bestimmt, dass der Dienstvertrag einen Rückrufvertrag definiert. In diesem Thema wird das Implementieren eines WCF-Diensts und -Clients beschrieben, die mithilfe der <xref:System.ServiceModel.NetHttpBinding> über WebSockets kommunizieren.  
@@ -42,21 +42,21 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
+    {  
+        public async Task StartSendingQuotes()  
         {  
-            public async Task StartSendingQuotes()  
+            var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
+            var random = new Random();  
+            double price = 29.00;  
+
+            while (((IChannel)callback).State == CommunicationState.Opened)  
             {  
-                var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
-                var random = new Random();  
-                double price = 29.00;  
-  
-                while (((IChannel)callback).State == CommunicationState.Opened)  
-                {  
-                    await callback.SendQuote("MSFT", price);  
-                    price += random.NextDouble();  
-                    await Task.Delay(1000);  
-                }  
+                await callback.SendQuote("MSFT", price);  
+                price += random.NextDouble();  
+                await Task.Delay(1000);  
             }  
         }  
+    }  
     ```  
   
      Der Dienstvorgang `StartSendingQuotes` wird als asynchroner Aufruf implementiert. Der Rückrufkanal wird mithilfe des `OperationContext` abgerufen, und wenn der Kanal geöffnet ist, wird ein asynchroner Aufruf des Rückrufkanals ausgeführt.  

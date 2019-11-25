@@ -1,5 +1,5 @@
 ---
-title: <clear>-Element für <listeners> für <source>
+title: <clear> Element für <listeners> für <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4567f236397435e89371ca4c80730ff964fddd21
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697184"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088932"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear >-Element für \<listener > für \<source->
+# <a name="clear-element-for-listeners-for-source"></a>\<> Element für \<Listener > für \<Quelle löschen >
 Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listener >** ](listeners-element-for-source.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Quellen**](sources-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**Quelle**](source-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](listeners-element-for-source.md) Listener >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<löschen** >
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -50,13 +50,13 @@ Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.
 |`listeners`|Gibt Listener an, die Nachrichten erfassen, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `<clear>`-Element entfernt alle Listener aus der `Listeners`-Auflistung für eine Ablauf Verfolgungs Quelle, einschließlich der <xref:System.Diagnostics.DefaultTraceListener>. Sie können das `<clear>`-Element verwenden, bevor Sie das `<add>`-Element verwenden, um sicherzustellen, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
+ Das `<clear>`-Element entfernt alle Listener aus der `Listeners` Auflistung für eine Ablauf Verfolgungs Quelle, einschließlich des <xref:System.Diagnostics.DefaultTraceListener>. Sie können das `<clear>`-Element verwenden, bevor Sie das `<add>`-Element verwenden, um sicher zu sein, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<clear>`-Element verwendet wird, bevor die `<add>`-Elemente verwendet werden, um die Listener `console` und `textListener` der `Listeners`-Sammlung für die Ablauf Verfolgungs Quelle `TraceSourceApp` hinzuzufügen.  
+ Im folgenden Beispiel wird gezeigt, wie das `<clear>`-Element verwendet wird, bevor die `<add>` Elemente verwendet werden, um die Listener `console` und `textListener` der `Listeners` Auflistung für die Ablauf Verfolgungs Quelle `TraceSourceApp`hinzuzufügen.  
   
 ```xml  
 <configuration>  

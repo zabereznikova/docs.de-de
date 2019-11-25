@@ -1,13 +1,13 @@
 ---
 title: Berechnungsausdrücke
 description: Erfahren Sie, wie Sie eine bequeme Syntax zum Schreiben von F# Berechnungen in erstellen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können.
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424744"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976785"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+In den meisten Fällen kann Sie von Aufrufern ausgelassen werden. Die gängigste Methode zum Weglassen von `yield` ist mit dem `->`-Operator:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+Für komplexere Ausdrücke, die möglicherweise viele verschiedene Werte ergeben, und möglicherweise bedingt, kann das-Schlüsselwort einfach weggelassen werden:
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 Ebenso wie das [Yield-Schlüssel C#Wort in ](../../csharp/language-reference/keywords/yield.md)wird jedes Element im Berechnungs Ausdruck beim Durchlaufen zurückgegeben.
 
 `yield` wird vom `Yield(x)`-Element für den Builder-Typ definiert, wobei `x` das Element ist, das zurückzugeben ist.
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 Wenn das Ergebnis ausgewertet wird, werden die Elemente des von `yield!` aufgerufenen Berechnungs Ausdrucks nacheinander zurückgegeben und das Ergebnis vereinfacht.
 
 `yield!` wird vom `YieldFrom(x)`-Member für den Builder-Typ definiert, wobei `x` eine Auflistung von Werten ist.
+
+Im Gegensatz zu `yield`müssen `yield!` explizit angegeben werden. Das Verhalten ist in Berechnungs Ausdrücken nicht implizit.
 
 ### `return`
 
@@ -394,7 +424,7 @@ Das folgende Beispiel zeigt die Erweiterung der vorhandenen `Microsoft.FSharp.Li
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

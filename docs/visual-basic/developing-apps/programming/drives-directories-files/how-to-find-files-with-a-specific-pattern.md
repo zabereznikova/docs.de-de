@@ -1,19 +1,20 @@
 ---
-title: 'Vorgehensweise: Suchen nach Dateien mit einem bestimmten Muster in Visual Basic'
+title: 'Vorgehensweise: Suchen nach Dateien mit einem bestimmten Muster'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: f35222d958f8b02f83c6575d940d24e359c3ae00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914719"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348757"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Vorgehensweise: Suchen nach Dateien mit einem bestimmten Muster in Visual Basic
+
 Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Dateien darstellen. Sie können den `wildCards` -Parameter verwenden, um ein bestimmtes Muster anzugeben. Legen Sie zum Einschließen der Unterverzeichnisse in die Suche den Parameter `searchType` auf `SearchOption.SearchAllSubDirectories` fest.  
   
  Es wird eine leere Sammlung zurückgegeben, wenn keine Dateien dem angegebenen Muster entsprechen.  
@@ -28,6 +29,7 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode 
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699585"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088514"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<add >-Element für webRequestModules (Netzwerkeinstellungen)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<>-Element für webRequestModules hinzufügen (Netzwerkeinstellungen)
 Fügt der Anwendung ein benutzerdefiniertes Webanforderungs Modul hinzu.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webrequestmodules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Hinzufügen >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -56,11 +56,11 @@ Fügt der Anwendung ein benutzerdefiniertes Webanforderungs Modul hinzu.
 ## <a name="remarks"></a>Hinweise  
  Das `prefix`-Attribut definiert das URI-Präfix, das das angegebene Webanforderungs Modul verwendet. Webanforderungs Module sind in der Regel für die Verarbeitung eines bestimmten Protokolls registriert, z. b. http oder FTP, können jedoch registriert werden, um eine Anforderung an einen bestimmten Server oder Pfad auf einem Server zu verarbeiten.  
   
- Das Webanforderungs Modul wird erstellt, wenn ein URI-übereinstimmendes Präfix an die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>-Methode übermittelt wird.  
+ Das Webanforderungs Modul wird erstellt, wenn ein URI-übereinstimmendes Präfix an die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode übermittelt wird.  
   
- Der Wert für das `prefix`-Attribut muss die führenden Zeichen eines gültigen URIs sein. Beispielsweise `http` oder `http://www.contoso.com`.
+ Der Wert für das `prefix` Attribut muss die führenden Zeichen eines gültigen URIs sein. Beispielsweise `http` oder `http://www.contoso.com`.
   
- Der Wert für das `type`-Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.
+ Der Wert für das `type` Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

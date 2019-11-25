@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
+title: Erstellen von Dateien und Verzeichnissen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314684"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333809"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
+
 Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen der Datei-E/A in Visual Basic. Es wird beschrieben, wie Sie eine kleine Anwendung erstellen können, in der Textdateien in einem Verzeichnis aufgelistet und überprüft werden. Die Anwendung stellt Dateiattribute und die erste Zeile des Inhalts jeder ausgewählten Textdatei zur Verfügung. Es besteht die Möglichkeit, Informationen in eine Protokolldatei zu schreiben.  
   
  In dieser exemplarischen Vorgehensweise werden Member von `My.Computer.FileSystem Object` verwendet, die in Visual Basic verfügbar sind. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Am Ende dieser exemplarischen Vorgehensweise finden Sie ein entsprechendes Beispiel, in dem Klassen aus dem Namespace <xref:System.IO> verwendet werden.  
@@ -45,11 +46,11 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
     |Steuerelement|Eigenschaft|Wert|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**name**|`filesListBox`|  
-    |**Schaltfläche**|**name**<br /><br /> **Text**|`browseButton`<br /><br /> **Durchsuchen**|  
-    |**Schaltfläche**|**name**<br /><br /> **Text**|`examineButton`<br /><br /> **Untersuchen**|  
-    |**CheckBox**|**name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Ergebnisse speichern**|  
-    |**FolderBrowserDialog**|**name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Button** (Schaltfläche)|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **Browse** (Durchsuchen)|  
+    |**Button** (Schaltfläche)|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **Examine** (Untersuchen)|  
+    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Save Results** (Ergebnisse speichern)|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>So wählen Sie einen Ordner und Listendateien in einem Ordner aus  
   
@@ -150,11 +151,13 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
 6. Führen Sie die Anwendung aus. Das Kontrollkästchen **Save Results** (Ergebnisse speichern) und die Schaltfläche **Examine** (Untersuchen) sind deaktiviert, wenn ein Element nicht in `ListBox` ausgewählt ist.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>Ausführliches Beispiel mit Verwendung von „My.Computer.FileSystem“  
+
  Im Folgenden sehen Sie das vollständige Beispiel.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>Ausführliches Beispiel mit Verwendung von „System.IO“  
+
  Im folgenden entsprechenden Beispiel werden Klassen aus dem Namespace <xref:System.IO> anstelle von `My.Computer.FileSystem`-Objekten verwendet.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
@@ -164,4 +167,4 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

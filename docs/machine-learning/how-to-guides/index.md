@@ -3,24 +3,20 @@ title: ML.NET-Schrittanleitungen
 description: Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645031"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977110"
 ---
-# <a name="net-machine-learning-how-to-guides"></a>Schrittanleitungen für .NET Machine Learning 
+# <a name="net-machine-learning-how-to-guides"></a>Schrittanleitungen für .NET Machine Learning
 
 Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell Antworten auf häufige Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein, damit sie einfacher zu finden sind.
 
-## <a name="load-the-data"></a>Laden der Daten
+## <a name="load-data"></a>Laden von Daten
 
-* [Laden von Daten mit vielen Spalten aus einer CSV-Datei für die Machine Learning-Verarbeitung](load-data-from-mult-column-csv-ml-net.md)
-
-* [Laden von Daten aus mehreren Dateien für die Machine Learning-Verarbeitung](load-data-from-multiple-files-ml-net.md)
-
-* [Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung](load-data-from-text-file-ml-net.md)
+* [Laden von Daten aus Dateien und SQL-Datenbanken](load-data-ml-net.md)
 
 ### <a name="prepare-the-data"></a>Vorbereiten der Daten
 
@@ -28,11 +24,9 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 ## <a name="train-the-model"></a>Trainieren des Modells
 
-* [Trainieren eines Machine Learning-Modells mithilfe von Daten, die nicht in einer Textdatei enthalten sind](load-non-file-training-data-ml-net.md)
+* [Trainieren eines Machine Learning-Modells mit der Kreuzvalidierung](train-machine-learning-model-cross-validation-ml-net.md)
 
-* [Trainieren eines Machine Learning-Modells mit der Kreuzvalidierung](train-cross-validation-ml-net.md)
-
-* [Trainieren eines Regressionsmodells zur Vorhersage eines Werts mit ML.NET](train-regression-model-ml-net.md)
+* [Trainieren eines Regressionsmodells zur Vorhersage eines Werts mit ML.NET](train-machine-learning-model-ml-net.md)
 
 ### <a name="evaluate-the-model-quality"></a>Bewerten der Modellqualität
 
@@ -40,23 +34,17 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 ### <a name="model-explainability"></a>Modellerklärung
 
-* [Bestimmen der Wichtigkeit von Modellfeatures mit Permutation Feature Importance (PFI)](determine-global-feature-importance-in-model.md)
+* [Bestimmen der Wichtigkeit von Modellfeatures mit Permutation Feature Importance (PFI)](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
 * [Einsatz von verallgemeinerten additiven Modellen und shape-Funktionen zur Modellerklärung](use-gams-for-model-explainability.md)
-
-### <a name="feature-engineering"></a>Funktionsentwicklung
-
-* [Featureentwicklung für ein Modelltraining mit Kategoriedaten in ML.NET](train-model-categorical-ml-net.md)
-
-* [Featureentwicklung für ein Modelltraining mit Textdaten in ML.NET](train-model-textual-ml-net.md)
 
 ## <a name="run"></a>Run
 
 * [Untersuchen von Zwischendatenwerten beim Verarbeiten der ML.NET-Pipeline](inspect-intermediate-data-ml-net.md)
 
-* [Operationalisieren eines trainierten Machine Learning-Modells in Apps](consuming-model-ml-net.md)
+* [Laden eines trainierten Machine Learning-Modells](save-load-machine-learning-models-ml-net.md)
 
-* [Einzelvorhersage mit PredictionFunction](single-predict-model-ml-net.md)
+* [Treffen von Vorhersagen mit einem trainierten Modell](machine-learning-model-predictions-ml-net.md)
 
 ## <a name="probabilistic-infernet"></a>Probabilistisch (Infer.NET)
 

@@ -2,12 +2,12 @@
 title: Beispiel zum Streaming von Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425361"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976375"
 ---
 # <a name="streaming-feeds-sample"></a>Beispiel zum Streaming von Feeds
 In diesem Beispiel wird veranschaulicht, wie Syndication-Feeds verwaltet werden, die eine große Anzahl von Elementen enthalten. Auf dem Server zeigt das Beispiel, wie die Erstellung einzelner <xref:System.ServiceModel.Syndication.SyndicationItem>-Objekte innerhalb des Feeds bis unmittelbar vor den Zeitpunkt verzögert werden kann, zu dem das Element in den Netzwerkstream geschrieben wird.  
@@ -33,7 +33,7 @@ interface IStreamingFeedService
   
  Diesen Vertrag implementiert der Dienst mittels einer `ItemGenerator`-Klasse zum Erstellen eines potentiell unendlichen Streams von <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanzen mithilfe eines Iterators, wie im folgenden Code gezeigt.  
   
-```csharp  
+```csharp
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -51,7 +51,7 @@ class ItemGenerator
   
  Beim Erstellen des Feeds verwendet die Dienstimplementierung statt einer gepufferten Auflistung von Elementen die Ausgabe von `ItemGenerator.GenerateItems()`.  
   
-```csharp  
+```csharp
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  

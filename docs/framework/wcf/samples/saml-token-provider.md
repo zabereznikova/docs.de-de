@@ -2,12 +2,12 @@
 title: SAML-Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424235"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976711"
 ---
 # <a name="saml-token-provider"></a>SAML-Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) wird zum Bereitstellen von Anmelde Informationen für die Sicherheitsinfrastruktur verwendet. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. WCF wird mit dem standardmäßigen Anmelde Informations Manager-Tokenanbieter ausgeliefert. WCF ist auch mit einem CardSpace-Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
@@ -161,8 +161,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
      Die <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse dient zur Erstellung von <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Ein Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und eines Token-Serialisierungsprogramms. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten SAML-Tokenanbieter zurückzugeben, wenn die übergebenen Sicherheitstokenanforderungen angeben, dass das SAML-Token angefordert wird. Wenn die Clientanmeldeinformationsklasse (siehe Schritt 3) keine Assertion angegeben hat, erstellt der Sicherheitstoken-Manager eine entsprechende Instanz.
 
     ```csharp
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 

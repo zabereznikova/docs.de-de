@@ -3,12 +3,12 @@ title: Einführung in Docker
 description: Dieser Artikel bietet eine Einführung und einen Überblick über Docker im Rahmen einer.NET Core-Anwendung.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523002"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087385"
 ---
 # <a name="introduction-to-net-and-docker"></a>Einführung zu .NET und Docker
 
@@ -61,7 +61,7 @@ Stellen Sie Web-Apps und APIs mithilfe von Linux-Containern in einer PaaS-Umgebu
 - [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Hosten Sie Ihren Container in der Cloud ohne übergeordnete Verwaltungsdienste.
 
- [Azure Batch](https://azure.microsoft.com/services/batch/)\
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Führen Sie sich wiederholende Computeaufträge mit Containern aus.
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
@@ -72,7 +72,7 @@ Speichern und verwalten Sie Containerimages für alle Typen von Azure-Bereitstel
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Bereitstellen einer .NET Core-Anwendung im Container](build-docker-netcore-container.md)
+- [Bereitstellen einer .NET Core-Anwendung im Container](build-container.md)
 - [Bereitstellen einer ASP.NET Core-Anwendung im Container.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [Tutorial zu ASP.NET Core-Microservices](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Informationen zu Containertools in Visual Studio](/visualstudio/containers/overview)

@@ -1,21 +1,23 @@
 ---
-title: Sicherheit und die Registrierung (Visual Basic)
+title: Sicherheit und die Registrierung
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916526"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345483"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Sicherheit und die Registrierung (Visual Basic)
+
 Diese Seite beschreibt die Sicherheitsauswirkungen bei der Speicherung von Daten in der Registrierung.  
   
 ## <a name="permissions"></a>Berechtigungen  
+
  Es ist nicht sicher, geheime Daten wie Kennwörter in der Registrierung als Klartext zu speichern. Dies gilt auch, wenn der Registrierungsschlüssel durch Zugriffssteuerungslisten (ACLs) geschützt ist.  
   
  Das Arbeiten mit der Registrierung schränkt möglicherweise die Sicherheit ein, da nicht ordnungsgemäßer Zugriff auf Systemressourcen oder geschützte Informationen zugelassen wird. Um diese Eigenschaften verwenden zu können, benötigen Sie Lese- und Schreibberechtigungen aus der Enumeration <xref:System.Security.Permissions.RegistryPermissionAccess>, die den Zugriff auf Registrierungsvariablen steuert. Jeder Code, der mit voller Vertrauenswürdigkeit ausgeführt wird (gemäß der Standardsicherheitsrichtlinie ist dies jeder Code, der auf der lokalen Festplatte des Benutzers installiert ist) verfügt über die erforderlichen Berechtigungen zum Zugriff auf die Registrierung. Weitere Informationen finden Sie in der <xref:System.Security.Permissions.RegistryPermission>-Klasse.  
@@ -33,6 +35,7 @@ Diese Seite beschreibt die Sicherheitsauswirkungen bei der Speicherung von Daten
 |`Write`|Write|  
   
 ## <a name="checking-values-in-registry-keys"></a>Überprüfen von Werten in Registrierungsschlüsseln  
+
  Wenn Sie einen Registrierungswert erstellen, müssen Sie festlegen, was geschehen soll, wenn der Wert bereits vorhanden ist. Möglicherweise wurde der Wert bereits von einem bösartigen Prozess erstellt, der nun darauf zugreifen kann. Wenn Sie dem Registrierungswert Daten hinzufügen, kann der andere Prozess darauf zugreifen. Um dies zu verhindern, verwenden Sie die `GetValue`-Methode. Die Methode gibt `Nothing` zurück, wenn der Schlüssel noch nicht vorhanden ist.  
   
 > [!IMPORTANT]

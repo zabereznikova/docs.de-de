@@ -4,12 +4,12 @@ description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereic
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180177"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977286"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -29,9 +29,9 @@ Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) n
 
 ## <a name="calibration"></a>Kalibrierung
 
-Die Kalibrierung ist der Prozess der Zuordnung einer unformatierten Bewertung zu einer Klassenzugehörigkeit für die binäre und Multiklassenklassifizierung. Einige ML.NE-Trainer haben ein `NonCalibrated`-Suffix. Diese Algorithmen erzeugen eine unformatierte Bewertung, die dann einer Klassenwahrscheinlichkeit zugeordnet werden muss. 
+Die Kalibrierung ist der Prozess der Zuordnung einer unformatierten Bewertung zu einer Klassenzugehörigkeit für die binäre und Multiklassenklassifizierung. Einige ML.NE-Trainer haben ein `NonCalibrated`-Suffix. Diese Algorithmen erzeugen eine unformatierte Bewertung, die dann einer Klassenwahrscheinlichkeit zugeordnet werden muss.
 
-## <a name="catalog"></a>Catalog 
+## <a name="catalog"></a>Catalog
 
 In ML.NET ist ein Katalog eine Sammlung von Erweiterungsfunktionen, die nach einem gemeinsamen Zweck gruppiert sind.
 
@@ -170,7 +170,7 @@ Der Prozess der Identifizierung eines [Modells](#model) für einen bestimmten Tr
 
 Eine ML-NET-Klasse, die die <xref:Microsoft.ML.ITransformer>-Schnittstelle implementiert.
 
-Ein Transformator transformiert eine <xref:Microsoft.ML.IDataView> in eine andere. Ein Transformator wird durch das Training eines [Estimators](#estimator) oder einer Estimatorpipeline erstellt. 
+Ein Transformator transformiert eine <xref:Microsoft.ML.IDataView> in eine andere. Ein Transformator wird durch das Training eines [Estimators](#estimator) oder einer Estimatorpipeline erstellt.
 
 ## <a name="unsupervised-machine-learning"></a>Unüberwachtes maschinelles Lernen
 

@@ -2,12 +2,12 @@
 title: Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 7a50454c5189c48704adfaaed2c90d2638dd677f
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928974"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978181"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
 Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwendungen, eingeführt. Diese Anwendungen sind für Touchscreenoberflächen konzipiert. .NET Framework 4.5 ermöglicht Windows Store-Anwendungen das Aufrufen von WCF-Diensten.  
@@ -55,7 +55,7 @@ Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwen
  Sowohl textbasierte als auch binäre Codierungen werden unterstützt. Alle WCF-Übertragungsmodi werden unterstützt. Weitere Informationen finden Sie unter [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Dienstverweis hinzufügen  
- Um einen WCF-Dienst aus einer Windows Store-Anwendung aufzurufen, verwenden Sie die Funktion „Dienstverweis hinzufügen“ in Visual Studio 2012. Sie werden bei Verwendung von „Dienstverweis hinzufügen“ innerhalb einer Windows Store-Anwendung einige Funktionsunterschiede bemerken. Als erstes wird keine Konfigurationsdatei generiert. Da Windows Store-Anwendungen keine Konfigurationsdateien verwenden, müssen sie im Code konfiguriert werden. Dieser Konfigurationscode befindet sich in der Datei „References.cs“, die durch „Dienstverweis hinzufügen“ generiert wird. Um diese Datei anzuzeigen, müssen Sie im Projektmappen-Explorer "alle Dateien anzeigen" auswählen. Die Datei befindet sich innerhalb des Projekts unter dem Knoten „Dienstverweise“ und dann „Reference.svcmap“. Alle Vorgänge, die für WCF-Dienste in einer Windows Store-Anwendung generiert werden, werden unter Verwendung des taskbasierten asynchronen Musters asynchron implementiert. Weitere Informationen finden Sie unter [asynchrone Aufgaben: Vereinfachen der asynchronen Programmierung mit Aufgaben](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Um einen WCF-Dienst aus einer Windows Store-Anwendung aufzurufen, verwenden Sie die Funktion „Dienstverweis hinzufügen“ in Visual Studio 2012. Sie werden bei Verwendung von „Dienstverweis hinzufügen“ innerhalb einer Windows Store-Anwendung einige Funktionsunterschiede bemerken. Als erstes wird keine Konfigurationsdatei generiert. Da Windows Store-Anwendungen keine Konfigurationsdateien verwenden, müssen sie im Code konfiguriert werden. Dieser Konfigurationscode befindet sich in der Datei „References.cs“, die durch „Dienstverweis hinzufügen“ generiert wird. Um diese Datei anzuzeigen, müssen Sie im Projektmappen-Explorer "alle Dateien anzeigen" auswählen. Die Datei befindet sich innerhalb des Projekts unter dem Knoten „Dienstverweise“ und dann „Reference.svcmap“. Alle Vorgänge, die für WCF-Dienste in einer Windows Store-Anwendung generiert werden, werden unter Verwendung des taskbasierten asynchronen Musters asynchron implementiert. Weitere Informationen finden Sie unter [asynchrone Aufgaben: Vereinfachen der asynchronen Programmierung mit Aufgaben](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
   
  Da die Konfiguration nun im Code generiert wird, werden alle Änderungen in der Datei „Reference.cs“ überschrieben, sobald der Dienstverweis aktualisiert wird. Um diese Situation zu vermeiden, wird der Konfigurationscode innerhalb einer partiellen Methode generiert, die Sie in der Clientproxyklasse implementieren können. Die partielle Methode wird folgendermaßen deklariert:  
   
@@ -120,9 +120,9 @@ Die folgenden Sicherheitsmodi werden in Windows Store-Anwendungen unterstützt:
   
 Die folgenden Client Anmelde Informationstypen werden in Windows Store-Anwendungen unterstützt:
   
-1. None  
+1. Keiner  
   
-2. Einfach  
+2. Standard  
   
 3. Digest  
   
@@ -139,7 +139,7 @@ Die folgenden Client Anmelde Informationstypen werden in Windows Store-Anwendung
  Damit Windows Store-Anwendungen auf standardmäßige Windows-Anmeldeinformationen zugreifen und diese senden können, müssen Sie diese Funktionalität innerhalb der Datei „Package.appmanifest“ aktivieren. Öffnen Sie diese Datei, wählen Sie die Registerkarte Funktionen aus, und wählen Sie "Windows-Standard Anmelde Informationen" Dadurch kann die Anwendung eine Verbindung mit Intranetressourcen herstellen, die Domänenanmeldeinformationen erfordern.  
   
 > [!IMPORTANT]
-> Damit Windows Store-Anwendungen Computer übergreifende Aufrufe durchführen können, müssen Sie eine weitere Funktion mit dem Namen "Home/work Networking" aktivieren. Diese Einstellung befindet sich ebenfalls in der Datei „Package.appmanifest“ auf der Registerkarte für Funktionen. Aktivieren Sie das Kontrollkästchen „Home/Work Networking“. Dadurch erhält die Anwendung eingehenden und ausgehenden Zugriff auf die Netzwerke der vertrauenswürdigen Orte des Benutzers wie Heim und Arbeit. Wichtige eingehende Ports sind immer blockiert. Für den Zugriff auf Internetdienste müssen Sie auch die Internetfunktion (Client) aktivieren.  
+> Damit Windows Store-Anwendungen Computer übergreifende Aufrufe durchführen können, müssen Sie eine weitere Funktion mit dem Namen "Home/work Networking" aktivieren. Diese Einstellung befindet sich auch in der Datei "Package. AppManifest" auf der Registerkarte "Funktionen". Aktivieren Sie das Kontrollkästchen "Home/work Networking" Dadurch erhält die Anwendung eingehenden und ausgehenden Zugriff auf die Netzwerke der vertrauenswürdigen Orte des Benutzers wie Heim und Arbeit. Wichtige eingehende Ports sind immer blockiert. Für den Zugriff auf Internetdienste müssen Sie auch die Internetfunktion (Client) aktivieren.  
   
 ### <a name="misc"></a>Sonstiges  
  Die Verwendung der folgenden Klassen wird für Windows Store-Anwendungen unterstützt:  

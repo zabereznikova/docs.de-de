@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: 45d2da22a7c3486d4c7a638e92d1f3fce6f9883c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4b3495d17e07ca611a384bf958ee06e928eb2506
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699714"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088014"
 ---
-# <a name="cryptonamemapping-element"></a>\<cryptonamemapping > Element
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping-> Element
 Enthält die Zuordnung von Klassen zu den Anzeigenamen.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographysettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<cryptonamemapping >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib->** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoNameMapping >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -50,10 +50,10 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`cryptoNameMapping`|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|`mscorlib`|Enthält das > Element \<cryptographysettings.|  
+|`mscorlib`|Enthält die \<cryptographySettings-> Element.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<cryptonamemapping->** Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<cryptoNameMapping->** Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
   
 ```xml  
 <configuration>  
@@ -78,5 +78,5 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 
 - [Konfigurationsdateischema](../index.md)
 - [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

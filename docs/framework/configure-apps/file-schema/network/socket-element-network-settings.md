@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: ec2c8388411e24940041dc9dcb7f6a6755e89805
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697587"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089092"
 ---
-# <a name="socket-element-network-settings"></a>\<socket >-Element (Netzwerkeinstellungen)
+# <a name="socket-element-network-settings"></a>\<Socket >-Element (Netzwerkeinstellungen)
 Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<socket >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Einstellungen**](settings-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Socket >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -42,7 +42,7 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Gibt an, ob der Socket immer Beendigungs Anschlüsse für Accept-Methodenaufrufe verwenden soll. Der Standardwert ist `false`sein.|  
 |`alwaysUseCompletionPortsForConnect`|Gibt an, ob der Socket immer Beendigungs Anschlüsse für Verbindungsmethoden Aufrufe verwenden soll. Der Standardwert ist `false`sein.|  
-|`ipProtectionLevel`|Gibt den Standard <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> an, der für einen Socket verwendet werden soll. Der Standardwert hängt von der Windows-Version ab.|  
+|`ipProtectionLevel`|Gibt die Standard <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> an, die für einen Socket verwendet werden sollen. Der Standardwert hängt von der Windows-Version ab.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -51,18 +51,18 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[Einstellungen](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Attribute `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` werden verwendet, um das Standardverhalten in Bezug auf die Verwendung von Abschlussports durch die Klassen im @no__t -2. Namespace anzugeben. Abschlussports werden für hochleistungsfähige Server Anwendungen empfohlen.  
+ Die Attribute `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` werden verwendet, um das Standardverhalten in Bezug auf die Verwendung von Abschlussports durch die Klassen im <xref:System.Net.Sockets?displayProperty=nameWithType>. Namespace anzugeben. Abschlussports werden für hochleistungsfähige Server Anwendungen empfohlen.  
   
  Der Standardwert für die Attribute `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` ist **false**.  
   
- Der <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> kann verwendet werden, um den aktuellen Wert des `alwaysUseCompletionPortsForAccept`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten. Der <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> kann verwendet werden, um den aktuellen Wert des `alwaysUseCompletionPortsForConnect`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Der <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> kann verwendet werden, um den aktuellen Wert des `alwaysUseCompletionPortsForAccept` Attributs aus den anwendbaren Konfigurationsdateien zu erhalten. Der <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> kann verwendet werden, um den aktuellen Wert des `alwaysUseCompletionPortsForConnect` Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
- Das `ipProtectionLevel`-Attribut gibt die Standard <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> an, die für einen Socket verwendet werden soll. Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>-Eigenschaft ermöglicht die Konfiguration einer Einschränkung für einen IPv6-Socket zu einem angegebenen Bereich, z. b. Adressen mit demselben Link lokalen oder Standort lokalen Präfix. Mit dieser Option können Anwendungen Zugriffs Einschränkungen für IPv6-Sockets platzieren. Mit solchen Einschränkungen kann sich eine im privaten LAN ausgeführte Anwendung selbst einfach und stabil vor externen Angriffen schützen. Mit dieser Option wird der Bereich eines Abhör Sockets erweitert oder eingeschränkt, bei Bedarf der uneingeschränkte Zugriff von öffentlichen und privaten Benutzern ermöglicht oder der Zugriff auf dieselbe Website eingeschränkt.  
+ Das `ipProtectionLevel`-Attribut gibt die Standard <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> an, die für einen Socket verwendet werden sollen. Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>-Eigenschaft ermöglicht die Konfiguration einer Einschränkung für einen IPv6-Socket zu einem angegebenen Bereich, z. b. Adressen mit demselben Link lokalen oder Standort lokalen Präfix. Mit dieser Option können Anwendungen Zugriffs Einschränkungen für IPv6-Sockets platzieren. Mit solchen Einschränkungen kann sich eine im privaten LAN ausgeführte Anwendung selbst einfach und stabil vor externen Angriffen schützen. Mit dieser Option wird der Bereich eines Abhör Sockets erweitert oder eingeschränkt, bei Bedarf der uneingeschränkte Zugriff von öffentlichen und privaten Benutzern ermöglicht oder der Zugriff auf dieselbe Website eingeschränkt.  
   
- Diese @no__t 0-Attribut Einstellung wirkt sich nur auf den ersten eingehenden Datenverkehr aus:  
+ Diese `ipProtectionLevel` Attribut Einstellung betrifft nur den ersten eingehenden Datenverkehr:  
   
 - Ein TCP-Server, der eingehende Verbindungen für einen Socket überwacht.  
   
@@ -81,13 +81,13 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
   
  Der Standardwert für das `ipProtectionLevel`-Attribut ist **nicht angegeben**.  
   
- Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `ipProtectionLevel`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `ipProtectionLevel` Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie angegeben wird, dass die Abschlussports verwendet werden sollen und dass der Standardwert von <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> uneingeschränkt sein sollte.  
+ Im folgenden Beispiel wird gezeigt, wie Sie angeben, dass die Abschlussports verwendet werden sollen und dass der Standard <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> uneingeschränkt sein sollte.  
   
 ```xml  
 <configuration>  

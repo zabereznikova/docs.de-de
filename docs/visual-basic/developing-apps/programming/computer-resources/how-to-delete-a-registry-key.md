@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Löschen von Registrierungsschlüsseln in Visual Basic'
+title: 'Vorgehensweise: Löschen von Registrierungsschlüsseln'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662772"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345650"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Vorgehensweise: Löschen von Registrierungsschlüsseln in Visual Basic
+
 Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> und <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> können zum Löschen von Registrierungsschlüsseln verwendet werden.  
   
 ## <a name="procedure"></a>Prozedur  
@@ -30,6 +31,7 @@ Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die `DeleteSubKey`-Methode gibt eine leere Zeichenfolge zurück, wenn das Schlüssel-Wert-Paar nicht vorhanden ist.  
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
@@ -43,6 +45,7 @@ Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
 - Der Registrierungsschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+
  Registrierungsaufrufe schlagen fehl, wenn die notwendigen Laufzeitberechtigungen fehlen (<xref:System.Security.Permissions.RegistryPermission>), oder wenn der Benutzer nicht über den korrekten Zugriff (wie von den ACLs angegeben) für das Erstellen von und Schreiben in Einstellungen verfügt. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung.  
   
 ## <a name="see-also"></a>Siehe auch

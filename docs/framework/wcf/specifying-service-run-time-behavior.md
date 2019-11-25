@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ffa2f906ac2ff4630de83938ce365c1b9d5d4d64
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321375"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976633"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Angeben des Dienstlaufzeitverhaltens
 Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der-Dienst Anwendung finden Sie unter [Konfigurieren von Diensten](configuring-services.md).  
@@ -59,7 +59,7 @@ Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](designi
   
  Sie können jedoch auch selbst ein Dienstobjekt und den Diensthost, der dieses Objekt verwendet, erstellen. Hierfür müssen Sie auch die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.Single> festlegen, damit keine Ausnahme ausgelöst wird, sobald der Diensthost geöffnet wird.  
   
- Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienstimplementierungstyp schwer zu erstellen ist (wenn er z.&#160;B. keinen öffentlichen parameterlosen Standardkonstruktor implementiert).  
+ Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienst Implementierungstyp schwer zu erstellen ist (wenn er z. b. keinen Parameter losen öffentlichen Konstruktor implementiert).
   
  Beachten Sie Folgendes: Wenn ein Objekt für diesen Konstruktor bereitgestellt wird, funktionieren einige Funktionen im Zusammenhang mit dem Windows Communication Foundation-Instanziierungsverhalten (WCF) unterschiedlich. So zeigt zum Beispiel der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> keine Wirkung, wenn eine bekannte Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Die <xref:System.ServiceModel.ServiceHost> -Klasse verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> festgelegt ist.  
   

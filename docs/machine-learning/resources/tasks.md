@@ -4,16 +4,16 @@ description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learni
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630052"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977255"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Machine Learning-Aufgaben in ML.NET
 
-Wenn Sie ein Machine Learning-Modell erstellen, müssen Sie zuerst definieren, was Sie mit Ihren Daten erreichen möchten. Dadurch können Sie die richtige Machine Learning-Aufgabe für Ihren Zweck auswählen. In der folgenden Liste werden die verschiedenen Machine Learning-Aufgaben beschrieben, unter denen Sie auswählen können, und einige häufige Anwendungsfälle.
+Wenn Sie ein Machine Learning-Modell erstellen, müssen Sie zuerst definieren, was Sie mit Ihren Daten erreichen möchten. Dadurch können Sie die richtige Machine Learning-Aufgabe für Ihren Zweck auswählen. In der folgenden Liste werden die verschiedenen Machine Learning-Aufgaben beschrieben, unter denen Sie auswählen können, und einige häufige Anwendungsfälle. Weitere Informationen zum Auswählen der für Ihr Szenario geeigneten Aufgabe finden Sie unter [Algorithmen](../how-to-choose-an-ml-net-algorithm.md).
 
 Nachdem Sie entschieden haben, welche Aufgabe auf Ihr Szenario zutrifft, müssen Sie den besten Algorithmus zum Trainieren Ihres Modells auswählen. Die verfügbaren Algorithmen sind im Abschnitt zur jeweiligen Aufgabe aufgeführt.
 
@@ -24,7 +24,7 @@ Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Auf
 * [Verstehen des Standpunkts in Twitter-Kommentaren](../tutorials/sentiment-analysis.md) als „positiv“ oder „negativ“.
 * Diagnostizieren, ob bei einem Patienten eine bestimmte Krankheit vorliegt oder nicht.
 * Treffen einer Entscheidung, um eine E-Mail-Nachricht als „Spam“ zu markieren oder nicht.
-* Bestimmen, ob ein Foto einen Hund oder Obst zeigt.
+* Ermitteln, ob ein Foto ein bestimmtes Element, z. B. einen Hund oder eine Frucht, enthält oder nicht
 
 Weitere Informationen finden Sie auf Wikipedia im Artikel zur [binären Klassifizierung](https://en.wikipedia.org/wiki/Binary_classification).
 
@@ -34,15 +34,15 @@ Sie können ein binäres Klassifizierungsmodell mithilfe der folgenden Algorithm
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
-* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
 ### <a name="binary-classification-inputs-and-outputs"></a>Eingaben und Ausgaben für die binäre Klassifizierung
@@ -79,10 +79,10 @@ Sie können ein Modell zur Multiklassenklassifizierung mithilfe der folgenden Al
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Eingaben und Ausgaben für die Multiklassenklassifizierung
 
@@ -112,7 +112,7 @@ Sie können ein Regressionsmodell mithilfe der folgenden Algorithmen trainieren:
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
@@ -140,7 +140,7 @@ Eine [nicht überwachte Machine Learning](glossary.md#unsupervised-machine-learn
 
 Sie können ein Modell zur Clusterbildung mithilfe der folgenden Algorithmen trainieren:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ### <a name="clustering-inputs-and-outputs"></a>Eingaben und Ausgaben für das Clustering
 
@@ -193,7 +193,7 @@ Eine Rangfolgenaufgabe erstellt für einen Satz bezeichneter Beispiele eine Rang
 Sie können ein Rangfolgemodell mithilfe der folgenden Algorithmen trainieren:
 
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 
 ### <a name="ranking-input-and-outputs"></a>Eingaben und Ausgaben für die Rangfolge
 

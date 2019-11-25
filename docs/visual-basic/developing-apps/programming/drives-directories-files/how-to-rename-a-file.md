@@ -1,18 +1,19 @@
 ---
-title: 'Vorgehensweise: Umbenennen einer Datei in Visual Basic'
+title: 'Vorgehensweise: Umbenennen einer Datei'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 2bc3e19968362993528c166ca6ec7a7fbbec1993
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623226"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334554"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Vorgehensweise: Umbenennen einer Datei in Visual Basic
+
 Verwenden Sie die `RenameFile`-Methode des `My.Computer.FileSystem`-Objekts, um eine Datei umzubenennen, indem Sie den aktuellen Standort, Dateinamen sowie den neuen Dateinamen bereitstellen. Diese Methode kann nicht dazu verwendet werden, um eine Datei zu verschieben; verwenden Sie die `MoveFile`-Methode, um die Datei zu verschieben und umzubenennen.  
   
 ### <a name="to-rename-a-file"></a>So benennen Sie eine Datei um  
@@ -24,6 +25,7 @@ Verwenden Sie die `RenameFile`-Methode des `My.Computer.FileSystem`-Objekts, um 
  Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl befindet sich der Ausschnitt unter **Dateisystem - Verarbeiten von Laufwerken, Ordnern und Dateien**. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  

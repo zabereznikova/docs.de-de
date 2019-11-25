@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers'
+title: 'Gewusst wie: Registrieren und Konfigurieren eines Dienstmonikers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972144"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976125"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Gewusst wie: Registrieren und Konfigurieren eines Dienstmonikers
 Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in einer COM-Anwendung mit einem typisierten Vertrag müssen Sie die erforderlichen attributierten Typen bei com registrieren und die COM-Anwendung und den Moniker mit der erforderlichen Bindung konfigurieren. konfiguri.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>So registrieren Sie die erforderlichen attributierten Typen bei COM  
@@ -67,7 +67,7 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in 
   
      Nachdem ein Verweis auf die Assembly mit den `IMathService`-Typen hinzugefügt wurde (siehe folgendes Codebeispiel), kann jede dieser Monikerzeichenfolgen in einer Visual Basic 6.0-Anwendung verwendet werden.  
   
-    ```vb  
+    ```vb
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -85,7 +85,7 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in 
     > Für C#-, C++- oder andere .NET-Anwendung kann ein ähnlicher Code verwendet werden.  
   
     > [!NOTE]
-    > : Wenn der Moniker falsch formatiert ist oder der Dienst nicht verfügbar ist, `GetObject` gibt der Aufruf von den Fehler "Ungültige Syntax" zurück. Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
+    > : Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben. Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
   
      Obgleich in diesem Thema hauptsächlich die Verwendung des Dienstmonikers in VB 6.0-Code behandelt wird, können Dienstmoniker auch in anderen Sprachen verwendet werden. Bei Verwendung eines Monikers in C++-Code muss die von Svcutil.exe generierte Assembly gemäß dem folgenden Beispiel mit "no_namespace named_guids raw_interfaces_only" importiert werden:  
   

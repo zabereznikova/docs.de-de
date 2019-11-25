@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740652"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976774"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML-Namespaces und Namespacezuordnung für WPF-XAML
 Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden XAML-Namespacezuordnungen, die häufig im Stammelement einer WPF XAML-Datei zu finden sind. Es wird ebenfalls beschrieben, wie Sie ähnliche Zuordnungen für Elemente in Ihrem eigenen Code und/oder separaten Assemblys erstellen können.  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Designer-Namespaces und andere Präfixe aus XAML-Vorlagen  
  Wenn Sie mit Entwicklungsumgebungen und/oder Entwurfstools für WPF-XAML arbeiten, werden Sie bemerken, dass es im XAML-Markup weitere definierte XAML-Namespaces/Präfixe gibt.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] verwendet einen Designer-Namespace, der üblicherweise dem Präfix `d:` zugeordnet ist. Neuere Projektvorlagen für WPF ordnen dieses Präfix möglicherweise bereits im Vorfeld zu, um den Austausch von XAML zwischen [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] und andere Entwurfsumgebungen zu unterstützen. Dieser XAML-Designer-Namespace wird verwendet, um bei Roundtrips von XAML-basierten Benutzeroberflächen den jeweiligen Stand des Designs festzuhalten. Er wird ebenfalls für Funktionen wie z.B. `d:IsDataSource` verwendet, die die Laufzeit-Datenquellen in einem Designer aktivieren.  
+ WPF-Designer für Visual Studio verwendet einen Designer-Namespace, der normalerweise dem Präfix `d:`zugeordnet wird. Neuere Projektvorlagen für WPF können diesen XAML-Namespace vorab zuordnen, um den Austausch von XAML zwischen dem WPF-Designer für Visual Studio und anderen Entwurfs Umgebungen zu unterstützen. Dieser XAML-Designer-Namespace wird verwendet, um bei Roundtrips von XAML-basierten Benutzeroberflächen den jeweiligen Stand des Designs festzuhalten. Er wird ebenfalls für Funktionen wie z.B. `d:IsDataSource` verwendet, die die Laufzeit-Datenquellen in einem Designer aktivieren.  
   
  Ein anderes Präfix, dessen Zuordnung Sie möglicherweise sehen können, ist `mc:`. `mc:` dient der Markupkompatibilität. Dabei wird ein Markup-Kompatibilitätsmuster wiederverwendet, das nicht unbedingt XAML-spezifisch ist. In gewissem Umfang können die Markupkompatibilitäts-Funktionen verwendet werden, um XAML zwischen Frameworks oder grenzübergreifend mit unterstützenden Implementierungen auszutauschen, zwischen verschiedenen XAML-Schema-Kontexten zu arbeiten, Kompatibilität für eingeschränkte Modi in Designern bereitzustellen, und so weiter. Weitere Informationen zu Markupkompatibilitätskonzepten und deren Bezug auf WPF finden Sie unter [Markupkompatibilität (mc:) – Sprachfeatures](markup-compatibility-mc-language-features.md).  
   

@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796502"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428533"
 ---
 # <a name="default-values-table-c-reference"></a>Tabelle für Standardwerte (C#-Referenz)
 
@@ -23,10 +23,10 @@ In der folgenden Tabelle werden die Standardwerte von C#-Typen gezeigt:
 |Beliebiger [integrierter integraler numerischer Typ](../builtin-types/integral-numeric-types.md)|0 (null)|
 |Beliebiger [integrierter numerischer Gleitkommatyp](../builtin-types/floating-point-numeric-types.md)|0 (null)|
 |[bool](bool.md)|`false`|
-|[char](char.md)|`'\0'` (U+0000)|
+|[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Der Wert, der vom Ausdruck `(E)0` erzeugt wird, bei dem `E` der Enumerationsbezeichner ist.|
 |[struct](struct.md)|Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte festgelegt werden und alle Verweistypfelder auf `null`.|
-|Ein [Werttyp, der NULL-Werte zulässt](../../programming-guide/nullable-types/index.md).|Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist. Dieser Standardwert wird auch als *NULL*-Wert des Werttyps bezeichnet, der NULL-Werte zulässt.|
+|Ein [Werttyp, der NULL-Werte zulässt](../builtin-types/nullable-value-types.md).|Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist. Dieser Standardwert wird auch als *NULL*-Wert eines Nullable-Werttyps bezeichnet.|
 
 Verwenden Sie den [default-Operator](../operators/default.md), um wie im folgenden Beispiel den Standardwert eines Typs zu erzeugen:
 

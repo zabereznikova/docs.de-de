@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5f055d6e665f68586191ab760fb5658eeb5c2cb2
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698436"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087995"
 ---
-# <a name="oidmap-element"></a>\<oidmap > Element
+# <a name="oidmap-element"></a>\<oidmap >-Element
 Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographysettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<oidmap >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib->** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oidmap >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -40,7 +40,7 @@ Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<oidEntry>](oidentry-element.md)|Ordnet eine ASN. 1-OID einem anzeigen Amen zu.|  
+|[\<oidEntry >](oidentry-element.md)|Ordnet eine ASN. 1-OID einem anzeigen Amen zu.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -48,10 +48,10 @@ Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
-|`mscorlib`|Enthält das `cryptographySettings` -Element.|  
+|`mscorlib`|Enthält das `cryptographySettings` Element.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<oidmap->** -Element verwendet wird, um eine Zuordnung einer OID für den RIPEMD-160-Hash Algorithmus zu einer Implementierung dieses Hash Algorithmus zu enthalten.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<oidmap >** -Element verwendet wird, um eine Zuordnung einer OID für den RIPEMD-160-Hash Algorithmus zu einer Implementierung dieses Hash Algorithmus zu enthalten.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.
 
 - [Konfigurationsdateischema](../index.md)
 - [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../map-object-identifiers-to-cryptography-algorithms.md)

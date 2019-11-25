@@ -3,12 +3,12 @@ title: Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 description: Übersicht und Installation des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118001"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977080"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 
@@ -29,7 +29,7 @@ Hinweis: Wenn nach der Installation von [.NET Core 2.2 SDK](https://dotnet.micro
 
 ## <a name="install"></a>Installieren
 
-Die ML.NET-CLI wird wie jedes andere globale .NET-Tool installiert. Sie verwenden den .NET Core-CLI-Befehl `dotnet tool install`. 
+Die ML.NET-CLI wird wie jedes andere globale .NET-Tool installiert. Sie verwenden den .NET Core-CLI-Befehl `dotnet tool install`.
 
 Im folgenden Beispiel wird gezeigt, wie eine ML.NET-CLI im standardmäßigen NuGet-Feedspeicherort installiert wird:
 
@@ -112,7 +112,7 @@ Auf dem Computer, auf dem Sie die Vervollständigung aktivieren möchten, müsse
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (Für die anderen Shells können Sie nach einem [Problem](https://github.com/dotnet/System.CommandLine/issues) [suchen](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) oder ein neues erstellen.)
 
@@ -136,5 +136,5 @@ In diesem Fall fügt die .NET Core-CLI diesen Speicherort nicht automatisch der 
 
 - [Tutorial „Erste Schritte mit dem ML.NET CLI-Tool“](../tutorials/mlnet-cli.md)
 - [Vorgehensweise: Automatisches Trainieren von Modellen mit dem ML.NET CLI-Tool](../automate-training-with-cli.md)
-- [Referenzhandbuch für den „auto-train“-Befehl in der ML.NET-CLI](../reference/ml-net-cli-reference.md) 
+- [Referenzhandbuch für den „auto-train“-Befehl in der ML.NET-CLI](../reference/ml-net-cli-reference.md)
 - [Telemetrie in der ML.NET-CLI](../resources/ml-net-cli-telemetry.md)

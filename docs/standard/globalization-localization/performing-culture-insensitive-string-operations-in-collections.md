@@ -15,12 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120817"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353674"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen
 
@@ -78,7 +78,6 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 Eine `SortedList`-Instanz entspricht einer Auflistung von Schlüssel-Wert-Paaren, die nach Schlüsseln sortiert sind und auf die sowohl über Schlüssel als auch über Index zugegriffen werden kann. Wenn Sie eine `SortedList`-Instanz verwenden, in der Zeichenfolgen als Schlüssel verwendet werden, können Sortier- und Nachschlagevorgänge durch die `Thread.CurrentCulture`-Eigenschaft beeinflusst werden. Um für eine `SortedList`-Instanz kulturunabhängiges Verhalten zu erzielen, erstellen Sie die `SortedList`-Instanz mit einem Konstruktor, der einen `comparer`-Parameter akzeptiert. Der `comparer`-Parameter gibt die <xref:System.Collections.IComparer>-Implementierung an, die beim Vergleich von Schlüsseln zu verwenden ist. Geben Sie für den Parameter eine benutzerdefinierte Comparer-Klasse an, in der `CultureInfo.InvariantCulture` verwendet wird, um Schlüssel zu vergleichen. Das folgende Beispiel veranschaulicht eine benutzerdefinierte kulturunabhängige Comparer-Klasse, die Sie als `comparer`-Parameter für einen `SortedList`-Konstruktor angeben können.
 
 ```vb
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

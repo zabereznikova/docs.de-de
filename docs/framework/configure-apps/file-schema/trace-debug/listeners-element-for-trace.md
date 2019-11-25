@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 10530cfadf2e182f912c699e50294af4b57f47b5
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699351"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088864"
 ---
-# <a name="listeners-element-for-trace"></a>\<listener > Element für \<trace >
+# <a name="listeners-element-for-trace"></a>\<Listener > Element für \<Trace >
 Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listener >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Ablauf Verfolgungs**](trace-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Listener **>**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -44,7 +44,7 @@ Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Lis
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der `Listeners`-Auflistung.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der `Listeners` Auflistung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -55,13 +55,13 @@ Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Lis
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Klassen <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> **verwenden dieselbe Listener** -Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die mit dem .NET Framework ausgeliefert werden, werden von der <xref:System.Diagnostics.TraceListener>-Klasse abgeleitet.  
+ Die Klassen <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> **verwenden dieselbe Listener** -Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die mit dem .NET Framework ausgeliefert werden, werden von der <xref:System.Diagnostics.TraceListener> Klasse abgeleitet.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<listener->** -Element verwendet wird, **um die Listener** `MyListener` und `MyEventListener` der Listener-Auflistung hinzuzufügen. `MyListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei. `MyEventListener` erstellt einen Eintrag im Ereignisprotokoll.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<Listener >** -Element verwendet wird, um die Listener `MyListener` und **`MyEventListener` der Listener** -Auflistung hinzuzufügen. `MyListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei. `MyEventListener` erstellt einen Eintrag im Ereignisprotokoll.  
   
 ```xml  
 <configuration>  

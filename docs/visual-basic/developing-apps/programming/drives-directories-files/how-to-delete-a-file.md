@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Löschen einer Datei in Visual Basic'
+title: 'Vorgehensweise: Löschen einer Datei'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: dcaf74a6ff99113903f066740ebf143dfad95f74
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629148"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348779"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Vorgehensweise: Löschen einer Datei in Visual Basic
+
 Die `DeleteFile`-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das Löschen einer Textdatei. Sie bietet u.a. folgende Optionen: ob die gelöschte Datei in den **Papierkorb** verschoben werden soll, ob der Benutzer den Löschvorgang bestätigen muss und was passiert, wenn der Benutzer den Vorgang abbricht.  
   
 ### <a name="to-delete-a-text-file"></a>Löschen einer Textdatei  
@@ -36,6 +37,7 @@ Die `DeleteFile`-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das L�
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  

@@ -5,22 +5,22 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e9bfad4724b353b0f3bfc615a40f1d72b80a2cd4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929370"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976978"
 ---
 # <a name="prepare-data-for-building-a-model"></a>Vorbereiten von Daten für die Modellerstellung
 
 Erfahren Sie, wie Sie ML.NET verwenden können, um Daten für die weitere Verarbeitung oder die Erstellung eines Modells aufzubereiten.
 
-Die Daten sind oft unsauber und haben eine geringe Dichte. Für Machine-Learning-Algorithmen in ML.NET sind Eingaben oder Features in einem einzigen numerischen Vektor erforderlich. Analog dazu muss der Wert, der vorhersagt werden soll (Label), codiert werden. Dies gilt insbesondere für kategorische Daten. Daher besteht eines der Ziele der Datenaufbereitung darin, die Daten in das von ML.NET-Algorithmen erwartete Format zu bringen. 
+Die Daten sind oft unsauber und haben eine geringe Dichte. Für Machine-Learning-Algorithmen in ML.NET sind Eingaben oder Features in einem einzigen numerischen Vektor erforderlich. Analog dazu muss der Wert, der vorhersagt werden soll (Label), codiert werden. Dies gilt insbesondere für kategorische Daten. Daher besteht eines der Ziele der Datenaufbereitung darin, die Daten in das von ML.NET-Algorithmen erwartete Format zu bringen.
 
 ## <a name="filter-data"></a>Filtern von Daten
 
-Manchmal sind nicht alle Daten in einem Dataset für die Analyse relevant. Ein Ansatz zur Entfernung irrelevanter Daten ist das Filtern. Der [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) enthält eine Reihe von Filtervorgängen, der eine [`IDataView`](xref:Microsoft.ML.IDataView) mit allen Daten aufnehmen und eine [IDataView](xref:Microsoft.ML.IDataView) zurückgeben kann, die nur die Datenpunkte von Interesse enthält. Es ist wichtig zu beachten, dass Filtervorgänge nicht als Teil einer [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)- oder [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601)-Datenaufbereitungspipeline aufgenommen werden können, da sie kein [`IEstimator`](xref:Microsoft.ML.IEstimator%601) oder [`ITransformer`](xref:Microsoft.ML.ITransformer) wie im [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog) sind. 
+Manchmal sind nicht alle Daten in einem Dataset für die Analyse relevant. Ein Ansatz zur Entfernung irrelevanter Daten ist das Filtern. Der [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) enthält eine Reihe von Filtervorgängen, der eine [`IDataView`](xref:Microsoft.ML.IDataView) mit allen Daten aufnehmen und eine [IDataView](xref:Microsoft.ML.IDataView) zurückgeben kann, die nur die Datenpunkte von Interesse enthält. Es ist wichtig zu beachten, dass Filtervorgänge nicht als Teil einer [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)- oder [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601)-Datenaufbereitungspipeline aufgenommen werden können, da sie kein [`IEstimator`](xref:Microsoft.ML.IEstimator%601) oder [`ITransformer`](xref:Microsoft.ML.ITransformer) wie im [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog) sind.
 
 Verwenden die folgenden Eingabedaten, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden:
 
@@ -56,7 +56,7 @@ Das obige Beispiel zeigt Zeilen im Dataset mit einem Preis zwischen 20.0000 und 
 
 ## <a name="replace-missing-values"></a>Ersetzen fehlender Werte
 
-Fehlende Werte kommen in Datasets häufig vor. Ein Ansatz für den Umgang mit fehlenden Daten, besteht darin, sie durch den Standardwert für den gegebenen Typ zu ersetzen, falls vorhanden, oder durch einen anderen sinnvollen Wert, wie beispielsweise den Mittelwert der Daten. 
+Fehlende Werte kommen in Datasets häufig vor. Ein Ansatz für den Umgang mit fehlenden Daten, besteht darin, sie durch den Standardwert für den gegebenen Typ zu ersetzen, falls vorhanden, oder durch einen anderen sinnvollen Wert, wie beispielsweise den Mittelwert der Daten.
 
 Verwenden die folgenden Eingabedaten, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden:
 
@@ -98,11 +98,11 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-ML.NET unterstützt verschiedene [Ersetzungsmodi](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). Das obige Beispiel verwendet den `Mean`-Ersetzungsmodus, der den fehlenden Wert mit dem Durchschnittswert dieser Spalte ausfüllt. Das Ergebnis der Ersetzung trägt für die `Price`-Eigenschaft für das letzte Element in unseren Daten mit 200.000 ein, da dies der Durchschnitt von 100.000 und 300.000 ist. 
+ML.NET unterstützt verschiedene [Ersetzungsmodi](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). Das obige Beispiel verwendet den `Mean`-Ersetzungsmodus, der den fehlenden Wert mit dem Durchschnittswert dieser Spalte ausfüllt. Das Ergebnis der Ersetzung trägt für die `Price`-Eigenschaft für das letzte Element in unseren Daten mit 200.000 ein, da dies der Durchschnitt von 100.000 und 300.000 ist.
 
 ## <a name="use-normalizers"></a>Verwenden von Normalisierungsfunktionen
 
-Die [Normalisierung](https://en.wikipedia.org/wiki/Feature_scaling) ist eine Datenvorverarbeitungstechnik, die verwendet wird, um Features zu standardisieren, die nicht in der gleichen Größenordnung liegen. Da können Algorithmen schneller konvergieren. So variieren beispielsweise die Bereiche für Werte wie Alter und Einkommen stark, wobei das Alter im Allgemeinen im Bereich von 0-100 und das Einkommen im Allgemeinen im Bereich von Null bis Tausend liegt. Eine detailliertere Liste und Beschreibung der Normalisierungstransformationen finden Sie auf der Seite zu [Datentransformationen](../resources/transforms.md). 
+Die [Normalisierung](https://en.wikipedia.org/wiki/Feature_scaling) ist eine Datenvorverarbeitungstechnik, die verwendet wird, um Features zu standardisieren, die nicht in der gleichen Größenordnung liegen. Da können Algorithmen schneller konvergieren. So variieren beispielsweise die Bereiche für Werte wie Alter und Einkommen stark, wobei das Alter im Allgemeinen im Bereich von 0-100 und das Einkommen im Allgemeinen im Bereich von Null bis Tausend liegt. Eine detailliertere Liste und Beschreibung der Normalisierungstransformationen finden Sie auf der Seite zu [Datentransformationen](../resources/transforms.md).
 
 ### <a name="min-max-normalization"></a>Min-Max-Normalisierung
 
@@ -142,7 +142,7 @@ Die ursprünglichen Preiswerte `[200000,100000]` werden unter Verwendung der Nor
 
 ### <a name="binning"></a>Quantisierung
 
-Die [Quantisierung](https://en.wikipedia.org/wiki/Data_binning) konvertiert kontinuierliche Werte in eine diskrete Darstellung der Eingabe. Nehmen wir beispielsweise an, dass eines Ihrer Features das Alter ist. Anstatt den tatsächlichen Alterswert zu verwenden, werden durch die Quantisierung Bereiche für diesen Wert erstellt. 0 bis 18 könnte dabei einer der Bereiche sein, ein anderer könnte 19 bis 35 sein usw. 
+Die [Quantisierung](https://en.wikipedia.org/wiki/Data_binning) konvertiert kontinuierliche Werte in eine diskrete Darstellung der Eingabe. Nehmen wir beispielsweise an, dass eines Ihrer Features das Alter ist. Anstatt den tatsächlichen Alterswert zu verwenden, werden durch die Quantisierung Bereiche für diesen Wert erstellt. 0 bis 18 könnte dabei einer der Bereiche sein, ein anderer könnte 19 bis 35 sein usw.
 
 Verwenden die folgenden Eingabedaten, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden:
 
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalisieren Sie die Daten mit der [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*)-Methode in Bereiche. Mit dem `maximumBinCount`-Parameter können Sie die Anzahl der Bereiche angeben, die zur Klassifizierung Ihrer Daten benötigt werden. In diesem Beispiel werden Daten in zwei Bereiche aufgeteilt.  
+Normalisieren Sie die Daten mit der [`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*)-Methode in Bereiche. Mit dem `maximumBinCount`-Parameter können Sie die Anzahl der Bereiche angeben, die zur Klassifizierung Ihrer Daten benötigt werden. In diesem Beispiel werden Daten in zwei Bereiche aufgeteilt.
 
 ```csharp
 // Define binning estimator
@@ -185,12 +185,12 @@ Durch die Quantisierung werden Bereichsbegrenzungen von `[0,200000,Infinity]` er
 
 ## <a name="work-with-categorical-data"></a>Arbeiten mit Kategoriedaten
 
-Nicht-numerische Kategoriedaten müssen in eine Zahl umgewandelt werden, bevor sie zum Erstellen eines Machine Learning-Modells verwendet werden können. 
+Nicht-numerische Kategoriedaten müssen in eine Zahl umgewandelt werden, bevor sie zum Erstellen eines Machine Learning-Modells verwendet werden können.
 
 Verwenden die folgenden Eingabedaten, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden:
 
 ```csharp
-CarData[] cars = new CarData[] 
+CarData[] cars = new CarData[]
 {
     new CarData
     {
@@ -210,7 +210,7 @@ CarData[] cars = new CarData[]
 };
 ```
 
-Die Kategorieeigenschaft `VehicleType` kann mit der [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*)-Methode in eine Zahl konvertiert werden. 
+Die Kategorieeigenschaft `VehicleType` kann mit der [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*)-Methode in eine Zahl konvertiert werden.
 
 ```csharp
 // Define categorical transform estimator
@@ -224,7 +224,7 @@ ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
 IDataView transformedData = categoricalTransformer.Transform(data);
 ```
 
-Die daraus resultierende Transformation konvertiert den Textwert von `VehicleType` in eine Zahl. Die Einträge in der `VehicleType`-Spalte sehen beim Anwenden der Transformation wie folgt aus: 
+Die daraus resultierende Transformation konvertiert den Textwert von `VehicleType` in eine Zahl. Die Einträge in der `VehicleType`-Spalte sehen beim Anwenden der Transformation wie folgt aus:
 
 ```text
 [
@@ -256,7 +256,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-Zur Konvertierung von Text in eine numerische Vektordarstellung muss mindestens die [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*)-Methode verwendet werden. Durch die Verwendung der [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*)-Transformation wird eine Reihe von Transformationen für die Eingabespalte durchgeführt, was zu einem numerischen Vektor führt, der die Lp-normalisierten Wort- und Zeichen-N-Gramme darstellt. 
+Zur Konvertierung von Text in eine numerische Vektordarstellung muss mindestens die [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*)-Methode verwendet werden. Durch die Verwendung der [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*)-Transformation wird eine Reihe von Transformationen für die Eingabespalte durchgeführt, was zu einem numerischen Vektor führt, der die Lp-normalisierten Wort- und Zeichen-N-Gramme darstellt.
 
 ```csharp
 // Define text transform estimator
@@ -288,7 +288,7 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-`textEstimator` enthält eine Teilmenge von Vorgängen, die von der [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*)-Methode durchgeführt werden. Der Vorteil einer komplexeren Pipeline ist die Steuerung und Sichtbarkeit hinsichtlich der Transformationen, die für die Daten durchgeführt werden. 
+`textEstimator` enthält eine Teilmenge von Vorgängen, die von der [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*)-Methode durchgeführt werden. Der Vorteil einer komplexeren Pipeline ist die Steuerung und Sichtbarkeit hinsichtlich der Transformationen, die für die Daten durchgeführt werden.
 
 Im Folgenden finden Sie am Beispiel des ersten Eintrags eine detaillierte Beschreibung der Ergebnisse, die durch die vom `textEstimator` definierten Transformationsschritte generiert wurden:
 

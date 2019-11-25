@@ -1,24 +1,26 @@
 ---
-title: Lesen aus der und Schreiben in die Registrierung (Visual Basic)
+title: Lesen von der und Schreiben in die Registrierung
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591481"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349764"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Lesen aus der und Schreiben in die Registrierung (Visual Basic)
+
 In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die mit der Registrierung in Verbindung stehen.  
   
  Beim Programmieren in Visual Basic können Sie auf die Registrierung zugreifen. Dies geschieht entweder über die in Visual Basic bereitgestellten Funktionen oder die Registrierungsklassen von .NET Framework. Die Registrierung enthält Informationen des Betriebssystems und Informationen von auf dem Computer gehosteten Anwendungen. Das Arbeiten mit der Registrierung schränkt möglicherweise die Sicherheit ein, da nicht ordnungsgemäßer Zugriff auf Systemressourcen oder geschützte Informationen zugelassen wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen ihrer Werte](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  Beschreibt die Verwendung der Methoden `CreateSubKey` und `SetValue` des `My.Computer.Registry`-Objekts zum Erstellen eines Registrierungsschlüssels und das Festlegen seines Werts  
   
@@ -35,6 +37,7 @@ In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die 
  Beschreibt Sicherheitsprobleme im Zusammenhang mit der Registrierung  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  Listet die Member des `My.Computer.Registry`-Objekts auf und erklärt diese  
   

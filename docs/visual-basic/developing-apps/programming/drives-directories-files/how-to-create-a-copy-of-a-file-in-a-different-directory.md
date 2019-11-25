@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis in Visual Basic'
+title: 'Vorgehensweise: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: fa4289f33a8c9498648dc71cb92d6403ece30524
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9a14e1f3743979548b92a3db653d09a470a1875
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628813"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348829"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Vorgehensweise: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis in Visual Basic
+
 Mit der `My.Computer.FileSystem.CopyFile`-Methode können Sie Dateien kopieren. Die Parameter der Methode bieten die Möglichkeit, vorhandene Dateien zu überschreiben, die Datei umzubenennen, den Fortschritt des Vorgangs anzuzeigen sowie den Benutzer zu erlauben, den Vorgang abzubrechen.  
   
 ### <a name="to-copy-a-text-file-to-another-folder"></a>So kopieren Sie eine Textdatei in einen anderen Ordner  
@@ -24,6 +25,7 @@ Mit der `My.Computer.FileSystem.CopyFile`-Methode können Sie Dateien kopieren. 
      [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können eine Ausnahme auslösen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  

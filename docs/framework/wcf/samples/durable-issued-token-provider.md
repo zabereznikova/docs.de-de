@@ -2,12 +2,12 @@
 title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 52c4e99f8b2a834d7200c2d2c2383fbdb21bdd1a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989942"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978327"
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
@@ -36,7 +36,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In diesem Beispiel wird der ICalculator-Vertrag mithilfe der [ \<WSHttpBinding-> verfügbar](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)gemacht. Das folgende Codebeispiel zeigt die Konfiguration dieser Bindung auf dem Client.  
+ In diesem Beispiel wird der ICalculator-Vertrag mithilfe der [\<WSHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)verfügbar gemacht. Das folgende Codebeispiel zeigt die Konfiguration dieser Bindung auf dem Client.  
   
 ```xml  
 <bindings>
@@ -137,7 +137,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
      Der <xref:System.IdentityModel.Selectors.SecurityTokenManager> wird zur Erstellung von einem <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> verwendet, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Der Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und Token-Serialisierungsprogrammen. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten Tokenanbieter zurückzugeben, wenn die übergebenen Tokenanforderungen angeben, dass ein ausgestelltes Token angefordert wird.  
   
-    ```csharp  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        else  
+        else
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
      Eine Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.  
   
-    ```csharp  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 4. Implementieren Sie den Tokencache. Die Beispielimplementierung verwendet eine abstrakte Basisklasse, über die Consumer eines bestimmten Tokencaches mit dem Cache interagieren.  
   
-    ```csharp  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
      Im Beispiel wird die Standardklasse für die Clientanmeldeinformationen gelöscht und die neue Klasse für Clientanmeldeinformationen angegeben, sodass der Client die benutzerdefinierten Clientanmeldeinformationen verwenden kann.  
   
-    ```csharp  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -250,6 +250,6 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

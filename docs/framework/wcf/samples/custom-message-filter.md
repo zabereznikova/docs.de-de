@@ -2,12 +2,12 @@
 title: Benutzerdefinierter Nachrichtenfilter
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 30405800cd219f56fcc08b8e8d22f4fe0b907e32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9c0fe8ab3412976d9ccddac23e23d9c70f707a89
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928690"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978316"
 ---
 # <a name="custom-message-filter"></a>Benutzerdefinierter Nachrichtenfilter
 In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werden, die Windows Communication Foundation (WCF) verwendet, um Nachrichten an Endpunkte zu senden.  
@@ -19,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werde
   
  Jeder Endpunkt eines Diensts hat einen einzelnen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> besitzt sowohl einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> als auch einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. Die Verbindung dieser beiden Filter ist der für diesen Endpunkt verwendete Nachrichtenfilter.  
   
- Standardmäßig stimmt der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> für einen Endpunkt mit jeder Nachricht überein, die an eine Adresse gesendet wird, die wiederum mit der <xref:System.ServiceModel.EndpointAddress> des Dienstendpunkts übereinstimmt. Standardmäßig überprüft der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> für einen Endpunkt die Aktion der eingehenden Nachricht und gleicht jede Nachricht mit einer Aktion ab, die einer der Aktionen der Vorgänge des Dienst Endpunkt Vertrags entspricht (nur `IsInitiating` = `true`Aktionen werden berücksichtigt.) Demzufolge stimmt der Filter für einen Endpunkt standardmäßig nur überein, wenn sowohl der To-Header der Nachricht die <xref:System.ServiceModel.EndpointAddress> des Endpunkts ist als auch die Aktion der Nachricht mit einer der Aktionen der Endpunktvorgänge übereinstimmt.  
+ Standardmäßig stimmt der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> für einen Endpunkt mit jeder Nachricht überein, die an eine Adresse gesendet wird, die wiederum mit der <xref:System.ServiceModel.EndpointAddress> des Dienstendpunkts übereinstimmt. Standardmäßig überprüft der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> für einen Endpunkt die Aktion der eingehenden Nachricht und gleicht jede Nachricht mit einer Aktion ab, die einer der Aktionen der Vorgänge des dienstend Punkt Vertrags entspricht (nur `IsInitiating`=`true` Aktionen berücksichtigt werden). Demzufolge stimmt der Filter für einen Endpunkt standardmäßig nur überein, wenn sowohl der To-Header der Nachricht die <xref:System.ServiceModel.EndpointAddress> des Endpunkts ist als auch die Aktion der Nachricht mit einer der Aktionen der Endpunktvorgänge übereinstimmt.  
   
  Diese Filter können mit einer Verhaltensweise geändert werden. Im folgenden Beispiel erstellt der Dienst ein <xref:System.ServiceModel.Description.IEndpointBehavior>, das den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> und den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> auf dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ersetzt:  
   
@@ -32,22 +32,22 @@ class FilteringEndpointBehavior : IEndpointBehavior
   
  Es werden zwei Adressfilter definiert:  
   
-```csharp  
+```csharp
 // Matches any message whose To address contains the letter 'e'  
-class MatchEAddressFilter : MessageFilter …  
+class MatchEAddressFilter : MessageFilter { }
 // Matches any message whose To address does not contain the letter 'e'  
-class MatchNoEAddressFilter : MessageFilter  
+class MatchNoEAddressFilter : MessageFilter { }  
 ```  
   
  Das `FilteringEndpointBehavior` wird konfigurierbar gemacht und ermöglicht zwei verschiedene Varianten.  
   
-```csharp  
-public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement  
+```csharp
+public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement { }
 ```  
   
  Variante&#160;1 gleicht nur Adressen ab, die ein "e" (aber eine beliebige Aktion) enthalten, wohingegen Variante&#160;2 nur die Adressen ohne "e" abgleicht:  
   
-```csharp  
+```csharp
 if (Variation == 1)  
     return new FilteringEndpointBehavior(  
         new MatchEAddressFilter(), new MatchAllMessageFilter());  
@@ -116,7 +116,7 @@ Hello
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
@@ -128,12 +128,12 @@ Hello
   
 3. Um das Beispiel in einer Computer übergreifenden Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) , und ändern Sie die folgende Zeile in Client.cs.  
   
-    ```csharp  
+    ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
      Ersetzen Sie "localhost" mit dem Namen des Servers.  
   
-    ```csharp  
+    ```csharp
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  

@@ -1,19 +1,20 @@
 ---
-title: 'Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen in Visual Basic'
+title: 'Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296718"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345596"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen in Visual Basic
+
 Dieses Thema beschreibt, wie `My.Computer.Ports` zum Empfangen von Zeichenfolgen von seriellen Ports des Computers in Visual Basic verwendet wird.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>So werden Zeichenfolgen von seriellen Anschlüssen empfangen  
@@ -51,14 +52,17 @@ Dieses Thema beschreibt, wie `My.Computer.Ports` zum Empfangen von Zeichenfolgen
      [!code-vb[VbVbalrMyComputer#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#44)]  
   
 ## <a name="example"></a>Beispiel  
+
  [!code-vb[VbVbalrMyComputer#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#37)]  
   
  Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl ist er unter **Konnektivität und Netzwerk** zu finden. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet. Der Code sollte dem Benutzer erlauben, den gewünschten seriellen Anschluss aus einer Liste der verfügbaren Anschlüsse auszuwählen, um mehr Flexibilität zu gewährleisten. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
  Dieses Beispiel verwendet einen `Try...Catch...Finally`-Block, um sicherzustellen, dass die Anwendung den Anschluss schließt, und um Zeitüberschreitungen zu erfassen. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
