@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Überprüfen Sie, ob zwei Objekte der gleichen (Visual Basic)'
+title: 'Gewusst wie: Überprüfen, ob zwei Objekte identisch sind'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 6301228d786fe55e8851b6207dd84819671656f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22e8e1e688d9e3bc3804899103ee78814aac235b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649681"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343622"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a><span data-ttu-id="577ab-102">Vorgehensweise: Überprüfen Sie, ob zwei Objekte der gleichen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="577ab-102">How to: Test Whether Two Objects Are the Same (Visual Basic)</span></span>
-<span data-ttu-id="577ab-103">Wenn Sie zwei Variablen, die auf Objekte verweisen verfügen, verwenden Sie entweder die `Is` oder `IsNot` Operator oder beides, um zu bestimmen, ob sie an dieselbe Instanz verweisen.</span><span class="sxs-lookup"><span data-stu-id="577ab-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span></span>  
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a><span data-ttu-id="75646-102">Gewusst wie: Überprüfen, ob zwei Objekte identisch sind (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75646-102">How to: Test Whether Two Objects Are the Same (Visual Basic)</span></span>
+<span data-ttu-id="75646-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span><span class="sxs-lookup"><span data-stu-id="75646-103">If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.</span></span>  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a><span data-ttu-id="577ab-104">Zum Überprüfen, ob zwei Objekte gleich sind.</span><span class="sxs-lookup"><span data-stu-id="577ab-104">To test whether two objects are the same</span></span>  
+### <a name="to-test-whether-two-objects-are-the-same"></a><span data-ttu-id="75646-104">To test whether two objects are the same</span><span class="sxs-lookup"><span data-stu-id="75646-104">To test whether two objects are the same</span></span>  
   
-- <span data-ttu-id="577ab-105">Verwenden der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) oder [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) mit den beiden Variablen als Operanden.</span><span class="sxs-lookup"><span data-stu-id="577ab-105">Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.</span></span>  
+- <span data-ttu-id="75646-105">Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.</span><span class="sxs-lookup"><span data-stu-id="75646-105">Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.</span></span>  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- <span data-ttu-id="577ab-106">Sie möchten eine bestimmte Aktion ausgeführt abhängig davon, ob zwei Objekte auf dieselbe Instanz verweisen.</span><span class="sxs-lookup"><span data-stu-id="577ab-106">You might want to take a certain action depending on whether two objects refer to the same instance.</span></span> <span data-ttu-id="577ab-107">Im vorherige Beispiel vergleicht Steuerelement `c` für das aktive Steuerelement im Formular `f`.</span><span class="sxs-lookup"><span data-stu-id="577ab-107">The preceding example compares control `c` against the active control on form `f`.</span></span> <span data-ttu-id="577ab-108">Wenn keine aktiven Steuerelement vorhanden ist, oder ist es ein, aber es ist nicht der gleichen Instanz des Steuerelements als `c`, und klicken Sie dann die `If` Anweisung fehl, und die Prozedur zurückgegeben werden, ohne weitere Verarbeitung.</span><span class="sxs-lookup"><span data-stu-id="577ab-108">If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.</span></span>  
+ <span data-ttu-id="75646-106">You might want to take a certain action depending on whether two objects refer to the same instance.</span><span class="sxs-lookup"><span data-stu-id="75646-106">You might want to take a certain action depending on whether two objects refer to the same instance.</span></span> <span data-ttu-id="75646-107">The preceding example compares control `c` against the active control on form `f`.</span><span class="sxs-lookup"><span data-stu-id="75646-107">The preceding example compares control `c` against the active control on form `f`.</span></span> <span data-ttu-id="75646-108">If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.</span><span class="sxs-lookup"><span data-stu-id="75646-108">If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.</span></span>  
   
- <span data-ttu-id="577ab-109">Gibt an, ob Sie verwenden `Is` oder `IsNot` persönliche aus Gründen der Bequemlichkeit für Sie ist.</span><span class="sxs-lookup"><span data-stu-id="577ab-109">Whether you use `Is` or `IsNot` is a matter of personal convenience to you.</span></span> <span data-ttu-id="577ab-110">Eine möglicherweise einfacher, als das andere in einem bestimmten Ausdruck zu lesen.</span><span class="sxs-lookup"><span data-stu-id="577ab-110">One might be easier to read than the other in a given expression.</span></span>  
+ <span data-ttu-id="75646-109">Whether you use `Is` or `IsNot` is a matter of personal convenience to you.</span><span class="sxs-lookup"><span data-stu-id="75646-109">Whether you use `Is` or `IsNot` is a matter of personal convenience to you.</span></span> <span data-ttu-id="75646-110">One might be easier to read than the other in a given expression.</span><span class="sxs-lookup"><span data-stu-id="75646-110">One might be easier to read than the other in a given expression.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="577ab-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="577ab-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75646-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="75646-111">See also</span></span>
 
-- [<span data-ttu-id="577ab-112">Vergleichsoperatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="577ab-112">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="75646-112">Comparison Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="75646-112">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

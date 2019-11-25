@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Auffüllen einer XML-Struktur aus dem Dateisystem (Visual Basic)'
+title: 'Gewusst wie: Auffüllen einer XML-Struktur über das Dateisystem'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789063"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344477"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="a0eec-102">Vorgehensweise: Auffüllen einer XML-Struktur aus dem Dateisystem (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0eec-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
-<span data-ttu-id="a0eec-103">Eine häufige und sinnvolle Anwendung von XML-Strukturen besteht in deren Verwendung als hierarchischer Name/Wert-Datenspeicher.</span><span class="sxs-lookup"><span data-stu-id="a0eec-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="a0eec-104">Sie können eine XML-Struktur mit hierarchischen Daten auffüllen und die Struktur dann abfragen, transformieren und bei Bedarf serialisieren.</span><span class="sxs-lookup"><span data-stu-id="a0eec-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="a0eec-105">In diesem Verwendungsszenario ist ein großer Teil der XML-spezifischen Semantik, wie das Namespace- und Leerraumverhalten, ohne Bedeutung.</span><span class="sxs-lookup"><span data-stu-id="a0eec-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="a0eec-106">Die XML-Struktur wird stattdessen als kleine hierarchische Datenbank für einen einzelnen Benutzer verwendet, die im Arbeitsspeicher gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="a0eec-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="58a04-102">How to: Populate an XML Tree from the File System (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58a04-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
+<span data-ttu-id="58a04-103">Eine häufige und sinnvolle Anwendung von XML-Strukturen besteht in deren Verwendung als hierarchischer Name/Wert-Datenspeicher.</span><span class="sxs-lookup"><span data-stu-id="58a04-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="58a04-104">Sie können eine XML-Struktur mit hierarchischen Daten auffüllen und die Struktur dann abfragen, transformieren und bei Bedarf serialisieren.</span><span class="sxs-lookup"><span data-stu-id="58a04-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="58a04-105">In diesem Verwendungsszenario ist ein großer Teil der XML-spezifischen Semantik, wie das Namespace- und Leerraumverhalten, ohne Bedeutung.</span><span class="sxs-lookup"><span data-stu-id="58a04-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="58a04-106">Die XML-Struktur wird stattdessen als kleine hierarchische Datenbank für einen einzelnen Benutzer verwendet, die im Arbeitsspeicher gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="58a04-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a0eec-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a0eec-107">Example</span></span>  
- <span data-ttu-id="a0eec-108">Das folgende Beispiel füllt mit Rekursion eine XML-Struktur aus dem lokalen Dateisystem auf.</span><span class="sxs-lookup"><span data-stu-id="a0eec-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="a0eec-109">Anschließend fragt es die Struktur ab, indem es die Gesamtgröße aller Dateien in der Struktur berechnet.</span><span class="sxs-lookup"><span data-stu-id="a0eec-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="58a04-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="58a04-107">Example</span></span>  
+ <span data-ttu-id="58a04-108">Das folgende Beispiel füllt mit Rekursion eine XML-Struktur aus dem lokalen Dateisystem auf.</span><span class="sxs-lookup"><span data-stu-id="58a04-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="58a04-109">Anschließend fragt es die Struktur ab, indem es die Gesamtgröße aller Dateien in der Struktur berechnet.</span><span class="sxs-lookup"><span data-stu-id="58a04-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="a0eec-110">Dieses Beispiel führt zu einer Ausgabe, die der folgenden Ausgabe ähnelt:</span><span class="sxs-lookup"><span data-stu-id="a0eec-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="58a04-110">Dieses Beispiel führt zu einer Ausgabe, die der folgenden Ausgabe ähnelt:</span><span class="sxs-lookup"><span data-stu-id="58a04-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -114,6 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a0eec-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a0eec-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58a04-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58a04-111">See also</span></span>
 
-- [<span data-ttu-id="a0eec-112">Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0eec-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="58a04-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58a04-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
