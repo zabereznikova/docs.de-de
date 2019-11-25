@@ -1,31 +1,31 @@
 ---
-title: Verkettungsvorgänge (Visual Basic)
+title: Verkettungsvorgänge
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 054f9253cead4d2632f6f4b5631da64159a6de48
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: db9bebb967faf3791fd28c4fd4dac9591fd2c9f8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054137"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345673"
 ---
-# <a name="concatenation-operations-visual-basic"></a><span data-ttu-id="cd3f2-102">Verkettungsvorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd3f2-102">Concatenation Operations (Visual Basic)</span></span>
-<span data-ttu-id="cd3f2-103">Verkettung bezieht sich auf das Anhängen einer Sequenz an eine andere.</span><span class="sxs-lookup"><span data-stu-id="cd3f2-103">Concatenation refers to the operation of appending one sequence to another.</span></span>  
+# <a name="concatenation-operations-visual-basic"></a><span data-ttu-id="14c67-102">Concatenation Operations (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14c67-102">Concatenation Operations (Visual Basic)</span></span>
+<span data-ttu-id="14c67-103">Verkettung bezieht sich auf das Anhängen einer Sequenz an eine andere.</span><span class="sxs-lookup"><span data-stu-id="14c67-103">Concatenation refers to the operation of appending one sequence to another.</span></span>  
   
- <span data-ttu-id="cd3f2-104">Die folgende Abbildung stellt einen Verkettungsvorgang zweier Zeichensequenzen dar.</span><span class="sxs-lookup"><span data-stu-id="cd3f2-104">The following illustration depicts a concatenation operation on two sequences of characters.</span></span>  
+ <span data-ttu-id="14c67-104">Die folgende Abbildung stellt einen Verkettungsvorgang zweier Zeichensequenzen dar.</span><span class="sxs-lookup"><span data-stu-id="14c67-104">The following illustration depicts a concatenation operation on two sequences of characters.</span></span>  
   
  ![Grafik, die die Verkettung von zwei Sequenzen darstellt.](./media/concatenation-operations/concatenation-two-sequences.png)  
   
- <span data-ttu-id="cd3f2-106">Die Methoden des Standardabfrageoperators, die die Verkettung ausführen, sind im folgenden Abschnitt aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="cd3f2-106">The standard query operator methods that perform concatenation are listed in the following section.</span></span>  
+ <span data-ttu-id="14c67-106">Die Methoden des Standardabfrageoperators, die die Verkettung ausführen, sind im folgenden Abschnitt aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="14c67-106">The standard query operator methods that perform concatenation are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cd3f2-107">Methoden</span><span class="sxs-lookup"><span data-stu-id="cd3f2-107">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="14c67-107">Methoden</span><span class="sxs-lookup"><span data-stu-id="14c67-107">Methods</span></span>  
   
-|<span data-ttu-id="cd3f2-108">Methodenname</span><span class="sxs-lookup"><span data-stu-id="cd3f2-108">Method Name</span></span>|<span data-ttu-id="cd3f2-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cd3f2-109">Description</span></span>|<span data-ttu-id="cd3f2-110">Visual Basic-Abfrageausdruckssyntax</span><span class="sxs-lookup"><span data-stu-id="cd3f2-110">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="cd3f2-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="cd3f2-111">More Information</span></span>|  
+|<span data-ttu-id="14c67-108">Methodenname</span><span class="sxs-lookup"><span data-stu-id="14c67-108">Method Name</span></span>|<span data-ttu-id="14c67-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14c67-109">Description</span></span>|<span data-ttu-id="14c67-110">Visual Basic Query Expression Syntax</span><span class="sxs-lookup"><span data-stu-id="14c67-110">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="14c67-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="14c67-111">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="cd3f2-112">Concat</span><span class="sxs-lookup"><span data-stu-id="cd3f2-112">Concat</span></span>|<span data-ttu-id="cd3f2-113">Verkettet zwei Sequenzen zu einer einzigen Sequenz.</span><span class="sxs-lookup"><span data-stu-id="cd3f2-113">Concatenates two sequences to form one sequence.</span></span>|<span data-ttu-id="cd3f2-114">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="cd3f2-114">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="14c67-112">Concat</span><span class="sxs-lookup"><span data-stu-id="14c67-112">Concat</span></span>|<span data-ttu-id="14c67-113">Verkettet zwei Sequenzen zu einer einzigen Sequenz.</span><span class="sxs-lookup"><span data-stu-id="14c67-113">Concatenates two sequences to form one sequence.</span></span>|<span data-ttu-id="14c67-114">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="14c67-114">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a><span data-ttu-id="cd3f2-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cd3f2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14c67-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="14c67-115">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="cd3f2-116">Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="cd3f2-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="cd3f2-117">Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd3f2-117">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [<span data-ttu-id="14c67-116">Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="14c67-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="14c67-117">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14c67-117">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

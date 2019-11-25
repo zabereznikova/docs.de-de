@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bezeichnungs Anweisungen (Visual Basic)'
+title: 'Gewusst wie: Bezeichnen von Anweisungen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054050"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347382"
 ---
-# <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="42a93-102">Vorgehensweise: Bezeichnungs Anweisungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42a93-102">How to: Label Statements (Visual Basic)</span></span>
+# <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="0d526-102">Gewusst wie: Label-Anweisungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d526-102">How to: Label Statements (Visual Basic)</span></span>
 
-<span data-ttu-id="42a93-103">Anweisungsblöcke bestehen aus Codezeilen, die durch Doppelpunkte getrennt sind.</span><span class="sxs-lookup"><span data-stu-id="42a93-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="42a93-104">Codezeilen, denen eine identifizierende Zeichenfolge oder eine ganze Zahl vorangestellt ist, werden *als bezeichnet*.</span><span class="sxs-lookup"><span data-stu-id="42a93-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="42a93-105">Mithilfe von Anweisungs Bezeichnungen wird eine Codezeile gekennzeichnet, um Sie für die Verwendung mit Anweisungen wie `On Error Goto`zu kennzeichnen.</span><span class="sxs-lookup"><span data-stu-id="42a93-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>
+<span data-ttu-id="0d526-103">Statement blocks are made up of lines of code delimited by colons.</span><span class="sxs-lookup"><span data-stu-id="0d526-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="0d526-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span><span class="sxs-lookup"><span data-stu-id="0d526-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="0d526-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="0d526-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>
 
-<span data-ttu-id="42a93-106">Bezeichnungen können entweder gültige Visual Basic Bezeichner sein – z. b. diejenigen, die Programmier Elemente identifizieren – oder ganzzahlige Literale.</span><span class="sxs-lookup"><span data-stu-id="42a93-106">Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals.</span></span> <span data-ttu-id="42a93-107">Eine Bezeichnung muss am Anfang einer Zeile des Quellcodes vorhanden sein, und es muss ein Doppelpunkt folgen, unabhängig davon, ob auf Sie eine-Anweisung in derselben Zeile folgt.</span><span class="sxs-lookup"><span data-stu-id="42a93-107">A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.</span></span>
+<span data-ttu-id="0d526-106">Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals.</span><span class="sxs-lookup"><span data-stu-id="0d526-106">Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals.</span></span> <span data-ttu-id="0d526-107">A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.</span><span class="sxs-lookup"><span data-stu-id="0d526-107">A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.</span></span>
 
-<span data-ttu-id="42a93-108">Der Compiler identifiziert Bezeichnungen, indem er überprüft, ob der Anfang der Zeile mit einem bereits definierten Bezeichner übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="42a93-108">The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier.</span></span> <span data-ttu-id="42a93-109">Andernfalls geht der Compiler davon aus, dass es sich um eine Bezeichnung handelt.</span><span class="sxs-lookup"><span data-stu-id="42a93-109">If it does not, the compiler assumes it is a label.</span></span>
+<span data-ttu-id="0d526-108">The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier.</span><span class="sxs-lookup"><span data-stu-id="0d526-108">The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier.</span></span> <span data-ttu-id="0d526-109">If it does not, the compiler assumes it is a label.</span><span class="sxs-lookup"><span data-stu-id="0d526-109">If it does not, the compiler assumes it is a label.</span></span>
 
-<span data-ttu-id="42a93-110">Bezeichnungen verfügen über einen eigenen Deklarations Bereich und stören andere Bezeichner nicht.</span><span class="sxs-lookup"><span data-stu-id="42a93-110">Labels have their own declaration space and do not interfere with other identifiers.</span></span> <span data-ttu-id="42a93-111">Der Gültigkeitsbereich einer Bezeichnung ist der Text der Methode.</span><span class="sxs-lookup"><span data-stu-id="42a93-111">A label's scope is the body of the method.</span></span> <span data-ttu-id="42a93-112">Die Bezeichnungs Deklaration hat in jeder mehrdeutigen Situation Vorrang.</span><span class="sxs-lookup"><span data-stu-id="42a93-112">Label declaration takes precedence in any ambiguous situation.</span></span>
+<span data-ttu-id="0d526-110">Labels have their own declaration space and do not interfere with other identifiers.</span><span class="sxs-lookup"><span data-stu-id="0d526-110">Labels have their own declaration space and do not interfere with other identifiers.</span></span> <span data-ttu-id="0d526-111">A label's scope is the body of the method.</span><span class="sxs-lookup"><span data-stu-id="0d526-111">A label's scope is the body of the method.</span></span> <span data-ttu-id="0d526-112">Label declaration takes precedence in any ambiguous situation.</span><span class="sxs-lookup"><span data-stu-id="0d526-112">Label declaration takes precedence in any ambiguous situation.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="42a93-113">Bezeichnungen können nur für ausführbare Anweisungen innerhalb von Methoden verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="42a93-113">Labels can be used only on executable statements inside methods.</span></span>
+> <span data-ttu-id="0d526-113">Labels can be used only on executable statements inside methods.</span><span class="sxs-lookup"><span data-stu-id="0d526-113">Labels can be used only on executable statements inside methods.</span></span>
 
-## <a name="to-label-a-line-of-code"></a><span data-ttu-id="42a93-114">So bezeichnen Sie eine Codezeile</span><span class="sxs-lookup"><span data-stu-id="42a93-114">To label a line of code</span></span>
+## <a name="to-label-a-line-of-code"></a><span data-ttu-id="0d526-114">To label a line of code</span><span class="sxs-lookup"><span data-stu-id="0d526-114">To label a line of code</span></span>
 
-<span data-ttu-id="42a93-115">Platzieren Sie einen Bezeichner, gefolgt von einem Doppelpunkt, am Anfang der Zeile des Quellcodes.</span><span class="sxs-lookup"><span data-stu-id="42a93-115">Place an identifier, followed by a colon, at the beginning of the line of source code.</span></span>
+<span data-ttu-id="0d526-115">Place an identifier, followed by a colon, at the beginning of the line of source code.</span><span class="sxs-lookup"><span data-stu-id="0d526-115">Place an identifier, followed by a colon, at the beginning of the line of source code.</span></span>
 
-<span data-ttu-id="42a93-116">Die folgenden Codezeilen werden z. b. mit `Jump` `120`bzw. gekennzeichnet:</span><span class="sxs-lookup"><span data-stu-id="42a93-116">For example, the following lines of code are labeled with `Jump` and `120`, respectively:</span></span>
+<span data-ttu-id="0d526-116">For example, the following lines of code are labeled with `Jump` and `120`, respectively:</span><span class="sxs-lookup"><span data-stu-id="0d526-116">For example, the following lines of code are labeled with `Jump` and `120`, respectively:</span></span>
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
-## <a name="see-also"></a><span data-ttu-id="42a93-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="42a93-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d526-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d526-117">See also</span></span>
 
-- [<span data-ttu-id="42a93-118">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="42a93-118">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
-- [<span data-ttu-id="42a93-119">Namen deklarierter Elemente</span><span class="sxs-lookup"><span data-stu-id="42a93-119">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [<span data-ttu-id="42a93-120">Programmstruktur und Codekonventionen</span><span class="sxs-lookup"><span data-stu-id="42a93-120">Program Structure and Code Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [<span data-ttu-id="0d526-118">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="0d526-118">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="0d526-119">Namen deklarierter Elemente</span><span class="sxs-lookup"><span data-stu-id="0d526-119">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [<span data-ttu-id="0d526-120">Programmstruktur und Codekonventionen</span><span class="sxs-lookup"><span data-stu-id="0d526-120">Program Structure and Code Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

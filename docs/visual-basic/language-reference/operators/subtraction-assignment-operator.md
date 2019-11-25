@@ -1,5 +1,5 @@
 ---
-title: -=-Operator (Visual Basic)
+title: Operator -=
 ms.date: 07/20/2015
 f1_keywords:
 - vb.-=
@@ -10,47 +10,47 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: f857c8bf2f89120e047c49674ce9e8a3bff22f7d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 44cb226d64e9f0b86c6566eb25fbafd6323a6d4c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701317"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347813"
 ---
-# <a name="--operator-visual-basic"></a><span data-ttu-id="9b2c5-102">-=-Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b2c5-102">-= Operator (Visual Basic)</span></span>
-<span data-ttu-id="9b2c5-103">Subtrahiert den Wert eines Ausdrucks vom Wert einer Variablen oder Eigenschaft und weist das Ergebnis der Variablen oder der Eigenschaft zu.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-103">Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.</span></span>  
+# <a name="--operator-visual-basic"></a><span data-ttu-id="531d2-102">-=-Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="531d2-102">-= Operator (Visual Basic)</span></span>
+<span data-ttu-id="531d2-103">Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.</span><span class="sxs-lookup"><span data-stu-id="531d2-103">Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b2c5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9b2c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="531d2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="531d2-104">Syntax</span></span>  
   
 ```vb  
 variableorproperty -= expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="9b2c5-105">Teile</span><span class="sxs-lookup"><span data-stu-id="9b2c5-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="531d2-105">Teile</span><span class="sxs-lookup"><span data-stu-id="531d2-105">Parts</span></span>  
  `variableorproperty`  
- <span data-ttu-id="9b2c5-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-106">Required.</span></span> <span data-ttu-id="9b2c5-107">Eine beliebige numerische Variable oder Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-107">Any numeric variable or property.</span></span>  
+ <span data-ttu-id="531d2-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="531d2-106">Required.</span></span> <span data-ttu-id="531d2-107">Any numeric variable or property.</span><span class="sxs-lookup"><span data-stu-id="531d2-107">Any numeric variable or property.</span></span>  
   
  `expression`  
- <span data-ttu-id="9b2c5-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-108">Required.</span></span> <span data-ttu-id="9b2c5-109">Ein beliebiger numerischer Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-109">Any numeric expression.</span></span>  
+ <span data-ttu-id="531d2-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="531d2-108">Required.</span></span> <span data-ttu-id="531d2-109">Ein beliebiger numerischer Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="531d2-109">Any numeric expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b2c5-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9b2c5-110">Remarks</span></span>  
- <span data-ttu-id="9b2c5-111">Das Element auf der linken Seite des `-=`-Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-111">The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="9b2c5-112">Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)</span><span class="sxs-lookup"><span data-stu-id="9b2c5-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="531d2-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="531d2-110">Remarks</span></span>  
+ <span data-ttu-id="531d2-111">The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array.</span><span class="sxs-lookup"><span data-stu-id="531d2-111">The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="531d2-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="531d2-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
   
- <span data-ttu-id="9b2c5-113">Der `-=`-Operator subtrahiert zuerst den Wert des Ausdrucks (auf der rechten Seite des Operators) vom Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators).</span><span class="sxs-lookup"><span data-stu-id="9b2c5-113">The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator).</span></span> <span data-ttu-id="9b2c5-114">Der-Operator weist dann das Ergebnis dieses Vorgangs der Variablen oder der Eigenschaft zu.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-114">The operator then assigns the result of that operation to the variable or property.</span></span>  
+ <span data-ttu-id="531d2-113">The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator).</span><span class="sxs-lookup"><span data-stu-id="531d2-113">The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator).</span></span> <span data-ttu-id="531d2-114">The operator then assigns the result of that operation to the variable or property.</span><span class="sxs-lookup"><span data-stu-id="531d2-114">The operator then assigns the result of that operation to the variable or property.</span></span>  
   
-## <a name="overloading"></a><span data-ttu-id="9b2c5-115">Überladen</span><span class="sxs-lookup"><span data-stu-id="9b2c5-115">Overloading</span></span>  
- <span data-ttu-id="9b2c5-116">Der [-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-116">The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="9b2c5-117">Das Überladen des `-`-Operators wirkt sich auf das Verhalten des `-=`-Operators aus.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-117">Overloading the `-` operator affects the behavior of the `-=` operator.</span></span> <span data-ttu-id="9b2c5-118">Wenn Ihr Code `-=` für eine Klasse oder Struktur verwendet, die `-` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-118">If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="9b2c5-119">Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="9b2c5-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+## <a name="overloading"></a><span data-ttu-id="531d2-115">Überladen</span><span class="sxs-lookup"><span data-stu-id="531d2-115">Overloading</span></span>  
+ <span data-ttu-id="531d2-116">The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span><span class="sxs-lookup"><span data-stu-id="531d2-116">The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="531d2-117">Overloading the `-` operator affects the behavior of the `-=` operator.</span><span class="sxs-lookup"><span data-stu-id="531d2-117">Overloading the `-` operator affects the behavior of the `-=` operator.</span></span> <span data-ttu-id="531d2-118">If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior.</span><span class="sxs-lookup"><span data-stu-id="531d2-118">If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="531d2-119">Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="531d2-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9b2c5-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9b2c5-120">Example</span></span>  
- <span data-ttu-id="9b2c5-121">Im folgenden Beispiel wird der `-=`-Operator verwendet, um eine `Integer`-Variable von einer anderen zu subtrahieren und das Ergebnis der letzteren Variablen zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="9b2c5-121">The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.</span></span>  
+## <a name="example"></a><span data-ttu-id="531d2-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="531d2-120">Example</span></span>  
+ <span data-ttu-id="531d2-121">The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.</span><span class="sxs-lookup"><span data-stu-id="531d2-121">The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.</span></span>  
   
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="9b2c5-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9b2c5-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="531d2-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="531d2-122">See also</span></span>
 
-- [<span data-ttu-id="9b2c5-123">-Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b2c5-123">- Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-operator.md)
-- [<span data-ttu-id="9b2c5-124">Zuweisungsoperatoren</span><span class="sxs-lookup"><span data-stu-id="9b2c5-124">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [<span data-ttu-id="9b2c5-125">Arithmetische Operatoren</span><span class="sxs-lookup"><span data-stu-id="9b2c5-125">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="9b2c5-126">Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b2c5-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="9b2c5-127">Nach Funktionalität sortierte Operatoren</span><span class="sxs-lookup"><span data-stu-id="9b2c5-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="9b2c5-128">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="9b2c5-128">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="531d2-123">- Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="531d2-123">- Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-operator.md)
+- [<span data-ttu-id="531d2-124">Zuweisungsoperatoren</span><span class="sxs-lookup"><span data-stu-id="531d2-124">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [<span data-ttu-id="531d2-125">Arithmetische Operatoren</span><span class="sxs-lookup"><span data-stu-id="531d2-125">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="531d2-126">Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="531d2-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="531d2-127">Nach Funktionalität sortierte Operatoren</span><span class="sxs-lookup"><span data-stu-id="531d2-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="531d2-128">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="531d2-128">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)

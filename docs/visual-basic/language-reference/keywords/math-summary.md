@@ -1,5 +1,5 @@
 ---
-title: 'Mathematische Operationen: Zusammenfassung (Visual Basic)'
+title: 'Mathematische Operationen: Zusammenfassung'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, summary
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802949"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348492"
 ---
-# <a name="math-summary-visual-basic"></a><span data-ttu-id="95546-102">Mathematische Operationen: Zusammenfassung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95546-102">Math Summary (Visual Basic)</span></span>
-<span data-ttu-id="95546-103">Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.</span><span class="sxs-lookup"><span data-stu-id="95546-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
+# <a name="math-summary-visual-basic"></a><span data-ttu-id="8cbd0-102">Mathematische Operationen: Zusammenfassung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cbd0-102">Math Summary (Visual Basic)</span></span>
+<span data-ttu-id="8cbd0-103">Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.</span><span class="sxs-lookup"><span data-stu-id="8cbd0-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|<span data-ttu-id="95546-104">Aktion</span><span class="sxs-lookup"><span data-stu-id="95546-104">Action</span></span>|<span data-ttu-id="95546-105">Sprachelement</span><span class="sxs-lookup"><span data-stu-id="95546-105">Language element</span></span>|  
+|<span data-ttu-id="8cbd0-104">Aktion</span><span class="sxs-lookup"><span data-stu-id="8cbd0-104">Action</span></span>|<span data-ttu-id="8cbd0-105">Sprachelement</span><span class="sxs-lookup"><span data-stu-id="8cbd0-105">Language element</span></span>|  
 |------------|----------------------|  
-|<span data-ttu-id="95546-106">Ableiten trigonometrischer Funktionen</span><span class="sxs-lookup"><span data-stu-id="95546-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="95546-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span><span class="sxs-lookup"><span data-stu-id="95546-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
-|<span data-ttu-id="95546-108">Allgemeine Berechnungen</span><span class="sxs-lookup"><span data-stu-id="95546-108">General calculations.</span></span>|<span data-ttu-id="95546-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span><span class="sxs-lookup"><span data-stu-id="95546-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
-|<span data-ttu-id="95546-110">Generieren von Zufallszahlen</span><span class="sxs-lookup"><span data-stu-id="95546-110">Generate random numbers.</span></span>|<span data-ttu-id="95546-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span><span class="sxs-lookup"><span data-stu-id="95546-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
-|<span data-ttu-id="95546-112">Abrufen absoluter Werte</span><span class="sxs-lookup"><span data-stu-id="95546-112">Get absolute value.</span></span>|<xref:System.Math.Abs%2A>|  
-|<span data-ttu-id="95546-113">Abrufen des Vorzeichens eines Ausdrucks</span><span class="sxs-lookup"><span data-stu-id="95546-113">Get the sign of an expression.</span></span>|<xref:System.Math.Sign%2A>|  
-|<span data-ttu-id="95546-114">Durchführen numerischer Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="95546-114">Perform numeric conversions.</span></span>|<span data-ttu-id="95546-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="95546-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="8cbd0-106">Ableiten trigonometrischer Funktionen</span><span class="sxs-lookup"><span data-stu-id="8cbd0-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="8cbd0-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span><span class="sxs-lookup"><span data-stu-id="8cbd0-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
+|<span data-ttu-id="8cbd0-108">Allgemeine Berechnungen</span><span class="sxs-lookup"><span data-stu-id="8cbd0-108">General calculations.</span></span>|<span data-ttu-id="8cbd0-109"><xref:System.Math.Exp%2A>ist <xref:System.Math.Log%2A>ist <xref:System.Math.Sqrt%2A></span><span class="sxs-lookup"><span data-stu-id="8cbd0-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
+|<span data-ttu-id="8cbd0-110">Generieren von Zufallszahlen</span><span class="sxs-lookup"><span data-stu-id="8cbd0-110">Generate random numbers.</span></span>|<span data-ttu-id="8cbd0-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span><span class="sxs-lookup"><span data-stu-id="8cbd0-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
+|<span data-ttu-id="8cbd0-112">Abrufen absoluter Werte</span><span class="sxs-lookup"><span data-stu-id="8cbd0-112">Get absolute value.</span></span>|<xref:System.Math.Abs%2A>|  
+|<span data-ttu-id="8cbd0-113">Abrufen des Vorzeichens eines Ausdrucks</span><span class="sxs-lookup"><span data-stu-id="8cbd0-113">Get the sign of an expression.</span></span>|<xref:System.Math.Sign%2A>|  
+|<span data-ttu-id="8cbd0-114">Durchführen numerischer Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="8cbd0-114">Perform numeric conversions.</span></span>|<span data-ttu-id="8cbd0-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="8cbd0-115"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="95546-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="95546-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cbd0-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8cbd0-116">See also</span></span>
 
-- [<span data-ttu-id="95546-117">Abgeleitete mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="95546-117">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [<span data-ttu-id="95546-118">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="95546-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="95546-119">Member der Visual Basic-Laufzeitbibliothek</span><span class="sxs-lookup"><span data-stu-id="95546-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)
+- [<span data-ttu-id="8cbd0-117">Abgeleitete mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="8cbd0-117">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [<span data-ttu-id="8cbd0-118">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="8cbd0-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="8cbd0-119">Member der Visual Basic-Laufzeitbibliothek</span><span class="sxs-lookup"><span data-stu-id="8cbd0-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)
