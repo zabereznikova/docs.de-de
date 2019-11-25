@@ -9,13 +9,13 @@ metadata:
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 10/02/2019
-  ms.openlocfilehash: 4d9e3f78b02e7e95567dc9f025a1123966038770
-  ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+  ms.date: 10/30/2019
+  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
+  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72320520"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73423943"
 landingContent:
 - title: Grundlagen zu ML.NET
   linkLists:
@@ -51,14 +51,20 @@ landingContent:
       url: tutorials/sentiment-analysis-model-builder.md
     - text: Vorhersagen von Preisen (Modellgenerator)
       url: tutorials/predict-prices-with-model-builder.md
+    - text: Kategorisieren von Integritätsverstößen (Modell-Generator & SQL Server)
+      url: tutorials/health-violation-classification-model-builder.md
     - text: Kategorisieren von Supportproblemen (API)
       url: tutorials/github-issue-classification.md
-    - text: Klassifizieren von Bildern mit TensorFlow (API)
+    - text: Klassifizieren von Bildern mit der Bild Klassifizierungs-API (API)
+      url: tutorials/image-classification-api-transfer-learning.md
+    - text: Klassifizieren von Bildern mithilfe der Modellzusammenstellung (API)
       url: tutorials/image-classification.md
     - text: Erkennen von Objekten in Bildern (API)
       url: tutorials/object-detection-onnx.md
     - text: Erkennen von Anomalien bei Produktverkäufen (API)
       url: tutorials/sales-anomaly-detection.md
+    - text: Vorhersage der Nachfrage für Fahrradvermietungen (API & SQL Server)
+      url: tutorials/time-series-demand-forecasting.md
     - text: Erstellen eines Filmempfehlungssystems (API)
       url: tutorials/movie-recommendation.md
 - title: Anleitungen
