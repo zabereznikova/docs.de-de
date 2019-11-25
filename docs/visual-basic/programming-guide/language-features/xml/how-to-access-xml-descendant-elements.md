@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugriff XML-Nachfolgerelemente (Visual Basic)'
+title: 'Gewusst wie: Zugriff auf XML-Nachfolgerelemente'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML descendent axis property [Visual Basic]
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: 008fd599e527ad4a8d483d2468a57ece1d2b4bdc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a094c3c2b20736f0ef6589c76d53b7cc96b29a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598595"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332312"
 ---
-# <a name="how-to-access-xml-descendant-elements-visual-basic"></a><span data-ttu-id="e9e77-102">Vorgehensweise: Zugriff XML-Nachfolgerelemente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9e77-102">How to: Access XML Descendant Elements (Visual Basic)</span></span>
-<span data-ttu-id="e9e77-103">Dieses Beispiel zeigt, wie Sie mit einer untergeordneten Achseneigenschaft auf alle XML-Elemente, die einen angegebenen Namen aufweisen und in ein XML-Element enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="e9e77-103">This example shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under an XML element.</span></span> <span data-ttu-id="e9e77-104">Insbesondere verwendet die `Value` Eigenschaft, um dem Wert des ersten Elements in der Sammlung abrufen, die die `name` -Achseneigenschaft zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="e9e77-104">In particular, it uses the `Value` property to get the value of the first element in the collection that the `name` descendant axis property returns.</span></span> <span data-ttu-id="e9e77-105">Die `name` Nachfolgerachseneigenschaft Ruft alle Elemente, die mit dem Namen `name` enthalten sind die `contacts` Objekt.</span><span class="sxs-lookup"><span data-stu-id="e9e77-105">The `name` descendant axis property gets all elements named `name` that are contained in the `contacts` object.</span></span> <span data-ttu-id="e9e77-106">Dieses Beispiel verwendet auch die `phone` Nachfolgerachseneigenschaft auf alle Nachfolger namens `phone` enthalten sind die `contacts` Objekt.</span><span class="sxs-lookup"><span data-stu-id="e9e77-106">This example also uses the `phone` descendant axis property to access all descendants named `phone` that are contained in the `contacts` object.</span></span>  
+# <a name="how-to-access-xml-descendant-elements-visual-basic"></a><span data-ttu-id="0fc94-102">Gewusst wie: Zugreifen auf XML-Nachfolgerelemente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fc94-102">How to: Access XML Descendant Elements (Visual Basic)</span></span>
+<span data-ttu-id="0fc94-103">This example shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under an XML element.</span><span class="sxs-lookup"><span data-stu-id="0fc94-103">This example shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under an XML element.</span></span> <span data-ttu-id="0fc94-104">In particular, it uses the `Value` property to get the value of the first element in the collection that the `name` descendant axis property returns.</span><span class="sxs-lookup"><span data-stu-id="0fc94-104">In particular, it uses the `Value` property to get the value of the first element in the collection that the `name` descendant axis property returns.</span></span> <span data-ttu-id="0fc94-105">The `name` descendant axis property gets all elements named `name` that are contained in the `contacts` object.</span><span class="sxs-lookup"><span data-stu-id="0fc94-105">The `name` descendant axis property gets all elements named `name` that are contained in the `contacts` object.</span></span> <span data-ttu-id="0fc94-106">This example also uses the `phone` descendant axis property to access all descendants named `phone` that are contained in the `contacts` object.</span><span class="sxs-lookup"><span data-stu-id="0fc94-106">This example also uses the `phone` descendant axis property to access all descendants named `phone` that are contained in the `contacts` object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e9e77-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e9e77-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0fc94-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0fc94-107">Example</span></span>  
  [!code-vb[VbXMLSamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#31)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e9e77-108">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="e9e77-108">Compiling the Code</span></span>  
- <span data-ttu-id="e9e77-109">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="e9e77-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0fc94-108">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="0fc94-108">Compiling the Code</span></span>  
+ <span data-ttu-id="0fc94-109">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="0fc94-109">This example requires:</span></span>  
   
-- <span data-ttu-id="e9e77-110">Einen Verweis auf den <xref:System.Xml.Linq>-Namespace</span><span class="sxs-lookup"><span data-stu-id="e9e77-110">A reference to the <xref:System.Xml.Linq> namespace.</span></span>  
+- <span data-ttu-id="0fc94-110">Einen Verweis auf den <xref:System.Xml.Linq>-Namespace</span><span class="sxs-lookup"><span data-stu-id="0fc94-110">A reference to the <xref:System.Xml.Linq> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9e77-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e9e77-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0fc94-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0fc94-111">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="e9e77-112">XML-Nachfolger-Achseneigenschaft</span><span class="sxs-lookup"><span data-stu-id="e9e77-112">XML Descendant Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
-- [<span data-ttu-id="e9e77-113">XML-Value-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="e9e77-113">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [<span data-ttu-id="e9e77-114">Zugreifen auf XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e9e77-114">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [<span data-ttu-id="e9e77-115">XML</span><span class="sxs-lookup"><span data-stu-id="e9e77-115">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="0fc94-112">XML-Nachfolger-Achseneigenschaft</span><span class="sxs-lookup"><span data-stu-id="0fc94-112">XML Descendant Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
+- [<span data-ttu-id="0fc94-113">XML-Value-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="0fc94-113">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [<span data-ttu-id="0fc94-114">Zugreifen auf XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0fc94-114">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [<span data-ttu-id="0fc94-115">XML</span><span class="sxs-lookup"><span data-stu-id="0fc94-115">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -1,78 +1,78 @@
 ---
-title: 'Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)'
+title: 'Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 5bd4e0a760bcedf8f5e96c2cebe3a71b9050a420
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582280"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350037"
 ---
-# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a><span data-ttu-id="3ef82-102">Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ef82-102">How to: Infer Property Names and Types in Anonymous Type Declarations (Visual Basic)</span></span>
+# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a><span data-ttu-id="5941a-102">Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5941a-102">How to: Infer Property Names and Types in Anonymous Type Declarations (Visual Basic)</span></span>
 
-<span data-ttu-id="3ef82-103">Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von Eigenschaften bereit.</span><span class="sxs-lookup"><span data-stu-id="3ef82-103">Anonymous types provide no mechanism for directly specifying the data types of properties.</span></span> <span data-ttu-id="3ef82-104">Die Typen aller Eigenschaften werden abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="3ef82-104">Types of all properties are inferred.</span></span> <span data-ttu-id="3ef82-105">Im folgenden Beispiel werden die Typen von `Name` und `Price` direkt aus den Werten abgeleitet, mit denen sie initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="3ef82-105">In the following example, the types of `Name` and `Price` are inferred directly from the values that are used to initialize them.</span></span>
+<span data-ttu-id="5941a-103">Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von Eigenschaften bereit.</span><span class="sxs-lookup"><span data-stu-id="5941a-103">Anonymous types provide no mechanism for directly specifying the data types of properties.</span></span> <span data-ttu-id="5941a-104">Die Typen aller Eigenschaften werden abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="5941a-104">Types of all properties are inferred.</span></span> <span data-ttu-id="5941a-105">Im folgenden Beispiel werden die Typen von `Name` und `Price` direkt aus den Werten abgeleitet, mit denen sie initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="5941a-105">In the following example, the types of `Name` and `Price` are inferred directly from the values that are used to initialize them.</span></span>
 
 [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]
 
-<span data-ttu-id="3ef82-106">Anonyme Typen können Eigenschaftennamen und -typen auch aus anderen Quellen ableiten.</span><span class="sxs-lookup"><span data-stu-id="3ef82-106">Anonymous types can also infer property names and types from other sources.</span></span> <span data-ttu-id="3ef82-107">In den folgenden Abschnitten werden sowohl eine Liste der Umstände, unter denen Ableitung möglich ist, als auch Beispiele bereitgestellt, in denen keine Ableitung möglich ist.</span><span class="sxs-lookup"><span data-stu-id="3ef82-107">The sections that follow provide a list of the circumstances where inference is possible, and examples of situations where it is not.</span></span>
+<span data-ttu-id="5941a-106">Anonyme Typen können Eigenschaftennamen und -typen auch aus anderen Quellen ableiten.</span><span class="sxs-lookup"><span data-stu-id="5941a-106">Anonymous types can also infer property names and types from other sources.</span></span> <span data-ttu-id="5941a-107">In den folgenden Abschnitten werden sowohl eine Liste der Umstände, unter denen Ableitung möglich ist, als auch Beispiele bereitgestellt, in denen keine Ableitung möglich ist.</span><span class="sxs-lookup"><span data-stu-id="5941a-107">The sections that follow provide a list of the circumstances where inference is possible, and examples of situations where it is not.</span></span>
 
-## <a name="successful-inference"></a><span data-ttu-id="3ef82-108">Erfolgreiche Ableitung</span><span class="sxs-lookup"><span data-stu-id="3ef82-108">Successful Inference</span></span>
+## <a name="successful-inference"></a><span data-ttu-id="5941a-108">Erfolgreiche Ableitung</span><span class="sxs-lookup"><span data-stu-id="5941a-108">Successful Inference</span></span>
 
-#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a><span data-ttu-id="3ef82-109">Anonyme Typen können Eigenschaftennamen und -typen aus folgenden Quellen ableiten:</span><span class="sxs-lookup"><span data-stu-id="3ef82-109">Anonymous types can infer property names and types from the following sources:</span></span>
+#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a><span data-ttu-id="5941a-109">Anonyme Typen können Eigenschaftennamen und -typen aus folgenden Quellen ableiten:</span><span class="sxs-lookup"><span data-stu-id="5941a-109">Anonymous types can infer property names and types from the following sources:</span></span>
 
-- <span data-ttu-id="3ef82-110">Aus Variablennamen.</span><span class="sxs-lookup"><span data-stu-id="3ef82-110">From variable names.</span></span> <span data-ttu-id="3ef82-111">Der anonyme Typ `anonProduct` hat die beiden Eigenschaften `productName` und `productPrice`.</span><span class="sxs-lookup"><span data-stu-id="3ef82-111">Anonymous type `anonProduct` will have two properties, `productName` and `productPrice`.</span></span> <span data-ttu-id="3ef82-112">Ihre Datentypen sind gleich denen der ursprünglichen Variablen, also `String` bzw. `Double`.</span><span class="sxs-lookup"><span data-stu-id="3ef82-112">Their data types will be those of the original variables, `String` and `Double`, respectively.</span></span>
+- <span data-ttu-id="5941a-110">Aus Variablennamen.</span><span class="sxs-lookup"><span data-stu-id="5941a-110">From variable names.</span></span> <span data-ttu-id="5941a-111">Der anonyme Typ `anonProduct` hat die beiden Eigenschaften `productName` und `productPrice`.</span><span class="sxs-lookup"><span data-stu-id="5941a-111">Anonymous type `anonProduct` will have two properties, `productName` and `productPrice`.</span></span> <span data-ttu-id="5941a-112">Ihre Datentypen sind gleich denen der ursprünglichen Variablen, also `String` bzw. `Double`.</span><span class="sxs-lookup"><span data-stu-id="5941a-112">Their data types will be those of the original variables, `String` and `Double`, respectively.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]
 
-- <span data-ttu-id="3ef82-113">Aus Eigenschaften- oder Feldnamen anderer Objekte.</span><span class="sxs-lookup"><span data-stu-id="3ef82-113">From property or field names of other objects.</span></span> <span data-ttu-id="3ef82-114">Betrachten Sie z. B. ein `car` -Objekt eines `CarClass` -Typs, der die `Name` -Eigenschaft und die `ID` -Eigenschaft enthält.</span><span class="sxs-lookup"><span data-stu-id="3ef82-114">For example, consider a `car` object of a `CarClass` type that includes `Name` and `ID` properties.</span></span> <span data-ttu-id="3ef82-115">Um die neue Instanz `car1`des anonymen Typs mit der `Name` -Eigenschaft und der `ID` -Eigenschaft zu erstellen, die mit den Werten aus dem `car` -Objekt initialisiert werden, können Sie folgenden Code schreiben:</span><span class="sxs-lookup"><span data-stu-id="3ef82-115">To create a new anonymous type instance, `car1`, with `Name` and `ID` properties that are initialized with the values from the `car` object, you can write the following:</span></span>
+- <span data-ttu-id="5941a-113">Aus Eigenschaften- oder Feldnamen anderer Objekte.</span><span class="sxs-lookup"><span data-stu-id="5941a-113">From property or field names of other objects.</span></span> <span data-ttu-id="5941a-114">Betrachten Sie z. B. ein `car` -Objekt eines `CarClass` -Typs, der die `Name` -Eigenschaft und die `ID` -Eigenschaft enthält.</span><span class="sxs-lookup"><span data-stu-id="5941a-114">For example, consider a `car` object of a `CarClass` type that includes `Name` and `ID` properties.</span></span> <span data-ttu-id="5941a-115">Um die neue Instanz `car1`des anonymen Typs mit der `Name` -Eigenschaft und der `ID` -Eigenschaft zu erstellen, die mit den Werten aus dem `car` -Objekt initialisiert werden, können Sie folgenden Code schreiben:</span><span class="sxs-lookup"><span data-stu-id="5941a-115">To create a new anonymous type instance, `car1`, with `Name` and `ID` properties that are initialized with the values from the `car` object, you can write the following:</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]
 
-  <span data-ttu-id="3ef82-116">Die vorherige Deklaration ist mit der längeren Codezeile gleichwertig, in der der anonyme Typ `car2`definiert ist.</span><span class="sxs-lookup"><span data-stu-id="3ef82-116">The previous declaration is equivalent to the longer line of code that defines anonymous type `car2`.</span></span>
+  <span data-ttu-id="5941a-116">Die vorherige Deklaration ist mit der längeren Codezeile gleichwertig, in der der anonyme Typ `car2`definiert ist.</span><span class="sxs-lookup"><span data-stu-id="5941a-116">The previous declaration is equivalent to the longer line of code that defines anonymous type `car2`.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]
 
-- <span data-ttu-id="3ef82-117">Aus XML-Membernamen.</span><span class="sxs-lookup"><span data-stu-id="3ef82-117">From XML member names.</span></span>
+- <span data-ttu-id="5941a-117">Aus XML-Membernamen.</span><span class="sxs-lookup"><span data-stu-id="5941a-117">From XML member names.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]
 
-  <span data-ttu-id="3ef82-118">Der resultierende Typ für `anon` hätte eine Eigenschaft, `Book`, des Typs <xref:System.Collections.IEnumerable>(Of XElement).</span><span class="sxs-lookup"><span data-stu-id="3ef82-118">The resulting type for `anon` would have one property, `Book`, of type <xref:System.Collections.IEnumerable>(Of XElement).</span></span>
+  <span data-ttu-id="5941a-118">Der resultierende Typ für `anon` hätte eine Eigenschaft, `Book`, des Typs <xref:System.Collections.IEnumerable>(Of XElement).</span><span class="sxs-lookup"><span data-stu-id="5941a-118">The resulting type for `anon` would have one property, `Book`, of type <xref:System.Collections.IEnumerable>(Of XElement).</span></span>
 
-- <span data-ttu-id="3ef82-119">Aus einer Funktion, die keine Parameter hat, z. B. `SomeFunction` im folgenden Beispiel.</span><span class="sxs-lookup"><span data-stu-id="3ef82-119">From a function that has no parameters, such as `SomeFunction` in the following example.</span></span>
+- <span data-ttu-id="5941a-119">Aus einer Funktion, die keine Parameter hat, z. B. `SomeFunction` im folgenden Beispiel.</span><span class="sxs-lookup"><span data-stu-id="5941a-119">From a function that has no parameters, such as `SomeFunction` in the following example.</span></span>
 
   ```vb
   Dim sc As New SomeClass
   Dim anon1 = New With {Key sc.SomeFunction()}
   ```
 
-  <span data-ttu-id="3ef82-120">Die Variable `anon2` im folgenden Code ist ein anonymer Typ, der eine Eigenschaft hat: ein Zeichen namens `First`.</span><span class="sxs-lookup"><span data-stu-id="3ef82-120">The variable `anon2` in the following code is an anonymous type that has one property, a character named `First`.</span></span> <span data-ttu-id="3ef82-121">Dieser Code zeigt den Buchstaben "E" an, der von der Funktion <xref:System.Linq.Enumerable.First%2A>zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="3ef82-121">This code will display a letter "E," the letter that is returned by function <xref:System.Linq.Enumerable.First%2A>.</span></span>
+  <span data-ttu-id="5941a-120">Die Variable `anon2` im folgenden Code ist ein anonymer Typ, der eine Eigenschaft hat: ein Zeichen namens `First`.</span><span class="sxs-lookup"><span data-stu-id="5941a-120">The variable `anon2` in the following code is an anonymous type that has one property, a character named `First`.</span></span> <span data-ttu-id="5941a-121">Dieser Code zeigt den Buchstaben "E" an, der von der Funktion <xref:System.Linq.Enumerable.First%2A>zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="5941a-121">This code will display a letter "E," the letter that is returned by function <xref:System.Linq.Enumerable.First%2A>.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#13)]
 
-## <a name="inference-failures"></a><span data-ttu-id="3ef82-122">Ableitungsfehler</span><span class="sxs-lookup"><span data-stu-id="3ef82-122">Inference Failures</span></span>
+## <a name="inference-failures"></a><span data-ttu-id="5941a-122">Ableitungsfehler</span><span class="sxs-lookup"><span data-stu-id="5941a-122">Inference Failures</span></span>
 
-#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a><span data-ttu-id="3ef82-123">Die Ableitung von Namen schlägt in vielen Fällen fehl, etwa in den folgenden:</span><span class="sxs-lookup"><span data-stu-id="3ef82-123">Name inference will fail in many circumstances, including the following:</span></span>
+#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a><span data-ttu-id="5941a-123">Die Ableitung von Namen schlägt in vielen Fällen fehl, etwa in den folgenden:</span><span class="sxs-lookup"><span data-stu-id="5941a-123">Name inference will fail in many circumstances, including the following:</span></span>
 
-- <span data-ttu-id="3ef82-124">Die Ableitung erfolgt über den Aufruf einer Methode, eines Konstruktors oder einer parametrisierten Eigenschaft, die Argumente erfordert.</span><span class="sxs-lookup"><span data-stu-id="3ef82-124">The inference derives from the invocation of a method, a constructor, or a parameterized property that requires arguments.</span></span> <span data-ttu-id="3ef82-125">Die vorherige Deklaration von `anon1` schlägt fehl, wenn `someFunction` ein oder mehrere Argumente hat.</span><span class="sxs-lookup"><span data-stu-id="3ef82-125">The previous declaration of `anon1` fails if `someFunction` has one or more arguments.</span></span>
+- <span data-ttu-id="5941a-124">Die Ableitung erfolgt über den Aufruf einer Methode, eines Konstruktors oder einer parametrisierten Eigenschaft, die Argumente erfordert.</span><span class="sxs-lookup"><span data-stu-id="5941a-124">The inference derives from the invocation of a method, a constructor, or a parameterized property that requires arguments.</span></span> <span data-ttu-id="5941a-125">Die vorherige Deklaration von `anon1` schlägt fehl, wenn `someFunction` ein oder mehrere Argumente hat.</span><span class="sxs-lookup"><span data-stu-id="5941a-125">The previous declaration of `anon1` fails if `someFunction` has one or more arguments.</span></span>
 
   ```vb
   ' Not valid.
   ' Dim anon3 = New With {Key sc.someFunction(someArg)}
   ```
 
-  <span data-ttu-id="3ef82-126">Durch Zuweisung zu einem neuen Eigenschaftennamen kann das Problem gelöst werden.</span><span class="sxs-lookup"><span data-stu-id="3ef82-126">Assignment to a new property name solves the problem.</span></span>
+  <span data-ttu-id="5941a-126">Durch Zuweisung zu einem neuen Eigenschaftennamen kann das Problem gelöst werden.</span><span class="sxs-lookup"><span data-stu-id="5941a-126">Assignment to a new property name solves the problem.</span></span>
 
   ```vb
   ' Valid.
   Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}
   ```
 
-- <span data-ttu-id="3ef82-127">Die Ableitung erfolgt aus einem komplexen Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="3ef82-127">The inference derives from a complex expression.</span></span>
+- <span data-ttu-id="5941a-127">Die Ableitung erfolgt aus einem komplexen Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="5941a-127">The inference derives from a complex expression.</span></span>
 
   ```vb
   Dim aString As String = "Act "
@@ -80,22 +80,22 @@ ms.locfileid: "72582280"
   ' Dim label = New With {Key aString & "IV"}
   ```
 
-  <span data-ttu-id="3ef82-128">Der Fehler kann behoben werden, indem das Ergebnis des Ausdrucks einem Eigenschaftennamen zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="3ef82-128">The error can be resolved by assigning the result of the expression to a property name.</span></span>
+  <span data-ttu-id="5941a-128">Der Fehler kann behoben werden, indem das Ergebnis des Ausdrucks einem Eigenschaftennamen zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="5941a-128">The error can be resolved by assigning the result of the expression to a property name.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]
 
-- <span data-ttu-id="3ef82-129">Die Ableitung für mehrere Eigenschaften führt zu zwei oder mehr Eigenschaften mit demselben Namen.</span><span class="sxs-lookup"><span data-stu-id="3ef82-129">Inference for multiple properties produces two or more properties that have the same name.</span></span> <span data-ttu-id="3ef82-130">Ein Rückblick auf die Deklarationen in früheren Beispielen zeigt, dass es nicht möglich ist, sowohl `product.Name` als auch `car1.Name` als Eigenschaften desselben anonymen Typs aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="3ef82-130">Referring back to declarations in earlier examples, you cannot list both `product.Name` and `car1.Name` as properties of the same anonymous type.</span></span> <span data-ttu-id="3ef82-131">Dies liegt daran, dass der abgeleitete Bezeichner für beide Eigenschaften gleich `Name`wäre.</span><span class="sxs-lookup"><span data-stu-id="3ef82-131">This is because the inferred identifier for each of these would be `Name`.</span></span>
+- <span data-ttu-id="5941a-129">Die Ableitung für mehrere Eigenschaften führt zu zwei oder mehr Eigenschaften mit demselben Namen.</span><span class="sxs-lookup"><span data-stu-id="5941a-129">Inference for multiple properties produces two or more properties that have the same name.</span></span> <span data-ttu-id="5941a-130">Ein Rückblick auf die Deklarationen in früheren Beispielen zeigt, dass es nicht möglich ist, sowohl `product.Name` als auch `car1.Name` als Eigenschaften desselben anonymen Typs aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="5941a-130">Referring back to declarations in earlier examples, you cannot list both `product.Name` and `car1.Name` as properties of the same anonymous type.</span></span> <span data-ttu-id="5941a-131">Dies liegt daran, dass der abgeleitete Bezeichner für beide Eigenschaften gleich `Name`wäre.</span><span class="sxs-lookup"><span data-stu-id="5941a-131">This is because the inferred identifier for each of these would be `Name`.</span></span>
 
   ```vb
   ' Not valid.
   ' Dim anon5 = New With {Key product.Name, Key car1.Name}
   ```
 
-  <span data-ttu-id="3ef82-132">Das Problem kann gelöst werden, indem die Werte unterschiedlichen Eigenschaftennamen zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="3ef82-132">The problem can be solved by assigning the values to distinct property names.</span></span>
+  <span data-ttu-id="5941a-132">Das Problem kann gelöst werden, indem die Werte unterschiedlichen Eigenschaftennamen zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="5941a-132">The problem can be solved by assigning the values to distinct property names.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]
 
-  <span data-ttu-id="3ef82-133">Beachten Sie, dass eine unterschiedliche Schreibweise (Unterschiede in der Groß- und Kleinschreibung) nicht dazu führt, dass zwei Namen unterschiedlich sind.</span><span class="sxs-lookup"><span data-stu-id="3ef82-133">Note that changes in case (changes between uppercase and lowercase letters) do not make two names distinct.</span></span>
+  <span data-ttu-id="5941a-133">Beachten Sie, dass eine unterschiedliche Schreibweise (Unterschiede in der Groß- und Kleinschreibung) nicht dazu führt, dass zwei Namen unterschiedlich sind.</span><span class="sxs-lookup"><span data-stu-id="5941a-133">Note that changes in case (changes between uppercase and lowercase letters) do not make two names distinct.</span></span>
 
   ```vb
   Dim price = 0
@@ -103,18 +103,18 @@ ms.locfileid: "72582280"
   ' Dim anon7 = New With {Key product.Price, Key price}
   ```
 
-- <span data-ttu-id="3ef82-134">Der ursprüngliche Typ und Wert einer Eigenschaft sind von einer anderen Eigenschaft abhängig, die noch nicht festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="3ef82-134">The initial type and value of one property depends on another property that is not yet established.</span></span> <span data-ttu-id="3ef82-135">Zum Beispiel ist `.IDName = .LastName` in der Deklaration eines anonymen Typs nicht zulässig, wenn `.LastName` noch nicht initialisiert wurde.</span><span class="sxs-lookup"><span data-stu-id="3ef82-135">For example, `.IDName = .LastName` is not valid in an anonymous type declaration unless `.LastName` is already initialized.</span></span>
+- <span data-ttu-id="5941a-134">Der ursprüngliche Typ und Wert einer Eigenschaft sind von einer anderen Eigenschaft abhängig, die noch nicht festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="5941a-134">The initial type and value of one property depends on another property that is not yet established.</span></span> <span data-ttu-id="5941a-135">Zum Beispiel ist `.IDName = .LastName` in der Deklaration eines anonymen Typs nicht zulässig, wenn `.LastName` noch nicht initialisiert wurde.</span><span class="sxs-lookup"><span data-stu-id="5941a-135">For example, `.IDName = .LastName` is not valid in an anonymous type declaration unless `.LastName` is already initialized.</span></span>
 
   ```vb
   ' Not valid.
   ' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}
   ```
 
-  <span data-ttu-id="3ef82-136">In diesem Beispiel kann das Problem behoben werden, indem die Reihenfolge, in der die Eigenschaften deklariert werden, umgekehrt wird.</span><span class="sxs-lookup"><span data-stu-id="3ef82-136">In this example, you can fix the problem by reversing the order in which the properties are declared.</span></span>
+  <span data-ttu-id="5941a-136">In diesem Beispiel kann das Problem behoben werden, indem die Reihenfolge, in der die Eigenschaften deklariert werden, umgekehrt wird.</span><span class="sxs-lookup"><span data-stu-id="5941a-136">In this example, you can fix the problem by reversing the order in which the properties are declared.</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]
 
-- <span data-ttu-id="3ef82-137">Ein Eigenschaftennamen eines anonymen Typs ist mit dem Namen eines Members von <xref:System.Object>identisch.</span><span class="sxs-lookup"><span data-stu-id="3ef82-137">A property name of the anonymous type is the same as the name of a member of <xref:System.Object>.</span></span> <span data-ttu-id="3ef82-138">Zum Beispiel schlägt die folgende Deklaration fehl, weil `Equals` eine Methode von <xref:System.Object>ist.</span><span class="sxs-lookup"><span data-stu-id="3ef82-138">For example, the following declaration fails because `Equals` is a method of <xref:System.Object>.</span></span>
+- <span data-ttu-id="5941a-137">Ein Eigenschaftennamen eines anonymen Typs ist mit dem Namen eines Members von <xref:System.Object>identisch.</span><span class="sxs-lookup"><span data-stu-id="5941a-137">A property name of the anonymous type is the same as the name of a member of <xref:System.Object>.</span></span> <span data-ttu-id="5941a-138">Zum Beispiel schlägt die folgende Deklaration fehl, weil `Equals` eine Methode von <xref:System.Object>ist.</span><span class="sxs-lookup"><span data-stu-id="5941a-138">For example, the following declaration fails because `Equals` is a method of <xref:System.Object>.</span></span>
 
   ```vb
   ' Not valid.
@@ -122,13 +122,13 @@ ms.locfileid: "72582280"
   '                       "greater than", Key .Less = "less than"}
   ```
 
-  <span data-ttu-id="3ef82-139">Sie können das Problem beheben, indem Sie den Eigenschaftennamen ändern:</span><span class="sxs-lookup"><span data-stu-id="3ef82-139">You can fix the problem by changing the property name:</span></span>
+  <span data-ttu-id="5941a-139">Sie können das Problem beheben, indem Sie den Eigenschaftennamen ändern:</span><span class="sxs-lookup"><span data-stu-id="5941a-139">You can fix the problem by changing the property name:</span></span>
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 
-## <a name="see-also"></a><span data-ttu-id="3ef82-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ef82-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5941a-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5941a-140">See also</span></span>
 
-- [<span data-ttu-id="3ef82-141">Objektinitialisierer: Benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="3ef82-141">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [<span data-ttu-id="3ef82-142">Lokaler Typrückschluss</span><span class="sxs-lookup"><span data-stu-id="3ef82-142">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="3ef82-143">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="3ef82-143">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [<span data-ttu-id="3ef82-144">Key</span><span class="sxs-lookup"><span data-stu-id="3ef82-144">Key</span></span>](../../../../visual-basic/language-reference/modifiers/key.md)
+- [<span data-ttu-id="5941a-141">Objektinitialisierer: Benannte und anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="5941a-141">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [<span data-ttu-id="5941a-142">Lokaler Typrückschluss</span><span class="sxs-lookup"><span data-stu-id="5941a-142">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="5941a-143">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="5941a-143">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [<span data-ttu-id="5941a-144">Key</span><span class="sxs-lookup"><span data-stu-id="5941a-144">Key</span></span>](../../../../visual-basic/language-reference/modifiers/key.md)

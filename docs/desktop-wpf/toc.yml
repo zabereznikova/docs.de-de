@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: Erstellen und Anwenden eines Stils
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: Erstellen und Anwenden einer Vorlage
+              href: themes/how-to-create-apply-template.md
     - name: Arbeiten mit Daten
       items:
         - name: Übersicht über Datenbindung

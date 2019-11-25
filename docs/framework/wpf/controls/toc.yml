@@ -394,8 +394,8 @@
       items:
         - name: Erstellen von Formaten und Vorlagen
           href: styling-and-templating.md
-        - name: Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: Anpassen eines vorhandenen Steuerelements mit einer ControlTemplate-Klasse
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 'Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Anpassung von Steuerelementen

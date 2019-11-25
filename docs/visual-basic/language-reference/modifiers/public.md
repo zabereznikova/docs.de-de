@@ -1,5 +1,5 @@
 ---
-title: Public (Visual Basic)
+title: Öffentlich
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -8,71 +8,71 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 0b8c31facc3605ff5a77aecf7b11456b33fbab72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35bf1a65e0b8f24a1263adc480719c69b95dff9b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647746"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351293"
 ---
-# <a name="public-visual-basic"></a><span data-ttu-id="4d371-102">Public (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d371-102">Public (Visual Basic)</span></span>
-<span data-ttu-id="4d371-103">Gibt an, dass eine oder mehrere deklarierte Programmierelemente über keine zugriffseinschränkungen verfügen.</span><span class="sxs-lookup"><span data-stu-id="4d371-103">Specifies that one or more declared programming elements have no access restrictions.</span></span>  
+# <a name="public-visual-basic"></a><span data-ttu-id="ac867-102">Public (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac867-102">Public (Visual Basic)</span></span>
+<span data-ttu-id="ac867-103">Specifies that one or more declared programming elements have no access restrictions.</span><span class="sxs-lookup"><span data-stu-id="ac867-103">Specifies that one or more declared programming elements have no access restrictions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4d371-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4d371-104">Remarks</span></span>  
- <span data-ttu-id="4d371-105">Wenn Sie eine Komponente oder ein Satz von Komponenten, z. B. eine Klassenbibliothek, veröffentlichen möchten Sie in der Regel die Programmierelemente von jedem Code zugegriffen werden kann, die mit der Assembly interagiert.</span><span class="sxs-lookup"><span data-stu-id="4d371-105">If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly.</span></span> <span data-ttu-id="4d371-106">Um solche unbegrenzten Zugriff auf ein Element gewähren zu können, deklarieren Sie es mit `Public`.</span><span class="sxs-lookup"><span data-stu-id="4d371-106">To confer such unlimited access on an element, you can declare it with `Public`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ac867-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ac867-104">Remarks</span></span>  
+ <span data-ttu-id="ac867-105">If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly.</span><span class="sxs-lookup"><span data-stu-id="ac867-105">If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly.</span></span> <span data-ttu-id="ac867-106">To confer such unlimited access on an element, you can declare it with `Public`.</span><span class="sxs-lookup"><span data-stu-id="ac867-106">To confer such unlimited access on an element, you can declare it with `Public`.</span></span>  
   
- <span data-ttu-id="4d371-107">Öffentlicher Zugriff ist die normale Zugriffsebene für ein Programmierelement ein Element aus, wenn Sie nicht benötigen, um den Zugriff darauf einschränken.</span><span class="sxs-lookup"><span data-stu-id="4d371-107">Public access is the normal level for a programming element when you do not need to limit access to it.</span></span> <span data-ttu-id="4d371-108">Beachten Sie, dass die Zugriffsebene eines Elements innerhalb einer Schnittstelle, Modul, Klasse oder Struktur deklariert ist standardmäßig `Public` , wenn Sie es andernfalls nicht deklarieren.</span><span class="sxs-lookup"><span data-stu-id="4d371-108">Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.</span></span>  
+ <span data-ttu-id="ac867-107">Public access is the normal level for a programming element when you do not need to limit access to it.</span><span class="sxs-lookup"><span data-stu-id="ac867-107">Public access is the normal level for a programming element when you do not need to limit access to it.</span></span> <span data-ttu-id="ac867-108">Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.</span><span class="sxs-lookup"><span data-stu-id="ac867-108">Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.</span></span>  
   
-## <a name="rules"></a><span data-ttu-id="4d371-109">Regeln</span><span class="sxs-lookup"><span data-stu-id="4d371-109">Rules</span></span>  
+## <a name="rules"></a><span data-ttu-id="ac867-109">Regeln</span><span class="sxs-lookup"><span data-stu-id="ac867-109">Rules</span></span>  
   
-- <span data-ttu-id="4d371-110">**Deklarationskontext.**</span><span class="sxs-lookup"><span data-stu-id="4d371-110">**Declaration Context.**</span></span> <span data-ttu-id="4d371-111">Sie können `Public` nur auf Modul, Schnittstelle oder Namespace-Ebene.</span><span class="sxs-lookup"><span data-stu-id="4d371-111">You can use `Public` only at module, interface, or namespace level.</span></span> <span data-ttu-id="4d371-112">Dies bedeutet, dass der Deklarationskontext für eine `Public` Element muss eine Quelldatei, Namespace, Schnittstelle, Modul, Klasse oder Struktur sein, und keine Prozedur sein.</span><span class="sxs-lookup"><span data-stu-id="4d371-112">This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.</span></span>  
+- <span data-ttu-id="ac867-110">**Declaration Context.**</span><span class="sxs-lookup"><span data-stu-id="ac867-110">**Declaration Context.**</span></span> <span data-ttu-id="ac867-111">You can use `Public` only at module, interface, or namespace level.</span><span class="sxs-lookup"><span data-stu-id="ac867-111">You can use `Public` only at module, interface, or namespace level.</span></span> <span data-ttu-id="ac867-112">This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.</span><span class="sxs-lookup"><span data-stu-id="ac867-112">This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.</span></span>  
   
-## <a name="behavior"></a><span data-ttu-id="4d371-113">Verhalten</span><span class="sxs-lookup"><span data-stu-id="4d371-113">Behavior</span></span>  
+## <a name="behavior"></a><span data-ttu-id="ac867-113">Verhalten</span><span class="sxs-lookup"><span data-stu-id="ac867-113">Behavior</span></span>  
   
-- <span data-ttu-id="4d371-114">**Zugriffsebene.**</span><span class="sxs-lookup"><span data-stu-id="4d371-114">**Access Level.**</span></span> <span data-ttu-id="4d371-115">Sämtlicher Code, der ein Modul, Klasse oder Struktur zugreifen kann kann Zugriff auf seine `Public` Elemente.</span><span class="sxs-lookup"><span data-stu-id="4d371-115">All code that can access a module, class, or structure can access its `Public` elements.</span></span>  
+- <span data-ttu-id="ac867-114">**Access Level.**</span><span class="sxs-lookup"><span data-stu-id="ac867-114">**Access Level.**</span></span> <span data-ttu-id="ac867-115">All code that can access a module, class, or structure can access its `Public` elements.</span><span class="sxs-lookup"><span data-stu-id="ac867-115">All code that can access a module, class, or structure can access its `Public` elements.</span></span>  
   
-- <span data-ttu-id="4d371-116">**Der Standardzugriff.**</span><span class="sxs-lookup"><span data-stu-id="4d371-116">**Default Access.**</span></span> <span data-ttu-id="4d371-117">Lokale Variablen in eine Prozedur verfügen standardmäßig die öffentlichen Zugriff, und Sie können keine Zugriffsmodifizierer auf diesen.</span><span class="sxs-lookup"><span data-stu-id="4d371-117">Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.</span></span>  
+- <span data-ttu-id="ac867-116">**Default Access.**</span><span class="sxs-lookup"><span data-stu-id="ac867-116">**Default Access.**</span></span> <span data-ttu-id="ac867-117">Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.</span><span class="sxs-lookup"><span data-stu-id="ac867-117">Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.</span></span>  
   
-- <span data-ttu-id="4d371-118">**Zugriffsmodifizierer.**</span><span class="sxs-lookup"><span data-stu-id="4d371-118">**Access Modifiers.**</span></span> <span data-ttu-id="4d371-119">Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*.</span><span class="sxs-lookup"><span data-stu-id="4d371-119">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="4d371-120">Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="4d371-120">For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
+- <span data-ttu-id="ac867-118">**Access Modifiers.**</span><span class="sxs-lookup"><span data-stu-id="ac867-118">**Access Modifiers.**</span></span> <span data-ttu-id="ac867-119">The keywords that specify access level are called *access modifiers*.</span><span class="sxs-lookup"><span data-stu-id="ac867-119">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="ac867-120">For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="ac867-120">For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
- <span data-ttu-id="4d371-121">Der `Public`-Modifizierer kann in folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="4d371-121">The `Public` modifier can be used in these contexts:</span></span>  
+ <span data-ttu-id="ac867-121">Der `Public`-Modifizierer kann in folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="ac867-121">The `Public` modifier can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="4d371-122">Class-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-122">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="ac867-122">Class-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-122">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [<span data-ttu-id="4d371-123">Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-123">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="ac867-123">Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-123">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [<span data-ttu-id="4d371-124">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-124">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="ac867-124">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-124">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [<span data-ttu-id="4d371-125">Delegate-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-125">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="ac867-125">Delegate-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-125">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [<span data-ttu-id="4d371-126">Dim-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-126">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="ac867-126">Dim-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-126">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [<span data-ttu-id="4d371-127">Enum-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-127">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="ac867-127">Enum-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-127">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [<span data-ttu-id="4d371-128">Event-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-128">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="ac867-128">Event-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-128">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [<span data-ttu-id="4d371-129">Function-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-129">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="ac867-129">Function-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-129">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="4d371-130">Interface-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-130">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="ac867-130">Interface-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-130">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [<span data-ttu-id="4d371-131">Module-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-131">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="ac867-131">Module-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-131">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [<span data-ttu-id="4d371-132">Operator-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-132">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="ac867-132">Operator-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-132">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [<span data-ttu-id="4d371-133">Property-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-133">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="ac867-133">Property-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-133">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [<span data-ttu-id="4d371-134">Structure-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-134">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="ac867-134">Structure-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-134">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [<span data-ttu-id="4d371-135">Sub-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4d371-135">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="ac867-135">Sub-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ac867-135">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4d371-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4d371-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac867-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac867-136">See also</span></span>
 
-- [<span data-ttu-id="4d371-137">Protected</span><span class="sxs-lookup"><span data-stu-id="4d371-137">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)
-- [<span data-ttu-id="4d371-138">Friend</span><span class="sxs-lookup"><span data-stu-id="4d371-138">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)
-- [<span data-ttu-id="4d371-139">Private</span><span class="sxs-lookup"><span data-stu-id="4d371-139">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
-- [<span data-ttu-id="4d371-140">Private Protected</span><span class="sxs-lookup"><span data-stu-id="4d371-140">Private Protected</span></span>](private-protected.md)
-- [<span data-ttu-id="4d371-141">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="4d371-141">Protected Friend</span></span>](protected-friend.md)
-- [<span data-ttu-id="4d371-142">Zugriffsebenen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4d371-142">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [<span data-ttu-id="4d371-143">Verfahren</span><span class="sxs-lookup"><span data-stu-id="4d371-143">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [<span data-ttu-id="4d371-144">Strukturen</span><span class="sxs-lookup"><span data-stu-id="4d371-144">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="4d371-145">Objekte und Klassen</span><span class="sxs-lookup"><span data-stu-id="4d371-145">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="ac867-137">Protected</span><span class="sxs-lookup"><span data-stu-id="ac867-137">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)
+- [<span data-ttu-id="ac867-138">Friend</span><span class="sxs-lookup"><span data-stu-id="ac867-138">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)
+- [<span data-ttu-id="ac867-139">Private</span><span class="sxs-lookup"><span data-stu-id="ac867-139">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
+- [<span data-ttu-id="ac867-140">Private Protected</span><span class="sxs-lookup"><span data-stu-id="ac867-140">Private Protected</span></span>](private-protected.md)
+- [<span data-ttu-id="ac867-141">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="ac867-141">Protected Friend</span></span>](protected-friend.md)
+- [<span data-ttu-id="ac867-142">Access levels in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ac867-142">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="ac867-143">Verfahren</span><span class="sxs-lookup"><span data-stu-id="ac867-143">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [<span data-ttu-id="ac867-144">Strukturen</span><span class="sxs-lookup"><span data-stu-id="ac867-144">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="ac867-145">Objekte und Klassen</span><span class="sxs-lookup"><span data-stu-id="ac867-145">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
