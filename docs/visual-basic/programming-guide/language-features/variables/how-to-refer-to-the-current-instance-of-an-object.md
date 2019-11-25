@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verweisen auf die aktuelle Instanz eines Objekts (Visual Basic)'
+title: 'Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 62b22a54904a45380052d3d81d9415517d4f8d3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005658"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346884"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Vorgehensweise: Verweisen auf die aktuelle Instanz eines Objekts (Visual Basic)
-Die *aktuelle Instanz* eines-Objekts ist die Instanz, in der der Code gerade ausgeführt wird.  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts (Visual Basic)
+The *current instance* of an object is the instance in which the code is currently executing.  
   
- Verwenden Sie das Schlüsselwort "`Me`", um auf die aktuelle-Instanz zu verweisen.  
+ You use the `Me` keyword to refer to the current instance.  
   
-### <a name="to-refer-to-the-current-instance"></a>So verweisen Sie auf die aktuelle Instanz  
+### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
   
-- Verwenden Sie das Schlüsselwort "`Me`", bei dem Sie normalerweise den Namen einer Objektvariablen verwenden.  
+- Use the `Me` keyword where you would normally use the name of an object variable.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Obwohl sich `Me` wie eine Objekt Variable verhält, können Sie Sie nicht deklarieren oder ihr etwas zuweisen. `Me` verweist immer auf die aktuelle Instanz.  
+     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: ORDER BY-Klausel (Visual Basic)
+title: Order By-Klausel
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryOrderBy
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: f8ee46b12e84f99629c3a92057fc3a7bb8a3c2e8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a7104e3dd82ff2dde2911861ce98a7367faf3b25
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004950"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350420"
 ---
 # <a name="order-by-clause-visual-basic"></a>ORDER BY-Klausel (Visual Basic)
-Gibt die Sortierreihenfolge für ein Abfrageergebnis an.  
+Specifies the sort order for a query result.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,25 +28,25 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>Teile  
  `orderExp1`  
- Erforderlich. Ein oder mehrere Felder aus dem aktuellen Abfrageergebnis, die die Reihenfolge der zurückgegebenen Werte bestimmen. Die Feldnamen müssen durch Kommas (,) getrennt werden. Sie können jedes Feld in aufsteigender oder absteigender Reihenfolge mithilfe der Schlüsselwörter `Ascending` oder `Descending` identifizieren. Wenn kein `Ascending`-oder `Descending`-Schlüsselwort angegeben ist, ist die Standard Sortierreihenfolge aufsteigend. Die Sortier Reihenfolgen Felder haben Vorrang vor von links nach rechts.  
+ Erforderlich. One or more fields from the current query result that identify how to order the returned values. The field names must be separated by commas (,). You can identify each field as sorted in ascending or descending order by using the `Ascending` or `Descending` keywords. If no `Ascending` or `Descending` keyword is specified, the default sort order is ascending. The sort order fields are given precedence from left to right.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `Order By`-Klausel verwenden, um die Ergebnisse einer Abfrage zu sortieren. Die `Order By`-Klausel kann ein Ergebnis nur basierend auf der Bereichs Variablen für den aktuellen Bereich sortieren. Die `Select`-Klausel führt z. b. einen neuen Bereich in einem Abfrage Ausdruck mit neuen Iterations Variablen für diesen Bereich ein. Bereichs Variablen, die vor einer `Select`-Klausel in einer Abfrage definiert sind, sind nach der `Select`-Klausel nicht verfügbar. Wenn Sie also die Ergebnisse nach einem Feld sortieren möchten, das in der `Select`-Klausel nicht verfügbar ist, müssen Sie die `Order By`-Klausel vor der `Select`-Klausel ablegen. Ein Beispiel hierfür wäre, wenn Sie die Abfrage nach Feldern sortieren möchten, die nicht als Teil des Ergebnisses zurückgegeben werden.  
+ You can use the `Order By` clause to sort the results of a query. The `Order By` clause can only sort a result based on the range variable for the current scope. For example, the `Select` clause introduces a new scope in a query expression with new iteration variables for that scope. Range variables defined before a `Select` clause in a query are not available after the `Select` clause. Therefore, if you want to order your results by a field that is not available in the `Select` clause, you must put the `Order By` clause before the `Select` clause. One example of when you would have to do this is when you want to sort your query by fields that are not returned as part of the result.  
   
- Die aufsteigende und absteigende Reihenfolge für ein Feld wird durch die Implementierung der <xref:System.IComparable>-Schnittstelle für den Datentyp des Felds bestimmt. Wenn der Datentyp die <xref:System.IComparable>-Schnittstelle nicht implementiert, wird die Sortierreihenfolge ignoriert.  
+ Ascending and descending order for a field is determined by the implementation of the <xref:System.IComparable> interface for the data type of the field. If the data type does not implement the <xref:System.IComparable> interface, the sort order is ignored.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrage Ausdruck verwendet eine `From`-Klausel, um eine Bereichs Variable `book` für die `books`-Auflistung zu deklarieren. Die `Order By`-Klausel sortiert das Abfrageergebnis nach Preis in aufsteigender Reihenfolge (Standardeinstellung). Bücher mit demselben Preis werden nach Titel in aufsteigender Reihenfolge sortiert. Die `Select`-Klausel wählt die Eigenschaften `Title` und `Price` als die von der Abfrage zurückgegebenen Werte aus.  
+ The following query expression uses a `From` clause to declare a range variable `book` for the `books` collection. The `Order By` clause sorts the query result by price in ascending order (the default). Books with the same price are sorted by title in ascending order. The `Select` clause selects the `Title` and `Price` properties as the values returned by the query.  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrage Ausdruck verwendet die `Order By`-Klausel, um das Abfrageergebnis nach Preis in absteigender Reihenfolge zu sortieren. Bücher mit demselben Preis werden nach Titel in aufsteigender Reihenfolge sortiert.  
+ The following query expression uses the `Order By` clause to sort the query result by price in descending order. Books with the same price are sorted by title in ascending order.  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrage Ausdruck verwendet eine `Select`-Klausel, um den Buchtitel, den Preis, das Veröffentlichungsdatum und den Autor auszuwählen. Anschließend werden die Felder "`Title`", "`Price`", "`PublishDate`" und "`Author`" der Bereichs Variablen für den neuen Bereich aufgefüllt. Die `Order By`-Klausel ordnet die neue Bereichs Variable nach Autor Name, Titel Titel und Preis an. Jede Spalte wird in der Standard Reihenfolge sortiert (aufsteigend).  
+ The following query expression uses a `Select` clause to select the book title, price, publish date, and author. It then populates the `Title`, `Price`, `PublishDate`, and `Author` fields of the range variable for the new scope. The `Order By` clause orders the new range variable by author name, book title, and then price. Each column is sorted in the default order (ascending).  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   

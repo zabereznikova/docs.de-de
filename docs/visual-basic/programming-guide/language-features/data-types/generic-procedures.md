@@ -1,5 +1,5 @@
 ---
-title: Generische Prozeduren in Visual Basic
+title: Generische Prozeduren
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generic methods [Visual Basic], type inference
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 4aed16ce9eb59da54156a0cd5f1594819788521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906593"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350084"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generische Prozeduren in Visual Basic
-Ein *generische Prozedur*auch Namens eine *generische Methode*, wird eine Prozedur mit mindestens einem Typparameter definiert. Dadurch wird den aufrufenden Code auf die Datentypen, die Anforderungen jedes Mal passen sie die Prozedur aufruft.  
+A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter. This allows the calling code to tailor the data types to its requirements each time it calls the procedure.  
   
- Eine Prozedur ist nicht generisch, einfach aufgrund der innerhalb einer generischen Klasse oder eine generische Struktur definiert wird. Um generisch sein, muss die Prozedur mindestens einen Typparameter, zusätzlich zum normalen Parameter ausführen, dauert es möglicherweise. Module kann generische Prozeduren enthält, oder einer generischen Klasse oder Struktur nicht generischen Prozeduren und eine nicht generische Klasse, Struktur, enthalten.  
+ A procedure is not generic simply by virtue of being defined inside a generic class or a generic structure. To be generic, the procedure must take at least one type parameter, in addition to any normal parameters it might take. A generic class or structure can contain nongeneric procedures, and a nongeneric class, structure, or module can contain generic procedures.  
   
- Eine generische Prozedur können dessen Typparameter in der normalen Parameterliste, ihren Rückgabetyp, wenn sie über ein, und in der Prozedur Code verfügt.  
+ A generic procedure can use its type parameters in its normal parameter list, in its return type if it has one, and in its procedure code.  
   
 ## <a name="type-inference"></a>Typableitung  
- Sie können eine generische Prozedur aufrufen, ohne Angabe von Typargumenten überhaupt. Wenn Sie auf diese Weise aufrufen, versucht der Compiler, um zu bestimmen, die entsprechenden Datentypen Übergabe an die Prozedur Typargumente. Dies wird als bezeichnet *Typrückschluss*. Der folgende Code zeigt einen Aufruf in die leitet der Compiler, dass er Typ übergeben soll `String` an den Typparameter `t`.  
+ You can call a generic procedure without supplying any type arguments at all. If you call it this way, the compiler attempts to determine the appropriate data types to pass to the procedure's type arguments. This is called *type inference*. The following code shows a call in which the compiler infers that it should pass type `String` to the type parameter `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
- Wenn der Compiler die Typargumente aus dem Kontext des Aufrufs nicht ableiten kann, wird ein Fehler gemeldet. Eine mögliche Ursache für einen derartigen Fehler ist ein Array Rank-Konflikt. Nehmen wir beispielsweise an, dass Sie einen normalen Parameter als Array von einem Typparameter definieren. Rufen Sie die generische Prozedur bewirkt, dass ein Array von einem abweichenden Rang (Anzahl der Dimensionen) angeben, des Konflikts Typrückschluss fehlschlagen. Der folgende Code zeigt einen Aufruf in das ein zweidimensionales Array an eine Prozedur übergeben wird, das ein eindimensionales Array erwartet.  
+ If the compiler cannot infer the type arguments from the context of your call, it reports an error. One possible cause of such an error is an array rank mismatch. For example, suppose you define a normal parameter as an array of a type parameter. If you call the generic procedure supplying an array of a different rank (number of dimensions), the mismatch causes type inference to fail. The following code shows a call in which a two-dimensional array is passed to a procedure that expects a one-dimensional array.  
   
 ```vb  
 Public Sub demoSub(Of t)(ByVal arg() As t)
@@ -43,32 +43,32 @@ Public Sub callDemoSub()
 End Sub
 ```
   
- Sie können den Typrückschluss aufrufen, nur, indem Sie alle Typargumente auslassen. Wenn Sie ein Typargument angeben, müssen Sie alle angeben.  
+ You can invoke type inference only by omitting all the type arguments. If you supply one type argument, you must supply them all.  
   
- Typrückschluss ist nur für generische Prozeduren unterstützt. Typrückschluss für generische Klassen, Strukturen, Schnittstellen oder Delegaten kann nicht aufgerufen werden.  
+ Type inference is supported only for generic procedures. You cannot invoke type inference on generic classes, structures, interfaces, or delegates.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel definiert einen generischen `Function` Verfahren zum Suchen eines bestimmten Elements in einem Array. Er definiert einen Typparameter und wird verwendet, um die beiden Parameter in der Parameterliste zu erstellen.  
+ The following example defines a generic `Function` procedure to find a particular element in an array. It defines one type parameter and uses it to construct the two parameters in the parameter list.  
   
 ### <a name="code"></a>Code  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Kommentare  
- Das obige Beispiel erfordert die Möglichkeit, vergleichen `searchValue` für jedes Element `searchArray`. Um dies zu garantieren, schränkt sie die Typparameter `T` zum Implementieren der <xref:System.IComparable%601> Schnittstelle. Der Code verwendet die <xref:System.IComparable%601.CompareTo%2A> -Methode anstelle der `=` -Operator, da keine Garantie, die ein Typargument besteht für angegeben `T` unterstützt die `=` Operator.  
+ The preceding example requires the ability to compare `searchValue` against each element of `searchArray`. To guarantee this ability, it constrains the type parameter `T` to implement the <xref:System.IComparable%601> interface. The code uses the <xref:System.IComparable%601.CompareTo%2A> method instead of the `=` operator, because there is no guarantee that a type argument supplied for `T` supports the `=` operator.  
   
- Sie können testen, die `findElement` Prozedur durch den folgenden Code.  
+ You can test the `findElement` procedure with the following code.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- Der vorherigen Aufrufe von `MsgBox` anzeigen bzw. "0", "1" und "-1".  
+ The preceding calls to `MsgBox` display "0", "1", and "-1" respectively.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [Vorgehensweise: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Gewusst wie: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Verfahren](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Parameter und Argumente von Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Typliste](../../../../visual-basic/language-reference/statements/type-list.md)

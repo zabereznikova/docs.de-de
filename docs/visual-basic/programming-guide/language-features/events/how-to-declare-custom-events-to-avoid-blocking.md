@@ -1,29 +1,29 @@
 ---
-title: 'Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen (Visual Basic) eine Blockierung zu vermeiden'
+title: 'Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um eine Blockierung zu vermeiden'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d73d9c4590afb33e7176f647069cafcb3a9d7d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051896"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345149"
 ---
-# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen (Visual Basic) eine Blockierung zu vermeiden
-Es gibt verschiedenen Fällen bei der es ist wichtig, einem Ereignishandler nicht blockieren nachfolgenden Ereignishandlern. Benutzerdefinierte Ereignisse ermöglichen das Ereignis, dessen Ereignishandler asynchron aufzurufen.  
+# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um eine Blockierung zu vermeiden (Visual Basic)
+There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
   
- Standardmäßig ist das Sicherungsspeicher Feld für eine Ereignisdeklaration ein multicast-Delegat, der seriell auf alle Ereignishandler kombiniert. Dies bedeutet, dass wenn ein Handler eine lange Zeit in Anspruch nimmt, es anderer Handler blockiert, bis es abgeschlossen ist. (Gut konzipierte Ereignishandler sollte nie langwierige oder potenziell blockierende Vorgänge ausführen.)  
+ By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
   
- Statt die standardmäßige Implementierung von Ereignissen, die Visual Basic bietet, können Sie ein benutzerdefiniertes Ereignis aus, der die Ereignishandler asynchron ausgeführt.  
+ Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel die `AddHandler` Accessor fügt der Delegat für jeden Handler des der `Click` Ereignis, um eine <xref:System.Collections.ArrayList> gespeichert, der `EventHandlerList` Feld.  
+ In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
   
- Wenn der code löst die `Click` -Ereignis, das `RaiseEvent` Accessor Ruft alle Ereignishandlerdelegaten, die asynchron mit der <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> Methode. Diese Methode ruft jede Handler auf einem Arbeitsthread und gibt sofort zurück, sodass Handler gegenseitig blockieren können nicht.  
+ When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
@@ -32,4 +32,4 @@ Es gibt verschiedenen Fällen bei der es ist wichtig, einem Ereignishandler nich
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>
 - [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

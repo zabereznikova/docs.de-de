@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)'
+title: 'How to: Combine Data with LINQ by Using Joins'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,75 +9,75 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7279908c5d262b65f4c4da9cd9b6c1b4117bc402
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775881"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344999"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Vorgehensweise: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)
-Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt mehrerer Sammlungen basierend auf häufig verwendete Werte zwischen den Sammlungen kombinieren können. Diese Werte werden als bezeichnet *Schlüssel* Werte. Mit relationale Datenbank vertraute Entwickler erkennt die `Join` -Klausel als ein INNER JOIN und `Group Join` -Klausel so effektiv einen LEFT OUTER JOIN.  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Gewusst wie: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)
+Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections. These values are known as *key* values. Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.  
   
- In die Beispielen in diesem Thema veranschaulichen einige Möglichkeiten zum Kombinieren von Daten mithilfe der `Join` und `Group Join` -Abfrageklauseln.  
+ The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.  
   
-## <a name="create-a-project-and-add-sample-data"></a>Erstellen eines Projekts und Hinzufügen von Beispieldaten  
+## <a name="create-a-project-and-add-sample-data"></a>Create a Project and Add Sample Data  
   
-#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Ein Projekt zu erstellen, die Beispieldaten und Typen enthält.  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>To create a project that contains sample data and types  
   
-1. Um die Beispiele in diesem Thema auszuführen, öffnen Sie Visual Studio, und fügen Sie ein neues Visual Basic-Konsolenanwendungsprojekt hinzu. Doppelklicken Sie auf die Datei "Module1.vb" von Visual Basic erstellt.  
+1. To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project. Double-click the Module1.vb file created by Visual Basic.  
   
-2. In den Beispielen in diesem Thema verwenden die `Person` und `Pet` Typen und Daten aus dem folgenden Codebeispiel. Kopieren Sie diesen Code in der Standardeinstellung `Module1` Modul von Visual Basic erstellt.  
+2. The samples in this topic use the `Person` and `Pet` types and data from the following code example. Copy this code into the default `Module1` module created by Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
-## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Führen Sie eine innere Verknüpfung mithilfe der Join-Klausel  
- Ein INNER JOIN, werden die Daten aus beiden Auflistungen kombiniert. Elemente, die bei denen entspricht die angegebenen Schlüsselwerten werden eingeschlossen. Alle Elemente der beiden Auflistungen, die nicht über ein übereinstimmendes Element in die andere Auflistung verfügen, werden ausgeschlossen.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Perform an Inner Join by Using the Join Clause  
+ An INNER JOIN combines data from two collections. Items for which the specified key values match are included. Any items from either collection that do not have a matching item in the other collection are excluded.  
   
- In Visual Basic LINQ bietet zwei Optionen zum Ausführen eines inneren Joins: eine implizite Verknüpfung und eine explizite Verknüpfung.  
+ In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.  
   
- Eine implizite Verknüpfung gibt an, die Auflistungen verknüpft werden, eine `From` Klausel und die entsprechenden Schlüsselfelder im identifiziert eine `Where` Klausel. Visual Basic wird implizit die beiden Auflistungen, die basierend auf den angegebenen Schlüssel Feldern verknüpft.  
+ An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause. Visual Basic implicitly joins the two collections based on the specified key fields.  
   
- Sie können die expliziten Join angeben, indem die `Join` -Klausel, wenn bestimmte, zu welcher Schlüssel für die Verwendung in der Verknüpfung Felder sein sollen. In diesem Fall eine `Where` -Klausel kann weiterhin verwendet werden, um die Ergebnisse der Abfrage zu filtern.  
+ You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join. In this case, a `Where` clause can still be used to filter the query results.  
   
-#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Ein Inner Join ausführen, mithilfe der Join-Klausel  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>To perform an Inner Join by using the Join clause  
   
-1. Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für beide eine implizite und explizite innere Verknüpfung anzuzeigen.  
+1. Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Führen Sie eine linke äußere Verknüpfung mit dem Group Join-Klausel  
- LEFT OUTER JOIN enthält alle Elemente aus der Auflistung der linken Seite des Joins und nur übereinstimmende Werte aus der Auflistung der rechten Seite des Joins. Alle Elemente aus der Auflistung der rechten Seite des Joins, die nicht über ein übereinstimmendes Element in der linken Auflistung verfügen, werden aus dem Abfrageergebnis ausgeschlossen.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Perform a Left Outer Join by Using the Group Join Clause  
+ A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join. Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.  
   
- Die `Group Join` Klausel ausführt, aktiviert ist, einem LEFT OUTER JOIN. Der Unterschied zwischen als LEFT OUTER JOIN in der Regel bezeichnet wird und was die `Group Join` Klausel zurückgegeben wird, die die `Group Join` Klausel Ergebnisse für Servergruppen aus der Auflistung der rechten Seite des Joins für jedes Element in der linken Auflistung. In einer relationalen Datenbank gibt LEFT OUTER JOIN, dass ein nicht gruppierte Ergebnis in dem jedes Element in der Abfrage führen übereinstimmende Elemente aus beiden Auflistungen in der Verknüpfung enthält. In diesem Fall werden die Elemente aus der Auflistung der linken Seite des Joins für jedes passende Element aus der rechten Auflistung wiederholt. Es wird angezeigt, wie dies aussieht, wenn Sie das nächste Verfahren ausführen.  
+ The `Group Join` clause performs, in effect, a LEFT OUTER JOIN. The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection. In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join. In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection. You will see what this looks like when you complete the next procedure.  
   
- Sie können die Ergebnisse Abrufen einer `Group Join` Abfrage als nicht gruppierte Ergebnis durch das Erweitern Ihrer Abfrage aus, um ein Element für jede gruppierte Abfrageergebnis zurück. Um dies zu erreichen, müssen Sie sicherstellen, dass Sie für Abfragen die `DefaultIfEmpty` -Methode der gruppierte Auflistung. Dadurch wird sichergestellt, dass Elemente aus der Auflistung der linken Seite des Joins immer noch im Abfrageergebnis enthalten sind, auch wenn sie keine übereinstimmenden Ergebnisse aus der Auflistung von rechten verfügen. Sie können Code hinzufügen, um Ihrer Abfrage einen Standardwert für das Ergebnis angeben, wenn kein übereinstimmender Wert aus der Auflistung der rechten Seite des Joins vorhanden ist.  
+ You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result. To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection. This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection. You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Um einen Left Outer Join ausführen, indem Sie mit der Group Join-Klausel  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>To perform a Left Outer Join by using the Group Join clause  
   
-1. Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für eine gruppierte linke äußere Verknüpfung und einen nicht gruppierten linken äußeren Join anzuzeigen.  
+1. Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
-## <a name="perform-a-join-by-using-a-composite-key"></a>Ausführen einer Verknüpfung mithilfe eines zusammengesetzten Schlüssels  
- Können Sie die `And` -Schlüsselwort in einer `Join` oder `Group Join` -Klausel, um die mehrfachen Schlüsselfelder verwenden, beim Abgleich zu identifizieren. Werte aus den zu verknüpfenden Auflistungen. Die `And` -Schlüsselwort Gibt an, dass alle Felder müssen für die angegebenen zu verknüpfenden Elemente übereinstimmen.  
+## <a name="perform-a-join-by-using-a-composite-key"></a>Perform a Join by Using a Composite Key  
+ You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined. The `And` keyword specifies that all specified key fields must match for items to be joined.  
   
-#### <a name="to-perform-a-join-by-using-a-composite-key"></a>Für einen Join mithilfe eines zusammengesetzten Schlüssels  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a>To perform a Join by using a composite key  
   
-1. Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für einen Join anzuzeigen, die einen zusammengesetzten Schlüssel verwendet.  
+1. Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
-## <a name="run-the-code"></a>Führen Sie den Code  
+## <a name="run-the-code"></a>Run the Code  
   
-#### <a name="to-add-code-to-run-the-examples"></a>Hinzufügen von Code zum Ausführen der Beispiele  
+#### <a name="to-add-code-to-run-the-examples"></a>To add code to run the examples  
   
-1. Ersetzen Sie die `Sub Main` in die `Module1` Modul in Ihrem Projekt durch den folgenden Code zum Ausführen der Beispiele in diesem Thema.  
+1. Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2. Drücken Sie F5, um die Beispiele ausführen.  
+2. Press F5 to run the examples.  
   
 ## <a name="see-also"></a>Siehe auch
 

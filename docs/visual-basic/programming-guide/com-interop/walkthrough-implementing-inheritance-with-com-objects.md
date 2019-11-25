@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Implementieren von Vererbung mit COM-Objekten (Visual Basic)'
+title: 'Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 209e1005b9f944bf4883e8406031fb17d4d60df1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053334"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347989"
 ---
-# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von Vererbung mit COM-Objekten (Visual Basic)
+# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten (Visual Basic)
 
-Sie können Visual Basic Klassen von `Public` Klassen in COM-Objekten ableiten, auch in früheren Versionen von Visual Basic. Die Eigenschaften und Methoden von Klassen, die von COM-Objekten geerbt werden, können überschrieben oder überladen werden, auch wenn Eigenschaften und Methoden einer beliebigen anderen Basisklasse überschrieben oder überladen werden können. Die Vererbung von COM-Objekten ist nützlich, wenn Sie über eine vorhandene Klassenbibliothek verfügen, die Sie nicht neu kompilieren möchten.
+You can derive Visual Basic classes from `Public` classes in COM objects, even those created in earlier versions of Visual Basic. The properties and methods of classes inherited from COM objects can be overridden or overloaded just as properties and methods of any other base class can be overridden or overloaded. Inheritance from COM objects is useful when you have an existing class library that you do not want to recompile.
 
-Im folgenden Verfahren wird gezeigt, wie Sie mit Visual Basic 6,0 ein COM-Objekt erstellen, das eine-Klasse enthält, und dieses dann als Basisklasse verwenden.
+The following procedure shows how to use Visual Basic 6.0 to create a COM object that contains a class, and then use it as a base class.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>So erstellen Sie das COM-Objekt, das in dieser exemplarischen Vorgehensweise verwendet wird
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>To build the COM object that is used in this walkthrough
 
-1. Öffnen Sie in Visual Basic 6,0 ein neues ActiveX-DLL-Projekt. Es wird ein `Project1` Projekt mit dem Namen erstellt. Es verfügt über eine Klasse `Class1`mit dem Namen.
+1. In Visual Basic 6.0, open a new ActiveX DLL project. A project named `Project1` is created. It has a class named `Class1`.
 
-2. Klicken Sie im **Projekt Explorer**mit der rechten Maustaste auf **Projekt1**, und klicken Sie dann auf **Projekt1 Eigenschaften**. Das Dialogfeld **Projekteigenschaften** wird angezeigt.
+2. In the **Project Explorer**, right-click **Project1**, and then click **Project1 Properties**. The **Project Properties** dialog box is displayed.
 
-3. Ändern Sie im Dialogfeld **Projekteigenschaften** auf der Registerkarte **Allgemein** den Projektnamen, indem `ComObject1` Sie im Feld **Projektname** eingeben.
+3. On the **General** tab of the **Project Properties** dialog box, change the project name by typing `ComObject1` in the **Project Name** field.
 
-4. Klicken Sie im **Projekt Explorer**mit der rechten `Class1`Maustaste auf, und klicken Sie dann auf **Eigenschaften**. Das Fenster **Eigenschaften** für die-Klasse wird angezeigt.
+4. In the **Project Explorer**, right-click `Class1`, and then click **Properties**. The **Properties** window for the class is displayed.
 
-5. Ändern Sie `Name` die- `MathFunctions`Eigenschaft in.
+5. Change the `Name` property to `MathFunctions`.
 
-6. Klicken Sie im **Projekt Explorer**mit der rechten `MathFunctions`Maustaste auf, und klicken Sie dann auf **Code anzeigen**. Der **Code-Editor** wird angezeigt.
+6. In the **Project Explorer**, right-click `MathFunctions`, and then click **View Code**. The **Code Editor** is displayed.
 
-7. Fügen Sie eine lokale Variable hinzu, die den Eigenschafts Wert enthält:
+7. Add a local variable to hold the property value:
 
     ```vb
     ' Local variable to hold property value
     Private mvarProp1 As Integer
     ```
 
-8. Eigenschaften und Eigenschaften `Get` Prozeduren hinzufügen: `Let`
+8. Add Property `Let` and Property `Get` property procedures:
 
     ```vb
     Public Property Let Prop1(ByVal vData As Integer)
@@ -56,7 +56,7 @@ Im folgenden Verfahren wird gezeigt, wie Sie mit Visual Basic 6,0 ein COM-Objekt
     End Property
     ```
 
-9. Fügen Sie eine Funktion hinzu:
+9. Add a function:
 
     ```vb
     Function AddNumbers(
@@ -67,16 +67,16 @@ Im folgenden Verfahren wird gezeigt, wie Sie mit Visual Basic 6,0 ein COM-Objekt
     End Function
     ```
 
-10. Erstellen und registrieren Sie das COM-Objekt, indem Sie im Menü **Datei** auf **ComObject1. dll** festlegen klicken.
+10. Create and register the COM object by clicking **Make ComObject1.dll** on the **File** menu.
 
     > [!NOTE]
-    > Obwohl Sie eine mit Visual Basic erstellte Klasse auch als COM-Objekt verfügbar machen können, handelt es sich nicht um ein echtes com-Objekt, das in dieser exemplarischen Vorgehensweise nicht verwendet werden kann. Weitere Informationen finden Sie unter [com-Interoperabilität in .NET Framework Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).
+    > Although you can also expose a class created with Visual Basic as a COM object, it is not a true COM object and cannot be used in this walkthrough. For details, see [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).
 
-## <a name="interop-assemblies"></a>Interopassemblys
+## <a name="interop-assemblies"></a>Interop Assemblies
 
-Im folgenden Verfahren erstellen Sie eine Interop-Assembly, die als Brücke zwischen nicht verwaltetem Code (z. b. einem COM-Objekt) und dem verwalteten Code, der von Visual Studio verwendet wird, fungiert. Die Interop-Assembly, die Visual Basic erstellt, verarbeitet viele Details der Arbeit mit COM-Objekten, z. b. *Interop*-Marshalling, das Packen von Parametern und Rückgabe Werten in äquivalente Datentypen beim Wechsel zu und von COM-Objekten. Der Verweis in der Visual Basic Anwendung verweist auf die Interop-Assembly, nicht auf das tatsächliche com-Objekt.
+In the following procedure, you will create an interop assembly, which acts as a bridge between unmanaged code (such as a COM object) and the managed code Visual Studio uses. The interop assembly that Visual Basic creates handles many of the details of working with COM objects, such as *interop marshaling*, the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. The reference in the Visual Basic application points to the interop assembly, not the actual COM object.
 
-### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>So verwenden Sie ein COM-Objekt mit Visual Basic 2005 und höheren Versionen
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>To use a COM object with Visual Basic 2005 and later versions
 
 1. Öffnen Sie ein neues Visual Basic-Windows-Anwendungsprojekt.
 
@@ -84,53 +84,53 @@ Im folgenden Verfahren erstellen Sie eine Interop-Assembly, die als Brücke zwis
 
      Das Dialogfeld **Verweis hinzufügen** wird angezeigt.
 
-3. Doppelklicken Sie `ComObject1` auf der Registerkarte com in die Liste **Komponenten Name** , und klicken Sie auf **OK**.
+3. On the **COM** tab, double-click `ComObject1` in the **Component Name** list and click **OK**.
 
 4. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.
 
      Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
 
-5. Klicken Sie im Bereich **Vorlagen** auf **Klasse**.
+5. In the **Templates** pane, click **Class**.
 
-     Der Standard Dateiname `Class1.vb`,, wird im Feld **Name** angezeigt. Ändern Sie dieses Feld in MathClass. vb, und klicken Sie auf **Hinzufügen**. Dadurch wird eine Klasse mit `MathClass`dem Namen erstellt und der zugehörige Code angezeigt.
+     The default file name, `Class1.vb`, appears in the **Name** field. Change this field to MathClass.vb and click **Add**. This creates a class named `MathClass`, and displays its code.
 
-6. Fügen Sie den folgenden Code am Anfang von `MathClass` ein, um von der com-Klasse zu erben.
+6. Add the following code to the top of `MathClass` to inherit from the COM class.
 
      [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]
 
-7. Überladen Sie die öffentliche Methode der Basisklasse, indem Sie `MathClass`folgenden Code hinzufügen:
+7. Overload the public method of the base class by adding the following code to `MathClass`:
 
      [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]
 
-8. Erweitern Sie die geerbte Klasse, indem Sie `MathClass`folgenden Code hinzufügen:
+8. Extend the inherited class by adding the following code to `MathClass`:
 
      [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]
 
-Die neue Klasse erbt die Eigenschaften der Basisklasse im COM-Objekt, über lädt eine-Methode und definiert eine neue-Methode, um die-Klasse zu erweitern.
+The new class inherits the properties of the base class in the COM object, overloads a method, and defines a new method to extend the class.
 
-### <a name="to-test-the-inherited-class"></a>So testen Sie die geerbte Klasse
+### <a name="to-test-the-inherited-class"></a>To test the inherited class
 
-1. Fügen Sie dem Start Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um den Code anzuzeigen.
+1. Add a button to your startup form, and then double-click it to view its code.
 
-2. Fügen Sie den folgenden `Click` Code in die Ereignishandlerprozedur der Schaltfläche ein, `MathClass` um eine Instanz von zu erstellen und die überladenen Methoden aufzurufen:
+2. In the button's `Click` event handler procedure, add the following code to create an instance of `MathClass` and call the overloaded methods:
 
      [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]
 
-3. Führen Sie das Projekt aus, indem Sie F5 drücken.
+3. Run the project by pressing F5.
 
-Wenn Sie im Formular auf die Schaltfläche klicken, `AddNumbers` wird die-Methode zuerst `Short` mit Datentyp Nummern aufgerufen, und Visual Basic wählt die entsprechende Methode aus der Basisklasse aus. Der zweite aufrufen `AddNumbers` von wird an die Überladungs Methode aus `MathClass`geleitet. Der dritte Aufruf ruft die `SubtractNumbers` -Methode auf, die die-Klasse erweitert. Die-Eigenschaft in der Basisklasse wird festgelegt, und der Wert wird angezeigt.
+When you click the button on the form, the `AddNumbers` method is first called with `Short` data type numbers, and Visual Basic chooses the appropriate method from the base class. The second call to `AddNumbers` is directed to the overload method from `MathClass`. The third call calls the `SubtractNumbers` method, which extends the class. The property in the base class is set, and the value is displayed.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Möglicherweise haben Sie bemerkt, dass `AddNumbers` die überladene Funktion den gleichen Datentyp wie die Methode hat, die von der Basisklasse des COM-Objekts geerbt wurde. Dies liegt daran, dass die Argumente und Parameter der Basisklassen Methode in Visual Basic 6,0 als 16-Bit-Ganzzahlen definiert sind, jedoch in späteren Versionen von Visual Basic als 16-Bit `Short` -Ganzzahlen vom Typ verfügbar gemacht werden. Die neue Funktion akzeptiert ganzzahlige 32-Bit-Werte und über lädt die Basisklassen Funktion.
+You may have noticed that the overloaded `AddNumbers` function appears to have the same data type as the method inherited from the base class of the COM object. This is because the arguments and parameters of the base class method are defined as 16-bit integers in Visual Basic 6.0, but they are exposed as 16-bit integers of type `Short` in later versions of Visual Basic. The new function accepts 32-bit integers, and overloads the base class function.
 
-Stellen Sie beim Arbeiten mit COM-Objekten sicher, dass Sie die Größe und die Datentypen von Parametern überprüfen. Wenn Sie z. b. ein COM-Objekt verwenden, das ein Visual Basic 6,0-Auflistungs Objekt als Argument akzeptiert, können Sie keine Auflistung aus einer neueren Version von Visual Basic bereitstellen.
+When working with COM objects, make sure that you verify the size and data types of parameters. For example, when you are using a COM object that accepts a Visual Basic 6.0 collection object as an argument, you cannot provide a collection from a later version of Visual Basic.
 
-Eigenschaften und Methoden, die von COM-Klassen geerbt werden, können überschrieben werden. Dies bedeutet, dass Sie eine lokale Eigenschaft oder Methode deklarieren können, die eine von einer com-Basisklasse geerbte Eigenschaft oder Methode ersetzt. Die Regeln zum Überschreiben von geerbten com-Eigenschaften ähneln den Regeln zum Überschreiben anderer Eigenschaften und Methoden mit den folgenden Ausnahmen:
+Properties and methods inherited from COM classes can be overridden, meaning that you can declare a local property or method that replaces a property or method inherited from a base COM class. The rules for overriding inherited COM properties are similar to the rules for overriding other properties and methods with the following exceptions:
 
-- Wenn Sie eine Eigenschaft oder Methode überschreiben, die von einer com-Klasse geerbt wird, müssen Sie alle anderen geerbten Eigenschaften und Methoden überschreiben.
+- If you override any property or method inherited from a COM class, you must override all the other inherited properties and methods.
 
-- Eigenschaften, die `ByRef` Parameter verwenden, können nicht überschrieben werden.
+- Properties that use `ByRef` parameters cannot be overridden.
 
 ## <a name="see-also"></a>Siehe auch
 

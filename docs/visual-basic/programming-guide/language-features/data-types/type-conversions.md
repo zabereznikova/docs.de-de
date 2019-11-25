@@ -1,5 +1,5 @@
 ---
-title: Typkonvertierung in Visual Basic
+title: Typkonvertierungen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbf0c9877cf9a9b4364c8c058c61e847ad7bf049
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663283"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348724"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Typkonvertierung in Visual Basic
-Das Ändern eines Werts aus einem Datentyp in einen anderen Typ wird als bezeichnet *Konvertierung*. Konvertierungen sind entweder *erweiternde* oder *einschränkende*, je nachdem, auf die Datenkapazität, der den verwendeten Typen. Sie sind auch *implizite* oder *explizite*, je nachdem, auf die Syntax im Quellcode.  
+The process of changing a value from one data type to another type is called *conversion*. Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved. They are also *implicit* or *explicit*, depending on the syntax in the source code.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Erläutert, Konvertierungen klassifiziert, indem Sie, ob der Zieltyp für die Daten enthalten kann.  
+ Explains conversions classified by whether the destination type can hold the data.  
   
  [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Beschreibt die Konvertierungen, die klassifiziert, indem Sie, ob Visual Basic automatisch ausführt.  
+ Discusses conversions classified by whether Visual Basic performs them automatically.  
   
  [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Veranschaulicht die Konvertierung zwischen Zeichenfolgen und numerischen, `Boolean`, oder Datum/Uhrzeit-Werte.  
+ Illustrates converting between strings and numeric, `Boolean`, or date/time values.  
   
- [Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Zeigt, wie Konvertieren einer `Object` -Variable auf einen anderen Datentyp.  
+ [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Shows how to convert an `Object` variable to any other data type.  
   
  [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Führt Sie durch den Prozess der Konvertierung zwischen Arrays mit unterschiedlichen Datentypen.  
+ Steps you through the process of converting between arrays of different data types.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Führt die Visual Basic-Datentypen und beschreibt, wie sie.  
+ Introduces the Visual Basic data types and describes how to use them.  
   
  [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- Listet die elementare Datentypen, die von Visual Basic.  
+ Lists the elementary data types supplied by Visual Basic.  
   
  [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- Beschreibt einige häufig auftretende Probleme können bei der Arbeit mit Datentypen.
+ Discusses some common problems that can arise when working with data types.

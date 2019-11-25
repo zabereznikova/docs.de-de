@@ -1,17 +1,17 @@
 ---
-title: Codierungskonventionen in Visual Basic
+title: Codierungskonventionen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003123"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346158"
 ---
 # <a name="visual-basic-coding-conventions"></a>Codierungskonventionen in Visual Basic
 Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen. Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:  
@@ -26,7 +26,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
-- Informationen zu Benennungs Richtlinien finden Sie im Thema [Benennungs Richtlinien](../../../standard/design-guidelines/naming-guidelines.md) .  
+- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
   
 - Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens. Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.  
   
@@ -36,7 +36,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 - Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.  
   
-- Verwenden Sie eine **ganz Zahl Auflistung (Neuformatierung) von Code** , um den Code im Code-Editor neu zu formatieren. Weitere Informationen finden Sie unter [Optionen, Text-Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
 - Verwenden Sie pro Zeile nur eine Anweisung. Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).  
   
@@ -44,7 +44,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 - Verwenden Sie pro Zeile nur eine Deklaration.  
   
-- Wenn **durch eine Auflistung (Neuformatierung) des Codes** keine Fortsetzungs Zeilen automatisch formatiert werden, werden Fortsetzungs Zeilen manuell mit einem Tabstopp Einzug eingelesen. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
+- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
   
     ```vb  
     a As Integer,  

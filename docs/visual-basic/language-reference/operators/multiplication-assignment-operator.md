@@ -1,5 +1,5 @@
 ---
-title: '*=-Operator (Visual Basic)'
+title: Operator *=
 ms.date: 07/20/2015
 f1_keywords:
 - vb.*=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 47d3239af6ff24501e6babc23c0db4103c477796
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4b60fa44a92bff683e13f850da025d7fe753618d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701072"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349788"
 ---
 # <a name="-operator-visual-basic"></a>*=-Operator (Visual Basic)
-Multipliziert den Wert einer Variablen oder Eigenschaft mit dem Wert eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft zu.  
+Multiplies the value of a variable or property by the value of an expression and assigns the result to the variable or property.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,21 +28,21 @@ variableorproperty *= expression
   
 ## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich. Eine beliebige numerische Variable oder Eigenschaft.  
+ Erforderlich. Any numeric variable or property.  
   
  `expression`  
  Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite des `*=`-Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ The element on the left side of the `*=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Der `*=`-Operator multipliziert zuerst den Wert des Ausdrucks (auf der rechten Seite des Operators) durch den Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators). Der-Operator weist dann das Ergebnis dieses Vorgangs der Variablen oder der Eigenschaft zu.  
+ The `*=` operator first multiplies the value of the expression (on the right-hand side of the operator) by the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
   
 ## <a name="overloading"></a>Überladen  
- Der [Operator *](../../../visual-basic/language-reference/operators/multiplication-operator.md) kann *überladen*werden. das bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `*`-Operators wirkt sich auf das Verhalten des `*=`-Operators aus. Wenn Ihr Code `*=` für eine Klasse oder Struktur verwendet, die `*` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `*` operator affects the behavior of the `*=` operator. If your code uses `*=` on a class or structure that overloads `*`, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der `*=`-Operator verwendet, um eine `Integer`-Variable mit einer Sekunde zu multiplizieren und das Ergebnis der ersten Variablen zuzuweisen.  
+ The following example uses the `*=` operator to multiply one `Integer` variable by a second and assign the result to the first variable.  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   

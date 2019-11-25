@@ -1,17 +1,17 @@
 ---
-title: 'Eingabe und Ausgabe: Zusammenfassung (Visual Basic)'
+title: 'Eingabe und Ausgabe: Zusammenfassung'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - input, Visual Basic functions
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 13013ee3dd9ee024cd3375003ed23c5ae4d620bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12651977609d8a689f13777b0fe2244cdb10819c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802504"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348526"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>Eingabe und Ausgabe: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -27,11 +27,11 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Verwalten von Dateien|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |Lesen aus einer Datei|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
 |Zurückgeben der Dateilänge|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Festlegen oder Abrufen von Dateiattributen|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Festlegen oder Abrufen von Dateiattributen|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>ist <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>ist <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
 |Festlegen der Schreib-/Leseposition in einer Datei|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |Schreiben in eine Datei|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Implementieren von Schnittstellen (Visual Basic)
+title: Erstellen und Implementieren von Schnittstellen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [Visual Basic], walkthroughs
@@ -7,105 +7,105 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 62e301e9eb366d14b58088d3e2cda3b567d17f5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 47176d2e7a512d8e8c27a90ac04d2a2a2af274b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923309"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345037"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen und Implementieren von Schnittstellen (Visual Basic)
 
-Schnittstellen beschreiben die Merkmale von Eigenschaften, Methoden und Ereignissen, belassen aber die Implementierungsdetails in Strukturen oder Klassen.  
+Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.  
   
- In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine Schnittstelle deklariert und implementiert wird.  
+ This walkthrough demonstrates how to declare and implement an interface.  
   
 > [!NOTE]
-> Diese exemplarische Vorgehensweise bietet keine Informationen zum Erstellen einer Benutzeroberfläche.  
+> This walkthrough doesn't provide information about how to create a user interface.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a>So definieren Sie eine Schnittstelle
+## <a name="to-define-an-interface"></a>To define an interface
   
 1. Öffnen Sie ein neues Visual Basic-Windows-Anwendungsprojekt.  
   
-2. Fügen Sie dem Projekt ein neues Modul hinzu, indem Sie im Menü **Projekt** auf **Modul hinzufügen** klicken.  
+2. Add a new module to the project by clicking **Add Module** on the **Project** menu.  
   
-3. Benennen Sie das neue `Module1.vb` Modul, und klicken Sie auf **Hinzufügen** Der Code für das neue Modul wird angezeigt.  
+3. Name the new module `Module1.vb` and click **Add**. The code for the new module is displayed.  
   
-4. Definieren Sie eine Schnitt `TestInterface` Stelle `Module1` mit dem Namen in `Module` , `End Module` indem Sie zwischen der-Anweisung und der-Anweisung eingeben `Interface TestInterface` Im **Code-Editor** wird das `Interface` Schlüsselwort eingerückt `End Interface` und eine-Anweisung hinzugefügt, um einen Codeblock zu bilden.  
+4. Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER. The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.  
   
-5. Definieren Sie eine Eigenschaft, eine Methode und ein Ereignis für die Schnittstelle, indem Sie den `Interface` folgenden `End Interface` Code zwischen den Anweisungen und platzieren:  
+5. Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
 ## <a name="implementation"></a>Implementierung
 
- Sie werden feststellen, dass sich die Syntax zum Deklarieren von Schnittstellenmembern von der Syntax unterscheidet, mit der Klassenmember deklariert werden Dieser Unterschied spiegelt die Tatsache wider, dass Schnittstellen keinen Implementierungs Code enthalten können.  
+ You may notice that the syntax used to declare interface members is different from the syntax used to declare class members. This difference reflects the fact that interfaces cannot contain implementation code.  
   
-### <a name="to-implement-the-interface"></a>So implementieren Sie die-Schnittstelle
+### <a name="to-implement-the-interface"></a>To implement the interface
   
-1. Fügen Sie eine Klasse `ImplementationClass` mit dem Namen hinzu, indem `Module1`Sie nach der `End Interface` Anweisung, aber vor `End Module` der Anweisung die folgende Anweisung hinzufügen, und drücken Sie dann die EINGABETASTE:  
+1. Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     Wenn Sie innerhalb der integrierten Entwicklungsumgebung arbeiten, liefert der **Code-Editor** eine entsprechende `End Class` Anweisung, wenn Sie die EINGABETASTE drücken.  
+     If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.  
   
-2. Fügen Sie die `Implements` folgende- `ImplementationClass`Anweisung hinzu, die die von der Klasse implementierte Schnittstelle benennt:  
+2. Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     Wenn Sie getrennt von anderen Elementen oben in einer Klasse oder Struktur aufgeführt werden, gibt `Implements` die Anweisung an, dass die Klasse oder Struktur eine Schnittstelle implementiert.  
+     When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.  
   
-     Wenn Sie innerhalb der integrierten Entwicklungsumgebung arbeiten, implementiert der **Code-Editor** die Klassenmember, `TestInterface` die für erforderlich sind, wenn Sie die EINGABETASTE drücken, und Sie können den nächsten Schritt überspringen.  
+     If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.  
   
-3. Wenn Sie nicht innerhalb der integrierten Entwicklungsumgebung arbeiten, müssen Sie alle Member der-Schnittstelle `MyInterface`implementieren. Fügen Sie den folgenden Code `ImplementationClass` hinzu, `Event1`um `Method1`, und `Prop1`zu implementieren:  
+3. If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`. Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     Die `Implements` -Anweisung benennt die implementierte Schnittstelle und den Schnittstellenmember.  
+     The `Implements` statement names the interface and interface member being implemented.  
   
-4. Vervollständigen Sie die Definition `Prop1` von, indem Sie der Klasse, die den Eigenschafts Wert gespeichert hat, ein privates Feld hinzufügen:  
+4. Complete the definition of `Prop1` by adding a private field to the class that stored the property value:  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     Gibt den Wert von `pval` aus dem Get-Accessor der Eigenschaft zurück.  
+     Return the value of the `pval` from the property get accessor.  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     Legen Sie den Wert `pval` von im Eigenschaften Satz-Accessor fest.  
+     Set the value of `pval` in the property set accessor.  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. Vervollständigen Sie die Definition `Method1` von, indem Sie den folgenden Code hinzufügen.  
+5. Complete the definition of `Method1` by adding the following code.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>So testen Sie die Implementierung der Schnittstelle
+### <a name="to-test-the-implementation-of-the-interface"></a>To test the implementation of the interface
   
-1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf das Start Formular für das Projekt, und klicken Sie dann auf **Code anzeigen**. Im Editor wird die Klasse für das Start Formular angezeigt. Standardmäßig wird das Start Formular aufgerufen `Form1`.  
+1. Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**. The editor displays the class for your startup form. By default, the startup form is called `Form1`.  
   
-2. Fügen Sie der `testInstance` - `Form1` Klasse das folgende Feld hinzu:  
+2. Add the following `testInstance` field to the `Form1` class:  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     Durch `testInstance` deklarieren `WithEvents`von als `Form1` kann die-Klasse die-Ereignisse verarbeiten.  
+     By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.  
   
-3. Fügen Sie der- `Form1` Klasse den folgenden Ereignishandler hinzu, um von `testInstance`aufgebene Ereignisse zu behandeln:  
+3. Add the following event handler to the `Form1` class to handle events raised by `testInstance`:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. Fügen Sie der `Form1` -Klasse `Test` eine Unterroutine mit dem Namen hinzu, um die Implementierungs Klasse zu testen:  
+4. Add a subroutine named `Test` to the `Form1` class to test the implementation class:  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     Die `Test` Prozedur erstellt eine Instanz der-Klasse, die `MyInterface`implementiert, diese Instanz dem `testInstance` Feld zuweist, eine Eigenschaft festlegt und eine Methode über die-Schnittstelle ausführt.  
+     The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.  
   
-5. Fügen Sie Code hinzu, `Test` um die Prozedur `Form1 Load` aus der Prozedur Ihres Start Formulars aufzurufen:  
+5. Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. Führen Sie `Test` die Prozedur aus, indem Sie F5 drücken. Die Meldung "Eigenschaft PROP1 wurde auf 9 festgelegt" wird angezeigt. Nachdem Sie auf OK geklickt haben, wird die Meldung "der X-Parameter für Methode1 ist 5" angezeigt. Klicken Sie auf OK, und die Meldung "der Ereignishandler hat das Ereignis abgefangen" wird angezeigt.  
+6. Run the `Test` procedure by pressing F5. The message "Prop1 was set to 9" is displayed. After you click OK, the message "The X parameter for Method1 is 5" is displayed. Click OK, and the message "The event handler caught the event" is displayed.  
   
 ## <a name="see-also"></a>Siehe auch
 

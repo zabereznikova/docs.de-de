@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aufrufen einer Eigenschaftenprozedur (Visual Basic)'
+title: 'Gewusst wie: Aufrufen einer Eigenschaftenprozedur'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,60 +8,60 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864363"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340551"
 ---
-# <a name="how-to-call-a-property-procedure-visual-basic"></a>Vorgehensweise: Aufrufen einer Eigenschaftenprozedur (Visual Basic)
-Sie aufrufen eine Eigenschaftenprozedur zum Speichern eines Werts in der Eigenschaft oder der Wert abgerufen. Sie Zugriff auf eine Eigenschaft die gleiche Weise, die Sie eine Variable zuzugreifen.  
+# <a name="how-to-call-a-property-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Eigenschaftenprozedur (Visual Basic)
+You call a property procedure by storing a value in the property or retrieving its value. You access a property the same way you access a variable.  
   
- Des Eigenschaftenwert `Set` Prozedur speichert einen Wert ein, und die zugehörige `Get` Prozedur ruft den Wert ab. Allerdings sind Sie nicht explizit dazu anhand des Namens aufrufen. Verwenden Sie die Eigenschaft in einer zuweisungsanweisung oder einem Ausdruck, wie würden Sie speichern oder des Werts einer Variablen abrufen. Visual Basic ermöglicht, die Aufrufe an die Prozeduren der Eigenschaft.  
+ The property's `Set` procedure stores a value, and its `Get` procedure retrieves the value. However, you do not explicitly call these procedures by name. You use the property in an assignment statement or an expression, just as you would store or retrieve the value of a variable. Visual Basic makes the calls to the property's procedures.  
   
-### <a name="to-call-a-propertys-get-procedure"></a>Zum Aufrufen einer Eigenschaft Get-Prozedur  
+### <a name="to-call-a-propertys-get-procedure"></a>To call a property's Get procedure  
   
-1. Verwenden Sie die Namen der Eigenschaft in einem Ausdruck die gleiche Weise, die Sie einen Variablennamen verwenden würden. Sie können eine Eigenschaft an einer beliebigen Stelle können Sie eine Variable oder eine Konstante.  
+1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
   
-     - oder -   
+     - oder -  
   
-     Verwenden Sie den Namen der Eigenschaft, nach dem Gleichheitszeichen (`=`) in einer zuweisungsanweisung anmelden.  
+     Use the property name following the equal (`=`) sign in an assignment statement.  
   
-     Das folgende Beispiel liest den Wert des der <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> implizit aufrufen-Eigenschaft der `Get` Prozedur.  
+     The following example reads the value of the <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> property, implicitly calling its `Get` procedure.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. Wenn die Eigenschaft Argumente akzeptiert, führen Sie die Namen der Eigenschaft in Klammern einschließen, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen.  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Achten Sie darauf, dass Sie die Argumente in der gleichen Reihenfolge angeben, dass die Eigenschaft über die entsprechenden Parameter definiert.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
- Der Wert der Eigenschaft ist Teil des Ausdrucks wie eine Variable oder Konstante würde, oder es befindet sich in der Variablen oder Eigenschaft auf der linken Seite der Zuweisung.  
+ The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
   
-### <a name="to-call-a-propertys-set-procedure"></a>Um eine Eigenschaft Aufrufen der Prozedur festzulegen.  
+### <a name="to-call-a-propertys-set-procedure"></a>To call a property's Set procedure  
   
-1. Verwenden Sie den Eigenschaftennamen, auf der linken Seite einer zuweisungsanweisung.  
+1. Use the property name on the left side of an assignment statement.  
   
-     Im folgenden Beispiel wird den Wert des der <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> implizit aufrufen-Eigenschaft der `Set` Verfahren.  
+     The following example sets the value of the <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> property, implicitly calling the `Set` procedure.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. Wenn die Eigenschaft Argumente akzeptiert, führen Sie die Namen der Eigenschaft in Klammern einschließen, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen.  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Achten Sie darauf, dass Sie die Argumente in der gleichen Reihenfolge angeben, dass die Eigenschaft über die entsprechenden Parameter definiert.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
- Der Wert, der auf der rechten Seite der Zuweisung generiert wird in der Eigenschaft gespeichert.  
+ The value generated on the right side of the assignment statement is stored in the property.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)
-- [Vorgehensweise: Erstellen Sie eine Eigenschaft](./how-to-create-a-property.md)
-- [Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Vorgehensweise: Das Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
-- [Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)
+- [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
+- [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)
 - [Get-Anweisung](../../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set-Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)

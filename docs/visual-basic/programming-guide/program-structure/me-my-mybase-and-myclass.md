@@ -1,5 +1,5 @@
 ---
-title: Me, "My", "MyBase" und "MyClass" in Visual Basic
+title: Me, My, MyBase und MyClass
 ms.date: 07/20/2015
 f1_keywords:
 - MyClass
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002532"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347337"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, "My", "MyBase" und "MyClass" in Visual Basic
-`Me`, `My`, `MyBase` und `MyClass` in Visual Basic haben ähnliche Namen, aber unterschiedliche Zwecke. In diesem Thema werden diese Entitäten beschrieben, um Sie zu unterscheiden.  
+`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
   
 ## <a name="me"></a>Me  
- Das Schlüsselwort "`Me`" bietet eine Möglichkeit, auf die jeweilige Instanz einer Klasse oder Struktur zu verweisen, in der der Code gerade ausgeführt wird. `Me` verhält sich wie eine Objekt Variable oder eine Struktur Variable, die auf die aktuelle Instanz verweist. Die Verwendung von `Me` ist besonders nützlich, wenn Informationen über die derzeit ausgeführte Instanz einer Klasse oder Struktur an eine Prozedur in einer anderen Klasse, Struktur oder einem anderen Modul übergeben werden.  
+ The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
   
- Nehmen Sie beispielsweise an, dass Sie das folgende Verfahren in einem Modul ausführen.  
+ For example, suppose you have the following procedure in a module.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- Sie können diese Prozedur aufzurufen und die aktuelle Instanz der <xref:System.Windows.Forms.Form>-Klasse als Argument übergeben, indem Sie die folgende-Anweisung verwenden.  
+ You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- Das Feature "`My`" bietet einfachen und intuitiven Zugriff auf eine Reihe von .NET Framework Klassen, sodass der Visual Basic Benutzer mit dem Computer, der Anwendung, den Einstellungen, den Ressourcen usw. interagieren kann.  
+ The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
   
 ## <a name="mybase"></a>MyBase  
- Das `MyBase`-Schlüsselwort verhält sich wie eine Objekt Variable, die auf die Basisklasse der aktuellen Instanz einer Klasse verweist. `MyBase` wird häufig verwendet, um auf Basisklassenmember zuzugreifen, die von einer abgeleiteten Klasse überschrieben oder überschattet werden. `MyBase.New` wird verwendet, um explizit einen Basisklassenkonstruktor aus einem abgeleiteten Klassenkonstruktor aufzurufen.  
+ The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
   
 ## <a name="myclass"></a>MyClass  
- Das `MyClass`-Schlüsselwort verhält sich wie eine Objekt Variable, die auf die aktuelle Instanz einer Klasse verweist, die ursprünglich implementiert wurde. `MyClass` ist `Me` ähnlich, aber alle Methodenaufrufe darauf werden so behandelt, als wäre die Methode `NotOverridable`.  
+ The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
   
 ## <a name="see-also"></a>Siehe auch
 

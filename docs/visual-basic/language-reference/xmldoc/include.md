@@ -1,19 +1,19 @@
 ---
-title: <include> (Visual Basic)
+title: <include>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: d9c1c1a50f0e3530c842a6058e288b8d2be15f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f2bebfd06d4614f05cb66834cc5bef40524ce3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940906"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348460"
 ---
-# <a name="include-visual-basic"></a>\<umfassen > (Visual Basic)
-Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschreibt.  
+# <a name="include-visual-basic"></a>\<include> (Visual Basic)
+Refers to another file that describes the types and members in your source code.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -23,28 +23,28 @@ Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschr
   
 ## <a name="parameters"></a>Parameter  
  `filename`  
- Erforderlich. Der Name der Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden. Schließen Sie `filename` in doppelte Anführungszeichen ("").  
+ Erforderlich. Der Name der Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden. Enclose `filename` in double quotation marks (" ").  
   
  `tagpath`  
- Erforderlich. Der Pfad der Tags in `filename`, der zum Tag `name` führt. Schließen Sie den Pfad in doppelte Anführungszeichen ("").  
+ Erforderlich. Der Pfad der Tags in `filename`, der zum Tag `name` führt. Enclose the path in double quotation marks (" ").  
   
  `name`  
- Erforderlich. Der Namensbezeichner in dem Tag, das vor den Kommentaren befindet. `Name` hat eine `id`.  
+ Erforderlich. The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
   
  `id`  
- Erforderlich. Die ID für das Tag, das sich vor den Kommentaren befindet. Die ID muss in einfache Anführungszeichen ("").  
+ Erforderlich. Die ID für das Tag, das sich vor den Kommentaren befindet. Enclose the ID in single quotation marks (' ').  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<include>` -Tag zum Verweisen auf Kommentare in einer anderen Datei, die beschreiben, die Typen und Member im Quellcode. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei.  
+ Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei.  
   
- Die `<include>` Tag verwendet die Empfehlung des W3C XML Path Language (XPath) Version 1.0. Weitere Informationen zu Möglichkeiten zum Anpassen Ihrer `<include>` finden Sie unter <https://www.w3.org/TR/xpath>.  
+ The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<include>` Tag zum Importieren von Dokumentationskommentaren Member aus einer Datei namens `commentFile.xml`.  
+ This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- Das Format der `commentFile.xml` lautet wie folgt.  
+ The format of the `commentFile.xml` is as follows.  
   
 ```xml  
 <Docs>  

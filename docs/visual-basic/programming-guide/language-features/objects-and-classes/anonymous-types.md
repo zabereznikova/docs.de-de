@@ -1,5 +1,5 @@
 ---
-title: Anonyme Typen (Visual Basic)
+title: Anonyme Typen
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AnonymousType
@@ -8,129 +8,129 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 2d134b8c8ef202a91b35ad8645bf63622b5e8030
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 064c43274069be3951f816eaafafac0bbece7651
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040846"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347161"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonyme Typen (Visual Basic)
-Visual Basic unterstützt anonyme Typen, die es Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt <xref:System.Object>von und enthält die Eigenschaften, die Sie beim Deklarieren des Objekts angeben. Da der Name des Datentyps nicht angegeben wird, wird er als *anonymer Typ*bezeichnet.  
+Visual Basic supports anonymous types, which enable you to create objects without writing a class definition for the data type. Stattdessen erzeugt der Compiler eine Klasse. The class has no usable name, inherits directly from <xref:System.Object>, and contains the properties you specify in declaring the object. Because the name of the data type is not specified, it is referred to as an *anonymous type*.  
   
- Im folgenden Beispiel wird eine-Variable `product` deklariert und als Instanz eines anonymen Typs mit zwei Eigenschaften, und `Name` `Price`, erstellt.  
+ The following example declares and creates variable `product` as an instance of an anonymous type that has two properties, `Name` and `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
- Ein *Abfrage Ausdruck* verwendet anonyme Typen, um von einer Abfrage ausgewählte Spalten von Daten zu kombinieren. Sie können den Ergebnistyp nicht im Voraus definieren, da Sie die Spalten, die von einer bestimmten Abfrage ausgewählt werden können, nicht vorhersagen können. Mit anonymen Typen können Sie eine Abfrage schreiben, die eine beliebige Anzahl von Spalten in beliebiger Reihenfolge auswählt. Der Compiler erstellt einen Datentyp, der den angegebenen Eigenschaften und der angegebenen Reihenfolge entspricht.  
+ A *query expression* uses anonymous types to combine columns of data selected by a query. You cannot define the type of the result in advance, because you cannot predict the columns a particular query might select. Anonymous types enable you to write a query that selects any number of columns, in any order. The compiler creates a data type that matches the specified properties and the specified order.  
   
- In den folgenden Beispielen `products` ist eine Liste von Produkt Objekten, von denen jede über viele Eigenschaften verfügt. Die `namePriceQuery` Variable enthält die Definition einer Abfrage, die bei der Ausführung eine Auflistung von Instanzen eines anonymen Typs mit zwei Eigenschaften, `Name` und `Price`, zurückgibt.  
+ In the following examples, `products` is a list of product objects, each of which has many properties. Variable `namePriceQuery` holds the definition of a query that, when it is executed, returns a collection of instances of an anonymous type that has two properties, `Name` and `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
- Die `nameQuantityQuery` Variable enthält die Definition einer Abfrage, die bei der Ausführung eine Auflistung von Instanzen eines anonymen Typs mit zwei Eigenschaften, `Name` und `OnHand`, zurückgibt.  
+ Variable `nameQuantityQuery` holds the definition of a query that, when it is executed, returns a collection of instances of an anonymous type that has two properties, `Name` and `OnHand`.  
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- Weitere Informationen zu dem Code, der vom Compiler für einen anonymen Typ erstellt wurde, finden Sie unter [Anonyme Typdefinition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ For more information about the code created by the compiler for an anonymous type, see [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 > [!CAUTION]
-> Der Name des anonymen Typs ist vom Compiler generiert und kann von der Kompilierung bis zur Kompilierung abweichen. Der Code sollte nicht den Namen eines anonymen Typs verwenden oder darauf basieren, da sich der Name bei der erneuten Kompilierung eines Projekts ändern kann.  
+> The name of the anonymous type is compiler generated and may vary from compilation to compilation. Your code should not use or rely on the name of an anonymous type because the name might change when a project is recompiled.  
   
-## <a name="declaring-an-anonymous-type"></a>Deklarieren eines anonymen Typs  
- Die Deklaration einer Instanz eines anonymen Typs verwendet eine Initialisiererliste, um die Eigenschaften des Typs anzugeben. Sie können nur Eigenschaften angeben, wenn Sie einen anonymen Typ deklarieren, nicht jedoch andere Klassen Elemente, wie z. b. Methoden oder Ereignisse. Im folgenden Beispiel `product1` ist eine Instanz eines anonymen Typs mit zwei Eigenschaften: `Name` und `Price`.  
+## <a name="declaring-an-anonymous-type"></a>Declaring an Anonymous Type  
+ The declaration of an instance of an anonymous type uses an initializer list to specify the properties of the type. You can specify only properties when you declare an anonymous type, not other class elements such as methods or events. In the following example, `product1` is an instance of an anonymous type that has two properties: `Name` and `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
- Wenn Sie Eigenschaften als Schlüsseleigenschaften festlegen, können Sie diese verwenden, um zwei anonyme Typinstanzen auf Gleichheit zu vergleichen. Die Werte der Schlüsseleigenschaften können jedoch nicht geändert werden. Weitere Informationen finden Sie im Abschnitt Schlüsseleigenschaften weiter unten in diesem Thema.  
+ If you designate properties as key properties, you can use them to compare two anonymous type instances for equality. However, the values of key properties cannot be changed. See the Key Properties section later in this topic for more information.  
   
- Beachten Sie, dass das Deklarieren einer Instanz eines anonymen Typs dem Deklarieren einer Instanz eines benannten Typs mithilfe eines Objektinitialisierers ähnelt:  
+ Notice that declaring an instance of an anonymous type is like declaring an instance of a named type by using an object initializer:  
   
  [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
- Weitere Informationen zu anderen Methoden zum angeben anonymer Typeigenschaften finden [Sie unter Gewusst wie: Eigenschaften Namen und Typen in Deklarationen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)anonymer Typen ableiten.  
+ For more information about other ways to specify anonymous type properties, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="key-properties"></a>Schlüsseleigenschaften  
- Schlüsseleigenschaften unterscheiden sich auf verschiedene Arten von nicht Schlüsseleigenschaften:  
+ Key properties differ from non-key properties in several fundamental ways:  
   
-- Es werden nur die Werte der Schlüsseleigenschaften verglichen, um zu bestimmen, ob zwei Instanzen gleich sind.  
+- Only the values of key properties are compared in order to determine whether two instances are equal.  
   
-- Die Werte der Schlüsseleigenschaften sind schreibgeschützt und können nicht geändert werden.  
+- The values of key properties are read-only and cannot be changed.  
   
-- Nur Schlüssel Eigenschaftswerte sind im vom Compiler generierten Hash Code Algorithmus für einen anonymen Typ enthalten.  
+- Only key property values are included in the compiler-generated hash code algorithm for an anonymous type.  
   
 ### <a name="equality"></a>Gleichheit  
- Instanzen anonymer Typen können nur gleich sein, wenn es sich um Instanzen desselben anonymen Typs handelt. Der Compiler behandelt zwei Instanzen als Instanzen desselben Typs, wenn Sie die folgenden Bedingungen erfüllen:  
+ Instances of anonymous types can be equal only if they are instances of the same anonymous type. The compiler treats two instances as instances of the same type if they meet the following conditions:  
   
-- Sie werden in derselben Assembly deklariert.  
+- They are declared in the same assembly.  
   
-- Ihre Eigenschaften haben die gleichen Namen, die gleichen abhergenten Typen und werden in derselben Reihenfolge deklariert. Bei namens vergleichen wird die Groß-/Kleinschreibung nicht beachtet  
+- Their properties have the same names, the same inferred types, and are declared in the same order. Name comparisons are not case-sensitive.  
   
-- Die gleichen Eigenschaften sind jeweils als Schlüsseleigenschaften gekennzeichnet.  
+- The same properties in each are marked as key properties.  
   
-- Mindestens eine Eigenschaft in jeder Deklaration ist eine Schlüsseleigenschaft.  
+- At least one property in each declaration is a key property.  
   
- Eine Instanz eines anonymen Typs ohne Schlüsseleigenschaften ist nur mit sich selbst identisch.  
+ An instance of an anonymous types that has no key properties is equal only to itself.  
   
  [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
- Zwei Instanzen desselben anonymen Typs sind gleich, wenn die Werte ihrer Schlüsseleigenschaften gleich sind. In den folgenden Beispielen wird veranschaulicht, wie Gleichheit getestet wird.  
+ Two instances of the same anonymous type are equal if the values of their key properties are equal. The following examples illustrate how equality is tested.  
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
-### <a name="read-only-values"></a>Schreibgeschützte Werte  
- Die Werte der Schlüsseleigenschaften können nicht geändert werden. Beispiels `prod8` Weise sind `Price` `Name`inim vorherigen Beispiel die Felder und, aber `OnHand` Sie können geändert werden. `read-only`  
+### <a name="read-only-values"></a>Read-Only Values  
+ The values of key properties cannot be changed. For example, in `prod8` in the previous example, the `Name` and `Price` fields are `read-only`, but `OnHand` can be changed.  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
-## <a name="anonymous-types-from-query-expressions"></a>Anonyme Typen aus Abfrage Ausdrücken  
- Abfrage Ausdrücke erfordern nicht immer die Erstellung anonymer Typen. Wenn möglich, verwenden Sie einen vorhandenen Typ zum Speichern der Spaltendaten. Dies tritt auf, wenn die Abfrage entweder ganze Datensätze aus der Datenquelle oder nur ein Feld aus jedem Datensatz zurückgibt. In den folgenden Codebeispielen `customers` ist eine Auflistung von-Objekten einer `Customer` -Klasse. Die-Klasse verfügt über zahlreiche Eigenschaften, und Sie können eine oder mehrere davon in beliebiger Reihenfolge in das Abfrageergebnis einschließen. In den ersten beiden Beispielen sind keine anonymen Typen erforderlich, da die Abfragen Elemente benannter Typen auswählen:  
+## <a name="anonymous-types-from-query-expressions"></a>Anonymous Types from Query Expressions  
+ Query expressions do not always require the creation of anonymous types. When possible, they use an existing type to hold the column data. This occurs when the query returns either whole records from the data source, or only one field from each record. In the following code examples, `customers` is a collection of objects of a `Customer` class. The class has many properties, and you can include one or more of them in the query result, in any order. In the first two examples, no anonymous types are required because the queries select elements of named types:  
   
-- `custs1`enthält eine Auflistung von Zeichen folgen, `cust.Name` da eine Zeichenfolge ist.  
+- `custs1` contains a collection of strings, because `cust.Name` is a string.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
-- `custs2`enthält eine Auflistung von `Customer` -Objekten, da jedes Element `customers` von ein `Customer` -Objekt ist und das gesamte Element von der Abfrage ausgewählt wird.  
+- `custs2` contains a collection of `Customer` objects, because each element of `customers` is a `Customer` object, and the whole element is selected by the query.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
- Geeignete benannte Typen sind jedoch nicht immer verfügbar. Möglicherweise möchten Sie Kundennamen und Adressen für einen Zweck, Kunden-ID-Nummern und Standorte für einen anderen, Kundennamen, Adressen und Bestell Verläufe für eine dritte auswählen. Mit anonymen Typen können Sie eine beliebige Kombination von Eigenschaften in beliebiger Reihenfolge auswählen, ohne zuerst einen neuen benannten Typ für das Ergebnis zu deklarieren. Stattdessen erstellt der Compiler einen anonymen Typ für jede Kompilierung von Eigenschaften. Mit der folgenden Abfrage werden nur der Name und die ID-Nummer des `Customer` Kunden aus `customers`den einzelnen Objekten in ausgewählt. Daher erstellt der Compiler einen anonymen Typ, der nur die beiden Eigenschaften enthält.  
+ However, appropriate named types are not always available. You might want to select customer names and addresses for one purpose, customer ID numbers and locations for another, and customer names, addresses, and order histories for a third. Anonymous types enable you to select any combination of properties, in any order, without first declaring a new named type to hold the result. Instead, the compiler creates an anonymous type for each compilation of properties. The following query selects only the customer's name and ID number from each `Customer` object in `customers`. Therefore, the compiler creates an anonymous type that contains only those two properties.  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
- Sowohl der Name als auch die Datentypen der Eigenschaften im anonymen Typ werden von den Argumenten zu `Select`, `cust.Name` und `cust.ID`entnommen. Die Eigenschaften in einem anonymen Typ, der von einer Abfrage erstellt wird, sind immer Schlüsseleigenschaften. Wenn `custs3` in der folgenden `For Each` Schleife ausgeführt wird, ist das Ergebnis eine Auflistung von Instanzen eines anonymen Typs mit zwei Schlüsseleigenschaften, `Name` und `ID`.  
+ Both the names and the data types of the properties in the anonymous type are taken from the arguments to `Select`, `cust.Name` and `cust.ID`. The properties in an anonymous type that is created by a query are always key properties. When `custs3` is executed in the following `For Each` loop, the result is a collection of instances of an anonymous type with two key properties, `Name` and `ID`.  
   
  [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
- Die Elemente in der durch `custs3` dargestellten Auflistung sind stark typisiert, und Sie können IntelliSense verwenden, um durch die verfügbaren Eigenschaften zu navigieren und deren Typen zu überprüfen.  
+ The elements in the collection represented by `custs3` are strongly typed, and you can use IntelliSense to navigate through the available properties and to verify their types.  
   
- Weitere Informationen finden Sie unter [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ For more information, see [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-## <a name="deciding-whether-to-use-anonymous-types"></a>Entscheiden, ob anonyme Typen verwendet werden sollen  
- Bevor Sie ein Objekt als Instanz einer anonymen Klasse erstellen, sollten Sie berücksichtigen, ob dies die beste Option ist. Wenn Sie z. b. ein temporäres Objekt erstellen möchten, das verwandte Daten enthält, und Sie keine weiteren Felder und Methoden benötigen, die eine komplette Klasse enthalten kann, ist ein anonymer Typ eine gute Lösung. Anonyme Typen sind auch dann praktisch, wenn Sie für jede Deklaration eine andere Auswahl von Eigenschaften benötigen oder wenn Sie die Reihenfolge der Eigenschaften ändern möchten. Wenn das Projekt jedoch mehrere Objekte mit denselben Eigenschaften enthält, können Sie diese in einer festgelegten Reihenfolge leichter deklarieren, indem Sie einen benannten Typ mit einem Klassenkonstruktor verwenden. Mit einem geeigneten Konstruktor ist es z. b. einfacher, mehrere Instanzen `Product` einer Klasse zu deklarieren, als mehrere Instanzen eines anonymen Typs zu deklarieren.  
+## <a name="deciding-whether-to-use-anonymous-types"></a>Deciding Whether to Use Anonymous Types  
+ Before you create an object as an instance of an anonymous class, consider whether that is the best option. For example, if you want to create a temporary object to contain related data, and you have no need for other fields and methods that a complete class might contain, an anonymous type is a good solution. Anonymous types are also convenient if you want a different selection of properties for each declaration, or if you want to change the order of the properties. However, if your project includes several objects that have the same properties, in a fixed order, you can declare them more easily by using a named type with a class constructor. For example, with an appropriate constructor, it is easier to declare several instances of a `Product` class than it is to declare several instances of an anonymous type.  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
- Ein weiterer Vorteil von benannten Typen besteht darin, dass der Compiler ein versehentliches falsch formatiping eines Eigenschafts namens abfangen kann. In den vorherigen Beispielen `firstProd2`sollen, `secondProd2`und `thirdProd2` Instanzen desselben anonymen Typs sein. Wenn Sie jedoch versehentlich auf eine der folgenden `thirdProd2` Arten deklarieren würden, unterscheidet sich der Typ von `firstProd2` und `secondProd2`.  
+ Another advantage of named types is that the compiler can catch an accidental mistyping of a property name. In the previous examples, `firstProd2`, `secondProd2`, and `thirdProd2` are intended to be instances of the same anonymous type. However, if you were to accidentally declare `thirdProd2` in one of the following ways, its type would be different from that of `firstProd2` and `secondProd2`.  
   
  [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
- Noch wichtiger ist, dass die Verwendung anonymer Typen, die nicht für Instanzen benannter Typen gelten, eingeschränkt ist. `firstProd2`, `secondProd2` und`thirdProd2` sind Instanzen desselben anonymen Typs. Der Name des freigegebenen anonymen Typs ist jedoch nicht verfügbar und kann nicht angezeigt werden, wenn in Ihrem Code ein Typname erwartet wird. Ein anonymer Typ kann z. b. nicht verwendet werden, um eine Methoden Signatur zu definieren, eine andere Variable oder ein anderes Feld oder eine Typdeklaration zu deklarieren. Daher sind anonyme Typen nicht geeignet, wenn Sie Informationen über Methoden hinweg freigeben müssen.  
+ More importantly, there are limitations on the use of anonymous types that do not apply to instances of named types. `firstProd2`, `secondProd2`, and `thirdProd2` are instances of the same anonymous type. However, the name for the shared anonymous type is not available and cannot appear where a type name is expected in your code. For example, an anonymous type cannot be used to define a method signature, to declare another variable or field, or in any type declaration. As a result, anonymous types are not appropriate when you have to share information across methods.  
   
-## <a name="an-anonymous-type-definition"></a>Eine anonyme Typdefinition  
- Als Antwort auf die Deklaration einer Instanz eines anonymen Typs erstellt der Compiler eine neue Klassendefinition, die die angegebenen Eigenschaften enthält.  
+## <a name="an-anonymous-type-definition"></a>An Anonymous Type Definition  
+ In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties.  
   
- Wenn der anonyme Typ mindestens eine Schlüsseleigenschaft enthält, überschreibt <xref:System.Object>die Definition drei von geerbte Member: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>und. <xref:System.Object.ToString%2A> Der Code, der zum Testen der Gleichheit und zum Ermitteln des Hashcodewerts erstellt wurde, berücksichtigt nur die Schlüsseleigenschaften. Wenn der anonyme Typ keine Schlüsseleigenschaften enthält, wird <xref:System.Object.ToString%2A> nur überschrieben. Explizit benannte Eigenschaften eines anonymen Typs können nicht mit diesen generierten Methoden in Konflikt stehen. Das heißt, Sie können, `.Equals` `.GetHashCode`oder `.ToString` nicht verwenden, um eine Eigenschaft zu benennen.  
+ If the anonymous type contains at least one key property, the definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The code produced for testing equality and determining the hash code value considers only the key properties. If the anonymous type contains no key properties, only <xref:System.Object.ToString%2A> is overridden. Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.  
   
- Anonyme Typdefinitionen, die über mindestens eine Schlüsseleigenschaft verfügen, implementieren <xref:System.IEquatable%601?displayProperty=nameWithType> auch die- `T` Schnittstelle, wobei der Typ des anonymen Typs ist.  
+ Anonymous type definitions that have at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.  
   
- Weitere Informationen zu dem vom Compiler erstellten Code und zu den Funktionen der überschriebenen Methoden finden Sie unter [Anonyme Typdefinition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ For more information about the code created by the compiler and the functionality of the overridden methods, see [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Vorgehensweise: Eigenschaften Namen und Typen in Deklarationen anonymer Typen ableiten](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Definition von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)

@@ -1,16 +1,16 @@
 ---
-title: Erste Schritte mit Visual Basic
+title: Erste Schritte
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 386f7aa74efbcb69e1a2fc0e528c88f25b1d5e2b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425147"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344813"
 ---
 # <a name="get-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 
@@ -53,7 +53,7 @@ Erläutert, wie Sie Support erhalten und Feedback geben können
 - [Visual Studio](/visualstudio/)\
 Enthält Links zur Dokumentation für Visual Studio.
 
-- [C#](../../csharp/index.md)\
+- [C#](../../csharp/index.yml)\
 Listet Links zur Dokumentation der Anwendungsentwicklung mit Visual C# auf.
 
 - [Visual C++](/cpp/)\

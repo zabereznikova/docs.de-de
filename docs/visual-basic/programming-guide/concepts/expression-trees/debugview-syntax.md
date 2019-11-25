@@ -1,6 +1,6 @@
 ---
-title: Syntax von DebugView-Eigenschaft (Visual Basic) verwendet wird
-description: Beschreibt die spezielle Syntax, die durch die DebugView-Eigenschaft verwendet wird, um eine Zeichenfolgendarstellung von Ausdrucksbaumstrukturen zu erstellen.
+title: Syntax used by DebugView property
+description: Beschreibt die spezielle Syntax, die von der DebugView-Eigenschaft verwendet wird, um eine Zeichenfolgendarstellung von Ausdrucksbaumstrukturen zu erzeugen.
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 98ceba37aa226fab68ae1c1028e2a1139b3b8e7e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689540"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346868"
 ---
 # <a name="debugview-syntax"></a>`DebugView`-Syntax
 
-Die `DebugView` Eigenschaft (nur beim Debuggen verfügbar) bietet eine Darstellung der Zeichenfolge von Ausdrucksbaumstrukturen. Die meisten der Syntax ist recht einfach zu verstehen. besondere Fälle werden in den folgenden Abschnitten beschrieben.
+Die `DebugView`-Eigenschaft (nur beim Debuggen verfügbar) bietet eine Zeichenfolgendarstellung von Ausdrucksbaumstrukturen. Der größte Teil der Syntax ist recht einfach zu verstehen; einige Sonderfälle werden in den folgenden Abschnitten beschrieben.
 
-Jedes Beispiel folgt eine Comment-Block mit der `DebugView`.
+Each example is followed by a comment block containing the `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,9 +45,9 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Für <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType>-Objekte, die ganzzahlige Werte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante angezeigt.
 
-Für einige numerische Typen wird der Wert ein Suffix hinzugefügt:
+For some numeric types, a suffix is added to the value:
 
-| Typ | Stichwort | Suffix |
+| Geben Sie Folgendes ein: | Stichwort | Suffix |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Wenn der Typ des eine <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> Objekt vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in spitzen Klammern angezeigt (`<` und `>`). Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.
+Wenn sich der Typ eines <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType>-Objekts vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in spitzen Klammern (`<` und `>`) angezeigt. Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.
 
 ### <a name="examples"></a>Beispiele
 
@@ -168,7 +168,7 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="checked-operators"></a>Überprüfte Operatoren
 
-Überprüfte Operatoren werden angezeigt, mit der `#` Ansicht das Symbol. Der überprüfte Additionsoperator wird z.B. als `#+` angezeigt.
+Überprüften Operatoren wird in der Ansicht das `#`-Symbol vorangestellt. Der überprüfte Additionsoperator wird z.B. als `#+` angezeigt.
 
 ### <a name="examples"></a>Beispiele
 

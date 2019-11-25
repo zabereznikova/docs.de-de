@@ -1,15 +1,15 @@
 ---
-title: Verarbeiten von erneuten eintreten in Async-Apps (Visual Basic)
+title: Ablauf des erneuten Eintretens in asynchronen Anwendungen
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775534"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354264"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Verarbeiten von erneuten eintreten in Async-Apps (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
 
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.
 
@@ -17,7 +17,7 @@ Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintret
 > Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
 
 > [!NOTE]
-> Transport Layer Security (TLS) Version 1,2 ist nun die Mindestversion, die für die APP-Entwicklung verwendet werden soll. Wenn Ihre APP auf eine .NET Framework-Version vor 4,7 abzielt, finden Sie im folgenden Artikel [Transport Layer Security (TLS) Best Practices mit der .NET Framework](../../../../framework/network-programming/tls.md) 
+> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App auf eine .NET Framework-Version vor 4.7 ausgerichtet ist, lesen Sie den Artikel [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../../framework/network-programming/tls.md). 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Erkennen von Ablaufinvarianz
 
@@ -126,7 +126,7 @@ Aufgrund der Änderungen reagiert die Schaltfläche nicht, während die Websites
 
 Anstatt die Schaltfläche **Start** zu deaktivieren, kann die Schaltfläche aktiv bleiben. Wenn der Benutzer die Schaltfläche dann erneut anklickt, brechen Sie den bereits ausgeführten Vorgang ab und lassen den zuletzt begonnenen Vorgang fortsetzen.
 
-Weitere Informationen zum Abbruch finden Sie unter [Feinabstimmung der Async-Anwendung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".
 
@@ -139,7 +139,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
         Dim cts As CancellationTokenSource
     ```
 
-2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert `cts` `Nothing` ist, ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing` ist, wird der Vorgang, der bereits ausgeführt wird, abgebrochen.
+2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
     cts = newCTS
     ```
 
-4. Am Ende der `StartButton_Click` ist der aktuelle Prozess abgeschlossen. Legen Sie daher den Wert `cts` auf `Nothing` zurück.
+4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-Wenn Sie die Schaltfläche " **Start** " mehrmals auswählen, während diese APP ausgeführt wird, sollte Sie Ergebnisse wie die folgende Ausgabe ergeben:
+If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -516,7 +516,7 @@ Die Ausgabe zeigt die folgenden Muster an.
   TOTAL bytes returned:  915908
   ```
 
-- Der `pendingWork` Task wird am Anfang von `FinishOneGroupAsync` nur für Gruppe A `Nothing`, die zuerst gestartet wurde. Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
+- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
 
 - Die folgenden zwei Zeilen werden immer zusammen in der Ausgabe angezeigt. Der Code wird zwischen dem Starten des Vorgangs einer Gruppe in `StartButton_Click` und dem Zuweisen eines Tasks für die Gruppe zu `pendingWork` nie unterbrochen.
 
@@ -560,11 +560,11 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3. Erweitern Sie im Bereich **installierte Vorlagen** den Bereich **Visual Basic**, und erweitern Sie dann **Windows**.
+3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
 
 4. Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.
 
-5. Benennen Sie das Projekt `WebsiteDownloadWPF`, wählen Sie .NET Framework Version 4,6 oder höher aus, und klicken Sie dann auf die Schaltfläche **OK** .
+5. Benennen Sie das Projekt `WebsiteDownloadWPF`, wählen Sie die .NET Framework-Version 4.6 oder höher aus, und klicken Sie dann auf die Schaltfläche **OK**.
 
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.
 
@@ -592,13 +592,13 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
      Ein einfaches Fenster, das ein Textfeld und eine Schaltfläche enthält, wird in der **Entwurfsansicht** der Datei „MainWindow.xaml“ angezeigt.
 
-8. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**aus.
+8. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und klicken Sie anschließend auf **Verweis hinzufügen**.
 
      Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu, sofern dieser nicht bereits ausgewählt ist.
 
-9. Öffnen Sie in **Projektmappen-Explorer**das Kontextmenü für "MainWindow. XAML. vb", und wählen Sie dann **Code anzeigen**aus.
+9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
-10. Ersetzen Sie den Code in "MainWindow. XAML. vb" durch den folgenden Code.
+10. In MainWindow.xaml.vb , replace the code with the following code.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

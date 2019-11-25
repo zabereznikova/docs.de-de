@@ -1,5 +1,5 @@
 ---
-title: GOTO-Anweisung (Visual Basic)
+title: GoTo-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 4b7a5cce56dfdd2bdc7e068aadbc18b92bba269d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d5cdcd214c9679e245645505fe11cb5d521ce085
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581815"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351087"
 ---
 # <a name="goto-statement"></a>GoTo-Anweisung
-Verzweigt bedingungslos in eine angegebene Zeile in einer Prozedur.  
+Branches unconditionally to a specified line in a procedure.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,33 +31,33 @@ GoTo line
   
 ## <a name="part"></a>Segment  
  `line`  
- Erforderlich. Eine beliebige Zeilen Bezeichnung.  
+ Erforderlich. Any line label.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GoTo`-Anweisung kann nur bis Zeilen in der Prozedur verzweigt werden, in der Sie angezeigt wird. Die Linie muss über eine Zeilen Bezeichnung verfügen, auf die `GoTo` verweisen kann. Weitere Informationen finden Sie unter Gewusst [wie: bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> mit `GoTo`-Anweisungen kann der Code schwierig zu lesen und zu warten. Verwenden Sie, wenn möglich, stattdessen eine Steuerelement Struktur. Weitere Informationen finden Sie unter [Ablauf Steuerung](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- Eine `GoTo`-Anweisung kann nicht verwendet werden, um außerhalb eines `For` zu verzweigen... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, 0... 1 oder 2... 3 Konstruktion in eine Bezeichnung in.  
+ You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
   
-## <a name="branching-and-try-constructions"></a>Verzweigungen und Versuchs Konstruktionen  
- Innerhalb einer `Try`... `Catch`... `Finally` Konstruktion gelten die folgenden Regeln für die Verzweigung mit der `GoTo`-Anweisung.  
+## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
+ Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
   
-|Block oder Region|Verzweigungen von außerhalb|Verzweigungen aus innerhalb|  
+|Block or region|Branching in from outside|Branching out from inside|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`-Block|Nur aus einem `Catch` Block desselben Baus <sup>1</sup>|Nur für die gesamte Konstruktion|  
-|`Catch`-Block|Nie zulässig|Nur für die gesamte Konstruktion oder den `Try` Block desselben Aufbaus <sup>1</sup>|  
-|`Finally`-Block|Nie zulässig|Nie zulässig|  
+|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
+|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
+|`Finally` block|Never allowed|Never allowed|  
   
- <sup>1</sup> , wenn ein `Try`... `Catch`... `Finally` Konstruktion in einer anderen geschachtelt ist, kann ein `Catch` Block in den `Try` Block auf der eigenen Schachtelungs Ebene, aber nicht in einen anderen `Try` Block verzweigen. Ein-`Try`... `Catch`... `Finally` Konstruktion muss vollständig in einem `Try` oder `Catch` Block der Konstruktion enthalten sein, in der Sie geschachtelt ist.  
+ <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
   
- Die folgende Abbildung zeigt eine `Try` in einer anderen geschachtelte Konstruktion. Verschiedene Verzweigungen zwischen den Blöcken der beiden Konstruktionen werden als gültig oder ungültig angegeben.  
+ The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
   
  ![Grafisches Diagramm der Verzweigung in Try-Konstrukten](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `GoTo`-Anweisung verwendet, um Zeilen Bezeichnungen in einer-Prozedur zu verzweigen.  
+ The following example uses the `GoTo` statement to branch to line labels in a procedure.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

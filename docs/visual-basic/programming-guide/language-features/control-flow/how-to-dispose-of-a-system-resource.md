@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Freigeben einer Systemressource (Visual Basic)'
+title: 'Gewusst wie: Freigeben einer Systemressource'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583146"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353941"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Gewusst wie: Freigeben einer Systemressource (Visual Basic)
-Sie können einen `Using`-Block verwenden, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block verlässt. Dies ist nützlich, wenn Sie eine System Ressource verwenden, die eine große Menge an Arbeitsspeicher beansprucht oder die andere Komponenten verwenden möchten.  
+You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>So löschen Sie eine Datenbankverbindung, wenn Ihr Code abgeschlossen ist  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
   
-1. Stellen Sie sicher, dass Sie die entsprechende [Imports-Anweisung (.NET-Namespace und-Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für die Datenbankverbindung am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlClient>) einschließen.  
+1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
   
-2. Erstellen Sie einen `Using`-Block mit den Anweisungen `Using` und `End Using`. Fügen Sie innerhalb des-Blocks den Code ein, der die Datenbankverbindung behandelt.  
+2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
   
-3. Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz davon als Teil der `Using`-Anweisung.  
+3. Declare the connection and create an instance of it as part of the `Using` statement.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ Sie können einen `Using`-Block verwenden, um sicherzustellen, dass das System e
     End Sub  
     ```  
   
-     Das System löscht die Ressource unabhängig davon, wie Sie den Block beenden, einschließlich der Groß-/Kleinschreibung einer nicht behandelten Ausnahme.  
+     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
   
-     Beachten Sie, dass Sie nicht von außerhalb des `Using` Blocks auf `sqc` zugreifen können, da der zugehörige Bereich auf den Block beschränkt ist.  
+     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
   
-     Sie können dieselbe Technik für eine System Ressource wie ein Datei Handle oder einen COM-Wrapper verwenden. Sie verwenden einen `Using` Block, wenn Sie sicher gehen möchten, dass die Ressource für andere Komponenten verfügbar ist, nachdem Sie den `Using`-Block verlassen haben.  
+     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
   
 ## <a name="see-also"></a>Siehe auch
 

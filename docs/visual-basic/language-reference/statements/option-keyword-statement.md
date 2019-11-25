@@ -1,23 +1,23 @@
 ---
-title: Option <keyword> Anweisung (Visual Basic)
+title: Option <keyword>-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac0116b56fac7a5bfdc6545c8570317376791a1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784019"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353773"
 ---
-# <a name="option-keyword-statement"></a>Option \<Schlüsselwort >-Anweisung
-Führt eine Anweisung, die eine Compileroption angibt, die für die gesamte Quelldatei gilt.  
+# <a name="option-keyword-statement"></a>Option \<keyword> Statement
+Introduces a statement that specifies a compiler option that applies to the entire source file.  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt an, ob alle Variablen explizit deklariert werden müssen, gibt an, ob einschränkende typkonvertierungen explizit sein muss und gibt an, ob Zeichenfolgen als Text oder als binärer Mengen verglichen werden sollen, können die Compiler-Optionen steuern.  
+ The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
   
  Das `Option`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
@@ -31,4 +31,4 @@ Führt eine Anweisung, die eine Compileroption angibt, die für die gesamte Quel
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)

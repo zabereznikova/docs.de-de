@@ -1,5 +1,5 @@
 ---
-title: Lebensdauer in Visual Basic
+title: Lebensdauer
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -10,66 +10,66 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917929"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345315"
 ---
 # <a name="lifetime-in-visual-basic"></a>Lebensdauer in Visual Basic
-Die *Lebensdauer* eines deklarierten Elements ist den Zeitraum, während die It für die Verwendung verfügbar ist. Variablen sind nur Elemente, die deren Lebensdauer. Zu diesem Zweck der Compiler behandelt Prozedurparameter, und Funktionsergebnis ist als spezielle Fälle von Variablen. Die Lebensdauer einer Variablen stellt die Zeitspanne, in dem sie einen Wert enthalten kann. Der Wert kann während seiner Lebensdauer ändern, aber sie enthält immer einen Wert.  
+The *lifetime* of a declared element is the period of time during which it is available for use. Variables are the only elements that have lifetime. For this purpose, the compiler treats procedure parameters and function returns as special cases of variables. The lifetime of a variable represents the period of time during which it can hold a value. Its value can change over its lifetime, but it always holds some value.  
   
-## <a name="different-lifetimes"></a>Unterschiedliche Lebensdauer  
- Ein *Membervariable* (auf Modulebene außerhalb einer Prozedur deklariert) in der Regel hat die gleiche Lebensdauer wie das Element in der sie deklariert ist. Eine nicht freigegebene Variable, die in einer Klasse oder Struktur deklariert ist vorhanden, als eine separate Kopie für jede Instanz der Klasse oder Struktur, die in der sie deklariert ist. Jede dieser Variablen hat die gleiche Lebensdauer wie die Instanz. Allerdings eine `Shared` Variable hat nur eine Lebensdauer, die für die gesamte Zeit in der Regel dauert die Anwendung ausgeführt wird.  
+## <a name="different-lifetimes"></a>Different Lifetimes  
+ A *member variable* (declared at module level, outside any procedure) typically has the same lifetime as the element in which it is declared. A nonshared variable declared in a class or structure exists as a separate copy for each instance of the class or structure in which it is declared. Each such variable has the same lifetime as its instance. However, a `Shared` variable has only a single lifetime, which lasts for the entire time your application is running.  
   
- Ein *lokale Variable* (innerhalb einer Prozedur deklariert) vorhanden ist, nur während der Ausführung der Prozedur, die in der sie deklariert ist. Dies gilt auch, um die Parameter der Prozedur und eine Funktion zurück. Wenn diese Prozedur anderen Prozeduren aufgerufen wird, behalten jedoch die lokalen Variablen ihre Werte während die aufgerufenen Verfahren ausgeführt werden.  
+ A *local variable* (declared inside a procedure) exists only while the procedure in which it is declared is running. This applies also to that procedure's parameters and to any function return. However, if that procedure calls other procedures, the local variables retain their values while the called procedures are running.  
   
-## <a name="beginning-of-lifetime"></a>Beginn der Lebensdauer  
- Lebensdauer einer lokalen Variablen beginnt, wenn es sich bei die Prozedur Eintritte in der sie deklariert ist. Jede lokale Variable auf den Standardwert für seinen Datentyp initialisiert wird, sobald das Verfahren beginnt ausgeführt wird. Wenn die Prozedur trifft eine `Dim` Anweisung, die ursprünglichen Werte gibt an, wird dieser Variablen auf die Werte, selbst wenn Ihr Code bereits andere Werte werden zugewiesen hat.  
+## <a name="beginning-of-lifetime"></a>Beginning of Lifetime  
+ A local variable's lifetime begins when control enters the procedure in which it is declared. Every local variable is initialized to the default value for its data type as soon as the procedure begins running. When the procedure encounters a `Dim` statement that specifies initial values, it sets those variables to those values, even if your code had already assigned other values to them.  
   
- Jedes Element einer Struktur-Variable wird initialisiert, als handele es sich um eine separate Variable. Auf ähnliche Weise wird jedes Element einer Arrayvariablen einzeln initialisiert werden.  
+ Each member of a structure variable is initialized as if it were a separate variable. Similarly, each element of an array variable is initialized individually.  
   
- Variablen, die in einem Block innerhalb einer Prozedur deklariert (z. B. eine `For` Schleife), die beim Einstieg in die Prozedur initialisiert werden. Diese Initialisierungen werden wirksam, und zwar unabhängig davon, ob Ihr Code den Block einmal ausgeführt wird.  
+ Variables declared within a block inside a procedure (such as a `For` loop) are initialized on entry to the procedure. These initializations take effect whether or not your code ever executes the block.  
   
-## <a name="end-of-lifetime"></a>Ende der Lebensdauer  
- Wenn eine Prozedur beendet wird, die Werte der zugehörigen lokalen Variablen werden nicht beibehalten, und Visual Basic gibt ihren Speicher frei. Beim nächsten der Prozedur aufrufen, alle zugehörigen lokalen Variablen neu erstellt und initialisiert.  
+## <a name="end-of-lifetime"></a>End of Lifetime  
+ When a procedure terminates, the values of its local variables are not preserved, and Visual Basic reclaims their memory. The next time you call the procedure, all its local variables are created afresh and reinitialized.  
   
- Wenn eine Instanz einer Klasse oder Struktur beendet wird, verlieren die nicht freigegebenen Variablen, deren Speicher und ihre Werte. Jede neue Instanz der Klasse oder Struktur erstellt und initialisiert seine nicht freigegebenen Variablen. Allerdings `Shared` Variablen werden beibehalten, bis die Anwendung beendet wird.  
+ When an instance of a class or structure terminates, its nonshared variables lose their memory and their values. Each new instance of the class or structure creates and reinitializes its nonshared variables. However, `Shared` variables are preserved until your application stops running.  
   
-## <a name="extension-of-lifetime"></a>Erweiterung der Lebensdauer  
- Wenn Sie eine lokale Variable mit deklarieren die `Static` -Schlüsselwort, seine Lebensdauer ist länger als die Ausführungszeit des Verfahrens. Die folgende Tabelle zeigt, wie wie lange der Prozedurdeklaration eine `Static` Variable vorhanden ist.  
+## <a name="extension-of-lifetime"></a>Extension of Lifetime  
+ If you declare a local variable with the `Static` keyword, its lifetime is longer than the execution time of its procedure. The following table shows how the procedure declaration determines how long a `Static` variable exists.  
   
-|Prozedurspeicherort und Freigabe|Beginnt die Lebensdauer der statische Variablen|Die Lebensdauer der statischen Variablen endet|  
+|Procedure location and sharing|Static variable lifetime begins|Static variable lifetime ends|  
 |------------------------------------|-------------------------------------|-----------------------------------|  
-|In einem Modul (standardmäßig freigegeben)|Beim ersten wird die Prozedur aufgerufen.|Wenn Ihre Anwendung nicht mehr ausgeführt|  
-|In einer Klasse `Shared` (der Prozedur ist nicht auf einen Instanzmember)|Beim ersten der Prozedur auf eine bestimmte Instanz oder auf die Klasse oder Struktur aufrufen Namens der Speichermomentaufnahme|Wenn Ihre Anwendung nicht mehr ausgeführt|  
-|In einer Instanz einer Klasse nicht `Shared` (Prozedur ist ein Instanzmember)|Beim ersten wird die Prozedur auf die jeweilige Instanz aufgerufen.|Wenn die Instanz für die Garbagecollection (GC) freigegeben wird|  
+|In a module (shared by default)|The first time the procedure is called|When your application stops running|  
+|In a class, `Shared` (procedure is not an instance member)|The first time the procedure is called either on a specific instance or on the class or structure name itself|When your application stops running|  
+|In an instance of a class, not `Shared` (procedure is an instance member)|The first time the procedure is called on the specific instance|When the instance is released for garbage collection (GC)|  
   
-## <a name="static-variables-of-the-same-name"></a>Statische Variablen mit dem gleichen Namen  
- Sie können statische Variablen mit dem gleichen Namen in mehr als eine Prozedur deklarieren. Wenn Sie dies tun, berücksichtigt Visual Basic-Compiler jede dieser Variablen, die als separates Element auf. Die Initialisierung von einer dieser Variablen wirkt sich nicht auf die Werte der anderen aus. Dasselbe gilt, wenn Sie eine Prozedur mit einem Satz von Überladungen definieren und deklarieren Sie eine statische Variable mit dem gleichen Namen in jeder Überladung.  
+## <a name="static-variables-of-the-same-name"></a>Static Variables of the Same Name  
+ You can declare static variables with the same name in more than one procedure. If you do this, the Visual Basic compiler considers each such variable to be a separate element. The initialization of one of these variables does not affect the values of the others. The same applies if you define a procedure with a set of overloads and declare a static variable with the same name in each overload.  
   
-## <a name="containing-elements-for-static-variables"></a>Die Elemente für statische Variablen enthält.  
- Sie können eine statische lokale Variable innerhalb einer Klasse, d. h. innerhalb einer Prozedur in dieser Klasse deklarieren. Sie können nicht jedoch eine statische lokale Variable in einer Struktur als einen Strukturmember oder als lokale Variable einer Prozedur innerhalb dieser Struktur deklarieren.  
+## <a name="containing-elements-for-static-variables"></a>Containing Elements for Static Variables  
+ You can declare a static local variable within a class, that is, inside a procedure in that class. However, you cannot declare a static local variable within a structure, either as a structure member or as a local variable of a procedure within that structure.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel deklariert eine Variable mit dem [statische](../../../../visual-basic/language-reference/modifiers/static.md) Schlüsselwort. (Beachten Sie, die Sie nicht benötigen die `Dim` Schlüsselwort bei der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) verwendet einen Modifizierer, z. B. `Static`.)  
+ The following example declares a variable with the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword. (Note that you do not need the `Dim` keyword when the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) uses a modifier such as `Static`.)  
   
 ### <a name="code"></a>Code  
  [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Kommentare  
- Im vorherigen Beispiel, die Variable `applesSold` bleibt nach dem Verfahren `runningTotal` an den aufrufenden Code zurückgibt. Das nächste Mal `runningTotal` aufgerufen wird, `applesSold` behält den zuvor berechneten Wert.  
+ In the preceding example, the variable `applesSold` continues to exist after the procedure `runningTotal` returns to the calling code. The next time `runningTotal` is called, `applesSold` retains its previously calculated value.  
   
- Wenn `applesSold` deklariert wurde ohne `Static`, die gesammelten Werte nicht über Aufrufe hinweg beibehalten werden würde `runningTotal`. Das nächste Mal `runningTotal` aufgerufen wurde, `applesSold` wird neu erstellt und mit 0 (null) initialisiert wurden und `runningTotal` einfach zurückgegeben hätte den gleichen Wert, mit denen er aufgerufen wurde.  
+ If `applesSold` had been declared without using `Static`, the previous accumulated values would not be preserved across calls to `runningTotal`. The next time `runningTotal` was called, `applesSold` would have been recreated and initialized to 0, and `runningTotal` would have simply returned the same value with which it was called.  
   
 ### <a name="compiling-the-code"></a>Kompilieren des Codes  
- Sie können den Wert einer statischen lokalen Variablen als Teil der Deklaration initialisieren. Wenn Sie ein Array sein deklarieren `Static`, Sie können sein Rang (Anzahl der Dimensionen), die Länge jeder Dimension, und die Werte der einzelnen Elemente initialisieren.  
+ You can initialize the value of a static local variable as part of its declaration. If you declare an array to be `Static`, you can initialize its rank (number of dimensions), the length of each dimension, and the values of the individual elements.  
   
 ### <a name="security"></a>Sicherheit  
- Im vorherigen Beispiel können Sie die gleiche Lebensdauer erzeugen, indem deklarieren `applesSold` auf Modulebene. Wenn Sie den Bereich einer Variablen auf diese Weise geändert, jedoch müsste die Prozedur nicht mehr exklusiven Zugriff darauf. Da andere Prozeduren zugegriffen werden konnte `applesSold` und ändern Sie seinen Wert, die laufende Summe ist möglicherweise unzuverlässig und der Code möglicherweise schwieriger zu warten.  
+ In the preceding example, you can produce the same lifetime by declaring `applesSold` at module level. If you changed the scope of a variable this way, however, the procedure would no longer have exclusive access to it. Because other procedures could access `applesSold` and change its value, the running total could be unreliable and the code could be more difficult to maintain.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -77,8 +77,8 @@ Die *Lebensdauer* eines deklarierten Elements ist den Zeitraum, während die It 
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

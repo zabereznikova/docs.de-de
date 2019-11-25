@@ -1,5 +1,5 @@
 ---
-title: Namen deklarierter Elemente (Visual Basic)
+title: Declared Element Names
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -23,36 +23,36 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 0ace2b13473db30a4500648a67f6ce34edf3e587
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e8620517b934a5f1a97ea25c5a94c8b932bb47b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197563"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345432"
 ---
 # <a name="declared-element-names-visual-basic"></a>Namen deklarierter Elemente (Visual Basic)
-Jedes deklarierte Element weist einen Namen auf, der auch als *Bezeichner*bezeichnet wird. Dies ist der Inhalt, den der Code verwendet, um darauf zu verweisen.  
+Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.  
   
 ## <a name="rules"></a>Regeln  
- Für einen Elementnamen in Visual Basic müssen die folgenden Regeln beachtet werden:  
+ An element name in Visual Basic must observe the following rules:  
   
-- Er muss mit einem alphabetischen Zeichen oder einem Unterstrich (`_`) beginnen.  
+- It must begin with an alphabetic character or an underscore (`_`).  
   
-- Sie darf nur alphabetische Zeichen, Dezimalziffern und Unterstriche enthalten.  
+- It must only contain alphabetic characters, decimal digits, and underscores.  
   
-- Er muss mindestens ein alphabetisches Zeichen oder eine Dezimal Ziffer enthalten, wenn er mit einem Unterstrich beginnt.  
+- It must contain at least one alphabetic character or decimal digit if it begins with an underscore.  
   
-- Er darf nicht mehr als 1023 Zeichen lang sein.  
+- It must not be more than 1023 characters long.  
   
- Die Längen Beschränkung von 1023 Zeichen gilt auch für die gesamte Zeichenfolge eines voll qualifizierten Namens, z. b. `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
+ The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
- Das folgende Beispiel zeigt einige gültige Elementnamen.  
+ The following example shows some valid element names.  
   
  `aB123__45`  
   
  `_567`  
   
- Das folgende Beispiel zeigt einige ungültige Elementnamen. Der erste enthält nur einen Unterstrich, der zweite beginnt mit einer Dezimal Ziffer, das dritte enthält ein ungültiges Zeichen ($).  
+ The following example shows some invalid element names. The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).  
   
  `' Three INVALID element names`  
   
@@ -63,31 +63,31 @@ Jedes deklarierte Element weist einen Namen auf, der auch als *Bezeichner*bezeic
  `xyz$wv`  
   
 > [!CAUTION]
-> Element Namen, die mit einem Unterstrich (`_`) beginnen, sind nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../../standard/language-independence-and-language-independent-components.md) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die solche Namen definiert. Ein Unterstrich an einer beliebigen anderen Position in einem Elementnamen ist jedoch CLS-kompatibel.  
+> Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names. However, an underscore in any other position in an element name is CLS-compliant.  
   
-### <a name="name-length-guidelines"></a>Namens Längen Richtlinien  
- Als praktische Angelegenheit sollte Ihr Name so kurz wie möglich sein, während er die Art des Elements eindeutig identifiziert. Dadurch wird die Lesbarkeit des Codes verbessert, und die Zeilen-und Quelldatei Größe wird reduziert.  
+### <a name="name-length-guidelines"></a>Name Length Guidelines  
+ As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
   
- Auf der anderen Seite sollte Ihr Name nicht so kurz sein, dass er nicht genau beschreibt, was das Element darstellt und wie der Code es verwendet. Dies ist wichtig für die Lesbarkeit des Codes. Wenn eine andere Person versucht, dies zu verstehen, oder wenn Sie sich nach dem verfassen einen langen Zeitraum ansehen, können geeignete Elementnamen einen beträchtlichen Zeitraum sparen.  
+ On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.  
   
-## <a name="escaped-names"></a>Namens Escapezeichen  
- Im Allgemeinen darf ein Elementname keinem der Schlüsselwörter entsprechen, die von Visual Basic reserviert sind, z. b. `Case` oder `Friend`. Sie können jedoch einen *Namen*mit Escapezeichen definieren, der in eckige Klammern (`[ ]`) eingeschlossen ist. Ein Name mit Escapezeichen kann mit einem beliebigen Visual Basic Schlüsselwort identisch sein, da die Klammern jegliche Mehrdeutigkeit Sie verwenden die Klammern auch, wenn Sie später in Ihrem Code auf den Namen verweisen.  
+## <a name="escaped-names"></a>Escaped Names  
+ Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`. However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`). An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity. You also use the brackets when you refer to the name later in your code.  
   
- Im Allgemeinen sollten Sie Namen mit Escapezeichen nur dann verwenden, wenn:  
+ In general, you should use escaped names only when:  
   
-- Der Code wurde von einer früheren Version von Visual Basic migriert, die das Schlüsselwort nicht als Name reserviert hat. noch  
+- Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or  
   
-- Sie arbeiten mit Code, der in einer anderen Sprache geschrieben ist, in der das angegebene Schlüsselwort nicht reserviert ist.  
+- You are working with code written in another language in which the given keyword is not reserved.  
   
- Andernfalls sollten Sie das Umbenennen des Elements in Erwägung gezogen, wenn der Name mit einem Schlüsselwort in Konflikt steht. Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) bietet eine einfache Möglichkeit, dies zu erreichen. Weitere Informationen finden Sie unter [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
+ Otherwise, you should consider renaming the element if its name conflicts with a keyword. The integrated development environment (IDE) provides an easy way to do this. For more information, see [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
   
-## <a name="case-sensitivity-in-names"></a>Groß-/Kleinschreibung in Namen  
- Bei Element Namen in Visual Basic wird Groß-/Kleinschreibung nicht beachtet. Dies bedeutet Folgendes: Wenn der Compiler zwei Namen vergleicht, die sich nur in alphabetischer Schreibweise unterscheiden, interpretiert er Sie als denselben Namen. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
+## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
+ Element names in Visual Basic are case-insensitive. This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
   
- Der Common Language Runtime (CLR) verwendet jedoch die Groß-/Kleinschreibung. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC`definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC`verweisen. Wenn Sie danach die Klasse erneut kompilieren und den Namen des Elements in `abc`ändern, können die anderen Assemblys, die Ihre Klasse verwenden, nicht mehr auf dieses Element zugreifen. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß-/Kleinschreibung öffentlicher Elemente nicht ändern.  
+ However, the common language runtime (CLR) uses case-sensitive binding. Wenn Sie also eine Assembly oder DLL erstellen und für andere Assemblys verfügbar machen, wird bei Ihren Namen Groß-und Kleinschreibung unterschieden. Wenn Sie z. B. eine Klasse mit einem Element namens `ABC`definieren, müssen andere Assemblys, die die Klasse über die Common Language Runtime verwenden, auf das Element als `ABC`verweisen. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element. Wenn Sie also eine aktualisierte Version einer Assembly herausgeben, sollten Sie die Groß-/Kleinschreibung öffentlicher Elemente nicht ändern.  
   
-## <a name="names-and-locales"></a>Namen und Gebiets Schemas  
- Der Vergleich von Namen ist unabhängig vom Gebiets Schema. Wenn zwei Namen in einem Gebiets Schema vorliegen, entsprechen Sie garantiert allen Gebiets Schemas.  
+## <a name="names-and-locales"></a>Names and Locales  
+ Comparison of names is independent of locale. If two names match in one locale, they are guaranteed to match in all locales.  
   
 ## <a name="see-also"></a>Siehe auch
 

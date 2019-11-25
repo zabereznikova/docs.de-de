@@ -1,17 +1,17 @@
 ---
-title: 'Operatoren: Zusammenfassung (Visual Basic)'
+title: 'Operatoren: Zusammenfassung'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], about operators [Visual Basic]
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: 3fbb8dd0dafb0d16531f13280a2033e4f085897f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7de9fbce0bce775fb2e50b3e0bdf913cf7e9be73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801282"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351669"
 ---
 # <a name="operators-summary-visual-basic"></a>Operatoren: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -27,5 +27,5 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -1,15 +1,15 @@
 ---
-title: My.Computer.Keyboard-Objekt (Visual Basic)
+title: My.Computer.Keyboard-Objekt
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
-ms.openlocfilehash: 19e2780d526c0ae37d6577aef25a5a4940005cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41b1fb1f9f358463d17fcb95ee85c09272e3832d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751448"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347196"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard-Objekt
 Stellt Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur bereit, z.B. welche Tasten werden gerade gedrückt? Außerdem bietet es eine Methode, mit der Sie Tastatureingaben an ein aktives Fenster schicken können.  

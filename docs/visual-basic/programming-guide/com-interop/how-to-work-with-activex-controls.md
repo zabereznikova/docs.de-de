@@ -1,39 +1,39 @@
 ---
-title: 'Vorgehensweise: Arbeiten mit ActiveX-Steuerelementen (Visual Basic)'
+title: 'Gewusst wie: Verwenden von ActiveX-Steuerelementen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: f46459615430dc61ff5cb9fcbde5ae568fce31af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c41d30582b8c2d3f7fa63c7b75046ab3e65fa390
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969341"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353218"
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a>Vorgehensweise: Arbeiten mit ActiveX-Steuerelementen (Visual Basic)
-ActiveX-Steuerelemente sind COM-Komponenten oder Objekte, die Sie in eine Webseite oder eine andere Anwendung einfügen können, um die von einem anderen Benutzer programmierten Funktionen wiederzuverwenden. Sie können ActiveX-Steuerelemente verwenden, die für Visual Basic 6,0 und frühere Versionen entwickelt wurden, um der **Toolbox** von Visual Studio Funktionen hinzuzufügen.  
+# <a name="how-to-work-with-activex-controls-visual-basic"></a>Gewusst wie: Verwenden von ActiveX-Steuerelementen (Visual Basic)
+ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>So fügen Sie der Toolbox ActiveX-Steuerelemente hinzu  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
   
-1. Klicken Sie im Menü Extras auf **Toolbox Elemente auswählen**.  
+1. On the **Tools** menu, click **Choose Toolbox Items**.  
   
-     Das Dialogfeld **Toolbox auswählen** wird angezeigt.  
+     The **Choose Toolbox** dialog box appears.  
   
-2. Klicken Sie auf die Registerkarte **com-Komponenten** .  
+2. Click the **COM Components** tab.  
   
-3. Aktivieren Sie das Kontrollkästchen neben dem ActiveX-Steuerelement, das Sie verwenden möchten, und klicken Sie dann auf **OK**.  
+3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
   
-     Das neue Steuerelement wird mit den anderen Tools in der **Toolbox**angezeigt.  
+     The new control appears with the other tools in the **Toolbox**.  
   
     > [!NOTE]
-    > Sie können das Hilfsprogramm Aximp verwenden, um manuell eine Interop-Assembly für ActiveX-Steuerelemente zu erstellen. Weitere Informationen finden Sie unter [Aximp. exe (Windows Forms ActiveX-Steuerelement Import Programm)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Vorgehensweise: ActiveX-Steuerelemente zu Windows Forms hinzufügen](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Windows Forms ActiveX Control Importer-Tool)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
