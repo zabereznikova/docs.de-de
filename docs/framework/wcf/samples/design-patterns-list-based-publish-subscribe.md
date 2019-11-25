@@ -1,15 +1,15 @@
 ---
-title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren'
+title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen-Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928838"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978211"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren
+# <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen-Abonnieren
 Dieses Beispiel veranschaulicht das Listen basierte Veröffentlichen-Abonnieren-Muster, das als Windows Communication Foundation (WCF)-Programm implementiert ist.  
   
 > [!NOTE]
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Der Dienst verwendet ein .NET Framework-Ereignis als Mechanismus, um alle Abonnenten über neue Informationen zu informieren. Wenn ein Client dem Dienst beitritt, indem er Subscribe aufruft, wird ein Ereignishandler bereitgestellt. Wenn ein Client den Dienst verlässt, wird sein Ereignishandler von dem Ereignis entfernt. Wenn eine Datenquelle den Dienst aufruft, um eine Preisänderung mitzuteilen, löst der Dienst das Ereignis aus. Daraufhin wird jede Instanz des Diensts aufgerufen, eine für jeden Client mit einem Abonnement, und die Ereignishandler werden ausgeführt. Jeder Ereignishandler übermittelt die Informationen über seine Rückruffunktion an seinen Client.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -118,9 +118,9 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1. Überprüfen Sie, ob Sie über einen Browser auf den Dienst zugreifen können, indem `http://localhost/servicemodelsamples/service.svc`Sie die folgende Adresse eingeben:. Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
+1. Überprüfen Sie, ob Sie über einen Browser auf den Dienst zugreifen können, indem Sie die folgende Adresse eingeben: `http://localhost/servicemodelsamples/service.svc`. Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
   
-2. Führen Sie "Client. exe" aus dem\\Ordner "\client\bin" unter dem sprachspezifischen Ordner aus. Im Clientkonsolenfenster wird die Clientaktivität angezeigt. Starten Sie mehrere Clients.  
+2. Führen Sie "Client. exe" aus dem Ordner "\client\bin\\" unter dem sprachspezifischen Ordner aus. Im Clientkonsolenfenster wird die Clientaktivität angezeigt. Starten Sie mehrere Clients.  
   
 3. Führen Sie "DataSource. exe" aus "\datasource\bin\\" unter dem sprachspezifischen Ordner aus. Die Datenquellenaktivität wird im Konsolenfenster angezeigt. Sobald die Datenquelle Informationen an den Dienst sendet, sollten diese an jeden Client übergeben werden.  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

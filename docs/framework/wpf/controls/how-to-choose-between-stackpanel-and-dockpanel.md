@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Auswählen von StackPanel oder DockPanel'
+title: 'Gewusst wie: Auswählen von StackPanel oder DockPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdf4b38e67a7856136224368e86609c135e5ad6f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911239"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976441"
 ---
-# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Vorgehensweise: Auswählen von StackPanel oder DockPanel
-Dieses Beispiel zeigt die Auswahl zwischen der Verwendung einer <xref:System.Windows.Controls.StackPanel> oder ein <xref:System.Windows.Controls.DockPanel> Wenn Sie Inhalte in Stapeln eine <xref:System.Windows.Controls.Panel>.  
-  
-## <a name="example"></a>Beispiel  
- Sie können zwar entweder verwenden <xref:System.Windows.Controls.DockPanel> oder <xref:System.Windows.Controls.StackPanel> zum Stapeln von untergeordneten Elementen, die beiden Steuerelemente immer erzeugen nicht die gleichen Ergebnisse. Z. B. die Reihenfolge, in der untergeordneten Elemente kann Auswirkungen auf die Größe von untergeordneten Elementen in einem <xref:System.Windows.Controls.DockPanel> jedoch nicht in einer <xref:System.Windows.Controls.StackPanel>. Dieses unterschiedliche Verhalten tritt auf, weil <xref:System.Windows.Controls.StackPanel> Measures in der Richtung des Stapels bei <xref:System.Double>.<xref:System.Double.PositiveInfinity>jedoch <xref:System.Windows.Controls.DockPanel> misst nur die verfügbare Größe.  
-  
- Das folgende Beispiel veranschaulicht diese unterscheiden sich hauptsächlich <xref:System.Windows.Controls.DockPanel> und <xref:System.Windows.Controls.StackPanel>.  
-  
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Gewusst wie: Auswählen von StackPanel oder DockPanel
+Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Controls.StackPanel> oder eine <xref:System.Windows.Controls.DockPanel> auswählen, wenn Sie Inhalte in einem <xref:System.Windows.Controls.Panel>stapeln.
+
+## <a name="example"></a>Beispiel
+ Obwohl Sie entweder <xref:System.Windows.Controls.DockPanel> oder <xref:System.Windows.Controls.StackPanel> verwenden können, um untergeordnete Elemente zu stapeln, werden die beiden-Steuerelemente nicht immer dieselben Ergebnisse erzielen. Beispielsweise kann sich die Reihenfolge, in der Sie untergeordnete Elemente platzieren, auf die Größe der untergeordneten Elemente in einem <xref:System.Windows.Controls.DockPanel>, aber nicht in einem <xref:System.Windows.Controls.StackPanel>auswirken. Dieses unterschiedliche Verhalten tritt auf, weil <xref:System.Windows.Controls.StackPanel> Measures in der stapelweise bei [Double. positivabfinity](xref:System.Double.PositiveInfinity); <xref:System.Windows.Controls.DockPanel> misst jedoch nur die verfügbare Größe.
+
+ Im folgenden Beispiel wird dieser Hauptunterschied zwischen <xref:System.Windows.Controls.DockPanel> und <xref:System.Windows.Controls.StackPanel>veranschaulicht.
+
  [!code-cpp[StackPanelOvw4#1](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
  [!code-csharp[StackPanelOvw4#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
  [!code-vb[StackPanelOvw4#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
-  
+ [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.StackPanel>

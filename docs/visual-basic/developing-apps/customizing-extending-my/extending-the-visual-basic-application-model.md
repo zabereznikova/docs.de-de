@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582766"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976865"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Erweitern des Visual Basic-Anwendungsmodells
 
@@ -79,9 +79,10 @@ Wenn es sich bei der Anwendung um eine normale Anwendung (multiinstanzanwendung)
 
  Wenn die Anwendung eine Einzelinstanzanwendung ist und die Anwendung bereits ausgeführt wird, ruft die nachfolgende Instanz der Anwendung die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>-Methode für die ursprüngliche Instanz der Anwendung auf und wird dann beendet.
 
- Der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>-Konstruktor ruft die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>-Eigenschaft auf, um zu bestimmen, welche textrenderingengine für die Anwendungs Formulare verwendet werden soll. Standardmäßig gibt die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>-Eigenschaft `False` zurück, die angibt, dass das GDI-textrenderingmodul verwendet werden soll. Dies ist die Standardeinstellung in Visual Basic 2005 und höheren Versionen. Sie können die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>-Eigenschaft überschreiben, um `True` zurückzugeben. Dies bedeutet, dass das GDI+-textrenderingmodul verwendet wird. Dies ist die Standardeinstellung in Visual Basic .NET 2002 und Visual Basic .NET 2003.
+ Der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>-Konstruktor ruft die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>-Eigenschaft auf, um zu bestimmen, welche textrenderingengine für die Anwendungs Formulare verwendet werden soll. Standardmäßig gibt die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>-Eigenschaft `False`zurück, die angibt, dass das GDI-textrenderingmodul verwendet werden soll. Dies ist die Standardeinstellung in Visual Basic 2005 und höheren Versionen. Sie können die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>-Eigenschaft überschreiben, um `True`zurückzugeben. Dies bedeutet, dass das GDI+-textrenderingmodul verwendet wird. Dies ist die Standardeinstellung in Visual Basic .NET 2002 und Visual Basic .NET 2003.
 
 ## <a name="configuring-the-application"></a>Konfigurieren der Anwendung
+
  Im Rahmen des Visual Basic Anwendungs Modells stellt die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>-Klasse geschützte Eigenschaften bereit, die die Anwendung konfigurieren. Diese Eigenschaften sollten im Konstruktor der implementierenden Klasse festgelegt werden.
 
  In einem Standard Windows Forms Projekt erstellt der **Projekt-Designer** Code, um die Eigenschaften mit den Designer Einstellungen festzulegen. Die Eigenschaften werden nur verwendet, wenn die Anwendung gestartet wird. Wenn Sie diese nach dem Start der Anwendung festlegen, hat dies keine Auswirkungen.

@@ -2,12 +2,12 @@
 title: Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: c5712467cdebb854d09cb55c29878cb8b553f271
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: af859d9ad8ac69bfe636384832f0fb62e0771b48
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047100"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448399"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 <xref:System.Net.WebRequest> und die abgeleiteten Klassen (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FileWebRequest>) lösen Ausnahmen aus, um einen nicht ordnungsgemäßen Zustand zu signalisieren. In einigen Fällen ist die Lösung dieser Probleme nicht offensichtlich.  
@@ -26,7 +26,7 @@ ms.locfileid: "71047100"
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|Die Anwendung hat versucht, auf ein Socket zu schreiben, das bereits geschlossen wurde.|Der Client oder Server ist überlastet. Verringern Sie die Auslastung.<br /><br /> Erhöhen Sie die <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>-Einstellung.<br /><br /> Weitere Informationen zum Ändern der Leistungseinstellungen des Webdiensts finden Sie unter <https://support.microsoft.com/?id=821268>.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|Der festgelegte Grenzwert (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>) für die Nachrichtenlänge wurde überschritten.|Vergrößern Sie den Wert der <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>-Eigenschaft.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Der Domain Name Service konnte den Proxyhostnamen nicht auflösen.|Konfigurieren Sie den Proxy ordnungsgemäß. Siehe <https://support.microsoft.com/?id=318140>.<br /><br /> Zwingen Sie <xref:System.Net.HttpWebRequest> hierfür kein Proxy zu verwenden, indem Sie die <xref:System.Net.HttpWebRequest.Proxy%2A>-Eigenschaft auf `null` festlegen.|  
-|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Die Serverantwort ist eine ungültige HTTP-Antwort. Dieses Problem tritt auf, wenn .NET Framework erkennt, dass die Serverantwort nicht mit HTTP 1.1 RFC übereinstimmt. Dieses Problem kann auftreten, wenn die Antwort falsche Header oder falsche Headertrennzeichen enthält. RFC 2616 definiert HTTP 1.1 und gültige Formate für die Serverantwort. Weitere Informationen finden Sie unter [RFC 2616 –Hypertext Transfer-Protokoll – HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) auf der Webseite der [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Führen Sie eine Ablaufverfolgung im Netzwerk der Transaktion aus, und untersuchen Sie die Header in der Antwort.<br /><br /> Wenn Ihre Anwendung eine Serverantwort ohne Analyse erfordert (dies kann ein Sicherheitsproblem sein), dann legen Sie `useUnsafeHeaderParsing` in der Konfigurationsdatei auf `true` fest. Weitere Informationen finden Sie unter [\<HttpWebRequest>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Die Serverantwort ist eine ungültige HTTP-Antwort. Dieses Problem tritt auf, wenn .NET Framework erkennt, dass die Serverantwort nicht mit HTTP 1.1 RFC übereinstimmt. Dieses Problem kann auftreten, wenn die Antwort falsche Header oder falsche Headertrennzeichen enthält. RFC 2616 definiert HTTP 1.1 und gültige Formate für die Serverantwort. Weitere Informationen finden Sie unter [RFC 2616 –Hypertext Transfer-Protokoll – HTTP/1.1](https://tools.ietf.org/html/rfc2616) auf der Webseite der [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Führen Sie eine Ablaufverfolgung im Netzwerk der Transaktion aus, und untersuchen Sie die Header in der Antwort.<br /><br /> Wenn Ihre Anwendung eine Serverantwort ohne Analyse erfordert (dies kann ein Sicherheitsproblem sein), dann legen Sie `useUnsafeHeaderParsing` in der Konfigurationsdatei auf `true` fest. Weitere Informationen finden Sie unter [\<HttpWebRequest>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Siehe auch
 

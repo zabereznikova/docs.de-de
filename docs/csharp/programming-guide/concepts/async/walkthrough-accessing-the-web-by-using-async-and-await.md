@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195650"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281785"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)
 
@@ -46,7 +46,7 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie [Asynchron
 
 4. Markieren Sie das **TextBox**-Steuerelement, und legen Sie im Fenster **Eigenschaften** die folgenden Werte fest:
 
-    - Legen Sie die Eigenschaft **Name** auf `resultsTextBox` fest.
+    - Legen Sie die Eigenschaft **Name**auf `resultsTextBox` fest.
 
     - Legen Sie die Eigenschaft **Height** auf „250“ fest.
 
@@ -254,7 +254,7 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
      Durch den Aufruf von `webReq.GetResponseAsync` wird `Task(Of WebResponse)` oder `Task<WebResponse>` zurückgegeben. Anschließend wird ein await-Operator auf die Aufgabe angewendet, um den `WebResponse`-Wert abzurufen.
 
-     Wenn Ihre asynchrone Methode Aktionen vornehmen muss, die nicht von der Fertigstellung der Aufgabe abhängen, kann die Methode diese Aktionen zwischen zwei Anweisungen fortsetzen, und zwar nach dem Aufruf der asynchronen Methode und vor dem Anwenden des `await`-Operators. Beispiele hierzu finden Sie unter [Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) und [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Wenn Ihre asynchrone Methode Aktionen vornehmen muss, die nicht von der Fertigstellung der Aufgabe abhängen, kann die Methode diese Aktionen zwischen zwei Anweisungen fortsetzen, und zwar nach dem Aufruf der asynchronen Methode und vor dem Anwenden des `await`-Operators. Beispiele finden Sie unter [How to make multiple web requests in parallel by using async and await (C#) (Vorgehensweise: Gleichzeitiges Erstellen von mehreren Webanforderungen mit „Async“ und „Await“ (C#))](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) und [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 3. Da Sie den Operator `await` im vorherigen Schritt hinzugefügt haben, tritt ein Compilerfehler auf. Der Operator kann nur in Methoden verwendet werden, die mit dem Modifizierer [async](../../../language-reference/keywords/async.md) markiert sind. Ignorieren Sie den Fehler, während Sie die Konvertierungsschritte zum Ersetzen des Aufrufs von `CopyTo` mit einem Aufruf von `CopyToAsync` wiederholen.
 
@@ -690,7 +690,7 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Async Sample: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)

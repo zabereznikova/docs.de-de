@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119216"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088081"
 ---
 # <a name="app-settings-schema"></a>Schema für App-Einstellungen
 
 Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung.
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
 | Element | Beschreibung |

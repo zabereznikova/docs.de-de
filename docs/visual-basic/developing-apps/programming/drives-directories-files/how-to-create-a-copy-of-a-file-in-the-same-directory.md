@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Kopie einer Datei im gleichen Ordner in Visual Basic'
+title: 'Vorgehensweise: Erstellen einer Kopie einer Datei im gleichen Verzeichnis'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 747d985cbd9e2f2cc7f9b07f5723455a63a87b8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629084"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348822"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Vorgehensweise: Erstellen einer Kopie einer Datei im gleichen Ordner in Visual Basic
+
 Verwenden Sie die `My.Computer.FileSystem.CopyFile`-Methode, um die Dateien zu kopieren. Die Parameter der Methode bieten die Möglichkeit, vorhandene Dateien zu überschreiben, die Datei umzubenennen, den Fortschritt des Vorgangs anzuzeigen sowie den Benutzer zu erlauben, den Vorgang abzubrechen.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Erstellen einer Kopie einer Datei im gleichen Ordner  
@@ -32,6 +33,7 @@ Verwenden Sie die `My.Computer.FileSystem.CopyFile`-Methode, um die Dateien zu k
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können eine Ausnahme auslösen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  

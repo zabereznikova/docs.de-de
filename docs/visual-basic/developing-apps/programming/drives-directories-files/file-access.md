@@ -1,5 +1,5 @@
 ---
-title: Dateizugriff mit Visual Basic
+title: Dateizugriff
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583304"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348900"
 ---
 # <a name="file-access-with-visual-basic"></a>Dateizugriff mit Visual Basic
+
 Das `My.Computer.FileSystem`-Objekt bietet Tools zum Arbeiten mit Dateien und Ordnern. Seine Eigenschaften, Methoden und Ereignisse erlauben es Ihnen, Dateien und Ordner zu erstellen, zu kopieren, zu verschieben, zu untersuchen und zu löschen. `My.Computer.FileSystem` bietet eine bessere Leistung als die von Visual Basic bereitgestellten älteren Funktionen (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` usw.), um Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Listet Themen im Zusammenhang mit der Verwendung des `My.Computer.FileSystem`-Objekts zum Lesen aus Dateien auf  
   

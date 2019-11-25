@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Lesen von Binärdateien in Visual Basic'
+title: 'Vorgehensweise: Lesen aus Binärdateien'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623722"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335292"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Vorgehensweise: Lesen von Binärdateien in Visual Basic
+
 Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen von Binärdateien.  
   
 ### <a name="to-read-from-a-binary-file"></a>Lesen aus einer Binärdatei  
@@ -28,6 +29,7 @@ Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen 
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können eine Ausnahme auslösen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Es handelt sich um eine Zeichenfolge der Länge 0, der Pfad enthält nur Leerzeichen, er enthält ungültige Zeichen, oder es handelt sich um einen Gerätepfad (<xref:System.ArgumentException>).  

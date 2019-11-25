@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771722"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428435"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren: C#-Referenz
 
-Mit den folgenden Operatoren werden bitweise oder Schiebeoperationen mit Operanden durchgeführt, die [integrale Typen](../builtin-types/integral-numeric-types.md) aufweisen:
+Mit den folgenden Operatoren werden bitweise oder Verschiebevorgänge mit Operanden durchgeführt, die [integrale numerische Typen](../builtin-types/integral-numeric-types.md) oder den [char](../builtin-types/char.md)-Typ aufweisen:
 
 - Unärer Operator [`~` (bitweises Komplement)](#bitwise-complement-operator-)
 - Binäre Schiebeoperatoren [`<<` (Linksverschiebung)](#left-shift-operator-) und [`>>` (Rechtsverschiebung)](#right-shift-operator-)
@@ -46,7 +46,7 @@ Mit den folgenden Operatoren werden bitweise oder Schiebeoperationen mit Operand
 
 Diese Operatoren werden für die Typen `int`, `uint`, `long` und `ulong` definiert. Wenn beide Operanden andere integrale Typen aufweisen (`sbyte`, `byte`, `short`, `ushort` oder `char`), werden ihre Werte in den Typ `int` konvertiert. Hierbei handelt es sich auch um den Ergebnistyp einer Operation. Wenn die Operanden abweichende integrale Typen aufweisen, werden ihre Werte in den enthaltenden integralen Typ konvertiert, der am besten geeignet ist. Weitere Informationen finden Sie im Abschnitt [Numerische Heraufstufungen](~/_csharplang/spec/expressions.md#numeric-promotions) der [Spezifikation für die Sprache C#](~/_csharplang/spec/introduction.md).
 
-Die Operatoren `&`, `|` und `^` werden auch für die Operanden des Typs `bool` definiert. Weitere Informationen finden Sie unter [Logische boolesche Operatoren](boolean-logical-operators.md).
+Die Operatoren `&`, `|` und `^` werden auch für Operanden des `bool`-Typs definiert. Weitere Informationen finden Sie unter [Logische boolesche Operatoren](boolean-logical-operators.md).
 
 Bitweise und Schiebeoperationen verursachen niemals Überläufe und führen sowohl in [geprüften als auch in ungeprüften](../keywords/checked-and-unchecked.md) Kontexten zu identischen Ergebnissen.
 
@@ -82,11 +82,11 @@ Bei der Operation zum Verschieben nach rechts werden die niedrigen Bits verworfe
 
 Die höheren leeren Bitpositionen werden basierend auf dem Typ des linken Operanden wie folgt festgelegt:
 
-- Wenn der linke Operand vom Typ [int](../builtin-types/integral-numeric-types.md) oder [long](../builtin-types/integral-numeric-types.md) ist, führt der Operator zur Rechtsverschiebung eine *arithmetische* Verschiebung durch: Der Wert des Bits mit dem höchsten Stellenwert (MSB, „most significant bit“) des linken Operanden wird auf die hohen leeren Bitpositionen übertragen. Die hohen leeren Bitpositionen werden daher auf 0 festgelegt, wenn der linke Operand nicht negativ ist, bzw. auf 1, wenn der linke Operand negativ ist.
+- Wenn der linke Operand vom Typ `int` oder `long` ist, führt der Operator zur Rechtsverschiebung eine *arithmetische* Verschiebung durch: Der Wert des Bits mit dem höchsten Stellenwert (MSB, „most significant bit“) des linken Operanden wird auf die hohen leeren Bitpositionen übertragen. Die hohen leeren Bitpositionen werden daher auf 0 festgelegt, wenn der linke Operand nicht negativ ist, bzw. auf 1, wenn der linke Operand negativ ist.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Wenn der linke Operand vom Typ [uint](../builtin-types/integral-numeric-types.md) oder [ulong](../builtin-types/integral-numeric-types.md) ist, führt der Operator zur Rechtsverschiebung eine *logische* Verschiebung durch: Die hohen leeren Bitpositionen werden immer auf 0 (null) festgelegt.
+- Wenn der linke Operand vom Typ `uint` oder `ulong` ist, führt der Operator zur Rechtsverschiebung eine *logische* Verschiebung durch: Die hohen leeren Bitpositionen werden immer auf 0 (null) festgelegt.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -98,7 +98,7 @@ Mit dem Operator `&` wird „bitweises logisches UND“ für die Operanden berec
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-Für die Operanden vom Typ `bool` berechnet der Operator `&` [logisches UND](boolean-logical-operators.md#logical-and-operator-) für die Operanden. Der unäre `&`-Operator ist der [address-of-Operator](pointer-related-operators.md#address-of-operator-).
+Für `bool`-Operanden berechnet der `&`-Operator das [logische UND](boolean-logical-operators.md#logical-and-operator-) für die Operanden. Der unäre `&`-Operator ist der [address-of-Operator](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Logischer exklusiver OR-Operator: ^
 
@@ -106,7 +106,7 @@ Mit dem Operator `^` wird „bitweises logisches exklusives ODER“, auch als �
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-Für die Operanden vom Typ `bool` berechnet der Operator `^` [logisches exklusives ODER](boolean-logical-operators.md#logical-exclusive-or-operator-) für die Operanden.
+Für `bool`-Operanden berechnet der `^`-Operator das [logische exklusive ODER](boolean-logical-operators.md#logical-exclusive-or-operator-) für die Operanden.
 
 ## <a name="logical-or-operator-"></a>Logischer OR-Operator: |
 
@@ -114,7 +114,7 @@ Mit dem Operator `|` wird „bitweises logisches ODER“ der Operanden berechnet
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-Für die Operanden vom Typ `bool` berechnet der Operator `|` [logisches ODER](boolean-logical-operators.md#logical-or-operator-) für die Operanden.
+Für `bool`-Operanden berechnet der `|`-Operator das [logische ODER](boolean-logical-operators.md#logical-or-operator-) für die Operanden.
 
 ## <a name="compound-assignment"></a>Verbundzuweisung
 
@@ -154,17 +154,17 @@ Verwenden Sie Klammern `()`, wenn Sie die Reihenfolge der Auswertung ändern mö
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie unter [C#-Operatoren](index.md).
+Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie im Abschnitt [Operatorrangfolge](index.md#operator-precedence) im Artikel [C#-Operatoren](index.md).
 
 ## <a name="shift-count-of-the-shift-operators"></a>Anzahl für die Verschiebung durch Schiebeoperatoren
 
-Für die Schiebeoperatoren `<<` und `>>` muss der Typ des rechten Operanden [int](../builtin-types/integral-numeric-types.md) lauten oder ein Typ sein, der eine [vordefinierte implizite numerische Konvertierung](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) in `int` aufweist.
+Für die Schiebeoperatoren `<<` und `>>` muss der Typ des rechten Operanden `int` lauten oder ein Typ sein, der eine [vordefinierte, implizite numerische Konvertierung](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) in `int` aufweist.
 
 Für die Ausdrücke `x << count` und `x >> count` hängt die tatsächliche Verschiebungsanzahl wie folgt vom Typ von `x` ab:
 
-- Lautet der Typ von `x` [int](../builtin-types/integral-numeric-types.md) oder [uint](../builtin-types/integral-numeric-types.md), wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
+- Lautet der Typ von `x` `int` oder `uint`, wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
 
-- Lautet der Typ von `x` [long](../builtin-types/integral-numeric-types.md) oder [ulong](../builtin-types/integral-numeric-types.md), wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
+- Lautet der Typ von `x` `long` oder `ulong`, wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
 
 Das folgende Beispiel veranschaulicht dieses Verhalten:
 
@@ -172,7 +172,7 @@ Das folgende Beispiel veranschaulicht dieses Verhalten:
 
 ## <a name="enumeration-logical-operators"></a>Logische Enumerationsoperatoren
 
-Die Operatoren `~`, `&`, `|` und `^` werden auch für jeden [Enumerationstyp](../keywords/enum.md) definiert. Für die Operanden mit dem gleichen Enumerationstyp wird eine logische Operation für die entsprechenden Werte des zugrunde liegenden integralen Typs durchgeführt. Für alle `x`- und `y`-Elemente des Enumerationstyps `T` mit dem zugrunde liegenden Typ `U` führt der Ausdruck `x & y` zum gleichen Ergebnis wie der Ausdruck `(T)((U)x & (U)y)`.
+Die Operatoren `~`, `&`, `|` und `^` werden auch von jedem [Enumerationstyp](../keywords/enum.md) unterstützt. Für Operanden mit dem gleichen Enumerationstyp wird ein logischer Vorgang für die entsprechenden Werte des zugrunde liegenden integralen Typs durchgeführt. Für alle `x`- und `y`-Elemente des Enumerationstyps `T` mit dem zugrunde liegenden Typ `U` führt der Ausdruck `x & y` zum gleichen Ergebnis wie der Ausdruck `(T)((U)x & (U)y)`.
 
 Normalerweise verwenden Sie bitweise logische Operatoren mit einem Enumerationstyp, der mit dem [Flags](xref:System.FlagsAttribute)-Attribut definiert wird. Weitere Informationen finden Sie im Abschnitt [Enumerationstypen als Bitflags](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) des Artikels [Enumerationstypen](../../programming-guide/enumeration-types.md).
 

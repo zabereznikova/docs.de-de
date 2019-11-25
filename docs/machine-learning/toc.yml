@@ -7,7 +7,7 @@
       items:
         - name: Die ML.NET-API
           href: how-does-mldotnet-work.md
-    - name: Tools
+    - name: Modellgenerator und CLI
       items:
         - name: Der ML.NET-Modellgenerator
           href: automate-training-with-model-builder.md
@@ -97,7 +97,7 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Bereitstellen eines Modells für eine Web-API
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Tools
+    - name: Modellgenerator und CLI
       items:
         - name: Laden von Daten in den Modellgenerator
           href: how-to-guides/load-data-model-builder.md
@@ -109,18 +109,12 @@
           href: how-to-guides/how-to-use-the-automl-api.md
 - name: Referenz
   items:
-    - name: API
-      items:
-        - name: ML.NET-API-Referenz
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-        - name: ML.NET-API-Vorschau – API-Referenz
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-    - name: Tools
-      items:
-        - name: CLI-Referenz
-          href: reference/ml-net-cli-reference.md
-        - name: ML.NET-AutoML-API-Referenz
-          href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+    - name: ML.NET-API-Referenz
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+    - name: ML.NET-API-Vorschau – API-Referenz
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: CLI-Referenz
+      href: reference/ml-net-cli-reference.md
 - name: Ressourcen
   items:
     - name: Übersicht

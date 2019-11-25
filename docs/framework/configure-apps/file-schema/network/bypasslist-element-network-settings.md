@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699539"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087521"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist >-Element (Netzwerkeinstellungen)
+# <a name="bypasslist-element-network-settings"></a>\<BypassList >-Element (Netzwerkeinstellungen)
 Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<BypassList >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -51,9 +51,9 @@ Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, d
 |[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Umgehungs Liste enthält reguläre Ausdrücke, in denen URIs beschrieben werden, auf die <xref:System.Net.WebRequest>-Instanzen direkt anstatt über den Proxy Server zugreifen.  
+ Die Umgehungs Liste enthält reguläre Ausdrücke, mit denen URIs beschrieben werden, die <xref:System.Net.WebRequest> Instanzen direkt anstatt über den Proxy Server auf die Instanzen zugreifen.  
   
- Sie sollten Vorsicht walten lassen, wenn Sie einen regulären Ausdruck für dieses Element angeben. Der reguläre Ausdruck "[a-z] + @no__t -0.contoso\\.com" stimmt mit jedem Host in der contoso.com-Domäne überein, aber auch mit jedem Host in der contoso.com.cpandl.com-Domäne überein. Um nur einen Host in der contoso.com-Domäne zu finden, verwenden Sie einen Anker ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
+ Sie sollten Vorsicht walten lassen, wenn Sie einen regulären Ausdruck für dieses Element angeben. Der reguläre Ausdruck "[a-z] +\\.\\. com" stimmt mit jedem Host in der contoso.com-Domäne überein, aber auch mit jedem Host in der contoso.com.cpandl.com-Domäne überein. Um nur einen Host in der contoso.com-Domäne zu finden, verwenden Sie einen Anker ("$"): "[a-z] +\\.\\. com $".  
   
  Weitere Informationen zu regulären Ausdrücken finden Sie unter. [.NET Framework reguläre Ausdrücke](../../../../standard/base-types/regular-expressions.md).  
   

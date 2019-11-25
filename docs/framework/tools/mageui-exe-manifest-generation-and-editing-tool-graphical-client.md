@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449417"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
@@ -66,7 +66,7 @@ ms.locfileid: "71044453"
 |**Neu**|Generiert eine neue PFX-Datei, die nicht durch eine Zertifizierungsstelle überprüft wird. Weitere Informationen zu den Zertifikattypen, die zum Signieren von ClickOnce-Bereitstellungen verwendet werden, finden Sie unter [Trusted Application Deployment Overview (Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen)](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Kennwort**|Stellt einen Bereich für die Eingabe des Kennworts zum Signieren mit diesem Zertifikat bereit. Kann leer bleiben, wenn kein Kennwort verwendet wird.|  
 |**Mit gespeichertem Zertifikat signieren**|Zeigt eine Liste für die Auswahl aus im Zertifikatsspeicher des Computers gespeicherten digitalen Zertifikaten an.|  
-|**Zeitstempel-URI**|Zeigt den Uniform Resource Locator (URI) eines digitalen Zeitstempeldiensts an. Der Zeitstempel verhindert, dass Sie ein Manifest neu signieren müssen, wenn das digitale Zertifikat abläuft, bevor Sie die nächste Version der Anwendung bereitstellen. Weitere Informationen finden Sie unter [Mitglieder des Windows-Programms für Stammzertifikate](https://go.microsoft.com/fwlink/?LinkId=159000) und [ClickOnce und Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**Zeitstempel-URI**|Zeigt den Uniform Resource Locator (URI) eines digitalen Zeitstempeldiensts an. Der Zeitstempel verhindert, dass Sie ein Manifest neu signieren müssen, wenn das digitale Zertifikat abläuft, bevor Sie die nächste Version der Anwendung bereitstellen. Weitere Informationen finden Sie unter [Mitglieder des Windows-Programms für Stammzertifikate](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) und [ClickOnce und Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**Nicht signieren**|Ermöglicht das Speichern des Manifests, ohne eine Signatur aus einem digitalen Zertifikat hinzuzufügen.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Beschreibungen von Registerkarten und Bereichen  

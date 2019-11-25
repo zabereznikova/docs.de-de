@@ -1,14 +1,14 @@
 ---
 title: 'Gewusst wie: Verwenden der automatisierten ML-API von ML.NET'
 description: Die automatisierte ML-API von ML.NET automatisiert das Erstellen von Modellen und generiert ein zur Bereitstellung geeignetes Modell. Erfahren Sie, welche Optionen Sie verwenden können, um automatisierte Machine Learning-Aufgaben zu konfigurieren.
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774550"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977115"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Gewusst wie: Verwenden der automatisierten ML-API von ML.NET
 
@@ -32,6 +32,7 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Auswählen des Machine Learning-Aufgabentyps
+
 Bevor Sie ein Experiment erstellen, ermitteln Sie die Art des Machine Learning-Problems, das Sie lösen möchten. Automatisiertes Machine Learning unterstützt die folgenden ML-Aufgaben:
 
 * Binäre Klassifizierung
@@ -62,7 +63,7 @@ Erstellen Sie Experimenteinstellungen für den bestimmten ML-Aufgabentyp:
 
 ## <a name="configure-experiment-settings"></a>Konfigurieren von Experimenteinstellungen
 
-Experimente sind hochgradig konfigurierbar. In der [AutoML-API-Dokumentation](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) finden Sie eine vollständige Liste der Konfigurationseinstellungen.
+Experimente sind hochgradig konfigurierbar. In der [AutoML-API-Dokumentation](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) finden Sie eine vollständige Liste der Konfigurationseinstellungen.
 
 Beispiele:
 

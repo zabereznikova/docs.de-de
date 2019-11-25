@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 5b3b0af5b46774beff9fb7a2a86c37e5399c0dd2
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bea5cd1b42773e62601edbc113b2155ff78cf884
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957389"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977412"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
 
@@ -48,7 +48,7 @@ Wir werden ein vorhandenes Dataset verwenden, das für ein Szenario „Standpunk
 1. Laden Sie [die Dataset-ZIP-Datei „UCI Sentiment Labeled Sentences“ (siehe Zitate im folgenden Hinweis)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) herunter, und entzippen Sie sie in einem beliebigen Ordner Ihrer Wahl.
 
     > [!NOTE]
-    > Die in diesem Tutorial verwendeten Datasets stammen aus „From Group to Individual Labels using Deep Features“, Kotzias et al,. KDD 2015, und werden im UCI Machine Learning Repository – Dua, D. und Karra Taniskidou, E. gehostet. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science
+    > Die in diesem Tutorial verwendeten Datasets stammen aus „From Group to Individual Labels using Deep Features“, Kotzias et al,. KDD 2015, und werden im UCI Machine Learning Repository – Dua, D. und Karra Taniskidou, E. gehostet. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 2. Kopieren Sie die `yelp_labelled.txt`-Datei in einen vorher von Ihnen erstellten Ordner (wie z.B. `/cli-test`).
 
@@ -105,7 +105,7 @@ Wir werden ein vorhandenes Dataset verwenden, das für ein Szenario „Standpunk
 
     ![Befehl „auto-train“ in der ML.NET-CLI auf PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
-    In diesem speziellen Fall konnte das CLI-Tool in nur 10 Sekunden und mit dem bereitgestellten kleinen Dataset eine ganze Reihe von Iterationen durchführen. Das bedeutet, dass das Training basierend auf verschiedenen Kombinationen von Algorithmen/Konfigurationen mit unterschiedlichen internen Datentransformationen und den Hyperparametern des Algorithmus mehrfach durchgeführt wurde. 
+    In diesem speziellen Fall konnte das CLI-Tool in nur 10 Sekunden und mit dem bereitgestellten kleinen Dataset eine ganze Reihe von Iterationen durchführen. Das bedeutet, dass das Training basierend auf verschiedenen Kombinationen von Algorithmen/Konfigurationen mit unterschiedlichen internen Datentransformationen und den Hyperparametern des Algorithmus mehrfach durchgeführt wurde.
 
     Schließlich ist das „Modell mit der besten Qualität“, das in 10 Sekunden gefunden wurde, ein Modell, das einen bestimmten Trainer/Algorithmus mit einer bestimmten Konfiguration verwendet. Je nach Explorationszeit kann der Befehl ein anderes Ergebnis liefern. Die Auswahl basiert auf den zahlreichen dargestellten Metriken, wie z.B. `Accuracy`.
 
@@ -118,16 +118,16 @@ Wir werden ein vorhandenes Dataset verwenden, das für ein Szenario „Standpunk
     Weitere Metriken und **detailliertere Informationen über die Metriken,** wie z.B. „Accuracy“. „AUC“, „AUCPR“, „F1-score“, die zur Bewertung der verschiedenen Modelle verwendet werden, finden Sie in [Verstehen der ML.NET-Metriken](../resources/metrics.md).
 
     > [!NOTE]
-    > Sie können genau dieses Dataset ausprobieren und für `--max-exploration-time` ein paar Minuten angeben (z.B. für drei Minuten geben Sie 180 Sekunden an). Dadurch wird mit einer anderen Konfiguration der Trainingspipeline für dieses Dataset (das ziemlich klein ist, 1.000 Zeilen) ein besseres „bestes Modell“ für Sie ermittelt. 
-        
-    Um für größere Datasets ein einsatzbereites Modell mit „bester/gute Qualität“ zu finden, sollten Sie mit der CLI experimentieren, wobei in der Regel je nach Größe des Datasets viel mehr Explorationszeit angegeben wird. In der Tat kann es in vielen Fällen vorkommen, dass Sie mehrere Stunden Explorationszeit benötigen, insbesondere wenn das Dataset viele Zeilen und Spalten enthält. 
+    > Sie können genau dieses Dataset ausprobieren und für `--max-exploration-time` ein paar Minuten angeben (z.B. für drei Minuten geben Sie 180 Sekunden an). Dadurch wird mit einer anderen Konfiguration der Trainingspipeline für dieses Dataset (das ziemlich klein ist, 1.000 Zeilen) ein besseres „bestes Modell“ für Sie ermittelt.
+
+    Um für größere Datasets ein einsatzbereites Modell mit „bester/gute Qualität“ zu finden, sollten Sie mit der CLI experimentieren, wobei in der Regel je nach Größe des Datasets viel mehr Explorationszeit angegeben wird. In der Tat kann es in vielen Fällen vorkommen, dass Sie mehrere Stunden Explorationszeit benötigen, insbesondere wenn das Dataset viele Zeilen und Spalten enthält.
 
 1. Durch die vorherige Befehlsausführung wurden die folgenden Objekte generiert:
 
-    - Eine serialisierte ZIP-Datei des Modells („bestes Modell“), die sofort verwendet werden kann. 
+    - Eine serialisierte ZIP-Datei des Modells („bestes Modell“), die sofort verwendet werden kann.
     - C#-Code, um das generierte Modell auszuführen/zu bewerten (um mit diesem Modell Vorhersagen in Ihren Endbenutzer-Apps zu treffen).
     - C#-Trainingscode, der zur Erstellung dieses Modells verwendet wird (zu Lernzwecken).
-    - Eine Protokolldatei mit allen untersuchten Iterationen mit spezifischen Detailinformationen zu jedem Algorithmus, der mit seiner Kombination aus Hyperparametern und Datentransformationen getestet wurde. 
+    - Eine Protokolldatei mit allen untersuchten Iterationen mit spezifischen Detailinformationen zu jedem Algorithmus, der mit seiner Kombination aus Hyperparametern und Datentransformationen getestet wurde.
 
     Die ersten beiden Objekte (ZIP-Datei des Modells und der C#-Code zur Ausführung des Modells) können direkt in Ihren Endbenutzer-App (ASP.NET Core-Web-App, Dienste, Desktop-App usw.) verwendet werden, um mit dem generierten ML-Modell Vorhersagen zu treffen.
 
@@ -145,10 +145,10 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
     ![Von der CLI generierte VS-Projektmappe](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
     - Die generierte **Klassenbibliothek**, die das serialisierte ML-Modell (ZIP-Datei) und die Datenklassen (Datenmodelle) enthält, können Sie direkt in Ihrer Endbenutzeranwendung verwenden, auch wenn Sie direkt auf diese Klassenbibliothek verweisen (oder den Code verschieben, ganz wie Sie möchten).
-    - Die generierte **Konsolen-App** enthält Ausführungscode, den Sie überprüfen müssen. Dann wird der „Bewertungscode“ (Code, der das ML-Modell ausführt, um Vorhersagen zu treffen) in der Regel wiederverwendet, indem Sie diesen einfachen Code (nur ein paar Zeilen) in Ihre Endbenutzeranwendung verschieben, wo Sie die Vorhersagen machen möchten. 
+    - Die generierte **Konsolen-App** enthält Ausführungscode, den Sie überprüfen müssen. Dann wird der „Bewertungscode“ (Code, der das ML-Modell ausführt, um Vorhersagen zu treffen) in der Regel wiederverwendet, indem Sie diesen einfachen Code (nur ein paar Zeilen) in Ihre Endbenutzeranwendung verschieben, wo Sie die Vorhersagen machen möchten.
 
-1. Öffnen Sie die Klassendateien **ModelInput.cs** und **ModelOutput.cs** im Klassenbibliotheksprojekt. Sie sehen, dass diese Klassen „Datenklassen“ oder POCO-Klassen sind, die zum Speichern von Daten verwendet werden. Es handelt sich um einen "Textbausteincode", dessen Generierung jedoch sinnvoll ist, wenn Ihr Dataset Dutzende oder sogar Hunderte von Spalten enthält. 
-    - Die `ModelInput`-Klasse wird beim Auslesen von Daten aus dem Dataset verwendet. 
+1. Öffnen Sie die Klassendateien **ModelInput.cs** und **ModelOutput.cs** im Klassenbibliotheksprojekt. Sie sehen, dass diese Klassen „Datenklassen“ oder POCO-Klassen sind, die zum Speichern von Daten verwendet werden. Es handelt sich um einen "Textbausteincode", dessen Generierung jedoch sinnvoll ist, wenn Ihr Dataset Dutzende oder sogar Hunderte von Spalten enthält.
+    - Die `ModelInput`-Klasse wird beim Auslesen von Daten aus dem Dataset verwendet.
     - Die `ModelOutput`-Klasse wird verwendet, um das Vorhersageergebnis (Vorhersagedaten) abzurufen.
 
 1. Öffnen Sie die Datei „Program.cs“, und untersuchen Sie den Code. Mit nur wenigen Zeilen können Sie das Modell ausführen und eine Beispielvorhersage treffen.
@@ -164,7 +164,7 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
         var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
-        // Create sample data to do a single prediction with it 
+        // Create sample data to do a single prediction with it
         ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
@@ -174,7 +174,7 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
     }
     ```
 
-- Die erste Zeile des Codes erstellt einfach ein `MLContext`-Objekt, das bei der Ausführung von ML.NET-Code benötigt wird. 
+- Die erste Zeile des Codes erstellt einfach ein `MLContext`-Objekt, das bei der Ausführung von ML.NET-Code benötigt wird.
 
 - Die zweite Codezeile wird auskommentiert, da Sie das Modell nicht trainieren müssen, da es bereits vom CLI-Tool für Sie trainiert und in der serialisierten ZIP-Datei des Modells gespeichert wurde. Wenn Sie jedoch sehen möchten, *„wie das Modell von der CLI trainiert wurde“* , können Sie die Auskommentierung dieser Zeile aufheben und den für dieses spezielle ML-Modell verwendeten Trainingscode ausführen/debuggen.
 
@@ -215,11 +215,11 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
 
     ---
 
-1. Versuchen Sie, die hartcodierten Beispieldaten in andere Sätze mit verschiedenen Standpunkten zu ändern, und schauen Sie sich an, wie das Modell positive oder negative Standpunkte vorhersagt. 
+1. Versuchen Sie, die hartcodierten Beispieldaten in andere Sätze mit verschiedenen Standpunkten zu ändern, und schauen Sie sich an, wie das Modell positive oder negative Standpunkte vorhersagt.
 
 ## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>Ergänzen Ihrer Endbenutzeranwendungen mit ML-Modellvorhersagen
 
-Sie können einen ähnlichen „Bewertungscode für das ML-Modell“ verwenden, um das Modell in Ihrer Endbenutzeranwendung auszuführen und Vorhersagen zu treffen. 
+Sie können einen ähnlichen „Bewertungscode für das ML-Modell“ verwenden, um das Modell in Ihrer Endbenutzeranwendung auszuführen und Vorhersagen zu treffen.
 
 Beispielsweise können Sie diesen Code direkt in eine beliebige Windows-Desktop-Anwendung wie **WPF** und **WinForms** verschieben und das Modell auf die gleiche Weise ausführen wie in der Konsolen-App.
 
@@ -229,14 +229,14 @@ Die Art und Weise, wie Sie diese Codezeilen zur Ausführung des ML-Modells imple
 
 Die Erstellung des Modellobjekts (`ITransformer`, das aus der ZIP-Datei eines Modells geladen wurde) und des `PredictionEngine`-Objekts sollte optimiert werden, insbesondere bei der Ausführung auf skalierbaren Web-Apps und verteilten Diensten. Für den ersten Fall, das Modellobjekt (`ITransformer`), ist die Optimierung einfach. Da das `ITransformer`-Objekt threadsicher ist, können Sie das Objekt als Singleton-Objekt oder statisches Objekt zwischenspeichern und das Modell einmal laden.
 
-Für das zweite Objekt, das `PredictionEngine`-Objekt, ist es nicht so einfach, da das `PredictionEngine`-Objekt nicht threadsicher ist. Daher können Sie dieses Objekt nicht als Singleton- oder statisches Objekt in einer ASP.NET Core-App instanziieren. Dieses Problem der Threadsicherheit und Skalierbarkeit wird in diesem [Blogbeitrag](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/) ausführlich behandelt. 
+Für das zweite Objekt, das `PredictionEngine`-Objekt, ist es nicht so einfach, da das `PredictionEngine`-Objekt nicht threadsicher ist. Daher können Sie dieses Objekt nicht als Singleton- oder statisches Objekt in einer ASP.NET Core-App instanziieren. Dieses Problem der Threadsicherheit und Skalierbarkeit wird in diesem [Blogbeitrag](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/) ausführlich behandelt.
 
 Allerdings ist die Praxis für Sie heute wesentlich einfacher, als in diesem Blogbeitrag beschrieben. Wir haben für Sie einen einfacheren Ansatz erarbeitet und ein praktisches **.NET Core-Integrationspaket** erstellt, das Sie problemlos in Ihren ASP.NET Core-Apps und -Diensten verwenden können, indem Sie es in den DI-Diensten der Anwendung (Dependency Injection Services) registrieren und dann direkt über Ihren Code verwenden. Schauen Sie sich dafür das folgende Tutorial und Beispiel an:
 
 - [Tutorial: Ausführen von ML.NET-Modellen auf skalierbaren ASP.NET Core-Web-Apps und -Web-APIs](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [Beispiel: Skalierbares ML.NET-Modell auf ASP.NET Core-Web-API](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
-## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Untersuchen des generierten C#-Codes, der zum Trainieren des „Modell mit der besten Qualität“ verwendet wurde 
+## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Untersuchen des generierten C#-Codes, der zum Trainieren des „Modell mit der besten Qualität“ verwendet wurde
 
 Für weiterführende Lernzwecke können Sie auch den generierten C#-Code untersuchen, der vom CLI-Tool zum Trainieren des generierten Modells verwendet wurde.
 
@@ -253,13 +253,13 @@ Es ist interessant, den gewählten Algorithmus und die Pipelinekonfiguration im 
 - [Automatisieren des Modelltrainings mit der ML.NET-CLI](../automate-training-with-cli.md)
 - [Tutorial: Ausführen von ML.NET-Modellen auf skalierbaren ASP.NET Core-Web-Apps und -Web-APIs](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [Beispiel: Skalierbares ML.NET-Modell auf ASP.NET Core-Web-API](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [Referenzhandbuch für den „auto-train“-Befehl in der ML.NET-CLI](../reference/ml-net-cli-reference.md) 
+- [Referenzhandbuch für den „auto-train“-Befehl in der ML.NET-CLI](../reference/ml-net-cli-reference.md)
 - [Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)](../how-to-guides/install-ml-net-cli.md)
 - [Telemetrie in der ML.NET-CLI](../resources/ml-net-cli-telemetry.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Folgendes gelernt:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > - Vorbereiten der Daten für die ausgewählte ML-Aufgabe (zu lösendes Problem)

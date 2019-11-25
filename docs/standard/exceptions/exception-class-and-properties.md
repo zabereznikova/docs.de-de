@@ -8,27 +8,25 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e17fa07fe2dd19cdcd03bc923940abfef886219c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44216541"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283120"
 ---
 # <a name="exception-class-and-properties"></a>Ausnahmeklasse und -eigenschaften
 
 Die <xref:System.Exception>-Klasse ist die Basisklasse, von der Ausnahmen erben. Die Hierarchie der <xref:System.InvalidCastException>-Klasse sieht beispielsweise wie folgt aus:
 
-```
-Object
-  Exception
-    SystemException
-       InvalidCastException
-```
+<xref:System.Object>\
+&nbsp;&nbsp;<xref:System.Exception>\
+&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.SystemException>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.InvalidCastException>
 
 Die <xref:System.Exception>-Klasse verfügt über die folgenden Eigenschaften, die das Verständnis einer Ausnahme erleichtern.
 
-| Eigenschaftenname | Beschreibung  |
+| Eigenschaftenname | BESCHREIBUNG |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Ein <xref:System.Collections.IDictionary>, das beliebige Daten in Schlüssel-Wert-Paaren enthält. |
 | <xref:System.Exception.HelpLink> | Kann einen URL (oder URN) zu einer Hilfedatei enthalten, die ausführliche Informationen zur Ursache einer Ausnahme bereitstellt. |

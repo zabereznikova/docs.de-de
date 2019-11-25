@@ -1,19 +1,20 @@
 ---
-title: 'Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic'
+title: 'Vorgehensweise: Beibehalten von Benutzereinstellungen'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: 0683a5c359da1c4d082f7312c1ed8f43e1c151f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1026e400015ff7807144dca8e9ce6d72fe3d18e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968378"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329642"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic
+
 Sie können mit der `My.Settings.Save`-Methode Änderungen der Benutzereinstellungen beibehalten.  
   
  Anwendungen werden üblicherweise so entwickelt, dass sie Änderungen der Benutzereinstellungen beibehalten, wenn die Anwendung beendet wird. Dies liegt daran, dass das Speichern der Einstellungen mehrere Sekunden in Anspruch nehmen kann; dabei hängt die Länge des Speichervorgangs von mehreren Faktoren ab.  
@@ -24,6 +25,7 @@ Sie können mit der `My.Settings.Save`-Methode Änderungen der Benutzereinstellu
 > Obwohl Sie die Werte der Einstellungen für den Benutzerbereich zur Laufzeit ändern und speichern können, sind die Einstellungen für den Anwendungsbereich schreibgeschützt und können nicht programmgesteuert geändert werden. Sie können die Einstellungen für den Anwendungsbereich nur ändern, wenn Sie die Anwendung (über den **Projekt-Designer**) erstellen, oder indem Sie die Anwendungskonfigurationsdatei bearbeiten. Weitere Informationen finden Sie unter [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Beispiel  
+
  In diesem Beispiel wird der Wert der Benutzereinstellung `LastChanged` geändert, und diese Änderung wird mit einem Aufruf an die `My.Settings.Save`-Methode gespeichert.  
   
  [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  

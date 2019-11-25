@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608302"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283065"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Einführung in die Programmiersprache C# und in .NET Framework
 
@@ -44,7 +44,7 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
  Die folgenden zusätzlichen C#-Ressourcen stehen zur Verfügung:  
   
-- Eine gute allgemeine Einführung in die Sprache finden Sie in Kapitel 1 der [C#-Sprachspezifikation](../language-reference/language-specification/index.md).  
+- Eine gute allgemeine Einführung in die Sprache finden Sie in Kapitel 1 der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 - Ausführliche Informationen zu bestimmten Aspekte der Programmiersprache C# finden Sie in der [C#-Referenz](../language-reference/index.md).  
   
@@ -68,5 +68,4 @@ C# ist eine elegante, typsichere und objektorientierte Sprache, mit der Entwickl
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#](../index.md)
-- [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Erste Schritte mit Visual C#](/visualstudio/ide/quickstart-csharp-console)

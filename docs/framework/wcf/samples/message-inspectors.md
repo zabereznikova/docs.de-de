@@ -2,12 +2,12 @@
 title: Nachrichteninspektoren
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424151"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977304"
 ---
 # <a name="message-inspectors"></a>Nachrichteninspektoren
 In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
@@ -19,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspek
 ## <a name="message-inspector"></a>Nachrichteninspektor  
  Clientnachrichteninspektoren implementieren die <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>-Schnittstelle, und Dienstnachrichteninspektoren implementieren die <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>-Schnittstelle. Die Implementierungen können in einer Klasse zusammengefasst werden, um einen Nachrichteninspektor zu bilden, der für beide Seiten funktioniert. In diesem Beispiel wird so ein kombinierter Nachrichteninspektor implementiert. Der Inspektor wird erstellt und übergibt einen Schemasatz, anhand dessen eingehende und ausgehende Nachrichten überprüft werden. Außerdem kann der Entwickler festlegen, ob eingehende oder ausgehende Nachrichten überprüft werden und ob der Inspektor sich im Dispatch- oder Clientmodus befindet. Diese letzte Einstellung beeinflusst die Fehlerbehandlung, die später in diesem Thema erläutert wird.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  Bei der folgenden `SchemaValidationBehavior`-Klasse handelt es sich um die Verhaltensweise, mit der der Nachrichteninspektor dieses Beispiels zur Client- oder Dispatchlaufzeit hinzugefügt wird. Die Implementierung ist in beiden Fällen ganz einfach. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> und <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> wird der Nachrichteninspektor erstellt und zur <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Auflistung der entsprechenden Laufzeit hinzugefügt.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Die überschriebene `CreateBehavior`-Methode wandelt die Konfigurationsdaten in ein Verhaltensobjekt um, wenn die Laufzeit die Konfigurationsdaten beim Erstellen eines Clients oder Endpunkts bewertet.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

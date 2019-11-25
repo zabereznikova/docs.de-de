@@ -3,12 +3,12 @@ title: Befehl „dotnet nuget locals“
 description: Der dotnet nuget locals-Befehl löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder Ordner mit globalen Paketen auf dem Computer, bzw. listet diese Ressourcen auf.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 482e841d3b402084eb8c7f2456779f1600a5dd19
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117627"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087407"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -18,7 +18,7 @@ ms.locfileid: "71117627"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet nuget locals`: Löscht lokale NuGet-Ressourcen oder listet diese auf.
 
@@ -67,31 +67,31 @@ Der `dotnet nuget locals`-Befehl löscht lokale NuGet-Ressourcen im http-Anforde
 * Zeigt die Pfade aller lokalen Cacheverzeichnisse an (http-Cacheverzeichnis, Cacheverzeichnis für globale Pakete und temporäres Cacheverzeichnis):
 
   ```dotnetcli
-  dotnet nuget locals –l all
+  dotnet nuget locals all –l
   ```
 
 * Zeigt den Pfad für das lokale http-Cacheverzeichnis an:
 
   ```dotnetcli
-  dotnet nuget locals --list http-cache
+  dotnet nuget locals http-cache --list
   ```
 
 * Löscht alle Dateien aus allen lokalen Cacheverzeichnissen (http-Cacheverzeichnis, Cacheverzeichnis für globale Pakete und temporäres Cacheverzeichnis):
 
   ```dotnetcli
-  dotnet nuget locals --clear all
+  dotnet nuget locals all --clear
   ```
 
 * Löscht alle Dateien im lokalen Cacheverzeichnis für globale Pakete:
 
   ```dotnetcli
-  dotnet nuget locals -c global-packages
+  dotnet nuget locals global-packages -c
   ```
 
 * Löscht alle Dateien im lokalen temporären Cacheverzeichnis:
 
   ```dotnetcli
-  dotnet nuget locals -c temp
+  dotnet nuget locals temp -c
   ```
 
 ## <a name="troubleshooting"></a>Problembehandlung

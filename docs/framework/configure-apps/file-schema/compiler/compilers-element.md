@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167694"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088703"
 ---
 # <a name="compilers-element"></a>\<Compiler > Element
 Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder mehr [\<compiler>](compiler-element.md)-Elemente.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Compiler >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Compiler >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -51,7 +51,7 @@ Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder
 |[\<System. CodeDom >-Element](system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das-Compiler->-Element enthält die Compilerkonfigurationseinstellungen für Sprachanbieter auf einem Computer. [ \<](compilers-element.md) [ Jedes\<Compiler >](compiler-element.md) -Element gibt die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an.  
+ Das [\<-Compiler >](compilers-element.md) -Element enthält die Compilerkonfigurationseinstellungen für Sprachanbieter auf einem Computer. Jedes [\<Compiler >](compiler-element.md) -Element gibt die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an.  
   
  In der-.NET Framework werden die anfänglichen Compiler-und Sprachanbieter Einstellungen in der Computer Konfigurationsdatei (Machine. config) definiert. Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
   

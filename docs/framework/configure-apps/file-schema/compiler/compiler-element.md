@@ -10,21 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168938"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088056"
 ---
 # <a name="compiler-element"></a>\<Compiler > Element
 
 Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Compiler >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Compiler>**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Compiler**](compilers-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<- **Compiler>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`compilerOptions`|Optionales Attribut.<br /><br /> Gibt zusätzliche compilerspezifische Argumente für die Kompilierung an. Die Werte für das `compilerOptions` -Attribut werden in der Regel in einem Compileroptionen-Thema für den Compiler aufgeführt.|
+|`compilerOptions`|Optionales Attribut.<br /><br /> Gibt zusätzliche compilerspezifische Argumente für die Kompilierung an. Die Werte für das `compilerOptions`-Attribut werden in der Regel in einem Compileroptionen-Thema für den Compiler aufgeführt.|
 |`extension`|Erforderliches Attribut.<br /><br /> Stellt eine durch Semikolons getrennte Liste der Dateinamen Erweiterungen bereit, die von den Quelldateien für den Sprachanbieter verwendet werden. Beispiel: ". cs".|
 |`language`|Erforderliches Attribut.<br /><br /> Stellt eine durch Semikolons getrennte Liste der vom Sprachanbieter unterstützten Sprachnamen bereit. Beispiel: "c#; cs; csharp".|
 |`type`|Erforderliches Attribut.<br /><br /> Gibt den Typnamen des sprach Anbieters an, einschließlich des Namens der Assembly, die die Anbieter Implementierung enthält. Der Typname muss die in [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)definierten Anforderungen erfüllen.|
@@ -56,7 +56,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<Provideroption >-Element](provideroption-element.md)|Gibt Attribute der Compilerversion für einen Sprachanbieter an.|
+|[\<Provideroption-> Element](provideroption-element.md)|Gibt Attribute der Compilerversion für einen Sprachanbieter an.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -64,11 +64,11 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |-------------|-----------------|
 |[\<configuration> Element](../configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |[\<System. CodeDom >-Element](system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|
-|[\<Compiler > Element](compilers-element.md)|Container für Compilerkonfigurationselemente; enthält 0 (NULL `<compiler>` ) oder mehr-Elemente.|
+|[\<Compiler > Element](compilers-element.md)|Container für Compilerkonfigurationselemente; enthält 0 (null) oder mehr `<compiler>` Elemente.|
 
 ## <a name="remarks"></a>Hinweise
 
-Jedes `<compiler>` -Element gibt die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an. Der Anbieter erweitert die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> -Klasse für eine bestimmte Sprache; `<compiler>` das-Element definiert die Compiler-und Code-Generator-Einstellungen für den Sprachanbieter.
+Jedes `<compiler>`-Element gibt die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an. Der Anbieter erweitert die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> Klasse für eine bestimmte Sprache. Das `<compiler>`-Element definiert die Compiler-und Code-Generator-Einstellungen für den Sprachanbieter.
 
 .NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.
 

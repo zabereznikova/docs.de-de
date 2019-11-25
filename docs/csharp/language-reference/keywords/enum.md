@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771866"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428524"
 ---
 # <a name="enum-c-reference"></a>enum (C#-Referenz)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 In dieser Enumeration wird erzwungen, dass die Abfolge von Elementen mit `1` und nicht mit `0`beginnt. Allerdings wird das Einfügen einer Konstanten mit dem Wert 0 empfohlen. Weitere Informationen finden Sie unter [Enumerationstypen](../../programming-guide/enumeration-types.md).
 
-Jeder Enumerationstyp hat einen zugrunde liegenden Typ, bei dem es sich um jeden [integralen numerischen Typ](../builtin-types/integral-numeric-types.md) handeln kann. Eine Ausnahme bildet [char](char.md). Der zugrunde liegende Standardtyp von Enumerationselementen ist [int](../builtin-types/integral-numeric-types.md). Um eine Enumeration eines anderen ganzzahligen Typs, z. B. [byte](../builtin-types/integral-numeric-types.md)zu deklarieren, setzen Sie einen Doppelpunkt hinter dem Bezeichner, auf den der Typ folgt, wie im folgenden Beispiel gezeigt.
+Jeder Enumerationstyp hat einen zugrunde liegenden Typ, bei dem es sich um jeden [integralen numerischen Typ](../builtin-types/integral-numeric-types.md) handeln kann. Eine Ausnahme bildet [char](../builtin-types/char.md). Der zugrunde liegende Standardtyp von Enumerationselementen ist [int](../builtin-types/integral-numeric-types.md). Um eine Enumeration eines anderen ganzzahligen Typs, z. B. [byte](../builtin-types/integral-numeric-types.md)zu deklarieren, setzen Sie einen Doppelpunkt hinter dem Bezeichner, auf den der Typ folgt, wie im folgenden Beispiel gezeigt.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 541d71efa66d14855704797892cac68799215159
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919755"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978340"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Problembehandlung für Hybridanwendungen
 <a name="introduction"></a>In diesem Thema werden einige der häufigsten Probleme aufgeführt, die beim Erstellen von Hybridanwendungen, die sowohl die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- als auch die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologie verwenden, auftreten können,.  
@@ -96,7 +96,7 @@ ms.locfileid: "72919755"
   
 <a name="wpf_designer"></a>   
 ## <a name="wpf-designer"></a>WPF-Designer  
- Sie können den WPF-Inhalt mit dem [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] entwerfen. Die folgenden Abschnitte enthalten einige der häufigsten Probleme, die beim Erstellen von Hybridanwendungen mit dem [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] auftreten können.  
+ Sie können den WPF-Inhalt mit dem WPF-Designer für Visual Studio entwerfen. In den folgenden Abschnitten werden einige allgemeine Probleme aufgelistet, die beim Erstellen von Hybrid Anwendungen mit dem WPF-Designer auftreten können.  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent wird zur Entwurfszeit ignoriert  
  Die <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A>-Eigenschaft funktioniert möglicherweise zur Entwurfszeit nicht wie erwartet.  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic'
+title: 'Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662752"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345616"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic
+
 Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden, um Werte in der Windows-Registrierung zu lesen.  
   
  Wenn der Schlüssel („Software\MyApp“ im folgenden Beispiel) nicht vorhanden ist, wird eine Ausnahme ausgelöst. Wenn der `ValueName` („Name“ im folgenden Beispiel) nicht vorhanden ist, wird `Nothing` zurückgegeben.  
@@ -39,6 +40,7 @@ Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden,
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die Registrierung enthält Schlüssel der obersten Ebene oder Stammschlüssel, die zum Speichern von Daten verwendet werden. Beispielsweise wird der HKEY_LOCAL_MACHINE-Stammschlüssel zum Speichern von Einstellungen auf Computerebene genutzt, die von allen Benutzern verwendet werden, während HKEY_CURRENT_USER zum Speichern von Daten genutzt wird, die spezifisch für einen einzelnen Benutzer sind.  
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
@@ -50,6 +52,7 @@ Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden,
 - Der Name des Schlüssels überschreitet das Limit von 255 Zeichen (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+
  Die Assembly benötigt zum Ausführen dieses Prozesses eine von der <xref:System.Security.Permissions.RegistryPermission>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Ebenso muss der Benutzer die richtigen Zugriffssteuerungslisten zum Erstellen von oder Schreiben auf Einstellungen verfügen. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Siehe auch

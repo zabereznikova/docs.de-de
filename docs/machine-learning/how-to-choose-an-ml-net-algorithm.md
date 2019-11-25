@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie einen ML.NET-Algorithmus für Ihr Machine Lea
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972086"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976696"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Gewusst wie: Auswählen eines ML.NET-Algorithmus
 
@@ -19,9 +19,9 @@ Algorithmen arbeiten mit **Features**. Features sind numerische Werte, die aus I
 
 ## <a name="trainer--algorithm--task"></a>Trainer = Algorithmus + Aufgabe
 
-Ein Algorithmus ist die Berechnung, die ausgeführt wird, um ein **Modell** zu erzeugen. Verschiedene Algorithmen schaffen Modelle mit unterschiedlichen Eigenschaften. 
+Ein Algorithmus ist die Berechnung, die ausgeführt wird, um ein **Modell** zu erzeugen. Verschiedene Algorithmen schaffen Modelle mit unterschiedlichen Eigenschaften.
 
-Mit ML.NET kann der gleiche Algorithmus für verschiedene Aufgaben angewendet werden. Beispielsweise kann ein stochastischer dualer koordinierter Anstieg für Binärklassifizierung, Multiklassenklassifizierung und Regression verwendet werden. Der Unterschied besteht darin, wie die Ausgabe des Algorithmus interpretiert wird, um der Aufgabe zu entsprechen. 
+Mit ML.NET kann der gleiche Algorithmus für verschiedene Aufgaben angewendet werden. Beispielsweise kann ein stochastischer dualer koordinierter Anstieg für Binärklassifizierung, Multiklassenklassifizierung und Regression verwendet werden. Der Unterschied besteht darin, wie die Ausgabe des Algorithmus interpretiert wird, um der Aufgabe zu entsprechen.
 
 Für jede Kombination von Algorithmus und Aufgabe bietet ML.NET eine Komponente, die den Trainingsalgorithmus und die Interpretation ausführt. Diese Komponenten werden als Trainer bezeichnet. <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> verwendet z.B. den **StochasticDualCoordinatedAscent**-Algorithmus, der auf die **Regression**-Aufgabe angewendet wird.
 

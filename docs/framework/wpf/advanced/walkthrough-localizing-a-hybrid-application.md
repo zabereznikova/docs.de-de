@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: bef296d5de4735780c839af312b5d4fe7eeeb960
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197851"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976503"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Exemplarische Vorgehensweise: Lokalisieren einer Hybridanwendung
 
@@ -56,7 +56,7 @@ Fügen Sie als nächstes ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tl
 
 ### <a name="to-add-localizable-content"></a>So fügen Sie lokalisierbaren Inhalt hinzu
 
-1. Doppelklicken Sie in **Projektmappen-Explorer**auf **SimpleControl. XAML** , um es im [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]zu öffnen.
+1. Doppelklicken Sie in **Projektmappen-Explorer**auf **SimpleControl. XAML** , um es im WPF-Designer zu öffnen.
 
 2. Legen Sie den Inhalt des Steuer Elements <xref:System.Windows.Controls.Button> mithilfe des folgenden Codes fest.
 

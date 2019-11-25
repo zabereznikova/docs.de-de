@@ -1,17 +1,17 @@
 ---
 title: Indizierte Eigenschaften
 description: Erfahren Sie mehr über indizierte Eigenschaften in F#, die einen Array ähnlichen Zugriff auf geordnete Daten ermöglichen.
-ms.date: 10/17/2018
-ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 11/04/2019
+ms.openlocfilehash: f6cf3bfa737d2bf458e379594be5884696cee3e1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627556"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976610"
 ---
 # <a name="indexed-properties"></a>Indizierte Eigenschaften
 
-Beim Definieren einer Klasse, die geordnete Daten abstrahiert, kann es manchmal hilfreich sein, den indizierten Zugriff auf diese Daten bereitzustellen, ohne die zugrunde liegende Implementierung verfügbar zu machen. Dies erfolgt mit dem `Item` -Member.
+Beim Definieren einer Klasse, die geordnete Daten abstrahiert, kann es manchmal hilfreich sein, den indizierten Zugriff auf diese Daten bereitzustellen, ohne die zugrunde liegende Implementierung verfügbar zu machen. Dies erfolgt mit dem `Item`-Member.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,11 +36,11 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Hinweise
 
-Die Formen der vorherigen Syntax veranschaulichen, wie indizierte Eigenschaften definiert werden, die sowohl `get` eine- `set` als auch eine- `get` Methode aufweisen, nur über eine `set` -Methode verfügen oder nur über eine-Methode verfügen. Sie können auch die Syntax für "Get only" und die für "Set" angezeigte Syntax kombinieren und eine Eigenschaft mit "Get" und "Set" entwickeln. In diesem letzteren Formular können Sie verschiedene Zugriffsmodifizierer und Attribute für die Get-und Set-Methoden einfügen.
+Die Formen der vorherigen Syntax veranschaulichen, wie indizierte Eigenschaften definiert werden, die sowohl über eine `get`-als auch eine `set`-Methode verfügen, nur über eine `get`-Methode verfügen oder nur über eine `set`-Methode verfügen. Sie können auch die Syntax für "Get only" und die für "Set" angezeigte Syntax kombinieren und eine Eigenschaft mit "Get" und "Set" entwickeln. In diesem letzteren Formular können Sie verschiedene Zugriffsmodifizierer und Attribute für die Get-und Set-Methoden einfügen.
 
-Wenn Sie den Namen `Item`verwenden, behandelt der Compiler die Eigenschaft als indizierte Standard Eigenschaft. Eine *indizierte Standard Eigenschaft* ist eine Eigenschaft, auf die Sie mithilfe einer Array ähnlichen Syntax für die Objektinstanz zugreifen können. Wenn `o` z. b. ein Objekt vom Typ ist, das diese Eigenschaft definiert, wird `o.[index]` die Syntax für den Zugriff auf die-Eigenschaft verwendet.
+Wenn Sie den Namen `Item`verwenden, behandelt der Compiler die Eigenschaft als indizierte Standard Eigenschaft. Eine *indizierte Standard Eigenschaft* ist eine Eigenschaft, auf die Sie mithilfe einer Array ähnlichen Syntax für die Objektinstanz zugreifen können. Wenn `o` z. b. ein Objekt des Typs ist, der diese Eigenschaft definiert, wird die Syntax `o.[index]` verwendet, um auf die Eigenschaft zuzugreifen.
 
-Die Syntax für den Zugriff auf eine nicht standardmäßig indizierte Eigenschaft besteht darin, den Namen der Eigenschaft und den Index in Klammern wie einem regulären Member bereitzustellen. Wenn beispielsweise die-Eigenschaft `o` für aufgerufen `Ordinal`wird, schreiben `o.Ordinal(index)` Sie, um darauf zuzugreifen.
+Die Syntax für den Zugriff auf eine nicht standardmäßig indizierte Eigenschaft besteht darin, den Namen der Eigenschaft und den Index in Klammern wie einem regulären Member bereitzustellen. Wenn beispielsweise die-Eigenschaft auf `o` `Ordinal`aufgerufen wird, schreiben Sie `o.Ordinal(index)`, um darauf zuzugreifen.
 
 Unabhängig davon, welches Formular Sie verwenden, sollten Sie immer das Curry-Formular für die Set-Methode für eine indizierte Eigenschaft verwenden. Weitere Informationen zu Curry-Funktionen finden Sie unter [Functions](../functions/index.md).
 
@@ -50,7 +50,7 @@ Im folgenden Codebeispiel werden die Definition und die Verwendung von standardm
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```console
 ONE two three four five six seven eight nine ten
@@ -70,7 +70,7 @@ open System.Collections.Generic
 /// Basic implementation of a sparse matrix based on a dictionary
 type SparseMatrix() =
     let table = new Dictionary<(int * int), float>()
-    member __.Item
+    member _.Item
         // Because the key is comprised of two values, 'get' has two index values
         with get(key1, key2) = table.[(key1, key2)]
 

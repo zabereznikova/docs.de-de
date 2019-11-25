@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774467"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977381"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Erstellen eines Programms zur Filmempfehlung mithilfe der Matrixfaktorisierung mit ML.NET
 
@@ -48,7 +48,7 @@ Es gibt mehrere Möglichkeiten, ein Empfehlungssystem umzusetzen. Beispielsweise
 
 ### <a name="create-a-project"></a>Erstellen eines Projekts
 
-1. Öffnen Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Wählen Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#** und anschließend den Knoten **.NET Core** aus. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)** . Geben Sie im Textfeld **Name** „MovieRecommender“ ein, und klicken Sie anschließend auf die Schaltfläche **OK**.
+1. Öffnen Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Wählen Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#** und anschließend den Knoten **.NET Core** aus. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)**. Geben Sie im Textfeld **Name** „MovieRecommender“ ein, und klicken Sie anschließend auf die Schaltfläche **OK**.
 
 2. Erstellen Sie ein Verzeichnis mit dem Namen *Data* in Ihrem Projekt, um das Dataset zu speichern:
 
@@ -73,7 +73,7 @@ Es gibt mehrere Möglichkeiten, ein Empfehlungssystem umzusetzen. Beispielsweise
 
 2. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die \*.csv-Dateien, und wählen Sie **Eigenschaften** aus. Ändern Sie unter **Erweitert** den Wert von **In Ausgabeverzeichnis kopieren** in **Kopieren, wenn neuer**.
 
-   ![Option „Kopieren, wenn neuer“ in Visual Studio](./media/movie-recommendation/copytoout.gif)
+   ![GIF der Auswahl der Option „Kopieren, wenn neuer“](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>Laden von Daten
 
@@ -83,7 +83,7 @@ Die Empfehlungsbewertungsdaten werden in die Datasets `Train` und `Test` unterte
 
 Unten sehen Sie eine Vorschau der Daten aus den CSV-Dateien:
 
-![Vorschau der Daten](./media/movie-recommendation/csv-dataset-preview.png)
+![Screenshot: Vorschau des CVS-Datasets](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 In den CSV-Dateien befinden sich vier Spalten:
 
@@ -102,7 +102,7 @@ Da Sie Filmbewertungen vorhersagen möchten, ist `Label` die Bewertungsspalte. D
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Sie müssen selbst entscheiden, welche `Features` Sie verwenden möchten, um das `Label` vorherzusagen. Sie können auch Methoden wie [Permutation Feature Importance](../how-to-guides/determine-global-feature-importance-in-model.md) verwenden, um die besten `Features` auszuwählen.
+Sie müssen selbst entscheiden, welche `Features` Sie verwenden möchten, um das `Label` vorherzusagen. Sie können auch Methoden wie [Permutation Feature Importance](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) verwenden, um die Auswahl der besten `Features` zu unterstützen.
 
 In diesem Tutorial sollten Sie die `timestamp`-Spalte nicht als `Feature` festlegen, da der Zeitstempel nicht beeinflusst, wie ein Benutzer einen Film bewertet, und daher nicht zu einer genaueren Vorhersage beitragen würde.
 
@@ -171,11 +171,11 @@ In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../resources/
 
 Für Machine Learning-Trainingsalgorithmen sind Daten in einem bestimmten Format erforderlich. `Transformers` werden verwendet, um Tabellendaten in ein kompatibles Format zu transformieren.
 
-![Bild: Transformator](./media/movie-recommendation/transformer.png)
+![Diagramm des Transformationsdatenflusses](./media/movie-recommendation/data-transformer-transformed.png)
 
 `Transformers` werden in ML.NET mithilfe von `Estimators` erstellt. `Estimators` akzeptieren Daten und geben `Transformers` zurück.
 
-![Bild: Schätzer](./media/movie-recommendation/estimator.png)
+![Diagramm des Schätzungsdatenflusses](./media/movie-recommendation/data-estimator-transformer.png)
 
 Der Trainingsalgorithmus für Empfehlungen, den Sie für das Training des Modells einsetzen, ist ein Beispiel für einen `Estimator`.
 
@@ -373,7 +373,7 @@ Fügen Sie den unten aufgeführten Code als nächste Codezeile in die `Main()`-M
 
 ### <a name="use-your-saved-model"></a>Verwenden des gespeicherten Modells
 
-Nachdem Sie das trainierte Modell gespeichert haben, können Sie es in verschiedenen Umgebungen nutzen. Wie Sie ein trainiertes Machine Learning-Modell in Apps operationalisieren, erfahren Sie in der [Schrittanleitung](../how-to-guides/consuming-model-ml-net.md).
+Nachdem Sie Ihr trainiertes Modell gespeichert haben, können Sie das Modell in verschiedenen Umgebungen nutzen. Weitere Informationen zum Nutzbarmachen eines trainierten Machine Learning-Modells in Apps finden Sie unter [Speichern und Laden trainierter Modelle](../how-to-guides/save-load-machine-learning-models-ml-net.md).
 
 ## <a name="results"></a>Ergebnisse
 
@@ -420,7 +420,7 @@ Es gibt mehrere Möglichkeiten, die Leistung des Modells zu verbessern, um so ge
 
 Wenn Sie mehr Trainingsdaten mit ausreichend Beispielen für jeden Benutzer und für jede movieId hinzufügen, kann die Qualität des Empfehlungsmodells gesteigert werden.
 
-Die [Kreuzvalidierung](../how-to-guides/train-cross-validation-ml-net.md) ist eine Methode zur Auswertung von Modellen, bei der nicht –wie in diesem Tutorial – Testdaten aus dem Dataset extrahiert, sondern stattdessen nach dem Zufallsprinzip Daten in Teilmengen aufgeteilt werden. Anschließend werden einige Gruppen als Trainingsdaten und einige als Testdaten verwendet. Diese Methode führt im Vergleich zur Aufteilung von Daten in Trainings- und Testdatasets zu einer höheren Modellqualität.
+Die [Kreuzvalidierung](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) ist eine Methode zur Auswertung von Modellen, bei der nicht –wie in diesem Tutorial – Testdaten aus dem Dataset extrahiert, sondern stattdessen nach dem Zufallsprinzip Daten in Teilmengen aufgeteilt werden. Anschließend werden einige Gruppen als Trainingsdaten und einige als Testdaten verwendet. Diese Methode führt im Vergleich zur Aufteilung von Daten in Trainings- und Testdatasets zu einer höheren Modellqualität.
 
 ### <a name="features"></a>Features
 
@@ -428,7 +428,7 @@ In diesem Tutorial verwenden Sie nur die drei `Features` (`user id`, `movie id` 
 
 Dies ist für den Anfang ausreichend. In einem echten Szenario sollten Sie jedoch weitere Attribute oder `Features` (beispielsweise Alter, Geschlecht, Standort usw.) hinzufügen, falls diese im Dataset enthalten sind. Durch das Hinzufügen relevanter `Features` können Sie die Leistung des Empfehlungsmodells verbessern.
 
-Wenn Sie nicht genau wissen, welche `Features` für Ihre Machine Learning-Aufgabe am relevantesten sind, können Sie auch die Methoden Feature Contribution Calculation (FCC) und [Permutation Feature Importance](../how-to-guides/determine-global-feature-importance-in-model.md) verwenden, die ML.NET zur Ermittlung der wichtigsten `Features` bereitstellt.
+Wenn Sie nicht genau wissen, welche `Features` für Ihre Machine Learning-Aufgabe am relevantesten sind, können Sie auch die Methoden Feature Contribution Calculation (FCC) und [Permutation Feature Importance](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) verwenden, die ML.NET zur Ermittlung der wichtigsten `Features` bereitstellt.
 
 ### <a name="algorithm-hyperparameters"></a>Hyperparameter für Algorithmen
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0d6eda0aea9ad97063cc5362d83163443de034a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016085"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976945"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen für das Rendern von Grafiken, die sich auf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen auswirken.  
@@ -24,11 +24,11 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Was sind XPDM und WDDM?  
- Einige der Registrierungseinstellungen für das Rendern von Grafiken besitzen unterschiedliche Werte, je nachdem, ob Ihre Grafikkarte einen XPDM- oder einen WDDM-Treiber verwendet. XPDM ist das [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Anzeigetreibermodell, und WDDM ist das Windows-Anzeigetreibermodell. WDDM ist auf Computern unter [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)] verfügbar. XPDM ist auf Computern unter [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] und [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)] verfügbar. Weitere Informationen zu WDDM finden Sie im Leitfaden für [Windows Vista-Anzeigetreibermodelle](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Einige der Registrierungseinstellungen für das Rendern von Grafiken besitzen unterschiedliche Werte, je nachdem, ob Ihre Grafikkarte einen XPDM- oder einen WDDM-Treiber verwendet. XPDM ist das [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Anzeigetreibermodell, und WDDM ist das Windows-Anzeigetreibermodell. WDDM ist auf Computern verfügbar, auf denen Windows Vista und [!INCLUDE[win7](../../../../includes/win7-md.md)]ausgeführt werden. XPDM ist auf Computern verfügbar, auf denen Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]und [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]ausgeführt wird. Weitere Informationen zu WDDM finden Sie im Leitfaden für [Windows Vista-Anzeigetreibermodelle](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Registrierungseinstellungen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet vier Registrierungseinstellungen zum Steuern des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Renderings:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet vier Registrierungseinstellungen zum Steuern des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Rendering:  
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
@@ -57,7 +57,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- Mit dem **maximalen Multisampling-Wert** können Sie die maximale Menge an Antialiasing von 3D-Inhalten anpassen. Verwenden Sie diese Ebene, um das 3D-Antialiasing in [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] zu deaktivieren oder in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]zu aktivieren.  
+ Mit dem **maximalen Multisampling-Wert** können Sie die maximale Menge an Antialiasing von 3D-Inhalten anpassen. Verwenden Sie diese Ebene, um das 3D-Antialiasing in Windows Vista zu deaktivieren oder es in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]zu aktivieren.  
   
  Der **maximale Wert für Multisampling** ist ein DWORD-Wert, der zwischen 0 und 16 liegt. Der Wert 0 bedeutet, dass bei 3D-Inhalten das Multisample-Antialiasing deaktiviert wird. Der Wert 16 versucht, bis zu 16-faches Multisample-Antialiasing zu verwenden, sofern dies von der Grafikkarte unterstützt wird. Beachten Sie, dass die Einstellung dieses Registrierungsschlüssel Werts auf Computern, die XPDM-Treiber verwenden, dazu führt, dass Anwendungen einen großen Teil des zusätzlichen Grafik Speichers verwenden, die Leistung von 3D-Rendering verringern und das Rendering von renderingfehlern und-Stabilität durchführen können. Schwierigkeiten.  
   
@@ -89,7 +89,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- Mithilfe der **Option "Verweis Raster verwenden** " können Sie in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] einen simulierten Hardwarerendering-Modus für das Debuggen erzwingen: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wechselt in den Hardware Modus, verwendet jedoch den Microsoft Direct3D Reference Software Raster, "d3dref9. dll, anstelle eines tatsächlichen Hardware Geräts.  
+ Mithilfe der **Option "Verweis Raster verwenden** " können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in einem simulierten hardwarrenderingmodus für das Debuggen erzwingen: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wechselt in den Hardware Modus, verwendet jedoch den Microsoft Direct3D Reference Software Raster, "d3dref9. dll, anstelle eines tatsächlichen Hardware Geräts.  
   
  Das Referenzraster ist sehr langsam, umgeht aber Ihren Videotreiber, wodurch durch Treiberprobleme verursachte Renderingprobleme vermieden werden. Aus diesem Grund können Sie das Referenzraster verwenden, um zu ermitteln, ob Renderingprobleme vom Videotreiber verursacht werden. Die Datei „d3dref9.dll“ muss sich an einem Speicherort befinden, auf den die Anwendung zugreifen kann, z.B. an einem beliebigen Speicherort im Systempfad oder im lokalen Verzeichnis der Anwendung.  
   

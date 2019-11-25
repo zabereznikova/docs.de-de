@@ -1,21 +1,23 @@
 ---
-title: Zugreifen auf die Anschlüsse des Computers (Visual Basic)
+title: Zugreifen auf die Anschlüsse des Computers
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589326"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329596"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Zugreifen auf die Anschlüsse des Computers (Visual Basic)
+
 Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die seriellen Anschlüsse eines Computer zugreifen können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Hier erfahren Sie, wie Sie verfügbare seriellen Anschlüsse anzeigen können.  
   
@@ -32,6 +34,7 @@ Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, 
  Hier erfahren Sie, wie Sie .NET Framework verwenden können, während Sie Portoperationen durchführen.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Beschreibt das `My.Computer.Ports`-Objekt und dessen Member  
   
@@ -42,5 +45,6 @@ Das Objekt `My.Computer.Ports` stellt eine Eigenschaft und eine Methode bereit, 
  Beschreibt die `OpenSerialPort`-Methode, mit der ein <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>-Objekt erstellt und geöffnet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  <xref:System.IO.Ports.SerialPort>  
  Beschreibt die .NET Framework-Klasse <xref:System.IO.Ports.SerialPort>.

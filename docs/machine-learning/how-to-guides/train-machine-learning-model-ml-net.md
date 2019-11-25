@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929346"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976762"
 ---
 # <a name="train-and-evaluate-a-model"></a>Trainieren und Auswerten eines Modells
 
@@ -98,9 +98,9 @@ Bei ML.NET-Algorithmen gibt es Einschränkungen hinsichtlich der Eingabespaltent
 
 ### <a name="working-with-expected-column-types"></a>Arbeiten mit erwarteten Spaltentypen
 
-Die Machine Learning-Algorithmen in ML.NET erwarten als Eingabe einen Float-Vektor mit bekannter Größe. Wenden Sie das [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute)-Attribut auf Ihr Datenmodell an, wenn alle Daten bereits im numerischen Format vorliegen und gemeinsam verarbeitet werden sollen (z.B. Bildpunkte). 
+Die Machine Learning-Algorithmen in ML.NET erwarten als Eingabe einen Float-Vektor mit bekannter Größe. Wenden Sie das [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute)-Attribut auf Ihr Datenmodell an, wenn alle Daten bereits im numerischen Format vorliegen und gemeinsam verarbeitet werden sollen (z.B. Bildpunkte).
 
-Wenn die Daten nicht alle numerisch sind und Sie unterschiedliche Datentransformationen auf jede der Spalten einzeln anwenden möchten, verwenden Sie die [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)-Methode, nachdem alle Spalten verarbeitet wurden, um alle einzelnen Spalten zu einem einzigen Featurevektor zu kombinieren, der an eine neue Spalte ausgegeben wird. 
+Wenn die Daten nicht alle numerisch sind und Sie unterschiedliche Datentransformationen auf jede der Spalten einzeln anwenden möchten, verwenden Sie die [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)-Methode, nachdem alle Spalten verarbeitet wurden, um alle einzelnen Spalten zu einem einzigen Featurevektor zu kombinieren, der an eine neue Spalte ausgegeben wird.
 
 Das folgende Ausschnitt kombiniert die Spalten `Size` und `HistoricalPrices` zu einem einzigen Featurevektor, der in eine neue Spalte namens `Features` ausgegeben wird. Da es einen Unterschied in den Skalierungen gibt, wird [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) auf die Spalte `Features` angewendet, um die Daten zu normalisieren.
 
@@ -121,9 +121,9 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ### <a name="working-with-default-column-names"></a>Arbeiten mit standardmäßigen Spaltennamen
 
-ML.NET-Algorithmen verwenden standardmäßige Spaltennamen, wenn keine Namen angegeben sind. Alle Trainer haben einen Parameter namens `featureColumnName` für die Eingaben des Algorithmus und gegebenenfalls auch einen Parameter für den erwarteten Wert namens `labelColumnName`. Standardmäßig sind das die Werte `Features` bzw. `Label`. 
+ML.NET-Algorithmen verwenden standardmäßige Spaltennamen, wenn keine Namen angegeben sind. Alle Trainer haben einen Parameter namens `featureColumnName` für die Eingaben des Algorithmus und gegebenenfalls auch einen Parameter für den erwarteten Wert namens `labelColumnName`. Standardmäßig sind das die Werte `Features` bzw. `Label`.
 
-Durch die Verwendung der [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)-Methode während der Vorverarbeitung zum Erstellen einer neuen Spalte mit dem Namen `Features` muss der Name der Featurespalte nicht in den Parametern des Algorithmus angegeben werden, da er bereits in der vorverarbeiteten `IDataView` vorhanden ist. Die Bezeichnungsspalte ist `CurrentPrice`, aber da das [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)-Attribut im Datenmodell verwendet wird, benennt ML.NET die `CurrentPrice`-Spalte in `Label` um, sodass der `labelColumnName`-Parameter dem Estimator des Machine Learning-Algorithmus nicht mehr bereitgestellt werden muss. 
+Durch die Verwendung der [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)-Methode während der Vorverarbeitung zum Erstellen einer neuen Spalte mit dem Namen `Features` muss der Name der Featurespalte nicht in den Parametern des Algorithmus angegeben werden, da er bereits in der vorverarbeiteten `IDataView` vorhanden ist. Die Bezeichnungsspalte ist `CurrentPrice`, aber da das [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)-Attribut im Datenmodell verwendet wird, benennt ML.NET die `CurrentPrice`-Spalte in `Label` um, sodass der `labelColumnName`-Parameter dem Estimator des Machine Learning-Algorithmus nicht mehr bereitgestellt werden muss.
 
 Wenn Sie die standardmäßigen Spaltennamen nicht verwenden möchten, übergeben Sie die Namen der Feature- und Bezeichnungsspalten als Parameter bei der Definition des Estimators des Maschine Learning-Algorithmus, wie im nachfolgenden Ausschnitt gezeigt:
 
@@ -145,21 +145,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Extrahieren von Modellparametern
 
-Nachdem das Modell trainiert wurde, extrahieren Sie die gelernten [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) zur Überprüfung oder für das erneute Training. Die [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) stellen den den Trend und die erlernten Koeffizienten oder Gewichtungen des trainierten Modells bereit. 
+Nachdem das Modell trainiert wurde, extrahieren Sie die gelernten [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) zur Überprüfung oder für das erneute Training. Die [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) stellen den den Trend und die erlernten Koeffizienten oder Gewichtungen des trainierten Modells bereit.
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> Andere Modelle haben für ihre Aufgaben spezifische Parameter. So stellt beispielsweise der [K-Means-Algorithmus](xref:Microsoft.ML.Trainers.KMeansTrainer) Daten in einen Cluster basierend auf Schwerpunkten bereit, und der [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) enthält eine Eigenschaft, die diese erlernten Schwerpunkte speichert. Um mehr zu erfahren, lesen Sie die [`Microsoft.ML.Trainers`-API-Dokumentation](xref:Microsoft.ML.Trainers), und suchen Sie nach Klassen, die `ModelParameters` in ihrem Namen enthalten. 
+> Andere Modelle haben für ihre Aufgaben spezifische Parameter. So stellt beispielsweise der [K-Means-Algorithmus](xref:Microsoft.ML.Trainers.KMeansTrainer) Daten in einen Cluster basierend auf Schwerpunkten bereit, und der [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) enthält eine Eigenschaft, die diese erlernten Schwerpunkte speichert. Um mehr zu erfahren, lesen Sie die [`Microsoft.ML.Trainers`-API-Dokumentation](xref:Microsoft.ML.Trainers), und suchen Sie nach Klassen, die `ModelParameters` in ihrem Namen enthalten.
 
 ## <a name="evaluate-model-quality"></a>Bewerten der Modellqualität
 
 Um die Auswahl des leistungsstärksten Modells zu erleichtern, muss die Leistung anhand von Testdaten bewertet werden. Verwenden Sie die [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*)-Methode, um verschiedene Metriken für das trainierte Modell zu messen.
 
 > [!NOTE]
-> Die `Evaluate`-Methode liefert unterschiedliche Metriken, je nachdem, welche Machine Learning-Aufgabe durchgeführt wurde. Um mehr zu erfahren, lesen Sie die [`Microsoft.ML.Data`-API-Dokumentation](xref:Microsoft.ML.Data), und suchen Sie nach Klassen, die `Metrics` in ihrem Namen enthalten. 
+> Die `Evaluate`-Methode liefert unterschiedliche Metriken, je nachdem, welche Machine Learning-Aufgabe durchgeführt wurde. Um mehr zu erfahren, lesen Sie die [`Microsoft.ML.Data`-API-Dokumentation](xref:Microsoft.ML.Data), und suchen Sie nach Klassen, die `Metrics` in ihrem Namen enthalten.
 
 ```csharp
 // Measure trained model performance
@@ -174,9 +174,9 @@ RegressionMetrics trainedModelMetrics = mlContext.Regression.Evaluate(testDataPr
 double rSquared = trainedModelMetrics.RSquared;
 ```
 
-Im vorherigen Codebeispiel:  
+Im vorherigen Codebeispiel:
 
-1. Das Testdataset wird unter Verwendung der zuvor definierten Datenaufbereitungstransformationen vorverarbeitet. 
+1. Das Testdataset wird unter Verwendung der zuvor definierten Datenaufbereitungstransformationen vorverarbeitet.
 2. Das trainierte Machine Learning-Modell wird verwendet, um Vorhersagen zu den Testdaten zu treffen.
 3. Bei der `Evaluate`-Methode werden die Werte in der Spalte `CurrentPrice` des Testdatasets mit der Spalte `Score` der neu ausgegebenen Vorhersagen verglichen, um die Metriken für das Regressionsmodell zu berechnen, von dem das Bestimmtheitsmaß in der `rSquared`-Variablen gespeichert wird.
 

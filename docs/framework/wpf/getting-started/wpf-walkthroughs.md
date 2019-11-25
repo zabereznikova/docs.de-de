@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920407"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977030"
 ---
 # <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenarien. Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.
@@ -21,11 +21,11 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Exemplarische Vorgehensweise: Entwickeln einer einfachen WPF-Anwendung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Veranschaulicht, wie eine einfache WPF-Anwendung mit dem [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]erstellt wird.|
+|[Exemplarische Vorgehensweise: Entwickeln einer einfachen WPF-Anwendung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Veranschaulicht, wie eine einfache WPF-Anwendung mit dem WPF-Designer erstellt wird.|
 |[Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Veranschaulicht das Erstellen eines dynamischen Layouts mithilfe eines <xref:System.Windows.Controls.Grid> Panel-Steuer Elements.|
 |[Exemplarische Vorgehensweise: Erstellen einer Anwendung mit Größenänderung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Veranschaulicht, wie Fensterlayouts erstellt werden, deren Größe vom Benutzer zur Laufzeit geändert werden kann.|
-|[Exemplarische Vorgehensweise: Erstellen einer Datenbindung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Veranschaulicht, wie die-[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] verwendet wird, um Daten Bindungen zu erstellen, die Daten mit einem-Steuerelement verbinden.|
-|[Exemplarische Vorgehensweise: Verwenden einer Design instance-Methode zum Binden an Daten im Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Veranschaulicht, wie die-[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] verwendet wird, um zur Entwurfszeit Daten Bindungen für einen Datenkontext zu erstellen, der zur Laufzeit zugewiesen wird.|
+|[Exemplarische Vorgehensweise: Erstellen einer Datenbindung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Veranschaulicht, wie der WPF-Designer verwendet wird, um Daten Bindungen zu erstellen, die Daten mit einem-Steuerelement verbinden.|
+|[Exemplarische Vorgehensweise: Verwenden einer Design instance-Methode zum Binden an Daten im Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Veranschaulicht, wie der WPF-Designer zum Erstellen von Daten Bindungen zur Entwurfszeit für einen Datenkontext verwendet wird, der zur Laufzeit zugewiesen wird.|
 
 ## <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 

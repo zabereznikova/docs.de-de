@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 2edc890049d62913d693ad61d8d814d012c0f482
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: db2de681227dfdb7420808963219b9f52381f8fe
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697173"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088960"
 ---
-# <a name="add-element-for-switches"></a>\<add >-Element für \<switches >
+# <a name="add-element-for-switches"></a>\<> Element für \<Switches hinzufügen >
 Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<switches >** ](switches-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Switches**](switches-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Hinzufügen >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -37,7 +37,7 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |**name**|Erforderliches Attribut.<br /><br /> Gibt den Namen des Schalters an. Der Wert dieses Attributs entspricht dem *DisplayName* -Parameter, der an den Switch-Konstruktor übergeben wird.|  
-|**value**|Erforderliches Attribut.<br /><br /> Gibt die Ebene des Schalters an.|  
+|**Wert**|Erforderliches Attribut.<br /><br /> Gibt die Ebene des Schalters an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -51,10 +51,10 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die Ebene eines Ablauf Verfolgungs Schalters ändern, indem Sie ihn in eine Konfigurationsdatei einfügen. Wenn der Schalter ein <xref:System.Diagnostics.BooleanSwitch> ist, können Sie ihn aktivieren und deaktivieren. Wenn der Schalter ein <xref:System.Diagnostics.TraceSwitch> ist, können Sie ihm verschiedene Ebenen zuweisen, um die Typen der Ablauf Verfolgungs-oder Debugmeldungen anzugeben, die die Anwendung ausgibt.  
+ Sie können die Ebene eines Ablauf Verfolgungs Schalters ändern, indem Sie ihn in eine Konfigurationsdatei einfügen. Wenn der Schalter ein <xref:System.Diagnostics.BooleanSwitch>ist, können Sie ihn aktivieren und deaktivieren. Wenn der Schalter ein <xref:System.Diagnostics.TraceSwitch>ist, können Sie ihm verschiedene Ebenen zuweisen, um die Typen der von der Anwendung ausgegebenen Ablauf Verfolgungs-oder Debugmeldungen anzugeben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<ADD >-** Element verwendet wird, um den `General`-Ablauf Verfolgungs Schalter auf die <xref:System.Diagnostics.TraceLevel>-Ebene festzulegen und den `Data`-booleschen Ablauf Verfolgungs Schalter zu aktivieren.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<Add >** -Elements verwendet wird, um den `General` Trace-Schalter auf die <xref:System.Diagnostics.TraceLevel> Ebene festzulegen und den `Data` booleschen Ablauf Verfolgungs Schalter zu aktivieren.  
   
 ```xml  
 <configuration>  

@@ -1,13 +1,13 @@
 ---
 title: Aufruferinformationen
 description: Beschreibt, wie aufruferinfo-Argument Attribute verwendet werden, um Aufruferinformationen von einer Methode abzurufen.
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106587"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976795"
 ---
 # <a name="caller-information"></a>Aufruferinformationen
 
@@ -15,10 +15,10 @@ Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufruf
 
 Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informations Attribute aufgelistet, die im [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) -Namespace definiert sind:
 
-|Attribut|Beschreibung|Typ|
+|Attribut|Beschreibung|Geben Sie Folgendes ein:|
 |---------|-----------|----|
-|[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Dateipfad zum Zeitpunkt der Kompilierung.|`String`
-|[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird.|`Integer`|
+|[Callerfilepath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Dateipfad zum Zeitpunkt der Kompilierung.|`String`
+|[Callerlinenumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird.|`Integer`|
 |[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Der Methoden- oder Eigenschaftenname des Aufrufers. Weitere Informationen finden Sie im Abschnitt Elementnamen weiter unten in diesem Thema.|`String`|
 
 ## <a name="example"></a>Beispiel
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -51,7 +51,7 @@ Sie können die optionalen Argumente explizit angeben, um die Aufruferinformatio
 
 ## <a name="member-names"></a>Membernamen
 
-Sie können das [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) -Attribut verwenden, um zu vermeiden, dass der `String` Elementname als Argument für die aufgerufene Methode angegeben wird. Wenn Sie dieses Verfahren verwenden, vermeiden Sie das Problem, dass die `String` Werte durch das umbenennen umbenennen nicht geändert werden. Dieser Vorteil ist für die folgenden Aufgaben besonders hilfreich:
+Sie können das [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) -Attribut verwenden, um zu vermeiden, dass der Elementname als `String` Argument der aufgerufenen Methode angegeben wird. Wenn Sie dieses Verfahren verwenden, vermeiden Sie das Problem, dass die `String` Werte durch das Umbenennen von Refactoring nicht geändert werden. Dieser Vorteil ist für die folgenden Aufgaben besonders hilfreich:
 
 - Verwenden der Ablaufverfolgung und der Diagnoseprogramme
 - Implementieren der [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) -Schnittstelle beim Binden von Daten. Diese Schnittstelle ermöglicht es der Eigenschaft eines Objekts, ein gebundenes Steuerelement über die Änderung der Eigenschaft zu benachrichtigen, damit das Steuerelement die aktualisierten Informationen anzeigen kann. Ohne das [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) -Attribut müssen Sie den Eigenschaftsnamen als Literalwert angeben.

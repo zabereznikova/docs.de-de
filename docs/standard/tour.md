@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421577"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283896"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -29,7 +29,7 @@ Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codeb
 
 Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic (VB). 
 
-* C# ist einfach, leistungsstark, typsicher und objektorientiert, behält aber gleichzeitig die Ausdruckskraft und Eleganz der C-Sprachen bei. Wer sich mit C und ähnlichen Sprachen auskennt, hat wenig Probleme bei der Verwendung von C#. Weitere Informationen zu C# finden Sie im [Leitfaden für C#](../csharp/index.md).
+* C# ist einfach, leistungsstark, typsicher und objektorientiert, behält aber gleichzeitig die Ausdruckskraft und Eleganz der C-Sprachen bei. Wer sich mit C und ähnlichen Sprachen auskennt, hat wenig Probleme bei der Verwendung von C#. Weitere Informationen zu C# finden Sie im [Leitfaden für C#](../csharp/index.yml).
 
 * F# ist eine plattformübergreifende, funktionsorientierte Programmiersprache, die auch die herkömmliche und imperative Programmierung unterstützt. Weitere Informationen zu F# finden Sie im [Leitfaden für F#](../fsharp/index.md).
 

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: fa00aed2cd1e96ec788d4bc9c1c63f20561d8d1c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698181"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087456"
 ---
-# <a name="httpwebrequest-element-network-settings"></a>\<httpwebrequest >-Element (Netzwerkeinstellungen)
+# <a name="httpwebrequest-element-network-settings"></a>\<"HttpWebRequest" >-Element (Netzwerkeinstellungen)
 Passt Webanforderungs Parameter an.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<httpwebrequest >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Einstellungen**](settings-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<HttpWebRequest >**
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
@@ -53,10 +53,10 @@ Passt Webanforderungs Parameter an.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[Einstellungen](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig erzwingt das .NET Framework nur RFC 2616 für die URI-Verarbeitung. Einige Server Antworten können Steuerzeichen in unzulässigen Feldern enthalten, die bewirken, dass die <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>-Methode eine <xref:System.Net.WebException> auslöst. Wenn **useunsafeheaderparamesing** auf **true**festgelegt ist, wird in diesem Fall nicht <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> ausgelöst. die Anwendung ist jedoch für verschiedene Formen von URI-analyseangriffen anfällig. Die beste Lösung besteht darin, den Server so zu ändern, dass die Antwort keine Steuerzeichen enthält.  
+ Standardmäßig erzwingt das .NET Framework nur RFC 2616 für die URI-Verarbeitung. Einige Server Antworten können Steuerzeichen in unzulässigen Feldern enthalten, was dazu führt, dass die <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> Methode eine <xref:System.Net.WebException>auslöst. Wenn **useunsafeheaderparamesing** auf **true**festgelegt ist, wird in diesem Fall <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> nicht ausgelöst. die Anwendung ist jedoch für verschiedene Formen von URI-analyseangriffen anfällig. Die beste Lösung besteht darin, den Server so zu ändern, dass die Antwort keine Steuerzeichen enthält.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

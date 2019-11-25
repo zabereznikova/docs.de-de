@@ -1,5 +1,5 @@
 ---
-title: Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen in Visual Basic
+title: Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -22,60 +22,63 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590945"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348913"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen in Visual Basic
+
 Dieser Abschnitt enthält die Aufgaben im Zusammenhang mit dem Erstellen, Löschen, Verschieben und Umbenennen von Dateien und Verzeichnissen in Visual Basic.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+
+ [Vorgehensweise: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Veranschaulicht, wie Dateien mit einem bestimmten Dateinamenmuster, z.B. nur TXT-Dateien, in ein Verzeichnis kopiert werden.  
   
- [Gewusst wie: Erstellen einer Kopie einer Datei im gleichen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [Vorgehensweise: Erstellen einer Kopie einer Datei im gleichen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  Veranschaulicht, wie eine Kopie einer Datei im gleichen Verzeichnis erstellt wird.  
   
- [Gewusst wie: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [Vorgehensweise: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
  Veranschaulicht, wie eine Datei in ein anderes Verzeichnis kopiert wird.  
   
- [Gewusst wie: Erstellen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [Vorgehensweise: Erstellen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Veranschaulicht, wie eine Datei erstellt wird.  
   
- [Gewusst wie: Löschen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Vorgehensweise: Löschen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  Veranschaulicht, wie eine Datei gelöscht wird.  
   
- [Gewusst wie: Suchen nach Dateien mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [Vorgehensweise: Suchen nach Dateien mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
  Veranschaulicht, wie nur Dateien mit einem bestimmten Dateinamenmuster in einem Verzeichnis aufgeführt werden.  
   
- [Gewusst wie: Verschieben einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [Vorgehensweise: Verschieben von Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
  Veranschaulicht, wie eine Datei in ein anderes Verzeichnis verschoben wird.  
   
- [Gewusst wie: Umbenennen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [Vorgehensweise: Umbenennen einer Datei](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
  Veranschaulicht, wie eine Datei umbenannt wird.  
   
- [Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [Vorgehensweise: Kopieren eines Verzeichnisses in ein anderes Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  Veranschaulicht, wie ein Verzeichnis an einen anderen Speicherort kopiert wird.  
   
- [Gewusst wie: Erstellen eines Verzeichnisses](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [Vorgehensweise: Erstellen eines Verzeichnisses](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
  Veranschaulicht, wie ein Verzeichnis erstellt wird.  
   
- [Gewusst wie: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [Vorgehensweise: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
  Veranschaulicht, wie Verzeichnisse mit einem bestimmten Muster in ihren Namen aufgeführt werden.  
   
- [Gewusst wie: Abrufen einer Sammlung von Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ [Vorgehensweise: Abrufen einer Auflistung der Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
  Veranschaulicht, wie Dateien in einem Verzeichnis aufgeführt werden.  
   
- [Gewusst wie: Abrufen des Inhalts des Verzeichnisses „Eigene Dokumente“](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ [Vorgehensweise: Abrufen des Inhalts des Verzeichnisses „Eigene Dokumente“](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  Veranschaulicht, wie aus bestimmen Verzeichnissen gelesen wird.  
   
- [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [Vorgehensweise: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Veranschaulicht, wie `My`-Methoden verwendet werden, um Dateipfade zu kombinieren.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Beschreibt das `My.Computer.FileSystem`-Objekt und dessen Member  
   
@@ -116,6 +119,7 @@ Dieser Abschnitt enthält die Aufgaben im Zusammenhang mit dem Erstellen, Lösch
  Beschreibt das `SpecialDirectories`-Objekt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Führt die Aufgaben im Zusammenhang mit dem Lesen von Dateien auf.  
   

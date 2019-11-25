@@ -4,12 +4,12 @@ description: Untersuchen Sie die in ML.NET unterstützten herausragenden technis
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929252"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977234"
 ---
 # <a name="data-transformations"></a>Datentransformationen
 
@@ -21,7 +21,7 @@ Datentransformationen werden für Folgendes verwendet:
 
 Die Transformationen in diesem Handbuch geben Klassen zurück, die die [IEstimator](xref:Microsoft.ML.IEstimator%601)-Schnittstelle implementieren. Datentransformationen können miteinander verkettet werden. Jede Transformation erwartet und erzeugt Daten bestimmter Typen und Formate, die in der verknüpften Referenzdokumentation angegeben werden.
 
-Einige Datentransformationen erfordern Trainingsdaten, um ihre Parameter zu berechnen. Beispiel: Der <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A>-Transformator berechnet den Mittelwert und die Varianz der Trainingsdaten während des `Fit()`-Vorgangs und verwendet diese Parameter im `Transform()`-Vorgang. 
+Einige Datentransformationen erfordern Trainingsdaten, um ihre Parameter zu berechnen. Beispiel: Der <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A>-Transformator berechnet den Mittelwert und die Varianz der Trainingsdaten während des `Fit()`-Vorgangs und verwendet diese Parameter im `Transform()`-Vorgang.
 
 Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*>-Transformation kann die `Transform()`-Operation durchführen, ohne während der `Fit()`-Operation Trainingsdaten gesehen zu haben.
 
@@ -62,7 +62,7 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Umwandeln einer Textspalte in ein Gleitkommaarray der normalisierten Anzahl von N-Grammen und Char-Grammen | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Umwandeln einer Textspalte in ein Gleitkommaarray der normalisierten Anzahl von N-Grammen und Char-Grammen |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Aufteilen einer oder mehrerer Textspalten in einzelne Wörter |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Aufteilen einer oder mehrerer Textspalten in einzelne Zeichengleitkommazahlen über eine Reihe von Themen |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Ändern von Groß-/Kleinschreibung, Entfernen von diakritischen Zeichen, Satzzeichen und Zahlen |
