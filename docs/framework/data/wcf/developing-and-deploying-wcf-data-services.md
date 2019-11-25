@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854065"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975317"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 
@@ -20,7 +20,7 @@ Dieses Thema enthält Informationen zum entwickeln und Bereitstellen von WCF Dat
 
 ## <a name="develop-wcf-data-services"></a>Entwickeln WCF Data Services
 
-Wenn Sie WCF Data Services verwenden, um einen Datendienst zu erstellen, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]der die unterstützt, müssen Sie während der Entwicklung die folgenden grundlegenden Aufgaben ausführen:
+Wenn Sie WCF Data Services verwenden, um einen Datendienst zu erstellen, der die Open Data Protocol (odata) unterstützt, müssen Sie während der Entwicklung die folgenden grundlegenden Aufgaben ausführen:
 
 1. **Definieren des Datenmodells**
 
@@ -32,7 +32,7 @@ Wenn Sie WCF Data Services verwenden, um einen Datendienst zu erstellen, [!INCLU
 
 3. **Konfigurieren des Datendiensts**
 
-     Standardmäßig deaktiviert WCF Data Services den Zugriff auf Ressourcen, die von einem Entitätencontainer verfügbar gemacht werden. Die <xref:System.Data.Services.DataServiceConfiguration> -Schnittstelle ermöglicht Ihnen das Konfigurieren des Zugriffs auf Ressourcen und Dienst Vorgänge, das Angeben der unterstützten Version von odata und das definieren anderer Dienst weiter Verhalten, z. b. das Batch Verarbeitungs Verhalten oder die maximale Anzahl von Entitäten, die zurückgegeben werden können. in einem einzelnen Antwort Feed. Weitere Informationen finden Sie unter [Konfigurieren des Daten Dienstanbieter](configuring-the-data-service-wcf-data-services.md).
+     Standardmäßig deaktiviert WCF Data Services den Zugriff auf Ressourcen, die von einem Entitätencontainer verfügbar gemacht werden. Die <xref:System.Data.Services.DataServiceConfiguration>-Schnittstelle ermöglicht Ihnen das Konfigurieren des Zugriffs auf Ressourcen und Dienst Vorgänge, das Angeben der unterstützten Version von odata und das definieren anderer Dienst weiter Verhalten, wie z. b. das Batch Verarbeitungs Verhalten oder die maximale Anzahl von Entitäten, die in einem einzelnen Antwort Feed zurückgegeben werden können. Weitere Informationen finden Sie unter [Konfigurieren des Daten Dienstanbieter](configuring-the-data-service-wcf-data-services.md).
 
 Dieses Thema behandelt primär die Entwicklung und Bereitstellung von Datendiensten mithilfe von Visual Studio. Informationen zur Flexibilität, die WCF Data Services zum verfügbar machen Ihrer Daten als odata-Feeds bietet, finden Sie unter [Definieren von WCF Data Services](defining-wcf-data-services.md).
 
@@ -42,7 +42,7 @@ Wenn Sie einen WCF Data Service mithilfe von Visual Studio 2015 als ASP.NET-Anwe
 
 1. **Lokaler IIS-Server**
 
-     Wenn Sie einen Datendienst erstellen, bei dem es sich um eine ASP.net-oder ASP.NET-Website handelt, die auf Internetinformationsdienste (IIS) ausgeführt wird, empfiehlt es sich, den Datendienst mithilfe von IIS auf dem lokalen Computer zu entwickeln und zu testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Um den Datendienst unter IIS auszuführen, müssen Sie sicherstellen, dass IIS und Windows Communication Foundation (WCF) installiert und ordnungsgemäß konfiguriert sind und Zugriff auf IIS-Konten im Dateisystem und in den Datenbanken gewähren. Weitere Informationen finden Sie unter [Vorgehensweise: Entwickeln Sie einen WCF-Datendienst,](how-to-develop-a-wcf-data-service-running-on-iis.md)der auf IIS ausgeführt wird.
+     Wenn Sie einen Datendienst erstellen, bei dem es sich um eine ASP.net-oder ASP.NET-Website handelt, die auf Internetinformationsdienste (IIS) ausgeführt wird, empfiehlt es sich, den Datendienst mithilfe von IIS auf dem lokalen Computer zu entwickeln und zu testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Um den Datendienst unter IIS auszuführen, müssen Sie sicherstellen, dass IIS und Windows Communication Foundation (WCF) installiert und ordnungsgemäß konfiguriert sind und Zugriff auf IIS-Konten im Dateisystem und in den Datenbanken gewähren. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Sie müssen Visual Studio mit Administratorrechten ausführen, um die Entwicklungsumgebung für die Konfiguration des lokalen IIS-Servers zu aktivieren.
@@ -63,7 +63,7 @@ Wenn Sie einen WCF Data Service mithilfe von Visual Studio 2015 als ASP.NET-Anwe
 
     - Dieser Server kann keine aufgeteilten http-Streams verarbeiten, die beim Zugriff auf große Binärdaten vom Datendienst standardmäßig vom WCF Data Services Client gesendet werden. Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).
 
-    - Bei diesem Server treten Probleme bei der Verarbeitung des`.`Period ()-Zeichens in einer URL auf, obwohl dieses Zeichen von WCF Data Services in Schlüsselwerten unterstützt wird.
+    - Bei diesem Server treten Probleme bei der Verarbeitung des Punkt Zeichens (`.`) in einer URL auf, obwohl dieses Zeichen durch WCF Data Services in Schlüsselwerten unterstützt wird.
 
     > [!TIP]
     > Obwohl Sie die Visual Studio Development Server verwenden können, um Ihre Datendienste während der Entwicklung zu testen, sollten Sie Sie nach der Bereitstellung auf einem Webserver, auf dem IIS ausgeführt wird, erneut testen.
@@ -98,20 +98,20 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
     - [Vorgehensweise: Erstellen eines Webbereitstellungs Pakets in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Vorgehensweise: Bereitstellen eines Webprojekts mithilfe der One-Click-Veröffentlichung in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Gewusst wie: Bereitstellen eines Webprojekts mithilfe der One-Click-Veröffentlichung in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **Bereitstellungstechnologien für ASP.NET-Websites**
 
-    - [Vorgehensweise: Kopieren von Website Dateien mit dem Tool zum Kopieren von Websites](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [Gewusst wie: Kopieren von Website Dateien mit dem Tool "Website kopieren"](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
     - [Vorgehensweise: Veröffentlichen von Websites](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-    - [Exemplarische Vorgehensweise: Bereitstellen einer ASP.NET-Webanwendung mithilfe von Xcopy](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [Exemplarische Vorgehensweise: Bereitstellen einer ASP.NET-Webanwendung mit XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      Weitere Informationen zu den Bereitstellungs Optionen für eine ASP.NET-Anwendung finden Sie unter Übersicht über die [Webbereitstellung für Visual Studio und ASP.net](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
-    > Bevor Sie versuchen, den Datendienst unter IIS bereitzustellen, muss die Bereitstellung auf einem Webserver mit IIS getestet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Entwickeln Sie einen WCF-Datendienst,](how-to-develop-a-wcf-data-service-running-on-iis.md)der auf IIS ausgeführt wird.
+    > Bevor Sie versuchen, den Datendienst unter IIS bereitzustellen, muss die Bereitstellung auf einem Webserver mit IIS getestet werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 - **Windows Azure**
 
@@ -121,7 +121,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
 
-- Wenn Sie einen Datendienst bereitstellen, der den Entity Framework Anbieter für den Zugriff auf eine SQL Server Datenbank verwendet, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienst Bereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, und diese Skripts können im Webbereitstellungs Paket einer ASP.NET-Anwendung enthalten sein. Weitere Informationen finden Sie unter [Vorgehensweise: Stellen Sie eine Datenbank mit einem Webanwendungs Projekt](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))bereit. Für eine ASP.NET-Website können Sie dazu den Assistenten für die **Daten Bank Veröffentlichung** in Visual Studio verwenden. Weitere Informationen finden Sie unter [Veröffentlichen einer SQL-Datenbank](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Wenn Sie einen Datendienst bereitstellen, der den Entity Framework Anbieter für den Zugriff auf eine SQL Server Datenbank verwendet, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienst Bereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, und diese Skripts können im Webbereitstellungs Paket einer ASP.NET-Anwendung enthalten sein. Weitere Informationen finden Sie unter Gewusst [wie: Bereitstellen einer Datenbank mit einem Webanwendungs Projekt](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Für eine ASP.NET-Website können Sie dazu den Assistenten für die **Daten Bank Veröffentlichung** in Visual Studio verwenden. Weitere Informationen finden Sie unter [Veröffentlichen einer SQL-Datenbank](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der unter IIS unter Windows Server bereitgestellt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Daten dienstanzdienstanbieter finden Sie im Beitrag nach [Verfolgung WCF Data Services mit Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

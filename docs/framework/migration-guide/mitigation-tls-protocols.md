@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779153"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457837"
 ---
 # <a name="mitigation-tls-protocols"></a>Entschärfung: TLS-Protokolle
 Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?displayProperty=nameWithType> und <xref:System.Net.Security.SslStream?displayProperty=nameWithType> eines der folgenden drei Protokolle verwenden: TLS 1.0, TLS 1.1 oder TLS 1.2. Weder das SSL3.0-Protokoll noch das RC4-Verschlüsselungsverfahren werden unterstützt.  
@@ -44,4 +42,4 @@ Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6.md)
+- [Anwendungskompatibilität](application-compatibility.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: f8766a5dfa2bcfc715a0f0e21274f7c6ac04ad15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca15d710a30586135f0d030e155b09b63a22ee45
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944896"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976063"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer
 Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können, generieren und kompilieren für diese Datentypen während der Laufzeit Code, was zu einem verlangsamten Start führen kann.  
@@ -25,7 +25,7 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
   
 3. Starten Sie das Tool Svcutil.exe an der Eingabeaufforderung mit dem folgenden Format.  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -47,13 +47,13 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
   
 1. Erstellen Sie den WCF-Dienst und die Client Projekte in Visual Studio. Fügen Sie dann dem Client Projekt einen Dienst Verweis hinzu.  
   
-2. Fügen Sie <xref:System.ServiceModel.XmlSerializerFormatAttribute> dem Dienstvertrag in der *Reference.cs* -Datei im Client-App-Projekt unter **servicereferenzierungsreferenz** ->  **. svcmap**einen hinzu. Beachten Sie, dass Sie alle Dateien in **Projektmappen-Explorer** anzeigen müssen, um diese Dateien anzuzeigen.  
+2. Fügen Sie dem Dienstvertrag in der *Reference.cs* -Datei im Client-App-Projekt unter **servicereferen -> ** **Reference. svcmap**eine <xref:System.ServiceModel.XmlSerializerFormatAttribute> hinzu. Beachten Sie, dass Sie alle Dateien in **Projektmappen-Explorer** anzeigen müssen, um diese Dateien anzuzeigen.  
   
 3. Erstellen Sie die Client-App.  
   
 4. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , um mithilfe des Befehls eine vorab generierte Datei Serialisierungsprogramm *. cs* zu erstellen:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -61,7 +61,7 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
   
      Beispiel:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
@@ -71,7 +71,7 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
   
      Basierend auf dem Beispiel im vorherigen Schritt würde der Kompilierungs Befehl folgendermaßen lauten:  
   
-    ```  
+    ```console  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
@@ -82,7 +82,7 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
 ## <a name="example"></a>Beispiel  
  Der folgende Befehl generiert Serialisierungstypen für `XmlSerializer`-Typen, die von Dienstverträgen in der Assembly verwendet werden.  
   
-```  
+```console  
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   

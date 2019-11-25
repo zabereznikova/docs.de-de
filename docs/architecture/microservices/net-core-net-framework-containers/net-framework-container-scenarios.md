@@ -2,12 +2,12 @@
 title: Wann sollte .NET Framework für Docker-Container verwendet werden?
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Framework für Docker-Container verwendet werden?
 ms.date: 01/07/2019
-ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093762"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966889"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Wann sollte .NET Framework für Docker-Container verwendet werden?
 
@@ -51,15 +51,16 @@ Wenn eine der Plattformen oder einer der Dienste in Azure .NET Core weiterhin ni
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Leitfaden für .NET Core**  
+- **Leitfaden für .NET Core** \
   [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
-- **Portieren von .NET Framework zu .NET Core**  
+- **Porting from .NET Framework to .NET Core (Portieren von .NET Framework zu .NET Core)** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Einführung zu .NET und Docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- **Einführung zu .NET und Docker** \
+  [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
-- **.NET-Komponenten – Übersicht**  
+- **.NET-Komponenten – Übersicht** \
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]

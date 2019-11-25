@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115213"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968907"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode >-Element
 
@@ -21,7 +21,7 @@ Bestimmt, ob die Laufzeit Legacy Verhalten bei Formatierungs Vorgängen mit <xre
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** TimeSpan_LegacyFormatMode >  
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,13 +75,13 @@ Im folgenden Beispiel wird ein <xref:System.TimeSpan> Objekt instanziiert und ve
 
 Wenn Sie das Beispiel auf dem .NET Framework 3,5 oder einer früheren Version ausführen, wird die folgende Ausgabe angezeigt:
 
-```
+```console
 12:30:45
 ```
 
 Dies unterscheidet sich deutlich von der Ausgabe, wenn Sie das Beispiel auf dem .NET Framework 4 oder einer höheren Version ausführen:
 
-```
+```console
 Invalid Format
 ```
 

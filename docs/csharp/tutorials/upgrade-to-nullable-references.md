@@ -4,16 +4,16 @@ description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistype
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039685"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969348"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
-C# 8 führt **Verweistypen, die NULL-Werte zulassen** ein, die Verweistypen auf die gleiche Weise ergänzen, wie NULL-Werte zulassenden Werttypen Werttypen ergänzen. Sie deklarieren eine Variable zu einem **Verweistyp, der NULL-Werte zulässt**, indem Sie `?` an den Typen anfügen. Beispielsweise stellt `string?` eine `string` dar, die NULL-Werte zulässt. Mit diesen neuen Typen können Sie Ihre Entwurfsabsicht besser zum Ausdruck bringen: Einige Variablen *müssen immer einen Wert* haben, bei anderen  *kann ein Wert fehlen*. Alle vorhandenen Variablen eines Verweistyps würden als NULL-Werte zulassende Verweistypen interpretiert. 
+C# 8 führt **Verweistypen, die NULL-Werte zulassen** ein, die Verweistypen auf die gleiche Weise ergänzen, wie NULL-Werte zulassenden Werttypen Werttypen ergänzen. Sie deklarieren eine Variable zu einem **Verweistyp, der NULL-Werte zulässt**, indem Sie `?` an den Typen anfügen. Beispielsweise stellt `string?` eine `string` dar, die NULL-Werte zulässt. Mit diesen neuen Typen können Sie Ihre Entwurfsabsicht besser zum Ausdruck bringen: Einige Variablen *müssen immer einen Wert* haben, bei anderen *kann ein Wert fehlen*. Alle vorhandenen Variablen eines Verweistyps würden als NULL-Werte zulassende Verweistypen interpretiert. 
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -32,7 +32,7 @@ In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Vis
 
 ## <a name="explore-the-sample-application"></a>Untersuchen der Beispielanwendung
 
-Die Beispielanwendung, die Sie migrieren, ist eine RSS-Feed-Reader-Web-App. Sie liest aus einem einzelnen RSS-Feed und zeigt Zusammenfassungen für die neuesten Artikel an. Sie können auf einen der Artikel klicken, um auf die Website zuzugreifen. Die Anwendung ist relativ neu, wurde jedoch geschrieben, bevor NULL-Werte zulassende Verweistypen verfügbar waren. Die Entwurfsentscheidungen für die Anwendung stellten bewährte Prinzipien dar, nutzen diese wichtige Sprachfunktion jedoch nicht.
+Die Beispielanwendung, die Sie migrieren, ist eine RSS-Feed-Reader-Web-App. Sie liest aus einem einzelnen RSS-Feed und zeigt Zusammenfassungen für die neuesten Artikel an. Sie können einen der Artikel auswählen, um auf die Website zuzugreifen. Die Anwendung ist relativ neu, wurde jedoch geschrieben, bevor NULL-Werte zulassende Verweistypen verfügbar waren. Die Entwurfsentscheidungen für die Anwendung stellten bewährte Prinzipien dar, nutzen diese wichtige Sprachfunktion jedoch nicht.
 
 Die Beispielanwendung enthält eine Komponententestbibliothek, die die wichtigsten Funktionen der App überprüft. Das Projekt wird die sichere Aktualisierung erleichtern, wenn Sie Teile der Implementierung entsprechend der generierten Warnungen ändern. Sie können den Startercode aus dem Repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) auf GitHub herunterladen.
 

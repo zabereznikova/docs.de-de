@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052077"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975679"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 
@@ -66,7 +66,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
 **Wartung**
 
-- Allgemeine Informationen finden Sie im [.NET Framework-Blog](https://go.microsoft.com/fwlink/p/?LinkId=254977).
+- Allgemeine Informationen finden Sie im [.NET Framework-Blog](https://devblogs.microsoft.com/dotnet/).
 
 - [Erkennen von Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md)
 

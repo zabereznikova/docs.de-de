@@ -1,33 +1,33 @@
 ---
 title: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
-description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Auswählen von Azure-computeplattformen für Container basierte Anwendungen
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 ms.date: 05/04/2018
 ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
 ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73736996"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 
-Wie Sie nach dem Lesen der vorherigen Abschnitte bemerkt haben, ist Azure eine offene Cloud, die mehrere Optionen bietet. Sie können die beste Lösung für Ihre Anforderungen verwenden, aber auch Fragen zu den Produkten und Technologien, die Sie für Ihre containerisierten Anwendungen verwenden sollten.
+Wie Sie nach dem Lesen der vorherigen Abschnitte bemerkt haben, ist Azure eine offene Cloud, die mehrere Optionen bietet. Sie können die am beste passende Lösung für Ihre Anforderungen verwenden. Es wirft aber auch Fragen auf, welche/s Produkt/Technologie Sie für Ihre containerisierten Anwendungen verwenden sollten.
 
-Als *Standard* Empfehlung werden folgende Hauptkriterien in dieser Anleitung empfohlen:
+Als *standardmäßige* Empfehlung werden folgende Hauptkriterien in dieser Anleitung empfohlen:
 
-- **Einzelne monolithische App:** Wählen Sie Azure App Service
-- **N-Tier-App:** Wählen Sie orchestratoren wie Azure Kubernetes Service (AKS) oder App Service aus, wenn Sie einen oder mehrere Back-End-Dienste haben.
-- **Mikrodienste:** AKS oder Azure-Web-Apps für Container auswählen
-- **Server lose Funktionen & Ereignishandler:** Wählen Sie Azure Functions
-- Umfang **reicher Batch:** Wählen Sie Azure Batch
+- **Einzelne monolithische App:** Azure App Service auswählen
+- **n-schichtige App:** Wählen Sie Orchestratoren wie Azure Kubernetes Service (AKS) oder App Service aus, wenn Sie einen einzelnen oder ein paar Back-End-Dienste haben.
+- **Microservices:** Wählen Sie AKS oder Azure-Web-Apps für Container aus.
+- **Serverlose Funktionen und Ereignishandler:** Wählen Sie Azure Functions aus.
+- **Massenstapel:** Wählen Sie Azure Batch aus.
 
-Diese Empfehlung sollte jedoch mit einem Salt-Salt-Vorgang durchgeführt werden, da die Auswahl des Produkts von den Anforderungen und Merkmalen ihrer jeweiligen Anwendung abhängt. Nicht alle Anwendungen sind identisch, auch wenn Sie anfänglich ähnliche Typen sehen könnten.
+Diese Empfehlung sollte jedoch mit ein wenig Vorsicht genossen werden, da die Auswahl des Produkts von den Anforderungen und Eigenschaften Ihrer spezifischen Anwendung abhängt. Nicht alle Anwendungen sind identisch, selbst wenn Sie anfänglich wie ähnliche Typen aussehen mögen.
 
-Nach einer tieferen Analyse der Anwendungsanforderungen könnte sich das ausgewählte Produkt unterscheiden. Als Ausgangspunkt empfiehlt es sich jedoch, eine erste Anleitung zu erhalten, in der Sie basierend auf einer bestimmten Priorität evaluieren und testen können.
+Nach einer intensiveren Analyse der Anwendungsanforderungen könnte das ausgewählte Produkt abweichen. Als Ausgangspunkt ist es jedoch gut, eine erste Orientierung zu haben, mit der Sie basierend auf einer bestimmten Priorität evaluieren und testen können.
 
-In Abbildung 1 sehen Sie eine Aufschlüsselung der verschiedenen Arten von apps und ihrer idealen Azure-Hostingszenarios.
+In Abbildung 1 sehen Sie eine Aufschlüsselung der verschiedenen Arten von Apps und ihrer idealen Azure-Hostingszenarios.
 
-![Tabelle, in der Azure-Hostingszenarien für verschiedene apps am besten geeignet sind.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
+![Tabelle, welche Azure-Hostingszenarios für verschiedene Apps am besten geeignet sind.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
 
 > [!div class="step-by-step"]
 > [Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

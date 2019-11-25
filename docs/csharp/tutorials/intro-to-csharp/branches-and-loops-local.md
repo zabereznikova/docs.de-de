@@ -3,12 +3,12 @@ title: Verzweigungen und Schleifen – Einführung in das C#-Tutorial
 description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zum wiederholten Ausführen von Anweisungen unterstützt.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834121"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739126"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
 
@@ -18,7 +18,13 @@ Für dieses Tutorial benötigen Sie einen Computer, den Sie für die Entwicklung
 
 ## <a name="make-decisions-using-the-if-statement"></a>Treffen von Entscheidungen mithilfe der `if`-Anweisung
 
-Erstellen Sie ein Verzeichnis mit dem Namen *branches-tutorial*. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n BranchesAndLoops -o .` aus. Dieser Befehl erstellt im aktuellen Verzeichnis eine neue .NET Core-Konsolenanwendung.
+Erstellen Sie ein Verzeichnis mit dem Namen *branches-tutorial*. Legen Sie dieses als das aktuelle Verzeichnis fest, und führen Sie den folgenden Befehl aus:
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+Dieser Befehl erstellt im aktuellen Verzeichnis eine neue .NET Core-Konsolenanwendung.
 
 Öffnen Sie *Program.cs* in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` durch den folgenden Code:
 

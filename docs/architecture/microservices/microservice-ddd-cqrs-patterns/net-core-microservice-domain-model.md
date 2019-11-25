@@ -2,12 +2,12 @@
 title: Implementieren eines Microservicedomänenmodells mit .NET Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676587"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972046"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
@@ -17,7 +17,9 @@ Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die 
 
 Die Ordnerorganisation, die für die Referenzanwendung „eShopOnContainers“ verwendet wird, stellt das Modell für das domänengesteuerte Design für die Anwendung dar. Möglicherweise stellen Sie fest, dass die Ordnerorganisation Ihren Überlegungen zum Anwendungsentwurf angepasst werden muss. Wie in Abbildung 7-10 dargestellt, gibt es im Domänenmodell für Bestellungen zwei Aggregate: das Aggregat „Order“ und das Aggregat „Buyer“. Jedes Aggregat besteht aus einer Gruppe von Domänenentitäten und Wertobjekten. Sie können aber auch über ein Aggregat verfügen, das aus genau einer Domänenentität besteht (dem Aggregatstamm oder der Stammentität).
 
-![Ansicht im Projektmappen-Explorer: Projekt Ordering.Domain mit dem Ordner „AggregatesModel“, der die Ordner „BuyerAggregate“ und „OrderAggregate“ enthält, die jeweils ihre Entitätsklassen, Wertobjektdateien und so weiter enthalten ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Screenshot des Projekts „Ordering.Domain“ im Projektmappen-Explorer.":::
+Ansicht im Projektmappen-Explorer: Projekt Ordering.Domain mit dem Ordner „AggregatesModel“, der die Ordner „BuyerAggregate“ und „OrderAggregate“ enthält, die jeweils ihre Entitätsklassen, Wertobjektdateien und so weiter enthalten
+:::image-end:::
 
 **Abbildung 7-10**. Domänenmodellstruktur für den Microservice für Bestellungen in eShopOnContainers
 
@@ -31,7 +33,9 @@ Ein Aggregat bezieht sich auf einen Cluster von Domänenobjekten, die entspreche
 
 Der Begriff „Transaktionskonsistenz“ bedeutet, dass ein Aggregat am Ende einer geschäftlichen Transaktion garantiert konsistent und aktuell ist. Das Aggregat „Order“ aus dem Domänenmodell des Microservices für Bestellungen setzt sich wie in Abbildung 7-11 dargestellt zusammen.
 
-![Detailansicht des Ordners OrderAggregate: „Address.cs“ ist ein Wertobjekt, „IOrderRepository“ eine Repositoryschnittstelle, „Order.cs“ ein Aggregatstamm, „OrderItem.cs“ eine untergeordnete Entität und „OrderStatus.cs“ eine Enumerationsklasse.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="Screenshot des Ordners „OrderAggregate“ und seiner Klassen.":::
+Detailansicht des Ordners OrderAggregate: „Address.cs“ ist ein Wertobjekt, „IOrderRepository“ eine Repositoryschnittstelle, „Order.cs“ ein Aggregatstamm, „OrderItem.cs“ eine untergeordnete Entität und „OrderStatus.cs“ eine Enumerationsklasse.
+:::image-end:::
 
 **Abbildung 7-11**. Das Aggregat „Order“ in einer Visual Studio-Projektmappe
 
@@ -170,7 +174,7 @@ Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere pri
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. Datenpunkte – Codierung für Domain-Driven Design: Tipps für Entwickler mit Datenschwerpunkt** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)**  \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

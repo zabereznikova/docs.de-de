@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104948"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454625"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -39,7 +39,7 @@ Sie können die Vorteile der neuesten SDK-Funktionen und -Verbesserungen nutzen,
 
 In seltenen Fällen werden Sie eine frühere SDK-Version benötigen. Sie geben die Version in einer [*global.json*-Datei](../tools/global-json.md) an. Die Richtlinie zum Verwenden der neuesten Version bedeutet, dass Sie *global.json* nur verwenden, um eine .NET Core SDK-Version vor der zuletzt installierten Version anzugeben.
 
-*global.json* kann überall in der Dateihierarchie platziert werden. Die CLI sucht im Projektverzeichnis aufwärts, bis sie das erste *global.json* findet. Sie bestimmen, für welche Projekte eine bestimmte *global.json*-Datei gilt, indem Sie ihren Platz im Dateisystem angeben. Die .NET Core-CLI sucht nach einer *global.json*-Datei, die den Pfad vom aktuellen Arbeitsverzeichnis iterativ nach oben navigiert. Die erste gefundene *global.json*-Datei gibt die verwendete Version an. Wenn diese Version installiert ist, wird sie verwendet. Wenn das in der *global.json*-Datei angegebene SDK nicht gefunden wird, führt die .NET Core-CLI einen Rollforward zum zuletzt installierten SDK aus. Rollforward entspricht dem Standardverhalten, wenn keine *global.json*-Datei gefunden wird.
+*global.json* kann überall in der Dateihierarchie platziert werden. Die CLI sucht im Projektverzeichnis aufwärts, bis sie das erste *global.json* findet. Sie bestimmen, für welche Projekte eine bestimmte *global.json*-Datei gilt, indem Sie ihren Platz im Dateisystem angeben. Die .NET Core-CLI sucht nach einer *global.json*-Datei, die den Pfad vom aktuellen Arbeitsverzeichnis iterativ nach oben navigiert. Die erste gefundene *global.json*-Datei gibt die verwendete Version an. Wenn diese SDK-Version installiert ist, wird sie verwendet. Wenn das in der *global.json-Datei* angegebene SDK nicht gefunden wird, verwendet die .NET-CLI [Abgleichsregeln](../tools/global-json.md#matching-rules), um ein kompatibles SDK auszuwählen oder schlägt fehl, wenn keine gefunden werden.
 
 Das folgende Beispiel veranschaulicht die *global.json*-Syntax:
 

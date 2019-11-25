@@ -1,25 +1,25 @@
 ---
-title: Orchestrierungs Muster-Server Lose apps
-description: Azure Durable Functions-PR
+title: 'Orchestrierungsmuster: Serverlose Apps'
+description: Azure Durable Functions
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522637"
 ---
-# <a name="orchestration-patterns"></a>Orchestrierungs Muster
+# <a name="orchestration-patterns"></a>Orchestrierungsmuster
 
-Durable Functions erleichtert das Erstellen Zustands behafteter Workflows, die aus diskreten, lang andauernden Aktivitäten in einer Server losen Umgebung bestehen. Da Durable Functions den Fortschritt Ihrer Workflows verfolgen und den Ausführungs Verlauf in regelmäßigen Abständen prüfen kann, eignet er sich für die Implementierung einiger interessanter Muster.
+Durable Functions erleichtert das Erstellen zustandsbehafteter Workflows, die aus diskreten, zeitintensiven Aktivitäten in einer serverlosen Umgebung bestehen. Da Durable Functions den Fortschritt Ihrer Workflows nachverfolgen und den Ausführungsverlauf in regelmäßigen Abständen prüfen kann, ist die Anwendung für die Implementierung einiger interessanter Muster geeignet.
 
-## <a name="function-chaining"></a>Funktions Verkettung
+## <a name="function-chaining"></a>Funktionsverkettung
 
-In einem typischen sequenziellen Prozess müssen Aktivitäten nacheinander in einer bestimmten Reihenfolge ausgeführt werden. Optional ist für die bevorstehende Aktivität möglicherweise eine Ausgabe der vorherigen Funktion erforderlich. Diese Abhängigkeit von der Reihenfolge der Aktivitäten erstellt eine funktionskette der Ausführung.
+In einem typischen sequenziellen Prozess müssen Aktivitäten nacheinander in einer bestimmten Reihenfolge ausgeführt werden. Optional ist für die bevorstehende Aktivität möglicherweise eine Ausgabe der vorherigen Funktion erforderlich. Diese Abhängigkeit von der Reihenfolge der Aktivitäten erstellt eine Funktionskette der Ausführung.
 
-Der Vorteil der Verwendung von Durable Functions, um dieses Workflow Muster zu implementieren, ist von der Fähigkeit, auf Prüfpunkte zu verweisen. Wenn der Server abstürzt, das Netzwerk ausfällt oder ein anderes Problem auftritt, können Durable Functions vom letzten bekannten Zustand fortgesetzt werden und den Workflow weiterhin ausführen, auch wenn er auf einem anderen Server ausgeführt wird.
+Der Vorteil der Verwendung von Durable Functions, um dieses Workflowmuster zu implementieren, liegt in der Fähigkeit, Prüfpunkte zu verwenden. Wenn der Server abstürzt, ein Timeout des Netzwerks oder ein anderes Problem auftritt, kann Durable Functions vom letzten bekannten Zustand fortgesetzt werden und den Workflow weiterhin ausführen, selbst auf einem anderen Server.
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -37,7 +37,7 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Im vorangehenden Codebeispiel ist die Funktion "`CallActivityAsync`" für die Ausführung einer bestimmten Aktivität auf einem virtuellen Computer im Rechenzentrum verantwortlich. Wenn die Erwartung zurückkehrt und die zugrunde liegende Aufgabe abgeschlossen ist, wird die Ausführung in der Verlaufs Tabelle aufgezeichnet. Der Code in der orchestratorfunktion kann alle vertrauten Konstrukte der Task Parallel Library und der Schlüsselwörter "Async/erwartungsgemäß" nutzen.
+Im vorherigen Codebeispiel ist die `CallActivityAsync`-Funktion für die Ausführung einer bestimmten Aktivität auf einem virtuellen Computer im Rechenzentrum verantwortlich. Nach Rückgabe von await und Abschluss des zugrunde liegenden Tasks wird die Ausführung in der Verlaufstabelle aufgezeichnet. Der Code in der Orchestratorfunktion kann alle vertrauten Konstrukte der Task Parallel Library (TPL) und die Schlüsselwörter async/await nutzen.
 
 Der folgende Code ist ein vereinfachtes Beispiel dafür, wie die `ProcessPayment`-Methode aussehen könnte:
 
@@ -58,9 +58,9 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 ## <a name="asynchronous-http-apis"></a>Asynchrone HTTP-APIs
 
-In einigen Fällen können Workflows Aktivitäten enthalten, die eine relativ lange Zeit in Anspruch nehmen. Stellen Sie sich einen Prozess vor, bei dem die Sicherung von Mediendateien in BLOB Storage gestartet wird. Abhängig von der Größe und Menge der Mediendateien kann dieser Sicherungs Vorgang einige Stunden in Anspruch nehmen.
+In einigen Fällen können Workflows Aktivitäten enthalten, deren Abschluss eine relativ lange Zeit in Anspruch nimmt. Stellen Sie sich einen Prozess vor, bei dem die Sicherung von Mediendateien in Blobspeicher gestartet wird. Abhängig von der Größe und Menge der Mediendateien kann dieser Sicherungsprozess Stunden in Anspruch nehmen.
 
-In diesem Szenario ist die `DurableOrchestrationClient`-Fähigkeit, den Status eines laufenden Workflows zu überprüfen, hilfreich. Wenn Sie mit einem `HttpTrigger` einen Workflow starten, kann die `CreateCheckStatusResponse`-Methode verwendet werden, um eine Instanz von `HttpResponseMessage` zurückzugeben. Diese Antwort stellt dem Client einen URI in der Nutzlast zur Verfügung, der zum Überprüfen des Status des laufenden Prozesses verwendet werden kann.
+In diesem Szenario ist die Fähigkeit von `DurableOrchestrationClient` nützlich, den Status eines ausgeführten Workflows zu überprüfen. Wenn Sie einen `HttpTrigger` zum Starten eines Workflows verwenden, kann die `CreateCheckStatusResponse`-Methode verwendet werden, um eine Instanz von `HttpResponseMessage` zurückzugeben. Diese Antwort stellt dem Client in der Nutzlast einen URI zur Verfügung, der zum Überprüfen des Status des aktiven Prozesses verwendet werden kann.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -76,7 +76,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-Das folgende Beispiel Ergebnis zeigt die Struktur der Antwort Nutzlast.
+Das folgende Beispielergebnis zeigt die Struktur der Antwortnutzlast.
 
 ```json
 {
@@ -87,7 +87,7 @@ Das folgende Beispiel Ergebnis zeigt die Struktur der Antwort Nutzlast.
 }
 ```
 
-Mithilfe Ihres bevorzugten HTTP-Clients können Get-Anforderungen an den URI in statusquerygeturi erfolgen, um den Status des laufenden Workflows zu überprüfen. Die zurückgegebene Status Antwort sollte dem folgenden Code ähneln.
+Mithilfe Ihres bevorzugten HTTP-Clients können GET-Anforderungen an den URI in StatusQueryGetUri erfolgen, um den Status des aktiven Workflows zu überprüfen. Die zurückgegebene Statusantwort sollte dem folgenden Code ähneln.
 
 ```json
 {
@@ -101,13 +101,13 @@ Mithilfe Ihres bevorzugten HTTP-Clients können Get-Anforderungen an den URI in 
 }
 ```
 
-Wenn der Prozess fortgesetzt wird, ändert sich die Status Antwort entweder in " **failed** " oder " **abgeschlossen**". Nach erfolgreichem Abschluss enthält die **Output** -Eigenschaft in der Nutzlast alle zurückgegebenen Daten.
+Während der Prozess fortgesetzt wird, ändert sich die Statusantwort entweder in **Failed** (Fehler) oder **Completed** (Abgeschlossen). Nach erfolgreichem Abschluss enthält die **output**-Eigenschaft in der Nutzlast alle zurückgegebenen Daten.
 
 ## <a name="monitoring"></a>Überwachung
 
-Für einfache wiederkehrende Aufgaben stellt Azure Functions den `TimerTrigger` bereit, der basierend auf einem Cron-Ausdruck geplant werden kann. Der Timer eignet sich gut für einfache, kurzlebige Aufgaben, aber es kann Szenarien geben, in denen eine flexiblere Planung erforderlich ist. Dieses Szenario ist der Fall, wenn das Überwachungs Muster und der Durable Functions helfen können.
+Für einfache periodische Vorgänge stellt Azure Functions den `TimerTrigger` bereit, der basierend auf einem CRON-Ausdruck geplant werden kann. Der Timer eignet sich gut für einfache, kurzlebige Tasks, aber es kann Szenarien geben, in denen eine flexiblere Planung erforderlich ist. Dieses Szenario ist dann der Fall, wenn das Überwachungsmuster und Durable Functions helfen können.
 
-Durable Functions ermöglicht flexible Planungs Intervalle, Lebensdauer Verwaltung und die Erstellung mehrerer Monitor Prozesse aus einer einzelnen Orchestrierungs Funktion. Ein Anwendungsfall für diese Funktionalität ist das Erstellen von Überwachungen für Aktienpreis Änderungen, die durchgeführt werden, sobald ein bestimmter Schwellenwert erreicht wird.
+Durable Functions ermöglicht flexible Planungsintervalle, Lebensdauerverwaltung und die Erstellung mehrerer Überwachungsprozesse aus einer einzigen Orchestrierungsfunktion. Ein Anwendungsfall für diese Funktionalität könnte darin bestehen, Beobachter für Aktienkursänderungen zu erstellen, die bei Erreichen eines bestimmten Schwellenwerts abgeschlossen werden.
 
 ```csharp
 [FunctionName("CheckStockPrice")]
@@ -149,11 +149,11 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-die `CreateTimer`-Methode von `DurableOrchestrationContext` richtet den Zeitplan für den nächsten Aufruf der Schleife ein, um nach Aktienkurs Änderungen zu suchen. `DurableOrchestrationContext` verfügt auch über eine Eigenschaft `CurrentUtcDateTime`, um den aktuellen DateTime-Wert in UTC zu erhalten. Es ist besser, diese Eigenschaft anstelle von "`DateTime.UtcNow`" zu verwenden, da Sie leicht zu Testzwecken verspottet wird.
+Die `CreateTimer`-Methode von `DurableOrchestrationContext` richtet den Zeitplan für den nächsten Aufruf der Schleife ein, um auf Aktienkursänderungen zu prüfen. `DurableOrchestrationContext` verfügt auch über eine `CurrentUtcDateTime`-Eigenschaft, um den aktuellen DateTime-Wert in UTC abzurufen. Es ist besser, diese Eigenschaft anstelle von `DateTime.UtcNow` zu verwenden, da sie leicht zu Testzwecken simuliert werden kann.
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-- [Azure-Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Azure Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
 - [Komponententests in .NET Core und .NET Standard](../../core/testing/index.md)
 
 >[!div class="step-by-step"]

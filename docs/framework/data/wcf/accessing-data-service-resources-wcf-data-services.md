@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: d18ec4fd57f2437ca936074e8dcf70f17f09b877
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991118"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975432"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]unterstützt [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die Open Data Protocol (odata), um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
   
 ## <a name="addressing-resources"></a>Adressieren von Ressourcen  
- In [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] werden alle vom Datenmodell verfügbar gemachten Daten mit einem URI adressiert. Der folgende URI gibt z. b. einen Feed zurück, bei dem es sich um die Entitätenmenge Customers handelt, die Einträge für alle Instanzen des Customer-Entitäts Typs enthält:  
+ In odata adressieren Sie alle Daten, die vom Datenmodell mithilfe eines URI verfügbar gemacht werden. Der folgende URI gibt z. b. einen Feed zurück, bei dem es sich um die Entitätenmenge Customers handelt, die Einträge für alle Instanzen des Customer-Entitäts Typs enthält:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
   
@@ -43,20 +43,20 @@ ms.locfileid: "70991118"
   
 <https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer>
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]ermöglicht es Ihnen außerdem, Ressourcen auf der Grundlage der Ergebnisse von Abfrage Ausdrücken zu adressieren. Dies ermöglicht es, Ressourcen Sätze auf der Grundlage eines ausgewerteten Ausdrucks zu filtern. Der folgende URI filtert z. B. die Ressourcen, um nur die Bestellungen für den angegebenen Kunden zurückzugeben, die seit dem 22. September 1997 ausgeliefert wurden:  
+ Odata ermöglicht Ihnen außerdem das Adressieren von Ressourcen auf der Grundlage der Ergebnisse von Abfrage Ausdrücken. Dies ermöglicht es, Ressourcen Sätze auf der Grundlage eines ausgewerteten Ausdrucks zu filtern. Der folgende URI filtert z. B. die Ressourcen, um nur die Bestellungen für den angegebenen Kunden zurückzugeben, die seit dem 22. September 1997 ausgeliefert wurden:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers( "ALFKI")/Bestellungen? $Filter = ShippedDate gt DateTime "1997-09-22t00:00:00" >
   
- Weitere Informationen finden [Sie unter odata: URI-](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)Konventionen.
+ Weitere Informationen finden Sie unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="system-query-options"></a>Systemabfrageoptionen  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definiert einen Satz von System Abfrage Optionen, mit denen Sie herkömmliche Abfrage Vorgänge für Ressourcen ausführen können, z. b. Filtern, Sortieren und Paging. Der folgende URI gibt z. b. den Satz aller `Order` Entitäten zusammen `Order_Detail` mit verknüpften Entitäten zurück, deren Postleitzahlen nicht auf `100`enden:  
+ Odata definiert einen Satz von System Abfrage Optionen, mit denen Sie herkömmliche Abfrage Vorgänge für Ressourcen ausführen können, z. b. Filtern, Sortieren und Paging. Der folgende URI gibt z. b. den Satz aller `Order` Entitäten zusammen mit verknüpften `Order_Detail` Entitäten zurück, deren Postleitzahlen nicht auf `100`enden:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Orders? $Filter = not EndsWith (shipPostalCode, ' 100 ') & $Expand = Order_Details & $OrderBy = ShipCity >
   
  Die Einträge des zurückgegebenen Feeds werden zudem nach dem Wert der ShipCity-Eigenschaft der Bestellungen geordnet.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]unterstützt die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] folgenden System Abfrage Optionen:  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die folgenden odata-System Abfrage Optionen:  
   
 |Abfrageoption|Beschreibung|  
 |------------------|-----------------|  
@@ -69,14 +69,14 @@ ms.locfileid: "70991118"
 |`$inlinecount`|Fordert an, dass die Anzahl der im Feed zurückgegebenen Entitäten im Feed enthalten sein muss.|  
   
 ## <a name="addressing-relationships"></a>Behandeln von Beziehungen  
- Zusätzlich zur Adressierung von Entitätenmengen und [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Entitäts Instanzen ermöglicht Ihnen auch die Adressierung der Zuordnungen, die Beziehungen zwischen Entitäten darstellen. Diese Funktionalität ist erforderlich, um eine Beziehung zwischen zwei Entitätsinstanzen erstellen oder ändern zu können, z. B. das Versandunternehmen, das sich auf eine angegebene Bestellung in der Northwind-Beispieldatenbank bezieht. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]unterstützt `$link` einen-Operator, um die Zuordnungen zwischen Entitäten zu adressieren Der folgende URI wird z. B. in einer HTTP PUT-Anforderungsnachricht angegeben, um das Versandunternehmen für die angegebene Bestellung in ein neues Versandunternehmen zu ändern.  
+ Zusätzlich zum Adressieren von Entitätenmengen und Entitäts Instanzen ermöglicht odata auch das adressieren der Zuordnungen, die Beziehungen zwischen Entitäten darstellen. Diese Funktionalität ist erforderlich, um eine Beziehung zwischen zwei Entitätsinstanzen erstellen oder ändern zu können, z. B. das Versandunternehmen, das sich auf eine angegebene Bestellung in der Northwind-Beispieldatenbank bezieht. Odata unterstützt einen `$link` Operator, um speziell die Zuordnungen zwischen Entitäten zu adressieren. Der folgende URI wird z. B. in einer HTTP PUT-Anforderungsnachricht angegeben, um das Versandunternehmen für die angegebene Bestellung in ein neues Versandunternehmen zu ändern.  
   
 <https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper>
   
- Weitere Informationen finden Sie im Abschnitt `3.2. Addressing Links between Entries` unter [odata: URI-](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)Konventionen.
+ Weitere Informationen finden Sie im Abschnitt `3.2. Addressing Links between Entries` unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="consuming-the-returned-feed"></a>Verwenden des zurückgegebenen Feeds  
- Der URI [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] einer Ressource ermöglicht es Ihnen, vom Dienst verfügbar gemachte Entitäts Daten zu adressieren. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben, wird eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feed-Darstellung der angeforderten Ressource zurückgegeben. Weitere Informationen finden Sie in der [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)Anleitung. Obwohl ein Webbrowser nützlich sein kann, um zu testen, ob eine Datendienst Ressource die erwarteten Daten zurückgibt, erfolgt der Zugriff auf Produktionsdaten Dienste, die auch Daten erstellen, aktualisieren und löschen können, im Allgemeinen über Anwendungscode oder Skriptsprachen auf einer Webseite. Weitere Informationen finden Sie unter [Verwenden eines Daten Dienstanbieter in einer Client Anwendung](using-a-data-service-in-a-client-application-wcf-data-services.md).  
+ Der URI einer odata-Ressource ermöglicht es Ihnen, vom Dienst verfügbar gemachte Entitäts Daten zu adressieren. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben, wird eine odata-Feed-Darstellung der angeforderten Ressource zurückgegeben. Weitere Informationen finden Sie in der [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)Anleitung. Obwohl ein Webbrowser nützlich sein kann, um zu testen, ob eine Datendienst Ressource die erwarteten Daten zurückgibt, erfolgt der Zugriff auf Produktionsdaten Dienste, die auch Daten erstellen, aktualisieren und löschen können, im Allgemeinen über Anwendungscode oder Skriptsprachen auf einer Webseite. Weitere Informationen finden Sie unter [Verwenden eines Daten Dienstanbieter in einer Client Anwendung](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

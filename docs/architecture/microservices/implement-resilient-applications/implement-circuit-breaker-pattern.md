@@ -2,12 +2,12 @@
 title: Implementieren des Trennschaltermusters
 description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes System zu HTTP-Wiederholungsversuchen implementieren können.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094117"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732858"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -94,7 +94,7 @@ Sobald die Anwendung ausgeführt wird, können Sie z.B. die Middleware aktiviere
 
 Mit dem URI `http://localhost:5103/failing` können Sie anschließend wie in Abbildung 8–5 dargestellt den Status überprüfen.
 
-![Browseransicht des Ergebnisses der Überprüfung des Status bei einem in der Middlewaresimulation auftretenden Fehler](./media/image4.png)
+![Screenshot der Überprüfung des Status einer fehlschlagenden Middlewaresimulation.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Abbildung 8-5.** Überprüfung des „Fehlerstatus“ der ASP.NET-Middleware (hier deaktiviert)
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Die durch den Code ausgelösten Schritte werden im Folgenden kurz zusammengefasst. Die Wiederholungsrichtlinie versucht mehrmals, HTTP-Anforderungen zu stellen, was zu HTTP-Fehlern führt. Wenn die maximale Anzahl der Wiederholungen erreicht wird, die für die Circuit Breaker-Richtlinie festgelegt wurde (in diesem Fall 5), löst die Anwendung die Ausnahme „BrokenCircuitException“ aus. Das Ergebnis ist eine Benutzerbenachrichtigung (siehe Abbildung 8-6).
 
-![Browseransicht der MVC-Web-App mit einer von der Circuit Breaker-Richtlinie ausgelösten „basket service inoperative“-Meldung](./media/image5.png)
+![Screenshot der MVC-Web-App mit einem Fehler wegen nicht funktionierendem Warenkorbdienst.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Abbildung 8-6.** Trennschalter, der einen Fehler zurückgibt, der auf der Benutzeroberfläche angezeigt wird
 

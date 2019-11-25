@@ -2,21 +2,21 @@
 title: <add> von <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 809e6d5504b56f86eb09a5d57931f922e1c18348
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850522"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973824"
 ---
-# <a name="add-of-baseaddressprefixfilter"></a>\<Fügen Sie > \<von baseadresssspree fixfilter hinzu >
+# <a name="add-of-baseaddressprefixfilter"></a>\<> \<baseadresssspree fixfilter hinzufügen >
 Stellt ein Konfigurationselement dar, das einen Pass-Through-Filter angibt, der einen Mechanismus zum Auswählen der entsprechenden Internetinformationsdienste (IIS)-Bindungen beim Hosten einer Windows Communication Foundation (WCF)-Anwendung in IIS bereitstellt.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<servicehoststingenvironment->** ](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseadresssspfixfilters >** ](baseaddressprefixfilters.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
+&nbsp; &nbsp;[ **\<system. Service Model->** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ServiceHost**](servicehostingenvironment.md) ->\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseadresspfixfilters >** ](baseaddressprefixfilters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<hinzufügen >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Stellt ein Konfigurationselement dar, das einen Pass-Through-Filter angibt, der 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|Eine Auflistung von Konfigurationselementen, die Pass-Through-Filter angeben, die einen Mechanismus zum Auswählen der entsprechenden IIS-Bindungen bieten, wenn eine Windows Communication Foundation (WCF)-Anwendung in IIS gehostet wird.|  
+|[\<baseadresspfixfilters >](baseaddressprefixfilters.md)|Eine Auflistung von Konfigurationselementen, die Pass-Through-Filter angeben, die einen Mechanismus zum Auswählen der entsprechenden IIS-Bindungen bieten, wenn eine Windows Communication Foundation (WCF)-Anwendung in IIS gehostet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Präfixfilter bietet gemeinsamen Hostanbietern eine Methode, um die vom Dienst zu verwendenden URIs anzugeben. Sie ermöglicht es gemeinsamen Hosts, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
@@ -53,9 +53,9 @@ Stellt ein Konfigurationselement dar, das einen Pass-Through-Filter angibt, der 
   
  IIS unterstützt die Angabe mehrerer IIS-Bindungen für jede Website, was zu mehreren Basisadressen für jedes Schema führt. Da ein unter einer Website gehosteter WCF-Dienst nur die Bindung an eine Basisadresse für jedes Schema ermöglicht, können Sie mit der Präfix Filterfunktion die erforderliche Basisadresse des gehosteten Dienstanbieter auswählen. Die von IIS bereitgestellten eingehenden Basisadressen werden anhand des optionalen Präfixlistenfilters gefiltert.  
   
- Ihre Website kann beispielsweise die folgenden Basisadressen enthalten.  
+ Ihre Website kann beispielsweise die folgenden Basisadressen enthalten:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

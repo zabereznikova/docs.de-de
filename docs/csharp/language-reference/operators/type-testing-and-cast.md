@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922283"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972651"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Typtest- und Umwandlungsoperatoren (C#-Referenz)
 
@@ -36,7 +36,7 @@ Sie können die folgenden Operatoren zur Überprüfung oder Konvertierung von Ty
 
 ## <a name="is-operator"></a>is-Operator
 
-Der `is`-Operator prüft, ob der Laufzeittyp eines Ausdrucksergebnisses mit einem angegebenen Typ kompatibel ist. Ab C# 7.0 überprüft der `is`-Operator ein Ausdrucksergebnis auch anhand eines Musters.
+Der `is`-Operator prüft, ob der Laufzeittyp eines Ausdrucksergebnisses mit einem angegebenen Typ kompatibel ist. Ab C# 7.0 überprüft der `is`-Operator ein Ausdrucksergebnis auch anhand eines Musters.
 
 Der Ausdruck mit dem `is`-Operator für die Typüberprüfung weist folgende Form auf:
 
@@ -52,7 +52,7 @@ Das folgende Beispiel zeigt, dass der `is`-Operator `true` zurückgibt, wenn der
 
 [!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-Das nächste Beispiel zeigt, dass der `is`-Operator Boxing- und Unboxingkonvertierungen berücksichtigt, numerische Konvertierungen aber nicht:
+Das nächste Beispiel zeigt, dass der `is`-Operator Boxing- und Unboxingkonvertierungen berücksichtigt, [numerische Konvertierungen](../builtin-types/numeric-conversions.md) aber nicht:
 
 [!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
@@ -60,7 +60,7 @@ Informationen zu C#-Konvertierungen finden Sie im Kapitel [Konvertierungen](~/_c
 
 ### <a name="type-testing-with-pattern-matching"></a>Typüberprüfung mit Musterabgleich
 
-Ab C# 7.0 überprüft der `is`-Operator ein Ausdrucksergebnis auch anhand eines Musters. Insbesondere wird das Typmuster in der folgenden Form unterstützt:
+Ab C# 7.0 überprüft der `is`-Operator ein Ausdrucksergebnis auch anhand eines Musters. Insbesondere wird das Typmuster in der folgenden Form unterstützt:
 
 ```csharp
 E is T v
@@ -99,9 +99,9 @@ Im folgenden Beispiel wird die Verwendung des `as`-Operators veranschaulicht:
 [!code-csharp-interactive[as operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> Wie das vorherige Beispiel zeigt, müssen Sie das Ergebnis des `as`-Ausdrucks mit `null` vergleichen, um zu überprüfen, ob die Konvertierung erfolgreich war. Ab C# 7.0 können Sie den [-is-Operator](#type-testing-with-pattern-matching) verwenden, um sowohl die erfolgreiche Durchführung der Konvertierung zu überprüfen als auch – bei Erfolg –das Ergebnis einer neuen Variable zuzuweisen.
+> Wie das vorherige Beispiel zeigt, müssen Sie das Ergebnis des `as`-Ausdrucks mit `null` vergleichen, um zu überprüfen, ob die Konvertierung erfolgreich war. Ab C# 7.0 können Sie den [is-Operator](#type-testing-with-pattern-matching) verwenden, um sowohl die erfolgreiche Durchführung der Konvertierung zu überprüfen als auch bei Erfolg das Ergebnis einer neuen Variable zuzuweisen.
 
-## <a name="cast-operator-"></a>cast-Operator ()
+## <a name="cast-operator-"></a>Umwandlungsoperator ()
 
 Ein cast-Ausdruck der Form `(T)E` führt eine explizite Konvertierung des Ergebnisses des Ausdrucks `E` in den Typ `T` durch. Wenn keine explizite Konvertierung von Typ `E` in Typ `T` möglich ist, tritt ein Fehler während der Kompilierung auf. Möglicherweise ist eine explizite Konvertierung zur Laufzeit nicht erfolgreich, und ein cast-Ausdruck löst eine Ausnahme aus.
 
@@ -127,7 +127,7 @@ Sie können den `typeof`-Operator auch mit ungebundenen generischen Typen verwen
 
 [!code-csharp-interactive[typeof unbound generic](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Ein Ausdruck kann kein Argument des `typeof`-Operators sein. Um die <xref:System.Type?displayProperty=nameWithType>-Instanz für den Laufzeittyp des Ausdrucksergebnisses abzurufen, verwenden Sie die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode.
+Ein Ausdruck kann kein Argument des `typeof`-Operators sein. Verwenden Sie die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode, um die <xref:System.Type?displayProperty=nameWithType>-Instanz für den Laufzeittyp eines Ausdrucksergebnisses abzurufen.
 
 ### <a name="type-testing-with-the-typeof-operator"></a>Typüberprüfung mit dem `typeof`-Operator
 
@@ -155,3 +155,4 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)
 - [Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und den Operatoren „is“ und „as“](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Generics in .NET](../../../standard/generics/index.md)

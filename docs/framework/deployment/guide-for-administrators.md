@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052155"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975571"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 
@@ -21,7 +21,7 @@ In diesem Artikel erfahren Sie Schritt für Schritt, wie Systemadministratoren .
 > [!NOTE]
 > Die Software, auf die in diesem Dokument verwiesen wird (einschließlich .NET Framework 4.5, System Center Configuration Manager und Active Directory), unterliegt jeweils den geltenden Lizenzbedingungen. In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden. Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.
 >
-> Informationen zur Unterstützung für .NET Framework finden Sie unter [Microsoft .NET Framework Support Lifecycle-Richtlinien](https://go.microsoft.com/fwlink/?LinkId=196607) auf der Microsoft Support-Website.
+> Informationen zur Unterstützung für .NET Framework finden Sie unter [.NET Framework Support-Richtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) auf der Microsoft Support-Website.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -135,9 +135,9 @@ In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoption
 |------------|-----------------|
 |**/q**|Legt den stillen Modus fest. Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.|
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|
-|**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim [Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"** .|
+|**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"**.|
 
-Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer nicht in den Installationsvorgang ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der unter [Getting Progress Information from an Installation Package (Abrufen von Statusinformationen aus einem Installationspaket)](https://go.microsoft.com/fwlink/?LinkId=179606).
+Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer nicht in den Installationsvorgang ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der unter [Getting Progress Information from an Installation Package (Abrufen von Statusinformationen aus einem Installationspaket)](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 

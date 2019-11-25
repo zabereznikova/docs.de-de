@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423158"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969716"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -37,7 +37,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Weitere Informationen zum Erstellen neuer Zeichenfolgen, die auf Änderungen wie Such- und Ersetzungsvorgängen in der ursprünglichen Zeichenfolge basieren, finden Sie unter [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).  
+ Weitere Informationen zum Erstellen neuer Zeichenfolgen, die auf Änderungen wie beispielsweise Vorgängen zum Suchen und Ersetzen auf der ursprüngliche Zeichenfolge basieren, finden Sie unter [Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Reguläre und ausführliche Zeichenfolgenliterale  
  Verwenden Sie reguläre Zeichenfolgenliterale, wenn Sie von C# bereitgestellte Escapezeichen einbetten müssen, wie im folgenden Beispiel gezeigt:  
@@ -91,7 +91,7 @@ Verwenden Sie die Zeichenfolgeninterpolation, um die Lesbarkeit und die Wartungs
 Weitere Informationen zum Formatieren von .NET-Typen finden Sie unter [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Teilzeichenfolgen  
- Eine Teilzeichenfolge ist eine beliebige Sequenz von Zeichen, die in einer Zeichenfolge enthalten ist. Verwenden Sie die <xref:System.String.Substring%2A>-Methode, um eine neue Zeichenfolge aus einem Teil der ursprünglichen Zeichenfolge zu erstellen. Sie können nach einem oder mehreren Vorkommnissen einer Teilzeichenfolge suchen, indem Sie die <xref:System.String.IndexOf%2A>-Methode verwenden. Verwenden Sie die <xref:System.String.Replace%2A>-Methode, um alle Vorkommnisse einer angegebenen Teilzeichenfolge mit einer neuen Zeichenfolge zu ersetzen. Genauso wie die <xref:System.String.Substring%2A>-Methode gibt <xref:System.String.Replace%2A> tatsächlich eine neue Zeichenfolge zurück und ändert nicht die ursprüngliche Zeichenfolge. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen von Zeichenfolgen](../../how-to/search-strings.md) und [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).  
+ Eine Teilzeichenfolge ist eine beliebige Sequenz von Zeichen, die in einer Zeichenfolge enthalten ist. Verwenden Sie die <xref:System.String.Substring%2A>-Methode, um eine neue Zeichenfolge aus einem Teil der ursprünglichen Zeichenfolge zu erstellen. Sie können nach einem oder mehreren Vorkommnissen einer Teilzeichenfolge suchen, indem Sie die <xref:System.String.IndexOf%2A>-Methode verwenden. Verwenden Sie die <xref:System.String.Replace%2A>-Methode, um alle Vorkommnisse einer angegebenen Teilzeichenfolge mit einer neuen Zeichenfolge zu ersetzen. Genauso wie die <xref:System.String.Substring%2A>-Methode gibt <xref:System.String.Replace%2A> tatsächlich eine neue Zeichenfolge zurück und ändert nicht die ursprüngliche Zeichenfolge. Weitere Informationen finden Sie unter [Suchen von Zeichenfolgen mithilfe von Zeichenfolgenmethoden](../../how-to/search-strings.md) und [Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -131,12 +131,12 @@ string s = String.Empty;
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
-|[Vorgehensweise: Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  
-|[Vorgehensweise: Verketten von mehreren Zeichenfolgen](../../how-to/concatenate-multiple-strings.md)|Veranschaulicht verschiedene Möglichkeiten, mehrere Zeichenfolgen zu einer einzigen zu verknüpfen.|
-|[Vorgehensweise: Analysieren von Zeichenfolgen mithilfe von String.Split](../../how-to/parse-strings-using-split.md)|Enthält Codebeispiele, die veranschaulichen, wie Sie die `String.Split`-Methode zum Analysieren von Zeichenfolgen verwenden.|  
-|[Vorgehensweise: Durchsuchen von Zeichenfolgen](../../how-to/search-strings.md)|Erläutert, wie Sie mit der Suche Zeichenfolgen nach spezifischem Text oder spezifischen Mustern durchsuchen können.|  
-|[Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  
+|[Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
+|[Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  
+|[Verketten mehrerer Zeichenfolgen](../../how-to/concatenate-multiple-strings.md)|Veranschaulicht verschiedene Möglichkeiten, mehrere Zeichenfolgen zu einer einzigen zu verknüpfen.|
+|[Analysieren von Zeichenfolgen mithilfe von String.Split](../../how-to/parse-strings-using-split.md)|Enthält Codebeispiele, die veranschaulichen, wie Sie die `String.Split`-Methode zum Analysieren von Zeichenfolgen verwenden.|  
+|[Suchen von Zeichenfolgen](../../how-to/search-strings.md)|Erläutert, wie Sie mit der Suche Zeichenfolgen nach spezifischem Text oder spezifischen Mustern durchsuchen können.|  
+|[Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  
 |[Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md)|Beschreibt die Funktion zur Zeichenfolgeninterpolation, die eine zweckmäßige Syntax zum Formatieren von Zeichenfolgen bietet.|
 |[Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
 |[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Beschreibt das Konvertieren von Zeichenfolgendarstellungen der .NET-Basistypen in Instanzen der entsprechenden Typen.|  

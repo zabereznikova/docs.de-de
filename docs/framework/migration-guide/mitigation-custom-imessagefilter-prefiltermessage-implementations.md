@@ -2,14 +2,12 @@
 title: 'Entschärfung: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen'
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779430"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457945"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Entschärfung: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen
 
@@ -49,4 +47,4 @@ Für Apps, die für frühere Versionen von .NET Framework vorgesehen sind, aber
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Anwendungskompatibilität](application-compatibility.md)

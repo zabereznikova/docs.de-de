@@ -2,13 +2,14 @@
 title: Stark typisierte Delegate
 description: Informationen zur Verwendung von generischen Delegattypen zum Deklarieren von benutzerdefinierten Typen beim Erstellen eines Features, das Delegaten erfordert.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215163"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037363"
 ---
 # <a name="strongly-typed-delegates"></a>Stark typisierte Delegate
 
@@ -34,7 +35,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 Die `in`-Modifizierer im generischen Typargument wird in diesem Artikel in Kovarianz behandelt.
 
 Es gibt Variationen des `Action`-Delegaten, der bis zu 16 Argumente enthält, wie z.B. <xref:System.Action%6016>.
-Es ist wichtig, dass diese Definitionen andere generische Argumente für jeden der Delegatargumente verwenden: Das bietet Ihnen maximale Flexibilität. Die Methodenargumente müssen nicht, aber können der gleiche Typ sein.
+Es ist wichtig, dass diese Definitionen andere generische Argumente für jeden der Delegatargumente verwenden: Dies bietet Ihnen maximale Flexibilität. Die Methodenargumente müssen nicht, aber können der gleiche Typ sein.
 
 Verwenden Sie einen der `Action`-Typen für jeden Delegattyp, der über einen void-Rückgabetyp verfügt.
 
@@ -54,7 +55,8 @@ Der Typ des Ergebnisses ist immer der letzte Typparameter in allen `Func`-Deklar
 
 Verwenden Sie einen der `Func`-Typen für jeden Delegattyp, der einen Wert zurückgibt.
 
-Es gibt auch einen spezialisierten <xref:System.Predicate%601>-Typ für einen Delegaten, der einen Test für einen einzelnen Wert zurückgibt:
+Außerdem gibt es einen spezialisierten <xref:System.Predicate%601>-Typ 
+für einen Delegaten, der einen Test für einen einzelnen Wert zurückgibt:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);

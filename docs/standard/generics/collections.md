@@ -13,18 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 21d8ef3abfd16e11c9251edfc4f39b02e93eaab5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353947"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740924"
 ---
-# <a name="generic-collections-in-net"></a>Generische Auflistungen in .NET
+# <a name="generic-collections-in-net"></a>Generische Sammlungen in .NET
 
  Die Klassenbibliothek von .NET enthält eine Reihe generischer Auflistungsklassen in den Namespaces <xref:System.Collections.Generic> und <xref:System.Collections.ObjectModel>. Ausführliche Informationen zu diesen Klassen finden Sie unter [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
-### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
+## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
+
  Viele der generischen Auflistungstypen sind direkte Entsprechungen nicht generischer Typen. <xref:System.Collections.Generic.Dictionary%602> ist eine generische Version von <xref:System.Collections.Hashtable>. Sie verwendet die generische Struktur <xref:System.Collections.Generic.KeyValuePair%602> für die Enumeration anstelle von <xref:System.Collections.DictionaryEntry>.  
   
  <xref:System.Collections.Generic.List%601> ist eine generische Version von <xref:System.Collections.ArrayList>. Es gibt die generischen Klassen <xref:System.Collections.Generic.Queue%601> und <xref:System.Collections.Generic.Stack%601>, die nicht generischen Versionen entsprechen.  
@@ -33,14 +34,16 @@ ms.locfileid: "71353947"
   
  Die generische <xref:System.Collections.Generic.LinkedList%601>-Klasse ist eine echte verknüpfte Liste. Sie hat keine nicht generische Entsprechung.  
   
-### <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel  
+## <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel
+
  Die generische <xref:System.Collections.ObjectModel.Collection%601>-Klasse stellt eine Basisklasse bereit, aus der Sie Ihre eigenen generischen Auflistungstypen ableiten können. Die <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>-Klasse bietet eine einfache Möglichkeit, eine schreibgeschützte Auflistung von jedem beliebigen Typ abzuleiten, der die generische <xref:System.Collections.Generic.IList%601>-Schnittstelle implementiert. Die generische <xref:System.Collections.ObjectModel.KeyedCollection%602>-Klasse bietet eine Möglichkeit, Objekte zu speichern, die ihre eigenen Schlüssel enthalten.  
   
-## <a name="other-generic-types"></a>Weitere generische Typen  
+## <a name="other-generic-types"></a>Andere generische Typen
+
  Die generische <xref:System.Nullable%601>Struktur ermöglicht es Ihnen, die Werttypen so zu verwenden, als ob ihnen `null` zugewiesen werden könnte. Dies kann nützlich sein, wenn Datenbankabfragen verwendet werden, für die möglicherweise Felder fehlen, die Werttypen enthalten. Der generische Typparameter kann ein beliebiger Werttyp sein.  
   
 > [!NOTE]
-> In C# und Visual Basic muss <xref:System.Nullable%601> nicht explizit verwendet werden, weil die Sprache eine Syntax für NULL-fähige Typen umfasst. Siehe [Nullable-Werttypen (C#-Programmierleitfaden)](../../csharp/programming-guide/nullable-types/index.md) und [Nullwerte zulassende Werttypen (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
+> In C# und Visual Basic muss <xref:System.Nullable%601> nicht explizit verwendet werden, weil die Sprache eine Syntax für NULL-fähige Typen umfasst. Siehe [Nullable-Werttypen (C#-Referenz)](../../csharp/language-reference/builtin-types/nullable-value-types.md) und [Nullwerte zulassende Werttypen (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
   
  Die generische <xref:System.ArraySegment%601>-Struktur bietet eine Möglichkeit, einen Bereich von Elementen in einem eindimensionalen nullbasierten Array eines beliebigen Typs abzugrenzen. Der generische Typparameter ist der Typ der Elemente des Arrays.  
   

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET Core-Anwendung erstellen, die Plug-
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579505"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739700"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Erstellen einer .NET Core-Anwendung mit Plug-Ins
 
@@ -285,3 +285,7 @@ Damit wird verhindert, dass die `A.PluginBase`-Assemblys in das Ausgabeverzeichn
 ## <a name="plugin-target-framework-recommendations"></a>Empfehlungen für das Plug-In-Zielframework
 
 Da beim Laden der Plug-In-Abhängigkeit die Datei *.deps.json* verwendet wird, gibt es ein Problem im Zusammenhang mit dem Zielframework des Plug-Ins. Genauer gesagt müssen Ihre Plug-Ins für eine Runtime ausgelegt sein, z.B. .NET Core 3.0, anstatt für eine Version von .NET Standard. Die Datei *.deps.json* wird anhand des Zielframeworks des Projekts generiert, und da viele Pakete, die mit .NET Standard kompatibel sind, Verweisassemblys für die Erstellung für .NET Standard und Implementierungsassemblys für spezifische Runtimes enthalten, werden Implementierungsassemblys möglicherweise nicht ordnungsgemäß von *.deps.json* erkannt, oder die .NET Standard-Version kann anstelle der erwarteten .NET Core-Version abgerufen werden.
+
+## <a name="plugin-framework-references"></a>Plug-In-Frameworkverweise
+
+Plug-Ins können derzeit keine neuen Frameworks in den Prozess einbringen. Beispielsweise können Sie ein Plug-in, das das Framework `Microsoft.AspNetCore.App` verwendet, nicht in eine Anwendung laden, die nur das Stammframework `Microsoft.NETCore.App` verwendet. Die Hostanwendung muss Verweise auf alle von Plug-Ins benötigten Frameworks deklarieren.

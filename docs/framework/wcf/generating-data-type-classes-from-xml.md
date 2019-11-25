@@ -2,12 +2,12 @@
 title: Generieren von Datentypklassen aus XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: bf5596211e78842153b7406273626a7fa3c3aeea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 977b12b5c61c196a4f033361d37785e4ed0af73a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990285"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975858"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Generieren von Datentypklassen aus XML
 .NET Framework 4,5 enthält ein neues Feature zum Generieren von Datentyp Klassen aus XML. In diesem Thema wird beschrieben, wie Datentypen für den RSS-Feed des .net-Blogs automatisch generiert werden.  
@@ -28,13 +28,13 @@ ms.locfileid: "70990285"
   
 3. Wählen Sie **Bearbeiten**, **Sonderzeichen einfügen**, **XML als Klassen einfügen**aus.  
   
-4. `rss` `rssChannelItemGuid` Klassen, ,`rssChannel`,und,werden mit den erforderlichen Membern erstellt, um auf die Elemente im RSS-Feed zuzugreifen. `rssChannelItem` `link` `rssChannelImage`  
+4. Klassen, die `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` und `rssChannelItemGuid` aufgerufen werden, werden mit den erforderlichen Membern für den Zugriff auf die Elemente im RSS-Feed erstellt.  
   
 ### <a name="using-the-generated-classes"></a>Verwenden der generierten Klassen  
   
 1. Nachdem die Klassen generiert wurden, können sie wie jede andere Klasse im Code verwendet werden. Im folgenden Codebeispiel wird eine neue Instanz der `rssChannelImage`-Klasse zurückgegeben.  
   
-    ```csharp  
+    ```csharp
     var channelImage = new rssChannelImage()   
     {   
         title = "MyImage",   

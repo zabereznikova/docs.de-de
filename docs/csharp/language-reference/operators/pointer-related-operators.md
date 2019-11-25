@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512355"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036149"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatoren im Zusammenhang mit Zeigern (C#-Referenz)
 
@@ -48,7 +48,7 @@ Der unäre Operator `&` gibt die Adresse seines Operanden zurück:
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-Der Operand des Operators `&` muss eine feste Variable sein. *Feste* Variablen befinden sich an Speicherorten, auf die sich [Garbage Collector](../../../standard/garbage-collection/index.md)-Operationen nicht auswirken. Im vorherigen Beispiel ist die lokale Variable `number` eine feste Variable, da sie im Stapel angeordnet ist. Variablen an Speicherorten, auf die sich der Garbage Collector auswirken kann (z. B. durch eine Verschiebung), werden als *bewegliche* Variablen bezeichnet. Objektfelder und Arrayelemente sind Beispiele für bewegliche Variablen. Sie können die Adresse einer beweglichen Variablen erhalten, wenn Sie sie mit der Anweisung [fixed](../keywords/fixed-statement.md) „fixieren“ bzw. „anheften“. Die abgerufene Adresse ist nur für die Dauer des `fixed`-Anweisungsblocks gültig. Im folgenden Beispiel wird veranschaulicht, wie Sie die Anweisung `fixed` und den Operator `&` verwenden:
+Der Operand des Operators `&` muss eine feste Variable sein. *Feste* Variablen befinden sich an Speicherorten, auf die sich [Garbage Collector](../../../standard/garbage-collection/index.md)-Operationen nicht auswirken. Im vorherigen Beispiel ist die lokale Variable `number` eine feste Variable, da sie im Stapel angeordnet ist. Variablen an Speicherorten, auf die sich der Garbage Collector auswirken kann (z. B. durch eine Verschiebung), werden als *bewegliche* Variablen bezeichnet. Objektfelder und Arrayelemente sind Beispiele für bewegliche Variablen. Sie können die Adresse einer beweglichen Variablen erhalten, wenn Sie sie mit einer [`fixed`-Anweisung](../keywords/fixed-statement.md) „fixieren“ bzw. „anheften“. Die erhaltene Adresse ist nur innerhalb des Blocks einer `fixed`-Anweisung gültig. Im folgenden Beispiel wird veranschaulicht, wie Sie eine `fixed`-Anweisung und den `&`-Operator verwenden:
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ Mit dem binären Operator `*` wird das [Produkt](arithmetic-operators.md#multipl
 
 ## <a name="pointer-member-access-operator--"></a>Zeigermember-Zugriffsoperator ->
 
-Mit dem Operator `->` werden die [Zeigerdereferenzierung](#pointer-indirection-operator-) und der [Memberzugriff](member-access-operators.md#member-access-operator-) kombiniert. Wenn `x` ein Zeiger des Typs `T*` und `y` ein Member von `T` ist, auf den zugegriffen werden kann, ist ein Ausdruck der Form
+Mit dem Operator `->` werden die [Zeigerdereferenzierung](#pointer-indirection-operator-) und der [Memberzugriff](member-access-operators.md#member-access-operator-) kombiniert. Wenn `x` ein Zeiger des Typs `T*` und `y` ein Member des Typs `T` ist, auf den zugegriffen werden kann, ist ein Ausdruck der Form
 
 ```csharp
 x->y
@@ -166,7 +166,7 @@ In der folgenden Liste sind die Zeigeroperatoren absteigend nach der Rangfolge s
 
 Verwenden Sie Klammern `()`, wenn Sie die Reihenfolge der Auswertung ändern möchten, die durch die Operatorrangfolge festgelegt ist.
 
-Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie unter [C#-Operatoren](index.md).
+Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie im Abschnitt [Operatorrangfolge](index.md#operator-precedence) im Artikel [C#-Operatoren](index.md).
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 

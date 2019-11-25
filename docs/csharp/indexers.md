@@ -2,13 +2,14 @@
 title: Indexer
 description: Erfahren Sie mehr über C#-Indexer und wie sie indizierte Eigenschaften, d.h. Eigenschaften, auf die mit mindestens einem Argument verwiesen wird, implementieren.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197599"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039118"
 ---
 # <a name="indexers"></a>Indexer
 
@@ -326,4 +327,4 @@ Entwickler verwenden den `DateTime`-Typ, aber die `Date`-Eigenschaft, um sicherz
 ## <a name="summing-up"></a>Schlussbemerkung
 
 Sie sollten Indexer immer dann erstellen, wenn Sie ein Element, das einer Eigenschaft ähnelt, in Ihrer Klasse vorliegen haben, und wenn diese Eigenschaft nicht einen einzelnen Wert repräsentiert, sondern eine Auflistung von Werten, in der jedes einzelne Element durch einen Satz von Argumenten identifiziert wird. Diese Argumente können eindeutig identifizieren, auf welches Element in der Auflistung verwiesen werden sollte.
-Indexer erweitern das Konzept der [Eigenschaften](properties.md), wo ein Member außerhalb der Klasse nicht wie ein Datenelement behandelt wird, sondern wie eine Methode von innen. Indexer ermöglichen es Argumenten, ein einzelnes Element in einer Eigenschaft zu finden, das einen Satz von Elementen repräsentiert.
+Indexer erweitern das Konzept der [Eigenschaften](properties.md), bei denen ein Member wie ein Datenelement außerhalb der Klasse behandelt wird, sondern wie eine Methode innerhalb der Klasse. Indexer ermöglichen es Argumenten, ein einzelnes Element in einer Eigenschaft zu finden, das einen Satz von Elementen repräsentiert.

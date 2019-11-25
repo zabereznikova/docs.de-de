@@ -2,14 +2,12 @@
 title: 'Entschärfung: Überprüfen von Pfaden auf Doppelpunkte'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a74c25a9bf4dd8b9ab86bd280881fe1a7999e1d5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789991"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457896"
 ---
 # <a name="mitigation-path-colon-checks"></a>Entschärfung: Überprüfen von Pfaden auf Doppelpunkte
 Für Apps, die gezielt .NET Framework 4.6.2 und höhere Versionen verwenden, wurde eine Reihe von Änderungen vorgenommen, um zuvor nicht unterstützte Pfade zu unterstützen (im Hinblick auf Länge und Format). Insbesondere wurden Prüfungen auf ordnungsgemäße Syntax von Laufwerkstrennzeichen (den Doppelpunkt) strenger definiert.  
@@ -34,4 +32,4 @@ Für Apps, die gezielt .NET Framework 4.6.2 und höhere Versionen verwenden, w
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Anwendungskompatibilität](application-compatibility.md)

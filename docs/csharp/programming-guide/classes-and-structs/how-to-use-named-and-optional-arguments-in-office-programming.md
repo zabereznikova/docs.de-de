@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von benannten und optionalen Argumenten bei der Office-Programmierung – C#-Programmierhandbuch'
+title: 'Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002787"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970491"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Vorgehensweise: Verwenden von benannten und optionalen Argumenten bei der Office-Programmierung (C#-Programmierhandbuch)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)
 
 Benannte und optionale Argumente, die in C# 4 eingeführt wurden, optimieren die Praxistauglichkeit, Flexibilität und Lesbarkeit in der C#-Programmierung. Diese Funktionen erleichtern zusätzlich den Zugriff auf COM-Schnittstellen wie etwa die Automatisierungs-APIs in Microsoft Office.
 

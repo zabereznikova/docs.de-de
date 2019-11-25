@@ -8,21 +8,21 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5cf7a6e563069e35a4ac0fe729a616dc1c56bdb5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779744"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975116"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualisieren des Datendiensts (WCF Data Services)
-Wenn Sie die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Client Bibliothek verwenden, um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] einen-Feed zu nutzen, übersetzt die Bibliothek die Einträge im-Feed in Instanzen von Client Datendienst Klassen. Diese Datendienstklassen werden mithilfe des <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem die <xref:System.Data.Services.Client.DataServiceQuery%601> gehört. Der Client verfolgt Änderungen an Entitäten nach, die mit Methoden des <xref:System.Data.Services.Client.DataServiceContext> gemeldet werden. Mithilfe dieser Methoden kann der Client hinzugefügte und gelöschte Entitäten sowie Änderungen an den Eigenschaftswerten oder an Beziehungen zwischen Entitätsinstanzen verfolgen. Wenn Sie die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufrufen, werden diese nachverfolgten Änderungen als REST-basierte Vorgänge an den Datendienst zurückgesendet.  
+Wenn Sie die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client Bibliothek verwenden, um einen Open Data Protocol (odata)-Feed zu nutzen, übersetzt die Bibliothek die Einträge im Feed in Instanzen von Client Datendienst Klassen. Diese Datendienstklassen werden mithilfe des <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem die <xref:System.Data.Services.Client.DataServiceQuery%601> gehört. Der Client verfolgt Änderungen an Entitäten nach, die mit Methoden des <xref:System.Data.Services.Client.DataServiceContext> gemeldet werden. Mithilfe dieser Methoden kann der Client hinzugefügte und gelöschte Entitäten sowie Änderungen an den Eigenschaftswerten oder an Beziehungen zwischen Entitätsinstanzen verfolgen. Wenn Sie die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufrufen, werden diese nachverfolgten Änderungen als REST-basierte Vorgänge an den Datendienst zurückgesendet.  
   
 > [!NOTE]
 > Wenn Sie mithilfe einer Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> Daten an Steuerelemente binden, werden die an Daten im gebundenen Steuerelement vorgenommenen Änderungen automatisch dem <xref:System.Data.Services.Client.DataServiceContext> gemeldet. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](binding-data-to-controls-wcf-data-services.md).  
   
 ## <a name="adding-modifying-and-changing-entities"></a>Hinzufügen und Ändern von Entitäten  
- Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio zum Hinzufügen eines [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Verweises auf einen Feed verwenden, verfügen die resultierenden Client Datendienst Klassen jeweils über eine statische *Create* -Methode, die einen Parameter für jede Entitäts Eigenschaft verwendet, die keine NULL-Werte zulässt. . Sie können mithilfe dieser Methode Instanzen von Entitätstypklassen wie im folgenden Beispiel erstellen:  
+ Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio zum Hinzufügen eines Verweises zu einem odata-Feed verwenden, verfügen die resultierenden Client Datendienst Klassen jeweils über eine statische *Create* -Methode, die einen Parameter für jede Entitäts Eigenschaft verwendet, die keine NULL-Werte zulässt. Sie können mithilfe dieser Methode Instanzen von Entitätstypklassen wie im folgenden Beispiel erstellen:  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
@@ -44,7 +44,7 @@ Wenn Sie die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Client
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, ändern und Löschen von](how-to-add-modify-and-delete-entities-wcf-data-services.md)Entitäten.  
+ Weitere Informationen finden Sie unter Gewusst [wie: Hinzufügen, ändern und Löschen von Entitäten](how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Anfügen von Entitäten  
  Mithilfe der Clientbibliothek können Sie an einer Entität vorgenommene Aktualisierungen speichern, ohne zuerst eine Abfrage zum Laden der Entität in den <xref:System.Data.Services.Client.DataServiceContext> auszuführen. Verwenden Sie die <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A>-Methode, um ein vorhandenes Objekt an eine bestimmte Entitätenmenge im <xref:System.Data.Services.Client.DataServiceContext> anzufügen. Sie können dann das Objekt ändern und die Änderungen am Datendienst speichern. Im folgenden Beispiel wird ein geändertes Kundenobjekt an den Kontext angefügt, und dann wird <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> aufgerufen, um das angefügte Objekt als <xref:System.Data.Services.Client.EntityStates.Modified> zu markieren, bevor <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> aufgerufen wird:  
@@ -62,12 +62,12 @@ Wenn Sie die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Client
   
 - Die <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29>-Methodenüberladung, die einen `etag`-Parameter annimmt, wird verwendet, wenn Sie ein zusammen mit einem eTag-Wert empfangenes Entitätsobjekt anfügen. Dieser eTag-Wert wird dann zur Überprüfung auf Parallelität verwendet, wenn Änderungen am angefügten Objekt gespeichert werden.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie eine vorhandene Entität an DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)an.  
+ Weitere Informationen finden Sie unter Gewusst [wie: Anfügen einer vorhandenen Entität an den DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md).  
   
 ## <a name="creating-and-modifying-relationship-links"></a>Erstellen und Ändern von Beziehungslinks  
- Wenn Sie eine neue Entität hinzufügen, indem <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> Sie entweder die-Methode oder die entsprechende *AddTo* -Methode der <xref:System.Data.Services.Client.DataServiceContext> -Klasse verwenden, die das **Dienstverweis hinzufügen** Dialogfeld generiert, werden alle Beziehungen zwischen der neuen Entität und den zugehörigen Entitäten nicht automatisch definiert.  
+ Wenn Sie eine neue Entität mit der <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>-Methode oder der entsprechenden *AddTo* -Methode der <xref:System.Data.Services.Client.DataServiceContext>-Klasse hinzufügen, die das Dialogfeld **Dienstverweis hinzufügen** generiert, werden alle Beziehungen zwischen der neuen Entität und den zugehörigen Entitäten nicht automatisch definiert.  
   
- Sie können Beziehungen zwischen Entitätsinstanzen erstellen und ändern und die Clientbibliothek diese Änderungen im Datendienst widerspiegeln lassen. Beziehungen zwischen Entitäten werden im Modell als Zuordnungen definiert, und das <xref:System.Data.Services.Client.DataServiceContext>-Objekt verfolgt jede Beziehung als Linkobjekt im Kontext. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]stellt die folgenden Methoden für die <xref:System.Data.Services.Client.DataServiceContext> -Klasse bereit, um diese Links zu erstellen, zu ändern und zu löschen:  
+ Sie können Beziehungen zwischen Entitätsinstanzen erstellen und ändern und die Clientbibliothek diese Änderungen im Datendienst widerspiegeln lassen. Beziehungen zwischen Entitäten werden im Modell als Zuordnungen definiert, und das <xref:System.Data.Services.Client.DataServiceContext>-Objekt verfolgt jede Beziehung als Linkobjekt im Kontext. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] stellt die folgenden Methoden für die <xref:System.Data.Services.Client.DataServiceContext>-Klasse bereit, um diese Links zu erstellen, zu ändern und zu löschen:  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
@@ -88,7 +88,7 @@ Wenn Sie die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Client
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Definieren von Entitäts Beziehungen](how-to-define-entity-relationships-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter Gewusst [wie: Definieren von Entitäts Beziehungen](how-to-define-entity-relationships-wcf-data-services.md).  
   
 ## <a name="saving-changes"></a>Speichern von Änderungen  
  Änderungen werden in der <xref:System.Data.Services.Client.DataServiceContext>-Instanz nachverfolgt, jedoch nicht unmittelbar an den Server gesendet. Wenn Sie die erforderlichen Änderungen für eine bestimmte Aktivität vorgenommen haben, rufen Sie <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> auf, um alle Änderungen an den Datendienst zu übergeben. Weitere Informationen finden Sie unter [Verwalten des Datendienst Kontexts](managing-the-data-service-context-wcf-data-services.md). Sie können Änderungen mit der <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A>-Methode und der <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>-Methode auch asynchron speichern. Weitere Informationen finden Sie unter [asynchrone Vorgänge](asynchronous-operations-wcf-data-services.md).  

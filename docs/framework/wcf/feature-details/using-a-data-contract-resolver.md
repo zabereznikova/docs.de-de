@@ -2,12 +2,12 @@
 title: Verwenden eines Datenvertragsresolvers
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9082d2979cf9bd0837635af567d69ef34c2e312
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918566"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975974"
 ---
 # <a name="using-a-data-contract-resolver"></a>Verwenden eines Datenvertragsresolvers
 Mithilfe eines Datenvertragsresolver können Sie bekannte Typen dynamisch konfigurieren. Bekannte Typen sind erforderlich, wenn ein Typ serialisiert oder deserialisiert wird, der von einem Datenvertrag nicht erwartet wird. Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Bekannte Typen werden in der Regel statisch angegeben. Das bedeutet, dass Sie beim Implementieren eines Vorgangs alle möglichen Typen kennen müssen, die der Vorgang erhalten kann. In einigen Szenarios trifft dies nicht zu, und es ist wichtig, bekannte Typen dynamisch angeben zu können.  
@@ -51,13 +51,13 @@ public class MyCustomerResolver : DataContractResolver
   
  Nachdem Sie einen <xref:System.Runtime.Serialization.DataContractResolver> definiert haben, können Sie diesen verwenden, indem Sie ihn an den <xref:System.Runtime.Serialization.DataContractSerializer>-Konstruktor übergeben. Dies ist im folgenden Beispiel dargestellt.  
   
-```  
+```csharp
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
  Sie können einen <xref:System.Runtime.Serialization.DataContractResolver> in einem Aufruf der Methoden <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> oder <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType> angeben, wie im folgenden Beispiel gezeigt.  
   
-```  
+```csharp
 MemoryStream ms = new MemoryStream();  
 DataContractSerializer serializer = new DataContractSerializer(typeof(Customer));  
 XmlDictionaryWriter writer = XmlDictionaryWriter.CreateDictionaryWriter(XmlWriter.Create(ms));  
@@ -69,7 +69,7 @@ Console.WriteLine(((Customer)serializer.ReadObject(XmlDictionaryReader.CreateDic
   
  Sie können ihn jedoch auch unter <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> festlegen, wie im folgenden Beispiel gezeigt.  
   
-```  
+```csharp
 ServiceHost host = new ServiceHost(typeof(MyService));  
   
 ContractDescription cd = host.Description.Endpoints[0].Contract;  
@@ -85,7 +85,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Sie können einen Datenvertragsresolver deklarativ angeben, indem Sie ein Attribut implementieren, das auf einen Dienst angewendet werden kann.  Weitere Informationen finden Sie unter den [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) Beispiel. Diesem Beispiel wird ein Attribut namens "KnownAssembly" implementiert, das Verhalten des Diensts einen benutzerdefinierten datenvertragsresolver hinzufügt.  
+ Sie können einen Datenvertragsresolver deklarativ angeben, indem Sie ein Attribut implementieren, das auf einen Dienst angewendet werden kann.  Weitere Informationen finden Sie im Beispiel für das [knownassemblyattribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) -Beispiel. In diesem Beispiel wird ein Attribut mit dem Namen "KnownAssembly" implementiert, mit dem dem Dienst Verhalten ein benutzerdefinierter datenvertragsresolver hinzugefügt wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

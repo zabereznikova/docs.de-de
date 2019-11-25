@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3863bc1376d89ef804022fb9c87fac3a25fc910f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115040"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968844"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<userandomizedstringhashalgorithm > Element
 Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet.  
@@ -70,7 +70,7 @@ Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwend
   
  Wenn Sie das Beispiel ausführen, ohne eine Konfigurationsdatei anzugeben, wird die folgende Ausgabe angezeigt. Beachten Sie, dass die Hashcodes für die Zeichenfolge in den zwei Anwendungsdomänen identisch sind.  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
   
  Wenn die Konfigurationsdatei vorhanden ist, zeigt das Beispiel die folgende Ausgabe an:  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  

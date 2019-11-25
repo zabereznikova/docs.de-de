@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052042"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975669"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen
-Das .NET Framework 4.5-Installationsprogramm verwendet den [Neustart-Manager](https://go.microsoft.com/fwlink/?LinkId=231425), um Systemneustarts während der Installation nach Möglichkeit zu verhindern. Wenn das App-Setupprogramm .NET Framework installiert, kann es über eine Schnittstelle mit dem Neustart-Manager diese Funktion nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
+Das .NET Framework 4.5-Installationsprogramm verwendet den [Neustart-Manager](/windows/win32/rstmgr/about-restart-manager), um Systemneustarts während der Installation nach Möglichkeit zu verhindern. Wenn das App-Setupprogramm .NET Framework installiert, kann es über eine Schnittstelle mit dem Neustart-Manager diese Funktion nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Gründe für einen Neustart  
  Die .NET Framework 4.5-Installation erfordert einen Systemneustart, wenn während der Installation eine .NET Framework 4.5-App in Verwendung ist. Der Grund: .NET Framework 4-Dateien werden durch .NET Framework 4.5 ersetzt und müssen während der Installation verfügbar sein. In vielen Fällen lässt sich ein Neustart verhindern, indem .NET Framework 4-Apps, die in Verwendung sind, präemptiv erkannt und geschlossen werden. Einige System-Apps dürfen jedoch nicht geschlossen werden. In diesen Fällen lässt sich ein Neustart nicht vermeiden.  

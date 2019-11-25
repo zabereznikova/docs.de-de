@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Abhängigkeitsinjektion, das Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454852"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737535"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -17,7 +17,9 @@ Wie bereits erwähnt, kann die Anwendungsschicht als Teil des Artefakts (der Ass
 
 Der Anwendungsschichtcode des Microservices für Bestellungen ist beispielsweise direkt als Teil des **Ordering.API**-Projekts (ein ASP.NET Core-Web-API-Projekt) implementiert (s. Abbildung 7-23).
 
-![Der Projektmappen-Explorer des Microservice „Ordering.API“, der die Unterordner von „Anwendung“ anzeigt: Verhalten, Befehle, DomainEventHandlers, IntegrationEvents, Modelle, Abfragen und Prüfungen.](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Screenshot des Microservice „Ordering.API“ im Projektmappen-Explorer.":::
+Der Projektmappen-Explorer des Microservice „Ordering.API“, der die Unterordner von „Anwendung“ anzeigt: Verhalten, Befehle, DomainEventHandlers, IntegrationEvents, Modelle, Abfragen und Prüfungen.
+:::image-end:::
 
 **Abbildung 7-23**. Die Anwendungsschicht im Projekt Ordering.API-Projekt (ASP.NET Core-Web-API-Projekt)
 
@@ -181,9 +183,11 @@ Das Befehlsmuster bezieht sich systemintern auf das CQRS-Muster, das weiter oben
 
 Wie in Abbildung 7-24 dargestellt, basiert das Muster auf der clientseitigen Annahme von Befehlen und ihre Verarbeitung auf Grundlage von Domänenmodellregeln und schließlich der Beibehaltung der Status mit Transaktionen.
 
-![Der Überblick über die Schreibseite in CQRS: Die Benutzeroberflächen-App sendet einen Befehl über die API, der zu einem CommandHandler gelangt, der vom Domänenmodell und der Infrastruktur abhängt, um die Datenbank zu aktualisieren.](./media/image21.png)
+![Diagramm, das eine Übersicht über den allgemeinen Datenfluss vom Client zur Datenbank zeigt.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **Abbildung 7-24**. Überblick über die Befehle oder die „Transaktionsseite“ in einem CQRS-Muster
+
+Abbildung 7–24 zeigt, dass die Benutzeroberflächen-App einen Befehl über die API sendet, der zu einem `CommandHandler` gelangt, der vom Domänenmodell und der Infrastruktur abhängt, um die Datenbank zu aktualisieren.
 
 ### <a name="the-command-class"></a>Die Befehlsklasse
 
@@ -423,9 +427,11 @@ Die anderen beiden Hauptoptionen, die empfohlen werden, lauten:
 
 Wie in Abbildung 7-25 dargestellt, verwenden Sie in einem CQRS-Ansatz einen intelligenten Vermittler, ähnlich einem In-Memory-Bus. Dieser ist ausreichend intelligent, um den richtigen Befehlshandler basierend auf dem empfangenen Befehlstyp oder dem DTO (Datentransferobjekt) umzuleiten. Die schwarzen Pfeile zwischen Komponenten stellen die Abhängigkeiten zwischen Objekten (in vielen Fällen mit DI eingefügt) mit den zugehörigen Interaktionen dar.
 
-![Zoom aus dem vorherigen Bild: Der ASP.NET Core-Controller sendet den Befehl an die Befehlspipeline von MediatR, damit er zum entsprechenden Handler gelangt.](./media/image22.png)
+![Diagramm, das eine detailliertere Übersicht über den Datenfluss vom Client zur Datenbank zeigt.](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **Abbildung 7-25**. Verwenden des Vermittlermusters in einem CQRS-Microservice
+
+Das obige Diagramm zeigt eine Vergrößerung der Abbildung 7–24: Der ASP.NET Core-Controller sendet den Befehl an die Befehlspipeline von MediatR, damit er zum entsprechenden Handler gelangt.
 
 Die Verwendung des Vermittlermusters ist sinnvoll, da Verarbeitungsanforderungen in Unternehmensanforderungen kompliziert sein können. Sie möchten eine offene Anzahl von querschnittlichen Belangen wie Protokollierung, Überprüfungen, Überwachung und Sicherheit hinzufügen können. In diesen Fällen können Sie auf eine Vermittlerpipeline zurückgreifen (weitere Informationen finden Sie unter [Vermittlermuster](https://en.wikipedia.org/wiki/Mediator_pattern)), um ein Mittel für diese zusätzlichen Verhaltensweisen oder querschnittlichen Belange bereitzustellen.
 
@@ -439,11 +445,11 @@ Im Microservice für Bestellung von eShopOnContainers werden beispielsweise zwei
 
 Eine andere Möglichkeit ist die Verwendung asynchroner Nachrichten basierend auf Brokern oder Nachrichtenwarteschlagen (s. Abbildung 7-26). Diese Option kann auch mit der Vermittlerkomponente direkt vor dem Befehlshandler kombiniert werden.
 
-![Die Befehlspipeline kann auch über eine hochverfügbare Nachrichtenwarteschlange verarbeitet werden, um die Befehle an den entsprechenden Handler zu übergeben.](./media/image23.png)
+![Diagramm, das den Datenfluss unter Verwendung einer Hochverfügbarkeits-Nachrichtenwarteschlange zeigt.](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **Abbildung 7-26**. Verwenden von Nachrichtenwarteschlangen (prozessexterne und prozessübergreifende Kommunikation) mit CQRS-Befehlen
 
-Wenn Nachrichtenwarteschlangen verwendet werden, um die Befehle zu akzeptieren, kann die Pipeline des Befehls noch komplexer werden, da Sie sie wahrscheinlich in zwei über die externe Warteschlange verbundene Prozesse aufteilen müssen. Die Verwendung ist jedoch sinnvoll, wenn Sie Skalierbarkeit und Leistung basierend auf asynchronem Messaging verbessern müssen. Beachten Sie, dass im Fall von Abbildung 7-26 der Controller nur die Befehlsnachricht in die Warteschlange sendet und zurückgibt. Die Befehlshandler verarbeiten die Nachrichten in ihrem eigenen Tempo. Dies ist ein großer Vorteil von Warteschlangen: Die Nachrichtenwarteschlange kann als Puffer fungieren, wenn Hyperskalierbarkeit erforderlich ist, z.B. für Lager oder jedes andere Szenario mit einem hohen eingehenden Datenaufkommen.
+Die Befehlspipeline kann auch über eine hochverfügbare Nachrichtenwarteschlange verarbeitet werden, um die Befehle an den entsprechenden Handler zu übergeben. Wenn Nachrichtenwarteschlangen verwendet werden, um die Befehle zu akzeptieren, kann die Pipeline des Befehls noch komplexer werden, da Sie sie wahrscheinlich in zwei über die externe Warteschlange verbundene Prozesse aufteilen müssen. Die Verwendung ist jedoch sinnvoll, wenn Sie Skalierbarkeit und Leistung basierend auf asynchronem Messaging verbessern müssen. Beachten Sie, dass im Fall von Abbildung 7-26 der Controller nur die Befehlsnachricht in die Warteschlange sendet und zurückgibt. Die Befehlshandler verarbeiten die Nachrichten in ihrem eigenen Tempo. Dies ist ein großer Vorteil von Warteschlangen: Die Nachrichtenwarteschlange kann als Puffer fungieren, wenn Hyperskalierbarkeit erforderlich ist, z.B. für Lager oder jedes andere Szenario mit einem hohen eingehenden Datenaufkommen.
 
 Da die Nachrichtenwarteschlangen asynchron sind, müssen Sie herausfinden, wie mit der Clientanwendung über den Erfolg oder Misserfolg des Prozesses des Befehls kommuniziert werden soll. Im Allgemeinen sollten Sie nie „Fire and Forget“-Befehle verwenden. Jede Geschäftsanwendung muss wissen, ob ein Befehl erfolgreich verarbeitet oder zumindest überprüft und akzeptiert wurde.
 

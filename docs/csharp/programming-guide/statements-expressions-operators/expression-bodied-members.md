@@ -5,14 +5,12 @@ ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120149"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Ausdruckskörpermember (C#-Programmierhandbuch)
 
@@ -89,9 +87,9 @@ Weitere Informationen finden Sie unter [Finalizer (C#-Programmierhandbuch)](../c
 
 ## <a name="indexers"></a>Indexer
 
-Genauso wie Eigenschaften bestehen die Accessoren der Get- und Set-Methode des Indexers aus Ausdruckstextdefinitionen, wenn der Get-Accessor aus einer einzelnen Anweisung besteht, die einen Wert zurückgibt, oder der Set-Accessor führt eine einfache Zuweisung aus.
+Genauso wie Eigenschaften bestehen die `get`- und `set`-Accessoren des Indexers aus Ausdruckstextdefinitionen, wenn der `get`-Accessor aus einem einzelnen Ausdruck besteht, der einen Wert zurückgibt, oder der `set`-Accessor führt eine einfache Zuweisung aus.
 
-Im folgenden Beispiel wird eine Klasse namens `Sports` definiert, die ein internes <xref:System.String>-Array enthält, das aus den Namen von verschiedenen Sportarten besteht. Die Get- und Set-Accessoren des Indexers werden als Ausdruckstextdefinitionen implementiert.
+Im folgenden Beispiel wird eine Klasse namens `Sports` definiert, die ein internes <xref:System.String>-Array enthält, das aus den Namen von verschiedenen Sportarten besteht. Die `get`- und `set`-Accessoren des Indexers werden als Ausdruckstextdefinitionen implementiert.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

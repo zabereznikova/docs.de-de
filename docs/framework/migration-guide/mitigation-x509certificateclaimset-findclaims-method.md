@@ -2,14 +2,12 @@
 title: 'Entschärfung: X509CertificateClaimSet.FindClaims-Methode'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778934"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457751"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Entschärfung: X509CertificateClaimSet.FindClaims-Methode
 Ab Apps, die auf .NET Framework 4.6.1 ausgerichtet sind, wird von der Methode <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> versucht, das Argument `claimType` mit allen DNS-Einträgen im zugehörigen SAN-Feld zu vergleichen.  
@@ -38,4 +36,4 @@ Ab Apps, die auf .NET Framework 4.6.1 ausgerichtet sind, wird von der Methode 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Anwendungskompatibilität](application-compatibility.md)

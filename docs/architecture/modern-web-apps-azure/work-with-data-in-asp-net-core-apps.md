@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbe
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117305"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966875"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -282,7 +282,7 @@ Das erste DbContext-Objekt ist \_catalogContext und das zweite befindet sich im 
 
 EF Core eignet sich gut zum Verwalten der Persistenz und kapselt vor allem die von Anwendungsentwicklern bereitgestellten Datenbankinformationen. Es gibt hierfür jedoch auch andere Möglichkeiten. [Dapper](https://github.com/StackExchange/Dapper) ist z.B. eine Open-Source-Alternative, die häufig verwendet wird. Dabei handelt es sich um eine Mikro-ORM. Bei einer Mikro-ORM handelt es sich um ein Tool mit allen Features, die zum Zuordnen von Objekten zu Datenstrukturen benötigt werden. Bei Dapper hat man sich vor allem auf das Thema Leistung konzentriert, anstatt die zugrunde liegenden Abfragen, die verwendet werden, um Daten abzurufen und zu aktualisieren, vollständig zu kapseln. Da Dapper SQL nicht vom Entwickler abstrahiert, kann dieser sich mehr an der Hardware orientierten und genau die Abfragen schreiben, die er für einen bestimmten Vorgang zum Zugreifen auf Daten verwenden möchte.
 
-EF Core enthält zwei wichtige Features, durch die sich dieses Tool zwar von Dapper unterscheidet, die aber gleichzeitig den Leistungsaufwand erhöhen. Das eine Feature ist dafür zuständig, LINQ-Ausdrücke in SQL zu übersetzen. Diese Übersetzungen werden zwar zwischengespeichert, aber es ist trotzdem sehr aufwändig, wenn sie das erste Mal erstellt werden müssen. Das andere Feature ist dafür zuständig, Änderungen an Entitäten nachzuverfolgen, damit effiziente Updateanweisungen generiert werden können. Dieses Verhalten kann für bestimmte Abfragen mit der AsNotTracking-Erweiterung deaktiviert werden. Außerdem generiert EF Core SQL-Abfragen, die sehr effizient sind und kein zu hohes Maß an Leistung erfordern. Wenn Sie zudem die Abfragen, die ausgeführt werden sollen, genau steuern möchten, können Sie auch benutzerdefinierte SQL-Elemente hinzufügen oder eine gespeicherte Prozedur mit EF Core ausführen. In diesem Szenario ist Dapper im Hinblick auf die Leistung zwar nützlicher als EF Core, aber der Unterschied ist nur gering. Julie Lerman führt in Ihrem MSDN-Artikel mit dem Titel [Datenpunkte – Dapper, Entity Framework und Hybrid-Apps](https://msdn.microsoft.com/magazine/mt703432.aspx) vom Mai 2016 einige Leistungsdaten auf. Außerdem finden Sie auf der [Dapper-Website](https://github.com/StackExchange/Dapper) zusätzliche Vergleichsdaten zur Leistung für verschiedene Datenzugriffsmethoden.
+EF Core enthält zwei wichtige Features, durch die sich dieses Tool zwar von Dapper unterscheidet, die aber gleichzeitig den Leistungsaufwand erhöhen. Das eine Feature ist dafür zuständig, LINQ-Ausdrücke in SQL zu übersetzen. Diese Übersetzungen werden zwar zwischengespeichert, aber es ist trotzdem sehr aufwändig, wenn sie das erste Mal erstellt werden müssen. Das andere Feature ist dafür zuständig, Änderungen an Entitäten nachzuverfolgen, damit effiziente Updateanweisungen generiert werden können. Dieses Verhalten kann für bestimmte Abfragen mit der AsNotTracking-Erweiterung deaktiviert werden. Außerdem generiert EF Core SQL-Abfragen, die sehr effizient sind und kein zu hohes Maß an Leistung erfordern. Wenn Sie zudem die Abfragen, die ausgeführt werden sollen, genau steuern möchten, können Sie auch benutzerdefinierte SQL-Elemente hinzufügen oder eine gespeicherte Prozedur mit EF Core ausführen. In diesem Szenario ist Dapper im Hinblick auf die Leistung zwar nützlicher als EF Core, aber der Unterschied ist nur gering. Julie Lerman führt in Ihrem MSDN-Artikel mit dem Titel [Datenpunkte – Dapper, Entity Framework und Hybrid-Apps](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps) vom Mai 2016 einige Leistungsdaten auf. Außerdem finden Sie auf der [Dapper-Website](https://github.com/StackExchange/Dapper) zusätzliche Vergleichsdaten zur Leistung für verschiedene Datenzugriffsmethoden.
 
 Wenn Sie sehen möchten, wie sich die Dapper-Syntax von der EF Core-Syntax unterscheidet, können Sie auf zwei unterschiedliche Versionen einer Methode zurückgreifen, die eine Liste von Elementen abruft:
 
@@ -342,20 +342,20 @@ In NoSQL-Datenbanken ist es möglich, mehrere Versionen von Objekten zu speicher
 
 NoSQL-Datenbanken erzwingen in der Regel nicht das [ACID](https://en.wikipedia.org/wiki/ACID)-Prinzip, weshalb sie im Hinblick auf die Leistung und Skalierbarkeit einen Vorteil gegenüber relationalen Datenbanken aufweisen. Sie eignen sich besonders gut für extrem große Datasets und Objekte, die sich nicht zum Speichern in genormten Tabellenstrukturen eignen. Sie müssen sich aber nicht zwischen relationalen Datenbanken und NoSQL-Datenbanken entscheiden: Sie können sogar innerhalb einer Anwendung für jeden einzelnen Bestandteil entscheiden, welche Art von Datenbank sich besser eignet.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB ist ein vollständig verwalteter Dienst für NoSQL-Datenbanken, der einen cloudbasierten schemalosen Datenspeicher umfasst. DocumentDB ist auf schnelle und vorhersagbare Leistung, Hochverfügbarkeit, elastische Skalierung und globale Verteilung ausgerichtet. Obwohl es sich um einen Dienst für NoSQL-Datenbanken handelt, können Entwickler aufwändige und vertraute SQL-Abfragefunktionen für JSON-Daten verwenden. Alle Ressourcen in DocumentDB werden als JSON-Dokumente gespeichert. Ressourcen werden als _Elemente_, bei denen es sich um Dokumente mit Metadaten handelt, und als _Feeds_ verwaltet, bei denen es sich um Auflistungen von Elementen handelt. In Abbildung 8–2 wird die Beziehung zwischen verschiedenen DocumentDB-Ressourcen dargestellt.
+Azure Cosmos DB ist ein vollständig verwalteter Dienst für NoSQL-Datenbanken, der einen cloudbasierten schemalosen Datenspeicher umfasst. Azure Cosmos DB ist auf schnelle und vorhersagbare Leistung, Hochverfügbarkeit, elastische Skalierung und globale Verteilung ausgerichtet. Obwohl es sich um einen Dienst für NoSQL-Datenbanken handelt, können Entwickler aufwändige und vertraute SQL-Abfragefunktionen für JSON-Daten verwenden. Alle Ressourcen in Azure Cosmos DB werden als JSON-Dokumente gespeichert. Ressourcen werden als _Elemente_, bei denen es sich um Dokumente mit Metadaten handelt, und als _Feeds_ verwaltet, bei denen es sich um Auflistungen von Elementen handelt. In Abbildung 8–2 wird die Beziehung zwischen verschiedenen Azure Cosmos DB-Ressourcen dargestellt.
 
-![Die hierarchische Beziehung zwischen Ressourcen in DocumentDB; eine NoSQL-Datenbank im JSON-Format](./media/image8-2.png)
+![Abbildung: Hierarchische Beziehung zwischen Ressourcen in Azure Cosmos DB, einer NoSQL-Datenbank im JSON-Format](./media/image8-2.png)
 
-**Abbildung 8–2.** Ressourcenorganisation in DocumentDB
+**Abbildung 8–2.** Azure Cosmos DB-Ressourcenorganisation
 
-Bei der DocumentDB-Abfragesprache handelt es sich um eine einfache, aber leistungsstarke Schnittstelle zum Abfragen von JSON-Dokumenten. Diese Sprache unterstützt einen Teil der durch das American National Standards Institute (ANSI) festgelegten Grammatik und umfasst eine ausführliche Integration von JavaScript-Objekten, Arrays, Objektkonstruktionen und Funktionsaufrufen.
+Die Azure Cosmos DB-Abfragesprache ist eine einfache und dennoch effektive Schnittstelle für das Abfragen von JSON-Dokumenten. Diese Sprache unterstützt einen Teil der durch das American National Standards Institute (ANSI) festgelegten Grammatik und umfasst eine ausführliche Integration von JavaScript-Objekten, Arrays, Objektkonstruktionen und Funktionsaufrufen.
 
-**Ressourcen: DocumentDB**
+**Verweise: Azure Cosmos DB**
 
-- Einführung in DocumentDB  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Einführung in Azure Cosmos DB  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Andere Persistenzoptionen
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

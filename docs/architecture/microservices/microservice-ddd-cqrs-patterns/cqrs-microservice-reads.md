@@ -2,12 +2,12 @@
 title: Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung der Abfrageseite von CQRS im Microservice für Bestellungen in eShopOnContainers mit Dapper
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094063"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972088"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 
@@ -15,15 +15,15 @@ Der Microservice für Bestellungen aus der Referenzanwendung eShopOnContainers i
 
 Dieser Ansatz ist einfach, wie in Abbildung 7-3 zu sehen ist. Die API-Schnittstelle wird von den Web-API-Controllern implementiert. Diese nutzen eine beliebige Infrastruktur (z.B. einen Micro-ORM (objektrelationaler Mapper) wie Dapper) und geben je nach Anforderungen der Benutzeroberflächenanwendungen dynamische ViewModels zurück.
 
-![Der einfachste Ansatz für die Abfrageseite in einem vereinfachten CQRS-Ansatz kann durch einfaches Abfragen der Datenbank mit einem Micro-ORM wie Dapper und Rückgabe dynamischer ViewModels implementiert werden.](./media/image3.png)
+![Diagramm, das die allgemeine Abfrageseite in vereinfachter CQRS zeigt.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Abbildung 7-3**. Der einfachste Ansatz für Abfragen in einem CQRS-Microservice
 
-Dies ist der einfachste mögliche Ansatz für Abfragen. Durch Abfragedefinitionen wird die Datenbank abgefragt und ein ViewModel dynamisch für jede Abfrage erstellt. Da Abfragen idempotent sind, ändern sie Daten auch bei mehrmaliger Ausführung nicht. Daher sind keine Einschränkungen durch DDD-Muster (beispielsweise Aggregate und andere Muster) notwendig, die auf der Transaktionsseite verwendet werden. Dies ist auch der Grund, weshalb Abfragen vom Transaktionsbereich getrennt sind. Die von der Benutzeroberfläche benötigten Daten können durch eine einfache Abfrage der Datenbank abgerufen werden. Außerdem wird ein dynamisches ViewModel zurückgegeben, das über keine Klasse verfügt und nur in den SQL-Anweisungen statisch definiert werden muss.
+Der einfachste Ansatz für die Abfrageseite in einem vereinfachten CQRS-Ansatz kann durch einfaches Abfragen der Datenbank mit einem Micro-ORM wie Dapper und Rückgabe dynamischer ViewModels implementiert werden. Durch Abfragedefinitionen wird die Datenbank abgefragt und ein ViewModel dynamisch für jede Abfrage erstellt. Da Abfragen idempotent sind, ändern sie Daten auch bei mehrmaliger Ausführung nicht. Daher sind keine Einschränkungen durch DDD-Muster (beispielsweise Aggregate und andere Muster) notwendig, die auf der Transaktionsseite verwendet werden. Dies ist auch der Grund, weshalb Abfragen vom Transaktionsbereich getrennt sind. Die von der Benutzeroberfläche benötigten Daten können durch eine einfache Abfrage der Datenbank abgerufen werden. Außerdem wird ein dynamisches ViewModel zurückgegeben, das über keine Klasse verfügt und nur in den SQL-Anweisungen statisch definiert werden muss.
 
 Da dieser Ansatz sehr einfach ist, kann der für die Abfrageseite benötigte Code (beispielsweise Code, der auf Micro-ORMs wie [Dapper](https://github.com/StackExchange/Dapper) zurückgreift) [innerhalb desselben WEB-API-Projekts](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) implementiert werden. Dies ist in Abbildung 7-4 zu sehen. Die Abfragen werden im **Ordering.API**-Microserviceprojekt in der Projektmappe „eShopOnContainers“ definiert.
 
-![Ansicht im Projektmappen-Explorer: Projekt Ordering.API mit den Ordnern „Anwendung“ > „Abfragen“](./media/image4.png)
+![Screenshot des Ordners „Abfragen“ des Ordering.API-Projekts.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Abbildung 7-4**. Abfragen im Microservice für Bestellungen in eShopOnContainers
 
@@ -41,7 +41,7 @@ Für Abfragen kann ein beliebiges Micro-ORM, Entity Framework Core oder sogar ei
 
 Bei dem Framework handelt es sich um ein Open Source-Projekt, das ursprünglich von Sam Saffron entworfen wurde und nun Teil des Grundgerüsts von [Stack Overflow](https://stackoverflow.com/) ist. Um Dapper zu verwenden, müssen Sie das Tool mithilfe des [Dapper-NuGet-Pakets](https://www.nuget.org/packages/Dapper) (s. Abbildung unten) installieren:
 
-![Dapper-Paket in der Ansicht zum Verwalten von NuGet-Paketen in VS](./media/image4.1.png)
+![Screenshot des Dapper-Pakets in der NuGet-Paketeansicht.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 Außerdem ist das Hinzufügen einer using-Anweisung erforderlich, damit der Code auf die Dapper-Erweiterungsmethoden zugreifen kann.
 
@@ -177,7 +177,7 @@ Dies ist ein weiterer Grund, weshalb explizite Rückgabetypen langfristig besser
 
 In der folgenden Abbildung wird gezeigt, wie ResponseType-Informationen auf der Swagger-Benutzeroberfläche dargestellt werden.
 
-![Browseransicht der Swagger-Benutzeroberfläche für die Bestell-API.](./media/image5.png)
+![Screenshot der Swagger-Benutzeroberflächenseite für die Bestell-API.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Abbildung 7-5**. Swagger-Benutzeroberfläche mit Antworttypen und möglichen HTTP-Statuscodes von einer Web-API
 
@@ -189,7 +189,7 @@ In der Abbildung werden mehrere Beispielwerte, die auf den ViewModel-Typen basie
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Datenpunkte – Dapper, Entity Framework und Hybrid-Apps (Artikel im MSDN Magazine)**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **ASP.NET Core-Web-API-Hilfeseiten mit Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>

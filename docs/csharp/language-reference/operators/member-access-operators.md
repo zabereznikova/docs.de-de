@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116136"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038997"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatoren für den Memberzugriff (C#-Referenz)
 
@@ -92,7 +92,7 @@ Im folgenden Beispiel wird der Indexerzugriff anhand des .NET <xref:System.Colle
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-Mit Indexern können Sie Instanzen eines benutzerdefinierten Typs auf ähnliche Weise wie ein Array indizieren. Im Gegensatz zu Arrayindizes, die ganze Zahlen sein müssen, können die Indexerargumente mit einem beliebigen Typ deklariert werden.
+Mit Indexern können Sie Instanzen eines benutzerdefinierten Typs auf ähnliche Weise wie ein Array indizieren. Im Gegensatz zu Arrayindizes, die ganze Zahlen sein müssen, können die Indexerparameter mit einem beliebigen Typ deklariert werden.
 
 Weitere Informationen über Indexer finden Sie unter [Indexer](../../programming-guide/indexers/index.md).
 
@@ -122,7 +122,7 @@ Im folgenden Beispiel wird die Verwendung des `?.`- und `?[]`-Operators veransch
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-Das vorhergehende Beispiel zeigt auch die Verwendung des [NULL-Sammeloperators](null-coalescing-operator.md). Sie könnten den NULL-Sammeloperator verwenden, um einen alternativen Ausdruck zum Auswerten in dem Fall bereitzustellen, dass das Ergebnis des NULL-bedingten Vorgangs `null` ist.
+Im vorangehenden Beispiel wird auch der [NULL-Sammeloperator`??`](null-coalescing-operator.md) zum Angeben eines alternativen Ausdrucks zum Auswerten verwendet, falls das Ergebnis eines NULL-bedingten Vorgangs `null` ist.
 
 ### <a name="thread-safe-delegate-invocation"></a>Threadsicherer Delegataufruf
 
@@ -198,6 +198,8 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Elementzugriff](~/_csharplang/spec/expressions.md#element-access)
 - [NULL-bedingter Operator](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [Aufrufausdrücke](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+Weitere Informationen zu Indizes und Bereichen finden Sie unter [Hinweis zum Featurevorschlag](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
 ## <a name="see-also"></a>Siehe auch
 

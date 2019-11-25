@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5204165370459466b1258897e72c488ab7e7fadb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740814"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975778"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
-Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Presentation Foundation (WPF) verwenden, über einen umfangreichen neuen Satz von Druck-und drucksystemverwaltungs-APIs. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Der Kern dieser neuen Funktionalität ist das neue XPS-Dateiformat (XML Paper Specification) und der XPS-Druckpfad.  
+Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Presentation Foundation (WPF) verwenden, über einen umfangreichen neuen Satz von Druck-und drucksystemverwaltungs-APIs. Mit Windows Vista sind einige dieser Erweiterungen des Drucksystems auch für Entwickler verfügbar, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendungen und Entwicklern mit nicht verwaltetem Code erstellen. Der Kern dieser neuen Funktionalität ist das neue XPS-Dateiformat (XML Paper Specification) und der XPS-Druckpfad.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -31,7 +31,7 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
 ## <a name="about-xps"></a>Info über XPS  
  XPS ist ein elektronisches Dokumentformat, ein spooldateiformat und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat, in dem XML, Open Packaging Conventions (OPC) und andere Industriestandards zum Erstellen von plattformübergreifenden Dokumenten verwendet werden. XPS vereinfacht den Prozess, mit dem digitale Dokumente erstellt, freigegeben, gedruckt, angezeigt und archiviert werden. Weitere Informationen zu XPS finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
   
- Verschiedene Verfahren zum Drucken von XPS-basiertem Inhalt mithilfe von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] werden in Programm gesteuertes [Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md)veranschaulicht. Es kann sinnvoll sein, diese Beispiele beim Durcharbeiten der in diesem Thema enthaltenen Inhalte hinzuzuziehen. (Entwicklern von nicht verwaltetem Code sollte die Dokumentation für die [MXDC_ESCAPE-Funktion](/windows/desktop/printdocs/mxdc-escape)angezeigt werden. Windows Forms Entwickler müssen die API im <xref:System.Drawing.Printing>-Namespace verwenden, der nicht den vollständigen XPS-Druckpfad unterstützt, aber einen Hybriden GDI-zu-XPS-Druckpfad unterstützt. Weitere Informationen finden Sie unter **Druckpfadarchitektur** unten.)  
+ Verschiedene Verfahren zum Drucken von XPS-basiertem Inhalt mithilfe von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] werden in Programm gesteuertes [Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md)veranschaulicht. Es kann sinnvoll sein, diese Beispiele beim Durcharbeiten der in diesem Thema enthaltenen Inhalte hinzuzuziehen. (Entwickler von nicht verwaltetem Code sollten die Dokumentation für die [MXDC_ESCAPE-Funktion](/windows/desktop/printdocs/mxdc-escape)sehen. Windows Forms Entwickler müssen die API im <xref:System.Drawing.Printing>-Namespace verwenden, der nicht den vollständigen XPS-Druckpfad unterstützt, aber einen Hybriden GDI-zu-XPS-Druckpfad unterstützt. Weitere Informationen finden Sie unter **Druckpfadarchitektur** unten.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS-Druckpfad  

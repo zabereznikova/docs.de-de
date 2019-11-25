@@ -7,26 +7,19 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046417"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975497"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT-ETW-Ablaufverfolgungsereignisse
-<a name="top"></a> Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.  
-  
- JIT-Ablaufverfolgungsereignisse bestehen aus den folgenden beiden Kategorien:  
-  
-- [JIT-Inliningereignisse](#jit_inlining_events)  
-  
-- [JIT-Endaufrufereignisse](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>JIT-Inliningereignisse  
-  
-### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed-Ereignis  
+Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.
+
+## <a name="jit-inlining-events"></a>JIT-Inliningereignisse
+
+### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed-Ereignis
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -83,10 +76,7 @@ ms.locfileid: "71046417"
 |InlineeName|win:UnicodeString|Die Methode, die der Compiler Inline setzen möchte (es wird kein Aufruf generiert).|  
 |InlineeNameSignature|win:UnicodeString|Die Signatur des Inlinees:|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-  
- [Zurück nach oben](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>JIT-Endaufrufereignisse  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed-Ereignis  

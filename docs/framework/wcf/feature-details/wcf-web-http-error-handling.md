@@ -2,33 +2,36 @@
 title: WCF-Web-HTTP-Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648423"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975955"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung
-Windows Communication Foundation (WCF)-Web-HTTP-Fehlerbehandlung ermöglicht es Ihnen, Fehler von WCF-Web-HTTP-Diensten zurückzugeben, die HTTP-Statuscode angeben und die Fehlerdetails, die mit dem gleichen Format wie des Vorgangs (z. B. XML oder JSON) zurückzugeben.  
+Windows Communication Foundation (WCF)-Web-http-Fehlerbehandlung ermöglicht es Ihnen, Fehler von WCF-Web-http-Diensten zurückzugeben, die einen HTTP-Statuscode angeben und Fehlerdetails im gleichen Format wie der Vorgang (z. b. XML oder JSON) zurückgeben.  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF-Web-HTTP-Fehlerbehandlung  
  Die <xref:System.ServiceModel.Web.WebFaultException>-Klasse definiert einen Konstruktor, der Ihnen das Angeben eines HTTP-Statuscodes ermöglicht. Dieser Statuscode wird dann an den Client zurückgegeben. Dies ist eine generische Version der <xref:System.ServiceModel.Web.WebFaultException>-Klasse. Mit <xref:System.ServiceModel.Web.WebFaultException%601> können Sie einen benutzerdefinierten Typ zurückgeben, der Informationen zum aufgetretenen Fehler enthält. Dieses benutzerdefinierte Objekt wird in dem Format serialisiert, das vom Vorgang angegeben und an den Client zurückgegeben wird. Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP-Statuscode zurückgeben.  
   
-```  
-Public string Operation1()  
-{   // Operation logic  
-   // ...  
-   Throw new WebFaultException(HttpStatusCode.Forbidden);  
+```csharp
+public string Operation1()
+{
+    // Operation logic  
+   // ...
+   throw new WebFaultException(HttpStatusCode.Forbidden);
 }  
 ```  
   
  Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP-Statuscode und zusätzliche Informationen in einem benutzerdefinierten Typ zurückgeben. `MyErrorDetail` ist ein benutzerdefinierter Typ, der zusätzliche Informationen zum aufgetretenen Fehler enthält.  
   
-```  
-Public string Operation2()  
+```csharp
+public string Operation2()
+{
    // Operation logic  
-   // ...   MyErrorDetail detail = new MyErrorDetail  
+   // ...
+   MyErrorDetail detail = new MyErrorDetail()
    {  
       Message = "Error Message",  
       ErrorCode = 123,  
@@ -45,7 +48,7 @@ Public string Operation2()
   
 - Der Wert der <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>-Eigenschaft, indem auf <xref:System.ServiceModel.Web.OutgoingWebResponseContext> zugegriffen wird.  
   
- Weitere Informationen dazu, wie diese Werte auf die Formatierung des Vorgangs auswirken, finden Sie unter [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Weitere Informationen dazu, wie sich diese Werte auf die Formatierung des Vorgangs auswirken, finden Sie unter [WCF-Web-http-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
  <xref:System.ServiceModel.Web.WebFaultException> ist ein <xref:System.ServiceModel.FaultException>-Objekt und kann daher als Fehlerausnahme-Programmiermodell für Dienste verwendet werden, die SOAP-Endpunkte sowie Web-HTTP-Endpunkte verfügbar machen.  
   

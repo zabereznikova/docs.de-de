@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126439"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, die eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie sie beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einer herkömmlichen NFA-Engine implementiert werden.  
@@ -135,7 +133,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
     |-------------|-----------------|  
     |`^`|Beginnt die Suche am Anfang der Zeichenfolge.|  
     |`[A-Z0-9]`|Übereinstimmung mit beliebigem numerischen oder alphanumerischen Zeichen. (Beim Vergleich wird die Groß-und Kleinschreibung nicht berücksichtigt.)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Übereinstimmung mit null oder mehr Vorkommen eines beliebigen Wortzeichens oder eines der folgenden Zeichen: -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124; oder ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Übereinstimmung mit 0 („null“) oder mehr Vorkommen eines beliebigen Wortzeichens oder eines der folgenden Zeichen: -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124; oder ~.|  
     |`(?<=[A-Z0-9])`|Lookbehind für vorheriges Zeichen, das numerisch oder alphanumerisch sein muss. (Beim Vergleich wird die Groß-und Kleinschreibung nicht berücksichtigt.)|  
     |`$`|Beendet die Suche am Ende der Zeichenfolge.|  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes'
+title: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes
 description: Erfahren Sie, wie Sie die auf einem Computer installierten .NET Framework-Sicherheitsupdates und -Hotfixes ermitteln.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318971"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735199"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Vorgehensweise: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes
 
 In diesem Artikel wird gezeigt, wie Sie die auf einem Computer installierten .NET Framework-Sicherheitsupdates und -Hotfixes ermitteln.
 
 > [!NOTE]
 > Alle in diesem Artikel gezeigten Techniken erfordern ein Konto mit Administratorberechtigungen.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>So ermitteln Sie mithilfe der Registrierung die installierten Updates
+## <a name="use-registry-editor"></a>Verwenden des Registrierungs-Editors
 
 Die auf einem Computer installierten Sicherheitsupdates und Hotfixes für jede Version von .NET Framework werden in der Windows-Registrierung aufgeführt. Sie können diese Informationen mit dem Registrierungs-Editor (*regedit.exe*) anzeigen.
 
@@ -33,13 +33,13 @@ Die auf einem Computer installierten Sicherheitsupdates und Hotfixes für jede V
 
 2. Öffnen Sie im Registrierungs-Editor den folgenden Unterschlüssel:
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      Die installierten Updates werden unter Unterschlüsseln aufgeführt, die die für sie geltende .NET Framework-Version identifizieren. Jedes Update wird durch eine Knowledge Base (KB)-Nummer identifiziert.
 
 Im Registrierungs-Editor werden die .NET Framework-Versionen und die installierten Updates für jede Version in verschiedenen Unterschlüsseln gespeichert. Informationen zum Ermitteln der installierten Versionsnummern finden Sie unter [Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen](how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>So ermitteln Sie mithilfe einer Registrierungsabfrage im Code die installierten Updates
+## <a name="query-the-registry-using-code"></a>Abfragen der Registrierung mithilfe von Code
 
 Im folgenden Beispiel werden die auf einem Computer installierten .NET Framework-Sicherheitsupdates und -Hotfixes programmgesteuert ermittelt:
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>So ermitteln Sie mithilfe einer Registrierungsabfrage in PowerShell die installierten Updates
+## <a name="use-powershell-to-query-the-registry"></a>Abfragen der Registrierung mithilfe von PowerShell
 
 Im folgenden Beispiel werden die auf einem Computer installierten .NET Framework-Sicherheitsupdates und -Hotfixes mithilfe von PowerShell ermittelt:
 

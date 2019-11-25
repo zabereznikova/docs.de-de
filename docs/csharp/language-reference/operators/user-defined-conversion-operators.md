@@ -10,18 +10,18 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 25f042dec5fd5594b7e166cc064394e90db01c27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566675"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036119"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Benutzerdefinierte Konvertierungsoperatoren (C#-Referenz)
 
 Ein benutzerdefinierter Typ kann eine benutzerdefinierte implizite oder explizite Konvertierung von einem oder in einen anderen Typ definieren.
 
-Zum Aufrufen von impliziten Konvertierungen ist keine spezielle Syntax erforderlich. Implizite Konvertierungen können in verschiedenen Situationen auftreten, beispielswiese in Arbeitsaufträgen und Methodenaufrufen. Vordefinierte implizite Konvertierungen in C# werden immer erfolgreich ausgeführt. Bei deren Ausführung wird nie eine Ausnahme ausgelöst, und es gehen nie Informationen verloren. Benutzerdefinierte Konvertierungen sollten sich ebenso verhalten. Wenn bei einer benutzerdefinierten Konvertierung eine Ausnahme ausgelöst werden kann oder Informationen verloren gehen können, definieren Sie sie als explizite Konvertierung.
+Zum Aufrufen von impliziten Konvertierungen ist keine spezielle Syntax erforderlich. Implizite Konvertierungen können in verschiedenen Situationen auftreten, beispielswiese in Arbeitsaufträgen und Methodenaufrufen. Vordefinierte implizite C#-Konvertierungen sind immer erfolgreich und lösen keine Ausnahmen aus. Benutzerdefinierte Konvertierungen sollten sich ebenso verhalten. Wenn bei einer benutzerdefinierten Konvertierung eine Ausnahme ausgelöst werden kann oder Informationen verloren gehen können, definieren Sie sie als explizite Konvertierung.
 
 Benutzerdefinierte Konvertierungen werden vom [is](type-testing-and-cast.md#is-operator)- und [as](type-testing-and-cast.md#as-operator)-Operator nicht berücksichtigt. Verwenden Sie den [cast-Operator ()](type-testing-and-cast.md#cast-operator-), um eine benutzerdefinierte explizite Konvertierung aufzurufen.
 

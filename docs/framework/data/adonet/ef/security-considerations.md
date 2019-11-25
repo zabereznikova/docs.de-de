@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039867"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968415"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwicklung, Bereitstellung und Ausführung von Entity Framework-Anwendungen spezifisch sind. Außerdem sollten Sie die Empfehlungen zum Erstellen von sicheren .NET Framework-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../security-overview.md).  
@@ -119,11 +119,11 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
  Vermeiden Sie es aus den folgenden Gründen, <xref:System.Linq.IQueryable%601>-Typen von Methoden zurückzugeben, die für potenziell nicht vertrauenswürdige Aufrufer verfügbar gemacht wurden:  
   
 - Der Consumer einer Abfrage, die einen <xref:System.Linq.IQueryable%601>-Typ verfügbar macht, könnte mit dem Ergebnis Methoden aufrufen, die sichere Daten verfügbar machen oder die Größe des Resultsets erhöhen. Betrachten Sie beispielsweise die folgende Methodensignatur:  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Ein Consumer dieser Abfrage könnte `.Include("Orders")` für den zurückgegebenen `IQueryable<Customer>` aufrufen, um Daten abrufen, die durch die Abfrage nicht verfügbar gemacht werden sollten. Dies kann vermieden werden, indem der Rückgabetyp der Methode in <xref:System.Collections.Generic.IEnumerable%601> geändert und eine Methode aufgerufen wird (beispielsweise `.ToList()`), die die Ergebnisse materialisiert.  
   
 - Da <xref:System.Linq.IQueryable%601>-Abfragen ausgeführt werden, während die Ergebnisse durchlaufen werden, könnte der Consumer einer Abfrage, die einen <xref:System.Linq.IQueryable%601>-Typ verfügbar macht, eventuell ausgelöste Ausnahmen abfangen. Ausnahmen könnten Informationen enthalten, die nicht für den Consumer bestimmt sind.  

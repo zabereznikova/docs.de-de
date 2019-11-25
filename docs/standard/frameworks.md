@@ -1,19 +1,19 @@
 ---
-title: Zielframeworks
+title: Zielframeworks in Projekten im SDK-Format – .NET
 description: Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen und -Bibliotheken.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216653"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040996"
 ---
-# <a name="target-frameworks"></a>Zielframeworks
+# <a name="target-frameworks-in-sdk-style-projects"></a>Zielframeworks in Projekten im SDK-Format
 
 Wenn Sie ein Framework in einer App oder Bibliothek als Ziel verwenden, geben Sie mehrere APIs an, die Sie für die App oder Bibliothek verfügbar machen möchten. Sie geben das Zielframework mit Zielframeworkmonikers (TFMs) in Ihrer Projektdatei an.
 
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-Das Buildsystem beachtet Präprozessorsymbole, die Zielframeworks darstellen, die in der Tabelle [Unterstützte Zielframeworkversionen](#supported-target-framework-versions) aufgelistet sind. Wenn Sie ein Symbol verwenden, das einen TFM von .NET Standard oder .NET Core darstellt, ersetzen Sie den Punkt (.) durch einen Unterstrich (_), und ändern Sie Klein- in Großbuchstaben (das Symbol für `netstandard1.4` ist z.B. `NETSTANDARD1_4`).
+Das Buildsystem beachtet Präprozessorsymbole, die Zielframeworks darstellen, die in der Tabelle [Unterstützte Zielframeworkversionen](#supported-target-framework-versions) aufgelistet sind, wenn Sie Projekte im SDK-Format verwenden. Wenn Sie ein Symbol verwenden, das einen TFM von .NET Standard oder .NET Core darstellt, ersetzen Sie den Punkt (.) durch einen Unterstrich (_), und ändern Sie Klein- in Großbuchstaben (das Symbol für `netstandard1.4` ist z.B. `NETSTANDARD1_4`).
 
 Hier finden Sie eine vollständige Liste der Präprozessorsymbole für .NET Core-Zielframeworks:
 

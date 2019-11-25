@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596567"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455441"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Objekt- und Auflistungsinitialisierer (C#-Programmierhandbuch)
 
@@ -103,7 +103,7 @@ Sie können [NULL](../../language-reference/keywords/null.md) als ein Element in
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-Im vorherigen Beispiel wurde Code generiert, der die <xref:System.Collections.Generic.Dictionary%602.Item(%600)>-Eigenschaft zum Festlegen der Werte aufruft. Ab C# 6 können Wörterbücher und andere assoziative Container mithilfe der folgenden Syntax initialisiert werden. Es gilt zu beachten, dass anstelle einer Indexersyntax mit Klammern und einer Zuweisung ein Objekt mit mehreren Werten verwendet wird:
+Im vorherigen Beispiel wurde Code generiert, der die <xref:System.Collections.Generic.Dictionary%602.Item(%600)>-Eigenschaft zum Festlegen der Werte aufruft. Mit Versionen vor C# 6 können Sie Wörterbücher und andere assoziative Container mithilfe der folgenden Syntax initialisieren. Es gilt zu beachten, dass anstelle einer Indexersyntax mit Klammern und einer Zuweisung ein Objekt mit mehreren Werten verwendet wird:
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
@@ -126,5 +126,5 @@ Im folgenden Beispiel wird ein Objekt veranschaulicht, das <xref:System.Collecti
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [LINQ-Abfrageausdrücke](../linq-query-expressions/index.md)
+- [LINQ in C#](../../linq/index.md)
 - [Anonyme Typen](anonymous-types.md)
