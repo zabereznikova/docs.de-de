@@ -9,15 +9,15 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: 26989474f264161be12bcc14fed614fdc7f775b6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 39f81aacb24b0b68b550da622b1e3038eb9eac9b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460326"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283513"
 ---
 # <a name="expander-styles-and-templates"></a>Expander-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Expander>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Expander>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="expander-parts"></a>Expander-Teile  
  Das <xref:System.Windows.Controls.Expander>-Steuerelement verfügt über keine benannten Teile.  
@@ -28,8 +28,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|  
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |Erweitert|Expansions Zustände|Das-Steuerelement ist erweitert.|  
@@ -60,4 +60,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 3bcd128e6e9f53f662dd3fc99336b5b45faebf5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96afa61d32e1ba744c9f3dbbeeb7fb2e55157f4c
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943119"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141655"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>Vorgehensweise: Festlegen der maximalen Zeitdehnung (Uhrabweichung)
 Zeitkritische Funktionen können behindert werden, wenn zwei Computer unterschiedliche Uhreinstellungen aufweisen. Um diese Gefahr zu umgehen, können Sie für die `MaxClockSkew`-Eigenschaft einen <xref:System.TimeSpan>-Wert festlegen. Diese Eigenschaft ist für zwei Klassen verfügbar:  
@@ -23,14 +23,14 @@ Zeitkritische Funktionen können behindert werden, wenn zwei Computer unterschie
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
   
 > [!IMPORTANT]
-> Für eine sichere Konversation müssen Änderungen an `MaxClockSkew` der-Eigenschaft vorgenommen werden, wenn der Dienst oder der Client bootstrapped ist. Zu diesem Zweck müssen Sie die-Eigenschaft für die <xref:System.ServiceModel.Channels.SecurityBindingElement> festlegen, die von der <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird.  
+> Für eine sichere Konversation müssen Änderungen an der `MaxClockSkew`-Eigenschaft vorgenommen werden, wenn der Dienst oder der Client bootstrapped ist. Zu diesem Zweck müssen Sie die-Eigenschaft für den <xref:System.ServiceModel.Channels.SecurityBindingElement> festlegen, der von der <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
  Um die Eigenschaft bei einer der vom System bereitgestellten Bindungen zu ändern, suchen Sie das Sicherheitsbindungselement in der Bindungsauflistung und legen für die `MaxClockSkew`-Eigenschaft einen neuen Wert fest. Von <xref:System.ServiceModel.Channels.SecurityBindingElement> werden zwei Klassen abgeleitet: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> und <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Wenn Sie die Sicherheitsbindung aus der Auflistung abrufen, müssen Sie eine Umwandlung in einen dieser Typen durchführen, damit die `MaxClockSkew`-Eigenschaft richtig festgelegt werden kann. Im folgenden Beispiel wird eine <xref:System.ServiceModel.WSHttpBinding> verwendet, die die <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>-Klasse nutzt. Eine Liste, die den Typ der Sicherheitsbindung angibt, der in jeder vom System bereitgestellten Bindung verwendet werden soll, finden Sie unter vom [System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>So erstellen Sie eine benutzerdefinierte Bindung mit einem neuen Zeitdehnungswert im Code  
   
 > [!WARNING]
-> Fügen Sie im Code Verweise auf die folgenden Namespaces hinzu <xref:System.ServiceModel.Channels>: <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, und <xref:System.ServiceModel.Security.Tokens>.  
+> Fügen Sie im Code Verweise auf die folgenden Namespaces hinzu: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>und <xref:System.ServiceModel.Security.Tokens>.  
   
 1. Erstellen Sie eine Instanz einer <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie als Sicherheitsmodus <xref:System.ServiceModel.SecurityMode.Message?displayProperty=nameWithType> fest.  
   
@@ -51,19 +51,19 @@ Zeitkritische Funktionen können behindert werden, wenn zwei Computer unterschie
   
 ## <a name="to-set-the-maxclockskew-in-configuration"></a>So legen Sie MaxClockSkew in der Konfiguration fest  
   
-1. Erstellen Sie im Abschnitt [ \<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element einen [ \<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) .  
+1. Erstellen Sie im Abschnitt [\<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element einen [\<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) .  
   
-2. Erstellen Sie eine [ \<Bindung >](../../../../docs/framework/misc/binding.md) -Element, `name` und legen Sie das-Attribut auf einen geeigneten Wert fest. Im folgenden Beispiel wird das Attribut auf den Wert `MaxClockSkewBinding` festgelegt.  
+2. Erstellen Sie ein [\<Bindungs >](../../configure-apps/file-schema/wcf/bindings.md) Element, und legen Sie das `name`-Attribut auf einen geeigneten Wert fest. Im folgenden Beispiel wird das Attribut auf den Wert `MaxClockSkewBinding` festgelegt.  
   
-3. Fügen Sie ein Codierungselement hinzu. Im folgenden Beispiel wird eine [ \<textMessageEncoding->](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)hinzugefügt.  
+3. Fügen Sie ein Codierungselement hinzu. Im folgenden Beispiel wird eine [\<textMessageEncoding->](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)hinzugefügt.  
   
-4. Fügen Sie ein [ \<Sicherheits >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) Element hinzu, `authenticationMode` und legen Sie das-Attribut auf eine geeignete Einstellung fest. Im folgenden Beispiel wird das Attribut auf `Kerberos` festgelegt, um anzugeben, dass der Dienst die Windows-Authentifizierung verwendet.  
+4. Fügen Sie ein [\<Security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) -Element hinzu, und legen Sie das `authenticationMode`-Attribut auf eine geeignete Einstellung fest. Im folgenden Beispiel wird das Attribut auf `Kerberos` festgelegt, um anzugeben, dass der Dienst die Windows-Authentifizierung verwendet.  
   
-5. Fügen Sie einen [ \<LocalServiceSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) hinzu `maxClockSkew` `"##:##:##"`, und legen Sie das-Attribut auf einen Wert in der Form fest. Im folgenden Beispiel werden sieben Minuten eingestellt. Fügen Sie optional einen [ \<LocalServiceSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) hinzu, `maxClockSkew` und legen Sie das-Attribut auf eine geeignete Einstellung fest.  
+5. Fügen Sie eine [\<LocalServiceSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) hinzu, und legen Sie das `maxClockSkew`-Attribut auf einen Wert in der Form `"##:##:##"`fest. Im folgenden Beispiel werden sieben Minuten eingestellt. Fügen Sie optional eine [\<LocalServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) hinzu, und legen Sie das `maxClockSkew`-Attribut auf eine geeignete Einstellung fest.  
   
-6. Fügen Sie ein Transportelement hinzu. Im folgenden Beispiel wird ein [ \<httpTransport->](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)verwendet.  
+6. Fügen Sie ein Transportelement hinzu. Im folgenden Beispiel wird eine [\<httpTransport->](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)verwendet.  
   
-7. Für eine sichere Konversation müssen die Sicherheitseinstellungen beim Bootstrap im [ \<secureConversationBootstrap->](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) Element auftreten.  
+7. Für eine sichere Konversation müssen die Sicherheitseinstellungen beim Bootstrap im [\<secureConversationBootstrap->](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) Element auftreten.  
   
     ```xml  
     <bindings>  

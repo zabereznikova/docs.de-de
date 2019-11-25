@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774289"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283282"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 
@@ -38,7 +38,7 @@ Zertifikate werden in Speichern abgelegt. Die zwei Hauptspeicherorte sind in wei
 
 Diese beiden Speicher teilen sich in weitere Unterspeicher auf. Die wichtigsten Unterspeicher für die Programmierung mit WCF sind folgende:
 
-- **Vertrauenswürdige Stammzertifizierungsstellen** Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.
+- **Vertrauenswürdige Stammzertifizierungsstellen**. Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.
 
   > [!IMPORTANT]
   > Der lokale Computer stuft alle Zertifikate in diesem Speicher als implizit vertrauenswürdig ein; dies gilt auch, wenn das Zertifikat im Speicher nicht von einer vertrauenswürdigen Zertifizierungsstelle eines Drittanbieters stammt. Aus diesem Grund sollten Sie in diesem Speicher nur Zertifikate ablegen, wenn Sie dem Aussteller uneingeschränkt vertrauen und sich der möglichen Folgen bewusst sind.
@@ -72,7 +72,7 @@ Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zerti
 
 Wenn Sie einen neuen Dienst erstellen, verwenden Sie möglicherweise ein Zertifikat, das nicht von einer vertrauenswürdigen Stammzertifizierungsstelle ausgegeben wurde, oder das ausstellende Zertifikat befindet sich nicht im Speicher vertrauenswürdiger Stammzertifizierungsstellen. Sie können die Überprüfung der Kette von Vertrauensstellungen für ein Zertifikat in Entwicklungsumgebungen vorübergehend deaktivieren. Legen Sie dazu die `CertificateValidationMode`-Eigenschaft auf entweder `PeerTrust` oder `PeerOrChainTrust` fest. Durch den jeweiligen Modus wird angegeben, dass das Zertifikat entweder selbst ausgegeben (Peervertrauenszertifikat) oder Teil einer Kette von Vertrauensstellungen ist. Die Eigenschaft kann auf eine der folgenden Klassen festgelegt werden:
 
-|Klasse|property|
+|Klasse|Die Eigenschaften-|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -113,7 +113,7 @@ Im Zusammenhang mit Zertifikaten wird häufig danach gefragt, welches Zertifikat
 
 ### <a name="service-certificates"></a>Dienstzertifikate
 
-Dienstzertifikate werden in erster Linie zur Authentifizierung von Servern gegenüber Clients verwendet. Bei der Authentifizierung eines Servers durch einen Client wird u.a. zunächst überprüft, ob der Wert im Feld **Antragsteller** mit dem Uniform Resource Identifier (URI) übereinstimmt, der zum Herstellen der Verbindung mit dem Dienst verwendet wird: das DNS von Client und Server muss übereinstimmen. Wenn der URI des Dienstanbieter beispielsweise `http://www.contoso.com/endpoint/` ist, muss das Feld **Betreff** auch den Wert `www.contoso.com` enthalten.
+Dienstzertifikate werden in erster Linie zur Authentifizierung von Servern gegenüber Clients verwendet. Bei der Authentifizierung eines Servers durch einen Client wird u. a. zunächst überprüft, ob der Wert im Feld **Antragsteller** mit dem Uniform Resource Identifier (URI) übereinstimmt, der zum Herstellen der Verbindung mit dem Dienst verwendet wird: das DNS von Client und Server muss übereinstimmen. Wenn der URI des Dienstanbieter beispielsweise `http://www.contoso.com/endpoint/` ist, muss das Feld **Betreff** auch den Wert `www.contoso.com`enthalten.
 
 Das Feld kann mehrere Werte enthalten, denen jeweils eine Initialisierung zur Angabe des Werts vorangeht. In den meisten Fällen ist die Initialisierung "CN" (allgemeiner Name), z. b. `CN = www.contoso.com`. Das Feld **Antragsteller** kann auch leer sein. In diesem Fall kann das Feld **Alternativer Antragstellername** den Wert **DNS-Name** enthalten.
 
@@ -184,7 +184,7 @@ Wenn diese Funktion aktiviert ist, können Sie die <xref:System.ServiceModel.Sec
 
 Die Zuordnung eines X.509-Zertifikats zu einem Token, das ein Windows-Benutzerkonto darstellt, wird als Erweiterung der Berechtigungen angesehen, da das Windows-Token nach der Zuordnung Zugriff auf geschützte Ressourcen ermöglicht. Das X.509-Zertifikat muss daher vor der Zuordnung die entsprechenden Anforderungen der Domänenrichtlinie erfüllen. Dies wird durch das *SChannel*-Sicherheitspaket sichergestellt.
 
-WCF stellt bei Verwendung von [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] oder höher sicher, dass das Zertifikat der Domänenrichtlinie entspricht, bevor es einem Windows-Konto zugeordnet wird.
+Wenn Sie .NET Framework 3,5 oder höhere Versionen verwenden, stellt WCF sicher, dass das Zertifikat der Domänen Richtlinie entspricht, bevor es einem Windows-Konto zugeordnet wird.
 
 Im ersten Release von WCF erfolgt die Zuordnung ohne auf die Domänenrichtlinie zurückzugreifen. Möglicherweise tritt daher bei älteren Anwendungen, die mit dem ersten Release ausgeführt werden konnten, ein Fehler auf, wenn die Zuordnung aktiviert ist und die Anforderungen der Domänenrichtlinie vom X.509-Zertifikat nicht erfüllt werden.
 
@@ -194,4 +194,4 @@ Im ersten Release von WCF erfolgt die Zuordnung ohne auf die Domänenrichtlinie 
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

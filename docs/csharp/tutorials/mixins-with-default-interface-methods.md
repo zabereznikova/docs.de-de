@@ -3,14 +3,14 @@ title: Erstellen von Mixin-Typen mithilfe von Standardschnittstellenmethoden
 description: Mithilfe von Standardschnittstellenmembern können Sie Schnittstellen mit optionalen Standardimplementierungen für Implementierungpsprogramme erweitern.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039277"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140845"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Mixin-Funktionen beim Erstellen von Klassen mithilfe von Schnittstellen mit Standardschnittstellenmethoden
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Untermischen von Funktionalität beim Erstellen von Klassen mithilfe von Schnittstellen mit Standardschnittstellenmethoden
 
 Ab C# 8.0 können Sie in .NET Core 3.0 eine Implementierung definieren, wenn Sie einen Member einer Schnittstelle deklarieren. Dieses Feature bietet neue Funktionen, mit denen Sie Standardimplementierungen für Funktionen definieren können, die in Schnittstellen deklariert werden. Klassen können auswählen, wann die Funktionalität überschrieben werden soll, wann die Standardfunktionalität verwendet werden soll und wann keine Unterstützung für diskrete Features deklariert werden soll.
 

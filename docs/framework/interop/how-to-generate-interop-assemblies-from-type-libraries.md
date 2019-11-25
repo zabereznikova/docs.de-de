@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-ms.openlocfilehash: 7cca21630bd1dbd6896f882d058f288f603e95df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4f099dfaf5ff02edd3958d7eab9354ce727a239
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123898"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281802"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Gewusst wie: Generieren von Interop-Assemblys aus Typbibliotheken
 [Type Library Importer (Tlbexp.exe)](../tools/tlbimp-exe-type-library-importer.md) ist ein Befehlszeilentool, das die Co-Klassen- und Schnittstellen einer COM-Typbibliothek in Metadaten konvertiert. Dieses Tool erstellt automatisch eine Interop-Assembly und den Namespace für die Typinformationen. Nachdem die Metadaten einer Klasse verfügbar sind, können verwaltete Clients Instanzen des COM-Typs erstellen und seine Methoden aufrufen, als ob es sich um eine .NET-Instanz handeln würde. „Tlbimp.exe“ konvertiert eine ganze Typbibliothek auf einmal in Metadaten und kann keine Typinformationen für eine Teilmenge der in einer Typbibliothek definierten Typen generieren.  
@@ -29,17 +29,17 @@ ms.locfileid: "73123898"
 ## <a name="example"></a>Beispiel  
  Der folgende Befehl erstellt die „Loanlib.dll“-Assembly im `Loanlib`-Namespace.  
   
-```  
+```console  
 tlbimp Loanlib.tlb  
 ```  
   
  Der folgende Befehl erzeugt eine Interop-Assembly mit einem geänderten Namen (LOANLib.dll).  
   
-```  
+```console  
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)
 - [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)

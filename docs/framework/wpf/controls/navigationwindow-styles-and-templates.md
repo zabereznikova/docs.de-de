@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 4aae14299b3959e7d2122991954cc62505d2a19e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5cc504956ce036505ac9261ea1438c7881fa2790
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460203"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283495"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>NavigationWindow-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Navigation.NavigationWindow>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Navigation.NavigationWindow>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="navigationwindow-parts"></a>NavigationWindow-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Navigation.NavigationWindow>-Steuerelement aufgelistet.  
   
-|Segment|Geben Sie Folgendes ein:|Beschreibung|  
+|Segment|Typ|Beschreibung|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|Der Bereich für den Inhalt.|  
   
@@ -54,4 +54,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Navi
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

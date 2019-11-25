@@ -2,15 +2,15 @@
 title: Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: abb747a0deecb7e07776d9cd6ef5bc3775b1be9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989933"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281692"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Erweitern der Kontrolle über Fehlerbehandlung und -meldung
-In diesem Beispiel wird veranschaulicht, wie die Kontrolle über die Fehlerbehandlung und die Fehlerberichterstattung in einem Windows Communication Foundation (WCF <xref:System.ServiceModel.Dispatcher.IErrorHandler> )-Dienst mithilfe der-Schnittstelle erweitert wird. Das Beispiel basiert auf den ersten [Schritten mit zusätzlichem Code, der dem](../../../../docs/framework/wcf/samples/getting-started-sample.md) Dienst zum Behandeln von Fehlern hinzugefügt wurde. Der Client erzwingt verschiedene Fehlerbedingungen. Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  
+In diesem Beispiel wird veranschaulicht, wie die Kontrolle über die Fehlerbehandlung und die Fehlerberichterstattung in einem Windows Communication Foundation (WCF)-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler> Schnittstelle erweitert wird. Das Beispiel basiert auf den ersten [Schritten mit zusätzlichem Code, der dem](../../../../docs/framework/wcf/samples/getting-started-sample.md) Dienst zum Behandeln von Fehlern hinzugefügt wurde. Der Client erzwingt verschiedene Fehlerbedingungen. Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -19,39 +19,39 @@ In diesem Beispiel wird veranschaulicht, wie die Kontrolle über die Fehlerbehan
   
  In diesem Beispiel implementiert der `CalculatorErrorHandler`-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle. Geben Sie Feld  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\logs. Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Methode schreibt das `CalculatorErrorHandler` ein Protokoll des Fehlers in die Textdatei "Error. txt" in "c:\Logs". Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
   
-```csharp  
-public class CalculatorErrorHandler : IErrorHandler  
-{  
-        // Provide a fault. The Message fault parameter can be replaced, or set to  
-        // null to suppress reporting a fault.  
-  
-        public void ProvideFault(Exception error, MessageVersion version, ref Message fault)  
-        {  
-        }  
-  
-        // HandleError. Log an error, then allow the error to be handled as usual.  
-        // Return true if the error is considered as already handled  
-  
-        public bool HandleError(Exception error)  
-        {  
-            using (TextWriter tw = File.AppendText(@"c:\logs\error.txt"))  
-            {  
-                if (error != null)  
-                {  
-                    tw.WriteLine("Exception: " + error.GetType().Name + " - " + error.Message);  
-                }  
-                tw.Close();  
-            }  
-            return true;  
-        }  
-    }  
+```csharp
+public class CalculatorErrorHandler : IErrorHandler
+{
+    // Provide a fault. The Message fault parameter can be replaced, or set to
+    // null to suppress reporting a fault.
+
+    public void ProvideFault(Exception error, MessageVersion version, ref Message fault)
+    {
+    }
+
+    // HandleError. Log an error, then allow the error to be handled as usual.
+    // Return true if the error is considered as already handled
+
+    public bool HandleError(Exception error)
+    {
+        using (TextWriter tw = File.AppendText(@"c:\logs\error.txt"))
+        {
+            if (error != null)
+            {
+                tw.WriteLine("Exception: " + error.GetType().Name + " - " + error.Message);
+            }
+            tw.Close();
+        }
+        return true;
+    }
+}  
 ```  
   
  Das `ErrorBehaviorAttribute` dient als Mechanismus zum Registrieren eines Fehlerhandlers mit einem Dienst. Dieses Attribut nimmt einen einzelnen Typparameter entgegen. Dieser Typ sollte die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle implementieren und einen öffentlichen, leeren Konstruktor besitzen. Das Attribut instanziiert dann eine Instanz dieses Fehlerhandlertyps und installiert sie im Dienst. Dazu wird die <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle implementiert, und dann werden dem Dienst mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>-Methode Instanzen des Fehlerhandlers hinzugefügt.  
   
-```csharp  
+```csharp
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,8 +98,8 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  Das Beispiel implementiert einen Rechnerdienst. Der Client verursacht im Dienst absichtlich zwei Fehler, indem er Parameter mit ungültigen Werten angibt. Der `CalculatorErrorHandler` protokolliert mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle die Fehler in einer lokalen Datei und lässt dann zu, dass sie wieder zurück an den Client gemeldet werden. Der Client erzwingt eine Division durch Null und einen Argument-außerhalb-des-Bereichs-Zustand.  
   
-```csharp  
-try  
+```csharp
+try
 {  
     Console.WriteLine("Forcing an error in Divide");  
     // Call the Divide service operation - trigger a divide by 0 error.  
@@ -120,7 +120,7 @@ catch (Exception e)
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Sie sehen, dass die Division durch Null und die Argument-außerhalb-des-Bereichs-Zustände als Fehler gemeldet werden. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -143,7 +143,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
+2. Befolgen Sie zum Erstellen der Projektmappe die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3. Vergewissern Sie sich, dass Sie das Verzeichnis "c:\logs" für die Datei "error.txt" erstellt haben. Sie können auch den in `CalculatorErrorHandler.HandleError` verwendeten Dateinamen ändern.  
   
@@ -154,6 +154,6 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

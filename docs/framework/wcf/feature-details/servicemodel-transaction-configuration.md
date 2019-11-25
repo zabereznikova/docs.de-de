@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c8c9ebff259ccd991768afb8cdf9925a66aad0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747705"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141610"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel-Transaktionskonfiguration
-Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren von Transaktionen für einen Dienst: `transactionFlow`, `transactionProtocol`, und `transactionTimeout`.  
+Windows Communication Foundation (WCF) stellt drei Attribute zum Konfigurieren von Transaktionen für einen Dienst bereit: `transactionFlow`, `transactionProtocol`und `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>Konfigurieren des transactionFlow-Attributs  
- Die vordefinierten Bindungen, WCF bietet enthalten, die meisten der `transactionFlow` und `transactionProtocol` Attribute, sodass Sie die Bindung für die Annahme eingehender Transaktionen für einen bestimmten Endpunkt mit einem bestimmten transaktionsflussprotokolls konfigurieren können. Darüber hinaus können Sie mit dem `transactionFlow`-Element und dessen `transactionProtocol`-Attribut Ihre eigene Bindung erstellen. Weitere Informationen zum Festlegen der Konfigurationselemente finden Sie unter [ \<Bindung >](../../../../docs/framework/misc/binding.md) und [WCF-Konfigurationsschema](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ Die meisten der vordefinierten Bindungen, die WCF bereitstellt, enthalten die Attribute "`transactionFlow`" und "`transactionProtocol`", damit Sie die Bindung so konfigurieren können, dass eingehende Transaktionen für einen bestimmten Endpunkt mithilfe eines bestimmten Transaktions Fluss Protokolls akzeptiert werden. Darüber hinaus können Sie mit dem `transactionFlow`-Element und dessen `transactionProtocol`-Attribut Ihre eigene Bindung erstellen. Weitere Informationen zum Festlegen der Konfigurationselemente finden Sie unter [\<Bindung >](../../configure-apps/file-schema/wcf/bindings.md) und [WCF-Konfigurations Schema](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  Das `transactionFlow`-Attribut gibt an, ob der Transaktionsfluss für Dienstendpunkte aktiviert ist, die die Bindung verwenden.  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren v
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>Konfigurieren des transactionTimeout-Attributs  
- Sie können konfigurieren, die `transactionTimeout` -Attribut für den WCF-Dienst in der `behavior` Element der Konfigurationsdatei. Im folgenden Codebeispiel wird die hierfür erforderliche Vorgehensweise veranschaulicht:  
+ Sie können das `transactionTimeout`-Attribut für den WCF-Dienst im `behavior`-Element der Konfigurationsdatei konfigurieren. Im folgenden Codebeispiel wird die hierfür erforderliche Vorgehensweise veranschaulicht:  
   
 ```xml  
 <configuration>  
@@ -64,5 +64,5 @@ Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren v
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<binding>](../../../../docs/framework/misc/binding.md)
+- [\<Bindungs >](../../configure-apps/file-schema/wcf/bindings.md)
 - [WCF Configuration Schema (Schema zur WCF-Konfiguration)](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

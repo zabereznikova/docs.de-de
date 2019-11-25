@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 926edb4478551affa03619f44ee886d5eb591e4d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 41be55391ae9481f6c2e4feb76443f7fb676b69d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637265"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141922"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Anpassen des Workflowentwurfsvorgangs
 
-Die Szenarien zum Entwerfen von benutzerdefinierten Aktivitäten und zum erneuten Hosten von [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] wurden in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] deutlich vereinfacht. Die Entwicklung und Bereitstellung sind jetzt einfacher sowie flexibler. Die wichtigste Änderung ist, dass das neue Aktivitätsdesigner-Programmiermodell von Windows Presentation Foundation (WPF) erstellt wird. Dies ermöglicht Ihnen, Aktivitätsdesigner deklarativ zu definieren und den [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in anderen Anwendungen vergleichsweise einfach erneut zu hosten. Beim erneuten Hosten kann ein benutzerdefinierter Ausdrucks-Editor entwickelt werden, um IntelliSense oder eine vereinfachte Ausdrucksdomäne zu unterstützen. Die Integration mit Windows Communication Foundation (WCF) ist mit der Verwendung von Workflowdiensten nahtloser geworden. Benutzerdefinierte Aktivitätsdesigner und die Modellelementstruktur können verwendet werden, um die Entwurfszeiterfahrung in neu gehosteten Workflowdesignern zu verbessern.
+Die Szenarien zum Entwerfen von benutzerdefinierten Aktivitäten und zum erneuten Hosting der [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] wurden in .NET Framework 4 erheblich vereinfacht. Die Entwicklung und Bereitstellung sind jetzt einfacher sowie flexibler. Die wesentliche Infrastrukturänderung besteht darin, dass das neue Programmiermodell des Aktivitäts Designers auf Windows Presentation Foundation (WPF) aufbaut. Dies ermöglicht Ihnen, Aktivitätsdesigner deklarativ zu definieren und den [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in anderen Anwendungen vergleichsweise einfach erneut zu hosten. Beim erneuten Hosten kann ein benutzerdefinierter Ausdrucks-Editor entwickelt werden, um IntelliSense oder eine vereinfachte Ausdrucksdomäne zu unterstützen. Die Integration mit Windows Communication Foundation (WCF) wurde mit der Verwendung von Workflow Diensten nahtlos. Benutzerdefinierte Aktivitätsdesigner und die Modellelementstruktur können verwendet werden, um die Entwurfszeiterfahrung in neu gehosteten Workflowdesignern zu verbessern.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,11 +23,11 @@ Die Szenarien zum Entwerfen von benutzerdefinierten Aktivitäten und zum erneute
 
  [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
 
- Beschreibt das erneute hosten die [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] außerhalb von Visual Studio und wie Validierungsfehler angezeigt.
+ Hier wird beschrieben, wie Sie die [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] außerhalb von Visual Studio neu hosten und Validierungs Fehler anzeigen.
 
  [Verwenden eines benutzerdefinierten Ausdrucks-Editors](using-a-custom-expression-editor.md)
 
- Beschreibt, wie einen benutzerdefinierter Ausdrucks-Editor für die Verwendung von workflowdesignern, die außerhalb von Visual Studio 2010 zu implementieren.
+ Beschreibt, wie ein benutzerdefinierter Ausdrucks-Editor für die Verwendung mit Workflow-Designern implementiert wird, die außerhalb von Visual Studio 2010 neu gehostet werden.
 
 ## <a name="reference"></a>Referenz
 

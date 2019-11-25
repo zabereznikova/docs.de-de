@@ -1,5 +1,5 @@
 ---
-title: Lokaler Typrückschluss (Visual Basic)
+title: Lokaler Typrückschluss
 ms.date: 07/20/2015
 f1_keywords:
 - local type inference
@@ -12,68 +12,68 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 2b239e17ba7fa0b6a6b08d52f4394541eaa08b28
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f79ac70aecb5805a3a4a4fea8f7e7ccd3f8243fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775725"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351837"
 ---
 # <a name="local-type-inference-visual-basic"></a>Lokaler Typrückschluss (Visual Basic)
 
-Der Visual Basic-Compiler verwendet den *Typrückschluss* , um die Datentypen von lokalen Variablen zu bestimmen, die ohne `As`-Klausel deklariert werden. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungs Ausdrucks ab. Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben, wie im folgenden Beispiel gezeigt. Aufgrund der Deklarationen werden sowohl `num1` als auch `num2` stark als ganze Zahlen typisiert.
+The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type, as shown in the following example. As a result of the declarations, both `num1` and `num2` are strongly typed as integers.
 
 [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]
 
 > [!NOTE]
-> Wenn Sie `num2` im vorherigen Beispiel nicht als `Integer` typisieren möchten, können Sie einen anderen Typ mithilfe einer Deklaration wie `Dim num3 As Object = 3` oder `Dim num4 As Double = 3` angeben.
+> If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.
 
 > [!NOTE]
-> Der Typrückschluss kann nur für nicht statische lokale Variablen verwendet werden. Sie kann nicht verwendet werden, um den Typ der Klassen Felder, Eigenschaften oder Funktionen zu bestimmen.
+> Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.
 
-Der lokale Typrückschluss gilt für die Prozedur Ebene. Sie kann nicht zum Deklarieren von Variablen auf Modulebene verwendet werden (innerhalb einer Klasse, Struktur, eines Moduls oder einer Schnittstelle, aber nicht innerhalb einer Prozedur oder eines Blocks). Wenn `num2` im vorherigen Beispiel ein Feld einer Klasse anstelle einer lokalen Variablen in einer Prozedur wäre, würde die Deklaration einen Fehler bei `Option Strict` auf verursachen und `num2` als `Object` mit `Option Strict` aus klassifizieren. Ebenso gilt der lokale Typrückschluss nicht für Variablen auf Prozedur Ebene, die als `Static` deklariert werden.
+Local type inference applies at procedure level. It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block). If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off. Similarly, local type inference does not apply to procedure level variables declared as `Static`.
 
-## <a name="type-inference-vs-late-binding"></a>Typrückschluss und späte Bindung
+## <a name="type-inference-vs-late-binding"></a>Type Inference vs. Late Binding
 
-Code, der den Typrückschluss verwendet, ähnelt dem Code, der die späte Bindung verwendet. Der Typrückschluss gibt jedoch die Variable stark aus, anstatt Sie als `Object` zu belassen. Der Compiler verwendet den Initialisierer einer Variablen, um den Typ der Variable zur Kompilierzeit zu bestimmen, um früh gebundenen Code zu erstellen. Im vorherigen Beispiel wird `num2`, wie `num1`, als `Integer` typisiert.
+Code that uses type inference resembles code that relies on late binding. However, type inference strongly types the variable instead of leaving it as `Object`. The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code. In the previous example, `num2`, like `num1`, is typed as an `Integer`.
 
-Das Verhalten früh gebundener Variablen unterscheidet sich von der von spät gebundenen Variablen, für die der Typ nur zur Laufzeit bekannt ist. Wenn Sie den Typ früh wissen, kann der Compiler Probleme vor der Ausführung erkennen, Speicher exakt zuordnen und andere Optimierungen durchführen. Die frühe Bindung ermöglicht außerdem der Visual Basic integrierten Entwicklungsumgebung (Integrated Development Environment, IDE), IntelliSense-Hilfe zu den Membern eines Objekts bereitzustellen. Die frühe Bindung wird auch für die Leistung bevorzugt. Dies liegt daran, dass alle in einer spät gebundenen Variablen gespeicherten Daten als Typ `Object` umschließt werden müssen und der Zugriff auf Member des Typs zur Laufzeit das Programm verlangsamt.
+The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time. Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations. Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object. Early binding is also preferred for performance. This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.
 
 ## <a name="examples"></a>Beispiele
 
-Der Typrückschluss tritt auf, wenn eine lokale Variable ohne eine `As`-Klausel deklariert und initialisiert wird. Der Compiler verwendet den Typ des zugewiesenen anfangs Werts als Typ der Variablen. Jede der folgenden Codezeilen deklariert z. b. eine Variable vom Typ `String`.
+Type inference occurs when a local variable is declared without an `As` clause and initialized. The compiler uses the type of the assigned initial value as the type of the variable. For example, each of the following lines of code declares a variable of type `String`.
 
 [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]
 
-Der folgende Code veranschaulicht zwei äquivalente Möglichkeiten, ein Array von ganzen Zahlen zu erstellen.
+The following code demonstrates two equivalent ways to create an array of integers.
 
 [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]
 
-Es ist praktisch, mit dem Typrückschluss den Typ einer Schleifen Steuerungsvariablen zu bestimmen. Im folgenden Code geht der Compiler davon aus, dass `number` ein `Integer` ist, da `someNumbers2` aus dem vorherigen Beispiel ein Array aus ganzen Zahlen ist.
+It is convenient to use type inference to determine the type of a loop control variable. In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.
 
 [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]
 
-Der lokale Typrückschluss kann in `Using`-Anweisungen verwendet werden, um den Typ des Ressourcen namensfest zulegen, wie im folgenden Beispiel veranschaulicht.
+Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.
 
 [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]
 
-Der Typ einer Variablen kann auch von den Rückgabe Werten von Functions abgeleitet werden, wie im folgenden Beispiel veranschaulicht. Sowohl `pList1` als auch `pList2` sind Arrays von Prozessen, da `Process.GetProcesses` ein Array von Prozessen zurückgibt.
+The type of a variable can also be inferred from the return values of functions, as the following example demonstrates. Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.
 
 [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]
 
 ## <a name="option-infer"></a>Option Infer
 
-mithilfe `Option Infer` können Sie angeben, ob der lokale Typrückschluss in einer bestimmten Datei zulässig ist. Wenn Sie oder zum Blockieren der Option aktivieren möchten, geben Sie eine der folgenden Anweisungen am Anfang der Datei ein.
+`Option Infer` enables you specify whether local type inference is allowed in a particular file. To enable or to block the option, type one of the following statements at the start of the file.
 
 `Option Infer On`
 
 `Option Infer Off`
 
-Wenn Sie keinen Wert für `Option Infer` im Code angeben, wird der Compilerstandard `Option Infer On`.
+If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.
 
 Wenn der in einer Datei für `Option Infer` festgelegte Wert mit dem in der IDE oder in der Befehlszeile festgelegten Wert im Konflikt steht, hat der Wert in der Datei Vorrang.
 
-Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md) und [Kompilierungs Seite, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
 ## <a name="see-also"></a>Siehe auch
 

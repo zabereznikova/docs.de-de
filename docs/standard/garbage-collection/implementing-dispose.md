@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424334"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142055"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
@@ -103,7 +103,7 @@ Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispo
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementieren des Dispose-Musters für eine abgeleitete Klasse
 
-Eine Klasse, die von einer Klasse abgeleitet ist, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte <xref:System.IDisposable> nicht implementieren, da die Basisklassenimplementierung von <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> von den abgeleiteten Klassen geerbt wird. Stattdessen müssen Sie Folgendes bereitstellen, um das Dispose-Muster für eine abgeleitete Klasse zu implementieren:  
+Eine Klasse, die von einer Klasse abgeleitet ist, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte <xref:System.IDisposable> nicht implementieren, da die Basisklassenimplementierung von <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> von den abgeleiteten Klassen geerbt wird. Zum Freigeben von Ressourcen einer abgeleiteten Klasse stellen Sie stattdessen Folgendes bereit:  
   
 - Eine `protected Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihren disposing-Status für das Argument übergeben.  
   

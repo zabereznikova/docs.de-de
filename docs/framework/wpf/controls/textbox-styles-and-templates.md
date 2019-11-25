@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 7c4680a3ea9352e94d628e786fc8e4fd71018d00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 41e390c261836909240cc146a48729d48c4a410e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458248"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283703"
 ---
 # <a name="textbox-styles-and-templates"></a>TextBox-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.TextBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.TextBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="textbox-parts"></a>Text Feld Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.TextBox>-Steuerelement aufgelistet.  
   
-|Segment|Geben Sie Folgendes ein:|Beschreibung|  
+|Segment|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das ein <xref:System.Windows.FrameworkElement>enthalten kann. Der Text des <xref:System.Windows.Controls.TextBox> wird in diesem Element angezeigt.|  
   
@@ -32,8 +32,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|Der Standardzustand|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|  
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
 |ReadOnly|CommonStates|Der Benutzer kann den Text im <xref:System.Windows.Controls.TextBox>nicht ändern.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
@@ -59,4 +59,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

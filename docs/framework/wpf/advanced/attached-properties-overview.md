@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455523"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089333"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -91,7 +91,7 @@ Wie bereits erwähnt, sollten Sie als eine angefügte Eigenschaft registrieren, 
 
 Wenn die Klasse die angefügte Eigenschaft ausschließlich für die Verwendung in anderen Typen definiert, muss die Klasse nicht von <xref:System.Windows.DependencyObject>abgeleitet werden. Sie müssen jedoch von <xref:System.Windows.DependencyObject> abgeleitet werden, wenn Sie dem WPF-Gesamtmodell folgen, wenn die angefügte Eigenschaft auch eine Abhängigkeits Eigenschaft ist.
 
-Definieren Sie die angefügte Eigenschaft als Abhängigkeits Eigenschaft, indem Sie ein `public static readonly` Feld vom Typ <xref:System.Windows.DependencyProperty>deklarieren. Sie definieren dieses Feld, indem Sie den Rückgabewert der <xref:System.Windows.DependencyProperty.RegisterAttached%2A>-Methode verwenden. Der Feldname muss mit dem Namen der angefügten Eigenschaft, angefügt an die Zeichenfolge `Property`, dem festgelegten WPF-Muster für die Benennung der identifizierenden Felder im Vergleich zu den Eigenschaften, die Sie darstellen, entsprechen. Der angefügte Eigenschaften Anbieter muss auch statische **Get_PropertyName_** -und **Set_PropertyName_** -Methoden als Accessoren für die angefügte Eigenschaft bereitstellen. Wenn dies nicht der Fall ist, kann das Eigenschaften System die angefügte Eigenschaft nicht verwenden.
+Definieren Sie die angefügte Eigenschaft als Abhängigkeits Eigenschaft, indem Sie ein `public static readonly` Feld vom Typ <xref:System.Windows.DependencyProperty>deklarieren. Sie definieren dieses Feld, indem Sie den Rückgabewert der <xref:System.Windows.DependencyProperty.RegisterAttached%2A>-Methode verwenden. Der Feldname muss mit dem Namen der angefügten Eigenschaft, angefügt an die Zeichenfolge `Property`, dem festgelegten WPF-Muster für die Benennung der identifizierenden Felder im Vergleich zu den Eigenschaften, die Sie darstellen, entsprechen. Der angefügte Eigenschaften Anbieter muss auch statische **Get_PropertyName_** und **Set_PropertyName_** Methoden als Accessoren für die angefügte Eigenschaft bereitstellen. Wenn dies nicht der Fall ist, kann das Eigenschaften System die angefügte Eigenschaft nicht verwenden.
 
 > [!NOTE]
 > Wenn Sie den Get-Accessor der angefügten Eigenschaft weglassen, funktioniert die Datenbindung für die Eigenschaft nicht in Entwurfs Tools wie Visual Studio und Blend für Visual Studio.
@@ -116,14 +116,14 @@ Die Signatur für den **Set_PropertyName_** -Accessor muss wie folgt lauten:
 
 - Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Beispielsweise gibt die <xref:System.Windows.Controls.DockPanel.SetDock%2A>-Methode Sie als <xref:System.Windows.Controls.Dock>ein, da der Wert nur auf diese Enumeration festgelegt werden kann. Denken Sie daran, dass der Wert für diese Methode die Eingabe des XAML-Loaders ist, wenn sie Ihre angefügte Eigenschaft in einer Verwendung der angefügten Eigenschaft im Markup erkennt. Diese Eingabe ist der Wert, der als XAML-Attributwert im Markup angegeben wird. Aus diesem Grund muss die Typkonvertierung, das Wertserialisierungsprogramm oder die Unterstützung von Markuperweiterungen für den verwendeten Typ vorhanden sein, damit der entsprechende Typ aus dem Attributwert (der letztendlich nur eine Zeichenfolge ist) erstellt werden kann.
 
-Das folgende Beispiel zeigt die Registrierung der Abhängigkeits Eigenschaft (mit der <xref:System.Windows.DependencyProperty.RegisterAttached%2A>-Methode) sowie die Accessoren **Get_PropertyName_** und **Set_PropertyName_** . Im Beispiel ist der Name der angefügten Eigenschaft `IsBubbleSource`. Deshalb müssen die Accessoren `GetIsBubbleSource` und `SetIsBubbleSource` genannt werden.
+Das folgende Beispiel zeigt die Registrierung der Abhängigkeits Eigenschaft (mit der <xref:System.Windows.DependencyProperty.RegisterAttached%2A>-Methode) sowie die **Get_PropertyName_** -und **Set_PropertyName_** Accessoren. Im Beispiel ist der Name der angefügten Eigenschaft `IsBubbleSource`. Deshalb müssen die Accessoren `GetIsBubbleSource` und `SetIsBubbleSource` genannt werden.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Attribute von angefügten Eigenschaften
 
-WPF definiert mehrere [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], die für die Bereitstellung von Informationen zu angefügten Eigenschaften für reflektionsprozesse und für typische Benutzer von Reflektion und Eigenschafts Informationen wie Designern vorgesehen sind. Da angefügte Eigenschaften einen uneingeschränkten Bereich haben, benötigen Entwickler eine Möglichkeit, Benutzer nicht durch eine globale Liste aller angefügten Eigenschaften zu überwältigen, die in einer bestimmten Implementierung von Technologie definiert sind, die XAML verwendet. Der [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], den WPF für angefügte Eigenschaften definiert, kann verwendet werden, um die Situationen festzustellen, in denen eine angegebene angefügte Eigenschaft in einem Eigenschaften Fenster angezeigt werden soll. Sie sollten diese Attribute auch auf Ihre eigenen benutzerdefinierten angefügten Eigenschaften anwenden. Der Zweck und die Syntax von [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] wird auf den entsprechenden Referenzseiten beschrieben:
+WPF definiert mehrere .NET-Attribute, die für die Bereitstellung von Informationen zu angefügten Eigenschaften für reflektionsprozesse und für typische Benutzer von Reflektion und Eigenschafts Informationen wie Designern vorgesehen sind. Da angefügte Eigenschaften einen uneingeschränkten Bereich haben, benötigen Entwickler eine Möglichkeit, Benutzer nicht durch eine globale Liste aller angefügten Eigenschaften zu überwältigen, die in einer bestimmten Implementierung von Technologie definiert sind, die XAML verwendet. Die .NET-Attribute, die von WPF für angefügte Eigenschaften definiert werden, können verwendet werden, um die Situationen festzustellen, in denen eine angefügte Eigenschaft in einem Eigenschaften Fenster angezeigt werden soll. Sie sollten diese Attribute auch auf Ihre eigenen benutzerdefinierten angefügten Eigenschaften anwenden. Der Zweck und die Syntax der .NET-Attribute werden auf den entsprechenden Referenzseiten beschrieben:
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

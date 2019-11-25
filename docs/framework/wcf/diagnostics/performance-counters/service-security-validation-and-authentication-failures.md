@@ -2,12 +2,12 @@
 title: 'Dienst: Sicherheitsvalidierung und Authentifizierungsfehler'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 5843d25eb26bdd9facc324a2af50c6b02c5ad7c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613577"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204578"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Dienst: Sicherheitsvalidierung und Authentifizierungsfehler
 Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler  

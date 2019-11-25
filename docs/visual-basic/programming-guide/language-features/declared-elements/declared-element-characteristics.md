@@ -1,5 +1,5 @@
 ---
-title: Merkmale deklarierter Elemente (Visual Basic)
+title: Merkmale deklarierter Elemente
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
@@ -13,53 +13,53 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4e03cd28fed5e0ae109337739251c11a0ff3424a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912988"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331625"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Merkmale deklarierter Elemente (Visual Basic)
-Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die betroffen sind, wie Code mit ihm interagieren kann. Jedem deklariertes Element verfügt über eine oder mehrere der folgenden Eigenschaften zugeordnet:  
+A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
   
-- *Datentyp* – die Werte, die das Element enthalten kann und wie diese Werte gespeichert. Weitere Informationen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Data type* — the values the element can hold, and how it stores those values. Weitere Informationen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/index.md).  
   
-- *Lebensdauer* – den Zeitraum der Ausführungszeit, die in dem das Element für die Verwendung verfügbar ist. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- *Bereich* – die Anzahl sämtlicher Code, der auf das Element ohne Angabe ihres Namens verweisen kann. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
-- *Zugriffsebene* – die Berechtigung für Code, um, des Elements verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
-## <a name="characteristics-of-the-elements"></a>Eigenschaften der Elemente  
- Die folgende Tabelle zeigt die deklarierte Elemente und die Eigenschaften, die für jede gelten.  
+## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
+ The following table shows the declared elements and the characteristics that apply to each one.  
   
-|Element|Datentyp|Lebensdauer|Bereich <sup>1</sup>|Zugriffsebene|  
+|Element|Datentyp|Lebensdauer|Scope <sup>1</sup>|Access Level|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |Variable|Ja|Ja|Ja|Ja|  
 |Konstante|Ja|Nein|Ja|Ja|  
 |Enumeration|Ja|Nein|Ja|Ja|  
 |Struktur|Nein|Nein|Ja|Ja|  
-|Eigenschaft|Ja|Ja|Ja|Ja|  
+|property|Ja|Ja|Ja|Ja|  
 |Methode|Nein|Ja|Ja|Ja|  
-|Verfahren (`Sub` oder `Function`)|Nein|Ja|Ja|Ja|  
+|Procedure (`Sub` or `Function`)|Nein|Ja|Ja|Ja|  
 |Prozedurparameter|Ja|Ja|Ja|Nein|  
-|Funktionsrückgabe|Ja|Ja|Ja|Nein|  
+|Function return|Ja|Ja|Ja|Nein|  
 |Operator|Ja|Nein|Ja|Ja|  
 |Interface|Nein|Nein|Ja|Ja|  
 |Klasse|Nein|Nein|Ja|Ja|  
 |event|Nein|Nein|Ja|Ja|  
 |delegate|Nein|Nein|Ja|Ja|  
   
- <sup>1</sup> Bereich wird manchmal als bezeichnet *Sichtbarkeit*.  
+ <sup>1</sup> Scope is sometimes referred to as *visibility*.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

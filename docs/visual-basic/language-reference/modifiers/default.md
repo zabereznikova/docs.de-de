@@ -1,5 +1,5 @@
 ---
-title: Default (Visual Basic)
+title: Default
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad4c9528f208cc2c31f07b0506d1b049a7568c86
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800931"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351582"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-Gibt eine Eigenschaft als Standardeigenschaft von der Klasse, Struktur oder Schnittstelle an.  
+Identifies a property as the default property of its class, structure, or interface.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Klasse, Struktur oder Schnittstelle kann höchstens eine der Eigenschaften als Festlegen der *Standardeigenschaft*, vorausgesetzt, dass die Eigenschaft über mindestens einen Parameter akzeptiert. Wenn der Code einen Verweis auf eine Klasse oder Struktur ist ein Mitglied angegeben, löst Visual Basic dieser Verweis auf die Standardeigenschaft.  
+ A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
   
- Standardeigenschaften können dazu führen, eine kleine Reduzierung in Code-Zeichen, aber leisten können Ihren Code schwieriger zu lesen. Wenn der aufrufende Code nicht vertraut sind, mit der Klasse oder Struktur ist, wenn es sich um einen Verweis auf den Namen der Klasse oder Struktur ist es bestimmte nicht möglich, ob der Verweis der Klasse oder Struktur selbst oder an eine Standardeigenschaft greift auf. Dies kann zu Compilerfehlern oder geringfügige Laufzeitlogik-Fehler führen.  
+ Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
   
- Sie können etwas reduziert die Wahrscheinlichkeit Eigenschaftenfehler standardmäßig immer mit der [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md) Festlegen der Compiler die typüberprüfung zu `On`.  
+ You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
   
- Wenn Sie beabsichtigen, mit einer vordefinierten Klasse oder Struktur in Ihrem Code müssen Sie bestimmen, ob es sich um eine Standardeigenschaft verfügt, und wenn Ja, ist wie der Name.  
+ If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
   
- Wegen der genannten Nachteile sollten Sie keine Standardeigenschaften definieren. Sie sollten für die Lesbarkeit des Codes berücksichtigen Sie auch immer explizit verweisen, die allen Eigenschaften, auch die Standardeigenschaften.  
+ Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
   
- Die `Default` Modifizierer kann in diesem Kontext verwendet werden:  
+ The `Default` modifier can be used in this context:  
   
  [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)

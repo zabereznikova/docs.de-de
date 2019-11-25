@@ -1,16 +1,16 @@
 ---
-title: Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
+title: Arbeiten mit globalen Namespaces (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582358"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350993"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
-Eines der wichtigsten Features von XML-Literalen in Visual Basic ist die Funktion zum Deklarieren von XML-Namespaces mithilfe der `Imports`-Anweisung. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  
+One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  
   
  Diese Möglichkeit erweist sich in zwei Situationen als hilfreich: Zum einen werden in XML-Literalen deklarierte Namespaces nicht in eingebettete Ausdrücke übertragen. Durch das Deklarieren globaler Namespaces verringert sich der Arbeitsaufwand, der erforderlich ist, wenn Sie eingebettete Ausdrücke mit Namespaces verwenden. Zum anderen müssen Sie globale Namespaces deklarieren, um Namespaces mit XML-Eigenschaften zu verwenden.  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

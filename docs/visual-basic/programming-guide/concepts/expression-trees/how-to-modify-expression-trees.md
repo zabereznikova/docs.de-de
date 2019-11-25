@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Ändern von Ausdrucks Baumstrukturen (Visual Basic)'
+title: 'Gewusst wie: Ändern von Ausdrucksbaumstrukturen'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: ac196b56f178659765437a97a25f46c04f8040fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 12ccad6df7d6c7d91ebc290163db362eae173209
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054212"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353745"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Vorgehensweise: Ändern von Ausdrucks Baumstrukturen (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>How to: Modify Expression Trees (Visual Basic)
 
 In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können. Ausdrucksbaumstrukturen sind unveränderlich, d.h. sie können nicht direkt modifiziert werden. Um eine Ausdrucksbaumstruktur zu verändern, müssen Sie eine Kopie eines vorhandenen Ausdrucksbaumstruktur erstellen und währenddessen die erforderlichen Änderungen vornehmen. Sie können die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse verwenden, um einen vorhandenen Ausdrucksbaum zu durchlaufen und jeden Knoten zu kopieren, der durchlaufen wird.
 
@@ -17,7 +17,7 @@ In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können
 
 1. Erstellen Sie ein neues **Konsolenanwendungsprojekt**.
 
-2. Fügen Sie `Imports` der Datei eine-Anweisung für `System.Linq.Expressions` den-Namespace hinzu.
+2. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
 
 3. Fügen Sie die `AndAlsoModifier`-Klasse in Ihr Projekt ein.
 
@@ -47,9 +47,9 @@ In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können
 
     Diese Klasse erbt die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse und ist darauf spezialisiert, Ausdrücke zu verändern, die bedingte `AND`-Vorgänge darstellen. Es ändert diese Vorgänge von einem bedingten `AND` in ein bedingtes `OR`. Zu diesem Zweck setzt die Klasse die <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>-Methode der Basisklasse außer Kraft, weil bedingte `AND`-Ausdrücke als binäre Ausdrücke dargestellt werden. Für die `VisitBinary`-Methode gilt Folgendes: Wenn der an die Methode übergebene Ausdruck eine bedingte `AND`-Operation darstellt, erstellt der Code einen neuen Ausdruck, der den bedingten Operator `OR` anstelle des bedingten Operators `AND` enthält. Wenn der an `VisitBinary` übergebene Ausdruck keinen bedingten `AND`-Vorgang darstellt, verzögert die Methode die Implementierung der Basisklasse. Die Basisklassenmethode erstellt Knoten, die den übergebenen Ausdrucksbaumstrukturen gleichen. In diesem Fall sind die Teilstrukturen der Knoten jedoch durch die Ausdrucksbaumstrukturen ersetzt, die vom Besucher rekursiv erstellt werden.
 
-4. Fügen Sie `Imports` der Datei eine-Anweisung für `System.Linq.Expressions` den-Namespace hinzu.
+4. Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.
 
-5. Fügen Sie der `Main` -Methode in der Module1. vb-Datei Code hinzu, um eine Ausdrucks Baumstruktur zu erstellen und an die Methode zu übergeben, die Sie ändert.
+5. Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -73,5 +73,5 @@ In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Ausdrucks Baumstrukturen ausführen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: 334cb4a44788980262110eadac3305283bb61a92
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f533142d5ba202bd4aaf628487eaaa2a18a535d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458390"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283389"
 ---
 # <a name="slider-styles-and-templates"></a>Slider-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Slider>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Slider>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="slider-parts"></a>Schieberegler-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Slider>-Steuerelement aufgelistet.  
   
-|Segment|Geben Sie Folgendes ein:|Beschreibung|  
+|Segment|Typ|Beschreibung|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Der Container für das Element, das die Position des <xref:System.Windows.Controls.Slider>angibt.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Das Element, das einen Auswahlbereich entlang der <xref:System.Windows.Controls.Slider>anzeigt.  Der Auswahlbereich ist nur sichtbar, wenn die <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>-Eigenschaft `true`ist.|  
@@ -33,8 +33,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|Der Standardzustand|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|  
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
@@ -59,4 +59,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

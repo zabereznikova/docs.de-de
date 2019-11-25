@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: b782e62500edd14b40b1267c3b7f92758210a5c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a984311234386cb205d5db35f18a743ca535ff05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458209"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283655"
 ---
 # <a name="toolbar-styles-and-templates"></a>ToolBar-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ToolBar>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ToolBar>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="toolbar-parts"></a>Symbolleisten Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ToolBar>-Steuerelement aufgelistet.  
   
-|Segment|Geben Sie Folgendes ein:|Beschreibung|  
+|Segment|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Das-Objekt, das die Steuerelemente auf dem <xref:System.Windows.Controls.ToolBar>enthält.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Das-Objekt, das die Steuerelemente enthält, die sich im Überlauf Bereich der <xref:System.Windows.Controls.ToolBar>befinden.|  
@@ -56,4 +56,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

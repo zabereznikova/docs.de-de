@@ -3,6 +3,8 @@
   items:
     - name: Schlüsselbegriffe der Sicherheit
       href: key-security-concepts.md
+    - name: FIPS-Compliance für .NET Core
+      href: fips-compliance.md
     - name: Rollenbasierte Sicherheit
       href: role-based-security.md
       items:

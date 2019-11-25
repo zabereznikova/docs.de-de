@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: cbae03c52f3cc39f7afd422a34b16e99a60d9f3a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912714"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283219"
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
-Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Adresse des Endpunkts wird dargestellt, in der Windows Communication Foundation (WCF)-Programmiermodell von der <xref:System.ServiceModel.EndpointAddress> -Klasse, die ein optionales enthält <xref:System.ServiceModel.EndpointAddress.Identity%2A> -Eigenschaft, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, austauschen, mit denen er Meldungen und einen Satz Optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die alle anderen zum Erreichen des Diensts erforderlichen SOAP-Header festlegen. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
+Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Endpunkt Adresse wird im WCF-Programmiermodell (Windows Communication Foundation) durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die eine optionale <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft enthält, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, die Nachrichten mit ihm austauschen, sowie einen Satz optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die alle anderen SOAP-Header definieren, die für den Dienst erforderlich sind. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
   
 ## <a name="uri-structure-of-an-address"></a>URI-Struktur einer Adresse  
- Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Z. B. die vier Teile des URIS `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` können wie folgt aufgeführt werden:  
+ Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Beispielsweise können die vier Teile des URI-`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` wie folgt aufgelistet werden:  
   
 - Schema: `http:`
   
@@ -31,28 +31,28 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
  Die Endpunktadresse für einen Dienst kann entweder imperativ über Code oder deklarativ über die Konfiguration angegeben werden. Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden. Im Allgemeinen ist es praktischer, Dienstendpunkte nicht mit Code, sondern mit Konfiguration zu definieren. Werden die Bindung und die Adressinformationen nicht in den Code integriert, ist eine Änderung ohne Neukompilierung oder eine erneute Bereitstellung der Anwendung möglich.  
   
 ### <a name="defining-an-address-in-configuration"></a>Definieren einer Adresse in der Konfiguration  
- Verwenden Sie zum Definieren eines Endpunkts in einer Konfigurationsdatei das [ \<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Element. Weitere Informationen und ein Beispiel finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Um einen Endpunkt in einer Konfigurationsdatei zu definieren, verwenden Sie den [\<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) -Elements. Weitere Informationen und ein Beispiel finden Sie unter [Angeben einer Endpunkt Adresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="defining-an-address-in-code"></a>Definieren einer Adresse im Code  
- Eine Endpunktadresse kann mit der <xref:System.ServiceModel.EndpointAddress>-Klasse im Code erstellt werden. Weitere Informationen und ein Beispiel finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Eine Endpunktadresse kann mit der <xref:System.ServiceModel.EndpointAddress>-Klasse im Code erstellt werden. Weitere Informationen und ein Beispiel finden Sie unter [Angeben einer Endpunkt Adresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="endpoints-in-wsdl"></a>Endpunkt in WSDL  
- Eine Endpunktadresse kann auch in WSDL (Web Services Description Language) als ein WS-Addressierungs-EPR-Element innerhalb des `wsdl:port`-Elements des entsprechenden Endpunkts dargestellt werden. Der EPR enthält die Endpunktadresse sowie eventuelle Adresseigenschaften. Weitere Informationen und ein Beispiel finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Eine Endpunktadresse kann auch in WSDL (Web Services Description Language) als ein WS-Addressierungs-EPR-Element innerhalb des `wsdl:port`-Elements des entsprechenden Endpunkts dargestellt werden. Der EPR enthält die Endpunktadresse sowie eventuelle Adresseigenschaften. Weitere Informationen und ein Beispiel finden Sie unter [Angeben einer Endpunkt Adresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Mehrere IIS-Bindungen Unterstützung in .NET Framework 3.5  
- Internetdienstanbieter hosten oftmals viele Anwendungen auf demselben Server und derselben Website, um die Websitedichte zu erhöhen und die Gesamtkosten (TCO) zu senken. Diese Anwendungen werden i.&amp;#160;d.&amp;#160;R. an unterschiedliche Basisadressen gebunden. Eine Internetinformationsdienste(IIS)-Website kann mehrere Anwendungen enthalten. Auf die Anwendungen auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden.  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Unterstützung mehrerer IIS-Bindungen in .NET Framework 3,5  
+ Internetdienstanbieter hosten oftmals viele Anwendungen auf demselben Server und derselben Website, um die Websitedichte zu erhöhen und die Gesamtkosten (TCO) zu senken. Diese Anwendungen werden i.&#160;d.&#160;R. an unterschiedliche Basisadressen gebunden. Eine Internetinformationsdienste(IIS)-Website kann mehrere Anwendungen enthalten. Auf die Anwendungen auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden.  
   
  IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website.  
   
  Das folgende Beispiel zeigt die Komponenten, die in einer IIS-Bindung enthalten sein können:  
   
-- Das Bindungsprotokoll: HTTP  
+- Bindungsprotokoll: HTTP  
   
 - Bindungsinformationen: IP-Adresse, Anschluss, Hostheader  
   
- IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt. Vor dem [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF mehrere Adressen für ein Schema wurde nicht unterstützt und wenn sie angegeben wurden, hat eine <xref:System.ArgumentException> während der Aktivierung.  
+ IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt. Vor .NET Framework 3,5 wurde von WCF nicht mehrere Adressen für ein Schema unterstützt. Wenn Sie angegeben wurden, wurde während der Aktivierung ein <xref:System.ArgumentException> ausgelöst.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] ermöglicht es Internetdienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
+ Der .NET Framework 3,5 ermöglicht es Internet Dienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
   
  Eine Website kann beispielsweise die folgenden Basisadressen enthalten:  
   
@@ -60,7 +60,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
 - `http://shipping.myorg.com/Service.svc`
   
- Bei [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] geben Sie in der Konfigurationsdatei auf der AppDomain-Ebene einen Präfixfilter an. Dies erledigen Sie über die [ \<BaseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) Element, das eine Liste der Präfixe enthält. Die eingehenden, von IIS angegebenen Basisadressen werden anhand der optionalen Präfixliste gefiltert. Standardmäßig werden alle Adressen übergeben, wenn ein Präfix nicht angegeben ist. Wenn die Präfixergebnisse angegeben werden, wird nur die Basisadresse übergeben, die dem Schema entspricht.  
+ Bei .NET Framework 3,5 geben Sie einen Präfix Filter auf der AppDomain-Ebene in der Konfigurationsdatei an. Dies geschieht mit dem [\<baseadresssspree fixfilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) -Element, das eine Liste von Präfixen enthält. Die eingehenden, von IIS angegebenen Basisadressen werden anhand der optionalen Präfixliste gefiltert. Standardmäßig werden alle Adressen übergeben, wenn ein Präfix nicht angegeben ist. Wenn die Präfixergebnisse angegeben werden, wird nur die Basisadresse übergeben, die dem Schema entspricht.  
   
  Es folgt ein Beispiel für Konfigurationscode, der die Präfixfilter verwendet.  
   
@@ -75,7 +75,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 </system.serviceModel>  
 ```  
   
- Im vorherigen Beispiel `net.tcp://payroll.myorg.com:8000` und `http://shipping.myorg.com:8000` sind die einzigen Basisadressen für die jeweiligen Schemata, die übergeben werden.  
+ Im vorherigen Beispiel sind `net.tcp://payroll.myorg.com:8000` und `http://shipping.myorg.com:8000` die einzigen Basisadressen für die jeweiligen Schemas, die durchlaufen werden.  
   
  Der `baseAddressPrefixFilter` unterstützt keine Platzhalter.  
   
@@ -84,7 +84,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Unterstützung für mehrere IIS-Bindungen in .NET Framework 4 und höher  
  Ab .NET 4 können Sie die Unterstützung für mehrere Bindungen in IIS aktivieren, ohne eine Basisadresse auswählen zu müssen. Legen Sie dazu die Einstellung <xref:System.ServiceModel.ServiceHostingEnvironment> von <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> auf TRUE fest. Die Unterstützung ist auf HTTP-Protokollschemas begrenzt.  
   
- Folgendes ist ein Beispiel für Konfigurationscode, der MultipleSiteBindingsEnabled verwendet [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+ Im folgenden finden Sie ein Beispiel für Konfigurations Code, der multiplesitebindingsenabled auf [\<servicehoststingenvironment->](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)verwendet.  
   
 ```xml  
 <system.serviceModel>  
@@ -95,18 +95,18 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  Wenn mehrere Websitebindungen mit dieser Einstellung aktiviert wurden, werden alle Einstellungen von baseAddressPrefixFilters sowohl für HTTP-Protokolle als auch für andere Protokolle ignoriert.  
   
- Weitere Informationen und Beispiele finden Sie unter [unterstützen mehrerer IIS-Sitebindungen](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) und <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ Weitere Informationen und Beispiele finden Sie [unter unterstützen mehrerer IIS-Site Bindungen](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) und <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Erweitern der Adressierung in WCF-Diensten  
- Das Adressierungsmodell der WCF-Dienste verwendet des endpunktadress-URI für folgende Zwecke:  
+ Das Standard Adressierungs Modell der WCF-Dienste verwendet den Endpunkt Adress-URI für die folgenden Zwecke:  
   
-- Um die Abhöradresse des Diensts anzugeben, d.&amp;#160;h. den Speicherort, den der Endpunkt auf Nachrichten abhört  
+- Um die Abhöradresse des Diensts anzugeben, d.&#160;h. den Speicherort, den der Endpunkt auf Nachrichten abhört  
   
-- Um den SOAP-Adressfilter anzugeben, d.&amp;#160;h. die Adresse, die ein Endpunkt als SOAP-Header erwartet  
+- Um den SOAP-Adressfilter anzugeben, d.&#160;h. die Adresse, die ein Endpunkt als SOAP-Header erwartet  
   
  Die Werte für beide Situationen können separat angegeben werden. Dadurch werden mehrere Adressierungserweiterungen für nützliche Szenarien möglich:  
   
-- SOAP-Vermittler: Eine von einem Client gesendete Nachricht durchläuft einen oder mehrere zusätzliche Dienste, die die Nachricht verarbeiten, bevor sie ihr endgültiges Ziel erreicht. SOAP-Vermittler können verschiedene Aufgaben ausführen, z.&amp;#160;B. Caching, Routing, Lastenausgleich oder Schemavalidierung für Nachrichten. Dieses Szenario wird durch das Senden von Nachrichten an eine separate physische Adresse erreicht (`via`), die auf den Vermittler verweist, anstatt nur an eine logische Adresse (`wsa:To`), die auf das endgültige Ziel verweist.  
+- SOAP-Vermittler: Eine von einem Client gesendete Nachricht durchläuft einen oder mehrere zusätzliche Dienste, die die Nachricht verarbeiten, bevor sie ihr endgültiges Ziel erreicht. SOAP-Vermittler können verschiedene Aufgaben ausführen, z.&#160;B. Caching, Routing, Lastenausgleich oder Schemavalidierung für Nachrichten. Dieses Szenario wird durch das Senden von Nachrichten an eine separate physische Adresse erreicht (`via`), die auf den Vermittler verweist, anstatt nur an eine logische Adresse (`wsa:To`), die auf das endgültige Ziel verweist.  
   
 - Die Abhöradresse des Endpunkts ist ein privater URI und wird auf einen anderen Wert als seine `listenURI`-Eigenschaft festgelegt.  
   
@@ -115,11 +115,11 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 ### <a name="addressing-headers"></a>Adressierungsheader  
  Ein Endpunkt kann neben seinem Basis-URI von einem oder mehreren SOAP-Headern adressiert werden. Dies ist beispielsweise in SOAP-Vermittlerszenarien nützlich, in denen ein Endpunkt es erfordert, dass seine Clients SOAP-Header einfügen, die sich an Vermittler richten.  
   
- Sie können benutzerdefinierte Adressheader auf zweierlei Weise definieren &amp;#8211; entweder mit Code oder einer Konfiguration:  
+ Sie können benutzerdefinierte Adressheader auf zweierlei Weise definieren &#8211; entweder mit Code oder einer Konfiguration:  
   
 - Im Code werden benutzerdefinierte Adressheader mithilfe der <xref:System.ServiceModel.Channels.AddressHeader>-Klasse erstellt und dann bei der Erstellung einer <xref:System.ServiceModel.EndpointAddress> verwendet.  
   
-- In der benutzerdefinierten Konfiguration [ \<Header >](../../configure-apps/file-schema/wcf/headers.md) werden als untergeordnete Elemente des angegebenen die [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Element.  
+- In der Konfiguration werden benutzerdefinierte [\<Header >](../../configure-apps/file-schema/wcf/headers.md) als untergeordnete Elemente des [\<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Elements angegeben.  
   
  Die Konfiguration ist im Allgemeinen dem Code vorzuziehen, da sie es Ihnen ermöglicht, die Header nach der Bereitstellung zu ändern.  
   
@@ -130,7 +130,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
 - Im Code geben Sie eine benutzerdefinierte Abhöradresse durch Hinzufügen einer <xref:System.ServiceModel.Description.ClientViaBehavior>-Klasse zur Verhaltensauflistung des Endpunkts an.  
   
-- In einer Konfiguration geben Sie eine benutzerdefinierte lauschadresse mit dem `ListenUri` Attribut des Diensts [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-element.md) Element.  
+- Geben Sie unter Konfiguration eine benutzerdefinierte Abhör Adresse mit dem `ListenUri`-Attribut des Dienst [\<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-element.md) Elements an.  
   
 ### <a name="custom-soap-address-filter"></a>Benutzerdefinierter SOAP-Adressenfilter  
  Der <xref:System.ServiceModel.EndpointAddress.Uri%2A> wird in Verbindung mit einer beliebigen <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaft zur Definition des SOAP-Adressfilters eines Endpunkts verwendet (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Standardmäßig prüft dieser Filter, ob eine eingehende Nachricht über einen `To`-Nachrichtenheader verfügt, der mit dem URI des Endpunkts übereinstimmt, und ob alle erforderlichen Endpunktheader in der Nachricht vorhanden sind.  

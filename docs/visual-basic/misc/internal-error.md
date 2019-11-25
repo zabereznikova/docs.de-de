@@ -1,18 +1,18 @@
 ---
-title: Interner Fehler (Visual Basic)
+title: Internal error
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID51
 ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
-ms.openlocfilehash: 58ee05a5eaa126053e954ffc497b387d171a7883
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 873ad46881e3e5e306e5979afe0fc586b5d5a261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624884"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329510"
 ---
 # <a name="internal-error-visual-basic"></a>Interner Fehler (Visual Basic)
-In Visual Basic ist eine interne Fehlfunktion aufgetreten.  
+An internal malfunction has occurred in Visual Basic.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   

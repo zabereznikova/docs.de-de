@@ -9,22 +9,22 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 4ba90182468466773644c7375059f0cc01675b33
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458842"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283467"
 ---
 # <a name="passwordbox-styles-and-templates"></a>PasswordBox-Stile und -Vorlagen
 
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.
 
 ## <a name="passwordbox-parts"></a>PasswordBox-Teile
 
 In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement aufgelistet.
 
-|Segment|Geben Sie Folgendes ein:|Beschreibung|
+|Segment|Typ|Beschreibung|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das ein <xref:System.Windows.FrameworkElement>enthalten kann. Der Text des <xref:System.Windows.Controls.PasswordBox> wird in diesem Element angezeigt.|
 
@@ -35,8 +35,8 @@ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Wi
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|
 |-|-|-|
 |Normal|CommonStates|Der Standardzustand|
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|
@@ -62,4 +62,4 @@ Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit Contro
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

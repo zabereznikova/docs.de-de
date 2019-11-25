@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-ms.openlocfilehash: 826dfceb28512e4fd3157c432b7a4d94fba704fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f8337f96239948189ffd58923d87fd05c79b0c3
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097858"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204861"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy-Enumeration
 Stellt einen Wert bereit, der bestimmt, ob ein Debugger systemeigene Abbilder (NGen) aus dem Cache für systemeigene Abbilder lädt.  
@@ -38,10 +38,10 @@ enum CorDebugNGENPolicy {
   
 |Membername|Beschreibung|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|In einer [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)]-APP wird die Verwendung von Images aus dem lokalen Cache für Native Images deaktiviert. In einer Desktop-App hat diese Einstellung keine Auswirkungen.|  
+|`DISABLE_LOCAL_NIC`|In a Windows 8.x Store app, the use of images from the local native image cache is disabled. In a desktop app, this setting has no effect.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorDebugNGENPolicy`-Enumeration wird von der [ICorDebugProcess5:: enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) -Methode verwendet. Das Deaktivieren der Verwendung von Bildern aus dem lokalen Cache für systemeigene Images sorgt für ein konsistentes Debuggen, indem sichergestellt wird, dass der Debugger Debugfähige JIT-kompilierte Images anstelle von optimierten systemeigenen Images lädt.  
+ The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method. Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

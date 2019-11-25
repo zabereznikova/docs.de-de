@@ -1,12 +1,12 @@
 ---
 title: Attribute (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374369"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141566"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 
@@ -25,7 +25,7 @@ Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein be
 
 In diesem Beispiel wird das Attribut <xref:System.SerializableAttribute> benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 Eine Methode mit dem Attribut <xref:System.Runtime.InteropServices.DllImportAttribute> wird wie im folgenden Beispiel deklariert:
 
@@ -33,12 +33,12 @@ Eine Methode mit dem Attribut <xref:System.Runtime.InteropServices.DllImportAttr
 
 Mehrere Attribute können in einer Deklaration platziert werden, wie im folgenden Beispiel dargestellt:
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 Einige Attribute können für eine bestimmte Entität mehrmals angegeben werden. Ein Beispiel für ein solches mehrfach verwendbares Attribut ist <xref:System.Diagnostics.ConditionalAttribute>:
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > Alle Attributnamen enden laut Konvention mit dem Wort „Attribute“, um sie von anderen Elementen in .NET-Bibliotheken zu unterscheiden. Sie müssen das Attributsuffix allerdings nicht angeben, wenn Sie Attribute im Code verwenden. Beispiel: `[DllImport]` entspricht `[DllImportAttribute]`, aber `DllImportAttribute` ist der tatsächliche Name des Attributs in der .NET Framework-Klassenbibliothek.
@@ -119,7 +119,7 @@ Weitere Informationen finden Sie unter:
 
 - [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)  
 - [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)  
-- [Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Erstellen einer Union in C/C++ mit Attributen (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Allgemeine Attribute (C#)](common-attributes.md)  
 - [Aufruferinformationen (C#)](../caller-information.md)  
 

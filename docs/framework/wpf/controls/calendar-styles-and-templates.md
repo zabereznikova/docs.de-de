@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 64cb62a3459a3eeea6aa5e91b433a58a88ab08ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460925"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283557"
 ---
 # <a name="calendar-styles-and-templates"></a>Calendar-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Calendar>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Calendar>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="calendar-parts"></a>Kalender Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Calendar>-Steuerelement aufgelistet.  
   
-|Segment|Geben Sie Folgendes ein:|Beschreibung|  
+|Segment|Typ|Beschreibung|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Der derzeit auf dem <xref:System.Windows.Controls.Calendar>angezeigte Monat oder Jahr.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Der Bereich, der die <xref:System.Windows.Controls.Primitives.CalendarItem>enthält.|  
@@ -39,7 +39,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="calendaritem-parts"></a>CalendarItem-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.CalendarItem>-Steuerelement aufgelistet.  
   
-|Segment|Geben Sie Folgendes ein:|Beschreibung|  
+|Segment|Typ|Beschreibung|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Der Stamm des Steuer Elements.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Die Schaltfläche, die die vorherige Seite des Kalenders anzeigt, wenn darauf geklickt wird.|  
@@ -73,21 +73,21 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
-|Deaktiviert|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist deaktiviert.|  
+|Disabled|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Gedrückt|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarDayButton> wird gedrückt.|  
 |Ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
 |Nicht markiert|SelectionStates|Die Schaltfläche ist nicht ausgewählt.|  
-|Calendarbuttonfokussierte|Calendarbuttonfocusstates|Die Schaltfläche hat den Fokus.|  
-|Calendarbuttonunfokussiert|Calendarbuttonfocusstates|Die Schaltfläche hat keinen Fokus.|  
+|Calendarbuttonfokussierte|CalendarButtonFocusStates|Die Schaltfläche hat den Fokus.|  
+|Calendarbuttonunfokussiert|CalendarButtonFocusStates|Die Schaltfläche hat keinen Fokus.|  
 |Mit Fokus|FocusStates|Die Schaltfläche hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Schaltfläche hat keinen Fokus.|  
 |Aktiv|Activestates|Die Schaltfläche ist aktiv.|  
 |Inaktiv|Activestates|Die Schaltfläche ist inaktiv.|  
 |Regularday|Daystates|Die Schaltfläche stellt <xref:System.DateTime.Today%2A?displayProperty=nameWithType>nicht dar.|  
 |Heute|Daystates|Die Schaltfläche stellt <xref:System.DateTime.Today%2A?displayProperty=nameWithType>dar.|  
-|Normaltag|Blackoutdaystates|Die Schaltfläche stellt einen Tag dar, der ausgewählt werden kann.|  
-|Blackoutday|Blackoutdaystates|Die Schaltfläche stellt einen Tag dar, der nicht ausgewählt werden kann.|  
+|NormalDay|BlackoutDayStates|Die Schaltfläche stellt einen Tag dar, der ausgewählt werden kann.|  
+|BlackoutDay|BlackoutDayStates|Die Schaltfläche stellt einen Tag dar, der nicht ausgewählt werden kann.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
 |InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
 |InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
@@ -101,13 +101,13 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
-|Deaktiviert|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarButton> ist deaktiviert.|  
+|Disabled|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarButton> ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Gedrückt|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarButton> wird gedrückt.|  
 |Ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
 |Nicht markiert|SelectionStates|Die Schaltfläche ist nicht ausgewählt.|  
-|Calendarbuttonfokussierte|Calendarbuttonfocusstates|Die Schaltfläche hat den Fokus.|  
-|Calendarbuttonunfokussiert|Calendarbuttonfocusstates|Die Schaltfläche hat keinen Fokus.|  
+|Calendarbuttonfokussierte|CalendarButtonFocusStates|Die Schaltfläche hat den Fokus.|  
+|Calendarbuttonunfokussiert|CalendarButtonFocusStates|Die Schaltfläche hat keinen Fokus.|  
 |Mit Fokus|FocusStates|Die Schaltfläche hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Schaltfläche hat keinen Fokus.|  
 |Aktiv|Activestates|Die Schaltfläche ist aktiv.|  
@@ -134,4 +134,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

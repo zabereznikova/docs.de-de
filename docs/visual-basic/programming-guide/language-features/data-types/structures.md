@@ -1,5 +1,5 @@
 ---
-title: Strukturen (Visual Basic)
+title: Strukturen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structures [Visual Basic]
@@ -9,36 +9,36 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5f1f8d6d783c6612fdb2bd2058b61a5a46024cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663361"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350776"
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
-Ein *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (UDT) von älteren Versionen von Visual Basic unterstützt. Neben Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können einzelne Zugriffsebenen für die einzelnen Felder deklarieren.  
+A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
   
- Sie können Datenelemente verschiedener Inhaltstypen zum Erstellen einer Strukturelements kombinieren. Eine Struktur ordnet eine oder mehrere *Elemente* miteinander und mit der Struktur selbst. Wenn Sie eine Struktur zu deklarieren, es wird eine *zusammengesetzten Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
+ You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
   
- Strukturen sind hilfreich, wenn Sie eine einzelne Variable zum Speichern von mehreren informationspaketen möchten. Beispielsweise empfiehlt es sich um Name, Durchwahl und Gehalt des Mitarbeiters zusammenzuhalten. Sie können mehrere Variablen für diese Informationen verwenden, oder Sie können eine Struktur definieren und verwenden sie für eine Variable für die einzelnen Mitarbeiter. Der Vorteil der Struktur wird deutlich, wenn Sie viele Mitarbeiter und aus diesem Grund viele Instanzen der Variablen haben.  
+ Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Zeigt, wie eine Struktur und seine Elemente zu deklarieren.  
+ [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ Shows how to declare a structure and its elements.  
   
  [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Erläutert das Zuweisen einer Struktur an eine Variable und den Zugriff auf die Elemente.  
+ Covers assigning a structure to a variable and accessing its elements.  
   
  [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Fasst zusammen, wie Strukturen mit Arrays, Objekte, Prozeduren und miteinander interagieren.  
+ Summarizes how structures interact with arrays, objects, procedures, and each other.  
   
  [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Beschreibt die ähnlichkeiten und Unterschiede zwischen Klassen und Strukturen.  
+ Describes the similarities and differences between structures and classes.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Führt die Visual Basic-Datentypen und beschreibt, wie sie.  
+ Introduces the Visual Basic data types and describes how to use them.  
   
  [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- Listet die elementare Datentypen, die von Visual Basic.
+ Lists the elementary data types supplied by Visual Basic.

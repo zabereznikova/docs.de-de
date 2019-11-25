@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 572537826074dd51b56f1cae9edb767708bc1c3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c9a1e889ab5adcb8f0eb5ea851c81a4f9ee56e95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321035"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138546"
 ---
 # <a name="load-balancing"></a>Lastenausgleich
 Eine Möglichkeit, um die Kapazität von Windows Communication Foundation (WCF)-Anwendungen zu erhöhen, besteht darin, Sie horizontal zu skalieren, indem Sie Sie in einer Serverfarm mit Lastenausgleich bereitstellen. Für WCF-Anwendungen kann ein Lastenausgleich mithilfe von Standardverfahren für den Lastenausgleich ausgeführt werden, einschließlich Software Lastenausgleich wie Windows-Netzwerk Lastenausgleich und hardwarebasierte Lasten Ausgleichs Geräte.  
@@ -17,7 +17,7 @@ Eine Möglichkeit, um die Kapazität von Windows Communication Foundation (WCF)-
  In den folgenden Abschnitten werden Überlegungen für den Lastenausgleich von WCF-Anwendungen erläutert, die mit verschiedenen vom System bereitgestellten Bindungen  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Lastenausgleich mit der Basic-HTTP-Bindung  
- Aus Sicht des Lasten Ausgleichs unterscheiden sich WCF-Anwendungen, die mit dem <xref:System.ServiceModel.BasicHttpBinding> kommunizieren, nicht von anderen gängigen Arten des http-Netzwerk Datenverkehrs (statischer HTML-Inhalt, ASP.NET-Seiten oder ASMX-Webdienste). WCF-Kanäle, die diese Bindung verwenden, sind grundsätzlich zustandslos und beenden ihre Verbindungen, wenn der Kanal geschlossen wird. Daher funktioniert die <xref:System.ServiceModel.BasicHttpBinding> gut mit vorhandenen HTTP-Lastenausgleichstechniken.  
+ Aus Sicht des Lasten Ausgleichs unterscheiden sich WCF-Anwendungen, die mit dem <xref:System.ServiceModel.BasicHttpBinding> kommunizieren, nicht von anderen gängigen Arten von http-Netzwerk Datenverkehr (statischer HTML-Inhalt, ASP.NET-Seiten oder ASMX-Webdienste). WCF-Kanäle, die diese Bindung verwenden, sind grundsätzlich zustandslos und beenden ihre Verbindungen, wenn der Kanal geschlossen wird. Daher funktioniert die <xref:System.ServiceModel.BasicHttpBinding> gut mit vorhandenen HTTP-Lastenausgleichstechniken.  
   
  Standardmäßig sendet die <xref:System.ServiceModel.BasicHttpBinding> einen HTTP-Verbindungsheader in Nachrichten mit einem `Keep-Alive`-Wert, der Clients ermöglicht, permanente Verbindungen zu den Diensten herzustellen, die sie unterstützen. Diese Konfiguration bietet einen höheren Durchsatz, da zuvor hergestellte Verbindungen erneut verwendet werden können, um nachfolgende Nachrichten an denselben Server zu senden. Die Wiederverwendung der Verbindung kann jedoch dazu führen, dass Clients eng mit einem bestimmten Server innerhalb der Serverfarm mit Lastenausgleich verbunden werden, was die Effektivität des Roundrobin-Lastenausgleichs reduziert. Wenn dieses Verhalten unerwünscht ist, kann HTTP `Keep-Alive` auf dem Server deaktiviert werden, indem die <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A>-Eigenschaft mit einer <xref:System.ServiceModel.Channels.CustomBinding> oder einer benutzerdefinierten <xref:System.ServiceModel.Channels.Binding> verwendet wird. Im folgenden Beispiel wird gezeigt, wie dieser Vorgang unter Verwendung der Konfiguration ausgeführt wird.  
   
@@ -56,7 +56,7 @@ Eine Möglichkeit, um die Kapazität von Windows Communication Foundation (WCF)-
 </configuration>  
 ```  
   
- Wenn Sie die in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] eingeführte vereinfachte Konfiguration verwenden, kann das gleiche Verhalten mit der folgenden vereinfachten Konfiguration erreicht werden.  
+ Mithilfe der vereinfachten Konfiguration, die in .NET Framework 4 eingeführt wurde, kann das gleiche Verhalten mithilfe der folgenden vereinfachten Konfiguration erreicht werden.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

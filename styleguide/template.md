@@ -14,16 +14,16 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775544"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089281"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
-Diese dotnet/docs-Vorlage enthält Beispiele der Markdownsyntax sowie einen Leitfaden zum Festlegen der Metadaten. Um die Vorlage bestmöglich zu nutzen, müssen Sie sowohl das [unformatierte Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) als auch die [gerenderte Ansicht](https://github.com/dotnet/docs/blob/master/styleguide/template.md) anzeigen (beispielsweise zeigt das unformatierte Markdown, anders als die gerenderte Ansicht, den Metadatenblock an).
+Diese dotnet/docs-Vorlage enthält Beispiele der Markdownsyntax sowie einen Leitfaden zum Festlegen der Metadaten. Sie müssen sowohl das [unformatierte Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) als auch die [gerenderte Ansicht](https://github.com/dotnet/docs/blob/master/styleguide/template.md) anzeigen, um die Vorlage bestmöglich zu nutzen.
 
 Beim Erstellen einer Markdowndatei sollten Sie diese Vorlage in eine neue Datei kopieren, die Metadaten wie nachstehend angegeben ausfüllen, den H1-Header oben als Titel des Artikels festlegen und den Inhalt löschen.
 
@@ -38,7 +38,7 @@ Der vollständige Metadatenblock befindet sich oben (im [unformatierten Markdown
 - **description**: Bietet eine Zusammenfassung des Artikelinhalts. Diese wird normalerweise auf der Seite mit den Suchergebnissen angezeigt, hat auf den Rang in den Suchergebnissen jedoch keine Auswirkungen. Die Länge sollte 115-145 Zeichen (einschließlich Leerzeichen) betragen.
 - **author** und **ms.author**: Das Feld „author“ sollte den **GitHub-Benutzernamen** des Autors enthalten, nicht dessen Alias.  Das Feld **ms.author** hingegen sollte einen Microsoft-Alias enthalten und die für die Verwaltung des Artikels verantwortliche Person angeben.
 - **ms.topic**: Der Thementyp. Der häufigste Wert ist `conceptual` und wird auf globaler Ebene festgelegt. Andere gängige Werte sind `tutorial`, `overview` und `reference`.
-- **ms.devlang** definiert den für das Thema angezeigten Sprachfilter. Eine Liste der unterstützten Werte finden Sie im Abschnitt [Unterstützte Sprachen](#supported-languages). Dieser Wert muss nur festgelegt werden, wenn mehr als eine Programmiersprache im Thema abgedeckt wird. In der Regel verwenden wir in unserem Inhalt nur `csharp`, `vb`, `fsharp` und `cpp` für diesen Wert.
+- **dev_langs** definiert den für das Thema angezeigten Sprachfilter. Eine Liste der unterstützten Werte finden Sie im Abschnitt [Unterstützte Sprachen](#supported-languages). Dieser Wert muss nur festgelegt werden, wenn mehr als eine Programmiersprache im Thema abgedeckt wird. In der Regel verwenden wir in unserem Inhalt nur `csharp`, `vb`, `fsharp` und `cpp` für diesen Wert.
 - **ms.prod**: Die für BI-Zwecke verwendete Produktidentifizierung. Sie werden normalerweise auf globaler Ebene festgelegt und daher für gewöhnlich nicht im Metadatenblock jedes Artikels angezeigt.
 - **ms.technology**: Zusätzliche BI-Klassifizierung. Dies sind einige der unterstützten Werte: `devlang-csharp` für C#-Themen, `devlang-fsharp` für F#-Themen und `devlang-visual-basic` für VB-Themen. Da bei anderen Leitfäden die Werte variieren, wenden Sie sich bitte an ein Teammitglied.
 - **ms.date**: Ein Datum im Format MM/TT/JJJJ. Wird auf der veröffentlichten Seite angezeigt und gibt das Datum der letzten wesentlichen Bearbeitung des Artikels an bzw. garantiert dessen Aktualität (d.h. der Artikel wurde überprüft und als aktuell eingestuft).
@@ -54,8 +54,8 @@ Alles grundlegende Markdown sowie GitHub Flavored Markdown (GFM) wird unterstüt
 
 Markdown verwendet Sonderzeichen wie z.B. \*, \`, und \# für die Formatierung. Wenn Sie eines dieser Zeichen in Ihren Inhalt einschließen möchten, müssen Sie einen der folgenden Schritte ausführen:
 
-- Setzen Sie einen umgekehrten Schrägstrich vor das Sonderzeichen, um es mit einem Escapezeichen zu versehen (z.B. `\*` für \*)
-- Verwenden Sie den [HTML-Entitätscode](https://www.ascii.cl/htmlcodes.htm) für das Zeichen (z.B. `&#42;` für ein &#42;).
+- Setzen Sie einen umgekehrten Schrägstrich vor das Sonderzeichen, um es mit einem Escapezeichen zu versehen (z. B. `\*` für \*)
+- Verwenden Sie den [HTML-Entitätscode](https://www.ascii.cl/htmlcodes.htm) für das Zeichen (z. B. `&#42;` für ein &#42;).
 
 ## <a name="file-name"></a>Dateiname
 
@@ -70,7 +70,9 @@ Dateinamen verwenden die folgenden Regeln:
 
 ## <a name="headings"></a>Kopfzeilen
 
-Verwenden Sie die übliche Groß-/Kleinschreibung. Schreiben Sie das erste Wort einer Überschrift immer groß, und beachten Sie die Regeln der Groß- und Kleinschreibung nach Doppelpunkten (z. B. „Vorgehensweise: Sortieren eines Arrays“).
+Verwenden Sie die übliche Groß-/Kleinschreibung. Schreiben Sie den ersten Buchstaben des ersten Worts einer Überschrift, Eigennamen und den ersten Buchstaben nach einem Doppelpunkt groß (z. B. „Tutorial: Vorhersagen von Preisen per Regression mit ML.NET“).
+
+Verwenden Sie bei der Beschreibung von Vorgehensweisen keinen Doppelpunkt (z. B. „Sortieren eines Arrays“ und nicht „Vorgehensweise: Sortieren eines Arrays“).
 
 Überschriften sollten mithilfe des atx-Stils erstellt werden, d.h. es sollten 1-6 Hash-Zeichen (#) am Anfang der Zeile verwendet werden, um eine Überschrift anzugeben, entsprechend der HTML-Überschriftenebenen H1 bis H6. Beispiele für Header der ersten und zweiten Ebene werden oben verwendet.
 
@@ -140,9 +142,9 @@ Die UID entspricht dem vollqualifizierten Typ und Membernamen.
 
 Wenn Sie ein \* (oder %2A) nach der UID hinzufügen, stellt der Link dann die Überladungsseite und nicht eine bestimmte API dar. Dies können Sie beispielsweise verwenden, wenn Sie generisch auf die Seite [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) anstelle einer bestimmten Überladung wie [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_) verweisen möchten. Sie können auch \* verwenden, um einen Link zu einer Memberseite zu erstellen, wenn das Member nicht überladen ist; so müssen Sie die Parameterliste nicht in die UID einschließen.
 
-Wenn Sie einen Link zu einer bestimmten Methodenüberladung erstellen möchten, müssen Sie den vollqualifizierten Typnamen jedes einzelnen Parameters der Methode angeben. \<xref:System.DateTime.ToString> ist beispielsweise mit der parameterlosen Methode [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) verknüpft, während \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> mit der Methode  [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) verknüpft ist. Sie können die UIDs eines bestimmten überladenen Members auf `https://xref.docs.microsoft.com/autocomplete` finden. Die Abfragezeichenfolge „?text= *\<Typmembername>* “ identifiziert den Typ oder das Member, dessen UIDs angezeigt werden sollen. Beispielsweise ruft `https://xref.docs.microsoft.com/autocomplete?text=string.format` die [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format)-Überladungen ab.
+Wenn Sie einen Link zu einer bestimmten Methodenüberladung erstellen möchten, müssen Sie den vollqualifizierten Typnamen jedes einzelnen Parameters der Methode angeben. \<xref:System.DateTime.ToString> ist beispielsweise mit der parameterlosen Methode [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) verknüpft, während \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> mit der Methode  [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) verknüpft ist. Sie können die UIDs eines bestimmten überladenen Members auf <https://xref.docs.microsoft.com/autocomplete> finden. Die Abfragezeichenfolge „?text= *\<Typmembername>* “ identifiziert den Typ oder das Member, dessen UIDs angezeigt werden sollen. Beispielsweise ruft <https://xref.docs.microsoft.com/autocomplete?text=string.format> die [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format)-Überladungen ab.
 
-Zum Erstellen eines Links zu einem generischen Typ wie [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) verwenden Sie das Zeichen ` (%60) gefolgt von der Anzahl von generischen Typparametern. \<xref:System.Nullable%601> erstellt einen Link zum Typ [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), während \<xref:System.Func%602> einen Link zum Delegaten [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) erstellt.
+Zum Erstellen eines Links zu einem generischen Typ wie [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) verwenden Sie das Zeichen \` (%60) gefolgt von der Anzahl von generischen Typparametern. \<xref:System.Nullable%601> erstellt einen Link zum Typ [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), während \<xref:System.Func%602> einen Link zum Delegaten [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) erstellt.
 
 Sie können eine der folgenden Syntaxen verwenden:
 
@@ -165,7 +167,7 @@ Weitere Informationen zur Verwendung dieser Notation finden Sie unter [Using cro
 Es gibt zwei Möglichkeiten, die UID zu bestimmen:
 
 - Sehen Sie sich die Quelle für die API-Seite an, die Sie verknüpfen möchten, und finden Sie den Wert „ms.assetid“. Beachten Sie, dass einzelne Überladungswerte in der Quelle nicht angezeigt werden.
-- Verwenden Sie für die Suche nach UIDs folgendes Tool: https://xref.docs.microsoft.com/autocomplete?text=tostring (Ersetzen Sie „tostring“ durch Teile des API-Namens, nach dem Sie suchen). Das Tool sucht nach dem angegebenen `text`-Abfrageparameter in jedem Teil der UID. Sie können zum Beispiel nach dem Membernamen (ToString), einem Teil des Membernamens (ToStri) oder dem Typ- und Membernamen (Double.ToString) suchen.
+- Verwenden Sie für die Suche nach UIDs folgendes Tool: <https://xref.docs.microsoft.com/autocomplete?text=tostring> (Ersetzen Sie „tostring“ durch Teile des API-Namens, nach dem Sie suchen). Das Tool sucht nach dem angegebenen `text`-Abfrageparameter in jedem Teil der UID. Sie können zum Beispiel nach dem Membernamen (ToString), einem Teil des Membernamens (ToStri) oder dem Typ- und Membernamen (Double.ToString) suchen.
 
 Wenn die UID die Sonderzeichen \`, \# und \* enthält, muss der UID-Wert als `%60`, `%23` bzw. `%2A` HTML-codiert werden. In manchen Fällen werden Sie codierte Klammern sehen, dies ist jedoch nicht zwingend erforderlich.
 
@@ -305,6 +307,7 @@ Verwenden Sie drei Graviszeichen (\`\`\`) + eine Sprachen-ID, um die sprachenspe
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps (Dezimaltrennzeichen: Punkt)|powerapps-dot|
 |PowerApps (Dezimaltrennzeichen: Komma)|powerapps-comma|
 |PowerShell|powershell|
@@ -319,12 +322,13 @@ Verwenden Sie drei Graviszeichen (\`\`\`) + eine Sprachen-ID, um die sprachenspe
 |VBScript|vbscript|
 |XAML|xaml|
 |XML|xml|
+|yml|yml|
 
 Der Name `csharp-interactive` gibt die C#-Programmiersprache und die Möglichkeit an, die Beispiele über den Browser auszuführen. Diese Codeausschnitte werden in einem Docker-Container kompiliert und ausgeführt, und die Ergebnisse dieser Programmausführung werden im Browserfenster des Benutzers angezeigt.
 
 Im Folgenden finden Sie Beispiele für Codeblöcke mit den Sprach-IDs für C# (\`\`\`csharp), Python (\`\`\`python) und PowerShell (\`\`\`powershell).
 
-##### <a name="c9839"></a>C&#9839;
+##### <a name="c"></a>C\#
 
 ```csharp
 using System;

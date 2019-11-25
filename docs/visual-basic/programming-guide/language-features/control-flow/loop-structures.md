@@ -1,5 +1,5 @@
 ---
-title: Schleifenstruktur (Visual Basic)
+title: Schleifenstruktur
 ms.date: 07/20/2015
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a75205a7d52c332094d624d082e5db3e89447f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906859"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353914"
 ---
 # <a name="loop-structures-visual-basic"></a>Schleifenstruktur (Visual Basic)
-Visual Basic-Schleifenstruktur können Sie eine oder mehrere Zeilen Code wiederholt auszuführen. Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung ist `False`, eine Zahl, die mehrmals oder einmal für jedes Element in einer angegebenen Auflistung.  
+Visual Basic loop structures allow you to run one or more lines of code repetitively. You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.  
   
- Die folgende Abbildung zeigt eine Schleifenstruktur, die einen Satz von Anweisungen ausgeführt, bis eine Bedingung erfüllt wird:  
+ The following illustration shows a loop structure that runs a set of statements until a condition becomes true:  
   
- ![Flussdiagramm, das zeigt, wie eine Do... Until-Schleife.](./media/loop-structures/do-until-loop-true-condition.gif)  
+ ![Flow chart that shows a Do...Until loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
-## <a name="while-loops"></a>While-Schleifen  
- Die `While`... `End While` Konstruktion wird eine Reihe von Anweisungen ausgeführt, solange die Bedingung in angegeben die `While` -Anweisung ist `True`. Weitere Informationen finden Sie unter [während... While-Anweisung enden](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+## <a name="while-loops"></a>While Loops  
+ The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`. For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
-## <a name="do-loops"></a>Do-Schleifen  
- Die `Do`... `Loop` Konstruktion können Sie eine Bedingung auf den Anfang oder Ende einer Schleifenstruktur zu testen. Sie können auch angeben, ob die Schleife wiederholt wird, solange die Bedingung bleibt `True` oder bis er wieder ist `True`. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+## <a name="do-loops"></a>Do Loops  
+ The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure. You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`. For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="for-loops"></a>For-Schleifen  
- Die `For`... `Next` Konstruktion führt eine festgelegte Anzahl an, wie oft die Schleife. Er verwendet eine Loop-Steuerelementvariable, die so genannte eine *Leistungsindikator*, zum Nachverfolgen der Wiederholungen. Sie die Start- und Endwerte für diesen Zähler angeben und optional können Sie angeben, die Menge, die mit der sie über eine Wiederholung an den nächsten erhöht. Weitere Informationen finden Sie unter [für... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
+## <a name="for-loops"></a>For Loops  
+ The `For`...`Next` construction performs the loop a set number of times. It uses a loop control variable, also called a *counter*, to keep track of the repetitions. You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next. For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
-## <a name="for-each-loops"></a>Foreach-Schleifen  
- Die `For Each`... `Next` Konstruktion wird eine Reihe von Anweisungen, die einmal für jedes Element in einer Sammlung ausgeführt. Sie geben die Loop-Steuerelementvariable, aber Sie müssen nicht bestimmt werden, starten oder den Endwert dieser. Weitere Informationen finden Sie unter [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+## <a name="for-each-loops"></a>For Each Loops  
+ The `For Each`...`Next` construction runs a set of statements once for each element in a collection. You specify the loop control variable, but you do not have to determine starting or ending values for it. For more information, see [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: XML-Nachfolgerachseneigenschaft (Visual Basic)
+title: XML Descendant Axis Property
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyDescendantsAxis
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: e2c3e01808d3eeb18f6753a5fc79b8627e7f323b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b2bf524214fa8ecca215d50c198b23d127e3b400
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582233"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349445"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML-Nachfolgerachseneigenschaft (Visual Basic)
 
-Bietet Zugriff auf die nachfolgenden der folgenden Elemente: ein <xref:System.Xml.Linq.XElement> Objekt, ein <xref:System.Xml.Linq.XDocument> Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement> Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument> Objekten.
+Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,16 +31,16 @@ object...<descendant>
 
 `object` ist erforderlich. Ein <xref:System.Xml.Linq.XElement>Objekt, ein <xref:System.Xml.Linq.XDocument>-Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement>Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.
 
-`...<` ist erforderlich. Gibt den Anfang einer untergeordneten Achsen Eigenschaft an.
+`...<` ist erforderlich. Denotes the start of a descendant axis property.
 
-`descendant` ist erforderlich. Name der untergeordneten Knoten, auf die im Format [`prefix:]name` zugegriffen werden soll.
+`descendant` ist erforderlich. Name of the descendant nodes to access, of the form [`prefix:]name`.
 
 |Segment|Beschreibung|
 |----------|-----------------|
-|`prefix`|Dies ist optional. XML-Namespace Präfix für den Nachfolger Knoten. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert wird.|
-|`name`|Erforderlich. Der lokale Name des untergeordneten Knotens. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Dies ist optional. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
+|`name`|Erforderlich. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` ist erforderlich. Bezeichnet das Ende einer Nachfolger Achsen Eigenschaft.
+`>` ist erforderlich. Denotes the end of a descendant axis property.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -48,17 +48,17 @@ Eine Auflistung von <xref:System.Xml.Linq.XElement>-Objekten.
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können eine XML-Nachfolger Achsen Eigenschaft für den Zugriff auf Nachfolger Knoten anhand des Namens aus einem <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XDocument>-Objekt oder aus einer Auflistung von <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XDocument> Objekten verwenden. Verwenden Sie die XML-`Value`-Eigenschaft, um auf den Wert des ersten untergeordneten Knotens in der zurückgegebenen Auflistung zuzugreifen. Weitere Informationen finden Sie unter [XML-Wert Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-Der Visual Basic-Compiler konvertiert Nachfolger Achsen Eigenschaften in Aufrufe der <xref:System.Xml.Linq.XContainer.Descendants%2A>-Methode.
+The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
 
 ## <a name="xml-namespaces"></a>XML-Namespaces
 
-Der Name in einer Nachfolger Achsen Eigenschaft kann nur XML-Namespaces verwenden, die Global mit der `Imports`-Anweisung deklariert werden. XML-Namespaces, die lokal in XML-Element Literalen deklariert sind, können nicht verwendet werden. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie auf den Wert des ersten untergeordneten Knotens mit dem Namen `name` und die Werte aller untergeordneten Knoten mit dem Namen `phone` aus dem `contacts`-Objekt zugegriffen wird.
+The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ Durch diesen Code wird folgender Text angezeigt:
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix. Anschließend wird das Präfix des-Namespace verwendet, um ein XML-Literalelement zu erstellen und auf den Wert des ersten untergeordneten Knotens mit dem qualifizierten Namen `ns:name` zuzugreifen.
+Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 

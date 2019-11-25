@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9a8db0670fff604cc9db8279ab1566e6e3fd3c8d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 29792726567373c907898cf6ced9891577f11588
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320673"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141629"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Wenn Sie einen Windows Communication Foundation (WCF)-Dienst mit einer Konfigurationsdatei konfigurieren, haben Sie die Flexibilität, Endpunkt-und Dienst Verhaltensdaten zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit bereitzustellen. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
   
- Ein WCF-Dienst kann mit der .NET Framework-Konfigurations Technologie konfiguriert werden. In den meisten Fällen werden XML-Elemente der Datei "Web. config" für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. Außerdem umfasst WCF mehrere vom System bereitgestellte Elemente, mit denen Sie schnell die grundlegendsten Features für einen Dienst auswählen können. Ab [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] enthält WCF ein neues Standard Konfigurations Modell, das die WCF-Konfigurations Anforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit einigen Standard Endpunkten und der Standard Bindung/dem Standardverhalten. In der Praxis ist das Schreiben von Konfigurationen ein wesentlicher Bestandteil der Programmierung von WCF-Anwendungen.  
+ Ein WCF-Dienst kann mit der .NET Framework-Konfigurations Technologie konfiguriert werden. In den meisten Fällen werden XML-Elemente der Datei "Web. config" für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen für die Kommunikation mit dem Dienst verwendeten Adressen) für einzelne Computer. Außerdem umfasst WCF mehrere vom System bereitgestellte Elemente, mit denen Sie schnell die grundlegendsten Features für einen Dienst auswählen können. Ab .NET Framework 4 enthält WCF ein neues Standard Konfigurations Modell, das die WCF-Konfigurations Anforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit einigen Standard Endpunkten und der Standard Bindung/dem Standardverhalten. In der Praxis ist das Schreiben von Konfigurationen ein wesentlicher Bestandteil der Programmierung von WCF-Anwendungen.  
   
  Weitere Informationen finden Sie unter [Konfigurieren von Bindungen für Dienste](configuring-bindings-for-wcf-services.md). Eine Liste der am häufigsten verwendeten Elemente finden Sie unter vom [System bereitgestellte Bindungen](system-provided-bindings.md). Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](./samples/simplified-configuration-for-wcf-services.md).  
   
@@ -66,21 +66,21 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Dienst mit einer Konfigura
 > [!NOTE]
 > Die Bindungs- und Verhaltensabschnitte sind optional und nur bei Bedarf enthalten.  
   
-### <a name="the-services-element"></a>Das \<services >-Element  
- Das `services` -Element enthält die Spezifikationen aller Dienste, die die Anwendung hostet. Wenn das vereinfachte Konfigurationsmodell in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]verwendet wird, ist dieser Abschnitt optional.  
+### <a name="the-services-element"></a>Das \<Services-> Element  
+ Das `services` -Element enthält die Spezifikationen aller Dienste, die die Anwendung hostet. Ab dem vereinfachten Konfigurations Modell in .NET Framework 4 ist dieser Abschnitt optional.  
   
- [\<-Dienste >](../configure-apps/file-schema/wcf/services.md)  
+ [\<Dienste >](../configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>Das \<service >-Element  
+### <a name="the-service-element"></a>Das \<Service >-Element  
  Jeder Dienst verfügt über diese Attribute:  
   
 - `name` Gibt den Typ an, der eine Implementierung eines Dienstvertrags bereitstellt. Dies ist ein vollqualifizierter Name, der aus dem Namespace und einem Punkt gefolgt von dem Typnamen besteht. Beispiel: `"MyNameSpace.myServiceType"`.  
   
 - `behaviorConfiguration` Gibt den Namen eines `behavior` -Elements an, das im `behaviors` -Element gefunden wurde. Das angegebene Verhalten steuert Aktionen, beispielsweise ob der Dienst Identitätswechsel erlaubt. Wenn der Wert ein leerer Name oder kein `behaviorConfiguration` ist, wird dem Dienst der Standardsatz von Dienstverhalten hinzugefügt.  
   
-- [\<-Dienst >](../configure-apps/file-schema/wcf/service.md)  
+- [\<Dienst >](../configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>Der \<endpoint >-Element  
+### <a name="the-endpoint-element"></a>Das > Element des \<Endpunkts.  
  Jeder Endpunkt benötigt eine Adresse, eine Bindung und einen Vertrag. Diese Elemente werden durch die folgenden Attribute dargestellt:  
   
 - `address` Gibt den Uniform Resource Identifier (URI) des Diensts an. Er kann als absolute Adresse oder als eine zur Basisadresse des Diensts relative Adresse angegeben werden. Eine leere Zeichenfolge zeigt an, dass der Endpunkt unter der Basisadresse verfügbar ist. Diese Basisadresse wird bei der Erstellung des <xref:System.ServiceModel.ServiceHost> für den Dienst angegeben.  
@@ -91,29 +91,29 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Dienst mit einer Konfigura
   
 - `contract` Gibt die Schnittstelle an, die den Vertrag definiert. Das ist die Schnittstelle, die im CLR-Typ (Common Language Runtime) implementiert ist, der vom `name` -Attribut des `service` -Elements angegeben wird.  
   
-- [\< Endpunkt >](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [\<Endpunkt >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
-### <a name="the-bindings-element"></a>Das \<binding >-Element  
+### <a name="the-bindings-element"></a>Das \<-Bindungs > Element  
  Das `bindings` -Element enthält die Spezifikationen für alle Bindungen, die von jedem in einem Dienst definierten Endpunkt verwendet werden können.  
   
- [\<-Bindungen >](../configure-apps/file-schema/wcf/bindings.md)  
+ [\<Bindungen >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-binding-element"></a>Das \<binding >-Element  
+### <a name="the-binding-element"></a>Das \<Bindungs > Element  
  Das `binding` -Elemente, die im `bindings` -Element enthalten sind, können entweder eine der systemeigenen Bindungen (siehe [System-Provided Bindings](system-provided-bindings.md)) oder eine benutzerdefinierte Bindung (siehe [Custom Bindings](./extending/custom-bindings.md)) sein. Das `binding` -Element verfügt über ein `name` -Attribut, das eine Beziehung zwischen der Bindung und dem Endpunkt herstellt, der im `bindingConfiguration` -Attribut des `endpoint` -Elements angegeben ist. Wenn kein Name angegeben wird, entspricht die Bindung der Standardbindung für diesen Bindungstyp.  
   
 Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unter [Konfigurieren von WCF-Diensten](configuring-services.md).
   
- [\<binding >](../misc/binding.md)  
+ [\<Bindungs >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-behaviors-element"></a>Das \<verhaltens>-Element  
+### <a name="the-behaviors-element"></a>Das \<Verhalten > Element  
  Dies ist ein Containerelement für die `behavior` -Elemente, die das Verhalten eines Diensts definieren.  
   
- [\<-Verhalten >](../configure-apps/file-schema/wcf/behaviors.md)  
+ [\<Verhalten >](../configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>Das \<behavior >-Element  
- Jedes `behavior`-Element wird durch ein `name`-Attribut identifiziert und stellt entweder ein vom System bereitgestelltes Verhalten dar, z. b. < `throttling` > oder ein benutzerdefiniertes Verhalten. Wenn kein Name angegeben wird, entspricht dieses Verhaltenselement dem standardmäßigen Dienst- oder Endpunktverhalten.  
+### <a name="the-behavior-element"></a>Das \<Verhalten > Element  
+ Jedes `behavior` Element wird durch ein `name` Attribut identifiziert und stellt entweder ein vom System bereitgestelltes Verhalten dar, z. b. <`throttling`> oder ein benutzerdefiniertes Verhalten. Wenn kein Name angegeben wird, entspricht dieses Verhaltenselement dem standardmäßigen Dienst- oder Endpunktverhalten.  
   
- [\<-Verhalten >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<Verhalten >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Gewusst wie: Verwenden von Bindungs- und Verhaltenskonfigurationen  
  WCF vereinfacht das Freigeben von Konfigurationen zwischen Endpunkten mithilfe eines Referenzsystems in der Konfiguration. Statt einem Endpunkt direkt Konfigurationswerte zuzuweisen, werden bindungsrelevante Konfigurationswerte in `bindingConfiguration` -Elementen des `<binding>` -Abschnitts gruppiert. Eine Bindungskonfiguration ist eine benannte Gruppe von Einstellungen einer Bindung. Endpunkte können dann mithilfe des Namens auf eine `bindingConfiguration` verweisen.  
@@ -148,7 +148,7 @@ Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unte
 </configuration>  
 ```  
   
- Das `name` -Attribut der `bindingConfiguration` wird im `<binding>` -Element festgelegt. Der `name` muss eine eindeutige Zeichenfolge im Bereich des Bindungs Typs sein – in diesem Fall der [< BasicHttpBinding @ no__t-2](../configure-apps/file-schema/wcf/basichttpbinding.md)oder ein leerer Wert, um auf die Standard Bindung zu verweisen. Der Endpunkt wird mit der Konfiguration verknüpft, indem das `bindingConfiguration` -Attribut auf diese Zeichenfolge festgelegt wird.  
+ Das `name` -Attribut der `bindingConfiguration` wird im `<binding>` -Element festgelegt. Der `name` muss eine eindeutige Zeichenfolge im Bereich des Bindungs Typs sein – in diesem Fall das [< BasicHttpBinding-\>](../configure-apps/file-schema/wcf/basichttpbinding.md)oder ein leerer Wert, um auf die Standard Bindung zu verweisen. Der Endpunkt wird mit der Konfiguration verknüpft, indem das `bindingConfiguration` -Attribut auf diese Zeichenfolge festgelegt wird.  
   
  Eine `behaviorConfiguration` wird genauso implementiert, wie das folgende Beispiel zeigt.  
   
@@ -188,7 +188,7 @@ Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unte
   
  `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- Und die Datei `~\Web.config` hat folgenden Inhalt:  
+ Und ihre `~\Web.config` Datei hat folgenden Inhalt:  
   
 ```xml  
 <configuration>  
@@ -222,7 +222,7 @@ Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unte
   
  Der Dienst unter ~\Child\Service.svc wird sowohl das serviceDebug-Verhalten als auch das serviceMetadata-Verhalten berücksichtigen. Der Dienst unter ~\Service.svc berücksichtigt lediglich das serviceDebug-Verhalten. Die beiden Verhaltensauflistungen mit demselben Namen (in diesem Fall einer leeren Zeichenfolge) werden zusammengeführt.  
   
- Sie können Verhaltens Auflistungen auch löschen, indem Sie das \<clear > Tag verwenden und einzelne Verhalten aus der Auflistung entfernen, indem Sie das \<remove >-Tag verwenden. Die folgenden beiden Konfigurationen führen beispielsweise dazu, dass der untergeordnete Dienst lediglich das serviceMetadata-Verhalten verwendet:  
+ Sie können Verhaltens Auflistungen auch löschen, indem Sie die \<> Tag löschen und einzelne Verhalten aus der Auflistung entfernen, indem Sie das \<> Tag entfernen verwenden. Die folgenden beiden Konfigurationen führen beispielsweise dazu, dass der untergeordnete Dienst lediglich das serviceMetadata-Verhalten verwendet:  
   
 ```xml  
 <configuration>  
@@ -260,11 +260,11 @@ Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unte
   
  Die Verhaltenszusammenführung wird sowohl auf Endpunktverhalten als auch auf Dienstverhalten in der Konfiguration angewendet.  
   
- Wenn eine untergeordnete Verhaltensauflistung ein Verhalten enthält, das bereits in der übergeordneten Verhaltensauflistung enthalten ist, wird das übergeordnete Verhalten vom untergeordneten überschrieben. Wenn also eine übergeordnete Verhaltens Auflistung `<serviceMetadata httpGetEnabled="False" />` und eine untergeordnete Verhaltens Auflistung `<serviceMetadata httpGetEnabled="True" />` enthielt, würde das untergeordnete Verhalten das übergeordnete Verhalten in der Verhaltens Auflistung überschreiben, und HttpGetEnabled wäre "true".  
+ Wenn eine untergeordnete Verhaltensauflistung ein Verhalten enthält, das bereits in der übergeordneten Verhaltensauflistung enthalten ist, wird das übergeordnete Verhalten vom untergeordneten überschrieben. Wenn also eine übergeordnete Verhaltens Auflistung `<serviceMetadata httpGetEnabled="False" />` und eine untergeordnete Verhaltens Auflistung `<serviceMetadata httpGetEnabled="True" />`hatte, überschreibt das untergeordnete Verhalten das übergeordnete Verhalten in der Verhaltens Auflistung, und HttpGetEnabled wäre "true".  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Vereinfachte Konfiguration](simplified-configuration.md)
 - [Konfigurieren von WCF-Diensten](configuring-services.md)
-- [\<-Dienst >](../configure-apps/file-schema/wcf/service.md)
-- [\<binding >](../misc/binding.md)
+- [\<Dienst >](../configure-apps/file-schema/wcf/service.md)
+- [\<Bindungs >](../configure-apps/file-schema/wcf/bindings.md)

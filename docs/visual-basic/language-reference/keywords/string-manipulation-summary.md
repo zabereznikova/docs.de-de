@@ -1,17 +1,17 @@
 ---
-title: 'Zeichenfolgenbearbeitung: Zusammenfassung (Visual Basic)'
+title: 'Zeichenfolgenbearbeitung: Zusammenfassung'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: db57633e2de0c4ae898c242ea754c5f5c2fcd211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c3808e3b17d8e91e6b29ca7c306c61354db607
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802595"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351657"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Zeichenfolgenbearbeitung: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -21,7 +21,7 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Vergleichen von zwei Zeichenfolgen|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
 |Konvertieren von Zeichenfolgen|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
 |Umkehren einer Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
-|Konvertieren in Groß- oder Kleinschreibung|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|Konvertieren in Groß- oder Kleinschreibung|<xref:Microsoft.VisualBasic.Strings.Format%2A>ist <xref:Microsoft.VisualBasic.Strings.LCase%2A>ist <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
 |Erstellen einer Zeichenfolge aus sich wiederholenden Zeichen|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
 |Suchen der Länge einer Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
 |Formatieren einer Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
@@ -34,5 +34,5 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -2,12 +2,12 @@
 title: Verwenden von WorkflowIdentity und Versionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958393"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142048"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Verwenden von WorkflowIdentity und Versionsverwaltung
 
@@ -89,9 +89,9 @@ The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded inst
 Um die <xref:System.Activities.WorkflowIdentity> einer persistenten Workflowinstanz abzurufen, wird die <xref:System.Activities.WorkflowApplication.GetInstance%2A>-Methode verwendet. Die <xref:System.Activities.WorkflowApplication.GetInstance%2A>-Methode verwendet die <xref:System.Activities.WorkflowApplication.Id%2A> der persistenten Workflowinstanz und den <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, der die persistente Instanz enthält und <xref:System.Activities.WorkflowApplicationInstance> zurückgibt. <xref:System.Activities.WorkflowApplicationInstance> enthält Informationen über eine persistente Workflowinstanz, einschließlich der zugeordneten <xref:System.Activities.WorkflowIdentity>. Diese zugeordnete <xref:System.Activities.WorkflowIdentity> kann vom Host verwendet werden, um die richtige Workflowdefinition bereitzustellen, wenn die Workflowinstanz geladen und fortgesetzt wird.
 
 > [!NOTE]
-> Eine leere <xref:System.Activities.WorkflowIdentity> ist gültig und kann vom Host verwendet werden, um Instanzen, die ohne zugeordnete <xref:System.Activities.WorkflowIdentity> gespeichert wurden, der richtigen Workflowdefinition zuzuordnen. Dieses Szenario tritt auf, wenn eine Workflowanwendung zunächst ohne Workflowversionsverwaltung geschrieben wurde oder wenn eine Anwendung von [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] aktualisiert wird. Weitere Informationen finden [Sie unter Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflow Versions](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)Verwaltung.
+> Eine leere <xref:System.Activities.WorkflowIdentity> ist gültig und kann vom Host verwendet werden, um Instanzen, die ohne zugeordnete <xref:System.Activities.WorkflowIdentity> gespeichert wurden, der richtigen Workflowdefinition zuzuordnen. Dieses Szenario kann auftreten, wenn eine Workflow Anwendung nicht anfänglich mit der Workflow Versionsverwaltung geschrieben wurde oder wenn eine Anwendung von .NET Framework 4 aktualisiert wird. Weitere Informationen finden [Sie unter Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflow Versions](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)Verwaltung.
 
-Im folgenden Beispiel wird ein `Dictionary<WorkflowIdentity, Activity>` verwendet, um- <xref:System.Activities.WorkflowIdentity> Instanzen den entsprechenden Workflow Definitionen zuzuordnen, und ein Workflow wird mithilfe der `MortgageWorkflow` Workflow Definition gestartet, die dem `identityV1` <xref:System.Activities.WorkflowIdentity>.
+Im folgenden Beispiel wird eine `Dictionary<WorkflowIdentity, Activity>` verwendet, um <xref:System.Activities.WorkflowIdentity>-Instanzen den entsprechenden Workflow Definitionen zuzuordnen, und ein Workflow wird mit der `MortgageWorkflow` Workflow Definition gestartet, die dem `identityV1` <xref:System.Activities.WorkflowIdentity>zugeordnet ist.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -146,9 +146,9 @@ wfApp.Load(instance);
 
 ## <a name="UpdatingWF4PersistenceDatabases"></a>Aktualisieren von .NET Framework 4 Persistenzdatenbanken zur Unterstützung der Workflow Versionsverwaltung
 
-Ein SqlWorkflowInstanceStoreSchemaUpgrade.sql-Datenbankskript wird bereitgestellt, um ein Upgrade für Persistenzdatenbanken auszuführen, die mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Datenbankskripts erstellt wurden. Dieses Skript aktualisiert die Datenbanken, um die neuen Versions Verwaltungsfunktionen zu unterstützen, die in .NET Framework 4,5 eingeführt wurden. Den persistenten Workflowinstanzen in den Datenbanken werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein.
+Ein sqlworkflowinstancestoreschemaupgrade. SQL-Datenbankskript wird zur Aktualisierung von Persistenzdatenbanken bereitgestellt, die mit den .NET Framework 4-Daten Bank Skripts erstellt Dieses Skript aktualisiert die Datenbanken, um die neuen Versions Verwaltungsfunktionen zu unterstützen, die in .NET Framework 4,5 eingeführt wurden. Den persistenten Workflowinstanzen in den Datenbanken werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein.
 
-Wenn eine .NET Framework 4,5-Workflow Anwendung alle Persistenzvorgänge versucht, die die neuen Versions Verwaltungsfunktionen für eine Persistenzdatenbank verwenden, die nicht mit dem <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> bereitgestellten Skript aktualisiert wurde, wird eine mit einer Meldung ähnlich der folgende Meldung wird angezeigt.
+Wenn eine .NET Framework 4,5-Workflow Anwendung alle Persistenzvorgänge versucht, die die neuen Versions Verwaltungsfunktionen für eine Persistenzdatenbank verwenden, die nicht mit dem bereitgestellten Skript aktualisiert wurde, wird eine-<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> mit einer Meldung ausgelöst, die der folgenden Meldung ähnelt:
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.

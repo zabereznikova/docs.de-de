@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424901"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281633"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -56,7 +56,7 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
 3. Das asynchrone IAsyncResult-Muster  
   
 #### <a name="task-based-asynchronous-pattern"></a>Taskbasiertes asynchrones Muster  
- Das aufgabenbasierte asynchrone Muster ist die bevorzugte Methode zum Implementieren asynchroner Vorgänge, weil es einfach und verständlich ist. Um diese Methode zu verwenden, implementieren Sie einfach den Dienstvorgang, und geben Sie den Rückgabetyp Task\<T> an, wobei T der Typ ist, der von der logischen Operation zurückgegeben wird. Beispiel:  
+ Das aufgabenbasierte asynchrone Muster ist die bevorzugte Methode zum Implementieren asynchroner Vorgänge, weil es einfach und verständlich ist. Um diese Methode zu verwenden, implementieren Sie einfach den Dienstvorgang, und geben Sie den Rückgabetyp Task\<T> an, wobei T der Typ ist, der von der logischen Operation zurückgegeben wird. Zum Beispiel:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -76,10 +76,10 @@ public class SampleService:ISampleService
  Der SampleMethodTaskAsync-Vorgang gibt Task\<string> zurück, da die logische Operation eine Zeichenfolge zurückgibt. Weitere Informationen über das taskbasierte asynchrone Muster finden Sie unter [Taskbasiertes asynchrones Muster](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
-> Bei Verwendung des taskbasierten asynchronen Musters kann bei einer Ausnahme eine T:System.AggregateException ausgelöst werden, während auf den Abschluss des Vorgangs gewartet wird. Diese Ausnahme kann für Clients oder Dienste auftreten.  
+> Bei Verwendung des taskbasierten asynchronen Musters kann bei einer Ausnahme eine {1}T:System.AggregateException{2} ausgelöst werden, während auf den Abschluss des Vorgangs gewartet wird. Diese Ausnahme kann für Clients oder Dienste auftreten.  
   
 #### <a name="event-based-asynchronous-pattern"></a>Ereignisbasiertes asynchrones Muster  
- Ein Dienst, der das ereignisbasierte asynchrone Muster unterstützt, verfügt über einen oder mehrere Vorgänge mit dem Namen MethodNameAsync. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein MethodNameCompleted-Ereignis und eine MethodNameAsyncCancel-Methode (kurz CancelAsync) verfügen. Ein Client, der den Vorgang aufrufen möchte, definiert einen Ereignishandler, der bei Abschluss des Vorgangs aufgerufen wird.  
+ Ein Dienst, der das ereignisbasierte asynchrone Muster unterstützt, verfügt über einen oder mehrere Vorgänge mit dem Namen {1}MethodNameAsync{2}. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein MethodNameCompleted-Ereignis und eine MethodNameAsyncCancel-Methode (kurz {1}CancelAsync{2}) verfügen. Ein Client, der den Vorgang aufrufen möchte, definiert einen Ereignishandler, der bei Abschluss des Vorgangs aufgerufen wird.  
   
  Der folgende Codeausschnitt veranschaulicht, wie asynchrone Vorgänge unter Verwendung des ereignisbasierten asynchronen Musters deklariert werden.  
   
@@ -174,7 +174,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  Dadurch generiert „Svcutil.exe“ eine WCF-Clientklasse mit der Ereignisinfrastruktur, die es der aufrufenden Anwendung ermöglicht, einen Ereignishandler zu implementieren und zuzuweisen, der die Antwort empfängt und die entsprechende Aktion einleitet. Ein vollständiges Beispiel finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Das ereignisbasierte asynchrone Modell ist jedoch nur in [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] verfügbar. Es wird darüber hinaus nicht einmal in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] unterstützt, wenn ein WCF-Clientkanal mithilfe einer <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> erstellt wird. Bei WCF-Clientkanalobjekten müssen Sie <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekte verwenden, um die Vorgänge asynchron aufzurufen. Geben Sie zum Verwenden dieses Ansatzes die **/async**-Befehlsoption für das [Service Model Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) an, wie in folgendem Beispiel dargestellt.  
+ Das ereignisbasierte asynchrone Modell ist jedoch nur in .NET Framework 3,5 verfügbar. Außerdem wird Sie auch in .NET Framework 3,5 nicht unterstützt, wenn ein WCF-Client Kanal mithilfe einer <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>erstellt wird. Bei WCF-Clientkanalobjekten müssen Sie <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekte verwenden, um die Vorgänge asynchron aufzurufen. Geben Sie zum Verwenden dieses Ansatzes die **/async**-Befehlsoption für das [Service Model Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) an, wie in folgendem Beispiel dargestellt.  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

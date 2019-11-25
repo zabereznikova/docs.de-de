@@ -1,82 +1,82 @@
 ---
-title: Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
+title: Auswirkungen der Kultur auf Zeichenfolgen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: d090a6e89a470958dd323c3f249ed0658dc1cefa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2520a7684b8710abd949543e3f17f77d3c631d22
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955099"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352477"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
-Auf dieser Hilfeseite wird erläutert, wie Visual Basic Kultur Informationen verwendet, um Zeichen folgen Konvertierungen und Vergleiche auszuführen.  
+This Help page discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
   
-## <a name="when-to-use-culture-specific-strings"></a>Verwendungszwecke kulturspezifischer Zeichen folgen  
- In der Regel sollten Sie Kultur abhängige Zeichen folgen für alle Daten verwenden, die Benutzern angezeigt und von diesen gelesen werden, und Kultur abhängige Zeichen folgen für die internen Daten Ihrer Anwendung verwenden.  
+## <a name="when-to-use-culture-specific-strings"></a>When to Use Culture-Specific Strings  
+ Typically, you should use culture-specific strings for all data presented to and read from users, and use culture-invariant strings for your application's internal data.  
   
- Wenn Ihre Anwendung z. b. Benutzer auffordert, ein Datum als Zeichenfolge einzugeben, sollte erwartet werden, dass Benutzer die Zeichen folgen gemäß ihrer Kultur formatieren, und die Anwendung sollte die Zeichenfolge entsprechend konvertieren. Wenn Ihre Anwendung dieses Datum dann in der Benutzeroberfläche anzeigt, sollte Sie in der Kultur des Benutzers vorhanden sein.  
+ For example, if your application asks users to enter a date as a string, it should expect users to format the strings according to their culture, and the application should convert the string appropriately. If your application then presents that date in its user interface, it should present it in the user's culture.  
   
- Wenn die Anwendung jedoch das Datum auf einen zentralen Server hochlädt, sollte Sie die Zeichenfolge entsprechend einer bestimmten Kultur formatieren, um Verwechslungen zwischen potenziell unterschiedlichen Datumsformaten zu vermeiden.  
+ However, if the application uploads the date to a central server, it should format the string according to one specific culture, to prevent confusion between potentially different date formats.  
   
-## <a name="culture-sensitive-functions"></a>Kultur abhängige Funktionen  
- Alle Visual Basic Zeichen folgen Konvertierungs Funktionen (außer den `Str` Funktionen und `Val` ) verwenden die Kultur Informationen der Anwendung, um sicherzustellen, dass die Konvertierungen und Vergleiche für die Kultur des Bedienungs.  
+## <a name="culture-sensitive-functions"></a>Culture-Sensitive Functions  
+ All of the Visual Basic string-conversion functions (except for the `Str` and `Val` functions) use the application's culture information to make sure that the conversions and comparisons are appropriate for the culture of the application's user.  
   
- Der Schlüssel für die erfolgreiche Verwendung von Funktionen zur Zeichen folgen Konvertierung in Anwendungen, die auf Computern mit unterschiedlichen Kultur Einstellungen ausgeführt werden, besteht darin, zu verstehen, welche Funktionen eine bestimmte Kultur Einstellung verwenden und welche die aktuelle Kultur Einstellung verwendet. Beachten Sie, dass die Kultur Einstellungen der Anwendung standardmäßig von den Kultur Einstellungen des Betriebssystems geerbt werden. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A> und [Funktionen zur Typkonvertierung](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ The key to successfully using string-conversion functions in applications that run on computers with different culture settings is to understand which functions use a specific culture setting, and which use the current culture setting. Notice that the application's culture settings are, by default, inherited from the culture settings of the operating system. For more information, see <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- Der `Str` (konvertiert Zahlen in Zeichen folgen) `Val` und (Konvertiert Zeichen folgen in Zahlen) Funktionen verwenden beim Konvertieren zwischen Zeichen folgen und Zahlen nicht die Kultur Informationen der Anwendung. Stattdessen wird nur der Punkt (.) als gültiges Dezimaltrennzeichen erkannt. Die Kultur abhängigen analog zu diesen Funktionen sind:  
+ The `Str` (converts numbers to strings) and `Val` (converts strings to numbers) functions do not use the application's culture information when converting between strings and numbers. Instead, they recognize only the period (.) as a valid decimal separator. The culturally-aware analogues of these functions are:  
   
-- **Konvertierungen mit der aktuellen Kultur.** Die `CStr` Funktionen `Format` und konvertieren eine Zahl in eine Zeichenfolge, und `CDbl` die `CInt` -und-Funktionen konvertieren eine Zeichenfolge in eine Zahl.  
+- **Conversions that use the current culture.** The `CStr` and `Format` functions convert a number to a string, and the `CDbl` and `CInt` functions convert a string to a number.  
   
-- **Konvertierungen, die eine bestimmte Kultur verwenden.** Jedes Number-Objekt verfügt `ToString(IFormatProvider)` über eine-Methode, die eine Zahl in eine Zeichen `Parse(String, IFormatProvider)` Folge konvertiert, und eine Methode, die eine Zeichenfolge in eine Zahl konvertiert. Der `Double` -Typ stellt beispielsweise die <xref:System.Double.ToString%28System.IFormatProvider%29> - <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> Methode und die-Methode bereit.  
+- **Conversions that use a specific culture.** Each number object has a `ToString(IFormatProvider)` method that converts a number to a string, and a `Parse(String, IFormatProvider)` method that converts a string to a number. For example, the `Double` type provides the <xref:System.Double.ToString%28System.IFormatProvider%29> and <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> methods.  
   
  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Conversion.Str%2A> und <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
-## <a name="using-a-specific-culture"></a>Verwenden einer bestimmten Kultur  
- Stellen Sie sich vor, dass Sie eine Anwendung entwickeln, die ein Datum (als Zeichenfolge formatiert) an einen Webdienst sendet. In diesem Fall muss die Anwendung eine bestimmte Kultur für die Zeichen folgen Konvertierung verwenden. Um dies zu veranschaulichen, sollten Sie das Ergebnis der Verwendung der <xref:System.DateTime.ToString> Date-Methode beachten: Wenn Ihre Anwendung diese Methode verwendet, um das Datum des 4. Juli 2005 zu formatieren, wird "7/4/2005 12:00:00 am" zurückgegeben, wenn Sie mit der Kultur "USA English (en-US)" ausgeführt wird. Sie gibt jedoch "04.07.2005 00:00:00" zurück, wenn Sie mit der Kultur Deutsch (de-de) ausgeführt wird.  
+## <a name="using-a-specific-culture"></a>Using a Specific Culture  
+ Imagine that you are developing an application that sends a date (formatted as a string) to a Web service. In this case, your application must use a specific culture for the string conversion. To illustrate why, consider the result of using the date's <xref:System.DateTime.ToString> method: If your application uses that method to format the date July 4, 2005, it returns "7/4/2005 12:00:00 AM" when run with the United States English (en-US) culture, but it returns "04.07.2005 00:00:00" when run with the German (de-DE) culture.  
   
- Wenn Sie eine Zeichen folgen Konvertierung in einem bestimmten Kultur Format ausführen müssen, sollten Sie die `CultureInfo` -Klasse verwenden, die in die .NET Framework integriert ist. Sie können ein neues `CultureInfo` -Objekt für eine bestimmte Kultur erstellen, indem Sie den Namen der Kultur an den <xref:System.Globalization.CultureInfo.%23ctor%2A> -Konstruktor übergeben. Die unterstützten Kultur Namen werden auf der <xref:System.Globalization.CultureInfo> Hilfeseite der-Klasse aufgelistet.  
+ When you need to perform a string conversion in a specific culture format, you should use the `CultureInfo` class that is built into the .NET Framework. You can create a new `CultureInfo` object for a specific culture by passing the culture's name to the <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor. The supported culture names are listed in the <xref:System.Globalization.CultureInfo> class Help page.  
   
- Alternativ können Sie eine Instanz der *invarianten Kultur* aus der <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> -Eigenschaft erhalten. Die invariante Kultur basiert auf der englischen Kultur, es gibt jedoch einige Unterschiede. Die invariante Kultur gibt z. b. eine 24-Stunden-Uhrzeit anstelle eines 12-Stunden-Formats an.  
+ Alternatively, you can get an instance of the *invariant culture* from the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property. The invariant culture is based on the English culture, but there are some differences. For example, the invariant culture specifies a 24-hour clock instead of a 12-hour clock.  
   
- Wenn Sie ein Datum in die Zeichenfolge der Kultur konvertieren möchten <xref:System.Globalization.CultureInfo> , übergeben Sie das-Objekt <xref:System.DateTime.ToString%28System.IFormatProvider%29> an die-Methode des Date-Objekts. Der folgende Code zeigt z. b. "07/04/2005 00:00:00" an, unabhängig von den Kultur Einstellungen der Anwendung.  
+ To convert a date to the culture's string, pass the <xref:System.Globalization.CultureInfo> object to the date object's <xref:System.DateTime.ToString%28System.IFormatProvider%29> method. For example, the following code displays "07/04/2005 00:00:00", regardless of the application's culture settings.  
   
  [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
-> Datums Literale werden immer gemäß der englischen Kultur interpretiert.  
+> Date literals are always interpreted according to the English culture.  
   
 ## <a name="comparing-strings"></a>Vergleichen von Zeichenfolgen  
- Es gibt zwei wichtige Situationen, in denen Zeichen folgen Vergleiche erforderlich sind:  
+ There are two important situations where string comparisons are needed:  
   
-- **Sortieren von Daten für die Anzeige für den Benutzer.** Verwenden Sie Vorgänge auf der Grundlage der aktuellen Kultur, damit die Zeichen folgen entsprechend sortiert werden.  
+- **Sorting data for display to the user.** Use operations based on the current culture so the strings sort appropriately.  
   
-- **Ermitteln, ob zwei Anwendungs interne Zeichen folgen exakt übereinstimmen (in der Regel aus Sicherheitsgründen).** Verwenden Sie Vorgänge, die die aktuelle Kultur ignorieren.  
+- **Determining if two application-internal strings exactly match (typically for security purposes).** Use operations that disregard the current culture.  
   
- Beide Arten von vergleichen können mit der Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> -Funktion durchgeführt werden. Geben Sie das `Compare` optionale Argument zum Steuern des Vergleichs Typs an `Text` : für die meisten Eingaben `Binary` und Ausgaben zum Bestimmen der exakten Übereinstimmungen.  
+ You can perform both types of comparisons with the Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> function. Specify the optional `Compare` argument to control the type of comparison: `Text` for most input and output `Binary` for determining exact matches.  
   
- Die `StrComp` -Funktion gibt eine ganze Zahl zurück, die die Beziehung zwischen den beiden verglichenen Zeichen folgen auf Grundlage der Sortierreihenfolge angibt Ein positiver Wert für das Ergebnis gibt an, dass die erste Zeichenfolge größer als die zweite Zeichenfolge ist. Ein negatives Ergebnis gibt an, dass die erste Zeichenfolge kleiner ist, und NULL gibt die Gleichheit zwischen den Zeichen folgen an.  
+ The `StrComp` function returns an integer that indicates the relationship between the two compared strings based on the sorting order. A positive value for the result indicates that the first string is greater than the second string. A negative result indicates the first string is smaller, and zero indicates equality between the strings.  
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Sie können auch den .NET Framework Partner `StrComp` der-Funktion verwenden, die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode. Dies ist eine statische, überladene Methode der Basis Zeichenfolgen-Klasse. Im folgenden Beispiel wird veranschaulicht, wie diese Methode verwendet wird:  
+ You can also use the .NET Framework partner of the `StrComp` function, the <xref:System.String.Compare%2A?displayProperty=nameWithType> method. This is a static, overloaded method of the base string class. The following example illustrates how this method is used:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
- Um die <xref:System.String.Compare%2A> Art und Weise zu steuern, wie die Vergleiche ausgeführt werden, können Sie zusätzliche über Ladungen der-Methode verwenden. Mit der <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode können Sie das `comparisonType` -Argument verwenden, um anzugeben, welcher Vergleichstyp verwendet werden soll.  
+ For finer control over how the comparisons are performed, you can use additional overloads of the <xref:System.String.Compare%2A> method. With the <xref:System.String.Compare%2A?displayProperty=nameWithType> method, you can use the `comparisonType` argument to specify which type of comparison to use.  
   
-|Wert für `comparisonType` Argument|Vergleichstyp|Empfohlene Verwendung|  
+|Value for `comparisonType` argument|Type of comparison|Empfohlene Verwendung|  
 |---|---|---|  
-|`Ordinal`|Vergleich basierend auf den Komponenten Bytes der Zeichenfolge.|Verwenden Sie diesen Wert beim vergleichen: Bezeichner für Groß-/Kleinschreibung, sicherheitsbezogene Einstellungen oder andere nicht linguistische Bezeichner, bei denen die Bytes genau übereinstimmen müssen.|  
-|`OrdinalIgnoreCase`|Vergleich basierend auf den Komponenten Bytes der Zeichenfolge.<br /><br /> `OrdinalIgnoreCase`bestimmt mithilfe der invarianten Kultur Informationen, ob sich zwei Zeichen nur in der Groß-und Kleinschreibung unterscheiden.|Verwenden Sie diesen Wert beim vergleichen: Bezeichner für die Groß-/Kleinschreibung, sicherheitsbezogene Einstellungen und in Windows gespeicherte Daten.|  
-|`CurrentCulture` oder `CurrentCultureIgnoreCase`|Vergleich basierend auf der Interpretation der Zeichen folgen in der aktuellen Kultur.|Verwenden Sie diese Werte, wenn Sie vergleichen: dem Benutzer angezeigte Daten, die meisten Benutzereingaben und andere Daten, die eine linguistische Interpretation erfordern.|  
-|`InvariantCulture` oder `InvariantCultureIgnoreCase`|Vergleich basierend auf der Interpretation der Zeichen folgen in der invarianten Kultur.<br /><br /> Dies unterscheidet `Ordinal` sich von und `OrdinalIgnoreCase`, da die invariante Kultur Zeichen außerhalb des zulässigen Bereichs als äquivalente invariante Zeichen behandelt.|Verwenden Sie diese Werte nur, wenn Sie persistente Daten vergleichen oder linguistisch relevante Daten anzeigen, die eine festgelegte Sortierreihenfolge erfordern.|  
+|`Ordinal`|Comparison based on strings' component bytes.|Use this value when comparing: case-sensitive identifiers, security-related settings, or other non-linguistic identifiers where the bytes must match exactly.|  
+|`OrdinalIgnoreCase`|Comparison based on strings' component bytes.<br /><br /> `OrdinalIgnoreCase` uses the invariant culture information to determine when two characters differ only in capitalization.|Use this value when comparing: case-insensitive identifiers, security-related settings, and data stored in Windows.|  
+|`CurrentCulture` oder `CurrentCultureIgnoreCase`|Comparison based on the strings' interpretation in the current culture.|Use these values when comparing: data that is displayed to the user, most user input, and other data that requires linguistic interpretation.|  
+|`InvariantCulture` oder `InvariantCultureIgnoreCase`|Comparison based on the strings' interpretation in the invariant culture.<br /><br /> This is different than the `Ordinal` and `OrdinalIgnoreCase`, because the invariant culture treats characters outside its accepted range as equivalent invariant characters.|Use these values only when comparing persisting data or displaying linguistically-relevant data that requires a fixed sort order.|  
   
 ### <a name="security-considerations"></a>Sicherheitsüberlegungen  
- Wenn Ihre Anwendung Sicherheitsentscheidungen auf Grundlage des Ergebnisses eines Vergleichs oder einer Änderung der Fall Änderung trifft, sollte der <xref:System.String.Compare%2A?displayProperty=nameWithType> Vorgang die-Methode verwenden und oder `OrdinalIgnoreCase` für `Ordinal` das `comparisonType` -Argument übergeben.  
+ If your application makes security decisions based on the result of a comparison or case-change operation, then the operation should use the <xref:System.String.Compare%2A?displayProperty=nameWithType> method, and pass `Ordinal` or `OrdinalIgnoreCase` for the `comparisonType` argument.  
   
 ## <a name="see-also"></a>Siehe auch
 

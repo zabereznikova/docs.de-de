@@ -4,12 +4,12 @@ description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationsk
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037651"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140666"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -21,16 +21,16 @@ XML-Dokumentationskommentare werden wie alle anderen Kommentare vom Compiler ign
 
 Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folgenden Aktionen durchführen:
 
-- Wenn Sie eine Anwendung mit .NET Core über die Befehlszeile entwickeln, können Sie im Abschnitt `<PropertyGroup>` der CSPROJ-Projektdatei ein [DocumentationFile-Element](/visualstudio/msbuild/common-msbuild-project-properties) hinzufügen. Im folgenden Beispiel wird eine XML-Datei im Projektverzeichnis mit dem gleichen Stammdateinamen wie die Assembly generiert:
+- Wenn Sie eine Anwendung mit .NET Core über die Befehlszeile entwickeln, können Sie im Abschnitt `<PropertyGroup>` der CSPROJ-Projektdatei ein `GenerateDocumentationFile`-Element hinzufügen. Ferner können Sie den Pfad zur Dokumentationsdatei direkt mithilfe des [`DocumentationFile`-Elements](/visualstudio/msbuild/common-msbuild-project-properties) angeben. Im folgenden Beispiel wird eine XML-Datei im Projektverzeichnis mit dem gleichen Stammdateinamen wie die Assembly generiert:
 
+   ```xml
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   ```
+   
+   Dieser Ausdruck ist äquivalent zu Folgendem:
+   
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-   ```
-
-   Sie können auch den genauen absoluten oder relativen Pfad und den Namen der XML-Datei angeben. Im folgenden Beispiel wird die XML-Datei in demselben Verzeichnis wie die Debugversion einer Anwendung generiert:
-
-   ```xml
-   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Wenn Sie eine Anwendung mit Visual Studio entwickeln, klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus. Wählen Sie im Eigenschaftendialogfeld die Registerkarte **Erstellen** aus, und aktivieren Sie das Kontrollkästchen bei **XML-Dokumentationsdatei**. Sie können auch den Speicherort ändern, an den der Compiler die Datei schreibt.
