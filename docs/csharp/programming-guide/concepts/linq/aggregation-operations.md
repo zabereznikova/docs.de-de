@@ -2,12 +2,12 @@
 title: Aggregationsvorgänge (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: 04415c430059057cef26b3750faa03b925cfa994
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aebefcad8a741a97a51e73bfade9d4a16d343100
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594981"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141532"
 ---
 # <a name="aggregation-operations-c"></a>Aggregationsvorgänge (C#)
 Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein einzelner Wert berechnet. Ein Beispiel für einen Aggregationsvorgang ist die Berechnung der durchschnittlichen Tagestemperatur aus den Tagestemperaturen eines Monats.  

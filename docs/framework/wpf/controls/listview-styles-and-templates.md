@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: 5f5a9d9f747246ee9b72b42a45291a42bb04cb88
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 579ce6fd7e4e7a1179fc686daeb95b9dea21ac90
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459376"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283719"
 ---
 # <a name="listview-styles-and-templates"></a>ListView-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ListView>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ListView>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="listview-parts"></a>ListView-Teile  
  Das <xref:System.Windows.Controls.ListView>-Steuerelement verfügt über keine benannten Teile.  
@@ -42,7 +42,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
 |Normal|CommonStates|Der Standardzustand|  
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
@@ -71,4 +71,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

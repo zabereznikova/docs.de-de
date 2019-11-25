@@ -2,20 +2,20 @@
 title: Cacheunterstützung für WCF-Web-HTTP-Dienste
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988776"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141789"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cacheunterstützung für WCF-Web-HTTP-Dienste
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]ermöglicht Ihnen die Verwendung des deklarativen zwischen Speicherungs Mechanismus, der in ASP.net bereits in den WCF-Web-http-Diensten verfügbar ist. Auf diese Weise können Sie Antworten der WCF-Web-HTTP-Dienstvorgänge zwischenspeichern. Wenn ein Benutzer HTTP GET an den Dienst sendet, der zum Zwischenspeichern konfiguriert ist, sendet ASP.NET die zwischengespeicherte Antwort zurück, und die Dienstmethode wird nicht aufgerufen. Wenn der Cache abgelaufen ist, wird beim nächsten Senden eines HTTP GET durch einen Benutzer die Dienstmethode aufgerufen und die Antwort erneut zwischengespeichert. Weitere Informationen zum Zwischenspeichern von ASP.net finden Sie unter [ASP.NET Caching Overview](https://go.microsoft.com/fwlink/?LinkId=152534) .  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ermöglicht Ihnen die Verwendung des deklarativen zwischen Speicherungs Mechanismus, der in ASP.net in den WCF-Web-http-Diensten bereits verfügbar ist. Auf diese Weise können Sie Antworten der WCF-Web-HTTP-Dienstvorgänge zwischenspeichern. Wenn ein Benutzer HTTP GET an den Dienst sendet, der zum Zwischenspeichern konfiguriert ist, sendet ASP.NET die zwischengespeicherte Antwort zurück, und die Dienstmethode wird nicht aufgerufen. Wenn der Cache abgelaufen ist, wird beim nächsten Senden eines HTTP GET durch einen Benutzer die Dienstmethode aufgerufen und die Antwort erneut zwischengespeichert. Weitere Informationen zum Zwischenspeichern von ASP.net finden Sie unter [ASP.NET Caching Overview](https://go.microsoft.com/fwlink/?LinkId=152534) .  
   
 ## <a name="basic-web-http-service-caching"></a>Grundlegendes Zwischenspeichern von Web-HTTP-Diensten  
  Zum Aktivieren des Zwischenspeicherns von WEB-HTTP-Diensten müssen Sie zuerst die ASP.NET-Kompatibilität aktivieren, indem Sie <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf die Diensteinstellung <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> und <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> anwenden.  
   
- Mit [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wird ein neues Attribut mit dem Namen <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> eingeführt, das Ihnen das Angeben eines Cacheprofilnamens ermöglicht. Dieses Attribut wird auf einen Dienstvorgang angewendet. Im folgenden Beispiel wird <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf einen Dienst angewendet, um ASP.NET-Kompatibilität zu erzielen, und der `GetCustomer`-Vorgang wird für die Zwischenspeicherung konfiguriert. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>-Attribut gibt ein Cacheprofil an, das die zu verwendenden Cacheeinstellungen enthält.  
+ .NET Framework 4 führt ein neues Attribut mit dem Namen <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> ein, mit dem Sie einen Cache Profilnamen angeben können. Dieses Attribut wird auf einen Dienstvorgang angewendet. Im folgenden Beispiel wird <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf einen Dienst angewendet, um ASP.NET-Kompatibilität zu erzielen, und der `GetCustomer`-Vorgang wird für die Zwischenspeicherung konfiguriert. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>-Attribut gibt ein Cacheprofil an, das die zu verwendenden Cacheeinstellungen enthält.  
   
 ```csharp
 [ServiceContract] 
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- Dies ist das gleiche Konfigurationselement, das für ASP.NET-Anwendungen verfügbar ist. Weitere Informationen zu ASP.NET-Cache Profilen finden <xref:System.Web.Configuration.OutputCacheProfile>Sie unter. Die wichtigsten Attribute im Cacheprofil für Web-HTTP-Dienste sind `cacheDuration` und `varyByParam`. Beide Attribute sind erforderlich. `cacheDuration` legt den Zeitraum in Sekunden fest, für den eine Antwort zwischengespeichert werden soll. Mit `varyByParam` können Sie einen Abfragezeichenfolgenparameter angeben, der zum Zwischenspeichern von Antworten verwendet wird. Alle Anforderungen, die mit unterschiedlichen Abfragezeichenfolgenparameter-Werten gestellt werden, werden separat zwischengespeichert. Wenn beispielsweise eine anfängliche Anforderung an `http://MyServer/MyHttpService/MyOperation?param=10`gesendet wird, würden alle nachfolgenden Anforderungen mit dem gleichen URI die zwischengespeicherte Antwort zurückgegeben (solange die Cache Dauer nicht verstrichen ist). Antworten für eine ähnliche Anforderung, die gleich ist, jedoch über einen anderen Wert als Abfragezeichenfolgenparameter verfügt, werden getrennt zwischengespeichert. Falls Sie dieses separate Zwischenspeicherverhalten nicht wünschen, legen Sie `varyByParam` auf "none" fest.  
+ Dies ist das gleiche Konfigurationselement, das für ASP.NET-Anwendungen verfügbar ist. Weitere Informationen zu ASP.NET-Cache Profilen finden Sie unter <xref:System.Web.Configuration.OutputCacheProfile>. Die wichtigsten Attribute im Cacheprofil für Web-HTTP-Dienste sind `cacheDuration` und `varyByParam`. Beide Attribute sind erforderlich. `cacheDuration` legt den Zeitraum in Sekunden fest, für den eine Antwort zwischengespeichert werden soll. Mit `varyByParam` können Sie einen Abfragezeichenfolgenparameter angeben, der zum Zwischenspeichern von Antworten verwendet wird. Alle Anforderungen, die mit unterschiedlichen Abfragezeichenfolgenparameter-Werten gestellt werden, werden separat zwischengespeichert. Wenn z. b. eine anfängliche Anforderung an `http://MyServer/MyHttpService/MyOperation?param=10`erfolgt, würden alle nachfolgenden Anforderungen, die mit demselben URI erfolgen, die zwischengespeicherte Antwort zurückgeben (solange die Cache Dauer nicht verstrichen ist). Antworten für eine ähnliche Anforderung, die gleich ist, jedoch über einen anderen Wert als Abfragezeichenfolgenparameter verfügt, werden getrennt zwischengespeichert. Falls Sie dieses separate Zwischenspeicherverhalten nicht wünschen, legen Sie `varyByParam` auf "none" fest.  
   
 ## <a name="sql-cache-dependency"></a>SQL-Cacheabhängigkeit  
  Antworten auf Web-HTTP-Dienste können auch mit einer SQL-Cacheabhängigkeit zwischengespeichert werden. Wenn der WCF-Web-HTTP-Dienst von in einer SQL-Datenbank gespeicherten Daten abhängig ist, sollten Sie die Antwort des Diensts zwischenspeichern und die zwischengespeicherte Antwort für ungültig erklären, wenn sich die Daten in der SQL-Datenbanktabelle ändern. Dieses Verhalten wird vollständig in der Datei "Web.config" konfiguriert. Sie müssen zunächst eine Verbindungs Zeichenfolge im <`connectionStrings`>-Element definieren.  
@@ -71,7 +71,7 @@ public class Service
 </connectionStrings>
 ```  
   
- Anschließend müssen Sie die SQL-Cache Abhängigkeit innerhalb eines`caching`< >-Elements innerhalb`system.web`des < > Elements aktivieren, wie im folgenden Konfigurationsbeispiel gezeigt.  
+ Anschließend müssen Sie die SQL-Cache Abhängigkeit in einem <`caching`>-Element innerhalb des <`system.web`>-Elements aktivieren, wie im folgenden Konfigurationsbeispiel gezeigt.  
   
 ```xml  
 <system.web>
@@ -87,7 +87,7 @@ public class Service
 </system.web>
 ```  
   
- Hier wird die SQL-Cacheabhängigkeit aktiviert und ein Abrufzeitraum von 1000 Millisekunden festgelegt. Wenn der Abrufzeitraum verstrichen ist, wird die Datenbanktabelle jeweils auf Updates geprüft. Wenn Änderungen erkannt werden, wird der Inhalt des Caches entfernt, und beim nächsten Aufrufen des Dienstvorgangs wird eine neue Antwort zwischengespeichert. Fügen Sie im`sqlCacheDependency`< >-Element die Datenbanken hinzu, und verweisen Sie auf`databases`die Verbindungs Zeichenfolgen im < >-Element, wie im folgenden Beispiel gezeigt.  
+ Hier wird die SQL-Cacheabhängigkeit aktiviert und ein Abrufzeitraum von 1000 Millisekunden festgelegt. Wenn der Abrufzeitraum verstrichen ist, wird die Datenbanktabelle jeweils auf Updates geprüft. Wenn Änderungen erkannt werden, wird der Inhalt des Caches entfernt, und beim nächsten Aufrufen des Dienstvorgangs wird eine neue Antwort zwischengespeichert. Fügen Sie im <`sqlCacheDependency`>-Element die Datenbanken hinzu, und verweisen Sie auf die Verbindungs Zeichenfolgen innerhalb des <`databases`>-Elements, wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <system.web>
@@ -103,7 +103,7 @@ public class Service
 </system.web>  
 ```  
   
- Im nächsten Schritt müssen Sie die Ausgabe Cache Einstellungen innerhalb des`caching`< >-Elements konfigurieren, wie im folgenden Beispiel gezeigt.  
+ Im nächsten Schritt müssen Sie die Ausgabe Cache Einstellungen innerhalb des <`caching`>-Elements konfigurieren, wie im folgenden Beispiel gezeigt.  
   
 ```xml
 <system.web>

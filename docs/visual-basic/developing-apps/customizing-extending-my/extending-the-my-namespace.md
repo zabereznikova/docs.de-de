@@ -1,5 +1,5 @@
 ---
-title: Erweitern des My-Namespaces in Visual Basic
+title: Erweitern des My-Namespaces
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddingMyExtensions
@@ -8,83 +8,83 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 6da0914c9d2d4dc1220ede5d6fa9f1aa6b43426a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2a7b0b84061fccd9a333a68e4a19477bd19ca4ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775300"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330315"
 ---
-# <a name="extending-the-my-namespace-in-visual-basic"></a>Erweitern des `My` Namespace in Visual Basic
+# <a name="extending-the-my-namespace-in-visual-basic"></a>Extending the `My` Namespace in Visual Basic
 
-Der `My`-Namespace in Visual Basic stellt Eigenschaften und Methoden zur Verfügung, mit denen Sie die Vorteile der .NET Framework problemlos nutzen können. Der `My`-Namespace vereinfacht häufige Programmierprobleme, wodurch eine schwierige Aufgabe häufig auf eine einzelne Codezeile reduziert wird. Außerdem ist der `My`-Namespace vollständig erweiterbar, sodass Sie das Verhalten von `My` anpassen und neue Dienste zur Hierarchie hinzufügen können, um Sie an bestimmte Anwendungsanforderungen anzupassen. In diesem Thema wird erläutert, wie vorhandene Member des `My`-Namespace angepasst werden und wie eigene benutzerdefinierte Klassen zum `My`-Namespace hinzugefügt werden.
+The `My` namespace in Visual Basic exposes properties and methods that enable you to easily take advantage of the power of the .NET Framework. The `My` namespace simplifies common programming problems, often reducing a difficult task to a single line of code. Additionally, the `My` namespace is fully extensible so that you can customize the behavior of `My` and add new services to its hierarchy to adapt to specific application needs. This topic discusses both how to customize existing members of the `My` namespace and how to add your own custom classes to the `My` namespace.
 
-## <a name="customizing-existing-my-namespace-members"></a>Anpassen vorhandener `My` Namespace-Member
+## <a name="customizing-existing-my-namespace-members"></a>Customizing existing `My` namespace members
 
-Der `My`-Namespace in Visual Basic stellt häufig verwendete Informationen zu Ihrer Anwendung, Ihrem Computer und mehr zur Verfügung. Eine komplette Liste der Objekte im `My`-Namespace finden Sie unter [My Reference (meine Referenz](../../language-reference/keywords/my-reference.md)). Möglicherweise müssen Sie vorhandene Member des `My`-Namespace anpassen, damit Sie den Anforderungen Ihrer Anwendung besser entsprechen. Jede Eigenschaft eines Objekts im `My` Namespace, die nicht schreibgeschützt ist, kann auf einen benutzerdefinierten Wert festgelegt werden.
+The `My` namespace in Visual Basic exposes frequently used information about your application, your computer, and more. For a complete list of the objects in the `My` namespace, see [My Reference](../../language-reference/keywords/my-reference.md). You may have to customize existing members of the `My` namespace so that they better match the needs of your application. Any property of an object in the `My` namespace that is not read-only can be set to a custom value.
 
-Nehmen Sie beispielsweise an, dass Sie häufig das `My.User`-Objekt verwenden, um auf den aktuellen Sicherheitskontext für den Benutzer zuzugreifen, der Ihre Anwendung ausgeführt hat. Ihr Unternehmen verwendet jedoch ein benutzerdefiniertes Benutzerobjekt, um zusätzliche Informationen und Funktionen für Benutzer innerhalb des Unternehmens verfügbar zu machen. In diesem Szenario können Sie den Standardwert der `My.User.CurrentPrincipal`-Eigenschaft durch eine Instanz Ihres eigenen benutzerdefinierten Prinzipal Objekts ersetzen, wie im folgenden Beispiel gezeigt:
+For example, assume that you frequently use the `My.User` object to access the current security context for the user running your application. However, your company uses a custom user object to expose additional information and capabilities for users within the company. In this scenario, you can replace the default value of the `My.User.CurrentPrincipal` property with an instance of your own custom principal object, as shown in the following example:
 
 [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]
 
-Wenn Sie die `CurrentPrincipal`-Eigenschaft für das `My.User` Objekt festlegen, ändert sich die Identität, unter der die Anwendung ausgeführt wird. Das `My.User`-Objekt wiederum gibt Informationen zum neu angegebenen Benutzer zurück.
+Setting the `CurrentPrincipal` property on the `My.User` object changes the identity under which the application runs. The `My.User` object, in turn, returns information about the newly specified user.
   
-## <a name="adding-members-to-my-objects"></a>Hinzufügen von Membern zu `My` Objekten
+## <a name="adding-members-to-my-objects"></a>Adding members to `My` objects
 
-Die von `My.Application` und `My.Computer` zurückgegebenen Typen werden als `Partial` Klassen definiert. Aus diesem Grund können Sie die Objekte `My.Application` und `My.Computer` erweitern, indem Sie eine `Partial` Klasse mit dem Namen `MyApplication` oder `MyComputer` erstellen. Die Klasse kann keine `Private` Klasse sein. Wenn Sie die-Klasse als Teil des `My`-Namespace angeben, können Sie Eigenschaften und Methoden hinzufügen, die in der `My.Application`-oder `My.Computer`-Objekte enthalten sein werden.
+The types returned from `My.Application` and `My.Computer` are defined as `Partial` classes. Therefore, you can extend the `My.Application` and `My.Computer` objects by creating a `Partial` class named `MyApplication` or `MyComputer`. The class cannot be a `Private` class. If you specify the class as part of the `My` namespace, you can add properties and methods that will be included with the `My.Application` or `My.Computer` objects.
 
-Im folgenden Beispiel wird dem `My.Computer`-Objekt eine Eigenschaft mit dem Namen `DnsServerIPAddresses` hinzugefügt:
+The following example adds a property named `DnsServerIPAddresses` to the `My.Computer` object:
 
 [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]
 
-## <a name="adding-custom-objects-to-the-my-namespace"></a>Hinzufügen von benutzerdefinierten Objekten zum `My`-Namespace
+## <a name="adding-custom-objects-to-the-my-namespace"></a>Adding custom objects to the `My` namespace
 
-Obwohl der `My`-Namespace Lösungen für viele gängige Programmieraufgaben bereitstellt, können Sie Aufgaben erkennen, die der `My`-Namespace nicht adressiert. Beispielsweise kann Ihre Anwendung auf benutzerdefinierte Verzeichnisdienste zugreifen, oder die Anwendung verwendet Assemblys, die nicht standardmäßig mit Visual Basic installiert werden. Sie können den `My`-Namespace erweitern, um benutzerdefinierte Lösungen für allgemeine Aufgaben zu integrieren, die für Ihre Umgebung spezifisch sind. Der `My`-Namespace kann problemlos erweitert werden, um neue Mitglieder hinzuzufügen, um wachsende Anwendungsanforderungen zu erfüllen. Darüber hinaus können Sie Ihre `My`-Namespace Erweiterungen für andere Entwickler als Visual Basic Vorlage bereitstellen.
+Although the `My` namespace provides solutions for many common programming tasks, you may encounter tasks that the `My` namespace does not address. For example, your application might access custom directory services for user data, or your application might use assemblies that are not installed by default with Visual Basic. You can extend the `My` namespace to include custom solutions to common tasks that are specific to your environment. The `My` namespace can easily be extended to add new members to meet growing application needs. Additionally, you can deploy your `My` namespace extensions to other developers as a Visual Basic template.
   
-### <a name="adding-members-to-the-my-namespace"></a>Hinzufügen von Elementen zum `My`-Namespace
+### <a name="adding-members-to-the-my-namespace"></a>Adding members to the `My` namespace
 
-Da `My` ein Namespace wie ein beliebiger anderer Namespace ist, können Sie ihm Eigenschaften der obersten Ebene hinzufügen, indem Sie einfach ein Modul hinzufügen und eine `Namespace` `My` angeben. Kommentieren Sie das Modul mit dem `HideModuleName`-Attribut, wie im folgenden Beispiel gezeigt. Das `HideModuleName`-Attribut stellt sicher, dass IntelliSense den Modulnamen nicht anzeigt, wenn die Elemente des `My`-Namespace angezeigt werden.
+Because `My` is a namespace like any other namespace, you can add top-level properties to it by just adding a module and specifying a `Namespace` of `My`. Annotate the module with the `HideModuleName` attribute as shown in the following example. The `HideModuleName` attribute ensures that IntelliSense will not display the module name when it displays the members of the `My` namespace.
 
 [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]
 
-Um dem `My`-Namespace Elemente hinzuzufügen, fügen Sie dem Modul nach Bedarf Eigenschaften hinzu. Fügen Sie für jede Eigenschaft, die dem `My`-Namespace hinzugefügt wird, ein privates Feld vom Typ `ThreadSafeObjectProvider(Of T)` hinzu, wobei der Typ der von der benutzerdefinierten Eigenschaft zurückgegebene Typ ist. Dieses Feld wird verwendet, um Thread sichere Objektinstanzen zu erstellen, die von der-Eigenschaft zurückgegeben werden, indem die `GetInstance`-Methode aufgerufen wird. Folglich erhält jeder Thread, der auf die erweiterte Eigenschaft zugreift, eine eigene Instanz des zurückgegebenen Typs. Im folgenden Beispiel wird dem `My`-Namespace eine Eigenschaft mit dem Namen `SampleExtension` hinzugefügt, die vom Typ `SampleExtension` ist:
+To add members to the `My` namespace, add properties as needed to the module. For each property added to the `My` namespace, add a private field of type `ThreadSafeObjectProvider(Of T)`, where the type is the type returned by your custom property. This field is used to create thread-safe object instances to be returned by the property by calling the `GetInstance` method. As a result, each thread that is accessing the extended property receives its own instance of the returned type. The following example adds a property named `SampleExtension` that is of type `SampleExtension` to the `My` namespace:
 
 [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]
 
-## <a name="adding-events-to-custom-my-objects"></a>Hinzufügen von Ereignissen zu benutzerdefinierten `My` Objekten
+## <a name="adding-events-to-custom-my-objects"></a>Adding events to custom `My` objects
 
-Sie können das `My.Application`-Objekt verwenden, um Ereignisse für die benutzerdefinierten `My` Objekte verfügbar zu machen, indem Sie die `MyApplication` partielle Klasse im `My`-Namespace erweitern. Für Windows-basierte Projekte können Sie in **Projektmappen-Explorer**auf den Knoten **mein Projekt** in für das Projekt doppelklicken. Klicken Sie im Visual Basic **Projekt-Designer**auf die Registerkarte **Anwendung** , und klicken Sie dann auf die Schaltfläche **Anwendungs Ereignisse anzeigen** . Eine neue Datei mit dem Namen " *ApplicationEvents. vb* " wird erstellt. Sie enthält den folgenden Code zum Erweitern der `MyApplication`-Klasse:
+You can use the `My.Application` object to expose events for your custom `My` objects by extending the `MyApplication` partial class in the `My` namespace. For Windows-based projects, you can double-click the **My Project** node in for your project in **Solution Explorer**. In the Visual Basic **Project Designer**, click the **Application** tab and then click the **View Application Events** button. A new file that is named *ApplicationEvents.vb* will be created. It contains the following code for extending the `MyApplication` class:
 
 [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]
 
-Sie können Ereignishandler für die benutzerdefinierten `My`-Objekte hinzufügen, indem Sie der `MyApplication`-Klasse benutzerdefinierte Ereignishandler hinzufügen. Mit benutzerdefinierten Ereignissen können Sie Code hinzufügen, der ausgeführt wird, wenn ein Ereignishandler hinzugefügt, entfernt oder das-Ereignis ausgelöst wird. Beachten Sie, dass der `AddHandler` Code für ein benutzerdefiniertes Ereignis nur ausgeführt wird, wenn der Benutzercode zur Behandlung des Ereignisses hinzufügt. Beachten Sie z. b., dass das `SampleExtension`-Objekt aus dem vorherigen Abschnitt ein `Load` Ereignis aufweist, für das Sie einen benutzerdefinierten Ereignishandler hinzufügen möchten. Das folgende Codebeispiel zeigt einen benutzerdefinierten Ereignishandler mit dem Namen `SampleExtensionLoad`, der beim Auftreten des `My.SampleExtension.Load` Ereignisses aufgerufen wird. Wenn Code zum Verarbeiten des neuen `My.SampleExtensionLoad` Ereignisses hinzugefügt wird, wird der `AddHandler` Teil dieses benutzerdefinierten Ereignis Codes ausgeführt. Die `MyApplication_SampleExtensionLoad`-Methode ist im Codebeispiel enthalten, um ein Beispiel eines Ereignis Handlers anzuzeigen, der das `My.SampleExtensionLoad`-Ereignis behandelt. Beachten Sie, dass das `SampleExtensionLoad` Ereignis verfügbar ist, wenn Sie die Option **meine Anwendungs Ereignisse** in der linken Dropdown Liste oberhalb des Code-Editors auswählen, wenn Sie die Datei " *ApplicationEvents. vb* " bearbeiten.
+You can add event handlers for your custom `My` objects by adding custom event handlers to the `MyApplication` class. Custom events enable you to add code that will execute when an event handler is added, removed, or the event is raised. Note that the `AddHandler` code for a custom event runs only if code is added by a user to handle the event. For example, consider that the `SampleExtension` object from the previous section has a `Load` event that you want to add a custom event handler for. The following code example shows a custom event handler named `SampleExtensionLoad` that will be invoked when the `My.SampleExtension.Load` event occurs. When code is added to handle the new `My.SampleExtensionLoad` event, the `AddHandler` part of this custom event code is executed. The `MyApplication_SampleExtensionLoad` method is included in the code example to show an example of an event handler that handles the `My.SampleExtensionLoad` event. Note that the `SampleExtensionLoad` event will be available when you select the **My Application Events** option in the left drop-down list above the Code Editor when you are editing the *ApplicationEvents.vb* file.
 
 [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]
 
-## <a name="design-guidelines"></a>Entwurfs Richtlinien
+## <a name="design-guidelines"></a>Design guidelines
 
-Wenn Sie Erweiterungen für den `My`-Namespace entwickeln, verwenden Sie die folgenden Richtlinien, um die Wartungskosten der Erweiterungs Komponenten zu minimieren:
+When you develop extensions to the `My` namespace, use the following guidelines to help minimize the maintenance costs of your extension components:
 
-- **Schließen Sie nur die Erweiterungs Logik ein.** Die in der `My`-Namespace Erweiterung enthaltene Logik sollte nur den Code enthalten, der benötigt wird, um die erforderliche Funktionalität im `My`-Namespace verfügbar zu machen. Da sich Ihre Erweiterung in Benutzer Projekten als Quellcode befinden wird, entstehen beim Aktualisieren der Erweiterungs Komponente hohe Wartungskosten und sollten nach Möglichkeit vermieden werden.
-- **Minimieren Sie Projekt Annahmen.** Wenn Sie die Erweiterungen des `My`-Namespace erstellen, gehen Sie nicht davon aus, dass eine Gruppe von verweisen, Importe auf Projektebene oder bestimmte Compilereinstellungen (z. b. `Option Strict` off) enthalten sind. Minimieren Sie stattdessen die Abhängigkeiten, und qualifizieren Sie alle Typverweise mit dem `Global`-Schlüsselwort vollständig. Stellen Sie außerdem sicher, dass die Erweiterung mit `Option Strict` on kompiliert wird, um Fehler in der Erweiterung zu minimieren.
-- **Isolieren Sie den Erweiterungs Code.** Wenn Sie den Code in einer einzelnen Datei platzieren, kann die Erweiterung leicht als Visual Studio-Element Vorlage bereitgestellt werden. Weitere Informationen finden Sie weiter unten in diesem Thema unter "Verpacken und Bereitstellen von Erweiterungen". Wenn Sie den Code für die `My`-Namespace Erweiterung in einer einzelnen Datei oder in einem separaten Ordner in einem Projekt platzieren, können Benutzer auch die `My`-Namespace Erweiterung suchen.
+- **Include only the extension logic.** The logic included in the `My` namespace extension should include only the code that is needed to expose the required functionality in the `My` namespace. Because your extension will reside in user projects as source code, updating the extension component incurs a high maintenance cost and should be avoided if possible.
+- **Minimize project assumptions.** When you create your extensions of the `My` namespace, do not assume a set of references, project-level imports, or specific compiler settings (for example, `Option Strict` off). Instead, minimize dependencies and fully qualify all type references by using the `Global` keyword. Also, ensure that the extension compiles with `Option Strict` on to minimize errors in the extension.
+- **Isolate the extension code.** Placing the code in a single file makes your extension easily deployable as a Visual Studio item template. For more information, see "Packaging and Deploying Extensions" later in this topic. Placing all the `My` namespace extension code in a single file or a separate folder in a project will also help users locate the `My` namespace extension.
 
-## <a name="designing-class-libraries-for-my"></a>Entwerfen von Klassenbibliotheken für `My`
+## <a name="designing-class-libraries-for-my"></a>Designing class libraries for `My`
 
-Wie dies bei den meisten Objekt Modellen der Fall ist, funktionieren einige Entwurfsmuster im `My`-Namespace und andere nicht. Beachten Sie beim Entwerfen einer Erweiterung für den `My`-Namespace die folgenden Prinzipien:
+As is the case with most object models, some design patterns work well in the `My` namespace and others do not. When designing an extension to the `My` namespace, consider the following principles:
 
-- **Zustands lose Methoden.** Methoden im `My`-Namespace sollten eine komplette Lösung für eine bestimmte Aufgabe bereitstellen. Stellen Sie sicher, dass die an die-Methode übergebenen Parameterwerte sämtliche Eingaben bereitstellen, die zum Ausführen der jeweiligen Aufgabe erforderlich sind. Vermeiden Sie das Erstellen von Methoden, die sich auf den vorherigen Zustand stützen, z. b. offene Verbindungen mit Ressourcen
-- **Globale Instanzen.** Der einzige Status, der im `My`-Namespace verwaltet wird, ist für das Projekt Global. @No__t_0 kapselt z. b. den Status, der in der gesamten Anwendung gemeinsam verwendet wird.
-- **Einfache Parametertypen.** Vermeiden Sie es, indem Sie komplexe Parametertypen vermeiden. Erstellen Sie stattdessen Methoden, die entweder keine Parameter Eingaben annehmen oder einfache Eingabetypen wie z. b. Zeichen folgen, primitive Typen usw. verwenden.
-- **Factorymethoden.** Einige Typen sind notwendigerweise schwer zu instanziieren. Wenn Sie Factorymethoden als Erweiterungen für den `My`-Namespace bereitstellen, können Sie Typen, die in diese Kategorie fallen, leichter ermitteln und nutzen. Ein Beispiel einer Factorymethode, die gut funktioniert, ist `My.Computer.FileSystem.OpenTextFileReader`. Im .NET Framework sind mehrere Streamtypen verfügbar. Durch die Angabe von Textdateien wird der Benutzer anhand der `OpenTextFileReader` den zu verwendenden Stream besser verstehen.
+- **Stateless methods.** Methods in the `My` namespace should provide a complete solution to a specific task. Ensure that the parameter values that are passed to the method provide all the input required to complete the particular task. Avoid creating methods that rely on prior state, such as open connections to resources.
+- **Global instances.** The only state that is maintained in the `My` namespace is global to the project. For example, `My.Application.Info` encapsulates state that is shared throughout the application.
+- **Simple parameter types.** Keep things simple by avoiding complex parameter types. Instead, create methods that either take no parameter input or that take simple input types such as strings, primitive types, and so on.
+- **Factory methods.** Some types are necessarily difficult to instantiate. Providing factory methods as extensions to the `My` namespace enables you to more easily discover and consume types that fall into this category. An example of a factory method that works well is `My.Computer.FileSystem.OpenTextFileReader`. There are several stream types available in the .NET Framework. By specifying text files specifically, the `OpenTextFileReader` helps the user understand which stream to use.
 
-Diese Richtlinien schließen keine allgemeinen Entwurfs Prinzipien für Klassenbibliotheken aus. Vielmehr handelt es sich um Empfehlungen, die für Entwickler optimiert werden, die Visual Basic und den `My`-Namespace verwenden. Allgemeine Entwurfs Prinzipien zum Erstellen von Klassenbibliotheken finden Sie unter [Framework-Entwurfs Richtlinien](../../../standard/design-guidelines/index.md).
+These guidelines do not preclude general design principles for class libraries. Rather, they are recommendations that are optimized for developers who are using Visual Basic and the `My` namespace. For general design principles for creating class libraries, see [Framework Design Guidelines](../../../standard/design-guidelines/index.md).
 
-## <a name="packaging-and-deploying-extensions"></a>Verpacken und Bereitstellen von Erweiterungen
+## <a name="packaging-and-deploying-extensions"></a>Packaging and deploying extensions
 
-Sie können `My`-Namespace Erweiterungen in eine Visual Studio-Projektvorlage einschließen, oder Sie können Ihre Erweiterungen verpacken und als Visual Studio-Element Vorlage bereitstellen. Wenn Sie die `My`-Namespace Erweiterungen als Visual Studio-Element Vorlage Verpacken, können Sie zusätzliche Funktionen nutzen, die von Visual Basic bereitgestellt werden. Diese Funktionen ermöglichen es Ihnen, eine Erweiterung einzubeziehen, wenn ein Projekt auf eine bestimmte Assembly verweist, oder Benutzern das explizite Hinzufügen Ihrer `My`-Namespace Erweiterung auf der Seite " **Meine Erweiterungen** " des Visual Basic Projekt-Designers.
+You can include `My` namespace extensions in a Visual Studio project template, or you can package your extensions and deploy them as a Visual Studio item template. When you package your `My` namespace extensions as a Visual Studio item template, you can take advantage of additional capabilities provided by Visual Basic. These capabilities enable you to include an extension when a project references a particular assembly, or enable users to explicitly add your `My` namespace extension by using the **My Extensions** page of the Visual Basic Project Designer.
 
-Ausführliche Informationen zum Bereitstellen von `My`-Namespace Erweiterungen finden Sie unter packen und Bereitstellen von [benutzerdefinierten My-Erweiterungen](packaging-and-deploying-custom-my-extensions.md).
+For details about how to deploy `My` namespace extensions, see [Packaging and Deploying Custom My Extensions](packaging-and-deploying-custom-my-extensions.md).
 
 ## <a name="see-also"></a>Siehe auch
 

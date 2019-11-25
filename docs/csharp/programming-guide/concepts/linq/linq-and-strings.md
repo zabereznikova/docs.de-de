@@ -2,12 +2,12 @@
 title: LINQ und Zeichenfolgen (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744621"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140897"
 ---
 # <a name="linq-and-strings-c"></a>LINQ und Zeichenfolgen (C#)
 

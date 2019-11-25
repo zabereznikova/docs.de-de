@@ -2,12 +2,12 @@
 title: Duale WS-Http-Verbindung
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424547"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138675"
 ---
 # <a name="ws-dual-http"></a>Duale WS-Http-Verbindung
 
@@ -88,7 +88,7 @@ Wenn Sie das Beispiel ausführen, werden die vom Client zurückgegebenen Nachric
 4. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Beim Ausführen des Clients in einer Computer übergreifenden Konfiguration müssen Sie "localhost" sowohl im `address`-Attribut des [\<-Endpunkts > \<Client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) -Elements als auch im `clientBaseAddress`-Attribut der [\<Bindung ersetzen >](../../../../docs/framework/misc/binding.md) -Element des [\<WSDualHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) Element mit dem Namen des entsprechenden Computers, wie hier gezeigt:
+    > Beim Ausführen des Clients in einer Computer übergreifenden Konfiguration müssen Sie "localhost" sowohl im `address`-Attribut des [\<-Endpunkts > \<Client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) -Elements als auch im `clientBaseAddress`-Attribut der [\<Bindung ersetzen >](../../configure-apps/file-schema/wcf/bindings.md) -Element des [\<WSDualHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) Element mit dem Namen des entsprechenden Computers, wie hier gezeigt:
 
     ```xml
     <client>

@@ -2,12 +2,12 @@
 title: LINQ und Dateiverzeichnisse (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a91e397686b329d47380a8b03f61be2e2ec5043
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591975"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140938"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ und Dateiverzeichnisse (C#)
 Viele Dateisystemvorgänge sind im Wesentlichen Abfragen und sind deshalb für die LINQ-Vorgehensweise gut geeignet.  

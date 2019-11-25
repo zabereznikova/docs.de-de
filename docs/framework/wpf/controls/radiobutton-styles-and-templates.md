@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], RadioButton
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
-ms.openlocfilehash: 892b4bead6ef6db3a6c007e34fb333ebf1e39850
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2d732dc6620cd06c99bdbaedfa5be474477d4917
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459866"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283437"
 ---
 # <a name="radiobutton-styles-and-templates"></a>RadioButton-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.RadioButton>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.RadioButton>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
   
 ## <a name="radiobutton-parts"></a>RadioButton-Teile  
  Das <xref:System.Windows.Controls.RadioButton>-Steuerelement verfügt über keine benannten Teile.  
@@ -28,9 +28,9 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|Der Standardzustand|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|  
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
 |Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|  
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |Aktiviert|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> ist `true`.|  
@@ -58,4 +58,4 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)
