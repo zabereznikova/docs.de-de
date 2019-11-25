@@ -1,48 +1,73 @@
 ---
 title: Sequenzen
 description: Erfahren Sie, wie F# Sie Sequenzen verwenden, wenn Sie über eine große, geordnete Sammlung von Daten verfügen, aber nicht unbedingt alle Elemente verwenden.
-ms.date: 02/19/2019
-ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216757"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971448"
 ---
 # <a name="sequences"></a>Sequenzen
 
 > [!NOTE]
 > Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-Eine *Sequenz* ist eine logische Reihe von Elementen, die alle einen Typ haben. Sequenzen sind besonders nützlich, wenn Sie über eine große, geordnete Auflistung von Daten verfügen, aber nicht unbedingt alle Elemente erwarten. Einzelne Sequenz Elemente werden nur bei Bedarf berechnet, sodass eine Sequenz eine bessere Leistung als eine Liste bieten kann, wenn nicht alle Elemente verwendet werden. Sequenzen werden durch den `seq<'T>` -Typ dargestellt, bei dem es sich um einen Alias für `System.Collections.Generic.IEnumerable`handelt. Daher kann jeder .NET Framework Typ, der `System.IEnumerable` implementiert, als Sequenz verwendet werden. Das- [Modul "SQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) " bietet Unterstützung für Manipulationen bei Sequenzen.
+Eine *Sequenz* ist eine logische Reihe von Elementen, die alle einen Typ haben. Sequenzen sind besonders nützlich, wenn Sie über eine große, geordnete Auflistung von Daten verfügen, aber nicht unbedingt alle Elemente erwarten. Einzelne Sequenz Elemente werden nur bei Bedarf berechnet, sodass eine Sequenz eine bessere Leistung als eine Liste bieten kann, wenn nicht alle Elemente verwendet werden. Sequenzen werden durch den `seq<'T>`-Typ dargestellt, bei dem es sich um einen Alias für <xref:System.Collections.Generic.IEnumerable%601>handelt. Daher kann jeder .NET-Typ, der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, als Sequenz verwendet werden. Das- [Modul "SQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) " bietet Unterstützung für Manipulationen bei Sequenzen.
 
 ## <a name="sequence-expressions"></a>Sequenz Ausdrücke
 
-Ein *Sequenz Ausdruck* ist ein Ausdruck, der zu einer Sequenz ausgewertet wird. Sequenz Ausdrücke können eine Reihe von Formularen annehmen. In der einfachsten Form wird ein Bereich angegeben. Beispielsweise wird `seq { 1 .. 5 }` von eine Sequenz erstellt, die fünf Elemente enthält, einschließlich der Endpunkte 1 und 5. Sie können auch ein Inkrement (oder Dekrement) zwischen zwei doppelten Perioden angeben. Der folgende Code erstellt z. b. die Sequenz von Vielfachen von 10.
+Ein *Sequenz Ausdruck* ist ein Ausdruck, der zu einer Sequenz ausgewertet wird. Sequenz Ausdrücke können eine Reihe von Formularen annehmen. In der einfachsten Form wird ein Bereich angegeben. Beispielsweise erstellt `seq { 1 .. 5 }` eine Sequenz, die fünf Elemente enthält, einschließlich der Endpunkte 1 und 5. Sie können auch ein Inkrement (oder Dekrement) zwischen zwei doppelten Perioden angeben. Der folgende Code erstellt z. b. die Sequenz von Vielfachen von 10.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Sequence-Ausdrücke bestehen aus einer F#-Ausdrücke, die Werte der Sequenz zu erzeugen. Sie können das `yield` Schlüsselwort verwenden, um Werte zu liefern, die Teil der Sequenz werden.
-
-Im folgenden finden Sie ein Beispiel.
+Sequence-Ausdrücke bestehen aus einer F#-Ausdrücke, die Werte der Sequenz zu erzeugen. Sie können Werte auch Programm gesteuert generieren:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-Sie können den `->` -Operator anstelle von `yield`verwenden. in diesem Fall können Sie das `do` -Schlüsselwort weglassen, wie im folgenden Beispiel gezeigt.
+Im vorherigen Beispiel wird der `->`-Operator verwendet, der es Ihnen ermöglicht, einen Ausdruck anzugeben, dessen Wert zu einem Teil der Sequenz wird. Sie können nur `->` verwenden, wenn jeder Teil des nachfolgenden Codes einen Wert zurückgibt.
+
+Alternativ können Sie das `do`-Schlüsselwort mit einem optionalen `yield` angeben, das folgt:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-Der folgende Code generiert eine Liste von Koordinatenpaaren sowie einen Index in einem Array, das das Raster darstellt.
+Der folgende Code generiert eine Liste von Koordinatenpaaren sowie einen Index in einem Array, das das Raster darstellt. Beachten Sie, dass für den ersten `for` Ausdruck eine `do` angegeben werden muss.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
-Ein `if` Ausdruck, der in einer Sequenz verwendet wird, ist ein Filter. Wenn Sie z. b. eine Sequenz von nur Primzahlen generieren möchten, vorausgesetzt `isprime` , dass `int -> bool`Sie über eine Funktion des Typs verfügen, erstellen Sie die Sequenz wie folgt.
+Ein `if` Ausdruck, der in einer Sequenz verwendet wird, ist ein Filter. Wenn Sie z. b. eine Sequenz von nur Primzahlen generieren möchten, vorausgesetzt, dass Sie über eine Funktions `isprime` vom Typ `int -> bool`verfügen, erstellen Sie die Sequenz wie folgt.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-Wenn Sie oder `yield` `->` in einer Iterations Sequenz verwenden, wird davon ausgegangen, dass jede Iterations Sequenz ein einzelnes Element der Sequenz generiert. Wenn jede Iterations Sequenz eine Sequenz von Elementen erzeugt, `yield!`verwenden Sie. In diesem Fall werden die Elemente, die bei jeder Iterationen generiert werden, verkettet, um die endgültige Sequenz zu erzeugen.
+Wie bereits erwähnt, ist hier `do` erforderlich, da keine `else` Verzweigung vorhanden ist, die in die `if`übergeht. Wenn Sie versuchen, `->`zu verwenden, erhalten Sie eine Fehlermeldung, die besagt, dass nicht alle Verzweigungen einen Wert zurückgeben.
 
-Sie können mehrere Ausdrücke in einem Sequenz Ausdruck zusammenfassen. Die von den einzelnen Ausdrücken generierten Elemente werden zusammen verkettet. Ein Beispiel finden Sie im Abschnitt "Beispiele" in diesem Thema.
+## <a name="the-yield-keyword"></a>Das `yield!`-Schlüsselwort
+
+Manchmal möchten Sie möglicherweise eine Sequenz von Elementen in eine andere Sequenz einschließen. Wenn Sie eine Sequenz in eine andere Sequenz einschließen möchten, müssen Sie das `yield!`-Schlüsselwort verwenden:
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+Eine andere Möglichkeit der Betrachtung von `yield!` ist, dass Sie eine innere Sequenz vereinfacht und diese dann in die enthaltende Sequenz einbezieht.
+
+Wenn `yield!` in einem Ausdruck verwendet wird, müssen alle anderen einzelnen Werte das `yield`-Schlüsselwort verwenden:
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+Wenn Sie nur `x` im vorherigen Beispiel angeben, führt dies dazu, dass die Sequenz keine Werte erzeugt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -50,11 +75,11 @@ Im ersten Beispiel wird ein Sequenz Ausdruck verwendet, der eine Iterations-, Fi
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-Der folgende Code verwendet `yield` , um eine Multiplikationstabelle zu erstellen, die aus Tupeln von drei Elementen besteht, die aus zwei Faktoren und dem Produkt bestehen.
+Im folgenden Beispiel wird eine Multiplikationstabelle erstellt, die aus Tupeln mit drei Elementen besteht, die aus zwei Faktoren und dem Produkt bestehen:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
-Das folgende Beispiel veranschaulicht die Verwendung von `yield!` , um einzelne Sequenzen in einer einzigen abschließenden Sequenz zu kombinieren. In diesem Fall werden die Sequenzen für jede Teilstruktur in einer binären Struktur in einer rekursiven Funktion verkettet, um die endgültige Sequenz zu erhalten.
+Das folgende Beispiel veranschaulicht die Verwendung von `yield!`, um einzelne Sequenzen in einer einzigen abschließenden Sequenz zu kombinieren. In diesem Fall werden die Sequenzen für jede Teilstruktur in einer binären Struktur in einer rekursiven Funktion verkettet, um die endgültige Sequenz zu erhalten.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1509.fs)]
 
@@ -62,7 +87,7 @@ Das folgende Beispiel veranschaulicht die Verwendung von `yield!` , um einzelne 
 
 Sequenzen unterstützen viele der gleichen Funktionen wie [Listen](lists.md). Sequenzen unterstützen auch Vorgänge wie z. b. das Gruppieren und zählen mithilfe von Funktionen zum Erstellen von Schlüsseln. Sequenzen unterstützen außerdem vielfältigere Funktionen zum Extrahieren von unter Sequenzen.
 
-Viele Datentypen, z. b. Listen, Arrays, Mengen und Zuordnungen, sind implizit Sequenzen, da es sich um Aufzähl Bare Auflistungen handelt. Eine Funktion, die eine Sequenz akzeptiert, da ein Argument mit einem allgemeinen F#-Datentypen, darüber hinaus in einen .NET Framework-Datentyp verwendet werden kann, die implementiert `System.Collections.Generic.IEnumerable<'T>`. Vergleichen Sie dies mit einer Funktion, die eine Liste als Argument annimmt, das nur Listen annehmen kann. Der Typ `seq<'T>` ist eine typabkürzung für `IEnumerable<'T>`. Dies bedeutet, dass jeder Typ, die generische implementiert `System.Collections.Generic.IEnumerable<'T>`festlegt einschließlich Arrays, Listen und Zuordnungen in F# und auch die meisten .NET Framework-Auflistungstypen, ist kompatibel mit der `seq` geben und kann verwendet werden, wo eine Sequenz erwartet wird.
+Viele Datentypen, z. b. Listen, Arrays, Mengen und Zuordnungen, sind implizit Sequenzen, da es sich um Aufzähl Bare Auflistungen handelt. Eine Funktion, die eine Sequenz als Argument annimmt, funktioniert mit einem der Common F# Data Types, zusätzlich zu einem beliebigen .NET-Datentyp, der `System.Collections.Generic.IEnumerable<'T>`implementiert. Vergleichen Sie dies mit einer Funktion, die eine Liste als Argument annimmt, das nur Listen annehmen kann. Der Typ `seq<'T>` ist eine typabkürzung für `IEnumerable<'T>`. Dies bedeutet, dass jeder Typ, der die generische `System.Collections.Generic.IEnumerable<'T>`implementiert, einschließlich Arrays, Listen, Sätze und Zuordnungen F#in sowie der meisten .net-Auflistungs Typen, mit dem `seq`-Typ kompatibel ist und überall dort verwendet werden kann, wo eine Sequenz erwartet wird.
 
 ## <a name="module-functions"></a>Modulfunktionen
 
@@ -90,7 +115,7 @@ Durch die Verwendung von "c [q. ofArray](https://msdn.microsoft.com/library/299c
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet11.fs)]
 
-Mithilfe von "* [. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)" können Sie eine Sequenz aus einer schwach typisierten Auflistung erstellen, z. b. die `System.Collections`in definierten. Solch schwach typisierte Auflistungen haben den `System.Object` Elementtyp und werden mit dem nicht generischen `System.Collections.Generic.IEnumerable&#96;1` Typ aufgelistet. Der folgende Code veranschaulicht die Verwendung von `Seq.cast` , um ein `System.Collections.ArrayList` in eine Sequenz zu konvertieren.
+Mithilfe von "* [. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)" können Sie eine Sequenz aus einer schwach typisierten Auflistung erstellen, z. b. die in `System.Collections`definierten. Solch schwach typisierte Auflistungen haben den Elementtyp `System.Object` und werden mithilfe des nicht generischen `System.Collections.Generic.IEnumerable&#96;1` Typs aufgelistet. Der folgende Code veranschaulicht die Verwendung von `Seq.cast`, um eine `System.Collections.ArrayList` in eine Sequenz zu konvertieren.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet12.fs)]
 
@@ -98,7 +123,7 @@ Mithilfe der Funktion " [setq. initInfinite](https://msdn.microsoft.com/library/
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-Mit "" wird eine Sequenz aus einer Berechnungs [Funktion generiert,](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) die einen-Zustand annimmt und Sie transformiert, um jedes nachfolgende Element in der Sequenz zu erzeugen. Der Status ist nur ein Wert, der zum Berechnen der einzelnen Elemente verwendet wird, und kann sich ändern, wenn jedes Element berechnet wird. Das zweite Argument für `Seq.unfold` ist der Anfangswert, der verwendet wird, um die Sequenz zu starten. `Seq.unfold`verwendet einen Optionstyp für den-Zustand, mit dem Sie die Sequenz beenden können, indem `None` Sie den-Wert zurückgeben. Der folgende Code zeigt zwei Beispiele für Sequenzen, `seq1` und `fib`, die von einem `unfold` -Vorgang generiert werden. Der erste, `seq1`, ist nur eine einfache Sequenz mit Zahlen von bis zu 20. Die zweite, `fib`, verwendet `unfold` , um die "fbonacci"-Sequenz zu berechnen. Da jedes Element in der "atbonacci"-Sequenz die Summe der vorherigen beiden "fbonacci"-Zahlen ist, ist der Zustandswert ein Tupel, das aus den vorherigen zwei Zahlen in der Sequenz besteht. Der Anfangswert ist `(1,1)`, die ersten beiden Zahlen in der Sequenz.
+Mit "" wird eine Sequenz aus einer Berechnungs [Funktion generiert,](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) die einen-Zustand annimmt und Sie transformiert, um jedes nachfolgende Element in der Sequenz zu erzeugen. Der Status ist nur ein Wert, der zum Berechnen der einzelnen Elemente verwendet wird, und kann sich ändern, wenn jedes Element berechnet wird. Das zweite Argument für `Seq.unfold` ist der Anfangswert, der verwendet wird, um die Sequenz zu starten. `Seq.unfold` verwendet einen Optionstyp für den-Zustand, mit dem Sie die Sequenz beenden können, indem Sie den `None`-Wert zurückgeben. Der folgende Code zeigt zwei Beispiele für Sequenzen, `seq1` und `fib`, die von einem `unfold` Vorgang generiert werden. Der erste, `seq1`, ist nur eine einfache Sequenz mit Zahlen von bis zu 20. Der zweite `fib`verwendet `unfold`, um die "fbonacci"-Sequenz zu berechnen. Da jedes Element in der "atbonacci"-Sequenz die Summe der vorherigen beiden "fbonacci"-Zahlen ist, ist der Zustandswert ein Tupel, das aus den vorherigen zwei Zahlen in der Sequenz besteht. Der Anfangswert ist `(1,1)`, die ersten beiden Zahlen in der Sequenz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -126,32 +151,32 @@ Funktionen zur Unterstützung von Sequenzen mit Listen: [Seq.exists](https://msd
 
 " [Set](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) " und "Set" sind wie die entsprechenden Funktionen, die für Listen verfügbar sind, mit [dem Unterschied](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) , dass das Filtern und auswählen erst erfolgt, wenn die Sequenz Elemente ausgewertet werden.
 
-Mit " [sq. TRUNCATE](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) " wird eine Sequenz aus einer anderen Sequenz erstellt, die Sequenz wird jedoch auf eine angegebene Anzahl von Elementen beschränkt. "* [. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) " erstellt eine neue Sequenz, die nur eine angegebene Anzahl von Elementen ab dem Anfang einer Sequenz enthält. Wenn in der Sequenz weniger Elemente vorhanden sind, als Sie für die Ausführung `Seq.take` von angeben `System.InvalidOperationException`, löst eine aus. Der Unterschied `Seq.take` zwischen `Seq.truncate` und ist `Seq.truncate` , dass keinen Fehler erzeugt, wenn die Anzahl der Elemente kleiner ist als die angegebene Zahl.
+Mit " [sq. TRUNCATE](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) " wird eine Sequenz aus einer anderen Sequenz erstellt, die Sequenz wird jedoch auf eine angegebene Anzahl von Elementen beschränkt. "* [. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) " erstellt eine neue Sequenz, die nur eine angegebene Anzahl von Elementen ab dem Anfang einer Sequenz enthält. Wenn in der Sequenz weniger Elemente vorhanden sind, als Sie angeben, wird von `Seq.take` eine `System.InvalidOperationException`ausgelöst. Der Unterschied zwischen `Seq.take` und `Seq.truncate` besteht darin, dass `Seq.truncate` keinen Fehler erzeugt, wenn die Anzahl der Elemente kleiner ist als die Anzahl, die Sie angeben.
 
-Der folgende Code zeigt das Verhalten von und Unterschiede `Seq.truncate` zwischen `Seq.take`und.
+Der folgende Code zeigt das Verhalten und Unterschiede zwischen `Seq.truncate` und `Seq.take`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet16.fs)]
 
 Die Ausgabe vor dem Auftreten des Fehlers lautet wie folgt.
 
 ```console
-1 4 9 16 25 
-1 4 9 16 25 36 49 64 81 100 
-1 4 9 16 25 
+1 4 9 16 25
+1 4 9 16 25 36 49 64 81 100
+1 4 9 16 25
 1 4 9 16 25 36 49 64 81 100
 ```
 
-Mithilfe von "* [. TakeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92)" können Sie eine Prädikat Funktion angeben (eine boolesche Funktion) und eine Sequenz aus einer anderen Sequenz erstellen, die aus den Elementen der ursprünglichen Sequenz besteht, für die das Prädikat ist `true`, aber vor dem ersten Element beendet werden. , für die das Prädikat `false`zurückgibt. " [Sq. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) " gibt eine Sequenz zurück, die eine angegebene Anzahl von ersten Elementen einer anderen Sequenz überspringt und die restlichen Elemente zurückgibt. "* [. SkipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) " gibt eine Sequenz zurück, die die ersten Elemente einer anderen Sequenz überspringt, solange das Prädikat zurückgibt `true`, und gibt dann die übrigen Elemente zurück, beginnend mit dem ersten Element, für das das Prädikat zurück `false` gegeben wird. .
+Mithilfe von "* [. TakeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92)" können Sie eine Prädikat Funktion angeben (eine boolesche Funktion) und eine Sequenz aus einer anderen Sequenz erstellen, die aus den Elementen der ursprünglichen Sequenz besteht, für die das Prädikat `true`ist, aber vor dem ersten Element für die, die das Prädikat `false`zurückgibt. " [Sq. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) " gibt eine Sequenz zurück, die eine angegebene Anzahl von ersten Elementen einer anderen Sequenz überspringt und die restlichen Elemente zurückgibt. "* [. SkipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) " gibt eine Sequenz zurück, die die ersten Elemente einer anderen Sequenz überspringt, solange das Prädikat `true`zurückgibt, und dann die restlichen Elemente zurückgibt, beginnend mit dem ersten Element, für das das Prädikat `false`zurückgibt.
 
-Im folgenden Codebeispiel wird das Verhalten von und unterschieden `Seq.takeWhile`zwischen `Seq.skip`, und `Seq.skipWhile`veranschaulicht.
+Das folgende Codebeispiel veranschaulicht das Verhalten von und unterschieden zwischen `Seq.takeWhile`, `Seq.skip`und `Seq.skipWhile`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet17.fs)]
 
 Die Ausgabe lautet wie folgt.
 
 ```console
-1 4 9 
-36 49 64 81 100 
+1 4 9
+36 49 64 81 100
 16 25 36 49 64 81 100
 ```
 
@@ -161,7 +186,7 @@ Die Ausgabe lautet wie folgt.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet18.fs)]
 
-" [Seq. Windowed](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) " `Seq.pairwise`ähnelt, mit der Ausnahme, dass anstelle einer Sequenz von Tupeln eine Sequenz von Arrays erstellt wird, die Kopien der angrenzenden Elemente (ein *Fenster*) aus der Sequenz enthalten. Sie geben die Anzahl der angrenzenden Elemente in jedem Array an.
+" [Seq. Windowed](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) " ist wie `Seq.pairwise`, mit der Ausnahme, dass anstelle einer Sequenz von Tupeln eine Sequenz von Arrays erzeugt wird, die Kopien von angrenzenden Elementen (ein *Fenster*) aus der Sequenz enthalten. Sie geben die Anzahl der angrenzenden Elemente in jedem Array an.
 
 Das folgende Codebeispiel veranschaulicht die Verwendung von `Seq.windowed`. In diesem Fall ist die Anzahl der Elemente im Fenster 3. Im Beispiel wird `printSeq`verwendet, das im vorherigen Codebeispiel definiert wurde.
 
@@ -172,12 +197,12 @@ Die Ausgabe lautet wie folgt.
 Anfangssequenz:
 
 ```console
-1.0 1.5 2.0 1.5 1.0 1.5 
+1.0 1.5 2.0 1.5 1.0 1.5
 
-Windows of length 3: 
-[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|] 
+Windows of length 3:
+[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|]
 
-Moving average: 
+Moving average:
 1.5 1.666666667 1.5 1.333333333
 ```
 
@@ -197,7 +222,7 @@ Im folgenden Code wird die Verwendung von `Seq.compareWith` veranschaulicht:
 
 Im vorherigen Code wird nur das erste Element berechnet und überprüft, und das Ergebnis ist-1.
 
-"" Ist eine Funktion, die für jedes Element einen Wert [mit](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) dem Namen " *Key* " generiert. Ein Schlüssel wird für jedes Element generiert, indem diese Funktion für jedes Element aufgerufen wird. `Seq.countBy`gibt dann eine Sequenz zurück, die die Schlüsselwerte und die Anzahl der Elemente enthält, die jeden Wert des Schlüssels generiert haben.
+"" Ist eine Funktion, die für jedes Element einen Wert [mit](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) dem Namen " *Key* " generiert. Ein Schlüssel wird für jedes Element generiert, indem diese Funktion für jedes Element aufgerufen wird. `Seq.countBy` gibt dann eine Sequenz zurück, die die Schlüsselwerte und die Anzahl der Elemente enthält, die jeden Wert des Schlüssels generiert haben.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -209,9 +234,9 @@ Die Ausgabe lautet wie folgt.
 
 Die vorherige Ausgabe zeigt, dass 34 Elemente der ursprünglichen Sequenz vorhanden waren, die den Schlüssel 1, 33-Werte, die den Schlüssel 2 erstellt haben, und 33-Werte, die den Schlüssel 0 erzeugt haben, erstellt haben.
 
-Sie können Elemente einer Sequenz gruppieren, indem Sie "* [. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)" aufrufen. `Seq.groupBy`nimmt eine-Sequenz und eine Funktion an, die einen Schlüssel aus einem-Element generiert. Die-Funktion wird für jedes Element der Sequenz ausgeführt. `Seq.groupBy`gibt eine Sequenz von Tupeln zurück, wobei das erste Element jedes Tupels der Schlüssel und das zweite eine Sequenz von Elementen ist, die diesen Schlüssel erzeugt.
+Sie können Elemente einer Sequenz gruppieren, indem Sie "* [. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)" aufrufen. `Seq.groupBy` nimmt eine Sequenz und eine Funktion an, die einen Schlüssel aus einem-Element generiert. Die-Funktion wird für jedes Element der Sequenz ausgeführt. `Seq.groupBy` gibt eine Sequenz von Tupeln zurück, wobei das erste Element jedes Tupels der Schlüssel und das zweite eine Sequenz von Elementen ist, die diesen Schlüssel erzeugt.
 
-Im folgenden Codebeispiel wird die Verwendung von `Seq.groupBy` veranschaulicht, um die Sequenz von Zahlen von 1 bis 100 in drei Gruppen mit den unterschiedlichen Schlüsselwerten 0, 1 und 2 zu partitionieren.
+Im folgenden Codebeispiel wird die Verwendung von `Seq.groupBy` zum Partitionieren der Sequenz von Zahlen von 1 bis 100 in drei Gruppen mit den eindeutigen Schlüsselwerten 0, 1 und 2 veranschaulicht.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet202.fs)]
 
@@ -223,21 +248,21 @@ Die Ausgabe lautet wie folgt.
 
 Sie können eine Sequenz erstellen, die doppelte Elemente durch Aufrufen von "* [. verschieden](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401)" entfernt. Oder Sie können " [sq. distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75)" verwenden, das eine Schlüssel generierende Funktion verwendet, die für jedes Element aufgerufen wird. Die resultierende Sequenz enthält Elemente der ursprünglichen Sequenz mit eindeutigen Schlüsseln. spätere Elemente, die einen doppelten Schlüssel zu einem früheren Element liefern, werden verworfen.
 
-Das folgende Codebeispiel veranschaulicht die Verwendung von `Seq.distinct`. `Seq.distinct`wird veranschaulicht, indem Sequenzen erzeugt werden, die binäre Zahlen darstellen, und dann zeigt, dass die einzigen unterschiedlichen Elemente 0 und 1 sind.
+Das folgende Codebeispiel veranschaulicht die Verwendung von `Seq.distinct`. `Seq.distinct` wird veranschaulicht, indem Sequenzen erzeugt werden, die binäre Zahlen darstellen, und dann zeigt, dass die einzigen unterschiedlichen Elemente 0 und 1 sind.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet22.fs)]
 
-Der folgende Code veranschaulicht `Seq.distinctBy` , wie mit einer Sequenz begonnen wird, die negative und positive Zahlen enthält und die absolute value-Funktion als Schlüssel generierende Funktion verwendet. In der resultierenden Sequenz fehlen alle positiven Zahlen, die den negativen Zahlen in der Sequenz entsprechen, da die negativen Zahlen an früherer Stelle in der Sequenz angezeigt werden und daher anstelle der positiven Zahlen mit dem gleichen absoluten Wert ausgewählt werden. -Wert oder-Schlüssel.
+Der folgende Code veranschaulicht die `Seq.distinctBy`, indem mit einer Sequenz begonnen wird, die negative und positive Zahlen enthält und die absolute value-Funktion als Schlüssel generierende Funktion verwendet. In der resultierenden Sequenz fehlen alle positiven Zahlen, die den negativen Zahlen in der Sequenz entsprechen, da die negativen Zahlen an früherer Stelle in der Sequenz angezeigt werden und daher anstelle der positiven Zahlen mit dem gleichen absoluten Wert ausgewählt werden. -Wert oder-Schlüssel.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet23.fs)]
 
 ## <a name="readonly-and-cached-sequences"></a>Schreibgeschützte und zwischengespeicherte Sequenzen
 
-Mit "*" wird eine schreibgeschützte Kopie einer [Sequenz erstellt.](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) `Seq.readonly`ist nützlich, wenn Sie über eine Auflistung mit Lese-/Schreibzugriff verfügen, z. b. ein Array, und Sie die ursprüngliche Auflistung nicht ändern möchten. Diese Funktion kann verwendet werden, um die Daten Kapselung beizubehalten. Im folgenden Codebeispiel wird ein Typ erstellt, der ein Array enthält. Eine Eigenschaft macht das Array verfügbar, aber anstelle eines Arrays gibt es eine Sequenz zurück, die aus dem Array mithilfe `Seq.readonly`von erstellt wird.
+Mit "*" wird eine schreibgeschützte Kopie einer [Sequenz erstellt.](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) `Seq.readonly` ist nützlich, wenn Sie über eine Auflistung mit Lese-/Schreibzugriff verfügen, z. b. ein Array, und Sie die ursprüngliche Auflistung nicht ändern möchten. Diese Funktion kann verwendet werden, um die Daten Kapselung beizubehalten. Im folgenden Codebeispiel wird ein Typ erstellt, der ein Array enthält. Eine Eigenschaft macht das Array verfügbar, aber anstelle eines Arrays gibt es eine Sequenz zurück, die aus dem Array mithilfe von `Seq.readonly`erstellt wird.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet24.fs)]
 
-" [Sq. Cache](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0) " erstellt eine gespeicherte Version einer Sequenz. Verwenden `Seq.cache` Sie, um die erneute Auswertung einer Sequenz zu vermeiden, oder wenn Sie über mehrere Threads verfügen, die eine Sequenz verwenden, aber Sie müssen sicherstellen, dass jedes Element nur einmal bearbeitet wird. Wenn Sie eine Sequenz haben, die von mehreren Threads verwendet wird, können Sie einen Thread verwenden, der die Werte für die ursprüngliche Sequenz auflistet und berechnet, und die verbleibenden Threads können die zwischengespeicherte Sequenz verwenden.
+" [Sq. Cache](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0) " erstellt eine gespeicherte Version einer Sequenz. Verwenden Sie `Seq.cache`, um eine erneute Auswertung einer Sequenz zu vermeiden, oder wenn Sie über mehrere Threads verfügen, die eine Sequenz verwenden, aber Sie müssen sicherstellen, dass jedes Element nur einmal bearbeitet wird. Wenn Sie eine Sequenz haben, die von mehreren Threads verwendet wird, können Sie einen Thread verwenden, der die Werte für die ursprüngliche Sequenz auflistet und berechnet, und die verbleibenden Threads können die zwischengespeicherte Sequenz verwenden.
 
 ## <a name="performing-computations-on-sequences"></a>Ausführen von Berechnungen für Sequenzen
 

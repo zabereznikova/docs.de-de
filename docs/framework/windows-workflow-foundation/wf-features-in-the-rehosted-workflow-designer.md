@@ -2,12 +2,12 @@
 title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987235"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142070"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Features eingeführt, einschließlich verschiedener Erweiterungen der Workflow-Designer-Darstellung. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.
@@ -33,14 +33,14 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
 > Die [Schnellsuche](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) und die [Suche in Dateien](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) werden im neu gehosteten Designer nicht unterstützt.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Löschen von Kontextmenüelementen im Variablen- und Argument-Designer
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] konnten Variablen und Argumente nur im Designer und mithilfe der Tastatur gelöscht werden. Ab .NET Framework 4,5 können Variablen und Argumente über das Kontextmenü gelöscht werden. Diese Funktion wird im neu gehosteten Designer unterstützt.
+ In .NET Framework 4 konnten Variablen und Argumente nur im Designer mit der Tastatur gelöscht werden. Ab .NET Framework 4,5 können Variablen und Argumente über das Kontextmenü gelöscht werden. Diese Funktion wird im neu gehosteten Designer unterstützt.
 
  Das folgende Bildschirmfoto zeigt das Kontextmenü des Variablen- und Argument-Designers.
 
  ![Kontextmenü des Variablen- und Argument-Designers](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Automatisches Umschließen mit Sequenz
- Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Beginnend mit .NET Framework 4,5 wird beim Hinzufügen einer zweiten Aktivität zur Designer Oberfläche automatisch eine `Sequence` -Aktivität erstellt, um beide Aktivitäten zu umschließen. Diese Funktion wird im neu gehosteten Designer unterstützt.
+ Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Ab .NET Framework 4,5 wird automatisch eine `Sequence` Aktivität erstellt, um beide Aktivitäten zu umschließen, wenn der Designer Oberfläche eine zweite Aktivität hinzugefügt wird. Diese Funktion wird im neu gehosteten Designer unterstützt.
 
  Die folgende Bildschirmaufnahme zeigt eine `WriteLine`-Aktivität in `Body` von `NoPersistScope`.
 
@@ -72,10 +72,10 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  ![Screenshot der Gliederungs Ansicht mit einem sequenziellen Workflow in Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Bessere Kontrolle über die Sichtbarkeit der Shellleiste und Headerelemente
- In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] wird diese Anpassung nur von der Shellleiste im unteren Bereich des Designers unterstützt. In .NET Framework 4,5 kann die Sichtbarkeit von shellheadern am oberen Rand des Designers angepasst werden, indem mit <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> dem entsprechenden <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> Wert festgelegt wird.
+ In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In .NET Framework 4 wird diese Anpassung nur von der shellleiste am unteren Rand des Designers unterstützt. In .NET Framework 4,5 kann die Sichtbarkeit von shellheadern am oberen Rand des Designers angepasst werden, indem <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> mit dem entsprechenden <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> Wert festgelegt wird.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Automatisches Verbinden und Einfügen in Flussdiagramm- und Zustandsautomatworkflows
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] mussten Verbindungen zwischen Knoten in einem Flussdiagramm-Workflow manuell hinzugefügt werden. In .NET Framework 4,5 verfügen Flussdiagramm-und Zustands Automaten Knoten über automatische Verbindungspunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox auf die Designer Oberfläche gezogen wird. Durch Ablegen einer Aktivität auf einem dieser Punkte wird die Aktivität automatisch zusammen mit der erforderlichen Verbindung hinzugefügt.
+ In .NET Framework 4 mussten Verbindungen zwischen Knoten in einem Flussdiagramm-Workflow manuell hinzugefügt werden. In .NET Framework 4,5 verfügen Flussdiagramm-und Zustands Automaten Knoten über automatische Verbindungspunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox auf die Designer Oberfläche gezogen wird. Durch Ablegen einer Aktivität auf einem dieser Punkte wird die Aktivität automatisch zusammen mit der erforderlichen Verbindung hinzugefügt.
 
  Das folgende Bildschirmfoto zeigt die Anfügepunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox gezogen wird.
 
@@ -95,23 +95,23 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  Designer-Anmerkungen werden im neu gehosteten Designer unterstützt.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definieren und Nutzen von ActivityDelegate-Objekten im Designer
- Aktivitäten in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] verwendeten <xref:System.Activities.ActivityDelegate>-Objekte, um Ausführungspunkte verfügbar zu machen, in denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten. Zur Verwendung dieser Ausführungspunkte war normalerweise jedoch beträchtlicher Code erforderlich. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Verarbeiten von Aktivitäts Delegaten im](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)Workflow-Designer.
+ Die Aktivitäten in .NET Framework 4 wurden <xref:System.Activities.ActivityDelegate> Objekten verwendet, um Ausführungs Punkte verfügbar zu machen, an denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten, aber die Verwendung dieser Ausführungs Punkte erforderte normalerweise eine ziemlich große Menge an Code. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Verarbeiten von Aktivitäts Delegaten im Workflow-Designer](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
  Aktivitätsdelegaten werden im neu gehosteten Designer unterstützt.
 
 ### <a name="build-time-validation"></a>Validierung zur Buildzeit
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] galten Workflowvalidierungsfehler während der Erstellung eines Workflowprojekts nicht als Erstellungsfehler. Das bedeutete, dass das Erstellen eines Workflowprojekts erfolgreich gewesen sein konnte, obwohl Workflowvalidierungsfehler auftraten. In .NET Framework 4,5 bewirken Workflow Validierungs Fehler, dass der Build fehlschlägt.
+ In .NET Framework 4 wurden Workflow Validierungs Fehler während der Erstellung eines Workflow Projekts nicht als Buildfehler gezählt. Das bedeutete, dass das Erstellen eines Workflowprojekts erfolgreich gewesen sein konnte, obwohl Workflowvalidierungsfehler auftraten. In .NET Framework 4,5 bewirken Workflow Validierungs Fehler, dass der Build fehlschlägt.
 
 > [!WARNING]
 > Die Validierung zur Buildzeit wird im neu gehosteten Designer nicht unterstützt.  
   
 ### <a name="design-time-background-validation"></a>Hintergrundvalidierung zur Entwurfszeit  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]wurden Workflows als Vordergrund Prozess überprüft, wodurch die Benutzeroberfläche bei komplexen oder zeitaufwändigen Validierungs Prozessen potenziell blockiert werden kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.  
+ In .NET Framework 4 wurden Workflows als Vordergrund Prozess überprüft, der die Benutzeroberfläche bei komplexen oder zeitaufwändigen Validierungs Prozessen potenziell blockieren kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.  
   
  Die Hintergrundvalidierung zur Entwurfszeit wird im neu gehosteten Designer unterstützt.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Der Ansichtszustand wird an einem separaten Ort in XAML-Dateien gespeichert  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] werden die Ansichtszustandsinformationen für einen Workflow an vielen verschiedenen Orten in der XAML-Datei gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In .NET Framework 4,5 werden die Ansichts Zustandsinformationen in der XAML-Datei als separates Element in der XAML-Datei serialisiert.  Entwickler können die Ansichts Zustandsinformationen einer Aktivität leicht finden und bearbeiten oder den Ansichts Zustand vollständig entfernen.  
+ In .NET Framework 4 werden die Ansichts Zustandsinformationen für einen Workflow in der XAML-Datei an vielen verschiedenen Speicherorten gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In .NET Framework 4,5 werden die Ansichts Zustandsinformationen in der XAML-Datei als separates Element in der XAML-Datei serialisiert.  Entwickler können die Ansichts Zustandsinformationen einer Aktivität leicht finden und bearbeiten oder den Ansichts Zustand vollständig entfernen.  
   
  Diese Funktion wird im neu gehosteten Workflow-Designer unterstützt.  
   
@@ -132,14 +132,14 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
   
 4. Aktivitäten, die zum Erstellen von Zustandsautomatworkflows verwendet werden, darunter: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> und <xref:System.Activities.Statements.Transition>  
   
- Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus dem Schritt [" [Getting Started Tutorial](getting-started-tutorial.md) " Gewusst wie: Erstellen Sie einen Zustandsautomatworkflow](how-to-create-a-state-machine-workflow.md).  
+ Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus dem Schritt " [Getting Started Tutorial](getting-started-tutorial.md) " [Vorgehensweise: Erstellen Sie einen Zustands Automaten Workflow](how-to-create-a-state-machine-workflow.md).  
   
  ![Die Abbildung zeigt den abgeschlossenen Zustandsautomatworkflow.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Weitere Informationen zum Erstellen von Zustandsautomatworkflows finden Sie unter [Zustandsautomatworkflows](state-machine-workflows.md). Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
   
 ### <a name="contract-first-workflow-development"></a>Vertrag zuerst-Workflowentwicklung  
- Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden [Sie unter Gewusst wie: Erstellen Sie einen Workflow Dienst, der einen vorhandenen Dienst](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)Vertrag verwendet.  
+ Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter [Vorgehensweise: Erstellen Sie einen Workflow Dienst, der einen vorhandenen Dienstvertrags](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.  
   
 > [!WARNING]
 > Die Vertrag zuerst-Workflowentwicklung wird im Workflow-Designer nicht unterstützt.
