@@ -9,7 +9,7 @@
 - name: .NET-Desktopleitfaden (WPF)
   href: desktop-wpf/
 - name: 'Leitfaden für C#'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'Leitfaden für F#'
   href: fsharp/
 - name: Leitfaden für Visual Basic
