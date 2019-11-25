@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 3d64c4805abe38c80301748ffa6b35fc87563b60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403968"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036394"
 ---
 # <a name="new-operator-c-reference"></a>new-Operator (C#-Referenz)
 
@@ -50,7 +50,7 @@ Um eine Instanz eines [anonymen Typs](../../programming-guide/classes-and-struct
 
 Sie müssen keine zuvor angelegten Typinstanzen zerstören. Instanzen sowohl von Verweis- als auch von Werttypen werden automatisch zerstört. Instanzen von Werttypen werden zerstört, sobald der sie enthaltende Kontext zerstört wird. Instanzen von Verweistypen werden vom [Garbage Collector](../../../standard/garbage-collection/index.md) zu einem unbestimmten Zeitpunkt zerstört, nachdem der letzte Verweis auf sie entfernt wurde.
 
-Bei Typen, die unverwaltete Ressourcen, z.B. Dateihandle, enthalten, ist eine deterministische Bereinigung empfehlenswert, um sicherzustellen, dass die darin enthaltenen Ressourcen so bald wie möglich freigegeben werden. Weitere Informationen finden Sie im Artikel zum <xref:System.IDisposable?displayProperty=nameWithType>API-Verweis und der [using-Anweisung](../keywords/using-statement.md).
+Bei Typinstanzen, die nicht verwaltete Ressourcen wie beispielsweise ein Dateihandle enthalten, ist eine deterministische Bereinigung empfehlenswert, um sicherzustellen, dass die darin enthaltenen Ressourcen so bald wie möglich freigegeben werden. Weitere Informationen finden Sie im Artikel zum <xref:System.IDisposable?displayProperty=nameWithType>API-Verweis und der [using-Anweisung](../keywords/using-statement.md).
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 

@@ -1,51 +1,51 @@
 ---
 title: Migrieren zu Hybridcloudszenarios
-description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migration zu Hybrid Cloud Szenarios
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migrieren zu Hybridcloudszenarios
 ms.date: 04/30/2018
 ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72394543"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren zu Hybridcloudszenarios
 
-Einige Organisationen und Unternehmen können einige Ihrer Anwendungen aufgrund von Bestimmungen oder ihrer eigenen Richtlinien nicht in öffentliche Clouds wie Microsoft Azure oder andere Public Cloud migrieren. Es ist jedoch wahrscheinlich, dass alle Organisationen davon profitieren können, dass einige Ihrer Anwendungen in der Public Cloud und anderen Anwendungen lokal vorhanden sind. Eine gemischte Umgebung kann jedoch aufgrund verschiedener Plattformen und Technologien, die in öffentlichen Clouds und lokalen Umgebungen verwendet werden, zu einer übermäßigen Komplexität in Umgebungen führen.
+Manche Organisationen und Unternehmen können einige Ihrer Anwendungen aufgrund von Bestimmungen oder ihrer eigenen Richtlinien nicht in öffentliche Clouds wie Microsoft Azure oder eine andere öffentliche Cloud migrieren. Es ist jedoch wahrscheinlich, dass alle Organisationen davon profitieren können, dass sich einige Ihrer Anwendungen in der öffentlichen Cloud befinden und andere Anwendungen lokal vorhanden sind. Eine gemischte Umgebung kann jedoch aufgrund verschiedener Plattformen und Technologien, die in öffentlichen Clouds im Gegensatz zu lokalen Umgebungen verwendet werden, zu übermäßiger Komplexität in Umgebungen führen.
 
-Microsoft bietet die beste Hybrid Cloud Lösung, bei der Sie Ihre vorhandenen Ressourcen lokal und im Public Cloud optimieren können, während Sie die Konsistenz in einem Azure-Hybrid Cloud gewährleisten. Dank Azure Stack (lokal) und Azure (Public Cloud) können Sie vorhandene Fähigkeiten maximieren und einen flexiblen, einheitlichen Ansatz zum Entwickeln von Apps nutzen, die in der Cloud oder lokal ausgeführt werden können.
+Microsoft bietet die beste Hybrid Cloud-Lösung, bei der Sie Ihre vorhandenen Ressourcen lokal und in der öffentlichen Cloud optimieren können, während Sie die Konsistenz in einer Azure Hybrid Cloud gewährleisten. Dank Azure Stack (lokal) und Azure (Public Cloud) können Sie vorhandene Fähigkeiten maximieren und einen flexiblen, einheitlichen Ansatz zum Entwickeln von Apps nutzen, die in der Cloud oder lokal ausgeführt werden können.
 
-Wenn es um die Sicherheit geht, können Sie die Verwaltung und Sicherheit über ihre Hybrid Cloud hinweg zentralisieren. Sie können die Kontrolle über alle Assets von Ihrem Rechenzentrum in die Cloud erhalten, indem Sie Single Sign-on für lokale und Cloud-apps bereitstellen. Dies erreichen Sie, indem Sie Active Directory auf eine Hybrid Cloud erweitern und die Identitätsverwaltung verwenden.
+Hinsichtlich Sicherheit können Sie die Verwaltung und Sicherheit in der gesamten Hybrid Cloud zentralisieren. Sie können die Kontrolle über alle Ressourcen erhalten, von Ihrem Rechenzentrum bis in die Cloud, indem Sie einmaliges Anmelden für lokale und Cloud-Apps bereitstellen. Dies erreichen Sie, indem Sie Active Directory in eine Hybrid Cloud erweitern und Identitätsverwaltung verwenden.
 
-Schließlich können Sie Daten nahtlos verteilen und analysieren, die gleichen Abfrage Sprachen für Cloud-und lokale Ressourcen verwenden und Analysen und Deep Learning in Azure anwenden, um Ihre Daten unabhängig von ihrer Quelle zu erweitern.
+Schließlich können Sie Daten nahtlos verteilen und analysieren, dieselben Abfragesprachen für Cloud- und lokale Ressourcen verwenden sowie Analysen und Deep Learning in Azure anwenden, um Ihre Daten unabhängig von deren Quelle anzureichern.
 
 ## <a name="azure-stack"></a>Azure Stack
 
-Azure Stack ist eine Hybrid Cloud Plattform, mit der Sie Azure-Dienste aus dem Rechenzentrum Ihrer Organisation bereitstellen können. Azure Stack ist für die Unterstützung neuer Optionen für ihre modernen Anwendungen in wichtigen Szenarien konzipiert, z. b. bei Edge-und nicht verbundenen Umgebungen oder bei der Erfüllung spezifischer Sicherheits-und Konformitätsanforderungen.
+Azure Stack ist eine Hybrid Cloud-Plattform, mit der Sie Azure-Dienste über das Rechenzentrum Ihrer Organisation bereitstellen können. Azure Stack soll in wichtigen Szenarien (etwa in Edge-Umgebungen und nicht verbundenen Umgebungen) neue Möglichkeiten für Ihre modernen Anwendungen unterstützen und zur Erfüllung spezifischer Sicherheits- und Konformitätsanforderungen beitragen.
 
-Abbildung 4-13 zeigt eine Übersicht über die echte Hybrid Cloud Plattform, die Microsoft bietet.
+Abbildung 4-13 zeigt eine Übersicht über die echte Hybrid Cloud-Plattform, die Microsoft bietet.
 
 ![Diagramm der Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure
 
-Azure Stack wird in zwei Bereitstellungs Optionen angeboten, die Ihren Anforderungen entsprechen:
+Azure Stack wird in zwei auf Ihre Anforderungen abgestimmten Bereitstellungsoptionen angeboten:
 
-- Azure Stack integrierter Systeme
+- Integrierte Azure Stack-Systeme
 
 - Azure Stack Development Kit
 
-### <a name="azure-stack-integrated-systems"></a>Azure Stack integrierter Systeme
+### <a name="azure-stack-integrated-systems"></a>Integrierte Azure Stack-Systeme
 
-Azure Stack integrierte Systeme werden über eine Partnerschaft von Microsoft und Hardwarepartnern angeboten. Mit der Partnerschaft wird eine Lösung erstellt, die Innovationen in der Cloud bietet, die mit der Einfachheit der Verwaltung ausgeglichen werden. Da Azure Stack als integriertes System von Hardware und Software angeboten wird, erhalten Sie die richtige Flexibilität und Kontrolle, während Sie trotzdem Innovationen aus der Cloud einführen. Azure Stack integrierte Systeme reichen von 4 bis 12 Knoten und werden vom Hardwarepartner und von Microsoft gemeinsam unterstützt. Verwenden Sie Azure Stack integrierte Systeme, um neue Szenarien für Ihre produktionsworkloads zu implementieren.
+Integrierte Azure Stack-Systeme werden im Rahmen einer Partnerschaft zwischen Microsoft und Hardwarepartnern angeboten. Durch diese Partnerschaft entsteht eine Lösung mit cloudbasierten Innovationen und komfortabler Computeverwaltung. Bei Azure Stack handelt es sich um ein integriertes System aus Hardware und Software. Somit bietet die Plattform genau das richtige Maß an Flexibilität und Kontrolle bei gleichzeitiger Bereitstellung von cloudbasierten Innovationen. Integrierte Azure Stack-Systeme haben eine Größe von 4 bis 12 Knoten, und der Support wird vom Hardwarepartner und von Microsoft gemeinsam bereitgestellt. Mit integrierten Azure Stack-Systemen ermöglichen Sie die Implementierung neuer Szenarien für Ihre Produktionsworkloads.
 
 ### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
 
-Microsoft Azure Stack Development Kit ist eine Bereitstellung von Azure Stack mit einem einzelnen Knoten, die Sie zum Auswerten und Kennenlernen von Azure Stack verwenden können. Sie können auch Azure Stack Development Kit als Entwicklerumgebung verwenden, in der Sie mithilfe von APIs und Tools entwickeln können, die mit Azure konsistent sind. Azure Stack Development Kit ist nicht für die Verwendung als Produktionsumgebung vorgesehen.
+Microsoft Azure Stack Development Kit ist eine Einzelknotenbereitstellung von Azure Stack, mit der Sie Azure Stack auswerten und näher kennenlernen können. Sie können auch Azure Stack Development Kit als Entwicklerumgebung verwenden, in der Sie anhand von mit Azure konsistenten APIs und Tools Entwicklungsarbeiten durchführen können. Azure Stack Development Kit ist nicht für die Verwendung als Produktionsumgebung konzipiert.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Azure-Hybrid Cloud**
+- **Azure Hybrid Cloud**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
@@ -53,7 +53,7 @@ Microsoft Azure Stack Development Kit ist eine Bereitstellung von Azure Stack mi
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
-- **Active Directory-Dienst Konten für Windows-Container**
+- **Active Directory-Dienstkonten für Windows-Container**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
@@ -61,7 +61,7 @@ Microsoft Azure Stack Development Kit ist eine Bereitstellung von Azure Stack mi
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
-- **Azure-Hybridvorteil Lizenzierung**
+- **Azure-Hybridvorteil – Lizenzierung**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

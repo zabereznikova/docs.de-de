@@ -1,101 +1,101 @@
 ---
-title: Beispielszenarien für Geschäftsszenarien und Anwendungsfälle für Server Lose apps
-description: Erfahren Sie, wie Sie sich mit einem praktischen Ansatz vertraut machen, indem Sie auf Beispiele zugreifen, die von der Bildverarbeitung zu mobilen Back-Ends und ETL-Pipelines reichen.
+title: Beispiele für Geschäftsszenarien und Anwendungsfälle für serverlose Apps
+description: Lernen Sie serverlose Architekturen mit einem praktischen Ansatz kennen, indem Sie auf Beispiele zugreifen, die von der Bildverarbeitung bis hin zu Mobile-Back-Ends und ETL-Pipelines reichen.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522385"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
 
-Es gibt viele Anwendungsfälle und Szenarien für Server lose Anwendungen. Dieses Kapitel enthält Beispiele, die die verschiedenen Szenarien veranschaulichen. Zu den Szenarien gehören Links zu verwandten Dokumentationen und öffentlichen Quellcode-Repository. Die Beispiele in diesem Kapitel ermöglichen Ihnen den Einstieg in das entwickeln und Implementieren von Server losen Lösungen.
+Es gibt viele Anwendungsfälle und Szenarien für serverlose Anwendungen. Dieses Kapitel enthält Beispiele, die die verschiedenen Szenarien veranschaulichen. Zu den Szenarien gehören Links zu verwandter Dokumentation und öffentlichen Quellcoderepositorys. Die Beispiele in diesem Kapitel ermöglichen Ihnen den Einstieg in das Entwickeln und Implementieren von serverlosen Lösungen.
 
 ## <a name="analyze-and-archive-images"></a>Analysieren und Archivieren von Bildern
 
-In diesem Beispiel werden Server lose Ereignisse (Event Grid), Workflows (Logik-APP) und Code (Azure Functions) veranschaulicht. Außerdem wird gezeigt, wie Sie in eine andere Ressource integrieren, in diesem Fall Cognitive Services für die Bildanalyse.
+In diesem Beispiel werden serverlose Ereignisse (Event Grid), Workflows (Logik-App) und Code (Azure Functions) veranschaulicht. Außerdem wird gezeigt, wie Sie die Integration in eine andere Ressource ausführen, in diesem Fall Cognitive Services für Bildanalyse.
 
-Eine Konsolenanwendung ermöglicht Ihnen das Übergeben eines Links an eine URL im Web. Die App veröffentlicht die URL als Event Grid-Nachricht. Parallel dazu wird die Nachricht von einer Server losen Funktions-APP und einer Logik-App abonniert. Die Server lose Funktions-APP serialisiert das Image in BLOB Storage. Außerdem werden Informationen in Azure Table Storage gespeichert. Die Metadaten speichern die ursprüngliche Bild-URL und den Namen des BLOB-Bilds. Die Logik-App interagiert mit der Custom Vision-API, um das Image zu analysieren und eine vom computergenerierte Beschriftung zu erstellen. Die Beschriftung wird in der Metadatentabelle gespeichert.
+Eine Konsolenanwendung ermöglicht Ihnen das Übergeben eines Links an eine URL im Web. Die App veröffentlicht die URL als Event Grid-Nachricht. Parallel dazu wird die Nachricht von einer serverlosen Funktions-App und einer Logik-App abonniert. Die serverlose Funktions-App serialisiert das Bild im Blobspeicher. Außerdem werden Informationen in Azure Table Storage gespeichert. In den Metadaten werden die ursprüngliche Bild-URL und der Name des Blobbilds gespeichert. Die Logik-App interagiert mit der Custom Vision-API, um das Bild zu analysieren und eine computergenerierte Beschriftung zu erstellen. Die Beschriftung wird in der Metadatentabelle gespeichert.
 
-![Analysieren und Archivieren von Images](./media/image-processing-example.png)
+![Architektur für das Analysieren und Archivieren von Bildern](./media/image-processing-example.png)
 
-Eine separate Single-Page-Anwendung (Spa) Ruft eine Server lose Funktion auf, um eine Liste von Bildern und Metadaten zu erhalten. Für jedes Image wird eine andere Funktion aufgerufen, die die Bilddaten aus dem Archiv übermittelt. Das Endergebnis ist ein Katalog mit automatischen Beschriftungen.
+Eine separate Single-Page-Anwendung (SPA) ruft eine serverlose Funktion auf, um eine Liste von Bildern und Metadaten abzurufen. Für jedes Bild wird eine andere Funktion aufgerufen, die die Bilddaten aus dem Archiv übermittelt. Das Endergebnis ist ein Katalog mit automatischen Beschriftungen.
 
-![Automatisierter Image Katalog](./media/automated-image-gallery.png)
+![Automatisierter Bildkatalog](./media/automated-image-gallery.png)
 
-Das vollständige Repository und Anweisungen zum Erstellen der Logik-App finden Sie hier: [Event Grid-Kleber](https://github.com/JeremyLikness/Event-Grid-Glue).
+Das vollständige Repository und Anleitungen zum Erstellen der Logik-App finden Sie hier: [Event Grid-Verbindung](https://github.com/JeremyLikness/Event-Grid-Glue).
 
-## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Plattformübergreifender mobiler Client mit xamarin. Forms und Functions
+## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Plattformübergreifender mobiler Client, der Xamarin.Forms und Funktionen verwendet
 
-Erfahren Sie, wie Sie eine einfache Server lose Azure-Funktion im Azure-Webportal oder in Visual Studio implementieren. Erstellen Sie einen Client mit xamarin. Forms, der unter Android, IOS und Windows ausgeführt wird. Die Anwendung wird dann für die Verwendung von JavaScript Object Notation (JSON) als Kommunikationsmedium zwischen dem Server und den mobilen Clients mit einem Server losen Back-End verfeinert.
+Erfahren Sie, wie Sie eine einfache serverlose Azure-Funktion im Azure-Webportal oder in Visual Studio implementieren. Erstellen Sie einen Client mit Xamarin.Forms, der unter Android, iOS und Windows ausgeführt wird. Die Anwendung wird dann verfeinert, um JavaScript Object Notation (JSON) als Kommunikationsmedium zwischen dem Server und den mobilen Clients mit einem serverlosen Back-End zu verwenden.
 
-Weitere Informationen finden Sie unter [Implementieren einer einfachen Azure-Funktion mit einem xamarin. Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
+Weitere Informationen finden Sie unter [Implementieren einer einfachen Azure-Funktion mit einem Xamarin.Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
 
-## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Foto-Mosaik mit Server loser Bild Erkennung generieren
+## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Generieren eines Fotomosaiks mit serverloser Bilderkennung
 
-Das Beispiel verwendet Azure Functions und Microsoft Cognitive Services Custom Vision Service, um ein Photo-Mosaik aus einem Eingabebild zu generieren. Das Modell wird trainiert, um Bilder zu erkennen. Wenn ein Bild hochgeladen wird, wird das Bild erkannt und mit dem Suchvorgang gesucht. Das ursprüngliche Bild wird mithilfe der Suchergebnisse neu zusammengesetzt.
+Das Beispiel verwendet Azure Functions und Custom Vision Service von Microsoft Cognitive Services, um ein Photomosaik aus einem Eingabebild zu generieren. Das Modell wurde trainiert, um Bilder zu erkennen. Wenn ein Bild hochgeladen wird, wird das Bild erkannt und mit Bing gesucht. Das ursprüngliche Bild wird mithilfe der Suchergebnisse neu zusammengesetzt.
 
-![Orlando Eye Photo und Mosaic](./media/orlando-eye-both.png)
+![Foto und Mosaik von Orlando Eye](./media/orlando-eye-both.png)
 
-Beispielsweise können Sie Ihr Modell mit Orlando-, z. b. dem Orlando Eye, Schulen. Custom Vision erkennt ein Bild von Orlando Eye, und die Funktion erstellt ein Foto-Mosaik, das aus den Suchergebnissen von Suchergebnissen für "Orlando Eye" besteht.
+Beispielsweise können Sie Ihr Modell mit Wahrzeichen aus Orlando (Florida, USA) trainieren, etwa mit dem Riesenrad Orlando Eye. Custom Vision erkennt ein Bild des Riesenrads Orlando Eye, und die Funktion erstellt ein Fotomosaik, das aus den Ergebnissen der Bing-Bildersuche für „Orlando Eye“ besteht.
 
-Weitere Informationen finden Sie unter [Azure Functions Photo Mosaic Generator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
+Weitere Informationen finden Sie unter [Azure Functions-Fotomosaikgenerator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Migrieren einer vorhandenen Anwendung in die Cloud
 
-Wie bereits in den vorherigen Kapiteln erläutert, ist es üblich, eine N-Tier-Architektur zu nutzen, um Ihre Anwendung lokal zu hosten. Obwohl das Migrieren von Ressourcen "wie immer" mit virtuellen Computern der am wenigsten riskante Weg zur Cloud ist, entscheiden sich viele Unternehmen für die Umgestaltung Ihrer Anwendungen. Glücklicherweise muss das Refactoring keinen "All-or-Nothing"-Aufwand haben. Tatsächlich ist es möglich, Ihre APP zu migrieren, und dann Komponenten durch die native Cloud-Entsprechung zu ersetzen.
+Wie bereits in vorherigen Kapiteln erläutert, ist es üblich, eine n-schichtige Architektur zu nutzen, um Ihre Anwendung lokal zu hosten. Obwohl das „unveränderte“ Migrieren von Ressourcen mithilfe virtueller Computer der am wenigsten riskante Weg in die Cloud ist, entscheiden sich viele Unternehmen für ein Refactoring ihrer Anwendungen. Glücklicherweise muss dieses Refactoring kein Unterfangen der Art „Alles oder Nichts“ sein. Tatsächlich ist es möglich, Ihre App zu migrieren und dann stückweise Komponenten durch native Gegenstücke aus der Cloud zu ersetzen.
 
-Die Anwendung verwendet die Proxys von Azure Functions, um das Refactoring eines Endpunkts aus dem Legacy lokalen Code zu einem Server losen Endpunkt zu ermöglichen.
+Die Anwendung verwendet die Proxyfunktion von Azure Functions, um das Refactoring eines Endpunkts aus dem lokalen Legacycode in einen serverlosen Endpunkt zu ermöglichen.
 
-![Migrations Architektur](./media/migration-architecture.png)
+![Migrationsarchitektur](./media/migration-architecture.png)
 
-Der Proxy stellt einen einzelnen API-Endpunkt bereit, der aktualisiert wird, um einzelne Anforderungen umzuleiten, wenn Sie in Server lose Funktionen verschoben werden.
+Der Proxy stellt einen einzelnen API-Endpunkt bereit, der aktualisiert wird, um einzelne Anforderungen umzuleiten, wenn Sie in serverlose Funktionen verschoben werden.
 
-Sie können sich ein Video ansehen, das die gesamte Migration durchläuft: [Lift & Shift mit Server losen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102). Greifen Sie auf den Beispielcode zu: [Bring your own App](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Sie können sich ein Video ansehen, das die gesamte Migration schrittweise durchläuft: [Lift and shift with serverless Azure functions](https://channel9.msdn.com/Events/Connect/2017/E102) („Lift and Shift“ mit serverlosen Azure-Funktionen). Greifen Sie auf den Beispielcode zu: [Bring your own app](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
-## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Eine CSV-Datei analysieren und in eine Datenbank einfügen
+## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analysieren einer CSV-Datei und Einfügen in eine Datenbank
 
-Extrahieren, Transformieren und laden (ETL) ist eine gängige Geschäftsfunktion, die verschiedene Systeme integriert. Herkömmliche Ansätze umfassen häufig das Einrichten dedizierter FTP-Server und die anschließende Bereitstellung geplanter Aufträge, um Dateien zu analysieren und für die geschäftliche Verwendung zu übersetzen. Durch die Server lose Architektur wird die Aufgabe vereinfacht, da ein Trigger ausgelöst werden kann, wenn die Datei hochgeladen wird. Azure Functions behandelt Aufgaben wie ETL durch die ideale Komposition von kleinen Code teilen, die sich auf ein bestimmtes Problem konzentrieren.
+ETL (Extrahieren, Transformieren und Laden) ist eine gängige Geschäftsfunktion, die verschiedene Systeme integriert. Herkömmliche Ansätze umfassen häufig das Einrichten dedizierter FTP-Server und die anschließende Bereitstellung geplanter Aufträge, um Dateien zu analysieren und für die geschäftliche Verwendung zu übersetzen. Durch die serverlose Architektur wird diese Aufgabe vereinfacht, da ein Trigger ausgelöst werden kann, wenn die Datei hochgeladen wird. Azure Functions löst Aufgaben wie ETL durch die ideale Zusammensetzung aus kleinen Codeabschnitten, die sich auf ein bestimmtes Problem konzentrieren.
 
-![Screenshot, der den CSV-Prozess für die CSV-Verarbeitung anzeigt.](./media/serverless-business-scenarios/csv-parse-database-import.png)
+![Screenshot, der den CSV-Analyseprozess zeigt.](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
-Informationen zu Quellcode und praktischen Übungseinheiten finden Sie unter [CSV-Import-Lab](https://github.com/JeremyLikness/azure-fn-file-process-hol).
+Quellcode und ein Praxislab finden Sie unter [CSV-Importlab](https://github.com/JeremyLikness/azure-fn-file-process-hol).
 
-## <a name="shorten-links-and-track-metrics"></a>Kürzen von Links und verfolgen von Metriken
+## <a name="shorten-links-and-track-metrics"></a>Kürzen von Links und Nachverfolgen von Metriken
 
-Die Tools zum Verkürzen von Links trugen ursprünglich dazu bei, URLs in kurzen Twitter-Beiträgen zu codieren, um den Grenzwert von 140 Zeichen Sie wurden zu mehreren Verwendungsmöglichkeiten erweitert, meistens zum Nachverfolgen von Click-through-Vorgängen für Analysezwecke. Das linkshortener-Szenario ist eine vollständig Server lose Anwendung zum Verwalten von Verknüpfungen und Berichts Metriken.
+Tools zum Kürzen von Links trugen ursprünglich dazu bei, URLs in kurzen Twitter-Beiträgen zu codieren, um den Grenzwert von 140 Zeichen zu unterstützen. Sie werden inzwischen für eine Vielzahl von Verwendungsmöglichkeiten eingesetzt, vor allem zur Nachverfolgung von Click-Through-Vorgängen für Analysen. Das Szenario für die Kürzung von Links ist eine vollständig serverlose Anwendung zum Verwalten von Links, die auch Metriken bereitstellt.
 
-Azure Functions wird für eine Single-Page-Anwendung (Spa) verwendet, mit der Sie die Long-URL einfügen und kurze URLs generieren können. Die URLs werden gekennzeichnet, um Dinge wie Kampagnen (Themen) und Medien (z. b. soziale Netzwerke, an die die Links gesendet werden) nachverfolgen zu können. Der kurze Code wird in Azure Table Storage als Schlüssel gespeichert, wobei die Long-URL den Wert hat. Wenn Sie auf den Kurzlink klicken, wird von einer anderen Funktion die Long-URL nachgeschlagen, eine Umleitung gesendet und Informationen über das Ereignis in einer Warteschlange abgelegt. Eine andere Azure-Funktion verarbeitet die Warteschlange und platziert die Informationen in Azure Cosmos DB.
+Azure Functions wird für eine Single-Page-Anwendung (SPA) verwendet, mit der Sie die lange URL einfügen und kurze URLs generieren können. Die URLs werden gekennzeichnet, um Dinge wie Kampagnen (Themen) und Medien (z.B. soziale Netzwerke, in denen die Links gepostet werden) nachverfolgen zu können. Der kurze Code wird in Azure Table Storage als Schlüssel gespeichert, wobei die lange URL den Wert darstellt. Wenn Sie auf den kurzen Link klicken, schlägt eine andere Funktion die lange URL nach, sendet eine Umleitung und speichert Informationen zum Ereignis in einer Warteschlange. Eine andere Azure-Funktion verarbeitet die Warteschlange und platziert die Informationen in Azure Cosmos DB.
 
-![Link Kürzel-Architektur](./media/link-shortener-architecture.png)
+![Architektur der Linkkürzung](./media/link-shortener-architecture.png)
 
-Sie können dann ein Power BI Dashboard erstellen, um Einblicke in die gesammelten Daten zu sammeln. Im Back-End stellt Application Insights wichtige Metriken bereit. Die Telemetrie umfasst, wie lange es dauert, bis der durchschnittliche Benutzer umgeleitet wird und wie lange der Zugriff auf Azure Table Storage dauert.
+Sie können dann ein Power BI-Dashboard erstellen, um Einblicke in die erfassten Daten zu erhalten. Im Back-End stellt Application Insights wichtige Metriken bereit. Die Telemetrie umfasst beispielsweise Angaben dazu, wie lange es dauert, bis der durchschnittliche Benutzer umgeleitet wird, und wie lange der Zugriff auf Azure Table Storage dauert.
 
-![Power BI Beispiel](./media/power-bi-example.png)
+![Power BI-Beispiel](./media/power-bi-example.png)
 
-Das vollständige Link-verkürzer-Repository mit Anweisungen finden Sie hier: [Server Loses URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener). Informationen zu einer vereinfachten Version finden Sie hier: [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+Das vollständige Repository für die Linkkürzung mit Anleitungen finden Sie hier: [Serverlose URL-Kürzung](https://github.com/jeremylikness/serverless-url-shortener). Informationen zu einer vereinfachten Version finden Sie hier: [Azure Storage für serverlose .NET-Apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
-## <a name="verify-device-connectivity-using-a-ping"></a>Überprüfen der Geräte Konnektivität per Ping
+## <a name="verify-device-connectivity-using-a-ping"></a>Überprüfen der Gerätekonnektivität mit Ping
 
-Das Beispiel besteht aus einer Azure IOT Hub und einer Azure-Funktion. Eine neue Nachricht im IOT Hub löst die Azure-Funktion aus. Der Server lose Code sendet denselben Nachrichten Inhalt zurück an das Gerät, von dem das Gerät gesendet wurde. Das Projekt verfügt über den gesamten Code und die Bereitstellungs Konfiguration, die für die Lösung erforderlich sind.
+Das Beispiel besteht aus einem Azure IoT Hub und einer Azure-Funktion. Eine neue Nachricht im IoT Hub löst die Azure-Funktion aus. Der serverlose Code sendet denselben Nachrichteninhalt zurück an das Gerät, von dem er gesendet wurde. Das Projekt verfügt über den gesamten für die Lösung erforderlichen Code und die Bereitstellungskonfiguration.
 
-Weitere Informationen finden Sie unter [Azure IOT Hub Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
+Weitere Informationen finden Sie unter [Azure IoT Hub – Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-- [Azure Functions Photo-Mosaik Generator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Azure IOT Hub Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-- [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-- [Bring your own App](https://github.com/JeremyLikness/bring-own-app-connect-17)
-- [CSV-Import-Lab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-- [Event Grid-Kleber](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Implementieren einer einfachen Azure-Funktion mit einem xamarin. Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-- [Lift & Shift mit Server losen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102)
-- [Server loser URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Functions-Fotomosaikgenerator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IoT Hub – Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Storage für serverlose .NET-Apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [Bring your own app](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV-Importlab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Event Grid-Verbindung](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Implementieren einer einfachen Azure-Funktion mit einem Xamarin.Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [„Lift and Shift“ mit serverlosen Azure-Funktionen](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Serverlose URL-Kürzung](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[Zurück](orchestration-patterns.md)

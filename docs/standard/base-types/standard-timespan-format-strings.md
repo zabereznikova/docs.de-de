@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121692"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972094"
 ---
 # <a name="standard-timespan-format-strings"></a>TimeSpan-Standardformatzeichenfolgen
-<a name="Top"></a> Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+
+Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Die Zeichenfolgendarstellungen von <xref:System.TimeSpan>-Werten werden durch Aufrufe der Überladungen der <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>-Methode und durch Methoden, die die kombinierte Formatierung unterstützen (z. B. <xref:System.String.Format%2A?displayProperty=nameWithType>), erzeugt. Weitere Informationen finden Sie unter [Formatieren von Typen](../../../docs/standard/base-types/formatting-types.md) und [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md). Das folgende Beispiel veranschaulicht die Verwendung von Standardformatzeichenfolgen bei Formatierungsvorgängen.  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121692"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.  
+Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.  
   
 |Formatbezeichner|name|BESCHREIBUNG|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen finden Sie unter: [Der Konstantenformatbezeichner "c"](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Kurzformatbezeichner "g"](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Allgemeines Langformat|Dieser Bezeichner gibt immer Tage und sieben Dezimalstellen aus. Es ist kulturabhängig und besitzt das Format `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Langformatbezeichner "G"](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
-  
-<a name="Constant"></a>   
+|"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen finden Sie unter: [Der Konstantenformatbezeichner "c"](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Kurzformatbezeichner "g"](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Allgemeines Langformat|Dieser Bezeichner gibt immer Tage und sieben Dezimalstellen aus. Es ist kulturabhängig und besitzt das Format `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Langformatbezeichner "G"](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>Der Konstantenformatbezeichner "c"  
  Der Formatbezeichner "c" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in der folgenden Form an:  
   
@@ -71,10 +71,7 @@ ms.locfileid: "73121692"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [Zurück zur Tabelle](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>Der allgemeine Kurzformatbezeichner "g"  
  Der <xref:System.TimeSpan>-Formatbezeichner "g" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in einem kompakten Format an, indem nur die erforderlichen Elemente eingeschlossen werden. Er hat das folgende Format:  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121692"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [Zurück zur Tabelle](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>Der allgemeine Langformatbezeichner "G"  
  Der <xref:System.TimeSpan>-Formatbezeichner "G" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in einem Langformat zurück, das immer Tage und Sekundenbruchteile enthält. Die Zeichenfolge, die sich aus dem Standardformatbezeichner "G" ergibt, hat folgendes Format:  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121692"
  Im folgenden Beispiel werden zwei <xref:System.TimeSpan>-Objekte instanziiert, zum Ausführen arithmetischer Vorgänge verwendet, und das Ergebnis wird angezeigt. In jedem Fall wird die kombinierte Formatierung zum Anzeigen des <xref:System.TimeSpan>-Werts mit dem Formatbezeichner "G" verwendet. Darüber hinaus wir der <xref:System.TimeSpan>-Wert unter Verwendung der Formatierungskonventionen der aktuellen Systemkultur formatiert (d. h. in diesem Fall Englisch - USA oder en-US) und der Kultur Französisch - Frankreich (fr-FR)).  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [Zurück zur Tabelle](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>Siehe auch
 

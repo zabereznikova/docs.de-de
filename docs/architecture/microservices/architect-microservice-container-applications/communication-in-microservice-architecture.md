@@ -2,12 +2,12 @@
 title: Kommunikation in einer Microservicearchitektur
 description: Erkunden Sie verschiedene Kommunikationsmöglichkeiten zwischen Microservices, und lernen Sie die Auswirkungen synchroner und asynchroner Optionen kennen.
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673297"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966977"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -51,9 +51,11 @@ Darüber hinaus verlieren Ihre Microservices durch HTTP-Abhängigkeiten zwischen
 
 Je mehr Sie synchrone Abhängigkeiten zwischen Microservices hinzufügen, z.B. in Form von Abfrageanforderungen, desto schlechter wird die Gesamtantwortzeit bei den Client-Apps.
 
-![In der synchronen Kommunikation wird eine „Kette“ von Anforderungen zwischen Microservices erstellt, während die Clientanforderung verarbeitet wird. Dies ist ein Antimuster. In der asynchronen Kommunikation verwenden Microservices asynchrone Nachrichten oder HTTP-Abrufe zur Kommunikation mit anderen Microservices – die Clientanforderung wird sofort beantwortet.](./media/image15.png)
+![Diagramm, das zeigt drei Typen von Kommunikation über Microservices hinweg zeigt.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **Abbildung 4-15**. Antimuster und Muster bei der Kommunikation zwischen Microservices
+
+Wie in dem obigen Diagramm gezeigt, wird in der synchronen Kommunikation eine „Kette“ von Anforderungen zwischen Microservices erstellt, während die Clientanforderung verarbeitet wird. Dies ist ein Antimuster. In der asynchronen Kommunikation verwenden Microservices asynchrone Nachrichten oder HTTP-Abrufe zur Kommunikation mit anderen Microservices – die Clientanforderung wird sofort beantwortet.
 
 Wenn Ihr Microservice eine weitere Aktion in einem anderen Microservice auslösen muss, sollten Sie diese Aktion möglichst nicht synchron und im Rahmen des ursprünglichen Anforderungs- und Antwortvorgangs des Microservices ausführen. Führen Sie die Aktion stattdessen asynchron aus (über asynchrones Messaging oder Integrationsereignisse, Warteschlangen usw.). Rufen Sie die Aktion jedoch möglichst nicht synchron im Rahmen des ursprünglichen synchronen Anforderungs- und Antwortvorgangs auf.
 
@@ -75,7 +77,7 @@ Es gibt auch mehrere Nachrichtenformate wie JSON, XML oder sogar Binärformate, 
 
 Wenn ein Client die Kommunikation über Anforderungen/Antworten verwendet, sendet er eine Anforderung an einen Dienst. Der Dienst verarbeitet die Anforderung dann und sendet eine Antwort zurück. Die Kommunikation über Anforderungen/Antworten eignet sich besonders zum Abfragen von Daten für eine Echtzeit-Benutzeroberfläche (eine Live-Benutzeroberfläche) über Client-Apps. Daher wird dieser Kommunikationsmechanismus (s. Abbildung 4-16) in einer Microservicearchitektur wahrscheinlich bei den meisten Abfragen verwendet.
 
-![Sie können die Anforderungs-/Antwortkommunikation für Liveabfragen verwenden, wenn der Client die Anforderung an ein API-Gateway sendet, falls die Antwort der Microservices bald erwartet wird.](./media/image16.png)
+![Diagramm, das Anforderung/Antwort-Kommunikation für Liveabfragen und Updates zeigt.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **Abbildung 4-16**. Verwenden der Kommunikation über HTTP-Anforderungen/-Antworten (synchron oder asynchron)
 
@@ -99,11 +101,11 @@ Eine andere Möglichkeit (in der Regel zu anderen Zwecken als REST) ist eine in 
 
 Wie in Abbildung 4-17 zu sehen ist, bedeutet HTTP-Kommunikation in Echtzeit, dass Sie über Servercode verfügen können, der bei Zurverfügungstellung der Daten Inhalte mithilfe von Push an verbundene Clients überträgt, statt den Server auf eine Clientanforderung nach neuen Daten warten zu lassen.
 
-![SignalR ist ein guter Ansatz für die Echtzeitkommunikation, um Inhalte von einem Back-End-Server an Clients zu übertragen.](./media/image17.png)
+![Diagramm, das Push- und Echtzeitkommunikation auf Grundlage von SignalR zeigt.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **Abbildung 4-17**. Asynchrone 1:1-Nachrichtenkommunikation in Echtzeit
 
-Da die Kommunikation in Echtzeit erfolgt, werden die Änderungen in Client-Apps praktisch sofort angezeigt. Dies wird normalerweise von einem Protokoll wie WebSockets unter Verwendung vieler WebSockets-Verbindungen (eine pro Client) gesteuert. Ein typisches Beispiel ist, wenn ein Dienst die Bewertungsänderung eines Sportspiels an viele Client-Apps gleichzeitig überträgt.
+SignalR ist ein guter Ansatz für die Echtzeitkommunikation, um Inhalte von einem Back-End-Server an Clients zu übertragen. Da die Kommunikation in Echtzeit erfolgt, werden die Änderungen in Client-Apps praktisch sofort angezeigt. Dies wird normalerweise von einem Protokoll wie WebSockets unter Verwendung vieler WebSockets-Verbindungen (eine pro Client) gesteuert. Ein typisches Beispiel ist, wenn ein Dienst die Bewertungsänderung eines Sportspiels an viele Client-Apps gleichzeitig überträgt.
 
 >[!div class="step-by-step"]
 >[Zurück](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

@@ -3,14 +3,14 @@ title: Berechnen von Metriken zum Bewerten der Qualität des Machine Learning-Mo
 description: Erfahren Sie, wie Sie ML.NET Metriken zum Bewerten und Überprüfen der Qualität des Machine Learning-Modells berechnen
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 529003913b166c966e131b006800f944096605b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6409307cd283ae67d7546c4dc6e19e6089a0766
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855567"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975838"
 ---
-# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Berechnen von Metriken zum Bewerten der Qualität des Machine Learning-Modells 
+# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Berechnen von Metriken zum Bewerten der Qualität des Machine Learning-Modells
 
 > [!NOTE]
 > Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie auf der Seite [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet).

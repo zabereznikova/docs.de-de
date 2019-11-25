@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970655"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037962"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio 2017
 
@@ -42,11 +42,11 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
-   * Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
+   - Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
 
-   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem \[TestMethod\]-Attribut markierte Testmethode in einer Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
+   - Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem \[TestMethod\]-Attribut markierte Testmethode in einer Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
 
-   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
+   - Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
@@ -73,11 +73,11 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
-   * Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
+   - Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
 
-   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> markierte Testmethode in einer Testklasse wird bei Ausführung des Komponententests automatisch ausgeführt.
+   - Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> markierte Testmethode in einer Testklasse wird bei Ausführung des Komponententests automatisch ausgeführt.
 
-   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
+   - Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
@@ -93,7 +93,7 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
 Wenn Visual Studio einen Komponententest ausführt, wird jede Methode in einer Komponententestklasse – der Klasse, auf die das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> angewendet wird – ausgeführt, die mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> markiert ist. Eine Testmethode endet, wenn der erste Fehler aufgetreten ist, oder wenn alle in der Methode enthaltenen Tests erfolgreich ausgeführt wurden.
 
-In den am häufigsten verwendeten Tests werden Member der Klasse <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> aufgerufen. Viele Assert-Methoden enthalten mindestens zwei Parameter, von denen einer das erwartete und der andere das tatsächliche Testergebnis ist. Die am häufigsten aufgerufenen Methoden sind in der nachfolgenden Tabelle aufgeführt.
+In den am häufigsten verwendeten Tests werden Member der Klasse <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> aufgerufen. Viele Assert-Methoden enthalten mindestens zwei Parameter, von denen einer das erwartete und der andere das tatsächliche Testergebnis ist. Die am häufigsten aufgerufenen Methoden sind in der nachfolgenden Tabelle aufgeführt:
 
 Assert-Methoden | Funktion
 --- | ---
@@ -116,7 +116,7 @@ So erstellen Sie die Testmethoden:
 
 1. Ersetzen Sie den Code im Codefenster *UnitTest1.cs* durch den folgenden Code:
 
-   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Beachten Sie, dass Ihr Großbuchstabentest in der `TestStartsWithUpper`-Methode den griechischen Großbuchstaben Alpha (U+0391) und den kyrillischen Großbuchstaben EM (U+ 041C) umfasst, und der Kleinbuchstabentest in der `TestDoesNotStartWithUpper`-Methode den griechischen Kleinbuchstaben Alpha (U+03B1) und den kyrillischen Kleinbuchstaben Ghe (U+0433).
 
@@ -128,7 +128,7 @@ So erstellen Sie die Testmethoden:
 
 1. Ersetzen Sie den Code im Codefenster *UnitTest1.vb* durch den folgenden Code:
 
-    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Beachten Sie, dass Ihr Großbuchstabentest in der `TestStartsWithUpper`-Methode den griechischen Großbuchstaben Alpha (U+0391) und den kyrillischen Großbuchstaben EM (U+ 041C) umfasst, und der Kleinbuchstabentest in der `TestDoesNotStartWithUpper`-Methode den griechischen Kleinbuchstaben Alpha (U+03B1) und den kyrillischen Kleinbuchstaben Ghe (U+0433).
 

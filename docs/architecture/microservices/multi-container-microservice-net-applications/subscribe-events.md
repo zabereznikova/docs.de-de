@@ -2,12 +2,12 @@
 title: Abonnieren von Ereignissen
 description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035635"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737064"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -139,7 +139,7 @@ Wenn Sie die Schritte zum Veröffentlichen von Ereignissen implementieren, haben
 
 In Abbildung 6-22 wird der Aufbau des ersten Ansatzes veranschaulicht.
 
-![Ein Ansatz zum Umgang mit Unteilbarkeit beim Veröffentlichen von Ereignissen: Verwenden Sie eine Transaktion, um das Ereignis in eine EventLog-Tabelle zu committen, und dann eine weitere zur Veröffentlichung (verwendet in eShopOnContainers)](./media/image23.png)
+![Diagramm der Unteilbarkeit beim Veröffentlichen ohne einen Workermicroservice.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Abbildung 6-22**. Unteilbarkeit beim Veröffentlichen von Ereignissen im Ereignisbus
 
@@ -147,7 +147,7 @@ Dem in Abbildung 6-22 dargestellten Ansatz fehlt ein zusätzlicher Workermicrose
 
 Beim zweiten Ansatz verwenden Sie die EventLog-Tabelle als Warteschlange und zusätzlich immer einen Workermicroservice zum Veröffentlichen von Meldungen. In diesem Fall sieht der Prozess wie in Abbildung 6-23 dargestellt aus. Hier sehen Sie einen zusätzlichen Microservice. Die Tabelle ist die einzige Quelle beim Veröffentlichen von Ereignissen.
 
-![Ein anderer Ansatz zum Umgang mit Unteilbarkeit: Veröffentlichen Sie das Ereignis in einer Ereignisprotokokolltabelle, und veröffentlichen Sie es dann durch einen weiteren Microservice (Worker im Hintergrund).](./media/image24.png)
+![Diagramm der Unteilbarkeit beim Veröffentlichen mit einem Workermicroservice.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Abbildung 6-23**. Unteilbarkeit beim Veröffentlichen von Ereignissen im Ereignisbus mit einem Workermicroservice
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Der Ereignishandler muss überprüfen, ob das Produkt in einer Warenkorbinstanz vorhanden ist. Außerdem aktualisiert er den Preis für jeden verknüpften Warenkorbartikel. Zum Schluss erstellt er eine Warnung, die dem Benutzer bezüglich der Preisänderung angezeigt wird. Dies wird in Abbildung 6-24 veranschaulicht.
 
-![Browseransicht der Benachrichtigung zur Preisänderung im Einkaufswagen des Benutzers.](./media/image25.png)
+![Screenshot eines Browsers, der die Benachrichtigung zur Preisänderung im Warenkorb des Benutzers zeigt.](./media/subscribe-events/display-item-price-change.png)
 
 **Abbildung 6-24**. Preisänderung in einem Warenkorb wie von Integrationsereignissen gemeldet
 

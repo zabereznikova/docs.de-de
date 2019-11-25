@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arch
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373767"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416692"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -75,7 +75,7 @@ Kapseln Sie die Logik in einem Programmierungskonstrukt anstatt sie zu duplizier
 
 ### <a name="persistence-ignorance"></a>Ignorieren der Persistenz
 
-Das **Ignorieren der Persistenz** (Persistence Ignorance, PI) bezieht sich auf Typen, die beibehalten werden müssen, deren Code jedoch von der Wahl der Persistenztechnologie nicht beeinflusst wird. Solche Typen werden in .NET häufig als „Plain Old CLR Objects“ (POCOs) bezeichnet, da sie nicht von einer bestimmten Basisklasse erben oder eine bestimmte Schnittstelle implementieren müssen. Das Ignorieren der Persistenz ist wertvoll, weil das Geschäftsmodell so auf unterschiedliche Weise beibehalten werden kann, wodurch zusätzliche Flexibilität für die Anwendung garantiert werden kann. Die Wahl der Persistenz kann sich mit der Zeit von einer Datenbanktechnologie zur anderen ändern, oder es sind möglicherweise zusätzliche Persistenzformen entsprechend der Komponente, mit der die Anwendung gestartet wurde, erforderlich(z.B. mithilfe eines Redis-Caches oder Azure DocumentDB zusätzlich zu einer relationalen Datenbank).
+Das **Ignorieren der Persistenz** (Persistence Ignorance, PI) bezieht sich auf Typen, die beibehalten werden müssen, deren Code jedoch von der Wahl der Persistenztechnologie nicht beeinflusst wird. Solche Typen werden in .NET häufig als „Plain Old CLR Objects“ (POCOs) bezeichnet, da sie nicht von einer bestimmten Basisklasse erben oder eine bestimmte Schnittstelle implementieren müssen. Das Ignorieren der Persistenz ist wertvoll, weil das Geschäftsmodell so auf unterschiedliche Weise beibehalten werden kann, wodurch zusätzliche Flexibilität für die Anwendung garantiert werden kann. Die Wahl der Persistenz kann sich mit der Zeit von einer Datenbanktechnologie zur anderen ändern, oder es sind möglicherweise zusätzliche Persistenzformen entsprechend der Komponente erforderlich, mit der die Anwendung gestartet wurde (z. B. mithilfe eines Redis-Caches oder mit Azure Cosmos DB zusätzlich zu einer relationalen Datenbank).
 
 Einige Beispiele für Verstöße gegen dieses Prinzip:
 

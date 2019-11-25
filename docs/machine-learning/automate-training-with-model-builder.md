@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929469"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971521"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -60,7 +60,7 @@ Wenn Ihr Szenario eine Klassifizierung in zwei Kategorien erfordert, können Sie
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Vorhersagen einer Kategorie (wenn drei oder mehr Kategorien vorliegen)
 
-Die Multiklassenklassifizierung kann für die Kategorisierung von Daten in drei oder mehr Klassen verwendet werden. 
+Die Multiklassenklassifizierung kann für die Kategorisierung von Daten in drei oder mehr Klassen verwendet werden.
 
 ![Beispiele für die Mehrklassenklassifizierung, einschließlich Dokument- und Produktklassifizierung, Supportticketweiterleitung und Kundenproblempriorisierung](media/multiclass-classification-examples.png)
 

@@ -7,16 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206058"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975533"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
-
-<a name="top"></a>
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -24,16 +22,6 @@ Sicherheit schließt drei interagierende Elemente ein: Sandkasten, Berechtigunge
 
 > [!IMPORTANT]
 > Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Ab .NET Framework 4 ist die Sicherheitsrichtlinie veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Kompatibilität und Migration von Richtlinien für die Code Zugriffssicherheit](code-access-security-policy-compatibility-and-migration.md).
-
-In diesem Thema wird das Transparenzmodell genauer beschrieben. Es enthält die folgenden Abschnitte:
-
-- [Zweck des Transparenz Modells](#purpose)
-
-- [Angeben der Transparenz Ebene](#level)
-
-- [Transparenz Erzwingung](#enforcement)
-
-<a name="purpose"></a>
 
 ## <a name="purpose-of-the-transparency-model"></a>Zweck des Transparenzmodells
 
@@ -47,11 +35,7 @@ Das primäre Ziel der Transparenzerzwingung besteht darin, einen einfachen, effe
 Transparenz wurde in .NET Framework, Version 2.0, eingeführt, um das Sicherheitsmodell zu vereinfachen und das Schreiben und Bereitstellen von sicheren Bibliotheken und Anwendungen zu erleichtern. Transparenter Code wird auch in Microsoft Silverlight verwendet, um die Entwicklung von teilweise vertrauenswürdigen Anwendungen zu vereinfachen.
 
 > [!NOTE]
-> Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.
-
-[Zurück nach oben](#top)
-
-<a name="level"></a>
+> Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Gewusst wie: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.
 
 ## <a name="specifying-the-transparency-level"></a>Angeben der Transparenzebene
 
@@ -59,7 +43,7 @@ Das <xref:System.Security.SecurityRulesAttribute>-Attribut auf Assemblyebene wä
 
 Die Ebenen lauten folgendermaßen:
 
-- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die Transparenzregeln für .NET Framework 4.
+- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die Transparenzregeln .NET Framework 4.
 
 - Ebene 1 (<xref:System.Security.SecurityRuleSet.Level1>) – die .NET Framework 2.0-Transparenzregeln.
 
@@ -107,10 +91,6 @@ Für das Transparenzmodell der Ebene 1 gelten die folgenden Einschränkungen:
 - Vererbungsregeln werden nicht erzwungen.
 
 - Es besteht die Möglichkeit, dass durch transparenten Code schädliche Vorgänge ausgeführt werden, wenn er mit voller Vertrauenswürdigkeit ausgeführt wird.
-
-[Zurück nach oben](#top)
-
-<a name="enforcement"></a>
 
 ## <a name="transparency-enforcement"></a>Transparenzerzwingung
 

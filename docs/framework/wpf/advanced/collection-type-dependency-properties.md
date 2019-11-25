@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458473"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974153"
 ---
 # <a name="collection-type-dependency-properties"></a>Abhängigkeitseigenschaften vom Auflistungstyp
 Dieses Thema enthält einen Leitfaden und empfohlene Muster zur Implementierung einer Abhängigkeitseigenschaft für Eigenschaften vom Auflistungstyp.  
@@ -28,8 +28,11 @@ Dieses Thema enthält einen Leitfaden und empfohlene Muster zur Implementierung 
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Initialisieren der Auflistung für einen anderen Wert als den Standardwert  
  Beim Erstellen einer Abhängigkeitseigenschaft geben Sie nicht den Standardwert der Eigenschaft als Anfangsfeldwert an. Geben Sie den Standardwert stattdessen über die Metadaten für Abhängigkeitseigenschaften an. Handelt es sich bei der Eigenschaft um einen Verweistyp, ist der in den Metadaten für Abhängigkeitseigenschaften angegebene Standardwert kein Standardwert pro Instanz. Er stellt vielmehr einen Standardwert dar, der für alle Instanzen des Typs gilt. Achten Sie also darauf, dass Sie nicht die durch die Metadaten für Auflistungseigenschaften definierte, einzelne statische Auflistung als funktionierenden Standardwert für neu erstellte Instanzen des Typs verwenden. Vergewissern Sie sich stattdessen, dass Sie den Auflistungswert bewusst als eine eindeutige (Instanz-)Auflistung als Teil Ihrer Klassenkonstruktorlogik festlegen. Andernfalls erstellen Sie unbeabsichtigterweise eine Singleton-Klasse.  
   
- Betrachten Sie das folgende Beispiel. Der nachfolgende Abschnitt des Beispiels veranschaulicht die Definition einer `Aquarium`-Klasse. Die-Klasse definiert die Abhängigkeits Eigenschaft des Auflistungs Typs `AquariumObjects`, die den generischen <xref:System.Collections.Generic.List%601>-Typ mit einer <xref:System.Windows.FrameworkElement>-Typeinschränkung verwendet. Im <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>-Aufrufe für die-Abhängigkeits Eigenschaft wird der Standardwert von den Metadaten als neuer generischer <xref:System.Collections.Generic.List%601>festgelegt.  
-  
+ Betrachten Sie das folgende Beispiel. Der folgende Abschnitt des Beispiels zeigt die Definition für eine Klasse `Aquarium`, die einen Fehler mit dem Standardwert enthält. Die-Klasse definiert die Abhängigkeits Eigenschaft des Auflistungs Typs `AquariumObjects`, die den generischen <xref:System.Collections.Generic.List%601>-Typ mit einer <xref:System.Windows.FrameworkElement>-Typeinschränkung verwendet. Im <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>-Aufrufe für die-Abhängigkeits Eigenschaft wird der Standardwert von den Metadaten als neuer generischer <xref:System.Collections.Generic.List%601>festgelegt.
+
+> [!WARNING]
+> Der folgende Code verhält sich nicht ordnungsgemäß.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

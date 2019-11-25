@@ -1,87 +1,87 @@
 ---
-title: Migrieren und Verschieben vorhandener .net-apps in Azure IaaS (cloudinfrastruktur-bereit)
+title: Migrieren vorhandener .NET-Apps zu Azure-IaaS mittels Lift & Shift (cloudinfrastrukturfähig)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
 ms.date: 04/28/2018
 ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089634"
 ---
-# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrieren und Verschieben vorhandener .net-apps in Azure IaaS (cloudinfrastruktur-bereit)
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrieren vorhandener .NET-Apps zu Azure-IaaS mittels Lift & Shift (cloudinfrastrukturfähig)
 
-> Vision: um Ihre lokalen Investitionen und die Gesamtkosten der Hardware-und Netzwerk Wartung zu verringern, müssen Sie im ersten Schritt Ihre vorhandenen Anwendungen in der Cloud neu hosten.
+> Vision: Als ersten Schritt, um Ihre lokalen Investitionen und die Gesamtkosten für die Hardware- und Netzwerkwartung zu verringern, hosten Sie einfach Ihre vorhandenen Anwendungen neu in der Cloud.
 
-Bevor Sie sich *mit der* Migration vorhandener Anwendungen zur Azure Infrastructure as a Service (IaaS)-Plattform befassen, *sollten* Sie die Gründe für die direkte Migration zu IaaS in Azure analysieren. Das Szenario auf dieser Modernisierungs Reife liegt im Wesentlichen darin, VMS in der Cloud zu verwenden, anstatt weiterhin Ihre aktuelle lokale Infrastruktur zu verwenden.
+Bevor wir in die Details gehen, *wie* Sie Ihre vorhandenen Anwendungen zur Azure IaaS-Plattform (Infrastructure-as-a-Service) migrieren, ist es wichtig, die Gründe zu analysieren, *warum* Sie direkt zu IaaS in Azure migrieren möchten. Das Szenario bei diesem Modernisierungsreifegrad liegt im Wesentlichen darin, mit der Verwendung von VMs in der Cloud zu beginnen, anstatt weiterhin Ihre aktuelle lokale Infrastruktur zu verwenden.
 
-Ein weiterer Punkt, der analysiert werden kann, ist der *Grund, warum* Sie zu einer reinen IaaS-Cloud migrieren möchten, anstatt einfach erweiterte verwaltete Dienste in Azure hinzuzufügen. Legen Sie fest, für welche Fälle zuerst IaaS erforderlich sind.
+Ein weiterer Punkt, der analysiert werden sollte, ist, *warum* Sie zu einer reinen IaaS-Cloud migrieren möchten, anstatt nur komplexere verwaltete Dienste in Azure hinzuzufügen. Bestimmen Sie, für welche Fälle IaaS in erster Linie erforderlich ist.
 
-In Abbildung 2-1 werden cloudinfrastrukturfähige Anwendungen in den Modernisierungs Reifegraden positioniert:
+In Abbildung 2-1 werden cloudinfrastrukturfähige Anwendungen in den Modernisierungsreifegraden positioniert:
 
-![Positionieren von cloudinfrastrukturfähigen Anwendungen](./media/image2-1.png)
+![Positionierung von cloudinfrastrukturfähigen Anwendungen](./media/image2-1.png)
 
-**Abbildung 2-1.** Positionieren von cloudinfrastrukturfähigen Anwendungen
+**Abbildung 2-1.** Positionierung von cloudinfrastrukturfähigen Anwendungen
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Gründe für die Migration vorhandener .NET-Webanwendungen zu Azure IaaS
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Warum vorhandene .NET-Webanwendungen zu Azure IaaS migrieren?
 
-Der Hauptgrund für die Migration in die Cloud, auch auf der ersten IaaS-Ebene, besteht darin, Kostensenkungen zu erzielen. Durch die Verwendung von mehr verwalteten Infrastruktur Diensten kann Ihre Organisation die Investitionen in die Hardware Wartung, die Bereitstellung und Bereitstellung von Server-oder VM-bereit Stellungen und die Infrastruktur Verwaltung senken.
+Der Hauptgrund für die Migration in die Cloud, auch auf einer ersten IaaS-Ebene, besteht darin, Kostensenkungen zu erzielen. Durch die Verwendung von mehr verwalteten Infrastrukturdiensten kann Ihre Organisation Ihre Investitionen in die Hardwarewartung, Server- oder VM-Bereitstellung und Infrastrukturverwaltung senken.
 
-Wenn Sie die Entscheidung getroffen haben, Ihre apps in die Cloud zu verlagern, ist der Hauptgrund, warum Sie IaaS anstelle von erweiterten Optionen wie z.b. "Pas" auswählen können, einfach die IaaS-Umgebung vertraut zu machen. Die Umstellung auf eine Umgebung, die Ihrer aktuellen, lokalen Umgebung ähnelt, bietet eine geringere Lernkurve, die den schnellsten Weg zur Cloud macht.
+Nachdem Sie die Entscheidung getroffen haben, Ihre Apps in die Cloud zu verlagern, ist der Hauptgrund für die Wahl von IaaS anstelle von komplexeren Optionen wie PaaS einfach der, dass die IaaS-Umgebung vertrauter sein wird. Beim Umzug in eine Umgebung, die Ihrer aktuellen lokalen Umgebung ähnelt, bietet die lokale Umgebung eine flachere Lernkurve, was dies zum schnellsten Weg in die Cloud macht.
 
-Der schnellste Weg zur Cloud bedeutet jedoch nicht, dass Sie am meisten davon profitieren, dass Ihre Anwendungen in der Cloud ausgeführt werden. Jede Organisation erhält die wichtigsten Vorteile von einer cloudmigration auf den bereits eingeführten cloudoptimierten und cloudbasierten Reifegraden.
+Der schnellste Weg in die Cloud bedeutet jedoch nicht, dass Sie den größten Nutzen daraus ziehen, dass Ihre Anwendungen in der Cloud laufen. Jede Organisation profitiert von einer Cloudmigration mit den bereits eingeführten Reifegraden „Cloud-Optimized“ und „Cloud-Native“ am meisten.
 
-Es ist auch offensichtlich, dass Anwendungen in Zukunft einfacher zu modernisieren und zu entwerfen sind, wenn Sie bereits in der Cloud ausgeführt werden, auch in IaaS. Die Migration von Anwendungsdaten wurde bereits durchgeführt. Außerdem erhält Ihre Organisation Kenntnisse, die für die Arbeit in der Cloud erforderlich sind, und hat den Betrieb in eine "cloudkultur" verlagert.
+Es hat sich auch gezeigt, dass Anwendungen in Zukunft einfacher zu modernisieren und umzubauen sind, wenn sie bereits in der Cloud ausgeführt werden, auch in IaaS. Die Migration von Anwendungsdaten wurde bereits durchgeführt. Außerdem hat Ihre Organisation die für die Arbeit in der Cloud erforderlichen Fähigkeiten bereits erworben und den Wechsel zum Betrieb in einer „Cloudkultur“ vollzogen.
 
-## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Bei der Migration zu IaaS anstelle von zu "Pas"
+## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Wann zu IaaS anstatt zu PaaS migrieren?
 
-In den nächsten Abschnitten werden Cloud-optimierte Anwendungen erläutert, die größtenteils auf den Plattformen und Diensten von Pas basieren. Diese Apps bieten Ihnen die meisten Vorteile von der Migration zur Cloud.
+In den nächsten Abschnitten werden „Cloud-Optimized“-Anwendungen behandelt, die überwiegend auf PaaS-Plattformen und -Diensten basieren. Diese Apps bieten Ihnen die meisten Vorteile durch die Migration zur Cloud.
 
-Wenn Sie lediglich vorhandene Anwendungen in die Cloud verschieben möchten, müssen Sie zunächst vorhandene Anwendungen identifizieren, für die keine beträchtlichen Änderungen erforderlich sind, um Sie in Azure App Service auszuführen. Diese apps sollten die ersten Kandidaten für die Cloud-Optimierung sein.
+Wenn Ihr Ziel einfach darin besteht, bestehende Anwendungen in die Cloud zu verschieben, identifizieren Sie zunächst bestehende Anwendungen, die keine wesentlichen Änderungen erfordern würden, um sie in Azure App Service auszuführen. Diese Apps sollten die ersten Kandidaten für „Cloud-Optimized“ sein.
 
-Migrieren Sie dann für die apps, die nach wie vor nicht in Windows-Container und-Paare (z. b. app Service oder orchestratoren wie Azure Kubernetes Service) verschoben werden können, diese zu einfachen einfachen VMS (IaaS).
+Migrieren Sie dann die Apps, die nach wie vor nicht in Windows-Container und PaaS verschoben werden können (z. B. App Service oder Orchestratoren wie Azure Kubernetes Service), zu einfachen VMs (IaaS).
 
-Denken Sie jedoch daran, dass die ordnungsgemäße Konfiguration, Sicherung und Wartung von VMS viel mehr Zeit und IT-Fachkenntnisse im Vergleich zur Verwendung von Azure-Diensten in Azure erfordert. Wenn Sie Azure Virtual Machines in Erwägung ziehen, müssen Sie sicherstellen, dass Sie den fortlaufenden Wartungsaufwand für das Patchen, aktualisieren und Verwalten Ihrer VM-Umgebung berücksichtigen. Azure-Virtual Machines ist IaaS.
+Beachten Sie jedoch, dass die korrekte Konfiguration, Sicherung und Wartung von VMs viel mehr Zeit und IT-Kenntnisse erfordert, als die Nutzung von PaaS-Diensten in Azure. Wenn Sie die Nutzung von Azure Virtual Machines in Erwägung ziehen, müssen Sie den fortlaufenden Wartungsaufwand berücksichtigen, der für das Patchen, Aktualisieren oder Verwalten der VM-Umgebung erforderlich ist. Virtuelle Azure-Computer sind IaaS.
 
-## <a name="use-azure-migrate-to-analyze-and-migrate-your-existing-applications-to-azure"></a>Verwenden von Azure migrate zum Analysieren und Migrieren vorhandener Anwendungen zu Azure
+## <a name="use-azure-migrate-to-analyze-and-migrate-your-existing-applications-to-azure"></a>Verwenden Sie Azure Migrate, um Ihre vorhandenen Anwendungen zu analysieren und zu Azure zu migrieren.
 
-Die Migration zur Cloud muss nicht schwierig sein. Viele Unternehmen sind jedoch gezwungen, loszulegen, um einen tiefen Einblick in die Umgebung und die engen Abhängigkeiten zwischen Anwendungen, Workloads und Daten zu erhalten. Ohne diese Sichtbarkeit kann es schwierig sein, den Pfad vorwärts zu planen. Ohne detaillierte Informationen zu den Voraussetzungen für eine erfolgreiche Migration können Sie in Ihrer Organisation nicht die richtigen Konversationen durchführen. Sie wissen nicht genug über die potenziellen Kostenvorteile, oder ob Arbeits Auslastungen einfach nur eine Lift-and-Shift-Funktion oder eine beträchtliche Neuverarbeitung erfordern, um erfolgreich migriert zu werden. Kein Wunder, dass viele Unternehmen zögern.
+Die Migration zur Cloud muss nicht schwierig sein. Viele Organisationen haben jedoch Probleme beim Einstieg, um einen tiefen Einblick in die Umgebung und die engen Abhängigkeiten zwischen Anwendungen, Workloads und Daten zu erhalten. Ohne diesen Einblick kann es schwierig sein, den weitergehenden Pfad zu planen. Ohne detaillierte Informationen zu den Voraussetzungen für eine erfolgreiche Migration können Sie in Ihrer Organisation nicht die richtigen Unterhaltungen führen. Sie wissen nicht genug über die potenziellen Kostenvorteile, oder ob Workloads einfach nur per Lift & Shift migriert werden können oder eine beträchtliche Neubearbeitung erfordern, um erfolgreich migriert zu werden. Kein Wunder, dass viele Unternehmen zögern.
 
-[Azure migrate](https://aka.ms/azuremigrate) ist ein neuer Dienst, der Anleitungen, Einblicke und Mechanismen bietet, die Sie bei der Migration zu Azure unterstützen müssen. Azure migrate bietet Folgendes:
+[Azure Migrate](https://aka.ms/azuremigrate) ist eine neuer Dienst, der Anleitung, Einblicke und Mechanismen bietet, die erforderlich sind, um Sie bei der Migration zu Azure zu unterstützen. Azure Migrate bietet:
 
 - Ermittlung und Bewertung für lokale virtuelle Computer
 
-- Integrierte Abhängigkeits Zuordnung für die hoch Vertrauensstellung von Anwendungen mit mehreren Ebenen
+- Integrierte Abhängigkeitszuordnung für die hoch zuverlässige Ermittlung von Anwendungen mit mehreren Schichten
 
-- Intelligent right Sizing to Azure Virtual Machines
+- Intelligente richtige Größenbestimmung für virtuelle Azure-Computer
 
-- Kompatibilitäts Berichte mit Richtlinien zum Beheben potenzieller Probleme
+- Kompatibilitätsberichte mit Richtlinien zum Beheben potenzieller Probleme
 
-- Integration in Azure Database Management Service für die Daten Bank Ermittlung und-Migration
+- Integration in Azure Database Management Service für Datenbankermittlung und -migration
 
-Azure migrate bietet Ihnen die Gewissheit, dass Ihre Workloads mit minimalen Auswirkungen auf das Unternehmen migriert und erwartungsgemäß in Azure ausgeführt werden können. Mit den richtigen Tools und Anleitungen können Sie eine maximale Rendite erzielen und gleichzeitig sicherstellen, dass wichtige Anforderungen an Leistung und Zuverlässigkeit erfüllt werden.
+Azure Migrate bietet Ihnen die Gewissheit, dass Ihre Workloads mit minimalen Auswirkungen auf das Unternehmen migriert und erwartungsgemäß in Azure ausgeführt werden können. Mit den richtigen Tools und Anleitungen können Sie eine maximale Rendite erzielen und gleichzeitig sicherstellen, dass wichtige Anforderungen an Leistung und Zuverlässigkeit erfüllt werden.
 
-In Abbildung 2-2 wird die integrierte Abhängigkeits Zuordnung für alle Server-und Anwendungs Verbindungen gezeigt, die von Azure Migrate ausgeführt werden.
+In Abbildung 2-2 wird die integrierte Abhängigkeitszuordnung für alle Server- und Anwendungsverbindungen gezeigt, die von Azure Migrate hergestellt werden.
 
-![Positionieren von cloudinfrastrukturfähigen Anwendungen](./media/image2-2.png)
+![Positionierung von cloudinfrastrukturfähigen Anwendungen](./media/image2-2.png)
 
-**Abbildung 2–2.** Positionieren von cloudinfrastrukturfähigen Anwendungen
+**Abbildung 2–2.** Positionierung von cloudinfrastrukturfähigen Anwendungen
 
-## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Verwenden von Azure Site Recovery zum Migrieren Ihrer vorhandenen VMS zu Azure-VMS
+## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Verwenden von Azure Site Recovery, um Ihre vorhandenen VMs zu Azure-VMs zu migrieren
 
-Als Teil der End-to-End- [Azure migrate](https://aka.ms/azuremigrate)ist [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) ein Tool, mit dem Sie Ihre Web-Apps problemlos zu virtuellen Computern in Azure migrieren können. Sie können Site Recovery verwenden, um lokale VMS und physische Server in Azure zu replizieren oder um Sie an einen sekundären lokalen Standort zu replizieren. Sie können sogar eine Arbeitsauslastung, die auf einer unterstützten Azure-VM ausgeführt wird, auf einer lokalen *Hyper-V-* VM, auf einer *VMware* -VM oder auf einem physischen Windows-oder Linux-Server replizieren. Durch die Replikation in Azure entfallen die Kosten und die Komplexität der Verwaltung eines sekundären Rechenzentrums.
+Als Teil von End-to-End-[Azure Migrate](https://aka.ms/azuremigrate) ist [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) ein Tool, mit dem Sie Ihre Web-Apps problemlos zu virtuellen Computern in Azure migrieren können. Sie können Site Recovery verwenden, um lokale VMs und physische Server in Azure zu synchronisieren oder um sie an einen sekundären lokalen Ort zu replizieren. Sie können sogar eine Workload replizieren, die auf einem unterstützten virtuellen Azure-Computer, auf einem lokalen virtuellen *Hyper-V*-Computer, auf einem virtuellen *VMware*-Computer oder auf einem physischen Windows- oder Linux-Server ausgeführt wird. Mit der Replikation in Azure entfallen die Kosten und die Komplexität, die mit der Verwaltung eines sekundären Datencenters verbunden sind.
 
-Site Recovery wird auch speziell für Hybrid Umgebungen, die teilweise lokal und teilweise in Azure sind, vorgenommen. Site Recovery können die Geschäftskontinuität sicherstellen, indem Sie Ihre apps, die auf virtuellen Computern ausgeführt werden, und lokale physische Server verfügbar halten, wenn ein Standort ausfällt. Es repliziert Workloads, die auf VMS und physischen Servern ausgeführt werden, damit Sie an einem sekundären Standort verfügbar bleiben, wenn der primäre Standort nicht verfügbar ist. Es werden Arbeits Auslastungen am primären Standort wieder hergestellt, wenn dieser wieder in Betrieb ist.
+Site Recovery ist auch speziell auf Hybridumgebungen ausgelegt, die sich teilweise lokal und teilweise in Azure befinden. Site Recovery sorgt für Geschäftskontinuität, indem es Ihre Apps, die auf VMs und lokalen physischen Servern ausgeführt werden, verfügbar hält, wenn ein Standort ausfällt. Es repliziert Workloads, die auf VMs und physischen Servern ausgeführt werden, damit sie an einem sekundären Ort verfügbar bleiben, wenn die Verfügbarkeit des primären Standorts nicht mehr gegeben ist. Workloads werden am primären Standort wiederhergestellt, wenn er wieder betriebsbereit ist.
 
-In Abbildung 2-3 wird die Ausführung mehrerer VM-Migrationen mithilfe Azure Site Recovery veranschaulicht.
+In Abbildung 2-3 wird die Ausführung mehrerer VM-Migrationen mithilfe von Azure Site Recovery veranschaulicht.
 
-![Positionieren von cloudinfrastrukturfähigen Anwendungen](./media/image2-3.png)
+![Positionierung von cloudinfrastrukturfähigen Anwendungen](./media/image2-3.png)
 
-**Abbildung 2-3.** Positionieren von cloudinfrastrukturfähigen Anwendungen
+**Abbildung 2-3.** Positionierung von cloudinfrastrukturfähigen Anwendungen
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Datenblatt "Azure migrate"**
+- **Azure Migrate-Datenblatt**
 
     <https://aka.ms/azuremigration\_datasheet>
 
@@ -93,15 +93,15 @@ In Abbildung 2-3 wird die Ausführung mehrerer VM-Migrationen mithilfe Azure Sit
 
     <https://azure.microsoft.com/migration/>
 
-- **Migrieren zu Azure mit Site Recovery**
+- **Durchführen der Migration zu Azure mit Site Recovery**
 
     <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure>
 
-- **Übersicht über Azure Site Recovery-Dienst**
+- **Azure Site Recovery-Dienstübersicht**
 
     <https://docs.microsoft.com/azure/site-recovery/site-recovery-overview>
 
-- **Migrieren von VMS in AWS zu Azure-VMS**
+- **Migrieren von VMs in AWS zu virtuellen Azure-Computern**
 
     <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 

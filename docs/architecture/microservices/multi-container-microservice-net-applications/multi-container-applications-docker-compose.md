@@ -2,12 +2,12 @@
 title: Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 description: Festlegen der Zusammensetzung von Microservices für eine Anwendung mit mehreren Containern mit „docker-compose.yml“
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416702"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737088"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 
@@ -177,9 +177,15 @@ Sie können eine einzelne docker-compose-Datei verwenden. Dies wird in den vorhe
 
 Standardmäßig liest Compose zwei Dateien: eine docker-compose.yml- und eine optionale docker-compose.override.yml-Datei. Wenn Sie Visual Studio verwenden und die Docker-Unterstützung aktivieren, erstellt Visual Studio wie in Abbildung 6-11 dargestellt eine zusätzliche „docker-compose.vs.debug.g.yml“-Datei zum Debuggen der Anwendung. Sie können sich diese Datei im Ordner obj\\Docker\\ im Projektmappenhauptordner ansehen.
 
-![Struktur der Projektdatei „docker-compose“: „.dockerignore“ zum Ignorieren von Dateien, „docker-compose.yml“ zum Erstellen von Microservices und „docker-compose.override.yml“ zum Konfigurieren der Microservicesumgebung.](./media/image12.png)
+![Screenshot der Dateien in einem Docker Compose-Projekt.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Abbildung 6-11**. docker-compose-Dateien in Visual Studio 2017
+
+**docker-compose**-Projektdateistruktur:
+
+* *.dockerignore*: wird zum Ignorieren von Dateien verwendet.
+* *docker-compose.yml*: wird zum Verfassen von Microservices verwendet.
+* *docker-compose.override.yml*: wird zum Konfigurieren der Microservices-Umgebung verwendet.
 
 Sie können die docker-compose-Dateien mit jedem beliebigen Editor bearbeiten, z.B. mit Visual Studio Code oder Sublime, und die Anwendung mit dem Befehl „docker-compose up“ ausführen.
 
@@ -191,11 +197,11 @@ Die docker-compose.override.yml-Datei enthält – wie der Name vermuten lässt 
 
 Ein typischer Anwendungsfall ist, wenn Sie mehrere Compose-Dateien definieren, damit Sie auf mehrere Umgebungen abzielen können, z.B. auf die Produktion, das Staging, CI oder die Entwicklung. Sie können Ihre Compose-Konfiguration wie in Abbildung 6-12 dargestellt in mehrere Dateien aufteilen, um diese Unterschiede zu unterstützen.
 
-![Sie können mehrere docker.compose*.fml-Dateien kombinieren, wenn verschiedene Umgebungen abgedeckt werden müssen.](./media/image13.png)
+![Diagramm mit drei Docker Compose-Dateien, die zum Überschreiben der Basisdatei festgelegt sind.](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **Abbildung 6-12**. Mehrere docker-compose-Dateien, die Werte in der docker-compose.yml-Basisdatei überschreiben
 
-Sie beginnen mit der docker-compose.yml-Basisdatei. Diese Basisdatei muss die Basis- oder statischen Konfigurationseinstellungen enthalten, die sich nicht in Abhängigkeit von der Umgebung ändern. Beispielsweise verfügt eShopOnContainers über die folgende docker-compose.yml-Datei (zur Vereinfachung mit weniger Diensten) als Basisdatei.
+Sie können mehrere docker.compose*.yml-Dateien kombinieren, wenn verschiedene Umgebungen abgedeckt werden müssen. Sie beginnen mit der docker-compose.yml-Basisdatei. Diese Basisdatei muss die Basis- oder statischen Konfigurationseinstellungen enthalten, die sich nicht in Abhängigkeit von der Umgebung ändern. Beispielsweise verfügt eShopOnContainers über die folgende docker-compose.yml-Datei (zur Vereinfachung mit weniger Diensten) als Basisdatei.
 
 ```yml
 #docker-compose.yml (Base)

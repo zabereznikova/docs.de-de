@@ -9,38 +9,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134271"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973781"
 ---
 # <a name="dataflow-task-parallel-library"></a>Datenfluss (Task Parallel Library)
-<a name="top"></a> Die Task Parallel Library (TPL) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. Diese Datenflusskomponenten werden zusammen als *TPL-Datenflussbibliothek* bezeichnet. Dieses Datenflussmodell begünstigt die akteurbasierte Programmierung durch eine prozessinterne Nachrichtenübergabe für simple Datenfluss- und Pipelineaufgaben. Die Datenflusskomponenten basieren auf den Typen und der Planungsinfrastruktur der TPL und sind in die C#-, Visual Basic- und F#-Sprachunterstützung für asynchrone Programmierung integriert. Diese Datenflusskomponenten sind hilfreich, wenn mehrere Vorgänge vorliegen, die asynchron miteinander kommunizieren müssen, oder wenn Sie Daten verarbeiten möchten, die gerade verfügbar werden. Denken Sie beispielsweise an eine Anwendung, die Bilddaten von einer Webcam verarbeitet. Durch das Datenflussmodell kann die Anwendung Bildframes verarbeiten, sobald diese verfügbar sind. Wenn die Anwendung Bildframes beispielsweise durch Lichtkorrektur oder Rote-Augen-Reduktion aufbessert, können Sie eine *Pipeline* von Datenflusskomponenten erstellen. Jede Phase der Pipeline kann grober strukturierte Parallelitätsfunktionen verwenden, wie z. B. die von der TPL bereitgestellten Funktionen zum Transformieren des Bilds.  
+Die Task Parallel Library (TPL) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. Diese Datenflusskomponenten werden zusammen als *TPL-Datenflussbibliothek* bezeichnet. Dieses Datenflussmodell begünstigt die akteurbasierte Programmierung durch eine prozessinterne Nachrichtenübergabe für simple Datenfluss- und Pipelineaufgaben. Die Datenflusskomponenten basieren auf den Typen und der Planungsinfrastruktur der TPL und sind in die C#-, Visual Basic- und F#-Sprachunterstützung für asynchrone Programmierung integriert. Diese Datenflusskomponenten sind hilfreich, wenn mehrere Vorgänge vorliegen, die asynchron miteinander kommunizieren müssen, oder wenn Sie Daten verarbeiten möchten, die gerade verfügbar werden. Denken Sie beispielsweise an eine Anwendung, die Bilddaten von einer Webcam verarbeitet. Durch das Datenflussmodell kann die Anwendung Bildframes verarbeiten, sobald diese verfügbar sind. Wenn die Anwendung Bildframes beispielsweise durch Lichtkorrektur oder Rote-Augen-Reduktion aufbessert, können Sie eine *Pipeline* von Datenflusskomponenten erstellen. Jede Phase der Pipeline kann grober strukturierte Parallelitätsfunktionen verwenden, wie z. B. die von der TPL bereitgestellten Funktionen zum Transformieren des Bilds.  
   
  Dieses Dokument enthält eine Übersicht über die TPL-Datenflussbibliothek. Es bietet Informationen über das Programmiermodell, die vordefinierten Datenflussblocktypen sowie die Konfiguration der Datenflussblöcke für die speziellen Anforderungen Ihrer Anwendungen.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
-  
- Dieses Dokument enthält folgende Abschnitte:  
-  
-- [Programmiermodell](#model)  
-  
-- [Vordefinierte Datenflussblocktypen](#predefined_types)  
-  
-- [Konfigurieren des Datenflussblockverhaltens](#behavior)  
-  
-- [Benutzerdefinierte Datenflussblöcke](#custom)  
-  
-<a name="model"></a>   
-## <a name="programming-model"></a>Programmiermodell  
+
+## <a name="programming-model"></a>Programmiermodell
  Die TPL-Datenflussbibliothek bietet eine Grundlage für die Nachrichtenübergabe und die Parallelisierung CPU-intensiver und E/A-intensiver Anwendungen mit hohem Durchsatz und niedriger Latenz. Außerdem erhalten Sie damit explizite Kontrolle darüber, wie Daten gepuffert und im System übermittelt werden. Stellen Sie sich zum besseren Verständnis des Datenflussprogrammiermodells eine Anwendung vor, die Bilder asynchron vom Datenträger lädt und ein Kompositum dieser Bilder erstellt. Herkömmliche Programmiermodelle erfordern in der Regel die Verwendung von Rückrufen und Synchronisierungsobjekten wie Sperren, um Aufgaben und den Zugriff auf freigegebene Daten zu koordinieren. Mit dem Datenflussprogrammiermodell können Sie Datenflussobjekte erstellen, die Bilder beim Lesen vom Datenträger verarbeiten. Unter dem Datenflussmodell deklarieren Sie, wie Daten behandelt werden, sobald diese verfügbar werden, und legen außerdem Abhängigkeiten zwischen Daten fest. Da die Laufzeit Abhängigkeiten zwischen Daten verwaltet, können Sie häufig die Anforderung vermeiden, Zugriff auf freigegebene Daten synchronisieren zu müssen. Da die Arbeit von der Laufzeit basierend auf dem asynchronen Eintreffen von Daten geplant wird, können Reaktionsgeschwindigkeit und Durchsatz des Datenflusses verbessert werden, indem die zugrunde liegenden Threads effizient verwaltet werden. Ein Beispiel, bei dem mit dem Datenflussprogrammiermodell eine Bildverarbeitung in einer Windows Forms-Anwendung implementiert wird, finden Sie unter [Walkthrough: Using Dataflow in a Windows Forms Application (Exemplarische Vorgehensweise: Verwenden von Datenflüssen in einer Windows Forms-Anwendung)](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ### <a name="sources-and-targets"></a>Quellen und Ziele  
  Die TPL-Datenflussbibliothek besteht aus *Datenflussblöcken*, bei denen es sich um Datenstrukturen handelt, die Daten puffern und verarbeiten. Die TPL definiert drei Arten von Datenflussblöcken: *Quellblöcke*, *Zielblöcke* und *Weitergabeblöcke*. Ein Quellblock fungiert als Datenquelle, aus der gelesen werden kann. Ein Zielblock fungiert als Datenempfänger, in den geschrieben werden kann. Ein Weitergabeblock fungiert als Quellblock und als Zielblock, aus dem gelesen und in den geschrieben werden kann. Die TPL definiert die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType>-Schnittstelle, um Quellen darzustellen, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType>, um Ziele darzustellen, und <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType>, um Weitergaben darzustellen. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> erbt von <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> und <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>.  
   
- Die TPL-Datenflussbibliothek enthält mehrere vordefinierte Datenflussblocktypen, die die Schnittstellen <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> und <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> implementieren. Diese Datenflussblocktypen werden in diesem Dokument im Abschnitt [Vordefinierte Datenflussblocktypen](#predefined_types) beschrieben.  
+ Die TPL-Datenflussbibliothek enthält mehrere vordefinierte Datenflussblocktypen, die die Schnittstellen <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> und <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> implementieren. Diese Datenflussblocktypen werden in diesem Dokument im Abschnitt [Vordefinierte Datenflussblocktypen](#predefined-dataflow-block-types) beschrieben.  
   
 ### <a name="connecting-blocks"></a>Verbinden von Blöcken  
  Sie können Datenflussblöcke mit *Formularpipelines* (lineare Sequenzen von Datenflussblöcken) oder *Netzwerken* (Diagramme von Datenflussblöcken) verbinden. Eine Pipeline ist eine Form von Netzwerk. In einer Pipeline oder einem Netzwerk geben Quellen asynchron Daten an Ziele weiter, sobald diese Daten verfügbar werden. Die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType>-Methode verknüpft einen Quelldatenflussblock mit einem Zielblock. Eine Quelle kann mit null oder mehr Zielen verknüpft werden. Ziele können mit null oder mehr Quellen verknüpft werden. Sie können Datenflussblöcke in einer Pipeline oder einem Netzwerk gleichzeitig hinzufügen oder entfernen. Die vordefinierten Datenflussblocktypen behandeln alle Threadsicherheitsaspekte bezüglich Verknüpfungen und des Lösens von Verknüpfungen.  
@@ -78,10 +67,7 @@ ms.locfileid: "73134271"
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
  Sie können auch Eigenschaften wie <xref:System.Threading.Tasks.Task.IsCanceled%2A> im Codetext der Fortsetzungsaufgabe verwenden, um zusätzliche Informationen über den Abschlussstatus eines Datenflussblocks zu ermitteln. Weitere Informationen zu Fortsetzungsaufgaben und deren Beziehung zum Abbruch und zur Fehlerbehandlung finden Sie unter [Verketten von Aufgaben durch Fortsetzungsaufgaben](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Ausnahmebehandlung](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
-  
- [[Nach oben](#top)]  
-  
-<a name="predefined_types"></a>   
+
 ## <a name="predefined-dataflow-block-types"></a>Vordefinierte Datenflussblocktypen  
  Die TPL-Datenflussbibliothek enthält mehrere vordefinierte Datenflussblocktypen. Diese Typen sind in drei Kategorien unterteilt: *Pufferblöcke*, *Ausführungsblöcke* und *Gruppierungsblöcke*. In den folgenden Abschnitten werden die Blocktypen dieser Kategorien beschrieben.  
   
@@ -201,10 +187,7 @@ ms.locfileid: "73134271"
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
  Ein vollständiges Beispiel, bei dem mit <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> die Ergebnisse und Ausnahmen erfasst werden, die beim Lesen des Programms aus einer Datenbank auftreten, finden Sie unter [Exemplarische Vorgehensweise: Effizienzverbesserung durch Verwendung von BatchBlock und BatchedJoinBlock](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md).  
-  
- [[Nach oben](#top)]  
-  
-<a name="behavior"></a>   
+
 ## <a name="configuring-dataflow--block-behavior"></a>Konfigurieren des Datenflussblockverhaltens  
  Sie können zusätzliche Optionen aktivieren, indem Sie ein <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType>-Objekt für den Konstruktor von Datenflussblocktypen bereitstellen. Diese Optionen steuern das Verhalten wie z. B. den Planer, der die zugrunde liegende Aufgabe und den Grad der Parallelität verwaltet. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> verfügt außerdem über abgeleitete Typen, die das Verhalten für bestimmte Datenflussblocktypen festlegen. In der folgenden Tabelle ist zusammengefasst, welcher Optionstyp den einzelnen Datenflussblocktypen zugeordnet ist.  
   
@@ -254,16 +237,11 @@ ms.locfileid: "73134271"
   
  Bei Gruppierungsblocktypen wie <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> bedeutet der gierige Modus, dass Daten vom Block sofort angenommen werden, auch wenn die entsprechenden Daten, mit denen eine gemeinsame Gruppierung erfolgt, noch nicht verfügbar sind. Nicht gieriger Modus bedeutet, dass der Block alle eingehenden Nachrichten zurückstellt, bis eine Nachricht an jedem der zugehörigen Ziele verfügbar ist, um die Gruppierung zu vervollständigen. Wenn eine der zurückgestellten Nachrichten nicht mehr verfügbar ist, gibt der Gruppierungsblock alle zurückgestellten Nachrichten frei und startet den Prozess neu. Bei der <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse ist das gierige und das nicht gierige Verhalten ähnlich, außer dass ein <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Objekt im nicht gierigen Modus alle eingehenden Nachrichten zurückstellt, bis genügend Nachrichten aus verschiedenen Quellen verfügbar sind, um einen Batch zu vervollständigen.  
   
- Legen Sie <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> auf `False` fest, um den nicht gierigen Modus für einen Datenflussblock festzulegen. Ein Beispiel für die Verwendung des nicht gierigen Modus, sodass mehrere Gruppierungsblöcke eine Datenquelle effizienter gemeinsam verwenden können, finden Sie unter [Vorgehensweise: Verwenden von JoinBlock zum Lesen aus mehreren Quellen](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).  
-  
- [[Nach oben](#top)]  
-  
-<a name="custom"></a>   
+ Legen Sie <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> auf `False` fest, um den nicht gierigen Modus für einen Datenflussblock festzulegen. Ein Beispiel für die Verwendung des nicht gierigen Modus, sodass mehrere Gruppierungsblöcke eine Datenquelle effizienter gemeinsam verwenden können, finden Sie unter [Vorgehensweise: Verwenden von JoinBlock zum Lesen aus mehreren Quellen](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).
+
 ## <a name="custom-dataflow-blocks"></a>Benutzerdefinierte Datenflussblöcke  
- Obwohl die TPL-Datenflussbibliothek viele vordefinierte Blocktypen bereitstellt, können Sie zusätzliche Blockstypen mit einem benutzerdefinierten Verhalten erstellen. Implementieren Sie direkt die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>- oder die <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>-Schnittstelle, oder verwenden Sie die <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A>-Methode, um einen komplexen Block zu erstellen, der das Verhalten vorhandener Blocktypen kapselt. Beispiele für die Implementierung benutzerdefinierter Datenflussblock-Funktionen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines Datenflussblocktyps](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).  
-  
- [[Nach oben](#top)]  
-  
+ Obwohl die TPL-Datenflussbibliothek viele vordefinierte Blocktypen bereitstellt, können Sie zusätzliche Blockstypen mit einem benutzerdefinierten Verhalten erstellen. Implementieren Sie direkt die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>- oder die <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>-Schnittstelle, oder verwenden Sie die <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A>-Methode, um einen komplexen Block zu erstellen, der das Verhalten vorhandener Blocktypen kapselt. Beispiele für die Implementierung benutzerdefinierter Datenflussblock-Funktionen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines Datenflussblocktyps](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).
+
 ## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|BESCHREIBUNG|  

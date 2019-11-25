@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Branches und Schleifen in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774011"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969357"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Erkunden von arithmetischen Operationen mit ganzen Zahlen
   durationInMinutes: 4
   content: >
-    Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein, und klicken Sie auf die Schaltfläche **Ausführen**:
+    Führen Sie den folgenden Code im interaktiven Fenster aus. Wählen Sie die Schaltfläche **Enter focus mode** (Fokusmodus aktivieren) aus. Geben Sie anschließend den folgenden Codeblock in das interaktive Fenster ein, und wählen Sie **Ausführen** aus:
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     > Im Rahmen dieses interaktiven Tutorials können Sie sich selbst mit dieser Operationen vertraut machen, indem Sie den Code, den Sie in das interaktive Fenster geschrieben haben, ändern. Dieses Tutorial stellt bei jedem Schritt Beispiele zur Verfügung, die Sie testen können.
 
 
-    Erkunden Sie zunächst die anderen Operationen. Ändern Sie die dritte Zeile, um die einzelnen Operationen zu testen. Klicken Sie nach jeder Änderung auf die Schaltfläche **Ausführen**.
+    Erkunden Sie zunächst die anderen Operationen. Ändern Sie die dritte Zeile, um die einzelnen Operationen zu testen. Wählen Sie nach jeder Änderung die Schaltfläche **Ausführen** aus.
 
 
     Subtraktion:
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    Klicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen.
+    Wählen Sie erneut **Ausführen** aus, um die Ergebnisse anzuzeigen.
 
 
     > [!NOTE]
@@ -415,7 +415,7 @@ items:
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
-    Sie haben das interaktive Tutorial „Zahlen in C#“ abgeschlossen. Klicken sie unten auf den Link **Verzweigungen und Schleifen**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
+    Sie haben das interaktive Tutorial „Zahlen in C#“ abgeschlossen. Wählen Sie unten den Link **Verzweigungen und Schleifen** aus, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 
 
     Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:

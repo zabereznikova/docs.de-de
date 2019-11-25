@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 15638e7da99ef15be58052849bf0675cc21941c9
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180164"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975492"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
 
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie unter [Windows Automation-API: UI-Automatisierung @ no__t-0.
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).
 
-In dieser Übersicht wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um den Textinhalt (einschließlich Format- und Stilattributen) von Textsteuerelementen auf Plattformen mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Unterstützung verfügbar zu machen. Diese Steuerelemente umfassen das Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> sowie deren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]-Entsprechungen, sind jedoch nicht darauf beschränkt.
+In dieser Übersicht wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um den Textinhalt (einschließlich Format- und Stilattributen) von Textsteuerelementen auf Plattformen mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Unterstützung verfügbar zu machen. Zu diesen Steuerelementen gehören das Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> sowie deren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Entsprechungen.
 
 Das Verfügbarmachen des Textinhalt eines Steuerelements wird erreicht, indem das <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster verwendet wird, das den Inhalt eines Textcontainer als Textstream darstellt. Zusätzlich erfordert <xref:System.Windows.Automation.TextPattern> , dass die <xref:System.Windows.Automation.Text.TextPatternRange> -Klasse unterstützt wird, um Format-und Stilattribute verfügbar zu machen. <xref:System.Windows.Automation.Text.TextPatternRange> unterstützt <xref:System.Windows.Automation.TextPattern> dadurch, dass es zusammenhängende oder mehrere unzusammenhängende Textabschnitte in einem Textcontainer mit einer Auflistung von <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> - und <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkten darstellt. <xref:System.Windows.Automation.Text.TextPatternRange> unterstützt Funktionen wie Auswahl, Vergleich, Abruf und Durchlauf.
 
@@ -33,9 +33,9 @@ Die in dieser Übersicht beschriebene Funktionalität ist entscheidend für Hilf
 
 Das Text Services-Framework (TSF) ist ein einfaches und skalierbares System Framework, das Dienste für natürliche Sprache und erweiterte Texteingaben auf dem Desktop und innerhalb von Anwendungen ermöglicht. Zusätzlich zur Bereitstellung von Schnittstellen für Anwendungen , um deren Textspeicher verfügbar zu machen, unterstützt es auch Metadaten für diesen Textspeicher.
 
-TSF wurde jedoch für Anwendungen entwickelt, die Eingaben in kontextabhängige Szenarien einfügen müssen, während <xref:System.Windows.Automation.TextPattern> eine schreibgeschützte Lösung ist (mit der oben beschriebenen eingeschränkten Problem Umgehung), die optimierten Zugriff auf einen Text Speicher für Sprachausgaben und Braille bereitstellen soll. Ling.
+TSF wurde jedoch für Anwendungen entwickelt, die Eingaben in kontextabhängige Szenarien einfügen müssen, während <xref:System.Windows.Automation.TextPattern> eine schreibgeschützte Lösung ist (mit der oben beschriebenen eingeschränkten Problem Umgehung), die optimierten Zugriff auf einen Text Speicher für Sprachausgaben und Braille-Geräte ermöglichen soll.
 
-Kurz gesagt: barrierefreie Technologien, die schreibgeschützten Zugriff auf einen Text Speicher erfordern, können <xref:System.Windows.Automation.TextPattern> verwenden. für kontextabhängige Eingaben benötigen Sie jedoch die komplexere Funktionalität von TSF.
+Kurz gesagt können barrierefreie Technologien, die schreibgeschützten Zugriff auf einen Text Speicher erfordern, <xref:System.Windows.Automation.TextPattern>verwenden, benötigen jedoch die komplexere Funktionalität von TSF für kontextabhängige Eingaben.
 
 <a name="Control_Types"></a>
 
@@ -104,7 +104,7 @@ Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation
 
 - Entwickler von Benutzeroberflächenautomatisierungs-Anbietern sollten sich bewusst sein, dass alle Informationen, die sie in ihren Steuerelementen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verfügbar machen, grundsätzlich öffentlich und für anderen Code vollständig zugänglich sind. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ermittelt nicht die Vertrauenswürdigkeit irgendeines Benutzeroberflächenautomatisierungs-Clients, und daher sollte der Benutzeroberflächenautomatisierungs-Anbieter weder geschützte Inhalte noch vertrauliche Textinformationen (z. B. Kennwortfelder) verfügbar machen.
 
-- Eine der wichtigsten Änderungen hinsichtlich der Sicherheit für [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] wird allgemein als "Secure Input" bezeichnet und umfasst Technologien wie LUA (Least-privileged oder Limited User Accounts) und UIPI (UI Privilege Level Isolation).
+- Eine der signifikantesten Änderungen an der Sicherheit für Windows Vista wird im Allgemeinen als "sichere Eingabe" bezeichnet. Diese umfasst Technologien wie z. b. die Benutzerkonten mit den geringsten Rechten (oder beschränkten) Benutzerkonten (LUA) und die Isolation auf Benutzeroberflächen Ebene (UIPI).
 
   - UIPI hindert ein Programm daran, ein anderes Programm, das mehr Berechtigungen hat, zu steuern und/oder zu überwachen. Dadurch verhindert UIPI Angriffe durch prozessübergreifende Fenstermeldungen, die Benutzereingaben vortäuschen.
 
@@ -134,9 +134,10 @@ Es gibt zwei Typen von eingebetteten Objekten im [!INCLUDE[TLA2#tla_uiautomation
 **Endpunkt**\
 Der absolute <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> - oder <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Punkt eines Textbereichs in einem Textcontainer.
 
-![Textpatternrangeendpoints &#40;starten und Beenden&#41;.](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") Im folgenden Beispiel wird ein Satz von Start-und Endpunkten veranschaulicht.
+![Textpatternrangeendpoints &#40;starten und Beenden&#41;.](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
+Die folgende Abbildung veranschaulicht einen Start- und einen Endpunkt.
 
-**TextRange**\
+**TextRange** -\
 Eine Darstellung eines Textabschnitts samt Start- und Endpunkt in einem Textcontainer einschließlich aller zugeordneten Attribute und Funktionen.
 
 <xref:System.Windows.Automation.Text.TextUnit>\

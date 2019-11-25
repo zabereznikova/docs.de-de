@@ -2,12 +2,14 @@
 title: Unterscheidung zwischen Delegaten und Ereignissen
 description: Informationen zum Unterschied zwischen Delegaten und Ereignissen und wann diese Features jeweils in .NET Core verwendet werden.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 2f9c26519d93314f4991829191723df5426b23b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037318"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Unterscheidung zwischen Delegaten und Ereignissen
 
@@ -34,7 +36,7 @@ UX-Steuerelemente funktionieren weiterhin ordnungsgemäß, auch wenn keine Abonn
 
 Ein weiterer Aspekt ist der Methodenprototyp, den Sie für die Delegatmethode haben sollten. Wie Sie gesehen haben, verfügen die für Ereignisse verwendete Delegaten alle über einen void-Rückgabetyp. Sie haben auch gesehen, dass Ausdrücke vorhanden sind, um Ereignishandler zu erstellen, die Informationen durch Ändern der Eigenschaften des Ereignisargumentobjekts zurück an die Ereignisquellen geben. Während diese Ausdrücke funktionieren, sind sie nicht so natürlich wie die Rückgabe eines Werts aus einer Methode.
 
-Beachten Sie, dass diese zwei Heuristiken häufig beide vorhanden sein können: Wenn Ihre Delegatmethode einen Wert zurückgibt, wird es sich wahrscheinlich in irgendeiner Form auf den Algorithmus auswirken.
+Beachten Sie, dass häufig diese beiden Heuristiken vorhanden sein können: Wenn die Delegatmethode einen Wert zurückgibt, wirkt sich dies wahrscheinlich auf irgendeine Weise auf den Algorithmus aus.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Ereignislistener haben häufig eine längere Lebensdauer 
 

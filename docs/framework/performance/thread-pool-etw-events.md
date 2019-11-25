@@ -7,24 +7,23 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046188"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974866"
 ---
 # <a name="thread-pool-etw-events"></a>ETW-Threadpoolereignisse
-<a name="top"></a> Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
+Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
   
  Es gibt zwei Gruppen von Threadpoolereignissen:  
   
-- [Arbeitsthreadpoolereignisse](#worker), die Aufschluss darüber geben, wie eine Anwendung den Threadpool verwendet und welchen Effekt Arbeitsauslastungen auf die Parallelitätssteuerung haben.  
+- [Arbeitsthreadpoolereignisse](#worker-thread-pool-events), die Aufschluss darüber geben, wie eine Anwendung den Threadpool verwendet und welchen Effekt Arbeitsauslastungen auf die Parallelitätssteuerung haben.  
   
-- [E/A-Threadpoolereignisse](#io), die Aufschluss über E/A-Threads geben, die im Threadpool erstellt, deaktiviert, erneut aktiviert oder beendet werden.  
-  
-<a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Arbeitsthreadpoolereignisse  
+- [E/A-Threadpoolereignisse](#io-thread-events), die Aufschluss über E/A-Threads geben, die im Threadpool erstellt, deaktiviert, erneut aktiviert oder beendet werden.  
+
+## <a name="worker-thread-pool-events"></a>Arbeitsthreadpoolereignisse
  Diese Ereignisse beziehen sich auf den Arbeitsthreadpool der Laufzeit und stellen Benachrichtigungen für Threadereignisse bereit (wenn z. B. ein Thread erstellt oder beendet wird). Der Arbeitsthreadpool verwendet einen adaptiven Algorithmus für die Parallelitätssteuerung, bei dem die Anzahl der Threads auf Basis des gemessenen Durchsatzes berechnet wird. Arbeitsthreadpoolereignisse können dazu verwendet werden zu verstehen, wie eine Anwendung den Threadpool verwendet und welche Auswirkungen bestimmte Arbeitsauslastungen möglicherweise auf die Parallelitätssteuerung haben.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart und ThreadPoolWorkerThreadStop  
@@ -124,10 +123,7 @@ ms.locfileid: "71046188"
 |NewcontrolSetting|win:Double|Die Anzahl der aktiven Arbeitsthreads, die als Grundlage für zukünftige Abweichungen bei der Anzahl aktiver Threads dienen werden.|  
 |NewThreadWaveMagnitude|Win:UInt16|Das Ausmaß zukünftiger Abweichungen bei der Anzahl aktiver Threads.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-  
- [Zurück nach oben](#top)  
-  
-<a name="io"></a>   
+
 ## <a name="io-thread-events"></a>E/A-Threadereignisse  
  Diese Threadpoolereignisse treten für Threads im E/A-Threadpool (Abschlussanschluss) auf, der asynchron ist.  
   

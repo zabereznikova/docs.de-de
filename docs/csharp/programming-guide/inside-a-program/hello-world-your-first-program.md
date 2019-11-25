@@ -9,16 +9,16 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991338"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196215"
 ---
 # <a name="hello-world----your-first-program"></a>Ihr erstes Programm: Hallo Welt
 
-In diesem Artikel verwenden Sie Visual Studio zum Erstellen eines traditionellen Hallo Welt -Programms. Visual Studio ist eine professionelle IDE (integrierte Entwicklungsumgebung) mit vielen Features, die für die .NET-Entwicklung konzipiert wurden. Zum Erstellen dieses Programms verwenden Sie nur wenige dieser Features. Weitere Informationen über Visual Studio finden Sie unter [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).
+In diesem Artikel verwenden Sie Visual Studio zum Erstellen eines traditionellen Hallo Welt -Programms. Visual Studio ist eine professionelle IDE (integrierte Entwicklungsumgebung) mit vielen Features, die für die .NET-Entwicklung konzipiert wurden. Zum Erstellen dieses Programms verwenden Sie nur wenige dieser Features. Weitere Informationen zu Visual Studio finden Sie unter [Erste Schritte mit Visual C#](/visualstudio/ide/quickstart-csharp-console).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -128,4 +128,4 @@ Weitere Informationen zu Eingabe-/Ausgabemethoden finden Sie unter <xref:System.
 - [C#-Programmierhandbuch](../index.md)
 - [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)
 - [Main() und Befehlszeilenargumente](../main-and-command-args/index.md)
-- [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Erste Schritte mit Visual C#](/visualstudio/ide/quickstart-csharp-console)

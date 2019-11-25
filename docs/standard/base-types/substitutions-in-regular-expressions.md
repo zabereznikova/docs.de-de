@@ -13,28 +13,28 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122480"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972063"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
-<a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
+Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
  .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
 |Substitution|BESCHREIBUNG|  
 |------------------|-----------------|  
-|$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
-|${ *Name* }|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
-|$$|Schließt ein einzelnes "$"-Literal in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen eines "$"-Symbols](#DollarSign).|  
-|$&|Schließt eine Kopie der gesamten Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der gesamten Übereinstimmung](#EntireMatch).|  
-|$\`|Schließt den gesamten Text der Eingabezeichenfolge vor der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts vor der Übereinstimmung](#BeforeMatch).|  
-|$'|Schließt den gesamten Text der Eingabezeichenfolge nach der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts nach der Übereinstimmung](#AfterMatch).|  
-|$+|Schließt die letzte erfasste Gruppe in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der zuletzt erfassten Gruppe](#LastGroup).|  
-|$_|Schließt die gesamte Eingabezeichenfolge in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der ganzen Eingabezeichenfolge](#EntireString).|  
+|$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#substituting-a-numbered-group).|  
+|${ *Name* }|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#substituting-a-named-group).|  
+|$$|Schließt ein einzelnes "$"-Literal in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen eines "$"-Symbols](#substituting-a--character).|  
+|$&|Schließt eine Kopie der gesamten Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der gesamten Übereinstimmung](#substituting-the-entire-match).|  
+|$\`|Schließt den gesamten Text der Eingabezeichenfolge vor der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts vor der Übereinstimmung](#substituting-the-text-before-the-match).|  
+|$'|Schließt den gesamten Text der Eingabezeichenfolge nach der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts nach der Übereinstimmung](#substituting-the-text-after-the-match).|  
+|$+|Schließt die letzte erfasste Gruppe in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der zuletzt erfassten Gruppe](#substituting-the-last-captured-group).|  
+|$\_|Schließt die gesamte Eingabezeichenfolge in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der ganzen Eingabezeichenfolge](#substituting-the-entire-input-string).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Ersetzungselemente und Ersetzungsmuster  
  Ersetzungen sind die einzigen Sonderkonstrukte, die in einem Ersetzungsmuster erkannt werden. Keines der anderen Sprachelemente für reguläre Ausdrücke, einschließlich Escapezeichen und Punkt (`.`), der einem beliebigen Zeichen entspricht, wird unterstützt. Auf ähnliche Weise werden Ersetzungssprachelemente nur in Ersetzungsmustern erkannt und sind in Mustern für reguläre Ausdrücke nie gültig.  
@@ -43,12 +43,11 @@ ms.locfileid: "73122480"
   
 > [!NOTE]
 > Für die Funktionalität, die mit einem Ersetzungsmuster innerhalb eines regulären Ausdrucks vergleichbar ist, verwenden Sie einen Rückverweis. Weitere Informationen zu Rückverweisen finden Sie unter [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
-  
-<a name="Numbered"></a>   
+
 ## <a name="substituting-a-numbered-group"></a>Ersetzen einer nummerierten Gruppe  
  Das `$`*Zahl* -Sprachelement schließt die letzte Teilzeichenfolge ein, die mit der *Zahl* -Erfassungsgruppe in der Ersetzungszeichenfolge übereinstimmt, wobei *Zahl* der Index der Erfassungsgruppe ist. Beispielsweise gibt das Ersetzungsmuster `$1` an, dass die übereinstimmende Teilzeichenfolge durch die erste erfasste Gruppe ersetzt werden soll. Weitere Informationen zu nummerierten Erfassungsgruppen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Alle Ziffern, die auf `$` folgen, werden als zur Gruppe *Zahl* gehörend interpretiert. Wenn dies nicht Ihre Absicht ist, können Sie stattdessen eine benannte Gruppe ersetzen. Sie können z. B. die Ersetzungszeichenfolge `${1}1` anstelle von `$11` verwenden, um die Ersetzungszeichenfolge als Wert der ersten erfassten Gruppe zusammen mit der Nummer "1" zu definieren. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).  
+ Alle Ziffern, die auf `$` folgen, werden als zur Gruppe *Zahl* gehörend interpretiert. Wenn dies nicht Ihre Absicht ist, können Sie stattdessen eine benannte Gruppe ersetzen. Sie können z. B. die Ersetzungszeichenfolge `${1}1` anstelle von `$11` verwenden, um die Ersetzungszeichenfolge als Wert der ersten erfassten Gruppe zusammen mit der Nummer "1" zu definieren. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#substituting-a-named-group).  
   
  Erfassungsgruppen, denen mit der Syntax `(?<`*Name*`>)` keine Namen explizit zugewiesen sind, werden beginnend mit Eins von links nach rechts durchnummeriert. Auch benannte Gruppen werden von links nach rechts durchnummeriert, wobei der Startwert um eins größer ist als der Index der letzten unbenannten Gruppe. Im regulären Ausdruck `(\w)(?<digit>\d)`ist z. B. der Index der benannten Gruppe `digit` 2.  
   
@@ -69,10 +68,7 @@ ms.locfileid: "73122480"
 |`[.,]?`|Übereinstimmung mit keinem oder einem Punkt oder Komma.|  
 |`\d*`|0 (null) oder mehr Dezimalstellen sollen übereinstimmen.|  
 |`(\s?\d+[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die erste Erfassungsgruppe. Da das Ersetzungsmuster `$1`ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
-  
- [Zurück nach oben](#Top)  
-  
-<a name="Named"></a>   
+
 ## <a name="substituting-a-named-group"></a>Ersetzen einer benannten Gruppe  
  Das `${`*Name*`}` -Sprachelement ersetzt die letzte mit der Erfassungsgruppe *Name* übereinstimmende Teilzeichenfolge, wobei *Name* der Name einer Erfassungsgruppe ist, die durch das Sprachelement `(?<`*Name*`>)` definiert wird. Weitere Informationen zu benannten Erfassungsgruppen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
@@ -95,10 +91,7 @@ ms.locfileid: "73122480"
 |`[.,]?`|Übereinstimmung mit keinem oder einem Punkt oder Komma.|  
 |`\d*`|0 (null) oder mehr Dezimalstellen sollen übereinstimmen.|  
 |`(?<amount>\s?\d[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die Erfassungsgruppe mit dem Namen `amount`. Da das Ersetzungsmuster `${amount}`ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
-  
- [Zurück nach oben](#Top)  
-  
-<a name="DollarSign"></a>   
+
 ## <a name="substituting-a--character"></a>Ersetzen eines "$"-Zeichens  
  Die `$$` -Ersetzung fügt ein literales "$"-Zeichen in der ersetzten Zeichenfolge ein.  
   
@@ -116,8 +109,7 @@ ms.locfileid: "73122480"
 |`\.`|Übereinstimmung mit einem Punkt (dem Dezimaltrennzeichen).|  
 |`(\d+)`|Entsprechung für mindestens eine Dezimalstelle finden. Dies ist die dritte Erfassungsgruppe.|  
 |`(\.(\d+))?`|Übereinstimmung mit keinem oder einem Vorkommen eines Punkts gefolgt von mindestens einer Dezimalzahl. Dies ist die zweite Erfassungsgruppe.|  
-  
-<a name="EntireMatch"></a>   
+
 ## <a name="substituting-the-entire-match"></a>Ersetzen der gesamten Übereinstimmung  
  Die Ersetzung `$&` schließt die gesamte Übereinstimmung in die Ersetzungszeichenfolge ein. Sie wird häufig dazu verwendet, dem Anfang oder Ende der übereinstimmenden Zeichenfolge eine Teilzeichenfolge hinzuzufügen. Das Ersetzungsmuster `($&)` fügt z. B. dem Anfang und Ende jeder Übereinstimmung Klammern hinzu. Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung `$&` nicht aus.  
   
@@ -135,10 +127,7 @@ ms.locfileid: "73122480"
 |`$`|Entsprechung für das Ende der Eingabezeichenfolge finden.|  
   
  Das Ersetzungsmuster `"$&"` fügt dem Anfang und Ende jeder Übereinstimmung ein literales Anführungszeichen hinzu.  
-  
- [Zurück nach oben](#Top)  
-  
-<a name="BeforeMatch"></a>   
+
 ## <a name="substituting-the-text-before-the-match"></a>Ersetzen des Texts vor der Übereinstimmung  
  Die Ersetzung ``$` `` ersetzt die übereinstimmende Zeichenfolge vor der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird bis zur Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text folgt, bleibt in der Ergebniszeichenfolge unverändert. Wenn mehrere Übereinstimmungen in einer Eingabezeichenfolge vorhanden sind, wird der Ersetzungstext von der ursprünglichen Eingabezeichenfolge abgeleitet und nicht von der Zeichenfolge, in der Text durch frühere Übereinstimmungen ersetzt wurde. \(Dies wird im Beispiel veranschaulicht.\) Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung ``$` `` nicht aus.  
   
@@ -155,11 +144,8 @@ ms.locfileid: "73122480"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|  
-  
- [Zurück nach oben](#Top)  
-  
-<a name="AfterMatch"></a>   
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+
 ## <a name="substituting-the-text-after-the-match"></a>Ersetzen des Texts nach der Übereinstimmung  
  Die Ersetzung `$'` ersetzt die übereinstimmende Zeichenfolge nach der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird nach der Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text vorausgeht, bleibt in der Ergebniszeichenfolge unverändert. Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung  `$'` nicht aus.  
   
@@ -177,10 +163,7 @@ ms.locfileid: "73122480"
 |3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
 |4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
-  
- [Zurück nach oben](#Top)  
-  
-<a name="LastGroup"></a>   
+
 ## <a name="substituting-the-last-captured-group"></a>Ersetzen der zuletzt erfassten Gruppe  
  Die Ersetzung `$+` ersetzt die übereinstimmende Zeichenfolge durch die zuletzt erfasste Gruppe. Wenn keine erfassten Gruppen vorhanden sind oder der Wert der zuletzt erfassten Gruppe <xref:System.String.Empty?displayProperty=nameWithType>ist, hat die Ersetzung `$+` keine Auswirkungen.  
   
@@ -198,10 +181,7 @@ ms.locfileid: "73122480"
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
 |`\1`|Übereinstimmung mit der ersten erfassten Gruppe.|  
 |`\b`|Der Vergleich endet an einer Wortgrenze.|  
-  
- [Zurück nach oben](#Top)  
-  
-<a name="EntireString"></a>   
+
 ## <a name="substituting-the-entire-input-string"></a>Ersetzen der ganzen Eingabezeichenfolge  
  Die Ersetzung `$_` ersetzt die übereinstimmende Zeichenfolge durch die gesamte Eingabezeichenfolge. Das heißt, dass der übereinstimmende Text entfernt und durch die gesamte Zeichenfolge, einschließlich des übereinstimmenden Texts, ersetzt wird.  
   

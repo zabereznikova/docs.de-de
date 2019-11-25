@@ -1,25 +1,25 @@
 ---
-title: Wann soll Windows-Container für Azure Container Service bereitgestellt werden (Kubernetes)
-description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Wann soll Windows-Container für Azure Container Service bereitgestellt werden (Kubernetes)
+title: Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (d. h. Kubernetes) erfolgen sollte
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (d. h. Kubernetes) erfolgen sollte
 ms.date: 04/30/2018
 ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577943"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Wann soll Windows-Container für Azure Container Service bereitgestellt werden (Kubernetes)
+# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (d. h. Kubernetes) erfolgen sollte
 
-Azure Container Service optimiert die Konfiguration beliebter Open Source-Tools und-Technologien speziell für Azure. Sie erhalten eine offene Lösung, die Portabilität sowohl für Ihre Container als auch für Ihre Anwendungskonfiguration bietet. Sie wählen die Größe, die Anzahl der Hosts und die Orchestrator-Tools aus. Azure Container Service kümmert sich um die Infrastruktur für Sie.
+Azure Container Service optimiert speziell für Azure die Konfiguration beliebter Open Source-Tools und -Technologien. Dadurch erhalten Sie eine offene Lösung, die die Portabilität Ihrer Container und Ihrer Anwendungskonfiguration garantiert. Sie müssen nur die Größe, die Anzahl von Hosts und die Orchestratortools auswählen. Die Infrastruktur handhabt Azure Container Service für Sie.
 
-Wenn Sie bereits mit Open Source-orchestratoren wie Kubernetes, docker Swarm oder DC/OS arbeiten, müssen Sie Ihre vorhandenen Verwaltungsverfahren nicht ändern, um containerworkloads in die Cloud zu verschieben. Verwenden Sie die Tools für die Anwendungs Verwaltung, mit denen Sie bereits vertraut sind, und stellen Sie eine Verbindung über die API-Standard Endpunkte für den Orchestrator Ihrer Wahl her.
+Wenn Sie bereits mit Open Sourc-Orchestratoren wie Kubernetes, Docker Swarm oder DC/OS arbeiten, müssen Sie Ihre bestehenden Verwaltungspraktiken nicht ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl.
 
-Alle diese orchestratoren sind ausgereifte Umgebungen, wenn Sie Linux-docker-Container verwenden, sich aber möglicherweise nur im Vorschau Zustand für Windows-Container befinden.
+Alle diese Orchestratoren sind reife Umgebungen, wenn Sie Linux Docker-Container verwenden, könnten sich für Windows-Container aber lediglich im Preview-Zustand befinden.
 
-In Kubernetes ist die Unterstützung für Container beispielsweise System eigen (erstklassige Bürger), daher ist die Verwendung von Windows-Containern auf Kubernetes auch wirksam (als Vorschauversion von Anfang 2018 in ACS).
+In Kubernetes ist die Unterstützung für Container beispielsweise nativ (wesentlicher Bestandteil, „Bürger erster Klasse“), weshalb die Verwendung von Windows-Containern auf Kubernetes auch effektiv ist (als Preview in ACS ab Anfang 2018).
 
-Wichtiger Hinweis: Die entwickelte und "Weitere" weitere Version von ACS (Azure Container Service) für Kubernetes ist AKS (Azure Kubernetes Service). Windows-Container werden jedoch noch nicht ab dem Q2 2018 unterstützt, aber Sie werden bald unterstützt.
+Wichtiger Hinweis: Die weiterentwickelte und „stärker PaaS“-Version von ACS (Azure Container Service) für Kubernetes ist AKS (Azure Kubernetes Service). Windows-Container werden jedoch mit Stand 2. Quartal 2018 immer noch nicht unterstützt. Dies soll sich jedoch bald ändern.
 
 >[!div class="step-by-step"]
 >[Zurück](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)

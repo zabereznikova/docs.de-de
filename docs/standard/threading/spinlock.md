@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5bd2468c7b68a9c79e7418a32294676fb468e1a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eac9a1be38ea81e8ccee1d05d9061ceeb597627f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042633"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106170"
 ---
 # <a name="spinlock"></a>SpinLock
 Die <xref:System.Threading.SpinLock>-Struktur ist eine Synchronisierungsprimitive auf niedriger Ebene mit gegenseitigem Ausschluss, die die Schleife durchläuft, während sie darauf wartet, eine Sperre abzurufen. Wenn Wartezeiten auf Mehrkerncomputern kurz und Konflikte minimal sein sollen, bietet <xref:System.Threading.SpinLock> einen Leistungsvorteil gegenüber anderen Arten von Sperren. Sie sollten <xref:System.Threading.SpinLock> jedoch nur verwenden, wenn Sie durch Profilerstellung bestimmen, dass die <xref:System.Threading.Monitor?displayProperty=nameWithType>- oder <xref:System.Threading.Interlocked>-Methode die Leistung des Programms erheblich beeinträchtigen.  
@@ -23,7 +21,7 @@ Die <xref:System.Threading.SpinLock>-Struktur ist eine Synchronisierungsprimitiv
   
  Weitere Informationen zum Verwenden dieses Typs finden Sie unter <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Ein Beispiel finden Sie unter [Gewusst wie: Synchronisierung auf niedriger Ebene mit SpinLock](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock> unterstützt einen *Thread*-*Nachverfolgungsmodus*, mit dem Sie während der Entwicklungsphase den Thread nachverfolgen können, der die Sperre zu einem bestimmten Zeitpunkt aufrechterhält. Der Thread-Nachverfolgungsmodus ist sehr nützlich für das Debuggen, aber Sie sollten ihn in der endgültigen Produktversion des Programms deaktivieren, da er die Leistung beeinträchtigen könnte. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> unterstützt einen *Thread*-*Nachverfolgungsmodus*, mit dem Sie während der Entwicklungsphase den Thread nachverfolgen können, der die Sperre zu einem bestimmten Zeitpunkt aufrechterhält. Der Thread-Nachverfolgungsmodus ist sehr nützlich für das Debuggen, aber Sie sollten ihn in der endgültigen Produktversion des Programms deaktivieren, da er die Leistung beeinträchtigen könnte. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,19 +8,19 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: e1414c17cefd0fb31bb782a311e11dbd4cc056bb
-  ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+  ms.openlocfilehash: bd11bda04ccf7d8253907bee8f17fc2b86ed76cd
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/06/2019
-  ms.locfileid: "70394092"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969492"
 items:
 - durationInMinutes: 1
   content: >
     In diesem Tutorial lernen Sie interaktiv die Grundlagen von C# 6 kennen, indem Sie mit Ihrem Browser C#-Code schreiben und die Ergebnisse der Kompilierung und Ausführung Ihres Codes sehen. Einige Lektionen sind eine Abwandlung früherer C#-Übungen mit den neueren, präziseren Features von C# 6. Im weiteren Verlauf dieses Artikels finden Sie eine Übersicht über die einzelnen Features, in der jeweils ein Link enthalten ist, über den Sie weitere Informationen zum Feature erhalten.
 - title: Zulassen von schreibgeschütztem Verhalten mit schreibgeschützten automatisch implementierten Eigenschaften
   durationInMinutes: 2
-  content: "Durch die folgenden zwei Verbesserungen an der Syntax für automatisch implementierte Eigenschaften können Sie automatisch implementierte Eigenschaften problemlos vielseitiger einsetzen: schreibgeschützte automatisch implementierte Eigenschaften und Initialisierer für automatisch implementierte Eigenschaften. Sehen Sie sich dieses kleine Programm an:\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n Starten Sie den Fokusmodus, und kopieren Sie den oben stehenden Code in der interaktive C#-Fenster. Klicken Sie dann auf *Ausführen*, um zu sehen, was das Ergebnis des Codes ist. `AllCaps` führt leider dazu, dass die Eigenschaftswerte gemeinsam mit der großgeschriebenen Zeichenfolge zurückgegeben werden. Eigentlich wollte der Autor der `Person`-Klasse, dass sie Zeichenfolgen `FirstName` und `LastName` schreibgeschützt sind. Mit C# 6 kann man dies erreichen. Entfernen Sie `private set` aus beiden Eigenschaften, um eine schreibgeschützte automatisch implementierte Eigenschaft zu erstellen. Klicken Sie auf *Ausführen*, und dann werden Sie sehen, dass der Compiler die beiden Positionen erkennt, an denen die Eigenschaften `FirstName` und `LastName` ungewollt geändert wurden. Ändern Sie die `AllCaps`-Methode folgendermaßen, um den Compilerfehler zu beheben:\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\nMit dieser neuen Syntax stellt der Compiler sicher, dass die Eigenschaften unveränderlich sind.\n"
+  content: "Durch die folgenden zwei Verbesserungen an der Syntax für automatisch implementierte Eigenschaften können Sie automatisch implementierte Eigenschaften problemlos vielseitiger einsetzen: schreibgeschützte automatisch implementierte Eigenschaften und Initialisierer für automatisch implementierte Eigenschaften. Sehen Sie sich dieses kleine Programm an:\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n Starten Sie den Fokusmodus, und kopieren Sie den oben stehenden Code in der interaktive C#-Fenster. Wählen Sie dann *Ausführen* aus, um zu sehen, was das Ergebnis des Codes ist. `AllCaps` führt leider dazu, dass die Eigenschaftswerte gemeinsam mit der großgeschriebenen Zeichenfolge zurückgegeben werden. Eigentlich wollte der Autor der `Person`-Klasse, dass sie Zeichenfolgen `FirstName` und `LastName` schreibgeschützt sind. Mit C# 6 kann man dies erreichen. Entfernen Sie `private set` aus beiden Eigenschaften, um eine schreibgeschützte automatisch implementierte Eigenschaft zu erstellen. Wählen Sie *Ausführen* aus, dann sehen Sie, dass der Compiler die beiden Positionen erkennt, an denen die Eigenschaften `FirstName` und `LastName` ungewollt geändert wurden. Ändern Sie die `AllCaps`-Methode folgendermaßen, um den Compilerfehler zu beheben:\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\nMit dieser neuen Syntax stellt der Compiler sicher, dass die Eigenschaften unveränderlich sind.\n"
 - title: Initialisieren von Unterstützungsfeldern für automatisch implementierte Eigenschaften
   durationInMinutes: 1
   content: "Mit der neuen Syntax in C# 6 können Sie Initialisierer für automatisch implementierte Eigenschaften verwenden. Dies wird umso wichtiger je mehr Funktionen Klassen haben. Fügen Sie eine Eigenschaft für einen Zweitnamen und einen Konstruktor hinzu, der Ihrer `Person`-Klasse drei Zeichenfolgen zuweist:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#MiddleName)]  \n\nDie Zuweisung der `MiddleName`-Eigenschaft ist ein Initialisierer. Dieser initialisiert das vom Compiler generierte Unterstützungsfeld für den Zweitnamen.\n"

@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002692"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739108"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -57,7 +57,7 @@ Nun wird es langsam interessant. Werfen wir einen Blick auf einige wichtige Feat
 - [Generics](../programming-guide/generics/index.md)
 - [Partial types (Partielle Typen)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonyme Methoden](../language-reference/operators/delegate-operator.md)
-- [Auf NULL festlegbare Werttypen](../programming-guide/nullable-types/index.md)
+- [Auf NULL festlegbare Werttypen](../language-reference/builtin-types/nullable-value-types.md)
 - [Iteratoren](../programming-guide/concepts/iterators.md)
 - [Kovarianz und Kontravarianz](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -104,7 +104,7 @@ Die C#-Version 4.0, die mit Visual Studio 2010 veröffentlicht wurde, konnte n
 
 Die nächste Version führte einige interessante neue Features ein:
 
-- [Dynamische Bindung](../language-reference/keywords/dynamic.md)
+- [Dynamische Bindung](../language-reference/builtin-types/reference-types.md)
 - [Benannte/optionale Argumente](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Generische Kovarianz und Kontravarianz](../../standard/generics/covariance-and-contravariance.md)
 - [Eingebettete Interop-Typen](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
@@ -132,7 +132,7 @@ Die eigentlichen Stars dieser Version sind aber `async` und `await`. Als diese F
 
 ## <a name="c-version-60"></a>C# Version 6.0
 
-Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. In der Version 6.0, die mit Visual Studio 2013 veröffentlicht wurde, lag der Fokus nicht auf einem einzelnen Hauptfeature, sondern auf der Implementierung vieler kleiner Verbesserungen, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
+Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. In Version 6.0, die mit Visual Studio 2015 veröffentlicht wurde, lag der Fokus nicht auf einem einzelnen Hauptfeature, sondern auf der Implementierung vieler kleiner Verbesserungen, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
 
 - [Statische Importe](./csharp-6.md#using-static)
 - [Ausnahmefilter](./csharp-6.md#exception-filters)

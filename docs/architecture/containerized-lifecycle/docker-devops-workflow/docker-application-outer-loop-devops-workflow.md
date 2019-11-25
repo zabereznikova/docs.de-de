@@ -2,18 +2,18 @@
 title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die „äußere Schleife“ des DevOps-Workflows
 ms.date: 02/15/2019
-ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834563"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738242"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 
-Abbildung 5–1 zeigt eine End-to-End-Darstellung der Schritte, aus denen der DevOps-Outer-Loop-Workflow besteht.
+Abbildung 5–1 zeigt eine End-to-End-Darstellung der Schritte, aus denen der DevOps-Outer-Loop-Workflow besteht. Sie zeigt die „äußere Schleife“ von DevOps. Wenn Code per Push an das Repository übertragen wird, beginnt die CD-Pipeline, in der die Anwendung bereitgestellt wird. Aus bereitgestellten Anwendungen gesammelte Metriken werden in die Entwicklungsworkload rückgekoppelt, in der die „innere Schleife“ stattfindet, sodass die Entwicklungsteams über reale Daten verfügen, mit denen sie auf Benutzer- und Geschäftsanforderungen reagieren können.
 
-![Dieses Diagramm zeigt die „äußere Schleife“ von DevOps. Wenn Code per Push an das Repository übertragen wird, beginnt die CD-Pipeline, in der die Anwendung bereitgestellt wird. Aus bereitgestellten Anwendungen gesammelte Metriken werden in die Entwicklungsworkload rückgekoppelt, in der die „innere Schleife“ stattfindet, sodass die Entwicklungsteams über reale Daten verfügen, mit denen sie auf Benutzer- und Geschäftsanforderungen reagieren können.](./media/image1.png)
+![Diagramm, das die 6 Schritte der „äußeren Schleife“ des DevOps-Workflows zeigt.](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
 **Abbildung 5–1**. DevOps-Outer-Loop-Workflow für Docker-Anwendungen mit Microsoft-Tools
 
@@ -45,9 +45,9 @@ Sie können Azure DevOps Services als Grundlage zum Erstellen Ihrer Anwendungen 
 
 Bei der Verwendung von Docker für die Bereitstellung sind die „endgültigen Artefakte“, die bereitgestellt werden sollen, Docker-Images, in denen Ihre Anwendung oder Ihre Dienste eingebettet sind. Diese Images werden per Push an eine *Docker-Registrierung* übertragen oder auf ihr veröffentlicht (dabei kann es sich um ein privates Repository in der Art der Azure Container Registry oder um ein öffentliches wie die Docker Hub-Registrierung handeln, die verbreitet für offizielle Basisimages verwendet wird).
 
-Dies ist das grundlegende Konzept: Die CI-Pipeline wird durch einen Commit an ein SCC-Repository wie Git gestartet. Der Commit bewirkt, dass Azure DevOps Services einen Buildauftrag innerhalb eines Docker-Containers ausführen und nach erfolgreichem Abschluss dieses Auftrags ein Docker-Image per Push in die Docker-Registrierung übertragen, wie in Abbildung 5–2 dargestellt.
+Dies ist das grundlegende Konzept: Die CI-Pipeline wird durch einen Commit an ein SCC-Repository wie Git gestartet. Der Commit bewirkt, dass Azure DevOps Services einen Buildauftrag innerhalb eines Docker-Containers ausführen und nach erfolgreichem Abschluss dieses Auftrags ein Docker-Image per Push in die Docker-Registrierung übertragen, wie in Abbildung 5–2 dargestellt. Der erste Teil der äußeren Schleife umfasst die Schritte 1 bis 3, von der Codeerstellung, Ausführung, Debuggen und Validierung, über das Coderepository bis hin zu den CI-Schritten für Erstellen und Testen.
 
-![Der erste Teil der äußeren Schleife umfasst die Schritte 1 bis 3, von der Codeerstellung, Ausführung, Debuggen und Validierung, über das Coderepository bis hin zu den CI-Schritten für Erstellen und Testen](./media/image2.png)
+![Diagramm, das die am CI-Workflow beteiligten drei Schritte zeigt.](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
 **Abbildung 5-2**. Die in CI enthaltenen Schritte
 
@@ -69,7 +69,7 @@ Dies sind die grundlegenden Schritte im CI-Workflow mit Docker und Azure DevOps 
 
 Visual Studio Azure DevOps Services enthält Build- und Releasevorlagen, die Sie in Ihrer CI/CD-Pipeline verwenden können. Mithilfe dieser Pipeline können Sie Docker-Images per Push in eine authentifizierte Docker-Registrierung übertragen, Docker-Images ausführen oder andere an der Docker-Eingabeaufforderung verfügbare Vorgänge ausführen. Außerdem wird eine Docker Compose-Aufgabe hinzugefügt, mit der Sie Docker-Anwendungen für mehrere Container erstellen, per Push übertragen und ausführen sowie andere von der Docker Compose-Eingabeaufforderung angebotene Vorgänge ausführen können, wie in Abbildung 5–3 dargestellt.
 
-![Browseransicht der Docker CI-Pipeline in Azure DevOps](./media/image3.png)
+![Screenshot der Docker CI-Pipeline in Azure DevOps.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
 **Abbildung 5-3**. Die Docker CI-Pipeline in Azure DevOps Services einschließlich Build- und Releasevorlagen und verwandten Aufgaben.
 
@@ -124,15 +124,15 @@ In ähnlicher Weise, wie der in Ihrem SSC-Repository (Git usw.) gespeicherte Anw
 
 Normalerweise ist es sinnvoll, private Repositorys für Ihre benutzerdefinierten Images entweder in einem privaten Repository in der Azure Container Registry, in einer lokalen Registrierung wie der Docker Trusted Registry oder in einer öffentlichen Cloudregistrierung mit eingeschränktem Zugriff (wie Docker Hub) aufzubewahren, mit der Einschränkung, dass Sie im letzten Fall der Sicherheit des Anbieters vertrauen müssen, falls Ihr Code nicht Open Source ist. Die eingesetzten Methoden sind in allen Fällen ähnlich und basieren auf dem `docker push`-Befehl, wie in Abbildung 5–4 dargestellt.
 
-![Zum Aufbau der Integration und zum Testen (CI) in Schritt 3 können Sie die resultierenden Docker-Images in einer privaten oder öffentlichen Registrierung veröffentlichen.](./media/image4.png)
+![Diagramm, das den Pushvorgang benutzerdefinierter Images in eine Containerregistrierung zeigt.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
 **Abbildung 5-4**. Veröffentlichen von benutzerdefinierten Images in der Docker-Registrierung
 
-Es gibt viele Angebote für Docker-Registrierungen von Cloudanbietern, wie Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry usw.
+Zum Aufbau der Integration und zum Testen (CI) in Schritt 3 können Sie die resultierenden Docker-Images in einer privaten oder öffentlichen Registrierung veröffentlichen. Es gibt viele Angebote für Docker-Registrierungen von Cloudanbietern, wie Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry usw.
 
 Mithilfe der Docker-Aufgaben können Sie eine Reihe von Dienstimages, die durch eine `docker-compose.yml`-Datei definiert sind, mit mehreren Tags per Push an eine authentifizierte Docker-Registrierung (wie die Container Registry) übertragen, wie in Abbildung 5–5 dargestellt.
 
-![Browseransicht des Schritts zum Veröffentlichen von Images aus Azure DevOps in einer Registrierung.](./media/image5.png)
+![Screenshot, der den Schritt zum Veröffentlichen von Images in einer Registrierung zeigt.](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **Abbildung 5-5**. Verwenden von Azure DevOps Services zum Veröffentlichen benutzerdefinierter Images in einer Docker-Registrierung
 
@@ -148,13 +148,13 @@ Allerdings hängt es an diesem Punkt davon ab, welche Art Docker-Anwendung Sie b
 
 Sehen wir uns zunächst das weniger komplizierte Szenario an: das Bereitstellen auf einfachen Docker-Hosts (VMs oder Servern) in einer einzelnen Umgebung oder mehreren Umgebungen (QA, Staging und Produktion). In diesem Szenario kann Ihre CD-Pipeline intern docker-compose (aus Ihren Azure DevOps Services-Bereitstellungsaufgaben) verwenden, um die Docker-Anwendungen mit ihrem zugehörigen Satz von Containern oder Diensten bereitzustellen, wie in Abbildung 5–6 dargestellt.
 
-![Der CD-Bereitstellungsschritt (Nr. 4) kann in verschiedenen Umgebungen, wie Q&A, Staging und Produktion veröffentlichen.](./media/image6.png)
+![Diagramm, das den Schritt für die CD-Bereitstellung in drei Umgebungen zeigt.](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **Abbildung 5–6**. Bereitstellen von Anwendungscontainern in einer Registrierung für einfache Docker-Hostumgebungen
 
 Abbildung 5–7 hebt hervor, wie Sie Ihre Build-CI mithilfe von Azure DevOps Services mit QA-/Testumgebungen verbinden können, indem Sie im Dialogfeld „Aufgabe hinzufügen“ auf „Docker Compose“ klicken. Beim Bereitstellen in Staging- oder Produktionsumgebungen würden jedoch normalerweise Funktionen der Releaseverwaltung zum Einsatz kommen, die mehrere Umgebungen (wie QA, Staging und Produktion) behandeln. Wenn Sie auf einzelnen Docker-Hosts bereitstellen, wird die Aufgabe „Docker Compose“ von Azure DevOps Services verwendet (die hinter den Kulissen den `docker-compose up`-Befehl aufruft). Wenn Sie in Azure Kubernetes Service (AKS) bereitstellen, wird die Docker-Bereitstellungsaufgabe verwendet, wie im anschließenden Abschnitt erläutert.
 
-![Browseransicht des Hinzufügens einer Docker Compose-Aufgabe.](./media/image7.png)
+![Screenshot, der das Dialogfeld „Aufgaben hinzufügen“ der Docker Compose-Aufgabe zeigt.](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **Abbildung 5-7**. Hinzufügen einer Docker Compose-Aufgabe in einer Azure DevOps Services-Pipeline
 
@@ -166,7 +166,7 @@ Die Azure DevOps Services-Vorlagen geben Ihnen die Möglichkeit, Buildartefakte 
 
 Mithilfe der Azure DevOps Services-Vorlagen können Sie ein neues Image erstellen, es in einer Docker-Registrierung veröffentlichen, es auf Linux- oder Windows-Hosts ausführen und Befehle wie `docker-compose` verwenden, um mehrere Container als vollständige Anwendung bereitzustellen, all das mithilfe der Funktionen von Azure DevOps Services Release Management, die für mehrere Umgebungen bestimmt sind, wie in Abbildung 5–8 dargestellt.
 
-![Browseransicht von Azure DevOps beim Konfigurieren von Docker Compose-Releases.](./media/image8.png)
+![Screenshot, der die Konfiguration von Docker Compose-Releases zeigt.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
 **Abbildung 5-8**. Konfigurieren von Azure DevOps Services Docker Compose-Aufgaben in Azure DevOps Services Release Management
 
@@ -180,19 +180,19 @@ Sie könnten aus einem CLI-Tool oder von einer Webbenutzeroberfläche aus Contai
 
 Unter CD-Gesichtspunkten und insbesondere im Hinblick auf Azure DevOps Services können Sie speziell erstellte Bereitstellungsaufgaben aus Ihren Azure DevOps Services Release Management-Umgebungen ausführen, die Ihre in Containern verpackten Anwendungen im Containerdienst auf verteilten Clustern bereitstellen, wie in Abbildung 5–9 veranschaulicht.
 
-![Der CD-Bereitstellungsschritt (Nr. 4) erlaubt ebenfalls die Veröffentlichung auf Clustern mithilfe von Orchestratoren.](./media/image9.png)
+![Diagramm, das den Schritt für die CD-Bereitstellung in Orchestratoren zeigt.](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **Abbildung 5-9**. Bereitstellen von verteilten Anwendungen im Containerdienst
 
 Beim Bereitstellen auf bestimmten Clustern oder Orchestratoren würden Sie traditionell von spezifischen Bereitstellungsskripts und für jeden Orchestrator spezifischen Mechanismen ausgehen (d.h. die Bereitstellungsmechanismen von Kubernetes und Service Fabric unterscheiden sich), statt das einfachere und komfortable `docker-compose`-Tool zu verwenden, das auf der `docker-compose.yml`-Definitionsdatei basiert. Aufgrund der Azure DevOps Services Docker Deploy-Aufgabe, die in Abbildung 5–10 dargestellt ist, können Sie jetzt auch auf den unterstützten Orchestratoren bereitstellen, indem Sie einfach Ihre vertraute `docker-compose.yml`-Datei verwenden, da das Tool die erforderliche „Übersetzung“ (von Ihrer `docker-compose.yml`-Datei in das für den Orchestrator erforderliche Format) für Sie vornimmt.
 
-![Browseransicht des Aufgabenkatalogs in Azure DevOps mit der Darstellung der Aufgabe zur Bereitstellung in Kubernetes.](./media/add-deploy-to-kubernetes-task.png)
+![Screenshot, der die Aufgabe „In Kubernetes bereitstellen“ zeigt.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **Abbildung 5-10**. Hinzufügen der Aufgabe zum Bereitstellen in Kubernetes zu Ihrer Umgebung
 
 Abbildung 5–11 veranschaulicht, wie Sie die Aufgabe „Für Kubernetes bereitstellen“ mit den zur Konfiguration verfügbaren Abschnitten bearbeiten können. Dies ist die Aufgabe, die Ihre verwendungsbereiten benutzerdefinierten Docker-Images für die Bereitstellung als Container im Cluster abruft.
 
-![Browseransicht von Azure DevOps, Aufgabendefinition von „Für Kubernetes bereitstellen“](./media/edit-deploy-to-kubernetes-task.png)
+![Screenshot, der die Konfiguration der Aufgabe „In Kubernetes bereitstellen“ zeigt.](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
 
 **Abbildung 5-11**. Definition der Docker-Bereitstellungsaufgabe bei der Bereitstellung für ACS DC/OS
 

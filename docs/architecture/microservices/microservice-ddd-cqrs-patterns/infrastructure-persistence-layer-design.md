@@ -2,12 +2,12 @@
 title: Entwerfen der Persistenzebene der Infrastruktur
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Repositorymuster im Entwurf der Infrastrukturpersistenzebene
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674117"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737949"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Entwerfen der Persistenzebene der Infrastruktur
 
@@ -33,9 +33,11 @@ Wenn der Benutzer Änderungen vornimmt, werden die zu aktualisierenden Daten von
 
 Beachten Sie, dass Sie pro Aggregatstamm nur ein Repository definieren dürfen (s. Abbildung 7-17). Damit das Ziel des Aggregatstamms erreicht wird und die Transaktionskonsistenz zwischen allen Objekten im Aggregat erhalten bleibt, sollten Sie niemals für jede Tabelle in der Datenbank ein Repository erstellen.
 
-![Beziehungen zwischen Domänen- und Infrastrukturebenen: Das Buyer-Aggregat hängt vom Aggregat IBuyerRepository und das Order-Aggregat von den IOrderRepository-Schnittstellen ab. Diese Schnittstellen werden in der Infrastrukturebene über die entsprechenden Repositorys implementiert, die von UnitOfWork abhängen. UnitOfWork ist ebenfalls dort implementiert und greift auf die Tabellen in der Datenschicht zu.](./media/image18.png)
+![Diagramm, das Beziehungen zwischen der Domäne und anderer Infrastruktur zeigt.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Abbildung 7-17**. Die Beziehung zwischen Repositorys, Aggregaten und Datenbanktabellen
+
+Das obige Diagramm zeigt die Beziehungen zwischen Domänen- und Infrastrukturebenen: Das Buyer-Aggregat hängt vom Aggregat IBuyerRepository und das Order-Aggregat von den IOrderRepository-Schnittstellen ab. Diese Schnittstellen werden in der Infrastrukturebene über die entsprechenden Repositorys implementiert, die von UnitOfWork abhängen. UnitOfWork ist ebenfalls dort implementiert und greift auf die Tabellen in der Datenschicht zu.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Erzwingen eines Aggregatstamms pro Repository
 

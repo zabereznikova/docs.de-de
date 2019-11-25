@@ -2,13 +2,14 @@
 title: Erstellen von Ausdrucksbaumstrukturen
 description: Informationen zu den Verfahren zum Erstellen von Ausdrucksbaumstrukturen.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207188"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037093"
 ---
 # <a name="building-expression-trees"></a>Erstellen von Ausdrucksbaumstrukturen
 
@@ -16,7 +17,7 @@ ms.locfileid: "36207188"
 
 Alle Ausdrucksbaumstrukturen, die Sie bisher gesehen haben, wurden vom C#-Compiler erstellt. Sie müssen einfach einen Lambdaausdruck erstellen, der einer typisierten Variable als `Expression<Func<T>>` oder als einen ähnlichen Typ zugewiesen wurde. Das ist nicht die einzige Möglichkeit, eine Ausdrucksbaumstruktur zu erstellen. Für viele Szenarios stellen Sie möglicherweise fest, dass Sie einen Ausdruck im Arbeitsspeicher zur Laufzeit erstellen müssen. 
 
-Das Erstellen von Ausdrucksbaumstrukturen ist kompliziert, da diese Ausdrucksbaumstrukturen unveränderlich sind. Unveränderlich bedeutet, dass Sie die Struktur von den Blättern bis zum Stamm erstellen müssen. Die APIs, die Sie zum Erstellen von Ausdrucksbaumstrukturen verwenden spiegeln diese Tatsache wider: Die Methoden, die Sie verwenden, um einen Knoten zu erstellen, werden alle ihre untergeordneten Elemente als Argumente verwenden. Betrachten wir einige Beispiele, die Ihnen die Techniken zeigen.
+Das Erstellen von Ausdrucksbaumstrukturen ist kompliziert, da diese Ausdrucksbaumstrukturen unveränderlich sind. Unveränderlich bedeutet, dass Sie die Struktur von den Blättern bis zum Stamm erstellen müssen. Die APIs, die Sie zum Erstellen von Ausdrucksbaumstrukturen verwenden, spiegeln diese Tatsache wider: Die Methoden, die Sie verwenden, um einen Knoten zu erstellen, nehmen alle untergeordneten Elemente als Argumente. Betrachten wir einige Beispiele, die Ihnen die Techniken zeigen.
 
 ## <a name="creating-nodes"></a>Erstellen von Knoten
 

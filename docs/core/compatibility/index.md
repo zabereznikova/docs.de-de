@@ -2,12 +2,12 @@
 title: Auswerten von Breaking Changes – .NET Core
 description: Erfahren Sie mehr darüber, wie .NET Core versucht, die Kompatibilität für Entwickler in allen .NET-Versionen aufrechtzuerhalten.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739352"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973650"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Auswerten von Breaking Changes in .NET Core
 
@@ -103,7 +103,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Beachten Sie, dass die Einführung einer Außerkraftsetzung dazu führen kann, dass vorherige Consumer beim Aufrufen von [base](../../csharp/language-reference/keywords/base.md) die Außerkraftsetzung überspringen.
 
-- **✔️ Hinzufügen eines Konstruktors zu einer Klasse, zusammen mit einem Standardkonstruktor (ohne Parameter), wenn die Klasse zuvor keine Konstruktoren hatte**
+- **✔️ Hinzufügen eines Konstruktors zu einer Klasse, gemeinsam mit einem Konstruktor (ohne Parameter), wenn die Klasse zuvor keine Konstruktoren hatte**
 
    Das Hinzufügen eines Konstruktors zu einer Klasse, die bisher keine Konstruktoren hatte, *ohne* den parameterlosen Konstruktor hinzuzufügen, ist jedoch nicht zulässig.
 

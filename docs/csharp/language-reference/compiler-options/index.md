@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455248"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972748"
 ---
 # <a name="c-compiler-options"></a>C#-Compileroptionen
 
@@ -29,7 +29,7 @@ In Visual Studio legen Sie Compileroptionen in der Datei *web.config* fest. Weit
 
 - [Erstellen über die Befehlszeile mit csc.exe](command-line-building-with-csc-exe.md): Informationen zum Erstellen einer Visual C#-Anwendung über die Befehlszeile.
 
-- [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md): Enthält Schritte für die Ausführung von *vsvars32.bat* zum Ermöglichen von Befehlszeilenbuilds.
+- [Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md): Umfasst Schritte für die Ausführung von *vsvars32.bat* zum Ermöglichen von Befehlszeilenbuilds.
 
 - [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md): Eine nach Kategorien sortierte Liste der Compileroptionen.
 

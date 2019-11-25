@@ -2,12 +2,12 @@
 title: Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 description: Erfahren Sie, wie Sie HttpClientFactory, verfügbar seit .NET Core 2.1, zum Erstellen von `HttpClient`-Instanzen verwenden, damit Sie HttpClientFactory mühelos in Ihren Anwendungen verwenden können.
 ms.date: 08/08/2019
-ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578911"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737741"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
@@ -21,7 +21,7 @@ Die Klasse ist zwar verwerfbar, sollte jedoch nicht mit der `using`-Anweisung ve
 
 Deshalb sollte `HttpClient` einmal instanziiert und während der Lebensdauer einer Anwendung wiederverwendet werden. Das Instanziieren einer `HttpClient`-Klasse für jede Anforderung erschöpft die Anzahl der verfügbaren Sockets und führt zu hoher Auslastung. Dieses Problem führt zu `SocketException`-Fehlern. Mögliche Ansätze zur Lösung dieses Problems basieren auf der Erstellung des `HttpClient`-Objekts als Singleton-Objekt oder statisches Objekt. Dies wird in diesem [Microsoft-Artikel zur Verwendung von HttpClient](../../../csharp/tutorials/console-webapiclient.md) erläutert.
 
-Es gibt jedoch noch ein weiteres Problem mit `HttpClient`, das auftreten kann, wenn Sie HttpClient als Singleton-Objekt oder statisches Objekt verwenden. In diesem Fall berücksichtigt ein `HttpClient`-Singleton-Objekt bzw. ein statisches HttpClient-Objekt keine DNS-Änderungen. Dies wird in diesem [Issue](https://github.com/dotnet/corefx/issues/11224) im GitHub-Repository unter „dotnet/corefx“ erläutert. 
+Es gibt jedoch noch ein weiteres Problem mit `HttpClient`, das auftreten kann, wenn Sie HttpClient als Singleton-Objekt oder statisches Objekt verwenden. In diesem Fall berücksichtigt ein `HttpClient`-Singleton-Objekt bzw. ein statisches HttpClient-Objekt keine DNS-Änderungen. Dies wird in diesem [Issue](https://github.com/dotnet/corefx/issues/11224) im GitHub-Repository unter „dotnet/corefx“ erläutert.
 
 Um diese Probleme zu beheben und die Verwaltung von `HttpClient`-Instanzen zu erleichtern, stellt .NET Core 2.1 ein neues `HttpClientFactory`-Objekt zur Verfügung, das zur Implementierung von robusten HTTP-Aufrufen verwendet werden kann, indem Polly integriert wird.
 
@@ -35,6 +35,9 @@ Um diese Probleme zu beheben und die Verwaltung von `HttpClient`-Instanzen zu er
 - Für das Umsetzen des Konzepts der ausgehenden Middleware über delegierende Handler in `HttpClient` in Code sowie für das Implementieren von Polly-basierter Middleware, um die Polly-Richtlinien für die Resilienz zu nutzen.
 - `HttpClient` enthält bereits das Konzept, Handler zu delegieren, die für ausgehende HTTP-Anforderungen miteinander verknüpft werden könnten. Sie registrieren HTTP-Clients in der Factory und können einen Polly-Handler verwenden, um Polly-Richtlinien für Wiederholungen, CircuitBreakers usw. verwenden zu können.
 - Für das Verwalten der Lebensdauer von `HttpClientMessageHandlers`-Meldungshandlern, um die erwähnten Probleme zu vermeiden, die auftreten können, wenn Sie die `HttpClient`-Lebensdauer selbst verwalten.
+
+> [!NOTE]
+> `HttpClientFactory` ist eng an die Implementierung der Abhängigkeitseinschleusung im NuGet-Paket `Microsoft.Extensions.DependencyInjection` gebunden. Weitere Informationen zur Verwendung anderer Abhängigkeitseinschleusungscontainer finden Sie in dieser [GitHub-Diskussion](https://github.com/aspnet/Extensions/issues/1345).
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Mehrere Verwendungsmöglichkeiten für HttpClientFactory
 
@@ -53,17 +56,19 @@ Was ist ein „typisierter Client“? Es ist einfach ein `HttpClient`, der konfi
 
 Im folgenden Diagramm wird veranschaulicht, wie typisierte Clients mit `HttpClientFactory` verwendet werden:
 
-![Ein (von einem Controller oder Clientcode verwendeter) ClientService verwendet einen HttpClient, der von der registrierten IHttpClientFactory erstellt wird. Diese Factory weist den HttpClient einem HttpMessageHandler aus einem Pool zu, die sie verwaltet. Der HttpClient kann bei Registrierung der IHttpClientFactory im DI-Container mit der Erweiterungsmethode AddHttpClient mit Pollys Richtlinien konfiguriert werden.](./media/image3.5.png)
+![Diagramm, das zeigt, wie typisierte Clients mit HttpClientFactory verwendet werden.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **Abbildung 8-4.** Verwenden von HttpClientFactory mit Klassen typisierter Clients.
 
-Richten Sie zunächst `HttpClientFactory` in Ihrer Anwendung ein, indem Sie das NuGet-Paket `Microsoft.Extensions.Http` installieren, das die `AddHttpClient()`-Erweiterungsmethode für `IServiceCollection` beinhaltet. Diese Erweiterungsmethode registriert `DefaultHttpClientFactory` für die Verwendung als Singleton für die Schnittstelle `IHttpClientFactory`. Dadurch wird eine temporäre Konfiguration für `HttpMessageHandlerBuilder` definiert. Dieser Meldungshandler (`HttpMessageHandler`-Objekt), der aus einem Pool abgerufen wurde, wird von dem `HttpClient`-Objekt verwendet, das von der Factory zurückgegebenen wird.
+In der obigen Abbildung verwendet ein (von einem Controller oder Clientcode verwendeter) ClientService einen `HttpClient`, der von der registrierten `IHttpClientFactory` erstellt wird. Diese Factory weist den `HttpClient` einem `HttpMessageHandler` aus einem Pool zu, den sie verwaltet. Der `HttpClient` kann bei Registrierung der `IHttpClientFactory` im DI-Container mit der Erweiterungsmethode `AddHttpClient` mit Pollys Richtlinien konfiguriert werden.
+
+Um die obige Struktur zu konfigurieren, fügen Sie `HttpClientFactory` in Ihrer Anwendung hinzu, indem Sie das NuGet-Paket `Microsoft.Extensions.Http` installieren, das die `AddHttpClient()`-Erweiterungsmethode für `IServiceCollection` beinhaltet. Diese Erweiterungsmethode registriert `DefaultHttpClientFactory` für die Verwendung als Singleton für die Schnittstelle `IHttpClientFactory`. Dadurch wird eine temporäre Konfiguration für `HttpMessageHandlerBuilder` definiert. Dieser Meldungshandler (`HttpMessageHandler`-Objekt), der aus einem Pool abgerufen wurde, wird von dem `HttpClient`-Objekt verwendet, das von der Factory zurückgegebenen wird.
 
 Im nächsten Codeausschnitt wird veranschaulicht, wie `AddHttpClient()` verwendet werden kann, um typisierte Clients (Dienst-Agents) zu registrieren, die `HttpClient` verwenden müssen.
 
 ```csharp
 // Startup.cs
-//Add http client services at ConfigureServices(IServiceCollection services) 
+//Add http client services at ConfigureServices(IServiceCollection services)
 services.AddHttpClient<ICatalogService, CatalogService>();
 services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
@@ -105,7 +110,7 @@ Das Zusammenlegen von Handlern ist wünschenswert, da jeder Handler in der Regel
 Die `HttpMessageHandler`-Objekte im Pool haben eine Lebensdauer, die der Zeitspanne entspricht, in der eine `HttpMessageHandler`-Instanz im Pool wiederverwendet werden kann. Der Standardwert beträgt zwei Minuten, kann jedoch für jeden typisierten Client überschrieben werden. Rufen Sie `SetHandlerLifetime()` auf dem bei der Erstellung des Clients zurückgegebenen `IHttpClientBuilder` auf, um den Wert zu überschreiben, wie im folgenden Code gezeigt:
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
 services.AddHttpClient<ICatalogService, CatalogService>()
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
@@ -127,10 +132,10 @@ public class CatalogService : ICatalogService
         _httpClient = httpClient;
     }
 
-    public async Task<Catalog> GetCatalogItems(int page, int take, 
+    public async Task<Catalog> GetCatalogItems(int page, int take,
                                                int? brand, int? type)
     {
-        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, 
+        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl,
                                                  page, take, brand, type);
 
         var responseString = await _httpClient.GetStringAsync(uri);
@@ -180,14 +185,17 @@ Bis zu diesem Punkt führt der Code nur reguläre HTTP-Anforderungen aus. In den
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Verwenden von HttpClientFactory in .NET Core** \
+- **Verwenden von HttpClientFactory in .NET Core**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **GitHub-Repository zu HttpClientFactory** \
+- **HttpClientFactory-Quellcode im `aspnet/Extensions`-GitHub-Repository**  
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
-- **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**  \
+- **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**  
   <http://www.thepollyproject.org/>
+  
+- **Verwenden von HttpClientFactory ohne Abhängigkeitseinschleusung (GitHub-Problem)**  
+  <https://github.com/aspnet/Extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[Zurück](explore-custom-http-call-retries-exponential-backoff.md)

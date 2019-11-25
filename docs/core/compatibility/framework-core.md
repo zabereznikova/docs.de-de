@@ -2,17 +2,14 @@
 title: 'Breaking Changes, .NET Framework zu .NET Core 3.0: .NET Core'
 description: Listet die Breaking Changes von .NET Framework zu .NET Core 3.0 für Windows Forms und Windows Presentation Foundation auf.
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089570"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739436"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>Breaking Changes für die Migration von .NET Framework 3.0 zu .NET Core 3.0
-
-> [!IMPORTANT]
-> Dieser Artikel wird aktuell überarbeitet. Nicht alle Breaking Changes für .NET Core werden hier aufgeführt. Weitere Informationen zu Breaking Changes für .NET Core finden Sie in den jeweiligen [Issues zu Breaking Changes](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) im Repository „dotnet/docs“ auf GitHub. 
 
 Wenn Sie eine Windows Forms- oder Windows Presentation Foundation-Anwendung von .NET Framework zu .NET Core 3.0 migrieren, finden Sie in den folgenden Themen Breaking Changes, die sich auf Ihre App auswirken können:
 

@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929422"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971403"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Automatisiertes Machine Learning mit ML.NET
 
@@ -22,7 +22,7 @@ Automatisiertes Machine Learning ist eine Funktion von ML.NET, die eine automati
 - den Quellcode für die Funktionsauswahl und das Modelltraining (um das Modell zu verstehen)
 
 > [!NOTE]
-> Dieses Feature befindet sich derzeit in der Vorschauphase, und das Material kann jederzeit geändert werden. 
+> Dieses Feature befindet sich derzeit in der Vorschauphase, und das Material kann jederzeit geändert werden.
 
 Das automatisierte ML ist derzeit auf Machine Learning-[Tasks](resources/tasks.md) für binäre Klassifikation, Multiklassenklassifizierung und Regression beschränkt. Andere Machine Learning-Tasks werden in zukünftigen Versionen unterstützt.
 

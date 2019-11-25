@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315870"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191696"
 ---
 # <a name="contributing"></a>Beitragen
 
@@ -15,9 +15,9 @@ Vielen Dank für Ihr Interesse und Ihre Bereitschaft, an der .NET-Dokumentation 
 
 Das Dokument beschreibt den Prozess bei der Mitwirkung an den Artikeln und Codebeispielen, die auf der Website [.NET-Dokumentation](https://docs.microsoft.com/dotnet) gehostet werden. Die Beiträge können so einfach wie das Korrigieren von Tippfehlern oder so komplex wie das Verfassen neuer Artikel sein.
 
+- [Verhaltensregeln](#dos-and-donts)
 - [Mitwirkungsprozess](#process-for-contributing)
 - [Die interaktive C#-Umgebung](#the-c-interactive-experience)
-- [Verhaltensregeln](#dos-and-donts)
 - [Lizenzvereinbarung für Mitwirkende](#contributor-license-agreement)
 
 Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die Website „.NET-Dokumentation“ besteht neben diesem Repository aus den folgenden Repositorys:
@@ -28,6 +28,24 @@ Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die Website
     Probleme und Aufgaben für dieses Repository werden in [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) nachverfolgt.
 - [Referenz: .NET Compiler Platform-SDK](https://github.com/dotnet/roslyn-api-docs)  
     Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
+
+## <a name="dos-and-donts"></a>Verhaltensregeln
+
+Die folgende Liste enthält einige grundlegende Regeln, die Sie beachten sollten, wenn Sie an der .NET-Dokumentation mitwirken:
+
+- **NEIN**: Überfallen Sie uns nicht mit großen Pull Requests. Eröffnen Sie stattdessen ein Ticket, und starten Sie eine Diskussion, damit wir uns auf eine Richtung einigen können, bevor Sie sehr viel Zeit investieren. Teilen Sie die Arbeit bei Massenänderungen in kleinere PRs auf (bis zu 100 Dateien). Diese Richtlinie wird dringend empfohlen, wenn Ihr PR die folgenden Richtlinien nicht erfüllt.
+- **JA:** Sehen Sie sich die aktuellen [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs)-Issues für Vorschläge zu den Aufgaben an.
+- **JA:** Erstellen Sie einen PR für jede Aufgabe. PRs, die mehrere nicht zusammenhängende Änderungen enthalten, sind viel schwieriger zu überprüfen. Dies verzögert die Überprüfung und Zusammenführung von PRS. Diese Richtlinie gilt auch für Überprüfungen: Wir versuchen, nicht zusammenhängenden Änderungen in Überprüfungen nicht vorzuschlagen. Diese Richtlinie gilt es auch bei Communityüberprüfungen zu beachten.
+- **JA:** Bieten Sie eine klare Beschreibung der Arbeit in Ihrem PR. Teilen Sie uns mit, was Sie verändert haben und warum. Die Standardbeschreibung „update article.md“ ist für die Prüfer nicht hilfreich.
+- **NEIN:** Übermitteln Sie keine PRs für reine Stiländerungen ohne vorherige Erörterung. Für die Überprüfung auf Genauigkeit dieser PRs wird zusätzliche Zeit benötigt, und die Zusammenführung führt häufig zu Zusammenführungskonflikten mit anderen wichtigen Updates. Wir arbeiten daran, einen konsistenten Stil zu befolgen, allerdings gestaltet sich dies durch die vielen verschiedenen Aufgaben schwierig. Wenn aus anderen Gründen wichtige Updates vorgenommen werden, werden diese Artikel vereinheitlicht. 
+- **JA** Lesen Sie den [Styleguide](./styleguide/template.md) und die Richtlinien bezüglich [Sprache und Schreibstil](./styleguide/voice-tone.md). Neue Ergänzungen sollten diese Richtlinien einhalten.
+- **JA** Erstellen Sie einen separaten Branch in Ihrer Verzweigung, bevor Sie an den Artikeln arbeiten.
+- **JA** Folgen Sie dem [GitHub-Flow-Workflow](https://guides.github.com/introduction/flow/).
+- **JA** Schreiben Sie häufig Blogs und Tweets (oder was auch immer) über Ihre Beiträge!
+
+Diese Richtlinien helfen uns dabei, die kostbare Zeit der Benutzer zu berücksichtigen. Viele tragen zu diesen Repositorys bei. Das Befolgen dieser Richtlinien erleichtert uns das schnelle Überprüfen und Zusammenführen Ihrer PRs. Diese Vorgehensweisen minimieren Konflikte mit PRs von anderen Communitymitgliedern und unserem Team. Da PRs, die diese Richtlinien nicht befolgen, häufig zusätzliche Arbeit für uns und Communitymitglieder verursachen, werden diese möglicherweise abgelehnt. Beginnen Sie mit dem Erstellen eines Issues, wenn Sie eine Ausnahme erstellen möchten.
+
+> Hinweis: Sie werden feststellen, dass sich derzeit einige der Themen nicht nach allen hier und im [Styleguide](./styleguide/template.md) definierten Richtlinien richten. Wir arbeiten daran, auf der gesamten Website Konsistenz zu erzielen.
 
 ## <a name="process-for-contributing"></a>Mitwirkungsprozess
 
@@ -79,7 +97,7 @@ docs
 
 **Schritt 4:** Übermitteln Sie einen Pull Request (PR) von Ihrem Branch an `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` oder `dotnet/samples/master`.
 
-Der PR sollte *immer* den Master-Branch zum Ziel haben. Sie sollten *niemals* einen PR öffnen, der den Live-Branch zum Ziel hat.
+Ihr PR sollte *immer* auf den Standardbranch des Repositorys abzielen (es sei denn, Sie arbeiten an einem Releasebranch). Für dotnet/docs ist der Masterbranch der Standardbranch. Für lokalisierte Repositorys ist der Livebranch der Standardbranch. Sie sollten *niemals* einen PR öffnen, der den Livebranch zum Ziel hat.
 
 Jeder PR sollte sich in der Regel auf jeweils ein Ticket beziehen. Mit dem PR können auch mehrere Dateien geändert werden. Wenn Sie sich mit mehreren Korrekturen an verschiedenen Dateien befassen, werden separate PRs bevorzugt.
 
@@ -135,19 +153,6 @@ Die interaktive C#-Umgebung passt sich der Arbeitsweise mit den Beispielen an. B
 
 - Bei Artikeln, in denen das Beispiel eine größere Ausgabe generiert, sollte diese Ausgabe in den Kommentaren nicht enthalten sein. Sie verdeckt den Code, nachdem das Beispiel ausgeführt wurde.
 - Bei Artikeln, in denen das Beispiel ein Thema veranschaulicht, die Ausgabe für das Verständnis aber nicht unbedingt erforderlich ist, kann die Ausgabe ausgeschlossen werden. Beispiel: Code, der eine LINQ-Abfrage zum Erläutern der Abfragesyntax ausführt und dann jedes Element in der Ausgabeauflistung anzeigt.
-
-## <a name="dos-and-donts"></a>Verhaltensregeln
-
-Die folgende Liste enthält einige grundlegende Regeln, die Sie beachten sollten, wenn Sie an der .NET-Dokumentation mitwirken:
-
-- **NEIN**: Überfallen Sie uns nicht mit großen Pull Requests. Eröffnen Sie stattdessen ein Ticket, und starten Sie eine Diskussion, damit wir uns auf eine Richtung einigen können, bevor Sie sehr viel Zeit investieren.
-- **JA** Lesen Sie den [Styleguide](./styleguide/template.md) und die Richtlinien bezüglich [Sprache und Schreibstil](./styleguide/voice-tone.md).
-- **JA** Verwenden Sie die [Vorlagendatei](./styleguide/template.md) als Ausgangspunkt für Ihre Arbeit.
-- **JA** Erstellen Sie einen separaten Branch in Ihrer Verzweigung, bevor Sie an den Artikeln arbeiten.
-- **JA** Folgen Sie dem [GitHub-Flow-Workflow](https://guides.github.com/introduction/flow/).
-- **JA** Schreiben Sie häufig Blogs und Tweets (oder was auch immer) über Ihre Beiträge!
-
-> Hinweis: Sie werden feststellen, dass sich derzeit einige der Themen nicht nach allen hier und im [Styleguide](./styleguide/template.md) definierten Richtlinien richten. Wir arbeiten daran, auf der gesamten Website Konsistenz zu erzielen. Überprüfen Sie in der Liste [open issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) die offenen Tickets, die wir derzeit für dieses spezielle Ziel verfolgen.
 
 ## <a name="contributor-license-agreement"></a>Lizenzvereinbarung für Mitwirkende
 

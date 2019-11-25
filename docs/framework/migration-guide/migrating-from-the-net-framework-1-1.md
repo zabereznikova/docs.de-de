@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126297"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974973"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>Migrieren von .NET Framework 1.1
+# <a name="migrate-from-the-net-framework-11"></a>Migrieren von .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] und neuere Versionen des Windows-Betriebssystems unterstützen .NET Framework 1.1 nicht. Folglich können Anwendungen, die auf .NET Framework 1.1 ausgerichtet sind, unter [!INCLUDE[win7](../../../includes/win7-md.md)] oder neueren Betriebssystemversionen nicht ohne Änderung ausgeführt werden. In diesem Thema werden die Schritte zum Ausführen einer Anwendung erläutert, die auf .NET Framework 1.1 unter [!INCLUDE[win7](../../../includes/win7-md.md)] und neueren Versionen des Windows-Betriebssystems ausgerichtet ist. Weitere Informationen zu .NET Framework 1.1 und [!INCLUDE[win8](../../../includes/win8-md.md)] finden Sie unter [Ausführen von auf .NET Framework 1.1 basierenden Apps unter Windows 8 und höher](../install/run-net-framework-1-1-apps.md).
+Windows 7 und neuere Versionen des Windows-Betriebssystems unterstützen .NET Framework 1.1 nicht. Folglich können Anwendungen, die auf .NET Framework 1.1 ausgerichtet sind, unter Windows 7 oder neueren Betriebssystemversionen nicht ohne Änderung ausgeführt werden. In diesem Thema werden die Schritte zum Ausführen einer Anwendung erläutert, die auf .NET Framework 1.1 unter Windows 7 und neueren Versionen des Windows-Betriebssystems ausgerichtet ist. Weitere Informationen zu .NET Framework 1.1 und Windows 8 finden Sie unter [Ausführen von auf .NET Framework 8 basierenden Apps unter Windows 1.1 und höher](../install/run-net-framework-1-1-apps.md).
 
-## <a name="retargeting-or-recompiling"></a>Zuweisen einer neuen Zielversion oder Neukompilieren
+## <a name="retarget-or-recompile"></a>Neuausrichtung oder Neukompilierung
 
-Es gibt zwei Möglichkeiten, eine mit .NET Framework 1.1 kompilierte Anwendung unter [!INCLUDE[win7](../../../includes/win7-md.md)] oder neueren Versionen des Windows-Betriebssystems auszuführen:
+Es gibt zwei Möglichkeiten, eine mit .NET Framework 1.1 kompilierte Anwendung unter Windows 7 oder neueren Versionen des Windows-Betriebssystems auszuführen:
 
-- Sie können die Anwendung für die Ausführung unter .NET Framework 4 und späteren Versionen neu ausrichten. Für Neuausrichtung müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter .NET Framework 4 und späteren Versionen ermöglicht, ein [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:
+- Neuausrichtung der Anwendung für die Ausführung unter .NET Framework 4 und späteren Versionen. Für Neuausrichtung müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter .NET Framework 4 und späteren Versionen ermöglicht, ein [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:
 
     ```xml
     <configuration>
@@ -30,7 +30,7 @@ Es gibt zwei Möglichkeiten, eine mit .NET Framework 1.1 kompilierte Anwendung u
     </configuration>
     ```
 
-- Sie können die Anwendung mit einem Compiler, der auf .NET Framework 4 oder eine spätere Version ausgerichtet ist, neu kompilieren. Wenn Sie ursprünglich Visual Studio 2003 zum Entwickeln und Kompilieren Ihrer Projektmappe verwendet haben, können Sie die Projektmappe in Visual Studio 2010 (und möglicherweise auch in späteren Versionen) öffnen. Die Projektmappe und die Projektdateien können dann über das Dialogfeld **Projektkompatibilität** aus den von Visual Studio 2003 verwendeten Formaten in das Format von Microsoft Build Engine (MSBuild) konvertiert werden.
+- Neukompilierung der Anwendung mit einem Compiler, der auf .NET Framework 4 oder eine spätere Version ausgerichtet ist. Wenn Sie ursprünglich Visual Studio 2003 zum Entwickeln und Kompilieren Ihrer Projektmappe verwendet haben, können Sie die Projektmappe in Visual Studio 2010 (und möglicherweise auch in späteren Versionen) öffnen. Die Projektmappe und die Projektdateien können dann über das Dialogfeld **Projektkompatibilität** aus den von Visual Studio 2003 verwendeten Formaten in das Format von Microsoft Build Engine (MSBuild) konvertiert werden.
 
 Unabhängig davon, ob Sie eine Neukompilierung oder eine neue Zielversion für die Anwendung vorziehen, müssen Sie bestimmen, ob die Anwendung von Änderungen betroffen ist, die in höheren Versionen von .NET Framework eingeführt wurden. Diese Änderungen sind von zweierlei Art:
 
@@ -40,7 +40,7 @@ Unabhängig davon, ob Sie eine Neukompilierung oder eine neue Zielversion für d
 
 Überprüfen Sie beim Zuweisen einer neuen Zielversion und auch beim Neukompilieren Ihrer Anwendung sowohl die Breaking Changes als auch die veralteten Typen und Member für jede Version von .NET Framework, die nach .NET Framework 1.1 veröffentlicht wurde.
 
-## <a name="breaking-changes"></a>Die Lauffähigkeit der Anwendung beeinträchtigende Änderungen
+## <a name="breaking-changes"></a>Breaking Changes
 
 Bei einer Änderung, die die Lauffähigkeit der Anwendung beeinträchtigt, ist ggf. eine Problemumgehung sowohl für Anwendungen mit neuer Zielversion als auch für neu kompilierte Anwendungen verfügbar. In einigen Fällen können Sie dem [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei der Anwendung ein untergeordnetes Element hinzufügen, um das vorherige Verhalten wiederherzustellen. Die folgende Konfigurationsdatei stellt z.B. die in .NET Framework 1.1 verwendete Zeichenfolgensortierung und das Vergleichsverhalten wieder her und kann bei neu zugewiesener Zielversion oder einer neu kompilierten Anwendung verwendet werden.
 
@@ -56,9 +56,9 @@ In einigen Fällen müssen Sie jedoch möglicherweise den Quellcode ändern und 
 
 Überprüfen Sie die folgende Änderungsliste, um die Auswirkungen möglicher Änderungen zu bewerten, die die Lauffähigkeit der Anwendung beeinträchtigen:
 
-- Unter [Breaking Changes in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) werden Änderungen in .NET Framework 2.0 SP1 erläutert, die Auswirkungen auf eine auf .NET Framework 1.1 ausgerichtet Anwendung haben können.
+- Unter [Breaking Changes in .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) werden Änderungen in .NET Framework 2.0 SP1 erläutert, die Auswirkungen auf eine auf .NET Framework 1.1 ausgerichtet Anwendung haben können.
 
-- Unter [Änderungen in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) werden Änderungen zwischen .NET Framework 3.5 und .NET Framework 3.5 SP1 dokumentiert.
+- Unter [Änderungen in .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) werden Änderungen zwischen .NET Framework 3.5 und .NET Framework 3.5 SP1 dokumentiert.
 
 - Unter[Migrationsprobleme in .NET Framework 4](net-framework-4-migration-issues.md) werden Änderungen zwischen .NET Framework 3.5 SP1 und .NET Framework 4 dokumentiert.
 

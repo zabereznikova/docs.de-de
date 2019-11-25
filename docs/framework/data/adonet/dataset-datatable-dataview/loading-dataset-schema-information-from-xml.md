@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d834f0c4517f4ff9fe8645257d5a947c03893881
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786220"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968396"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Laden von DataSet-Schemainformationen aus XML
-Das Schema von a <xref:System.Data.DataSet> (Tabellen, Spalten, Beziehungen und Einschränkungen) kann Programm gesteuert definiert, durch die **Fill** -Methode oder die <xref:System.Data.Common.DataAdapter> **FillSchema** -Methode eines erstellt oder aus einem XML-Dokument geladen werden. Zum Laden von **DataSet** -Schema Informationen aus einem XML-Dokument können Sie entweder die " **infoxmlschema** "-Methode oder die **InferXmlSchema** -Methode des **DataSets**verwenden. Mit " **infoxmlschema** " können Sie **DataSet** -Schema Informationen aus dem Dokument, das das XSD-Schema (XML Schema Definition Language) enthält, oder ein XML-Dokument mit Inline-XML-Schema laden bzw. daraus ableiten. Mit **InferXmlSchema** können Sie das Schema aus dem XML-Dokument ableiten, während bestimmte von Ihnen angegebene XML-Namespaces ignoriert werden.  
+Das Schema eines <xref:System.Data.DataSet> (seine Tabellen, Spalten, Beziehungen und Einschränkungen) kann Programm gesteuert definiert, von der **Fill** -Methode oder der **FillSchema** -Methode einer <xref:System.Data.Common.DataAdapter>erstellt oder aus einem XML-Dokument geladen werden. Zum Laden von **DataSet** -Schema Informationen aus einem XML-Dokument können Sie entweder die " **infoxmlschema** "-Methode oder die **InferXmlSchema** -Methode des **DataSets**verwenden. Mit " **infoxmlschema** " können Sie **DataSet** -Schema Informationen aus dem Dokument, das das XSD-Schema (XML Schema Definition Language) enthält, oder ein XML-Dokument mit Inline-XML-Schema laden bzw. daraus ableiten. Mit **InferXmlSchema** können Sie das Schema aus dem XML-Dokument ableiten, während bestimmte von Ihnen angegebene XML-Namespaces ignoriert werden.  
   
 > [!NOTE]
 > Die Tabellen Anordnung in einem **DataSet** wird möglicherweise nicht beibehalten, wenn Sie Webdienste oder XML-Serialisierung verwenden, um ein **DataSet** zu übertragen, das in-Memory mithilfe von XSD-Konstrukten (z. b. gruppierte Beziehungen) erstellt wurde. Daher sollte der Empfänger des **DataSets** in diesem Fall nicht von der Tabellen Anordnung abhängen. Die Tabellen Anordnung wird jedoch immer beibehalten, wenn das Schema des übertragenen **DataSets** aus XSD-Dateien gelesen wurde und nicht im Arbeitsspeicher erstellt wurde.  
@@ -40,7 +40,7 @@ dataSet.ReadXmlSchema("schema.xsd");
 ```  
   
 ```vb  
-Dim xmlStream As System.IO.StreamReader = New System.IO.StreamReader ("schema.xsd");  
+Dim xmlStream As New System.IO.StreamReader("schema.xsd")
 Dim dataSet As DataSet = New DataSet  
 dataSet.ReadXmlSchema(xmlStream)  
 xmlStream.Close()  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Aufgrund der Attribute, die für die Elemente im vorangehenden XML-Dokument angegeben sind, würden sowohl die Methode "read **XmlSchema** " als auch die "read **XML** "-Methode mit einem " **xmllesemode** " von " **InferSchema** " Tabellen für jedes Element im Dokument **Kategorien**, **CategoryID**, **CategoryName**, **Description**, **Products**, **ProductID**, **ReorderLevel**und werden nicht mehr unter **stützt.** (Weitere Informationen finden Sie unter [ableiten der relationalen DataSet-Struktur aus XML](inferring-dataset-relational-structure-from-xml.md).) Eine geeignetere Struktur wäre jedoch, nur die Tabellen " **Categories** " und " **Products** " zu erstellen und dann die Spalten " **CategoryID**", " **CategoryName**" und " **Description** " in der Tabelle **"categories" zu erstellen. ProductID**, **ReorderLevel**und nicht mehr unter **stützte Spalten in** der **Products** -Tabelle. Um sicherzustellen, dass das abzurufende Schema die in den XML-Elementen angegebenen Attribute ignoriert, verwenden Sie die **InferXmlSchema** -Methode, und geben Sie den XML-Namespace für **officedata** an, der ignoriert werden soll, wie im folgenden Beispiel gezeigt.  
+ Aufgrund der Attribute, die für die Elemente im vorangehenden XML-Dokument angegeben sind, würden sowohl die "read **XmlSchema** "-Methode als auch die "read **XML** "-Methode mit einem " **xmllesemode** " von " **InferSchema** " Tabellen für jedes Element im Dokument erstellen **:** (Weitere Informationen finden Sie unter [ableiten der relationalen DataSet-Struktur aus XML](inferring-dataset-relational-structure-from-xml.md).) Eine geeignetere Struktur wäre jedoch, nur die Tabellen **Categories** und **Products** zu erstellen und dann die Spalten **CategoryID**, **CategoryName**und **Description** in der Tabelle **Categories** sowie die Spalten **ProductID**, **ReorderLevel**und nicht mehr unter **stützte Spalten in** der Tabelle **Products** zu erstellen. Um sicherzustellen, dass das abzurufende Schema die in den XML-Elementen angegebenen Attribute ignoriert, verwenden Sie die **InferXmlSchema** -Methode, und geben Sie den XML-Namespace für **officedata** an, der ignoriert werden soll, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  

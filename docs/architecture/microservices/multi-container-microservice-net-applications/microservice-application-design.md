@@ -2,12 +2,12 @@
 title: Entwerfen einer an Microservice orientierten Anwendung
 description: .NET-Microservicearchitekturfür .NET-Containeranwendungen | Übersicht über die Vor- und Nachteile von microserviceorientierten Anwendungen zum Treffen fundierter Entscheidungen
 ms.date: 10/02/2018
-ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772063"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739543"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -65,9 +65,11 @@ Damit Sie sich auf die Architektur und die Technologien konzentrieren können, a
 
 Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der Shopbenutzeroberfläche (einer Webanwendung und einer nativen mobilen App), sowie den Back-End-Microservices und -Containern für alle erforderlichen serverseitigen Vorgänge mit mehreren API-Gateways als konsolidierte Einstiegspunkte für die internen Microservices. Abbildung 6-1 zeigt die Architektur der Referenzanwendung.
 
-![Mobile und SPA-Clients kommunizieren mit einzelnen Endpunkten des API-Gateways, die wiederum mit Microservices kommunizieren. Traditionelle Webclients kommunizieren mit dem MVC-Microservice, der mit Microservices kommuniziert.](./media/image1.png)
+![Diagramm der Client-Apps, die eShopOnContainers in einem einzelnen Docker-Host verwenden.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Abbildung 6-1**. Die Referenzanwendungsarchitektur von eShopOnContainers für die Entwicklungsumgebung.
+
+Das obige Diagramm zeigt, dass mobile und SPA-Clients mit einzelnen Endpunkten des API-Gateways kommunizieren, die wiederum mit Microservices kommunizieren. Traditionelle Webclients kommunizieren mit dem MVC-Microservice, der über das API-Gateway mit Microservices kommuniziert.
 
 **Hostumgebung**. In Abbildung 6-1 werden mehrere Container angezeigt, die innerhalb eines einzelnen Docker-Hosts bereitgestellt wurden. Dies wäre bei der Bereitstellung auf einem einzelnen Docker-Host mit dem Befehl „docker-compose up“ der Fall. Wenn Sie jedoch einen Orchestrator- oder Containercluster verwenden, könnte jeder Container auf einem anderen Host(knoten) ausgeführt werden, und jeder Knoten könnte, wie bereits im Abschnitt zur Architektur weiter oben beschrieben, jede beliebige Anzahl von Containern ausführen.
 
@@ -140,7 +142,7 @@ Wie bereits im Abschnitt zur Architektur erwähnt, sollten Sie beim Entwerfen un
 
 Bei der externen Architektur handelt es sich um die Microservicearchitektur, die sich aus mehreren Diensten zusammensetzt und den im Abschnitt zur Architektur in diesem Handbuch beschriebenen Prinzipien folgt. Jedoch ist es, abhängig von der Art jedes Microservices und unabhängig von der allgemeinen Microservicearchitektur, für die Sie sich entscheiden, üblich und manchmal ratsam, über verschiedene interne Architekturen für verschiedene Microservices zu verfügen, von denen jede auf unterschiedlichen Mustern basiert. Die Microservices können sogar verschiedene Technologien und Programmiersprachen verwenden. Abbildung 6-2 veranschaulicht diese Vielfalt.
 
-![Unterschied zwischen externer Architektur mit Microservicemustern, API-Gateways, resilienter Kommunikation, Pub/Sub usw. und interner Architektur: datengesteuert/CRUD, DDD-Muster, Abhängigkeitsinjektion, mehrere Bibliotheken usw.](./media/image2.png)
+![Diagramm, das den Vergleich von externen und internen Architekturmustern zeigt.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Abbildung 6-2**. Externe im Vergleich zu interner Architektur und Entwurf
 
@@ -170,11 +172,11 @@ Sie können Microservices auch mit vielen Technologien und Sprachen wie ASP.NET 
 
 Wichtig ist, dass weder ein bestimmtes Architekturmuster bzw. ein bestimmter Architekturstil noch eine bestimmte Technologie in allen Situationen die richtige Wahl darstellt. Abbildung 6-3 stellt einige Ansätze und Technologien dar (in einer beliebigen Reihenfolge), die in unterschiedlichen Microservices verwendet werden können.
 
-![Multiarchitekturmuster und polyglotte Microservices erlauben Ihnen, Sprachen und Technologien an die Anforderungen jedes Microservices anzupassen – wobei diese weiterhin miteinander kommunizieren können.](./media/image3.png)
+![Diagramm, das 12 komplexe Microservices in einer mehrsprachigen Weltarchitektur zeigt.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Abbildung 6-3**. Die Welt der Muster mit mehreren Architekturen und mehrsprachigen Microservices
 
-Wie in Abbildung 6-3 dargestellt, können Sie bei Anwendungen, die aus vielen Microservices bestehen („begrenzte Kontexte“ in der DDD-Terminologie oder einfach „Subsysteme“ als unabhängige Microservices), jeden Microservice auf eine andere Weise implementieren. Jeder könnte über ein anderes Architekturmuster verfügen und eine andere Sprache sowie andere Datenbanken verwenden, abhängig von der Art, den Geschäftsanforderungen und den Prioritäten der Anwendung. In einigen Fällen können die Microservices ähnlich sein. Dies ist üblicherweise jedoch nicht der Fall, da sich die Kontextgrenze und die Anforderungen jedes Subsystems für gewöhnlich unterscheiden.
+Multiarchitekturmuster und polyglotte Microservices erlauben Ihnen, Sprachen und Technologien an die Anforderungen jedes Microservices anzupassen – wobei diese weiterhin miteinander kommunizieren können. Wie in Abbildung 6-3 dargestellt, können Sie bei Anwendungen, die aus vielen Microservices bestehen („begrenzte Kontexte“ in der DDD-Terminologie oder einfach „Subsysteme“ als unabhängige Microservices), jeden Microservice auf eine andere Weise implementieren. Jeder könnte über ein anderes Architekturmuster verfügen und eine andere Sprache sowie andere Datenbanken verwenden, abhängig von der Art, den Geschäftsanforderungen und den Prioritäten der Anwendung. In einigen Fällen können die Microservices ähnlich sein. Dies ist üblicherweise jedoch nicht der Fall, da sich die Kontextgrenze und die Anforderungen jedes Subsystems für gewöhnlich unterscheiden.
 
 Beispielsweise ergäbe es bei einer einfachen CRUD-Wartungsanwendung möglicherweise keinen Sinn, DDD-Muster zu entwerfen und zu implementieren. Jedoch müssen Sie bei Ihrer Kerndomäne bzw. Ihrem Kerngeschäft möglicherweise komplexere Muster verwenden, um mit der Komplexität durch Geschäftsregeln umgehen zu können, die sich stetig ändern.
 

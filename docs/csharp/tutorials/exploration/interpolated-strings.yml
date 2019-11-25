@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966980"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969442"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Erstellen einer interpolierten Zeichenfolge
   durationInMinutes: 2
   content: >
-    Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den Code in das interaktive Fenster ein (ersetzen Sie `<name>` mit Ihrem Namen), und klicken Sie auf die Schaltfläche **Ausführen**:
+    Führen Sie den folgenden Code im interaktiven Fenster aus. Wählen Sie die Schaltfläche **Enter focus mode** (Fokusmodus aktivieren) aus. Geben Sie anschließend den folgenden Codeblock in das interaktive Fenster ein (ersetzen Sie `<name>` durch Ihren Namen), und wählen Sie **Ausführen** aus:
 
 
     ```csharp

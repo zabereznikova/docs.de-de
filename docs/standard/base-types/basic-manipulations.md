@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ausführen von grundlegenden Zeichenfolgenbearbeitungen in .NET'
+title: 'Vorgehensweise: Durchführen grundlegender Zeichenfolgenbearbeitungen in .NET'
 description: Beispiel zum Aufrufen vieler Zeichenfolgenmethoden
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -9,17 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - strings [.NET Framework], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 11f8043745c631a642b437339240cbf06fc8df5b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9c5cdd15e189b8f0821f52d216c398299d44a5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105737"
 ---
-# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Gewusst wie: Ausführen von grundlegenden Zeichenfolgenbearbeitungen in .NET
+# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Vorgehensweise: Durchführen grundlegender Zeichenfolgenbearbeitungen in .NET
 Im folgenden Beispiel werden einige Methoden verwendet, die in den Themen von [Grundlegende Zeichenfolgenvorgänge](../../../docs/standard/base-types/basic-string-operations.md) zum Erstellen einer Klasse erläutert werden, die Zeichenfolgenbearbeitungen in einer bei realen Anwendungen anzutreffenden Weise ausführt. Die `MailToData`-Klasse speichert Namen und Adresse einer Person in separaten Eigenschaften und bietet eine Möglichkeit zum Kombinieren der `City`-, `State`- und `Zip`-Felder für die Anzeige für den Benutzer in einer einzigen Zeichenfolge. Darüber hinaus ermöglicht die Klasse dem Benutzer die Eingabe von Ort, Bundesland und Postleitzahl als einzelne Zeichenfolge. Die Anwendung analysiert diese einzelne Zeichenfolge automatisch und fügt die geeigneten Informationen in die entsprechende Eigenschaft ein.  
   
  In diesem Beispiel wird der Einfachheit halber eine Konsolenanwendung mit einer Befehlszeilen-Schnittstelle verwendet.  

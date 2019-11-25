@@ -2,22 +2,22 @@
 title: Was ist Docker?
 description: Beim tieferen Einstieg in Ihre Docker-Kenntnisse kann Ihnen vielleicht eine einfache Analogie helfen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770720"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738156"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
 [Docker](https://www.docker.com/) ist ein [Open Source-Projekt](https://github.com/docker/docker) zur Automatisierung der Bereitstellung von Apps als mobile, eigenständige Container, die in der Cloud oder lokal ausgeführt werden können. Docker ist darüber hinaus ein [Unternehmen](https://www.docker.com/), das diese Technologie fördert und weiterentwickelt und mit Cloud-, Linux- und Windows-Anbietern zusammenarbeitet, einschließlich Microsoft.
 
-![Docker-Container können überall ausgeführt werden, lokal im Rechenzentrum des Kunden, bei einem externen Dienstanbieter oder in der Cloud auf Azure.](./media/image2.png)
+![Diagramm, das die Orte zeigt, an denen Docker-Container ausgeführt werden können.](./media/what-is-docker/docker-containers-run-anywhere.png)
 
 **Abbildung 1–2**. Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
 
-Docker-Imagecontainer können nativ unter Linux und Windows ausgeführt werden. Allerdings können Windows-Images nur auf Windows-Hosts ausgeführt werden, während Linux-Images sowohl auf Linux-Hosts als auch auf Windows-Hosts ausgeführt werden können (bis dato mithilfe einer Hyper-V-Linux-VM), wobei Host einen Server oder eine VM bedeutet.
+Wie in dem vorherigen Diagramm gezeigt, können Docker-Container überall ausgeführt werden, lokal im Rechenzentrum des Kunden, bei einem externen Dienstanbieter oder in der Cloud auf Azure. Docker-Imagecontainer können auch nativ unter Linux und Windows ausgeführt werden. Allerdings können Windows-Images nur auf Windows-Hosts ausgeführt werden, während Linux-Images sowohl auf Linux-Hosts als auch auf Windows-Hosts ausgeführt werden können (bis dato mithilfe einer Hyper-V-Linux-VM), wobei Host einen Server oder eine VM bedeutet.
 
 Entwickler können Entwicklungsumgebungen unter Windows, Linux oder macOS verwenden. Der Entwickler führt auf dem Entwicklungscomputer einen Docker-Host aus, in dem Docker-Images bereitgestellt werden, einschließlich der App und ihrer Abhängigkeiten. Entwickler, die unter Linux oder auf dem Mac arbeiten, verwenden einen Linux-basierten Docker-Host und können nur Images für Linux-Container erstellen. (Entwickler, die auf dem Mac arbeiten, können Code bearbeiten oder die Docker-Befehlszeilenschnittstelle (CLI) unter macOS ausführen, aber zum Entstehungszeitpunkt dieses Texts können Container nicht direkt unter macOS ausgeführt werden.) Entwickler, die unter Windows arbeiten, können Images wahlweise für Linux- oder für Windows-Container erstellen.
 
@@ -35,9 +35,11 @@ Die Images für diese Container werden genauso erstellt und funktionieren auch s
 
 In Abbildung 1–3 wird ein Vergleich zwischen virtuellen Computern und Docker Containern dargestellt.
 
-![Bei VMs gibt es drei Basisebenen auf dem Host-Server. Unten beginnend sind dies: Infrastruktur, Hostbetriebssystem und Hypervisor, und auf all dem aufsetzend weist jede VM ihr eigenes Betriebssystem und alle erforderlichen Bibliotheken auf. Andererseits verfügt der Hostserver bei Docker nur über die Infrastruktur und das Betriebssystem, sowie auch über eine Container-Engine, die die Container isoliert, aber die grundlegenden Betriebssystemdienste teilt.](./media/image3.png)
+![Diagramm, das einen Vergleich zwischen VM- und Containerumgebungen zeigt.](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
 **Abbildung 1–3**. Vergleichen der herkömmlichen virtuellen Computer mit Docker-Containern
+
+Wie im vorherigen Diagramm gezeigt, gibt es für VMs auf dem Hostserver drei Basisebenen. Von unten nach oben: Infrastruktur, Hostbetriebssystem und ein Hypervisor. Auf alledem besitzt jede VM ihr eigene Betriebssystem sowie alle notwendigen Bibliotheken. Auf der anderen Seite verfügt der Hostserver für Docker nur über die Infrastruktur und das Betriebssystem. Darüber hinaus hält die Container-Engine Container isoliert, lässt sie aber die Dienste des einzelnen Basisbetriebssystems gemeinsam nutzen.
 
 Da Container wesentlich weniger Ressourcen benötigen (z.B. keine Vollversion des Betriebssystems), lassen sie sich einfach bereitstellen und schnell hochfahren. Das ermöglicht eine höhere Dichte, d.h. es erlaubt Ihnen, mehr Dienste auf der gleichen Hardwareeinheit auszuführen, was geringere Kosten verursacht.
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894327"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975243"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
-Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] -Feed verfügbar macht. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität bereit, die erforderlich ist, um Anforderungs Nachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwort Nachrichten zu generieren, die von odata benötigt werden. Ein Datendienst kann jedoch keine Bindung an einen Netzwerk Socket für eingehende HTTP-Anforderungen herstellen und diesen überwachen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
+Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als Open Data Protocol (odata)-Feed verfügbar macht. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität bereit, die erforderlich ist, um Anforderungs Nachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwort Nachrichten zu generieren, die von odata benötigt werden. Ein Datendienst kann jedoch keine Bindung an einen Netzwerk Socket für eingehende HTTP-Anforderungen herstellen und diesen überwachen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
 
  Der Datendiensthost führt die folgenden Aufgaben im Namen des Datendiensts aus:
 

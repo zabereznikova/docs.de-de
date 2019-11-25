@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582448"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975788"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimieren der Leistung: Weitere Empfehlungen
 <a name="introduction"></a> Dieses Thema enthält Empfehlungen zur Leistung zusätzlich zu denen im Abschnitt [Optimierung der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "72582448"
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>Treffertests auf großen 3D-Oberflächen  
- Treffertests auf großen 3D-Oberflächen sind in Bezug auf CPU-Auslastung ein sehr aufwändiger Vorgang. Dies gilt insbesondere, wenn die 3D-Oberfläche animiert wird. Wenn Sie keine Treffertests auf diesen Oberflächen benötigen, sollten Sie die Treffertests deaktivieren. Objekte, die von <xref:System.Windows.UIElement> abgeleitet werden, können Treffer Tests deaktivieren, indem Sie die <xref:System.Windows.UIElement.IsHitTestVisible%2A>-Eigenschaft auf `false` festlegen.  
+ Treffertests auf großen 3D-Oberflächen sind in Bezug auf CPU-Auslastung ein sehr aufwändiger Vorgang. Dies gilt insbesondere, wenn die 3D-Oberfläche animiert wird. Wenn Sie keine Treffertests auf diesen Oberflächen benötigen, sollten Sie die Treffertests deaktivieren. Objekte, die von <xref:System.Windows.UIElement> abgeleitet werden, können Treffer Tests deaktivieren, indem Sie die <xref:System.Windows.UIElement.IsHitTestVisible%2A>-Eigenschaft auf `false`festlegen.  
   
 <a name="CompositionTarget_Rendering_Event"></a>   
 ## <a name="compositiontargetrendering-event"></a>CompositionTarget.Rendering-Ereignis  
@@ -70,7 +70,7 @@ ms.locfileid: "72582448"
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurieren des Diensts für den Schriftartencache zur Reduzierung der Startzeit  
- Der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dienst für den Schriftartencache stellt Schriftartdaten über [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen hinweg zur Verfügung. Die erste [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung, die Sie ausführen, startet diesen Dienst, wenn er noch nicht ausgeführt wird. Wenn Sie [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] verwenden, können Sie den "Windows Presentation Foundation (WPF)-Schriftart Cache 3.0.0.0"-Dienst von "manuell" (Standardeinstellung) auf "automatisch (verzögerter Start)" festlegen, um die anfängliche Startzeit der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen zu verringern.  
+ Der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dienst für den Schriftartencache stellt Schriftartdaten über [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen hinweg zur Verfügung. Die erste [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung, die Sie ausführen, startet diesen Dienst, wenn er noch nicht ausgeführt wird. Wenn Sie Windows Vista verwenden, können Sie den "Windows Presentation Foundation (WPF) Font Cache 3.0.0.0"-Dienst von "Manual" (Standardeinstellung) auf "Automatic (verzögerter Start)" festlegen, um die anfängliche Startzeit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen zu verkürzen.  
   
 ## <a name="see-also"></a>Siehe auch
 

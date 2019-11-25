@@ -2,14 +2,12 @@
 title: 'Entschärfung: WPF-Layout'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d266ad33110d2bda8f7911d89981c372624c3f36
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779066"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457782"
 ---
 # <a name="mitigation-wpf-layout"></a>Entschärfung: WPF-Layout
 Das Layout der WPF-Steuerelemente kann sich leicht ändern.  
@@ -40,4 +38,4 @@ Das Layout der WPF-Steuerelemente kann sich leicht ändern.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6.md)
+- [Anwendungskompatibilität](application-compatibility.md)

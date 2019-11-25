@@ -7,32 +7,19 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046394"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974589"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
-<a name="top"></a> In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
+In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
   
  Alle Ladeprogrammereignisse werden unter dem `LoaderKeyword` (0x8)-Schlüsselwort ausgelöst. Das `DCStart` -Ereignis und das `DCEnd` -Ereignis werden unter `LoaderRundownKeyword` (0x8) ausgelöst, wobei `StartRundown`/`EndRundown` aktiviert ist. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
-  
- Ladeprogrammereignisse werden in die folgenden Ereignisse unterteilt:  
-  
-- [Anwendungsdomänenereignisse](#application_domain_events)  
-  
-- [CLR-Ladeprogramm-Assemblyereignisse](#clr_loader_assembly_events)  
-  
-- [Modulereignisse](#module_events)  
-  
-- [CLR-Domänenmodulereignisse](#clr_domain_module_events)  
-  
-- [Modulbereichereignisse](#module_range_events)  
-  
-<a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>Anwendungsdomänenereignisse  
+
+## <a name="application-domain-events"></a>Anwendungsdomänenereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
@@ -55,14 +42,11 @@ ms.locfileid: "71046394"
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Der eindeutige Bezeichner für eine Anwendungsdomäne.|  
-|AppDomainFlags|win:UInt32|0x1 Standard Domäne.<br /><br /> 0x2 Bares.<br /><br /> 0x4 Anwendungsdomäne, Bit 28-31: Freigaberichtlinie für diese Domäne.<br /><br /> 0: Eine freigegebene Domäne.|  
+|AppDomainFlags|win:UInt32|0x1: Standarddomäne.<br /><br /> 0x2: Ausführbare Datei.<br /><br /> 0x4: Anwendungsdomäne, Bit 28-31: Freigaberichtlinie für diese Domäne.<br /><br /> 0: Eine freigegebene Domäne.|  
 |AppDomainName|win:UnicodeString|Anzeigename der Anwendungsdomäne. Kann sich während der Lebensdauer des Prozesses ändern.|  
 |AppDomainIndex|win:UInt32|Der Index dieser Anwendungsdomäne.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-  
- [Zurück nach oben](#top)  
-  
-<a name="clr_loader_assembly_events"></a>   
+
 ## <a name="clr-loader-assembly-events"></a>CLR-Ladeprogramm-Assemblyereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
@@ -88,14 +72,11 @@ ms.locfileid: "71046394"
 |AssemblyID|win:UInt64|Eindeutige ID für die Assembly.|  
 |AppDomainID|win:UInt64|ID der Domäne dieser Assembly.|  
 |BindingID|win:UInt64|ID, die die Assemblybindung eindeutig kennzeichnet.|  
-|AssemblyFlags|win:UInt32|0x1 Domänen neutrale Assembly.<br /><br /> 0x2 Dynamische Assembly.<br /><br /> 0x4 Die Assembly verfügt über ein System eigenes Image.<br /><br /> 0x8 Entladbare Assembly.|  
+|AssemblyFlags|win:UInt32|0x1: Domänenneutrale Assembly.<br /><br /> 0x2: Dynamische Assembly.<br /><br /> 0x4: Die Assembly verfügt über ein systemeigenes Image.<br /><br /> 0x8: Entladbare Assembly.|  
 |AssemblyName|win:UnicodeString|Vollqualifizierter Assemblyname.|  
-|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-  
- [Zurück nach oben](#top)  
-  
-<a name="module_events"></a>   
-## <a name="module-events"></a>Modulereignisse  
+|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|   
+
+## <a name="module-events"></a>Modulereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
@@ -120,7 +101,7 @@ ms.locfileid: "71046394"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|Eindeutige ID für das Modul.|  
 |AssemblyID|win:UInt64|ID der Assembly, in der sich das Modul befindet.|  
-|ModuleFlags|win:UInt32|0x1 Domänen neutrales Modul.<br /><br /> 0x2 Das Modul verfügt über ein System eigenes Image.<br /><br /> 0x4 Dynamisches Modul.<br /><br /> 0x8 Manifest-Modul.|  
+|ModuleFlags|win:UInt32|0x1: Domänenneutrales Modul.<br /><br /> 0x2: Das Modul verfügt über ein systemeigenes Image.<br /><br /> 0x4: Dynamisches Modul.<br /><br /> 0x8: Manifestmodul.|  
 |Reserved1|win:UInt32|Reserviertes Feld.|  
 |ModuleILPath|win:UnicodeString|Der Pfad des MSIL (Microsoft Intermediate Language)-Images für das Modul oder der dynamische Modulname, wenn es sich um eine dynamische (auf null endende) Assembly handelt.|  
 |ModuleNativePath|win:UnicodeString|Pfad des systemeigenen Images für das Modul, sofern vorhanden (auf null endend).|  
@@ -139,11 +120,8 @@ ms.locfileid: "71046394"
 - Die Feldnamen, die mit "ManagedPdb" beginnen, verweisen auf die verwaltete PDB, die dem MSIL-Modul entspricht, das vom verwalteten Compiler generiert wurde (z. B. dem C#- oder Visual Basic-Compiler). Diese PDB verwendet das verwaltete PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, MSIL-Elementen zugeordnet werden, die in das MSIL-Modul kompiliert werden.  
   
 - Die Feldnamen, die mit "NativePdb" beginnen, verweisen auf die NGen-PDB, die durch Aufrufen von `NGEN createPDB`generiert wurde. Diese PDB verwendet das systemeigene PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, systemeigenen Elementen zugeordnet werden, die in das NGen-Modul kompiliert werden.  
-  
- [Zurück nach oben](#top)  
-  
-<a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>CLR-Domänenmodulereignisse  
+
+## <a name="clr-domain-module-events"></a>CLR-Domänenmodulereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
@@ -167,16 +145,13 @@ ms.locfileid: "71046394"
 |ModuleID|win:UInt64|Kennzeichnet die Assembly, zu der dieses Modul gehört.|  
 |AssemblyID|win:UInt64|ID der Assembly, in der sich das Modul befindet.|  
 |AppDomainID|win:UInt64|ID der Anwendungsdomäne, in der dieses Modul verwendet wird.|  
-|ModuleFlags|win:UInt32|0x1 Domänen neutrales Modul.<br /><br /> 0x2 Das Modul verfügt über ein System eigenes Image.<br /><br /> 0x4 Dynamisches Modul.<br /><br /> 0x8 Manifest-Modul.|  
+|ModuleFlags|win:UInt32|0x1: Domänenneutrales Modul.<br /><br /> 0x2: Das Modul verfügt über ein systemeigenes Image.<br /><br /> 0x4: Dynamisches Modul.<br /><br /> 0x8: Manifestmodul.|  
 |Reserved1|win:UInt32|Reserviertes Feld.|  
 |ModuleILPath|win:UnicodeString|Der Pfad des MSIL-Images für das Modul oder der dynamische Modulname, wenn es sich um eine dynamische (auf null endende) Assembly handelt.|  
 |ModuleNativePath|win:UnicodeString|Pfad des systemeigenen Images für das Modul, sofern vorhanden (auf null endend).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-  
- [Zurück nach oben](#top)  
-  
-<a name="module_range_events"></a>   
-## <a name="module-range-events"></a>Modulbereichereignisse  
+
+## <a name="module-range-events"></a>Modulbereichereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  

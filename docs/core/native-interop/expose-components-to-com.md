@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216224"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973316"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Verfügbarmachen von .NET Core-Komponenten in COM
 
@@ -76,6 +76,6 @@ Ein voll funktionsfähiges [Beispiel für COM-Server](https://github.com/dotnet/
 
 ## <a name="additional-notes"></a>Zusätzliche Hinweise
 
-Anders als im .NET Framework wird in .NET Core die Erstellung einer COM-Typbibliothek (TLB) aus einer .NET Core-Assembly nicht unterstützt. Sie müssen entweder manuell eine IDL-Datei oder einen C++ Header für die nativen Deklarationen Ihrer Schnittstellen schreiben.
+Anders als im .NET Framework wird in .NET Core die Erstellung einer COM-Typbibliothek (TLB) aus einer .NET Core-Assembly nicht unterstützt. Die Anweisung besagt, dass Sie manuell eine IDL-Datei oder einen C++ Header für die nativen Deklarationen Ihrer Schnittstellen schreiben müssen.
 
-Außerdem können das .NET Framework und .NET Core nicht in denselben Prozess geladen werden. Ein COM-Server für .NET Core kann daher nicht in einen COM-Clientprozess für das .NET Framework geladen werden und umgekehrt.
+Zusätzlich gelten für das Laden von .NET Framework und .NET Core in denselben Prozess Diagnoseeinschränkungen. Die erste Einschränkung ist das Debuggen von verwalteten Komponenten, da es nicht möglich ist, .NET Framework und .NET Core gleichzeitig zu debuggen. Zusätzlich teilen die beiden Runtimeinstanzen keine verwalteten Assemblys. Das bedeutet, dass es nicht möglich ist, die tatsächlichen .NET-Typen über zwei Runtimes freizugeben. Stattdessen unterliegen alle Interaktionen den verfügbar gemachten Verträgen zur COM-Schnittstelle.

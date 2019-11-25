@@ -2,12 +2,12 @@
 title: Systemüberwachung
 description: Entdecken Sie eine Möglichkeit zum Implementieren der Systemüberwachung.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094072"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732912"
 ---
 # <a name="health-monitoring"></a>Systemüberwachung
 
@@ -123,7 +123,7 @@ Beim Open Source-Projekt [AspNetCore.Diagnostics.HealthChecks](https://github.co
 
 Zum `Catalog.API`-Microservice wurden beispielsweise folgende NuGet-Pakete hinzugefügt:
 
-![Ansicht des Catalog.API-Projekts mit Verweisen auf AspNetCore.Diagnostics.HealthChecks-NuGet-Pakete im Projektmappen-Explorer](./media/image6.png)
+![Screenshot des NuGet-Pakets „AspNetCore.Diagnostics.HealthChecks“.](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **Abbildung 8-7.** Mit AspNetCore.Diagnostics.HealthChecks in Catalog.API implementierte benutzerdefinierte Integritätsprüfungen
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 Wenn Sie wie in diesem Artikel beschrieben Integritätsüberprüfungen konfiguriert haben, können Sie direkt über den Browser überprüfen, ob der Microservice einwandfrei funktioniert, sobald dieser in Docker ausgeführt wird. Sie müssen den Containerport im Docker-Host veröffentlichen, damit Sie über die externe Docker-Host-IP-Adresse oder `localhost` auf den Container zugreifen können, wie in Abbildung 8-8 gezeigt.
 
-![Browseransicht der von einer Integritätsprüfung zurückgegebenen JSON-Antwort](./media/image7.png)
+![Screenshot der von einer Integritätsprüfung zurückgegebenen JSON-Antwort.](./media/monitor-app-health/health-check-json-response.png)
 
 **Abbildung 8-8.** Überprüfen des Integritätsstaus eines einzelnen Diensts über einen Browser
 
@@ -205,7 +205,7 @@ Das eShopOnContainers-Beispiel enthält eine Webseite, auf der wie in Abbildung 
 
 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) stellt auch das NuGet-Paket [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) bereit, das zum Anzeigen der Ergebnisse der Integritätsprüfung der konfigurierten URIs verwendet werden kann.
 
-![Browseransicht der WebStatus-App mit den Integritätsstatus aller Microservices von eShopOnContainers](./media/image8.png)
+![Screenshot des Integritätsstatus von eShopOnContainers in der Integritätsüberprüfungs-Benutzeroberfläche.](./media/monitor-app-health/health-check-status-ui.png)
 
 **Abbildung 8-9.** Beispielbericht zur Integritätsüberprüfung in eShopOnContainers
 

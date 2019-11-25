@@ -26,44 +26,22 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663990"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975824"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
-<a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.
+Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.
 
 In .NET Framework werden viele Aspekte der Kryptografie von den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwaltet. Einige davon sind Wrapper für die nicht verwaltete Microsoft Cryptography API (CryptoAPI), bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.
 
-Diese Übersicht bietet eine Zusammenfassung der Verschlüsselungsmethoden und Methoden, die von .NET Framework, einschließlich der ClickOnce-Manifeste, Suite B und Cryptography Next Generation (CNG) unterstützt, die seit .NET Framework 3.5 unterstützt.
-
-Diese Übersicht enthält folgende Abschnitte:
-
-- [Kryptografische Grundelemente](#primitives)
-
-- [Verschlüsselung mit geheimem Schlüssel](#secret_key)
-
-- [Verschlüsselung mit öffentlichem Schlüssel](#public_key)
-
-- [Digital Signatures](#digital_signatures)
-
-- [Hashwerte](#hash_values)
-
-- [Random Number Generation](#random_numbers)
-
-- [ClickOnce-Manifeste](#clickonce)
-
-- [Suite B-Unterstützung](#suite_b)
-
-- [Verwandte Themen](#related_topics)
+Diese Übersicht enthält eine Zusammenfassung der Verschlüsselungsmethoden und-Methoden, die von der .NET Framework unterstützt werden, einschließlich der ClickOnce-Manifeste, Suite B und der Unterstützung von Cryptography Next Generation (CNG), die in der .NET Framework 3,5 eingeführt wurde.
 
 Weitere Informationen zur Kryptografie sowie zu Microsoft-Diensten, -Komponenten und -Tools, mit deren Hilfe Sie Ihre Anwendungen mit kryptografischer Sicherheit versehen können, finden Sie in dieser Dokumentation im Abschnitt Sicherheit unter Win32- und COM-Entwicklung.
-
-<a name="primitives"></a>
 
 ## <a name="cryptographic-primitives"></a>Kryptografische Grundelemente
 
@@ -71,13 +49,13 @@ Eine typische Situation für den Einsatz von Kryptografie ist die Kommunikation 
 
 Die Kryptografie wird für folgende Zielsetzungen verwendet:
 
-- Vertraulichkeit: Um die Identität oder Daten eines Benutzers zu schützen, gelesen werden.
+- Vertraulichkeit: Die Identität des Benutzers soll geschützt oder das Lesen von Daten verhindert werden.
 
-- Datenintegrität: Zum Schutz der Daten nicht geändert werden.
+- Datenintegrität: Die Daten sollen vor Änderungen geschützt werden.
 
-- Authentifizierung: Um sicherzustellen, dass Daten von einem bestimmten Teilnehmer stammen.
+- Authentifizierung: Es soll sichergestellt werden, dass Daten von einem bestimmten Teilnehmer stammen.
 
-- Non-repudiation: Um zu verhindern, dass eine bestimmte Partei leugnen, dass sie eine Nachricht gesendet.
+- Nichtleugnung: Hindert einen bestimmten Teilnehmer zu leugnen, dass er eine Meldung gesendet hat.
 
 Um diese Ziele zu erreichen, können Sie aus einer Kombination von Algorithmen und Vorgehensweisen, die als kryptografische Grundelemente bezeichnet werden, ein kryptografisches Schema erstellen. In der nachstehenden Tabelle sind die kryptografischen Grundelemente und deren Verwendungszweck aufgeführt.
 
@@ -87,10 +65,6 @@ Um diese Ziele zu erreichen, können Sie aus einer Kombination von Algorithmen u
 |Verschlüsselung mit öffentlichem Schlüssel (asymmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem Paar aus öffentlichem und privatem Schlüssel ver- und entschlüsselt.|
 |Kryptografische Signatur|Stellt sicher, dass die Daten von einem bestimmten Teilnehmer stammen. Dazu wird eine digitale Signatur erstellt, die diesen Teilnehmer eindeutig bezeichnet. Bei diesem Prozess werden auch Hashfunktionen verwendet.|
 |Kryptografische Hashs|Ordnet Daten beliebiger Länge einer Bytefolge fester Länge zu. Hashs sind statistisch eindeutig; eine unterschiedliche 2-Byte-Sequenz erzielt nicht denselben Hashwert.|
-
-[Zurück nach oben](#top)
-
-<a name="secret_key"></a>
 
 ## <a name="secret-key-encryption"></a>Verschlüsselung mit geheimem Schlüssel
 
@@ -110,31 +84,27 @@ Eine Möglichkeit, mit einem CBC-Verschlüsselungsverfahren verschlüsselte Date
 
 Die Verschlüsselung mit geheimem Schlüssel hat den Nachteil, dass sich zwei Teilnehmer auf einen Schlüssel und einen Initialisierungsvektor geeinigt und die entsprechenden Werte ausgetauscht haben müssen. Der Initialisierungsvektor ist nicht geheim und kann mit der Nachricht in Klartext übermittelt werden. Der Schlüssel muss jedoch vor Unbefugten geheim gehalten werden. Aufgrund dieser Probleme wird die Verschlüsselung mit geheimem Schlüssel oft in Verbindung mit der Verschlüsselung mit öffentlichem Schlüssel eingesetzt, um die Werte von Schlüssel und Initialisierungsvektor vertraulich zu kommunizieren.
 
-Vorausgesetzt, dass Alice und Bob um zwei Teilnehmer, die über einen unsicheren Kanal miteinander kommunizieren möchten handelt, können sie die Verschlüsselung mit geheimem Schlüssel wie folgt verwenden: Alice und Bob stimmen auf einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erstellt einen Netzwerkstream (eventuell eine benannte Pipe oder eine Netzwerk-e-Mail) auf dem die Nachricht zu senden. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.
+Wenn es sich bei Alice und Bob um zwei Teilnehmer handelt, die über einen unsicheren Kanal miteinander kommunizieren möchten, könnten sie die Verschlüsselung mit geheimem Schlüssel wie nachfolgend beschrieben vornehmen: Alice und Bob einigen sich darauf, einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erstellt einen Netzwerkstream (vielleicht eine Named Pipe oder eine Netzwerk-e-Mail), an die die Nachricht gesendet werden soll. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.
 
-.NET Framework bietet die folgenden Klassen, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
+Der .NET Framework stellt die folgenden Klassen bereit, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
 
-- <xref:System.Security.Cryptography.AesManaged> (eingeführt in .NET Framework 3.5).
+- <xref:System.Security.Cryptography.AesManaged> (eingeführt in .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
 
-- <xref:System.Security.Cryptography.HMACSHA1> (Technisch gesehen handelt es sich hierbei um einen Algorithmus mit geheimem Schlüssel, da er einen Nachrichtenauthentifizierungscode darstellt, der mithilfe einer kryptografischen Hashfunktion und einem geheimen Schlüssel berechnet wird. Siehe [Hashwerte](#hash_values)weiter unten in diesem Thema.)
+- <xref:System.Security.Cryptography.HMACSHA1> (Technisch gesehen handelt es sich hierbei um einen Algorithmus mit geheimem Schlüssel, da er einen Nachrichtenauthentifizierungscode darstellt, der mithilfe einer kryptografischen Hashfunktion und einem geheimen Schlüssel berechnet wird. Siehe [Hashwerte](#hash-values)weiter unten in diesem Thema.)
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
 
 - <xref:System.Security.Cryptography.RijndaelManaged>
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
-
-[Zurück nach oben](#top)
-
-<a name="public_key"></a>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
 
 ## <a name="public-key-encryption"></a>Verschlüsselung mit öffentlichem Schlüssel
 
 Bei der Verschlüsselung mit öffentlichem Schlüssel werden zwei Schlüssel verwendet, nämlich ein privater Schlüssel, der vor Unbefugten geheim gehalten werden muss, und ein öffentlicher Schlüssel, der jedem zugänglich sein kann. Der öffentliche und der private Schlüssel sind mathematisch miteinander verknüpft. Mit dem öffentlichen Schlüssel verschlüsselte Daten können nur mit dem privaten Schlüssel entschlüsselt werden, und mit dem privaten Schlüssel signierte Daten können nur mit dem öffentlichen Schlüssel überprüft werden. Der öffentliche Schlüssel kann jedem zugänglich sein, da er zum Verschlüsseln von Daten verwendet wird, die an den Inhaber des privaten Schlüssels gesendet werden. Kryptografische Algorithmen mit öffentlichem Schlüssel werden auch als asymmetrische Algorithmen bezeichnet, da ein Schlüssel für das Verschlüsseln der Daten und ein anderer für das Entschlüsseln erforderlich ist. Eine grundlegende kryptografische Regel verhindert die Schlüsselwiederverwendung, und beide Schlüssel müssen für jede Kommunikationssitzung eindeutig sein. In der Praxis jedoch sind asymmetrische Schlüssel im Allgemeinen langlebig.
 
-Zwei Teilnehmer (Alice und Bob) könnten die Verschlüsselung mit öffentlichem Schlüssel wie folgt verwenden: Zuerst erzeugt Alice ein öffentliches/privates Schlüsselpaar. Wenn Bob Alice eine verschlüsselte Nachricht senden möchte, bittet er Alice um den öffentlichen Schlüssel. Alice sendet Bob ihren öffentlichen Schlüssel über ein unsicheres Netzwerk, und Bob verschlüsselt damit eine Nachricht. Bob sendet die verschlüsselte Nachricht an Alice, die sie mit ihrem privaten Schlüssel entschlüsselt. Wenn Bob den Schlüssel von Alice über einen unsicheren Kanal (z. B. ein öffentliches Netzwerk) erhalten hat, ist Bob im Hinblick auf einen Man-in-the-middle-Angriff gefährdet. Daher muss Bob bei Alice nachfragen, ob es sich um die richtige Kopie des öffentlichen Schlüssels handelt.
+Zwei Teilnehmer (Alice und Bob) könnten die Verschlüsselung mit öffentlichem Schlüssel wie folgt verwenden: Zuerst erzeugt Alice ein Schlüsselpaar aus öffentlichem und privatem Schlüssel. Wenn Bob Alice eine verschlüsselte Nachricht senden möchte, bittet er Alice um den öffentlichen Schlüssel. Alice sendet Bob ihren öffentlichen Schlüssel über ein unsicheres Netzwerk, und Bob verschlüsselt damit eine Nachricht. Bob sendet die verschlüsselte Nachricht an Alice, die sie mit ihrem privaten Schlüssel entschlüsselt. Wenn Bob den Schlüssel von Alice über einen unsicheren Kanal (z. B. ein öffentliches Netzwerk) erhalten hat, ist Bob im Hinblick auf einen Man-in-the-middle-Angriff gefährdet. Daher muss Bob bei Alice nachfragen, ob es sich um die richtige Kopie des öffentlichen Schlüssels handelt.
 
 Während der Übertragung des öffentlichen Schlüssels von Alice hätte ein Unbefugter den Schlüssel abfangen können. Außerdem hätte derselbe Unbefugte auch die verschlüsselte Nachricht von Bob abfangen können. Er kann die Nachricht mit dem öffentlichen Schlüssel jedoch nicht entschlüsseln. Die Nachricht kann nur mit Alices privatem Schlüssel entschlüsselt werden, der nicht übertragen wurde. Alice benutzt für die Verschlüsselung der Rückantwort an Bob nicht ihren privaten Schlüssel, da jeder mit dem öffentlichen Schlüssel die Nachricht entschlüsseln könnte. Wenn Alice eine Rückantwort an Bob senden möchte, bittet sie Bob um dessen öffentlichen Schlüssel und verschlüsselt ihre Nachricht damit. Bob wiederum entschlüsselt die Nachricht mit seinem zugehörigen privaten Schlüssel.
 
@@ -154,7 +124,7 @@ In der folgenden Liste werden Kryptographiealgorithmen mit öffentlichem und geh
 
 - Algorithmen mit öffentlichem Schlüssel sind im Vergleich zu Algorithmen mit geheimem Schlüssel extrem langsam und für die Verschlüsselung großer Datenmengen nicht geeignet. Algorithmen mit öffentlichem Schlüssel sind nur für die Übertragung sehr kleiner Datenmengen sinnvoll. In der Regel werden bei der Verschlüsselung mit öffentlichem Schlüssel ein Schlüssel und ein Initialisierungsvektor verschlüsselt, die in einem Algorithmus mit geheimem Schlüssel verwendet werden sollen. Nach der Übertragung von Schlüssel und Initialisierungsvektor wird für die restliche Sitzung die Verschlüsselung mit geheimem Schlüssel verwendet.
 
-.NET Framework bietet die folgenden Klassen, die Algorithmen für Verschlüsselung mit öffentlichem Schlüssel implementieren:
+Der .NET Framework stellt die folgenden Klassen bereit, die Verschlüsselungsalgorithmen mit öffentlichem Schlüssel implementieren:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -172,10 +142,6 @@ In der folgenden Liste werden Kryptographiealgorithmen mit öffentlichem und geh
 
 RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur. DSA kann dagegen nur für die Signatur und Diffie-Hellman nur für die Erzeugung von Schlüsseln verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.
 
-[Zurück nach oben](#top)
-
-<a name="digital_signatures"></a>
-
 ## <a name="digital-signatures"></a>Digitale Signaturen
 
 Algorithmen mit öffentlichem Schlüssel können auch für digitale Signaturen verwendet werden. Digitale Signaturen authentifizieren die Identität eines Absenders (wenn Sie dem öffentlichen Schlüssel des Absenders vertrauen) und schützen die Datenintegrität. Mit dem von Alice erzeugten öffentlichen Schlüssel kann der Empfänger von Alices Daten überprüfen, dass sie tatsächlich von Alice gesendet wurden. Dazu vergleicht er die digitale Signatur mit Alices Daten mit ihrem öffentlichen Schlüssel.
@@ -185,7 +151,7 @@ Um die Kryptografie mit öffentlichem Schlüssel zum digitalen Signieren einer N
 > [!NOTE]
 > Eine Signatur kann von jedem überprüft werden, da der öffentliche Schlüssel des Absenders allgemein bekannt und in der Regel im digitalen Signaturformat enthalten ist. Mit dieser Methode wird die Nachricht nicht geheim gehalten. Hierzu muss sie zusätzlich verschlüsselt werden.
 
-.NET Framework bietet die folgenden Klassen, die digitale Signaturalgorithmen implementiert:
+Der .NET Framework stellt die folgenden Klassen bereit, die digitale Signatur Algorithmen implementieren:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -195,10 +161,6 @@ Um die Kryptografie mit öffentlichem Schlüssel zum digitalen Signieren einer N
 
 - <xref:System.Security.Cryptography.ECDsaCng>
 
- [Zurück nach oben](#top)
-
-<a name="hash_values"></a>
-
 ## <a name="hash-values"></a>Hashwerte
 
 Mit Hashalgorithmen werden kleineren binären Werten fester Länge, die als Hashwerte bezeichnet werden, binäre Werte beliebiger Länge zugeordnet. Ein Hashwert ist eine numerische Darstellung eines Datenelements. Wenn ein Klartextabsatz gehasht ist und nur ein Buchstabe geändert wird, ergibt sich bei einem nachfolgenden Hashvorgang ein anderer Wert. Wenn der Hashvorgang kryptografisch stark ist, ändert sich der zugehörige Wert erheblich. Wenn sich beispielsweise ein einzelnes Bit einer Nachricht ändert, kann eine starke Hashfunktion ein um 50 % anderes Ergebnis liefern. Viele Eingabewerte ergeben möglicherweise denselben Hashausgabewert. Dennoch ist es rechnerisch unmöglich, zwei verschiedene Eingabewerte zu ermitteln, die denselben Hashwert bilden.
@@ -207,7 +169,7 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 - Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.
 
-  Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für die sichere Kommunikation mit Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:
 
@@ -223,9 +185,9 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten von Alice lesen, da sie als Klartext übertragen werden. Vollständige Sicherheit ist in der Regel nur mit digitalen Signaturen (Signieren von Nachrichten) und Verschlüsselung möglich.
 
-.NET Framework bietet die folgenden Klassen, die Hashalgorithmen implementiert:
+Der .NET Framework stellt die folgenden Klassen bereit, die Hash Algorithmen implementieren:
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.HMACSHA1>
 
 - <xref:System.Security.Cryptography.MACTripleDES>
 
@@ -239,7 +201,7 @@ Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten 
 
 - <xref:System.Security.Cryptography.SHA384Managed>
 
-- <xref:System.Security.Cryptography.SHA512Managed>.
+- <xref:System.Security.Cryptography.SHA512Managed>
 
 - HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.
 
@@ -250,23 +212,15 @@ Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten 
 > [!NOTE]
 > Fehler im Design von MD5 wurden 1996 erkannt und stattdessen SHA-1 empfohlen. 2004 wurden weitere Fehler festgestellt, und der MD5-Algorithmus galt nicht mehr als sicher. Der SHA-1-Algorithmus wurde ebenfalls als unsicher eingestuft, und nun wird stattdessen SHA-2 empfohlen.
 
-[Zurück nach oben](#top)
-
-<a name="random_numbers"></a>
-
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung
 
-Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in .NET Framework verwenden Zufallszahlengeneratoren kryptografische Schlüssel zu generieren.
+Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in der .NET Framework verwenden Zufallszahlengeneratoren, um kryptografische Schlüssel zu generieren.
 
 Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.
 
-[Zurück nach oben](#top)
-
-<a name="clickonce"></a>
-
 ## <a name="clickonce-manifests"></a>ClickOnce-Manifeste
 
-Die folgenden kryptografischen Klassen in .NET Framework 3.5 können Sie abrufen und überprüfen die Informationen zu manifestsignaturen für Anwendungen, die mit bereitgestellt werden [ClickOnce-Technologie](/visualstudio/deployment/clickonce-security-and-deployment):
+In den .NET Framework 3,5 können Sie mithilfe der folgenden Kryptografieklassen Informationen zu manifestresssignaturen für Anwendungen abrufen und überprüfen, die mit der [ClickOnce-Technologie](/visualstudio/deployment/clickonce-security-and-deployment)bereitgestellt werden:
 
 - Die <xref:System.Security.Cryptography.ManifestSignatureInformation> -Klasse ruft Informationen zu einer Manifestsignatur ab, wenn Sie deren <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> -Methodenüberladungen verwenden.
 
@@ -284,13 +238,9 @@ Die folgenden kryptografischen Klassen in .NET Framework 3.5 können Sie abrufen
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Liefert eine einfache Möglichkeit, um zu überprüfen, ob eine Authenticode-Signatur vertrauenswürdig ist.
 
-[Zurück nach oben](#top)
-
-<a name="suite_b"></a>
-
 ## <a name="suite-b-support"></a>Suite B-Unterstützung
 
-.NET Framework 3.5 unterstützt die Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).
+Der .NET Framework 3,5 unterstützt den Suite B Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).
 
 Dazu gehören die folgenden Algorithmen:
 
@@ -304,27 +254,19 @@ Dazu gehören die folgenden Algorithmen:
 
 Wrapper für verwalteten Code für die FIPS-zertifizierten (Federal Information Processing Standard) Implementierungen von AES, SHA-256, SHA-384 und SHA-512 sind in den neuen Klassen <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>und <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> verfügbar.
 
-[Zurück nach oben](#top)
-
-<a name="cng"></a>
-
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG-Klassen (Cryptography Next Generation)
 
-Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper um die systemeigenen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) "Cng" ist Teil des Namens dieser Klassen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.
+Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper um die systemeigenen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) Diese Klassen verfügen über "CNG" als Teil ihrer Namen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.
 
 Die <xref:System.Security.Cryptography.CngKey> -Klasse wird für eine Vielzahl zusätzlicher Operationen verwendet, einschließlich dem Öffnen, Erstellen, Löschen und Exportieren von Schlüsseln. Sie stellt auch den Zugriff auf das zugrunde liegende Schlüsselhandle bereit, das für den direkten Aufruf systemeigener Funktionen verwendet wird.
 
-.NET Framework 3.5 enthält auch eine Reihe von CNG-Klassen, wie die folgende Unterstützung:
+Der .NET Framework 3,5 umfasst auch eine Reihe von unterstützenden CNG-Klassen, wie z. b. die folgenden:
 
 - <xref:System.Security.Cryptography.CngProvider> verwaltet einen Schlüsselspeicheranbieter.
 
 - <xref:System.Security.Cryptography.CngAlgorithm> verwaltet einen CNG-Algorithmus.
 
 - <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.
-
-[Zurück nach oben](#top)
-
-<a name="related_topics"></a>
 
 ## <a name="related-topics"></a>Verwandte Themen
 

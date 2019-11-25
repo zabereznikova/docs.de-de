@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121732"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972113"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 
-<a name="Top"></a> Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Musterabgleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.
+Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Musterabgleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.
 
 |RegexOptions-Member|Inlinezeichen|Effekt|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|Nicht verfügbar|Standardverfahren verwenden. Weitere Informationen finden Sie unter [Standardoptionen](#Default).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Groß-/Kleinschreibung bei der Suche ignorieren Weitere Informationen finden Sie unter [Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung](#Case).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Verwenden Sie den Mehrzeilenmodus, in dem `^` und `$` dem Anfang und dem Ende jeder Zeile (und nicht dem Anfang und dem Ende der Eingabezeichenfolge) entsprechen. Weitere Informationen finden Sie unter [Mehrzeilenmodus](#Multiline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Verwenden Sie Einzeilenmodus, in dem der Punkt (.) den einzelnen Zeichen entspricht (anstatt allen Zeichen mit Ausnahme von `\n`). Weitere Informationen finden Sie unter [Einzeilenmodus](#Singleline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Unbenannte Gruppen nicht erfassen Die einzigen gültigen Erfassungen sind explizit benannte oder nummerierte Gruppen in der Form `(?<`*Name*`>` *Teilausdruck*`)`. Weitere Informationen finden Sie unter [Nur explizite Erfassungen](#Explicit).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Nicht verfügbar|Kompiliert den regulären Ausdruck in eine Assembly. Weitere Informationen hierzu finden Sie unter [Kompilierte reguläre Ausdrücke](#Compiled).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Schließt Leerstellen ohne Escapezeichen vom Muster aus und aktiviert Kommentare nach einem Nummernzeichen (`#`). Weitere Informationen finden Sie im Abschnitt [Ignorieren von Leerzeichen](#Whitespace).|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Nicht verfügbar|Ändert die Suchrichtung. Die Suche wird von rechts nach links und nicht von links nach rechts durchgeführt. Weitere Informationen finden Sie unter [Rechts-nach-Links-Modus](#RightToLeft).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Nicht verfügbar|ECMAScript-kompatibles Verhalten für den Ausdruck aktivieren. Weitere Informationen finden Sie unter [ECMAScript-Vergleichsverhalten](#ECMAScript).|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Nicht verfügbar|Ignoriert kulturelle Unterschiede in der Sprache. Weitere Informationen finden Sie unter [Vergleiche mit der invarianten Kultur](#Invariant).|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|Nicht verfügbar|Standardverfahren verwenden. Weitere Informationen finden Sie unter [Standardoptionen](#default-options).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Groß-/Kleinschreibung bei der Suche ignorieren Weitere Informationen finden Sie unter [Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung](#case-insensitive-matching).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Verwenden Sie den Mehrzeilenmodus, in dem `^` und `$` dem Anfang und dem Ende jeder Zeile (und nicht dem Anfang und dem Ende der Eingabezeichenfolge) entsprechen. Weitere Informationen finden Sie unter [Mehrzeilenmodus](#multiline-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Verwenden Sie Einzeilenmodus, in dem der Punkt (.) den einzelnen Zeichen entspricht (anstatt allen Zeichen mit Ausnahme von `\n`). Weitere Informationen finden Sie unter [Einzeilenmodus](#single-line-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Unbenannte Gruppen nicht erfassen Die einzigen gültigen Erfassungen sind explizit benannte oder nummerierte Gruppen in der Form `(?<`*Name*`>` *Teilausdruck*`)`. Weitere Informationen finden Sie unter [Nur explizite Erfassungen](#explicit-captures-only).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Nicht verfügbar|Kompiliert den regulären Ausdruck in eine Assembly. Weitere Informationen hierzu finden Sie unter [Kompilierte reguläre Ausdrücke](#compiled-regular-expressions).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Schließt Leerstellen ohne Escapezeichen vom Muster aus und aktiviert Kommentare nach einem Nummernzeichen (`#`). Weitere Informationen finden Sie im Abschnitt [Ignorieren von Leerzeichen](#ignore-white-space).|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Nicht verfügbar|Ändert die Suchrichtung. Die Suche wird von rechts nach links und nicht von links nach rechts durchgeführt. Weitere Informationen finden Sie unter [Rechts-nach-Links-Modus](#right-to-left-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Nicht verfügbar|ECMAScript-kompatibles Verhalten für den Ausdruck aktivieren. Weitere Informationen finden Sie unter [ECMAScript-Vergleichsverhalten](#ecmascript-matching-behavior).|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Nicht verfügbar|Ignoriert kulturelle Unterschiede in der Sprache. Weitere Informationen finden Sie unter [Vergleiche mit der invarianten Kultur](#comparison-using-the-invariant-culture).|
 
 ## <a name="specifying-the-options"></a>Angeben der Optionen
 
@@ -108,8 +108,6 @@ Zum Testen auf <xref:System.Text.RegularExpressions.RegexOptions.None?displayPro
 
 In den folgenden Abschnitten werden die Optionen aufgeführt, die von regulären .NET-Ausdrücken unterstützt werden.
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>Standardoptionen
 
 Die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option gibt an, dass keine Optionen angegeben wurden, und die Engine für reguläre Ausdrücke verwendet sein Standardverhalten. Hierzu gehören folgende Elemente:
@@ -135,10 +133,6 @@ Die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameW
 
 Da die <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>-Option das Standardverhalten der Engine für reguläre Ausdrücke darstellt, wird sie selten explizit in einem Methodenaufruf angegeben. Stattdessen wird ein Konstruktor oder eine statische Mustervergleichsmethode ohne `options`-Parameter aufgerufen.
 
-[Zurück zum Anfang](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung
 
 Die <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>-Option oder die `i`-Inlineoption stellt die Suche nach Übereinstimmungen ohne Berücksichtigung von Groß-/Kleinschreibung bereit. Standardmäßig werden die Groß-/Kleinschreibungskonventionen der aktuellen Kultur verwendet.
@@ -152,10 +146,6 @@ Im folgenden Beispiel wird das Muster eines regulären Ausdrucks aus dem vorheri
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[Zurück zum Anfang](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>Mehrzeilenmodus
 
@@ -184,10 +174,6 @@ Das folgende Beispiel entspricht dem vorherigen, abgesehen davon, dass zum Festl
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[Zurück zum Anfang](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>Einzeilenmodus
 
 Die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder die `s` Inlineoption sorgt dafür, dass die Engine für reguläre Ausdrücke die Eingabezeichenfolge so behandelt, als ob sie aus einer einzigen Zeile besteht. Es wird das Verhalten des Sprachelements Punkt (`.`) geändert, sodass dieser jedem Zeichen entspricht, anstatt jedem Zeichen außer dem Zeilenumbruchzeichen `\n` oder \u000A.
@@ -201,10 +187,6 @@ Das folgende Beispiel entspricht dem vorherigen, abgesehen davon, dass zum Aktiv
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[Zurück zum Anfang](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>Nur explizite Erfassungen.
 
@@ -244,10 +226,6 @@ Abschließend können Sie mit dem Inlinegruppenelement `(?n:)` automatische Erfa
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[Zurück zum Anfang](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>Kompilierte reguläre Ausdrücke
 
 Standardmäßig werden reguläre Ausdrücke in .NET interpretiert. Wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziiert oder eine statische <xref:System.Text.RegularExpressions.Regex>-Methode aufgerufen wird, wird das Muster eines regulären Ausdrucks in einen Satz benutzerdefinierter Opcodes analysiert, und ein Interpreter führt den regulären Ausdruck mithilfe dieser Opcodes aus. Dabei wird ein Kompromiss eingegangen: Der Aufwand für die Initialisierung der Engine für reguläre Ausdrücke wird auf Kosten der Runtimeleistung minimiert.
@@ -269,10 +247,6 @@ Diese Verbesserung der Leistung tritt jedoch nur unter den folgenden Bedingungen
 
 > [!NOTE]
 > Die <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>-Option steht in keinem Zusammenhang mit der <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode, die eine zweckgebundene Assembly erstellt, die vordefinierte kompilierte reguläre Ausdrücke enthält.
-
-[Zurück zum Anfang](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>Leerstellen ignorieren
 
@@ -302,7 +276,7 @@ Im folgenden Beispiel wird das folgende Muster des regulären Ausdrucks definier
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-Dieses Muster ist dem im Abschnitt [Nur explizite Erfassungen](#Explicit) definierten Muster ähnlich, außer dass mithilfe der <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>-Option Musterleerzeichen ignoriert werden.
+Dieses Muster ist dem im Abschnitt [Nur explizite Erfassungen](#explicit-captures-only) definierten Muster ähnlich, außer dass mithilfe der <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>-Option Musterleerzeichen ignoriert werden.
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ Im folgenden Beispiel wird die Inlineoption `(?x)` verwendet, um Leerzeichen im 
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[Zurück zum Anfang](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>Modus "von rechts nach links"
 
@@ -342,10 +312,6 @@ Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt de
 |`,?`|Entspricht keinem oder einem Kommazeichen.|
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|
 |`\d{4}`|Entsprechung für vier Dezimalstellen finden.|
-
-[Zurück zum Anfang](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript-Vergleichsverhalten
 
@@ -386,10 +352,6 @@ Das Verhalten von ECMAScript und kanonischen regulären Ausdrücke unterscheidet
   |`\0` gefolgt von 0 bis 2 Oktalziffern|Als Oktalwert interpretieren. Zum Beispiel wird `\044` immer als Oktalwert interpretiert und bedeutet "$".|Gleiches Verhalten.|
   |`\` gefolgt von einer Ziffer zwischen 1 und 9 ohne nachfolgende Dezimalziffern|Als Rückverweis interpretieren. Zum Beispiel bedeutet `\9` immer Rückverweis 9, auch wenn keine Erfassungsgruppe 9 vorhanden ist. Wenn die Aufzeichnungsgruppe nicht vorhanden ist, löst der Parser für den regulären Ausdruck eine <xref:System.ArgumentException> aus.|Wenn eine Erfassungsgruppe einer einzigen Dezimalziffer vorhanden ist, wird ein Rückverweis auf diese Ziffer ausgeführt. Andernfalls wird der Wert als Literal interpretiert.|
   |`\` gefolgt von einer Ziffer zwischen 1 und 9 mit nachfolgenden Dezimalziffern|Ziffern als Dezimalwert interpretieren. Wenn diese Erfassungsgruppe vorhanden ist, wird der Ausdruck als Rückverweis interpretiert.<br /><br /> Ansonsten werden die vorangestellten Oktalziffern bis zur Oktalzahl 377 interpretiert. Das bedeutet, dass nur die unteren 8 Bits des Werts berücksichtigt werden. Verbleibende Ziffern als Literale interpretieren. Beispiel: Wenn im Ausdruck `\3000` die Erfassungsgruppe 300 vorhanden ist, wird der Ausdruck als Rückverweis 300 interpretiert. Wenn die Erfassungsgruppe 300 nicht vorhanden ist, wird er als Oktalzahl 300 gefolgt von 0 interpretiert.|Als Rückverweis interpretieren, indem so viele Ziffern wie möglich in einen Dezimalwert konvertiert werden, der auf eine Erfassung verweisen kann. Wenn keine Ziffern konvertiert werden können, wird der Ausdruck als Oktalzahl unter Verwendung der ersten Oktalziffern bis zu Oktalzahl 377 interpretiert, und die restlichen Ziffern werden als Literale interpretiert.|
-
-[Zurück zum Anfang](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>Vergleiche mit der invarianten Kultur
 

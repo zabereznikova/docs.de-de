@@ -2,12 +2,12 @@
 title: Sitzungen, Instanziierung und Parallelität
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: d780488f7bb0bd46a22ef205b3954b6b4614cae0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8c0b40ca67de92f4f1b481298a8a26d96e887d4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969216"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976082"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -27,7 +27,7 @@ Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwe
   
 - Einer WCF-Sitzung ist kein allgemeiner Datenspeicher zugeordnet.  
   
- Wenn Sie mit der <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse in ASP.NET-Anwendungen und der von ihr bereitgestellten Funktionalität vertraut sind, werden Sie möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen bemerken:  
+ Wenn Sie mit der <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>-Klasse in ASP.NET-Anwendungen und der von ihr bereitgestellten Funktionalität vertraut sind, werden Sie möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen bemerken:  
   
 - ASP.NET-Sitzungen werden immer vom Server initiiert.  
   
@@ -42,15 +42,15 @@ Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwe
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Für jede <xref:System.ServiceModel.InstanceContext> Client Anforderung wird ein neuer (und damit auch ein neues Dienst Objekt) erstellt.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Für jede Clientanforderung wird ein neuer <xref:System.ServiceModel.InstanceContext> (und damit auch ein neues Dienstobjekt) erstellt.  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Für jede <xref:System.ServiceModel.InstanceContext> neue Client Sitzung wird ein neues (und damit auch ein neues Dienst Objekt) erstellt und für die Lebensdauer dieser Sitzung beibehalten (hierfür ist eine Bindung erforderlich, die Sitzungen unterstützt).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Für jede neue Clientsitzung wird ein neuer <xref:System.ServiceModel.InstanceContext> (und damit auch ein neues Dienstobjekt) erstellt und für die Lebensdauer dieser Sitzung aufrechterhalten, wofür eine Bindung erforderlich ist, die Sitzungen unterstützt.  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Ein einzelnes <xref:System.ServiceModel.InstanceContext> (und somit ein Dienst Objekt) verarbeitet alle Client Anforderungen für die Lebensdauer der Anwendung.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Alle Clientanforderungen werden während der Lebensdauer der Anwendung von einem <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) verarbeitet.  
   
  Das folgende Codebeispiel zeigt den Standard- <xref:System.ServiceModel.InstanceContextMode> -Wert ( <xref:System.ServiceModel.InstanceContextMode.PerSession> ), der explizit für eine Dienstklasse festgelegt wird.  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]   
 public class CalculatorService : ICalculatorInstance   
 {   
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Bekannte Singleton-Dienste  
  Gelegentlich ist eine Variante für einzelne Instanzendienstobjekte nützlich: Sie können selbst ein Dienstobjekt und den Diensthost, der dieses Objekt verwendet, erstellen. Hierfür müssen Sie auch die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.Single> festlegen, damit keine Ausnahme ausgelöst wird, sobald der Diensthost geöffnet wird.  
   
- Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Alternative verwenden, wenn Ihr Dienstimplementierungstyp schwer zu erstellen ist (wenn er z.&#160;B. keinen öffentlichen parameterlosen Standardkonstruktor implementiert).  
+ Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienst Implementierungstyp schwer zu erstellen ist (wenn er z. b. keinen Parameter losen öffentlichen Konstruktor implementiert).  
   
  Beachten Sie Folgendes: Wenn ein Objekt für diesen Konstruktor bereitgestellt wird, funktionieren einige Funktionen im Zusammenhang mit dem Windows Communication Foundation-Instanziierungsverhalten (WCF) unterschiedlich. So zeigt zum Beispiel der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> keine Wirkung, wenn eine Singleton-Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Der <xref:System.ServiceModel.ServiceHost> verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> festgelegt ist.  
   
@@ -75,20 +75,20 @@ public class CalculatorService : ICalculatorInstance
   
  Es stehen die folgenden drei Parallelitätsmodi zur Verfügung:  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Single>: Jeder Instanzkontext darf maximal einen Thread haben, der Nachrichten im Instanzkontext verarbeitet. Falls weitere Threads diesen Instanzkontext verwenden möchten, werden sie so lange blockiert, bis der ursprüngliche Thread den Instanzkontext verlässt.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: Jeder Instanzkontext darf höchstens über jeweils einen Thread verfügen, der im Instanzkontext Nachrichten verarbeitet. Falls weitere Threads diesen Instanzkontext verwenden möchten, werden sie so lange blockiert, bis der ursprüngliche Thread den Instanzkontext verlässt.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Jede Dienst Instanz kann über mehrere Threads verfügen, die Nachrichten gleichzeitig verarbeiten. Für diesen Parallelitätsmodus muss die Dienstimplementierung threadsicher sein.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Jede Dienstinstanz kann über mehrere Threads verfügen, die Nachrichten gleichzeitig verarbeiten. Für diesen Parallelitätsmodus muss die Dienstimplementierung threadsicher sein.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Jede Dienst Instanz verarbeitet jeweils nur eine Nachricht, akzeptiert jedoch Eintritts intranetaufrufe. Der Dienst akzeptiert diese Aufrufe nur, wenn er über ein WCF-Client Objekt aufgerufen wird.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Jede Dienstinstanz verarbeitet jeweils nur eine Nachricht, akzeptiert jedoch eintrittsinvariante Aufrufe. Der Dienst akzeptiert diese Aufrufe nur, wenn er über ein WCF-Client Objekt aufgerufen wird.  
   
 > [!NOTE]
 > Das Schreiben von Code, bei dem problemlos mehr als ein Thread verwendet wird, kann sich als sehr schwierig erweisen. Stellen Sie sicher, dass Ihr Dienst ordnungsgemäß mit den Modi <xref:System.ServiceModel.ConcurrencyMode.Multiple> bzw. <xref:System.ServiceModel.ConcurrencyMode.Reentrant> arbeiten kann, bevor Sie diese Werte verwenden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
- Die Parallelität steht mit dem Instanziierungsmodus in Beziehung. Bei <xref:System.ServiceModel.InstanceContextMode.PerCall> <xref:System.ServiceModel.InstanceContext> der InstanziierungistdieParallelitätnichtrelevant,dajedeNachrichtvoneinemneuenverarbeitetwirdunddaherniemehralseinThreadimaktivist.<xref:System.ServiceModel.InstanceContext>  
+ Die Parallelität steht mit dem Instanziierungsmodus in Beziehung. In <xref:System.ServiceModel.InstanceContextMode.PerCall> Instanziierung ist die Parallelität nicht relevant, da jede Nachricht von einem neuen <xref:System.ServiceModel.InstanceContext> verarbeitet wird und daher nie mehr als ein Thread im <xref:System.ServiceModel.InstanceContext>aktiv ist.  
   
  Das folgende Codebeispiel zeigt, wie die <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> -Eigenschaft auf den Wert <xref:System.ServiceModel.ConcurrencyMode.Multiple>festgelegt wird.  
   
-```  
+```csharp
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]   
 public class CalculatorService : ICalculatorConcurrency   
 {   
@@ -103,15 +103,15 @@ public class CalculatorService : ICalculatorConcurrency
   
 |InstanceContextMode-Wert|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|PerCall|-Verhalten mit Sitzungs basierten Kanälen: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.<br />-Verhalten mit sessionless Channel: Es wird eine Ausnahme ausgelöst.|-Verhalten mit Sitzungs basierten Kanälen: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.<br />-Verhalten mit sessionless Channel: Ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|-Verhalten mit Sitzungs basierten Kanälen: Es wird eine Ausnahme ausgelöst.<br />-Verhalten mit sessionless Channel: Ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|  
-|PerSession|-Verhalten mit Sitzungs basierten Kanälen: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden Kanal.<br />-Verhalten mit sessionless Channel: Es wird eine Ausnahme ausgelöst.|-Verhalten mit Sitzungs basierten Kanälen: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden Kanal.<br />-Verhalten mit sessionless Channel: Ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|-Verhalten mit Sitzungs basierten Kanälen: Es wird eine Ausnahme ausgelöst.<br />-Verhalten mit sessionless Channel: Ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|  
-|Single|-Verhalten mit Sitzungs basierten Kanälen: Eine Sitzung und eine <xref:System.ServiceModel.InstanceContext> für alle Aufrufe.<br />-Verhalten mit sessionless Channel: Es wird eine Ausnahme ausgelöst.|-Verhalten mit Sitzungs basierten Kanälen: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für den erstellten oder benutzerdefinierten Singleton.<br />-Verhalten mit sessionless Channel: Ein <xref:System.ServiceModel.InstanceContext> für den erstellten oder benutzerdefinierten Singleton.|-Verhalten mit Sitzungs basierten Kanälen: Es wird eine Ausnahme ausgelöst.<br />-Verhalten mit sessionless Channel: Ein <xref:System.ServiceModel.InstanceContext> für jeden erstellten SINGLETON oder für den vom Benutzer angegebenen Singleton.|  
+|PerCall|-Verhalten mit Sitzungs basierten Kanälen: eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.<br />-Verhalten mit sessionless Channel: Es wird eine Ausnahme ausgelöst.|-Verhalten mit Sitzungs basierten Kanälen: eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.<br />-Verhalten mit sessionless Channel: ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|-Verhalten mit Sitzungs basierten Kanälen: Es wird eine Ausnahme ausgelöst.<br />-Verhalten mit sessionless Channel: ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|  
+|PerSession|-Verhalten mit Sitzungs basierten Kanälen: eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden Kanal.<br />-Verhalten mit sessionless Channel: Es wird eine Ausnahme ausgelöst.|-Verhalten mit Sitzungs basierten Kanälen: eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden Kanal.<br />-Verhalten mit sessionless Channel: ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|-Verhalten mit Sitzungs basierten Kanälen: Es wird eine Ausnahme ausgelöst.<br />-Verhalten mit sessionless Channel: ein <xref:System.ServiceModel.InstanceContext> für jeden-Befehl.|  
+|Single|-Verhalten mit Sitzungs basierten Kanälen: eine Sitzung und eine <xref:System.ServiceModel.InstanceContext> für alle Aufrufe.<br />-Verhalten mit sessionless Channel: Es wird eine Ausnahme ausgelöst.|-Verhalten mit Sitzungs basierten Kanälen: eine Sitzung und <xref:System.ServiceModel.InstanceContext> für den erstellten oder benutzerdefinierten Singleton.<br />-Verhalten mit sessionless Channel: eine <xref:System.ServiceModel.InstanceContext> für den erstellten oder den Benutzer angegebenen Singleton.|-Verhalten mit Sitzungs basierten Kanälen: Es wird eine Ausnahme ausgelöst.<br />-Verhalten mit sessionless Channel: ein <xref:System.ServiceModel.InstanceContext> für jeden erstellten SINGLETON oder für den vom Benutzer angegebenen Singleton.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verwenden von Sitzungen](../../../../docs/framework/wcf/using-sessions.md)
-- [Vorgehensweise: Erstellen eines Dienstanbieter, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Vorgehensweise: Steuern der Dienst Instanz](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Vorgehensweise: Steuern der Dienstinstanzerstellung](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Instanziierung](../../../../docs/framework/wcf/samples/instancing.md)
 - [Sitzung](../../../../docs/framework/wcf/samples/session.md)

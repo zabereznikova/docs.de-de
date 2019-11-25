@@ -2,14 +2,12 @@
 title: 'Entschärfung: Deserialisierung von Objekten über App-Domänen'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894115"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457928"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Entschärfung: Deserialisierung von Objekten über App-Domänen
 In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.  
@@ -50,4 +48,4 @@ In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Änderungen zur Laufzeit](runtime-changes-in-the-net-framework-4-5-1.md)
+- [Anwendungskompatibilität](application-compatibility.md)

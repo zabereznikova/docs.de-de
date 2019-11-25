@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093959"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739894"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -47,11 +47,11 @@ Die Ereignisbusschnittstelle benötigt daher eine Infrastruktur, die die prozess
 
 Wenn die Ausführung eines Befehls im Zusammenhang mit einer Aggregatinstanz voraussetzt, dass weitere Domänenregeln auf einem oder mehreren zusätzlichen Aggregaten ausgeführt werden, sollten Sie die Nebenwirkungen so entwerfen und implementieren, dass sie von Domänenereignissen ausgelöst werden. Abbildung 7-14 veranschaulicht einen der wichtigsten Anwendungsfälle: Ein Domänenereignis soll verwendet werden, um Zustandsänderungen über mehrere Aggregate innerhalb des gleichen Domänenmodells wiederzugeben.
 
-![Die Konsistenz zwischen den Aggregaten wird durch Domänenereignisse erreicht. Das Aggregat „Order“ sendet ein OrderStarted-Domänenereignis, das zur Aktualisierung des Aggregats „Buyer“ verwendet wird. ](./media/image15.png)
+![Diagramm, das ein Domänenereignis zeigt, das Daten zu einem Käufer-Aggregat steuert.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Abbildung 7-14**. Domänenereignisse zum Erzwingen der Konsistenz zwischen mehreren Aggregaten in der gleichen Domäne
 
-Die Abbildung veranschaulicht, dass das OrderStarted-Domänenereignis bei Bestellungsinitiierung durch den Benutzer die Erstellung eines Käuferobjekts in dem Microservice für Bestellungen auslöst. Dies erfolgt auf der Grundlage der ursprünglichen Benutzerinformationen aus dem Identitäts-Microservice (mit Informationen, die im Befehl CreateOrder bereitgestellt werden). Das Domänenereignis wird von dem Bestellungsaggregat generiert, wenn es erstellt wird.
+In Abbildung 7-14 wird gezeigt, wie die Konsistenz zwischen Aggregaten durch Domänenereignisse erzielt wird. Wenn der Benutzer eine Bestellung initiiert, sendet das Order-Aggregat ein `OrderStarted`-Domänenereignis. Das OrderStarted-Domänenereignis wird vom Buyer-Aggregat verarbeitet, um ein Käuferobjekt im Microservice für Bestellungen zu erstellen. Dies erfolgt auf Grundlage der ursprünglichen Benutzerinformationen aus dem Identitäts-Microservice (mit Informationen, die im CreateOrder-Befehl bereitgestellt werden).
 
 Alternativ kann der Aggregatstamm für Ereignisse abonniert werden, die von Mitgliedern seiner Aggregate ausgelöst werden (untergeordnete Entitäten). Jede untergeordnete OrderItem-Entität kann beispielsweise ein Ereignis auslösen, wenn der Artikelpreis über einem bestimmten Betrag liegt oder der Produktartikelbetrag zu hoch ist. Der Aggregatstamm kann dann diese Ereignisse empfangen und eine globale Berechnung oder Aggregation durchführen.
 
@@ -78,11 +78,11 @@ Wenn Sie Domänenereignisse verwenden, können Sie andererseits eine differenzie
 
 Wie Abbildung 7-15 zeigt, können Sie ausgehend vom selben Domänenereignis mehrere Aktionen im Zusammenhang mit anderen Aggregaten in der Domäne oder zusätzliche Anwendungsaktionen handhaben, die Sie über Microservices ausführen müssen, wobei eine Verbindung mit Integrationsereignissen und dem Ereignisbus hergestellt wird.
 
-![Es kann mehrere Handler für das gleiche Domänenereignis in der Anwendungsschicht geben. Ein Handler kann die Konsistenz zwischen Aggregaten auflösen, und ein anderer Handler kann ein Integrationsereignis veröffentlichen, damit andere Microservices es verwenden können.](./media/image16.png)
+![Diagramm, das ein Domänenereignis zeigt, das Daten an mehrere Ereignishandler übergibt.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Abbildung 7-15**. Behandlung mehrerer Aktionen pro Domäne
 
-Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null (0) oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
+Es kann mehrere Handler für das gleiche Domänenereignis in der Anwendungsschicht geben. Ein Handler kann die Konsistenz zwischen Aggregaten auflösen, und ein anderer Handler kann ein Integrationsereignis veröffentlichen, damit andere Microservices es verwenden können. Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null (0) oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
 
 Wenn Sie eine offene Anzahl von Handlern pro Domänenereignis verwenden, können Sie beliebig viele Domänenregeln hinzufügen, ohne dass der aktuelle Code beeinträchtigt wird. Das Implementieren der folgenden Geschäftsregel kann sich beispielsweise ebenso einfach gestalten wie das Hinzufügen von einigen Ereignishandlern oder auch nur einem Ereignishandler:
 
@@ -244,7 +244,7 @@ Ein Ansatz ist ein echtes Messagingsystem oder sogar ein Ereignisbus, möglicher
 
 Eine andere Möglichkeit, Ereignisse mehreren Ereignishandlern zuzuordnen, ist die Verwendung der Typenregistrierung in einem IoC-Container, damit Sie dynamisch ableiten können, wohin die Ereignisse gesendet werden sollen. Das heißt, Sie müssen wissen, welche Ereignishandler ein bestimmtes Ereignis abrufen müssen. Abbildung 7-16 zeigt einen vereinfachten Ansatz dafür.
 
-![Die Abhängigkeitsinjektion kann zum Zuordnen von Ereignissen zu Ereignishandlern verwendet werden. Das entspricht dem Ansatz von MediatR.](./media/image17.png)
+![Diagramm, das einen Domänenereignisverteiler zeigt, der Ereignisse an die geeigneten Handler sendet.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Abbildung 7-16**. Domänenereignisverteiler mit IoC
 

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778862"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457731"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Entschärfung: Pfadtrennzeichen für ZipArchiveEntry.FullName
 Beginnend mit Apps, die gezielt .NET Framework 4.6.1 verwenden, ändert sich das in der Eigenschaft <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> verwendete Pfadtrennzeichen von einem umgekehrten Schrägstrich (\\) aus den Vorgängerversionen von .NET Framework in einen einfachen Schrägstrich (/).   <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType>-Objekte werden durch Aufrufen einer der Überladungen der <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>-Methode erstellt.  
@@ -47,4 +45,4 @@ Beginnend mit Apps, die gezielt .NET Framework 4.6.1 verwenden, ändert sich d
 ## <a name="see-also"></a>Siehe auch
 
 - [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Anwendungskompatibilität in 4.6.1](application-compatibility-in-the-net-framework-4-6-1.md)
+- [Anwendungskompatibilität](application-compatibility.md)

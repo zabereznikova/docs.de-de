@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970909"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971054"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -44,7 +44,7 @@ int i = s.WordCount();
   
  Im Code rufen Sie die Erweiterungsmethode mit Instanzmethodensyntax auf. Die vom Compiler erstellte Intermediate Language (IL) übersetzt jedoch Ihren Code in einen Aufruf der statischen Methode. Daher wird nicht wirklich gegen das Prinzip der Kapselung verstoßen. Erweiterungsmethoden können vielmehr nicht auf private Variablen im Typ zugreifen, den sie erweitern.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode](./how-to-implement-and-call-a-custom-extension-method.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode](./how-to-implement-and-call-a-custom-extension-method.md).
   
  Im Allgemeinen werden Sie vermutlich viel häufiger Erweiterungsmethoden aufrufen, anstatt Ihre eigenen zu implementieren. Da Erweiterungsmethoden mit der Instanzmethodensyntax aufgerufen werden, sind für ihren Einsatz aus dem Clientcode keine besonderen Kenntnisse erforderlich. Um Erweiterungsmethoden für einen bestimmten Typ zu aktivieren, fügen Sie eine `using`-Direktive für den Namespace, in dem die Methoden definiert werden, hinzu. Um beispielsweise die Standardabfrageoperatoren zu verwenden, fügen Sie diese `using`-Direktive dem Code hinzu:  
   

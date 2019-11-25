@@ -10,22 +10,22 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854113"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975125"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 
-Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und das Serialisieren von umfangreichen Binärdaten auf diese Weise die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Leistung beeinträchtigen können, definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu der Sie gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.
+Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und das Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können, definiert der Open Data Protocol (odata) einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu der er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.
 
 - Medienressource – Binärdaten, die zu einer Entität gehören, z. B. ein Video, ein Audioelement, ein Bild oder ein anderer Typ von Medienressourcenstream.
 
 - Medienlinkeintrag – eine Entität, die über einen Verweis auf einen zugehörigen Medienressourcenstream verfügt.
 
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] definieren Sie einen binären Ressourcenstream durch das Implementieren eines Streamingdatenanbieters. Die Implementierung des streaminganbieters stellt dem Datendienst den Medienressourcen Datenstrom bereit, der <xref:System.IO.Stream> einer bestimmten Entität als Objekt zugeordnet ist. Diese Implementierung ermöglicht dem Datendienst, Medienressourcen über HTTP als binäre Datenströme eines angegebenen MIME-Typs zu akzeptieren und zurückzugeben.
+Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] definieren Sie einen binären Ressourcenstream durch das Implementieren eines Streamingdatenanbieters. Die streaminganbieter-Implementierung stellt dem Datendienst den Medienressourcen Datenstrom bereit, der einer bestimmten Entität zugeordnet ist, als <xref:System.IO.Stream> Objekt. Diese Implementierung ermöglicht dem Datendienst, Medienressourcen über HTTP als binäre Datenströme eines angegebenen MIME-Typs zu akzeptieren und zurückzugeben.
 
 Folgende Schritte sind erforderlich, um einen Datendienst zu konfigurieren, der das Streaming von Binärdaten unterstützt:
 
@@ -39,7 +39,7 @@ Folgende Schritte sind erforderlich, um einen Datendienst zu konfigurieren, der 
 
 5. Aktivieren Sie den Zugriff auf binäre Ressourcen auf dem Server oder in einer Datenquelle.
 
-Die Beispiele in diesem Thema basieren auf einem Beispiel-Streaming-Foto-Dienst, der im Beitrag [Data Services Streaming Provider-Reihe ausführlich erläutert wird: Implementieren eines streaminganbieters (](https://go.microsoft.com/fwlink/?LinkID=198989)Teil 1). Der Quellcode für diesen Beispiel Dienst ist auf der [Beispielseite Streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkID=198988) auf der MSDN Code Gallery verfügbar.
+Die Beispiele in diesem Thema basieren auf einem Beispiel-Streaming-Foto-Dienst, der im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989)ausführlich erläutert wird. Der Quellcode für diesen Beispiel Dienst ist auf der [Beispielseite Streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkID=198988) auf der MSDN Code Gallery verfügbar.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definieren eines Medienlinkeintrags im Datenmodell
 
@@ -53,7 +53,7 @@ Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Entit
 
 Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.
 
-Ein Beispiel für einen Datendienst, der den Entity Framework Anbieter verwendet und eine Medien Ressource verfügbar macht, finden Sie [im Beitrag Data Services Streaming Provider Series: Implementieren eines streaminganbieters (](https://go.microsoft.com/fwlink/?LinkID=198989)Teil 1).
+Ein Beispiel für einen Datendienst, der den Entity Framework Anbieter verwendet und eine Medien Ressource verfügbar macht, finden Sie im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
 
 **Reflektionsanbieter**
 
@@ -91,11 +91,11 @@ Allgemeine Informationen zum Erstellen eines Daten dienstanzdienstanbieter finde
 Wenn Sie einen Datendienst in einer ASP.NET-Webanwendung erstellen, wird Windows Communication Foundation (WCF) verwendet, um die HTTP-Protokoll Implementierung bereitzustellen. Standardmäßig schränkt WCF die Größe von HTTP-Nachrichten auf nur 65 KB ein. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:
 
 > [!NOTE]
-> Sie müssen den <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> Übertragungsmodus verwenden, um sicherzustellen, dass die Binärdaten in den Anforderungs-und Antwort Nachrichten per Streaming gestreamt und nicht von WCF gepuffert werden.
+> Sie müssen einen <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> Übertragungsmodus verwenden, um sicherzustellen, dass die Binärdaten in den Anforderungs-und Antwort Nachrichten per Streaming gestreamt und nicht von WCF gepuffert werden.
 
 Weitere Informationen finden Sie unter [Streaming Message Transfer](../../wcf/feature-details/streaming-message-transfer.md) and [Transport Kontingenten](../../wcf/feature-details/transport-quotas.md).
 
-Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Sie müssen das `maxRequestLength` -Attribut des [httpRuntime-Elements (ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) `<system.web />` ) im Konfigurations Abschnitt festlegen, um es dem Datendienst zu ermöglichen, Datenströme zu erhalten, die größer als 4 MB sind, wenn Sie auf IIS ausgeführt werden. Dies ist im folgenden dargestellt: Beispiel
+Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Damit der Datendienst bei Ausführung unter IIS Datenströme empfangen kann, die größer als 4 MB sind, müssen Sie auch das `maxRequestLength`-Attribut des [httpRuntime-Elements (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) im `<system.web />`-Konfigurations Abschnitt festlegen, wie im folgenden Beispiel gezeigt:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Verwenden von Datenströmen in einer Clientanwendung
 
@@ -131,9 +131,9 @@ Folgende Aspekte sollten bei der Implementierung eines Streaminganbieters und be
 
 ## <a name="versioning-requirements"></a>Versionsanforderungen
 
-Der Streaminganbieter hat die folgenden Anforderungen an die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokollversion:
+Der streaminganbieter verfügt über die folgenden Anforderungen an die odata-Protokoll Versionsverwaltung:
 
-- Der Streaminganbieter erfordert, dass der Datendienst Version 2.0 des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls und höhere Versionen unterstützt.
+- Der streaminganbieter erfordert, dass der Datendienst Version 2,0 des odata-Protokolls und höhere Versionen unterstützt.
 
 Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md).
 

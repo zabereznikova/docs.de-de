@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458956"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973989"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -168,7 +168,7 @@ Im folgenden Beispiel wird eine Bindung gezeigt und die <xref:System.Windows.Fra
 Weitere Informationen finden Sie unter [ Vererbung von Eigenschaftswerten](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>WPF-Designer-Integration
-Ein benutzerdefiniertes Steuerelement mit Eigenschaften, die als Abhängigkeitseigenschaften implementiert werden, erhalten entsprechenden [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]-Support. Ein Beispiel hierfür ist die Fähigkeit, direkte und angefügte Abhängigkeitseigenschaften mit dem **Eigenschaften**-Fenster zu bearbeiten. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).
+Ein benutzerdefiniertes Steuerelement mit Eigenschaften, die als Abhängigkeits Eigenschaften implementiert werden, empfängt den entsprechenden WPF-Designer für Visual Studio-Unterstützung Ein Beispiel hierfür ist die Fähigkeit, direkte und angefügte Abhängigkeitseigenschaften mit dem **Eigenschaften**-Fenster zu bearbeiten. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 Wenn Sie den Wert einer Abhängigkeitseigenschaft abrufen, erhalten Sie möglicherweise einen Wert, der mithilfe einer der anderen auf Eigenschaften basierenden Eingaben, die Bestandteil des WPF-Systems sind, für die Eigenschaft festgelegt wurde. Abhängigkeitseigenschaftswerten werden Prioritäten zugewiesen, damit eine Vielzahl von Szenarios zur Art und Weise, wie Eigenschaften ihre Werte erhalten, in einer vorhersagbaren Weise interagieren können.

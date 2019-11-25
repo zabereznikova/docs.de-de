@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937523"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974016"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -40,7 +40,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
 - **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die DirectX-Versions Ebene ist größer als oder gleich Version 9,0.  
   
- Die <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> -Eigenschaft ermöglicht es Ihnen, die Renderingebene zur Laufzeit der Anwendung abzurufen. Sie verwenden die Renderingebene für die Bestimmung, ob das Gerät bestimmte hardwarebeschleunigte Grafikfunktionen unterstützt. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit verwenden, je nach der vom Gerät unterstützten Renderingebene.  
+ Die <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType>-Eigenschaft ermöglicht es Ihnen, die Renderingebene zur Laufzeit der Anwendung abzurufen. Sie verwenden die Renderingebene für die Bestimmung, ob das Gerät bestimmte hardwarebeschleunigte Grafikfunktionen unterstützt. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit verwenden, je nach der vom Gerät unterstützten Renderingebene.  
   
 ### <a name="rendering-tier-0"></a>Renderingebene 0  
  Der Wert 0 der Renderingebene bedeutet, dass keine Beschleunigung der Grafikhardware vorhanden ist, die für die Anwendung auf dem Gerät verfügbar ist. Auf dieser Ebene sollten Sie davon ausgehen, dass alle Grafiken von Software ohne Hardwarebeschleunigung gerendert werden. Die Funktionalität dieser Ebene entspricht einer DirectX-Version, die kleiner als 9,0 ist.  
@@ -64,32 +64,32 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Die folgenden Features und Funktionen sind für die Renderingebene 1 und 2 hardwarebeschleunigt:  
   
-|Feature|Hinweise|  
+|Feature|Notizen|  
 |-------------|-----------|  
 |2D-Rendering|Das meiste 2D-Rendering wird unterstützt.|  
 |3D-Rasterung|Die meisten 3D-Rasterungen werden unterstützt.|  
 |Anisotrope 3D-Filterung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten anisotrope Filterung zu verwenden. Anisotrope Filterung bezieht sich auf die verbesserte Bildqualität von Texturen auf Oberflächen, die in Bezug auf die Kamera weit entfernt und stark angewinkelt sind.|  
-|3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten MIP-Zuordnung zu verwenden. Die MIP-Zuordnung verbessert die Qualität des Textur Rendering, wenn eine Textur ein kleineres Ansichts Feld <xref:System.Windows.Controls.Viewport3D>in einem einnimmt.|  
-|Radiale Farbverläufe|Vermeiden Sie die Verwendung von <xref:System.Windows.Media.RadialGradientBrush> für große Objekte, während dies unterstützt wird.|  
+|3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten MIP-Zuordnung zu verwenden. Die MIP-Zuordnung verbessert die Qualität des Textur Rendering, wenn eine Textur ein kleineres Ansichts Feld in einem <xref:System.Windows.Controls.Viewport3D>einnimmt.|  
+|Radiale Farbverläufe|Vermeiden Sie die Verwendung von <xref:System.Windows.Media.RadialGradientBrush> bei großen Objekten, während dies unterstützt wird.|  
 |3D-Beleuchtungsberechnungen|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] führt die Pro-Vertex-Beleuchtung aus, was bedeutet, dass eine Lichtstärke bei jedem Vertex für jedes auf ein Mesh angewendetes Material berechnet werden muss.|  
 |Rendering von Text|Das Rendering der Subpixel-Schriftart verwendet verfügbare Pixel-Shader in der Grafikhardware.|  
   
  Die folgenden Features und Funktionen sind nur für die Renderingebene 2 hardwarebeschleunigt:  
   
-|Feature|Hinweise|  
+|Feature|Notizen|  
 |-------------|-----------|  
-|3D-Antialiasing|3D Antialiasing wird nur auf Betriebssystemen unterstützt, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|3D-Antialiasing|3D-Antialiasing wird nur unter Betriebssystemen unterstützt, die Windows Display Driver Model (WDDM) unterstützen, wie z. b. Windows Vista und [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
   
  Die folgenden Features und Funktionen sind **nicht** hardwarebeschleunigt:  
   
-|Feature|Hinweise|  
+|Feature|Notizen|  
 |-------------|-----------|  
 |Gedruckter Inhalt|Jeder gedruckte Inhalt wird mithilfe der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Softwarepipeline gerendert.|  
-|Rasterierter Inhalt, der verwendet<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Alle Inhalte, die mit der <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> -Methode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>von gerendert werden.|  
-|Gekachelter Inhalt, der verwendet<xref:System.Windows.Media.TileBrush>|Ein gekachelter Inhalt, <xref:System.Windows.Media.TileBrush.TileMode%2A> in dem die <xref:System.Windows.Media.TileBrush> -Eigenschaft von <xref:System.Windows.Media.TileMode.Tile>auf festgelegt ist.|  
+|Rasterisierter Inhalt, der <xref:System.Windows.Media.Imaging.RenderTargetBitmap> verwendet|Alle Inhalte, die mit der <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>-Methode von <xref:System.Windows.Media.Imaging.RenderTargetBitmap>gerendert werden.|  
+|Gekachelter Inhalt, der <xref:System.Windows.Media.TileBrush> verwendet|Alle gekachelten Inhalte, in denen die <xref:System.Windows.Media.TileBrush.TileMode%2A>-Eigenschaft des <xref:System.Windows.Media.TileBrush> auf <xref:System.Windows.Media.TileMode.Tile>festgelegt ist.|  
 |Flächen, die die maximale Texturgröße der Grafikhardware überschreiten|Bei der meisten Grafikhardware sind große Flächen 2048 x 2048 oder 4096 x 4096 Pixel groß.|  
 |Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) im Windows SDK ist.|  
-|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Auf Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)], sind überlappende Fenster hardwarebeschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in aktivieren, indem <xref:System.Windows.Window> Sie die folgenden Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Unter Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen (z. b. Windows Vista und [!INCLUDE[win7](../../../../includes/win7-md.md)]), werden mehrstufige Fenster Hardware beschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aktivieren, indem Sie die folgenden <xref:System.Windows.Window> Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Weitere Ressourcen  
@@ -124,7 +124,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Wenn Sie das DirectX-Diagnose Tool ausführen, enthält das Hauptfenster eine Reihe von Registerkarten, mit denen Sie DirectX-bezogene Informationen anzeigen und diagnostizieren können. Beispielsweise werden auf der Registerkarte **System** Systeminformationen zu Ihrem Computer und die auf dem Computer installierte DirectX-Version angegeben.  
   
- ![Bildschirm Abbildung DirectX-Diagnose]Tool(./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Bildschirmabbildung: DirectX-Diagnosetool](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Hauptfenster des DirectX-Diagnosetools  
   
 ## <a name="see-also"></a>Siehe auch

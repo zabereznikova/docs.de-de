@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052065"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975699"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Fehler beim Initialisieren von .NET Framework: Verwalten der Benutzerfreundlichkeit
 
@@ -41,7 +41,7 @@ Die CLR-Aktivierung APIs geben HRESULT-Code zurück, um das Ergebnis einer Aktiv
 
 Wenn das CLR-Aktivierungssystem die richtige Version der Laufzeit, die von einer Anwendung benötigt wird, nicht laden kann, wird eine Fehlermeldung angezeigt. Diese informiert den Benutzer darüber, dass der Computer für das Ausführen der Anwendung nicht ordnungsgemäß konfiguriert ist, und bietet eine Möglichkeit, die Situation zu beheben. In dieser Situation wird in der Regel die folgende Fehlermeldung erstellt. Der Benutzer kann **Ja** wählen, um zu einer Microsoft-Website zu wechseln, auf der die richtige .NET Framework-Version für die Anwendung heruntergeladen werden kann.
 
-![Dialogfeld: Fehler beim Initialisieren von .NET Framework](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Typische Fehlermeldung für Initialisierungsfehler")
+Dialogfeld ![Fehler beim Initialisieren von .NET Framework](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Typische Fehlermeldung bei Initialisierungsfehlern")
 
 ## <a name="resolving-the-initialization-error"></a>Beheben von Initialisierungsfehlern
 
@@ -59,7 +59,7 @@ Das Anzeigen einer Fehlermeldung, die kommuniziert, dass eine angeforderte .NET 
 
 Die [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)-Methode akzeptiert einen [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md)-Enumerationsmember als Eingabe. Sie können das METAHOST_POLICY_SHOW_ERROR_DIALOG-Flag einschließen, um eine Fehlermeldung anzufordern, wenn die angeforderte Version der CLR nicht gefunden wird. Standardmäßig wird die Fehlermeldung nicht angezeigt. (Die [ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md)-Methode akzeptiert dieses Flag nicht und stellt keine andere Möglichkeit bereit, um die Fehlermeldung anzuzeigen.)
 
-Windows bietet eine [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242)-Funktion, die Sie verwenden können, um zu deklarieren, dass Sie Fehlermeldungen aufgrund des innerhalb des Prozesses ausgeführten Codes angezeigt werden soll. Sie können das SEM_FAILCRITICALERRORS-Flag angeben, um das Anzeigen der Fehlermeldung zu verhindern.
+Windows bietet eine [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)-Funktion, die Sie verwenden können, um zu deklarieren, dass Sie Fehlermeldungen aufgrund des innerhalb des Prozesses ausgeführten Codes angezeigt werden soll. Sie können das SEM_FAILCRITICALERRORS-Flag angeben, um das Anzeigen der Fehlermeldung zu verhindern.
 
 In einigen Szenarios ist es wichtig, die SEM_FAILCRITICALERRORS-Einstellung zu überschreiben, die von einem Anwendungsprozess festgelegt wurde. Wenn Sie beispielsweise über eine systemeigene COM-Komponente verfügen, die die CLR hostet und in einem Prozess gehostet wird, in dem SEM_FAILCRITICALERRORS festgelegt ist, können Sie das Flag in Abhängigkeit von den Auswirkungen der Anzeige von Fehlermeldungen in diesem bestimmten Prozess überschreiben. In diesem Fall können Sie eines der folgenden Flags verwenden, um SEM_FAILCRITICALERRORS zu überschreiben:
 
@@ -82,7 +82,7 @@ Die CLR bietet eine Reihe von Hosts für verschiedene Szenarien, und alle diese 
 
 Das CLR-Aktivierungssystem stellt das gleiche Verhalten und die gleiche Benutzeroberfläche auf [!INCLUDE[win8](../../../includes/win8-md.md)] bereit, wie auf anderen Versionen des Windows-Betriebssystems, es sei denn, es treten Probleme beim Laden von CLR 2.0 auf. [!INCLUDE[win8](../../../includes/win8-md.md)] enthält .NET Framework 4.5, bei dem CLR 4.5 verwendet wird. [!INCLUDE[win8](../../../includes/win8-md.md)] enthält jedoch nicht .NET Framework 2.0, 3.0 oder 3.5, die alle CLR 2.0 verwenden. Daher werden Anwendungen, die auf CLR 2.0 angewiesen sind, unter [!INCLUDE[win8](../../../includes/win8-md.md)] nicht standardmäßig ausgeführt. Stattdessen wird das folgende Dialogfeld angezeigt, um Benutzern die Installation von .NET Framework 3.5 zu ermöglichen. Benutzer können .NET Framework 3.5 auch in der Systemsteuerung aktivieren. Beide Optionen werden im Artikel [Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8](../install/dotnet-35-windows-10.md) behandelt.
 
-![Dialogfeld für die Installation von .NET Framework 3.5 unter Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Aufforderung zur Installation von .NET Framework 3.5 (nach Bedarf)")
+![Dialogfeld für die Installation von 3.5 auf Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Aufforderung zum Installieren von .NET Framework 3.5 bei Bedarf")
 
 > [!NOTE]
 > .NET Framework 4.5 ersetzt .NET Framework 4 (CLR 4) auf dem Computer des Benutzers. Daher werden .NET Framework 4-Anwendungen nahtlos ausgeführt, ohne dieses Dialogfeld auf [!INCLUDE[win8](../../../includes/win8-md.md)] anzuzeigen.

@@ -2,12 +2,12 @@
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674097"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737925"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -174,11 +174,11 @@ Das Implementieren benutzerdefinierter Repositorys bietet jedoch mehrere Vorteil
 
 Abbildung 7-18 zeigt die Unterschiede zwischen einer Vorgehensweise ohne Repositorys (d.h. direkte Verwendung von EF-DbContext) im Vergleich zu einer Verwendung von Repositorys, die das Modellieren dieser Repositorys erleichtert.
 
-![Vergleich zwischen der Verwendung eines benutzerdefinierten Repositorys und eines einfachen DbContext: Das benutzerdefinierte Repository fügt eine Abstraktionsebene hinzu, mit der Tests durch das Modellieren des Repositorys vereinfacht werden können.](./media/image19.png)
+![Diagramm, das die Komponenten und den Datenfluss in den beiden Repositorys zeigt.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Abbildung 7-18**. Verwenden von benutzerdefinierten Repositorys im Vergleich zu einfachem DbContext
 
-Es gibt mehrere Alternativen für die Modellierung. Sie können lediglich Repositorys oder eine vollständige Arbeitseinheit modellieren. Üblicherweise reicht es aus, nur die Repositorys zu modellieren. Das komplexe Abstrahieren und Modellieren einer vollständigen Arbeitseinheit ist in der Regel nicht erforderlich.
+Abbildung 7–18 zeigt, dass die Verwendung eines benutzerdefinierten Repositorys eine Abstraktionsebene hinzufügt, mit der Tests durch das Modellieren des Repositorys vereinfacht werden können. Es gibt mehrere Alternativen für die Modellierung. Sie können lediglich Repositorys oder eine vollständige Arbeitseinheit modellieren. Üblicherweise reicht es aus, nur die Repositorys zu modellieren. Das komplexe Abstrahieren und Modellieren einer vollständigen Arbeitseinheit ist in der Regel nicht erforderlich.
 
 Wenn wir uns weiter unten mit der Anwendungsebene befassen, werden Sie sehen, wie die Abhängigkeitseinfügung in ASP.NET Core funktioniert und wie sie bei der Verwendung von Repositorys implementiert wird.
 

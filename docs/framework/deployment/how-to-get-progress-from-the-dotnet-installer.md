@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052084"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975552"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 
@@ -55,13 +55,13 @@ Im Chainer-Beispiel wird das .NET Framework 4.5-Setup automatisch gestartet un
 > [!WARNING]
 > Sie müssen das Beispiel als Administrator ausführen.
 
-Sie können die vollständige Visual Studio-Projektmappe für das [Chainer-Beispiel für .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) von der MSDN Samples Gallery herunterladen.
+Sie können die vollständige Visual Studio-Projektmappe für das [Chainer-Beispiel für .NET Framework 4.5](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) von der MSDN Samples Gallery herunterladen.
 
 In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel beschrieben: MMIOChainer.h, ChainingdotNet4.cpp und IProgressObserver.h.
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- Die Datei „MMIOChainer.h“ (siehe den [vollständigen Code](https://go.microsoft.com/fwlink/?LinkId=231369)) enthält die Datenstrukturdefinition und die Basisklasse, von der die chainer-Klasse abgeleitet werden sollte. .NET Framework 4.5 erweitert die MMIO-Datenstruktur, um Daten zu behandeln, die das .NET Framework 4.5-Installationsprogramm benötigt. Die Änderungen an der MMIO-Struktur sind abwärtskompatibel. Deshalb kann ein .NET Framework 4-Chainer mit dem .NET Framework 4.5-Setup verwendet werden, ohne dass eine Neukompilierung erforderlich ist. In diesem Szenario wird jedoch nicht die Funktion zur Reduzierung von Systemneustarts unterstützt.
+- Die Datei „MMIOChainer.h“ (siehe den [vollständigen Code](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)) enthält die Datenstrukturdefinition und die Basisklasse, von der die chainer-Klasse abgeleitet werden sollte. .NET Framework 4.5 erweitert die MMIO-Datenstruktur, um Daten zu behandeln, die das .NET Framework 4.5-Installationsprogramm benötigt. Die Änderungen an der MMIO-Struktur sind abwärtskompatibel. Deshalb kann ein .NET Framework 4-Chainer mit dem .NET Framework 4.5-Setup verwendet werden, ohne dass eine Neukompilierung erforderlich ist. In diesem Szenario wird jedoch nicht die Funktion zur Reduzierung von Systemneustarts unterstützt.
 
     Ein Versionsfeld ermöglicht das Erkennen von Änderungen an der Struktur und dem Meldungsformat. Das .NET Framework-Setup bestimmt die Version der Chainer-Schnittstelle, indem die `VirtualQuery`-Funktion aufgerufen wird, um die Größe der Dateizuordnung zu ermitteln. Wenn die Größe für das Versionsfeld ausreicht, verwendet das .NET Framework-Setup den angegebenen Wert. Wenn die Dateizuordnung zu klein ist, um ein Versionsfeld aufzunehmen, wie dies bei .NET Framework 4 der Fall ist, wird beim Setupvorgang Version 0 (4) angenommen. Wenn der Chainer die Version der Meldung, die vom .NET Framework-Setup gesendet werden soll, nicht unterstützt, geht das .NET Framework-Setup von der Antwort "Ignorieren" aus.
 
@@ -98,7 +98,7 @@ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
-- Die Datei „IProgressObserver.h“ implementiert einen Statusbeobachter (siehe den [vollständigen Code](https://go.microsoft.com/fwlink/?LinkId=231370)). Dieser Beobachter wird über den Download- und Installationsstatus (als `char` ohne Vorzeichen mit den Werten 0-255, gibt Abschluss von 1 %-100 % an) benachrichtigt. Der Beobachter wird außerdem benachrichtigt, wenn der Chainee eine Meldung sendet, und der Beobachter sollte eine Antwort senden.
+- Die Datei „IProgressObserver.h“ implementiert einen Statusbeobachter (siehe den [vollständigen Code](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)). Dieser Beobachter wird über den Download- und Installationsstatus (als `char` ohne Vorzeichen mit den Werten 0-255, gibt Abschluss von 1 %-100 % an) benachrichtigt. Der Beobachter wird außerdem benachrichtigt, wenn der Chainee eine Meldung sendet, und der Beobachter sollte eine Antwort senden.
 
     ```cpp
         class IProgressObserver
@@ -112,7 +112,7 @@ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel
 
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
-- Die Datei [chainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) implementiert die von der `MmioChainer`-Klasse abgeleitete `Server`-Klasse und setzt die entsprechenden Methoden außer Kraft, um Statusinformationen anzuzeigen. Der MmioChainer erstellt einen Abschnitt mit dem angegebenen Abschnittsnamen und initialisiert den Chainer mit dem angegebenen Ereignisnamen. Der Ereignisname wird in der zugeordneten Datenstruktur gespeichert. Sie sollten eindeutige Abschnitts- und Ereignisnamen angeben. Die `Server`-Klasse im folgenden Code startet das angegebene Setupprogramm, überwacht seinen Status und gibt einen Exitcode zurück.
+- Die Datei [chainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) implementiert die von der `MmioChainer`-Klasse abgeleitete `Server`-Klasse und setzt die entsprechenden Methoden außer Kraft, um Statusinformationen anzuzeigen. Der MmioChainer erstellt einen Abschnitt mit dem angegebenen Abschnittsnamen und initialisiert den Chainer mit dem angegebenen Ereignisnamen. Der Ereignisname wird in der zugeordneten Datenstruktur gespeichert. Sie sollten eindeutige Abschnitts- und Ereignisnamen angeben. Die `Server`-Klasse im folgenden Code startet das angegebene Setupprogramm, überwacht seinen Status und gibt einen Exitcode zurück.
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver

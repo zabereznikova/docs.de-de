@@ -1,81 +1,69 @@
 ---
-title: Anwendungskompatibilität im .NET Framework
-ms.date: 05/19/2017
+title: Änderungen der Runtime und Neuausrichtung in .NET Framework
+ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790121"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196696"
 ---
-# <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
+# <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität in .NET Framework
 
-## <a name="introduction"></a>Einführung
-Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch Kompatibilität wird sichergestellt, dass jede Version additiv ist; frühere Versionen funktionieren also weiterhin. Auf der anderen Seite können Änderungen an früheren Versionen (zur Leistungssteigerung, Beheben von Sicherheitsproblemen oder Fehlerbehebungen) zu Kompatibilitätsproblemen im vorhandenen Code oder Anwendungen führen, die unter einer späteren Version ausgeführt werden. .NET Framework erkennt Änderungen der Neuzuweisung und Laufzeitänderungen. Die Neuzuweisung von Änderungen beeinflussen Anwendungen, die auf eine bestimmte .NET Framework-Version abzielen, aber auf einer höheren Version ausgeführt werden. Laufzeitänderungen betreffen alle Anwendungen, die auf einer bestimmten Version ausgeführt werden.
+Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch die Kompatibilität wird sichergestellt, dass jede Version additiv ist. Frühere Versionen funktionieren also weiterhin. Andererseits können Änderungen an früheren Versionen (z. B. zur Leistungssteigerung, Beheben von Sicherheitsproblemen oder Fehlerbehebungen) zu Kompatibilitätsproblemen im vorhandenen Code oder Anwendungen führen, die unter einer späteren Version ausgeführt werden.
 
-Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folgendes angegeben werden kann:
+Jede App wird wie folgt auf eine spezifische Version von .NET Framework ausgerichtet:
 
 - Definieren eines Zielframeworks in Visual Studio
 - Angeben des Zielframeworks in einer Projektdatei
 - Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
 
-Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert. Die Version von .NET Framework, für die eine Anwendung ausgerichtet ist, wird durch die Zielversion der Einstiegsassembly für die Anwendungsdomäne bestimmt, in der der Code ausgeführt wird. Alle zusätzlichen in dieser Anwendungsdomäne geladenen Assemblys sind für diese Version von .NET Framework ausgelegt. Bei einer ausführbaren Datei ist z.B. der Kompatibilitätsmodus das Zielframework der ausführbaren Datei, unter dem alle Assemblys in der AppDomain ausgeführt werden.
+Bei der Migration von einer Version von .NET Framework zu einer anderen gibt es zwei Arten von Änderungen, die Sie berücksichtigen sollten:
+
+- [Laufzeitänderungen](#runtime-changes)
+- [Neuausrichtungsänderungen](#retargeting-changes)
 
 ## <a name="runtime-changes"></a>Laufzeitänderungen
 
-Laufzeitprobleme tauchen auf, wenn eine neue Laufzeit auf einem Gerät bereitgestellt wird und wenn die gleichen Binärdateien ausgeführt werden, es jedoch zu anderem Verhalten kommt. Wenn eine Binärdatei für .NET Framework 4.0 kompiliert wurde, wird Sie im .NET Framework 4.0-Kompatibilitätsmodus auf 4.5 oder späteren Versionen ausgeführt. Viele Änderungen, die 4.5 betreffen, werden für 4.0 kompilierte Binärdateien nicht betreffen. Dies ist spezifisch für AppDomain und ist von den Einstellungen der Einstiegsassembly abhängig.
+Probleme mit der Runtime treten auf, wenn eine neue Runtime auf einem Computer platziert wird und sich das Verhalten einer App ändert. Wenn eine neuere Version als die Zielversion ausgeführt wird, nutzt .NET Framework ein *besonderes* Verhalten, um die ältere Zielversion zu imitieren. Die App wird in der neueren Version ausgeführt, fungiert jedoch, als würde sie in der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert. Wenn eine Binärdatei beispielsweise für .NET Framework 4.0 kompiliert wurde, aber auf einem Computer mit .NET Framework 4.5 oder höher ausgeführt wird, wird sie im .NET Framework 4.0-Kompatibilitätsmodus ausgeführt. Das heißt, dass viele der Änderungen der neueren Version sich nicht auf die Binärdatei auswirken.
+
+Die Version von .NET Framework, für die eine Anwendung ausgerichtet ist, wird durch die Zielversion der Einstiegsassembly für die Anwendungsdomäne bestimmt, in der der Code ausgeführt wird. Alle zusätzlichen in dieser Anwendungsdomäne geladenen Assemblys sind für diese Version ausgelegt. Beispielsweise entspricht die Zielversion bei einer ausführbaren Datei dem Kompatibilitätsmodus aller Assemblys, die in der Anwendungsdomäne ausgeführt werden.
+
+Sie können eine Liste der Runtimeänderungen anzeigen, die für Ihre Umgebung gelten, indem Sie Ihre aktuelle .NET Framework-Zielversion und dann die Version auswählen, zu der Sie migrieren möchten:
+
+[!INCLUDE[versionselector](../../../includes/migration-guide/runtime/versionselector.md)]
 
 ## <a name="retargeting-changes"></a>Neuausrichtungsänderungen
 
-Probleme bei der Neuzuweisung erscheinen, wenn eine Assembly, die ursprünglich 4.0 angepeilt hat, nun 4.5 als Ziel hat. Die Assembly wählt nun die neuen Funktionen sowie die potenziellen Kompatibilitätsprobleme für alte Funktionen. Dies wird erneut von der Einstiegsassembly bestimmt, also von der Konsolen-App, die die Assembly verwendet oder der Website, die auf die Assembly verweist.
+Neuausrichtungsänderungen beziehen sich auf Änderungen, die auftreten, wenn eine Assembly für eine neuere Zielversion neu kompiliert wird. Das Verwenden einer neuen Zielversion bedeutet, dass die Assembly die neuen Features verwendet und möglicherweise potenzielle Kompatibilitätsprobleme für alte Features auftreten.
 
-## <a name="net-compatibility-diagnostics"></a>Diagnose der .NET-Kompatibilität
+Sie können eine Liste der Neuausrichtungsänderungen anzeigen, die für Ihre Umgebung gelten, indem Sie Ihre aktuelle .NET Framework-Zielversion und dann die Version auswählen, zu der Sie migrieren möchten:
 
-Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer, die bei der Erkennung von Anwendungskompatibilitätsproblemen zwischen .NET Framework-Versionen helfen. Diese Liste enthält alle verfügbaren Analyzer, obwohl nur eine Teilmenge auf eine bestimmte Migration angewendet werden kann. Die Analyzer ermitteln, welche Probleme auf die geplante Migration zutreffen und beschreibt diese nur kurz.
+[!INCLUDE[versionselector](../../../includes/migration-guide/retargeting/versionselector.md)]
 
-Jedes Problem umfasst die folgenden Informationen:
+## <a name="impact-classification"></a>Klassifizierung der Auswirkungen
 
-- Die Beschreibung der Änderungen von einer früheren Version.
+In den Artikeln, in denen die Runtime- und Neuausrichtungsänderungen beschrieben werden, z. B. unter [Neuausrichtungsänderungen für die Migration von 4.7.2 zu 4.8](retargeting/4.7.2-4.8.md), werden einzelne Elemente wie folgt nach ihren erwarteten Auswirkungen klassifiziert:
 
-- Wie sich die Änderung auf Kunden auswirkt und ob Problemumgehungen verfügbar sind, um die Kompatibilität zwischen Versionen beizubehalten.
+**Major**\
+Eine wesentliche Änderung, die viele Apps beeinflusst oder erhebliche Änderungen des Codes erforderlich macht.
 
-- Eine Bewertung der Bedeutung der Änderung. Anwendungskompatibilitätsprobleme werden wie folgt kategorisiert:
+**Minor**\
+Eine Änderung, die eine kleine Anzahl von Apps beeinflusst oder geringfügige Änderungen des Codes erforderlich macht.
 
-    |   |   |
-    |---|---|
-    |Hauptversion|Eine wesentliche Änderung, die eine große Anzahl von Apps beeinflusst oder erhebliche Änderungen des Codes erforderlich macht.|
-    |Gering|Eine Änderung, die eine kleine Anzahl von Apps beeinflusst oder geringfügige Änderungen des Codes erforderlich macht.|
-    |Grenzfall|Eine Änderung, die nur Apps in sehr spezifischen, nicht üblichen Szenarien beeinflusst.|
-    |Transparent|Eine Änderung ohne nennenswerte Auswirkungen auf die Entwickler oder Benutzer der Anwendung.|
+**Grenzfall**\
+Eine Änderung, die nur Apps in sehr spezifischen Szenarien beeinflusst, die nicht üblich sind.
 
-- Die Version gibt an, wann die Änderung zum ersten Mal im Framework auftritt. Einige der Änderungen werden in einer bestimmten Version eingeführt und in einer späteren Version zurückgesetzt; dies wird ebenso beschrieben.
-
-- Art der Änderung:
-
-    |   |   |
-    |---|---|
-    |Neuzuweisung|Die Änderung wirkt sich auf Apps aus, die neu kompiliert werden, um auf eine neue Version von .NET Framework ausgerichtet zu werden.|
-    |Laufzeit|Die Änderung wirkt sich auf eine vorhandene Anwendung aus, die auf eine frühere Version von .NET Framework ausgerichtet ist, aber unter einer höheren Version ausgeführt wird.|
-
-- Die betroffenen APIs, falls vorhanden.
-
-- Die IDs der verfügbaren Diagnosen.
-
-## <a name="usage"></a>Verwendung
-Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
-
-- [Neuausrichtungsänderungen](./retargeting/index.md)
-- [Änderungen zur Laufzeit](./runtime/index.md)
+**Transparent**\
+Eine Änderung, die keine nennenswerten Auswirkungen hat, die Entwickler oder Benutzer beachten müssten. Die App sollte keine Änderung benötigen.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Versionen und Abhängigkeiten](versions-and-dependencies.md)
 - [Neuigkeiten](../whats-new/index.md)
-- [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md)
+- [Veraltete Elemente](../whats-new/whats-obsolete.md)

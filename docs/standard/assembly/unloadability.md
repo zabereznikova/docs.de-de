@@ -4,25 +4,25 @@ description: Erfahren Sie, wie Sie entladbaren AssemblyLoadContext zum Laden und
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 52cd864393342e2bc31f872b9d09cb484c2c8463
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 462e6d2c7f135d2ba274d78fe31ad27391eac416
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972492"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740446"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core
 
 Ab .NET Core 3.0 wird die Möglichkeit unterstützt, eine Gruppe von Assemblys zu laden und später zu entladen. In .NET Framework wurden benutzerdefinierte App-Domänen zu diesem Zweck verwendet, .NET Core unterstützt jedoch nur eine einzelne App-Standarddomäne.
 
-.NET Core 3.0 und höhere Versionen unterstützen Entladbarkeit über <xref:System.Runtime.Loader.AssemblyLoadContext>. Sie können eine Gruppe von Assemblys in einen entladbaren `AssemblyLoadContext` laden, Methoden in ihnen ausführen oder sie einfach mithilfe von Reflektion untersuchen und schließlich den `AssemblyLoadContext` entladen. Dadurch werden die Assemblys entladen, die in diesen `AssemblyLoadContext` geladen wurden.
+.NET Core 3.0 und höhere Versionen unterstützen Entladbarkeit über <xref:System.Runtime.Loader.AssemblyLoadContext>. Sie können eine Gruppe von Assemblys in einen entladbaren `AssemblyLoadContext` laden, Methoden in ihnen ausführen oder sie einfach mithilfe von Reflektion untersuchen und schließlich den `AssemblyLoadContext` entladen. Dadurch werden die Assemblys entladen, die in den `AssemblyLoadContext` geladen wurden.
 
-Es gibt einen bemerkenswerten Unterschied zwischen dem Entladen mithilfe von `AssemblyLoadContext` und der Verwendung von AppDomains. Mit AppDomains wird das Entladen erzwungen. Zum Zeitpunkt der Entladung werden beispielsweise alle Threads abgebrochen, die in der Ziel-AppDomain ausgeführt werden. Außerdem werden verwaltete COM-Objekte gelöscht, die in der Ziel-AppDomain erstellt wurden. Mit `AssemblyLoadContext` ist der Entladevorgang „kooperativ“. Durch Aufrufen der <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType>-Methode wird der Entladevorgang nur initiiert. Das Entladen wird abgeschlossen, nachdem die folgenden Bedingungen erfüllt sind:
+Es gibt einen bemerkenswerten Unterschied zwischen dem Entladen mithilfe von `AssemblyLoadContext` und der Verwendung von AppDomains. Mit AppDomains wird das Entladen erzwungen. Zum Zeitpunkt der Entladung werden beispielsweise alle Threads abgebrochen, die in der Ziel-AppDomain ausgeführt werden. Außerdem werden unter anderem verwaltete COM-Objekte gelöscht, die in der Ziel-AppDomain erstellt wurden. Mit `AssemblyLoadContext` ist den Entladevorgang „kooperativ“. Durch Aufrufen der <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType>-Methode wird der Entladevorgang nur initiiert. Das Entladen wird abgeschlossen, nachdem die folgenden Bedingungen erfüllt sind:
 
 - Es gibt keine Threads, die über Methoden aus den Assemblys in ihren Aufruflisten verfügen, die in den `AssemblyLoadContext` geladen werden.
-- Auf keinen der Typen aus den in den `AssemblyLoadContext` geladenen Assemblys, auf keine Instanzen dieser Typen und auf keine der Assemblys selbst außerhalb des `AssemblyLoadContext` wird durch Folgendes verwiesen:
+- Auf keinen der Typen aus den in den `AssemblyLoadContext` geladenen Assemblys, auf keine Instanzen dieser Typen und auf keine der Assemblys selbst wird durch Folgendes verwiesen:
   - Verweise außerhalb des `AssemblyLoadContext`, ausgenommen schwache Verweise (<xref:System.WeakReference> oder <xref:System.WeakReference%601>).
-  - Starke GC-Handles (<xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Normal> oder <xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Pinned>) von innerhalb und außerhalb des `AssemblyLoadContext`.
+  - Starke GC-Handles (Garbage Collector) ([GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) oder [GCHandleType.pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned)) sowohl innerhalb als auch außerhalb des `AssemblyLoadContext`.
 
 ## <a name="use-collectible-assemblyloadcontext"></a>Verwenden des entladbaren „AssemblyLoadContext“-Objekts
 
@@ -31,13 +31,14 @@ Dieser Abschnitt enthält ein detailliertes schrittweises Tutorial, das eine ein
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Erstellen eines entladbaren AssemblyLoadContext
 
 Sie müssen die Klasse von <xref:System.Runtime.Loader.AssemblyLoadContext> ableiten und ihre <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>-Methode überladen. Diese Methode löst Verweise auf alle Assemblys auf, die Abhängigkeiten von in diesen `AssemblyLoadContext` geladenen Assemblys sind.
+
 Der folgende Code ist ein Beispiel für den einfachsten benutzerdefinierten `AssemblyLoadContext`:
 
 [!code-csharp[Simple custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/simple_example.cs#1)]
 
 Wie Sie sehen können, gibt die `Load`-Methode `null` zurück. Dies bedeutet, dass alle Abhängigkeitsassemblys in den Standardkontext geladen werden und der neue Kontext nur die Assemblys enthält, die explizit in ihn geladen wurden.
 
-Wenn Sie einige oder alle Abhängigkeiten in den `AssemblyLoadContext` laden möchten, können Sie `AssemblyDependencyResolver` in der `Load`-Methode verwenden. `AssemblyDependencyResolver` löst die Assemblynamen mithilfe der Datei *.deps.json*, die im Verzeichnis der in den Kontext geladenen Hauptassembly enthalten ist, in absolute Assemblydateipfade auf und verwendet Assemblydateien in diesem Verzeichnis.
+Wenn Sie einige oder alle Abhängigkeiten in den `AssemblyLoadContext` laden möchten, können Sie `AssemblyDependencyResolver` in der `Load`-Methode verwenden. `AssemblyDependencyResolver` löst die Assemblynamen in absolute Assemblydateipfade auf. Der Konfliktlöser verwendet die Datei *.deps.json* und Assemblydateien im Verzeichnis der Hauptassembly, die in den Kontext geladen wurde.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -69,19 +70,19 @@ Nun können Sie diese Funktion ausführen, um die Assembly zu laden, auszuführe
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-Das Entladen wird jedoch nicht sofort beendet. Wie bereits erwähnt, verwendet der Vorgang GC, um alle Objekte aus der Testassembly zu erfassen. In vielen Fällen ist es nicht erforderlich, auf den Abschluss des Entladevorgangs zu warten. Es gibt jedoch Fälle, in denen es nützlich zu wissen ist, dass der Entladevorgang abgeschlossen wurde. Beispielsweise, wenn Sie die Assemblydatei löschen möchten, die vom Datenträger in den benutzerdefinierten `AssemblyLoadContext` geladen wurde. In einem solchen Fall kann der folgende Codeausschnitt verwendet werden. Er löst eine GC aus und wartet auf ausstehende Finalizer in einer Schleife, bis der schwache Verweis auf den benutzerdefinierten `AssemblyLoadContext` auf `null` festgelegt wurde, um anzugeben, dass das Zielobjekt entladen wurde. Beachten Sie, dass in den meisten Fällen nur ein Durchlauf durch die Schleife erforderlich ist. Für komplexere Fälle, in denen Objekte, die durch den im `AssemblyLoadContext` ausgeführten Code erstellt wurden, über Finalizer verfügen, sind möglicherweise weitere Durchgänge erforderlich.
+Das Entladen wird jedoch nicht sofort beendet. Wie bereits erwähnt, verwendet der Vorgang den Garbage Collector, um alle Objekte aus der Testassembly zu erfassen. In vielen Fällen ist es nicht erforderlich, auf den Abschluss des Entladevorgangs zu warten. Es gibt jedoch Fälle, in denen es nützlich zu wissen ist, dass der Entladevorgang abgeschlossen wurde. Beispielsweise, wenn Sie die Assemblydatei löschen möchten, die vom Datenträger in den benutzerdefinierten `AssemblyLoadContext` geladen wurde. In einem solchen Fall kann der folgende Codeausschnitt verwendet werden. Er löst eine Garbage Collection aus und wartet auf ausstehende Finalizer in einer Schleife, bis der schwache Verweis auf den benutzerdefinierten `AssemblyLoadContext` auf `null` festgelegt wurde, um anzugeben, dass das Zielobjekt erfasst wurde. In den meisten Fällen ist nur ein Durchlauf durch die Schleife erforderlich. Für komplexere Fälle, in denen Objekte, die durch den im `AssemblyLoadContext` ausgeführten Code erstellt wurden, über Finalizer verfügen, sind möglicherweise weitere Durchgänge erforderlich.
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>Das Unloading-Ereignis
 
-In einigen Fällen kann es erforderlich sein, dass der Code, der in einen benutzerdefinierten `AssemblyLoadContext` geladen wird, einige Bereinigungsaufgaben durchführt, wenn das Entladen initiiert wird. Beispielsweise kann es erforderlich sein, Threads anzuhalten und einige starke GC-Handles zu bereinigen. Das `Unloading`-Ereignis kann in solchen Fällen verwendet werden. Ein Handler, der die erforderliche Bereinigung ausführt, kann mit diesem Ereignis verknüpft werden.
+In einigen Fällen kann es erforderlich sein, dass der Code, der in einen benutzerdefinierten `AssemblyLoadContext` geladen wird, einige Bereinigungsaufgaben durchführt, wenn das Entladen initiiert wird. Beispielsweise kann es erforderlich sein, Threads zu beenden und einige GC-Handles zu bereinigen. Das `Unloading`-Ereignis kann in solchen Fällen verwendet werden. Ein Handler, der die erforderliche Bereinigung ausführt, kann mit diesem Ereignis verknüpft werden.
 
 ### <a name="troubleshoot-unloadability-issues"></a>Behandlung bei Problemen mit der Entladbarkeit
 
-Aufgrund der kooperativen Natur der Entladung kann leicht vergessen werden, dass Verweise die Objekte in einem entladbaren `AssemblyLoadContext` aktiv halten und das Entladen verhindern können. Hier ist eine Zusammenfassung der Objekte (einige davon nicht offensichtlich), die die Verweise enthalten können:
+Aufgrund der kooperativen Natur der Entladung kann leicht vergessen werden, dass Verweise die Objekte ggf. in einem entladbaren `AssemblyLoadContext` aktiv halten und das Entladen verhindern können. Hier ist eine Zusammenfassung der Entitäten (einige davon nicht offensichtlich), die die Verweise enthalten können:
 
-- Reguläre Verweise, die außerhalb des entladbaren `AssemblyLoadContext` enthalten und in einem Stackslot oder einem Prozessorregister gespeichert sind (lokale Variablen von Methoden, entweder explizit durch den Benutzercode oder implizit durch JIT erstellt), eine statische Variable oder ein starkes/fixierendes GC-Handle und Transitivität, die auf Folgendes verweist:
+- Reguläre Verweise, die außerhalb des entladbaren `AssemblyLoadContext` enthalten und in einem Stackslot oder einem Prozessorregister gespeichert sind (lokale Variablen von Methoden, entweder explizit durch den Benutzercode oder implizit durch den JIT-Compiler erstellt), eine statische Variable oder ein starkes (fixierendes) GC-Handle und Transitivität, die auf Folgendes verweist:
   - Eine Assembly, die in den entladbaren `AssemblyLoadContext` geladen wurde.
   - Ein Typ aus einer solchen Assembly.
   - Eine Instanz eines Typs aus einer solchen Assembly.
@@ -89,16 +90,16 @@ Aufgrund der kooperativen Natur der Entladung kann leicht vergessen werden, dass
 - Instanzen von benutzerdefinierten, nicht entladbaren `AssemblyLoadContext`-Typen, die im entladbaren `AssemblyLoadContext` erstellt wurden.
 - Ausstehende <xref:System.Threading.RegisteredWaitHandle>-Instanzen, bei denen Rückrufe auf Methoden im benutzerdefinierten `AssemblyLoadContext` festgelegt sind.
 
-Hinweise zum Auffinden von Stackslots/Prozessorregistern, die ein Stammobjekt definieren:
-
-- Wenn Sie Ergebnisse eines Funktionsaufrufs direkt an eine andere Funktion übergeben, kann selbst dann ein Stamm erstellt werden, wenn keine vom Benutzer erstellte lokale Variable vorhanden ist.
-- Wenn zu irgendeinem Zeitpunkt in einer Methode ein Verweis auf ein Objekt verfügbar war, kann das JIT ggf. entscheiden, den Verweis in einem Stackslot/Prozessorregister so lange wie gewünscht in der aktuellen Funktion zu speichern.
+> [!TIP]
+> Objektverweise, die in Stackslots oder Prozessorregistern gespeichert sind und das Entladen eines `AssemblyLoadContext` verhindern könnten, können in folgenden Situationen auftreten:
+>
+> - Wenn Ergebnisse eines Funktionsaufrufs direkt an eine andere Funktion übergeben werden, obwohl keine vom Benutzer erstellte lokale Variable vorhanden ist.
+> - Wenn der JIT-Compiler einen Verweis auf ein Objekt beibehält, das zu einem bestimmten Zeitpunkt in einer Methode verfügbar war.
 
 ## <a name="debug-unloading-issues"></a>Debuggen von Problemen beim Entladen
 
-Das Debuggen von Problemen beim Entladen kann mühsam sein. Es können Situationen eintreten, in denen Sie nicht wissen, was einen `AssemblyLoadContext` aktiv halten könnte, aber das Entladen schlägt fehl.
-Die beste Waffe bei einem solchen Problem ist WinDbg (LLDB unter Unix) mit dem SOS-Plug-In. Sie müssen herausfinden, was einen `LoaderAllocator`, der zu dem jeweiligen `AssemblyLoadContext` gehört, aktiv bleiben lässt.
-Mit diesem Plug-In können Sie GC-Heapobjekte, ihre Hierarchien und Stämme überprüfen.
+Das Debuggen von Problemen beim Entladen kann mühsam sein. Es können Situationen eintreten, in denen Sie nicht wissen, was einen `AssemblyLoadContext` aktiv halten könnte, aber das Entladen schlägt fehl. Die beste Waffe bei einem solchen Problem ist WinDbg (LLDB unter Unix) mit dem SOS-Plug-In. Sie müssen herausfinden, was einen `LoaderAllocator`, der zu dem jeweiligen `AssemblyLoadContext` gehört, aktiv bleiben lässt. Mit dem SOS-Plug-In können Sie GC-Heapobjekte, ihre Hierarchien und Stämme überprüfen.
+
 Um das Plug-In in den Debugger zu laden, geben Sie den folgenden Befehl in der Debuggerbefehlszeile ein:
 
 In WinDbg (in WinDbg scheint dies automatisch beim Einstieg in die .NET Core-Anwendung zu geschehen):
@@ -113,9 +114,10 @@ In LLDB:
 plugin load /path/to/libsosplugin.so
 ```
 
-Versuchen wir, ein Beispielprogramm zu debuggen, das Probleme beim Entladen hat. Der Quellcode ist unten enthalten. Wenn Sie ihn unter WinDbg ausführen, steigt das Programm direkt nach dem Versuch, den Erfolg des Entladevorgangs zu überprüfen, in den Debugger ein. Sie können dann mit der Suche nach den „Schuldigen“ beginnen.
+Debuggen wir ein Beispielprogramm, das Probleme beim Entladen hat. Der Quellcode ist unten enthalten. Wenn Sie ihn unter WinDbg ausführen, steigt das Programm direkt nach dem Versuch, den Erfolg des Entladevorgangs zu überprüfen, in den Debugger ein. Sie können dann mit der Suche nach den „Schuldigen“ beginnen.
 
-Beachten Sie Folgendes: Wenn Sie mit LLDB unter UNIX debuggen, wird den SOS-Befehlen in den folgenden Beispielen kein `!` vorangestellt.
+> [!TIP]
+> Wenn Sie mit LLDB unter Unix debuggen, wird den SOS-Befehlen in den folgenden Beispielen kein `!` vorangestellt.
 
 ```console
 !dumpheap -type LoaderAllocator
@@ -137,13 +139,13 @@ Total 2 objects
 
 Überprüfen Sie im Abschnitt „Statistics“ unten die `MT` (`MethodTable`), die zu `System.Reflection.LoaderAllocator` gehört. Dies ist das Objekt, für das wir uns interessieren. Suchen Sie dann in der Liste am Anfang den Eintrag mit `MT`, der diesem Eintrag entspricht, und rufen Sie die Adresse des Objekts selbst ab. In unserem Fall lautet der Wert „000002b78000ce40“.
 
-Nachdem wir nun die Adresse des `LoaderAllocator`-Objekts kennen, können wir einen anderen Befehl verwenden, um seine GC-Stämme zu finden.
+Nachdem wir nun die Adresse des `LoaderAllocator`-Objekts kennen, können wir einen anderen Befehl verwenden, um seine GC-Stämme zu finden:
 
 ```console
-!gcroot -all 0x000002b78000ce40 
+!gcroot -all 0x000002b78000ce40
 ```
 
-Dieser Befehl sichert die Kette von Objektverweisen, die zur `LoaderAllocator`-Instanz führen. Die Liste beginnt mit dem Stamm, bei dem es sich um die Entität handelt, die den `LoaderAllocator` aktiv hält und daher den Kern des Problems darstellt, das Sie debuggen. Der Stamm kann ein Stackslot, ein Prozessorregister, ein GC-Handle oder eine statische Variable sein.
+Dieser Befehl sichert die Kette von Objektverweisen, die zur `LoaderAllocator`-Instanz führen. Die Liste beginnt mit dem Stamm, bei dem es sich um die Entität handelt, die den `LoaderAllocator` aktiv hält und daher den Kern des Problems darstellt. Der Stamm kann ein Stackslot, ein Prozessorregister, ein GC-Handle oder eine statische Variable sein.
 
 Hier ist ein Beispiel für die Ausgabe des `gcroot`-Befehls:
 
@@ -172,13 +174,13 @@ HandleTable:
 Found 3 roots.
 ```
 
-Nun müssen Sie herausfinden, wo sich der Stamm befindet, damit Sie das Problem beheben können. Im einfachsten Fall ist der Stamm ein Stackslot oder ein Prozessorregister. In diesem Fall zeigt `gcroot` den Namen der Funktion an, deren Frame den Stamm und den Thread enthält, der diese Funktion ausführt. Ein schwieriger Fall liegt vor, wenn der Stamm eine statische Variable oder ein GC-Handle ist. 
+Im nächsten Schritt müssen Sie herausfinden, wo sich der Stamm befindet, damit Sie das Problem beheben können. Im einfachsten Fall ist der Stamm ein Stackslot oder ein Prozessorregister. In diesem Fall zeigt `gcroot` den Namen der Funktion an, deren Frame den Stamm und den Thread enthält, der diese Funktion ausführt. Ein schwieriger Fall liegt vor, wenn der Stamm eine statische Variable oder ein GC-Handle ist.
 
 Im vorherigen Beispiel ist der erste Stamm eine lokale Variable vom Typ `System.Reflection.RuntimeMethodInfo`, die im Frame der Funktion `example.Program.Main(System.String[])` bei Adresse `rbp-20` gespeichert ist (`rbp` ist das Prozessorregister `rbp`, und -20 ist ein hexadezimaler Offset von diesem Register).
 
-Der zweite Stamm ist ein normales (starkes) `GCHandle`, das einen Verweis auf eine Instanz der `test.Test`-Klasse enthält. 
+Der zweite Stamm ist ein normales (starkes) `GCHandle`, das einen Verweis auf eine Instanz der `test.Test`-Klasse enthält.
 
-Der dritte Stamm ist ein fixiertes `GCHandle`. Dabei handelt es sich tatsächlich um eine statische Variable. Leider gibt es keine Möglichkeit, dies festzustellen. Statische Variablen für Verweistypen werden in einem verwalteten Objektarray in internen Laufzeitstrukturen gespeichert.
+Der dritte Stamm ist ein fixiertes `GCHandle`. Es handelt sich hierbei tatsächlich um eine statische Variable, aber leider gibt es keine Möglichkeit, dies zu erkennen. Statische Variablen für Verweistypen werden in einem verwalteten Objektarray in internen Laufzeitstrukturen gespeichert.
 
 Ein weiterer Fall, der das Entladen eines `AssemblyLoadContext` verhindern kann: Wenn ein Thread über einen Frame einer Methode aus einer Assembly verfügt, die in den `AssemblyLoadContext` auf ihrem Stapel geladen wurde. Sie können dies überprüfen, indem Sie die verwalteten Aufruflisten aller Threads sichern:
 
@@ -186,8 +188,7 @@ Ein weiterer Fall, der das Entladen eines `AssemblyLoadContext` verhindern kann:
 ~*e !clrstack
 ```
 
-Der Befehl bedeutet „Befehl `!clrstack` auf alle Threads anwenden“. Die folgende Abbildung zeigt die Ausgabe dieses Befehls für das Beispiel. Leider bietet LLDB unter Unix keine Möglichkeit, einen Befehl auf alle Threads anzuwenden, sodass Sie die Threads manuell wechseln und den Befehl `clrstack` wiederholen müssen.
-Ignorieren Sie alle Threads, bei denen der Debugger „Unable to walk the managed stack“ (Verwalteter Stapel kann nicht durchlaufen werden) anzeigt.
+Der Befehl bedeutet „Befehl `!clrstack` auf alle Threads anwenden“. Die folgende Abbildung zeigt die Ausgabe dieses Befehls für das Beispiel. Leider bietet LLDB unter Unix keine Möglichkeit, einen Befehl auf alle Threads anzuwenden, sodass Sie die Threads manuell wechseln und den Befehl `clrstack` wiederholen müssen. Ignorieren Sie alle Threads, bei denen der Debugger „Unable to walk the managed stack“ (Verwalteter Stapel kann nicht durchlaufen werden) anzeigt.
 
 ```console
 OS Thread Id: 0x6ba8 (0)

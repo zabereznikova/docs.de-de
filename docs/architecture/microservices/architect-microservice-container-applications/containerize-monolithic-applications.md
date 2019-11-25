@@ -2,12 +2,12 @@
 title: Containerisieren monolithischer Anwendungen
 description: Das Containerisieren monolithischer Anwendungen bietet zwar nicht alle Vorteile der Microservicearchitektur, dafür jedoch wichtige Vorteile beim Bereitstellen, von denen Sie direkt profitieren können.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771475"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738011"
 ---
 # <a name="containerizing-monolithic-applications"></a>Containerisieren monolithischer Anwendungen
 
@@ -15,11 +15,11 @@ Sie sollten eine einzelne, monolithisch bereitgestellte Webanwendung oder einen 
 
 Stellen Sie einen einzelnen Container bereit, der diese Anwendung darstellt, um dieses Modell zu verwalten. Führen Sie Erweiterungen aus, um die Kapazität zu erhöhen. Fügen Sie dazu weitere Exemplare mit einem Lastenausgleich davor hinzu. Die Einfachheit stammt aus der Verwaltung einer einzelnen Bereitstellung in einem einzelnen Container oder virtuellen Computer.
 
-![Die meisten Funktionen einer monolithischen Containeranwendung befinden sich innerhalb eines einzelnen Containers, der interne Ebenen oder Bibliotheken hat. Die Anwendung führt Erweiterungen durch Klonen des Containers auf mehrere Server/VMs aus.](./media/image1.png)
+![Diagramm, das die Komponenten einer monolithischen Containeranwendung darstellt.](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **Abbildung 4-1**. Beispiel für die Architektur einer containerisierten monolithischen Anwendung
 
-Sie können, wie in Abbildung 4-1 veranschaulicht, mehrere Komponenten, Bibliotheken oder interne Ebenen in jedem Container einschließen. Allerdings kann dieses monolithische Muster zu einem Konflikt mit dem Containerprinzip „ein Container führt eine Aufgabe in einem Prozess aus“ führen. In einigen Fällen kommt es jedoch nicht zum Konflikt.
+Sie können, wie in Abbildung 4-1 veranschaulicht, mehrere Komponenten, Bibliotheken oder interne Ebenen in jedem Container einschließen. Die meisten Funktionen einer monolithischen Containeranwendung befinden sich innerhalb eines einzelnen Containers, der interne Ebenen oder Bibliotheken hat. Die Anwendung führt Erweiterungen durch Klonen des Containers auf mehrere Server/VMs aus. Allerdings kann dieses monolithische Muster zu einem Konflikt mit dem Containerprinzip „ein Container führt eine Aufgabe in einem Prozess aus“ führen. In einigen Fällen kommt es jedoch nicht zum Konflikt.
 
 Der Nachteil dieses Ansatzes wird offensichtlich, wenn die Anwendung wächst und skaliert werden muss. Wenn die gesamte Anwendung skaliert werden kann, ist es kein Problem. In den meisten Fällen sind jedoch nur einige Teile der Anwendung Engpässe, die Skalierung erfordern, während andere Komponente weniger häufig verwendet werden.
 
@@ -31,7 +31,7 @@ Der monolithische Ansatz ist jedoch üblich, da die Entwicklung der Anwendung an
 
 Aus Sicht der Infrastruktur kann jeder Server, wie in Abbildung 4-2 dargestellt, viele Anwendungen innerhalb desselben Hosts ausführen und ein akzeptables Effizienzverhältnis in der Ressourcenverwendung haben.
 
-![Ein Host kann mehrere monolithische Apps ausführen, jede davon auf einem separaten Container.](./media/image2.png)
+![Diagramm, das einen Host zeigt, der viele Apps in Containern ausführt.](./media/containerize-monolithic-applications/host-multiple-apps-containers.png)
 
 **Abbildung 4-2**. Monolithischer Ansatz: Der Host führt mehrere Anwendungen aus, jede Anwendung wird als Container ausgeführt
 
@@ -39,7 +39,7 @@ Monolithische Anwendungen in Microsoft Azure können mithilfe von dedizierten VM
 
 Als QA-Umgebung oder begrenzte Produktionsumgebung können Sie mehrere Docker-Host-VMs bereitstellen und Sie, wie in Abbildung 4-3 dargestellt, mithilfe des Azure-Lastenausgleichs ausgleichen. So können Sie die Skalierung mit einem gröberen Ansatz verwalten, da die gesamte Anwendung in einem einzelnen Container aktiv ist.
 
-![Mehrere Hosts, die jeweils einen Container mit der monolithischen Anwendung ausführen](./media/image3.png)
+![Diagramm, das mehrere Hosts zeigt, die die monolithischen App-Container ausführen.](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **Abbildung 4-3**. Beispiel für die Skalierung einer einzelnen Containeranwendung durch mehrere Hosts
 
@@ -59,7 +59,7 @@ Während monolithische Anwendungen von Docker profitieren können, werden hier n
 
 Ob Sie einen in Azure bereitgestellten Container überprüfen möchten, oder wenn eine Anwendung einfach eine einzelnen Containeranwendung ist, Azure App Service bietet hervorragende, skalierbare Dienste auf Grundlage einzelner Containeranwendungen. Die Verwendung von Azure App Service ist einfach. Der Dienst bietet eine hervorragende Integration mit Git, um die Vorgehensweise für das Verwenden und Erstellen von Code in Visual Studio und die direkte Bereitstellung in Azure zu vereinfachen.
 
-![Assistent zum Veröffentlichen einer einzelnen Containeranwendung in Azure App Service aus Visual Studio](./media/image4.png)
+![Screenshot des Dialogfelds „App Service erstellen“ mit einer Containerregistrierung.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
 **Abbildung 4-4**. Veröffentlichen einer einzelnen Containeranwendung in Azure App Service aus Visual Studio
 

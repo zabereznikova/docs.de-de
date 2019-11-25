@@ -2,12 +2,12 @@
 title: Entwerfen eines DDD-orientierten Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Design DDD-orientierter Microservices für Bestellungen und die entsprechenden Anwendungsschichten
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674347"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739941"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Erstellen eines DDD-orientierten Microservices
 
@@ -37,13 +37,13 @@ Bei der Komplexität ist es wichtig, über ein Domänenmodell zu verfügen, das 
 
 In Abbildung 7-5 wird gezeigt, wie ein Entwurf mit mehreren Ebenen in die eShopOnContainers-Anwendung implementiert wird.
 
-![Die drei Ebenen in einem DDD-Microservice wie dem für Bestellungen Jede Ebene stellt ein VS-Projekt dar: Die Anwendungsebene ist „Ordering.API“, die Domänenebene „Ordering.Domain“ und die Infrastrukturebene „Ordering.Infrastructure“.](./media/image6.png)
+![Diagramm, das die Ebenen in einem Microservice mit domänengesteuertem Design zeigt.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **Abbildung 7-5**. DDD-Ebenen für den Microservice für Bestellungen in eShopOnContainers
 
-Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmten anderen Ebenen kommunizieren. Dies kann möglicherweise leichter durchgesetzt werden, wenn Ebenen als unterschiedliche Klassenbibliotheken implementiert werden, da Sie deutlich erkennen können, welche Abhängigkeiten zwischen Bibliotheken festgelegt wurden. Auf der Domänenmodellebene sollte beispielsweise keine Abhängigkeit für eine andere Ebene ausgewählt werden (bei den Domänenmodellklassen sollte es sich um Plain Old CLR Objects- bzw. um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln). Wie in Abbildung 7-6 dargestellt, weist die Bibliothek der Ebene **Ordering.Domain** nur Abhängigkeiten für die .NET Core-Bibliotheken oder NuGet-Pakete auf – jedoch keine Abhängigkeiten zu anderen benutzerdefinierten Bibliothek, z.B. zu einer Daten- oder Persistenzbibliothek.
+Die drei Ebenen in einem DDD-Microservice wie dem für Bestellungen Jede Ebene stellt ein VS-Projekt dar: Die Anwendungsebene ist „Ordering.API“, die Domänenebene „Ordering.Domain“ und die Infrastrukturebene „Ordering.Infrastructure“. Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmten anderen Ebenen kommunizieren. Dies kann möglicherweise leichter durchgesetzt werden, wenn Ebenen als unterschiedliche Klassenbibliotheken implementiert werden, da Sie deutlich erkennen können, welche Abhängigkeiten zwischen Bibliotheken festgelegt wurden. Auf der Domänenmodellebene sollte beispielsweise keine Abhängigkeit für eine andere Ebene ausgewählt werden (bei den Domänenmodellklassen sollte es sich um Plain Old CLR Objects- bzw. um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln). Wie in Abbildung 7-6 dargestellt, weist die Bibliothek der Ebene **Ordering.Domain** nur Abhängigkeiten für die .NET Core-Bibliotheken oder NuGet-Pakete auf – jedoch keine Abhängigkeiten zu anderen benutzerdefinierten Bibliothek, z.B. zu einer Daten- oder Persistenzbibliothek.
 
-![Ansicht im Projektmappen-Explorer: Ordering.Domain-Abhängigkeiten, die nur von .NET Core-Bibliotheken abhängen](./media/image7.png)
+![Screenshot der Ordering.Domain-Abhängigkeiten.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Abbildung 7-6**. Als Bibliotheken implementierte Ebenen lassen eine bessere Kontrolle der Abhängigkeiten zwischen Ebenen zu
 
@@ -85,11 +85,11 @@ Gemäß den oben genannten Grundsätzen [Ignorieren der Persistenz](https://devi
 
 Deswegen sollten Ihre Ebenen bzw. Klassenbibliotheken und Projekte wie in Abbildung 7-7 dargestellt von Ihrer Domänenmodellebene (Bibliothek) abhängen, nicht umgekehrt.
 
-![Abhängigkeiten in einem DDD-Dienst: Die Anwendungsschicht hängt von der Domäne und der Infrastruktur ab, die Infrastruktur von der Domäne – doch die Domäne hängt von keiner Ebene ab.](./media/image8.png)
+![Diagramm, das Abhängigkeiten zeigt, die zwischen DDD-Dienstebenen bestehen.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Abbildung 7-7**. Abhängigkeiten zwischen Ebenen in DDD
 
-Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie bereits erwähnt wurde, können Sie die komplexesten Microservices nach den DDD-Mustern implementieren, während einfachere datengesteuerte Microservices (einfacher CRUD-Vorgang auf einer einzelnen Ebene) auf einfachere Weise implementiert werden können.
+Abhängigkeiten in einem DDD-Dienst: Die Anwendungsschicht hängt von der Domäne und der Infrastruktur ab, die Infrastruktur von der Domäne – doch die Domäne hängt von keiner Ebene ab. Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie bereits erwähnt wurde, können Sie die komplexesten Microservices nach den DDD-Mustern implementieren, während einfachere datengesteuerte Microservices (einfacher CRUD-Vorgang auf einer einzelnen Ebene) auf einfachere Weise implementiert werden können.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

@@ -7,25 +7,19 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046439"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974932"
 ---
 # <a name="interop-etw-events"></a>Interop-ETW-Ereignisse
-<a name="top"></a> Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
-  
- Diese Kategorie umfasst die folgenden Ereignisse:  
-  
-- [ILStubGenerated-Ereignis](#ilstubgenerated_event)  
-  
-- [ILStubCacheHit-Ereignis](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>ILStubGenerated-Ereignis  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
+Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
+
+## <a name="ilstubgenerated-event"></a>ILStubGenerated-Ereignis
+
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
@@ -53,11 +47,9 @@ ms.locfileid: "71046439"
 |StubMethodILCode|win:UnicodeString|Der MSIL-Code für die Stubmethode.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück nach oben](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>ILStubCacheHit-Ereignis  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
@@ -80,8 +72,6 @@ ms.locfileid: "71046439"
 |ManagedInteropMethodName|win:UnicodeString|Der Name der verwalteten Interop-Methode.|  
 |ManagedInteropMethodSignature|win:UnicodeString|Die Signatur der verwalteten Interop-Methode.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-  
- [Zurück nach oben](#top)  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie beim Erstellen von Webanwen
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675477"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739456"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
@@ -40,7 +40,7 @@ Die Verbesserungen der Benutzerfreundlichkeit durch das SPA-Modell sollten mit d
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor ermöglicht Entwicklern das Erstellen von Benutzeroberflächen mit Razor auf dem Server sowie das Senden des Codes an den Browser und das clientseitige Ausführen des Codes mithilfe der JavaScript-Bibliothek „WebAssembly“. ASP.NET Core 3.0 befindet sich noch in der Entwicklung, in der Updateversion 3.0 dieses E-Books können Sie jedoch mehr über diese Technologie erfahren. Weitere Informationen zu Blazor finden Sie unter [Einführung in Blazor](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor ermöglicht Entwicklern das Erstellen von Benutzeroberflächen mit Razor auf dem Server sowie das Senden des Codes an den Browser und seine clientseitige Ausführung mithilfe der [WebAssembly](https://webassembly.org/). ASP.NET Core 3.0 befindet sich noch in der Entwicklung, in der Updateversion 3.0 dieses E-Books können Sie jedoch mehr über diese Technologie erfahren. Weitere Informationen zu Blazor finden Sie unter [Einführung in Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Fälle für die Verwendung von herkömmlichen Webanwendungen
 

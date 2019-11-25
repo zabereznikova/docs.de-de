@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424301"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974658"
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 
@@ -43,7 +43,7 @@ Oft bieten Anwendungen mehrere Serialisierungsoptionen, die dem Benutzer die Spe
 
 ### <a name="xps-print-path"></a>XPS-Druckpfad
 
-Der XPS-Druckpfad des Microsoft .NET Frameworks bietet auch einen erweiterbaren Mechanismus zum Schreiben von Dokumenten durch die Druckausgabe.  XPS dient als Dokument Dateiformat und ist das Native druckspoolformat für [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  XPS-Dokumente können direkt an XPS-kompatible Drucker gesendet werden, ohne dass eine Konvertierung in ein zwischen Format erforderlich ist.  Weitere Informationen zu Optionen und Funktionen der Druckpfadausgabe finden Sie unter [Übersicht über das Drucken](printing-overview.md).
+Der XPS-Druckpfad des Microsoft .NET Frameworks bietet auch einen erweiterbaren Mechanismus zum Schreiben von Dokumenten durch die Druckausgabe.  XPS dient als Dokument Dateiformat und ist das Native druckspool-Format für Windows Vista.  XPS-Dokumente können direkt an XPS-kompatible Drucker gesendet werden, ohne dass eine Konvertierung in ein zwischen Format erforderlich ist.  Weitere Informationen zu Optionen und Funktionen der Druckpfadausgabe finden Sie unter [Übersicht über das Drucken](printing-overview.md).
 
 <a name="PluginSerializers"></a>
 
@@ -55,7 +55,7 @@ Plug-In-Serialisierungsprogramme helfen Anwendungsentwicklern durch die Möglich
 
 ### <a name="using-a-plug-in-serializer"></a>Verwenden eines Plug-In-Serialisierungsprogramms
 
-Plug-In-Serialisierungsprogramme sind einfach zu verwenden.  Die <xref:System.Windows.Documents.Serialization.SerializerProvider>-Klasse listet ein <xref:System.Windows.Documents.Serialization.SerializerDescriptor>-Objekt für jedes im System installierte Plug-in auf.  Die <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>-Eigenschaft filtert die installierten Plug-ins basierend auf der aktuellen Konfiguration und überprüft, ob das Serialisierungsprogramm geladen und von der Anwendung verwendet werden kann.  Der <xref:System.Windows.Documents.Serialization.SerializerDescriptor> bietet auch weitere Eigenschaften, z. b. <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> und <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, die von der Anwendung verwendet werden können, um den Benutzer aufzufordern, ein Serialisierungsprogramm für ein verfügbares Ausgabeformat auszuwählen.  Ein Standard-Plug-in-Serialisierungsprogramm für XPS wird mit .NET Framework bereitgestellt und wird immer aufgelistet.  Nachdem der Benutzer ein Ausgabeformat ausgewählt hat, wird die <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>-Methode verwendet, um eine <xref:System.Windows.Documents.Serialization.SerializerWriter> für das jeweilige Format zu erstellen.  Das Sprachelement <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> die-Methode kann dann aufgerufen werden, um den Dokument Datenstrom an den Datenspeicher auszugeben.
+Plug-In-Serialisierungsprogramme sind einfach zu verwenden.  Die <xref:System.Windows.Documents.Serialization.SerializerProvider>-Klasse listet ein <xref:System.Windows.Documents.Serialization.SerializerDescriptor>-Objekt für jedes im System installierte Plug-in auf.  Die <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>-Eigenschaft filtert die installierten Plug-ins basierend auf der aktuellen Konfiguration und überprüft, ob das Serialisierungsprogramm geladen und von der Anwendung verwendet werden kann.  Der <xref:System.Windows.Documents.Serialization.SerializerDescriptor> bietet auch weitere Eigenschaften, z. b. <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> und <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, die von der Anwendung verwendet werden können, um den Benutzer aufzufordern, ein Serialisierungsprogramm für ein verfügbares Ausgabeformat auszuwählen.  Ein Standard-Plug-in-Serialisierungsprogramm für XPS wird mit .NET Framework bereitgestellt und wird immer aufgelistet.  Nachdem der Benutzer ein Ausgabeformat ausgewählt hat, wird die <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>-Methode verwendet, um eine <xref:System.Windows.Documents.Serialization.SerializerWriter> für das jeweilige Format zu erstellen.  Die <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A?displayProperty=nameWithType>-Methode kann dann aufgerufen werden, um den Dokument Datenstrom an den Datenspeicher auszugeben.
 
 Im folgenden Beispiel wird eine Anwendung veranschaulicht, die die <xref:System.Windows.Documents.Serialization.SerializerProvider>-Methode in einer "pluginfilefilter"-Eigenschaft verwendet.  Pluginfilefilter listet die installierten Plug-Ins auf und erstellt eine Filter Zeichenfolge mit den verfügbaren Datei Optionen für eine <xref:Microsoft.Win32.SaveFileDialog>.
 

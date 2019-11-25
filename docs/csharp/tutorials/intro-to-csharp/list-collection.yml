@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179005"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969390"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Erstellen von Listen
   durationInMinutes: 2
   content: >
-    Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein (ersetzen Sie `<name>` durch Ihren Namen), und klicken Sie auf die Schaltfläche **Ausführen**:
+    Führen Sie den folgenden Code im interaktiven Fenster aus. Wählen Sie die Schaltfläche **Enter focus mode** (Fokusmodus aktivieren) aus. Geben Sie anschließend den folgenden Codeblock in das interaktive Fenster ein (ersetzen Sie `<name>` durch Ihren Namen), und wählen Sie **Ausführen** aus:
 
 
     ```csharp
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    Klicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen. Denken Sie daran, dass die Indizes in C# mit 0 (null) beginnen, sodass der größte gültige Index um eins kleiner ist als die Anzahl der Elemente in der Liste.
+    Wählen Sie erneut **Ausführen** aus, um die Ergebnisse anzuzeigen. Denken Sie daran, dass die Indizes in C# mit 0 (null) beginnen, sodass der größte gültige Index um eins kleiner ist als die Anzahl der Elemente in der Liste.
 
 
     > [!NOTE]

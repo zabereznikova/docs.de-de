@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052985"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975398"
 ---
 # <a name="create-the-data-service"></a>Erstellen des Datendiensts
 
-In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services verwendet, um einen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] auf der Northwind-Beispieldatenbank basierenden-Feed verfügbar zu machen. Die Aufgabe umfasst die folgenden grundlegenden Schritte:
+In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services verwendet, um einen Open Data Protocol-Feed (odata) verfügbar zu machen, der auf der Beispieldatenbank Northwind basiert. Die Aufgabe umfasst die folgenden grundlegenden Schritte:
 
 1. Erstellen Sie eine ASP.NET-Webanwendung.
 
@@ -26,35 +26,35 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
 
 ## <a name="create-the-aspnet-web-app"></a>Erstellen der ASP.net-Web-App
 
-1. Wählen Sie in Visual Studio im Menü **Datei** die Option **Neues** > **Projekt**aus.
+1. Wählen Sie in Visual Studio im Menü **Datei** die Option **neu**  > **Projekt**aus.
 
 1. Wählen Sie im Dialogfeld **Neues Projekt** unter entweder Visual Basic oder Visual C# die Kategorie **Web** aus, und wählen Sie dann **ASP.NET Webanwendung**aus.
 
-1. Geben `NorthwindService` Sie als Namen für das Projekt ein, und klicken Sie dann auf **OK**.
+1. Geben Sie `NorthwindService` als Namen für das Projekt ein, und klicken Sie dann auf **OK**.
 
 1. Wählen Sie im Dialogfeld **neue ASP.NET Webanwendung** die Option **leer** aus, und klicken Sie dann auf **OK**.
 
-1. (Optional) Geben Sie eine bestimmte Portnummer für die Webanwendung an. Hinweis: die Portnummer `12345` wird in dieser Reihe von Schnellstart Themen verwendet.
+1. (Optional) Geben Sie eine bestimmte Portnummer für die Webanwendung an. Hinweis: in dieser Reihe von Schnellstart Themen wird die Portnummer `12345` verwendet.
 
     1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das ASP.net-Projekt, das Sie gerade erstellt haben, und wählen Sie dann **Eigenschaften**aus.
 
-    2. Wählen Sie die Registerkarte **Web** aus, und legen Sie den Wert für das Textfeld **bestimmter Port** auf `12345`fest.
+    2. Wählen Sie die Registerkarte **Web** aus, und legen Sie den Wert des Textfelds **spezieller Port** auf `12345`fest.
 
 ## <a name="define-the-data-model"></a>Definieren des Datenmodells
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts, und klicken Sie dann auf**Neues Element** **Hinzufügen** > .
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts, und klicken Sie dann auf > **Neues Element** **Hinzufügen** .
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Kategorie **Daten** aus, und wählen Sie dann **ADO.NET Entity Data Model**aus.
 
-3. Geben Sie `Northwind.edmx`als Name des Datenmodells ein.
+3. Geben Sie `Northwind.edmx`für den Namen des Datenmodells ein.
 
 4. Wählen Sie im **Entity Data Model-Assistenten**die Option EF- **Designer aus Datenbank aus**, und klicken Sie dann auf **weiter**.
 
 5. Verbinden Sie das Datenmodell mit der Datenbank, indem Sie einen der folgenden Schritte ausführen, und klicken Sie dann auf **weiter**:
 
-    - Wenn Sie noch keine Datenbankverbindung konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie Verbindungen mit SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))-Datenbanken. Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
+    - Wenn Sie noch keine Datenbankverbindung konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
 
-         \- oder –
+         \- oder -
 
     - Wenn bereits eine Datenbankverbindung für die Northwind-Datenbank konfiguriert wurde, wählen Sie diese Verbindung in der Liste der Verbindungen aus.
 
@@ -64,7 +64,7 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
 
 ## <a name="create-the-wcf-data-service"></a>Erstellen des WCF-Daten Dienstanbieter
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt ASP.net, und wählen Sie dann**Neues Element** **Hinzufügen** > aus.
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt ASP.net, und wählen Sie dann > **Neues Element** **Hinzufügen** aus.
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Element Vorlage **WCF-Datendienst** aus der Kategorie **Web** aus.
 
@@ -73,7 +73,7 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
    > [!NOTE]
    > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017.
 
-3. Geben `Northwind`Sie als Namen für den Dienst ein.
+3. Geben Sie `Northwind`als Namen für den Dienst ein.
 
      Visual Studio erstellt das XML-Markup und die Codedateien für den neuen Dienst. In der Standardeinstellung wird das Fenster des Code-Editors geöffnet. In **Projektmappen-Explorer**hat der Dienst den Namen "Northwind" mit der Erweiterung " *. svc.cs* " oder " *. svc. vb*".
 

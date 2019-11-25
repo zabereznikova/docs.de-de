@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 130eb4be66d13b43e5605ef98a647fa9f4223014
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 04c8731867e32ce1000a511c9ab36db554664a97
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116089"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038952"
 ---
 # <a name="operator-overloading-c-reference"></a>Operatorüberladung (C#-Referenz)
 
@@ -21,13 +21,13 @@ Ein benutzerdefinierter Typ kann einen vordefinierten C#-Operator überladen. Da
 Verwenden Sie das Schlüsselwort `operator`, um einen Operator zu deklarieren. Jede Operatordeklaration muss mit den folgenden Regeln konform sein:
 
 - Sie enthält sowohl einen `public`- als auch einen `static`-Modifizierer.
-- Ein unärer Operator übernimmt einen Parameter. Ein binärer Operator übernimmt zwei Parameter. Auf jeden Fall muss mindestens ein Parameter vom Typ `T` oder `T?` sein, wobei `T` der Typ ist, der die Operatordeklaration enthält.
+- Ein unärer Operator verfügt über einen Eingabeparameter. Ein binärer Operator verfügt über zwei Eingabeparameter. Auf jeden Fall muss mindestens ein Parameter vom Typ `T` oder `T?` sein, wobei `T` der Typ ist, der die Operatordeklaration enthält.
 
 Das folgende Beispiel definiert eine vereinfachte Struktur für die Darstellung einer rationalen Zahl. Die Struktur überlädt einige der [arithmetischen Operatoren](arithmetic-operators.md):
 
 [!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
 
-Sie könnten das vorherige Beispiel erweitern, indem Sie eine implizite Konvertierung von `int` nach `Fraction` definieren. Dann würden überladene Operatoren Argumente dieser beiden Typen unterstützen. Das bedeutet, dass es dann möglich wäre, eine ganze Zahl und einen Bruch zu addieren und als Ergebnis einen Bruch zu erhalten.
+Sie könnten das vorherige Beispiel erweitern, indem Sie eine [implizite Konvertierung](user-defined-conversion-operators.md) von `int` nach `Fraction` definieren. Dann würden überladene Operatoren Argumente dieser beiden Typen unterstützen. Das bedeutet, dass es dann möglich wäre, eine ganze Zahl und einen Bruch zu addieren und als Ergebnis einen Bruch zu erhalten.
 
 Verwenden Sie zudem das Kennwort `operator`, um eine benutzerdefinierte Konvertierung zu definieren. Weitere Informationen finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](user-defined-conversion-operators.md).
 

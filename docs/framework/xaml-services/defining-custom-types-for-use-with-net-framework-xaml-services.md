@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: e563c0d7e5113d55d4b942fb1d175a64f5b71abc
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 7437add6795c1bb7f8a59807ebfc51dc2d0f987f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364297"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972024"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten
 Wenn Sie benutzerdefinierte Typen definieren, bei denen es sich um Geschäftsobjekte handelt oder es sich um Typen handelt, die keine Abhängigkeit von bestimmten Frameworks aufweisen, gibt es bestimmte bewährte Methoden für XAML, denen Sie folgen können. Wenn Sie diese Vorgehensweisen befolgen, können .NET Framework XAML-Dienste und Ihre XAML-Reader und XAML-Writer die XAML-Merkmale Ihres Typs ermitteln und ihr eine geeignete Darstellung in einem XAML-knotenstream mithilfe des XAML-Typsystems zur Verfügung stellen. In diesem Thema werden bewährte Methoden für Typdefinitionen, Element Definitionen und CLR-Attributierung von Typen oder Membern beschrieben.  
@@ -17,7 +17,7 @@ Wenn Sie benutzerdefinierte Typen definieren, bei denen es sich um Geschäftsobj
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Konstruktormuster und Typdefinitionen für XAML  
  Eine benutzerdefinierte Klasse muss die folgenden Anforderungen erfüllen, damit Sie als Objekt Element in XAML instanziiert werden kann:  
   
-- Die benutzerdefinierte Klasse muss öffentlich sein und muss einen standardmäßigen (parameterlosen) öffentlichen Konstruktor verfügbar machen. (Hinweise zu Strukturen finden Sie im folgenden Abschnitt.)  
+- Die benutzerdefinierte Klasse muss öffentlich sein und muss einen Parameter losen öffentlichen Konstruktor verfügbar machen. (Hinweise zu Strukturen finden Sie im folgenden Abschnitt.)  
   
 - Die benutzerdefinierte Klasse darf keine nicht-Klasse sein. Durch den zusätzlichen "Punkt" im Pfad des vollständigen Namens ist die Division der Klasse "Namespace" mehrdeutig, und es werden andere XAML-Funktionen wie z. b. angefügte Eigenschaften beeinträchtigt.  
   
@@ -39,22 +39,22 @@ Wenn Sie benutzerdefinierte Typen definieren, bei denen es sich um Geschäftsobj
 ## <a name="enumerations"></a>Enumerationen  
  Enumerationen haben ein System eigenes XAML-Typkonvertierungs Verhalten. In XAML angegebene enumerationskonstantennamen werden für den zugrunde liegenden Enumerationstyp aufgelöst und geben den Enumerationswert an einen XAML-objektwriter zurück.  
   
- XAML unterstützt eine Flags-Verwendung für Enumerationen mit <xref:System.FlagsAttribute> angewendeten. Weitere Informationen finden Sie [in der XAML-Syntax im Detail](../wpf/advanced/xaml-syntax-in-detail.md). (Die[XAML-Syntax wird im Detail](../wpf/advanced/xaml-syntax-in-detail.md) für die WPF-Zielgruppe geschrieben, aber die meisten Informationen in diesem Thema sind für XAML relevant, das nicht spezifisch für ein bestimmtes implementierungsframework ist.)  
+ XAML unterstützt die Verwendung von Flags für Enumerationen mit angewendeten <xref:System.FlagsAttribute>. Weitere Informationen finden Sie [in der XAML-Syntax im Detail](../wpf/advanced/xaml-syntax-in-detail.md). (Die[XAML-Syntax wird im Detail](../wpf/advanced/xaml-syntax-in-detail.md) für die WPF-Zielgruppe geschrieben, aber die meisten Informationen in diesem Thema sind für XAML relevant, das nicht spezifisch für ein bestimmtes implementierungsframework ist.)  
   
 ## <a name="member-definitions"></a>Element Definitionen  
  Typen können Member für die XAML-Verwendung definieren. Typen, die Member definieren, die XAML-verwendbar sind, auch wenn dieser bestimmte Typ nicht XAML-verwendbar ist. Dies ist aufgrund der CLR-Vererbung möglich. Solange ein Typ, der den Member erbt, die XAML-Verwendung als Typ unterstützt, und der Member die XAML-Verwendung für den zugrunde liegenden Typ unterstützt oder eine systemeigene XAML-Syntax verfügbar ist, ist dieser Member XAML-verwendbar.  
   
 ### <a name="properties"></a>Eigenschaften  
- Wenn Sie Eigenschaften als öffentliche CLR-Eigenschaft mit den typischen CLR `get` -und accessormustern und der sprach passenden Key-Formulierung definieren, kann das XAML- `set` Typsystem die Eigenschaft als Member mit den entsprechenden Informationen für Eigenschaften, z. b <xref:System.Xaml.XamlMember.IsWritePublic%2A>. und.<xref:System.Xaml.XamlMember.IsReadPublic%2A> <xref:System.Xaml.XamlMember>  
+ Wenn Sie Eigenschaften als öffentliche CLR-Eigenschaft mit den typischen CLR-`get` und `set` accessormustern und sprach geeigneter Key-Formulierung definieren, kann das XAML-Typsystem die Eigenschaft als Member mit den entsprechenden Informationen für <xref:System.Xaml.XamlMember> Eigenschaften, z. b. <xref:System.Xaml.XamlMember.IsReadPublic%2A> und <xref:System.Xaml.XamlMember.IsWritePublic%2A>, melden.  
   
- Bestimmte Eigenschaften können eine Text Syntax durch Anwenden <xref:System.ComponentModel.TypeConverterAttribute>von aktivieren. Weitere Informationen finden Sie unter [Typkonverter und Markup Erweiterungen für XAML](type-converters-and-markup-extensions-for-xaml.md).  
+ Bestimmte Eigenschaften können eine Text Syntax durch Anwenden von <xref:System.ComponentModel.TypeConverterAttribute>aktivieren. Weitere Informationen finden Sie unter [Typkonverter und Markup Erweiterungen für XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- Wenn keine Text Syntax oder systemeigene XAML-Konvertierung vorhanden ist und keine weitere Dereferenzierung (z. b. eine Markup Erweiterungs Verwendung) vorhanden ist, muss der<xref:System.Xaml.XamlMember.TargetType%2A> Typ einer Eigenschaft (im XAML-Typsystem) in der Lage sein, eine Instanz an einen XAML-objektwriter zurückzugeben, indem t arget-Typ als CLR-Typ.  
+ Wenn keine Text Syntax oder systemeigene XAML-Konvertierung vorhanden ist und keine weitere Dereferenzierung (z. b. eine Markup Erweiterungs Verwendung) vorhanden ist, muss der Typ einer Eigenschaft (<xref:System.Xaml.XamlMember.TargetType%2A> im XAML-Typsystem) in der Lage sein, eine Instanz an einen XAML-objektwriter zurückzugeben, indem der Zieltyp als CLR-Typ behandelt wird.  
   
  Wenn Sie XAML 2009 verwenden, kann die [x:Reference-Markup Erweiterung](x-reference-markup-extension.md) verwendet werden, um Werte bereitzustellen, wenn die vorherigen Überlegungen nicht erfüllt sind. Dies ist jedoch eher ein Verwendungs Problem als ein typdefinitions Problem.  
   
 ### <a name="events"></a>Ereignisse  
- Wenn Sie Ereignisse als öffentliches CLR-Ereignis definieren, kann das XAML-Typsystem das Ereignis als Member mit <xref:System.Xaml.XamlMember.IsEvent%2A> as `true`melden. Das Verknüpfen von Ereignis Handlern liegt nicht innerhalb des Bereichs .NET Framework Funktionen der XAML-Dienste. Dies gilt für bestimmte Frameworks und Implementierungen.  
+ Wenn Sie Ereignisse als öffentliches CLR-Ereignis definieren, kann das XAML-Typsystem das Ereignis als Member mit <xref:System.Xaml.XamlMember.IsEvent%2A> als `true`melden. Das Verknüpfen von Ereignis Handlern liegt nicht innerhalb des Bereichs .NET Framework Funktionen der XAML-Dienste. Dies gilt für bestimmte Frameworks und Implementierungen.  
   
 ### <a name="methods"></a>Methoden  
  Inline Code für Methoden ist keine XAML-Standardfunktion. In den meisten Fällen verweisen Sie nicht direkt auf Methoden Elemente aus XAML, und die Rolle von Methoden in XAML besteht nur darin, die Unterstützung für bestimmte XAML-Muster bereitzustellen. die [x:factorymethod-Direktive](x-factorymethod-directive.md) ist eine Ausnahme.  
@@ -72,25 +72,25 @@ Wenn Sie benutzerdefinierte Typen definieren, bei denen es sich um Geschäftsobj
   
  `public static object Get` *PropertyName* `(object`  `target` `)`  
   
-- Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Sie können dies verwenden, um die Verwendung Ihres anfügbaren Members festzustellen. für Verwendungen außerhalb des vorgesehenen Bereichs werden ungültige Umwandlungs Ausnahmen ausgelöst, die dann durch einen XAML-Analysefehler angezeigt werden. Der Parameter Name `target` ist nicht erforderlich, wird jedoch in den `target` meisten Implementierungen in der Konvention benannt.  
+- Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Sie können dies verwenden, um die Verwendung Ihres anfügbaren Members festzustellen. für Verwendungen außerhalb des vorgesehenen Bereichs werden ungültige Umwandlungs Ausnahmen ausgelöst, die dann durch einen XAML-Analysefehler angezeigt werden. Der Parameter Name `target` ist keine Voraussetzung, wird jedoch in den meisten Implementierungen `target` by-Konvention benannt.  
   
 - Der Rückgabewert kann als spezifischerer Typ in Ihrer Implementierung angegeben werden.  
   
- Um eine <xref:System.ComponentModel.TypeConverter> aktivierte Text Syntax für die Attribut Verwendung des anfügbaren Members zu unter `Get`stützen, wenden <xref:System.ComponentModel.TypeConverterAttribute> Sie auf den *propertyName* -Accessor an. Die Anwendung `get` `set` von auf anstelle von mag nicht intuitiv erscheinen. diese Konvention kann jedoch das Konzept von schreibgeschützten, anfügbaren Membern unterstützen, die serialisierbar sind, was in Designer Szenarios nützlich ist.  
+ Um eine <xref:System.ComponentModel.TypeConverter> aktivierte Text Syntax für die Attribut Verwendung des anfügbaren Members zu unterstützen, wenden Sie <xref:System.ComponentModel.TypeConverterAttribute> auf den `Get`*propertyName* -Accessor an. Die Anwendung auf die `get` statt auf die `set` erscheint möglicherweise nicht intuitiv. Diese Konvention kann jedoch das Konzept Schreib geschützter anfügbarer Member unterstützen, die serialisierbar sind, was in Designer Szenarios nützlich ist.  
   
 #### <a name="the-setpropertyname-accessor"></a>Der SetPropertyName-Accessor  
  Die Signatur für den Set*propertyName* -Accessor muss wie folgt lauten:  
   
  `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
-- Das `target` -Objekt kann in der-Implementierung als spezifischeren Typ angegeben werden, mit der gleichen Logik und den Folgen, wie im vorherigen Abschnitt beschrieben.  
+- Das `target`-Objekt kann in der-Implementierung als spezifischeren Typ angegeben werden, und zwar mit der gleichen Logik und den Folgen, wie im vorherigen Abschnitt beschrieben.  
   
 - Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden.  
   
- Beachten Sie, dass der Wert für diese Methode die Eingabe aus der XAML-Verwendung ist, in der Regel in Attribut Form. Aus dem Attribut Formular muss die Unterstützung von Wert Konvertern für eine Text Syntax und das Attribut `Get`für den *propertyName* -Accessor sein.  
+ Beachten Sie, dass der Wert für diese Methode die Eingabe aus der XAML-Verwendung ist, in der Regel in Attribut Form. Aus dem Attribut Formular muss die Unterstützung von Wert Konvertern für eine Text Syntax und das Attribut für den `Get`*propertyName* -Accessor sein.  
   
 ### <a name="attachable-member-stores"></a>Anfügbare Member Stores  
- Die Accessormethoden reichen in der Regel nicht aus, um ein Mittel zum Platzieren von anfügbaren Element Werten in einem Objekt Diagramm oder zum Abrufen von Werten aus dem Objekt Diagramm und zum ordnungsgemäßen Serialisieren der Werte bereitzustellen. Um diese Funktionalität bereitzustellen, `target` müssen die Objekte in den vorherigen Accessor-Signaturen in der Lage sein, Werte zu speichern. Der Speichermechanismus sollte mit dem anfügbaren Member-Prinzip konsistent sein, dass der Member an Ziele anfügbar ist, wo sich der anfügbare Member nicht in der Liste der Mitglieder befindet. .NET Framework XAML-Dienste bieten eine Implementierungs Technik für anfügbare Element Speicher <xref:System.Xaml.IAttachedPropertyStore> über <xref:System.Xaml.AttachablePropertyServices>die APIs und. <xref:System.Xaml.IAttachedPropertyStore>wird von den XAML-Writern zum Ermitteln der Speicher Implementierung verwendet und sollte für den Typ implementiert werden, der `target` die der Accessoren ist. Die statischen <xref:System.Xaml.AttachablePropertyServices> APIs werden innerhalb des Texts der Accessoren verwendet und beziehen sich auf den anfügbaren Member durch <xref:System.Xaml.AttachableMemberIdentifier>seine.  
+ Die Accessormethoden reichen in der Regel nicht aus, um ein Mittel zum Platzieren von anfügbaren Element Werten in einem Objekt Diagramm oder zum Abrufen von Werten aus dem Objekt Diagramm und zum ordnungsgemäßen Serialisieren der Werte bereitzustellen. Um diese Funktionalität bereitzustellen, müssen die `target` Objekte in den vorherigen Accessor-Signaturen in der Lage sein, Werte zu speichern. Der Speichermechanismus sollte mit dem anfügbaren Member-Prinzip konsistent sein, dass der Member an Ziele anfügbar ist, wo sich der anfügbare Member nicht in der Liste der Mitglieder befindet. .NET Framework XAML-Dienste stellen eine Implementierungs Technik für anfügbare Element Speicher über die APIs <xref:System.Xaml.IAttachedPropertyStore> und <xref:System.Xaml.AttachablePropertyServices>bereit. <xref:System.Xaml.IAttachedPropertyStore> wird von den XAML-Writern zum Ermitteln der Speicher Implementierung verwendet und sollte für den Typ implementiert werden, der die `target` der Accessoren ist. Die statischen <xref:System.Xaml.AttachablePropertyServices>-APIs werden innerhalb des Texts der Accessoren verwendet und verweisen auf den anfügbaren Member durch seine <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>XAML-bezogene CLR-Attribute  
  Das ordnungsgemäße Zuweisen von Typen, Membern und Assemblys ist wichtig, um XAML-typsysteminformationen an .NET Framework XAML-Dienste zu melden. Dies ist relevant, wenn Sie beabsichtigen, ihre Typen mit XAML-Systemen zu verwenden, die direkt auf .NET Framework XAML-Readern und XAML-Writern von XAML-Diensten basieren, oder wenn Sie ein XAML-basiertes Framework definieren oder verwenden, das auf diesen XAML-Readern und XAML-Writern basiert.  
@@ -103,16 +103,16 @@ Wenn Sie benutzerdefinierte Typen definieren, bei denen es sich um Geschäftsobj
 ## <a name="access-level"></a>Zugriffsebene  
  Mit XAML können Typen geladen und instanziiert werden, die über eine `internal` Zugriffsebene verfügen. Diese Funktion wird bereitgestellt, damit Benutzercode eigene Typen definieren und diese Klassen aus Markup instanziieren kann, das auch Teil desselben Benutzercode Bereichs ist.  
   
- Ein Beispiel für WPF ist, wenn Benutzercode eine <xref:System.Windows.Controls.UserControl> definiert, die als Möglichkeit zum Umgestalten eines UI-Verhaltens gedacht ist, aber nicht als Teil eines möglichen Erweiterungsmechanismus, der möglicherweise durch Deklarieren der unter `public` stützenden Klasse mit Zugriffsebene impliziert wird. Ein <xref:System.Windows.Controls.UserControl> solcher kann mit `internal` Access deklariert werden, wenn der Unterstützungs Code in dieselbe Assembly kompiliert wird, aus der er als XAML-Typ referenziert wird.  
+ Ein Beispiel für WPF ist, wenn Benutzercode eine <xref:System.Windows.Controls.UserControl> definiert, die als Möglichkeit zum Umgestalten eines UI-Verhaltens gedacht ist, aber nicht als Teil eines möglichen Erweiterungsmechanismus, der möglicherweise durch Deklarieren der unterstützenden Klasse mit `public` Zugriffsebene impliziert wird. Eine solche <xref:System.Windows.Controls.UserControl> kann mit `internal` Access deklariert werden, wenn der Unterstützungs Code in dieselbe Assembly kompiliert wird, aus der er als XAML-Typ referenziert wird.  
   
- Für eine Anwendung, die XAML unter voller Vertrauenswürdigkeit lädt <xref:System.Xaml.XamlObjectWriter>und verwendet, ist `internal` das Laden von Klassen mit Zugriffsebene immer aktiviert.  
+ Für eine Anwendung, die XAML unter voller Vertrauenswürdigkeit lädt und <xref:System.Xaml.XamlObjectWriter>verwendet, ist das Laden von Klassen mit `internal` Zugriffsebene immer aktiviert.  
   
- Für eine Anwendung, die XAML mit teilweiser Vertrauenswürdigkeit lädt, können Sie die Eigenschaften der Zugriffsebene <xref:System.Xaml.Permissions.XamlAccessLevel> mithilfe der-API steuern. Außerdem müssen zurückstellungs Mechanismen (z. b. das WPF-Vorlagen System) in der Lage sein, alle Zugriffsebenen-Berechtigungen weiterzugeben und Sie für die Evaluierungs Versionen der Laufzeit zu erhalten. Dies wird intern durch übergeben der <xref:System.Xaml.Permissions.XamlAccessLevel> Informationen gehandhabt.  
+ Für eine Anwendung, die XAML mit teilweiser Vertrauenswürdigkeit lädt, können Sie die Eigenschaften der Zugriffsebene mithilfe der <xref:System.Xaml.Permissions.XamlAccessLevel>-API steuern. Außerdem müssen zurückstellungs Mechanismen (z. b. das WPF-Vorlagen System) in der Lage sein, alle Zugriffsebenen-Berechtigungen weiterzugeben und Sie für die Evaluierungs Versionen der Laufzeit zu erhalten. Dies wird intern durch übergeben der <xref:System.Xaml.Permissions.XamlAccessLevel> Informationen gehandhabt.  
   
 ### <a name="wpf-implementation"></a>WPF-Implementierung  
- WPF-XAML verwendet ein teilweise vertrauenswürdiges Zugriffs Modell, bei dem BAML unter teilweiser Vertrauenswürdigkeit geladen wird. <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A> der Zugriff ist für die Assembly, die die BAML-Quelle ist, auf eingeschränkt. Zur Verzögerung verwendet <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType> WPF als Mechanismus zum übergeben der zugriffsesinformationen.  
+ WPF-XAML verwendet ein teilweise vertrauenswürdiges Zugriffs Modell, bei dem BAML unter teilweiser Vertrauenswürdigkeit geladen wird. der Zugriff ist auf <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A> für die Assembly beschränkt, die die BAML-Quelle ist. Bei der Verzögerung verwendet WPF <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType> als Mechanismus zum übergeben der Informationen zur Zugriffsebene.  
   
- In der WPF-XAML-Terminologie ist ein *interner Typ* ein Typ, der durch dieselbe Assembly definiert wird, die auch die verweisende XAML enthält. Ein solcher Typ kann über einen XAML-Namespace zugeordnet werden, der den Assembly =-Teil einer Zuordnung absichtlich auslässt, z `xmlns:local="clr-namespace:WPFApplication1"`. b.  Wenn BAML auf einen internen Typ verweist und dieser Typ `internal` über eine Zugriffsebene verfügt, `GeneratedInternalTypeHelper` wird hierdurch eine Klasse für die Assembly generiert. Wenn Sie dies vermeiden `GeneratedInternalTypeHelper`möchten, müssen Sie entweder die Zugriffsebene verwenden `public` oder die relevante Klasse in eine separate Assembly einbeziehen und diese Assembly abhängig machen.  
+ In der WPF-XAML-Terminologie ist ein *interner Typ* ein Typ, der durch dieselbe Assembly definiert wird, die auch die verweisende XAML enthält. Ein solcher Typ kann über einen XAML-Namespace zugeordnet werden, der den Assembly =-Teil einer Zuordnung absichtlich auslässt, z. b. `xmlns:local="clr-namespace:WPFApplication1"`.  Wenn BAML auf einen internen Typ verweist und dieser Typ über `internal` Zugriffsebene verfügt, generiert dies eine `GeneratedInternalTypeHelper` Klasse für die Assembly. Wenn Sie `GeneratedInternalTypeHelper`vermeiden möchten, müssen Sie entweder `public` Zugriffsebene verwenden, oder Sie müssen die relevante Klasse in eine separate Assembly einbeziehen und diese Assembly abhängig machen.  
   
 ## <a name="see-also"></a>Siehe auch
 

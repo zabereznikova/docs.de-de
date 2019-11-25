@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460782"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975718"
 ---
 # <a name="control-authoring-overview"></a>Übersicht über das Erstellen von Steuerelementen
 
@@ -36,7 +36,7 @@ In der Vergangenheit waren Sie bei der Anpassung eines vorhandenen Steuerelement
   > [!NOTE]
   > Obwohl eine <xref:System.Windows.Controls.RadioButton> einen <xref:System.Windows.DataTemplate>verwenden kann, ist in diesem Beispiel ein <xref:System.Windows.DataTemplate> nicht ausreichend.  Der <xref:System.Windows.DataTemplate> der die Darstellung des Inhalts eines Steuer Elements definiert. Im Fall einer <xref:System.Windows.Controls.RadioButton>wird der Inhalt auf der rechten Seite des Kreises angezeigt, der angibt, ob die <xref:System.Windows.Controls.RadioButton> ausgewählt ist.  Im Beispiel mit der Ampel brauchen Sie lediglich das Optionsfeld als einen Kreis darzustellen, das „aufleuchten“ kann. Da sich die Darstellungs Anforderung für das Ampel von der Standarddarstellung der <xref:System.Windows.Controls.RadioButton>unterscheidet, ist es erforderlich, die <xref:System.Windows.Controls.ControlTemplate>neu zu definieren.  Im Allgemeinen wird eine <xref:System.Windows.DataTemplate> zum Definieren des Inhalts (oder der Daten) eines Steuer Elements verwendet, und ein <xref:System.Windows.Controls.ControlTemplate> wird verwendet, um zu definieren, wie ein Steuerelement strukturiert ist.
 
-- **Trigger.** Mit einem <xref:System.Windows.Trigger> können Sie die Darstellung und das Verhalten eines Steuer Elements dynamisch ändern, ohne ein neues Steuerelement erstellen zu müssen. Angenommen, Sie verfügen über mehrere <xref:System.Windows.Controls.ListBox>-Steuerelemente in Ihrer Anwendung und möchten, dass die Elemente in den einzelnen <xref:System.Windows.Controls.ListBox> Fett und rot sind, wenn Sie ausgewählt werden. Der erste Instinkt besteht darin, eine Klasse zu erstellen, die von <xref:System.Windows.Controls.ListBox> erbt, und die <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>-Methode außer Kraft zu setzen, um die Darstellung des ausgewählten Elements zu ändern. ein besserer Ansatz ist jedoch das Hinzufügen eines Auslösers zu einem Stil eines <xref:System.Windows.Controls.ListBoxItem>, der das Aussehen des ausgewählten Elements ändert. . Mit Triggern können Sie Eigenschaftswerte bearbeiten oder basierend auf den Eigenschaftswerten Aktionen ausführen. Mit einem <xref:System.Windows.EventTrigger> können Sie bei Auftreten eines Ereignisses Aktionen ausführen.
+- **Trigger.** Mit einem <xref:System.Windows.Trigger> können Sie die Darstellung und das Verhalten eines Steuer Elements dynamisch ändern, ohne ein neues Steuerelement erstellen zu müssen. Angenommen, Sie verfügen über mehrere <xref:System.Windows.Controls.ListBox>-Steuerelemente in Ihrer Anwendung und möchten, dass die Elemente in den einzelnen <xref:System.Windows.Controls.ListBox> Fett und rot sind, wenn Sie ausgewählt werden. Der erste Instinkt besteht darin, eine Klasse zu erstellen, die von <xref:System.Windows.Controls.ListBox> erbt, und die <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>-Methode außer Kraft zu setzen, um die Darstellung des ausgewählten Elements zu ändern. ein besserer Ansatz ist jedoch das Hinzufügen eines Auslösers zu einem Stil eines <xref:System.Windows.Controls.ListBoxItem>, der die Darstellung des ausgewählten Elements ändert. Mit Triggern können Sie Eigenschaftswerte bearbeiten oder basierend auf den Eigenschaftswerten Aktionen ausführen. Mit einem <xref:System.Windows.EventTrigger> können Sie bei Auftreten eines Ereignisses Aktionen ausführen.
 
 Weitere Informationen zu Stilen, Vorlagen und Triggern finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).
 
@@ -187,7 +187,7 @@ Weitere Informationen zu Datenbindungen finden Sie unter [Übersicht über Daten
 
 ### <a name="design-for-designers"></a>Darstellung für Designer
 
-Um Support für benutzerdefinierte WPF-Steuerelemente in [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] zu erhalten (z.B. bezüglich der Eigenschaftenbearbeitung mit dem Eigenschaftenfenster), befolgen Sie die folgenden Richtlinien.  Weitere Informationen zum entwickeln für die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]finden Sie unter [Entwerfen von XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+Um Unterstützung für benutzerdefinierte WPF-Steuerelemente im WPF-Designer für Visual Studio (z. b. Eigenschaften Bearbeitung mit dem Eigenschaftenfenster) zu erhalten, befolgen Sie diese Richtlinien.  Weitere Informationen zum entwickeln für den WPF-Designer finden Sie unter [Entwerfen von XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Abhängigkeitseigenschaften
 

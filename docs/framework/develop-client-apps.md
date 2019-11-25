@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b9d9efb62e0c6bc0925662bc9424065922a1534c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5cf10a4d50aec561fea4f8537098345f8e03a26a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051984"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457979"
 ---
-# <a name="developing-client-applications-with-the-net-framework"></a>Entwickeln von Clientanwendungen mit .NET Framework
+# <a name="develop-client-applications-with-the-net-framework"></a>Entwickeln von Clientanwendungen mit dem .NET Framework
 
-Es gibt mehrere Möglichkeiten zum Entwickeln von Windows-basierten Anwendungen mit .NET Framework. Sie können folgende Tools und Frameworks beliebig verwenden: 
+Es gibt mehrere Möglichkeiten zum Entwickeln von Windows-basierten Anwendungen mit .NET Framework. Sie können folgende Tools und Frameworks beliebig verwenden:
 
 - [Universelle Windows-Plattform (UWP)](https://developer.microsoft.com/windows/apps)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Forms](./winforms/index.md)
 
 Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie Windows-basierte Anwendungen mit Windows Presentation Foundation oder mit Windows Forms erstellt werden. Sie können jedoch außerdem Webanwendungen mit .NET Framework sowie Clientanwendungen für Computer oder Geräte erstellen, die Sie über Microsoft Store verfügbar machen.
- 
+
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Windows Presentation Foundation](./wpf/index.md)  
@@ -37,9 +37,6 @@ Stellt Informationen zum Entwickeln von Anwendungen mit WPF bereit.
 
 [Windows Forms](./winforms/index.md)  
 Stellt Informationen zum Entwickeln von Anwendungen mit Windows Forms bereit.
-
-[Allgemeine Clienttechnologien](./common-client-technologies/index.md)  
-Stellt Informationen über zusätzliche Technologien bereit, die zum Entwickeln von Clientanwendungen verwendet werden können.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

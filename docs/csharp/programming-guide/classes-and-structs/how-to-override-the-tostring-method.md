@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Überschreiben der ToString-Methode – C#-Programmierhandbuch'
+title: 'Gewusst wie: Überschreiben der ToString-Methode – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 9dd567e537768ceb8b9f61ce58dccd443db38ec7
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3d5b63609ea61764d4042d534c40d8032fb82841
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419339"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970475"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Vorgehensweise: Überschreiben der ToString-Methode (C#-Programmierhandbuch)
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Gewusst wie: Überschreiben der ToString-Methode (C#-Programmierhandbuch)
 
 In C# erben alle Klassen oder Strukturen implizit die <xref:System.Object>-Klasse. Deshalb erhält jedes Objekt in C# die <xref:System.Object.ToString%2A>-Methode, die eine Zeichenfolgenrepräsentation dieses Objekts zurückgibt. Alle Variablen des Typs `int` verfügen z.B über eine `ToString`-Methode, die es ihnen ermöglicht, ihren Inhalt als Zeichenfolge zurückzugeben:  
   

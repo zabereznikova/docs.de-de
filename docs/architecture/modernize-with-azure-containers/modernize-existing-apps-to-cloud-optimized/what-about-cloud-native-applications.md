@@ -1,69 +1,69 @@
 ---
 title: Was gilt für cloudnative Anwendungen?
-description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Wie sieht es mit cloudbasierten Anwendungen aus?
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Was gilt für cloudnative Anwendungen?
 ms.date: 04/28/2018
 ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72318436"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was gilt für cloudnative Anwendungen?
 
-Obwohl sich die [cloudbasierten](https://azure.microsoft.com/overview/cloudnative/) Anwendungen nicht im Mittelpunkt dieses Handbuchs befinden, ist es hilfreich, sich mit diesem Modernisierungsgrad vertraut zu machen und ihn von cloudoptimierten Anwendungen zu unterscheiden.
+Obwohl [Cloud-Native](https://azure.microsoft.com/overview/cloudnative/)-Anwendungen (cloudnativ) nicht der Hauptschwerpunkt dieses Leitfadens sind, ist es hilfreich, ein Verständnis für diesen Modernisierungsreifegrad zu besitzen und ihn von Cloud-Optimized-Anwendungen (cloudoptimiert) zu unterscheiden.
 
-In Abbildung 4-3 werden Native Cloud-apps in den Fälligkeits Stufen der Anwendungs Modernisierung positioniert:
+In Abbildung 4–3 werden Cloud-Native-Apps in den Reifegraden für Anwendungsmodernisierung positioniert:
 
-![Diagramm, das zeigt, wie Native Cloud-Anwendungen positioniert werden.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
+![Diagramm, das die Positionierung von Cloud-Native-Anwendungen zeigt.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
-**Abbildung 4-3.** Positionieren von Cloud-native Anwendungen
+**Abbildung 4–3.** . Positionierung von Cloud-Native-Anwendungen
 
-Die Cloud-Native Modernisierung der Modernisierung erfordert in der Regel neue Entwicklungsinvestitionen. Die Umstellung auf die cloudbasierte Ebene wird in der Regel von geschäftlichen Anforderungen gesteuert, um Anwendungen so weit wie möglich zu modernisieren und die Skalierung in großen Anwendungen drastisch zu verbessern, indem autonome Subsysteme (microservices) erstellt werden, die unabhängig bereitgestellt und skaliert werden können aus anderen Bereichen der Anwendung, während die Kosten langfristig gesenkt werden und die Flexibilität der Teile der autonomen App erhöht wird, die bedeutende Wettbewerbsvorteile bieten.
+Der Modernisierungsreifegrad „Cloud-Native“ erfordert normalerweise neue Entwicklungsinvestitionen. Die Umstellung auf den Reifegrad „Cloud-Native“ ist in der Regel durch geschäftliche Anforderungen motiviert, um Anwendungen so weit wie möglich zu modernisieren und so die Skalierung in großen Anwendungen drastisch zu verbessern, indem autonome Subsysteme (Microservices) erstellt werden, die unabhängig von anderen Bereichen der Anwendung bereitgestellt und skaliert werden können, während langfristig die Kosten gesenkt und die Flexibilität bei der Entwicklung der Teile dieser autonomen App erhöht wird, die bedeutende Wettbewerbsvorteile bieten.
 
-Die Hauptpfeiler der cloudbasierten Anwendungen basieren auf microservices-Architektur Ansätzen, die sich mit Agilität und Skalierbarkeit auf Grenzen entwickeln können, die in einer monolithischen Architektur, die in einer lokalen Umgebung oder in der Cloud bereitgestellt wird, schwierig zu erreichen sind. Umgebung.
+Die Hauptpfeiler cloudnativer Anwendungen ruhen auf Ansätzen mit Microservices-Architektur, die sich mit Agilität weiterentwickeln und auf Limits skalieren lassen, die sich in einer monolithischen Architektur, die in einer lokalen oder Cloudumgebung bereitgestellt ist, schwer erzielen ließen.
 
-Abbildung 4-4 zeigt die Hauptmerkmale des cloudbasierten Modells.
+Abbildung 4–4 zeigt die Haupteigenschaften des Cloud-Native-Modells.
 
-![Diagramm, in dem die Hauptmerkmale der Cloud aufgeführt sind.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
+![Diagramm, in dem die Haupteigenschaften von „Cloud-Native“ aufgeführt sind.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
-**Abbildung 4-4.** In der Cloud Native Merkmale
+**Abbildung 4–4.** Eigenschaften von „Cloud-Native“
 
-Außerdem können Sie grundlegende moderne Web-Apps und Native Cloud-apps erweitern, indem Sie weitere Dienste wie künstliche Intelligenz (KI), Machine Learning (ml) und IOT hinzufügen. Sie können einen dieser Dienste verwenden, um die möglichen cloudoptimierten Ansätze zu erweitern.
+Zusätzlich können Sie einfache moderne Web-Apps und cloudnative Apps erweitern, indem Sie weitere Dienste wie Künstliche Intelligenz (KI), Machine Learning (ML) und IoT hinzufügen. Sie können einen dieser Dienste verwenden, um jeden der möglichen cloudoptimierten Ansätze zu erweitern.
 
-Der grundlegende Unterschied bei Anwendungen auf der cloudbasierten Ebene ist die Anwendungsarchitektur. Native cloudanwendungen sind definitionsgemäß apps, die auf-Webdiensten basieren. Native Cloud-apps erfordern besondere Architekturen, Technologien und Plattformen im Vergleich zu einer monolithischen Webanwendung oder einer herkömmlichen N-Tier-Anwendung.
+Der grundlegende Unterschied bei Anwendungen auf der cloudnativen Ebene liegt in der Anwendungsarchitektur. Cloudnative Anwendungen sind definitionsgemäß Apps, die auf Microservices basieren. Cloudnative Apps erfordern besondere Architekturen, Technologien und Plattformen im Vergleich zu einer monolithischen Webanwendung oder einer herkömmlichen N-schichtigen Anwendung.
 
-## <a name="cloud-native-applications-details"></a>Details zur Cloud-native Anwendung
+## <a name="cloud-native-applications-details"></a>Details zu Cloud-Native-Anwendungen
 
-Cloud-Native ist ein fortschrittlicher oder ausgereifter Status für große und unternehmenskritische Anwendungen. Native Cloud-Anwendungen erfordern in der Regel Architektur und Entwurf, die von Grund auf neu erstellt werden, anstatt vorhandene Anwendungen zu modernisieren. Der Hauptunterschied zwischen einer cloudbasierten Anwendung und einer einfacheren cloudoptimierten Web-App ist die Empfehlung, microservicearchitekturen in einem cloudbasierten Ansatz zu verwenden. Cloud-optimierte Apps können auch monolithische Web-Apps oder N-Tier-apps sein.
+„Cloud-Native“ ist ein komplexerer oder ausgereifterer Zustand für große und unternehmenskritische Anwendungen. Cloudnative Anwendungen erfordern in der Regel eine Architektur und ein Design, die von Grund auf neu erstellt werden, anstatt vorhandene Anwendungen zu modernisieren. Der Hauptunterschied zwischen einer cloudnativen Anwendung und einer einfacheren cloudoptimierten Web-App liegt in der Empfehlung, Microservice-Architekturen in einem cloudnativen Ansatz zu verwenden. Cloudoptimierte Apps können auch monolithische Web-Apps oder N-schichtige Apps sein.
 
-Die [zwölfstufige App](https://12factor.net/) (eine Sammlung von Mustern, die eng mit den microserviceansätzen verknüpft sind) wird auch als Voraussetzung für cloudidentielle Anwendungsarchitekturen angesehen.
+Die [Twelve-Factor-App](https://12factor.net/) (eine Sammlung von Mustern, die in enger Beziehung zu Microservice-Ansätzen stehen) wird ebenfalls als eine Voraussetzung für cloudnative Anwendungsarchitekturen angesehen.
 
-Die [Cloud Native Computing Foundation (cncf)](https://www.cncf.io/) ist ein primärer Förderer der cloudbasierten Prinzipien. Microsoft ist [Mitglied von cncf](https://azure.microsoft.com/blog/announcing-cncf/).
+Die [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) ist ein primärer Förderer der cloudnativen Prinzipien. Microsoft ist [Mitglied de CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Eine Beispiel Definition und weitere Informationen zu den Merkmalen von cloudbasierten Anwendungen finden Sie im Gartner [-Artikel entwerfen und Entwerfen von cloudbasierten Anwendungen](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Eine spezielle Anleitung von Microsoft zur Implementierung einer Cloud-systemeigenen Anwendung finden Sie unter [.net-mikrodienste: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
+Eine Beispieldefinition und weitere Informationen zu den Eigenschaften von cloudnativen Anwendungen finden Sie in dem Gartner-Artikel [How to architect and design cloud-native applications](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) (Architektur und Design von Cloud-Native-Anwendungen). Spezifische Anleitungen von Microsoft zur Implementierung einer cloudnativen Anwendung finden Sie unter [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
 
-Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudbasierten Modell zu berücksichtigen ist, besteht darin, dass Sie eine Architektur in einer auf microservices basierenden Architektur entwickeln müssen. Dies erfordert aufgrund des großen Umgestaltungs Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeits Stufen und langfristige Agilität benötigen. Aber Sie könnten mit der Umstellung auf die Cloud-Native beginnen, indem Sie für ein paar neue Szenarios die folgenden Funktionen hinzufügen und die Anwendung dann vollständig als "mikroservices" umgestalten. Dies ist ein inkrementeller Ansatz, der in einigen Szenarien die beste Option ist.
+Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudnativen Modell zu berücksichtigen ist, besteht darin, dass Sie die Architektur vollständig neu auf eine auf Microservices basierende Architektur umstellen müssen. Dies erfordert aufgrund des umfangreichen Refactoring-Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeitsniveaus und langfristige Agilität benötigen. Sie könnten aber auch mit der Umstellung auf Cloud-Native beginnen, indem Sie Microservices nur für ein paar neue Szenarios hinzufügen und schließlich ein vollständiges Refactoring der Anwendung als Microservices durchführen. Dies ist ein inkrementeller Ansatz, der in einigen Szenarien die beste Option darstellt.
 
-## <a name="what-about-microservices"></a>Wie sieht es mit den Funktionen von "
+## <a name="what-about-microservices"></a>Und Microservices...?
 
-Das Verständnis von mikrodiensten und deren Funktionsweise ist wichtig, wenn Sie in der Cloud native Anwendungen für Ihre Organisation in Erwägung ziehen.
+Das Verständnis von Microservices und ihrer Funktionsweise ist wichtig, wenn Sie cloudnative Anwendungen für Ihre Organisation in Erwägung ziehen.
 
-Die microservices-Architektur ist ein erweiterter Ansatz, den Sie für Anwendungen verwenden können, die von Grund auf neu erstellt werden, oder wenn Sie vorhandene Anwendungen in Cloud-native Anwendungen weiterentwickeln. Sie können beginnen, indem Sie vorhandenen Anwendungen einige-Dienste hinzufügen, um mehr über die neuen Paradigmen für den Einsatz von Modellen zu erfahren. Natürlich müssen Sie aber auch einen Architekt und Code entwickeln, insbesondere für diese Art von Architektur.
+Die Microservices-Architektur ist ein komplexer Ansatz, den Sie für Anwendungen verwenden können, die von Grund auf neu erstellt werden, oder wenn Sie vorhandene Anwendungen in Richtung cloudnative Anwendungen weiterentwickeln. Sie können damit beginnen, dass Sie vorhandenen Anwendungen ein paar Microservices hinzufügen, um mehr über die neuen Paradigmen von Microservices zu erfahren. Natürlich müssen Sie aber auch speziell auf diesen Architekturansatz hin die Architektur entwickeln und programmieren.
 
-Allerdings sind die-mikrodienste für keine neue oder moderne Anwendung obligatorisch. Bei der Verwendung von mikroservices handelt es sich nicht um die einzige, beste Methode, um jede Anwendung zu erstellen. Wie und wann Sie-Webdienste verwenden, hängt von der Art der Anwendung ab, die Sie erstellen müssen.
+Microservices sind allerdings für keine neue oder moderne Anwendung obligatorisch. Bei Microservices handelt es sich nicht um eine „Wunderwaffe“, und sie sind nicht die einzige, optimale Methode, um jede Anwendung zu erstellen. Wie und wann Sie Microservices verwenden, hängt vom Typ der Anwendung ab, die Sie erstellen müssen.
 
-Die microservices-Architektur wird zum bevorzugten Ansatz für verteilte und große oder komplexe unternehmenskritische Anwendungen, die auf mehreren unabhängigen Subsystemen in Form von autonomen Diensten basieren. In einer auf microservices basierenden Architektur wird eine Anwendung als eine Sammlung von Diensten erstellt, die unabhängig entwickelt, getestet, versioniert, bereitgestellt und skaliert werden können. Dies kann jede zugehörige, autonome Datenbank pro mikroservice einschließen.
+Die Microservices-Architektur wird zum bevorzugten Ansatz für verteilte und große oder komplexe unternehmenskritische Anwendungen, die auf mehreren unabhängigen Subsystemen in Form von autonomen Diensten basieren. In einer auf Microservices basierenden Architektur wird eine Anwendung als Sammlung von Diensten erstellt, die unabhängig voneinander entwickelt, getestet, mit Versionsangaben versehen, bereitgestellt und skaliert werden. Dies kann alle jegliche verwandte, autonome Datenbank pro Microservice einschließen.
 
-Einen detaillierten Einblick in eine microservicearchitektur, die Sie mithilfe von .net Core implementieren können, finden Sie in der herunterladbaren PDF-e-book-[.net microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch ist auch [Online](../../microservices/index.md)verfügbar.
+Einen detaillierten Einblick in eine Microservice-Architektur, die Sie mithilfe von .NET Core implementieren können, finden Sie in dem herunterladbaren PDF-e-Book [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch steht auch [online](../../microservices/index.md) zur Verfügung.
 
-Aber auch in Szenarios, in denen die Funktionen von Mikro Diensten eine leistungsstarke, unabhängige Bereitstellung, starke subsystemgrenzen und Technologie Vielfalt bieten, sind auch viele neue Herausforderungen zu meistern. Die Herausforderungen beziehen sich auf die Entwicklung verteilter Anwendungen, wie z. b. fragmentierte und unabhängige Datenmodelle. erreichen robuster Kommunikation zwischen den-und-Diensten der Bedarf an letztlicher Konsistenz; und betriebliche Komplexität. Im Vergleich zu herkömmlichen monolithischen Anwendungen führt der-Dienst zu einem höheren Komplexitäts Grad.
+Doch selbst in Szenarios, in denen Microservices viele leistungsstarke Funktionen bieten, wie unabhängige Bereitstellung, starke Subsystemgrenzen und technologische Vielfalt, bringen sie auch viele neue Herausforderungen mit sich. Die Herausforderungen stehen im Zusammenhang mit der Entwicklung von verteilten Anwendungen, z. B. fragmentierte und unabhängige Datenmodelle, dem Erzielen von robuster Kommunikation zwischen Microservices, der letztendlichen Notwendigkeit von Konsistenz sowie der operativen Komplexität. Microservices führen einen höheren Komplexitätsgrad ein im Vergleich zu herkömmlichen monolithischen Anwendungen.
 
-Aufgrund der Komplexität einer microservicesarchitektur sind nur bestimmte Szenarien und bestimmte Anwendungs Typen für auf microservices basierende Anwendungen geeignet. Dazu zählen große und komplexe Anwendungen mit mehreren, sich entwickelnden Subsystemen. In diesen Fällen ist es sinnvoll, in eine komplexere Softwarearchitektur zu investieren, um eine höhere langfristige Agilität und eine effizientere Anwendungs Wartung zu erhalten. Für weniger komplexe Szenarien ist es jedoch möglicherweise besser, mit einer monolithischen Anwendungs Herangehensweise oder einfacheren N-Tier-Ansätzen fortzufahren.
+Aufgrund der Komplexität einer Microservices-Architektur sind nur bestimmte Szenarien und bestimmte Anwendungstypen für auf Microservices basierende Anwendungen geeignet. Dazu gehören große und komplexe Anwendungen mit mehreren sich entwickelnden Subsystemen. In diesen Fällen lohnt es sich, in komplexere Softwarearchitektur zu investieren, da damit für bessere langfristige Flexibilität und eine effizientere Anwendungswartung gesorgt wird. Für weniger komplexe Szenarien kann es jedoch möglicherweise besser sein, mit einem monolithischen Anwendungsansatz Herangehensweise oder einfacheren N-schichtigen Ansätzen fortzufahren.
 
-Zum Schluss sollten Sie selbst dann, wenn das Risiko besteht, dass Sie sich nicht mehr mit diesem Konzept beschäftigen, die Verwendung von in Ihren Anwendungen verwendeten mikroservices nicht als "alles oder gar nichts" betrachten. Sie können vorhandene monolithische Anwendungen erweitern und entwickeln, indem Sie neue, kleine Szenarios basierend auf den-Diensten hinzufügen. Sie müssen nicht von Grund auf neu beginnen, um mit einem microservices-Architekturansatz zu arbeiten. Es wird empfohlen, dass Sie sich von der Verwendung einer vorhandenen monolithischen oder N-Tier-Anwendung durch Hinzufügen neuer Szenarien weiterentwickeln. Schließlich können Sie die Anwendung in Autonome Komponenten oder in die-Dienste zerlegen. Sie können mit der Entwicklung monolithischer Anwendungen in einer Richtung für die Richtung eines einzelnen Schritts beginnen.
+Abschließend sei zu diesem Konzept bemerkt, auch auf die Gefahr, sich zu wiederholen, dass Sie die Verwendung von Microservices in Ihren Anwendungen nicht als „Ganz oder garn nicht“-Lösung betrachten sollten. Sie können vorhandene monolithische Anwendungen erweitern und weiterentwickeln, indem Sie neue, kleine Szenarios hinzufügen, die auf Microservices basieren. Sie müssen nicht von Grund auf neu beginnen, um die Arbeit mit einem Microservices-Architekturansatz zu beginnen. De facto empfehlen wir, dass Sie sich von der Verwendung einer vorhandenen monolithischen oder n-schichtigen Anwendung durch Hinzufügen neuer Szenarien weiterentwickeln. Als letzten Schritt können Sie dann die Anwendung in autonome Komponenten und Microservices aufteilen. Mit der Weiterentwicklung Ihrer monolithischen Anwendungen in Richtung von Microservices können Sie schrittweise beginnen.
 
-In jedem Fall konzentriert sich der Rest dieses Leitfadens am meisten auf "keine auf microservices basierenden Apps", da diese Richtlinien hauptsächlich auf die Modernisierung vorhandener apps abzielen, die normalerweise monolithische oder N-Tier-Architekturen haben.
+Auf jeden Fall konzentriert sich der Rest der vorliegenden Anleitung vorwiegend auf „nicht auf Microservices basierende Anwendungen“, da diese Anleitung hauptsächlich auf die Modernisierung vorhandener Anwendungen abzielt, die in der Regel monolithische oder N-schichtige Architekturen aufweisen.
 
 > [!div class="step-by-step"]
 > [Zurück](microsoft-technologies-in-cloud-optimized-applications.md)

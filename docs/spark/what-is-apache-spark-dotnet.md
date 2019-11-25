@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über das kostenlose, plattformübergreifende und
 author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
-ms.openlocfilehash: c31b50a20ac08bcde077e1e85ee915435a99fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395850"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458201"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Was ist .NET für Apache Spark?
 
@@ -20,9 +20,9 @@ ms.locfileid: "72395850"
 .NET für Apache Spark ermöglicht Entwicklern mit NET-Erfahrung oder einer .NET-Codebasis den Einstieg in die Welt von Big Data-Analysen. .NET für Apache Spark bietet Hochleistungs-APIs für die Verwendung von Spark in C# und F#. Mit C# und F# erhalten Sie Zugriff auf Folgendes:
 
 * DataFrames und Spark SQL für die Arbeit mit strukturierten Daten
-* Spark Structured Streaming für die Arbeit mit Streamingdaten
+* Spark Structured Streaming zum Arbeiten mit Streamingdaten
 * Spark SQL zum Schreiben von Abfragen mit SQL-Syntax
-* Integration von maschinellem Lernen für schnelleres Trainieren und Vorhersagen (d. h. Verwendung von .NET für Apache Spark zusammen mit [ML.NET](http://dot.net/ml))
+* Integration von maschinellem Lernen für schnelleres Trainieren und Vorhersagen (d. h. Verwendung von .NET für Apache Spark zusammen mit [ML.NET](https://dot.net/ml))
 
 .NET für Apache Spark ist mit .NET Standard kompatibel, einer formalen Spezifikation von .NET-APIs, die in allen .NET-Implementierungen verwendet werden. Dadurch können Sie .NET für Apache Spark für Ihren .NET-Code verwenden und Ihr Know-how als .NET-Entwickler nutzen sowie Ihren Code und Ihre Bibliotheken weiterverwenden.
 
@@ -39,7 +39,7 @@ Weitere Informationen zur Interoperabilitätsunterstützung für Spark-Spracherw
 
 ## <a name="net-for-apache-spark-performance"></a>Leistung von .NET für Apache Spark
 
-Beim Vergleich mit Python und Scala unter Verwendung der [TPC-H-Benchmarks](http://www.tpc.org/tpch/) ist die Leistung von .NET für Apache Spark in den meisten Fällen gut. Wenn benutzerdefinierte Funktionen besonders wichtig sind, ist die Leistung sogar doppelt so hoch wie bei Python. Die Leistung und Benchmarks werden kontinuierlich verbessert. 
+Beim Vergleich mit Python und Scala unter Verwendung der [TPC-H-Benchmarks](http://www.tpc.org/tpch/) ist die Leistung von .NET für Apache Spark in den meisten Fällen gut. Wenn benutzerdefinierte Funktionen besonders wichtig sind, ist die Leistung sogar doppelt so hoch wie bei Python. Die Leistung und Benchmarks werden kontinuierlich verbessert.
 
 Informationen zu eigenen Benchmarktests finden Sie in den verfügbaren Benchmarks auf der [GitHub-Seite für .NET für Apache Spark](https://github.com/dotnet/spark/tree/master/benchmark).
 

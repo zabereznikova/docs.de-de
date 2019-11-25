@@ -2,12 +2,12 @@
 title: Datensouveränität pro Microservice
 description: Datensouveränität pro Microservice gehört zu den Eckpfeilern von Microservices. Jeder Microservice muss der alleinige Besitzer seiner Datenbank sein – sie darf nicht freigegeben werden. Alle Instanzen eines Microservices verbinden sich mit der gleichen hochverfügbaren Datenbank.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834463"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191917"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
@@ -27,7 +27,9 @@ Der traditionelle Ansatz sieht vor, dass eine einzige Datenbank für alle Dienst
 
 Eine monolithische Anwendung, typischerweise mit einer relationalen Datenbank, hat die folgenden wichtigen Vorteile: [ACID-Transaktionen](https://en.wikipedia.org/wiki/ACID) und SQL, die für alle Tabellen und Daten Ihrer Anwendung funktionieren. Dieser Ansatz bietet eine Möglichkeit zum einfachen Schreiben einer Abfrage, die Daten aus mehreren Tabellen kombiniert.
 
-Der Datenzugriff wird jedoch beim Wechsel zu einer Microservicesarchitektur wesentlich komplexer. Aber selbst wenn ACID-Transaktionen innerhalb eines Microservices oder eines begrenzten Kontexts verwendet werden können oder sollen, sind die Daten im Besitz jedes Microservices für diesen Microservice privat und es kann nur über seine Microservice-API auf sie zugegriffen werden. Kapseln von Daten stellt sicher, dass die Microservices locker gekoppelt sind und sich unabhängig voneinander weiterentwickeln können. Wenn mehrere Dienste auf die gleichen Daten zugreifen, benötigen Schemaupdates koordinierte Updates für alle Dienste. Dadurch würde die Autonomie des Lebenszyklus der Microservices unterbrochen. Allerdings bedeuten verteilte Datenstrukturen, dass Sie keine einzelne ACID-Transaktion über Microservices vornehmen können. Dies bedeutet wiederum, dass Sie die letztliche Konsistenz verwenden müssen, wenn ein Geschäftsprozess mehrere Microservices umfasst. Dies ist viel schwieriger zu implementieren als einfache SQL-Joins, da Sie weder Integritätseinschränkungen erstellen noch verteilte Transaktionen zwischen verschiedenen Datenbanken verwenden können, wie später erläutert wird. Ebenso sind viele andere Funktionen der relationalen Datenbank nicht für mehrere Microservices verfügbar.
+Der Datenzugriff wird jedoch beim Wechsel zu einer Microservicearchitektur wesentlich komplizierter. Selbst bei der Verwendung von ACID-Transaktionen innerhalb eines Microservice oder einer Kontextgrenze muss berücksichtigt werden, dass die Daten, die sich im Besitz jedes Microservice befinden, für diesen Microservice privat sind und auf diese nur synchron über die API-Endpunkte (REST, gRPC, SOAP usw.) oder asynchron über Messaging (AMQP o. Ä.) zugegriffen werden sollte.
+
+Kapseln von Daten stellt sicher, dass die Microservices locker gekoppelt sind und sich unabhängig voneinander weiterentwickeln können. Wenn mehrere Dienste auf die gleichen Daten zugreifen, benötigen Schemaupdates koordinierte Updates für alle Dienste. Dadurch würde die Autonomie des Lebenszyklus der Microservices unterbrochen. Allerdings bedeuten verteilte Datenstrukturen, dass Sie keine einzelne ACID-Transaktion über Microservices vornehmen können. Dies bedeutet wiederum, dass Sie die letztliche Konsistenz verwenden müssen, wenn ein Geschäftsprozess mehrere Microservices umfasst. Dies ist viel schwieriger zu implementieren als einfache SQL-Joins, da Sie weder Integritätseinschränkungen erstellen noch verteilte Transaktionen zwischen verschiedenen Datenbanken verwenden können, wie später erläutert wird. Ebenso sind viele andere Funktionen der relationalen Datenbank nicht für mehrere Microservices verfügbar.
 
 Darüber hinaus verwenden verschiedene Microservices häufig unterschiedliche *Arten* von Datenbanken. Moderne Anwendungen speichern und verarbeiten verschiedene Typen von Daten. Eine relationale Datenbank ist nicht immer die beste Wahl. In einigen Anwendungsfällen verfügt eine NoSQL-Datenbank wie Azure CosmosDB oder MongoDB über ein praktischeres Datenmodell und bietet eine bessere Leistung und Skalierbarkeit als eine SQL-Datenbank wie SQL Server oder die Azure SQL-Datenbank. In anderen Fällen ist eine relationale Datenbank immer noch die beste Herangehensweise. Aus diesem Grund verwenden auf Microservices basierende Anwendungen häufig eine Mischung aus SQL- und NoSQL-Datenbanken, was in einigen Fällen auch [Polyglot-Persistence](https://martinfowler.com/bliki/PolyglotPersistence.html)-Ansatz genannt wird.
 

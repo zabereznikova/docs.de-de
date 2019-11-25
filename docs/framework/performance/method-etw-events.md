@@ -7,32 +7,20 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834549"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974918"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 
-<a name="top"></a> Diese Ereignisse sammeln Informationen, die für Methoden spezifisch sind. Die Nutzlast dieser Ereignisse ist für die Symbolauflösung erforderlich. Darüber hinaus bieten diese Ereignisse hilfreiche Informationen, beispielsweise, wie oft eine Methode aufgerufen wurde.
+Diese Ereignisse sammeln Informationen, die für Methoden spezifisch sind. Die Nutzlast dieser Ereignisse ist für die Symbolauflösung erforderlich. Darüber hinaus bieten diese Ereignisse hilfreiche Informationen, beispielsweise, wie oft eine Methode aufgerufen wurde.
 
 Alle Methodenereignisse verfügen über die Ebene "Information (4)". Alle ausführlichen Methodenereignisse verfügen über die Ebene "Ausführlich (5)".
 
 Alle Methodenereignisse werden unter dem Laufzeitanbieter vom Schlüsselwort `JITKeyword` (0x10) oder dem Schlüsselwort `NGenKeyword` (0x20) bzw. unter dem Rundownanbieter von `JitRundownKeyword` (0x10) oder `NGENRundownKeyword` (0x20) ausgelöst.
-
-Die CLR-Methodenereignisse werden weiter in Folgendes unterteilt:
-
-- [CLR-Methodenereignisse](#clr_method_events)
-
-- [CLR-Methodenmarkerereignisse](#clr_method_marker_events)
-
-- [Ausführliche CLR-Methodenereignisse](#clr_method_verbose_events)
-
-- [MethodJittingStarted-Ereignis](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
 
 ## <a name="clr-method-events"></a>CLR-Methodenereignisse
 
@@ -63,12 +51,8 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |MethodStartAddress|win:UInt64|Die Startadresse der Methode.|
 |MethodSize|win:UInt32|Die Größe der Methode.|
 |MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|
-|MethodFlags|win:UInt32|0x1 Dynamische Methode.<br /><br /> 0x2 Generische Methode.<br /><br /> 0x4 JIT-kompilierte Code Methode (andernfalls System eigener ngen-imagecode).<br /><br /> 0x8 Hilfsmethode.|
+|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Codemethode (andernfalls systemeigener NGEN-Imagecode).<br /><br /> 0x8: Hilfsmethode.|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
-
-[Zurück nach oben](#top)
-
-<a name="clr_method_marker_events"></a>
 
 ## <a name="clr-method-marker-events"></a>CLR-Methodenmarkerereignisse
 
@@ -96,10 +80,6 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
-
-[Zurück nach oben](#top)
-
-<a name="clr_method_verbose_events"></a>
 
 ## <a name="clr-method-verbose-events"></a>Ausführliche CLR-Methodenereignisse
 
@@ -130,15 +110,11 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 |MethodStartAddress|win:UInt64|Die Startadresse.|
 |MethodSize|win:UInt32|Die Länge der Methode.|
 |MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|
-|MethodFlags|win:UInt32|0x1 Dynamische Methode.<br /><br /> 0x2 Generische Methode.<br /><br /> 0x4 JIT-kompilierte Methode (andernfalls von "ngen. exe" generiert)<br /><br /> 0x8 Hilfsmethode.|
+|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Methode (andernfalls von NGen.exe generiert)<br /><br /> 0x8: Hilfsmethode.|
 |MethodNameSpace|win:UnicodeString|Der vollständige Namespacename, der der Methode zugeordnet ist.|
 |MethodName|win:UnicodeString|Der vollständige Klassenname, der der Methode zugeordnet ist.|
 |MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
-
-[Zurück nach oben](#top)
-
-<a name="methodjittingstarted_event"></a>
 
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted-Ereignis
 

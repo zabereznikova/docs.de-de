@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 246dbeed69fbd54c2c52bce2414363ddc9c62204
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658440"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035446"
 ---
 # <a name="net-docs"></a>.NET-Dokumentation
 
@@ -16,7 +16,9 @@ Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die [.NET-D
 
 Hier werden außer für das API-Verweisrepository alle Issues und Aufgaben nachverfolgt. Diese Ressourcen werden von sehr vielen Benutzern der Community verwendet. Wir sind bemüht, Issues immer zeitnah zu bearbeiten. In unserer [Issuerichtlinie](issues-policy.md) erfahren Sie mehr zu unserer Vorgehensweise beim Klassifizieren und Beheben von Issues.
 
-Wir freuen uns immer über Beiträge, die die .NET-Dokumentation verbessern und vervollständigen. Wenn Sie einen Beitrag leisten möchten, sehen Sie sich [Projects for .NET Community Contributors (Projekte für .NET-Communitymitwirkende)](https://github.com/dotnet/docs/projects/35) an, um sich inspirieren zu lassen. Im [Leitfaden für Mitwirkende](CONTRIBUTING.md) finden Sie Anweisungen zu bewährten Vorgehensweisen. Sehen Sie sich alternativ die [Issueliste](https://github.com/dotnet/docs/issues) an, um für Sie relevante Aufgaben zu finden. 
+Wir freuen uns immer über Beiträge, die die .NET-Dokumentation verbessern und vervollständigen. Dabei handelt es sich um ein großes Repository, das einen großen Bereich abdeckt. Wenn dies Ihr erster Besuch ist, finden Sie in unserer [Roadmap für Bezeichnungen und Projekte](styleguide/labels-projects.md) weitere Informationen zum Navigieren in den Issues und Projekten in diesem Repository.
+
+Wenn Sie einen Beitrag leisten möchten, sehen Sie sich [Projects for .NET Community Contributors (Projekte für .NET-Communitymitwirkende)](https://github.com/dotnet/docs/projects/35) an, um sich inspirieren zu lassen. Im [Leitfaden für Mitwirkende](CONTRIBUTING.md) finden Sie Anweisungen zu bewährten Vorgehensweisen. 
 
 Navigieren Sie zum Projekt [Codegaleriemigration](https://github.com/dotnet/docs/projects/88), wenn Sie an der Migration von vorhandenem Code interessiert sind, der das .NET Framework aus der [Codegalerie](https://code.msdn.microsoft.com) für .NET Core-Anwendungen zum Ziel hat, die in unserem [Beispielrepository](https://github.com/dotnet/samples) gespeichert sind und über den [Beispielbrowser](https://docs.microsoft.com/samples/browse) heruntergeladen werden können. 
 

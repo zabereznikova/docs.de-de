@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117012"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522815"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Verwenden des Microsoft XML Serializer Generators auf .NET Core
 
@@ -18,20 +18,20 @@ In diesem Tutorial erfahren Sie, wie Sie den Microsoft XML Serializer Generator 
 
 > [!div class="checklist"]
 >
-> * Erstellen einer .NET Core-App
-> * Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
-> * Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
-> * Hinzufügen von „XmlSerializer“ und einer Klasse
-> * Erstellen und Ausführen der Anwendung
+> - Erstellen einer .NET Core-App
+> - Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
+> - Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
+> - Hinzufügen von „XmlSerializer“ und einer Klasse
+> - Erstellen und Ausführen der Anwendung
 
 Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) gilt (wie der [XML Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) für .NET Framework) für .NET Core- und .NET Standard-Projekte. Es erstellt eine XML-Serialisierungsassembly für Typen, die in einer Assembly vorhanden sind, um die Startleistung der XML-Serialisierung zu verbessern, wenn Objekte dieser Typen mithilfe von <xref:System.Xml.Serialization.XmlSerializer> serialisiert oder deserialisiert werden.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Für dieses Tutorial benötigen Sie Folgendes:
+Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höher
-* Ihren bevorzugten Code-Editor
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höher
+- Ihren bevorzugten Code-Editor
 
 > [!TIP]
 > Benötigen Sie einen Code-Editor? Testen Sie [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
@@ -52,7 +52,7 @@ dotnet new console
 
 Verwenden Sie den [`dotnet add package`](../tools//dotnet-add-package.md)-Befehl, um den Verweis Ihrem Projekt hinzuzufügen.
 
-Geben Sie Folgendes ein:
+Typ:
 
 ```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
@@ -101,7 +101,7 @@ Fügen Sie die folgende Zeile unter *Main* hinzu, um einen `XmlSerializer` für 
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a>Erstellen und Ausführen der Anwendung
+### <a name="build-and-run-the-application"></a>Erstellen eines Builds und Ausführen der Anwendung
 
 Führen Sie (immer noch im Ordner *MyApp*) die Anwendung über [`dotnet run`](../tools/dotnet-run.md) aus. Dann werden die zuvor generierten Serializer zur Runtime automatisch geladen und verwendet.
 
@@ -122,14 +122,14 @@ Wenn alle Vorgänge erfolgreich ausgeführt werden, wird eine Assembly mit dem N
 Herzlichen Glückwunsch! Sie haben gerade:
 > [!div class="checklist"]
 >
-> * eine lokale .NET Core-App erstellt
-> * einen Verweis zum Microsoft.XmlSerializer.Generator-Paket hinzugefügt
-> * Ihre MyApp.csproj-Datei bearbeitet, um Abhängigkeiten hinzuzufügen
-> * „XmlSerializer“ und eine Klasse hinzugefügt
-> * die Anwendung erstellt und ausgeführt
+> - eine lokale .NET Core-App erstellt
+> - einen Verweis zum Microsoft.XmlSerializer.Generator-Paket hinzugefügt
+> - Ihre MyApp.csproj-Datei bearbeitet, um Abhängigkeiten hinzuzufügen
+> - „XmlSerializer“ und eine Klasse hinzugefügt
+> - die Anwendung erstellt und ausgeführt
 
-## <a name="related-resources"></a>Zugehörige Ressourcen
+## <a name="related-resources"></a>Verwandte Ressourcen
 
-* [Einführung in die XML-Serialisierung](../../standard/serialization/introducing-xml-serialization.md)
-* [Gewusst wie: Serialisieren mit XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [Gewusst wie: Serialisieren mit XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Einführung in die XML-Serialisierung](../../standard/serialization/introducing-xml-serialization.md)
+- [Vorgehensweise: Serialisieren mit XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Vorgehensweise: Serialisieren mit XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

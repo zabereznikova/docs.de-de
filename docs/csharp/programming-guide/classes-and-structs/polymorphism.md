@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922084"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970344"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -93,7 +93,7 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
 - [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Vorgehensweise: Überschreiben der ToString-Methode](./how-to-override-the-tostring-method.md)  
+- [Überschreiben der ToString-Methode](./how-to-override-the-tostring-method.md)
   
 ## <a name="see-also"></a>Siehe auch
 
