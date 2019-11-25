@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-ms.openlocfilehash: c2114a02016db96d898a394b6892b6d3042d81ff
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0d0d88e3b527beacfa5f879027e696aa75b18147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458235"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283683"
 ---
 # <a name="thumb-styles-and-templates"></a>Thumb-Stile und -Vorlagen
 
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Primitives.Thumb>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Primitives.Thumb>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.
 
 ## <a name="thumb-parts"></a>Thumb-Teile
 
@@ -31,9 +31,9 @@ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Wi
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|
 |-|-|-|
 |Normal|CommonStates|Der Standardzustand|
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|
 |Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|
@@ -59,4 +59,4 @@ Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit Contro
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

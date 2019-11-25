@@ -1,22 +1,22 @@
 ---
-title: 'Vorgehensweise: Erweiterungsmethode (Visual Basic) aufzurufen'
+title: 'Gewusst wie: Aufrufen einer Erweiterungsmethode'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512677"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340399"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Vorgehensweise: Erweiterungsmethode (Visual Basic) aufzurufen
+# <a name="how-to-call-an-extension-method-visual-basic"></a>Gewusst wie: Aufrufen einer Erweiterungsmethode (Visual Basic)
 
-Erweiterungs Methoden ermöglichen Ihnen das Hinzufügen von Methoden zu einer vorhandenen Klasse. Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingefügt wurde, können Sie Sie wie eine Instanzmethode des Typs, der Sie erweitert, abrufen. Weitere Informationen zum Schreiben einer Erweiterungsmethode finden [Sie unter Gewusst wie: Schreiben Sie eine Erweiterungs](./how-to-write-an-extension-method.md)Methode.
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- Die folgenden Anweisungen beziehen sich auf die `PrintAndPunctuate`Erweiterungsmethode, die die Zeichen folgen Instanz anzeigt, die diese aufruft, gefolgt von dem Wert, der in für den `punc`zweiten Parameter gesendet wird.
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-Die Methode muss sich im Gültigkeitsbereich befinden, wenn Sie aufgerufen wird.
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>So greifen Sie auf eine Erweiterungsmethode zu
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. Deklarieren Sie eine Variable, die den Datentyp des ersten Parameters der Erweiterungsmethode aufweist. Für `PrintAndPunctuate`benötigen Sie eine <xref:System.String> Variable:
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. Diese Variable Ruft die Erweiterungsmethode auf, und ihr Wert wird an den ersten Parameter `aString`gebunden. Die folgende Aufruf Anweisung wird angezeigt `Ready?`.
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Beachten Sie, dass der Aufrufen dieser Erweiterungsmethode genau wie ein Aufrufen einer der <xref:System.String> Instanzmethoden aussieht, die einen Parameter erfordern:
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Deklarieren Sie eine weitere Zeichen folgen Variable, und rufen Sie die Methode erneut auf, um zu überprüfen, ob Sie mit
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     Das Ergebnis ist diese Zeit: `or not!!!`.
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>Beispiel
- Der folgende Code ist ein umfassendes Beispiel für die Erstellung und Verwendung einer einfachen Erweiterungsmethode.
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -97,6 +97,6 @@ End Module
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md)
+- [Gewusst wie: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md)
 - [Erweiterungsmethoden](./extension-methods.md)
-- [Bereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

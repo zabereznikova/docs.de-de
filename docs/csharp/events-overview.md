@@ -3,12 +3,12 @@ title: Einführung in Ereignisse
 description: Erfahren Sie in diesem Überblick etwas über Ereignisse in .NET Core und über Ziele beim Sprachentwurf für Ereignisse.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771921"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138520"
 ---
 # <a name="introduction-to-events"></a>Einführung in Ereignisse
 
@@ -26,13 +26,13 @@ Das Abonnieren eines Ereignisses erstellt auch eine Kopplung zwischen zwei Objek
 
 ## <a name="design-goals-for-event-support"></a>Entwurfsziele für die Ereignisunterstützung
 
-Der Sprachentwurf für Ereignisse ist auf diese Ziele ausgerichtet.
+Der Sprachentwurf für Ereignisse ist auf diese Ziele ausgerichtet:
 
-Aktivieren Sie zunächst eine sehr geringe Kopplung zwischen der Ereignisquelle und -senke. Diese beiden Komponenten können nicht von derselben Organisation geschrieben werden und werden möglicherweise sogar auf völlig unterschiedliche Zeitpläne aktualisiert.
+- Aktivieren Sie eine sehr geringe Kopplung zwischen der Ereignisquelle und einer Ereignissenke. Diese beiden Komponenten können nicht von derselben Organisation geschrieben werden und werden möglicherweise sogar auf völlig unterschiedliche Zeitpläne aktualisiert.
 
-Zweitens sollte es sehr einfach sein, ein Ereignis zu abonnieren, und sich von demselben Ereignis abzumelden.
+- Es sollte sehr einfach sein, ein Ereignis zu abonnieren, und sich von demselben Ereignis abzumelden.
 
-Und schließlich sollten Ereignisquellen mehrere Ereignisabonnenten unterstützen. Es sollte auch unterstützen, dass es keine angefügten Ereignisabonnenten gibt.
+- Ereignisquellen sollten mehrere Ereignisabonnenten unterstützen. Es sollte auch unterstützen, dass es keine angefügten Ereignisabonnenten gibt.
 
 Sie sehen, dass die Ziele für Ereignisse, den Zielen für Delegaten sehr ähnlich sind.
 Deshalb basiert die Sprachunterstützung für Ereignisse auf der Sprachunterstützung für Delegaten.
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-Die Handlermethode ist in der Regel das Präfix „On“ gefolgt vom Ereignisnamen, wie oben gezeigt.
+Die Handlermethode weist in der Regel das Präfix „On“ auf, gefolgt vom Ereignisnamen, wie oben gezeigt.
 
 Sie melden sich mithilfe des `-=`-Operators ab:
 

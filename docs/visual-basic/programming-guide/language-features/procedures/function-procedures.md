@@ -1,5 +1,5 @@
 ---
-title: Function-Prozeduren (Visual Basic)
+title: Function-Prozeduren
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function procedures
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b62a730e8ade211821826afbb55fa8858ea311a3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649615"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341089"
 ---
 # <a name="function-procedures-visual-basic"></a>Function-Prozeduren (Visual Basic)
-Ein `Function` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `Function` und `End Function` Anweisungen. Die `Function` Prozedur führt eine Aufgabe aus und gibt dann die Steuerung an den aufrufenden Code zurück. Wenn er die Steuerung zurückgibt, gibt es auch einen Wert an den aufrufenden Code zurück.  
+A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
   
- Jedes Mal, die die Prozedur aufgerufen wird, werden die Anweisungen ausgeführt werden, wobei die erste ausführbare Anweisung nach der `Function` -Anweisung und beendet mit dem ersten `End Function`, `Exit Function`, oder `Return` Anweisung wurde gefunden.  
+ Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
   
- Sie können definieren, eine `Function` Prozedur in einem Modul, Klasse oder Struktur. Es ist `Public` standardmäßig also können Sie ihn aufrufen, von überall aus in Ihrer Anwendung, die Zugriff auf das Modul, Klasse oder Struktur, die in der Sie definiert wurde.  
+ You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
   
- Ein `Function` Argumenten, z. B. Konstanten, Variablen oder Ausdrücke, die an ihn, der aufrufende Code übergeben werden kann in Anspruch nehmen.  
+ A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
- Die Syntax zum Deklarieren einer `Function` Verfahren lautet wie folgt:  
+ The syntax for declaring a `Function` procedure is as follows:  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ Ein `Function` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `F
 End Function  
 ```  
   
- Die *Modifizierer* Zugriffsebene und Informationen zu überladen, überschreiben, freigeben und shadowing angeben können. Weitere Informationen finden Sie unter [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
- Jeder Parameter deklariert die gleiche Weise für [Sub-Prozeduren](./sub-procedures.md).  
+ You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
   
 ### <a name="data-type"></a>Datentyp  
- Jede `Function` Prozedur verfügt über einen Datentyp, ebenso wie Variablen verfügt. Dieser Datentyp wird angegeben, durch die `As` -Klausel in der `Function` -Anweisung, und bestimmt den Datentyp des Werts an die Funktion an den aufrufenden Code zurückgibt. Die folgenden Beispieldeklarationen veranschaulicht.  
+ Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- Weitere Informationen finden Sie unter "Teile" in [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
-## <a name="returning-values"></a>Zurückgeben von Werten  
- Der Wert einer `Function` sendet zurück an den aufrufenden Code wird den Rückgabewert aufgerufen. Die Prozedur gibt diesen Wert zurück, auf zwei Arten:  
+## <a name="returning-values"></a>Returning Values  
+ The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
   
-- Er verwendet den `Return` Anweisung an den Rückgabewert, und gibt die Steuerung wird sofort an das aufrufende Programm. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- Es wird eine eigene Funktionsnamen in eine oder mehrere Anweisungen der Prozedur ein Wert zugewiesen. Steuerung wird nicht zurückgegeben, an das aufrufende Programm, bis ein `Exit Function` oder `End Function` -Anweisung ausgeführt wird. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,27 +74,27 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- Der Vorteil, den Namen der Funktion den Rückgabewert zugewiesen ist, dass das Steuerelement nicht von der Prozedur erst zurückgegeben wird, es findet ein `Exit Function` oder `End Function` Anweisung. Dadurch können Sie einen vorläufigen Wert zuweisen, und sie später bei Bedarf anpassen.  
+ The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
   
- Weitere Informationen zur Rückgabe von Werten finden Sie unter [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md). Informationen zur Rückgabe von Arrays finden Sie unter [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="calling-syntax"></a>Die Syntax aufrufen  
- Rufen Sie eine `Function` Prozedur einschließlich der Namen und die Argumente, die entweder auf der rechten Seite einer zuweisungsanweisung oder in einem Ausdruck. Geben Sie Werte für alle Argumente, die nicht optional sind, und müssen Sie die Argumentliste in Klammern einschließen. Wenn keine Argumente angegeben werden, können Sie die Klammern optional weglassen.  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
   
- Die Syntax für einen Aufruf einer `Function` Verfahren lautet wie folgt:  
+ The syntax for a call to a `Function` procedure is as follows:  
   
- *l-Wert*`=`*Functionname* `[(` *Argumentlist* `)]`  
+ *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
   
  `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
   
- Beim Aufruf einer `Function` vor, Sie müssen nicht den Rückgabewert zu verwenden. Wenn Sie dies nicht tun, werden alle Aktionen der Funktion ausgeführt, aber der Rückgabewert wird ignoriert. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> auf diese Weise wird häufig aufgerufen werden.  
+ When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
   
-### <a name="illustration-of-declaration-and-call"></a>Abbildung der Deklaration und Aufruf  
- Die folgenden `Function` Prozedur berechnet werden, die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- Das folgende Beispiel zeigt einen typischen Aufruf von `hypotenuse`.  
+ The following example shows a typical call to `hypotenuse`.  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
@@ -106,6 +106,6 @@ End Function
 - [Operatorprozeduren](./operator-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Vorgehensweise: Erstellen Sie eine Prozedur, die einen Wert zurückgibt.](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Vorgehensweise: Zurückgeben eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)
-- [Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt.](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Gewusst wie: Erstellen einer Prozedur, die einen Wert zurückgibt](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Gewusst wie: Abrufen eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)
+- [Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt](./how-to-call-a-procedure-that-returns-a-value.md)

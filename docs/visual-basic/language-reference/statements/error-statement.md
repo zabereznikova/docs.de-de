@@ -1,5 +1,5 @@
 ---
-title: Error-Anweisung (Visual Basic)
+title: Error-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: c7b2adfe7f6b6ff5e89598cb318a90c51595ff6f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 668ffbc7b8db73a706c5771bb0734a77f8fc0206
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583378"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351236"
 ---
 # <a name="error-statement"></a>Error-Anweisung
-Simuliert das Auftreten eines Fehlers.  
+Simulates the occurrence of an error.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Teile  
  `errornumber`  
- Erforderlich. Kann eine beliebige gültige Fehlernummer sein.  
+ Erforderlich. Can be any valid error number.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Error`-Anweisung wird aus Gründen der Abwärtskompatibilität unterstützt. Verwenden Sie in neuem Code, insbesondere beim Erstellen von-Objekten, die `Raise`-Methode des `Err` Objekts, um Laufzeitfehler zu generieren.  
+ The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
   
- Wenn `errornumber` definiert ist, ruft die `Error` Anweisung den Fehlerhandler auf, nachdem den Eigenschaften des `Err`-Objekts die folgenden Standardwerte zugewiesen wurden:  
+ If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
   
 |property|Wert|  
 |--------------|-----------|  
-|`Number`|Der als Argument für `Error` Anweisung angegebene Wert. Kann eine beliebige gültige Fehlernummer sein.|  
-|`Source`|Der Name des aktuellen Visual Basic Projekts.|  
-|`Description`|Zeichen folgen Ausdruck, der dem Rückgabewert der `Error`-Funktion für die angegebene `Number` entspricht, wenn diese Zeichenfolge vorhanden ist. Wenn die Zeichenfolge nicht vorhanden ist, enthält `Description` eine Zeichenfolge der Länge 0 ("").|  
-|`HelpFile`|Das voll qualifizierte Laufwerk, der Pfad und der Dateiname der entsprechenden Visual Basic Hilfedatei.|  
-|`HelpContext`|Die entsprechende Visual Basic Hilfedatei-Kontext-ID für den Fehler, der der `Number`-Eigenschaft entspricht.|  
-|`LastDLLError`|Zins.|  
+|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
+|`Source`|Name of the current Visual Basic project.|  
+|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
+|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
+|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
+|`LastDLLError`|Zero.|  
   
- Wenn kein Fehlerhandler vorhanden ist oder keine aktiviert ist, wird eine Fehlermeldung erstellt und in den Eigenschaften des `Err` Objekts angezeigt.  
+ If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
   
 > [!NOTE]
-> Einige Visual Basic Host Anwendungen können keine Objekte erstellen. Informationen zum Erstellen von Klassen und Objekten finden Sie in der Dokumentation der Host Anwendung.  
+> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird die `Error`-Anweisung verwendet, um die Fehlernummer 11 zu generieren.  
+ This example uses the `Error` statement to generate error number 11.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
 

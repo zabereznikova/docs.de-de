@@ -1,15 +1,15 @@
 ---
-title: Aggregationsvorgänge (Visual Basic)
+title: Aggregationsoperationen
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c7f9344d379af2fed2a8f3d9f7c031c8ca00e8c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669026"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345781"
 ---
-# <a name="aggregation-operations-visual-basic"></a>Aggregationsvorgänge (Visual Basic)
+# <a name="aggregation-operations-visual-basic"></a>Aggregation Operations (Visual Basic)
 Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein einzelner Wert berechnet. Ein Beispiel für einen Aggregationsvorgang ist die Berechnung der durchschnittlichen Tagestemperatur aus den Tagestemperaturen eines Monats.  
   
  Die folgende Abbildung zeigt das Ergebnis von zwei verschiedenen Aggregationsvorgängen bei einer Zahlensequenz. Der erste Vorgang zählt die Zahlen zusammen. Der zweite Vorgang gibt den höchsten Wert der Sequenz zurück.  
@@ -20,7 +20,7 @@ Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein ein
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung|Visual Basic-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Aggregat|Führt einen benutzerdefinierten Aggregationsvorgang für die Werte einer Auflistung durch.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
 |Average|Berechnet den Durchschnittswert einer Auflistung von Werten.|`Aggregate … In … Into Average()`|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
@@ -33,32 +33,32 @@ Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein ein
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="average"></a>Average  
- Im folgenden Codebeispiel wird die `Aggregate Into Average` -Klausel in Visual Basic, um die Durchschnittstemperatur in ein Array von Zahlen berechnet, die Temperaturen darstellen.  
+ The following code example uses the `Aggregate Into Average` clause in Visual Basic to calculate the average temperature in an array of numbers that represent temperatures.  
   
  [!code-vb[CsLINQAggregating#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#1)]  
   
 ### <a name="count"></a>Anzahl  
- Im folgenden Codebeispiel wird die `Aggregate Into Count` -Klausel in Visual Basic, um die Anzahl der Werte in einem Array zu zählen, die größer als oder gleich 80.  
+ The following code example uses the `Aggregate Into Count` clause in Visual Basic to count the number of values in an array that are greater than or equal to 80.  
   
  [!code-vb[CsLINQAggregating#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#2)]  
   
 ### <a name="longcount"></a>LongCount  
- Im folgenden Codebeispiel wird die `Aggregate Into LongCount` -Klausel, um die Anzahl der Werte in einem Array zählen.  
+ The following code example uses the `Aggregate Into LongCount` clause to count the number of values in an array.  
   
  [!code-vb[CsLINQAggregating#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#3)]  
   
 ### <a name="max"></a>Max.  
- Im folgenden Codebeispiel wird die `Aggregate Into Max` -Klausel, um die maximale Temperatur in ein Array von Zahlen zu berechnen, die Temperaturen darstellen.  
+ The following code example uses the `Aggregate Into Max` clause  to calculate the maximum temperature in an array of numbers that represent temperatures.  
   
  [!code-vb[CsLINQAggregating#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#4)]  
   
 ### <a name="min"></a>Min.  
- Im folgenden Codebeispiel wird die `Aggregate Into Min` -Klausel, um die niedrigste Temperatur in ein Array von Zahlen zu berechnen, die Temperaturen darstellen.  
+ The following code example uses the `Aggregate Into Min` clause  to calculate the minimum temperature in an array of numbers that represent temperatures.  
   
  [!code-vb[CsLINQAggregating#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#5)]  
   
 ### <a name="sum"></a>Summe  
- Im folgenden Codebeispiel wird die `Aggregate Into Sum` -Klausel, um die Gesamtausgaben aus einem Array von Werten zu berechnen, die Ausgaben darstellen.  
+ The following code example uses the `Aggregate Into Sum` clause  to calculate the total expense amount from an array of values that represent expenses.  
   
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
@@ -67,8 +67,8 @@ Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein ein
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
-- [Vorgehensweise: Anzahl, Summen oder Durchschnittswerten von Daten](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
-- [Vorgehensweise: Suchen des minimalen oder maximalen Werts in einem Abfrageergebnis](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
-- [Vorgehensweise: Abfragen der größten Datei oder Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
-- [Vorgehensweise: Abfrage für die Gesamtzahl der Bytes in einem Ordnersatz (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)
+- [How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Gewusst wie: Bestimmen von Zahlen, Summen oder Durchschnittswerten von Daten](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
+- [Gewusst wie: Suchen des minimalen oder maximalen Werts in einem Abfrageergebnis](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
+- [How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)

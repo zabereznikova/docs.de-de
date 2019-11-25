@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Eine Variable mit dem gleichen Namen wie die Variable ausblenden (Visual Basic)'
+title: 'Gewusst wie: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: 487e0a15ba6b52f92ab39fe0bae4ab15fa92707f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0915adbbabb778b1bdd3b6b30e56725a7e74867c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629990"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345367"
 ---
-# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Vorgehensweise: Eine Variable mit dem gleichen Namen wie die Variable ausblenden (Visual Basic)
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Gewusst wie: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable (Visual Basic)
 
-Sie können eine Variable ausblenden, indem Sie Sie *shadoauen* , d. h., indem Sie Sie mit einer gleichnamigen Variablen neu definieren. Sie können die Variable, die Sie ausblenden möchten, auf zwei Arten schattieren:
+You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name. You can shadow the variable you want to hide in two ways:
 
-- **Shadodown durch den Gültigkeitsbereich.** Sie können den Bereich durch den Gültigkeitsbereich schattieren, indem Sie ihn in einem Teilbereich des Bereichs mit der Variablen, die Sie ausblenden möchten, erneut deklarieren.
+- **Shadowing Through Scope.** You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.
 
-- **Über schattung durch Vererbung.** Wenn die Variable, die Sie ausblenden möchten, auf Klassenebene definiert ist, können Sie Sie durch die Vererbung schattieren, indem Sie Sie mit dem [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) -Schlüsselwort in einer abgeleiteten Klasse erneut deklarieren.
+- **Shadowing Through Inheritance.** If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.
 
-## <a name="two-ways-to-hide-a-variable"></a>Zwei Möglichkeiten zum Ausblenden einer Variablen
+## <a name="two-ways-to-hide-a-variable"></a>Two Ways to Hide a Variable
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>So blenden Sie eine Variable durch shadoauen durch
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>To hide a variable by shadowing it through scope
 
-1. Bestimmen Sie die Region, in der die Variable definiert ist, die Sie ausblenden möchten, und bestimmen Sie, in welcher Region Sie mit der Variablen neu definiert werden soll.
+1. Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.
 
-    |Bereich der Variablen|Zulässiger Unterbereich für Neudefinition|
+    |Variable's region|Allowable subregion for redefining it|
     |-----------------------|-------------------------------------------|
-    |Modul|Eine Klasse innerhalb des Moduls|
-    |Klasse|Eine Unterklasse innerhalb der Klasse.<br /><br /> Eine Prozedur innerhalb der Klasse|
+    |Modul|A class within the module|
+    |Klasse|A subclass within the class<br /><br /> A procedure within the class|
 
-    Sie können eine Prozedur Variable in einem-Block innerhalb dieser Prozedur nicht neu definieren, z `If`. b. in einer... `End If` Konstruktion`For` oder Schleife.
+    You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.
 
-2. Erstellen Sie die unterregion, wenn Sie nicht bereits vorhanden ist.
+2. Create the subregion if it does not already exist.
 
-3. Schreiben Sie innerhalb des unter Bereichs eine [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) , die die Shadowingvariable deklariert.
+3. Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.
 
-    Wenn sich Code in der Unterregion auf den Variablennamen bezieht, löst der Compiler den Verweis auf die Shadowingvariable auf.
+    When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.
 
-    Das folgende Beispiel veranschaulicht shadothrough durch den Gültigkeitsbereich sowie einen Verweis, der den shadodown umgeht.
+    The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.
 
     ```vb
     Module shadowByScope
@@ -68,21 +68,21 @@ Sie können eine Variable ausblenden, indem Sie Sie *shadoauen* , d. h., indem S
     End Module
     ```
 
-    Im vorangehenden Beispiel wird die `num` -Variable auf Modulebene und auf Prozedur Ebene (in der `show`-Prozedur) deklariert. Die lokale Variable `num` gibt eine Schatten der Variablen `num` auf Modul `show`Ebene in aus, sodass die lokale Variable auf 2 festgelegt ist. Es ist jedoch keine lokale Variable zum Schatten `num` in der `useModuleLevelNum` Prozedur vorhanden. Daher wird `useModuleLevelNum` der Wert der Variablen auf Modulebene auf 1 festgelegt.
+    The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`). The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2. However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure. Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.
 
-    Der `MsgBox` -Befehl `show` in umgeht den shadoingmechanismus, indem `num` er mit dem Modulnamen qualifiziert wird. Daher wird anstelle der lokalen Variablen die Variable auf Modulebene angezeigt.
+    The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name. Therefore, it displays the module-level variable instead of the local variable.
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>So blenden Sie eine Variable aus, indem Sie Sie durch Vererbung shadoauen
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>To hide a variable by shadowing it through inheritance
 
-1. Stellen Sie sicher, dass die Variable, die Sie ausblenden möchten, in einer Klasse und auf Klassenebene (außerhalb der Prozeduren) deklariert wird. Andernfalls können Sie Sie nicht durch Vererbung schattieren.
+1. Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure). Otherwise you cannot shadow it through inheritance.
 
-2. Definieren Sie eine Klasse, die von der-Klasse der Variablen abgeleitet ist, wenn Sie noch nicht vorhanden ist.
+2. Define a class derived from the variable's class if one does not already exist.
 
-3. Schreiben Sie in der abgeleiteten Klasse `Dim` eine-Anweisung, die die Variable deklariert. Schließt das [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) -Schlüsselwort in die Deklaration ein.
+3. Inside the derived class, write a `Dim` statement declaring your variable. Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.
 
-    Wenn sich der Code in der abgeleiteten Klasse auf den Variablennamen bezieht, löst der Compiler den Verweis auf die Variable auf.
+    When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-    Das folgende Beispiel veranschaulicht shadothrough durch Vererbung. Es werden zwei Verweise erstellt, eine, die auf die Shadowingvariable zugreift, und eine, die den shadodown umgeht.
+    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
 
     ```vb
     Public Class shadowBaseClass
@@ -99,19 +99,19 @@ Sie können eine Variable ausblenden, indem Sie Sie *shadoauen* , d. h., indem S
     End Class
     ```
 
-    Im vorangehenden Beispiel wird die `shadowString` -Variable in der-Basisklasse deklariert und in der abgeleiteten Klasse als Schatten angegeben. Die Prozedur `showStrings` in der abgeleiteten Klasse zeigt die Shadowingversion der Zeichenfolge an, `shadowString` wenn der Name nicht qualifiziert ist. Anschließend wird die Schatten Version angezeigt, `shadowString` wenn mit dem `MyBase` -Schlüsselwort qualifiziert ist.
+    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.
 
 ## <a name="robust-programming"></a>Stabile Programmierung
 
-Mit shadowingwird mehr als eine Version einer Variablen mit demselben Namen eingeführt. Wenn sich eine Code Anweisung auf den Variablennamen bezieht, hängt die Version, auf die der Compiler den Verweis auflöst, von Faktoren wie dem Speicherort der Code Anweisung und dem vorhanden sein einer qualifizierenden Zeichenfolge ab. Dadurch kann das Risiko erhöht werden, dass auf eine unbeabsichtigte Version einer schattiert-Variablen verwiesen wird. Sie können dieses Risiko verringern, indem Sie alle Verweise auf eine Schatten Variable vollständig qualifizieren.
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadodown in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Unterschiede zwischen Shadowing und Überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Vorgehensweise: Vererbte Variable ausblenden](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Vorgehensweise: Zugreifen auf eine Variable, die durch eine abgeleitete Klasse ausgeblendet](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Gewusst wie: Ausblenden einer geerbten Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [Gewusst wie: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

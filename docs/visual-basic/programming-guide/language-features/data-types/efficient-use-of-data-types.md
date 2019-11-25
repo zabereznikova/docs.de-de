@@ -1,5 +1,5 @@
 ---
-title: Effiziente Verwendung von Datentypen (Visual Basic)
+title: Effiziente Verwendung von Datentypen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - performance, data type efficiency
@@ -13,40 +13,40 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 68371a9f8d4dcc5d0a2b67955d5e88943a83b085
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 621dec7537e9c993024e271b96ab8706baf89885
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350108"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Effiziente Verwendung von Datentypen (Visual Basic)
-Nicht deklarierte Variablen und Variablen, die ohne Datentyp deklariert `Object` werden, wird der-Datentyp zugewiesen. Dies vereinfacht das schnelle Schreiben von Programmen, kann jedoch dazu führen, dass Sie langsamer ausgeführt werden.
+Undeclared variables and variables declared without a data type are assigned the `Object` data type. This makes it easy to write programs quickly, but it can cause them to execute more slowly.
 
-## <a name="strong-typing"></a>Starke Typisierung
- Das Angeben von Datentypen für alle Variablen wird als *starke Typisierung*bezeichnet. Die Verwendung der starken Typisierung bietet mehrere Vorteile:
+## <a name="strong-typing"></a>Strong Typing
+ Specifying data types for all your variables is known as *strong typing*. Using strong typing has several advantages:
 
-- Sie ermöglicht die IntelliSense-Unterstützung für die Variablen. Dies ermöglicht es Ihnen, ihre Eigenschaften und andere Member anzuzeigen, während Sie den Code eingeben.
+- It enables IntelliSense support for your variables. This allows you to see their properties and other members as you type in the code.
 
-- Es nutzt die Compilertypüberprüfung. Dadurch werden Anweisungen abgefangen, die zur Laufzeit aufgrund von Fehlern wie einem Überlauf fehlschlagen können. Sie fängt auch Aufrufe von Methoden für Objekte ab, die Sie nicht unterstützen.
+- It takes advantage of compiler type checking. This catches statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.
 
-- Dies führt zu einer schnelleren Ausführung des Codes.
+- It results in faster execution of your code.
 
-## <a name="most-efficient-data-types"></a>Effizienteste Datentypen
- Für Variablen, die niemals Bruchteile enthalten, sind die ganzzahligen Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic `Integer` sind und `UInteger` die effizientesten numerischen Typen.
+## <a name="most-efficient-data-types"></a>Most Efficient Data Types
+ For variables that never contain fractions, the integral data types are more efficient than the nonintegral types. In Visual Basic, `Integer` and `UInteger` are the most efficient numeric types.
 
- Bei Bruchzahlen `Double` ist der effizienteste Datentyp, da die Prozessoren auf aktuellen Plattformen Gleit Komma Vorgänge mit doppelter Genauigkeit ausführen. Vorgänge mit `Double` sind jedoch nicht so schnell wie bei den ganzzahligen Typen `Integer`wie.
+ For fractional numbers, `Double` is the most efficient data type, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.
 
-## <a name="specifying-data-type"></a>Angeben von Datentyp
- Verwenden Sie die [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) , um eine Variable eines bestimmten Typs zu deklarieren. Sie können die Zugriffsebene gleichzeitig mithilfe des Schlüssel Worts [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../../visual-basic/language-reference/modifiers/private.md) angeben, wie im folgenden Beispiel gezeigt.
+## <a name="specifying-data-type"></a>Specifying Data Type
+ Use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) to declare a variable of a specific type. You can simultaneously specify its access level by using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, as in the following example.
 
 ```vb
 Private x As Double
 Protected s As String
 ```
 
-## <a name="character-conversion"></a>Zeichen Konvertierung
- Die `AscW` Funktionen `ChrW` und funktionieren in Unicode. Sie sollten diese bevorzugt für `Asc` und `Chr`verwenden, die in und aus Unicode übersetzt werden müssen.
+## <a name="character-conversion"></a>Character Conversion
+ The `AscW` and `ChrW` functions operate in Unicode. You should use them in preference to `Asc` and `Chr`, which must translate into and out of Unicode.
 
 ## <a name="see-also"></a>Siehe auch
 

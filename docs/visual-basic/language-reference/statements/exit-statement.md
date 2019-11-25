@@ -1,5 +1,5 @@
 ---
-title: Exit-Anweisung (Visual Basic)
+title: Exit-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Exit
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 1bfe81428fd3c50663fd8978e05c6a945cd47df8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956937"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345939"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit-Anweisung (Visual Basic)
 
-Beendet eine Prozedur oder einen Block und überträgt die Steuerung sofort an die Anweisung nach dem Prozedur-oder der Block Definition.
+Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,56 +32,56 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>Anweisungen
 
  `Exit Do`  
- Beendet sofort die `Do`-Schleife, in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der `Loop`-Anweisung fortgesetzt. `Exit Do` kann nur innerhalb einer `Do`-Schleife verwendet werden. Bei der Verwendung in geschachtelten `Do`-Schleifen beendet `Exit Do` die innerste Schleife und überträgt die Steuerung an die nächsthöhere Schachtelungs Ebene.
+ Immediately exits the `Do` loop in which it appears. Execution continues with the statement following the `Loop` statement. `Exit Do` can be used only inside a `Do` loop. When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.
 
  `Exit For`  
- Beendet sofort die `For`-Schleife, in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der `Next`-Anweisung fortgesetzt. `Exit For` kann nur innerhalb einer `For`... `Next`-oder `For Each`... `Next`-Schleife verwendet werden. Bei der Verwendung in geschachtelten `For`-Schleifen beendet `Exit For` die innerste Schleife und überträgt die Steuerung an die nächsthöhere Schachtelungs Ebene.
+ Immediately exits the `For` loop in which it appears. Execution continues with the statement following the `Next` statement. `Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop. When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
 
  `Exit Function`  
- Beendet sofort die Prozedur "`Function`", in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der Anweisung fortgesetzt, die die Prozedur "`Function`" aufgerufen hat. `Exit Function` kann nur innerhalb einer `Function`-Prozedur verwendet werden.
+ Immediately exits the `Function` procedure in which it appears. Execution continues with the statement following the statement that called the `Function` procedure. `Exit Function` can be used only inside a `Function` procedure.
 
- Zum Angeben eines Rückgabewerts können Sie den Wert dem Funktionsnamen in einer Zeile vor der `Exit Function`-Anweisung zuweisen. Wenn Sie den Rückgabewert zuweisen und die Funktion in einer Anweisung beenden möchten, können Sie stattdessen die [Return-Anweisung](return-statement.md)verwenden.
+ To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement. To assign the return value and exit the function in one statement, you can instead use the [Return Statement](return-statement.md).
 
  `Exit Property`  
- Beendet sofort die Prozedur "`Property`", in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung fortgesetzt, die die Prozedur `Property` aufgerufen hat, d. h. mit der Anweisung, die den Wert der Eigenschaft anfordert oder festlegt. `Exit Property` kann nur innerhalb der `Get`-oder `Set`-Prozedur einer Eigenschaft verwendet werden.
+ Immediately exits the `Property` procedure in which it appears. Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value. `Exit Property` can be used only inside a property's `Get` or `Set` procedure.
 
- Um einen Rückgabewert in einer `Get`-Prozedur anzugeben, können Sie den Wert dem Funktionsnamen in einer Zeile vor der `Exit Property`-Anweisung zuweisen. Um den Rückgabewert zuzuweisen und die `Get`-Prozedur in einer Anweisung zu beenden, können Sie stattdessen die `Return`-Anweisung verwenden.
+ To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement. To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.
 
- In einer `Set`-Prozedur entspricht die `Exit Property`-Anweisung der Anweisung `Return`.
+ In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.
 
  `Exit Select`  
- Beendet sofort den Block "`Select Case`", in dem er angezeigt wird. Die Ausführung wird mit der Anweisung nach der `End Select`-Anweisung fortgesetzt. `Exit Select` kann nur innerhalb einer `Select Case`-Anweisung verwendet werden.
+ Immediately exits the `Select Case` block in which it appears. Execution continues with the statement following the `End Select` statement. `Exit Select` can be used only inside a `Select Case` statement.
 
  `Exit Sub`  
- Beendet sofort die Prozedur "`Sub`", in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der Anweisung fortgesetzt, die die Prozedur "`Sub`" aufgerufen hat. `Exit Sub` kann nur innerhalb einer `Sub`-Prozedur verwendet werden.
+ Immediately exits the `Sub` procedure in which it appears. Execution continues with the statement following the statement that called the `Sub` procedure. `Exit Sub` can be used only inside a `Sub` procedure.
 
- In einer `Sub`-Prozedur entspricht die `Exit Sub`-Anweisung der Anweisung `Return`.
+ In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.
 
  `Exit Try`  
- Beendet sofort den Block "`Try`" oder "`Catch`", in dem er angezeigt wird. Die Ausführung wird mit dem Block "`Finally`" fortgesetzt, sofern vorhanden, oder mit der Anweisung, die der `End Try`-Anweisung folgt, andernfalls. `Exit Try` kann nur innerhalb eines `Try`-oder `Catch`-Blocks und nicht innerhalb eines `Finally`-Blocks verwendet werden.
+ Immediately exits the `Try` or `Catch` block in which it appears. Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise. `Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.
 
  `Exit While`  
- Beendet sofort die `While`-Schleife, in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der `End While`-Anweisung fortgesetzt. `Exit While` kann nur innerhalb einer `While`-Schleife verwendet werden. Bei der Verwendung in geschachtelten `While`-Schleifen überträgt `Exit While` die Steuerung an die Schleife, die eine geschachtelte Ebene oberhalb der Schleife ist, in der `Exit While` auftritt.
+ Immediately exits the `While` loop in which it appears. Execution continues with the statement following the `End While` statement. `Exit While` can be used only inside a `While` loop. When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwechseln Sie `Exit`-Anweisungen nicht mit `End`-Anweisungen. `Exit` definiert nicht das Ende einer-Anweisung.
+Do not confuse `Exit` statements with `End` statements. `Exit` does not define the end of a statement.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel stoppt die Schleifen Bedingung die Schleife, wenn die `index`-Variable größer als 100 ist. Die Anweisung "`If`" in der Schleife bewirkt jedoch, dass die `Exit Do`-Anweisung die Schleife beendet, wenn die Index Variable größer als 10 ist.
+In the following example, the loop condition stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird der Rückgabewert dem Funktionsnamen `myFunction` zugewiesen, und anschließend wird `Exit Function` verwendet, um von der-Funktion zurückzugeben:
+The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function:
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die [Return-Anweisung](return-statement.md) verwendet, um den Rückgabewert zuzuweisen und die-Funktion zu beenden:
+The following example uses the [Return Statement](return-statement.md) to assign the return value and exit the function:
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 

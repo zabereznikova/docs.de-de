@@ -1,5 +1,5 @@
 ---
-title: Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)
+title: Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -8,44 +8,44 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 989795ee2cdd3a78b71bad4d95cf9b384c2719bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665948"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341392"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)
-Wenn Sie eine Prozedur aufrufen, übergeben Sie ein oder mehrere Argumente in der Regel darauf. Jedes Argument entspricht einem zugrunde liegenden Programmierelement. Die zugrunde liegenden Elemente und die Argumente selbst können geändert werden kann oder als nicht änderbar sein.  
+When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Veränderbaren und nicht veränderbaren Elemente  
- Ein Programmierelement kann es sich um entweder eine *änderbare Element*, die aufweisen kann, dessen Wert sich ändert, oder ein *nicht veränderbares Element*, die über einen festen Wert verfügt, nachdem es erstellt wurde.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
+ A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
   
- Die folgende Tabelle enthält die veränderbaren und nicht veränderbaren Programmierelemente.  
+ The following table lists modifiable and nonmodifiable programming elements.  
   
-|Änderbare Elemente|Als nicht änderbar Elemente|  
+|Modifiable elements|Nonmodifiable elements|  
 |-------------------------|----------------------------|  
-|Lokale Variablen (deklariert in Prozeduren), einschließlich der Objektvariablen, ausgenommen schreibgeschützte|Schreibgeschützte Variablen, Felder und Eigenschaften|  
-|Felder (Membervariablen der Module, Klassen und Strukturen), mit Ausnahme von nur-Lese|Konstanten und Literale|  
-|Eigenschaften, ausgenommen schreibgeschützte|Enumerationsmember|  
-|Array-Elemente|Ausdrücke (auch wenn ihre Elemente geändert werden)|  
+|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
+|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
+|Properties, except for read-only|Enumeration members|  
+|Array elements|Expressions (even if their elements are modifiable)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Veränderbaren und nicht veränderbaren Argumenten  
- Ein *änderbaren Argument* ist ein URI mit einer änderbaren zugrunde liegende Element. Der aufrufende Code kann einen neuen Wert zu jedem Zeitpunkt speichern, und wenn Sie das Argument zu übergeben [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), den Code in der Prozedur kann auch das zugrunde liegende Element im aufrufenden Code ändern.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
+ A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
   
- Ein *nicht veränderbaren Argument* entweder ein nicht veränderbares zugrunde liegende Element, oder übergeben [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Die Prozedur ändern nicht das zugrunde liegende Element im aufrufenden Code, selbst wenn es sich um eine änderbare Element handelt. Wenn es sich um ein nicht veränderbares Element handelt, kann nicht der aufrufende Code selbst ändern.  
+ A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
   
- Die aufgerufene Prozedur kann die lokale Kopie der veränderbaren Arguments ändern, aber diese Änderung keine Auswirkungen auf das zugrunde liegende Element im aufrufenden Code hat.  
+ The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
-- [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
+- [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
 - [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
 - [Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Vorgehensweise: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Vorgehensweise: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Vorgehensweise: Erzwingen, dass ein Argument als Wert übergeben wird](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Gewusst wie: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

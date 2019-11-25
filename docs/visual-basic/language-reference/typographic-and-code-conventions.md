@@ -1,5 +1,5 @@
 ---
-title: Typografische und Codekonventionen (Visual Basic)
+title: Typografische und Codekonventionen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
@@ -10,47 +10,48 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-ms.openlocfilehash: 3255dff8268cd5500a1244716f37bf30f5b43cfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4906c5ebadb7ce77f2d0e53b2fc5dbab69c5b41f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698602"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352715"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Typografische und Codekonventionen (Visual Basic)
-Dokumentation zu Visual Basic verwendet die folgenden typografische und Codekonventionen.  
+
+Visual Basic documentation uses the following typographic and code conventions.  
   
-## <a name="typographic-conventions"></a>Typografische Konventionen  
-  
-|Beispiel|Beschreibung|  
-|-------------|-----------------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Sprachspezifische Schlüsselwörter und Common Language Runtime-Elemente haben stehender Großbuchstaben und werden wie im folgenden Beispiel gezeigt formatiert.|  
-|**SmallProject**, **ButtonCollection**|Wörter und Ausdrücke, die Sie zur Eingabe aufgefordert werden, werden wie im folgenden Beispiel gezeigt formatiert.|  
-|[Module-Anweisung](../../visual-basic/language-reference/statements/module-statement.md)|Wie im folgenden Beispiel gezeigt, werden Verknüpfungen aus, die Sie klicken können, um zu einer anderen Seite wechseln formatiert.|  
-|*object*, *variableName*, `argumentList`|Platzhalter für Informationen, die Sie angeben, werden formatiert, wie im folgenden Beispiel gezeigt.|  
-|[Schatten], [ *ExpressionList* ]|In der Syntax werden die optionalen Elemente in Klammern eingeschlossen.|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|In der Syntax Wenn Sie eine Wahl zwischen zwei oder mehr Elementen vornehmen, müssen die Elemente sind in geschweifte Klammern eingeschlossen und durch senkrechte Striche getrennt.<br /><br /> Sie müssen eine und nur eines der Elemente auswählen.|  
-|[ `Protected` &#124; `Friend` ]|In der Syntax Wenn man die Möglichkeit auszuwählen, die zwischen zwei oder mehr Elemente, die Elemente sind in eckige Klammern eingeschlossen und durch senkrechte Striche getrennt.<br /><br /> Sie können eine beliebige Kombination der Elemente oder kein Element auswählen.|  
-|[{ `ByVal` &#124; `ByRef` }]|Wenn Sie nicht mehr als ein Element auswählen können, aber Sie können Elemente auch komplett weglassen werden die Elemente in der Syntax in eckigen Klammern von geschweiften Klammern umgeben und durch senkrechte Striche getrennte eingeschlossen.|  
-|*memberName*1, *memberName*2, *memberName*3|Mehrere Instanzen eines Platzhalters unterscheiden sich von Feldindizes angegeben werden, wie im Beispiel gezeigt.|  
-|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|In der Syntax ist ein Auslassungszeichen (...) Dient zum Angeben einer unbestimmten Anzahl von Elementen der Art unmittelbar vor der Ellipse.<br /><br /> Im Code stellen Ellipsen Code, die aus Gründen der Übersichtlichkeit weggelassen.|  
-|ESC, ENTER|Schlüsselnamen und Tastenkombinationen auf der Tastatur, die in Großbuchstaben angezeigt werden.|  
-|ALT+F1|Wenn zwischen den Schlüsselnamen Pluszeichen (+) angezeigt werden, müssen Sie eine Taste gedrückt halten, und drücken die andere. ALT + F1 bedeutet beispielsweise, die der ALT-Taste gedrückt halten, während Sie die Taste F1 drücken.|  
-  
-## <a name="code-conventions"></a>Codekonventionen  
+## <a name="typographic-conventions"></a>Typographic Conventions  
   
 |Beispiel|Beschreibung|  
 |-------------|-----------------|  
-|`sampleString = "Hello, world!"`|Codebeispiele werden in einer Schriftart mit fester Zeichenbreite und werden wie im folgenden Beispiel gezeigt formatiert.|  
-|Die vorherige Anweisung legt den Wert der `sampleString` um "Hello, World!"|Code-Elementen im erläuternden Text werden in einer Schriftart mit fester Zeichenbreite, angezeigt, wie im folgenden Beispiel gezeigt.|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Codekommentare werden durch ein Apostroph (') oder dem REM-Schlüsselwort eingeführt.|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|Ein Leerzeichen, gefolgt von einem Unterstrich (_) am Ende einer Zeile gibt an, dass die Anweisung in der folgenden Zeile fortgesetzt wird.|  
+|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.|  
+|**SmallProject**, **ButtonCollection**|Words and phrases you are instructed to type are formatted as shown in this example.|  
+|[Module-Anweisung](../../visual-basic/language-reference/statements/module-statement.md)|Links you can click to go to another Help page are formatted as shown in this example.|  
+|*object*, *variableName*, `argumentList`|Placeholders for information that you supply are formatted as shown in this example.|  
+|[ Shadows ], [ *expressionList* ]|In syntax, optional items are enclosed in brackets.|  
+|{ `Public` &#124; `Friend` &#124; `Private` }|In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.<br /><br /> You must select one, and only one, of the items.|  
+|[ `Protected` &#124; `Friend` ]|In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.<br /><br /> You can select any combination of the items, or no item.|  
+|[{ `ByVal` &#124; `ByRef` }]|In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.|  
+|*memberName*1, *memberName*2, *memberName*3|Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.|  
+|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.<br /><br /> In code, ellipses signify code omitted for the sake of clarity.|  
+|ESC, ENTER|Key names and key sequences on the keyboard appear in all uppercase letters.|  
+|ALT+F1|When plus signs (+) appear between key names, you must hold down one key while pressing the other. For example, ALT+F1 means hold down the ALT key while pressing the F1 key.|  
+  
+## <a name="code-conventions"></a>Code Conventions  
+  
+|Beispiel|Beschreibung|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|Code samples appear in a fixed-pitch font and are formatted as shown in this example.|  
+|The previous statement sets the value of `sampleString` to "Hello, world!"|Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Code comments are introduced by an apostrophe (') or the REM keyword.|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)
-- [Schlüsselwörter](../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../visual-basic/language-reference/runtime-library-members.md)
-- [Visual Basic-Benennungskonventionen](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Visual Basic Naming Conventions](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [Kommentare in Code](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

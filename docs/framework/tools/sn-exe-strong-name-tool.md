@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104355"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138965"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../standard/assembly/strong-named.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|Extrahiert den öffentlichen Schlüssel aus der *Eingabedatei* und speichert ihn in einer CSV-Datei. Die einzelnen Byte des öffentlichen Schlüssels werden durch Kommas getrennt. Dieses Format eignet sich zum Hartcodieren von Schlüsselverweisen als initialisierte Arrays im Quellcode. Wenn Sie keine *Ausgabedatei* angeben, wird die Ausgabe dieser Option in der Zwischenablage gespeichert. **Hinweis**:  Diese Option überprüft nicht, ob die Eingabe nur ein öffentlicher Schlüssel ist. Wenn `infile` ein Schlüsselpaar mit einem privaten Schlüssel enthält, wird der private Schlüssel auch extrahiert.|  
 |`-p infile outfile [hashalg]`|Extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar in der *Eingabedatei* und speichert ihn in der *Ausgabedatei* unter optionaler Verwendung des RSA-Algorithmus, der von *hashalg* angegeben wird. Dieser öffentlichen Schlüssel kann zum verzögerten Signieren einer Assembly unter Verwendung der Optionen **/delaysign+** und **/keyfile** des [Assembly Linker-Tools („al.exe“)](al-exe-assembly-linker.md) verwendet werden. Beim verzögerten Signieren einer Assembly wird während der Kompilierung nur der öffentliche Schlüssel festgelegt und Speicherplatz in der Datei reserviert, damit die Signatur später hinzugefügt werden kann, wenn der private Schlüssel bekannt ist.|  
 |`-pc container outfile [hashalg]`|Extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar im *Container* und speichert ihn in der *Ausgabedatei*. Wenn Sie die Option *hashalg* verwenden, wird der öffentliche Schlüssel mit dem RSA-Algorithmus extrahiert.|  
-|`-Pb [y &#124; n]`|Legt fest, ob die Bypassrichtlinie für starke Namen erzwungen wird. Wenn Sie *y* angeben, werden starke Namen für voll vertrauenswürdige Assemblys beim Laden in ein voll vertrauenswürdiges <xref:System.AppDomain> nicht geprüft. Wenn Sie *n* angeben, werden starke Namen auf Korrektheit geprüft, jedoch nicht auf einen bestimmten starken Namen. <xref:System.Security.Permissions.StrongNameIdentityPermission> hat keine Auswirkung auf voll vertrauenswürdige Assemblys. Sie müssen eine eigene Überprüfung auf Übereinstimmung bei einem starken Namen durchführen.<br /><br /> Wenn weder `y` noch `n` angegeben ist, zeigt diese Option die aktuelle Einstellung an. Die Standardeinstellung ist `y`. **Hinweis**:  Auf 64-Bit-Computern müssen diese Parameter sowohl in der 32-Bit- als auch in der 64-Bit-Instanz von SN.EXE festgelegt werden.|  
+|`-Pb [y|n]`|Legt fest, ob die Bypassrichtlinie für starke Namen erzwungen wird. Wenn Sie *y* angeben, werden starke Namen für voll vertrauenswürdige Assemblys beim Laden in ein voll vertrauenswürdiges <xref:System.AppDomain> nicht geprüft. Wenn Sie *n* angeben, werden starke Namen auf Korrektheit geprüft, jedoch nicht auf einen bestimmten starken Namen. <xref:System.Security.Permissions.StrongNameIdentityPermission> hat keine Auswirkung auf voll vertrauenswürdige Assemblys. Sie müssen eine eigene Überprüfung auf Übereinstimmung bei einem starken Namen durchführen.<br /><br /> Wenn weder `y` noch `n` angegeben ist, zeigt diese Option die aktuelle Einstellung an. Die Standardeinstellung ist `y`. **Hinweis**:  Auf 64-Bit-Computern müssen diese Parameter sowohl in der 32-Bit- als auch in der 64-Bit-Instanz von SN.EXE festgelegt werden.|  
 |`-q[uiet]`|Gibt den stillen Modus an, in dem die Anzeige von Erfolgsmeldungen unterdrückt wird.|  
 |`-R[a] assembly infile`|Signiert eine bereits signierte oder eine verzögert signierte Assembly mit dem Schlüsselpaar in der *Eingabedatei* neu.<br /><br /> Bei Angabe von **-Ra** werden Hashes für alle Dateien in der Assembly neu berechnet.|  
 |`-Rc[a] assembly container`|Signiert eine bereits signierte oder eine verzögert signierte Assembly mit dem Schlüsselpaar in *Container*.<br /><br /> Bei Angabe von **-Rca** werden Hashes für alle Dateien in der Assembly neu berechnet.|  

@@ -1,5 +1,5 @@
 ---
-title: Unicode (Visual Basic)
+title: Unicode
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Unicode
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: b3c9452f8d144fb18ea3efcb35b85caed80e8692
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4286ed9e9d5fd768ae29b7050b3d1505ccca9dd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778676"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344224"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Gibt an, dass es sich bei Visual Basic alle Zeichenfolgen in Unicode-Werten, unabhängig vom Namen des deklarierten der externen Prozedur marshallen soll.  
+Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.  
   
- Wenn Sie eine Prozedur, die außerhalb des Projekts definiert aufrufen, Visual Basic-Compiler keinen Zugriff auf die Informationen, die sie benötigen, um die Prozedur richtig aufrufen. Diese Informationen umfassen, in dem die Prozedur befindet, wie dieses ermittelt wird, die Aufrufsequenz und Rückgabetyp und die Zeichenfolge festgelegt wird. Die [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.  
+ When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
   
- Die `charsetmodifier` -Teil in die `Declare` -Anweisung gibt die Zeichen zum Marshallen von Zeichenfolgen bei einem Aufruf der externen Prozedur Informationen. Es wirkt sich auch, wie Visual Basic die externe Datei für den externen Prozedurnamen durchsucht. Die `Unicode` %(Dateiname) gibt an, dass Visual Basic alle Zeichenfolgen in Unicode-Werte marshallen und die Prozedur suchen soll, ohne seinen Namen bei der Suche zu ändern.  
+ The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.  
   
- Wenn kein Modifizierer angegeben ist, `Ansi` ist die Standardeinstellung.  
+ If no character set modifier is specified, `Ansi` is the default.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Unicode` Modifizierer kann in diesem Kontext verwendet werden:  
+ The `Unicode` modifier can be used in this context:  
   
  [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Hinweise für Entwickler intelligente Geräte  
- Dieses Schlüsselwort wird nicht unterstützt.  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This keyword is not supported.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)

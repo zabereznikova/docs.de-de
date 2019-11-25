@@ -6,33 +6,17 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121601"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281812"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
+# <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in der .NET Framework
+
 Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-System [Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)finden können.  
-  
-- [Ausnahmeleistungsindikatoren](#exception)  
-  
-- [Interop-Leistungsindikatoren](#interop)  
-  
-- [JIT-Leistungsindikatoren](#jit)  
-  
-- [Ladeleistungsindikatoren](#loading)  
-  
-- [Sperren- und Threadleistungsindikatoren](#lockthread)  
-  
-- [Speicherleistungsindikatoren](#memory)  
-  
-- [Netzwerkleistungsindikatoren](#networking)  
-  
-- [Sicherheitsleistungsindikatoren](#security)  
-  
-<a name="exception"></a>   
+
 ## <a name="exception-performance-counters"></a>Ausnahmeleistungsindikatoren  
  Die Kategorie ".NET CLR-Ausnahmen" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den von einer Anwendung ausgelösten Ausnahmen liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -43,8 +27,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Anzahl Filter/s**|Gibt die Anzahl der pro Sekunde ausgeführten .NET-Ausnahmefilter an. Ein Ausnahmefilter wird immer ausgeführt, unabhängig davon, ob eine Ausnahme behandelt wird.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 |**Finally-Anzahl/s**|Gibt die Anzahl der pro Sekunde ausgeführten finally-Blöcke an. Die Ausführung eines finally-Blocks ist auf jeden Fall garantiert, unabhängig davon, wie der try-Block beendet wurde.  Nur die für eine Ausnahme ausgeführten finally-Blöcke werden gezählt. Finally-Blöcke in normalen Codepfaden werden von diesem Indikator nicht erfasst.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 |**Throw-zu-Catch-Tiefe/s**|Zeigt die Anzahl der traversierten Stackframes (von dem Frame, der die Ausnahme ausgelöst hat, zu dem Frame, der die Ausnahme behandelt hat) pro Sekunde an. Dieser Indikator wird auf null zurückgesetzt, wenn ein Ausnahmehandler gestartet wird, sodass geschachtelte Ausnahmen die Handler-zu-Handler-Stapeltiefe anzeigen.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
-  
-<a name="interop"></a>   
+     
 ## <a name="interop-performance-counters"></a>Interop-Leistungsindikatoren  
  Die Kategorie ".NET CLR-Interop" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zur Interaktion einer Anwendung mit COM-Komponenten, COM+-Diensten und externen Typbibliotheken liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -55,8 +38,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Anzahl Stubs**|Zeigt die aktuelle Anzahl von Stubs an, die von der Common Language Runtime erstellt werden. Stubs sind während eines COM-Interop- oder Plattformaufrufs verantwortlich für das Marshalling von Argumenten und Rückgabewerten von verwaltetem zu nicht verwaltetem Code und umgekehrt.|  
 |**Anzahl TLB-Exporte/s**|Für zukünftige Verwendung reserviert.|  
 |**Anzahl TLB-Importe/s**|Für zukünftige Verwendung reserviert.|  
-  
-<a name="jit"></a>   
+    
 ## <a name="jit-performance-counters"></a>JIT-Leistungsindikatoren  
  Die Kategorie ".NET CLR-JIT" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu JIT-kompiliertem Code liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -68,8 +50,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**JIT-kompilierte IL-Bytes/s**|Zeigt die Anzahl der pro Sekunde JIT-kompilierten MSIL-Bytes an. Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 |**Standard-JIT-Fehler**|Zeigt die Höchstzahl der Methoden an, bei denen seit dem Anwendungsstart Kompilierungsfehler im JIT-Compiler aufgetreten sind. Dieser Fehler kann auftreten, wenn die MSIL nicht überprüft werden kann, oder wenn ein interner Fehler im JIT-Compiler vorliegt.|  
 |**Gesamtzahl JIT-kompilierte IL-Bytes**|Zeigt die Gesamtzahl der MSIL-Bytes an, die seit dem Anwendungsstart JIT-kompiliert wurden. Dieser Indikator entspricht dem Indikator **Anzahl JIT-kompilierte IL-Bytes**.|  
-  
-<a name="loading"></a>   
+     
 ## <a name="loading-performance-counters"></a>Ladeleistungsindikatoren  
  Die Kategorie ".NET CLR-Laden" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu Assemblys, Klassen und Anwendungsdomänen liefern, die geladen werden. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -91,8 +72,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Entladene Anwendungsdomänen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart entladenen Anwendungsdomänen an. Wenn eine Anwendungsdomäne mehrmals geladen und entladen wird, wird dieser Zähler jedes Mal erhöht, wenn die Anwendungsdomäne entladen wird.|  
 |**Assemblys gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart geladenen Assemblys an. Wenn die Assembly aus mehreren Anwendungsdomänen domänenneutral geladen wird, wird dieser Zähler nur einmal erhöht.|  
 |**Geladene Klassen gesamt**|Zeigt die kumulierte Anzahl der seit dem Anwendungsstart in allen Assemblys geladenen Klassen an.|  
-  
-<a name="lockthread"></a>   
+   
 ## <a name="lock-and-thread-performance-counters"></a>Sperren- und Threadleistungsindikatoren  
  Die Kategorie ".NET CLR-Sperren und -Threads" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den durch eine Anwendung verwendeten Remoteobjekten liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -108,8 +88,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Max. Warteschlangenlänge**|Zeigt die Gesamtzahl der Threads an, die seit dem Anwendungsstart darauf gewartet haben, eine verwaltete Sperre einzurichten.|  
 |**Rate erkannte Threads/s**|Zeigt die Anzahl der Threads an, die pro Sekunde von der Laufzeit erkannt wurden. Diese Threads sind einem entsprechenden verwalteten Threadobjekt zugeordnet. Die Laufzeit erstellt diese Threads nicht, aber sie wurden mindestens einmal in der Laufzeit ausgeführt.<br /><br /> Nur eindeutige Threads werden nachverfolgt. Threads mit derselben Thread-ID, die erneut an die Laufzeit übergeben oder nach dem Beenden des Threads erneut erstellt werden, werden nicht zweimal gezählt.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 |**Gesamtzahl Konflikte**|Zeigt die Gesamtzahl der Fälle an, in denen Threads in der Laufzeit erfolglos versucht haben, eine verwaltete Sperre einzurichten.|  
-  
-<a name="memory"></a>   
+    
 ## <a name="memory-performance-counters"></a>Speicherleistungsindikatoren  
  Die Kategorie ".NET CLR-Speicher" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zum Garbage Collector liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -133,15 +112,15 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Gen 1-Heapgröße**|Zeigt die aktuelle Byteanzahl in Generation 1 an (und nicht die maximale Byteanzahl der Generation 1). In dieser Generation werden Objekte nicht direkt zugeordnet, sondern aus zuvor durchgeführte Garbage Collections der Generation 0 höher gestuft. Dieser Indikator wird nicht bei jeder Zuordnung, sondern nur am Ende einer Garbage Collection aktualisiert.|  
 |**Von Generation 1 höher gestufte Bytes/s**|Zeigt die Bytes an, die pro Sekunde von Generation 1 zu Generation 2 höher gestuft werden. Objekte, die nur höher gestuft werden, weil sie darauf warten finalisiert zu werden, sind nicht in diesem Indikator enthalten.<br /><br /> Speicher wird höher gestuft, wenn er durch eine Garbage Collection nicht gelöscht wird. Von Generation 2 werden keine Elemente höher gestuft, da es sich hierbei um die älteste Generation handelt. Dieser Indikator zeigt sehr langlebige Objekte an, die pro Sekunde erstellt werden.<br /><br /> Dieser Indikator zeigt den Unterschied zwischen den Werten an den letzten beiden Messpunkten dividiert durch die Dauer des Messintervalls an.|  
 |**Gen 2-Heapgröße**|Zeigt die aktuelle Anzahl der Bytes in Generation 2 an. In dieser Generation werden Objekte nicht direkt zugeordnet, sondern durch zuvor durchgeführte Garbage Collections der Generation 1 zu Generation 1 höher gestuft. Dieser Indikator wird nicht bei jeder Zuordnung, sondern nur am Ende einer Garbage Collection aktualisiert.|  
-|**Größe des Heap für große Objekte**|Zeigt die aktuelle Größe des Heaps für große Objekte in Bytes an. Objekte, die größer als etwa 85.000 Bytes sind, werden als große Objekte behandelt, die direkt in einem besonderen Heap angelegt werden. Sie werden nicht über die Generationen 0 bis 2 höher gestuft. Dieser Indikator wird nicht bei jeder Zuordnung, sondern nur am Ende einer Garbage Collection aktualisiert.|  
+|**Größe des Heap für große Objekte**|Zeigt die aktuelle Größe des großen Objekt Heaps in Bytes an. Objekte, die größer als ungefähr 85.000 Bytes sind, werden vom Garbage Collector als große Objekte behandelt und direkt in einem speziellen Heap zugeordnet. Sie werden nicht durch die Generationen herauf gestuft. Dieser Indikator wird nicht bei jeder Zuordnung, sondern nur am Ende einer Garbage Collection aktualisiert.|  
 |**Prozess-ID**|Zeigt die Prozess-ID der CLR-Prozessinstanz an, die überwacht wird.|  
 |**Von Generation 0 höher gestufter Finalisierungsspeicher**|Zeigt die Speicherbytes an, die nur deshalb von Generation 0 zu Generation 1 höher gestuft werden, weil sie auf die Finalisierung warten. Dieser Indikator ist nicht kumulativ. Es zeigt den Wert am Ende der letzten Garbage Collection erfassten Wert an.|  
 |**Von Generation 0 höher gestufter Speicher**|Zeigt die Speicherbytes an, die die Garbage Collection überleben und von Generation 0 zu Generation 1 höher gestuft werden. Objekte, die nur höher gestuft werden, weil sie darauf warten finalisiert zu werden, sind nicht in diesem Indikator enthalten. Dieser Indikator ist nicht kumulativ. Es zeigt den Wert am Ende der letzten Garbage Collection erfassten Wert an.|  
 |**Von Generation 1 höher gestufter Speicher**|Zeigt die Speicherbytes an, die die Garbage Collection überlebt haben und von Generation 1 zu Generation 2 hochgestuft werden. Objekte, die nur höher gestuft werden, weil sie darauf warten finalisiert zu werden, sind nicht in diesem Indikator enthalten. Dieser Indikator ist nicht kumulativ. Es zeigt den Wert am Ende der letzten Garbage Collection erfassten Wert an. Dieser Indikator wird auf 0 zurückgesetzt, wenn die letzte Garbage Collection eine reine Garbage Collection der Generation 0 war.|  
-  
-<a name="networking"></a>   
+     
 ## <a name="networking-performance-counters"></a>Netzwerkleistungsindikatoren  
- Die Kategorie ".NET CLR-Netzwerk" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den Daten liefern, die eine Anwendung über das Netzwerk sendet und empfängt. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
+
+Die Kategorie ".NET CLR-Netzwerk" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den Daten liefern, die eine Anwendung über das Netzwerk sendet und empfängt. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
@@ -167,7 +146,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
   
 - Pro-Intervall-Indikatoren, die die Anzahl von Objekten messen, die einen bestimmten Übergang pro Intervall (normalerweise pro Sekunde) absolvieren.  
   
- Die Netzwerkleistungsindikatoren für Ereignisse umfassen folgende:  
+Die Netzwerkleistungsindikatoren für Ereignisse umfassen folgende:  
   
 - **Hergestellte Verbindungen**  
   
@@ -177,7 +156,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
   
  Diese Leistungsindikatoren stellen Zählwerte seit Prozessstart bereit. Die Anzahl der hergestellten <xref:System.Net.Sockets.Socket>-Verbindungen umfasst ebenso explizite <xref:System.Net.Sockets.Socket>-Methodenaufrufe von einer Anwendung für eine Streamsocketverbindung, die hergestellt wurde, wie auch interne Aufrufe von anderen Klassen (z. B. <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> und <xref:System.Net.Sockets.TcpClient>), an die <xref:System.Net.Sockets.Socket>-Klasse.  
   
- Die Werte von **Empfangene Datagramme** und **Gesendete Datagramme** enthalten Datagrammpakete, die sowohl über explizite <xref:System.Net.Sockets.Socket>-Methodenaufrufe von einer Anwendung als auch mittels interner Aufrufe von anderen Klassen (z.B. <xref:System.Net.Sockets.UdpClient>) an <xref:System.Net.Sockets.Socket> gesendet oder empfangen wurden. -Klasse. Die Werte von **Empfangene Datagramme** und **Gesendete Datagramme** können auch verwendet werden, um ein sehr grobes Maß dafür anzugeben, wie viele Bytes unter Verwendung von Datagrammen gesendet oder empfangen wurden, indem für ein Datagramm eine durchschnittliche Größe angenommen wird.  
+ Die Werte von **Empfangene Datagramme** und **Gesendete Datagramme** enthält Datagrammpakete, die sowohl über explizite <xref:System.Net.Sockets.Socket>-Methodenaufrufe von einer Anwendung als auch mittels interner Aufrufe von anderen Klassen (z. B. <xref:System.Net.Sockets.UdpClient>) an <xref:System.Net.Sockets.Socket> gesendet oder empfangen wurden. -Klasse. Die Werte von **Empfangene Datagramme** und **Gesendete Datagramme** können auch verwendet werden, um ein sehr grobes Maß dafür anzugeben, wie viele Bytes unter Verwendung von Datagrammen gesendet oder empfangen wurden, indem für ein Datagramm eine durchschnittliche Größe angenommen wird.  
   
  Die Netzwerkleistungsindikatoren für Daten umfassen folgende:  
   
@@ -197,7 +176,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
   
 - Wenn die Anwendung die <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>-Methode nie aufruft, wird die Lebensdauer des <xref:System.Net.HttpWebRequest>-Objekts ignoriert.  
   
-- Wenn das <xref:System.Net.HttpWebRequest>-Objekt beim Aufrufen der <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A>-Methode eine <xref:System.Net.WebException> auslöst, endet die Lebensdauer mit dem Auslösen der Ausnahme. Aus technischer Sicht wird der zugrunde liegende Antwortstream auch an diesem Punkt geschlossen (der an den Benutzer zurückgegebene Antwortstream ist in Wirklichkeit ein Speicherstream, der eine Kopie des Antwortstreams enthält).  
+- Wenn das <xref:System.Net.HttpWebRequest>-Objekt beim Aufrufen der <xref:System.Net.WebException>- oder <xref:System.Net.HttpWebRequest.GetResponse%2A>-Methode eine <xref:System.Net.HttpWebRequest.EndGetResponse%2A> auslöst, endet die Lebensdauer mit dem Auslösen der Ausnahme. Aus technischer Sicht wird der zugrunde liegende Antwortstream auch an diesem Punkt geschlossen (der an den Benutzer zurückgegebene Antwortstream ist in Wirklichkeit ein Speicherstream, der eine Kopie des Antwortstreams enthält).  
   
  Es gibt vier Indikatoren, die bestimmte <xref:System.Net.HttpWebRequest> -Objektprobleme pro Intervall erfassen. Diese Leistungsindikatoren können Anwendungsentwicklern, Administratoren und Supportmitarbeiter dabei helfen, besser zu verstehen, was die <xref:System.Net.HttpWebRequest>-Objekte machen. Die Indikatoren sind unter anderem folgende:  
   
@@ -236,8 +215,7 @@ for (int i = 0; i < Array.Length; i++)
 - ".NET CLR-Netzwerk 4.0.0.0" – Alle der oben aufgeführten Socketindikatoren, zuzüglich der neuen Leistungsindikatoren, die von .NET Framework Version 4 und höher unterstützt werden. Diese neuen Indikatoren liefern Leistungsinformationen zu <xref:System.Net.HttpWebRequest>-Objekten.  
   
  Weitere Informationen zum Zugriff auf und der Verwaltung von Leistungsindikatoren in einer Anwendung finden Sie unter [Leistungsindikatoren](performance-counters.md).  
-  
-<a name="security"></a>   
+    
 ## <a name="security-performance-counters"></a>Sicherheitsleistungsindikatoren  
  Die Kategorie ".NET CLR-Sicherheit" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den Sicherheitsüberprüfungen, die die Common Language Runtime für eine Anwendung ausführt, liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
@@ -251,5 +229,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Leistungsindikatoren](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [Laufzeit-Profilerstellung](runtime-profiling.md)

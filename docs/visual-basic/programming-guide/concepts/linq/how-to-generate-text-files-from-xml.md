@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Generieren von Text Dateien aus XML (Visual Basic)'
+title: 'Gewusst wie: Generieren von Textdateien aus XML'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 1b383a0f3656558286bfe449ed72c633426b9410
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b30596df1a490d78d1333c688a23ed4ab30bcb82
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320535"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344577"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Gewusst wie: Generieren von Text Dateien aus XML (Visual Basic)
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>How to: Generate Text Files from XML (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie aus einer XML-Datei eine CSV-Datei generieren können.  
   
 ## <a name="example"></a>Beispiel  
- Die Visual Basic-Version verwendet prozeduralen Code zum Aggregieren der Auflistung von Zeichen folgen in einer einzelnen Zeichenfolge.  
+ The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.  
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

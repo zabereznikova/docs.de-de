@@ -1,41 +1,41 @@
 ---
-title: 'Gewusst wie: Schreiben einer Erweiterungsmethode (Visual Basic)'
+title: 'Gewusst wie: Schreiben einer Erweiterungsmethode'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 4671728330614f0f3da23fd90f5e635ddcf46578
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 697508f86ff4ff0a89150b65782121395d0fed12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581155"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346018"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Gewusst wie: Schreiben einer Erweiterungsmethode (Visual Basic)
 
-Erweiterungs Methoden ermöglichen Ihnen das Hinzufügen von Methoden zu einer vorhandenen Klasse. Die Erweiterungsmethode kann so aufgerufen werden, als ob es sich um eine Instanz dieser Klasse handelt.
+Extension methods enable you to add methods to an existing class. The extension method can be called as if it were an instance of that class.
 
-### <a name="to-define-an-extension-method"></a>So definieren Sie eine Erweiterungsmethode
+### <a name="to-define-an-extension-method"></a>To define an extension method
 
-1. Öffnen Sie in Visual Studio eine neue oder vorhandene Visual Basic Anwendung.
+1. Open a new or existing Visual Basic application in Visual Studio.
 
-2. Fügen Sie am Anfang der Datei, in der Sie eine Erweiterungsmethode definieren möchten, die folgende Import-Anweisung ein:
+2. At the top of the file in which you want to define an extension method, include the following import statement:
 
     ```vb
     Imports System.Runtime.CompilerServices
     ```
 
-3. Beginnen Sie in einem Modul in der neuen oder vorhandenen Anwendung mit der-Methoden Definition mit dem [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) -Attribut:
+3. Within a module in your new or existing application, begin the method definition with the [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) attribute:
 
     ```vb
     <Extension()>
     ```
 
-    Beachten Sie, dass das `Extension`-Attribut in einem Visual Basic [Modul](../../../language-reference/statements/module-statement.md)nur auf eine Methode (eine `Sub` oder `Function` Prozedur) angewendet werden kann. Wenn Sie es auf eine Methode in einer `Class` oder `Structure` anwenden, generiert der Visual Basic-Compiler den Fehler [BC36551](../../../misc/bc36551.md), "Erweiterungs Methoden können nur in Modulen definiert werden."
+    Note that the `Extension` attribute can only be applied to a method (a `Sub` or `Function` procedure) in a Visual Basic [Module](../../../language-reference/statements/module-statement.md). If you apply it to a method in a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules."
 
-4. Deklarieren Sie die Methode auf normale Weise, mit der Ausnahme, dass der Typ des ersten Parameters der Datentyp sein muss, den Sie erweitern möchten.
+4. Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.
 
     ```vb
     <Extension()>
@@ -46,7 +46,7 @@ Erweiterungs Methoden ermöglichen Ihnen das Hinzufügen von Methoden zu einer v
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird eine Erweiterungsmethode im Modul `StringExtensions` deklariert. Ein zweites Modul, `Module1`, importiert `StringExtensions` und ruft die-Methode auf. Die Erweiterungsmethode muss sich im Gültigkeitsbereich befinden, wenn Sie aufgerufen wird. Erweiterungsmethode `PrintAndPunctuate` erweitert die <xref:System.String>-Klasse mit einer Methode, die die Zeichen folgen Instanz anzeigt, gefolgt von einer Zeichenfolge aus Interpunktions Symbolen, die als Parameter gesendet werden.
+The following example declares an extension method in module `StringExtensions`. A second module, `Module1`, imports `StringExtensions` and calls the method. The extension method must be in scope when it is called. Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.
 
 ```vb
 ' Declarations will typically be in a separate module.
@@ -78,7 +78,7 @@ Module Module1
 End Module
 ```
 
-Beachten Sie, dass die-Methode mit zwei Parametern definiert und nur mit einem aufgerufen wird. Der erste Parameter `aString` in der Methoden Definition ist an `example` gebunden, d. h. die Instanz von `String`, die die-Methode aufruft. Die Ausgabe des Beispiels sieht folgendermaßen aus:
+Notice that the method is defined with two parameters and called with only one. The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method. Die Ausgabe des Beispiels sieht folgendermaßen aus:
 
 ```console
 Hello?
@@ -91,4 +91,4 @@ Hello!!!!
 - [Erweiterungsmethoden](extension-methods.md)
 - [Module-Anweisung](../../../language-reference/statements/module-statement.md)
 - [Parameter und Argumente von Prozeduren](procedure-parameters-and-arguments.md)
-- [Bereich in Visual Basic](../declared-elements/scope.md)
+- [Scope in Visual Basic](../declared-elements/scope.md)

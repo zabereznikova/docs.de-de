@@ -1,5 +1,5 @@
 ---
-title: Überladungsauflösung (Visual Basic)
+title: Overload Resolution
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,53 +10,53 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e69136b1e3015055cad9852bf04151f57558b88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792028"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352648"
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
-Stößt der Visual Basic-Compiler einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert ist, müssen Sie von der Compiler entscheiden, welche Überladung aufrufen. Hierzu werden die folgenden Schritte ausführen:  
+When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
   
-1. **Barrierefreiheit.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
+1. **Barrierefreiheit.** It eliminates any overload with an access level that prevents the calling code from calling it.  
   
-2. **Anzahl von Parametern.** Überladung, die eine andere Anzahl von Parametern definiert als bereitgestellt werden, in dem Aufruf beseitigt.  
+2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
   
-3. **Parameterdatentypen.** Der Compiler zieht Instanzmethoden über Erweiterungsmethoden. Wenn eine beliebige Instanzmethode, dass erfordert erweiterungskonvertierungen entsprechend den Prozeduraufruf gefunden wird, alle Erweiterungsmethoden werden gelöscht, und der Compiler, die mit nur den Instanzmethoden wird fortgesetzt. Wenn keine solche Instanzmethode gefunden wird, weiterhin mit sowohl die Instanz als auch die Erweiterungsmethoden.  
+3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
   
-     In diesem Schritt entfällt diese alle Überladungen, die für die die Datentypen der Argumente der Aufruf mit den Parametertypen in der Überladung definiert konvertiert werden können.  
+     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
   
-4. **Einschränkende Konvertierungen.** Überladung, die eine einschränkende Konvertierung von der aufrufenden Argumenttypen definierten Parametertypen erfordert beseitigt. Dies ist "true" gibt an, ob die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On` oder `Off`.  
+4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
   
-5. **Geringste Erweiterung.** Der Compiler betrachtet die verbleibenden Überladungen in Paaren. Für jedes Paar werden die Datentypen der definierten Parameter verglichen. Wenn die Typen in einer der Überladungen, die alle auf die entsprechenden Typen in der anderen erweitert werden kann, beseitigt der Compiler die zweite. D. h., bleibt die Überladung, die die geringste Menge an erweiternde erforderlich sind.  
+5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
   
-6. **Einzelne Kandidat.** Da die Überladungen, bis nur eine paarweise überladen bleibt und löst des Aufrufs von dieser Überladung wird fortgesetzt. Wenn der Compiler die Überladungen, die einem einzelnen Kandidaten reduzieren kann, wird einen Fehler generiert.  
+6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
   
- Die folgende Abbildung zeigt den Prozess, der bestimmt, die einem Satz von überladenen Versionen aufgerufen.  
+ The following illustration shows the process that determines which of a set of overloaded versions to call.  
   
- ![Flussdiagramm des überladungsauflösungsprozesses](./media/overload-resolution/determine-overloaded-version.gif "zwischen überladenen Versionen auflösen")    
+ ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
   
- Das folgende Beispiel veranschaulicht diese überladungsauflösungsprozesses.  
+ The following example illustrates this overload resolution process.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- Im ersten Aufruf wird der Compiler beseitigt die erste Überladung, da der Typ des ersten Arguments (`Short`) wird in den Typ des entsprechenden Parameters (`Byte`). Klicken Sie dann beseitigt, die dritte Überladung, da jedes Typargument in der zweiten Überladung (`Short` und `Single`) wird in den entsprechenden Typen in der dritten Überladung erweitert (`Integer` und `Single`). Die zweite Überladung eine geringere Erweiterung erfordert, damit der Compiler für den Aufruf verwendet.  
+ In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
   
- Im zweiten Aufruf kann nicht vom Compiler Überladung einschränkende vermieden. Die dritte Überladung beseitigt aus demselben Grund wie der erste Aufruf, da die zweite Überladung mit geringerer Erweiterung der Argumenttypen aufgerufen werden kann. Jedoch kann der Compiler zwischen den ersten und zweiten Überladungen nicht auflösen. Jede hat einen definierten Parameter-Typ, der in den entsprechenden Typ in der anderen erweitert wird (`Byte` zu `Short`, aber `Single` zu `Double`). Aus diesem Grund generiert der Compiler einen Fehler bei der objektnamensauflösung Überladung.  
+ In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Optionale überladen und ParamArray-Argumente  
- Wenn zwei Überladungen einer Prozedur identische Signaturen verfügen, mit dem Unterschied, dass der letzte Parameter deklariert, wird [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in die andere ist der Compiler löst einen Aufruf dieser Prozedur als Die folgende:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
+ If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
   
-|Wenn der Aufruf das letzte Argument als bereitstellt|Der Compiler löst den Aufruf an die Überladung, die das letzte Argument als deklarieren|  
+|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
 |---|---|  
-|Kein Wert (Argument ausgelassen wird)|`Optional`|  
-|Ein einzelner Wert|`Optional`|  
-|Zwei oder mehr Werte in einer durch Trennzeichen getrennte Liste|`ParamArray`|  
-|Ein Array mit beliebiger Länge (einschließlich ein leeres Array)|`ParamArray`|  
+|No value (argument omitted)|`Optional`|  
+|A single value|`Optional`|  
+|Two or more values in a comma-separated list|`ParamArray`|  
+|An array of any length (including an empty array)|`ParamArray`|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -64,10 +64,10 @@ Stößt der Visual Basic-Compiler einen Aufruf an eine Prozedur, die in mehreren
 - [Parameterarrays](./parameter-arrays.md)
 - [Prozedurüberladung](./procedure-overloading.md)
 - [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)
-- [Vorgehensweise: Definieren Sie mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Vorgehensweise: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)
-- [Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Gewusst wie: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)
+- [Gewusst wie: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Überladungen](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Erweiterungsmethoden](./extension-methods.md)

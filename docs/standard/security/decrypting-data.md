@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795225"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353852"
 ---
 # <a name="decrypting-data"></a>Entschlüsseln von Daten
 
@@ -43,12 +43,11 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(K
 Das folgende Beispiel veranschaulicht den gesamten Prozess: das Erzeugen des Streams, das Verschlüsseln des Streams, das Lesen aus dem Stream und das Schließen des Streams. Es wird ein <xref:System.Net.Sockets.TcpListener> -Objekt erstellt, durch das ein Netzwerkstream initialisiert wird, wenn eine Verbindung zum lauschenden Objekt hergestellt wurde. Der Netzwerkstream wird anschließend mit der **CryptoStream** -Klasse und der **RijndaelManaged** -Klasse entschlüsselt. Für dieses Beispiel wird angenommen, dass die Wert des Schlüssels und der Wert des IVs entweder erfolgreich übertragen oder zuvor vereinbart wurden. Das Beispiel enthält nicht den Code, der zum Verschlüsseln und Übertragen dieser Werte erforderlich ist.
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -175,9 +174,9 @@ Damit das obige Beispiel funktioniert, muss eine verschlüsselte Verbindung zum 
 
 ## <a name="asymmetric-decryption"></a>Asymmetrische Entschlüsselung
 
-In der Regel generiert ein Teilnehmer (Teilnehmer A) sowohl einen öffentlichen als auch einen privaten Schlüssel und speichert diese entweder im Arbeitsspeicher oder in einem kryptografischen Schlüsselcontainer. Teilnehmer A sendet dann den öffentlichen Schlüssel an einen anderen Teilnehmer (Teilnehmer B). Mit dem öffentlichen Schlüssel, Teilnehmer B Daten verschlüsselt und sendet die Daten zurück an Partei a Nach dem Empfang der das, entschlüsselt Partei A mit dem privaten Schlüssel, der entspricht. Die Entschlüsselung kann nur dann erfolgreich sein, wenn Teilnehmer A den privaten Schlüssel verwendet, der dem öffentlichen Schlüssel entspricht, den Teilnehmer B zum Verschlüsseln der Daten verwendet hat.
+In der Regel generiert ein Teilnehmer (Teilnehmer A) sowohl einen öffentlichen als auch einen privaten Schlüssel und speichert diese entweder im Arbeitsspeicher oder in einem kryptografischen Schlüsselcontainer. Teilnehmer A sendet dann den öffentlichen Schlüssel an einen anderen Teilnehmer (Teilnehmer B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. Die Entschlüsselung kann nur dann erfolgreich sein, wenn Teilnehmer A den privaten Schlüssel verwendet, der dem öffentlichen Schlüssel entspricht, den Teilnehmer B zum Verschlüsseln der Daten verwendet hat.
 
-Informationen zum Speichern ein asymmetrisches Schlüssels in sicheren Container für kryptografische Schlüssel und später diesen asymmetrischen Schlüssel abrufen finden Sie unter [Vorgehensweise: Asymmetrische Schlüssel in einem Schlüsselcontainer Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+Informationen dazu, wie Sie einen asymmetrischen Schlüssel in einem sicheren Container für kryptografische Schlüssel speichern und später diesen asymmetrischen Schlüssel abrufen, finden Sie unter [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 
 Das folgende Beispiel veranschaulicht die Entschlüsselung von zwei Bytearrays, die einen symmetrischen Schlüssel und einen IV darstellen. Informationen dazu, wie der asymmetrische öffentliche Schlüssel aus dem <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Objekt in ein Format extrahiert wird, das auf einfache Weise an andere Beteiligte gesendet werden kann, finden Sie unter [Encrypting Data](../../../docs/standard/security/encrypting-data.md)initialisiert.
 
@@ -209,4 +208,4 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 
 - [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Verschlüsseln von Daten](../../../docs/standard/security/encrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)

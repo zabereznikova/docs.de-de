@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Laufwerken, Verzeichnissen und Dateien (Visual Basic)
+title: Verarbeiten von Laufwerken, Verzeichnissen und Dateien
 ms.date: 07/20/2015
 helpviewer_keywords:
 - drives
@@ -9,17 +9,19 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: 7c0e412f9b9ccb8d425aae1e3985e7492e452fd9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 790cf5aa2d3fde779fcc24c0c9f1fc9c4c42331b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593400"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333950"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Verarbeiten von Laufwerken, Verzeichnissen und Dateien (Visual Basic)
+
 Sie können Visual Basic zum Verarbeiten von Laufwerken, Ordnern und Dateien mit dem `My.Computer.FileSystem`-Objekt verwenden, das eine bessere Leistung bietet und einfacher zu verwenden ist als herkömmliche Methoden, wie z.B. die `FileOpen`- und `Write`-Funktionen (obwohl sie immer noch verfügbar sind). In den folgenden Abschnitten werden diese Methoden ausführlich erörtert.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Dateizugriff mit Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
  Erläutert, wie das `My.Computer.FileSystem`-Objekt verwendet wird, um mit Dateien, Laufwerken und Ordnern zu arbeiten.  
   
@@ -33,6 +35,7 @@ Sie können Visual Basic zum Verarbeiten von Laufwerken, Ordnern und Dateien mit
  Veranschaulicht, wie das `My.Computer.FileSystem`-Objekt zum Bearbeiten von Dateien und Ordnern verwendet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Programmstruktur und Codekonventionen](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Enthält Richtlinien für die physische Struktur und die Darstellung von Programmen.  
   

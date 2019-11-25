@@ -1,5 +1,5 @@
 ---
-title: Erweiterungsmethoden (Visual Basic)
+title: Erweiterungsmethoden
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ExtensionMethods
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a88756fce9137f89db1b6b8b007d528e98381830
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396010"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341177"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
 
-Erweiterungs Methoden ermöglichen es Entwicklern, Datentypen, die bereits definiert sind, benutzerdefinierte Funktionen hinzuzufügen, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungs Methoden ermöglichen das Schreiben einer Methode, die aufgerufen werden kann, als ob es sich um eine Instanzmethode des vorhandenen Typs handelt.
+Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type. Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Erweiterungsmethode kann ausschließlich eine `Sub`-Prozedur oder eine `Function`-Prozedur sein. Erweiterungseigenschaften, -felder oder -ereignisse können nicht definiert werden. Alle Erweiterungs Methoden müssen mit dem Erweiterungs Attribut `<Extension>` aus dem <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace gekennzeichnet werden und müssen in einem [Modul](../../../language-reference/statements/module-statement.md)definiert werden. Wenn eine Erweiterungsmethode außerhalb eines Moduls definiert ist, generiert der Visual Basic-Compiler den Fehler [BC36551](../../../misc/bc36551.md), "Erweiterungs Methoden können nur in Modulen definiert werden".
+Eine Erweiterungsmethode kann ausschließlich eine `Sub`-Prozedur oder eine `Function`-Prozedur sein. Erweiterungseigenschaften, -felder oder -ereignisse können nicht definiert werden. All extension methods must be marked with the extension attribute `<Extension>` from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace and must be defined in a [Module](../../../language-reference/statements/module-statement.md). If an extension method is defined outside a module, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules".
 
 Der erste Parameter in der Definition einer Erweiterungsmethode gibt den Datentyp an, der von der Methode erweitert wird. Beim Ausführen der Methode wird der erste Parameter an die Instanz des Datentyps gebunden, der die Methode aufruft.
 
-Das `Extension`-Attribut kann nur auf eine Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md)oder [`Function`](../../../language-reference/statements/function-statement.md)angewendet werden. Wenn Sie die Datei auf einen `Class` oder einen `Structure` anwenden, generiert der Visual Basic-Compiler den Fehler [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md). das Erweiterungs Attribut kann nur auf Module, Sub-oder Function-Deklarationen angewendet werden.
+The `Extension` attribute can only be applied to a Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md), or [`Function`](../../../language-reference/statements/function-statement.md). If you apply it to a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), "'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations".
 
 ## <a name="example"></a>Beispiel
 
@@ -63,7 +63,7 @@ Module StringExtensions
 End Module
 ```
 
-Als nächstes werden die Erweiterungs Methoden in den Gültigkeitsbereich gebracht und aufgerufen:
+Next, the extension methods are brought into scope and called:
 
 ```vb
 Imports ConsoleApplication2.StringExtensions
@@ -87,7 +87,7 @@ Beachten Sie, dass beim Aufrufen der Methoden kein Argument für den ersten Para
 
 Wenn eine Erweiterungsmethode für ein Objekt aufgerufen wird, das auf `Nothing` festgelegt ist, wird die Erweiterungsmethode ausgeführt. Dies trifft nicht auf normale Instanzmethoden zu. Sie können in der Erweiterungsmethode explizit auf `Nothing` überprüfen.
 
-## <a name="types-that-can-be-extended"></a>Typen, die erweitert werden können
+## <a name="types-that-can-be-extended"></a>Types that can be extended
 
 Erweiterungsmethoden können für die meisten Typen definiert werden, die in Visual Basic-Parameterlisten wie den folgenden dargestellt werden können:
 
@@ -121,7 +121,7 @@ Erweiterungsmethoden, die Sie Typen hinzufügen, die sich nicht in Ihrem Besitz 
 
 - Erweitern Sie einen möglichst spezifischen Typ. Wenn Sie in einer Typhierarchie einen Typ auswählen, von dem viele andere Typen abgeleitet sind, können auf viele Weisen Instanzenmethoden oder andere Erweiterungsmethoden eingeführt werden, die Konflikte mit Ihren Instanzen- oder Erweiterungsmethoden verursachen könnten.
 
-## <a name="extension-methods-instance-methods-and-properties"></a>Erweiterungs Methoden, Instanzmethoden und Eigenschaften
+## <a name="extension-methods-instance-methods-and-properties"></a>Extension methods, instance methods, and properties
 
 Wenn eine Instanzmethode im Gültigkeitsbereich über eine Signatur verfügt, die mit den Argumenten einer Aufrufanweisung kompatibel ist, wird die Instanzmethode vor den Erweiterungsmethoden bevorzugt ausgewählt. Die Instanzmethode hat auch dann Vorrang, wenn die Erweiterungsmethode eine bessere Übereinstimmung aufweist. Im folgenden Beispiel enthält die `ExampleClass` eine Instanzmethode mit der Bezeichnung `ExampleMethod`, die über einen Parameter des Typs `Integer` verfügt. Die Erweiterungsmethode `ExampleMethod` erweitert die `ExampleClass` und verfügt über einen Parameter des Typs `Long`.
 
@@ -152,7 +152,7 @@ Instance method
 
 Bezüglich Eigenschaften ist der Sachverhalt unkomplizierter: Wenn eine Erweiterungsmethode den gleichen Namen wie eine Eigenschaft der Klasse hat, die sie erweitert, wird die Erweiterungsmethode nicht angezeigt, und es kann nicht darauf zugegriffen werden.
 
-## <a name="extension-method-precedence"></a>Rangfolge der Erweiterungsmethode
+## <a name="extension-method-precedence"></a>Extension method precedence
 
 Wenn sich zwei Erweiterungsmethoden mit identischen Signaturen im Gültigkeitsbereich befinden und zugreifbar sind, wird die Methode mit der höheren Rangfolge aufgerufen. Die Rangfolge einer Erweiterungsmethode basiert auf dem Mechanismus, der verwendet wird, um die Methode in den Gültigkeitsbereich einzubinden. Die folgende Liste gibt die hierarchische Rangfolge von oben nach unten an:
 
@@ -180,4 +180,4 @@ Wenn sich die Mehrdeutigkeit durch die Anwendung einer Rangfolge nicht auflösen
 - [Optionale Parameter](optional-parameters.md)
 - [Parameterarrays](parameter-arrays.md)
 - [Übersicht über Attribute](../../concepts/attributes/index.md)
-- [Bereich in Visual Basic](../declared-elements/scope.md)
+- [Scope in Visual Basic](../declared-elements/scope.md)

@@ -1,5 +1,5 @@
 ---
-title: Option Explicit-Anweisung (Visual Basic)
+title: Option Explicit-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Explicit
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 0405814efecbdff5769af36b27dce1cd3305aab5
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3c70d958fdcbb1782af22c3a4715676abbeeac0c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775494"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353782"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit-Anweisung (Visual Basic)
-Erzwingt die explizite Deklaration aller Variablen in einer Datei oder das zulassen impliziter Deklarationen von Variablen.  
+Forces explicit declaration of all variables in a file, or allows implicit declarations of variables.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,38 +29,38 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Teile  
  `On`  
- Dies ist optional. Ermöglicht `Option Explicit` Überprüfung. Wenn `On` oder `Off` nicht angegeben ist, wird der Standardwert `On`.  
+ Dies ist optional. Enables `Option Explicit` checking. If `On` or `Off` is not specified, the default is `On`.  
   
  `Off`  
- Dies ist optional. Deaktiviert die `Option Explicit` Überprüfung.  
+ Dies ist optional. Disables `Option Explicit` checking.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `Option Explicit On` oder `Option Explicit` in einer Datei angezeigt wird, müssen Sie alle Variablen explizit mithilfe der `Dim`-oder `ReDim` Anweisungen deklarieren. Wenn Sie versuchen, einen nicht deklarierten Variablennamen zu verwenden, tritt zum Zeitpunkt der Kompilierung ein Fehler auf. Die `Option Explicit Off`-Anweisung ermöglicht die implizite Deklaration von Variablen.  
+ When `Option Explicit On` or `Option Explicit` appears in a file, you must explicitly declare all variables by using the `Dim` or `ReDim` statements. If you try to use an undeclared variable name, an error occurs at compile time. The `Option Explicit Off` statement allows implicit declaration of variables.  
   
  Wenn sie verwendet wird, muss die `Option Explicit`-Anweisung in einer Datei vor allen anderen Quellcodeanweisungen angeordnet sein.  
   
 > [!NOTE]
-> Das Festlegen von `Option Explicit` auf `Off` ist in der Regel keine bewährte Vorgehensweise. Sie könnten den Namen einer Variable an einem oder mehreren Orten falsch buchstabieren, wodurch unerwartete Ergebnisse auftreten würden, wenn das Programm ausgeführt wird.  
+> Setting `Option Explicit` to `Off` is generally not a good practice. Sie könnten den Namen einer Variable an einem oder mehreren Orten falsch buchstabieren, wodurch unerwartete Ergebnisse auftreten würden, wenn das Programm ausgeführt wird.  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>Wenn eine Option explizite Anweisung nicht vorhanden ist  
- Wenn der Quellcode keine `Option Explicit`-Anweisung enthält, wird die **Option explizite** Einstellung auf der [Seite "kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet. Wenn der Befehlszeilen Compiler verwendet wird, wird die [-optionexplizite-Compileroption](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) verwendet.  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>When an Option Explicit Statement Is Not Present  
+ If the source code does not contain an `Option Explicit` statement, the **Option Explicit** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option is used.  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>So legen Sie die Option "explizit" in der IDE fest  
+#### <a name="to-set-option-explicit-in-the-ide"></a>To set Option Explicit in the IDE  
   
 1. Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
 2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3. Legen Sie den Wert im Feld **Option explizit** fest.  
+3. Set the value in the **Option Explicit** box.  
   
- Wenn Sie ein neues Projekt erstellen, wird die **Option explizite** Einstellung auf der Registerkarte **Kompilieren** auf die **Option explizite** Einstellung im Dialogfeld **VB-Standardeinstellungen** festgelegt. Um auf das Dialogfeld **VB-Standardeinstellungen** zuzugreifen, klicken Sie **im Menü Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB-Standardeinstellungen** ist `On`.  
+ When you create a new project, the **Option Explicit** setting on the **Compile** tab is set to the **Option Explicit** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. The initial default setting in **VB Defaults** is `On`.  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>So legen Sie die Option explizit in der Befehlszeile fest  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>To set Option Explicit on the command line  
   
-- Schließen Sie die [-optionexplizite-](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) Compileroption in den **vbc** -Befehl ein.  
+- Include the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option in the **vbc** command.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Option Explicit`-Anweisung verwendet, um die explizite Deklaration aller Variablen zu erzwingen. Der Versuch, eine nicht deklarierte Variable zu verwenden, verursacht einen Fehler zur Kompilierzeit.  
+ The following example uses the `Option Explicit` statement to force explicit declaration of all variables. Attempting to use an undeclared variable causes an error at compile time.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

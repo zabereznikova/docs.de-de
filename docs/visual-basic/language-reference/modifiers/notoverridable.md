@@ -1,5 +1,5 @@
 ---
-title: NotOverridable (Visual Basic)
+title: NotOverridable
 ms.date: 07/20/2015
 f1_keywords:
 - vb.NotOverridable
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 41c08a48fdb7501081e887fb5cf9f99c334c72ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c55d57bb3008b2825fe5382844908ea32f0d500c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920652"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351447"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Gibt an, dass eine Eigenschaft oder Prozedur kann nicht in einer abgeleiteten Klasse überschrieben werden.  
+Specifies that a property or procedure cannot be overridden in a derived class.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `NotOverridable` Modifizierer verhindert, dass eine Eigenschaft oder Methode in einer abgeleiteten Klasse überschrieben wird.  Die [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) Modifizierers können Sie eine Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben werden. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Wenn die `Overridable` oder `NotOverridable` Modifizierer ist nicht angegeben wird, hängt von der Standardeinstellung gibt an, ob die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt. Wenn die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt, die Standardeinstellung ist `Overridable`ist, andernfalls ist `NotOverridable`.  
+ If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
   
- Ein Element, das nicht überschrieben werden bezeichnet ein *versiegelten* Element.  
+ An element that cannot be overridden is sometimes called a *sealed* element.  
   
- Sie können `NotOverridable` nur in einer Eigenschaft oder einer Prozedurdeklarationsanweisung verwenden. Sie können angeben, `NotOverridable` nur auf eine Eigenschaft oder Prozedur, die eine andere Eigenschaft oder Prozedur, d. h. nur in Kombination mit überschreibt `Overrides`.  
+ You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
   
-## <a name="combined-modifiers"></a>Kombinierte Modifizierer  
- Sie können keine angeben `Overridable` oder `NotOverridable` für eine `Private` Methode.  
+## <a name="combined-modifiers"></a>Combined Modifiers  
+ You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
   
- Sie können keine angeben `NotOverridable` zusammen mit `MustOverride`, `Overridable`, oder `Shared` in der gleichen Deklaration.  
+ You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
   
 ## <a name="usage"></a>Verwendung  
  Der `NotOverridable`-Modifizierer kann in folgenden Kontexten verwendet werden:  
@@ -56,5 +56,5 @@ Gibt an, dass eine Eigenschaft oder Prozedur kann nicht in einer abgeleiteten Kl
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

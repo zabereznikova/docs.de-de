@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419389"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141603"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
 
@@ -30,13 +30,13 @@ Das `var`-Schlüsselwort kann in folgendem Kontext verwendet werden:
 - In einer [for](../../language-reference/keywords/for.md)-Initialisierungsanweisung.
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - In einer [foreach](../../language-reference/keywords/foreach-in.md)-Initialisierungsanweisung.
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - In einer [using](../../language-reference/keywords/using-statement.md)-Anweisung.
@@ -63,7 +63,7 @@ Die folgenden Einschränkungen gelten für implizit typisierte Variablendeklarat
 
 - `var` kann nicht für Felder im Klassenbereich verwendet werden.
 
-- Variablen, die mit `var` deklariert wurden, können nicht im Initialisierungsausdruck verwendet werden. Sprich, dieser Ausdruck ist gültig`: int i = (i = 20);`, aber dieser Ausdruck führt zu einem Kompilierzeitfehler: `var i = (i = 20);`
+- Variablen, die mit `var` deklariert wurden, können nicht im Initialisierungsausdruck verwendet werden. Sprich, dieser Ausdruck ist gültig: `int i = (i = 20);`, aber dieser Ausdruck führt zu einem Kompilierzeitfehler: `var i = (i = 20);`
 
 - Es können nicht mehrere implizit typisierte Variablen in derselben Anweisung initialisiert werden.
 
@@ -95,7 +95,7 @@ Durch den Gebrauch von `var` besteht aber zumindest die Möglichkeit, dass Ihr C
 
 - [C#-Referenz](../../language-reference/index.md)
 - [Implizit typisierte Arrays](../arrays/implicitly-typed-arrays.md)
-- [Vorgehensweise: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Anonyme Typen](anonymous-types.md)
 - [Objekt- und Auflistungsinitialisierer](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

@@ -1,32 +1,32 @@
 ---
-title: Das Array ist fixiert oder vorübergehend gesperrt (Visual Basic).
+title: Das Array ist fixiert oder vorübergehend gesperrt
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: c7b5372b6046e25aad87131ba141cb71c580e12c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d5e4add2d92a575126fb934ac3874a2e37685f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625943"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350791"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Das Array ist fixiert oder vorübergehend gesperrt (Visual Basic).
-Dieser Fehler hat die folgenden möglichen Ursachen:  
+This error has the following possible causes:  
   
-- Mithilfe von `ReDim` so ändern Sie die Anzahl der Elemente eines Arrays fester Größe.  
+- Using `ReDim` to change the number of elements of a fixed-size array.  
   
-- Neudimensionierung ein auf Modulebene dynamisches Array, in dem ein Element an eine Prozedur als Argument übergeben wurde. Wenn ein Element übergeben wird, ist das Array gesperrt, um zu verhindern, dass Freigeben von Speicher für der Verweisparameter, in der Prozedur.  
+- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
   
-- Es wird versucht, einen Wert zuweisen einer `Variant` Variable, die ein Array ist, enthält aber die `Variant` ist zurzeit gesperrt.  
+- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie das ursprüngliche Array dynamisch und nicht als deklarieren Sie es mit festen `ReDim` (wenn das Array in einer Prozedur deklariert wird), oder deklarieren es ohne Angabe der Anzahl der Elemente, (wenn das Array auf der Modulebene deklariert wird.  
+1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
   
-2. Bestimmen Sie, ob Sie wirklich benötigen, um das Element, zu übergeben, da es in alle Verfahren im Modul angezeigt wird.  
+2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
   
-3. Bestimmen, was verhindert die `Variant` und beheben sie das Problem.  
+3. Determine what is locking the `Variant` and remedy it.  
   
 ## <a name="see-also"></a>Siehe auch
 

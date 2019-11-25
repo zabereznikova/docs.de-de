@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320650"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141587"
 ---
 # <a name="configuring-wcf-services"></a>Konfigurieren von WCF-Diensten
 
@@ -19,7 +19,7 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vereinfachte Konfiguration](simplified-configuration.md)  
- Ab [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] enthält WCF ein neues Standard Konfigurations Modell, das die WCF-Konfigurations Anforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standard Endpunkten, Bindungen und Verhaltensweisen.  
+ Ab .NET Framework 4 enthält WCF ein neues Standard Konfigurations Modell, das die WCF-Konfigurations Anforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standard Endpunkten, Bindungen und Verhaltensweisen.  
   
  [Konfigurieren von Diensten mit Konfigurationsdateien](configuring-services-using-configuration-files.md)  
  Ein Windows Communication Foundation (WCF)-Dienst kann mit der .NET Framework-Konfigurations Technologie konfiguriert werden. In den meisten Fällen werden XML-Elemente der Datei "Web. config" für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  

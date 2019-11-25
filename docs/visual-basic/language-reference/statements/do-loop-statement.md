@@ -1,5 +1,5 @@
 ---
-title: Do...Loop-Anweisung (Visual Basic)
+title: Do...Loop-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Do
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: eff5239e07ca27f40ece5af68f46c491be91cf09
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9384cbb355189be448fa4b8d274721b4a7ca6a20
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583442"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351255"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop-Anweisung (Visual Basic)
-Wiederholt einen Anweisungsblock, während eine `Boolean` Bedingung `True` ist oder bis die Bedingung `True` wird.  
+Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,55 +54,55 @@ Loop { While | Until } condition
   
 |Begriff|Definition|  
 |---|---|  
-|`Do`|Erforderlich. Startet die Definition der `Do` Schleife.|  
-|`While`|Erforderlich, außer wenn `Until` verwendet wird. Wiederholen Sie die Schleife, bis `condition` `False` ist.|  
-|`Until`|Erforderlich, außer wenn `While` verwendet wird. Wiederholen Sie die Schleife, bis `condition` `True` ist.|  
-|`condition`|Dies ist optional. `Boolean` Ausdruck. Wenn `condition` `Nothing` ist, wird es von Visual Basic als `False` behandelt.|  
-|`statements`|Dies ist optional. Eine oder mehrere-Anweisungen, die wiederholt werden, während oder bis `condition` sind `True`.|  
-|`Continue Do`|Dies ist optional. Überträgt die Steuerung an die nächste Iterations `Do` Schleife.|  
-|`Exit Do`|Dies ist optional. Überträgt die Steuerung aus der `Do` Schleife.|  
-|`Loop`|Erforderlich. Beendet die Definition der `Do` Schleife.|  
+|`Do`|Erforderlich. Starts the definition of the `Do` loop.|  
+|`While`|Erforderlich, außer wenn `Until` verwendet wird. Repeat the loop until `condition` is `False`.|  
+|`Until`|Erforderlich, außer wenn `While` verwendet wird. Repeat the loop until `condition` is `True`.|  
+|`condition`|Dies ist optional. `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
+|`statements`|Dies ist optional. One or more statements that are repeated while, or until, `condition` is `True`.|  
+|`Continue Do`|Dies ist optional. Transfers control to the next iteration of the `Do` loop.|  
+|`Exit Do`|Dies ist optional. Transfers control out of the `Do` loop.|  
+|`Loop`|Erforderlich. Terminates the definition of the `Do` loop.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie eine `Do...Loop` Struktur, wenn Sie eine Reihe von Anweisungen beliebig oft wiederholen möchten, bis eine Bedingung erfüllt ist. Wenn Sie die-Anweisungen in einer festgelegten Anzahl von Wiederholungen wiederholen möchten, wird [für... Die nächste Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md) ist in der Regel eine bessere Wahl.  
+ Use a `Do...Loop` structure when you want to repeat a set of statements an indefinite number of times, until a condition is satisfied. If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
   
- Sie können entweder `While` oder `Until` verwenden, um `condition` anzugeben, aber nicht beides.  
+ You can use either `While` or `Until` to specify `condition`, but not both.  
   
- Sie können `condition` nur einmal entweder am Anfang oder am Ende der Schleife testen. Wenn Sie `condition` am Anfang der Schleife testen (in der `Do`-Anweisung), wird die Schleife möglicherweise nicht einmal ausgeführt. Wenn Sie am Ende der Schleife testen (in der `Loop`-Anweisung), wird die Schleife immer mindestens einmal ausgeführt.  
+ You can test `condition` only one time, at either the start or the end of the loop. If you test `condition` at the start of the loop (in the `Do` statement), the loop might not run even one time. If you test at the end of the loop (in the `Loop` statement), the loop always runs at least one time.  
   
- Die Bedingung ergibt in der Regel einen Vergleich zweier Werte, kann jedoch ein beliebiger Ausdruck sein, der zu einem [booleschen Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md) Wert (`True` oder `False`) ausgewertet wird. Dies umfasst auch Werte anderer Datentypen, z. b. numerischer Typen, die in `Boolean` konvertiert wurden.  
+ The condition usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This includes values of other data types, such as numeric types, that have been converted to `Boolean`.  
   
- Sie können `Do` Schleifen schachteln, indem Sie eine Schleife in eine andere einfügen. Sie können auch verschiedene Arten von Steuerungsstrukturen ineinander schachteln. Weitere Informationen finden Sie unter [Struktur von Struktur Steuer](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)Elementen.  
+ You can nest `Do` loops by putting one loop within another. You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
-> Die `Do...Loop` Struktur bietet mehr Flexibilität als die [Zeit... End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , da Sie Ihnen ermöglicht, zu entscheiden, ob die Schleife beendet werden soll, wenn `condition` beendet `True` wird, oder wenn Sie zum ersten Mal `True` wird. Außerdem können Sie `condition` entweder am Anfang oder am Ende der Schleife testen.  
+> The `Do...Loop` structure gives you more flexibility than the [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) because it enables you to decide whether to end the loop when `condition` stops being `True` or when it first becomes `True`. It also enables you to test `condition` at either the start or the end of the loop.  
   
-## <a name="exit-do"></a>Beenden  
- Die [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) -Anweisung kann eine alternative Möglichkeit zum Beenden einer `Do…Loop` bereitstellen. `Exit Do` überträgt die Steuerung sofort an die Anweisung, die auf die `Loop` Anweisung folgt.  
+## <a name="exit-do"></a>Exit Do  
+ The [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide an alternative way to exit a `Do…Loop`. `Exit Do` transfers control immediately to the statement that follows the `Loop` statement.  
   
- `Exit Do` wird häufig verwendet, wenn eine bestimmte Bedingung ausgewertet wird, z. b. in einer `If...Then...Else` Struktur. Möglicherweise möchten Sie eine Schleife beenden, wenn Sie eine Bedingung erkennen, die es unnötig oder unmöglich macht, die Iteration fortzusetzen, z. b. einen fehlerhaften Wert oder eine Beendigungs Anforderung. Eine Verwendung von `Exit Do` besteht darin, auf eine Bedingung zu testen, die eine *Endlosschleife*verursachen könnte. Dies ist eine Schleife, die eine große oder sogar unendliche Anzahl von Zeiten ausführen kann. Mit `Exit Do` können Sie die Schleife mit Escapezeichen versehen.  
+ `Exit Do` is often used after some condition is evaluated, for example in an `If...Then...Else` structure. You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. One use of `Exit Do` is to test for a condition that could cause an *endless loop*, which is a loop that could run a large or even infinite number of times. You can use `Exit Do` to escape the loop.  
   
- Sie können beliebig viele `Exit Do` Anweisungen in einem `Do…Loop` einschließen.  
+ You can include any number of `Exit Do` statements anywhere in a `Do…Loop`.  
   
- Wenn Sie in geschachtelten `Do` Schleifen verwendet wird, überträgt `Exit Do` die Steuerung aus der innersten Schleife und in die nächsthöhere Schachtelungs Ebene.  
+ When used within nested `Do` loops, `Exit Do` transfers control out of the innermost loop and into the next higher level of nesting.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die Anweisungen in der-Schleife weiterhin ausgeführt, bis die `index`-Variable größer als 10 ist. Die `Until`-Klausel befindet sich am Ende der Schleife.  
+ In the following example, the statements in the loop continue to run until the `index` variable is greater than 10. The `Until` clause is at the end of the loop.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird anstelle einer `Until`-Klausel eine `While`-Klausel verwendet, und `condition` wird am Anfang der Schleife anstelle von am Ende getestet.  
+ The following example uses a `While` clause instead of an `Until` clause, and `condition` is tested at the start of the loop instead of at the end.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel beendet `condition` die Schleife, wenn die `index` Variable größer als 100 ist. Die `If` Anweisung in der Schleife bewirkt jedoch, dass die `Exit Do` Anweisung die Schleife beendet, wenn die Index Variable größer als 10 ist.  
+ In the following example, `condition` stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden alle Zeilen in einer Textdatei gelesen. Die <xref:System.IO.File.OpenText%2A>-Methode öffnet die Datei und gibt eine <xref:System.IO.StreamReader> zurück, die die Zeichen liest. In der `Do...Loop` Bedingung bestimmt die <xref:System.IO.StreamReader.Peek%2A>-Methode des `StreamReader`, ob zusätzliche Zeichen vorhanden sind.  
+ The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `Do...Loop` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether there are any additional characters.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

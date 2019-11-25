@@ -1,19 +1,19 @@
 ---
-title: String-Funktionen (Visual Basic)
+title: String-Funktionen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 0002a3dd19b493f690f91f9b6c68a9241e6d6ea0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583000"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349981"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
 
-In der folgenden Tabelle sind die Funktionen aufgelistet, die Visual Basic in der <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>-Klasse zum Durchsuchen und Bearbeiten von Zeichen folgen bereitstellt. Sie können als Visual Basic intrinsische Funktionen angesehen werden. Das heißt, Sie müssen Sie nicht als explizite Member einer Klasse aufzurufen, wie in den Beispielen gezeigt. Zusätzliche Methoden und in einigen Fällen auch ergänzende Methoden sind in der <xref:System.String?displayProperty=nameWithType>-Klasse verfügbar.
+The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
 
 |.NET Framework-Methode|Beschreibung|
 |---------------------------|-----------------|
@@ -47,38 +47,38 @@ In der folgenden Tabelle sind die Funktionen aufgelistet, die Visual Basic in de
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende oder nachgestellte Leerzeichen enthält.|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das die angegebene Zeichenfolge in Großbuchstaben enthält.|
 
-Mit der [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) -Anweisung können Sie festlegen, ob Zeichen folgen mithilfe einer Text Sortierreihenfolge ohne Beachtung der Groß-/Kleinschreibung verglichen werden, die durch das Gebiets Schema des Systems (`Text`) oder durch die internen binären Darstellungen der Zeichen (`Binary`) festgelegt wird. Die Standardmethode zum Textvergleich ist `Binary`.
+You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). Die Standardmethode zum Textvergleich ist `Binary`.
 
-## <a name="example-ucase"></a>Beispiel: UCase
+## <a name="example-ucase"></a>Example: UCase
 
 In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Beispiel: LTrim
+## <a name="example-ltrim"></a>Example: LTrim
 
 In diesem Beispiel werden mit der `LTrim`-Funktion führende Leerzeichen und mit der `RTrim`-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt. Mit der `Trim`-Funktion werden beide Typen von Leerzeichen entfernt.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Beispiel: Mid
+## <a name="example-mid"></a>Example: Mid
 
 In diesem Beispiel wird die `Mid`-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Beispiel: len
+## <a name="example-len"></a>Example: Len
 
 In diesem Beispiel wird mit der `Len`-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Beispiel: InStr
+## <a name="example-instr"></a>Example: InStr
 
 In diesem Beispiel wird die `InStr`-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Beispiel: Format
+## <a name="example-format"></a>Example: Format
 
 Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funktion zur Formatierung von Werten mit `String`-Formaten und benutzerdefinierten Formaten. Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen (`/`), Trennzeichen für Zeitangaben (`:`) und AM/PM-Indikatoren (`t` und `tt`) richtet sich nach den Gebietsschemaeinstellungen des Codes. Wenn Datums- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24-Stunden-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.
 
@@ -92,4 +92,4 @@ Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funkti
 - [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System. String-Klassen Methoden](xref:System.String#methods)
+- [System.String class methods](xref:System.String#methods)

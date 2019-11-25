@@ -1,5 +1,5 @@
 ---
-title: Static (Visual Basic)
+title: Static
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Static
@@ -7,42 +7,42 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: f1031fe005a2fc264b50116b8ea3311dc7065dbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f020756466888f51298abb423997906ddc7caff7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647642"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350758"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
-Gibt an, dass eine oder mehrere deklarierte Variablen sind weiterhin vorhanden, und behalten ihre aktuellen Werte nach dem Beenden der Prozedur, in der sie deklariert werden.  
+Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
   
 ## <a name="remarks"></a>Hinweise  
- Normalerweise wird eine lokale Variable in einer Prozedur vorhanden ist, sobald die Prozedur beendet wird. Eine statische Variable bleibt erhalten und den aktuellen Wert beibehält. Das nächste Mal, das der Code der Prozedur wird, die Variable wird nicht erneut initialisiert, und sie behält den aktuellen Wert, den Sie zugewiesen. Eine statische Variable bleibt für die Lebensdauer der Klasse oder des Moduls vorhanden sein, die sie in definiert ist.  
+ Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
   
 ## <a name="rules"></a>Regeln  
   
-- **Deklarationskontext.** Sie können `Static` nur für lokale Variablen. Dies bedeutet, dass der Deklarationskontext für eine `Static` Variable muss eine Prozedur oder einen Block in einer Prozedur, und ist nicht möglich Quelldatei, Namespace, Klasse, Struktur oder Moduls.  
+- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
   
-     Sie können keine `Static` innerhalb einer Strukturprozedur.  
+     You cannot use `Static` inside a structure procedure.  
   
-- Die Datentypen der `Static` lokale Variablen können nicht abgeleitet werden. Weitere Informationen finden Sie unter [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-- **Kombinierte Modifizierer.** Sie können keine angeben `Static` zusammen mit `ReadOnly`, `Shadows`, oder `Shared` in der gleichen Deklaration.  
+- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
   
 ## <a name="behavior"></a>Verhalten  
- Wenn Sie deklarieren eine statische Variable in einem `Shared` Verfahren nur eine Kopie der statischen Variable steht für die gesamte Anwendung. Rufen Sie eine `Shared` name Prozedur mithilfe der Klasse, die nicht auf eine Variable, die auf eine Instanz der Klasse verweist.  
+ When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
   
- Wenn Sie eine statische Variable in einer Prozedur, die nicht deklarieren `Shared`, nur eine Kopie der Variablen für jede Instanz der Klasse zur Verfügung steht. Sie können eine nicht freigegebene Prozedur aufrufen, mithilfe einer Variablen, die auf eine bestimmte Instanz der Klasse verweist.  
+ When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `Static`.  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- Die `Static` Variable `totalSales` wird nur ein Mal mit 0 initialisiert. Jedes Mal, den Sie eingeben `updateSales`, `totalSales` noch immer den letzten Wert an, die Sie dafür berechnet.  
+ The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
   
- Die `Static` Modifizierer kann in diesem Kontext verwendet werden:  
+ The `Static` modifier can be used in this context:  
   
  [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -50,7 +50,7 @@ Gibt an, dass eine oder mehrere deklarierte Variablen sind weiterhin vorhanden, 
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Lebensdauer in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Variablendeklaration](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

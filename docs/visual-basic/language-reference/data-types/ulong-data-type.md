@@ -1,5 +1,5 @@
 ---
-title: ULong-Datentyp (Visual Basic)
+title: ULong-Datentyp
 ms.date: 01/31/2018
 f1_keywords:
 - vb.ulong
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 19a75f056436b858a22588d7ac5f37df5dd326f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3c6cd4086e08b808c158948756b4806f098196b9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583112"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343882"
 ---
-# <a name="ulong-data-type-visual-basic"></a>ULong-Datentyp (Visual Basic)
+# <a name="ulong-data-type-visual-basic"></a>ULong data type (Visual Basic)
 
-Enthält nicht signierte 64-Bit-Ganzzahlen (8 Byte) mit einem Wert von 0 bis 18446744073709551615 (mehr als 1,84 mal 10 ^ 19).
+Holds unsigned 64-bit (8-byte) integers ranging in value from 0 through 18,446,744,073,709,551,615 (more than 1.84 times 10 ^ 19).
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie den `ULong`-Datentyp, um Binärdaten zu enthalten, die für `UInteger` zu groß sind, oder die größtmöglichen ganzzahligen Werte ohne Vorzeichen.
+Use the `ULong` data type to contain binary data too large for `UInteger`, or the largest possible unsigned integer values.
 
 Der Standardwert von `ULong` lautet 0.
 
-## <a name="literal-assignments"></a>Literalzuweisungen
+## <a name="literal-assignments"></a>Literal assignments
 
-Sie können eine `ULong` Variable deklarieren und initialisieren, indem Sie Ihr ein dezimales Literalzeichen, ein hexadezimales Literalzeichen, ein Oktalliterale oder (beginnend mit Visual Basic 2017) ein binäres Literalzeichen zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `ULong` befindet – sprich, wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+You can declare and initialize a `ULong` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `ULong` befindet – sprich, wenn es kleiner als <xref:System.UInt64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 7.934.076.125, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `ULong`-Werten zugewiesen.
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
 
 > [!NOTE]
-> Sie verwenden das Präfix `&h` oder `&H`, um eine hexadezimale Literale anzugeben, das Präfix `&b` oder `&B`, um ein binäres Literal anzugeben, und das Präfix `&o` oder `&O`, um ein Oktalliteral anzugeben. Dezimale Literale haben kein Präfix.
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Dezimale Literale haben kein Präfix.
 
-Ab Visual Basic 2017 können Sie auch den Unterstrich (`_`) als Ziffern Trennzeichen verwenden, um die Lesbarkeit zu verbessern, wie im folgenden Beispiel gezeigt.
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich (`_`) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Beispiel:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -56,7 +56,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numerische Literale können auch das `UL` oder `ul` [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `ULong` Datentyp anzugeben, wie im folgenden Beispiel gezeigt.
+Numeric literals can also include the `UL` or `ul` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `ULong` data type, as the following example shows.
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Negative Zahlen.** Da `ULong` ein nicht signierter Typ ist, kann er keine negative Zahl darstellen. Wenn Sie den unären Minus-Operator (`-`) für einen Ausdruck verwenden, der als Typ `ULong` ausgewertet wird, konvertiert Visual Basic den Ausdruck zuerst in `Decimal`.
+- **Negative Numbers.** Because `ULong` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `ULong`, Visual Basic converts the expression to `Decimal` first.
 
-- **CLS-Kompatibilität.** Der `ULong`-Datentyp ist nicht Teil des [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die ihn verwendet.
+- **CLS Compliance.** The `ULong` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **Interop-Überlegungen.** Wenn Sie mit Komponenten interagieren, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass Typen wie `ulong` in anderen Umgebungen eine andere Daten Breite (32 Bits) aufweisen können. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `UInteger`, anstatt `ULong` in Ihrem verwalteten Visual Basic-Code zu verwenden.
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `ulong` can have a different data width (32 bits) in other environments. If you are passing a 32-bit argument to such a component, declare it as `UInteger` instead of `ULong` in your managed Visual Basic code.
 
-  Außerdem werden in Windows 95, Windows 98, Windows Me oder Windows 2000 keine 64-Bit-Ganzzahlen unterstützt. Es ist nicht möglich, ein Visual Basic `ULong`-Argument an eine Automatisierungskomponente auf diesen Plattformen zu übergeben.
+  Furthermore, Automation does not support 64-bit integers on Windows 95, Windows 98, Windows ME, or Windows 2000. You cannot pass a Visual Basic `ULong` argument to an Automation component on these platforms.
 
-- **Tet.** Der `ULong`-Datentyp wird auf `Decimal`, `Single` und `Double` erweitert. Dies bedeutet, dass Sie `ULong` in einen dieser Typen konvertieren können, ohne dass <xref:System.OverflowException?displayProperty=nameWithType> Fehler auftreten.
+- **Widening.** The `ULong` data type widens to `Decimal`, `Single`, and `Double`. This means you can convert `ULong` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Geben Sie Zeichen ein.** Durch das Anfügen der literalzeichenzeichen, die an ein Literalzeichen `UL` werden, wird der Datentyp `ULong` `ULong` hat kein Bezeichnertyp Zeichen.
+- **Type Characters.** Appending the literal type characters `UL` to a literal forces it to the `ULong` data type. `ULong` has no identifier type character.
 
-- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt64?displayProperty=nameWithType>-Struktur.
+- **Framework Type.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt64?displayProperty=nameWithType>-Struktur.
 
 ## <a name="see-also"></a>Siehe auch
 

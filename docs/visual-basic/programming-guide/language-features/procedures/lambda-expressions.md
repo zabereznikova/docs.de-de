@@ -1,5 +1,5 @@
 ---
-title: Lambdaausdrücke (Visual Basic)
+title: Lambda-Ausdrücke
 ms.date: 07/20/2015
 f1_keywords:
 - vb.LambdaFunction
@@ -9,67 +9,67 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: d3c385737d7f3a25009dba3abfffe88a1cf1619a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: f3f963167e1b3633cc5fe6e1f435e374cd272cce
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524048"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345975"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambdaausdrücke (Visual Basic)
 
-Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die überall dort verwendet werden kann, wo ein Delegat gültig ist. Lambda Ausdrücke können Funktionen oder Unterroutinen sein und können einzeilige oder mehrzeilige Zeilen sein. Sie können Werte aus dem aktuellen Gültigkeitsbereich an einen Lambda-Ausdruck übergeben.
+A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid. Lambda expressions can be functions or subroutines and can be single-line or multi-line. You can pass values from the current scope to a lambda expression.
 
 > [!NOTE]
-> Die `RemoveHandler`-Anweisung ist eine Ausnahme. Sie können einen Lambda-Ausdruck in nicht für den Delegatparameter `RemoveHandler` übergeben.
+> The `RemoveHandler` statement is an exception. You cannot pass a lambda expression in for the delegate parameter of `RemoveHandler`.
 
-Sie können Lambda Ausdrücke erstellen, indem Sie das-Schlüsselwort `Function` oder `Sub` verwenden, ebenso wie Sie eine Standardfunktion oder-Unterroutine erstellen. Allerdings sind Lambda-Ausdrücke in einer-Anweisung enthalten.
+You create lambda expressions by using the `Function` or `Sub` keyword, just as you create a standard function or subroutine. However, lambda expressions are included in a statement.
 
-Das folgende Beispiel zeigt einen Lambda-Ausdruck, der sein-Argument erhöht und den-Wert zurückgibt. Das Beispiel zeigt die einzeilige und die mehrzeilige Lambda-Ausdruckssyntax für eine Funktion.
+The following example is a lambda expression that increments its argument and returns the value. The example shows both the single-line and multi-line lambda expression syntax for a function.
 
 [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]
 
-Das folgende Beispiel ist ein Lambda-Ausdruck, der einen Wert in die Konsole schreibt. Das Beispiel zeigt die einzeilige und die mehrzeilige Lambda-Ausdruckssyntax für eine Unterroutine.
+The following example is a lambda expression that writes a value to the console. The example shows both the single-line and multi-line lambda expression syntax for a subroutine.
 
 [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]
 
-Beachten Sie, dass in den vorherigen Beispielen die Lambda-Ausdrücke einem Variablennamen zugewiesen werden. Wenn Sie auf die Variable verweisen, rufen Sie den Lambda-Ausdruck auf. Sie können einen Lambda-Ausdruck auch gleichzeitig deklarieren und aufrufen, wie im folgenden Beispiel gezeigt.
+Notice that in the previous examples the lambda expressions are assigned to a variable name. Whenever you refer to the variable, you invoke the lambda expression. You can also declare and invoke a lambda expression at the same time, as shown in the following example.
 
 [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]
 
-Ein Lambda-Ausdruck kann als Wert eines Funktions Aufrufes zurückgegeben werden (wie im Beispiel im [Kontext](#context) Abschnitt weiter unten in diesem Thema gezeigt) oder als Argument an einen Parameter übergeben, der einen Delegattyp annimmt, wie im folgenden Beispiel gezeigt.
+A lambda expression can be returned as the value of a function call (as is shown in the example in the [Context](#context) section later in this topic), or passed in as an argument to a parameter that takes a delegate type, as shown in the following example.
 
 [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]
 
 ## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax
 
-Die Syntax eines Lambda-Ausdrucks ähnelt der einer Standardfunktion oder-Unterroutine. Die Unterschiede lauten wie folgt:
+The syntax of a lambda expression resembles that of a standard function or subroutine. The differences are as follows:
 
-- Ein Lambda-Ausdruck weist keinen Namen auf.
+- A lambda expression does not have a name.
 
-- Lambda Ausdrücke können keine Modifizierer aufweisen, wie z. b. `Overloads` oder `Overrides`.
+- Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.
 
-- Einzeilige Lambda-Funktionen verwenden keine `As`-Klausel, um den Rückgabetyp anzugeben. Stattdessen wird der-Typ von dem Wert abgeleitet, zu dem der Text des Lambda-Ausdrucks ausgewertet wird. Wenn der Text des Lambda-Ausdrucks beispielsweise `cust.City = "London"` ist, ist der Rückgabetyp `Boolean`.
+- Single-line lambda functions do not use an `As` clause to designate the return type. Instead, the type is inferred from the value that the body of the lambda expression evaluates to. For example, if the body of the lambda expression is `cust.City = "London"`, its return type is `Boolean`.
 
-- In mehrzeiligen Lambda-Funktionen können Sie entweder mithilfe einer `As`-Klausel einen Rückgabetyp angeben oder die `As`-Klausel weglassen, damit der Rückgabetyp abgeleitet wird. Wenn die `As`-Klausel für eine mehrzeilige Lambda-Funktion weggelassen wird, wird der Rückgabetyp als dominanter Typ aus allen `Return` Anweisungen in der mehrzeiligen Lambda-Funktion abgeleitet. Der *vorherrschende Typ* ist ein eindeutiger Typ, auf den alle anderen Typen erweitert werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, auf den alle anderen Typen im Array eingrenzen können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. Wenn `Option Strict` in diesem Fall auf `On` festgelegt ist, tritt ein Compilerfehler auf.
+- In multi-line lambda functions, you can either specify a return type by using an `As` clause, or omit the `As` clause so that the return type is inferred. When the `As` clause is omitted for a multi-line lambda function, the return type is inferred to be the dominant type from all the `Return` statements in the multi-line lambda function. The *dominant type* is a unique type that all other types can widen to. If this unique type cannot be determined, the dominant type is the unique type that all other types in the array can narrow to. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. In this case, if `Option Strict` is set to `On`, a compiler error occurs.
 
-     Wenn die Ausdrücke, die für die `Return`-Anweisung bereitgestellt werden, z. b. Werte vom Typ `Integer`, `Long` und `Double` enthalten, ist das resultierende Array vom Typ `Double`. Sowohl `Integer` als auch `Long` werden auf `Double` und nur `Double` erweitert. Daher ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
+     For example, if the expressions supplied to the `Return` statement contain values of type `Integer`, `Long`, and `Double`, the resulting array is of type `Double`. Both `Integer` and `Long` widen to `Double` and only `Double`. Daher ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
 
-- Der Text einer einzeiligen Funktion muss ein Ausdruck sein, der einen Wert zurückgibt, nicht eine-Anweisung. Es gibt keine `Return`-Anweisung für einzeilige Funktionen. Der von der einzeiligen Funktion zurückgegebene Wert ist der Wert des Ausdrucks im Text der Funktion.
+- The body of a single-line function must be an expression that returns a value, not a statement. There is no `Return` statement for single-line functions. The value returned by the single-line function is the value of the expression in the body of the function.
 
-- Der Text einer einzeiligen Unterroutine muss eine einzeilige Anweisung sein.
+- The body of a single-line subroutine must be single-line statement.
 
-- Einzeilige Funktionen und Unterroutinen enthalten keine `End Function`-oder `End Sub`-Anweisung.
+- Single-line functions and subroutines do not include an `End Function` or `End Sub` statement.
 
-- Sie können den Datentyp eines Lambda-Ausdrucks Parameters angeben, indem Sie das `As`-Schlüsselwort verwenden, oder der Datentyp des Parameters kann abgeleitet werden. Entweder müssen alle Parameter über bestimmte Datentypen verfügen, oder alle müssen abgeleitet werden.
+- You can specify the data type of a lambda expression parameter by using the `As` keyword, or the data type of the parameter can be inferred. Either all parameters must have specified data types or all must be inferred.
 
-- `Optional` und `Paramarray` Parameter sind nicht zulässig.
+- `Optional` and `Paramarray` parameters are not permitted.
 
-- Generische Parameter sind nicht zulässig.
+- Generic parameters are not permitted.
 
 ## <a name="async-lambdas"></a>Asynchrone Lambdas
 
-Sie können problemlos Lambda Ausdrücke und Anweisungen erstellen, die die asynchrone Verarbeitung mithilfe der Schlüsselwörter [Async](../../../../visual-basic/language-reference/modifiers/async.md) und [Erwartung des Operators](../../../../visual-basic/language-reference/operators/await-operator.md) einschließen. Das folgende Windows Forms enthält z. B. einen Ereignishandler, der eine Async-Methode, `ExampleMethodAsync`, aufruft und erwartet.
+You can easily create lambda expressions and statements that incorporate asynchronous processing by using the [Async](../../../../visual-basic/language-reference/modifiers/async.md) and [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md) keywords. Das folgende Windows Forms enthält z. B. einen Ereignishandler, der eine Async-Methode, `ExampleMethodAsync`, aufruft und erwartet.
 
 ```vb
 Public Class Form1
@@ -88,7 +88,7 @@ Public Class Form1
 End Class
 ```
 
-Sie können denselben Ereignishandler hinzufügen, indem Sie einen Async-Lambda in einer [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md)verwenden. Um diesen Handler hinzuzufügen, fügen Sie einen `Async` -Modifizierer vor der Lambda-Parameterliste, wie im folgenden Beispiel dargestellt, hinzu.
+You can add the same event handler by using an async lambda in an [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Um diesen Handler hinzuzufügen, fügen Sie einen `Async` -Modifizierer vor der Lambda-Parameterliste, wie im folgenden Beispiel dargestellt, hinzu.
 
 ```vb
 Public Class Form1
@@ -110,49 +110,49 @@ Public Class Form1
 End Class
 ```
 
-Weitere Informationen zum Erstellen und Verwenden von Async-Methoden finden Sie unter [asynchrone Programmierung mit Async und warten](../../../../visual-basic/programming-guide/concepts/async/index.md).
+For more information about how to create and use async methods, see [Asynchronous Programming with Async and Await](../../../../visual-basic/programming-guide/concepts/async/index.md).
 
 ## <a name="context"></a>Kontext
 
-Ein Lambda-Ausdruck nutzt seinen Kontext mit dem Bereich, in dem er definiert ist. Sie verfügt über die gleichen Zugriffsrechte wie jeder Code, der in den enthaltenden Bereich geschrieben wurde. Dies schließt den Zugriff auf Element Variablen, Funktionen und subs, `Me` und Parameter sowie lokale Variablen im enthaltenden Bereich ein.
+A lambda expression shares its context with the scope within which it is defined. It has the same access rights as any code written in the containing scope. This includes access to member variables, functions and subs, `Me`, and parameters and local variables in the containing scope.
 
-Der Zugriff auf lokale Variablen und Parameter im enthaltenden Bereich kann über die Gültigkeitsdauer dieses Bereichs hinausgehen. Solange ein Delegat, der sich auf einen Lambda-Ausdruck bezieht, nicht für Garbage Collection verfügbar ist, wird der Zugriff auf die Variablen in der ursprünglichen Umgebung beibehalten. Im folgenden Beispiel ist die Variable `target` lokal, um `makeTheGame`, die Methode, in der der Lambda-Ausdruck `playTheGame` definiert ist. Beachten Sie, dass der zurückgegebene Lambda-Ausdruck, der `takeAGuess` in `Main` zugewiesen ist, weiterhin auf die lokale Variable `target` zugreifen kann.
+Access to local variables and parameters in the containing scope can extend beyond the lifetime of that scope. As long as a delegate referring to a lambda expression is not available to garbage collection, access to the variables in the original environment is retained. In the following example, variable `target` is local to `makeTheGame`, the method in which the lambda expression `playTheGame` is defined. Note that the returned lambda expression, assigned to `takeAGuess` in `Main`, still has access to the local variable `target`.
 
 [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]
 
-Im folgenden Beispiel wird der große Bereich von Zugriffsrechten für den in einem Lambda-Ausdruck aufgeführten Ausdruck veranschaulicht. Wenn der zurückgegebene Lambda-Ausdruck aus `Main` als `aDel` ausgeführt wird, greift er auf diese Elemente zu:
+The following example demonstrates the wide range of access rights of the nested lambda expression. When the returned lambda expression is executed from `Main` as `aDel`, it accesses these elements:
 
-- Ein Feld der Klasse, in der es definiert ist: `aField`
+- A field of the class in which it is defined: `aField`
 
-- Eine Eigenschaft der Klasse, in der Sie definiert ist: `aProp`
+- A property of the class in which it is defined: `aProp`
 
-- Ein Parameter der-Methode `functionWithNestedLambda`, in der er definiert ist: `level1`
+- A parameter of method `functionWithNestedLambda`, in which it is defined: `level1`
 
-- Eine lokale Variable `functionWithNestedLambda`: `localVar`
+- A local variable of `functionWithNestedLambda`: `localVar`
 
-- Ein Parameter des Lambda-Ausdrucks, in dem er sich befindet: `level2`
+- A parameter of the lambda expression in which it is nested: `level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 
-## <a name="converting-to-a-delegate-type"></a>Umstellen in einen Delegattyp
+## <a name="converting-to-a-delegate-type"></a>Converting to a Delegate Type
 
-Ein Lambda-Ausdruck kann implizit in einen kompatiblen Delegattyp konvertiert werden. Informationen zu den allgemeinen Kompatibilitätsanforderungen finden Sie unter [gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Das folgende Codebeispiel zeigt einen Lambda-Ausdruck, der implizit in `Func(Of Integer, Boolean)` oder eine entsprechende Delegatsignatur konvertiert.
+A lambda expression can be implicitly converted to a compatible delegate type. For information about the general requirements for compatibility, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). For example, the following code example shows a lambda expression that implicitly converts to `Func(Of Integer, Boolean)` or a matching delegate signature.
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
-Das folgende Codebeispiel zeigt einen Lambda-Ausdruck, der implizit in `Sub(Of Double, String, Double)` oder eine entsprechende Delegatsignatur konvertiert.
+The following code example shows a lambda expression that implicitly converts to `Sub(Of Double, String, Double)` or a matching delegate signature.
 
 [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]
 
-Wenn Sie Delegaten Lambda-Ausdrücke zuweisen oder Sie als Argumente an Prozeduren übergeben, können Sie die Parameternamen angeben, deren Datentypen jedoch weglassen und die Typen aus dem Delegaten entnommen werden.
+When you assign lambda expressions to delegates or pass them as arguments to procedures, you can specify the parameter names but omit their data types, letting the types be taken from the delegate.
 
 ## <a name="examples"></a>Beispiele
 
-- Im folgenden Beispiel wird ein Lambda-Ausdruck definiert, der `True` zurückgibt, wenn das Werte zulässt-Argument über einen zugewiesenen Wert verfügt, und `False`, wenn der Wert `Nothing` ist.
+- The following example defines a lambda expression that returns `True` if the nullable argument has an assigned value, and `False` if its value is `Nothing`.
 
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]
 
-- Im folgenden Beispiel wird ein Lambda-Ausdruck definiert, der den Index des letzten Elements in einem Array zurückgibt.
+- The following example defines a lambda expression that returns the index of the last element in an array.
 
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]
 

@@ -1,5 +1,5 @@
 ---
-title: Unterschiede zwischen Parametern und Argumenten (Visual Basic)
+title: Unterschiede zwischen Parametern und Argumenten
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864246"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341376"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Unterschiede zwischen Parametern und Argumenten (Visual Basic)
-In den meisten Fällen muss eine Prozedur einige Informationen zu den Umständen zusammen haben, in dem sie aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Aufgaben ausführt, verwendet verschiedene Informationen für jeden Aufruf an. Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücke, die Sie beim Aufruf an die Prozedur übergeben.  
+In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- Um diese Informationen, um das Verfahren zu kommunizieren, die Prozedur definiert einen *Parameter*, und der aufrufende Code übergibt einen *Argument* an diesen Parameter. Sie können die Parameter eine Parklücke und das Argument ein Auto vorstellen. Genau wie andere Autos zu unterschiedlichen Zeiten in einer Parklücke Parken können, kann der aufrufende Code ein anderes Argument auf den gleichen Parameter übergeben, jedes Mal, wenn die It die Prozedur aufruft.  
+ To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
   
 ## <a name="parameters"></a>Parameter  
- Ein *Parameter* stellt einen Wert, der die Prozedur erwartet, dass Sie beim Aufruf zu übergeben. Die Deklaration der Prozedur definiert die Parameter an.  
+ A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
   
- Beim Definieren einer `Function` oder `Sub` Verfahren geben Sie Sie einer *Parameterliste* in Klammern direkt nach den Namen der Prozedur. Für jeden Parameter, geben Sie einen Namen, einen Datentyp und eine Methode übergeben ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Sie können auch angeben, dass ein Parameter optional ist. Dies bedeutet, dass der aufrufende Code keinen Wert dafür übergeben werden.  
+ When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
   
- Der Name jedes Parameters dient als ein *lokale Variable* in der Prozedur. Sie verwenden den Namen des Parameters auf die gleiche Weise, die Sie eine anderen Variablen verwenden.  
+ The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
   
 ## <a name="arguments"></a>Argumente  
- Ein *Argument* stellt den Wert, der Sie Parameter einer Prozedur zu übergeben, wenn Sie die Prozedur aufrufen. Der aufrufende Code stellt die Argumente bereit, wenn sie die Prozedur aufruft.  
+ An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
   
- Beim Aufruf einer `Function` oder `Sub` Verfahren, die Sie enthalten eine *Argumentliste* in Klammern direkt nach den Namen der Prozedur. Jedes Argument entspricht dem Parameter in der gleichen Position in der Liste.  
+ When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
   
- Im Gegensatz zu Parameterdefinition Argumente Namen keine. Jedes Argument ist ein Ausdruck, der 0 (null) oder mehr Variablen, Konstanten und Literale enthalten kann. Der Datentyp des ausgewerteten Ausdrucks sollte in der Regel für den entsprechenden Parameter definierten Datentyp übereinstimmen, und in jedem Fall muss er in den Parametertyp konvertiert werden.  
+ In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,8 +44,8 @@ In den meisten Fällen muss eine Prozedur einige Informationen zu den Umständen
 - [Function-Prozeduren](./function-procedures.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Operatorprozeduren](./operator-procedures.md)
-- [Vorgehensweise: Definieren eines Parameters für eine Prozedur](./how-to-define-a-parameter-for-a-procedure.md)
-- [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
+- [Gewusst wie: Definieren eines Parameters für eine Prozedur](./how-to-define-a-parameter-for-a-procedure.md)
+- [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
 - [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
 - [Rekursive Prozeduren](./recursive-procedures.md)
 - [Prozedurüberladung](./procedure-overloading.md)

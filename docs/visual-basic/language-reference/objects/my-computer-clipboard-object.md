@@ -1,16 +1,16 @@
 ---
-title: My. Computer. Clipboard-Objekt (Visual Basic)
+title: My.Computer.Clipboard-Objekt
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: f372ff3ac97a1c970d436ed57fa2760e78656ac4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c1587a109d1dfd75505db9bb638aa829222ca4b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963718"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344109"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard-Objekt
 Stellt Methoden zur Bearbeitung der Zwischenablage bereit.  
@@ -18,17 +18,17 @@ Stellt Methoden zur Bearbeitung der Zwischenablage bereit.
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Clipboard` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- Weitere Informationen finden Sie unter [Speichern von Daten in der Zwischenablage und Lesen aus der Zwischenablage](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
-> Sie können auch Methoden der <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> -Klasse verwenden, um die Zwischenablage zu bearbeiten.  
+> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Klasse:** (ermöglicht den Zugriff <xref:System.Windows.Forms.Clipboard>auf) <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+ **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
   
- **Stadtverordneten** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
 

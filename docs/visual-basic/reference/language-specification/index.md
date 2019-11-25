@@ -1,20 +1,20 @@
 ---
-title: Visual Basic-Sprachspezifikation
+title: Sprachspezifikation
 ms.date: 08/02/2017
 helpviewer_keywords:
 - resources [Visual Basic], specifications
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 399bc15f3249c99f1c94338869e77befc8c26015
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0df3f0a49d1dc84f5a6f3218b23f20ce3d43a1fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766427"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352869"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic-Sprachspezifikation
-Der Visual Basic-Sprachspezifikation ist die autoritative Quelle für Antworten auf alle Fragen zu Visual Basic-Grammatik und Syntax. Es enthält ausführliche Informationen über die Sprache, darunter auch viele Punkte, die in der Visual Basic-Referenz-Dokumentation nicht behandelt.  
+The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
   
  Die Spezifikation ist im [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=188623) verfügbar.  
   

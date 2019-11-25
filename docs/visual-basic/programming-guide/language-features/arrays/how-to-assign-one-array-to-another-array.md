@@ -1,27 +1,27 @@
 ---
-title: 'Vorgehensweise: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)'
+title: 'Gewusst wie: Zuweisen eines Arrays zu einem anderen Array'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858886"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351892"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Vorgehensweise: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Gewusst wie: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
 
-Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Objekttypen. Eine Array-Variable enthält einen Zeiger auf die Daten enthalten sind, die die Elemente des Arrays und die Informationen Rang und die Länge und eine Zuordnung kopiert nur this-Zeiger.
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>Zuweisen eines Arrays zu einem anderen array
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. Stellen Sie sicher, dass die beiden Arrays den gleichen Rang (Anzahl der Dimensionen) und kompatiblen Elements-Datentypen aufweisen.
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. Verwenden Sie eine standardmäßige zuweisungsanweisung, um das Quellarray in den Zielarray zuzuweisen. Führen Sie nicht entweder Arrayname mit Klammern.
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Obje
     controlArray = formArray
     ```
 
-Wenn Sie ein Array zu einem anderen zuweisen, gelten die folgenden Regeln:
+When you assign one array to another, the following rules apply:
 
-- **Gleicher Rang.** Der Rang (Anzahl der Dimensionen) des Zielarrays muss des Quellarrays, identisch sein.
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  Sofern die Ränge von zwei Arrays gleich sind, müssen die Dimensionen nicht gleich sind. Die Anzahl der Elemente in der angegebenen Dimension kann bei der Zuordnung ändern.
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **Elementtypen.** Es müssen entweder beide Arrays *Verweistyp* Elemente oder beide Arrays müssen *Werttyp* Elemente. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - Wenn beide Arrays Elementen mit Werttyp haben, müssen die Element-Datentypen genau übereinstimmen. Die einzige Ausnahme hierbei ist, dass Sie ein Array von zuweisen können `Enum` Elemente in ein Array des Basistyps dieses `Enum`.
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - Wenn beide Arrays Elemente aufweisen, muss der Elementtyp der Datenquelle von der Ziel-Elementtyp abgeleitet werden. Wenn dies der Fall ist, müssen die beiden Arrays die gleiche vererbungsbeziehung als ihre Elemente. Dies wird als bezeichnet *Array-Kovarianz*.
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-Der Compiler meldet, dass ein Fehler, wenn die oben genannten Regeln, z. B. verletzt werden die Datentypen nicht kompatibel sind oder die Ränge ungleich sind. Sie können die Fehlerbehandlung in Ihrem Code, um sicherzustellen, dass die Arrays kompatibel sind, bevor Sie versuchen, eine Zuordnung hinzufügen. Sie können auch die [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) Schlüsselwort, wenn Sie das Auslösen einer Ausnahme vermeiden möchten.
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
 ## <a name="see-also"></a>Siehe auch
 

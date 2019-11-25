@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 2443e82dd9c6d8b5447c2fa16b537a9feed8ddaf
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8aff6afb09c97d7d01f5e7b7f1b92ae24bb99fb7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895155"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141752"
 ---
 # <a name="enabling-transaction-flow"></a>Aktivieren des Transaktionsflusses
 Windows Communication Foundation (WCF) bietet hochgradig flexible Optionen zum Steuern des Transaktions Flusses. Die Transaktionsflusseinstellungen eines Dienstes können durch eine Kombination aus Attributen und Konfigurationen ausgedrückt werden.  
@@ -35,23 +35,23 @@ Windows Communication Foundation (WCF) bietet hochgradig flexible Optionen zum S
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |Erforderlich|true|WS-AT|Der Transaktionsfluss muss im interoperablen WS-AT-Format erfolgen.|  
 |Erforderlich|true|OleTransactions|Die Transaktion muss im WCF OleTransactions-Format übertragen werden.|  
-|Erforderlich|false|Nicht verfügbar|Nicht zutreffend, da es sich um eine ungültige Konfiguration handelt.|  
+|Erforderlich|False|Nicht zutreffend|Nicht zutreffend, da es sich um eine ungültige Konfiguration handelt.|  
 |Allowed|true|WS-AT|Der Transaktionsfluss kann im interoperablen WS-AT-Format erfolgen.|  
 |Allowed|true|OleTransactions|Die Transaktion kann im WCF OleTransactions-Format übertragen werden.|  
-|Allowed|false|Beliebiger Wert|Es erfolgt kein Transaktionsfluss.|  
+|Allowed|False|Beliebiger Wert|Es erfolgt kein Transaktionsfluss.|  
 |NotAllowed|Beliebiger Wert|Beliebiger Wert|Es erfolgt kein Transaktionsfluss.|  
   
  In der folgenden Tabelle wird das Ergebnis der Nachrichtenverarbeitung zusammengefasst.  
   
 |Eingehende Nachricht|TransactionFlow-Einstellung|Transaktionsheader|Ergebnis der Nachrichtenverarbeitung|  
 |----------------------|-----------------------------|------------------------|-------------------------------|  
-|Die Transaktion stimmt mit dem erwarteten Protokollformat überein.|Allowed oder Mandatory|`MustUnderstand` ist gleich `true`.|Verarbeiten|  
+|Die Transaktion stimmt mit dem erwarteten Protokollformat überein.|Allowed oder Mandatory|`MustUnderstand` ist gleich `true`.|Prozess|  
 |Die Transaktion stimmt nicht mit dem erwarteten Protokollformat überein.|Erforderlich|`MustUnderstand` ist gleich `false`.|Abgelehnt, da eine Transaktion erforderlich ist.|  
 |Die Transaktion stimmt nicht mit dem erwarteten Protokollformat überein.|Allowed|`MustUnderstand` ist gleich `false`.|Abgelehnt, da der Header nicht interpretiert werden kann.|  
 |Transaktion mit einem beliebigen Protokollformat|NotAllowed|`MustUnderstand` ist gleich `false`.|Abgelehnt, da der Header nicht interpretiert werden kann.|  
-|Keine Transaktion|Erforderlich|N/V|Abgelehnt, da eine Transaktion erforderlich ist.|  
-|Keine Transaktion|Allowed|N/V|Verarbeiten|  
-|Keine Transaktion|NotAllowed|N/V|Verarbeiten|  
+|Keine Transaktion|Erforderlich|Nicht zutreffend|Abgelehnt, da eine Transaktion erforderlich ist.|  
+|Keine Transaktion|Allowed|Nicht zutreffend|Prozess|  
+|Keine Transaktion|NotAllowed|Nicht zutreffend|Prozess|  
   
  Jede Methode eines Vertrags kann zwar verschiedene Transaktionsflussanforderungen aufweisen, die Einstellung des Transaktionsflussprotokolls wird jedoch auf der Bindungsebene festgelegt. Das bedeutet, dass alle Methoden, die denselben Endpunkt gemeinsam nutzen (und somit dieselbe Bindung), auch dieselbe Richtlinie verwenden, die einen Transaktionsfluss zulässt oder verlangt, sowie gegebenenfalls dasselbe Transaktionsprotokoll.  
   
@@ -59,13 +59,13 @@ Windows Communication Foundation (WCF) bietet hochgradig flexible Optionen zum S
  Transaktionsflussanforderungen sind nicht immer für alle Methoden in einem Dienstvertrag identisch. Daher stellt WCF außerdem einen Attribut basierten Mechanismus bereit, mit dem die Transaktions Fluss Einstellungen der einzelnen Methoden ausgedrückt werden können. Dazu wird mit <xref:System.ServiceModel.TransactionFlowAttribute> die Ebene angegeben, auf der ein Dienstvorgang einen Transaktionsheader akzeptiert. Kennzeichnen Sie die Methoden des Dienstvertrags mit diesem Attribut, wenn Sie den Transaktionsfluss aktivieren möchten. Dieses Attribut verwendet einen der Werte der <xref:System.ServiceModel.TransactionFlowOption>-Enumeration, wobei hier der Standardwert <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> lautet. Wenn ein anderer Wert als <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> angegeben wird, darf die Methode nicht unidirektional sein. Ein Entwickler kann mit diesem Attribut Transaktionsflussanforderungen auf Methodenebene oder Einschränkungen zur Entwurfszeit angeben.  
   
 ## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>Aktivieren des Transaktionsflusses auf der Endpunktebene  
- Zusätzlich zu den Transaktions Fluss Einstellungen auf Methoden Ebene, die <xref:System.ServiceModel.TransactionFlowAttribute> das-Attribut bereitstellt, bietet WCF eine Endpunkt weite Einstellung für den Transaktions Fluss, damit Administratoren den Transaktions Fluss auf einer höheren Ebene steuern können.  
+ Zusätzlich zu den Transaktions Fluss Einstellungen auf Methoden Ebene, die das <xref:System.ServiceModel.TransactionFlowAttribute>-Attribut bereitstellt, bietet WCF eine Endpunkt weite Einstellung für den Transaktions Fluss, damit Administratoren den Transaktions Fluss auf einer höheren Ebene steuern können.  
   
  Sie verwenden dazu <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>. Damit können Sie den eingehenden Transaktionsfluss in der Bindungseinstellung eines Endpunkts aktivieren oder deaktivieren und das gewünschte Transaktionsprotokollformat für eingehende Transaktionen angeben.  
   
  Wenn der Transaktionsfluss der Bindung deaktiviert ist, jedoch einer der Vorgänge eines Dienstvertrags eine eingehende Transaktion erfordert, wird beim Starten des Dienstes eine Validierungsausnahme ausgelöst.  
   
- Die meisten der von WCF bereitgestellten Bindungen enthalten `transactionFlow` die `transactionProtocol` Attribute und, damit Sie die jeweilige Bindung so konfigurieren können, dass eingehende Transaktionen akzeptiert werden. Weitere Informationen zum Festlegen der Konfigurationselemente finden [ \<Sie unterbinden >](../../../../docs/framework/misc/binding.md).  
+ Die meisten der von WCF bereitgestellten Bindungen enthalten die Attribute "`transactionFlow`" und "`transactionProtocol`", damit Sie die jeweilige Bindung so konfigurieren können, dass eingehende Transaktionen akzeptiert werden. Weitere Informationen zum Festlegen der Konfigurationselemente finden Sie unter [\<Binding >](../../configure-apps/file-schema/wcf/bindings.md).  
   
  Ein Administrator oder Bereitsteller kann den Transaktionsfluss auf Endpunktebene verwenden, um mithilfe der Konfigurationsdatei Transaktionsflussanforderungen oder Einschränkungen zur Bereitstellungszeit zu konfigurieren.  
   

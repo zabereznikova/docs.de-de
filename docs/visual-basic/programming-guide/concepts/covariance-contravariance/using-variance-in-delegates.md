@@ -1,15 +1,15 @@
 ---
-title: Verwenden von Varianz in Delegaten (Visual Basic)
+title: Verwenden von Varianz bei Delegaten
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169068"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349030"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Verwenden von Varianz in Delegaten (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
 
 Wenn Sie einem Delegat eine Methode zuweisen, bieten *Kovarianz* und *Kontravarianz* Flexibilität für das Abgleichen eines Delegattyps mit einer Methodensignatur. Kovarianz lässt die Verfügung einer Methode über einen Rückgabetyp zu, der stärker abgeleitet ist als der im Delegat definierte Typ. Kontravarianz lässt eine Methode zu, die über Typen verfügt, die weniger abgeleitet sind als die im Delegattyp.
 
@@ -48,21 +48,21 @@ End Class
 
 ### <a name="description"></a>Beschreibung
 
-In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Parameter verfügen, deren Typen Basis Typen vom Delegatsignatur-Parametertyp sind. Mithilfe von Kontravarianz können Sie einen Ereignishandler anstelle getrennter Handler verwenden. Im folgenden Beispiel werden zwei Delegaten verwendet:
+In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Parameter eines Typs verfügen, die Basistypen von den Parametertypen der Delegatsignatur sind. Mithilfe von Kontravarianz können Sie einen Ereignishandler anstelle getrennter Handler verwenden. Im folgenden Beispiel werden zwei Delegaten verwendet:
 
-- Ein <xref:System.Windows.Forms.KeyEventHandler> Delegat, der die Signatur des [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) -Ereignisses definiert. Die Signatur lautet wie folgt:
+- Ein <xref:System.Windows.Forms.KeyEventHandler>-Delegat, der die Signatur des Ereignisses [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) definiert. Die Signatur lautet:
 
    ```vb
    Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
    ```
 
-- Ein <xref:System.Windows.Forms.MouseEventHandler> Delegat, der die Signatur des [Button. moukliclick](xref:System.Windows.Forms.Control.MouseDown) -Ereignisses definiert. Die Signatur lautet wie folgt:
+- Ein <xref:System.Windows.Forms.MouseEventHandler>-Delegat, der die Signatur des Ereignisses [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) definiert. Die Signatur lautet:
 
    ```vb
    Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
    ```
 
-Das Beispiel definiert einen Ereignishandler mit einem <xref:System.EventArgs> -Parameter und verwendet ihn, um das `Button.KeyDown` - `Button.MouseClick` Ereignis und das-Ereignis zu behandeln. Dies ist möglich, weil <xref:System.EventArgs> der Basistyp sowohl <xref:System.Windows.Forms.KeyEventArgs> von als auch <xref:System.Windows.Forms.MouseEventArgs>von ist.
+Das Beispiel definiert einen Ereignishandler mit einem <xref:System.EventArgs>-Parameter und verwendet diesen, um die Ereignisse `Button.KeyDown` und `Button.MouseClick` zu bearbeiten. Dies ist möglich, weil <xref:System.EventArgs> der Basistyp sowohl von <xref:System.Windows.Forms.KeyEventArgs> als auch von <xref:System.Windows.Forms.MouseEventArgs> ist.
 
 ### <a name="code"></a>Code
 

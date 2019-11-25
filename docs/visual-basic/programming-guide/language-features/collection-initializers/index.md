@@ -1,17 +1,17 @@
 ---
-title: Auflistungsinitialisierer (Visual Basic)
+title: Auflistungsinitialisierer
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CollectionInitializer
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906827"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346779"
 ---
 # <a name="collection-initializers-visual-basic"></a>Auflistungsinitialisierer (Visual Basic)
 
@@ -39,7 +39,7 @@ Wenn Sie eine Auflistung erstellen, z.B. <xref:System.Collections.Generic.List%6
 > [!NOTE]
 > Sie können nicht einen Auflistungsinitialisierer und einen Objektinitialisierer kombinieren, um das gleiche Auflistungsobjekt zu initialisieren. Sie können Objektinitialisierer zum Initialisieren von Objekten in einem Auflistungsinitialisierer verwenden.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Erstellen einer Sammlung mit einem Auflistungsinitialisierer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
 
 Wenn Sie eine Sammlung durch Verwendung eines Auflistunsinitialisierers erstellen, wird jeder Wert, der im Auflistunsinitialisierer angegeben ist, an die entsprechende `Add`-Methode der Auflistung übergeben. Wenn Sie z.B. eine <xref:System.Collections.Generic.List%601> durch Verwendung eines Auflistungsinitialisierers erstellen, wird jeder Zeichenfolgenwert im Auflistungsinitialisierer an die <xref:System.Collections.Generic.List%601.Add%2A>-Methode übergeben. Wenn Sie eine Auflistung mithilfe eines Auflistungsinitialisierers erstellen möchten, muss der angegebene Typ ein gültiger Auflistungstyp sein. Beispiele gültiger Auflistungstypen enthalten Klassen, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren oder die <xref:System.Collections.CollectionBase>-Klasse erben. Der angegebene Typ muss auch eine `Add`-Methode verfügbar machen, die die folgenden Kriterien erfüllt.
 
@@ -57,7 +57,7 @@ Das folgende Codebeispiel zeigt gleichwertigen Code, der keinen Auflistungsiniti
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-Wenn die Auflistung über eine `Add`-Methode verfügt, die Parameter besitzt, die mit dem Konstruktor für das `Customer`-Objekt übereinstimmen, können Sie Parameterwerte für die `Add`-Methode innerhalb von Auflistungsinitialisierern schachteln, so wie im nächsten Abschnitt beschrieben. Wenn die Auflistung nicht über diese `Add`-Methode verfügt, können Sie eine als Erweiterungsmethode erstellen. Ein Beispiel zum Erstellen einer `Add` Methode als eine Erweiterungsmethode für eine Sammlung finden Sie unter [Vorgehensweise: Erstellen einer Add-Erweiterungsmethode, die von einem Auflistungsinitialisierer verwendete](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Ein Beispiel für eine benutzerdefinierte Auflistung erstellen, die mit einem Auflistungsinitialisierer verwendet werden können, finden Sie unter [Vorgehensweise: Erstellen Sie eine Sammlung von einem Auflistungsinitialisierer verwendete](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
+Wenn die Auflistung über eine `Add`-Methode verfügt, die Parameter besitzt, die mit dem Konstruktor für das `Customer`-Objekt übereinstimmen, können Sie Parameterwerte für die `Add`-Methode innerhalb von Auflistungsinitialisierern schachteln, so wie im nächsten Abschnitt beschrieben. Wenn die Auflistung nicht über diese `Add`-Methode verfügt, können Sie eine als Erweiterungsmethode erstellen. Ein Beispiel, wie Sie eine `Add`-Methode als Sammlung für eine Auflistung erstellen, finden Sie unter [Vorgehensweise: Erstellen einer Add-Erweiterungsmethode für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Ein Beispiel, wie Sie eine benutzerdefinierte Auflistung erstellen, die mit einem Auflistungsinitialisierer verwendet werden kann, finden Sie unter [Vorgehensweise: Erstellen einer Auflistung für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
 
 ## <a name="nesting-collection-initializers"></a>Schachteln von Auflistungsinitialisierern
 
@@ -77,8 +77,8 @@ Es werden ausschließlich geschachtelte Wertelisten aus der ersten Schachtelungs
 
 |Titel|Beschreibung|
 |---|---|
-|[Vorgehensweise: Erstellen einer Add-Erweiterungsmethode, die von einem Auflistungsinitialisierer verwendet](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Zeigt, wie eine Erweiterungsmethode namens `Add` erstellt wird, die zum Auffüllen einer Auflistung mit Werten von einem Auflistungsinitialisierer verwendet werden kann.|
-|[Vorgehensweise: Erstellen Sie von einem Auflistungsinitialisierer verwendete Auflistung](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Zeigt, wie die Verwendung eines Auflistungsinitialisierers ermöglicht wird, indem eine `Add`-Methode in eine Auflistungsklasse eingefügt wird, die `IEnumerable` implementiert.|
+|[Gewusst wie: Erstellen einer Add-Erweiterungsmethode für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Zeigt, wie eine Erweiterungsmethode namens `Add` erstellt wird, die zum Auffüllen einer Auflistung mit Werten von einem Auflistungsinitialisierer verwendet werden kann.|
+|[Gewusst wie: Erstellen einer Auflistung für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Zeigt, wie die Verwendung eines Auflistungsinitialisierers ermöglicht wird, indem eine `Add`-Methode in eine Auflistungsklasse eingefügt wird, die `IEnumerable` implementiert.|
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -87,8 +87,8 @@ Es werden ausschließlich geschachtelte Wertelisten aus der ersten Schachtelungs
 - [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Automatisch implementierte Eigenschaften](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Vorgehensweise: Initialisieren einer Arrayvariablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)
 - [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Vorgehensweise: Erstellen Sie eine Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Gewusst wie: Erstellen einer Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

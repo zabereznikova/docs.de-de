@@ -1,5 +1,5 @@
 ---
-title: <list> (Visual Basic)
+title: <list>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 5d4295d485611e75e8b6c8d8f95e079654f0cfa3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: db5c571d2f2c59419c886f6596f4e4dbd30d7baf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524750"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352324"
 ---
-# <a name="list-visual-basic"></a>\<list > (Visual Basic)
-Definiert eine Liste oder Tabelle.  
+# <a name="list-visual-basic"></a>\<list> (Visual Basic)
+Defines a list or table.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,25 +40,25 @@ Definiert eine Liste oder Tabelle.
   
 ## <a name="parameters"></a>Parameter  
  `type`  
- Der Typ der Liste. Muss ein "Aufzählungs Zeichen" für eine Aufzählungs Liste, "Zahl" für eine nummerierte Liste oder "Table" für eine Tabelle mit zwei Spalten sein.  
+ The type of the list. Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.  
   
  `term`  
- Wird nur verwendet, wenn `type` "Table" ist. Ein zu definierenden Begriff, der im Beschreibungs-Tag definiert ist.  
+ Only used when `type` is "table." A term to define, which is defined in the description tag.  
   
  `description`  
- Wenn `type` "Bullet" oder "Number" ist, ist `description` ein Element in der Liste, wenn `type` "Table" ist. `description` ist die Definition des `term`.  
+ When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.  
   
 ## <a name="remarks"></a>Hinweise  
- Der `<listheader>`-Block definiert die Überschrift einer Tabelle oder einer Definitionsliste. Wenn Sie eine Tabelle definieren, müssen Sie in der Überschrift nur einen Eintrag für `term` bereitstellen.  
+ The `<listheader>` block defines the heading of either a table or definition list. When defining a table, you only have to supply an entry for `term` in the heading.  
   
- Jedes Element in der Liste wird mit einem `<item>`-Block angegeben. Beim Erstellen einer Definitionsliste müssen Sie sowohl `term` als auch `description` angeben. Für eine Tabelle, eine aufzählige Liste oder eine nummerierte Liste müssen Sie jedoch nur einen Eintrag für `description` bereitstellen.  
+ Each item in the list is specified with an `<item>` block. When creating a definition list, you must specify both `term` and `description`. However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.  
   
- Eine Liste oder Tabelle kann beliebig viele `<item>` Blöcke enthalten.  
+ A list or table can have as many `<item>` blocks as needed.  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird das `<list>`-Tag zum Definieren einer aufzurufenden Liste im Abschnitt "Hinweise" verwendet.  
+ This example uses the `<list>` tag to define a bulleted list in the remarks section.  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

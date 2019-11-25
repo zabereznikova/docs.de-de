@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4bc8884b2d4cb6f8201e2038894c69d0805bddda
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7456c6373c64e07b73e15e7e2bb229dce4032121
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738832"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140745"
 ---
 # <a name="netmsmqbinding"></a>\<Sie NetMsmqBinding >
 Definiert eine Bindung in der Warteschlange, die für eine computerübergreifende Kommunikation geeignet ist.  
@@ -75,7 +75,7 @@ Definiert eine Bindung in der Warteschlange, die für eine computerübergreifend
 |`maxBufferPoolSize`|Eine ganze Zahl, die die maximale Pufferpoolgröße für diese Bindung angibt. Der Standard ist 8.|  
 |`maxReceivedMessageSize`|Eine positive ganze Zahl, die die maximale Nachrichtengröße in Byte einschließlich Header angibt, die von dieser Bindung verarbeitet wird. Der Absender einer Nachricht, die diese Grenze überschreitet, erhält einen SOAP-Fehler. Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll. Der Standard ist 65536. Auf diese Weise sollen Denial-of-Service-Angriffe (DoS) reduziert werden.|  
 |`maxRetryCycles`|Eine ganze Zahl, die die Anzahl der Wiederholungszyklen für die Funktion zur Erkennung nicht verarbeitbarer Nachrichten angibt. Eine Nachricht gilt als nicht verarbeitbare Nachricht, wenn alle erneuten Zustellversuche fehlgeschlagen sind. Der Standard ist 3. Weitere Informationen finden Sie unter <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Erforderliches Attribut. Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zur Standardkonfiguration und zu den namenlosen Bindungen und Verhalten finden Sie unter [vereinfachte Konfiguration](../../../wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Erforderliches Attribut. Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab .NET Framework 4 müssen Bindungen und Verhaltensweisen keinen Namen haben. Weitere Informationen zur Standardkonfiguration und zu den namenlosen Bindungen und Verhalten finden Sie unter [vereinfachte Konfiguration](../../../wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |`QueueTransferProtocol`|Ein gültiger <xref:System.ServiceModel.QueueTransferProtocol>-Wert, der den Wartenschlangentransport für den Kommunikationskanal angibt, der von dieser Bindung verwendet wird. MSMQ unterstützt keine Active Directory-Adressierung in Verbindung mit dem SOAP Reliable Messaging Protocol. Daher sollten Sie dieses Attribut nicht auf `Srmp` oder `Srmps` festlegen, wenn das `useActiveDirectory`-Attribut auf `true`festgelegt ist.|  
 |`receiveErrorHandling`|Ein <xref:System.ServiceModel.ReceiveErrorHandling>-Wert, der angibt, wie nicht verarbeitbare und nicht zustellbare Nachrichten behandelt werden.|  
@@ -93,13 +93,13 @@ Definiert eine Bindung in der Warteschlange, die für eine computerübergreifend
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<von Readerkontingenten >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<Security >](security-of-netmsmqbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<Sicherheits >](security-of-netmsmqbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<-Bindungen >](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
+|[\<Bindungen >](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `netMsmqBinding`-Bindung stellt Unterstützung für Warteschlangen bereit, indem MSMQ (Microsoft Message Queuing) als Transport eingesetzt wird, und ermöglicht Unterstützung für lose miteinander verknüpfte Anwendungen, Fehlerisolierung, Lastenausgleich und Vorgänge im Offlinemodus. Eine Erläuterung dieser Features finden Sie unter [Warteschlangen in WCF](../../../wcf/feature-details/queues-in-wcf.md).  
@@ -142,7 +142,7 @@ Definiert eine Bindung in der Warteschlange, die für eine computerübergreifend
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
-- [\<binding >](bindings.md)
+- [\<Bindungs >](bindings.md)
 - [Bindungen](../../../wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)

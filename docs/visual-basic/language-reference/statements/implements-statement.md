@@ -1,5 +1,5 @@
 ---
-title: Implementierende Anweisung (Visual Basic)
+title: Implements-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Implements
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 865e99aa0e27591d10fde1465047a2e6bf183bbf
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e2e279b2c935dd082cbf832265a8ad09e6dffe9e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581793"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351155"
 ---
 # <a name="implements-statement"></a>Implements-Anweisung
-Gibt eine oder mehrere Schnittstellen oder Schnittstellenmember an, die in der Klassen-oder Struktur Definition implementiert werden müssen, in der Sie angezeigt wird.  
+Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,29 +29,29 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Teile  
  `interfacename`  
- Erforderlich. Eine Schnittstelle, deren Eigenschaften, Prozeduren und Ereignisse von entsprechenden Membern in der Klasse oder Struktur implementiert werden.  
+ Erforderlich. An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.  
   
  `interfacemember`  
- Erforderlich. Der Member einer Schnittstelle, die implementiert wird.  
+ Erforderlich. The member of an interface that is being implemented.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Schnittstelle ist eine Auflistung von Prototypen, die die Elemente (Eigenschaften, Prozeduren und Ereignisse) darstellen, die die Schnittstelle kapselt. Schnittstellen enthalten nur die Deklarationen für Member. Klassen und Strukturen implementieren diese Member. Weitere Informationen finden Sie unter [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates. Interfaces contain only the declarations for members; classes and structures implement these members. Weitere Informationen finden Sie unter [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Die `Implements`-Anweisung muss direkt auf die `Class`-oder `Structure`-Anweisung folgen.  
+ The `Implements` statement must immediately follow the `Class` or `Structure` statement.  
   
- Wenn Sie eine Schnittstelle implementieren, müssen alle in der Schnittstelle deklarierten Member implementiert werden. Das Weglassen eines Members wird als Syntax Fehler betrachtet. Um einen einzelnen Member zu implementieren, geben Sie das [implementierte](../../../visual-basic/language-reference/statements/implements-clause.md) Schlüsselwort (das von der `Implements` Anweisung getrennt ist) an, wenn Sie den Member in der Klasse oder Struktur deklarieren. Weitere Informationen finden Sie unter [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ When you implement an interface, you must implement all the members declared in the interface. Omitting any member is considered to be a syntax error. To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure. Weitere Informationen finden Sie unter [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Klassen können [private](../../../visual-basic/language-reference/modifiers/private.md) Implementierungen von Eigenschaften und Prozeduren verwenden, aber auf diese Member kann nur zugegriffen werden, indem eine Instanz der implementierenden Klasse in eine Variable umgewandelt wird, die als der Typ der Schnittstelle deklariert ist.  
+ Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie die `Implements`-Anweisung verwendet wird, um Member einer Schnittstelle zu implementieren. Er definiert eine Schnittstelle mit dem Namen `ICustomerInfo` mit einem Ereignis, einer Eigenschaft und einer Prozedur. Die-Klasse `customerInfo` die alle in der-Schnittstelle definierten Member implementiert.  
+ The following example shows how to use the `Implements` statement to implement members of an interface. It defines an interface named `ICustomerInfo` with an event, a property, and a procedure. The class `customerInfo` implements all the members defined in the interface.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Beachten Sie, dass die-Klasse `customerInfo` die `Implements`-Anweisung in einer separaten Quell Code Zeile verwendet, um anzugeben, dass die-Klasse alle Member der `ICustomerInfo`-Schnittstelle implementiert. Dann verwendet jedes Element in der-Klasse das `Implements`-Schlüsselwort als Teil seiner Member-Deklaration, um anzugeben, dass dieses Schnittstellenmember implementiert.  
+ Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface. Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.  
   
 ## <a name="example"></a>Beispiel  
- Die folgenden zwei Prozeduren zeigen, wie Sie die im vorherigen Beispiel implementierte-Schnittstelle verwenden können. Um die Implementierung zu testen, fügen Sie dem Projekt diese Prozeduren hinzu, und nennen Sie die `testImplements` Prozedur.  
+ The following two procedures show how you could use the interface implemented in the preceding example. To test the implementation, add these procedures to your project and call the `testImplements` procedure.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   

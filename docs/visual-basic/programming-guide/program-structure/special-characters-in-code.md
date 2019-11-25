@@ -1,5 +1,5 @@
 ---
-title: Sonderzeichen in Code (Visual Basic)
+title: Sonderzeichen in Code
 ms.date: 07/20/2015
 f1_keywords:
 - vb.)
@@ -30,62 +30,62 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 95bef937912e35cd828bf0090b4cf48ccb3290cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4ab35b56d48ae86bdb024ffea27735b39decdc2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962463"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347267"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Sonderzeichen in Code (Visual Basic)
-Manchmal müssen Sonderzeichen in Ihrem Code verwendet werden, d. h. Zeichen, die nicht alphabetisch oder numerisch sind. Die Interpunktions-und Sonderzeichen im Visual Basic Zeichensatz weisen verschiedene Verwendungsmöglichkeiten auf, von der Organisation des Programm Texts bis zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  
+Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric. The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs. Sie legen keine auszuführende Operation fest.  
   
-## <a name="parentheses"></a>Klammern  
- Verwenden Sie Klammern, wenn Sie eine Prozedur definieren, z `Sub` . b. oder. `Function` Alle Prozedur Argumentlisten müssen in Klammern eingeschlossen werden. Außerdem verwenden Sie Klammern zum Platzieren von Variablen oder Argumenten in logischen Gruppen, insbesondere, um die Standard Reihenfolge der Operator Rangfolge in einem komplexen Ausdruck zu überschreiben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+## <a name="parentheses"></a>Parentheses  
+ Use parentheses when you define a procedure, such as a `Sub` or `Function`. You must enclose all procedure argument lists in parentheses. You also use parentheses for putting variables or arguments into logical groups, especially to override the default order of operator precedence in a complex expression. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- Nach der Ausführung des vorherigen Codes ist der Wert von `d` 8,225 und der Wert von `e` 3. Die Berechnung für `d` verwendet die Standard Rangfolge `/` von `+` `d = b + (c / a)`over und entspricht. Die Klammern in der Berechnung für über `e` schreiben die Standard Rangfolge.  
+ Following execution of the previous code, the value of `d` is 8.225 and the value of `e` is 3. The calculation for `d` uses the default precedence of `/` over `+` and is equivalent to `d = b + (c / a)`. The parentheses in the calculation for `e` override the default precedence.  
   
 ## <a name="separators"></a>Trennzeichen  
- Trennzeichen tun, was der Name vermuten lässt: Sie trennen Code Abschnitte. In Visual Basic ist das Trennzeichen der Doppelpunkt (`:`). Verwenden Sie Trennzeichen, wenn Sie mehrere-Anweisungen in einer einzelnen Zeile anstelle von separaten Zeilen einschließen möchten. Dadurch wird Speicherplatz gespart, und die Lesbarkeit des Codes wird verbessert. Im folgenden Beispiel werden drei durch Doppelpunkte getrennte Anweisungen gezeigt.  
+ Separators do what their name suggests: they separate sections of code. In Visual Basic, the separator character is the colon (`:`). Use separators when you want to include multiple statements on a single line instead of separate lines. This saves space and improves the readability of your code. The following example shows three statements separated by colons.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Unterbrechen und Kombinieren von](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)Anweisungen im Code.  
+ For more information, see [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- Der Doppelpunkt`:`() wird auch verwendet, um eine Anweisungsbezeichnung zu identifizieren. Weitere Informationen finden Sie unter [Vorgehensweise: Bezeichnungs](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)Anweisungen.  
+ The colon (`:`) character is also used to identify a statement label. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>Verkettung  
- Verwenden Sie `&` den-Operator für die *Verkettung*oder das Verknüpfen von Zeichen folgen. Verwechseln Sie diese nicht mit dem `+` -Operator, der numerische Werte addiert. Wenn Sie den `+` -Operator zum Verketten verwenden, wenn Sie numerische Werte verarbeiten, können Sie falsche Ergebnisse erzielen. Dies wird im folgenden Beispiel veranschaulicht:  
+ Use the `&` operator for *concatenation*, or linking strings together. Do not confuse it with the `+` operator, which adds together numeric values. If you use the `+` operator to concatenate when you operate on numeric values, you can obtain incorrect results. Dies wird im folgenden Beispiel veranschaulicht:  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- Nach der Ausführung des vorherigen Codes ist der Wert von `resultA` 21,01 und der Wert von `resultB` "10,0111".  
+ Following execution of the previous code, the value of `resultA` is 21.01 and the value of `resultB` is "10.0111".  
   
-## <a name="member-access-operators"></a>Member-Zugriffs Operatoren  
- Wenn Sie auf einen Member eines Typs zugreifen möchten, verwenden Sie den`.`Punkt () oder den`!`Ausrufezeichen Operator () zwischen dem Typnamen und dem Elementnamen.  
+## <a name="member-access-operators"></a>Member Access Operators  
+ To access a member of a type, you use the dot (`.`) or exclamation point (`!`) operator between the type name and the member name.  
   
-### <a name="dot--operator"></a>Punkt (.) Operator  
- Verwenden Sie `.` den-Operator für eine Klasse, eine Struktur, eine Schnittstelle oder eine Enumeration als Member Access Operator. Der Member kann ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+### <a name="dot--operator"></a>Dot (.) Operator  
+ Use the `.` operator on a class, structure, interface, or enumeration as a member access operator. The member can be a field, property, event, or method. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>Ausrufezeichen (!) Operator  
- Verwenden Sie `!` den-Operator nur für eine Klasse oder Schnittstelle als Wörterbuch Zugriffs Operator. Die Klasse oder Schnittstelle muss über eine Default-Eigenschaft verfügen, `String` die ein einzelnes Argument akzeptiert. Der Bezeichner, der `!` direkt auf den Operator folgt, wird zum Argument Wert, der als Zeichenfolge an die Standard Eigenschaft übermittelt wird Dies wird im folgenden Beispiel veranschaulicht:  
+### <a name="exclamation-point--operator"></a>Exclamation Point (!) Operator  
+ Use the `!` operator only on a class or interface as a dictionary access operator. The class or interface must have a default property that accepts a single `String` argument. The identifier immediately following the `!` operator becomes the argument value passed to the default property as a string. Dies wird im folgenden Beispiel veranschaulicht:  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- In den drei Ausgabezeilen `MsgBox` von wird der Wert `32856`angezeigt. Die erste Zeile verwendet die herkömmliche Access-Eigenschaft `index`, die zweite verwendet die Tatsache, dass `index` die Standard Eigenschaft der-Klasse `hasDefault`ist, und die dritte verwendet den Wörterbuch Zugriff auf die-Klasse.  
+ The three output lines of `MsgBox` all display the value `32856`. The first line uses the traditional access to property `index`, the second makes use of the fact that `index` is the default property of class `hasDefault`, and the third uses dictionary access to the class.  
   
- Beachten Sie, dass der zweite Operand `!` des Operators ein gültiger Visual Basic Bezeichner sein muss, der nicht in doppelte`" "`Anführungszeichen () eingeschlossen ist. Anders ausgedrückt: Sie können keine Zeichenfolgenliterale oder Zeichen folgen Variable verwenden. Die folgende Änderung an der letzten Zeile des `MsgBox` Aufrufes generiert einen Fehler, da `"X"` ein eingeschlossenes zeichenfolgenliteralist.  
+ Note that the second operand of the `!` operator must be a valid Visual Basic identifier not enclosed in double quotation marks (`" "`). In other words, you cannot use a string literal or string variable. The following change to the last line of the `MsgBox` call generates an error because `"X"` is an enclosed string literal.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
-> Verweise auf Standard Auflistungen müssen explizit sein. Insbesondere kann der `!` -Operator nicht für eine spät gebundene Variable verwendet werden.  
+> References to default collections must be explicit. In particular, you cannot use the `!` operator on a late-bound variable.  
   
- Das `!` Zeichen wird auch `Single` als Typzeichen verwendet.  
+ The `!` character is also used as the `Single` type character.  
   
 ## <a name="see-also"></a>Siehe auch
 

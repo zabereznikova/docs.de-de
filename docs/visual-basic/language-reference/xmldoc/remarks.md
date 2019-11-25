@@ -1,19 +1,19 @@
 ---
-title: <remarks> (Visual Basic)
+title: <remarks>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 38549b2fcce0740b2b9cfd42d950e56b343e7a30
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b327e548bcdce1522a888855bd88e3150695147b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524675"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352250"
 ---
-# <a name="remarks-visual-basic"></a>\<remarks > (Visual Basic)
-Gibt einen Abschnitt mit Hinweisen für den Member an.  
+# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
+Specifies a remarks section for the member.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,14 +26,14 @@ Gibt einen Abschnitt mit Hinweisen für den Member an.
  Eine Beschreibung des Members  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie das `<remarks>`-Tag, um Informationen zu einem Typ hinzuzufügen, und ergänzen Sie die mit [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)angegebenen Informationen.  
+ Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).  
   
- Diese Informationen werden in der Objektkatalog angezeigt. Weitere Informationen zum Objektkatalog finden Sie unter [Anzeigen der Code Struktur](/visualstudio/ide/viewing-the-structure-of-code).  
+ This information appears in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird das `<remarks>`-Tag verwendet, um zu erläutern, was die `UpdateRecord` Methode bewirkt.  
+ This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

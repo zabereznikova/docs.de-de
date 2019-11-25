@@ -1,5 +1,5 @@
 ---
-title: Call-Anweisung (Visual Basic)
+title: Call-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Call
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: a04ebddc7db176188876da1082e1e6946e1e8eec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7de194ea23827e08c49f4519c1000708a4bd91b4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005166"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350163"
 ---
 # <a name="call-statement-visual-basic"></a>Call-Anweisung (Visual Basic)
 
-Überträgt die Steuerung an eine `Function`-, `Sub`-oder DLL-Prozedur (Dynamic-Link Library).  
+Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,21 +29,21 @@ ms.locfileid: "72005166"
 
 |||
 |---|---|
-|`procedureName`|Erforderlich. Der Name der aufzurufenden Prozedur.|
-|`argumentList`|Optional. Liste der Variablen oder Ausdrücke, die Argumente darstellen, die beim Aufrufen an die Prozedur übermittelt werden. Mehrere Argumente werden durch Kommas getrennt. Wenn Sie `argumentList` einschließen, müssen Sie Sie in Klammern einschließen.|
+|`procedureName`|Erforderlich. Name of the procedure to call.|
+|`argumentList`|Dies ist optional. List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
 |||
   
 ## <a name="remarks"></a>Hinweise
 
- Sie können das Schlüsselwort `Call` verwenden, wenn Sie eine Prozedur aufzurufen. Bei den meisten Prozedur aufrufen müssen Sie dieses Schlüsselwort nicht verwenden.
+ You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
 
- Normalerweise verwenden Sie das Schlüsselwort "`Call`", wenn der aufgerufene Ausdruck nicht mit einem Bezeichner beginnt. Die Verwendung des Schlüssel Worts "`Call`" für andere Verwendungszwecke wird nicht empfohlen.
+ You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
 
- Wenn die Prozedur einen Wert zurückgibt, wird Sie durch die `Call`-Anweisung verworfen.
+ If the procedure returns a value, the `Call` statement discards it.
 
 ## <a name="example"></a>Beispiel
 
- Der folgende Code zeigt zwei Beispiele, in denen das `Call`-Schlüsselwort erforderlich ist, um eine Prozedur aufzurufen. In beiden Beispielen beginnt der aufgerufene Ausdruck nicht mit einem Bezeichner.
+ The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   

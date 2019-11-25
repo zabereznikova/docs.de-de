@@ -1,19 +1,19 @@
 ---
-title: COM-Interop (Visual Basic)
+title: COM-Interop
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcfdb5f3661292dda2e084eca22afab9bbec15d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627083"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348008"
 ---
 # <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
-Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. In diesem Abschnitt werden einige der Probleme im Zusammenhang mit der Erstellung und Verwendung von COM-Objekten mit Visual Basic behandelt.  
+Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -22,19 +22,19 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
  [Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Beschreibt, wie COM-Objekten Verweise hinzugefügt werden, die über Typbibliotheken verfügen.  
   
- [Vorgehensweise: Arbeiten mit ActiveX-Steuerelementen](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Veranschaulicht, wie vorhandene ActiveX-Steuerelemente zum Hinzufügen von Funktionen zur Visual Studio-Toolbox verwendet werden.  
+ [Gewusst wie: Arbeiten mit ActiveX-Steuerelementen](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
   
  [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Führt Sie durch den Prozess, APIs aufzurufen, die Teil des Windows-Betriebssystems sind.  
   
- [Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ [Gewusst wie: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  Veranschaulicht, wie die `MessageBox`-Funktion in User32.dll definiert und aufgerufen wird.  
   
- [Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  Veranschaulicht, wie eine Windows-Funktion aufgerufen wird, die über einen Parameter eines unsignierten Typs verfügt.  
   
- [Exemplarische Vorgehensweise: Erstellen von COM-Objekten mit Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ [Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
  Führt Sie durch den Prozess zum Erstellen von COM-Objekten mit und ohne die COM-Klassenvorlage.  
   
  [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  

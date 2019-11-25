@@ -1,21 +1,20 @@
 ---
-ms.openlocfilehash: 65bac44c84589fb55d2b04c39088c2825c451a6b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394059"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74100997"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorisierung: AddAuthorization-Überladung in andere Assembly verschoben
 
-Die wichtigsten `AddAuthorization`-Methoden, die bisher in `Microsoft.AspNetCore.Authorization` enthalten waren, wurden in `AddAuthorizationCore` umbenannt. Die alten `AddAuthorization`-Methoden sind immer noch vorhanden, befinden sich jedoch stattdessen im Paket `Microsoft.AspNetCore.Authorization.Policy`. Dies sollte auf Apps, die beide Methoden verwenden, keine Auswirkung haben. Apps, die das Richtlinienpaket nicht verwendet haben, müssen auf die Verwendung von `AddAuthorizationCore` umgestellt werden.
+Die wichtigsten `AddAuthorization`-Methoden, die bisher in `Microsoft.AspNetCore.Authorization` enthalten waren, wurden in `AddAuthorizationCore` umbenannt. Die alten `AddAuthorization`-Methoden sind immer noch vorhanden, befinden sich jedoch stattdessen in der Assembly `Microsoft.AspNetCore.Authorization.Policy`. Dies sollte auf Apps, die beide Methoden verwenden, keine Auswirkung haben. Beachten Sie, dass `Microsoft.AspNetCore.Authorization.Policy` nun im freigegebenen Framework und nicht mehr in einem eigenständigen Paket enthalten ist, wie unter [Freigegebenes Framework: Assemblys aus Microsoft.AspNetCore.App entfernt](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp) dargestellt wird.
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
 3.0
 
 #### <a name="old-behavior"></a>Altes Verhalten
-
 Die `AddAuthorization`-Methoden waren in `Microsoft.AspNetCore.Authorization` enthalten.
 
 #### <a name="new-behavior"></a>Neues Verhalten

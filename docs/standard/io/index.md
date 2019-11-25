@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025501"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204801"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 
@@ -99,7 +99,7 @@ Weitere Informationen finden Sie unter [How to: Lesen aus einer Textdatei](how-t
 
 ## <a name="asynchronous-io-operations"></a>Asynchrone E/A-Vorgänge
 
-Das Lesen oder Schreiben einer großen Datenmenge kann ressourcenintensiv sein. Damit Ihre Anwendung weiterhin auf Benutzerinteraktionen reagiert, sollten Sie diese Aufgaben asynchron ausführen. Bei synchronen E/A-Vorgängen wird der UI-Thread blockiert, bis der ressourcenintensive Vorgang abgeschlossen ist.  Verwenden Sie beim Entwickeln von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps asynchrone E/A-Vorgänge, damit nicht der Eindruck erweckt wird, dass Ihre App nicht mehr reagiert.
+Das Lesen oder Schreiben einer großen Datenmenge kann ressourcenintensiv sein. Damit Ihre Anwendung weiterhin auf Benutzerinteraktionen reagiert, sollten Sie diese Aufgaben asynchron ausführen. Bei synchronen E/A-Vorgängen wird der UI-Thread blockiert, bis der ressourcenintensive Vorgang abgeschlossen ist.  Verwenden Sie beim Entwickeln von Windows Store-Apps Version 8.x asynchrone E/A-Vorgänge, damit nicht der Eindruck erweckt wird, dass Ihre App nicht mehr reagiert.
 
 Die asynchronen Member enthalten den Begriff `Async` in ihren Namen, z. B. die Methoden <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>,  <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>. Diese Methoden müssen mit den Schlüsselwörtern `async` und `await` verwendet werden.
 
@@ -129,7 +129,7 @@ Weitere Informationen finden Sie unter [How to: Komprimieren und Extrahieren von
 
 Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Der Speicher enthält ein virtuelles Dateisystem, das nach Benutzer, Assembly und Domäne (optional) isoliert ist. Ein isolierter Speicher ist besonders nützlich, wenn Ihre Anwendung keine Berechtigung für den Zugriff auf Benutzerdateien hat. Sie können die Einstellungen oder Dateien für die Anwendung so speichern, dass eine Kontrolle durch die Sicherheitsrichtlinien des Computers gewährleistet ist.
 
-Isolierter Speicher ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+Isolierter Speicher ist für Windows Store-Apps Version 8.x nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
 
 Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:
 
@@ -145,7 +145,7 @@ Weitere Informationen finden Sie unter [Isolierter Speicher](isolated-storage.md
 
 Das [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] enthält viele der Typen zum Lesen und Schreiben in Streams. Jedoch sind nicht alle E/A-Typen von .NET Framework verfügbar.
 
-Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden:
+Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in Windows Store-Apps Version 8.x verwenden:
 
 - Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace der Windows-Runtime, wie z.B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.
 
@@ -157,13 +157,13 @@ Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge
 
 Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder unter <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Weitere Informationen zu E/A-Vorgängen in einer Windows Store-App Version 8.x finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/A und Sicherheit
 
 Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](how-to-add-or-remove-access-control-list-entries.md).
 
-Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.
+Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) für Windows Store-Apps Version 8.x.
 
 Eine Sicherheitsüberprüfung wird nur beim Erstellen des Streams ausgeführt. Übergeben Sie daher keinen geöffneten Stream an weniger vertrauenswürdigen Code oder an Anwendungsdomänen.
 

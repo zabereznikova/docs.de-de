@@ -1,15 +1,15 @@
 ---
-title: Übersicht über die XDocument-Klasse (Visual Basic)
+title: Übersicht über die XDocument-Klasse
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-ms.openlocfilehash: 135d775a914bc6a440c639628281aa313cb85636
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbc1ccca53978da07f31c0ba7e54eca9f06b0e72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639189"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349288"
 ---
-# <a name="xdocument-class-overview-visual-basic"></a>Übersicht über die XDocument-Klasse (Visual Basic)
+# <a name="xdocument-class-overview-visual-basic"></a>XDocument Class Overview (Visual Basic)
 Dieses Thema enthält eine Einführung in die <xref:System.Xml.Linq.XDocument>-Klasse.  
   
 ## <a name="overview-of-the-xdocument-class"></a>Allgemeines  

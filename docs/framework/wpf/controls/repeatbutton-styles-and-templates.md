@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-ms.openlocfilehash: 9c6a8ad0a954d244fb693e25965ab52dda114068
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8585e98536fd908daa11f21da395cab44924d612
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459848"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283428"
 ---
 # <a name="repeatbutton-styles-and-templates"></a>RepeatButton-Stile und -Vorlagen
 
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Primitives.RepeatButton>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Primitives.RepeatButton>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.
 
 ## <a name="repeatbutton-parts"></a>RepeatButton-Teile
 
@@ -31,9 +31,9 @@ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Wi
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|
 |-|-|-|
 |Normal|CommonStates|Der Standardzustand|
-|MouseOver|CommonStates|Der Mauszeiger befindet sich auf dem Steuerelement.|
+|MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|
 |Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|
@@ -59,4 +59,4 @@ Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit Contro
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
 - [Anpassung von Steuerelementen](control-customization.md)
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Kombinieren und Vergleichen von Zeichen folgen Auflistungen (LINQ) (Visual Basic)'
+title: 'Gewusst wie: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352882"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348427"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Vorgehensweise: Kombinieren und Vergleichen von Zeichen folgen Auflistungen (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
 
 In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren. Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Erstellen Sie ein VB.net-Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ und Zeichen folgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,32 +1,32 @@
 ---
-title: Erstellen von XML in Visual Basic
+title: Erstellen von XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], creating
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c720bc2aca4cec3dd10656d924cf2413fc18a2d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756519"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351733"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Erstellen von XML in Visual Basic
-Visual Basic können Sie mit *XML-Literale* direkt in Ihrem Code. Stellt die XML-Literalsyntax [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte und der XML 1.0-Syntax ähnlich ist. Dies erleichtert die XML-Elemente, Dokumente und Fragmente programmgesteuert erstellt werden, da der Code die gleiche Struktur wie der endgültige XML-Code aufweist.  
+Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Begriff|Definition|  
 |---|---|  
-|[Übersicht über XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Einführung in die XML-Literale und die damit verbundenen [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Beschreibt, wie Sie eingebettete Ausdrücke in XML-Literalen verwendet.|  
-|[Vorgehensweise: Erstellen von XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Beschreibt, wie Sie ein XML-Element mit einem XML-literal in Code zu erstellen.|  
-|[Leerzeichen in XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Beschreibt, wie Visual Basic Leerzeichen in XML-Literale behandelt.|  
-|[XML-Literale und die XML 1.0-Spezifikation](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Beschreibt, wie sich die XML-Literale-Syntax in Visual Basic auf XML 1.0-Spezifikation bezieht.|  
-|[Vorgehensweise: Einbetten von Ausdrücken in XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Beschreibt, wie Sie eingebettete Ausdrücke in XML-Literalen verwendet, um Inhalte zur Laufzeit zu erstellen.|  
-|[Namen von deklarierten XML-Elementen und Attributen](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Enthält Richtlinien für die Benennung von XML-Elemente und Attribute.|  
+|[Übersicht über XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
+|[Gewusst wie: Erstellen von XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
+|[Leerzeichen in XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
+|[XML-Literale und die XML 1.0-Spezifikation](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
+|[Gewusst wie: Einbetten von Ausdrücken in XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
+|[Namen von deklarierten XML-Elementen und Attributen](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
   
 ## <a name="see-also"></a>Siehe auch
 

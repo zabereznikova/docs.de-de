@@ -1,5 +1,5 @@
 ---
-title: Get-Anweisung (Visual Basic)
+title: Get-Anweisung
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Get
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: d76155b8ff29e4f5e9206ae8fc689fa4fcaf3b8c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9560faf90d531c32f104dbd053a7c1f5584cfb1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581831"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351172"
 ---
 # <a name="get-statement"></a>Get-Anweisung
-Deklariert eine `Get`-Eigenschaften Prozedur, mit der der Wert einer Eigenschaft abgerufen wird.  
+Declares a `Get` property procedure used to retrieve the value of a property.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,43 +33,43 @@ End Get
   
 |Begriff|Definition|  
 |---|---|  
-|`attributelist`|Dies ist optional. Siehe [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optional für höchstens eine der `Get`-und `Set` Anweisungen in dieser Eigenschaft. Einer der folgenden Werte ist möglich:<br /><br /> -   [geschützt](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privat](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Dies ist optional. Eine oder mehrere-Anweisungen, die ausgeführt werden, wenn die `Get`-Eigenschaften Prozedur aufgerufen wird.|  
-|`End Get`|Erforderlich. Beendet die Definition der `Get`-Eigenschaften Prozedur.|  
+|`attributelist`|Dies ist optional. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Optional on at most one of the `Get` and `Set` statements in this property. Einer der folgenden Werte ist möglich:<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|Dies ist optional. One or more statements that run when the `Get` property procedure is called.|  
+|`End Get`|Erforderlich. Terminates the definition of the `Get` property procedure.|  
   
 ## <a name="remarks"></a>Hinweise  
- Jede Eigenschaft muss über eine `Get`-Eigenschaften Prozedur verfügen, es sei denn, die Eigenschaft ist `WriteOnly` markiert. Die `Get` Prozedur wird verwendet, um den aktuellen Wert der Eigenschaft zurückzugeben.  
+ Every property must have a `Get` property procedure unless the property is marked `WriteOnly`. The `Get` procedure is used to return the current value of the property.  
   
- Visual Basic automatisch die `Get` Prozedur einer Eigenschaft aufruft, wenn ein Ausdruck den Eigenschafts Wert anfordert.  
+ Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.  
   
- Der Text der Eigenschafts Deklaration darf nur die `Get`-und `Set` Prozeduren der Eigenschaft zwischen der [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md) und der `End Property`-Anweisung enthalten. Es kann nichts anderes als diese Prozeduren speichern. Insbesondere kann der aktuelle Wert der Eigenschaft nicht gespeichert werden. Sie müssen diesen Wert außerhalb der-Eigenschaft speichern, denn wenn Sie ihn in einer der Eigenschaften Prozeduren speichern, kann die andere Eigenschaften Prozedur nicht darauf zugreifen. Die übliche Vorgehensweise besteht darin, den Wert in einer [privaten](../../../visual-basic/language-reference/modifiers/private.md) Variable zu speichern, die auf derselben Ebene wie die-Eigenschaft deklariert ist. Sie müssen eine `Get` Prozedur innerhalb der Eigenschaft definieren, auf die Sie angewendet wird.  
+ The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Get` procedure inside the property to which it applies.  
   
- Die `Get` Prozedur verwendet standardmäßig die Zugriffsebene der enthaltenden Eigenschaft, es sei denn, Sie verwenden `accessmodifier` in der `Get`-Anweisung.  
+ The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.  
   
 ## <a name="rules"></a>Regeln  
   
-- **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene für die `Get` oder die `Set` Prozedur angeben, jedoch nicht für beide. Wenn Sie dies tun, muss die Prozedur Zugriffsebene restriktiver sein als die Zugriffsebene der Eigenschaft. Wenn die Eigenschaft beispielsweise als `Friend` deklariert ist, können Sie die `Get` Prozedur `Private` deklarieren, jedoch nicht `Public`.  
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.  
   
-     Wenn Sie eine `ReadOnly`-Eigenschaft definieren, stellt die `Get` Prozedur die gesamte-Eigenschaft dar. Sie können für `Get` keine andere Zugriffsebene deklarieren, da dadurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
+     If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property. You cannot declare a different access level for `Get`, because that would set two access levels for the property.  
   
-- **Rückgabetyp.** Die [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md) kann den Datentyp des zurückgegebenen Werts deklarieren. Die `Get` Prozedur gibt den Datentyp automatisch zurück. Sie können einen beliebigen Datentyp oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle angeben.  
+- **Return Type.** The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns. The `Get` procedure automatically returns that data type. You can specify any data type or the name of an enumeration, structure, class, or interface.  
   
-     Wenn die `Property`-Anweisung `returntype` nicht angibt, gibt die Prozedur `Object` zurück.  
+     If the `Property` statement does not specify `returntype`, the procedure returns `Object`.  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Zurückgeben aus einer Prozedur.** Wenn die `Get` Prozedur an den aufrufenden Code zurückkehrt, wird die Ausführung innerhalb der Anweisung fortgesetzt, die den Eigenschafts Wert angefordert hat.  
+- **Returning from a Procedure.** When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.  
   
-     `Get`-Eigenschaften Prozeduren können einen Wert zurückgeben, indem Sie entweder die [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) verwenden oder den Rückgabewert dem Eigenschaftsnamen zuweisen. Weitere Informationen finden Sie unter "Rückgabewert" in der [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     Die Anweisungen `Exit Property` und `Return` führen zu einem sofortigen Beenden einer Eigenschaften Prozedur. Eine beliebige Anzahl von `Exit Property`-und `Return` Anweisungen kann an beliebiger Stelle in der Prozedur angezeigt werden, und Sie können `Exit Property`-und `Return`-Anweisungen mischen.  
+     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
   
-- **Rückgabewert.** Um einen Wert aus einer `Get` Prozedur zurückzugeben, können Sie den Wert entweder dem Eigenschaftsnamen zuweisen oder ihn in eine [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md)einschließen. Die `Return`-Anweisung weist gleichzeitig den Rückgabewert der `Get` Prozedur zu und beendet die Prozedur.  
+- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md). The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.  
   
-     Wenn Sie `Exit Property` verwenden, ohne dem Eigenschaftsnamen einen Wert zuzuweisen, gibt die `Get` Prozedur den Standardwert für den Datentyp der Eigenschaft zurück. Weitere Informationen finden Sie unter "Rückgabewert" in der [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
+     If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     Im folgenden Beispiel werden zwei Möglichkeiten veranschaulicht, wie die schreibgeschützte Eigenschaft `quoteForTheDay` den in der privaten Variablen `quoteValue` gespeicherten Wert zurückgeben kann.  
+     The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Get`-Anweisung verwendet, um den Wert einer Eigenschaft zurückzugeben.  
+ The following example uses the `Get` statement to return the value of a property.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   

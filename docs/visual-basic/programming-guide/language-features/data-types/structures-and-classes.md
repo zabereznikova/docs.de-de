@@ -1,5 +1,5 @@
 ---
-title: Strukturen und Klassen (Visual Basic)
+title: Strukturen und Klassen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -9,88 +9,88 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: b947109f99d94b0ecb1d798835c311f2374e96fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3353935a74bb77fa4a630e706aa425063c7a610a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601035"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346331"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Strukturen und Klassen (Visual Basic)
-Visual Basic wird die Syntax für Strukturen und Klassen, mit dem Ergebnis, dass größtenteils die gleichen Funktionen unterstützen vereinheitlicht. Es gibt jedoch auch wichtige Unterschiede zwischen Klassen und Strukturen.  
+Visual Basic unifies the syntax for structures and classes, with the result that both entities support most of the same features. However, there are also important differences between structures and classes.  
   
- Klassen haben den Vorteil, Verweistypen – Übergabe eines Verweises ist effizienter als übergeben eine Strukturvariable mit allen zugehörigen Daten. Auf der anderen Seite erfordern Strukturen keine Zuordnung von Arbeitsspeicher auf dem globalen Heap.  
+ Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data. On the other hand, structures do not require allocation of memory on the global heap.  
   
- Da Sie aus einer Struktur geerbt werden können, sollten Strukturen nur für Objekte verwendet werden, die nicht erweitert werden müssen. Verwenden Sie Strukturen, wenn das Objekt, die Sie erstellen möchten eine kleine Instanzgröße hat, und berücksichtigen Sie die Leistungsmerkmale von Klassen und Strukturen.  
+ Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended. Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.  
   
-## <a name="similarities"></a>Ähnlichkeiten  
- Strukturen und Klassen sind ähnlich wie in folgender Hinsicht:  
+## <a name="similarities"></a>Similarities  
+ Structures and classes are similar in the following respects:  
   
-- Beide sind *Container* Typen, was bedeutet, dass sie andere Typen als Member enthalten.  
+- Both are *container* types, meaning that they contain other types as members.  
   
-- Beide verfügen über Member, die Konstruktoren, Methoden, Eigenschaften, Felder, Konstanten, Enumerationen, Ereignisse und Ereignishandler enthalten können. Allerdings Verwechseln Sie nicht diese Member mit dem deklarierten *Elemente* einer Struktur.  
+- Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers. However, do not confuse these members with the declared *elements* of a structure.  
   
-- Mitglieder von können Zugriffsebenen aufweisen. Beispielsweise kann ein Member deklariert werden `Public` und ein weiteres `Private`.  
+- Members of both can have individualized access levels. For example, one member can be declared `Public` and another `Private`.  
   
-- Beide können Schnittstellen implementieren.  
+- Both can implement interfaces.  
   
-- Beide können freigegebene Konstruktoren, mit oder ohne Parameter verfügen.  
+- Both can have shared constructors, with or without parameters.  
   
-- Beide können verfügbar machen eine *Standardeigenschaft*, vorausgesetzt, dass die Eigenschaft über mindestens einen Parameter akzeptiert.  
+- Both can expose a *default property*, provided that property takes at least one parameter.  
   
-- Beide können deklarieren und Auslösen von Ereignissen, und beide können Delegaten deklarieren.  
+- Both can declare and raise events, and both can declare delegates.  
   
-## <a name="differences"></a>Unterschiede  
- Strukturen und Klassen unterscheiden sich in den folgenden Angaben:  
+## <a name="differences"></a>Differences  
+ Structures and classes differ in the following particulars:  
   
-- Strukturen sind *Werttypen*; Klassen sind *Verweistypen*. Eine Variable eines Strukturtyps enthält die Struktur der Daten, anstatt mit einem Verweis auf die Daten als ein Klassentyp ist.  
+- Structures are *value types*; classes are *reference types*. A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.  
   
-- Verwenden von Strukturen stapelreservierung; Klassen verwenden Heapzuordnung.  
+- Structures use stack allocation; classes use heap allocation.  
   
-- Alle Strukturelemente sind `Public` standardmäßig-Klasse Variablen und Konstanten sind `Private` standardmäßig, während andere Klassenmember werden `Public` standardmäßig. Dieses Verhalten für Klassenmember bietet Kompatibilität mit dem Visual Basic 6.0-System von Standardwerten.  
+- All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default. This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.  
   
-- Eine Struktur müssen mindestens eine nicht freigegebene Variable oder nicht benutzerdefiniertes Ereigniselement enthalten Event-Element; eine Klasse kann vollständig leer sein.  
+- A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.  
   
-- Können nicht Strukturelemente deklariert werden, als `Protected`;-Klasse, Elemente zu können.  
+- Structure elements cannot be declared as `Protected`; class members can.  
   
-- Eine Strukturprozedur nur, wenn sie Ereignisse behandeln eine [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` Prozedur, und nur von der [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md); jede Klassenprozedur kann Behandeln von Ereignissen, die mit entweder der [ Behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) Schlüsselwort oder `AddHandler` Anweisung. Weitere Informationen finden Sie unter [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)definiert sind.  
+- A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement. Weitere Informationen finden Sie unter [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
-- Struktur-Variablendeklarationen können keine Initialisierer oder Anfangsgröße für Arrays angeben; Klasse Variablendeklarationen können.  
+- Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.  
   
-- Strukturen erben implizit vom die <xref:System.ValueType?displayProperty=nameWithType> Klasse und kann nicht von irgendeinem anderen Typ; erben Klassen können von einer Klasse oder Klassen erben, außer <xref:System.ValueType?displayProperty=nameWithType>.  
+- Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.  
   
-- Strukturen können nicht vererbt werden; Klassen sind.  
+- Structures are not inheritable; classes are.  
   
-- Strukturen werden nie beendet, nie aufruft und die common Language Runtime (CLR) die <xref:System.Object.Finalize%2A> Methode für jede Struktur; Klassen werden vom Garbage Collector (GC), die aufruft beendet <xref:System.Object.Finalize%2A> für eine Klasse, wenn er erkennt keine aktiven Verweise vorhanden sind Verbleibende.  
+- Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.  
   
-- Eine Struktur ist einen Konstruktor nicht erforderlich; eine Klasse ist.  
+- A structure does not require a constructor; a class does.  
   
-- Strukturen aufweisen können nicht freigegebene Konstruktoren, die nur dann, wenn sie Parameter annehmen; Klassen können mit oder ohne Parameter verfügen.  
+- Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.  
   
- Jede Struktur verfügt über einen impliziten öffentlichen Konstruktor ohne Parameter. Dieser Konstruktor initialisiert alle der Struktur Datenelemente auf ihre Standardwerte zurück. Sie können dieses Verhalten nicht neu definieren.  
+ Every structure has an implicit public constructor without parameters. This constructor initializes all the structure's data elements to their default values. You cannot redefine this behavior.  
   
-## <a name="instances-and-variables"></a>Instanzen und Variablen  
- Da Strukturen Werttypen sind, wird jede Strukturvariable permanent auf eine einzelne Struktur-Instanz gebunden. Jedoch sind Klassen Verweistypen, und eine Objektvariablen auf verschiedenen Klasseninstanzen, zu unterschiedlichen Zeitpunkten verweisen kann. Dieser Unterschied wirkt sich auf die die Nutzung von Strukturen und Klassen gibt folgenden Möglichkeiten:  
+## <a name="instances-and-variables"></a>Instances and Variables  
+ Because structures are value types, each structure variable is permanently bound to an individual structure instance. But classes are reference types, and an object variable can refer to various class instances at different times. This distinction affects your usage of structures and classes in the following ways:  
   
-- **Die Initialisierung.** Eine Strukturvariable enthält implizit eine Initialisierung der Elemente, die mit der Struktur parameterlosen Konstruktor. Aus diesem Grund `Dim s As struct1` entspricht `Dim s As struct1 = New struct1()`.  
+- **Initialization.** A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor. Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.  
   
-- **Zuweisen von Variablen.** Wenn Sie eine Strukturvariable zu einem anderen zuweisen oder eine Strukturinstanz auf ein Prozedurargument übergeben, werden die aktuellen Werte aller Variablen Elemente in die neue Struktur kopiert. Wenn Sie eine Objektvariable in einen anderen zuweisen oder eine Objektvariablen an eine Prozedur übergeben, wird nur der Verweiszeiger kopiert.  
+- **Assigning Variables.** When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure. When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.  
   
-- **Zuweisen von "Nothing".** Weisen Sie den Wert [nichts](../../../../visual-basic/language-reference/nothing.md) auf eine Struktur Variable, aber die Instanz weiterhin mit der Variablen zugeordnet werden soll. Weiterhin können Sie seine Methoden aufrufen und auf die Datenelemente, zugreifen, obwohl Variable Elemente durch die Zuweisung erneut initialisiert werden.  
+- **Assigning Nothing.** You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable. You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.  
   
-     Im Gegensatz dazu, wenn Sie eine Objektvariablen auf `Nothing`, heben Sie die Zuweisung von jeder Klasseninstanz, und Sie können keine Mitglieder über die Variable zugreifen, bis Sie eine andere Instanz zuweisen.  
+     In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.  
   
-- **Mehrere Instanzen.** Eine Objektvariable kann verschiedene Klasseninstanzen, die zu unterschiedlichen Zeiten zugewiesen haben, und mehrere Objektvariablen können gleichzeitig auf die gleiche Instanz der Klasse verweisen. Mit den Werten von Klassenmembern vorgenommene Änderungen Auswirkungen auf die Elemente, die beim Zugriff über eine andere Variable, die auf dieselbe Instanz verweisen.  
+- **Multiple Instances.** An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time. Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.  
   
-     Strukturelemente, sind jedoch in einer eigenen Instanz isoliert. Änderungen an deren Werte werden nicht in anderen Strukturvariablen, sogar in anderen Instanzen der gleichen wiedergegeben `Structure` Deklaration.  
+     Structure elements, however, are isolated within their own instance. Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.  
   
-- **Gleichheit.** Gleichheitsüberprüfung von zwei Strukturen muss für ein Element für Element durchgeführt werden. Zwei Objektvariablen verglichen werden können, mit der <xref:System.Object.Equals%2A> Methode. <xref:System.Object.Equals%2A> Gibt an, ob die zwei Variablen auf dieselbe Instanz verweisen.  
+- **Equality.** Equality testing of two structures must be performed with an element-by-element test. Two object variables can be compared using the <xref:System.Object.Equals%2A> method. <xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)

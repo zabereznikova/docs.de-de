@@ -1,28 +1,28 @@
 ---
-title: Objekte und Klassen in Visual Basic
+title: Objekte und Klassen
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755163"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346707"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 
 Ein *Objekt* ist eine Kombination aus Code und Daten, die als Einheit behandelt werden kann. Ein Objekt kann ein Teil einer Anwendung sein wie ein Steuerelement oder ein Formular. Eine vollständige Anwendung kann auch ein Objekt sein.
 
-Wenn Sie eine Anwendung in Visual Basic erstellen, arbeiten Sie ständig mit Objekten. Sie können Objekte, die von Visual Basic bereitgestellt werden, z. B. Steuerelemente, Formulare und Zugreifen auf Objekte verwenden. Sie können auch Objekte aus anderen Anwendungen in Visual Basic-Anwendung verwenden. Sie können sogar eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren. Objekte verhalten sich wie vorgefertigte Bausteine für Programme – Sie können ein Stück Code einmal schreiben und immer wieder verwenden.
+When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. Sie können sogar eigene Objekte erstellen und für diese zusätzliche Eigenschaften und Methoden definieren. Objekte verhalten sich wie vorgefertigte Bausteine für Programme – Sie können ein Stück Code einmal schreiben und immer wieder verwenden.
 
 Dieses Thema beschreibt Objekte im Detail.
 
 ## <a name="objects-and-classes"></a>Objekte und Klassen
 
-Jedes Objekt in Visual Basic wird definiert, indem eine *Klasse*. Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts. Objekte sind Instanzen von Klassen. Sie können beliebig viele Objekte erstellen, die Sie benötigen, sobald Sie eine Klasse definiert haben.
+Each object in Visual Basic is defined by a *class*. Eine Klasse beschreibt die Variablen, Eigenschaften, Prozeduren und Ereignisse eines Objekts. Objekte sind Instanzen von Klassen. Sie können beliebig viele Objekte erstellen, die Sie benötigen, sobald Sie eine Klasse definiert haben.
 
 Um die Beziehung zwischen einem Objekt und seiner Klasse zu verstehen, stellen Sie sich Ausstechformen und Kekse vor. Die Ausstechform ist die Klasse. Sie definiert die Merkmale der einzelnen Kekse, z.B. die Größe und Form. Die Klasse wird verwendet, um Objekte zu erstellen. Die Objekte sind die Kekse.
 
@@ -176,7 +176,7 @@ Andererseits können die in einem Modul deklarierten Member standardmäßig öff
 
 Mit Objekten können Sie Variablen und Prozeduren einmal deklarieren und anschließend bei Bedarf jederzeit wiederverwenden. Beispiel: Wenn Sie einer Anwendung eine Rechtschreibprüfung hinzufügen möchten, können Sie sämtliche Variablen und Supportfunktionen definieren, um die Rechtschreibprüfungsfunktion bereitzustellen. Wenn Sie Ihre Rechtschreibprüfung als Klasse erstellen, können Sie sie anschließend in anderen Anwendungen wiederverwenden, indem Sie einen Verweis auf die kompilierte Assembly hinzufügen. Sie können sich möglicherweise sogar selbst etwas Arbeit sparen, indem Sie eine Rechtschreibprüfungsklasse verwenden, die bereits von jemand anderem entwickelt wurde.
 
-.NET Framework bietet viele Beispiele von Komponenten, die für die Verwendung verfügbar sind. Das folgende Beispiel verwendet die <xref:System.TimeZone>-Klasse im <xref:System>-Namespace. <xref:System.TimeZone> enthält Member, die Ihnen das Abrufen von Informationen über die Zeitzone des aktuellen Computersystems ermöglichen.
+The .NET Framework provides many examples of components that are available for use. Das folgende Beispiel verwendet die <xref:System.TimeZone>-Klasse im <xref:System>-Namespace. <xref:System.TimeZone> enthält Member, die Ihnen das Abrufen von Informationen über die Zeitzone des aktuellen Computersystems ermöglichen.
 
 ```vb
 Public Sub examineTimeZone()
@@ -249,20 +249,20 @@ Eine andere Möglichkeit zur Verknüpfung von Objekten ist eine *Einschlussbezie
 
 #### <a name="collections"></a>Auflistungen
 
-Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. Visual Basic unterstützt eine spezielle Syntax in der [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) , mit der Sie die Elemente einer Auflistung zu durchlaufen. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
+Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Exemplarische Vorgehensweise: Definieren von Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 Stellt eine schrittweise Beschreibung des Erstellens einer Klasse bereit.
 
-[Überladene Eigenschaften und Methoden](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 Überladene Eigenschaften und Methoden
 
 [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
 Beschreibt die Vererbungsmodifizierer, das Außerkraftsetzen von Methoden und Eigenschaften, MyClass und MyBase.
 
-[Objektlebensdauer: Wie die Objekte erstellt und zerstört werden](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[Objektlebensdauer: Erstellen und Zerstören von Objekten](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
 Erläutert das Erstellen und Entfernen von Klasseninstanzen.
 
 [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
@@ -271,5 +271,5 @@ Beschreibt das Erstellen und Verwenden von anonymen Typen, die Ihnen das Erstell
 [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 Erläutert Objektinitialisierer, die zum Erstellen von Instanzen von benannten und anonymen Typen mit einem einzelnen Ausdruck verwendet werden.
 
-[Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 Erklärt das Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen. Stellt Beispiele für erfolgreiche und fehlgeschlagene Ableitungen bereit.
