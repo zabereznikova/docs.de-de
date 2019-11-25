@@ -1,21 +1,21 @@
 ---
-title: 'Gewusst wie: Analysieren einer Zeichenfolge (C#)'
+title: 'Vorgehensweise: Analysieren einer Zeichenfolge (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 16310e37afec950c372c7b47637986bb0eb399b8
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 086a4baecee9ee927b08d6da53d16324ef32e8a8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956612"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140975"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="039dd-102">Gewusst wie: Analysieren einer Zeichenfolge (C#)</span><span class="sxs-lookup"><span data-stu-id="039dd-102">How to: Parse a String (C#)</span></span>
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="54bd1-102">Vorgehensweise: Analysieren einer Zeichenfolge (C#)</span><span class="sxs-lookup"><span data-stu-id="54bd1-102">How to: Parse a String (C#)</span></span>
 
-<span data-ttu-id="039dd-103">In diesem Thema wird erläutert, wie Sie in C# eine XML-Struktur erstellen können.</span><span class="sxs-lookup"><span data-stu-id="039dd-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
+<span data-ttu-id="54bd1-103">In diesem Thema wird erläutert, wie Sie in C# eine XML-Struktur erstellen können.</span><span class="sxs-lookup"><span data-stu-id="54bd1-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
 
-## <a name="example"></a><span data-ttu-id="039dd-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="039dd-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="54bd1-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="54bd1-104">Example</span></span>
 
-<span data-ttu-id="039dd-105">Der folgende C#-Code zeigt das Analysieren einer XML-Zeichenfolge:</span><span class="sxs-lookup"><span data-stu-id="039dd-105">The following C# code shows how to parse an XML string:</span></span>
+<span data-ttu-id="54bd1-105">Der folgende C#-Code zeigt das Analysieren einer XML-Zeichenfolge:</span><span class="sxs-lookup"><span data-stu-id="54bd1-105">The following C# code shows how to parse an XML string:</span></span>
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +47,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-<span data-ttu-id="039dd-106">Der Stammknoten `Contacts` verfügt über zwei `Contact`-Knoten.</span><span class="sxs-lookup"><span data-stu-id="039dd-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="039dd-107">Um auf bestimmte Daten in der analysierten XML zuzugreifen, verwenden Sie die Methode [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements), die in diesem Fall die untergeordneten Elemente des Stammknotens `Contacts` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="039dd-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="039dd-108">Im folgenden Beispiel wird der erste `Contact`-Knoten in die Konsole geschrieben:</span><span class="sxs-lookup"><span data-stu-id="039dd-108">The following example prints the first `Contact` node to the console:</span></span>
+<span data-ttu-id="54bd1-106">Der Stammknoten `Contacts` verfügt über zwei `Contact`-Knoten.</span><span class="sxs-lookup"><span data-stu-id="54bd1-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="54bd1-107">Um auf bestimmte Daten in der analysierten XML zuzugreifen, verwenden Sie die Methode [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements), die in diesem Fall die untergeordneten Elemente des Stammknotens `Contacts` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="54bd1-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="54bd1-108">Im folgenden Beispiel wird der erste `Contact`-Knoten in die Konsole geschrieben:</span><span class="sxs-lookup"><span data-stu-id="54bd1-108">The following example prints the first `Contact` node to the console:</span></span>
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a><span data-ttu-id="039dd-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="039dd-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54bd1-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="54bd1-109">See also</span></span>
 
-- [<span data-ttu-id="039dd-110">Gewusst wie: Suchen nach einem Element mit bestimmten Attributen (C#)</span><span class="sxs-lookup"><span data-stu-id="039dd-110">How to: Find an Element with a Specific Attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)
+- [<span data-ttu-id="54bd1-110">Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (C#)</span><span class="sxs-lookup"><span data-stu-id="54bd1-110">How to find an element with a specific attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)
