@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771839"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428605"
 ---
 # <a name="c-reference"></a>C#-Referenz
 
@@ -61,9 +61,6 @@ Die Features, die in C#-Versionen nach 6.0 implementiert wurden, werden in Sprac
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
- [Leitfaden für C#](../index.md)  
- Enthält ein Portal für die Visual C#-Dokumentation.  
-  
  [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/get-started/csharp)  
  Enthält Links zu konzeptionellen und aufgabenspezifischen Themen, in denen IDE und Editor beschrieben werden.  
   
