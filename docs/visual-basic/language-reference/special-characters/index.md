@@ -8,9 +8,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349604"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>Sonderzeichen (Visual Basic Referenz)
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+Sonderzeichen sind vordefinierte, kontextabhängige Zeichen, die das Programmelement ändern, dem Sie vorangestellt sind. Visual Basic unterstützt das folgende Sonderzeichen:
 
 - [$](interpolated.md), das Zeichen für interpolierte Zeichenfolgen.
 

@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="datagrid-parts"></a>DataGrid-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.DataGrid>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Die Zeile, die die Spaltenheader enthält.|  
   
@@ -35,8 +35,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Normal|CommonStates|Der Standardstatus.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |InvalidFocused|ValidationStates|Das Steuerelement ist nicht gültig und besitzt den Fokus.|  
 |InvalidUnfocused|ValidationStates|Das Steuerelement ist nicht gültig und besitzt keinen Fokus.|  
 |Gültig|ValidationStates|Das Steuerelement ist gültig.|  
@@ -49,14 +49,14 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger wird auf der Zelle positioniert.|  
 |Mit Fokus|FocusStates|Die Zelle hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Zelle hat keinen Fokus.|  
 |Aktuell|Currentstates|Die Zelle ist die aktuelle Zelle.|  
 |Regulär|Currentstates|Die Zelle ist nicht die aktuelle Zelle.|  
 |Anzeige|Interaktionstates|Die Zelle befindet sich im Anzeigemodus.|  
-|Bearbeiten|Interaktionstates|Die Zelle befindet sich im Bearbeitungsmodus.|  
+|Bearbeitung|Interaktionstates|Die Zelle befindet sich im Bearbeitungsmodus.|  
 |Ausgewählt|SelectionStates|Die Zelle ist ausgewählt.|  
 |Nicht markiert|SelectionStates|Die Zelle ist nicht ausgewählt.|  
 |InvalidFocused|ValidationStates|Die Zelle ist ungültig und hat den Fokus.|  
@@ -71,7 +71,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über der Zeile.|  
 |MouseOver_Editing|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile befindet sich im Bearbeitungsmodus.|  
 |MouseOver_Selected|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile wird ausgewählt.|  
@@ -89,7 +89,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.DataGridRowHeader>-Element aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Zeilen Headers vom oberen Rand zu ändern.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Zeilen Headers von unten zu ändern.|  
@@ -99,7 +99,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über der Zeile.|  
 |MouseOver_CurrentRow|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile ist die aktuelle Zeile.|  
 |MouseOver_CurrentRow_Selected|CommonStates|Der Mauszeiger befindet sich über der Zeile, und die Zeile ist aktuell und ausgewählt.|  
@@ -122,7 +122,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Datagridcolumnheaderationsenter-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>-Element aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Der Platzhalter für Spaltenüberschriften.|  
   
@@ -138,7 +138,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>-Element aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Spalten Headers von Links zu ändern.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Das Element, das verwendet wird, um die Größe des Spalten Headers von rechts zu ändern.|  
@@ -148,12 +148,12 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
 |Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|  
 |SortAscending|Sortstates|Die Spalte wird in aufsteigender Reihenfolge sortiert.|  
 |Sortsteigend|Sortstates|Die Spalte wird in absteigender Reihenfolge sortiert.|  
-|Unsortiert|Sortstates|Die Spalte ist nicht sortiert.|  
+|Nicht sortiert|Sortstates|Die Spalte ist nicht sortiert.|  
 |InvalidFocused|ValidationStates|Das Steuerelement ist nicht gültig und besitzt den Fokus.|  
 |InvalidUnfocused|ValidationStates|Das Steuerelement ist nicht gültig und besitzt keinen Fokus.|  
 |Gültig|ValidationStates|Das Steuerelement ist gültig.|  

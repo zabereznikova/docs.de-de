@@ -13,22 +13,22 @@ ms.locfileid: "74344181"
 ---
 # <a name="modules-visual-basic"></a>Module (Visual Basic)
 
-Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
+Visual Basic stellt mehrere Module bereit, mit denen Sie häufige Aufgaben in Ihrem Code vereinfachen können, einschließlich der Bearbeitung von Zeichen folgen, der Durchführung mathematischer Berechnungen, dem erhalten von Systeminformationen, der Durchführung von Datei-und Verzeichnis Vorgängen usw. In der folgenden Tabelle werden die von Visual Basic bereitgestellten Module aufgelistet.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
-|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
-|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
-|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
-|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
-|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
-|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
+|<xref:Microsoft.VisualBasic.Constants>|Enthält verschiedene Konstanten. Diese Konstanten können an beliebiger Stelle im Code verwendet werden.|  
+|<xref:Microsoft.VisualBasic.ControlChars>|Enthält Konstante Steuerzeichen zum Drucken und Anzeigen von Text.|  
+|<xref:Microsoft.VisualBasic.Conversion>|Enthält Member, die Dezimalzahlen in andere Basen, Zahlen in Zeichen folgen, Zeichen folgen in Zahlen und einen Datentyp in einen anderen konvertieren.|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|Enthält Elemente, die das aktuelle Datum oder die aktuelle Uhrzeit erhalten, Datumsberechnungen durchführen, ein Datum oder eine Uhrzeit zurückgeben, das Datum oder die Uhrzeit oder die Dauer eines Prozesses festlegen.|  
+|<xref:Microsoft.VisualBasic.ErrObject>|Enthält Informationen über Laufzeitfehler und-Methoden, um einen Fehler zu erhöhen oder zu löschen.|  
+|<xref:Microsoft.VisualBasic.FileSystem>|Enthält Elemente, die Datei-, Verzeichnis-oder Ordner-und System Vorgänge ausführen.|  
+|<xref:Microsoft.VisualBasic.Financial>|Enthält Prozeduren, die zum Durchführen von Finanzberechnungen verwendet werden.|  
+|<xref:Microsoft.VisualBasic.Globals>|Enthält Informationen über die aktuelle Version der Skript-Engine.|  
+|<xref:Microsoft.VisualBasic.Information>|Enthält die Member, die Informationen, wie z. b. Array Größe, Typnamen usw., zurückgeben, testen oder überprüfen.|  
+|<xref:Microsoft.VisualBasic.Interaction>|Enthält Elemente, die mit Objekten, Anwendungen und Systemen interagieren.|  
+|<xref:Microsoft.VisualBasic.Strings>|Enthält Member, die Zeichen folgen Operationen wie das Neuformatieren von Zeichen folgen, das Durchsuchen einer Zeichenfolge, das erhalten der Länge einer Zeichenfolge usw. ausführen.|  
+|<xref:Microsoft.VisualBasic.VBMath>|Enthält Elemente, die mathematische Operationen ausführen.|  
   
 ## <a name="see-also"></a>Siehe auch
 

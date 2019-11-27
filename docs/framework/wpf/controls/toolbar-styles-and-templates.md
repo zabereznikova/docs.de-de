@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="toolbar-parts"></a>Symbolleisten Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ToolBar>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Das-Objekt, das die Steuerelemente auf dem <xref:System.Windows.Controls.ToolBar>enthält.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Das-Objekt, das die Steuerelemente enthält, die sich im Überlauf Bereich der <xref:System.Windows.Controls.ToolBar>befinden.|  

@@ -9,10 +9,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336015"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>How to: Modify an Office Open XML Document (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Gewusst wie: Ändern eines Office Open-XML-Dokuments (Visual Basic)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ändert und speichert.  
   
- For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).  
+ Weitere Informationen zu Office Open XML finden Sie im [Blog von Eric White](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht nach dem ersten Absatzelement im Dokument, ruft den Text aus dem Absatz ab und löscht dann alle Textruns im Absatz. Daraufhin wird ein neuer Textrun erstellt, der aus dem Text des ersten Absatzes, umgewandelt in Großbuchstaben, besteht. Anschließend wird das geänderte XML in ein Open XML-Paket serialisiert und das Paket wird geschlossen.  
@@ -137,7 +137,7 @@ End Module
   
  Wenn Sie `SampleDoc.docx` nach der Ausführung dieses Programms öffnen, sehen Sie, dass der erste Absatz des Dokuments in Großbuchstaben umgewandelt wurde.  
   
- When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:  
+ Wenn Sie mit dem Open XML-Beispiel Dokument ausführen, das unter [Erstellen des Open XML-Quelldokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)beschrieben wird, wird in diesem Beispiel die folgende Ausgabe erzeugt:  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
@@ -145,4 +145,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Erweiterte Abfrage Techniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

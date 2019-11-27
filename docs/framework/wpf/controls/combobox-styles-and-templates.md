@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="combobox-parts"></a>ComboBox-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ComboBox>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Enthält den Text der <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Das Dropdown-Element, das die Elemente im Kombinations Feld enthält.|  
@@ -34,8 +34,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Normal|CommonStates|Der Standardstatus.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
@@ -43,7 +43,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
 |InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
 |InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  
-|Bearbeitet|Editstates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `true`.|  
+|Editable|Editstates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `true`.|  
 |Editierbar|Editstates|Die <xref:System.Windows.Controls.ComboBox.IsEditable%2A>-Eigenschaft ist `false`.|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem-Teile  
@@ -54,8 +54,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Normal|CommonStates|Der Standardstatus.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  

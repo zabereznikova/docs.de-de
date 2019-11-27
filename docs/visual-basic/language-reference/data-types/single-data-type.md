@@ -29,25 +29,25 @@ ms.locfileid: "74343917"
 ---
 # <a name="single-data-type-visual-basic"></a>Single-Datentyp (Visual Basic)
 
-Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
+Enthält signierte IEEE 32-Bit (4-Byte)-Gleit Komma Zahlen mit einfacher Genauigkeit, die den Wert from-3.4028235 e + 38 bis- -1 401298E e-45 für negative Werte und von -1 401298E e-45 bis 3.4028235 e + 38 für positive Werte enthalten. Zahlen mit einfacher Genauigkeit speichern eine Näherung einer reellen Zahl.  
   
 ## <a name="remarks"></a>Hinweise  
 
- Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
+ Verwenden Sie den `Single`-Datentyp, um Gleit Komma Werte zu enthalten, die nicht die vollständige Daten Breite von `Double`erfordern. In einigen Fällen können die Common Language Runtime ihre `Single` Variablen eng zusammenpacken und den Speicherverbrauch sparen.  
   
  Der Standardwert von `Single` lautet 0.  
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
-- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Präziser.** Beachten Sie beim Arbeiten mit Gleit Komma Zahlen, dass Sie nicht immer über eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen bestimmter Vorgänge führen, wie z. b. Wert Vergleiche und der `Mod`-Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Tet.** Der `Single`-Datentyp wird zu `Double`erweitert. Dies bedeutet, dass Sie `Single` in `Double` konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType> Fehler auftritt.  
   
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
+- **Nachfolgende Nullen.** Die Gleit Komma Datentypen verfügen über keine interne Darstellung von nachfolgenden 0 Zeichen. Sie unterscheiden z. b. nicht zwischen 4,2000 und 4,2. Folglich werden nachfolgende 0 Zeichen nicht angezeigt, wenn Sie Gleit Komma Werte anzeigen oder drucken.  
   
-- **Type Characters.** Durch Anhängen des Literaltypzeichens `F` an ein Literal wird der `Single`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `!` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Single`-Datentyp erzwungen.  
+- **Geben Sie Zeichen ein.** Durch Anhängen des Literaltypzeichens `F` an ein Literal wird der `Single`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `!` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Single`-Datentyp erzwungen.  
   
-- **Framework Type.** Der entsprechende Typ in .NET Framework ist die <xref:System.Single?displayProperty=nameWithType>-Struktur.  
+- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Single?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
 

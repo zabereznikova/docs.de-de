@@ -28,16 +28,16 @@ Reduziert Codeabschnitte in Visual Basic-Dateien und blendet sie aus.
 #End Region  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`identifier_string`|Erforderlich. Eine Zeichenfolge, die als Bereichtitel fungiert, wenn sie reduziert ist. Bereiche werden standardmäßig reduziert.|  
+|`identifier_string`|Erforderlich Eine Zeichenfolge, die als Bereichtitel fungiert, wenn sie reduziert ist. Bereiche werden standardmäßig reduziert.|  
 |`#End Region`|Beendet den `#Region`-Block.|  
   
 ## <a name="remarks"></a>Hinweise  
 
- Mit der `#Region`-Anweisung können Sie einen Codeblock festlegen, der bei Verwendung der Gliederungsfunktion des Code-Editors von Visual Studio erweitert oder reduziert werden soll. You can place, or *nest*, regions within other regions to group similar regions together.  
+ Mit der `#Region`-Anweisung können Sie einen Codeblock festlegen, der bei Verwendung der Gliederungsfunktion des Code-Editors von Visual Studio erweitert oder reduziert werden soll. Sie können Bereiche in anderen Regionen platzieren oder *verschachteln*, um ähnliche Bereiche zu gruppieren.  
   
 ## <a name="example"></a>Beispiel  
 

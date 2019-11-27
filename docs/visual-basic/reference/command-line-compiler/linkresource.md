@@ -33,27 +33,27 @@ oder
   
 ## <a name="arguments"></a>Argumente  
  `filename`  
- Erforderlich. The resource file to link to the assembly. If the file name contains a space, enclose the name in quotation marks (" ").  
+ Erforderlich Die Ressourcen Datei, die mit der Assembly verknüpft werden soll. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen ("") einschließen.  
   
  `identifier`  
- Dies ist optional. The logical name for the resource. The name that is used to load the resource. Der Standardwert ist der Name der Datei. Optionally, you can specify whether the file is public or private in the assembly manifest, for example: `-linkres:filename.res,myname.res,public`. By default, `filename` is public in the assembly.  
+ Optional. Der logische Name der Ressource. Der Name, der zum Laden der Ressource verwendet wird. Der Standardwert ist der Name der Datei. Optional können Sie angeben, ob die Datei im Assemblymanifest öffentlich oder privat ist, z. b.: `-linkres:filename.res,myname.res,public`. Standardmäßig ist `filename` in der Assembly öffentlich.  
   
 ## <a name="remarks"></a>Hinweise  
- The `-linkresource` option does not embed the resource file in the output file; use the `-resource` option to do this.  
+ Mit der Option `-linkresource` wird die Ressourcen Datei nicht in die Ausgabedatei eingebettet. Verwenden Sie hierfür die Option `-resource`.  
   
- The `-linkresource` option requires one of the `-target` options other than `-target:module`.  
+ Die Option `-linkresource` erfordert eine der `-target` Optionen außer `-target:module`.  
   
- If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace. (For more information, see <xref:System.Resources.ResourceManager>.) To access all other resources at run time, use the methods that begin with `GetManifestResource` in the <xref:System.Reflection.Assembly> class.  
+ Wenn `filename` eine .NET Framework Ressourcen Datei ist, die beispielsweise von [Resgen. exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich. (Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.) Wenn Sie zur Laufzeit auf alle anderen Ressourcen zugreifen möchten, verwenden Sie die Methoden, die mit `GetManifestResource` beginnen, in der <xref:System.Reflection.Assembly>-Klasse.  
   
- The file name can be any file format. Sie können z.B. eine native DLL zu einem Teil der Assembly machen, sodass sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann.  
+ Der Dateiname kann ein beliebiges Dateiformat aufweisen. Sie können z.B. eine native DLL zu einem Teil der Assembly machen, sodass sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann.  
   
  Die Kurzform von `-linkresource` ist `-linkres`.  
   
 > [!NOTE]
-> The `-linkresource` option is not available from the Visual Studio development environment; it is available only when you compile from the command line.  
+> Die `-linkresource`-Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- The following code compiles `in.vb` and links to resource file `rf.resource`.  
+ Der folgende Code kompiliert `in.vb` und Links zu Ressourcen Datei `rf.resource`.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -62,6 +62,6 @@ vbc -linkresource:rf.resource in.vb
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Ressource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

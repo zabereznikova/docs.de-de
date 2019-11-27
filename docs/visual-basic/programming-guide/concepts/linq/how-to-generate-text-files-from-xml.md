@@ -9,11 +9,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344577"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>How to: Generate Text Files from XML (Visual Basic)
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Gewusst wie: Generieren von Text Dateien aus XML (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie aus einer XML-Datei eine CSV-Datei generieren können.  
   
 ## <a name="example"></a>Beispiel  
- The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.  
+ Die Visual Basic-Version verwendet prozeduralen Code zum Aggregieren der Auflistung von Zeichen folgen in einer einzelnen Zeichenfolge.  
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

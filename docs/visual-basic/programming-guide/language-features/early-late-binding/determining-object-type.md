@@ -17,30 +17,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345197"
 ---
 # <a name="determining-object-type-visual-basic"></a>Bestimmen des Objekttyps (Visual Basic)
-Generic object variables (that is, variables you declare as `Object`) can hold objects from any class. When using variables of type `Object`, you may need to take different actions based on the class of the object; for example, some objects might not support a particular property or method. Visual Basic provides two means of determining which type of object is stored in an object variable: the `TypeName` function and the `TypeOf...Is` operator.  
+Generische Objektvariablen (d. h. Variablen, die Sie als `Object`deklarieren) können Objekte aus beliebigen Klassen enthalten. Wenn Sie Variablen vom Typ `Object`verwenden, müssen Sie möglicherweise basierend auf der-Klasse des-Objekts verschiedene Aktionen durchführen. Beispielsweise unterstützen einige Objekte möglicherweise nicht eine bestimmte Eigenschaft oder Methode. Visual Basic bietet zwei Möglichkeiten, um zu bestimmen, welcher Objekttyp in einer Objektvariablen gespeichert wird: die `TypeName`-Funktion und der `TypeOf...Is`-Operator.  
   
-## <a name="typename-and-typeofis"></a>TypeName and TypeOf…Is  
- The `TypeName` function returns a string and is the best choice when you need to store or display the class name of an object, as shown in the following code fragment:  
+## <a name="typename-and-typeofis"></a>Typname und typeof... Richtet  
+ Die `TypeName`-Funktion gibt eine Zeichenfolge zurück und ist die beste Wahl, wenn Sie den Klassennamen eines Objekts speichern oder anzeigen müssen, wie im folgenden Code Fragment gezeigt:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
- The `TypeOf...Is` operator is the best choice for testing an object's type, because it is much faster than an equivalent string comparison using `TypeName`. The following code fragment uses `TypeOf...Is` within an `If...Then...Else` statement:  
+ Der `TypeOf...Is`-Operator ist die beste Wahl, um den Typ eines Objekts zu testen, da er viel schneller ist als ein entsprechender Zeichen folgen Vergleich mithilfe von `TypeName`. Das folgende Code Fragment verwendet `TypeOf...Is` in einer `If...Then...Else`-Anweisung:  
   
  [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
- A word of caution is due here. The `TypeOf...Is` operator returns `True` if an object is of a specific type, or is derived from a specific type. Almost everything you do with Visual Basic involves objects, which include some elements not normally thought of as objects, such as strings and integers. These objects are derived from and inherit methods from <xref:System.Object>. When passed an `Integer` and evaluated with `Object`, the `TypeOf...Is` operator returns `True`. The following example reports that the parameter `InParam` is both an `Object` and an `Integer`:  
+ Hier ist ein Wort mit Bedacht. Der `TypeOf...Is`-Operator gibt `True` zurück, wenn ein Objekt einen bestimmten Typ hat oder von einem bestimmten Typ abgeleitet ist. Fast alles, was Sie mit Visual Basic tun, umfasst-Objekte, die einige Elemente enthalten, die normalerweise nicht als Objekte angesehen werden, z. b. Zeichen folgen und ganze Zahlen Diese Objekte werden von abgeleitet und Erben Methoden von <xref:System.Object>. Wenn eine `Integer` übermittelt und mit `Object`ausgewertet wird, gibt der `TypeOf...Is`-Operator `True`zurück. Im folgenden Beispiel wird berichtet, dass der Parameter `InParam` sowohl ein `Object` als auch ein `Integer`ist:  
   
  [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
- The following example uses both `TypeOf...Is` and `TypeName` to determine the type of object passed to it in the `Ctrl` argument. The `TestObject` procedure calls `ShowType` with three different kinds of controls.  
+ Im folgenden Beispiel wird sowohl `TypeOf...Is` als auch `TypeName` verwendet, um den Typ des Objekts zu bestimmen, das im `Ctrl`-Argument an das Objekt übermittelt wird Die `TestObject` Prozedur ruft `ShowType` mit drei unterschiedlichen Arten von Steuerelementen auf.  
   
 #### <a name="to-run-the-example"></a>So führen Sie das Beispiel aus  
   
-1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
+1. Erstellen Sie ein neues Windows-Anwendungsprojekt, und fügen Sie dem Formular ein <xref:System.Windows.Forms.Button>-Steuerelement, ein <xref:System.Windows.Forms.CheckBox>-Steuerelement und ein <xref:System.Windows.Forms.RadioButton>-Steuerelement hinzu.  
   
-2. From the button on your form, call the `TestObject` procedure.  
+2. Nennen Sie auf der Schaltfläche auf dem Formular das `TestObject` Prozedur.  
   
-3. Add the following code to your form:  
+3. Fügen Sie dem Formular folgenden Code hinzu:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
@@ -48,7 +48,7 @@ Generic object variables (that is, variables you declare as `Object`) can hold o
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else-Anweisung](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Integer-Datentyp](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

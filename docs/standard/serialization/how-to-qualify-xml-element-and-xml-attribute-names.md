@@ -18,7 +18,7 @@ ms.locfileid: "74353099"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Gewusst wie: Qualifizieren von XML-Element- und XML-Attributnamen
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+XML-Namespaces, die in Instanzen der <xref:System.Xml.Serialization.XmlSerializerNamespaces>-Klasse enthalten sind, müssen der W3C-Spezifikation (World Wide Web Consortium) entsprechen, die als [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)bezeichnet werden.
 
 XML-Namespaces stellen eine Methode zur Qualifizierung der Namen von XML-Elementen und XML-Attributen in XML-Dokumenten bereit. Ein qualifizierter Name besteht aus einem Präfix und einem lokalen Namen, die durch einen Doppelpunkt voneinander getrennt sind. Das Präfix wird nur als Platzhalter verwendet und ist einem URI zugeordnet, der den Namespace angibt. Die Kombination aus dem global verwalteten URI-Namespace und dem lokalen Namen bildet einen weltweit garantiert eindeutigen Namen.
 
@@ -26,7 +26,7 @@ Sie können die in einem XML-Dokument verwendeten Präfixe festlegen, indem Sie 
 
 ## <a name="to-create-qualified-names-in-an-xml-document"></a>So erstellen Sie qualifizierte Namen in einem XML-Dokument
 
-1. Erstellen Sie eine Instanz der `XmlSerializerNamespaces`-Klasse.
+1. Erstellen Sie eine Instanz der Klasse `XmlSerializerNamespaces`.
 
 2. Fügen Sie alle Präfixe und Namespacepaare zu `XmlSerializerNamespaces` hinzu.
 
@@ -175,7 +175,7 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Das XML Schema Definition-Tool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer)
 - [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md)
 - [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)

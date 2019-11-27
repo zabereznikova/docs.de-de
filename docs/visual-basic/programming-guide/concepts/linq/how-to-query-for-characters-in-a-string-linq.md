@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347723"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>How to: Query for Characters in a String (LINQ) (Visual Basic)
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)
 
 Da die <xref:System.String>-Klasse die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, kann jede Zeichenfolge als Folge von Zeichen abgefragt werden. Dies ist allerdings kein üblicher Einsatz von LINQ. Verwenden Sie für komplex Musterabgleichvorgänge die <xref:System.Text.RegularExpressions.Regex>-Klasse.
 
@@ -58,9 +58,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
-- [How to combine LINQ queries with regular expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ und Zeichen folgen (Visual Basic)](linq-and-strings.md)
+- [Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)

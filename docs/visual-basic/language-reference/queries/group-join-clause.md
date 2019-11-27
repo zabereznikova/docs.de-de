@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346841"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join-Klausel (Visual Basic)
-Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen. The join operation is based on matching keys.  
+Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen. Der Joinvorgang basiert auf übereinstimmenden Schlüsseln.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,29 +29,29 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`element`|Erforderlich. The control variable for the collection being joined.|  
-|`type`|Dies ist optional. Der `element`-Typ. If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Erforderlich. The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
-|`key1` `Equals` `key2`|Erforderlich. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
-|`expressionList`|Erforderlich. One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). Sie können auch Aggregatfunktionen einschließen, die auf die Gruppe angewendet werden sollen.|  
+|`element`|Erforderlich Die Steuerelement Variable für die Auflistung, die verknüpft wird.|  
+|`type`|Optional. Der `element`-Typ. Wenn keine `type` angegeben wird, wird der Typ der `element` von `collection`abgeleitet.|  
+|`collection`|Erforderlich Die Auflistung, die mit der Auflistung auf der linken Seite des `Group Join` Operators kombiniert werden soll. Eine `Group Join`-Klausel kann in einer `Join`-Klausel oder in einer anderen `Group Join`-Klausel eingefügt werden.|  
+|`key1` `Equals` `key2`|Erforderlich Identifiziert Schlüssel für die Auflistungen, die verknüpft werden. Sie müssen den `Equals`-Operator verwenden, um Schlüssel aus den Auflistungen zu vergleichen, die verknüpft werden. Joinbedingungen können mithilfe des `And`-Operators kombiniert werden, um mehrere Schlüssel zu identifizieren. Der `key1`-Parameter muss von der Auflistung auf der linken Seite des `Join` Operators sein. Der `key2`-Parameter muss von der Auflistung auf der rechten Seite des `Join` Operators sein.<br /><br /> Die in der Join-Bedingung verwendeten Schlüssel können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jeder Schlüssel Ausdruck kann jedoch nur Elemente aus der jeweiligen Auflistung enthalten.|  
+|`expressionList`|Erforderlich Ein oder mehrere Ausdrücke, die bestimmen, wie die Gruppen von Elementen aus der Auflistung aggregiert werden. Um einen Elementnamen für die gruppierten Ergebnisse zu identifizieren, verwenden Sie das `Group`-Schlüsselwort (`<alias> = Group`). Sie können auch Aggregatfunktionen einschließen, die auf die Gruppe angewendet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Die `Group Join`-Klausel kombiniert zwei Auflistungen basierend auf übereinstimmenden Schlüsselwerten aus den verbundenen Sammlungen. Die resultierende Auflistung kann einen Member enthalten, der auf eine Auflistung von Elementen aus der zweiten Auflistung verweist, die mit dem Schlüsselwert aus der ersten Auflistung zu vergleichen sind. Sie können auch Aggregatfunktionen angeben, die auf die gruppierten Elemente aus der zweiten Auflistung angewendet werden sollen. Weitere Informationen zu Aggregatfunktionen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
+ Stellen Sie sich z. b. eine Sammlung von Managern und eine Sammlung von Mitarbeitern vor. Elemente aus beiden Auflistungen verfügen über eine ManagerID-Eigenschaft, die die Mitarbeiter identifiziert, die einem bestimmten Manager Berichten. Die Ergebnisse einer Join-Operation enthalten ein Ergebnis für jeden Vorgesetzten und jeden Mitarbeiter mit einem entsprechenden ManagerID-Wert. Die Ergebnisse eines `Group Join` Vorgangs enthalten die komplette Liste der Manager. Jedes Manager-Ergebnis hätte einen Member, der auf die Liste der Mitarbeiter verwiesen hat, die für den jeweiligen Vorgesetzten eine Entsprechung aufweisen.  
   
- The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Die aus einem `Group Join` Vorgang resultierende Auflistung kann eine beliebige Kombination von Werten aus der in der `From`-Klausel identifizierten Auflistung und die in der `Into`-Klausel der `Group Join`-Klausel identifizierten Ausdrücke enthalten. Weitere Informationen zu gültigen Ausdrücken für die `Into`-Klausel finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
+ Ein `Group Join` Vorgang gibt alle Ergebnisse aus der Auflistung zurück, die auf der linken Seite des `Group Join` Operators identifiziert werden. Dies gilt auch, wenn in der Auflistung keine Übereinstimmungen vorhanden sind. Dies ist wie eine `LEFT OUTER JOIN` in SQL.  
   
- You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
+ Sie können die `Join`-Klausel verwenden, um Auflistungen in einer einzelnen Auflistung zu kombinieren. Dies entspricht einer `INNER JOIN` in SQL.  
   
 ## <a name="example"></a>Beispiel  
- The following code example joins two collections by using the `Group Join` clause.  
+ Im folgenden Codebeispiel werden zwei Auflistungen mithilfe der `Group Join`-Klausel miteinander verbunden.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   

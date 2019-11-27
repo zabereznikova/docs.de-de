@@ -1,5 +1,5 @@
 ---
-title: How to query the contents of files in a folder (LINQ)
+title: Abfragen des Inhalts von Dateien in einem Ordner (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
 ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
@@ -9,9 +9,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347612"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>How to query the contents of files in a folder (LINQ) (Visual Basic)
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Abfragen des Inhalts von Dateien in einem Ordner (LINQ) (Visual Basic)
 
-Dieses Beispiel zeigt, wie Sie die Abfrage über alle Dateien in einer angegebenen Verzeichnisstruktur durchführen, jede Datei öffnen, und ihre Inhalte überprüfen. Diese Technik kann zum Erstellen von Indizes oder umgekehrten Indizes des Inhalts einer Verzeichnisstruktur verwendet werden. In diesem Beispiel wird eine einfache Zeichenfolgensuche ausgeführt. Komplexere Formen des Mustervergleichs können jedoch mit einem regulären Ausdruck ausgeführt werden. For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).  
+Dieses Beispiel zeigt, wie Sie die Abfrage über alle Dateien in einer angegebenen Verzeichnisstruktur durchführen, jede Datei öffnen, und ihre Inhalte überprüfen. Diese Technik kann zum Erstellen von Indizes oder umgekehrten Indizes des Inhalts einer Verzeichnisstruktur verwendet werden. In diesem Beispiel wird eine einfache Zeichenfolgensuche ausgeführt. Komplexere Formen des Mustervergleichs können jedoch mit einem regulären Ausdruck ausgeführt werden. Weitere Informationen finden Sie unter Gewusst [wie: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -75,7 +75,7 @@ End Module
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net, kopieren Sie das Codebeispiel, fügen Sie es ein, und passen Sie den Wert des Start Objekts in den Projekteigenschaften an.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348355"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Gewusst wie: Verwenden von Anmerkungen zum Transformieren von LINQ to XML Bäumen in einem XSLT-Format (Visual Basic)
 
 Sie können Anmerkungen verwenden, um das Transformieren von XML-Strukturen zu ermöglichen.
 
@@ -19,7 +19,7 @@ Einige XML-Dokumente sind "dokumentorientiert mit gemischtem Inhalt". Bei solche
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-Pro vorhandenem Textknoten kann eine unbegrenzte Anzahl untergeordneter `<b>`-Elemente und `<i>`-Elemente vorhanden sein. This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. Zellen in einer Tabelle können Text, Dropdownlisten oder Bitmaps enthalten. Eine der wichtigsten Eigenschaften von dokumentorientiertem XML besteht darin, dass Sie nicht wissen, welche untergeordneten Elemente ein bestimmtes Element besitzen wird.
+Pro vorhandenem Textknoten kann eine unbegrenzte Anzahl untergeordneter `<b>`-Elemente und `<i>`-Elemente vorhanden sein. Diese Vorgehensweise wird auf eine Reihe anderer Situationen ausgedehnt: z. b. Seiten, die eine Vielzahl untergeordneter Elemente enthalten können, z. b. reguläre Absätze, Absätze mit aufgelistete Absätze und Bitmaps. Zellen in einer Tabelle können Text, Dropdownlisten oder Bitmaps enthalten. Eine der wichtigsten Eigenschaften von dokumentorientiertem XML besteht darin, dass Sie nicht wissen, welche untergeordneten Elemente ein bestimmtes Element besitzen wird.
 
 Wenn Sie Elemente in einer Struktur transformieren möchten und nicht wirklich viel über die untergeordneten Elemente der Elemente wissen, die transformiert werden sollen, bietet sich die Verwendung von Anmerkungen als effektiver Ansatz an.
 
@@ -43,7 +43,7 @@ Genauer gesagt setzt sich der Ansatz aus folgenden Schritten zusammen:
 
 ## <a name="transforming-a-tree"></a>Transformieren einer Struktur
 
-This first example renames all `Paragraph` nodes to `para`:
+In diesem ersten Beispiel werden alle `Paragraph` Knoten in `para`umbenannt:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>A more complicated transform
+## <a name="a-more-complicated-transform"></a>Eine kompliziertere Transformation
 
 Das folgende Beispiel fragt die Struktur ab, berechnet den Durchschnitt und die Summe der `Data`-Elemente und fügt diese als neue Elemente zur Struktur hinzu.
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>Effecting the transform
+## <a name="effecting-the-transform"></a>Bewirken der Transformation
 
 Eine kleine Funktion, `XForm`, erstellt aus der ursprünglichen, mit Anmerkungen versehenen Struktur eine neue transformierte Struktur.
 
 Der Pseudocode für die Funktion ist recht einfach:
 
-> The function takes an XElement as an argument and returns an XElement.
+> Die Funktion nimmt ein XElement als Argument an und gibt ein XElement zurück.
 >
-> If an element has an XElement annotation, then return a new XElement:
+> Wenn ein Element über eine XElement-Anmerkung verfügt, geben Sie ein neues XElement zurück:
 >
-> - The name of the new XElement is the annotation element's name.
-> - All attributes are copied from the annotation to the new node.
-> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - Der Name des neuen XElement-Elements ist der Name des Anmerkung-Elements.
+> - Alle Attribute werden aus der Anmerkung in den neuen Knoten kopiert.
+> - Alle untergeordneten Knoten werden aus der-Anmerkung kopiert, mit der Ausnahme, dass der besondere Knoten XF: applytransformationen erkannt wird und die untergeordneten Knoten des Quell Elements durchlaufen werden. Wenn der untergeordnete Quellknoten kein XElement ist, wird er in die neue Struktur kopiert. Wenn das untergeordnete Quell Element ein XElement ist, wird es transformiert, indem diese Funktion rekursiv aufgerufen wird.
 >
-> If an element is not annotated:
+> Wenn ein Element nicht mit Anmerkungen versehen ist:
 >
-> - Return a new XElement
->   - The name of the new XElement is the source element's name.
->   - All attributes are copied from the source element to the destination's element.
->   - All child nodes are copied from the source element.
->   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - Zurückgeben eines neuen XElement
+>   - Der Name des neuen XElement-Elements ist der Name des Quell Elements.
+>   - Alle Attribute werden aus dem Quell Element in das-Element des Ziels kopiert.
+>   - Alle untergeordneten Knoten werden aus dem Quell Element kopiert.
+>   - Wenn der untergeordnete Quellknoten kein XElement ist, wird er in die neue Struktur kopiert. Wenn das untergeordnete Quell Element ein XElement ist, wird es transformiert, indem diese Funktion rekursiv aufgerufen wird.
 
-The following code is the implementation of this function:
+Der folgende Code ist die Implementierung dieser Funktion:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -376,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345149"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um eine Blockierung zu vermeiden (Visual Basic)
-There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
+Es gibt mehrere Situationen, in denen es wichtig ist, dass ein Ereignishandler nachfolgende Ereignishandler nicht blockiert. Benutzerdefinierte Ereignisse ermöglichen es dem Ereignis, seine Ereignishandler asynchron aufzurufen.  
   
- By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
+ Standardmäßig handelt es sich bei dem Feld für den Sicherungs Speicher einer Ereignis Deklaration um einen Multicast Delegat, der alle Ereignishandler serialisiert. Dies bedeutet, dass, wenn ein Handler lange Zeit benötigt, die anderen Handler blockiert werden, bis der Vorgang abgeschlossen ist. (Wohl verhaltene Ereignishandler sollten niemals lange oder potenziell blockierende Vorgänge ausführen.)  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
+ Anstatt die Standard Implementierung von Ereignissen zu verwenden, die Visual Basic bereitstellt, können Sie ein benutzerdefiniertes Ereignis verwenden, um die Ereignishandler asynchron auszuführen.  
   
 ## <a name="example"></a>Beispiel  
- In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
+ In diesem Beispiel fügt der `AddHandler` Accessor den Delegaten für jeden Handler des `Click` Ereignisses einem <xref:System.Collections.ArrayList> hinzu, der im `EventHandlerList` Feld gespeichert ist.  
   
- When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
+ Wenn Code das `Click`-Ereignis auslöst, ruft der `RaiseEvent`-Accessor alle Ereignishandlerdelegaten mithilfe der <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>-Methode asynchron auf. Diese Methode ruft jeden Handler auf einem Arbeits Thread auf und gibt sofort zurück, sodass Handler einander nicht blockieren können.  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   

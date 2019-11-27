@@ -23,7 +23,7 @@ ms.locfileid: "74331109"
 ---
 # <a name="-operator-visual-basic"></a>^-Operator (Visual Basic)
 
-Raises a number to the power of another number.
+Potenziert eine Zahl mit einer anderen Zahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,58 +31,58 @@ Raises a number to the power of another number.
 number ^ exponent
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 `number`\
-Erforderlich. Ein beliebiger numerischer Ausdruck.
+Erforderlich Ein beliebiger numerischer Ausdruck.
 
 `exponent`\
-Erforderlich. Ein beliebiger numerischer Ausdruck.
+Erforderlich Ein beliebiger numerischer Ausdruck.
 
 ## <a name="result"></a>Ergebnis
 
-The result is `number` raised to the power of `exponent`, always as a `Double` value.
+Das Ergebnis wird `number` der Leistungsfähigkeit von `exponent`, immer als `Double` Wert ausgelöst.
 
 ## <a name="supported-types"></a>Unterstützte Typen
 
-`Double` Operands of any different type are converted to `Double`.
+`Double`. Operanden eines beliebigen Typs werden in `Double`konvertiert.
 
 ## <a name="remarks"></a>Hinweise
 
-Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).
+Visual Basic führt immer eine exponentiell im [Double-Datentyp](../../../visual-basic/language-reference/data-types/double-data-type.md)aus.
 
-The value of `exponent` can be fractional, negative, or both.
+Der Wert von `exponent` kann eine Bruch Zahl, eine negative oder beides sein.
 
-When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.
+Wenn mehr als eine exponentiell in einem einzelnen Ausdruck ausgeführt wird, wird der `^`-Operator ausgewertet, da er von links nach rechts gefunden wird.
 
 > [!NOTE]
-> The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+> Der `^`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Beispiel
 
-The following example uses the `^` operator to raise a number to the power of an exponent. The result is the first operand raised to the power of the second.
+Im folgenden Beispiel wird der `^`-Operator verwendet, um eine Zahl zur Potenz eines Exponenten zu erhöhen. Das Ergebnis ist der erste Operand, der für die zweite Potenz ausgelöst wird.
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-The preceding example produces the following results:
+Das vorangehende Beispiel erzeugt die folgenden Ergebnisse:
 
-`exp1` is set to 4 (2 squared).
+`exp1` ist auf 4 (2 Quadrat) festgelegt.
 
-`exp2` is set to 19683 (3 cubed, then that value cubed).
+`exp2` ist auf 19683 (3 Cub, dann auf diesen Wert) festgelegt.
 
-`exp3` is set to -125 (-5 cubed).
+`exp3` ist auf-125 (-5-CUB) festgelegt.
 
-`exp4` is set to 625 (-5 to the fourth power).
+`exp4` ist auf 625 (-5 bis zum vierten Strom) festgelegt.
 
-`exp5` is set to 2 (cube root of 8).
+`exp5` ist auf 2 (Cube-Stamm von 8) festgelegt.
 
-`exp6` is set to 0.5 (1.0 divided by the cube root of 8).
+`exp6` ist auf 0,5 (1,0 dividiert durch den Cube-Stamm von 8) festgelegt.
 
-Note the importance of the parentheses in the expressions in the preceding example. Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator. If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:
+Beachten Sie die Wichtigkeit der Klammern in den Ausdrücken im vorherigen Beispiel. Aufgrund der *Operator Rangfolge*führt Visual Basic normalerweise den `^` Operator vor allen anderen, auch dem unären `–` Operator. Wenn `exp4` und `exp6` ohne Klammern berechnet wurden, haben Sie die folgenden Ergebnisse erzeugt:
 
-`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.
+`exp4 = -5 ^ 4` wird als – (5 bis zum vierten Strom) berechnet, was zu-625 führen würde.
 
-`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.
+`exp6 = 8 ^ -1.0 / 3.0` wird als (8 bis – 1 Potenz oder 0,125) dividiert durch 3,0 berechnet, was zu 0.041666666666666666666666666666667 führen würde.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -90,4 +90,4 @@ Note the importance of the parentheses in the expressions in the preceding examp
 - [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

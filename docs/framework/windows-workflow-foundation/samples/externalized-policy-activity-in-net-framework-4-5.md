@@ -17,9 +17,9 @@ Dieses Beispiel veranschaulicht, wie die ExternalizedPolicy4-Aktivität die Ausf
 
 |Projektname|Beschreibung|Hauptdateien|
 |-|-|-|
-|ExternalizedPolicy4|Enthält die ExternalizedPolicy4-Aktivität und ihren WF 4.5-Designer.|**ExternalizedPolicy4.cs**: Aktivitäts Definition.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Benutzerdefinierter Designer für die ExternalizedPolicy4-Aktivität. Er verwendet den Regeleditor (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) der WF 3.5-Regel-Engine.|
-|ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalizedPolicy4-Anwendung mit obligatorischem C#-Code konfiguriert und ausführt (kein Designer verwendet).|**ApplyDiscount.rules**: Datei mit [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der eine Kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **Program.cs**: Konfiguriert und führt einen Workflow aus, der über eine Policy4-Aktivität verfügt, mit der in ApplyDiscount.rules definierte Regeln auf Instanzen von Order-Objekten angewendet werden.<br /><br /> App.config: Die Konfigurationsdatei mit dem Pfad der Regeldatei.|
-|DesignerClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalPolicy4-Anwendung im [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer konfiguriert und ausführt.|**Sequence1.xaml**: Sequenzieller Workflow, der eine Policy4-Aktivität verwendet, um Regelauswertungen durchzuführen.<br /><br /> **Program.cs**: Führt eine Instanz des in Sequence1.xaml definierten Workflows aus.|
+|ExternalizedPolicy4|Enthält die ExternalizedPolicy4-Aktivität und ihren WF 4.5-Designer.|**ExternalizedPolicy4.cs**: Aktivitäts Definition.<br /><br /> **ExternalizedPolicy4Designer. XAML**: benutzerdefinierter Designer für die ExternalizedPolicy4-Aktivität. Er verwendet den Regeleditor (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) der WF 3.5-Regel-Engine.|
+|ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalizedPolicy4-Anwendung mit obligatorischem C#-Code konfiguriert und ausführt (kein Designer verwendet).|**ApplyDiscount. Rules**: Datei mit [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der eine Kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **Program.cs**: konfiguriert und führt einen Workflow aus, der über eine Policy4-Aktivität verfügt, um in ApplyDiscount. Rules definierte Regeln auf Instanzen von Order-Objekten anzuwenden.<br /><br /> App.config: Die Konfigurationsdatei mit dem Pfad der Regeldatei.|
+|DesignerClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalPolicy4-Anwendung im [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer konfiguriert und ausführt.|**Sequence1. XAML**: ein sequenzieller Workflow, der eine Policy4-Aktivität verwendet, um Regel Auswertungen auszuführen.<br /><br /> **Program.cs**: führt eine Instanz des Workflows aus, der in Sequence1. XAML definiert ist.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>Die ExternalizedPolicy4-Aktivität
 
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|Die Eigenschaften-|Beschreibung|
+|Eigenschaft|Beschreibung|
 |-|-|
 |RuleSetFilePath|Pfad zur .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> Datei, die beim Ausführen der Aktivität ausgewertet werden soll.|
 |RuleSetName|Name des <xref:System.Workflow.Activities.Rules.RuleSet>, der in der RULES-Datei verwendet werden soll.|
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4-Aktivitätsdesigner
 
-Mit dem ExternalizedPolicy4-Designer können Sie eine Aktivität zur Verwendung eines vorhandenen RuleSet konfigurieren, ohne dass Sie Code schreiben müssen. Geben Sie den Pfad an, in dem sich die RULES-Datei befindet, und legen Sie den zu verwendenden <xref:System.Workflow.Activities.Rules.RuleSet>-Namen fest. Sie können außerdem das <xref:System.Workflow.Activities.Rules.RuleSet> ändern. Nach dem Erstellen der Projektmappe befindet sich dies im Abschnitt Microsoft.Samples.Activities.Rules. Mit dem Designer können Sie eine RULES-Datei und ein <xref:System.Workflow.Activities.Rules.RuleSet> auswählen. Beim Klicken auf die Schaltfläche **Regelsatz bearbeiten** wird das <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> von WF 3.5 angezeigt. Dieses Dialogfeld ist der neu gehostete WF 3.5-Regeleditor. Es wird verwendet, um die von der ExternalizedPolicy4-Aktivität ausgeführten Regeln anzuzeigen und zu bearbeiten.
+Mit dem ExternalizedPolicy4-Designer können Sie eine Aktivität zur Verwendung eines vorhandenen RuleSet konfigurieren, ohne dass Sie Code schreiben müssen. Geben Sie den Pfad an, in dem sich die RULES-Datei befindet, und legen Sie den zu verwendenden <xref:System.Workflow.Activities.Rules.RuleSet>-Namen fest. Sie können außerdem das <xref:System.Workflow.Activities.Rules.RuleSet> ändern. Nach dem Erstellen der Projektmappe befindet sich dies im Abschnitt Microsoft.Samples.Activities.Rules. Mit dem Designer können Sie eine RULES-Datei und ein <xref:System.Workflow.Activities.Rules.RuleSet> auswählen. Wenn auf die Schaltfläche **Regelsatz bearbeiten** geklickt wird, wird der <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> WF 3,5 angezeigt. Dieses Dialogfeld ist der neu gehostete WF 3.5-Regeleditor. Es wird verwendet, um die von der ExternalizedPolicy4-Aktivität ausgeführten Regeln anzuzeigen und zu bearbeiten.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 und ExternalPolicy4
 
@@ -68,7 +68,7 @@ Dieses Beispiel umfasst zwei Clientanwendungen: ImperativeCodeClientSample und D
 
 1. Öffnen Sie die Projektmappendatei *Policy4sample. sln* mithilfe von Visual Studio.
 
-2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **ImperativeCodeClientSample**, und wählen Sie **Als Startprojekt festlegen**.
+2. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt **ImperativeCodeClientSample** , und wählen Sie dann **als Startprojekt festlegen**aus.
 
 3. Drücken Sie **STRG**+**F5**, um das Projekt auszuführen.
 
@@ -76,7 +76,7 @@ Dieses Beispiel umfasst zwei Clientanwendungen: ImperativeCodeClientSample und D
 
 1. Öffnen Sie die Projektmappendatei *Policy4sample. sln* mithilfe von Visual Studio.
 
-2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **DesignerClientSample**, und wählen Sie **Als Startprojekt festlegen**.
+2. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt **DesignerClientSample** , und wählen Sie dann **als Startprojekt festlegen**aus.
 
 3. Drücken Sie **STRG**+**UMSCHALT**+**B** , um das Projekt zu kompilieren.
 

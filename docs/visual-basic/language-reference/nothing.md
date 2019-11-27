@@ -15,48 +15,48 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344164"
 ---
-# <a name="nothing-keyword-visual-basic"></a>Nothing keyword (Visual Basic)
+# <a name="nothing-keyword-visual-basic"></a>Nothing-Schlüsselwort (Visual Basic)
 
-Represents the default value of any data type. For reference types, the default value is the `null` reference. For value types, the default value depends on whether the value type is nullable.
+Stellt den Standardwert eines beliebigen Datentyps dar. Der Standardwert für Verweis Typen ist der `null` Verweis. Für Werttypen hängt der Standardwert davon ab, ob der Werttyp NULL-Werte zulässt.
 
 > [!NOTE]
-> For non-nullable value types, `Nothing` in Visual Basic differs from `null` in C#. In Visual Basic, if you set a variable of a non-nullable value type to `Nothing`, the variable is set to the default value for its declared type. In C#, if you assign a variable of a non-nullable value type to `null`, a compile-time error occurs.
+> Bei nicht auf NULL festleg baren Werttypen unterscheiden sich `Nothing` in C#Visual Basic von `null` in. Wenn Sie in Visual Basic eine Variable eines Werttyps, der keine NULL-Werte zulässt, auf `Nothing`festlegen, wird die Variable auf den Standardwert für den deklarierten Typ festgelegt. Wenn C#Sie in eine Variable eines Werttyps, der keine NULL-Werte zulässt, `null`zuweisen, tritt ein Kompilierzeitfehler auf.
 
 ## <a name="remarks"></a>Hinweise
 
-`Nothing` represents the default value of a data type. The default value depends on whether the variable is of a value type or of a reference type.
+`Nothing` stellt den Standardwert eines-Datentyps dar. Der Standardwert hängt davon ab, ob es sich bei der Variablen um einen Werttyp oder einen Verweistyp handelt.
 
-A variable of a *value type* directly contains its value. Value types include all numeric data types, `Boolean`, `Char`, `Date`, all structures, and all enumerations. A variable of a *reference type* stores a reference to an instance of the object in memory. Reference types include classes, arrays, delegates, and strings. Weitere Informationen finden Sie unter [Value Types and Reference Types](../programming-guide/language-features/data-types/value-types-and-reference-types.md).
+Eine Variable eines *Werttyps* enthält direkt den zugehörigen Wert. Werttypen umfassen alle numerischen Datentypen, `Boolean``Char`, `Date`, alle Strukturen und alle Enumerationen. Eine Variable eines *Verweis Typs* speichert einen Verweis auf eine Instanz des Objekts im Arbeitsspeicher. Verweis Typen umfassen Klassen, Arrays, Delegaten und Zeichen folgen. Weitere Informationen finden Sie unter [Value Types and Reference Types](../programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-If a variable is of a value type, the behavior of `Nothing` depends on whether the variable is of a nullable data type. To represent a nullable value type, add a `?` modifier to the type name. Assigning `Nothing` to a nullable variable sets the value to `null`. For more information and examples, see [Nullable Value Types](../programming-guide/language-features/data-types/nullable-value-types.md).
+Wenn eine Variable einen Werttyp hat, ist das Verhalten von `Nothing` davon abhängig, ob die Variable einen Datentyp hat, der NULL-Werte zulässt. Um einen Werttyp anzugeben, der NULL-Werte zulässt, fügen Sie dem Typnamen einen `?` Modifizierer hinzu. Durch das Zuweisen von `Nothing` zu einer Variablen, die NULL-Werte zulässt, wird der Wert `null` Weitere Informationen und Beispiele finden Sie unter [Nullable-Werttypen](../programming-guide/language-features/data-types/nullable-value-types.md).
 
-If a variable is of a value type that is not nullable, assigning `Nothing` to it sets it to the default value for its declared type. If that type contains variable members, they are all set to their default values. The following example illustrates this for scalar types.
+Wenn eine Variable einen Werttyp hat, der nicht auf NULL festgelegt werden kann, wird durch Zuweisen `Nothing` an den Standardwert für den deklarierten Typ festgelegt. Wenn dieser Typ Variablen Elemente enthält, werden Sie alle auf ihre Standardwerte festgelegt. Dies wird im folgenden Beispiel für skalare Typen veranschaulicht.
 
 [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]
 
-If a variable is of a reference type, assigning `Nothing` to the variable sets it to a `null` reference of the variable's type. A variable that is set to a `null` reference is not associated with any object. Dies wird im folgenden Beispiel veranschaulicht:
+Wenn eine Variable einen Verweistyp hat, wird Sie durch Zuweisen von `Nothing` der Variablen auf einen `null` Verweis auf den Typ der Variablen festgelegt. Eine Variable, die auf einen `null` Verweis festgelegt ist, ist keinem Objekt zugeordnet. Dies wird im folgenden Beispiel veranschaulicht:
 
 [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]
 
-When checking whether a reference (or nullable value type) variable is `null`, do not use `= Nothing` or `<> Nothing`. Always use `Is Nothing` or `IsNot Nothing`.
+Wenn Sie überprüfen, ob eine Variable vom Typ Verweis (oder Werte zulässt-Werttyp) `null`ist, verwenden Sie nicht `= Nothing` oder `<> Nothing`. Verwenden Sie immer `Is Nothing` oder `IsNot Nothing`.
 
-For strings in Visual Basic, the empty string equals `Nothing`. Therefore, `"" = Nothing` is true.
+Für Zeichen folgen in Visual Basic ist die leere Zeichenfolge `Nothing`. Daher ist `"" = Nothing` "true".
 
-The following example shows comparisons that use the `Is` and `IsNot` operators:
+Das folgende Beispiel zeigt Vergleiche, die die Operatoren `Is` und `IsNot` verwenden:
 
 [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]
 
-If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`. An example of this is `Dim something = Nothing`. A compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is off.
+Wenn Sie eine Variable deklarieren, ohne eine `As`-Klausel zu verwenden, und Sie auf `Nothing`festlegen, hat die Variable den Typ `Object`. Ein Beispiel hierfür ist `Dim something = Nothing`. In diesem Fall tritt ein Kompilierzeitfehler auf, wenn `Option Strict` auf on und `Option Infer` deaktiviert ist.
 
-When you assign `Nothing` to an object variable, it no longer refers to any object instance. If the variable had previously referred to an instance, setting it to `Nothing` does not terminate the instance itself. The instance is terminated, and the memory and system resources associated with it are released, only after the garbage collector (GC) detects that there are no active references remaining.
+Wenn Sie `Nothing` einer Objektvariablen zuweisen, bezieht sie sich nicht mehr auf eine Objektinstanz. Wenn die Variable zuvor auf eine Instanz verwiesen hat, wird die Instanz selbst nicht beendet, wenn Sie auf `Nothing` festgelegt wird. Die Instanz wird beendet, und die zugeordneten Arbeitsspeicher-und Systemressourcen werden erst freigegeben, nachdem die Garbage Collector (GC) erkannt hat, dass noch keine aktiven Verweise vorhanden sind.
 
-`Nothing` differs from the <xref:System.DBNull> object, which represents an uninitialized variant or a nonexistent database column.
+`Nothing` unterscheidet sich vom <xref:System.DBNull>-Objekt, das eine nicht initialisierte Variante oder eine nicht vorhandene Daten Bank Spalte darstellt.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Dim-Anweisung](./statements/dim-statement.md)
 - [Objektlebensdauer: Erstellen und Zerstören von Objekten](../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [Lifetime in Visual Basic](../programming-guide/language-features/declared-elements/lifetime.md)
+- [Lebensdauer in Visual Basic](../programming-guide/language-features/declared-elements/lifetime.md)
 - [Is-Operator](./operators/is-operator.md)
 - [IsNot-Operator](./operators/isnot-operator.md)
 - [Auf NULL festlegbare Werttypen](../programming-guide/language-features/data-types/nullable-value-types.md)

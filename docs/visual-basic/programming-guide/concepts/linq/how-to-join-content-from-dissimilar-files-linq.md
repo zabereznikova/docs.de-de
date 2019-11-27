@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344554"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Vorgehensweise: Verknüpfen von Inhalten aus unterschiedlichen Dateien (LINQ) (Visual Basic)
 
 In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden. Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten. Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.
 
@@ -122,5 +122,5 @@ End Class
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ und Zeichen folgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

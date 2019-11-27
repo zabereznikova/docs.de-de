@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345456"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>How to: Write Object Data to an XML File (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)
 Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.  
   
 ## <a name="example"></a>Beispiel  
@@ -40,7 +40,7 @@ End Module
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
+## <a name="robust-programming"></a>Robuste Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 - Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
@@ -51,7 +51,7 @@ End Module
   
 - Der Datenträger ist voll (<xref:System.IO.IOException>).  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).  
   
 ## <a name="see-also"></a>Siehe auch

@@ -19,25 +19,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346037"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Gewusst wie: Verwenden einer Klasse, die Operatoren definiert (Visual Basic)
-If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
+Wenn Sie eine Klasse oder Struktur verwenden, die eigene Operatoren definiert, können Sie von Visual Basic aus auf diese Operatoren zugreifen.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Die Definition eines Operators für eine Klasse oder Struktur wird auch als *überladen* des Operators bezeichnet.  
   
 ## <a name="example"></a>Beispiel  
- The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
+ Im folgenden Beispiel wird auf die SQL-Struktur <xref:System.Data.SqlTypes.SqlString>zugegriffen, die die Konvertierungs Operatoren ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) in beide Richtungen zwischen einer SQL-Zeichenfolge und einer Visual Basic Zeichenfolge definiert. Verwenden Sie `CType(`*SQL-Zeichen folgen Ausdruck*`String)`, um eine SQL-Zeichenfolge in eine Visual Basic Zeichenfolge zu konvertieren, und `CType(`*Visual Basic Zeichen folgen Ausdruck*<xref:System.Data.SqlTypes.SqlString>, um in die andere Richtung zu konvertieren.`)`  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
+ Die <xref:System.Data.SqlTypes.SqlString>-Struktur definiert einen Konvertierungs Operator ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) von `String` bis <xref:System.Data.SqlTypes.SqlString> und einen anderen von <xref:System.Data.SqlTypes.SqlString> zu `String`. Die-Anweisung, die `title` zuweist, `jobTitle` den ersten Operator verwendet, und der <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Funktions aufrufter verwendet den zweiten.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Stellen Sie sicher, dass die verwendete Klasse oder Struktur den Operator definiert, den Sie verwenden möchten. Gehen Sie nicht davon aus, dass die Klasse oder Struktur jeden Operator definiert hat, der für das überladen verfügbar ist. Eine Liste der verfügbaren Operatoren finden Sie unter [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
+ Fügen Sie die entsprechende `Imports`-Anweisung für die SQL-Zeichenfolge am Anfang der Quelldatei ein (in diesem Fall <xref:System.Data.SqlTypes>).  
   
- Your project must have references to System.Data and System.XML.  
+ Das Projekt muss Verweise auf "System. Data" und "System. xml" aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch
 

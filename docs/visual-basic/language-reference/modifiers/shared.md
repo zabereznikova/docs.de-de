@@ -1,5 +1,5 @@
 ---
-title: Shared
+title: freigegebene
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -19,36 +19,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349120"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.  
+Gibt an, dass mindestens ein deklariertes Programmier Element einer Klasse oder Struktur sehr groß zugeordnet ist, nicht mit einer bestimmten Instanz der Klasse oder Struktur.  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="when-to-use-shared"></a>When to Use Shared  
- Sharing a member of a class or structure makes it available to every instance, rather than *nonshared*, where each instance keeps its own copy. This is useful, for example, if the value of a variable applies to the entire application. If you declare that variable to be `Shared`, then all instances access the same storage location, and if one instance changes the variable's value, all instances access the updated value.  
+## <a name="when-to-use-shared"></a>Verwendungszwecke von Shared  
+ Wenn Sie ein Member einer Klasse oder Struktur freigeben, ist es für jede Instanz verfügbar und nicht für die *nicht freigegebene*Instanz, wobei jede Instanz eine eigene Kopie beibehält. Dies ist beispielsweise hilfreich, wenn der Wert einer Variablen für die gesamte Anwendung gilt. Wenn Sie diese Variable als `Shared`deklarieren, greifen alle Instanzen auf denselben Speicherort zu, und wenn eine Instanz den Wert der Variablen ändert, greifen alle Instanzen auf den aktualisierten Wert zu.  
   
- Sharing does not alter the access level of a member. For example, a class member can be shared and private (accessible only from within the class), or nonshared and public. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Durch die Freigabe wird die Zugriffsebene eines Members nicht geändert. Beispielsweise kann ein Klassenmember freigegeben und privat (nur innerhalb der Klasse zugänglich) oder nicht freigegeben und öffentlich sein. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regeln  
   
-- **Declaration Context.** Sie können `Shared` nur auf Modulebene verwenden. This means the declaration context for a `Shared` element must be a class or structure, and cannot be a source file, namespace, or procedure.  
+- **Deklarations Kontext.** Sie können `Shared` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarations Kontext für ein `Shared` Element eine Klasse oder Struktur sein muss und weder eine Quelldatei, ein Namespace noch eine Prozedur sein darf.  
   
-- **Combined Modifiers.** You cannot specify `Shared` together with [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), or [Static](../../../visual-basic/language-reference/modifiers/static.md) in the same declaration.  
+- **Kombinierte modifiziererer.** Sie können `Shared` nicht zusammen mit [über](../../../visual-basic/language-reference/modifiers/overrides.md)schreibungen, [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)oder [static](../../../visual-basic/language-reference/modifiers/static.md) in derselben Deklaration angeben.  
   
-- **Accessing.** You access a shared element by qualifying it with its class or structure name, not with the variable name of a specific instance of its class or structure. You do not even have to create an instance of a class or structure to access its shared members.  
+- **Den.** Sie greifen auf ein frei gegebenes Element zu, indem Sie es mit seinem Klassen-oder Struktur Namen qualifizieren, nicht mit dem Variablennamen einer bestimmten Instanz der Klasse oder Struktur. Sie müssen nicht einmal eine Instanz einer Klasse oder Struktur erstellen, um auf die freigegebenen Member zuzugreifen.  
   
-     The following example calls the shared procedure <xref:System.Double.IsNaN%2A> exposed by the <xref:System.Double> structure.  
+     Im folgenden Beispiel wird die freigegebene Prozedur aufgerufen <xref:System.Double.IsNaN%2A> die von der <xref:System.Double>-Struktur verfügbar gemacht wird.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
-- **Implicit Sharing.** You cannot use the `Shared` modifier in a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md), but constants are implicitly shared. Similarly, you cannot declare a member of a module or an interface to be `Shared`, but they are implicitly shared.  
+- **Implizite Freigabe.** Sie können den `Shared` Modifizierer nicht in einer Konstanten [Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)verwenden, aber Konstanten werden implizit freigegeben. Entsprechend können Sie keinen Member eines Moduls oder einer Schnittstelle deklarieren, um `Shared`zu werden, aber Sie sind implizit freigegeben.  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Storage.** A shared variable or event is stored in memory only once, no matter how many or few instances you create of its class or structure. Similarly, a shared procedure or property holds only one set of local variables.  
+- **Speicher.** Eine freigegebene Variable oder ein frei gegebenes Ereignis wird im Arbeitsspeicher nur einmal gespeichert, unabhängig davon, wie viele oder wenige Instanzen Sie von der Klasse oder Struktur erstellen. Entsprechend enthält eine freigegebene Prozedur oder Eigenschaft nur einen Satz von lokalen Variablen.  
   
-- **Accessing through an Instance Variable.** It is possible to access a shared element by qualifying it with the name of a variable that contains a specific instance of its class or structure. Although this usually works as expected, the compiler generates a warning message and makes the access through the class or structure name instead of the variable.  
+- **Zugreifen über eine Instanzvariable.** Sie können auf ein frei gegebenes Element zugreifen, indem Sie es mit dem Namen einer Variablen qualifizieren, die eine bestimmte Instanz der Klasse oder Struktur enthält. Obwohl dies in der Regel erwartungsgemäß funktioniert, generiert der Compiler eine Warnmeldung und ermöglicht den Zugriff über den Klassen-oder Struktur Namen anstelle der Variablen.  
   
-- **Accessing through an Instance Expression.** If you access a shared element through an expression that returns an instance of its class or structure, the compiler makes the access through the class or structure name instead of evaluating the expression. This produces unexpected results if you intended the expression to perform other actions as well as returning the instance. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+- **Zugreifen über einen Instanzausdruck.** Wenn Sie über einen Ausdruck, der eine Instanz der Klasse oder Struktur zurückgibt, auf ein frei gegebenes Element zugreifen, übernimmt der Compiler den Zugriff über den Klassen-oder Struktur Namen, anstatt den Ausdruck auszuwerten. Dies führt zu unerwarteten Ergebnissen, wenn Sie den Ausdruck zum Ausführen anderer Aktionen und zum Zurückgeben der Instanz vorgesehen haben. Das folgende Beispiel veranschaulicht dies.  
   
     ```vb
     Sub main()  
@@ -76,7 +76,7 @@ Specifies that one or more declared programming elements are associated with a c
     End Class  
     ```  
   
-     In the preceding example, the compiler generates a warning message both times the code accesses the shared variable `total` through an instance. In each case it makes the access directly through the class `shareTotal` and does not make use of any instance. In the case of the intended call to the procedure `returnClass`, this means it does not even generate a call to `returnClass`, so the additional action of displaying "Function returnClass() called" is not performed.  
+     Im vorherigen Beispiel generiert der Compiler eine Warnmeldung, wenn der Code auf die freigegebene Variable `total` über eine-Instanz zugreift. In jedem Fall wird der Zugriff direkt über die-Klasse `shareTotal`, und es werden keine-Instanzen verwendet. Im Fall des beabsichtigten Aufrufs der Prozedur `returnClass`bedeutet dies, dass nicht einmal ein Aufruf an `returnClass`generiert wird, sodass die zusätzliche Aktion zum Anzeigen von "Function returnClass ()" nicht ausgeführt wird.  
   
  Der `Shared`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
@@ -86,7 +86,7 @@ Specifies that one or more declared programming elements are associated with a c
   
  [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -96,7 +96,7 @@ Specifies that one or more declared programming elements are associated with a c
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Lebensdauer in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

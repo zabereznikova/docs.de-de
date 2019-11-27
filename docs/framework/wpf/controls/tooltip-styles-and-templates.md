@@ -27,7 +27,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Closed|OpenStates|Der Standardzustand|  
+|Geschlossen|OpenStates|Der Standardstatus.|  
 |Öffnen|OpenStates|Der <xref:System.Windows.Controls.ToolTip> ist sichtbar.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
 |InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  

@@ -17,11 +17,11 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Aktion|Sprachelement|  
 |------------|----------------------|  
 |Überprüfen eines Arrays|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
-|Deklarieren und Initialisieren eines Arrays|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|Deklarieren und Initialisieren eines Arrays|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
 |Suchen der Arraygrenzen|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
-|Neuinitialisieren eines Arrays|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|Neuinitialisieren eines Arrays|[Löschen](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

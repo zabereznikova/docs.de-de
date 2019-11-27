@@ -15,24 +15,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348214"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast-Operator (Visual Basic)
-Introduces a type conversion operation that does not throw an exception.  
+Führt einen Typkonvertierungs Vorgang ein, der keine Ausnahme auslöst.  
   
 ## <a name="remarks"></a>Hinweise  
- If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
+ Wenn eine Konvertierungs Versuch fehlschlägt, lösen `CType` und `DirectCast` beide einen <xref:System.InvalidCastException> Fehler aus. Dies kann sich negativ auf die Leistung Ihrer Anwendung auswirken. `TryCast` gibt [nichts](../../../visual-basic/language-reference/nothing.md)zurück, sodass anstelle einer möglichen Ausnahme nur das zurückgegebene Ergebnis mit `Nothing`getestet werden muss.  
   
- You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
+ Sie verwenden das `TryCast`-Schlüsselwort auf die gleiche Weise wie die [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md) und das [DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) Schlüsselwort. Sie geben einen Ausdruck als erstes Argument und einen Typ an, in den es als zweites Argument konvertiert werden soll. `TryCast` funktioniert nur für Verweis Typen, z. b. Klassen und Schnittstellen. Es ist eine Vererbungs-oder Implementierungs Beziehung zwischen den beiden Typen erforderlich. Dies bedeutet, dass ein Typ von einem Typ erben oder ihn implementieren muss.  
   
-## <a name="errors-and-failures"></a>Errors and Failures  
- `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
+## <a name="errors-and-failures"></a>Fehler und Fehler  
+ `TryCast` generiert einen Compilerfehler, wenn erkannt wird, dass keine Vererbungs-oder Implementierungs Beziehung vorhanden ist. Das Fehlen eines Compilerfehlers garantiert jedoch nicht die erfolgreiche Konvertierung. Wenn die gewünschte Konvertierung einschränkend ist, kann Sie zur Laufzeit fehlschlagen. Wenn dies geschieht, gibt `TryCast` [nichts](../../../visual-basic/language-reference/nothing.md)zurück.  
   
 ## <a name="conversion-keywords"></a>Konvertierungsschlüsselwörter  
- A comparison of the type conversion keywords is as follows.  
+ Ein Vergleich der Schlüsselwörter für die Typkonvertierung lautet wie folgt.  
   
-|Stichwort|Datentypen|Argument relationship|Run-time failure|  
+|Schlüsselwort|Datentypen|Argument Beziehung|Laufzeitfehler|  
 |---|---|---|---|  
-|[CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
-|[DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
-|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)|Beliebige Datentypen|Zwischen den beiden Datentypen muss eine erweiternde oder einschränkende Konvertierung definiert werden.|Löst <xref:System.InvalidCastException>|  
+|[DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)|Beliebige Datentypen|Ein Typ muss von einem anderen Typ erben oder ihn implementieren.|Löst <xref:System.InvalidCastException>|  
+|`TryCast`|Nur Verweis Typen|Ein Typ muss von einem anderen Typ erben oder ihn implementieren.|Gibt [nichts](../../../visual-basic/language-reference/nothing.md) zurück.|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `TryCast`.  

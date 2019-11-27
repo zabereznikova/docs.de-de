@@ -1,5 +1,5 @@
 ---
-title: 'How to: Join Two Collections (LINQ to XML)'
+title: 'Vorgehensweise: Verknüpfen von zwei Auflistungen (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 404a43f52fce141b515da389090c81c57186f2e2
@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344534"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>How to: Join Two Collections (LINQ to XML) (Visual Basic)
+# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Vorgehensweise: Verknüpfen von zwei Auflistungen (LINQ to XML) (Visual Basic)
 Ein Element oder Attribut in einem XML-Dokument kann mitunter auf ein anderes Element oder Attribut verweisen. So enthält das XML-Dokument in [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) z.B. eine Liste von Kunden und eine Liste von Aufträgen. Jedes `Customer`-Element enthält ein `CustomerID`-Attribut. Jedes `Order`-Element enthält ein `CustomerID`-Element. Das `CustomerID`-Element eines Auftrags verweist auf das `CustomerID`-Attribut eines Kunden.  
   
  Das Thema [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) enthält ein XSD-Schema, das zum Validieren dieses Dokuments verwendet werden kann. Mit den Funktionen `xs:key` und `xs:keyref` des XSD-Schemas wird geprüft, ob das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist. Außerdem wird damit eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element hergestellt.  
@@ -18,7 +18,7 @@ Ein Element oder Attribut in einem XML-Dokument kann mitunter auf ein anderes El
   
  Da es keinen Index gibt, führt eine solche Verknüpfung zu einer schlechten Laufzeitleistung.  
   
- For more detailed information about `Join`, see [Join Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ Ausführlichere Informationen zu `Join`finden Sie unter [Join-Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel verknüpft die `Customer`-Elemente mit den `Order`-Elementen und generiert ein neues XML-Dokument, das das `CompanyName`-Element der Aufträge enthält.  
@@ -29,7 +29,7 @@ Ein Element oder Attribut in einem XML-Dokument kann mitunter auf ein anderes El
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- In diesem Beispiel wird das folgende XML-Schema verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ In diesem Beispiel wird das folgende XSD-Schema verwendet: [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
  Beachten Sie, dass diese Art von Verknüpfungen zu Leistungseinbußen führt. Joins (Verknüpfungen) werden über eine lineare Suche ausgeführt. Es gibt keine Hashtabellen oder Indizes, die die Geschwindigkeit erhöhen könnten.  
   
@@ -137,4 +137,4 @@ Attempting to validate, custOrdDoc validated
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Erweiterte Abfrage Techniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

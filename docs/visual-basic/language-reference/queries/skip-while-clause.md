@@ -24,21 +24,21 @@ ms.locfileid: "74333147"
 Skip While expression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`expression`|Erforderlich. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Erforderlich Ein Ausdruck, der eine Bedingung darstellt, für die Elemente getestet werden sollen. Der Ausdruck muss einen `Boolean` Wert oder eine funktionale Entsprechung zurückgeben, z. b. eine `Integer`, die als `Boolean`ausgewertet werden soll.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
+ Die `Skip While`-Klausel umgeht Elemente vom Anfang eines Abfrage Ergebnisses, bis die angegebene `expression` `false`zurückgibt. Nachdem `expression` `false`zurückgegeben hat, gibt die Abfrage alle verbleibenden Elemente zurück. Der `expression` wird für die restlichen Ergebnisse ignoriert.  
   
- The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
+ Die `Skip While`-Klausel unterscheidet sich von der `Where`-Klausel darin, dass die `Where`-Klausel verwendet werden kann, um alle Elemente aus einer Abfrage auszuschließen, die eine bestimmte Bedingung nicht erfüllen. Die `Skip While`-Klausel schließt Elemente nur dann aus, wenn die Bedingung zum ersten Mal nicht erfüllt wird. Die `Skip While`-Klausel ist besonders nützlich, wenn Sie mit einem geordneten Abfrageergebnis arbeiten.  
   
- You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
+ Sie können eine bestimmte Anzahl von Ergebnissen ab dem Anfang eines Abfrage Ergebnisses umgehen, indem Sie die `Skip`-Klausel verwenden.  
   
 ## <a name="example"></a>Beispiel  
- The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
+ Im folgenden Codebeispiel wird die `Skip While`-Klausel verwendet, um die Ergebnisse zu umgehen, bis der erste Kunde aus der USA gefunden wurde.  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   

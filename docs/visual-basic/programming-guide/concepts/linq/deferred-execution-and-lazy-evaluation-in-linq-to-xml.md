@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346406"
 ---
-# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)
+# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Verzögerte Ausführung und verzögerte Auswertung in LINQ to XML (Visual Basic)
 Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzögerte Ausführung (Deferred Execution) verwenden. In diesem Thema werden die Voraussetzungen und die Vorteile der verzögerten Ausführung erläutert und einige Überlegungen zur Implementierung angestellt.  
   
 ## <a name="deferred-execution"></a>Verzögerte Ausführung  
@@ -29,10 +29,10 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
 ## <a name="next-steps"></a>Nächste Schritte  
  Die verzögerte Ausführung ist Gegenstand des nächsten Themas dieses Lernprogramms:  
   
-- [Deferred Execution Example (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Beispiel für eine verzögerte Ausführung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
-- [Concepts and Terminology (Functional Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Aggregation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Tutorial: verzögerte Ausführung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Konzepte und Terminologie (funktionale Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
+- [Aggregations Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

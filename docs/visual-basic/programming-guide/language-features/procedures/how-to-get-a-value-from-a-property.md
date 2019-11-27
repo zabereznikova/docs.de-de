@@ -16,27 +16,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74339832"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Gewusst wie: Abrufen eines Werts aus einer Eigenschaft (Visual Basic)
-You retrieve a property's value by including the property name in an expression.  
+Sie rufen den Wert einer Eigenschaft ab, indem Sie den Eigenschaftsnamen in einen Ausdruck einschließen.  
   
- The property's `Get` procedure retrieves the value, but you do not explicitly call it by name. You use the property just as you would use a variable. Visual Basic makes the calls to the property's procedures.  
+ Die `Get` Prozedur der Eigenschaft ruft den Wert ab, aber Sie rufen ihn nicht explizit anhand des Namens auf. Sie verwenden die-Eigenschaft wie eine Variable. Visual Basic führt die Aufrufe der Prozeduren der Eigenschaft aus.  
   
-### <a name="to-retrieve-a-value-from-a-property"></a>To retrieve a value from a property  
+### <a name="to-retrieve-a-value-from-a-property"></a>So rufen Sie einen Wert aus einer Eigenschaft ab  
   
-1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
+1. Verwenden Sie den Eigenschaftsnamen in einem Ausdruck auf die gleiche Weise wie einen Variablennamen. Sie können eine Eigenschaft überall dort verwenden, wo Sie eine Variable oder eine Konstante verwenden können.  
   
-     - oder -  
+     \- oder -  
   
-     Use the property name following the equal (`=`) sign in an assignment statement.  
+     Verwenden Sie den Eigenschaftsnamen nach dem Gleichheitszeichen (`=`) in einer Zuweisungsanweisung.  
   
-     The following example reads the value of the Visual Basic `Now` property, implicitly calling its `Get` procedure.  
+     Im folgenden Beispiel wird der Wert der Visual Basic `Now`-Eigenschaft gelesen, wobei die `Get` Prozedur implizit aufgerufen wird.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. Wenn die Eigenschaft Argumente annimmt, befolgen Sie den Eigenschaftsnamen mit Klammern, um die Argumentliste einzuschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern, getrennt durch Kommas. Stellen Sie sicher, dass Sie die Argumente in derselben Reihenfolge bereitstellen, in der die-Eigenschaft die entsprechenden Parameter definiert.  
   
- The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
+ Der Wert der Eigenschaft nimmt an dem Ausdruck genau so ein, wie eine Variable oder Konstante, oder er wird in der Variablen oder der Eigenschaft auf der linken Seite der Zuweisungsanweisung gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,9 +44,9 @@ You retrieve a property's value by including the property name in an expression.
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)
 - [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)
 - [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Vorgehensweise: Deklarieren und Abrufen einer Standard Eigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)

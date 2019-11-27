@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332388"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>How to: Validate Using XSD (LINQ to XML) (Visual Basic)
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Vorgehensweise: Überprüfen mithilfe von XSD (LINQ to XML) (Visual Basic)
 Der <xref:System.Xml.Schema>-Namespace enthält Erweiterungsmethoden, die ein einfaches Validieren von XML-Strukturen anhand von XSD-Dateien ermöglichen. Weitere Informationen finden Sie in der Dokumentation zur <xref:System.Xml.Schema.Extensions.Validate%2A>-Methode.  
   
 ## <a name="example"></a>Beispiel  
@@ -81,7 +81,7 @@ doc2 did not validate
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- In diesem Beispiel wird das folgende XML-Schema verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ In diesem Beispiel wird das folgende XSD-Schema verwendet: [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -125,4 +125,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347630"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>How to: Read and Write an Encoded Document (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (Visual Basic)
 
 Fügen Sie zum Erstellen eines codierten XML-Dokuments der XML-Struktur eine <xref:System.Xml.Linq.XDeclaration> hinzu, die die Codierung auf den gewünschten Codeseitennamen festlegt.
 
@@ -81,4 +81,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

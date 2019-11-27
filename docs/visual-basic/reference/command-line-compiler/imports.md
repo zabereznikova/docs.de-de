@@ -13,8 +13,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332968"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+# <a name="-imports-visual-basic"></a>-Importe (Visual Basic)
+Importiert Namespaces aus einer angegebenen Assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,19 +26,19 @@ Imports namespaces from a specified assembly.
   
 |Begriff|Definition|  
 |---|---|  
-|`namespaceList`|Erforderlich. Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|Erforderlich Durch Trennzeichen getrennte Liste der zu importierenden Namespaces.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+ Mit der Option `-imports` werden alle Namespaces importiert, die innerhalb des aktuellen Satzes von Quelldateien oder einer beliebigen referenzierten Assembly definiert sind.  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ Die Elemente in einem Namespace, der mit `-imports` angegeben wird, sind für alle Quell Code Dateien in der Kompilierung verfügbar. Verwenden Sie die [Imports-Anweisung (.NET-Namespace und-Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , um einen Namespace in einer einzelnen Quell Code Datei zu verwenden.  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|So legen Sie/Imports in der integrierten Entwicklungsumgebung von Visual Studio fest|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2. Klicken Sie auf die Registerkarte **Verweise** .<br />3. Geben Sie den Namespace Namen in das Feld neben der Schaltfläche **Benutzer Import hinzufügen** ein.<br />4. Klicken Sie auf die Schaltfläche **Benutzer Import hinzufügen** .|  
   
 ## <a name="example"></a>Beispiel  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Der folgende Code wird kompiliert, wenn `/imports:system.globalization` angegeben wird. Ohne diesen Vorgang erfordert die erfolgreiche Kompilierung, dass eine `Imports System.Globalization`-Anweisung am Anfang der Quell Code Datei enthalten ist, oder dass die Eigenschaft voll qualifiziert als `System.Globalization.CultureInfo.CurrentCulture.Name`ist.
 
 ```vb
 Module Example

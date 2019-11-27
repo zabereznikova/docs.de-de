@@ -30,32 +30,32 @@ ms.locfileid: "74347429"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
 
-When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor. Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor. In such cases, you should consider breaking the single long statement into several lines.
+Wenn Sie Ihren Code schreiben, können Sie häufig lange Anweisungen erstellen, die den horizontalen Bildlauf im Code-Editor erfordern. Dies wirkt sich nicht auf die Art und Weise aus, in der der Code ausgeführt wird. es ist jedoch schwierig, den Code so zu lesen, wie er auf dem Monitor angezeigt wird. In solchen Fällen sollten Sie die Unterbrechung der einzelnen langen Anweisung in mehrere Zeilen in Erwägung gezogen.
 
-## <a name="to-break-a-single-statement-into-multiple-lines"></a>To break a single statement into multiple lines
+## <a name="to-break-a-single-statement-into-multiple-lines"></a>So brechen Sie eine einzelne Anweisung in mehrere Zeilen um
 
-Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break. The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.
+Verwenden Sie das Zeilen Fortsetzungs Zeichen, bei dem es sich um einen Unterstrich (`_`) handelt, an dem Punkt, an dem Sie die Linie unterbrechen möchten. Dem Unterstrich muss ein Leerzeichen unmittelbar vorangestellt sein, und es muss unmittelbar ein Zeichen für den Zeilen Abschluss (Wagen Rücklauf) oder (beginnend mit Version 16,0) ein Kommentar gefolgt von einem Wagen Rücklauf eingefügt werden.
 
   > [!NOTE]
-  > In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code. For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../../../visual-basic/programming-guide/language-features/statements.md).
+  > Wenn Sie das Zeilen Fortsetzungs Zeichen weglassen, wird der Visual Basic-Compiler in einigen Fällen implizit die Anweisung in der nächsten Codezeile fortsetzen. Eine Liste der Syntax Elemente, für die Sie das Zeilen Fortsetzungs Zeichen weglassen können, finden Sie unter "implizite Zeilen Fortsetzung" in- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md).
 
-  In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.
+  Im folgenden Beispiel wird die-Anweisung in vier Zeilen aufgeteilt, wobei Zeilen Fortsetzungs Zeichen alle außer der letzten Zeile beenden.
 
   [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
 
-  Using this sequence makes your code easier to read, both online and when printed.
+  Wenn Sie diese Sequenz verwenden, wird der Code leichter lesbar, sowohl online als auch gedruckt.
 
-  The line-continuation character must be the last character on a line. You can't follow it with anything else on the same line.
+  Das Zeilen Fortsetzungs Zeichen muss das letzte Zeichen in einer Zeile sein. Sie können das Element nicht in derselben Zeile verfolgen.
 
-  Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name. You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.
+  Es gibt einige Einschränkungen, bei denen Sie das Zeilen Fortsetzungs Zeichen verwenden können. Sie können Sie z. b. nicht in der Mitte eines Argument namens verwenden. Sie können eine Argumentliste mit dem Zeilen Fortsetzungs Zeichen unterbrechen, aber die einzelnen Namen der Argumente müssen unverändert bleiben.
 
-  You can't continue a comment by using a line-continuation character. The compiler doesn't examine the characters in a comment for special meaning. For a multiple-line comment, repeat the comment symbol (`'`) on each line.
+  Sie können einen Kommentar nicht fortsetzen, indem Sie ein Zeilen Fortsetzungs Zeichen verwenden. Der Compiler untersucht die Zeichen in einem Kommentar nicht auf eine besondere Bedeutung. Wenn Sie einen mehrzeiligen Kommentar haben, wiederholen Sie das Kommentar Symbol (`'`) in jeder Zeile.
 
- Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.
+ Obwohl das platzieren jeder Anweisung in einer separaten Zeile die empfohlene Methode ist, können Visual Basic auch mehrere-Anweisungen in derselben Zeile platzieren.
 
-## <a name="to-place-multiple-statements-on-the-same-line"></a>To place multiple statements on the same line
+## <a name="to-place-multiple-statements-on-the-same-line"></a>So platzieren Sie mehrere Anweisungen in derselben Zeile
 
-Separate the statements with a colon (`:`), as in the following example:
+Trennen Sie die-Anweisungen mit einem Doppelpunkt (`:`), wie im folgenden Beispiel gezeigt:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 

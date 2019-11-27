@@ -1,5 +1,5 @@
 ---
-title: 'How to: Call an Event Handler'
+title: 'Gewusst wie: aufzurufen eines Ereignis Handlers'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,41 +17,41 @@ ms.locfileid: "74340427"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic
 
-An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond. An *event handler* is the code you write to respond to an event.
+Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. b. ein Mausklick oder ein Guthaben Limit überschritten –, das von einer Programm Komponente erkannt wird, und für das Sie Code schreiben können, um Antworten zu können. Ein *Ereignishandler* ist der Code, den Sie schreiben, um auf ein Ereignis zu reagieren.
 
- An event handler in Visual Basic is a `Sub` procedure. However, you do not normally call it the same way as other `Sub` procedures. Instead, you identify the procedure as a handler for the event. You can do this either with a [Handles](../../../language-reference/statements/handles-clause.md) clause and a [WithEvents](../../../language-reference/modifiers/withevents.md) variable, or with an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md). Using a `Handles` clause is the default way to declare an event handler in Visual Basic. This is the way the event handlers are written by the designers when you program in the integrated development environment (IDE). The `AddHandler` statement is suitable for raising events dynamically at run time.
+ Ein Ereignishandler in Visual Basic ist eine `Sub` Prozedur. Dies wird jedoch in der Regel nicht auf dieselbe Weise aufgerufen wie andere `Sub` Prozeduren. Stattdessen identifizieren Sie die Prozedur als Handler für das-Ereignis. Hierzu können Sie entweder eine [Handles](../../../language-reference/statements/handles-clause.md) -Klausel und eine [widervents](../../../language-reference/modifiers/withevents.md) -Variable oder eine [AddHandler-Anweisung](../../../language-reference/statements/addhandler-statement.md)verwenden. Die Verwendung einer `Handles`-Klausel ist die Standardmethode zum Deklarieren eines Ereignis Handlers in Visual Basic. Dies ist die Methode, mit der die Ereignishandler von den Designern geschrieben werden, wenn Sie in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) programmieren. Die `AddHandler`-Anweisung eignet sich zum dynamischen Ereignisse zur Laufzeit.
 
- When the event occurs, Visual Basic automatically calls the event handler procedure. Any code that has access to the event can cause it to occur by executing a [RaiseEvent Statement](../../../language-reference/statements/raiseevent-statement.md).
+ Wenn das Ereignis auftritt, ruft Visual Basic automatisch die Ereignishandlerprozedur auf. Jeder Code, der Zugriff auf das Ereignis hat, kann dazu führen, dass er durch Ausführen einer [RaiseEvent-Anweisung](../../../language-reference/statements/raiseevent-statement.md)ausgelöst wird.
 
- You can associate more than one event handler with the same event. In some cases you can dissociate a handler from an event. Weitere Informationen finden Sie unter [Ereignisse](../events/index.md).
+ Sie können dem gleichen Ereignis mehr als einen Ereignishandler zuordnen. In einigen Fällen können Sie einen Handler von einem Ereignis trennen. Weitere Informationen finden Sie unter [Ereignisse](../events/index.md).
 
-### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>To call an event handler using Handles and WithEvents
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>So wenden Sie einen Ereignishandler mithilfe von Handles und wiwitvents an
 
-1. Make sure the event is declared with an [Event Statement](../../../language-reference/statements/event-statement.md).
+1. Stellen Sie sicher, dass das Ereignis mit einer [Ereignis Anweisung](../../../language-reference/statements/event-statement.md)deklariert ist.
 
-2. Declare an object variable at module or class level, using the [WithEvents](../../../language-reference/modifiers/withevents.md) keyword. The `As` clause for this variable must specify the class that raises the event.
+2. Deklarieren Sie eine Objekt Variable auf Modul-oder Klassenebene mithilfe des [widervents](../../../language-reference/modifiers/withevents.md) -Schlüssel Worts. Die `As`-Klausel für diese Variable muss die Klasse angeben, die das Ereignis auslöst.
 
-3. In the declaration of the event-handling `Sub` procedure, add a [Handles](../../../language-reference/statements/handles-clause.md) clause that specifies the `WithEvents` variable and the event name.
+3. Fügen Sie in der Deklaration des `Sub` Prozedur für die Ereignis Behandlung eine [Handles](../../../language-reference/statements/handles-clause.md) -Klausel hinzu, die die `WithEvents` Variable und den Ereignis Namen angibt.
 
-4. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
+4. Wenn das Ereignis auftritt, ruft Visual Basic automatisch die `Sub` Prozedur auf. Der Code kann eine `RaiseEvent`-Anweisung verwenden, damit das Ereignis auftritt.
 
-     The following example defines an event and a `WithEvents` variable that refers to the class that raises the event. The event-handling `Sub` procedure uses a `Handles` clause to specify the class and event it handles.
+     Im folgenden Beispiel werden ein Ereignis und eine `WithEvents` Variable definiert, die auf die Klasse verweist, die das-Ereignis auslöst. Bei der Ereignis Behandlung `Sub` Prozedur wird eine `Handles`-Klausel verwendet, um die Klasse und das Ereignis anzugeben, die Sie behandelt.
 
      [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]
 
-### <a name="to-call-an-event-handler-using-addhandler"></a>To call an event handler using AddHandler
+### <a name="to-call-an-event-handler-using-addhandler"></a>So greifen Sie einen Ereignishandler mithilfe von AddHandler an
 
-1. Make sure the event is declared with an `Event` statement.
+1. Stellen Sie sicher, dass das Ereignis mit einer `Event`-Anweisung deklariert wird.
 
-2. Execute an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to dynamically connect the event-handling `Sub` procedure with the event.
+2. Führen Sie eine [AddHandler-Anweisung](../../../language-reference/statements/addhandler-statement.md) aus, um die Ereignis Behandlung `Sub` Prozedur dynamisch mit dem-Ereignis zu verbinden.
 
-3. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
+3. Wenn das Ereignis auftritt, ruft Visual Basic automatisch die `Sub` Prozedur auf. Der Code kann eine `RaiseEvent`-Anweisung verwenden, damit das Ereignis auftritt.
 
-     The following example defines a `Sub` procedure to handle the <xref:System.Windows.Forms.Form.Closing> event of a form. It then uses the [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to associate the `catchClose` procedure as an event handler for <xref:System.Windows.Forms.Form.Closing>.
+     Im folgenden Beispiel wird eine `Sub` Prozedur zum Behandeln des <xref:System.Windows.Forms.Form.Closing> Ereignisses eines Formulars definiert. Anschließend wird die `catchClose` Prozedur mithilfe der [AddHandler-Anweisung](../../../language-reference/statements/addhandler-statement.md) als Ereignishandler für <xref:System.Windows.Forms.Form.Closing>verknüpft.
 
      [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]
 
-     You can dissociate an event handler from an event by executing the [RemoveHandler Statement](../../../language-reference/statements/removehandler-statement.md).
+     Sie können einen Ereignishandler von einem Ereignis trennen, indem Sie die [RemoveHandler-Anweisung](../../../language-reference/statements/removehandler-statement.md)ausführen.
 
 ## <a name="see-also"></a>Siehe auch
 

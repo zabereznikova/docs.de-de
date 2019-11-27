@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335381"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct-Klausel (Visual Basic)
-Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
+Schränkt die Werte der aktuellen Bereichs Variablen ein, um doppelte Werte in nachfolgenden Abfrage Klauseln auszuschließen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -25,10 +25,10 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
+ Mit der `Distinct`-Klausel können Sie eine Liste eindeutiger Elemente zurückgeben. Die `Distinct`-Klausel bewirkt, dass die Abfrage doppelte Abfrageergebnisse ignoriert. Die `Distinct`-Klausel gilt für doppelte Werte für alle Rückgabe Felder, die durch die `Select`-Klausel angegeben werden. Wenn keine `Select`-Klausel angegeben wird, wird die `Distinct`-Klausel auf die Bereichs Variable der in der `From`-Klausel identifizierten Abfrage angewendet. Wenn es sich bei der Bereichs Variablen nicht um einen unveränderlichen Typ handelt, wird von der Abfrage nur ein Abfrageergebnis ignoriert, wenn alle Member des Typs mit einem vorhandenen Abfrageergebnis zu vergleichen sind.  
   
 ## <a name="example"></a>Beispiel  
- The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
+ Der folgende Abfrage Ausdruck verbindet eine Liste von Kunden und eine Liste mit Kundenaufträgen. Die `Distinct`-Klausel ist enthalten, um eine Liste der eindeutigen Kundennamen und Bestelldaten zurückzugeben.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   

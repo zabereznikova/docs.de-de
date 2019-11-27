@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346185"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML-Literale und die XML 1.0-Spezifikation (Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+Die XML-Literalsyntax in Visual Basic unterstützt den größten Teil der Extensible Markup Language (XML) 1,0-Spezifikation. Ausführliche Informationen zur XML 1,0-Spezifikation finden Sie auf der W3C-Website [Extensible Markup Language (XML) 1,0](https://www.w3.org/TR/xml) .  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>Was Visual Basic nicht unterstützt  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- Ein XML-Literale darf keine DTD (Document Type Definition) enthalten.  
   
-- An XML document literal must start with an XML document declaration.  
+- Ein XML-Dokumentliteral muss mit einer XML-Dokument Deklaration beginnen.  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- Ein XML-Literale darf nicht mehr als 65.535 Zeichen in einer Zeile enthalten.  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- XML-Namespace Präfixe, Elementnamen und Attributnamen dürfen nicht mehr als 1.024 Zeichen enthalten.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Zusätzliche Funktionen, die Visual Basic unterstützt  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- Die in Dokument-und Element literalen zulässige eingebettete Ausdruckssyntax ist kein gültiges XML.  
   
 ## <a name="see-also"></a>Siehe auch
 

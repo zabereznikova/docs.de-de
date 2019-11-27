@@ -36,7 +36,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="treeviewitem-parts"></a>TreeViewItem-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.TreeViewItem>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das den Header Inhalt des <xref:System.Windows.Controls.TreeView> Steuer Elements enthält.|  
   
@@ -45,9 +45,9 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.TreeViewItem>.|  
-|Disabled|CommonStates|Der <xref:System.Windows.Controls.TreeViewItem> ist deaktiviert.|  
+|Deaktiviert|CommonStates|Der <xref:System.Windows.Controls.TreeViewItem> ist deaktiviert.|  
 |Mit Fokus|FocusStates|Der <xref:System.Windows.Controls.TreeViewItem> hat den Fokus.|  
 |Ohne Fokus|FocusStates|Der <xref:System.Windows.Controls.TreeViewItem> hat keinen Fokus.|  
 |Erweitert|Expansions Zustände|Das <xref:System.Windows.Controls.TreeViewItem> Steuerelement ist erweitert.|  

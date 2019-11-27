@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344638"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach neben geordneten Knoten (XPath-LINQ to XML) (Visual Basic)
 
 Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen. Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.
 
@@ -71,4 +71,4 @@ Results are identical
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML für XPath-Benutzer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

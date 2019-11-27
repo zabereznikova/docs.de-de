@@ -20,20 +20,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345861"
 ---
 # <a name="array-conversions-visual-basic"></a>Arraykonvertierungen (Visual Basic)
-You can convert an array type to a different array type provided you meet the following conditions:  
+Sie können einen Arraytyp in einen anderen Arraytyp konvertieren, wenn die folgenden Bedingungen erfüllt sind:  
   
-- **Equal Rank.** The ranks of the two arrays must be the same, that is, they must have the same number of dimensions. However, the lengths of the respective dimensions do not need to be the same.  
+- **Gleicher Rang.** Die Ränge der beiden Arrays müssen identisch sein, d. h., Sie müssen über die gleiche Anzahl von Dimensionen verfügen. Die Längen der jeweiligen Dimensionen müssen jedoch nicht identisch sein.  
   
-- **Element Data Type.** The data types of the elements of both arrays must be reference types. You cannot convert an `Integer` array to a `Long` array, or even to an `Object` array, because at least one value type is involved. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Der Element Datentyp.** Die Datentypen der Elemente beider Arrays müssen Verweis Typen sein. Sie können ein `Integer` Array nicht in ein `Long` Array oder sogar in ein `Object` Array konvertieren, da mindestens ein Werttyp beteiligt ist. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-- **Convertibility.** A conversion, either widening or narrowing, must be possible between the element types of the two arrays. An example that fails this requirement is an attempted conversion between a `String` array and an array of a class derived from <xref:System.Attribute?displayProperty=nameWithType>. These two types have nothing in common, and no conversion of any kind exists between them.  
+- **Konvertierbarkeit.** Eine Konvertierung, die erweitert oder einschränkend ist, muss zwischen den Elementtypen der beiden Arrays möglich sein. Ein Beispiel, bei dem diese Anforderung nicht erfüllt wird, ist eine versuchte Konvertierung zwischen einem `String` Array und einem Array einer Klasse, die von <xref:System.Attribute?displayProperty=nameWithType>abgeleitet wurde. Diese beiden Typen haben nichts gemeinsam, und es besteht keine Konvertierung zwischen Ihnen.  
   
- A conversion of one array type to another is widening or narrowing depending on whether the conversion of the respective elements is widening or narrowing. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Eine Konvertierung von einem Arraytyp in einen anderen wird erweitert oder einschränkend, abhängig davon, ob die Konvertierung der entsprechenden Elemente zunimmt oder einschränkend ist. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="conversion-to-an-object-array"></a>Conversion to an Object Array  
- When you declare an `Object` array without initializing it, its element type is `Object` as long as it remains uninitialized. When you set it to an array of a specific class, it takes on the type of that class. However, its underlying type is still `Object`, and you can subsequently set it to another array of an unrelated class. Since all classes derive from `Object`, you can change the array's element type from any class to any other class.  
+## <a name="conversion-to-an-object-array"></a>Konvertieren in ein Objekt Array  
+ Wenn Sie ein `Object` Array deklarieren, ohne es zu initialisieren, wird der Elementtyp `Object`, solange es nicht initialisiert bleibt. Wenn Sie es auf ein Array einer bestimmten Klasse festlegen, wird der Typ dieser Klasse benötigt. Allerdings ist der zugrunde liegende Typ weiterhin `Object`, und Sie können ihn anschließend auf ein anderes Array einer nicht verknüpften Klasse festlegen. Da alle Klassen von `Object`abgeleitet werden, können Sie den Elementtyp des Arrays von einer beliebigen Klasse in eine beliebige andere Klasse ändern.  
   
- In the following example, no conversion exists between types `student` and `String`, but both derive from `Object`, so all assignments are valid.  
+ Im folgenden Beispiel ist keine Konvertierung zwischen Typen `student` und `String`vorhanden, beide werden jedoch von `Object`abgeleitet, sodass alle Zuweisungen gültig sind.  
   
 ```vb  
 ' Assume student has already been defined as a class.  
@@ -46,10 +46,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### <a name="underlying-type-of-an-array"></a>Underlying Type of an Array  
- If you originally declare an array with a specific class, its underlying element type is that class. If you subsequently set it to an array of another class, there must be a conversion between the two classes.  
+### <a name="underlying-type-of-an-array"></a>Zugrunde liegender Typ eines Arrays  
+ Wenn Sie ein Array ursprünglich mit einer bestimmten Klasse deklariert haben, ist der zugrunde liegende Elementtyp diese Klasse. Wenn Sie anschließend ein Array einer anderen Klasse festlegen, muss eine Konvertierung zwischen den beiden Klassen erfolgen.  
   
- In the following example, `students` is a `student` array. Since no conversion exists between `String` and `student`, the last statement fails.  
+ Im folgenden Beispiel ist `students` ein `student` Array. Da zwischen `String` und `student`keine Konvertierung vorhanden ist, schlägt die letzte Anweisung fehl.  
   
 ```vb  
 Dim students() As student  
@@ -62,10 +62,10 @@ students = names
 ## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Typkonvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
 - [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

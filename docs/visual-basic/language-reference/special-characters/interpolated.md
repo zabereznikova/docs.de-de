@@ -8,7 +8,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349587"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Visual Basic Referenz)
 
 Identifiziert einen Zeichenfolgenliteral als [interpolierte Zeichenfolge](../../programming-guide/language-features/strings/interpolated-strings.md). Eine interpolierte Zeichenfolge ist eine Zeichenfolge ähnlich einer Vorlage, die Literaltext zusammen mit *interpolierten Ausdrücken* enthält. Wenn die interpolierte Zeichenfolge aufgelöst wird, beispielsweise in einer Zuweisungsanweisung oder einem Methodenaufruf, werden seine interpolierten Ausdrücke durch deren Zeichenfolgenrepräsentationen in der Ergebniszeichenfolge ersetzt. Interpolierte Zeichenfolgen ersetzen vom .NET Framework unterstützte [zusammengesetzte Formatzeichenfolgen](../../../standard/base-types/composite-formatting.md).
 
@@ -21,4 +21,4 @@ Weitere Informationen zu interpolierten Zeichenfolgen finden Sie unter [Interpol
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Referenz](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [Visual Basic Sonderzeichen](index.md)

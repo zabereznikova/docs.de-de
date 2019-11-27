@@ -38,7 +38,7 @@ Sie erhalten das aktuelle Datum und die aktuelle Uhrzeit aus der <xref:Microsoft
 
 Sie müssen einen `Date`-Literal zwischen Nummernzeichen (`# #`) einschließen. Sie müssen den Datumswert im Format M/T/JJJJ angeben, z. B. `#5/31/1993#`, oder JJJJ-MM-TT, z. B. `#1993-5-31#`. Wenn Sie das Jahr zuerst angeben, können Sie Schrägstriche verwenden.  Dies gilt unabhängig vom Gebietsschema und den Formateinstellungen für Datum und Uhrzeit Ihres Computers.
 
-Der Grund für diese Einschränkung ist, dass sich die Bedeutung des Codes nicht je nach dem Gebietsschema, in dem die Anwendung ausgeführt wird, ändern soll. Angenommen, Sie möchten ein `Date`-Literal von `#3/4/1998#` als vordefinierten Code aufnehmen und die Bedeutung 4. März 1998 festlegen. In einem Gebietsschema, das MM/TT/JJJJ verwendet, wird 3/4/1998 wie gewünscht kompiliert. But suppose you deploy your application in many countries/regions. In einem Gebietsschema, das TT/MM/JJJJ verwendet, würde das als vordefinierter Code aufgenommene Literal als 3. April 1998 kompiliert. In einem Gebietsschema, das JJJJ/MM/TT verwendet, wäre das Literal ungültig (1998. April 0003) und würde einen Compilerfehler verursachen.
+Der Grund für diese Einschränkung ist, dass sich die Bedeutung des Codes nicht je nach dem Gebietsschema, in dem die Anwendung ausgeführt wird, ändern soll. Angenommen, Sie möchten ein `Date`-Literal von `#3/4/1998#` als vordefinierten Code aufnehmen und die Bedeutung 4. März 1998 festlegen. In einem Gebietsschema, das MM/TT/JJJJ verwendet, wird 3/4/1998 wie gewünscht kompiliert. Angenommen, Sie stellen die Anwendung in vielen Ländern/Regionen bereit. In einem Gebietsschema, das TT/MM/JJJJ verwendet, würde das als vordefinierter Code aufgenommene Literal als 3. April 1998 kompiliert. In einem Gebietsschema, das JJJJ/MM/TT verwendet, wäre das Literal ungültig (1998. April 0003) und würde einen Compilerfehler verursachen.
 
 ## <a name="workarounds"></a>Problemumgehung
 
@@ -68,15 +68,15 @@ Beim Konvertieren eines `Date`-Werts in den `String`-Typ, gibt Visual Basic das
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Interop Considerations.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden (z. B. Automatisierungs- oder COM-Objekte), müssen Sie beachten, dass Datums-/Uhrzeittypen in anderen Umgebungen nicht zum `Date`-Typ von Visual Basic kompatibel sind. Wenn Sie ein Datums-/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
+- **Interop-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden (z. B. Automatisierungs- oder COM-Objekte), müssen Sie beachten, dass Datums-/Uhrzeittypen in anderen Umgebungen nicht zum `Date`-Typ von Visual Basic kompatibel sind. Wenn Sie ein Datums-/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
 
-- **Type Characters.** `Date` has no literal type character or identifier type character. Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.
+- **Geben Sie Zeichen ein.** `Date` hat kein Literaltyp Zeichen oder Bezeichnertyp Zeichen. Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.
 
-- **Framework Type.** Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=nameWithType>-Struktur.
+- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=nameWithType>-Struktur.
 
 ## <a name="example"></a>Beispiel
 
-Eine Variable oder Konstante des `Date`-Datentyps enthält das Datum und die Uhrzeit. Dies wird anhand des folgenden Beispiels veranschaulicht.
+Eine Variable oder Konstante des `Date`-Datentyps enthält das Datum und die Uhrzeit. Das folgende Beispiel veranschaulicht dies.
 
 ```vb
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
@@ -86,8 +86,8 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
-- [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../standard/base-types/standard-date-and-time-format-strings.md)
-- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
 - [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347604"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Vorgehensweise: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (Visual Basic)
 
 Eine Datei mit kommagetrennten Werten (CSV) ist eine Textdatei, die häufig verwendet wird, um Tabellenkalkulationsdaten oder andere Tabellendaten zu speichern, die durch Zeilen und Spalten dargestellt werden. Mithilfe der Methode <xref:System.String.Split%2A> zum Trennen von Feldern ist es sehr einfach, CSV-Dateien mithilfe von LINQ abzufragen und zu bearbeiten. Tatsächlich kann das gleiche Verfahren verwendet werden, um die Teile von beliebigen strukturierten Textzeilen neu anzuordnen. Es ist nicht auf CSV-Dateien beschränkt.
 
@@ -77,6 +77,6 @@ End Class
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ und Zeichen folgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Gewusst wie: Generieren von XML aus CSV-Dateien](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

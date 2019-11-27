@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344477"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>How to: Populate an XML Tree from the File System (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Gewusst wie: Auffüllen einer XML-Struktur aus dem Datei System (Visual Basic)
 Eine häufige und sinnvolle Anwendung von XML-Strukturen besteht in deren Verwendung als hierarchischer Name/Wert-Datenspeicher. Sie können eine XML-Struktur mit hierarchischen Daten auffüllen und die Struktur dann abfragen, transformieren und bei Bedarf serialisieren. In diesem Verwendungsszenario ist ein großer Teil der XML-spezifischen Semantik, wie das Namespace- und Leerraumverhalten, ohne Bedeutung. Die XML-Struktur wird stattdessen als kleine hierarchische Datenbank für einen einzelnen Benutzer verwendet, die im Arbeitsspeicher gespeichert ist.  
   
 ## <a name="example"></a>Beispiel  
@@ -116,4 +116,4 @@ Total File Size:59089
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Erweiterte Abfrage Techniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

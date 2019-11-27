@@ -56,7 +56,7 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
 3. Das asynchrone IAsyncResult-Muster  
   
 #### <a name="task-based-asynchronous-pattern"></a>Taskbasiertes asynchrones Muster  
- Das aufgabenbasierte asynchrone Muster ist die bevorzugte Methode zum Implementieren asynchroner Vorgänge, weil es einfach und verständlich ist. Um diese Methode zu verwenden, implementieren Sie einfach den Dienstvorgang, und geben Sie den Rückgabetyp Task\<T> an, wobei T der Typ ist, der von der logischen Operation zurückgegeben wird. Zum Beispiel:  
+ Das aufgabenbasierte asynchrone Muster ist die bevorzugte Methode zum Implementieren asynchroner Vorgänge, weil es einfach und verständlich ist. Um diese Methode zu verwenden, implementieren Sie einfach den Dienstvorgang, und geben Sie den Rückgabetyp Task\<T> an, wobei T der Typ ist, der von der logischen Operation zurückgegeben wird. Beispiel:  
   
 ```csharp  
 public class SampleService:ISampleService   
