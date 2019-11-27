@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345070"
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+In den folgenden Themen werden die wesentlichen Komponenten von Visual Basic erläutert und erläutert. dabei handelt es sich um eine objektorientierte Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt Visual Basic eine Reihe allgemeiner Programmierungskonstrukte und Sprachelemente.  
   
- Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ Wenn Sie bereits in anderen Sprachen programmiert haben, wird Ihnen vieles in diesem Abschnitt bekannt vorkommen. Obwohl die meisten Konstrukte mit denen in anderen Sprachen vergleichbar sind, führt die ereignisgesteuerte Natur von Visual Basic zu geringfügigen Unterschieden.  
   
- Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Once you understand the basics, you can create powerful applications using Visual Basic.  
+ Wenn Sie noch keine Erfahrung mit dem Programmieren haben, erhalten Sie in diesem Abschnitt eine Einführung in die grundlegenden Bausteine für das Schreiben von Code. Nachdem Sie die Grundlagen verstanden haben, können Sie mit Visual Basic leistungsstarke Anwendungen erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -83,4 +83,4 @@ The following topics introduce and discuss the essential components of Visual Ba
  Dieser Artikel beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.  
   
  [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ Enthält Referenzinformationen zu verschiedenen Aspekten der Visual Basic Programmierung.

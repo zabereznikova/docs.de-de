@@ -25,11 +25,11 @@ Public Class TextFieldParser
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `TextFieldParser` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
   
- For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ Weitere Informationen finden Sie unter [Lesen aus Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.FileIO>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")

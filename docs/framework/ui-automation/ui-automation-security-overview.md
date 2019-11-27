@@ -17,21 +17,21 @@ ms.locfileid: "74448771"
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).
 
-This overview describes the security model for [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in Windows Vista.
+In dieser Übersicht wird das Sicherheitsmodell für [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in Windows Vista beschrieben.
 
 <a name="User_Account_Control"></a>
 
 ## <a name="user-account-control"></a>Benutzerkontensteuerung
 
-Security is a major focus of Windows Vista and among the innovations is the ability for users to run as standard (non-administrator) users without necessarily being blocked from running applications and services that require higher privileges.
+Sicherheit ist ein wichtiger Schwerpunkt von Windows Vista. zu den Neuerungen zählt die Möglichkeit für Benutzer, als Standardbenutzer (nicht Administrator) auszuführen, ohne dass die Ausführung von Anwendungen und Diensten, die höhere Berechtigungen erfordern, nicht unbedingt blockiert ist.
 
-In Windows Vista, most applications are supplied with either a standard or an administrative token. Wenn eine Anwendung nicht als Administratoranwendung identifiziert werden kann, wird sie standardmäßig als Standardanwendung gestartet. Before an application identified as administrative can be launched, Windows Vista prompts the user for consent to run the application as elevated. Die Aufforderung zur Zustimmung wird standardmäßig angezeigt, auch wenn der Benutzer ein Mitglied der lokalen Administratorgruppe ist, da auch Administratoren mit den Rechten von Standardbenutzern agieren, bis eine Anwendung oder Systemkomponente, für die Administratorberechtigungen erforderlich sind, die Ausführungserlaubnis anfordert.
+In Windows Vista werden die meisten Anwendungen entweder mit einem Standard-oder einem Administrator Token bereitgestellt. Wenn eine Anwendung nicht als Administratoranwendung identifiziert werden kann, wird sie standardmäßig als Standardanwendung gestartet. Bevor eine Anwendung, die als administrative Anwendung identifiziert wird, gestartet werden kann, fordert Windows Vista den Benutzer zur Zustimmung auf, die Anwendung mit erhöhten Rechten auszuführen. Die Aufforderung zur Zustimmung wird standardmäßig angezeigt, auch wenn der Benutzer ein Mitglied der lokalen Administratorgruppe ist, da auch Administratoren mit den Rechten von Standardbenutzern agieren, bis eine Anwendung oder Systemkomponente, für die Administratorberechtigungen erforderlich sind, die Ausführungserlaubnis anfordert.
 
 <a name="Tasks_Requiring_Higher_Privileges"></a>
 
 ## <a name="tasks-requiring-higher-privileges"></a>Aufgaben, für die erhöhte Rechte erforderlich sind
 
-When a user attempts to perform a task that requires administrative privileges, Windows Vista presents a dialog box asking the user for consent to continue. Dieses Dialogfeld ist gegen prozessübergreifenden Datenaustausch geschützt, sodass Schadsoftware keine Benutzereingaben simulieren kann. Analog dazu kann auch auf den Anmeldebildschirm auf dem Desktop nicht durch andere Prozesse zugegriffen werden.
+Wenn ein Benutzer versucht, eine Aufgabe auszuführen, für die Administrator Berechtigungen erforderlich sind, zeigt Windows Vista ein Dialogfeld an, in dem der Benutzer zum Fortfahren aufgefordert wird. Dieses Dialogfeld ist gegen prozessübergreifenden Datenaustausch geschützt, sodass Schadsoftware keine Benutzereingaben simulieren kann. Analog dazu kann auch auf den Anmeldebildschirm auf dem Desktop nicht durch andere Prozesse zugegriffen werden.
 
 Benutzeroberflächenautomatisierungs-Clients müssen mit anderen Prozessen kommunizieren, von denen einige möglicherweise mit erhöhten Rechten ausgeführt werden. Darüber hinaus benötigen Clients möglicherweise Zugriff auf die Systemdialogfelder, die für andere Prozesse normalerweise nicht sichtbar sind. Daher müssen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Clients aus Sicht des Systems als vertrauenswürdig eingestuft sein und mit besonderen Berechtigungen ausgeführt werden.
 
@@ -41,7 +41,7 @@ Damit sie für den Datenaustausch mit Anwendungen, die mit höheren Berechtigung
 
 ## <a name="manifest-files"></a>Manifestdateien
 
-To gain access to the protected system UI, applications must be built with a manifest file that includes the `uiAccess` attribute in the `requestedExecutionLevel` tag, as follows:
+Für den Zugriff auf die Benutzeroberfläche des geschützten Systems müssen Anwendungen wie folgt mit einer Manifest-Datei erstellt werden, die das `uiAccess`-Attribut im `requestedExecutionLevel`-Tag enthält:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +57,4 @@ To gain access to the protected system UI, applications must be built with a man
 
 Der Wert des `level` -Attributs in diesem Code stellt nur ein Beispiel dar.
 
-`uiAccess` is "false" by default; that is, if the attribute is omitted, or if there is no manifest for the assembly, the application will not be able to gain access to protected UI.
+`uiAccess` ist standardmäßig "false". Das heißt, wenn das Attribut ausgelassen wird oder kein Manifest für die Assembly vorhanden ist, kann die Anwendung keinen Zugriff auf die geschützte Benutzeroberfläche erhalten.

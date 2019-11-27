@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433883"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces-Methode
-Gets the children of this namespace.  
+Ruft die untergeordneten Elemente dieses Namespace ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parameter  
  `cNameSpaces`  
- [in] A `ULONG32` that indicates the size of the `namespaces` array.  
+ in Ein-`ULONG32`, der die Größe des `namespaces` Arrays angibt.  
   
  `pcNameSpaces`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Namespaces enthalten muss, in Zeichen empfängt.  
   
  `namespaces`  
- [out] A pointer to the buffer that contains the namespaces.  
+ vorgenommen Ein Zeiger auf den Puffer, der die Namespaces enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

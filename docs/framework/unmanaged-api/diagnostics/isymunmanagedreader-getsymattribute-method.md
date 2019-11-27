@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440140"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute-Methode
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
+Ruft ein benutzerdefiniertes Attribut basierend auf seinem Namen ab. Im Gegensatz zu benutzerdefinierten Metadaten-Attributen werden diese benutzerdefinierten Attribute im Symbol Speicher gespeichert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parameter  
  `parent`  
- [in] The metadata token for the object for which the attribute is requested.  
+ in Das Metadatentoken für das-Objekt, für das das Attribut angefordert wird.  
   
  `name`  
- [in] A pointer to the variable that indicates the attribute to retrieve.  
+ in Ein Zeiger auf die Variable, die das abzurufende Attribut angibt.  
   
  `cBuffer`  
  [in] Die Größe des `buffer`-Arrays.  
   
  `pcBuffer`  
- [out] A pointer to the variable that receives the length of the attribute data.  
+ vorgenommen Ein Zeiger auf die Variable, die die Länge der Attributdaten empfängt.  
   
  `buffer`  
- [out] A pointer to the variable that receives the attribute data.  
+ vorgenommen Ein Zeiger auf die Variable, die die Attributdaten empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

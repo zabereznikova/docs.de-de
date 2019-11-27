@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427960"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo-Methode
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+Gibt die erforderlichen Informationen zurück, damit ein Compiler den Debugverzeichniseintrag im PE-Dateiheader schreiben muss. Der Symbolwriter füllt alle Felder mit Ausnahme von `TimeDateStamp` und `PointerToRawData`aus. (Der Compiler ist dafür verantwortlich, diese beiden Felder entsprechend festzulegen.)  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ Ein Compiler sollte diese Methode abrufen, das Daten-BLOB an die PE-Datei ausgeben, das `PointerToRawData`-Feld im IMAGE_DEBUG_DIRECTORY so festlegen, dass es auf die ausgegebenen Daten verweist, und die IMAGE_DEBUG_DIRECTORY in die PE-Datei schreiben. Der Compiler sollte auch das `TimeDateStamp`-Feld so festlegen, dass es dem `TimeDateStamp` der generierten PE-Datei entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Parameter  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [in, out] Ein Zeiger auf einen IMAGE_DEBUG_DIRECTORY, den der Symbolwriter ausfüllen wird.  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ in Eine `DWORD`, die die Größe der Debugdaten enthält.  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ vorgenommen Ein Zeiger auf einen `DWORD`, der die Größe des Puffers empfängt, der zum enthalten der Debugdaten erforderlich ist.  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ vorgenommen Ein Zeiger auf einen Puffer, der groß genug ist, um die Debugdaten für den Symbol Speicher zu speichern.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

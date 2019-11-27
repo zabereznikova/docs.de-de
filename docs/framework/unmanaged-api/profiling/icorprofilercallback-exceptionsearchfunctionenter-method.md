@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445345"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter-Methode
-Notifies the profiler that the search phase of exception handling has begun searching a function to find a handler for the current exception.  
+Benachrichtigt den Profiler, dass die Such Phase der Ausnahmebehandlung begonnen hat, eine Funktion zu durchsuchen, um einen Handler für die aktuelle Ausnahme zu finden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,9 +34,9 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="parameters"></a>Parameter  
  `functionId`  
- [in] The ID of the function that has been entered.  
+ in Die ID der Funktion, die eingegeben wurde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

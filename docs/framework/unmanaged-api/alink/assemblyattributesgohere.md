@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHere Class (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHere-Klasse (System. Runtime. CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHere
@@ -22,7 +22,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446639"
 ---
-# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere Class
+# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere-Klasse
 
 Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.
 
@@ -38,9 +38,9 @@ Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Que
 
 Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die nicht sicherheitsrelevant sind und nicht mehrfach verwendet werden.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Diese Typen werden innerhalb des .NET Framework als "intern" gekennzeichnet und befinden sich im <xref:System.Runtime.CompilerServices>-Namespace.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 mscorlib.dll
 

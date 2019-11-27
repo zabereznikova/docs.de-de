@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446657"
 ---
 # <a name="addimport-method"></a>AddImport-Methode
-Adds imports to the assembly.  
+Fügt der Assembly Importe hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,22 +38,22 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Unique ID of assembly to be augmented.  
+ Eindeutige ID der Assembly, die erweitert werden soll.  
   
  `ImportToken`  
- Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
+ Die eindeutige ID, die von der [ImportFile-Methode](importfile-method.md)abgerufen wird, der zu importierenden Datei.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Com+-FileDef-Flags wie `ffContainsNoMetaData` und `ffWriteable`. `dwFlags` wird an die [DefineFile-Methode](../metadata/imetadataassemblyemit-definefile-method.md)übermittelt.  
   
  `pFileToken`  
- Pointer to token that receives the ID for the resulting file.  
+ Zeiger auf das Token, das die ID für die resultierende Datei empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 

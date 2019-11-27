@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449901"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining-Methode
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+Benachrichtigt den Profiler, dass der JIT-Compiler (Just-in-Time) eine Funktion in der Zeile mit einer anderen Funktion einfügen soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +36,20 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>Parameter  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ in Die ID der Funktion, in die die `calleeId` Funktion eingefügt wird.  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ in Die ID der Funktion, die eingefügt werden soll.  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] `true`, damit die Einfügung erfolgen kann. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+ Der Profiler kann `pfShouldInline` auf `false` festlegen, um zu verhindern, dass die `calleeId` Funktion in die `callerId` Funktion eingefügt wird. Außerdem kann der Profiler die Inline Einfügung mit dem COR_PRF_DISABLE_INLINING Wert der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration global deaktivieren.  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ Inline-Funktionen, die Inline eingefügt werden, machen keine Ereignisse für die Eingabe oder den Abbruch Daher muss der Profiler `pfShouldInline` auf `false` festlegen, um ein genaues CallGraph zu generieren. Wenn Sie `pfShouldInline` auf `false` festlegen, wirkt sich dies auf die Leistung aus, da die Inline Einfügung in der Regel die Geschwindigkeit erhöht und die Anzahl der separaten JIT-Kompilierungs Ereignisse für die  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -34,7 +34,7 @@ ms.locfileid: "74441227"
 |----------------|------------------|  
 |Schaltfläche|Schaltfläche|  
 |Schaltfläche|RadioButton|  
-|Schaltfläche|Gruppieren|  
+|Schaltfläche|Gruppe|  
 |Schaltfläche|CheckBox|  
 |Schaltfläche|Link|  
 |Schaltfläche|SplitButton|  
@@ -54,13 +54,13 @@ ms.locfileid: "74441227"
 |ListBox|ListItem|  
 |#32768|Menü|  
 |#32768|MenuItem|  
-|msctls_progress32|ProgressBar|  
+|msctls_progress32|Statusanzeige|  
 |RichEdit|Dokument. Siehe Hinweis.|  
 |RichEdit20A|Dokument|  
 |RichEdit20W|Dokument|  
 |RichEdit50W|Dokument|  
-|ScrollBar|Slider|  
-|msctls_trackbar32|Slider|  
+|ScrollBar|Schieberegler|  
+|msctls_trackbar32|Schieberegler|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
 |SysTabControl32|Registerkarte|  
@@ -71,13 +71,13 @@ ms.locfileid: "74441227"
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|Trennzeichen|  
-|tooltips_class32|QuickInfo|  
-|#32774|QuickInfo|  
-|ReBarWindow32|ToolBar|  
+|tooltips_class32|ToolTip|  
+|#32774|ToolTip|  
+|ReBarWindow32|Symbolleiste|  
 |SysTreeView32|Struktur|  
 |SysTreeView32|TreeItem|  
   
- **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
+ **Hinweis** Das RichEdit-Steuerelement wird nur für Versionen unterstützt, die mit Windows Vista ausgeliefert werden (in Riched20. dll, Version 3,1 und höher, und MSF Tedit. dll, Version 4,1 und höher).  
   
  Die folgenden Steuerelemente werden nicht unterstützt:  
   
@@ -87,16 +87,16 @@ ms.locfileid: "74441227"
 |SysPager|Spinner|  
 |SysDateTimePick32|Benutzerdefiniert|  
 |SysMonthCal32|Kalender|  
-|MS_WINNOTE|QuickInfo|  
-|VBBubble|QuickInfo|  
-|ScrollBar (wenn als eigenständiges Steuerelement verwendet)|Slider|  
+|MS_WINNOTE|Tooltip|  
+|VBBubble|Tooltip|  
+|ScrollBar (wenn als eigenständiges Steuerelement verwendet)|Schieberegler|  
 |SuperGrid|Benutzerdefiniert|  
   
 <a name="Windows_Forms_Controls"></a>   
-## <a name="windows-forms-controls"></a>Windows Forms-Steuerelemente  
- Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. Diese Assembly wird automatisch für die Verwendung mit Benutzeroberflächenautomatisierungs-Clientanwendungen registriert.  
+## <a name="windows-forms-controls"></a>Steuerelemente für Windows Forms  
+ Windows Forms Steuerelemente werden über Client seitige Anbieter in "UIAutomationClientsideProviders. dll" [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] bereitgestellt. Diese Assembly wird automatisch für die Verwendung mit Benutzeroberflächenautomatisierungs-Clientanwendungen registriert.  
   
- Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Die folgenden Steuerelemente werden unterstützt:  
+ In der Regel werden Windows Forms Steuerelemente, die verwaltete Wrapper für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] allgemeine Steuerelemente sind, von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]unterstützt. Die folgenden Steuerelemente werden unterstützt:  
   
 |Klassenname|  
 |----------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "74441227"
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|Bezeichnung|  
+|Label|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -119,7 +119,7 @@ ms.locfileid: "74441227"
 |OpenFileDialog|  
 |PageSetupDialog|  
 |PrintDialog|  
-|ProgressBar|  
+|Statusanzeige|  
 |RadioButton|  
 |RichTextBox|  
 |SaveFileDialog|  
@@ -129,14 +129,14 @@ ms.locfileid: "74441227"
 |TabControl/TabPage|  
 |TextBox|  
 |Zeitgeber|  
-|ToolBar|  
-|QuickInfo|  
+|Symbolleiste|  
+|ToolTip|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |Webbrowser|  
   
- The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. Möglicherweise sind nicht alle Funktionen verfügbar.  
+ Die folgenden Steuerelemente sind nur für die Unterstützung von Microsoft Active Accessibility verfügbar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Möglicherweise sind nicht alle Funktionen verfügbar.  
   
 |Steuerelementname|  
 |------------------|  
@@ -163,10 +163,10 @@ ms.locfileid: "74441227"
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|Aufteilung|  
+|Teilungsfunktion (Splitter)|  
 |RaftingContainer|  
 |StatusStrip|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Steuerelementtypen der Benutzeroberflächenautomatisierung](ui-automation-control-types.md)
+- [UI Automation Control Types](ui-automation-control-types.md)

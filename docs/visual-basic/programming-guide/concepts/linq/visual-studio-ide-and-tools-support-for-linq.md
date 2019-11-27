@@ -9,17 +9,17 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351029"
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE and Tools Support for LINQ (Visual Basic)
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio-IDE und Tool Unterstützung für LINQ (Visual Basic)
 Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bietet die folgenden Features, die die LINQ-Anwendungsentwicklung unterstützen:  
   
-## <a name="object-relational-designer"></a>Object Relational Designer  
- The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) applications to generate classes in Visual Basic that represent the relational data in an underlying database. Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+## <a name="object-relational-designer"></a>O/R-Designer  
+ Der objektrelationaler Designer ist ein visuelles Entwurfs Tool, das Sie in [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) Anwendungen verwenden können, um Klassen in Visual Basic zu generieren, die die relationalen Daten in einer zugrunde liegenden Datenbank darstellen. Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal-Befehlszeilentool  
  SQLMetal ist ein Befehlszeilentool, das in Buildprozessen zum Generieren von Klassen aus vorhandenen Datenbanken verwendet werden kann, die in LINQ to SQL-Anwendungen verwendet werden sollen. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="linq-aware-code-editor"></a>LINQ-fähiger Code-Editor  
- The Visual Basic code editor supports LINQ extensively with IntelliSense and formatting capabilities.  
+ Der Visual Basic-Code-Editor unterstützt LINQ in großem Umfang mit IntelliSense und Formatierungsfunktionen.  
   
 ## <a name="visual-studio-debugger-support"></a>Unterstützung für Visual Studio-Debugger  
  Der Visual Studio-Debugger unterstützt das Debuggen von Abfrageausdrücken. Weitere Informationen finden Sie unter [Debuggen von LINQ](/visualstudio/debugger/debugging-linq).  

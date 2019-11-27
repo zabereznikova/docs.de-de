@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443448"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString-Methode
-Gets the index of the next string in the current table column.  
+Ruft den Index der nächsten Zeichenfolge in der aktuellen Tabellenspalte ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,17 +36,17 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Parameter  
  `ixString`  
- [in] The index value from a string table column.  
+ in Der Indexwert aus einer Zeichen folgen Tabellenspalte.  
   
  `pNext`  
- [out] A pointer to the index of the next string in the column.  
+ vorgenommen Ein Zeiger auf den Index der nächsten Zeichenfolge in der Spalte.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

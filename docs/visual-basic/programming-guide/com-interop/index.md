@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348008"
 ---
 # <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
-Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. In diesem Abschnitt werden einige der Probleme im Zusammenhang mit der Erstellung und Verwendung von COM-Objekten mit Visual Basic behandelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
  Beschreibt, wie COM-Objekten Verweise hinzugefügt werden, die über Typbibliotheken verfügen.  
   
  [Gewusst wie: Arbeiten mit ActiveX-Steuerelementen](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ Veranschaulicht, wie vorhandene ActiveX-Steuerelemente zum Hinzufügen von Funktionen zur Visual Studio-Toolbox verwendet werden.  
   
  [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Führt Sie durch den Prozess, APIs aufzurufen, die Teil des Windows-Betriebssystems sind.  

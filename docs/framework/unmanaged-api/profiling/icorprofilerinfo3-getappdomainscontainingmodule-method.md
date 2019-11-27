@@ -52,7 +52,7 @@ HRESULT GetAppDomainsContainingModule(
 ## <a name="remarks"></a>Hinweise  
  Die Methode verwendet vom Aufrufer reservierte Puffer.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

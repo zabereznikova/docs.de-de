@@ -1,5 +1,5 @@
 ---
-title: Referenz
+title: Verweis
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
@@ -12,28 +12,28 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352879"
 ---
-# <a name="reference-visual-basic"></a>Referenz
-This section provides links to reference information about various aspects of Visual Basic programming.  
+# <a name="reference-visual-basic"></a>Referenz (Visual Basic)
+Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekten der Visual Basic Programmierung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ Enthält Referenzinformationen zu verschiedenen Aspekten der Visual Basic Sprache.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Enthält Links zu Informationen über den Befehlszeilencompiler, der eine Alternative zur Kompilierung von Visual Studio-IDE-Programmen bietet.  
   
  [.NET Framework-Referenzinformationen](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ Enthält Links zu Informationen zum Arbeiten mit der .NET Framework-Klassenbibliothek.  
   
  [Visual Basic-Sprachspezifikation](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ Enthält Links zu der vollständigen Visual Basic-Sprachspezifikation, die ausführliche Informationen zu allen Aspekten der Sprache enthält.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Allgemeine Elemente der Benutzeroberfläche (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ Enthält Themen zu Dialogfeldern und Fenstern, die in Visual Studio verwendet werden.  
   
  [XML-Tools in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ Enthält Links zu Themen über verschiedene XML-Tools, die in Visual Studio verfügbar sind.  
   
  [Referenz zur Automatisierung und Erweiterbarkeit](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ Enthält Links zu Themen, die Automatisierung und Erweiterbarkeit in Visual Studio für freigegebene und sprachspezifische Komponenten abdecken.

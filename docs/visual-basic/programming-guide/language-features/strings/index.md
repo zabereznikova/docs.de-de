@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344336"
 ---
 # <a name="strings-in-visual-basic"></a>Zeichenfolgen in Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Zeichen folgen in Visual Basic beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ Listet Themen auf, die die grundlegenden Konzepte für die Verwendung von Zeichen folgen in Visual Basic beschreiben.  
   
  [Vorgehensweise: Erstellen von Zeichenfolgen mit StringBuilder in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Zeigt, wie eine lange Zeichenfolge effizient aus vielen kleineren Zeichenfolgen erstellt wird.  

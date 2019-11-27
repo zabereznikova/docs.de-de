@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448614"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument-Methode
-Gets the smallest start line and largest end line for the method in a specific document.  
+Ruft die kleinste anfangs Linie und die größte Endzeile für die Methode in einem bestimmten Dokument ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>Parameter  
  `document`  
- [in] A pointer to the document.  
+ in Ein Zeiger auf das Dokument.  
   
  `pstartLine`  
- [out] A pointer to a `ULONG32` that receives the start line.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der die Start Zeile empfängt.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Endzeile empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

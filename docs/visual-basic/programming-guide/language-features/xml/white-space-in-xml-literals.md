@@ -13,30 +13,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336009"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Leerzeichen in XML-Literalen (Visual Basic)
-The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. The insignificant white space characters are not incorporated.  
+Der Visual Basic-Compiler bindet nur die signifikanten Leerzeichen aus einem XML-Literalzeichen ein, wenn ein [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Objekt erstellt wird. Die unbedeutenden Leerzeichen sind nicht eingeschlossen.  
   
-## <a name="significant-and-insignificant-white-space"></a>Significant and Insignificant White Space  
- White space characters in XML literals are significant in only three areas:  
+## <a name="significant-and-insignificant-white-space"></a>Signifikanter und unbedeutender Leerraum  
+ Leerzeichen in XML-Literalen sind nur in drei Bereichen wichtig:  
   
-- When they are in an attribute value.  
+- Wenn Sie einen Attribut Wert haben.  
   
-- When they are part of an element's text content and the text also contains other characters.  
+- Wenn Sie Teil des Text Inhalts eines Elements sind und der Text auch andere Zeichen enthält.  
   
-- When they are in an embedded expression for an element's text content.  
+- Wenn Sie in einem eingebetteten Ausdruck für den Text Inhalt eines Elements enthalten sind.  
   
- Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.  
+ Andernfalls behandelt der Compiler leer Raum Zeichen als unbedeutend und schließt dann nicht in das [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekt für das Literale ein.  
   
- To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.  
+ Verwenden Sie einen eingebetteten Ausdruck, der ein Zeichenfolgenliteral mit dem Leerraum enthält, um unbedeutende Leerzeichen in ein XML-Literalformat einzubeziehen  
   
 > [!NOTE]
-> If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.  
+> Wenn das `xml:space`-Attribut in einem XML-Elementliterals angezeigt wird, enthält der Visual Basic Compiler das-Attribut im <xref:System.Xml.Linq.XElement>-Objekt. durch das Hinzufügen dieses Attributs wird jedoch nicht geändert, wie der Compiler Leerraum behandelt.  
   
 ## <a name="examples"></a>Beispiele  
- The following example contains two XML elements, outer and inner. Both elements contain white space in their text content. The white space in the outer element is insignificant because it contains only white space and an XML element. The white space in the inner element is significant because it contains white space and text.  
+ Das folgende Beispiel enthält zwei XML-Elemente (Outer und Inner). Beide Elemente enthalten Leerraum in Ihren Text Inhalt. Der Leerraum im äußeren Element ist unerheblich, da er nur Leerraum und ein XML-Element enthält. Der Leerraum im Inneren Element ist wichtig, da er Leerzeichen und Text enthält.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- When run, this code displays the following text.  
+ Wenn Sie ausführen, wird in diesem Code der folgende Text angezeigt.  
   
 ```xml  
 <outer>  

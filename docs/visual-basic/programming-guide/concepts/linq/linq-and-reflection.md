@@ -9,12 +9,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347785"
 ---
-# <a name="linq-and-reflection-visual-basic"></a>LINQ and Reflection (Visual Basic)
+# <a name="linq-and-reflection-visual-basic"></a>LINQ und Reflektion (Visual Basic)
 Die Reflektions-APIs der .NET Framework-Klassenbibliothek können verwendet werden, um die Metadaten in einer .NET-Assembly zu untersuchen und Auflistungen von Typen, Typmembern, Parametern usw., die sich in der Assembly befinden, zu erstellen. Da diese Auflistungen die generische `IEnumerable`-Schnittstelle unterstützen, können sie mithilfe von LINQ abgefragt werden.  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   
- [How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ [Gewusst wie: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  Zeigt, wie Sie LINQ mit Reflektion verwenden.  
   
 ## <a name="see-also"></a>Siehe auch

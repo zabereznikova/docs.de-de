@@ -21,7 +21,7 @@ ms.locfileid: "74283234"
 
  Windows Communication Foundation (WCF) ist das vereinheitlichte Programmiermodell von Microsoft zum entwickeln Dienst orientierter Anwendungen. Sie wurde zuerst als Teil von .NET 3,0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten des .NET Framework.
 
- Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Windows Server AppFabric ist eine Sammlung integrierter Technologien, die das Erstellen, Skalieren und Verwalten von Webanwendungen und kombinierten Anwendungen erleichtert, die unter IIS ausgeführt werden. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Ziele
  In diesem Thema werden die Leistungsmerkmale von WF4 anhand von Daten gezeigt, die für unterschiedliche Szenarien gemessen wurden. Außerdem werden ausführliche Vergleiche zwischen WF4 und WF3 bereitgestellt und so die Verbesserungen in dieser neuen Revision veranschaulicht. Die Szenarien und Daten in diesem Artikel quantifizieren die zugrunde liegenden Kosten für verschiedene Aspekte von WF4 und WF3. Diese Daten sind nützlich, um die Leistungsmerkmale von WF4 zu verstehen, und können bei der Planung von Migrationen von WF3 zu WF4 oder beim Einsatz von WF4 in der Anwendungsentwicklung hilfreich sein. Sie sollten jedoch vorsichtig sein, aus den in diesem Artikel präsentierten Daten Schlüsse zu ziehen. Die Leistung einer zusammengesetzten Workflowanwendung hängt stark von der Art der Workflowimplementierung und der Integration der verschiedenen Komponenten ab. Jede Anwendung muss gemessen werden, um die Leistungsmerkmale dieser Anwendung zu bestimmen.
@@ -201,7 +201,7 @@ Im folgenden Diagramm wird der grundlegende Kompensations Workflow gezeigt. Der 
  In einer WCF-Workflow Dienst Anwendung ist die Latenzzeit für das Starten eines neuen Workflows oder das Laden eines vorhandenen Workflows wichtig, da er blockiert werden kann.  Dieser Testfall misst einen WF3-XOML-Host in einem typischen Szenario im Vergleich zu einem WF4-XAMLX-Host.
 
 ##### <a name="environment-setup"></a>Umgebungssetup
- ![Umgebungseinrichtung für Latenz- und Durchsatztests](./media/performance/latency-throughput-environment-setup.gif)
+ ![Umgebungseinstellungen für Latenz- und Durchsatztests](./media/performance/latency-throughput-environment-setup.gif)
 
 ##### <a name="test-setup"></a>Testsetup
  In diesem Szenario kontaktiert ein Client Computer mithilfe einer kontextbasierten Korrelation einen WCF-Workflow Dienst.  Kontextkorrelation erfordert eine besondere Kontextbindung und verwendet einen Kontextheader oder ein Cookie, um Meldungen mit der richtigen Workflowinstanz zu verknüpfen.  Ein Leistungsvorteil besteht darin, dass sich die Korrelations-ID im Nachrichtenheader befindet, damit der Nachrichtentext nicht analysiert werden muss.
@@ -218,7 +218,7 @@ Im folgenden Diagramm wird der grundlegende Kompensations Workflow gezeigt. Der 
 
  ![Säulendiagramm mit kalter und warmer Latenz für WCF-Workflow Dienste mit WF3 und WF4](./media/performance/latency-results-graph.gif)
 
- Im vorherigen Diagramm bezieht sich "kalt" auf den Fall, dass für den angegebenen Workflow keine <xref:System.ServiceModel.WorkflowServiceHost> vorhanden ist.  Anders ausgedrückt bedeutet kalte Latenzzeit, dass der Workflow erstmals verwendet wird und XOML oder XAML kompiliert werden muss.  Warme Latenzzeit ist die Zeit zum Erstellen einer neuen Workflowinstanz, wenn der Workflowtyp bereits kompiliert wurde.  Die Komplexität des Workflows macht im Fall von WF4 nur einen geringen Unterschied, weist allerdings in WF3 linearen Fortschritt auf.
+ Im vorherigen Diagramm bezieht sich "kalt" auf den Fall, dass für den angegebenen Workflow keine <xref:System.ServiceModel.WorkflowServiceHost> vorhanden ist.  Anders ausgedrückt bedeutet kalte Wartezeit, wenn der Workflow zum ersten Mal verwendet wird und XOML oder XAML kompiliert werden muss.  Warme Wartezeit ist die Zeit zum Erstellen einer neuen Workflowinstanz, wenn der Workflowtyp bereits kompiliert wurde.  Die Komplexität des Workflows macht im Fall von WF4 nur einen geringen Unterschied, weist allerdings in WF3 linearen Fortschritt auf.
 
 #### <a name="correlation-throughput"></a>Korrelationsdurchsatz
  WF4 führt eine neue inhaltsbasierte Korrelationsfunktion ein.  WF3 bot nur kontextbasierte Korrelation.  Die kontextbasierte Korrelation konnte nur über bestimmte WCF-Kanal Bindungen durchgeführt werden.  Beim Verwenden dieser Bindungen wird die Workflow-ID in den Nachrichtenheader eingefügt.  Die WF3-Laufzeit konnte einen Workflow nur anhand seiner ID identifizieren.  Mit Inhalts basierter Korrelation kann der Workflow Autor aus einem relevanten Datenelement wie einer Kontonummer oder einer Kunden-ID einen Korrelations Schlüssel erstellen.
@@ -255,7 +255,7 @@ Im folgenden Diagramm wird der grundlegende Kompensations Workflow gezeigt. Der 
 
  Die Anzahl der Aktivitäten in einem bestimmten Test wird anhand der Tiefe und der Anzahl der Aktivitäten pro Sequenz bestimmt.  Die folgende Formel berechnet die Anzahl der Aktivitäten im WF4-Test:
 
- ![Gleichung zur Berechnung der Anzahl von Aktivitäten](./media/performance/number-activities-equation.gif)
+ ![Formel zur Berechnung der Anzahl der Aktivitäten](./media/performance/number-activities-equation.gif)
 
  Die Anzahl der Aktivitäten im WF3-Test kann aufgrund einer zusätzlichen Sequenz mit einer etwas anderen Formel berechnet werden:
 
@@ -397,7 +397,7 @@ public class Workflow1 : Activity
 
 - SQLServer:Latches\Latchwartezeiten/s
 
-### <a name="tracking"></a>Nachverfolgung
+### <a name="tracking"></a>Tracking
  Die Workflownachverfolgung kann verwendet werden, um den Status eines Workflows nachzuverfolgen.  Die Informationen, die in den Nachverfolgungsereignissen enthalten sind, werden von einem Nachverfolgungsprofil bestimmt.  Mit der Komplexität des Nachverfolgungsprofils steigt der Aufwand für die Nachverfolgung.
 
  WF3 wurde mit einem auf SQL-basierenden Nachverfolgungsdienst geliefert.  Dieser Dienst funktionierte im Batchmodus und in Nicht-Batch-Modi.  Im Nicht-Batch-Modus werden Nachverfolgungsereignisse direkt in die Datenbank geschrieben.  Im Batchmodus werden Nachverfolgungsereignisse im selben Batch wie der Workflowinstanzzustand gesammelt.  Der Batchmodus weist für den größten Bereich von Workflowentwürfen die beste Leistung auf.  Die Batchverarbeitung kann jedoch negative Auswirkungen auf die Leistung haben, wenn der Workflow viele Aktivitäten ohne Persistenz ausführt und diese Aktivitäten nachverfolgt werden.  Dies trat am häufigsten in Schleifen auf. Dieses Szenario wird am besten vermieden, indem große Schleifen entworfen werden, die einen Persistenzpunkt enthalten.  Das Einfügen eines Persistenzpunkts in eine Schleife kann negative Auswirkungen auf die Leistung haben. Daher müssen sich die jeweiligen Kosten gegeneinander aufwiegen.

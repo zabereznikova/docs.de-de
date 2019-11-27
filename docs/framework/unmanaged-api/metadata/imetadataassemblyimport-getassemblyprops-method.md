@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449443"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps-Methode
-Gets the set of properties for the assembly with the specified metadata signature.  
+Ruft den Satz von Eigenschaften für die Assembly mit der angegebenen Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,38 +43,38 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parameter  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]. Das `mdAssembly` Metadatentoken, das die Assembly darstellt, für die die Eigenschaften zu erhalten sind.  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ vorgenommen Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ vorgenommen Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel.  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ vorgenommen Ein Zeiger auf den Algorithmus, der zum Hash der Dateien in der Assembly verwendet wird.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ vorgenommen Der einfache Name der Assembly.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ in Die Größe `szName`in breiten Zeichen.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ vorgenommen Die Anzahl der breit Zeichen, die in `szName`tatsächlich zurückgegeben werden.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ vorgenommen Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ vorgenommen Flags, die die auf eine Assembly angewendeten Metadaten beschreiben. Dieser Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) -Werten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

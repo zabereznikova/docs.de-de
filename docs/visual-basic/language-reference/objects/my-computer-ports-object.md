@@ -18,17 +18,17 @@ Stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die ser
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Ports` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Weitere Informationen finden Sie unter [zugreifen auf die Ports des Computers](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> Sie können auch die Eigenschaften und Methoden der <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>-Klasse verwenden, um auf die seriellen Anschlüsse des Computers zuzugreifen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

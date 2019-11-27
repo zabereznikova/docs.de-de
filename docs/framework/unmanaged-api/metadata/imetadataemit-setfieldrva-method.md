@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428417"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA-Methode
-Sets a global variable value for the relative virtual address of the field referenced by the specified token.  
+Legt einen globalen Variablen Wert für die relative virtuelle Adresse des Felds fest, auf das durch das angegebene Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,17 +36,17 @@ HRESULT SetFieldRVA (
   
 ## <a name="parameters"></a>Parameter  
  `fd`  
- [in] The token for the target field.  
+ in Das Token für das Zielfeld.  
   
  `ulRVA`  
- [in] The address of a code or data area.  
+ in Die Adresse eines Codes oder eines Datenbereichs.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

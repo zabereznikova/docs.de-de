@@ -19,12 +19,12 @@ Stellt Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur ber
   
  Weitere Informationen finden Sie unter [Zugreifen auf die Tastatur](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

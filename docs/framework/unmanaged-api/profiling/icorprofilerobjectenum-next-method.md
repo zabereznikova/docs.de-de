@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428156"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next-Methode
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+Ruft die angegebene Anzahl von zusammenhängenden Objekten aus einer sequenziellen Auflistung von-Objekten ab, beginnend bei der aktuellen Position des Enumerators in der Sequenz.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,12 +41,12 @@ HRESULT Next (
  [in] Die Anzahl der abzurufenden Objekte.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ vorgenommen Ein Array von `ObjectID`-Werten, von denen jedes ein abgerufenes-Objekt darstellt.  
   
  `pceltFetched`  
  [out] Ein Zeiger auf die Anzahl von Elementen, die tatsächlich im `objects`-Array zurückgegeben werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

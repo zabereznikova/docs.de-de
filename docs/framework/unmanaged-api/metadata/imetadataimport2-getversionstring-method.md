@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445223"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString-Methode
-Gets the version number of the runtime that was used to build the assembly.  
+Ruft die Versionsnummer der Laufzeit ab, die zum Erstellen der Assembly verwendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,23 +37,23 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>Parameter  
  `pwzBuf`  
- [out] An array to store the string that specifies the version.  
+ vorgenommen Ein Array zum Speichern der Zeichenfolge, die die Version angibt.  
   
  `ccBufSize`  
- [in] The size, in wide characters, of the `pwzBuf` array.  
+ in Die Größe des `pwzBuf` Arrays in breit Zeichen.  
   
  `pccBufSize`  
- [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
+ vorgenommen Die Anzahl der breit Zeichen (einschließlich eines NULL-Terminator), die im `pwzBuf` Array zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
+ Die `GetVersionString`-Methode ruft die integrierte Version des aktuellen Metadatenbereichs ab. Wenn der Bereich noch nicht gespeichert wurde, verfügt er nicht über eine integrierte Version, und es wird eine leere Zeichenfolge zurückgegeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

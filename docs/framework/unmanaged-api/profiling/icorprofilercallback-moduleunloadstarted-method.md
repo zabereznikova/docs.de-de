@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445903"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted-Methode
-Notifies the profiler that a module is being unloaded.  
+Benachrichtigt den Profiler, dass ein Modul entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +34,12 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>Parameter  
  `moduleId`  
- [in] The ID of the module that is being unloaded.  
+ in Die ID des Moduls, das entladen wird.  
   
 ## <a name="remarks"></a>Hinweise  
- The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
+ Der Wert `moduleId` ist für eine Informationsanforderung nicht gültig, nachdem die `ModuleUnloadStarted`-Methode zurückgegeben wurde – dies ist die letzte Möglichkeit des Profilers, Informationen zu diesem Modul zu erhalten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448592"
 ---
 # <a name="call_id-structure"></a>CALL_ID-Struktur
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+Stellt einem Debugger Informationen zu einer Funktion bereit, die aufgerufen wird. Weitere Informationen finden Sie in der [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) -Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,15 +42,15 @@ typedef struct tagCALL_ID
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|Identifiziert den Computer, der den-Befehl aufruft.|  
+|`dwPid`|Identifiziert den Computer Prozessor.|  
+|`pUserThread`|Identifiziert den Thread, der den-Befehl ausführt.|  
+|`addrStackPointer`|Gibt die Adresse der-aufrufsstapel an.|  
+|`szEntryPoint`|Gibt die Adresse des Aufrufes an.|  
+|`szDestinationMachine`|Identifiziert den Computer, der den-Befehl ausführt.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** ProtocolNotify2.idl  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Siehe auch
 

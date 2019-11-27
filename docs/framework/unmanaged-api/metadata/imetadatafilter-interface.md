@@ -28,16 +28,16 @@ Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederke
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[IsTokenMarked-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Gets a value indicating whether the specified metadata token has been processed.|  
-|[MarkToken-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Sets a value indicating that the specified metadata token has been processed.|  
-|[UnmarkAll-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Removes the processing marks from all the tokens in the current metadata scope.|  
+|[IsTokenMarked-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Ruft einen Wert ab, der angibt, ob das angegebene Metadatentoken verarbeitet wurde.|  
+|[MarkToken-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Legt einen Wert fest, der angibt, dass das angegebene Metadatentoken verarbeitet wurde.|  
+|[UnmarkAll-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Entfernt die Verarbeitungs Markierungen aus allen Token im aktuellen Metadatenbereich.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445330"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown-Methode
-Notifies the profiler that an exception has been thrown.  
+Benachrichtigt den Profiler, dass eine Ausnahme ausgelöst wurde.  
   
 > [!NOTE]
-> This function is called only if the exception reaches managed code.  
+> Diese Funktion wird nur aufgerufen, wenn die Ausnahme verwalteten Code erreicht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parameter  
  `thrownObjectId`  
- [in] The ID of the object that caused the exception to be thrown.  
+ in Die ID des Objekts, das bewirkt hat, dass die Ausnahme ausgelöst wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Der Profiler sollte in seiner Implementierung dieser Methode nicht blockieren, da sich der Stapel möglicherweise nicht in einem Zustand befindet, der Garbage Collection zulässt, und daher können präemptiv Garbage Collection nicht aktiviert werden. Wenn der Profiler hier blockiert wird und Garbage Collection versucht wird, wird die Laufzeit blockiert, bis dieser Rückruf zurückgegeben wird.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Die Implementierung dieser Methode des Profilers sollte nicht in verwalteten Code oder auf irgendeine Weise eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

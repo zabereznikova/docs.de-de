@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443786"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor-Enumeration
-Specifies the metadata tokens that will be checked for duplicates.  
+Gibt die Metadatentoken an, die auf Duplikate geprüft werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,38 +68,38 @@ typedef enum CorCheckDuplicatesFor {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDDupAll`|Check all metadata tokens for duplicates.|  
+|`MDDupAll`|Überprüfen Sie alle Metadatentoken auf Duplikate.|  
 |`MDDupENC`|Nicht verwendet.|  
-|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
-|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
-|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
-|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
-|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
-|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
-|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
-|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
-|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
-|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
-|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
-|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
-|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
-|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
-|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
-|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
-|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
-|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
-|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
-|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
-|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
-|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
-|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
-|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
-|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
+|`MDNoDupChecks`|Überprüfen Sie die Metadatentoken nicht auf Duplikate.|  
+|`MDDupTypeDef`|Überprüfen Sie, ob `mdTypeDef` Token doppelt vorkommen.|  
+|`MDDupInterfaceImpl`|Überprüfen Sie, ob `mdInterfaceImpl` Token doppelt vorkommen.|  
+|`MDDupMethodDef`|Überprüfen Sie, ob `mdMethodDef` Token doppelt vorkommen.|  
+|`MDDupTypeRef`|Überprüfen Sie, ob `mdTypeRef` Token doppelt vorkommen.|  
+|`MDDupMemberRef`|Überprüfen Sie, ob `mdMemberRef` Token doppelt vorkommen.|  
+|`MDDupCustomAttribute`|Überprüfen Sie, ob `mdCustomAttribute` Token doppelt vorkommen.|  
+|`MDDupParamDef`|Überprüfen Sie, ob `mdParamDef` Token doppelt vorkommen.|  
+|`MDDupPermission`|Überprüfen Sie, ob `mdPermission` Token doppelt vorkommen.|  
+|`MDDupProperty`|Überprüfen Sie, ob `mdProperty` Token doppelt vorkommen.|  
+|`MDDupEvent`|Überprüfen Sie, ob `mdEvent` Token doppelt vorkommen.|  
+|`MDDupFieldDef`|Überprüfen Sie, ob `mdFieldDef` Token doppelt vorkommen.|  
+|`MDDupSignature`|Überprüfen Sie, ob `mdSignature` Token doppelt vorkommen.|  
+|`MDDupModuleRef`|Überprüfen Sie, ob `mdModuleRef` Token doppelt vorkommen.|  
+|`MDDupTypeSpec`|Überprüfen Sie, ob `mdTypeSpec` Token doppelt vorkommen.|  
+|`MDDupImplMap`|Überprüfen Sie, ob `mdImplMap` Token doppelt vorkommen.|  
+|`MDDupAssemblyRef`|Überprüfen Sie, ob `mdAssemblyRef` Token doppelt vorkommen.|  
+|`MDDupFile`|Überprüfen Sie, ob `mdFile` Token doppelt vorkommen.|  
+|`MDDupExportedType`|Überprüfen Sie, ob `mdExportedType` Token doppelt vorkommen.|  
+|`MDDupManifestResource`|Überprüfen Sie, ob `mdManifestResource` Token doppelt vorkommen.|  
+|`MDDupGenericParam`|Überprüfen Sie, ob `mdGenericParam` Token doppelt vorkommen.|  
+|`MDDupMethodSpec`|Überprüfen Sie, ob `mdMethodSpec` Token doppelt vorkommen.|  
+|`MDDupGenericParamConstraint`|Überprüfen Sie, ob `mdGenericParamConstraint` Token doppelt vorkommen.|  
+|`MDDupAssembly`|Überprüfen Sie, ob `mdAssembly` Token doppelt vorkommen.|  
+|`MDDupDefault`|Überprüfen Sie auf Duplikate von `mdMemberRef`-, `mdTypeRef`-, `mdSignature`-, `mdTypeSpec`-und `mdMethodSpec`-Token.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

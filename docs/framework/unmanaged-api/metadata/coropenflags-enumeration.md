@@ -56,18 +56,18 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|Gibt an, dass die Datei in den Arbeitsspeicher gelesen werden muss. Metadaten müssen eine eigene Kopie verwalten.|  
 |`ofCacheImage`|Veraltet. Dieses Flag wird ignoriert.|  
 |`ofManifestMetadata`|Veraltet. Dieses Flag wird ignoriert.|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
+|`ofReadOnly`|Gibt an, dass die Datei zum Lesen geöffnet werden soll, und dass kein `QueryInterface` für eine [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) -Datei aufgerufen werden kann.|  
+|`ofTakeOwnership`|Gibt an, dass der Arbeitsspeicher mithilfe eines Aufrufes [cotaskmemzuordc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) zugewiesen wurde und von den Metadaten freigegeben wird.|  
 |`ofNoTypeLib`|Veraltet. Dieses Flag wird ignoriert.|  
-|`ofNoTransform`|Gibt an, dass automatische Transformationen von .winmd-Dateien deaktiviert sein sollten. Anders ausgedrückt: Die Projektion eines Windows Runtime-Typs auf einen .NET Framework-Typ sollte deaktiviert sein. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|Für die interne Verwendung vorgesehen.|  
-|`ofReserved2`|Für die interne Verwendung vorgesehen.|  
-|`ofReserved`|Für die interne Verwendung vorgesehen.|  
+|`ofNoTransform`|Gibt an, dass automatische Transformationen von .winmd-Dateien deaktiviert sein sollten. Anders ausgedrückt: Die Projektion eines Windows Runtime-Typs auf einen .NET Framework-Typ sollte deaktiviert sein. Weitere Informationen finden Sie unter [Windows-Runtime und die CLR-unter der Haube mit .net und der Windows-Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
+|`ofReserved1`|Reserviert für interne Verwendung.|  
+|`ofReserved2`|Reserviert für interne Verwendung.|  
+|`ofReserved`|Reserviert für interne Verwendung.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,14 @@ ms.locfileid: "74332116"
 Stellt Eigenschaften für die Bearbeitung von Computerkomponenten bereit, z.B. Audio, die Uhr, die Tastatur, das Dateisystem und so weiter.  
   
 ## <a name="remarks"></a>Hinweise  
- Informationen zu den Methoden und Eigenschaften des `My.Computer` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+ Informationen zu den Methoden und Eigenschaften des `My.Computer` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Computer>. Die Basisklasse <xref:Microsoft.VisualBasic.Devices.ServerComputer> stellt die Member bereit, die in allen Projekten verfügbar sind.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (die Basisklasse <xref:Microsoft.VisualBasic.Devices.ServerComputer> stellt die Member bereit, die in allen Projekten verfügbar sind).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

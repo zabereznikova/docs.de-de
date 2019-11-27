@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440550"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps-Methode
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Legt die in den Metadaten gespeicherten Features für eine Eigenschaft fest, die durch einen vorherigen-Befehl der [DefineProperty-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)definiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,35 +42,35 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parameter  
  `pr`  
- [in] The token for the property to be changed  
+ in Das Token für die Eigenschaft, die geändert werden soll.  
   
  `dwPropFlags`  
- [in] Property flags.  
+ in Eigenschaftenflags.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ in Der Typ des Standardwerts der Eigenschaft.  
   
  `pValue`  
- [in] The default value for the property.  
+ in Der Standardwert für die-Eigenschaft.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ in Die Anzahl von (Unicode-) Zeichen in `pValue`.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ in Die Methode, die den Eigenschafts Wert festlegt.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ in Die Methode, die den Eigenschafts Wert abruft.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ in Ein Array von anderen Methoden, die der-Eigenschaft zugeordnet sind. Beenden Sie dieses Array mit einem `mdTokenNil`-Token.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

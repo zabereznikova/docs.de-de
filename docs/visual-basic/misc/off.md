@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331938"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+Aktiviert eine Compileroption.  
   
 ## <a name="remarks"></a>Hinweise  
  Das `Off`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
@@ -28,4 +28,4 @@ Turns a compiler option off.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../visual-basic/language-reference/keywords/index.md)

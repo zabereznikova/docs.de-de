@@ -15,17 +15,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448518"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Diagnosesymbolspeicher-Strukturen
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+In diesem Thema werden die nicht verwalteten Strukturen beschrieben, die von der Diagnose Symbol Speicher-API verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [CALL_ID-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ Stellt einem Debugger Informationen zu einer Funktion bereit, die aufgerufen wird.  
   
  [SYMLINEDELTA-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ Stellt Informationen für den Symbol Handler über Methoden bereit, die aufgrund von Änderungen verschoben wurden.  
   
  [USER_THREAD-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ Stellt einem Debugger Informationen zu einem Thread bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

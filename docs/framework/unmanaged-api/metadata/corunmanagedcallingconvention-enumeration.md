@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442441"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention-Enumeration
-Specifies the calling conventions for unmanaged code.  
+Gibt die Aufruf Konventionen für nicht verwalteten Code an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,22 +46,22 @@ typedef enum CorUnmanagedCallingConvention {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Die C-Programmiersprachen Aufruf Konvention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Die Standard Aufruf Konvention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|Die "This"-Aufruf Konvention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|Die "schnelle" Aufruf Konvention.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Nicht verwendet.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Nicht verwendet.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Nicht verwendet.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Nicht verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+ Die CLR unterstützt die "schnelle" Aufruf Konvention nicht in der .NET Framework Version 1,0.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -25,7 +25,7 @@ ms.locfileid: "74447345"
 Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` hat den Wert 0 (null), sodass `COR_PRF_JIT_CACHE` nicht als boolesches Ersatz Zeichen verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
+|`COR_PRF_FUNCTION_FOUND`|Bei der Suche wurde die-Funktion gefunden.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Die Funktion wurde von der Suche nicht gefunden.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

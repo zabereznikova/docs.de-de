@@ -39,7 +39,7 @@ Wenn Sie eine Auflistung erstellen, z.B. <xref:System.Collections.Generic.List%6
 > [!NOTE]
 > Sie können nicht einen Auflistungsinitialisierer und einen Objektinitialisierer kombinieren, um das gleiche Auflistungsobjekt zu initialisieren. Sie können Objektinitialisierer zum Initialisieren von Objekten in einem Auflistungsinitialisierer verwenden.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Erstellen einer Sammlung mithilfe eines sammlungsinitialisierers
 
 Wenn Sie eine Sammlung durch Verwendung eines Auflistunsinitialisierers erstellen, wird jeder Wert, der im Auflistunsinitialisierer angegeben ist, an die entsprechende `Add`-Methode der Auflistung übergeben. Wenn Sie z.B. eine <xref:System.Collections.Generic.List%601> durch Verwendung eines Auflistungsinitialisierers erstellen, wird jeder Zeichenfolgenwert im Auflistungsinitialisierer an die <xref:System.Collections.Generic.List%601.Add%2A>-Methode übergeben. Wenn Sie eine Auflistung mithilfe eines Auflistungsinitialisierers erstellen möchten, muss der angegebene Typ ein gültiger Auflistungstyp sein. Beispiele gültiger Auflistungstypen enthalten Klassen, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren oder die <xref:System.Collections.CollectionBase>-Klasse erben. Der angegebene Typ muss auch eine `Add`-Methode verfügbar machen, die die folgenden Kriterien erfüllt.
 

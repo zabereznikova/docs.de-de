@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446397"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount-Methode
-Gets a count of symbol search information.  
+Ruft die Anzahl der Symbol Suchinformationen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,13 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>Parameter  
  `pcSearchInfo`  
- ]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
+ ] out] ein Zeiger auf eine `ULONG32`, die die Größe des Puffers empfängt, der zum enthalten der Suchinformationen erforderlich ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433972"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName-Methode
-Gets the name of this namespace.  
+Ruft den Namen dieses Namespace ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parameter  
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ in Ein-`ULONG32`, der die Größe des `szName` Puffers angibt.  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers, der den Namespace Namen enthalten muss, einschließlich der NULL-Beendigung, in Zeichen empfängt.  
   
  `szName`  
- [out] A pointer to a buffer that contains the namespace name.  
+ vorgenommen Ein Zeiger auf einen Puffer, der den Namespace Namen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

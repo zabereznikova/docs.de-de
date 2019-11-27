@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445760"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage-Methode
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+Benachrichtigt den Profiler, dass der Prozess eine Remote Methodenaufruf-oder Aktivierungs Anforderung empfangen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,23 +35,23 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parameter  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ in Ein Wert, der dem Wert entspricht, der in [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) unter den folgenden Bedingungen bereitgestellt wird:  
   
-- Remoting GUID cookies are active.  
+- Remoting-GUID-Cookies sind aktiv.  
   
-- The channel succeeds in transmitting the message.  
+- Der Kanal hat die Nachricht erfolgreich übertragen.  
   
-- GUID cookies are active on the client-side process.  
+- GUID-Cookies sind im Client seitigen Prozess aktiv.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Dies ermöglicht eine einfache Kopplung von Remote aufrufen und die Erstellung einer logischen Aufruf Stapel.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ in Ein-Wert, der `true` wird, wenn der-Befehl asynchron ist. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ Wenn die Nachrichten Anforderung asynchron ist, kann die Anforderung von einem beliebigen Thread gewartet werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

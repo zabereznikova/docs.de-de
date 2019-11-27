@@ -34,7 +34,7 @@ Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarations
   
 - [Declare-Anweisung](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 - [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)  
   

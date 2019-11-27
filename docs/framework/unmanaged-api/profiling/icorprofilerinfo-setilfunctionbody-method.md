@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449882"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody-Methode
-Replaces the body of the specified function in the specified module.  
+Ersetzt den Text der angegebenen Funktion im angegebenen Modul.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,22 +36,22 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parameter  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ in Die ID des Moduls, in dem sich die Funktion befindet.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ in Das Token der Funktion, für die der Text ersetzt werden soll.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ in Der neue Header für die Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ Die `SetILFunctionBody`-Methode ersetzt die relative virtuelle Adresse der Funktion in den Metadaten, sodass Sie auf den neuen Funktions Text verweist, und passt alle internen Datenstrukturen nach Bedarf an.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ Die `SetILFunctionBody`-Methode kann nur für die Funktionen aufgerufen werden, die noch nie von einem JIT-Compiler (Just-in-Time) kompiliert wurden.  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Verwenden Sie die [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) -Methode, um Speicherplatz für die neue Methode zuzuweisen, um sicherzustellen, dass der Puffer kompatibel ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

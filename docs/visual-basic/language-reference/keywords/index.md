@@ -19,7 +19,7 @@ ms.locfileid: "74338781"
 ---
 # <a name="keywords-visual-basic"></a>Schlüsselwörter (Visual Basic)
 
-The following tables list all Visual Basic language keywords.
+In den folgenden Tabellen sind alle Schlüsselwörter der Visual Basic Sprache aufgeführt.
 
 ## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 
@@ -54,11 +54,11 @@ Die folgenden Schlüsselwörter sind *reserviert*. Das bedeutet, dass Sie sie ni
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[Modul](../modifiers/module-keyword.md)|[Module-Anweisung](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[new-Einschränkung](../statements/type-list.md)|[New-Operator](../operators/new-operator.md)|[Nächste](../statements/for-next-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[new-Einschränkung](../statements/type-list.md)|[New-Operator](../operators/new-operator.md)|[Weiter](../statements/for-next-statement.md)|
 |[Next (in Resume)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[Objekt](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
 |[Operator](../statements/operator-statement.md)|[Option](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[out (generischer Modifizierer)](../modifiers/out-generic-modifier.md)|[Überladungen](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
+|[OrElse](../operators/orelse-operator.md)|[out (generischer Modifizierer)](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overrides](../modifiers/overridable.md)|
 |[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
 |[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
@@ -80,7 +80,7 @@ Die folgenden Schlüsselwörter sind *reserviert*. Das bedeutet, dass Sie sie ni
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../queries/let-clause.md).
+> `EndIf`, `GoSub`, `Variant`und `Wend` werden als reservierte Schlüsselwörter beibehalten, obwohl Sie nicht mehr in Visual Basic verwendet werden. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../queries/let-clause.md).
 
 ## <a name="unreserved-keywords"></a>Nicht reservierte Schlüsselwörter
 
@@ -107,7 +107,7 @@ Die folgenden Schlüsselwörter sind nicht reserviert. Das bedeutet, dass Sie si
 |[Auflistungsobjekt: Zusammenfassung](collection-object-summary.md)|Führt Sprachelemente auf, die für Auflistungen verwendet werden.|  
 |[Ablaufsteuerung: Zusammenfassung](control-flow-summary.md)|Führt Anweisungen auf, die für Schleifen und Steuerung des Verfahrensfluss verwendet werden.|  
 |[Konvertierung: Zusammenfassung](conversion-summary.md)|Führt Funktionen auf, die zum Konvertieren von Zahlen, Datumsangaben, Uhrzeiten und Zeichenfolgen verwendet werden.|  
-|[Datentypen: Zusammenfassung](data-types-summary.md)|Führt Datentypen auf. Führt außerdem Funktionen auf, die zum Konvertieren zwischen Datentypen und zum Überprüfen von Datentypen verwendet werden.|  
+|[Data Types Summary](data-types-summary.md)|Führt Datentypen auf. Führt außerdem Funktionen auf, die zum Konvertieren zwischen Datentypen und zum Überprüfen von Datentypen verwendet werden.|  
 |[Datums- und Uhrzeitangaben: Zusammenfassung](dates-and-times-summary.md)|Führt Sprachelemente auf, die für Datumsangaben und Uhrzeiten verwendet werden.|  
 |[Deklarationen und Konstanten: Zusammenfassung](declarations-and-constants-summary.md)|Führt Anweisungen auf, die zum Deklarieren von Variablen, Konstanten, Klassen, Module und anderen Programmierungselementen verwendet werden. Listet auch Sprachelemente auf, die verwendet werden, um Objektinformationen abzurufen, Ereignisse zu behandeln und Vererbung zu implementieren.|  
 |[Verzeichnisse und Dateien: Zusammenfassung](directories-and-files-summary.md)|Führt Funktionen auf, die verwendet werden, um das Dateisystem zu steuern und Dateien zu verarbeiten.|  

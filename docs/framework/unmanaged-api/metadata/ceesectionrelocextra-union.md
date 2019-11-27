@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444176"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra-Union
-Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
+Stellt einen Adress Offset dar, der von der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) -Schnittstelle zum Verschieben eines Abschnitts verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ typedef union  {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`highAdj`|The upper address adjustment for the section.|  
+|`highAdj`|Die obere Adress Anpassung für den Abschnitt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

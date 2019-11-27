@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448069"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly-Methode
-Notifies the profiler that a module is being attached to its parent assembly.  
+Benachrichtigt den Profiler, dass ein Modul an die übergeordnete Assembly angefügt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>Parameter  
  `moduleId`  
- [in] The ID of the module that is being attached.  
+ in Die ID des Moduls, das angefügt wird.  
   
  `AssemblyId`  
- [in] The ID of the parent assembly to which the module is attached.  
+ in Die ID der übergeordneten Assembly, an die das Modul angefügt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
+ Ein Modul kann über eine Import Adress Tabelle (IAT), über einen aufzurufenden `LoadLibrary`oder über einen Metadatenverweis geladen werden. Daher verfügt das Common Language Runtime (CLR)-Lade Modul über mehrere Codepfade zum Ermitteln der Assembly, in der sich ein Modul befindet. Daher ist es möglich, dass das Modul nach dem Aufruf von [ICorProfilerCallback:: moduleloadend](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) nicht weiß, in welcher Assembly es sich befindet und die übergeordnete Assembly-ID nicht abgerufen werden kann. Die `ModuleAttachedToAssembly`-Methode wird aufgerufen, wenn das Modul an die übergeordnete Assembly angefügt wird und die zugehörige ID der übergeordneten Assembly abgerufen werden kann.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -24,7 +24,7 @@ ms.locfileid: "74433858"
   
 - Bedingte Unterstützung. Dieses Steuerelement unterstützt das Steuerelementmuster in Abhängigkeit vom Zustand des Steuerelements.  
   
-- Wird nicht unterstützt. Das Steuerelement unterstützt dieses Steuerelementmuster nicht. Benutzerdefinierte Steuerelemente können dieses Steuerelementmuster unterstützen.  
+- Nicht unterstützt. Das Steuerelement unterstützt dieses Steuerelementmuster nicht. Benutzerdefinierte Steuerelemente können dieses Steuerelementmuster unterstützen.  
   
 > [!NOTE]
 > Einige Steuerelemente verfügen je nach Funktionalität des Steuerelements über die bedingte Unterstützung für verschiedene Steuerelementmuster. Das MenuItem-Steuerelement verfügt beispielsweise über die bedingte Unterstützung für die <xref:System.Windows.Automation.InvokePattern>-, <xref:System.Windows.Automation.ExpandCollapsePattern>-, <xref:System.Windows.Automation.TogglePattern>- oder <xref:System.Windows.Automation.SelectionItemPattern> -Steuerelementmuster. Dies hängt von seiner Funktion im Menüsteuerelement ab.  
@@ -34,44 +34,44 @@ ms.locfileid: "74433858"
   
 |Steuerelementtyp|Unterstützt|Bedingte Unterstützung|Nicht unterstützt|  
 |------------------|---------------|-------------------------|-------------------|  
-|Schaltfläche|Keiner|Aufrufen, Ein-/ausschalten, Erweitern Reduzieren|Keiner|  
+|Schaltfläche|Keine|Aufrufen, Ein-/ausschalten, Erweitern Reduzieren|Keine|  
 |Kalender|Raster, Tabelle|Auswahl, Scroll|Wert|  
-|Kontrollkästchen|Ein-/ausschalten|Keiner|Keiner|  
+|Kontrollkästchen|Ein-/ausschalten|Keine|Keine|  
 |Kombinationsfeld|Erweitern Reduzieren|Auswahl, Wert|Scroll|  
-|DataGrid|Raster|Scroll, Auswahl, Tabelle|Keiner|  
-|Datenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Scroll-Element, Tabelle, Ein-/ausschalten, Wert|Keiner|  
-|Dokument|Text|Scroll, Wert|Keiner|  
-|Bearbeiten|Keiner|Text, Bereichswert, Wert|Keiner|  
-|Gruppieren|Keiner|Erweitern Reduzieren|Keiner|  
-|Header|Keiner|Transformation|Keiner|  
-|Headerelement|Keiner|Transformation, Aufrufen|Keiner|  
-|Link|Aufrufen|Wert|Keiner|  
-|Bild|Keiner|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
-|Liste|Keiner|Raster, mehrere Ansichten, Scroll, Auswahl|Tabelle|  
-|Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert|Keiner|  
-|Menü|Keiner|Keiner|Keiner|  
-|Menüleiste|Keiner|Erweitern Reduzieren, Andocken, Transformation|Keiner|  
-|Menübefehl|Keiner|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten|Keiner|  
-|Bereich|Keiner|Andocken Scroll, Transformation|Fenster|  
-|Statusanzeige|Keiner|Bereichswert, Wert|Keiner|  
-|Radio Button|SelectionItem|Keiner|Ein-/ausschalten|  
-|Bildlaufleiste|Keiner|Bereichswert|Scroll|  
-|Trennzeichen|Keiner|Keiner|Keiner|  
-|Slider|Keiner|Bereichswert, Auswahl, Wert|Keiner|  
-|Spinner|Keiner|Bereichswert, Auswahl, Wert|Keiner|  
-|Unterteilte Schaltfläche|Aufrufen, Erweitern Reduzieren|Keiner|Keiner|  
-|Statusleiste|Keiner|Raster|Keiner|  
-|Registerkarte|Auswahl|Scroll|Keiner|  
-|TabItem|SelectionItem|Keiner|Aufrufen|  
-|Tabelle|Raster, Rasterelement, Tabelle, Tabellenelement|Keiner|Keiner|  
-|Text|Keiner|Rasterelement, Tabellenelement, Text|Wert|  
-|Ziehpunkt|Transformation|Keiner|Keiner|  
-|Titelleiste|Keiner|Keiner|Keiner|  
-|Symbolleiste|Keiner|Andocken, Erweitern Reduzieren, Transformation|Keiner|  
-|QuickInfo|Keiner|Text, Fenster|Keiner|  
-|Struktur|Keiner|Scroll, Auswahl|Keiner|  
-|Strukturelement|Erweitern Reduzieren|Aufrufen, Scroll-Element, Auswahlelement, Ein-/ausschalten|Keiner|  
-|Fenster|Transformation, Fenster|Andocken|Keiner|  
+|DataGrid|Raster|Scroll, Auswahl, Tabelle|Keine|  
+|Datenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Scroll-Element, Tabelle, Ein-/ausschalten, Wert|Keine|  
+|Dokument|Text|Scroll, Wert|Keine|  
+|Bearbeiten|Keine|Text, Bereichswert, Wert|Keine|  
+|Gruppe|Keine|Erweitern Reduzieren|Keine|  
+|Header|Keine|Transformieren|Keine|  
+|Headerelement|Keine|Transformation, Aufrufen|Keine|  
+|Link|Aufrufen|Wert|Keine|  
+|Bild|Keine|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
+|Liste|Keine|Raster, mehrere Ansichten, Scroll, Auswahl|Table|  
+|Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert|Keine|  
+|Menü|Keine|Keine|Keine|  
+|Menüleiste|Keine|Erweitern Reduzieren, Andocken, Transformation|Keine|  
+|Menüelement|Keine|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten|Keine|  
+|Bereich|Keine|Andocken Scroll, Transformation|Fenster|  
+|Statusanzeige|Keine|Bereichswert, Wert|Keine|  
+|Optionsfeld|SelectionItem|Keine|Ein-/ausschalten|  
+|Bildlaufleiste|Keine|Bereichswert|Scroll|  
+|Trennzeichen|Keine|Keine|Keine|  
+|Schieberegler|Keine|Bereichswert, Auswahl, Wert|Keine|  
+|Spinner|Keine|Bereichswert, Auswahl, Wert|Keine|  
+|Unterteilte Schaltfläche|Aufrufen, Erweitern Reduzieren|Keine|Keine|  
+|Statusleiste|Keine|Raster|Keine|  
+|Registerkarte|Markierung|Scroll|Keine|  
+|TabItem|SelectionItem|Keine|Aufrufen|  
+|Table|Raster, Rasterelement, Tabelle, Tabellenelement|Keine|Keine|  
+|Text|Keine|Rasterelement, Tabellenelement, Text|Wert|  
+|Miniatur|Transformieren|Keine|Keine|  
+|Titelleiste|Keine|Keine|Keine|  
+|Symbolleiste|Keine|Andocken, Erweitern Reduzieren, Transformation|Keine|  
+|QuickInfo|Keine|Text, Fenster|Keine|  
+|Struktur|Keine|Scroll, Auswahl|Keine|  
+|Strukturelement|Erweitern Reduzieren|Aufrufen, Scroll-Element, Auswahlelement, Ein-/ausschalten|Keine|  
+|Fenster|Transformation, Fenster|Andocken|Keine|  
   
 > [!NOTE]
 > Wenn für einen Steuerelementtyp keine unterstützten Steuerelementmuster aufgeführt sind, es aber über mindestens ein bedingt unterstütztes Steuerelementmuster verfügt, dann wird eines dieser bedingten Steuerelementmuster jederzeit unterstützt.  

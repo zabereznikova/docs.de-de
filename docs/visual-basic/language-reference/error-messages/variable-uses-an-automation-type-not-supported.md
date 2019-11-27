@@ -1,5 +1,5 @@
 ---
-title: Variable uses an Automation type not supported
+title: Variable verwendet einen nicht unterstützten Automatisierungstyp.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
@@ -13,15 +13,15 @@ ms.locfileid: "74344826"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Die Variable verwendet einen Automatisierungstyp, der von Visual Basic nicht unterstützt wird.
 
-You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.
+Sie haben versucht, eine Variable zu verwenden, die in einer Typbibliothek oder Objektbibliothek mit einem Datentyp definiert ist, der von Visual Basic nicht unterstützt wird.
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-- Use a variable of a type recognized by Visual Basic.
+- Verwenden Sie eine Variable eines Typs, der von Visual Basic erkannt wird.
 
-     - oder -
+     \- oder -
 
-- If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.
+- Wenn dieser Fehler bei der Verwendung `FileGet` oder `FileGetObject`auftritt, stellen Sie sicher, dass die Datei, die Sie verwenden möchten, mit `FilePut` oder `FilePutObject`geschrieben wurde.
 
 ## <a name="see-also"></a>Siehe auch
 

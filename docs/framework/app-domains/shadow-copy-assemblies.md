@@ -18,7 +18,7 @@ ms.locfileid: "74204573"
 Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne verwendet werden, aktualisiert werden können, ohne die Anwendungsdomäne zu entladen. Dies ist besonders hilfreich für Anwendungen, die permanent verfügbar sein müssen, wie ASP.NET-Websites.
 
 > [!IMPORTANT]
-> Shadow copying is not supported in Windows 8.x Store apps.
+> Schatten Kopien werden in Windows 8. x Store-Apps nicht unterstützt.
 
 Die Common Language Runtime sperrt eine Assemblydatei, wenn die Assembly geladen ist, daher kann die Datei erst aktualisiert werden, wenn die Assembly entladen wurde. Die einzige Möglichkeit zum Entladen einer Assembly aus einer Anwendungsdomäne besteht darin, die Anwendungsdomäne zu entladen, sodass eine Assembly unter normalen Umständen erst auf dem Datenträger aktualisiert werden kann, wenn alle Anwendungsdomänen, in der sie genutzt wird, entladen wurden.
 

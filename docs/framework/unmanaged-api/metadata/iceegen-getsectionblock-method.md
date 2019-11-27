@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434878"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock-Methode
-Gets a section block of the code base.  
+Ruft einen Abschnitts Block der Codebasis ab.  
   
- This method is obsolete and should not be used.  
+ Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,26 +40,26 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ in Der Abschnitt, aus dem ein Block der Codebasis abgerufen wird.  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ in Die Länge des abzurufenden Blocks.  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ in Das Byte relativ zum Anfang des Abschnitts, mit dem das erste Byte des Blocks ausgerichtet werden soll. Dies ist die Position des-Blocks innerhalb des-Abschnitts.  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ vorgenommen Ein Zeiger auf einen Speicherort, der die Adresse des abgerufenen Blocks empfängt.  
   
 ## <a name="remarks"></a>Hinweise  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+ Wenn Sie über besondere Abschnitts Anforderungen verfügen, die nicht von anderen Methoden behandelt werden, wenden Sie `GetSectionBlock` nur an.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

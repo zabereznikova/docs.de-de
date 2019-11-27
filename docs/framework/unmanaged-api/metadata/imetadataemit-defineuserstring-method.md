@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450177"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString-Methode
-Gets a metadata token for the specified literal string.  
+Ruft ein Metadatentoken für die angegebene Literalzeichenfolge ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Parameter  
  `szString`  
- [in] The user string to store.  
+ in Die zu Speicher-Benutzer Zeichenfolge.  
   
  `cchString`  
- [in] The count of wide characters in `szString`.  
+ in Die Anzahl der breit Zeichen in `szString`.  
   
  `pstk`  
- [out] The string token assigned.  
+ vorgenommen Das zugewiesene Zeichen folgen Token.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

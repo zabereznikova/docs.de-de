@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352200"
 ---
-# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
-Specifies the summary of the member.  
+# <a name="summary-visual-basic"></a>\<Zusammenfassungs > (Visual Basic)
+Gibt die Zusammenfassung des Members an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,14 +26,14 @@ Specifies the summary of the member.
  Eine Übersicht des Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Use the `<summary>` tag to describe a type or a type member. Verwenden Sie [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
+ Verwenden Sie das `<summary>`-Tag, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
   
- The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ Der Text für das `<summary>`-Tag ist die einzige Quelle für Informationen über den Typ in IntelliSense und wird auch in der Objektkatalog angezeigt. Weitere Informationen zum Objektkatalog finden Sie unter [Anzeigen der Code Struktur](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.  
+ Dieses Beispiel verwendet das `<summary>`-Tag, um die `ResetCounter`-Methode und die `Counter`-Eigenschaft zu beschreiben.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

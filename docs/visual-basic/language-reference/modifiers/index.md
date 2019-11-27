@@ -51,9 +51,9 @@ Die Themen in diesem Abschnitt dokumentieren die Visual Basic-Laufzeitmodifizier
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Überladungen](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
  [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433533"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted-Methode
-Notifies the profiler that the runtime is resuming all run-time threads.  
+Benachrichtigt den Profiler, dass die Laufzeit alle Laufzeitthreads fortsetzt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,7 +31,7 @@ Notifies the profiler that the runtime is resuming all run-time threads.
 HRESULT RuntimeResumeStarted();  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

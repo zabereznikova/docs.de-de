@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448328"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments-Methode
-Returns an array of all the documents defined in the symbol store.  
+Gibt ein Array aller im Symbol Speicher definierten Dokumente zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +40,16 @@ HRESULT GetDocuments (
  [in] Die Größe des `pDocs`-Arrays.  
   
  `pcDocs`  
- [out] A pointer to a variable that receives the array length.  
+ vorgenommen Ein Zeiger auf eine Variable, die die Array Länge empfängt.  
   
  `pDocs`  
- [out] A pointer to a variable that receives the document array.  
+ vorgenommen Ein Zeiger auf eine Variable, die das Dokument Array empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

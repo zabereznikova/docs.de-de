@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445085"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted-Methode
-Notifies the profiler that a class is being loaded.  
+Benachrichtigt den Profiler, dass eine Klasse geladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +34,12 @@ HRESULT ClassLoadStarted(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] Identifies the class that is being loaded.  
+ in Identifiziert die Klasse, die geladen wird.  
   
 ## <a name="remarks"></a>Hinweise  
- The value of `classId` is not valid for an information request until the [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) method is called.  
+ Der Wert von `classId` ist erst gültig für eine Informationsanforderung, wenn die [ICorProfilerCallback:: classloadabgeschlossene](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) -Methode aufgerufen wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

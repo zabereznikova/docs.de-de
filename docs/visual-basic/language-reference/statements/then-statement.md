@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352802"
 ---
 # <a name="then-statement"></a>Then-Anweisung
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+Führt einen Anweisungsblock ein, der kompiliert oder ausgeführt werden soll, wenn eine getestete Bedingung wahr ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Das `Then`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Then... #Else-Direktive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

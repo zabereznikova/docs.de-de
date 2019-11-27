@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436328"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer-Methode
-Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
+Ruft einen Puffer der entsprechenden Größe für die Methode an der angegebenen relativen virtuellen Adresse ab.  
   
- This method is obsolete and should not be used.  
+ Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +38,17 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>Parameter  
  `RVA`  
- [in] The relative virtual address of the method for which to return a buffer.  
+ in Die relative virtuelle Adresse der Methode, für die ein Puffer zurückgegeben werden soll.  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ vorgenommen Ein Zeiger auf den zurückgegebenen Puffer.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

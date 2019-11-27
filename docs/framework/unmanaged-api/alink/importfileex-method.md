@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446954"
 ---
 # <a name="importfileex-method"></a>ImportFileEx-Methode
-Imports indicated assembly or unbound module.  
+Importiert die angegebener Assembly oder das nicht gebundene Modul.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parameter  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ Der voll qualifizierte Name der Datei, aus der importiert werden soll.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Optionaler Name der Zieldatei.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ TRUE gibt an, dass ImportTypes verwendet wird. andernfalls muss der Import manuell ausgeführt werden.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Flags, die an die [OpenScope-Methode](../metadata/imetadatadispenser-openscope-method.md)weitergegeben werden sollen.  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ Empfängt die ID der Datei, die importiert wird.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Empfängt assemblyimportierungsbereich [IMetaDataAssemblyImport Schnittstellen](../metadata/imetadataassemblyimport-interface.md) Schnittstelle. Wird auf NULL festgelegt, wenn die Datei keine Assembly ist.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ Empfängt die Anzahl importierter Dateien und/oder Bereiche.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h.  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 

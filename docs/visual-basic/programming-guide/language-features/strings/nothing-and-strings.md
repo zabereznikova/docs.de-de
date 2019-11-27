@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344292"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nothing und Zeichenfolgen in Visual Basic
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+Die Visual Basic-Laufzeit und die .NET Framework werden `Nothing` anders ausgewertet, wenn Sie Zeichen folgen sind.  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime und die .NET Framework  
  Betrachten Sie das folgende Beispiel:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ Die Visual Basic Runtime wertet `Nothing` in der Regel als leere Zeichenfolge ("") aus. Der .NET Framework jedoch nicht, und löst eine Ausnahme aus, wenn versucht wird, einen Zeichen folgen Vorgang auf `Nothing`auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch
 

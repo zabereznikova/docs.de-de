@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346416"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Erstellen des Office Open-Quell-XML-Dokuments (Visual Basic)
 In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokuments erläutert, das in den anderen Beispielen in diesem Lernprogramm verwendet wird. Wenn Sie diese Anweisungen befolgen, entspricht Ihre Ausgabe der Ausgabe im jeweiligen Beispiel.  
   
  Die Beispiele in diesem Lernprogramm funktionieren mit jedem gültigen WordprocessingML-Dokument.  
@@ -44,7 +44,7 @@ In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokument
   
 3. Formatieren Sie die erste Zeile mit der Formatvorlage "Überschrift 1".  
   
-4. Select the lines that contain the Visual Basic code. Die erste Zeile beginnt mit dem `Imports`-Schlüsselwort. The last line is "End Class". Formatieren Sie die Zeilen mit der Schriftart Courier. Formatieren Sie sie anschließend mit einer neuen Formatvorlage, und geben Sie der neuen Formatvorlage den Namen "Code".  
+4. Wählen Sie die Zeilen aus, die den Visual Basic Code enthalten. Die erste Zeile beginnt mit dem `Imports`-Schlüsselwort. Die letzte Zeile ist "End Class". Formatieren Sie die Zeilen mit der Schriftart Courier. Formatieren Sie sie anschließend mit einer neuen Formatvorlage, und geben Sie der neuen Formatvorlage den Namen "Code".  
   
 5. Wählen Sie zum Schluss die gesamte Zeile aus, die die Ausgabe enthält, und formatieren Sie sie mit der `Code`-Formatvorlage.  
   
@@ -55,4 +55,4 @@ In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokument
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

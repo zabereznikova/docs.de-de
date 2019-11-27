@@ -21,7 +21,7 @@ ms.locfileid: "74343832"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource-Anweisung
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+Gibt eine Zuordnung zwischen bestimmten Quell Codezeilen und Text außerhalb der Quelle an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,27 +31,27 @@ Indicates a mapping between specific lines of source code and text external to t
 #End ExternalSource  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
 
  `StringLiteral`  
- The path to the external source.  
+ Der Pfad zur externen Quelle.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ Die Zeilennummer der ersten Zeile der externen Quelle.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ Die Zeile, in der der Fehler in der externen Quelle auftritt.  
   
  `#End ExternalSource`  
  Beendet den `#ExternalSource`-Block.  
   
 ## <a name="remarks"></a>Hinweise  
 
- This directive is used only by the compiler and the debugger.  
+ Diese Direktive wird nur vom Compiler und vom Debugger verwendet.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ Eine Quelldatei kann externe Quell Direktiven enthalten, die eine Zuordnung zwischen bestimmten Codezeilen in der Quelldatei und Text außerhalb der Quelle, z. b. einer ASPX-Datei, angeben. Wenn während der Kompilierung Fehler im vorgesehenen Quellcode auftreten, werden Sie als aus der externen Quelle stammende identifiziert.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ Externe Quell Direktiven haben keine Auswirkung auf die Kompilierung und können nicht eingebettet werden. Sie sind nur für die interne Verwendung durch die Anwendung vorgesehen.  
   
 ## <a name="see-also"></a>Siehe auch
 

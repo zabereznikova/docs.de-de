@@ -37,20 +37,20 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Parameter  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ in Ein Zeiger auf die Metadatensignatur der Methode, für die die Aufruf Konvention zurückgegeben werden soll.  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ in Die Größe `pvSig`in Byte.  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ vorgenommen Ein Zeiger auf die systemeigene Aufruf Konvention.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

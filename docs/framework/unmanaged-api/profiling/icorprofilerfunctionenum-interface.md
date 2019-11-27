@@ -37,9 +37,9 @@ Stellt Methoden bereit, um eine Auflistung von Funktionen in der CLR (Common Lan
 ## <a name="remarks"></a>Hinweise  
  Die `ICorProfilerFunctionEnum`-Schnittstelle ist ein Enumerator. Hiermit kann der Empfänger eines Arrays mit einer Rate, die für den Empfänger geeignet ist, Elemente vom Absender abrufen. Anders ausgedrückt: Der Empfänger kann explizit den Fluss der Arrayelemente steuern und auf diese Weise Probleme im Zusammenhang mit der Übergabe großer Arrays als Methodenparameter vermeiden.  
   
- `ICorProfilerFunctionEnum` zählt Funktionen auf, die bereits mit JIT kompiliert wurden, jedoch keine Funktionen, die aus mit "Ngen.exe" generierten systemeigenen Images geladen werden.  
+ `ICorProfilerFunctionEnum` die Funktionen auflistet, die bereits JIT-kompiliert wurden, aber keine Funktionen enthalten, die von systemeigenen Images geladen werden, die mit "ngen. exe" generiert wurden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

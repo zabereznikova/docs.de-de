@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439560"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged-Methode
-Notifies the code profiler that the name of a thread has changed.  
+Benachrichtigt den Codeprofiler, dass sich der Name eines Threads geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,15 +36,15 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>Parameter  
  `threadId`  
- [in] The ID of the thread.  
+ in Die ID des Threads.  
   
  `cchName`  
- [in] The length of the new name of the thread.  
+ in Die Länge des neuen Namens des Threads.  
   
  `name`  
- [in] The new name of the thread. The name is not null-terminated.  
+ in Der neue Name des Threads. Der Name wird nicht mit Null beendet.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -31,7 +31,7 @@ Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

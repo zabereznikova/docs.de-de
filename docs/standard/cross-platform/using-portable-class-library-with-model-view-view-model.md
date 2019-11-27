@@ -19,18 +19,18 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204972"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Verwenden der portablen Klassenbibliothek mit Model-View-View Model
-You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.
+Mithilfe der .NET Framework [portablen Klassenbibliothek](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) können Sie das Model-View-View Model (MVVM)-Muster implementieren und Assemblys auf mehreren Plattformen freigeben.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM is an application pattern that isolates the user interface from the underlying business logic. You can implement the model and view model classes in a Portable Class Library project in Visual Studio 2012, and then create views that are customized for different platforms. This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and Windows 8.x Store apps, as shown in the following illustration.
+ MVVM ist ein Anwendungs Muster, das die Benutzeroberfläche von der zugrunde liegenden Geschäftslogik isoliert. Sie können das Modell und die Modellklassen in einem Projekt für eine portable Klassenbibliothek in Visual Studio 2012 implementieren und dann Sichten erstellen, die für unterschiedliche Plattformen angepasst sind. Mit diesem Ansatz können Sie das Datenmodell und die Geschäftslogik nur einmal schreiben und diesen Code aus .NET Framework-, Silverlight-, Windows Phone-und Windows 8. x Store-Apps verwenden, wie in der folgenden Abbildung dargestellt.
 
- ![Shows the Portable Class Library with MVVM sharing assemblies across platforms.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
+ ![Zeigt die portable Klassenbibliothek mit MVVM, die Assemblys plattformübergreifend freigibt.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- This topic does not provide general information about the MVVM pattern. It only provides information about how to use Portable Class Library to implement MVVM. For more information about MVVM, see the [MVVM Quickstart Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
+ In diesem Thema werden keine allgemeinen Informationen zum MVVM-Muster bereitgestellt. Sie enthält nur Informationen zur Verwendung der portablen Klassenbibliothek zum Implementieren von MVVM. Weitere Informationen zu MVVM finden [Sie unter MVVM-Schnellstart mit der Prism-Bibliothek 5,0 für WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
-## <a name="classes-that-support-mvvm"></a>Classes That Support MVVM
- When you target the .NET Framework 4.5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your Portable Class Library project, the following classes are available for implementing the MVVM pattern:
+## <a name="classes-that-support-mvvm"></a>Klassen, die MVVM unterstützen
+ Wenn Sie die .NET Framework 4,5, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight oder Windows Phone 7,5 für Ihr Projekt für die portable Klassenbibliothek als Ziel angeben, sind die folgenden Klassen für die Implementierung des MVVM-Musters verfügbar:
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>-Klasse
 
@@ -52,42 +52,42 @@ You can use the .NET Framework [Portable Class Library](../../../docs/standard/c
 
 - <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>-Klasse
 
-- All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
+- Alle Klassen im <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>-Namespace
 
-## <a name="implementing-mvvm"></a>Implementing MVVM
- To implement MVVM, you typically create both the model and the view model in a Portable Class Library project, because a Portable Class Library project cannot reference a non-portable project. The model and view model can be in the same project or in separate projects. If you use separate projects, add a reference from the view model project to the model project.
+## <a name="implementing-mvvm"></a>Implementieren von MVVM
+ Zum Implementieren von MVVM erstellen Sie in der Regel sowohl das Modell als auch das Ansichts Modell in einem Projekt für eine portable Klassenbibliothek, da ein Projekt für eine portable Klassenbibliothek nicht auf ein nicht Portables Projekt verweisen kann. Das Modell und das Ansichts Modell können sich im selben Projekt oder in separaten Projekten befinden. Wenn Sie separate Projekte verwenden, fügen Sie dem Modellprojekt einen Verweis aus dem Ansichts Modellprojekt hinzu.
 
- After you compile the model and view model projects, you reference those assemblies in the app that contains the view. If the view interacts only with the view model, you only have to reference the assembly that contains the view model.
+ Nachdem Sie das Modell kompiliert und Modellprojekte angezeigt haben, verweisen Sie in der APP, die die Sicht enthält, auf diese Assemblys. Wenn die Sicht nur mit dem Ansichts Modell interagiert, müssen Sie nur auf die Assembly verweisen, die das Ansichts Modell enthält.
 
 ### <a name="model"></a>Modell
- The following example shows a simplified model class that could reside in a Portable Class Library project.
+ Das folgende Beispiel zeigt eine vereinfachte Modell Klasse, die sich in einem Projekt für eine portable Klassenbibliothek befinden könnte.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- The following example shows a simple way to populate, retrieve, and update the data in a Portable Class Library project. In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.
+ Das folgende Beispiel zeigt eine einfache Möglichkeit zum Auffüllen, abrufen und Aktualisieren der Daten in einem Projekt für eine portable Klassenbibliothek. In einer echten APP würden Sie die Daten von einer Quelle, z. b. einem Windows Communication Foundation (WCF)-Dienst, abrufen.
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
 
-### <a name="view-model"></a>View Model
- A base class for view models is frequently added when implementing the MVVM pattern. The following example shows a base class.
+### <a name="view-model"></a>Modell anzeigen
+ Eine Basisklasse für Ansichts Modelle wird bei der Implementierung des MVVM-Musters häufig hinzugefügt. Im folgenden Beispiel wird eine Basisklasse veranschaulicht.
 
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern. Im folgenden Beispiel wird eine Implementierung der <xref:System.Windows.Input.ICommand>-Schnittstelle veranschaulicht.
+ Eine Implementierung der <xref:System.Windows.Input.ICommand>-Schnittstelle wird häufig mit dem MVVM-Muster verwendet. Im folgenden Beispiel wird eine Implementierung der <xref:System.Windows.Input.ICommand>-Schnittstelle veranschaulicht.
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
 
- The following example shows a simplified view model.
+ Das folgende Beispiel zeigt ein vereinfachtes Ansichts Modell.
 
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>Ansicht  
- From a .NET Framework 4.5 app, Windows 8.x Store app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.  You then create a view that interacts with the view model. The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model. You could create similar views in Silverlight, Windows Phone, or Windows 8.x Store apps.  
+### <a name="view"></a>Anzeigen  
+ Aus einer .NET Framework 4,5-APP, einer Windows 8. x Store-App, einer Silverlight-basierten APP oder einer Windows Phone 7,5-App können Sie auf die Assembly verweisen, die die Modell-und Modellprojekte enthält.  Anschließend erstellen Sie eine Ansicht, die mit dem Ansichts Modell interagiert. Das folgende Beispiel zeigt eine vereinfachte Windows Presentation Foundation-app (WPF), mit der Daten aus dem Ansichts Modell abgerufen und aktualisiert werden. Ähnliche Ansichten können Sie in Silverlight-, Windows Phone-oder Windows 8. x Store-Apps erstellen.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   

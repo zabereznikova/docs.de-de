@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432569"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent-Methode
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+Erstellt eine Definition für ein Ereignis mit der angegebenen Metadatensignatur und ruft ein Token für diese Ereignis Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,38 +43,38 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ in Das Token für die Zielklasse oder Schnittstelle. Dabei handelt es sich entweder um ein `mdTypeDef`-oder `mdTypeDefNil`-Token.  
   
  `szEvent`  
- [in] The name of the event.  
+ in Der Name des Ereignisses.  
   
  `dwEventFlags`  
- [in] Event flags.  
+ in Ereignisflags.  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ in Das Token für die Ereignisklasse. Dies ist eine `mdTypeDef`, ein `mdTypeRef`oder ein `mdTokenNil` Token.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ in Die Methode, die zum Abonnieren des Ereignisses verwendet wird, oder NULL.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ in Die Methode, die zum Kündigen des Ereignisses verwendet wird, oder NULL.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ in Die Methode, die (von einer abgeleiteten Klasse) verwendet wird, um das Ereignis zu erhöhen.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ in Ein Array von Token für andere Methoden, die dem Ereignis zugeordnet sind. Das Array wird mit einem `mdMethodDefNil` Token beendet.  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ vorgenommen Das Metadatentoken, das dem Ereignis zugewiesen ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

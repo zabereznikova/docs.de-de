@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446055"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName-Methode
-Gets the name of this variable.  
+Ruft den Namen dieser Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parameter  
  `cchName`  
- [in] The length of the buffer that the `pcchName` parameter points to.  
+ in Die Länge des Puffers, auf den der `pcchName`-Parameter verweist.  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers, der den Namen enthalten muss, in Zeichen, einschließlich der NULL-Beendigung, erhält.  
   
  `szName`  
- [out] The buffer that stores the name.  
+ vorgenommen Der Puffer, in dem der Name gespeichert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

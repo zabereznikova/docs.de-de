@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 96b3b270fb12aa451d9026435dd3d2c4c196b09c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782027"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435928"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream-Methode
-Speichert alle Metadaten im aktuellen Bereich für den angegebenen `IStream`.  
+Speichert alle Metadaten im aktuellen Gültigkeitsbereich in der angegebenen `IStream`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +36,17 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Parameter  
  `pIStream`  
- [in] Der beschreibbare Stream zu speichern.  
+ in Der beschreibbare Stream, in dem gespeichert werden soll.  
   
  `dwSaveFlags`  
- [in] Reserviert. NULL muss sein.  
+ [in]: Reserviert Muss 0 (null) sein.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

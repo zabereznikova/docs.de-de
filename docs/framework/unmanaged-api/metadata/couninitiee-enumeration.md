@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436438"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE-Enumeration
-Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+Gibt die Konstanten an, die von " [zählinitializeee](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) " beim Initialisieren der Common Language Runtime verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,15 +38,15 @@ typedef enum tagCOUNINITEE
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
-|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
+|`COUNINITEE_DEFAULT`|Gibt den Standardmodus für die nicht Initialisierung an.|  
+|`COUNINITEE_DLL`|Gibt den nicht Initialisierungs Modus zum Entladen einer Assembly an.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

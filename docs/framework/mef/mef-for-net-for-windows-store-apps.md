@@ -10,11 +10,11 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204708"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF für .NET für Windows Store-Apps
-<xref:System.Composition?displayProperty=nameWithType> and its child namespaces contain types for developing extensible Windows 8.x Store apps with Managed Extensibility Framework (MEF). Diese Namespaces gehören zur [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]-Teilmenge für das [!INCLUDE[win8](../../../includes/win8-md.md)]-Betriebssystem.  
+<xref:System.Composition?displayProperty=nameWithType> und die dazugehörigen untergeordneten Namespaces enthalten Typen für die Entwicklung erweiterbarer Windows 8. x Store-Apps mit Managed Extensibility Framework (MEF). Diese Namespaces gehören zur [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]-Teilmenge für das [!INCLUDE[win8](../../../includes/win8-md.md)]-Betriebssystem.  
   
  Diese Namespaces sind nicht Teil der Kernklassenbibliothek, die mit .NET Framework verteilt wird. Zum Installieren dieser Namespaces öffnen Sie das Projekt in Visual Studio, wählen aus dem Menü **Projekt** den Eintrag **NuGet-Pakete verwalten** aus und suchen anschließend online nach dem Microsoft.Composition-Paket.  
   
-- <xref:System.Composition?displayProperty=nameWithType> provides classes that constitute the core MEF for Windows 8.x Store apps.  
+- <xref:System.Composition?displayProperty=nameWithType> stellt Klassen bereit, die die kernmef für Windows 8. x Store-Apps bilden.  
   
 - <xref:System.Composition.Convention?displayProperty=nameWithType> stellt Typen bereit, die die Nutzung des MEF mit einem konventionsbasierten Konfigurationsmodell unterstützen.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "74204708"
   
 - <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> stellt MEF-Typen bereit, die von der Kompositions-Engine intern verwendet werden.  
   
- For more information about [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] and a list of namespaces and types that it contains, see [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
+ Weitere Informationen zu [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] und einer Liste von Namespaces und Typen, die darin enthalten sind, finden Sie unter [Übersicht über .net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
   
 ## <a name="see-also"></a>Siehe auch
 

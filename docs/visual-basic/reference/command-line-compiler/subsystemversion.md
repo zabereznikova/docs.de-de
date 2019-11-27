@@ -13,7 +13,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348539"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-SubSystemVersion (Visual Basic)
 
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.
 
@@ -40,12 +40,12 @@ Die folgende Tabelle enthält allgemeine Subsystemversionen von Windows.
 
 |Windows-Version|Subsystemversion|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
+|Windows 2000|5.00|
 |Windows XP|5.01|
 |Windows Server 2003|5.02|
 |Windows Vista|6.00|
-|Windows 7|6.01|
-|Windows Server 2008|6.01|
+|Windows 7|6,01|
+|Windows Server 2008|6,01|
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|
 
 ## <a name="default-values"></a>Standardwerte
@@ -66,7 +66,7 @@ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingu
 
 ## <a name="setting-this-option"></a>Festlegen dieser Option
 
-To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
+Um die **-SubSystemVersion-** Compileroption in Visual Studio festzulegen, müssen Sie die VBPROJ-Datei öffnen und einen Wert für die `SubsystemVersion`-Eigenschaft in der MSBuild-XML-Datei angeben. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Siehe auch
 

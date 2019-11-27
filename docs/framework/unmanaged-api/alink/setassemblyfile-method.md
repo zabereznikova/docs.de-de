@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445602"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile-Methode
-Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
+Weist den Namen der Assembly zu, die erstellt werden soll. Nicht für die Verwendung beim Erstellen von ungebundenen Modulen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>Parameter  
  `pszFilename`  
- Fully qualified name of the manifest file.  
+ Der voll qualifizierte Name der Manifest-Datei.  
   
  `pEmitter`  
- Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
+ Zeiger auf die [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) -Schnittstelle.  
   
  `afFlags`  
- Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ Flags, wie in [AssemblyFlags-Enumeration](../metadata/assemblyflags-enumeration.md)definiert.  
   
  `pAssemblyID`  
- Pointer to ID of resulting assembly.  
+ Zeiger auf die ID der resultierenden Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h.  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: erzwingen
+title: Objekte
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]

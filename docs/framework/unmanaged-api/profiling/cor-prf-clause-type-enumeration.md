@@ -39,12 +39,12 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|The exception clause is not valid.|  
-|`COR_PRF_CLAUSE_FILTER`|The exception clause is a filter expression.|  
-|`COR_PRF_CLAUSE_CATCH`|The exception clause is a `catch` statement.|  
-|`COR_PRF_CLAUSE_FINALLY`|The exception clause is a `finally` statement.|  
+|`COR_PRF_CLAUSE_NONE`|Die Exception-Klausel ist ungültig.|  
+|`COR_PRF_CLAUSE_FILTER`|Die Exception-Klausel ist ein Filter Ausdruck.|  
+|`COR_PRF_CLAUSE_CATCH`|Die Exception-Klausel ist eine `catch`-Anweisung.|  
+|`COR_PRF_CLAUSE_FINALLY`|Die Exception-Klausel ist eine `finally`-Anweisung.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

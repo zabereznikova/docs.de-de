@@ -23,10 +23,10 @@ ms.locfileid: "74435750"
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ In diesem Thema wird veranschaulicht, wie Sie das Vorkommen einer Zeichenfolge im Inhalt eines Text Steuer Elements mithilfe von [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]sequenziell suchen und hervorheben.  
   
 ## <a name="example"></a>Beispiel  
- The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control. A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>. Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.  
+ Im folgenden Beispiel wird ein <xref:System.Windows.Automation.TextPattern> Objekt aus einem Text-Steuerelement abgerufen. Ein <xref:System.Windows.Automation.Text.TextPatternRange>-Objekt, das den Text Inhalt des gesamten Dokuments darstellt, wird dann mit der <xref:System.Windows.Automation.TextPattern.DocumentRange%2A>-Eigenschaft dieser <xref:System.Windows.Automation.TextPattern>erstellt. Zwei zusätzliche <xref:System.Windows.Automation.Text.TextPatternRange> Objekte werden dann für die sequenzielle Such-und Hervorhebungs Funktionalität erstellt.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  

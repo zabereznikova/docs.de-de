@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450278"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr-Enumeration
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Enthält Werte, die die <xref:System.Type> Parameter für generische Typen beschreiben, wie Sie in Aufrufen von [IMetaDataEmit2::D efinegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,20 +47,20 @@ typedef enum CorGenericParamAttr {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|Die Parameter Varianz gilt nur für generische Parameter für Schnittstellen und Delegaten.|  
+|`gpNonVariant`|Gibt an, dass keine Varianz vorhanden ist.|  
+|`gpCovariant`|Gibt Kovarianz an.|  
+|`gpContravariant`|Gibt kontra Varianz an.|  
+|`gpSpecialConstraintMask`|Besondere Einschränkungen können auf beliebige <xref:System.Type> Parameter angewendet werden.|  
+|`gpNoSpecialConstraint`|Gibt an, dass keine Einschränkung für den <xref:System.Type>-Parameter gilt.|  
+|`gpReferenceTypeConstraint`|Gibt an, dass der <xref:System.Type>-Parameter ein Referenztyp sein muss.|  
+|`gpNotNullableValueTypeConstraint`|Gibt an, dass der <xref:System.Type>-Parameter ein Werttyp sein muss, der kein NULL-Wert sein darf.|  
+|`gpDefaultConstructorConstraint`|Gibt an, dass der <xref:System.Type>-Parameter über einen öffentlichen Standardkonstruktor verfügen muss, der keine Parameter annimmt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

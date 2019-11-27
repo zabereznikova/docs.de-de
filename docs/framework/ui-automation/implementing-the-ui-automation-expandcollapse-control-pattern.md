@@ -53,12 +53,12 @@ Beachten Sie beim Implementieren des „ExpandCollapse“-Steuerelementmusters d
 
 Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>erforderlich.
 
-|Erforderliche Member|Memberart|Notizen|
+|Erforderliche Member|Elementtyp|Hinweise|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|property|Keiner|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keiner|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Methode|Keiner|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|Dieses Steuerelement verfügt über keine zugeordneten Ereignisse. Verwenden Sie diesen generischen Delegaten.|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Eigenschaft|Keine|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keine|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Methode|Keine|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Ereignis|Dieses Steuerelement verfügt über keine zugeordneten Ereignisse. Verwenden Sie diesen generischen Delegaten.|
 
 <a name="Exceptions"></a>
 
@@ -74,7 +74,7 @@ Anbieter müssen die folgenden Ausnahmen auslösen.
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

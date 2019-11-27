@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437949"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField-Methode
-Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Ruft einen Zeiger auf das FieldDef-Token für das Feld ab, das durch die angegebene <xref:System.Type> eingeschlossen ist und über den angegebenen Namen und die angegebene Metadatensignatur verfügt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,33 +39,33 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
+ in Das TypeDef-Token für die Klasse oder Schnittstelle, die das Feld einschließt, nach dem gesucht werden soll. Wenn dieser Wert `mdTokenNil`ist, wird die Suche für eine globale Variable durchgeführt.  
   
  `szName`  
- [in] The name of the field to search for.  
+ in Der Name des Felds, nach dem gesucht werden soll.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the field.  
+ in Ein Zeiger auf die binäre Metadatensignatur des Felds.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ in Die Größe `pvSigBlob`in Byte.  
   
  `pmb`  
- [out] A pointer to the matching FieldDef token.  
+ vorgenommen Ein Zeiger auf das übereinstimmende FieldDef-Token.  
   
 ## <a name="remarks"></a>Hinweise  
- You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+ Sie geben das Feld mit der einschließenden Klasse oder Schnittstelle (`td`), dem Namen (`szName`) und optional der Signatur (`pvSigBlob`) an.  
   
- The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
+ Die an `FindField` über gegebene Signatur muss im aktuellen Gültigkeitsbereich generiert worden sein, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, das den einschließenden Klassen-oder Werttyp identifiziert. (Das Token ist ein Index in der lokalen Tabelle "Typedef"). Sie können keine Lauf Zeit Signatur außerhalb des Kontexts des aktuellen Bereichs erstellen und diese Signatur als Eingabe für `FindField`verwenden.  
   
- `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
+ `FindField` findet nur Felder, die direkt in der Klasse oder Schnittstelle definiert wurden. geerbte Felder werden nicht gefunden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -32,14 +32,14 @@ HRESULT SetFunctionReJIT(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **.NET Framework Version:** 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

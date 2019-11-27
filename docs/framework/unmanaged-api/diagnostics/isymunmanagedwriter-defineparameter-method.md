@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427997"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter-Methode
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+Definiert einen einzelnen Parameter in der aktuellen Methode. Der Parametertyp wird aus der Position (Sequence) des Parameters innerhalb der Signatur der Methode entnommen.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ Wenn Parameter in den Metadaten für eine bestimmte Methode definiert sind, müssen Sie Sie nicht mit dieser Methode erneut definieren. Die Symbol Leser müssen die normalen Metadaten für die Parameter überprüfen, bevor Sie den Symbol Speicher überprüfen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- [in] The parameter name.  
+ in Der Parameter Name.  
   
  `attributes`  
- [in] The parameter attributes.  
+ in Die Parameter Attribute.  
   
  `sequence`  
- [in] The parameter signature.  
+ in Die Parameter Signatur.  
   
  `addrKind`  
- [in] The address type.  
+ in Der adrestyp.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ in Die erste Adresse für die Parameter Spezifikation.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ in Die zweite Adresse für die Parameter Spezifikation.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ in Die dritte Adresse für die Parameter Spezifikation.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

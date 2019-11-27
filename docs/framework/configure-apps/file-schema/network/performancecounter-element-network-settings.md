@@ -32,7 +32,7 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
@@ -41,13 +41,13 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
 |`enabled`|Gibt an, ob die Netzwerk Leistungsindikatoren aktiviert sind. Der Standardwert ist `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ None.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[Einstellungen](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

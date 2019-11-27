@@ -13,7 +13,7 @@ ms.locfileid: "74283192"
 Bei der <xref:System.Activities.Statements.Interop> Aktivität handelt es sich um eine [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5)-Aktivität, die eine .NET Framework 3,5 (WF 3,5)-Aktivität innerhalb eines [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflows umschließt. Die WF 3-Aktivität kann eine einzelne Blattaktivität oder eine ganze Aktivitätsstruktur darstellen. Die Ausführung (einschließlich Abbruch und Ausnahmebehandlung) und die Persistenz der .NET Framework 3,5-Aktivität erfolgen innerhalb des Kontexts der [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflow Instanz, die ausgeführt wird.  
   
 > [!NOTE]
-> Die <xref:System.Activities.Statements.Interop>-Aktivität wird nur in der Toolbox des Workflow-Designers angezeigt, wenn für das Projekt des Workflows die Einstellung **Zielframework** auf **.NET Framework 4.5** festgelegt wurde.  
+> Die <xref:System.Activities.Statements.Interop> Aktivität wird nicht in der Toolbox des Workflow-Designers angezeigt, es sei denn, für das Projekt des Workflows ist die Einstellung für das **Ziel Framework** auf **.NET Framework 4,5**festgelegt  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Kriterien für die Verwendung einer WF 3-Aktivität mit einer Interop-Aktivität  
  Damit eine WF 3-Aktivität innerhalb einer <xref:System.Activities.Statements.Interop>-Aktivität erfolgreich ausgeführt werden kann, müssen die folgenden Kriterien erfüllt werden:  

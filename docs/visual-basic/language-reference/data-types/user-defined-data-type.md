@@ -32,41 +32,41 @@ ms.locfileid: "74343867"
 ---
 # <a name="user-defined-data-type"></a>Benutzerdefinierter Datentyp
 
-Holds data in a format you define. The `Structure` statement defines the format.
+Enthält Daten in einem Format, das Sie definieren. Die `Structure`-Anweisung definiert das Format.
 
-Previous versions of Visual Basic support the user-defined type (UDT). The current version expands the UDT to a *structure*. A structure is a concatenation of one or more *members* of various data types. Visual Basic treats a structure as a single unit, although you can also access its members individually.
+In früheren Versionen von Visual Basic wird der benutzerdefinierte Typ (User-Defined Type, UDT) unterstützt. Die aktuelle Version erweitert den UDT in eine- *Struktur*. Eine Struktur ist eine Verkettung von einem *oder mehreren Membern verschiedener Daten* Typen. Visual Basic behandelt eine Struktur als eine Einheit, obwohl Sie auch einzeln auf die Member zugreifen können.
 
 ## <a name="remarks"></a>Hinweise
 
-Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.
+Definieren und verwenden Sie einen Structure-Datentyp, wenn Sie verschiedene Datentypen in einer einzelnen Einheit kombinieren müssen, oder wenn keiner der elementaren Datentypen Ihren Anforderungen entspricht.
 
-The default value of a structure data type consists of the combination of the default values of each of its members.
+Der Standardwert eines Structure-Datentyps besteht aus der Kombination der Standardwerte der einzelnen Member.
 
-## <a name="declaration-format"></a>Declaration Format
+## <a name="declaration-format"></a>Deklarations Format
 
-A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End Structure` statement. The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining. Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.
+Eine Struktur Deklaration beginnt mit der [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md) und endet mit der `End Structure`-Anweisung. Die `Structure`-Anweisung gibt den Namen der Struktur an, die auch der Bezeichner des Datentyps ist, den die Struktur definiert. Andere Teile des Codes können diesen Bezeichner verwenden, um Variablen, Parameter und Funktions Rückgabewerte für den Datentyp dieser Struktur zu deklarieren.
 
-The declarations between the `Structure` and `End Structure` statements define the members of the structure.
+Die Deklarationen zwischen den Anweisungen `Structure` und `End Structure` definieren die Member der Struktur.
 
-## <a name="member-access-levels"></a>Member Access Levels
+## <a name="member-access-levels"></a>Mitglieds Zugriffsebenen
 
-You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md). If you use a `Dim` statement, the access level defaults to public.
+Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md) oder einer-Anweisung, die die Zugriffsebene angibt, wie z. b. [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../visual-basic/language-reference/modifiers/private.md), deklarieren. Wenn Sie eine `Dim`-Anweisung verwenden, ist die Zugriffsebene standardmäßig auf Public eingestellt.
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Memory Consumption.** Wie bei allen zusammengesetzten Datentypen können Sie den gesamten Speicherverbrauch auch bei Strukturen nicht dadurch zuverlässig berechnen, indem Sie die nominalen Speicherbelegungen ihrer Member addieren. Darüber hinaus können Sie nicht davon ausgehen, dass die Member im Speicher in derselben Reihenfolge wie in der Deklaration angeordnet sind. Wenn Sie das Speicherlayout einer Struktur steuern müssen, können Sie das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut auf die `Structure`-Anweisung anwenden.
+- **Arbeitsspeicher Nutzung.** Wie bei allen zusammengesetzten Datentypen können Sie den gesamten Speicherverbrauch auch bei Strukturen nicht dadurch zuverlässig berechnen, indem Sie die nominalen Speicherbelegungen ihrer Member addieren. Darüber hinaus können Sie nicht davon ausgehen, dass die Member im Speicher in derselben Reihenfolge wie in der Deklaration angeordnet sind. Wenn Sie das Speicherlayout einer Struktur steuern müssen, können Sie das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut auf die `Structure`-Anweisung anwenden.
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.
+- **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass benutzerdefinierte Typen in anderen Umgebungen nicht mit Visual Basic Strukturtypen kompatibel sind.
 
-- **Widening.** There is no automatic conversion to or from any structure data type. You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.
+- **Tet.** Es gibt keine automatische Konvertierung in oder aus einem Struktur Datentyp. Mithilfe der [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)können Sie Konvertierungs Operatoren für die Struktur definieren, und Sie können jeden Konvertierungs Operator als `Widening` oder `Narrowing`deklarieren.
 
-- **Type Characters.** Structure data types have no literal type character or identifier type character.
+- **Geben Sie Zeichen ein.** Struktur Datentypen haben kein Literaltyp Zeichen oder Bezeichnertyp Zeichen.
 
-- **Framework Type.** There is no corresponding type in the .NET Framework. All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.
+- **Frameworktyp.** In der .NET Framework ist kein entsprechender Typ vorhanden. Alle Strukturen erben von der .NET Framework Klasse <xref:System.ValueType?displayProperty=nameWithType>, aber keine einzelne Struktur entspricht <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Beispiel
 
-The following paradigm shows the outline of the declaration of a structure.
+Das folgende Paradigma zeigt den Umriss der Deklaration einer-Struktur.
 
 ```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname

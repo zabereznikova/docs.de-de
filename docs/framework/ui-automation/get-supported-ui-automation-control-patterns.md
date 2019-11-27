@@ -45,4 +45,4 @@ ms.locfileid: "74435640"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448218"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps-Methode
-Gets the set of properties of the exported type with the specified metadata signature.  
+Ruft den Satz von Eigenschaften des exportierten Typs mit der angegebenen Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,32 +41,32 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Parameter  
  `mdct`  
- [in] An `mdExportedType` metadata token that represents the exported type.  
+ in Ein `mdExportedType` Metadatentoken, das den exportierten Typ darstellt.  
   
  `szName`  
- [out] The name of the exported type.  
+ vorgenommen Der Name des exportierten Typs.  
   
  `cchName`  
- [in] The size, in wide characters, of `szName`.  
+ in Die Größe `szName`in breit Zeichen.  
   
  `pchName`  
- [out] The number of wide characters actually returned in `szName`  
+ vorgenommen Die Anzahl der tatsächlich in `szName` zurückgegebenen breit Zeichen.  
   
  `ptkImplementation`  
- [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
+ vorgenommen Ein `mdFile`-, `mdAssemblyRef`-oder `mdExportedType` Metadatentoken, das den Zugriff auf die Eigenschaften des exportierten Typs enthält bzw. zulässt.  
   
  `ptkTypeDef`  
- [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
+ vorgenommen Ein Zeiger auf ein `mdTypeDef` Token, das einen Typ in der Datei darstellt.  
   
  `pdwExportedTypeFlags`  
- [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
+ vorgenommen Ein Zeiger auf die Flags, die die auf den exportierten Typ angewendeten Metadaten beschreiben. Der Flags-Wert kann ein oder mehrere [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) -Werte sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

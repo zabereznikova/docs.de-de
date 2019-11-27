@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="slider-parts"></a>Schieberegler-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Slider>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Der Container für das Element, das die Position des <xref:System.Windows.Controls.Slider>angibt.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Das Element, das einen Auswahlbereich entlang der <xref:System.Windows.Controls.Slider>anzeigt.  Der Auswahlbereich ist nur sichtbar, wenn die <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>-Eigenschaft `true`ist.|  
@@ -32,9 +32,9 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  

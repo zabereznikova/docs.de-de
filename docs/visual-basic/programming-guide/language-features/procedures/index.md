@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345993"
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
-A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
+Eine *Prozedur* ist ein Block von Visual Basic Anweisungen, die von einer Deklarations Anweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer übereinstimmenden `End` Deklaration eingeschlossen werden. Alle ausführbaren Anweisungen in Visual Basic müssen sich innerhalb einiger Prozeduren befinden.  
   
 ## <a name="calling-a-procedure"></a>Aufrufen einer Prozedur  
  Sie rufen eine Prozedur an einer anderen Stelle im Code auf. Dies wird als *Prozeduraufruf* bezeichnet. Wenn die Ausführung der Prozedur abgeschlossen ist, übergibt die Prozedur die Kontrolle wieder an den Code, von dem sie aufgerufen wurde. Dieser Code wird als *aufrufender Code* bezeichnet. Der aufrufende Code ist eine Anweisung, oder ein Ausdruck in einer Anweisung, die die Prozedur mit einem Namen angibt und dieser die Kontrolle übergibt.  
@@ -34,7 +34,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
  In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten. Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben. Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird. Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf. Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.  
   
 ## <a name="types-of-procedures"></a>Prozedurtypen  
- Visual Basic uses several types of procedures:  
+ Visual Basic verwendet mehrere Arten von Prozeduren:  
   
 - [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
   

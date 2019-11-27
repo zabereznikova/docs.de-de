@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440024"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread-Methode
-Notifies the profiler that a managed thread is being implemented using a particular operating system thread.  
+Benachrichtigt den Profiler, dass ein verwalteter Thread mithilfe eines bestimmten Betriebssystem Threads implementiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT ThreadAssignedToOSThread(
   
 ## <a name="parameters"></a>Parameter  
  `managedThreadId`  
- [in] The identifier of the managed thread.  
+ in Der Bezeichner des verwalteten Threads.  
   
  `osThreadId`  
- [in] The identifier of the operating system thread.  
+ in Der Bezeichner des Betriebssystem Threads.  
   
 ## <a name="remarks"></a>Hinweise  
- The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.  
+ Der `ThreadAssignedToOSThread` Rückruf ist vorhanden, sodass der Profiler eine genaue Zuordnung zwischen Fibers von Betriebssystemthreads und verwalteten Threads aufrechterhalten kann.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

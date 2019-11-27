@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428035"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField-Methode
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+Definiert eine einzelne Variable, die sich nicht innerhalb einer Methode befindet. Diese Methode wird für bestimmte Felder in Klassen, Bitfeldern usw. verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parameter  
  `parent`  
- [in] The metadata type or method token.  
+ in Der Metadatentyp oder das Methoden Token.  
   
  `name`  
- [in] The field name.  
+ in Der Feldname.  
   
  `attributes`  
- [in] The field attributes.  
+ in Die Feld Attribute.  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ in Eine `ULONG32`, die die Größe des Puffers in Zeichen ist, der die Feld Signatur enthalten muss.  
   
  `signature`  
- [in] The array of field signatures.  
+ in Das Array von Feld Signaturen.  
   
  `addrKind`  
- [in] The address type.  
+ in Der adrestyp.  
   
  `addr1`  
- [in] The first address for the field specification.  
+ in Die erste Adresse für die Feld Angabe.  
   
  `addr2`  
- [in] The second address for the field specification.  
+ in Die zweite Adresse für die Feld Angabe.  
   
  `addr3`  
- [in] The third address for the field specification.  
+ in Die dritte Adresse für die Feld Angabe.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438759"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext-Methode
-Gets the context identity currently associated with the specified thread.  
+Ruft die Kontext Identität ab, die dem angegebenen Thread zurzeit zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parameter  
  `threadId`  
- [in] The ID of the thread.  
+ in Die ID des Threads.  
   
  `pContextId`  
- [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
+ vorgenommen Ein Zeiger auf die Kontext-ID, die derzeit dem angegebenen Thread zugeordnet ist. Wenn dem Thread aktuell kein Kontext zugeordnet ist, gibt diese Funktion CORPROF_E_DATAINCOMPLETE zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

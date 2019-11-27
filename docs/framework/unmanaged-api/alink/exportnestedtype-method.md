@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438421"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+Gibt die zu exportierenden Typen als exportierbar an. Die [ExportType-Methode](exporttype-method.md) kann auch die in die Liste eingefügten Typen exportieren, diese Methode ist jedoch schneller.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,31 +41,31 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID of assembly to export from.  
+ Die ID der zu exportierenden Assembly.  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ Dateitoken oder Assemblydatei, die den Typ definiert, der exportierbar gemacht werden soll.  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ Typtoken vom Typ, das als exportierbar erstellt werden soll.  
   
  `ParentType`  
- Token of parent type.  
+ Token des übergeordneten Typs.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Der voll qualifizierte Typname, der exportiert werden soll.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` Flags, z. b. `tdPublic` oder `tdNested`. Dieser Wert kann an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
   
  `pType`  
- Receives token for exported type.  
+ Empfängt das Token für den exportierten Typ.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 

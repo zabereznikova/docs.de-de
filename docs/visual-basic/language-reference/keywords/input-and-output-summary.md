@@ -27,11 +27,11 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Verwalten von Dateien|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |Lesen aus einer Datei|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
 |Zurückgeben der Dateilänge|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Festlegen oder Abrufen von Dateiattributen|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>ist <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>ist <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Festlegen oder Abrufen von Dateiattributen|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
 |Festlegen der Schreib-/Leseposition in einer Datei|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |Schreiben in eine Datei|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

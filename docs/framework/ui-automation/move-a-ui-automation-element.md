@@ -32,4 +32,4 @@ ms.locfileid: "74438543"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WindowPattern Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)
+- [WindowPattern-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)
