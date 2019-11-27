@@ -14,15 +14,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332332"
 ---
-# <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="58221-102">Gewusst wie: Zugreifen auf XML-Attribute (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58221-102">How to: Access XML Attributes (Visual Basic)</span></span>
-<span data-ttu-id="58221-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span><span class="sxs-lookup"><span data-stu-id="58221-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="58221-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span><span class="sxs-lookup"><span data-stu-id="58221-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  
+# <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="cc734-102">Gewusst wie: Zugreifen auf XML-Attribute (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc734-102">How to: Access XML Attributes (Visual Basic)</span></span>
+<span data-ttu-id="cc734-103">In diesem Beispiel wird gezeigt, wie eine Attribut Achsen Eigenschaft für den Zugriff auf XML-Attribute in einem XML-Element nach Namen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="cc734-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="cc734-104">Insbesondere wird die `type` Attribut Achsen Eigenschaft verwendet, um auf das Attribut mit dem Namen `type` im `phone` Objekt zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="cc734-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="58221-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="58221-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cc734-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cc734-105">Example</span></span>  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="58221-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58221-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc734-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc734-106">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="58221-107">XML-Attributachseneigenschaft</span><span class="sxs-lookup"><span data-stu-id="58221-107">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [<span data-ttu-id="58221-108">Zugreifen auf XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="58221-108">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [<span data-ttu-id="58221-109">XML</span><span class="sxs-lookup"><span data-stu-id="58221-109">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="cc734-107">XML-Attributachseneigenschaft</span><span class="sxs-lookup"><span data-stu-id="cc734-107">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [<span data-ttu-id="cc734-108">Zugreifen auf XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cc734-108">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [<span data-ttu-id="cc734-109">XML</span><span class="sxs-lookup"><span data-stu-id="cc734-109">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
