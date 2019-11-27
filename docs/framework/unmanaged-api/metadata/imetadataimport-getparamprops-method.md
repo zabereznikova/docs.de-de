@@ -44,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ in Ein ParamDef-Token, das den Parameter darstellt, für den Metadaten zurückgegeben werden sollen.  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ vorgenommen Ein Zeiger auf ein MethodDef-Token, das die Methode darstellt, die den-Parameter annimmt.  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ vorgenommen Die Ordinalposition des Parameters in der Methoden Argumentliste.  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ vorgenommen Ein Puffer, der den Namen des Parameters enthalten soll.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ in Die angeforderte Größe in breit Zeichen `szName`.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ vorgenommen Die zurückgegebene Größe in breit Zeichen `szName`.  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ vorgenommen Ein Zeiger auf alle Attributflags, die dem-Parameter zugeordnet sind. Dies ist eine Bitmaske von `CorParamAttr` Werten.  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ vorgenommen Ein Zeiger auf ein Flag, das angibt, dass der Parameter eine <xref:System.ValueType>ist.  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ vorgenommen Ein Zeiger auf eine Konstante Zeichenfolge, die vom-Parameter zurückgegeben wird.  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ vorgenommen Die Größe der `ppValue` in breit Zeichen oder 0 (null), wenn `ppValue` keine Zeichenfolge enthält.  
   
 ## <a name="remarks"></a>Hinweise
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+Die Sequenzwerte in `pulSequence` mit 1 für Parameter beginnen. Ein Rückgabewert hat eine Sequenznummer von 0.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -18,21 +18,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349696"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen (Visual Basic)
-If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement. You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.  
+Wenn Sie möchten, dass die `Get`-und `Set` Prozeduren einer Eigenschaft über unterschiedliche Zugriffsebenen verfügen, können Sie in der `Property`-Anweisung die restriktivere Ebene und die restriktivere Ebene in der `Get`-oder `Set`-Anweisung verwenden. Sie verwenden gemischte Zugriffsebenen für eine Eigenschaft, wenn bestimmte Teile des Codes in der Lage sein sollen, den Wert der Eigenschaft zu erhalten, und bestimmte andere Teile des Codes in der Lage sein sollen, den Wert zu ändern.  
   
- For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Weitere Informationen zu Zugriffsebenen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-### <a name="to-declare-a-property-with-mixed-access-levels"></a>To declare a property with mixed access levels  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a>So deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen  
   
-1. Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.  
+1. Deklarieren Sie die Eigenschaft auf normale Weise, und geben Sie die weniger restriktive Zugriffsebene (z. b. `Public`) in der `Property`-Anweisung an.  
   
-2. Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).  
+2. Deklarieren Sie entweder die `Get` oder die `Set` Prozedur, und geben Sie die restriktivere Zugriffsebene (z. b. `Friend`) an  
   
-3. Do not specify an access level on the other property procedure. It assumes the access level declared in the `Property` statement. You can restrict access on only one of the property procedures.  
+3. Geben Sie für die andere Eigenschaften Prozedur keine Zugriffsebene an. Dabei wird die in der `Property`-Anweisung deklarierte Zugriffsebene angenommen. Sie können den Zugriff nur für eine der Eigenschaften Prozeduren einschränken.  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access. A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.  
+     Im vorherigen Beispiel hat die `Get` Prozedur denselben `Protected` Zugriff wie die Eigenschaft selbst, während die `Set` Prozedur `Private` Zugriff hat. Eine von `employee` abgeleitete Klasse kann den `salary` Wert lesen, aber nur die `employee` Klasse kann Sie festlegen.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -40,9 +40,9 @@ If you want the `Get` and `Set` procedures on a property to have different acces
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)
 - [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)
 - [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Vorgehensweise: Deklarieren und Abrufen einer Standard Eigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
 - [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)

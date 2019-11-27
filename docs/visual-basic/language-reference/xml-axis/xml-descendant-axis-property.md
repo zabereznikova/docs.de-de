@@ -19,7 +19,7 @@ ms.locfileid: "74349445"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML-Nachfolgerachseneigenschaft (Visual Basic)
 
-Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+Bietet Zugriff auf die nachfolgenden der folgenden Elemente: ein <xref:System.Xml.Linq.XElement> Objekt, ein <xref:System.Xml.Linq.XDocument> Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement> Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument> Objekten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,20 +27,20 @@ Provides access to the descendants of the following: an <xref:System.Xml.Linq.XE
 object...<descendant>
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 `object` ist erforderlich. Ein <xref:System.Xml.Linq.XElement>Objekt, ein <xref:System.Xml.Linq.XDocument>-Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement>Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.
 
-`...<` ist erforderlich. Denotes the start of a descendant axis property.
+`...<` ist erforderlich. Gibt den Anfang einer untergeordneten Achsen Eigenschaft an.
 
-`descendant` ist erforderlich. Name of the descendant nodes to access, of the form [`prefix:]name`.
+`descendant` ist erforderlich. Name der untergeordneten Knoten, auf die im Format [`prefix:]name`zugegriffen werden soll.
 
-|Segment|Beschreibung|
+|-Komponente|Beschreibung|
 |----------|-----------------|
-|`prefix`|Dies ist optional. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
-|`name`|Erforderlich. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Optional. XML-Namespace Präfix für den Nachfolger Knoten. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert wird.|
+|`name`|Erforderlich Der lokale Name des untergeordneten Knotens. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` ist erforderlich. Denotes the end of a descendant axis property.
+`>` ist erforderlich. Bezeichnet das Ende einer Nachfolger Achsen Eigenschaft.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -48,17 +48,17 @@ Eine Auflistung von <xref:System.Xml.Linq.XElement>-Objekten.
 
 ## <a name="remarks"></a>Hinweise
 
-You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+Sie können eine XML-Nachfolger Achsen Eigenschaft für den Zugriff auf Nachfolger Knoten anhand des Namens aus einem <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XDocument>-Objekt oder aus einer Auflistung von <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XDocument> Objekten verwenden. Verwenden Sie die XML-`Value`-Eigenschaft, um auf den Wert des ersten untergeordneten Knotens in der zurückgegebenen Auflistung zuzugreifen. Weitere Informationen finden Sie unter [XML-Wert Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
+Der Visual Basic-Compiler konvertiert Nachfolger Achsen Eigenschaften in Aufrufe der <xref:System.Xml.Linq.XContainer.Descendants%2A>-Methode.
 
 ## <a name="xml-namespaces"></a>XML-Namespaces
 
-The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+Der Name in einer Nachfolger Achsen Eigenschaft kann nur XML-Namespaces verwenden, die Global mit der `Imports`-Anweisung deklariert werden. XML-Namespaces, die lokal in XML-Element Literalen deklariert sind, können nicht verwendet werden. Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Beispiel
 
-The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
+Im folgenden Beispiel wird gezeigt, wie auf den Wert des ersten untergeordneten Knotens mit dem Namen `name` und die Werte aller untergeordneten Knoten mit dem Namen `phone` aus dem `contacts`-Objekt zugegriffen wird.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ Durch diesen Code wird folgender Text angezeigt:
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
+Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix. Anschließend wird das Präfix des-Namespace verwendet, um ein XML-Literalelement zu erstellen und auf den Wert des ersten untergeordneten Knotens mit dem qualifizierten Namen `ns:name`zuzugreifen.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 

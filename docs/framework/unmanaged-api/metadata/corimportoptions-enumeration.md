@@ -46,20 +46,20 @@ typedef enum CorImportOptions {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|Gibt das Standardverhalten an, das zum Überspringen gelöschter Datensätze dient.|  
+|`MDImportOptionAll`|Gibt an, dass alle Metadaten aufgezählt werden sollen.|  
+|`MDImportOptionAllTypeDefs`|Gibt an, dass alle Typedefs, einschließlich gelöschter Typen, aufgelistet werden sollen.|  
+|`MDImportOptionAllMethodDefs`|Gibt an, dass alle methoddefs, einschließlich der gelöschten, aufgezählt werden sollen.|  
+|`MDImportOptionAllFieldDefs`|Gibt an, dass alle FieldDefs, einschließlich gelöschter, aufgezählt werden sollen.|  
+|`MDImportOptionAllProperties`|Gibt an, dass alle PropertyDefs, einschließlich gelöschter Werte, aufgelistet werden sollen.|  
+|`MDImportOptionAllEvents`|Gibt an, dass alle EventDefs, einschließlich der gelöschten, aufgezählt werden sollen.|  
+|`MDImportOptionAllCustomAttributes`|Gibt an, dass alle benutzerdefinierten Attribute, einschließlich gelöschter Attribute, aufgezählt werden sollen.|  
+|`MDImportOptionAllExportedTypes`|Gibt an, dass alle exportierten Typen, einschließlich gelöschter Typen, aufgezählt werden sollen.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

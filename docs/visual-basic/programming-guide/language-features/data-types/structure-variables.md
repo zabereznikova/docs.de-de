@@ -16,7 +16,7 @@ ms.locfileid: "74346295"
 ---
 # <a name="structure-variables-visual-basic"></a>Strukturvariablen (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. Dies wird im folgenden Beispiel veranschaulicht:
+Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedur-und Modulebene als diesen Typ deklarieren. Beispielsweise können Sie eine Struktur erstellen, die Informationen zu einem Computersystem aufzeichnet. Dies wird im folgenden Beispiel veranschaulicht:
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+Sie können jetzt Variablen dieses Typs deklarieren. Dies wird in der folgenden Deklaration veranschaulicht.
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> In Klassen und Modulen werden Strukturen, die mithilfe der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) deklariert werden, standardmäßig auf öffentlichen Zugriff eingestellt. Wenn Sie beabsichtigen, eine Struktur als privat zu verwenden, stellen Sie sicher, dass Sie Sie mit dem [privaten](../../../../visual-basic/language-reference/modifiers/private.md) Schlüsselwort deklarieren.
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>Zugriff auf Struktur Werte
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+Zum Zuweisen und Abrufen von Werten aus den Elementen einer Struktur Variablen verwenden Sie dieselbe Syntax wie zum Festlegen und Abrufen von Eigenschaften für ein Objekt. Sie platzieren den Member Access Operator (`.`) zwischen dem Struktur Variablennamen und dem Elementnamen. Im folgenden Beispiel wird auf Elemente der Variablen zugegriffen, die zuvor als Typ `systemInfo`deklariert wurden.
 
 ```vb
 mySystem.cPU = "486"
@@ -45,15 +45,15 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>Zuweisen von Struktur Variablen
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+Sie können eine Variable auch einer anderen zuweisen, wenn beide denselben Strukturtyp haben. Dadurch werden alle Elemente einer Struktur in die entsprechenden Elemente in der anderen kopiert. Dies wird in der folgenden Deklaration veranschaulicht.
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+Wenn ein Strukturelement ein Referenztyp ist, z. b. eine `String`, `Object`oder ein Array, wird der Zeiger auf die Daten kopiert. Wenn `systemInfo` im vorherigen Beispiel eine Objekt Variable enthalten hätte, hätte das vorangehende Beispiel den Zeiger von `mySystem` auf `yourSystem`kopiert, und eine Änderung an den Daten des Objekts durch eine Struktur wäre wirksam, wenn über die andere Struktur darauf zugegriffen wird.
 
 ## <a name="see-also"></a>Siehe auch
 

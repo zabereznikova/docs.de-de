@@ -36,7 +36,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="menuitem-parts"></a>MenuItem-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Menu>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Der Bereich für das Untermenü.|  
   

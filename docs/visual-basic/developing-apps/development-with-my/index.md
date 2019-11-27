@@ -24,7 +24,7 @@ Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit
   
  Diese Tabelle zeigt die `My`-Objekte der obersten Ebene und ihre Beziehung zueinander.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![Das Diagramm zeigt das Objektmodell für "My".](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
@@ -38,7 +38,7 @@ Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit
  Beschreibt die Objekte `My.Resources` und `My.Settings`, die Zugriff auf die Ressourcen und Einstellungen einer Anwendung ermöglichen  
   
  [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Beschreibt das Visual Basic Starten/Herunterfahren des Anwendungs Modells.  
   
  [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Bietet Informationen zu den in verschiedenen Projekttypen verfügbaren `My`-Funktionen  

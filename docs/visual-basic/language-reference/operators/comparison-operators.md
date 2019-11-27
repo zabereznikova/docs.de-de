@@ -38,19 +38,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336085"
 ---
 # <a name="comparison-operators-visual-basic"></a>Vergleichsoperatoren (Visual Basic)
-The following are the comparison operators defined in Visual Basic.
+Im folgenden sind die in Visual Basic definierten Vergleichs Operatoren angegeben.
 
- `<` operator
+ `<`-Operator
 
- `<=` operator
+ `<=`-Operator
 
- `>` operator
+ `>`-Operator
 
- `>=` operator
+ `>=`-Operator
 
- `=` operator
+ `=`-Operator
 
- `<>` operator
+ `<>`-Operator
 
  [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)
 
@@ -58,7 +58,7 @@ The following are the comparison operators defined in Visual Basic.
 
  [Like-Operator](../../../visual-basic/language-reference/operators/like-operator.md)
 
- These operators compare two expressions to determine whether or not they are equal, and if not, how they differ. `Is`, `IsNot`, and `Like` are discussed in detail on separate Help pages. The relational comparison operators are discussed in detail on this page.
+ Diese Operatoren vergleichen zwei Ausdrücke, um zu bestimmen, ob Sie gleich sind, und falls nicht, wie Sie sich unterscheiden. `Is`, `IsNot`und `Like` werden auf separaten Hilfeseiten ausführlich erläutert. Die relationalen Vergleichs Operatoren werden auf dieser Seite ausführlich erläutert.
 
 ## <a name="syntax"></a>Syntax
   
@@ -68,87 +68,87 @@ result = object1 [Is | IsNot] object2
 result = string Like pattern  
 ```  
   
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
  `result`  
- Erforderlich. A `Boolean` value representing the result of the comparison.
+ Erforderlich Ein `Boolean` Wert, der das Ergebnis des Vergleichs darstellt.
 
  `expression1`, `expression2`  
- Erforderlich. Beliebiger Ausdruck.
+ Erforderlich Beliebiger Ausdruck.
 
  `comparisonoperator`  
- Erforderlich. Any relational comparison operator.
+ Erforderlich Ein beliebiger relationaler Vergleichs Operator.
 
  `object1`, `object2`  
- Erforderlich. Any reference object names.
+ Erforderlich Alle Verweis Objektnamen.
 
  `string`  
- Erforderlich. Beliebiger `String` -Ausdruck.
+ Erforderlich Beliebiger `String` -Ausdruck.
 
  `pattern`  
- Erforderlich. Any `String` expression or range of characters.
+ Erforderlich Alle `String` Ausdruck oder der Zeichenbereich.
 
 ## <a name="remarks"></a>Hinweise
- The following table contains a list of the relational comparison operators and the conditions that determine whether `result` is `True` or `False`.
+ Die folgende Tabelle enthält eine Liste der relationalen Vergleichs Operatoren und die Bedingungen, die bestimmen, ob `result` `True` oder `False`ist.
 
 |Operator|`True`, wenn|`False`, wenn|
 |--------------|---------------|----------------|
-|`<` (Less than)|`expression1` < `expression2`|`expression1` >= `expression2`|
-|`<=` (Less than or equal to)|`expression1` <= `expression2`|`expression1` > `expression2`|
-|`>` (Greater than)|`expression1` > `expression2`|`expression1` <= `expression2`|
-|`>=` (Greater than or equal to)|`expression1` >= `expression2`|`expression1` < `expression2`|
-|`=` (Equal to)|`expression1` = `expression2`|`expression1` <> `expression2`|
-|`<>` (Not equal to)|`expression1` <> `expression2`|`expression1` = `expression2`|
+|`<` (kleiner als)|`expression1` < `expression2`|`expression1` >= `expression2`|
+|`<=` (kleiner als oder gleich)|`expression1` <= `expression2`|`expression1` > `expression2`|
+|`>` (größer als)|`expression1` > `expression2`|`expression1` <= `expression2`|
+|`>=` (größer als oder gleich)|`expression1` >= `expression2`|`expression1` < `expression2`|
+|`=` (gleich)|`expression1` = `expression2`|`expression1` <> `expression2`|
+|`<>` (ungleich)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
-> The [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) is also used as an assignment operator.
+> Der [Operator =](../../../visual-basic/language-reference/operators/assignment-operator.md) wird auch als Zuweisungs Operator verwendet.
 
- The `Is` operator, the `IsNot` operator, and the `Like` operator have specific comparison functionalities that differ from the operators in the preceding table.
+ Der `Is`-Operator, der `IsNot`-Operator und der `Like`-Operator verfügen über bestimmte Vergleichs Funktionalitäten, die sich von den Operatoren in der obigen Tabelle unterscheiden.
 
-## <a name="comparing-numbers"></a>Comparing Numbers
- When you compare an expression of type `Single` to one of type `Double`, the `Single` expression is converted to `Double`. This behavior is opposite to the behavior found in Visual Basic 6.
+## <a name="comparing-numbers"></a>Vergleichen von Zahlen
+ Wenn Sie einen Ausdruck vom Typ "`Single`" mit einem Typ vom Typ "`Double`" vergleichen, wird der `Single` Ausdruck in `Double`konvertiert. Dieses Verhalten steht im Gegensatz zu dem in Visual Basic 6 gefundenen Verhalten.
 
- Similarly, when you compare an expression of type `Decimal` to an expression of type `Single` or `Double`, the `Decimal` expression is converted to `Single` or `Double`. For `Decimal` expressions, any fractional value less than 1E-28 might be lost. Such fractional value loss may cause two values to compare as equal when they are not. For this reason, you should take care when using equality (`=`) to compare two floating-point variables. It is safer to test whether the absolute value of the difference between the two numbers is less than a small acceptable tolerance.
+ Wenn Sie einen Ausdruck vom Typ `Decimal` mit einem Ausdruck vom Typ `Single` oder `Double`vergleichen, wird der `Decimal` Ausdruck in `Single` oder `Double`konvertiert. Bei `Decimal` ausdrücken könnte jeder Bruchteil, der kleiner als 1E-28 ist, verloren gehen. Ein solcher Verlust von Bruchteil-Werten kann bewirken, dass zwei Werte als gleich verglichen werden, wenn Sie nicht sind. Aus diesem Grund sollten Sie sorgfältig vorgehen, wenn Sie Gleichheit (`=`) zum Vergleichen von zwei Gleit Komma Variablen verwenden. Es ist sicherer, zu testen, ob der absolute Wert des Unterschieds zwischen den beiden Zahlen kleiner als eine geringfügige akzeptable Toleranz ist.
 
-### <a name="floating-point-imprecision"></a>Floating-point Imprecision
- When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the [Mod Operator](../../../visual-basic/language-reference/operators/mod-operator.md). For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+### <a name="floating-point-imprecision"></a>Ungenauigkeit von Gleit Komma Werten
+ Beachten Sie beim Arbeiten mit Gleit Komma Zahlen, dass Sie nicht immer über eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen bestimmter Vorgänge führen, wie z. b. Wert Vergleiche und der [Mod-Operator](../../../visual-basic/language-reference/operators/mod-operator.md). Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="comparing-strings"></a>Vergleichen von Zeichenfolgen
- When you compare strings, the string expressions are evaluated based on their alphabetical sort order, which depends on the `Option Compare` setting.
+ Beim Vergleichen von Zeichen folgen werden die Zeichen folgen Ausdrücke basierend auf der alphabetischen Sortierreihenfolge ausgewertet, die von der `Option Compare` Einstellung abhängig ist.
 
- `Option Compare Binary` bases string comparisons on a sort order derived from the internal binary representations of the characters. The sort order is determined by the code page. The following example shows a typical binary sort order.
+ `Option Compare Binary` Basis Zeichenfolgenvergleiche in einer Sortierreihenfolge, die von den internen binären Darstellungen der Zeichen abgeleitet ist. Die Sortierreihenfolge wird von der Codepage bestimmt. Das folgende Beispiel zeigt eine typische binäre Sortierreihenfolge.
 
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`
 
- `Option Compare Text` bases string comparisons on a case-insensitive, textual sort order determined by your application's locale. When you set `Option Compare Text` and sort the characters in the preceding example, the following text sort order applies:
+ `Option Compare Text` Basiszeichen folgen Vergleiche bei einer durch die Groß-/Kleinschreibung Unterscheidung nach Groß-/Kleinschreibung, die durch das Gebiets Schema Wenn Sie `Option Compare Text` festlegen und die Zeichen im vorherigen Beispiel Sortieren, gilt die folgende Text Sortierreihenfolge:
 
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`
 
-### <a name="locale-dependence"></a>Locale Dependence
- When you set `Option Compare Text`, the result of a string comparison can depend on the locale in which the application is running. Two characters might compare as equal in one locale but not in another. If you are using a string comparison to make important decisions, such as whether to accept an attempt to log on, you should be alert to locale sensitivity. Consider either setting `Option Compare Binary` or calling the <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, which takes the locale into account.
+### <a name="locale-dependence"></a>Gebiets Schema Abhängigkeit
+ Wenn Sie `Option Compare Text`festlegen, kann das Ergebnis eines Zeichen folgen Vergleichs von dem Gebiets Schema abhängen, in dem die Anwendung ausgeführt wird. Zwei Zeichen können in einem Gebiets Schema gleich sein, aber nicht in einem anderen. Wenn Sie einen Zeichen folgen Vergleich verwenden, um wichtige Entscheidungen zu treffen, z. b., ob ein Anmeldeversuch angenommen werden soll, sollten Sie eine Warnung bezüglich Gebiets Schema Sensitivität haben. Sie können entweder `Option Compare Binary` festlegen oder den <xref:Microsoft.VisualBasic.Strings.StrComp%2A>aufrufen, der das Gebiets Schema berücksichtigt.
 
-## <a name="typeless-programming-with-relational-comparison-operators"></a>Typeless Programming with Relational Comparison Operators
- The use of relational comparison operators with `Object` expressions is not allowed under `Option Strict On`. When `Option Strict` is `Off`, and either `expression1` or `expression2` is an `Object` expression, the run-time types determine how they are compared. The following table shows how the expressions are compared and the result from the comparison, depending on the runtime type of the operands.
+## <a name="typeless-programming-with-relational-comparison-operators"></a>Typlose Programmierung mit relationalen Vergleichs Operatoren
+ Die Verwendung von relationalen Vergleichs Operatoren mit `Object` Ausdrücken ist unter `Option Strict On`nicht zulässig. Wenn `Option Strict` `Off`ist und entweder `expression1` oder `expression2` ein `Object` Ausdruck ist, bestimmen die Lauf Zeit Typen, wie Sie verglichen werden. Die folgende Tabelle zeigt, wie die Ausdrücke und das Ergebnis des Vergleichs verglichen werden, abhängig vom Lauf Zeittyp der Operanden.
 
-|If operands are|Comparison is|
+|Wenn Operanden|Vergleich ist|
 |---------------------|-------------------|
-|Both `String`|Sort comparison based on string sorting characteristics.|
-|Both numeric|Objects converted to `Double`, numeric comparison.|
-|One numeric and one `String`|The `String` is converted to a `Double` and numeric comparison is performed. If the `String` cannot be converted to `Double`, an <xref:System.InvalidCastException> is thrown.|
-|Either or both are reference types other than `String`|Es wird eine <xref:System.InvalidCastException> ausgelöst.|
+|Beide `String`|Sortier Vergleich auf Grundlage von Zeichen folgen Sortier Merkmalen.|
+|Beide numerisch|Objekte, die in `Double`konvertiert werden, numerischer Vergleich.|
+|Eine numerische und eine `String`|Der `String` wird in eine `Double` konvertiert, und es wird ein numerischer Vergleich ausgeführt. Wenn die `String` nicht in `Double`konvertiert werden kann, wird eine <xref:System.InvalidCastException> ausgelöst.|
+|Entweder oder beide sind Verweis Typen, die nicht `String`|Es wird eine <xref:System.InvalidCastException> ausgelöst.|
 
- Numeric comparisons treat `Nothing` as 0. String comparisons treat `Nothing` as `""` (an empty string).
+ Numerische Vergleiche behandeln `Nothing` als 0 (null). Zeichen folgen Vergleiche behandeln `Nothing` als `""` (eine leere Zeichenfolge).
 
 ## <a name="overloading"></a>Überladen
- The relational comparison operators (`<`. `<=`, `>`, `>=`, `=`, `<>`) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. If your code uses any of these operators on such a class or structure, be sure you understand the redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+ Die relationalen Vergleichs Operatoren (`<`. `<=`, `>`, `>=`, `=`, `<>`) können *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur ihr Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code einen dieser Operatoren in einer solchen Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
- Notice that the [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) can be overloaded only as a relational comparison operator, not as an assignment operator.
+ Beachten Sie, dass der [=-Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) nur als relationaler Vergleichs Operator, nicht als Zuweisungs Operator, überladen werden kann.
 
 ## <a name="example"></a>Beispiel
- The following example shows various uses of relational comparison operators, which you use to compare expressions. Relational comparison operators return a `Boolean` result that represents whether or not the stated expression evaluates to `True`. When you apply the `>` and `<` operators to strings, the comparison is made using the normal alphabetical sorting order of the strings. This order can be dependent on your locale setting. Whether the sort is case-sensitive or not depends on the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) setting.
+ Das folgende Beispiel zeigt verschiedene Verwendungen relationaler Vergleichs Operatoren, die Sie zum Vergleichen von Ausdrücken verwenden. Relationale Vergleichs Operatoren geben ein `Boolean` Ergebnis zurück, das angibt, ob der angegebene Ausdruck als `True`ausgewertet wird. Wenn Sie die `>`-und `<` Operatoren auf Zeichen folgen anwenden, erfolgt der Vergleich mithilfe der normalen alphabetischen Sortierreihenfolge der Zeichen folgen. Diese Reihenfolge kann von ihrer Gebiets Schema Einstellung abhängen. Ob bei der Sortierung die Groß-/Kleinschreibung beachtet wird, hängt von der [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) -Einstellung ab.
 
  [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]
 
- In the preceding example, the first comparison returns `False` and the remaining comparisons return `True`.
+ Im vorherigen Beispiel gibt der erste Vergleich `False` zurück, und die restlichen Vergleiche geben `True`zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -157,4 +157,4 @@ result = string Like pattern
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Vergleichs Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

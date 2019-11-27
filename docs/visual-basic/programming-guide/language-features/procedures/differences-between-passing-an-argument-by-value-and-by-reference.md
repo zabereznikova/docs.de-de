@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341232"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jedes Argument einem zugrunde liegenden Programmier Element im aufrufenden Code. Sie können entweder den Wert dieses zugrunde liegenden Elements oder einen Verweis darauf übergeben. Dies wird als *Übergabe Mechanismus*bezeichnet.  
   
 ## <a name="passing-by-value"></a>Übergeben als Wert  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ Sie übergeben ein Argument als *Wert* , indem Sie das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) -Schlüsselwort für den entsprechenden Parameter in der Prozedur Definition angeben. Wenn Sie diesen Übergabe Mechanismus verwenden, kopiert Visual Basic den Wert des zugrunde liegenden Programmier Elements in eine lokale Variable in der Prozedur. Der Prozedur Code hat keinen Zugriff auf das zugrunde liegende Element im aufrufenden Code.  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>Übergeben als Verweis  
+ Sie übergeben ein Argument als *Verweis* , indem Sie das [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort für den entsprechenden Parameter in der Prozedur Definition angeben. Wenn Sie diesen Übergabe Mechanismus verwenden, gibt Visual Basic der Prozedur einen direkten Verweis auf das zugrunde liegende Programmier Element im aufrufenden Code.  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>Übergeben von Mechanismen und Elementtyp  
+ Der übergebene Mechanismus ist nicht mit der Klassifizierung des zugrunde liegenden Elementtyps identisch. Wenn Sie als Wert oder als Verweis übergeben werden, bezieht sich dies auf die Visual Basic an den Prozedur Code liefert. Ein Werttyp oder Verweistyp bezieht sich darauf, wie ein Programmier Element im Arbeitsspeicher gespeichert wird.  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ Der Übergabe Mechanismus und der Elementtyp sind jedoch miteinander verknüpft. Der Wert eines Verweis Typs ist ein Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher. Dies bedeutet Folgendes: Wenn Sie einen Verweistyp als Wert übergeben, verfügt der Prozedur Code über einen Zeiger auf die Daten des zugrunde liegenden Elements, auch wenn er nicht auf das zugrunde liegende Element selbst zugreifen kann. Wenn das Element z. b. eine Array Variable ist, hat der Prozedur Code keinen Zugriff auf die Variable selbst, kann aber auf die Arraymember zugreifen.  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>Änderbarkeit  
+ Wenn Sie ein nicht änderbares Element als Argument übergeben, kann die Prozedur es niemals im aufrufenden Code ändern, unabhängig davon, ob es `ByVal` oder `ByRef`übergeben wird.  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ In der folgenden Tabelle wird für ein änderbares Element die Interaktion zwischen dem Elementtyp und dem Übergabe Mechanismus zusammengefasst.  
   
-|Elementtyp|Passed `ByVal`|Passed `ByRef`|  
+|Elementtyp|Bestandene `ByVal`|Bestandene `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|Werttyp (enthält nur einen Wert)|Die-Prozedur kann die Variable oder keines ihrer Member nicht ändern.|Die-Prozedur kann die Variable und ihre Member ändern.|  
+|Verweistyp (enthält einen Zeiger auf eine Klassen-oder Struktur Instanz)|Die Prozedur kann die Variable nicht ändern, kann jedoch die Member der Instanz ändern, auf die Sie verweist.|Die-Prozedur kann die Variable und die Member der Instanz ändern, auf die Sie verweist.|  
   
 ## <a name="see-also"></a>Siehe auch
 

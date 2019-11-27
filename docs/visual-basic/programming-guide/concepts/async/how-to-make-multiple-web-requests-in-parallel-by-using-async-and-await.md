@@ -9,9 +9,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346147"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit Async und warten (Visual Basic)
 
-In einer asynchronen Methode werden Aufgaben gestartet, wenn sie erstellt werden. The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes. Häufig wird eine Aufgabe erwartet, sobald sie erstellt wird, wie das folgende Beispiel zeigt.
+In einer asynchronen Methode werden Aufgaben gestartet, wenn sie erstellt werden. Der [Erwartungs Operator wird](../../../../visual-basic/language-reference/operators/await-operator.md) auf die Aufgabe an dem Punkt in der Methode angewendet, an dem die Verarbeitung nicht fortgesetzt werden kann, bis die Aufgabe abgeschlossen ist. Häufig wird eine Aufgabe erwartet, sobald sie erstellt wird, wie das folgende Beispiel zeigt.
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
@@ -39,25 +39,25 @@ Das folgende Programm startet drei asynchrone Webdownloads und erwartet diese da
 > [!NOTE]
 > Zum Fertigstellen dieses Projekts muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.
 
-For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+Ein weiteres Beispiel, in dem mehrere Aufgaben gleichzeitig gestartet werden, finden Sie unter Gewusst wie: Erweitern der asynchronen exemplarischen Vorgehensweise [mithilfe von "Task. alle" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 Sie können den Code für dieses Beispiel auf der Seite für [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) herunterladen.
 
 ### <a name="to-set-up-the-project"></a>So richten Sie das Projekt ein
 
-1. Führen Sie die folgenden Schritte aus, um eine WPF-Anwendung einzurichten. You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Führen Sie die folgenden Schritte aus, um eine WPF-Anwendung einzurichten. Ausführliche Anweisungen zu diesen Schritten finden Sie unter Exemplarische Vorgehensweise [: Zugreifen auf das Web mit Async und warten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
 
     - Erstellen Sie eine WPF-Anwendung, die ein Textfeld und eine Schaltfläche enthält. Benennen Sie die Schaltfläche mit `startButton` und das Textfeld mit `resultsTextBox`.
 
     - Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.
 
-    - In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.
+    - Fügen Sie in der Datei "MainWindow. XAML. vb" eine `Imports`-Anweisung für `System.Net.Http`hinzu.
 
 ### <a name="to-add-the-code"></a>So fügen Sie den Code hinzu
 
-1. In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.
+1. Doppelklicken Sie im Entwurfs Fenster MainWindow. XAML auf die Schaltfläche, um den `startButton_Click` Ereignishandler in "MainWindow. XAML. vb" zu erstellen.
 
-2. Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.
+2. Kopieren Sie den folgenden Code, und fügen Sie ihn in den Hauptteil des `startButton_Click` in "MainWindow. XAML. vb" ein.
 
     ```vb
     resultsTextBox.Clear()
@@ -73,7 +73,7 @@ Sie können den Code für dieses Beispiel auf der Seite für [Codebeispiele für
 
     - `DisplayResults` zeigt die Anzahl von Bytes im Bytearray für jede URL an. Diese Anzeige wird aufgerufen, wenn alle Aufgaben den Download abgeschlossen haben.
 
-     Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.
+     Kopieren Sie die folgenden Methoden, und fügen Sie Sie nach dem `startButton_Click`-Ereignishandler in MainWindow. XAML. vb ein.
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)

@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="textbox-parts"></a>Text Feld Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.TextBox>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das ein <xref:System.Windows.FrameworkElement>enthalten kann. Der Text des <xref:System.Windows.Controls.TextBox> wird in diesem Element angezeigt.|  
   
@@ -31,9 +31,9 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |ReadOnly|CommonStates|Der Benutzer kann den Text im <xref:System.Windows.Controls.TextBox>nicht ändern.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  

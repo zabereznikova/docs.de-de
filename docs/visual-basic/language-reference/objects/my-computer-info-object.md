@@ -15,14 +15,14 @@ ms.locfileid: "74347212"
 Stellt Eigenschaften zum Abrufen von Informationen über den Arbeitsspeicher des Computer, geladene Assemblys, Name und Betriebssystem bereit.  
   
 ## <a name="remarks"></a>Hinweise  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ Weitere Informationen zu den Eigenschaften des `My.Computer.Info` Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

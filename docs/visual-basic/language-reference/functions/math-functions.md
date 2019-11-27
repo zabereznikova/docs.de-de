@@ -15,48 +15,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348065"
 ---
 # <a name="math-functions-visual-basic"></a>Mathematische Funktionen (Visual Basic)
-The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.  
+Die Methoden der <xref:System.Math?displayProperty=nameWithType>-Klasse stellen die serialisierungsometrische, logarithmische und andere gängige mathematische Funktionen bereit.  
   
 ## <a name="remarks"></a>Hinweise  
- The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class. You can use these in a Visual Basic program.  
+ In der folgenden Tabelle sind die Methoden der <xref:System.Math?displayProperty=nameWithType>-Klasse aufgelistet. Sie können diese in einem Visual Basic-Programm verwenden.  
   
-|.NET method|Beschreibung|  
+|.NET-Methode|Beschreibung|  
 |---------------------------|-----------------|  
 |<xref:System.Math.Abs%2A>|Gibt den absoluten Wert einer Zahl zurück.|  
 |<xref:System.Math.Acos%2A>|Gibt einen Winkel zurück, dessen Kosinus die angegebene Zahl ist.|  
 |<xref:System.Math.Asin%2A>|Gibt einen Winkel zurück, dessen Sinus die angegebene Zahl ist.|  
 |<xref:System.Math.Atan%2A>|Gibt einen Winkel zurück, dessen Tangens die angegebene Zahl ist.|  
 |<xref:System.Math.Atan2%2A>|Gibt einen Winkel zurück, dessen Tangens der Quotient zweier angegebener Zahlen ist.|  
-|<xref:System.Math.BigMul%2A>|Returns the full product of two 32-bit numbers.|  
-|<xref:System.Math.Ceiling%2A>|Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.|  
+|<xref:System.Math.BigMul%2A>|Gibt das vollständige Produkt der 2 32-Bit-Zahlen zurück.|  
+|<xref:System.Math.Ceiling%2A>|Gibt den kleinsten ganzzahligen Wert zurück, der größer oder gleich dem angegebenen `Decimal` oder `Double`ist.|  
 |<xref:System.Math.Cos%2A>|Gibt den Kosinus des angegebenen Winkels zurück.|  
 |<xref:System.Math.Cosh%2A>|Gibt den Hyperbelkosinus des angegebenen Winkels zurück.|  
-|<xref:System.Math.DivRem%2A>|Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.|  
-|<xref:System.Math.Exp%2A>|Returns e (the base of natural logarithms) raised to the specified power.|  
-|<xref:System.Math.Floor%2A>|Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.|  
-|<xref:System.Math.IEEERemainder%2A>|Returns the remainder that results from the division of a specified number by another specified number.|  
-|<xref:System.Math.Log%2A>|Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.|  
+|<xref:System.Math.DivRem%2A>|Gibt den Quotienten von 2 32-Bit-oder 64-Bit-Ganzzahlen mit Vorzeichen zurück und gibt auch den Rest in einem Output-Parameter zurück.|  
+|<xref:System.Math.Exp%2A>|Gibt e (die Basis des natürlichen Logarithmus) in der angegebenen Potenz zurück.|  
+|<xref:System.Math.Floor%2A>|Gibt die größte ganze Zahl zurück, die kleiner oder gleich der angegebenen `Decimal` oder `Double` Zahl ist.|  
+|<xref:System.Math.IEEERemainder%2A>|Gibt den Rest zurück, der sich aus der Division einer angegebenen Zahl durch eine andere angegebene Zahl ergibt.|  
+|<xref:System.Math.Log%2A>|Gibt den natürlichen Logarithmus (Basis e) einer angegebenen Zahl oder den Logarithmus einer angegebenen Zahl in einer angegebenen Basis zurück.|  
 |<xref:System.Math.Log10%2A>|Gibt den Logarithmus einer angegebenen Zahl zur Basis 10 zurück.|  
-|<xref:System.Math.Max%2A>|Returns the larger of two numbers.|  
+|<xref:System.Math.Max%2A>|Gibt die größere von zwei Zahlen zurück.|  
 |<xref:System.Math.Min%2A>|Gibt die kleinere von zwei Zahlen zurück.|  
 |<xref:System.Math.Pow%2A>|Potenziert eine angegebene Zahl mit dem angegebenen Exponenten.|  
-|<xref:System.Math.Round%2A>|Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.|  
-|<xref:System.Math.Sign%2A>|Returns an `Integer` value indicating the sign of a number.|  
+|<xref:System.Math.Round%2A>|Gibt einen `Decimal` oder `Double` Wert zurück, der auf den nächstgelegenen ganzzahligen Wert oder auf eine angegebene Anzahl von Dezimalstellen gerundet wird.|  
+|<xref:System.Math.Sign%2A>|Gibt einen `Integer`-Wert zurück, der das Vorzeichen einer Zahl angibt.|  
 |<xref:System.Math.Sin%2A>|Gibt den Sinus des angegebenen Winkels zurück.|  
 |<xref:System.Math.Sinh%2A>|Gibt den Hyperbelsinus des angegebenen Winkels zurück.|  
 |<xref:System.Math.Sqrt%2A>|Gibt die Quadratwurzel einer angegebenen Zahl zurück.|  
 |<xref:System.Math.Tan%2A>|Gibt den Tangens des angegebenen Winkels zurück.|  
 |<xref:System.Math.Tanh%2A>|Gibt den Hyperbeltangens des angegebenen Winkels zurück.|  
-|<xref:System.Math.Truncate%2A>|Calculates the integral part of a specified `Decimal` or `Double` number.|  
+|<xref:System.Math.Truncate%2A>|Berechnet den integralen Teil eines angegebenen `Decimal` oder `Double` Zahl.|  
   
- To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:  
+ Wenn Sie diese Funktionen ohne Qualifikation verwenden möchten, importieren Sie den <xref:System.Math?displayProperty=nameWithType>-Namespace in Ihr Projekt, indem Sie den folgenden Code am Anfang der Quelldatei einfügen:  
   
 ```vb
 Imports System.Math  
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.  
+ In diesem Beispiel wird die <xref:System.Math.Abs%2A>-Methode der <xref:System.Math>-Klasse verwendet, um den absoluten Wert einer Zahl zu berechnen.  
   
 ```vb
 ' Returns 50.3.  
@@ -66,7 +66,7 @@ Dim MyNumber2 As Double = Math.Abs(-50.3)
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.  
+ In diesem Beispiel wird die <xref:System.Math.Atan%2A>-Methode der <xref:System.Math>-Klasse verwendet, um den Wert von Pi zu berechnen.  
   
 ```vb
 Public Function GetPi() As Double  
@@ -76,7 +76,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.  
+ In diesem Beispiel wird die <xref:System.Math.Cos%2A>-Methode der <xref:System.Math>-Klasse verwendet, um den Kosinus eines Winkels zurückzugeben.  
   
 ```vb
 Public Function Sec(ByVal angle As Double) As Double  
@@ -86,7 +86,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.  
+ In diesem Beispiel wird die <xref:System.Math.Exp%2A>-Methode der <xref:System.Math>-Klasse verwendet, um e an einen Strom zurückzugeben.  
   
 ```vb
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -96,7 +96,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.  
+ In diesem Beispiel wird die <xref:System.Math.Log%2A>-Methode der <xref:System.Math>-Klasse verwendet, um den natürlichen Logarithmus einer Zahl zurückzugeben.  
   
 ```vb
 Public Function Asinh(ByVal value As Double) As Double  
@@ -106,7 +106,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.  
+ In diesem Beispiel wird die <xref:System.Math.Round%2A>-Methode der <xref:System.Math>-Klasse verwendet, um eine Zahl auf die nächste ganze Zahl zu runden.  
   
 ```vb
 ' Returns 3.  
@@ -114,7 +114,7 @@ Dim MyVar2 As Double = Math.Round(2.8)
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.  
+ In diesem Beispiel wird die <xref:System.Math.Sign%2A>-Methode der <xref:System.Math>-Klasse verwendet, um das Vorzeichen einer Zahl zu bestimmen.  
   
 ```vb
 ' Returns 1.  
@@ -126,7 +126,7 @@ Dim MySign3 As Integer = Math.Sign(0)
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.  
+ In diesem Beispiel wird die <xref:System.Math.Sin%2A>-Methode der <xref:System.Math>-Klasse verwendet, um den Sinus eines Winkels zurückzugeben.  
   
 ```vb
 Public Function Csc(ByVal angle As Double) As Double  
@@ -136,7 +136,7 @@ End Function
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.  
+ In diesem Beispiel wird die <xref:System.Math.Sqrt%2A>-Methode der <xref:System.Math>-Klasse verwendet, um die Quadratwurzel einer Zahl zu berechnen.  
   
 ```vb
 ' Returns 2.  
@@ -150,7 +150,7 @@ Dim MySqr4 As Double = Math.Sqrt(-4)
 ```  
   
 ## <a name="example"></a>Beispiel  
- This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.  
+ In diesem Beispiel wird die <xref:System.Math.Tan%2A>-Methode der <xref:System.Math>-Klasse verwendet, um den Tangens eines Winkels zurückzugeben.  
   
 ```vb
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -159,12 +159,12 @@ Public Function Ctan(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Klasse:** <xref:System.Math>  
   
  **Namespace:** <xref:System>  
   
- **Assembly:** mscorlib (in mscorlib.dll)  
+ **Assembly:** mscorlib (in "mscorlib. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

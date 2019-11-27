@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331081"
 ---
 # <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
-Declares the parameters and code that define a function lambda expression.  
+Deklariert die Parameter und den Code, die einen Funktions-Lambda-Ausdruck definieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,53 +26,53 @@ Function ( [ parameterlist ] )
 End Function  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`parameterlist`|Dies ist optional. A list of local variable names that represent the parameters of this procedure. The parentheses must be present even when the list is empty. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Erforderlich. A single expression. The type of the expression is the return type of the function.|  
-|`statements`|Erforderlich. A list of statements that returns a value by using the `Return` statement. (See [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).) The type of the value returned is the return type of the function.|  
+|`parameterlist`|Optional. Eine Liste der Namen der lokalen Variablen, die die Parameter dieser Prozedur darstellen. Die Klammern müssen auch dann vorhanden sein, wenn die Liste leer ist. Siehe [Parameter Liste](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Erforderlich Ein einzelner Ausdruck. Der Typ des Ausdrucks ist der Rückgabetyp der Funktion.|  
+|`statements`|Erforderlich Eine Liste von-Anweisungen, die mit der `Return`-Anweisung einen Wert zurückgibt. (Siehe [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).) Der Typ des zurückgegebenen Werts ist der Rückgabetyp der Funktion.|  
   
 ## <a name="remarks"></a>Hinweise  
- A *lambda expression* is a function without a name that calculates and returns a value. You can use a lambda expression anywhere you can use a delegate type, except as an argument to `RemoveHandler`. For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Ein *Lambda-Ausdruck* ist eine Funktion ohne einen Namen, der einen Wert berechnet und zurückgibt. Sie können einen Lambda-Ausdruck überall dort verwenden, wo Sie einen Delegattyp verwenden können, außer als Argument für `RemoveHandler`. Weitere Informationen zu Delegaten und zur Verwendung von Lambda-Ausdrücken mit Delegaten finden Sie unter [delegatanweisung](../../../visual-basic/language-reference/statements/delegate-statement.md) und [gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
- The syntax of a lambda expression resembles that of a standard function. The differences are as follows:  
+ Die Syntax eines Lambda-Ausdrucks ähnelt der einer Standardfunktion. Es gibt die folgenden Unterschiede:  
   
-- A lambda expression does not have a name.  
+- Ein Lambda-Ausdruck weist keinen Namen auf.  
   
-- Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.  
+- Lambda Ausdrücke können keine Modifizierer aufweisen, wie z. b. `Overloads` oder `Overrides`.  
   
-- Lambda expressions do not use an `As` clause to designate the return type of the function. Instead, the type is inferred from the value that the body of a single-line lambda expression evaluates to, or the return value of a multiline lambda expression. For example, if the body of a single-line lambda expression is `Where cust.City = "London"`, its return type is `Boolean`.  
+- Lambda-Ausdrücke verwenden keine `As`-Klausel, um den Rückgabetyp der Funktion anzugeben. Stattdessen wird der-Typ von dem Wert abgeleitet, den der Text eines einzeiligen Lambda Ausdrucks ergibt, oder der Rückgabewert eines mehrzeiligen Lambda Ausdrucks. Wenn beispielsweise der Text eines einzeiligen Lambda-Ausdrucks `Where cust.City = "London"`ist, ist der Rückgabetyp `Boolean`.  
   
-- The body of a single-line lambda expression must be an expression, not a statement. The body can consist of a call to a function procedure, but not a call to a sub procedure.  
+- Der Text eines einzeiligen Lambda-Ausdrucks muss ein Ausdruck und keine-Anweisung sein. Der Text kann aus einem aufzurufenden Funktions Vorgang bestehen, jedoch nicht mit einem-Vorgang.  
   
-- Either all parameters must have specified data types or all must be inferred.  
+- Entweder müssen alle Parameter über bestimmte Datentypen verfügen, oder alle müssen abgeleitet werden.  
   
-- Optional and Paramarray parameters are not permitted.  
+- Optionale Parameter und ParamArray-Parameter sind nicht zulässig.  
   
-- Generic parameters are not permitted.  
+- Generische Parameter sind nicht zulässig.  
   
 ## <a name="example"></a>Beispiel  
- The following examples show two ways to create simple lambda expressions. The first uses a `Dim` to provide a name for the function. To call the function, you send in a value for the parameter.  
+ In den folgenden Beispielen werden zwei Möglichkeiten zum Erstellen einfacher Lambda-Ausdrücke veranschaulicht. Der erste verwendet einen `Dim`, um einen Namen für die Funktion bereitzustellen. Zum Aufrufen der-Funktion senden Sie einen Wert für den-Parameter.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>Beispiel  
- Alternatively, you can declare and run the function at the same time.  
+ Alternativ dazu können Sie die Funktion gleichzeitig deklarieren und ausführen.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Beispiel  
- Following is an example of a lambda expression that increments its argument and returns the value. The example shows both the single-line and multiline lambda expression syntax for a function. For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Im folgenden finden Sie ein Beispiel für einen Lambda-Ausdruck, der sein Argument erhöht und den Wert zurückgibt. Das Beispiel zeigt die einzeilige und die mehrzeilige Lambda-Ausdruckssyntax für eine Funktion. Weitere Beispiele finden Sie unter [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Beispiel  
- Lambda expressions underlie many of the query operators in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], and can be used explicitly in method-based queries. The following example shows a typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, followed by the translation of the query into method format.  
+ Lambda-Ausdrücke unterliegen vielen der Abfrage Operatoren in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]und können explizit in Methoden basierten Abfragen verwendet werden. Das folgende Beispiel zeigt eine typische [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage, gefolgt von der Übersetzung der Abfrage in das Methoden Format.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- For more information about query methods, see [Queries](../../../visual-basic/language-reference/queries/index.md). For more information about standard query operators, see [Standard Query Operators Overview](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Weitere Informationen zu Abfrage Methoden finden Sie unter [Abfragen](../../../visual-basic/language-reference/queries/index.md). Weitere Informationen zu Standard Abfrage Operatoren finden Sie unter [Übersicht über Standard Abfrage Operatoren](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

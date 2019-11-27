@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: 'Gewusst wie: Erstellen von Zeichen folgen mithilfe von StringBuilder'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,13 +12,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344382"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Gewusst wie: Erstellen von Zeichen folgen mithilfe von StringBuilder in Visual Basic
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+In diesem Beispiel wird mithilfe der <xref:System.Text.StringBuilder>-Klasse eine lange Zeichenfolge aus vielen kleineren Zeichen folgen erstellt. Die <xref:System.Text.StringBuilder>-Klasse ist effizienter als der `&=` Operator zum Verketten von vielen Zeichen folgen.
 
 ## <a name="example"></a>Beispiel
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+Im folgenden Beispiel wird eine Instanz der <xref:System.Text.StringBuilder>-Klasse erstellt, 1.000 Zeichen folgen an diese Instanz angefügt und dann die zugehörige Zeichen folgen Darstellung zurückgegeben:
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 

@@ -15,7 +15,7 @@ ms.locfileid: "74336064"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot-Operator (Visual Basic)
 
-Compares two object reference variables.
+Vergleicht zwei Objekt Verweis Variablen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,22 +23,22 @@ Compares two object reference variables.
 result = object1 IsNot object2
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
  `result` ist erforderlich. Ein `Boolean`-Wert.
 
- `object1` ist erforderlich. Any `Object` variable or expression.
+ `object1` ist erforderlich. Beliebige `Object` Variable oder Ausdruck.
 
- `object2` ist erforderlich. Any `Object` variable or expression.
+ `object2` ist erforderlich. Beliebige `Object` Variable oder Ausdruck.
 
 ## <a name="remarks"></a>Hinweise
- The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
+ Der `IsNot`-Operator bestimmt, ob zwei Objekt Verweise auf unterschiedliche Objekte verweisen. Es werden jedoch keine Wert Vergleiche durchgeführt. Wenn `object1` und `object2` beide auf genau dieselbe Objektinstanz verweisen, ist `result` `False`. Wenn dies nicht der Fall ist, wird `result` `True`.
 
- `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
+ `IsNot` ist das Gegenteil des `Is`-Operators. Der Vorteil von `IsNot` besteht darin, dass Sie eine umständliche Syntax mit `Not` und `Is`vermeiden können, was schwierig zu lesen ist.
 
- You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
+ Mit den Operatoren `Is` und `IsNot` können Sie sowohl früh gebundene als auch spät gebundene Objekte testen.
 
 ## <a name="example"></a>Beispiel
- The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
+ Im folgenden Codebeispiel werden sowohl der `Is`-Operator als auch der `IsNot`-Operator verwendet, um denselben Vergleich durchzuführen.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 

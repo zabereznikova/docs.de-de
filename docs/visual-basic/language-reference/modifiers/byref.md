@@ -1,5 +1,5 @@
 ---
-title: ByRef
+title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ByRef
@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351607"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.  
+Gibt an, dass ein Argument so übermittelt wird, dass die aufgerufene Prozedur den Wert einer Variablen ändern kann, die dem Argument im aufrufenden Code zugrunde liegt.  
   
 ## <a name="remarks"></a>Hinweise  
  Der `ByRef`-Modifizierer kann in folgenden Kontexten verwendet werden:  
@@ -29,5 +29,5 @@ Specifies that an argument is passed in such a way that the called procedure can
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

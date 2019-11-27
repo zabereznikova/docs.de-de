@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443104"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain-Methode
-Gets the ID of the application domain in which the specified thread is currently executing code.  
+Ruft die ID der Anwendungsdomäne ab, in der der angegebene Thread aktuell Code ausführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>Parameter  
  `threadId`  
- [in] The ID specifying the thread.  
+ in Die ID, die den Thread angibt.  
   
  `pAppDomainId`  
- [out] A pointer to the ID of the application domain.  
+ vorgenommen Ein Zeiger auf die ID der Anwendungsdomäne.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

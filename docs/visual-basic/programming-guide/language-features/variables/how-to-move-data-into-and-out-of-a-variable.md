@@ -14,42 +14,42 @@ ms.locfileid: "74346903"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Gewusst wie: Verschieben von Daten in und aus einer Variablen (Visual Basic)
 
-You store a value in a variable by putting the variable name on the left side of an assignment statement.
+Sie speichern einen Wert in einer Variablen, indem Sie den Variablennamen auf der linken Seite einer Zuweisungsanweisung platzieren.
 
-## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
+## <a name="putting-data-in-a-variable"></a>Einfügen von Daten in eine Variable
 
-#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
+#### <a name="to-store-a-value-in-a-variable"></a>So speichern Sie einen Wert in einer Variablen
 
-- Use the variable name on the left side of an assignment statement.
+- Verwenden Sie den Variablennamen auf der linken Seite einer Zuweisungsanweisung.
 
-    The following example sets the value of the variable `alpha`.
+    Im folgenden Beispiel wird der Wert der Variablen `alpha`festgelegt.
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    The value generated on the right side of the assignment statement is stored in the variable.
+    Der auf der rechten Seite der Zuweisungsanweisung generierte Wert wird in der Variablen gespeichert.
 
-## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
+## <a name="getting-data-from-a-variable"></a>Erhalten von Daten aus einer Variablen
 
-You retrieve a variable's value by including the variable name in an expression.
+Sie rufen den Wert einer Variablen ab, indem Sie den Variablennamen in einen Ausdruck einschließen.
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
+#### <a name="to-retrieve-a-value-from-a-variable"></a>So rufen Sie einen Wert aus einer Variablen ab
 
-- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
+- Verwenden Sie den Variablennamen in einem Ausdruck. Sie können eine Variable überall dort verwenden, wo Sie eine Konstante oder einen Literalwert verwenden können, außer in einem Ausdruck, der den Wert einer Konstanten definiert.
 
   \- oder -
 
-- Use the variable name following the equal (`=`) sign in an assignment statement.
+- Verwenden Sie den Variablennamen nach dem Gleichheitszeichen (`=`) in einer Zuweisungsanweisung.
 
-  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
+  Im folgenden Beispiel wird der Wert der Variablen `startValue` gelesen und dann der Wert der Variablen `counter` in einem Ausdruck verwendet.
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
+  Der Wert der-Variablen ist an dem Ausdruck genau wie eine Konstante beteiligt und wird dann in der Variablen oder der Eigenschaft auf der linken Seite der Zuweisungsanweisung gespeichert.
 
 ## <a name="see-also"></a>Siehe auch
 

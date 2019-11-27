@@ -14,25 +14,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349720"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Gewusst wie: Erstellen einer Prozedur, die einen Wert zurückgibt (Visual Basic)
-You use a `Function` procedure to return a value to the calling code.  
+Sie verwenden eine `Function` Prozedur, um einen Wert an den aufrufenden Code zurückzugeben.  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>So erstellen Sie eine Prozedur, die einen Wert zurückgibt  
   
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
+1. Verwenden Sie außerhalb einer anderen Prozedur eine `Function`-Anweisung, gefolgt von einer `End Function`-Anweisung.  
   
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
+2. Befolgen Sie in der `Function`-Anweisung das `Function`-Schlüsselwort mit dem Namen der Prozedur und anschließend die Parameterliste in Klammern.  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
+3. Folgen Sie den Klammern mit einer `As`-Klausel, um den Datentyp des zurückgegebenen Werts anzugeben.  
   
-4. Place the procedure's code statements between the `Function` and `End Function` statements.  
+4. Platzieren Sie die Code Anweisungen der Prozedur zwischen den Anweisungen `Function` und `End Function`.  
   
-5. Use a `Return` statement to return the value to the calling code.  
+5. Verwenden Sie eine `Return`-Anweisung, um den Wert an den aufrufenden Code zurückzugeben.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+     Mit der folgenden `Function` Prozedur wird die längste Seite (Hypotenuse) eines Rechts Dreiecks berechnet, wobei die Werte für die beiden anderen Seiten angegeben werden.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`.  
+     Das folgende Beispiel zeigt einen typischen `hypotenuse`-Aufruf.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   

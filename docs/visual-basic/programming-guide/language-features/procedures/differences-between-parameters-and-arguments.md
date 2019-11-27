@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341376"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Unterschiede zwischen Parametern und Argumenten (Visual Basic)
-In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+In den meisten Fällen muss eine Prozedur über einige Informationen zu den Bedingungen verfügen, in denen Sie aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Tasks ausführt, verwendet für jeden-Rückruf verschiedene Informationen. Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücken, die Sie an die Prozedur übergeben, wenn Sie sie aufgerufen haben.  
   
- To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
+ Um diese Informationen an die Prozedur zu übermitteln, definiert die Prozedur einen *Parameter*, und der aufrufende Code übergibt ein *Argument* an diesen Parameter. Sie können sich den-Parameter als Platz als Platz für das-und-Argument vorstellen. Ebenso wie unterschiedliche Fahrzeuge sich zu unterschiedlichen Zeiten in einem Park Platz befinden können, kann der aufrufende Code jedes Mal, wenn die Prozedur aufgerufen wird, ein anderes Argument an denselben Parameter übergeben.  
   
 ## <a name="parameters"></a>Parameter  
- A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
+ Ein *Parameter* stellt einen Wert dar, den die Prozedur beim Aufrufen erwartet. Die-Deklaration der Prozedur definiert ihre Parameter.  
   
- When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
+ Wenn Sie eine `Function` oder `Sub` Prozedur definieren, geben Sie eine *Parameterliste* in Klammern direkt nach dem Prozedur Namen an. Für jeden Parameter geben Sie einen Namen, einen Datentyp und einen Übergabe Mechanismus an ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Sie können auch angeben, dass ein Parameter optional ist. Dies bedeutet, dass der aufrufenden Code keinen Wert für ihn übergeben muss.  
   
- The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
+ Der Name jedes Parameters dient als *lokale Variable* in der Prozedur. Sie verwenden den Parameternamen auf dieselbe Weise wie eine beliebige andere Variable.  
   
 ## <a name="arguments"></a>Argumente  
- An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
+ Ein *Argument* stellt den Wert dar, den Sie an einen Prozedur Parameter übergeben, wenn Sie die Prozedur aufrufen. Der Aufruf Code liefert die Argumente, wenn die Prozedur aufgerufen wird.  
   
- When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
+ Wenn Sie eine `Function` oder `Sub` Prozedur aufzurufen, fügen Sie eine *Argumentliste* in Klammern ein, die direkt auf den Prozedur Namen folgt. Jedes Argument entspricht dem-Parameter an derselben Position in der Liste.  
   
- In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
+ Im Gegensatz zur Parameterdefinition haben Argumente keine Namen. Jedes Argument ist ein Ausdruck, der NULL oder mehr Variablen, Konstanten und Literale enthalten kann. Der Datentyp des ausgewerteten Ausdrucks sollte in der Regel mit dem Datentyp übereinstimmen, der für den entsprechenden Parameter definiert ist, und in jedem Fall muss er in den Parametertyp konvertierbar sein.  
   
 ## <a name="see-also"></a>Siehe auch
 

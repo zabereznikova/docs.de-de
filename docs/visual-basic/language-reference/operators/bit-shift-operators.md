@@ -14,9 +14,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336126"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Bitschiebeoperatoren (Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+Die folgenden BitShift-Operatoren sind in Visual Basic definiert.  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\<-Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>>-Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   

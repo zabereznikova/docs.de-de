@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426170"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString-Methode
-Gets the string stored at the specified relative virtual address.  
+Ruft die Zeichenfolge ab, die bei der angegebenen relativen virtuellen Adresse gespeichert wird.  
   
- This method is obsolete and should not be used.  
+ Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +38,17 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parameter  
  `RVA`  
- [in] The relative virtual address of the string to return.  
+ in Die relative virtuelle Adresse der zurück zugebende Zeichenfolge.  
   
  `lpString`  
- [out] The returned string.  
+ vorgenommen Die zurückgegebene Zeichenfolge.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

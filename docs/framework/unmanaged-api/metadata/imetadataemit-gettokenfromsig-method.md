@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434318"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig-Methode
-Gets a token for the specified metadata signature.  
+Ruft ein Token für die angegebene Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT GetTokenFromSig (
   
 ## <a name="parameters"></a>Parameter  
  `pvSig`  
- [in] The signature to be persisted and stored.  
+ in Die Signatur, die persistent gespeichert und gespeichert werden soll.  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ in Die Anzahl der Bytes in `pvSig`.  
   
  `pmsig`  
- [out] The `mdSignature` token assigned.  
+ vorgenommen Das zugewiesene `mdSignature` Token.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

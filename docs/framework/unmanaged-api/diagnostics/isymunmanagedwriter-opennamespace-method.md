@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427907"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace-Methode
-Öffnet einen neuen Namespace. Call this method before defining methods or variables that occupy a namespace. Namespaces can be nested.  
+Öffnet einen neuen Namespace. Diese Methode wird aufgerufen, bevor Methoden oder Variablen definiert werden, die einen Namespace belegen. Namespaces können eingebettet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,13 @@ HRESULT OpenNamespace(
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- [in] A pointer to the name of the new namespace.  
+ in Ein Zeiger auf den Namen des neuen Namespace.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

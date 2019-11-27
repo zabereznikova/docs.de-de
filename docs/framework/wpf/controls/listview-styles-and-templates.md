@@ -41,8 +41,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Normal|CommonStates|Der Standardstatus.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  

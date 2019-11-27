@@ -15,20 +15,20 @@ ms.locfileid: "74347410"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Gewusst wie: Reduzieren und Ausblenden von Codeabschnitten (Visual Basic)
 
-The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor. The ability to hide code selectively makes your files more manageable and easier to read. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).
+Die `#Region`-Direktive ermöglicht das reduzieren und Ausblenden von Code Abschnitten in Visual Basic Dateien. Mit der `#Region`-Direktive können Sie einen Codeblock angeben, den Sie erweitern oder reduzieren können, wenn Sie den Visual Studio-Code-Editor verwenden. Durch die Möglichkeit, Code selektiv auszublenden, werden Ihre Dateien besser verwaltbar und leichter lesbar. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).
 
-`#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.
+`#Region` Direktiven unterstützen Code Block Semantik wie `#If...#End If`. Dies bedeutet, dass Sie nicht in einem Block beginnen und mit einem anderen enden können. der Start-und der Ende müssen sich im gleichen-Block befinden. `#Region`-Direktiven werden in Functions nicht unterstützt.
 
-## <a name="to-collapse-and-hide-a-section-of-code"></a>To collapse and hide a section of code
+## <a name="to-collapse-and-hide-a-section-of-code"></a>So reduzieren Sie einen Code Abschnitt und blenden ihn aus
 
-Place the section of code between the `#Region` and `#End Region` statements, as in the following example:
+Platzieren Sie den Code Abschnitt zwischen den Anweisungen `#Region` und `#End Region`, wie im folgenden Beispiel gezeigt:
 
 [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]
 
-The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.
+Der `#Region`-Block kann mehrmals in einer Codedatei verwendet werden. Daher können Benutzer eigene Blöcke von Prozeduren und Klassen definieren, die wiederum reduziert werden können. `#Region` Blöcke können auch innerhalb anderer `#Region` Blöcke geschachtelt werden.
 
 > [!NOTE]
-> Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.
+> Das Ausblenden von Code verhindert nicht, dass er kompiliert wird, und wirkt sich nicht auf `#If...#End If`-Anweisungen aus.
 
 ## <a name="see-also"></a>Siehe auch
 

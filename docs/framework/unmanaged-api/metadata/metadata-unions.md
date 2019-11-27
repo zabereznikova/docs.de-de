@@ -18,7 +18,7 @@ In diesem Abschnitt werden die nicht verwalteten Unions beschrieben, welche die 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [CeeSectionRelocExtra-Union](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Stellt einen Adress Offset dar, der von der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) -Schnittstelle zum Verschieben eines Abschnitts verwendet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

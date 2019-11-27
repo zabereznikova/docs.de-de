@@ -35,17 +35,17 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] The token to check the reference validity for.  
+ in Das Token, für das die Verweis Gültigkeit überprüft werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` if `tk` is a valid metadata token within the current scope. Andernfalls `false`.  
+ `true`, wenn `tk` ein gültiges Metadatentoken im aktuellen Bereich ist. Andernfalls ist der Wert `false`.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

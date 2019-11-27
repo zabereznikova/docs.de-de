@@ -25,20 +25,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345874"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+Gibt an, dass ein Klassen-oder Strukturmember die Implementierung für einen in einer Schnittstelle definierten Member bereitstellt.  
   
 ## <a name="remarks"></a>Hinweise  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+Das `Implements`-Schlüsselwort ist nicht mit der [implementierten Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)identisch. Verwenden Sie die `Implements`-Anweisung, um anzugeben, dass eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, und verwenden Sie dann für jedes Element das `Implements`-Schlüsselwort, um anzugeben, welche Schnittstelle und welcher Member implementiert werden.
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss Sie die `Implements`-Anweisung direkt nach der [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md) oder der Structure- [Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)enthalten, und Sie muss alle Member implementieren, die von der-Schnittstelle definiert werden.
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>Neuimplementierung  
+In einer abgeleiteten Klasse können Sie einen Schnittstellenmember erneut implementieren, der von der Basisklasse bereits implementiert wurde. Dies unterscheidet sich von der Überschreibung des Basisklassenmembers in den folgenden Punkten:
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- Der Basisklassenmember muss nicht [über schreibbar](../../../visual-basic/language-reference/modifiers/overridable.md) sein, um neu implementiert werden zu können.
+- Sie können den Member mit einem anderen Namen neu implementieren.
 
-The `Implements` keyword can be used in the following contexts:
+Das `Implements`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:
 
 - [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)

@@ -20,27 +20,27 @@ ms.locfileid: "74350024"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Gewusst wie: Ablegen mehrerer Werte in einer Variablen (Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+Eine Variable enthält mehr als einen Wert, wenn Sie Sie als einen zusammen *gesetzten Datentyp*deklarieren.
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+Zusammen [gesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) umfassen Strukturen, Arrays und Klassen. Eine Variable eines zusammengesetzten Datentyps kann eine Kombination aus elementaren Datentypen und anderen zusammengesetzten Typen enthalten. Strukturen und Klassen können sowohl Code als auch Daten enthalten.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>So speichern Sie mehr als einen Wert in einer Variablen
 
-1. Determine what composite data type you want to use for your variable.
+1. Bestimmen Sie den zusammengesetzten Datentyp, den Sie für die Variable verwenden möchten.
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. Wenn der zusammengesetzte Datentyp nicht bereits definiert ist, definieren Sie ihn so, dass er von der Variablen verwendet werden kann.
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - Definieren Sie eine Struktur mit einer [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md).
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - Definieren Sie ein Array mit einer [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - Definieren Sie eine Klasse mit einer [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md).
 
-3. Declare your variable with a `Dim` statement.
+3. Deklarieren Sie die Variable mit einer `Dim`-Anweisung.
 
-4. Follow the variable name with an `As` clause.
+4. Befolgen Sie den Variablennamen mit einer `As`-Klausel.
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. Befolgen Sie das `As`-Schlüsselwort mit dem Namen des entsprechenden zusammengesetzten Datentyps.
 
 ## <a name="see-also"></a>Siehe auch
 

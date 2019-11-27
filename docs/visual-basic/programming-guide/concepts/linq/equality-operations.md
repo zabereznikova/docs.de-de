@@ -9,12 +9,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346834"
 ---
-# <a name="equality-operations-visual-basic"></a>Equality Operations (Visual Basic)
+# <a name="equality-operations-visual-basic"></a>Gleichheits Vorgänge (Visual Basic)
 Zwei Sequenzen, deren entsprechende Elemente gleich sind und die gleiche Anzahl von Elementen aufweisen, werden als gleich betrachtet werden.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|  
+|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |SequenceEqual|Bestimmt, ob zwei Sequenzen gleich sind, indem Elemente paarweise verglichen werden.|Nicht zutreffend.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
@@ -22,4 +22,4 @@ Zwei Sequenzen, deren entsprechende Elemente gleich sind und die gleiche Anzahl 
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)

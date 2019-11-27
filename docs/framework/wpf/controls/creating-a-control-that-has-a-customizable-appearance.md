@@ -52,7 +52,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 In diesem Thema wird davon ausgegangen, dass Sie wissen, wie Sie eine neue <xref:System.Windows.Controls.ControlTemplate> für ein vorhandenes Steuerelement erstellen, mit den Elementen in einem Steuerelement Vertrag vertraut sind und die Konzepte verstehen, die unter [Erstellen einer Vorlage für ein Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element erläutert werden.
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439307"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished-Methode
-Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
+Benachrichtigt den Profiler, dass der JIT-Compiler (Just-in-Time) die erneute Kompilierung einer Funktion abgeschlossen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +36,20 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>Parameter  
  `functionId`  
- [in] The ID of the function that was recompiled.  
+ in Die ID der Funktion, die neu kompiliert wurde.  
   
  `rejitId`  
  [in] Die Identität der erneut JIT-kompilierten Funktion.  
   
  `hrStatus`  
- [in] A value that indicates whether the JIT recompilation was successful.  
+ in Ein Wert, der angibt, ob die JIT-Neukompilierung erfolgreich war.  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
+ [in] `true`, um anzugeben, dass eine Blockierung bewirken kann, dass die Laufzeit auf die Rückgabe des aufrufenden Threads von diesem Rückruf wartet. `false`, um anzugeben, dass die Blockierung sich nicht auf den Lauf Zeit Vorgang auswirkt.  
   
- A value of `true` does not harm the runtime, but can affect the profiling results.  
+ Der Wert `true` schadet nicht der Laufzeit, kann jedoch die Profil Erstellungs Ergebnisse beeinflussen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

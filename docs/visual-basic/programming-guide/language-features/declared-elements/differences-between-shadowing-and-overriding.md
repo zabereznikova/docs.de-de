@@ -13,48 +13,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345413"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)
-When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class. Shadowing and overriding are both available for this purpose.  
+Wenn Sie eine Klasse definieren, die von einer Basisklasse erbt, empfiehlt es sich, ein oder mehrere der Basisklassen Elemente in der abgeleiteten Klasse neu zu definieren. Zu diesem Zweck sind auch shadodown und überschreiben verfügbar.  
   
 ## <a name="comparison"></a>Vergleich  
- Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two.  
+ Shadodown und überschreiben werden sowohl verwendet, wenn eine abgeleitete Klasse von einer Basisklasse erbt, als auch ein deklariertes Element mit einem anderen neu definieren. Es gibt jedoch bedeutende Unterschiede zwischen den beiden.  
   
- The following table compares shadowing with overriding.  
+ In der folgenden Tabelle wird shadodown mit überschreiben verglichen.  
   
 ||||  
 |---|---|---|  
-|Point of comparison|Shadowing|Overriding|  
-|Zweck|Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class|Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup>|  
-|Redefined element|Any declared element type|Only a procedure (`Function`, `Sub`, or `Operator`) or property|  
-|Redefining element|Any declared element type|Only a procedure or property with the identical calling sequence<sup>1</sup>|  
-|Access level of redefining element|Any access level|Cannot change access level of overridden element|  
-|Readability and writability of redefining element|Any combination|Cannot change readability or writability of overridden property|  
-|Control over redefining|Base class element cannot enforce or prohibit shadowing|Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`|  
-|Keyword usage|`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup>|`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class|  
-|Inheritance of redefining element by classes deriving from your derived class|Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup>|Overriding element inherited by further derived classes; overridden element still overridden|  
+|Vergleichspunkt|Shadowing|Dende|  
+|Zweck|Schützt gegen eine nachfolgende Änderung der Basisklasse, die einen Member einführt, den Sie bereits in der abgeleiteten Klasse definiert haben.|Erreicht Polymorphie durch Definieren einer anderen Implementierung einer Prozedur oder Eigenschaft mit derselben Aufruf Sequenz<sup>1</sup>|  
+|Neu definiertes Element|Beliebiger deklarierter Elementtyp|Nur eine Prozedur (`Function`, `Sub`oder `Operator`) oder Eigenschaft|  
+|Neu definierendes Element|Beliebiger deklarierter Elementtyp|Nur eine Prozedur oder Eigenschaft mit der identischen Aufruf Sequenz<sup>1</sup>|  
+|Zugriffsebene des neu definierenden Elements|Beliebige Zugriffsebene|Zugriffsebene des überschriebenen Elements kann nicht geändert werden.|  
+|Lesbarkeit und Schreib barkeit des neu definierenden Elements|Beliebige Kombination|Die Lesbarkeit oder Schreib barkeit der überschriebenen Eigenschaft kann nicht geändert werden.|  
+|Steuern der Neudefinition|Das Basisklassen Element kann Shadowing nicht erzwingen oder verbieten.|Das Basisklassen Element kann `MustOverride`, `NotOverridable`oder `Overridable` angeben.|  
+|Schlüsselwort Verwendung|`Shadows` in abgeleiteter Klasse empfohlen. `Shadows` wird angenommen, wenn weder `Shadows` noch<sup>`Overrides` angegeben ist</sup> .|in der Basisklasse sind `Overridable` oder `MustOverride` erforderlich. `Overrides` in abgeleiteter Klasse erforderlich|  
+|Vererbung des neu definierenden Elements durch Klassen, die von der abgeleiteten Klasse abgeleitet werden|Shadowingelement, das von weiteren abgeleiteten Klassen geerbt wird. Shadowing Element immer noch ausgeblendet<sup>3</sup>|Überschreiben von weitergeleiteten Klassen geerbten Elementen; überschriebener Element wird immer noch überschrieben|  
   
- <sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type. You cannot override a procedure with a property, or the other way around. You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.  
+ <sup>1</sup> die *Aufruf Sequenz* besteht aus dem Elementtyp (`Function`, `Sub`, `Operator`oder `Property`), dem Namen, der Parameterliste und dem Rückgabetyp. Es ist nicht möglich, eine Prozedur mit einer-Eigenschaft oder umgekehrt zu überschreiben. Sie können eine Art von Prozedur (`Function`, `Sub`oder `Operator`) nicht mit einer anderen Art überschreiben.  
   
- <sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use. If you ignore the warning, the shadowing mechanism is used.  
+ <sup>2</sup> Wenn Sie weder `Shadows` noch `Overrides`angeben, gibt der Compiler eine Warnmeldung aus, um sicherzustellen, welche Art von Neudefinition Sie verwenden möchten. Wenn Sie die Warnung ignorieren, wird der shadodown-Mechanismus verwendet.  
   
- <sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited. For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.  
+ <sup>3</sup> wenn in einer weiteren abgeleiteten Klasse nicht auf das Shadowingelement zugegriffen werden kann, wird shadowingnicht geerbt. Wenn Sie z. b. das Shadowingelement als `Private`deklarieren, erbt eine Klasse, die von der abgeleiteten Klasse abgeleitet wird, das ursprüngliche Element anstelle des shadowingelements.  
   
 ## <a name="guidelines"></a>Richtlinien  
- You normally use overriding in the following cases:  
+ In den folgenden Fällen verwenden Sie in der Regel das Überschreiben:  
   
-- You are defining polymorphic derived classes.  
+- Sie definieren polymorphe abgeleitete Klassen.  
   
-- You want the safety of having the compiler enforce the identical element type and calling sequence.  
+- Sie möchten, dass der Compiler den identischen Elementtyp und die gleiche Aufruf Sequenz erzwingt.  
   
- You normally use shadowing in the following cases:  
+ Normalerweise verwenden Sie shadowingin den folgenden Fällen:  
   
-- You anticipate that your base class might be modified and define an element using the same name as yours.  
+- Sie erwarten, dass die Basisklasse geändert wird, und definieren ein Element mit dem gleichen Namen wie Ihr.  
   
-- You want the freedom of changing the element type or calling sequence.  
+- Sie möchten die Freiheit ändern, den Elementtyp oder die Aufruf Sequenz zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadodown in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Gewusst wie: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Gewusst wie: Ausblenden einer geerbten Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [Gewusst wie: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

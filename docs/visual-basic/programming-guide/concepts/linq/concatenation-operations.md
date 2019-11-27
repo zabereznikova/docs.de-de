@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345673"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
+# <a name="concatenation-operations-visual-basic"></a>Verkettungs Vorgänge (Visual Basic)
 Verkettung bezieht sich auf das Anhängen einer Sequenz an eine andere.  
   
  Die folgende Abbildung stellt einen Verkettungsvorgang zweier Zeichensequenzen dar.  
@@ -20,7 +20,7 @@ Verkettung bezieht sich auf das Anhängen einer Sequenz an eine andere.
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|  
+|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Concat|Verkettet zwei Sequenzen zu einer einzigen Sequenz.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
@@ -28,4 +28,4 @@ Verkettung bezieht sich auf das Anhängen einer Sequenz an eine andere.
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Vorgehensweise: kombinieren und Vergleichen von Zeichen folgen Auflistungen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

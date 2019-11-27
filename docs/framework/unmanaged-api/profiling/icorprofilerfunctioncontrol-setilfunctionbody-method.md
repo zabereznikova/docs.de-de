@@ -48,9 +48,9 @@ HRESULT SetILFunctionBody(
 |S_OK|Die Ersetzung war erfolgreich.|  
   
 ## <a name="remarks"></a>Hinweise  
- Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. Er kann auf jedem Heap zugeordnet werden. The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
+ Anders als bei der [ICorProfilerInfo:: abtilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) -Methode verwaltet die `SetILFunctionBody`-Methode den für den neuen cil-Text benötigten Arbeitsspeicher. Dies bedeutet, dass der vom Profiler bereitgestellte cil-Text nicht mithilfe der [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) -Schnittstelle zugeordnet oder innerhalb eines bestimmten Bereichs zugeordnet werden muss. Er kann auf jedem Heap zugeordnet werden. Der Profiler kann den für seinen cil-Text verwendeten Arbeitsspeicher freigeben, nachdem `SetILFunctionBody` zurückgegeben hat.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

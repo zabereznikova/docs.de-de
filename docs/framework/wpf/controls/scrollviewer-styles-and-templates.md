@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="scrollviewer-parts"></a>ScrollViewer-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ScrollViewer>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|Der Platzhalter für den Inhalt in der <xref:System.Windows.Controls.ScrollViewer>.|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|Der <xref:System.Windows.Controls.Primitives.ScrollBar>, der zum horizontalen Scrollen des Inhalts verwendet wird.|  

@@ -24,19 +24,19 @@ Gibt Elemente in einer Auflistung zurück, solange eine angegebene Bedingung `tr
 Take While expression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`expression`|Erforderlich. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Erforderlich Ein Ausdruck, der eine Bedingung darstellt, für die Elemente getestet werden sollen. Der Ausdruck muss einen `Boolean` Wert oder eine funktionale Entsprechung zurückgeben, z. b. eine `Integer`, die als `Boolean`ausgewertet werden soll.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+ Die `Take While`-Klausel schließt Elemente vom Anfang eines Abfrage Ergebnisses ein, bis die angegebene `expression` `false`zurückgibt. Nachdem die `expression` `false`zurückgegeben hat, werden alle verbleibenden Elemente von der Abfrage umgangen. Der `expression` wird für die restlichen Ergebnisse ignoriert.  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ Die `Take While`-Klausel unterscheidet sich von der `Where`-Klausel darin, dass die `Where`-Klausel verwendet werden kann, um alle Elemente aus einer Abfrage aufzunehmen, die eine bestimmte Bedingung erfüllen. Die `Take While`-Klausel enthält Elemente nur bis zum ersten Mal, wenn die Bedingung nicht erfüllt wird. Die `Take While`-Klausel ist besonders nützlich, wenn Sie mit einem geordneten Abfrageergebnis arbeiten.  
   
 ## <a name="example"></a>Beispiel  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ Im folgenden Codebeispiel wird die `Take While`-Klausel verwendet, um die Ergebnisse abzurufen, bis der erste Kunde ohne Bestellungen gefunden wird.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   

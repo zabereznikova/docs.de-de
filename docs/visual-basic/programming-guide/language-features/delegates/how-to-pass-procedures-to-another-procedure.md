@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: 'Gewusst wie: übergeben von Prozeduren an eine andere Prozedur'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,37 +13,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345246"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic
-This example shows how to use delegates to pass a procedure to another procedure.  
+In diesem Beispiel wird gezeigt, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ Ein Delegat ist ein Typ, den Sie wie jeden anderen Typ in Visual Basic verwenden können. Der `AddressOf`-Operator gibt ein Delegatobjekt zurück, wenn es auf einen Prozedur Namen angewendet wird.  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ Dieses Beispiel enthält eine Prozedur mit einem Delegatparameter, der einen Verweis auf eine andere Prozedur annehmen kann, die mit dem `AddressOf`-Operator abgerufen wird.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>Erstellen des Delegaten und der entsprechenden Prozeduren  
   
-1. Create a delegate named `MathOperator`.  
+1. Erstellen Sie einen Delegaten mit dem Namen `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. Erstellen Sie eine Prozedur mit dem Namen `AddNumbers` mit Parametern und Rückgabe Werten, die mit denen `MathOperator`identisch sind, damit die Signaturen einander entsprechen.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. Erstellen Sie eine Prozedur mit dem Namen `SubtractNumbers` mit einer Signatur, die mit `MathOperator`übereinstimmt.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. Erstellen Sie eine Prozedur mit dem Namen `DelegateTest`, die einen Delegaten als Parameter annimmt.  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     Diese Prozedur kann einen Verweis auf `AddNumbers` oder `SubtractNumbers`akzeptieren, da ihre Signaturen der `MathOperator` Signatur entsprechen.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. Erstellen Sie eine Prozedur mit dem Namen `Test`, die `DelegateTest` einmal mit dem Delegaten für `AddNumbers` als Parameter aufruft, und wieder mit dem Delegaten für `SubtractNumbers` als Parameter.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     Wenn `Test` aufgerufen wird, zeigt es zuerst das Ergebnis `AddNumbers` an, das auf `5` und `3`(8) wirkt. Anschließend wird das Ergebnis der `SubtractNumbers`, die auf `9` und `3` reagieren, angezeigt, d. h. 6.  
   
 ## <a name="see-also"></a>Siehe auch
 

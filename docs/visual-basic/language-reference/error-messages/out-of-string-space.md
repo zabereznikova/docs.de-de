@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349176"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Nicht genügend Zeichenfolgenspeicher (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+Mit Visual Basic können Sie sehr große Zeichen folgen verwenden. Dieser Fehler kann jedoch durch die Anforderungen anderer Programme und die Art und Weise, wie Sie mit ihren Zeichen folgen arbeiten, verursacht werden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. Stellen Sie sicher, dass ein Ausdruck, der eine temporäre Zeichen folgen Erstellung während der Auswertung erfordert, nicht den Fehler verursacht.  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. Entfernen Sie alle unnötigen Anwendungen aus dem Arbeitsspeicher, um mehr Platz zu schaffen.  
   
 ## <a name="see-also"></a>Siehe auch
 

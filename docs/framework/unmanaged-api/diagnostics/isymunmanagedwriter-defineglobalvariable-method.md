@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428022"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable-Methode
-Defines a single global variable.  
+Definiert eine einzelne globale Variable.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,34 +41,34 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ in Ein Zeiger auf eine `WCHAR`, die den Namen der globalen Variablen definiert.  
   
  `attributes`  
- [in] The global variable attributes.  
+ in Die globalen Variablen Attribute.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ in Ein-`ULONG32`, der die Größe des `signature` Puffers in Zeichen angibt.  
   
  `signature`  
- [in] The global variable signature.  
+ in Die globale Variablen Signatur.  
   
  `addrKind`  
- [in] The address type.  
+ in Der adrestyp.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ in Die erste Adresse für die Parameter Spezifikation.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ in Die zweite Adresse für die Parameter Spezifikation.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ in Die dritte Adresse für die Parameter Spezifikation.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

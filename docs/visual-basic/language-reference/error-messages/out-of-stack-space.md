@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349184"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Nicht genügend Stapelspeicher (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+Der Stapel ist ein Arbeitsbereich des Arbeitsspeichers, der dynamisch mit den Anforderungen Ihres ausführenden Programms vergrößert und verkleinert wird. Die Grenzen wurden überschritten.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Check that procedures are not nested too deeply.  
+1. Überprüfen Sie, ob Prozeduren zu tief geschachtelt sind.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Stellen Sie sicher, dass rekursive Prozeduren richtig  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Wenn lokale Variablen mehr lokalen Variablen Speicher benötigen, als verfügbar ist, versuchen Sie, einige Variablen auf Modulebene zu deklarieren. Sie können auch alle Variablen in der Prozedur static deklarieren, indem Sie dem `Property`-, `Sub`-oder `Function`-Schlüsselwort mit `Static`vorangestellt sind. Oder Sie können die `Static`-Anweisung verwenden, um einzelne statische Variablen innerhalb von Prozeduren zu deklarieren.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Definieren Sie einige der Zeichen folgen fester Länge als Zeichen folgen variabler Länge neu, da Zeichen folgen fester Länge mehr Stapel Speicher als Zeichen folgen variabler Länge verwenden. Sie können auch die Zeichenfolge auf Modulebene definieren, an der kein Stapel Speicherplatz erforderlich ist.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Überprüfen Sie die Anzahl der aufgerufenen `DoEvents` Funktionsaufrufe, indem Sie im Dialogfeld `Calls` anzeigen, welche Prozeduren auf dem Stapel aktiv sind.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Stellen Sie sicher, dass Sie keine "Ereignis Cascade" verursacht haben, indem Sie ein Ereignis auslösen, das eine bereits auf dem Stapel bereits aufgerufenen Ereignis Prozedur aufruft. Eine Ereignis Kaskadierung ähnelt einem nicht abgeschlossenen rekursiven Prozedur Aufruf, aber Sie ist weniger offensichtlich, da der-Befehl durch Visual Basic statt eines expliziten Aufrufes im Code erfolgt. Verwenden Sie das Dialogfeld `Calls`, um anzuzeigen, welche Prozeduren auf dem Stapel aktiv sind.  
   
 ## <a name="see-also"></a>Siehe auch
 

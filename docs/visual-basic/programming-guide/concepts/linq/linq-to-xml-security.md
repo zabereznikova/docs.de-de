@@ -9,8 +9,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331741"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Security (Visual Basic)
-In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörtert. Darüber hinaus finden Sie hier einige Empfehlungen zur Minderung der Sicherheitsrisiken.  
+# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Sicherheit (Visual Basic)
+In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörtert. Darüber hinaus bietet es Anleitungen zum Minimieren von Sicherheitsrisiken.  
   
 ## <a name="linq-to-xml-security-overview"></a>Übersicht über die Sicherheit in LINQ to XML  
  Bei der Entwicklung von LINQ to XML standen nicht die serverseitigen Anwendungen mit strengen Sicherheitsanforderungen, sondern eher das bequeme Programmieren im Vordergrund. Die meisten XML-Szenarios beinhalten die Verarbeitung vertrauenswürdiger XML-Dokumente und nicht die Verarbeitung nicht vertrauenswürdiger XML-Dokumente, die auf einen Server hochgeladen werden. Genau für diese Szenarios ist LINQ to XML optimiert.  
@@ -47,7 +47,7 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
 - Nehmen Sie vor dem Konstruieren dynamischer XPath-Ausdrücke eine sorgfältige Validierung vor.  
   
 ## <a name="linq-to-xml-security-issues"></a>Sicherheitsprobleme in LINQ to XML  
- Die Aufzählung der in diesem Thema genannten Sicherheitsprobleme folgt keiner bestimmten Reihenfolge. Alle Probleme sind gleichermaßen wichtig und sollten entsprechend behandelt werden.  
+ Die Sicherheitsprobleme in diesem Thema werden nicht in einer bestimmten Reihenfolge präsentiert. Alle Probleme sind gleichermaßen wichtig und sollten entsprechend behandelt werden.  
   
  Bei einem erfolgreichen Angriff durch Rechteerhöhung erhält die bösartige Assembly mehr Kontrolle über ihre Umgebung. Ein solcher erfolgreicher Angriff durch Rechteerweiterung kann die Offenlegung von Daten, die Verweigerung des Dienstes und vieles mehr zur Folge haben.  
   
@@ -80,8 +80,8 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
 ### <a name="avoid-excess-entity-expansion"></a>Vermeiden Sie eine exzessive Entitätserweiterung  
  Ein bekannter DoS-Angriff mit einer DTD besteht in der Verwendung eines Dokuments, das eine exzessive Entitätserweiterung zur Folge hat. Wenn Sie solche Angriffe vermeiden möchten, können Sie die <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType>-Eigenschaft festlegen und einen Reader erstellen, der die Anzahl der Zeichen beschränkt, die aus einer Entitätserweiterung resultieren. Anschließend erstellen Sie mit dem Reader die XML-Struktur.  
   
-### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Schränken Sie die Tiefe der XML-Hierarchie ein  
- Ein möglicher DoS-Angriff besteht darin, ein Dokument zu senden, dass eine außerordentlich große Hierarchietiefe besitzt. Wenn Sie solche Angriffe verhindern möchten, können Sie in Ihrer eigenen Klasse einen <xref:System.Xml.XmlReader> umschließen, der die Tiefe der Elemente zählt. Wenn die Tiefe ein vorher festgelegtes vernünftiges Maß übersteigt, können Sie die Verarbeitung des bösartigen Dokuments beenden.  
+### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Begrenzen der Tiefe der XML-Hierarchie  
+ Eine Möglichkeit eines Denial-of-Service-Angriff ist gegeben, wenn ein Dokument mit einer übermäßigen Hierarchietiefe gesendet wird. Wenn Sie solche Angriffe verhindern möchten, können Sie in Ihrer eigenen Klasse einen <xref:System.Xml.XmlReader> umschließen, der die Tiefe der Elemente zählt. Wenn die Tiefe ein vorher festgelegtes vernünftiges Maß übersteigt, können Sie die Verarbeitung des bösartigen Dokuments beenden.  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>Schützen Sie sich vor nicht vertrauenswürdigen "XmlReader"- oder "XmlWriter"-Implementierungen  
  Administratoren müssen sicherstellen, dass alle extern bereitgestellten <xref:System.Xml.XmlReader>-Implementierungen oder <xref:System.Xml.XmlWriter>-Implementierungen starke Namen besitzen und in der Computerkonfiguration registriert sind. Auf diese Weise wird verhindert, dass bösartiger Code geladen wird, der sich als Reader oder Writer maskiert.  
@@ -101,4 +101,4 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programmier Handbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

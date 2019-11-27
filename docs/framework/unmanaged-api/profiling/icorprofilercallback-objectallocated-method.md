@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445854"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated-Methode
-Notifies the profiler that memory within the heap has been allocated for an object.  
+Benachrichtigt den Profiler, dass der Arbeitsspeicher im Heap für ein Objekt zugeordnet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>Parameter  
  `objectId`  
- [in] The ID of the object for which memory was allocated.  
+ in Die ID des Objekts, für das Speicher zugewiesen wurde.  
   
  `classId`  
- [in] The ID of the class of which the object is an instance.  
+ in Die ID der Klasse, für die das Objekt eine Instanz ist.  
   
 ## <a name="remarks"></a>Hinweise  
- The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
+ Die `ObjectedAllocated`-Methode wird nicht für Zuordnungen aus dem Stapel oder dem nicht verwalteten Speicher aufgerufen. Der `classId`-Parameter kann auf eine Klasse in verwaltetem Code verweisen, die noch nicht geladen wurde. Der Profiler empfängt direkt nach dem `ObjectAllocated` Rückruf einen Klassen Lade Rückruf für diese Klasse.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

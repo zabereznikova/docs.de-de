@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 'Gewusst wie: Sortieren eines Arrays'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351854"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Gewusst wie: Sortieren eines Arrays in Visual Basic
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+Dieser Artikel zeigt ein Beispiel für das Sortieren eines Arrays von Zeichen folgen in Visual Basic.
 
 ## <a name="example"></a>Beispiel
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+In diesem Beispiel wird ein Array von `String` Objekten mit dem Namen `zooAnimals`deklariert, aufgefüllt und dann alphabetisch sortiert:
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 Die folgenden Bedingungen können einen Ausnahmefehler verursachen:
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- Das Array ist leer (<xref:System.ArgumentNullException>-Klasse).
+- Array ist mehrdimensional (<xref:System.RankException>-Klasse).
+- Mindestens ein Element des Arrays implementiert nicht die <xref:System.IComparable>-Schnittstelle (<xref:System.InvalidOperationException>-Klasse).
 
 ## <a name="see-also"></a>Siehe auch
 

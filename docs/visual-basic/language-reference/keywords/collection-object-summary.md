@@ -16,7 +16,7 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
   
 |Aktion|Sprachelement|  
 |------------|----------------------|  
-|Erstellen eines `Collection`-Objekts|<xref:Microsoft.VisualBasic.Collection>|  
+|Erstellen Sie ein `Collection`-Objekt.|<xref:Microsoft.VisualBasic.Collection>|  
 |Hinzufügen von Elementen zu einer Auflistung|<xref:Microsoft.VisualBasic.Collection.Add*>|  
 |Entfernen eines Objekts aus einer Auflistung|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
 |Verweisen auf ein Element in einer Auflistung|<xref:Microsoft.VisualBasic.Collection.Item*>|  
@@ -24,5 +24,5 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

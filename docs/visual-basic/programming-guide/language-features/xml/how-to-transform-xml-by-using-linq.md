@@ -14,17 +14,17 @@ ms.locfileid: "74353648"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Gewusst wie: Transformieren von XML unter Verwendung von LINQ (Visual Basic)
 
-[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format. You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.
+[XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md) erleichtern das Lesen von XML aus einer Quelle und transformieren dieses in ein neues XML-Format. Sie können LINQ-Abfragen verwenden, um den zu transformierenden Inhalt abzurufen oder um Inhalt in einem vorhandenen Dokument in ein neues XML-Format zu ändern.
 
-The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.
+Im Beispiel in diesem Thema wird der Inhalt aus einem XML-Quelldokument in HTML transformiert, das in einem Browser angezeigt werden soll.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-transform-an-xml-document"></a>To transform an XML document
+### <a name="to-transform-an-xml-document"></a>So transformieren Sie ein XML-Dokument
 
-1. In Visual Studio, create a new Visual Basic project in the **Console Application** project template.
+1. Erstellen Sie in Visual Studio ein neues Visual Basic Projekt in der Projektvorlage **Konsolenanwendung** .
 
-2. Double-click the Module1.vb file created in the project to modify the Visual Basic code. Add the following code to the `Sub Main` of the `Module1` module. This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.
+2. Doppelklicken Sie auf die im Projekt erstellte Datei Module1. vb, um den Visual Basic Code zu ändern. Fügen Sie den folgenden Code in den `Sub Main` des `Module1`-Moduls ein. Mit diesem Code wird das XML-Quelldokument als <xref:System.Xml.Linq.XDocument>-Objekt erstellt.
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ The example in this topic transforms content from an XML source document to HTML
         </Catalog>
     ```
 
-     [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
+     Gewusst [wie: Laden von XML aus einer Datei, einer Zeichenfolge oder einem Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
 
-3. After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document. The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML. You can use embedded expressions to put the values from the source document in the new XML format.
+3. Fügen Sie nach dem Code zum Erstellen des XML-Quelldokuments den folgenden Code hinzu, um alle \<Book-> Elemente aus dem-Objekt abzurufen und in ein HTML-Dokument umzuwandeln. Die Liste der \<Book-> Elemente wird mithilfe einer LINQ-Abfrage erstellt, die eine Auflistung von <xref:System.Xml.Linq.XElement> Objekten zurückgibt, die das transformierte HTML enthalten. Sie können eingebettete Ausdrücke verwenden, um die Werte aus dem Quelldokument im neuen XML-Format zu platzieren.
 
-     The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.
+     Das resultierende HTML-Dokument wird mithilfe der <xref:System.Xml.Linq.XElement.Save%2A>-Methode in eine Datei geschrieben.
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ The example in this topic transforms content from an XML source document to HTML
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format. This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.
+4. Fügen Sie nach dem `Sub Main` `Module1`eine neue Methode (`Sub`) hinzu, um eine \<Description >-Knoten in das angegebene HTML-Format umzuwandeln. Diese Methode wird vom Code im vorherigen Schritt aufgerufen und wird verwendet, um das Format der \<Description > Elemente beizubehalten.
 
-     This method replaces sub-elements of the \<Description> element with HTML. The `ReplaceWith` method is used to preserve the location of the sub-elements. The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element. The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element. This ensures that sub-elements are included in the transformed content.
+     Diese Methode ersetzt unter Elemente der \<Description >-Elements durch HTML. Die `ReplaceWith`-Methode wird verwendet, um den Speicherort der untergeordneten Elemente beizubehalten. Der transformierte Inhalt der \<Description >-Elements ist in einem HTML-Absatz Element (\<p >) enthalten. Die <xref:System.Xml.Linq.XContainer.Nodes%2A>-Eigenschaft wird verwendet, um den transformierten Inhalt der \<Description >-Elements abzurufen. Dadurch wird sichergestellt, dass untergeordnete Elemente in den transformierten Inhalt eingeschlossen werden.
 
-     Add the following code after `Sub Main` of `Module1`.
+     Fügen Sie nach `Sub Main` `Module1`den folgenden Code hinzu.
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -117,7 +117,7 @@ The example in this topic transforms content from an XML source document to HTML
 
 5. Speichern Sie die Änderungen.
 
-6. Press F5 to run the code. The resulting saved document will resemble the following:
+6. Drücken Sie F5, um den Code auszuführen. Das resultierende gespeicherte Dokument ähnelt dem folgenden:
 
     ```html
     <?xml version="1.0"?>

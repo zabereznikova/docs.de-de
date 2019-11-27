@@ -20,7 +20,7 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Aktion|Sprachelement|  
 |------------|----------------------|  
 |Ableiten trigonometrischer Funktionen|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
-|Allgemeine Berechnungen|<xref:System.Math.Exp%2A>ist <xref:System.Math.Log%2A>ist <xref:System.Math.Sqrt%2A>|  
+|Allgemeine Berechnungen|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A>|  
 |Generieren von Zufallszahlen|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
 |Abrufen absoluter Werte|<xref:System.Math.Abs%2A>|  
 |Abrufen des Vorzeichens eines Ausdrucks|<xref:System.Math.Sign%2A>|  
@@ -29,5 +29,5 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 ## <a name="see-also"></a>Siehe auch
 
 - [Abgeleitete mathematische Funktionen](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

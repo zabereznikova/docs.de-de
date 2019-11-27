@@ -1,5 +1,5 @@
 ---
-title: Object-oriented programming
+title: Objektorientierte Programmierung
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
@@ -9,9 +9,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348162"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>Objektorientierte Programmierung (Visual Basic)
 
-Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
+Visual Basic bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.
 
  *Kapselung* bedeutet, dass eine Gruppe verwandter Eigenschaften, Methoden sowie anderer Member als eine Einheit bzw. ein Objekt behandelt wird.
 
@@ -23,18 +23,18 @@ Visual Basic provides full support for object-oriented programming including enc
 
 - [Klassen und Objekte](#classes-and-objects)
   - [Class members (Klassenmember)](#class-members)
-    - [Properties and fields](#properties-and-fields)
+    - [Eigenschaften und Felder](#properties-and-fields)
     - [Methoden](#methods)
     - [Konstruktoren](#constructors)
     - [Destruktoren](#destructors)
     - [Ereignisse](#events)
-    - [Nested classes](#nested-classes)
-  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
-    - [Instantiating classes](#instantiating-classes)
-    - [Shared classes and members](#shared-classes-and-members)
+    - [Klassen](#nested-classes)
+  - [Zugriffsmodifizierer und Zugriffsebenen](#access-modifiers-and-access-levels)
+    - [Instanziieren von Klassen](#instantiating-classes)
+    - [Freigegebene Klassen und Member](#shared-classes-and-members)
     - [Anonyme Typen](#anonymous-types)
 - [Vererbung](#inheritance)
-  - [Overriding members](#overriding-members)
+  - [Überschreiben von Mitgliedern](#overriding-members)
 - [Schnittstellen](#interfaces)
 - [Generics](#generics)
 - [Delegaten](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
+Visual Basic bietet auch eine einfache Version von Klassen, die als *Strukturen* bezeichnet werden, die nützlich sind, wenn Sie ein großes Array von Objekten erstellen müssen und nicht zu viel Arbeitsspeicher für diese verwenden möchten.
 
 So definieren Sie eine Struktur
 
@@ -68,7 +68,7 @@ Weitere Informationen finden Sie unter:
 
 Jede Klasse kann über andere *Klassenmember* verfügen. Diese enthalten Eigenschaften, die Klassendaten beschreiben, Methoden, die Klassenverhalten definieren sowie Ereignisse, die die Kommunikation zwischen verschiedenen Klassen und Objekten bereitstellen.
 
-#### <a name="properties-and-fields"></a>Properties and fields
+#### <a name="properties-and-fields"></a>Eigenschaften und Felder
 
 Felder und Eigenschaften stellen die in einem Objekt enthaltenen Informationen dar. Felder sind wie Variablen, sie können direkt gelesen oder festgelegt werden.
 
@@ -82,7 +82,7 @@ End Class
 
 Eigenschaften verfügen über Get- und Set-Prozeduren, die eine bessere Kontrolle über das Festlegen oder Abrufen von Werten ermöglichen.
 
-Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
+Mit Visual Basic können Sie ein privates Feld zum Speichern des Eigenschafts Werts erstellen oder so genannte automatisch implementierte Eigenschaften verwenden, die dieses Feld automatisch im Hintergrund erstellen und die grundlegende Logik für die Eigenschaften Prozeduren bereitstellen.
 
 So definieren Sie eine automatisch implementierte Eigenschaft
 
@@ -150,13 +150,13 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-In den meisten Fällen deklarieren Sie eine Methode innerhalb einer Klassendefinition. However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
+In den meisten Fällen deklarieren Sie eine Methode innerhalb einer Klassendefinition. Visual Basic unterstützt jedoch auch *Erweiterungs Methoden* , mit denen Sie einer vorhandenen Klasse außerhalb der eigentlichen Definition der Klasse Methoden hinzufügen können.
 
 Weitere Informationen finden Sie unter:
 
 - [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Überladungen](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Erweiterungsmethoden](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>Konstruktoren
@@ -173,9 +173,9 @@ Class SampleClass
 End Class
 ```
 
-For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Weitere Informationen finden Sie unter: [Objekt Lebensdauer: Erstellen und zerstören von Objekten](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
-#### <a name="destructors"></a>Destruktoren
+#### <a name="destructors"></a>Destruktoren verschoben.
 
 Destruktoren werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Destruktoren erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Destruktor für eine Klasse geben.
 
@@ -185,15 +185,15 @@ Weitere Informationen zu Destruktoren und der Garbage Collection in .NET Framewo
 
 Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).
 
-- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
+- Um Ereignisse zu deklarieren, verwenden Sie die- [Ereignis Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- Um Ereignisse aufzurichten, verwenden Sie die [raigevent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
+- Um Ereignishandler mithilfe einer deklarativen Methode anzugeben, verwenden Sie die [widervents](../../../visual-basic/language-reference/modifiers/withevents.md) -Anweisung und die [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) -Klausel.
 
-- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- Um den einem Ereignis zugeordneten Ereignishandler dynamisch hinzufügen, entfernen und ändern zu können, verwenden Sie die [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md) und die [RemoveHandler-Anweisung](../../../visual-basic/language-reference/statements/removehandler-statement.md) zusammen mit dem [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>Nested classes
+#### <a name="nested-classes"></a>Klassen
 
 Eine Klasse, die in einer anderen Klasse definiert wird, wird als *geschachtelt* bezeichnet. Standardmäßig ist die geschachtelte Klasse privat.
 
@@ -211,7 +211,7 @@ Um eine Instanz der geschachtelten Klasse zu erstellen, verwenden Sie den Namen 
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
+### <a name="access-modifiers-and-access-levels"></a>Zugriffsmodifizierer und Zugriffsebenen
 
 Alle Klassen und Klassenmember können mit *Zugriffsmodifizierern* angeben, welche Zugriffsebene sie für andere Klassen bereitstellen.
 
@@ -225,9 +225,9 @@ Die folgenden Zugriffsmodifizierer sind verfügbar:
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.|
 |`Protected Friend`|Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden.|
 
-For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>Instantiating classes
+### <a name="instantiating-classes"></a>Instanziieren von Klassen
 
 Um ein Objekt zu erstellen, müssen Sie eine Klasse instanziieren oder eine Klasseninstanz erstellen.
 
@@ -256,11 +256,11 @@ Weitere Informationen finden Sie unter:
 - [New-Operator](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Objektinitialisierer: Benannte und anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Shared classes and members
+### <a name="shared-classes-and-members"></a>Freigegebene Klassen und Member
 
- A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
+ Ein gemeinsam genutzter Member der-Klasse ist eine Eigenschaft, Prozedur oder ein Feld, die von allen Instanzen einer Klasse gemeinsam verwendet wird.
 
- To define a shared member:
+ So definieren Sie einen freigegebenen Member:
 
 ```vb
 Class SampleClass
@@ -268,13 +268,13 @@ Class SampleClass
 End Class
 ```
 
- To access the shared member, use the name of the class without creating an object of this class:
+ Wenn Sie auf den freigegebenen Member zugreifen möchten, verwenden Sie den Namen der Klasse, ohne ein Objekt dieser Klasse zu erstellen:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
+ Freigegebene Module in Visual Basic nur gemeinsame Member aufweisen und können nicht instanziiert werden. Freigegebene Member können auch nicht auf nicht freigegebene Eigenschaften, Felder oder Methoden zugreifen.
 
  Weitere Informationen finden Sie unter:
 
@@ -297,10 +297,10 @@ Weitere Informationen finden Sie unter [Anonyme Typen](../../../visual-basic/pro
 
 ## <a name="inheritance"></a>Vererbung
 
-Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
+Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. Allerdings erben alle Klassen in Visual Basic implizit von der <xref:System.Object> Klasse, die die .NET-Klassenhierarchie unterstützt und Dienste auf niedriger Ebene für alle Klassen bereitstellt.
 
 > [!NOTE]
-> Visual Basic doesn't support multiple inheritance. Sie können also nur eine Basisklasse für eine abgeleitete Klasse angeben.
+> Visual Basic unterstützt keine mehrfache Vererbung. Sie können also nur eine Basisklasse für eine abgeleitete Klasse angeben.
 
 So erben Sie von einer Basisklasse
 
@@ -332,7 +332,7 @@ Weitere Informationen finden Sie unter:
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Overriding members
+### <a name="overriding-members"></a>Überschreiben von Mitgliedern
 
 Standardmäßig erbt eine abgeleitete Klasse alle Member von ihrer Basisklasse. Wenn Sie das Verhalten des geerbten Members ändern möchten, müssen Sie diesen überschreiben. Das heißt, Sie können eine neue Implementierung der Methode, der Eigenschaft oder des Ereignisses in der abgeleiteten Klasse definieren.
 
@@ -340,7 +340,7 @@ Mit folgenden Modifizierern steuern Sie das Überschreiben von Eigenschaften und
 
 |Visual Basic-Modifizierer|Definition|
 |---------------------------|----------------|
-|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Ermöglicht das Überschreiben eines Klassenmembers in einer abgeleiteten Klasse.|
+|[Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)|Ermöglicht das Überschreiben eines Klassenmembers in einer abgeleiteten Klasse.|
 |[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Überschreibt einen virtuellen (überschreibbaren) Member, der in der Basisklasse definiert wurde.|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Verhindert das Überschreiben eines Members in einer erbenden Klasse.|
 |[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse.|
@@ -375,9 +375,9 @@ Weitere Informationen finden Sie unter:
 - [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)
 
-## <a name="generics"></a>Generics
+## <a name="generics"></a>Generika
 
-Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
+Klassen, Strukturen, Schnittstellen und Methoden in .net können *Typparameter* enthalten, die Typen von Objekten definieren, die Sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
 
 So definieren Sie eine generische Klasse
 

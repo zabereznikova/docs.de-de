@@ -17,8 +17,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347827"
 ---
-# <a name="-operator-visual-basic"></a>>> Operator (Visual Basic)
-Performs an arithmetic right shift on a bit pattern.  
+# <a name="-operator-visual-basic"></a>> > Operator (Visual Basic)
+Führt eine arithmetische Rechtsverschiebung in einem Bitmuster aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,65 +26,65 @@ Performs an arithmetic right shift on a bit pattern.
 result = pattern >> amount  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `result`  
- Erforderlich. Integral numeric value. The result of shifting the bit pattern. The data type is the same as that of `pattern`.  
+ Erforderlich Ganzzahliger numerischer Wert. Das Ergebnis der Verschiebung des Bitmusters. Der-Datentyp entspricht dem-Wert `pattern`.  
   
  `pattern`  
- Erforderlich. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ Erforderlich Ganzzahliger numerischer Ausdruck. Das Bitmuster, das verschoben werden soll. Der Datentyp muss ein ganzzahliger Typ sein (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`oder `ULong`).  
   
  `amount`  
- Erforderlich. Numeric expression. The number of bits to shift the bit pattern. The data type must be `Integer` or widen to `Integer`.  
+ Erforderlich Numerischer Ausdruck. Die Anzahl der Bits, um die das Bitmuster verschoben werden soll. Der Datentyp muss `Integer` oder auf `Integer`erweitert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost (sign) bit is propagated into the bit positions vacated at the left. This means that if `pattern` has a negative value, the vacated positions are set to one; otherwise they are set to zero.  
+ Arithmetische Verschiebungen sind nicht zirkulär, d. h., dass die Bits, die von einem Ende des Ergebnisses entfernt wurden, nicht erneut am anderen Ende eingefügt werden. In einer arithmetischen rechten Schicht werden die Bits, die über die bitmost-Bitposition hinaus verschoben werden, verworfen, und das äußteste äußteste Bit (Vorzeichen) wird an die auf der linken Seite freigegebenen Bitpositionen weitergegeben. Dies bedeutet, dass, wenn `pattern` einen negativen Wert hat, die frei gewordenen Positionen auf 1 festgelegt sind. Andernfalls werden Sie auf 0 (null) festgelegt.  
   
- Note that the data types `Byte`, `UShort`, `UInteger`, and `ULong` are unsigned, so there is no sign bit to propagate. If `pattern` is of any unsigned type, the vacated positions are always set to zero.  
+ Beachten Sie, dass die Datentypen `Byte`, `UShort`, `UInteger`und `ULong` nicht signiert sind, sodass kein Signier Bit zur Weitergabe vorhanden ist. Wenn `pattern` einen beliebigen Typ ohne Vorzeichen hat, werden die frei gewordenen Positionen immer auf 0 (null) festgelegt.  
   
- To prevent shifting by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask corresponding to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
+ Um zu verhindern, dass mehr Bits verschoben werden, als das Ergebnis enthalten kann, maskiert Visual Basic den Wert `amount` mit einer Größen Maske, die dem Datentyp von `pattern`entspricht. Die Binärdatei und diese Werte werden für die UMSCHALT Menge verwendet. Die Größen Masken lauten wie folgt:  
   
-|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
+|Datentyp von `pattern`|Größen Maske (dezimal)|Größen Maske (hexadezimal)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&H0000000F|  
-|`Integer`, `UInteger`|31|&H0000001F|  
-|`Long`, `ULong`|63|&H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
+ Wenn `amount` 0 (null) ist, ist der Wert von `result` identisch mit dem Wert von `pattern`. Wenn `amount` negativ ist, wird es als nicht signierter Wert angenommen und mit der entsprechenden Größen Maske maskiert.  
   
- Arithmetic shifts never generate overflow exceptions.  
+ Arithmetische Verschiebungen generieren niemals Überlauf Ausnahmen.  
   
 ## <a name="overloading"></a>Überladen  
- The `>>` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `>>`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `>>` operator to perform arithmetic right shifts on integral values. The result always has the same data type as that of the expression being shifted.  
+ Im folgenden Beispiel wird der `>>`-Operator verwendet, um arithmetische Rechte Verschiebungen für ganzzahlige Werte auszuführen. Das Ergebnis weist immer den gleichen Datentyp wie der zu Verschiebe Ausdruck auf.  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- The results of the preceding example are as follows:  
+ Die Ergebnisse des vorherigen Beispiels lauten wie folgt:  
   
-- `result1` is 2560 (0000 1010 0000 0000).  
+- `result1` ist 2560 (0000 1010 0000 0000).  
   
-- `result2` is 160 (0000 0000 1010 0000).  
+- `result2` ist 160 (0000 0000 1010 0000).  
   
-- `result3` is 2 (0000 0000 0000 0010).  
+- `result3` ist 2 (0000 0000 0000 0010).  
   
-- `result4` is 640 (0000 0010 1000 0000).  
+- `result4` ist 640 (0000 0010 1000 0000).  
   
-- `result5` is 0 (shifted 15 places to the right).  
+- `result5` ist 0 (verschiebt 15 Stellen nach rechts).  
   
- The shift amount for `result4` is calculated as 18 AND 15, which equals 2.  
+ Der Verschiebungs Betrag für `result4` wird als 18 und 15 berechnet, was dem Wert 2 entspricht.  
   
- The following example shows arithmetic shifts on a negative value.  
+ Das folgende Beispiel zeigt arithmetische Verschiebungen bei einem negativen Wert.  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- The results of the preceding example are as follows:  
+ Die Ergebnisse des vorherigen Beispiels lauten wie folgt:  
   
-- `negresult1` is -512 (1111 1110 0000 0000).  
+- `negresult1` ist-512 (1111 1110 0000 0000).  
   
-- `negresult2` is -1 (the sign bit is propagated).  
+- `negresult2` ist-1 (das Signier Bit wird weitergegeben).  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -93,4 +93,4 @@ result = pattern >> amount
 - [>>=-Operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

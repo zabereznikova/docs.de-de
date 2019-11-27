@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="calendar-parts"></a>Kalender Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Calendar>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Der derzeit auf dem <xref:System.Windows.Controls.Calendar>angezeigte Monat oder Jahr.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Der Bereich, der die <xref:System.Windows.Controls.Primitives.CalendarItem>enthält.|  
@@ -39,7 +39,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="calendaritem-parts"></a>CalendarItem-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.CalendarItem>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Der Stamm des Steuer Elements.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Die Schaltfläche, die die vorherige Seite des Kalenders anzeigt, wenn darauf geklickt wird.|  
@@ -55,7 +55,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normaler Zustand|CommonStates|Der Standardzustand|  
+|Normaler Zustand|CommonStates|Der Standardstatus.|  
 |Deaktivierter Zustand|CommonStates|Der Status des Kalenders, wenn die <xref:System.Windows.UIElement.IsEnabled%2A>-Eigenschaft `false`ist.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
 |InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
@@ -72,8 +72,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
-|Disabled|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist deaktiviert.|  
+|Normal|CommonStates|Der Standardstatus.|  
+|Deaktiviert|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Gedrückt|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarDayButton> wird gedrückt.|  
 |Ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
@@ -83,7 +83,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Mit Fokus|FocusStates|Die Schaltfläche hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Schaltfläche hat keinen Fokus.|  
 |Aktiv|Activestates|Die Schaltfläche ist aktiv.|  
-|Inaktiv|Activestates|Die Schaltfläche ist inaktiv.|  
+|Inactive|Activestates|Die Schaltfläche ist inaktiv.|  
 |Regularday|Daystates|Die Schaltfläche stellt <xref:System.DateTime.Today%2A?displayProperty=nameWithType>nicht dar.|  
 |Heute|Daystates|Die Schaltfläche stellt <xref:System.DateTime.Today%2A?displayProperty=nameWithType>dar.|  
 |NormalDay|BlackoutDayStates|Die Schaltfläche stellt einen Tag dar, der ausgewählt werden kann.|  
@@ -100,8 +100,8 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
-|Disabled|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarButton> ist deaktiviert.|  
+|Normal|CommonStates|Der Standardstatus.|  
+|Deaktiviert|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarButton> ist deaktiviert.|  
 |MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Gedrückt|CommonStates|Der <xref:System.Windows.Controls.Primitives.CalendarButton> wird gedrückt.|  
 |Ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
@@ -111,7 +111,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |Mit Fokus|FocusStates|Die Schaltfläche hat den Fokus.|  
 |Ohne Fokus|FocusStates|Die Schaltfläche hat keinen Fokus.|  
 |Aktiv|Activestates|Die Schaltfläche ist aktiv.|  
-|Inaktiv|Activestates|Die Schaltfläche ist inaktiv.|  
+|Inactive|Activestates|Die Schaltfläche ist inaktiv.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  
 |InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|  
 |InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|  

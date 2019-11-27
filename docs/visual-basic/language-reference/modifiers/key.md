@@ -16,40 +16,40 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351515"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
-The `Key` keyword enables you to specify behavior for properties of anonymous types. Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values. The values of key properties cannot be changed.  
+Mit dem `Key`-Schlüsselwort können Sie das Verhalten von Eigenschaften anonymer Typen angeben. Nur Eigenschaften, die Sie als Schlüsseleigenschaften festlegen, nehmen an Gleichheits Tests zwischen anonymen Typinstanzen oder der Berechnung von Hash Code Werten Teil. Die Werte der Schlüsseleigenschaften können nicht geändert werden.  
   
- You designate a property of an anonymous type as a key property by placing the keyword `Key` in front of its declaration in the initialization list. In the following example, `Airline` and `FlightNo` are key properties, but `Gate` is not.  
+ Sie legen eine Eigenschaft eines anonymen Typs als Schlüsseleigenschaft fest, indem Sie das Schlüsselwort `Key` vor der Deklaration in der Initialisierungs Liste platzieren. Im folgenden Beispiel sind `Airline` und `FlightNo` Schlüsseleigenschaften, aber `Gate` nicht.  
   
  [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
- When a new anonymous type is created, it inherits directly from <xref:System.Object>. The compiler overrides three inherited members: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The override code that is produced for <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> is based on key properties. If there are no key properties in the type, <xref:System.Object.GetHashCode%2A> and <xref:System.Object.Equals%2A> are not overridden.  
+ Wenn ein neuer anonymer Typ erstellt wird, erbt er direkt von <xref:System.Object>. Der Compiler überschreibt drei geerbte Member: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>und <xref:System.Object.ToString%2A>. Der für <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A> erstellte Überschreibungs Code basiert auf Schlüsseleigenschaften. Wenn keine Schlüsseleigenschaften im Typ vorhanden sind, werden <xref:System.Object.GetHashCode%2A> und <xref:System.Object.Equals%2A> nicht überschrieben.  
   
 ## <a name="equality"></a>Gleichheit  
- Two anonymous type instances are equal if they are instances of the same type and if the values of their key properties are equal. In the following examples, `flight2` is equal to `flight1` from the previous example because they are instances of the same anonymous type and they have matching values for their key properties. However, `flight3` is not equal to `flight1` because it has a different value for a key property, `FlightNo`. Instance `flight4` is not the same type as `flight1` because they designate different properties as key properties.  
+ Zwei anonyme Typinstanzen sind gleich, wenn Sie Instanzen desselben Typs sind und die Werte ihrer Schlüsseleigenschaften gleich sind. In den folgenden Beispielen ist `flight2` gleich `flight1` aus dem vorherigen Beispiel, da Sie Instanzen desselben anonymen Typs sind und über übereinstimmende Werte für Ihre Schlüsseleigenschaften verfügen. `flight3` ist jedoch nicht gleich `flight1`, da Sie einen anderen Wert für eine Schlüsseleigenschaft hat, `FlightNo`. Der Instanz`flight4` ist nicht der gleiche Typ wie `flight1`, da Sie andere Eigenschaften als Schlüsseleigenschaften festlegen.  
   
  [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
- If two instances are declared with only non-key properties, identical in name, type, order, and value, the two instances are not equal. An instance without key properties is equal only to itself.  
+ Wenn zwei Instanzen nur mit nicht Schlüsseleigenschaften deklariert werden, die in Name, Typ, Reihenfolge und Wert identisch sind, sind die beiden Instanzen nicht gleich. Eine Instanz ohne Schlüsseleigenschaften ist nur mit sich selbst identisch.  
   
- For more information about the conditions under which two anonymous type instances are instances of the same anonymous type, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ Weitere Informationen zu den Bedingungen, unter denen zwei Instanzen eines anonymen Typs Instanzen desselben anonymen Typs sind, finden Sie unter [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-## <a name="hash-code-calculation"></a>Hash Code Calculation  
- Like <xref:System.Object.Equals%2A>, the hash function that is defined in <xref:System.Object.GetHashCode%2A> for an anonymous type is based on the key properties of the type. The following examples show the interaction between key properties and hash code values.  
+## <a name="hash-code-calculation"></a>Hash Code Berechnung  
+ Wie <xref:System.Object.Equals%2A>basiert die Hash Funktion, die in <xref:System.Object.GetHashCode%2A> für einen anonymen Typ definiert ist, auf den Schlüsseleigenschaften des Typs. Die folgenden Beispiele zeigen die Interaktion zwischen Schlüsseleigenschaften und Hashcodewerten.  
   
- Instances of an anonymous type that have the same values for all key properties have the same hash code value, even if non-key properties do not have matching values. The following statement returns `True`.  
+ Instanzen eines anonymen Typs, die dieselben Werte für alle Schlüsseleigenschaften aufweisen, haben denselben Hash Codewert, auch wenn nicht Schlüsseleigenschaften nicht übereinstimmende Werte aufweisen. Die folgende Anweisung gibt `True`zurück.  
   
  [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
- Instances of an anonymous type that have different values for one or more key properties have different hash code values. The following statement returns `False`.  
+ Instanzen eines anonymen Typs, die unterschiedliche Werte für eine oder mehrere Schlüsseleigenschaften aufweisen, haben unterschiedliche Hashcode-Werte. Die folgende Anweisung gibt `False`zurück.  
   
  [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
- Instances of anonymous types that designate different properties as key properties are not instances of the same type. They have different hash code values even when the names and values of all properties are the same. The following statement returns `False`.  
+ Instanzen anonymer Typen, die andere Eigenschaften als Schlüsseleigenschaften festlegen, sind keine Instanzen desselben Typs. Sie haben verschiedene Hashcodewerte, auch wenn die Namen und Werte aller Eigenschaften identisch sind. Die folgende Anweisung gibt `False`zurück.  
   
  [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
-## <a name="read-only-values"></a>Read-Only Values  
- The values of key properties cannot be changed. For example, in `flight1` in the earlier examples, the `Airline` and `FlightNo` fields are read-only, but `Gate` can be changed.  
+## <a name="read-only-values"></a>Schreibgeschützte Werte  
+ Die Werte der Schlüsseleigenschaften können nicht geändert werden. Beispielsweise sind in `flight1` in den vorherigen Beispielen die Felder `Airline` und `FlightNo` schreibgeschützt, `Gate` können jedoch geändert werden.  
   
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   

@@ -18,39 +18,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351126"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameterarrays (Visual Basic)
-Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
+In der Regel ist es nicht möglich, eine Prozedur mit mehr Argumenten aufzurufen, als die Prozedur Deklaration angibt. Wenn Sie eine unbegrenzte Anzahl von Argumenten benötigen, können Sie ein *Parameter Array*deklarieren, das es einer Prozedur ermöglicht, ein Array von Werten für einen Parameter zu akzeptieren. Wenn Sie die Prozedur definieren, müssen Sie nicht die Anzahl der Elemente im Parameter Array kennen. Die Array Größe wird einzeln durch jeden aufzurufenden Vorgang bestimmt.  
   
-## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
- You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. Dabei gelten folgende Regeln:  
+## <a name="declaring-a-paramarray"></a>Deklarieren eines ParamArray  
+ Sie verwenden das [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) -Schlüsselwort, um ein Parameter Array in der Parameterliste anzugeben. Dabei gelten folgende Regeln:  
   
-- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
+- Eine Prozedur kann nur ein Parameter Array definieren, und es muss der letzte Parameter in der Prozedur Definition sein.  
   
-- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
+- Das Parameter Array muss als Wert übergeben werden. Es empfiehlt sich, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) -Schlüsselwort explizit in die Prozedur Definition einzubeziehen.  
   
-- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
+- Das Parameter Array ist automatisch optional. Der Standardwert ist ein leeres eindimensionales Array des Elementtyps des Parameter Arrays.  
   
-- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
+- Alle Parameter, die dem Parameter Array vorangestellt sind, müssen erforderlich sein. Das Parameter Array muss der einzige optionale Parameter sein.  
   
-## <a name="calling-a-paramarray"></a>Calling a ParamArray  
- When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
+## <a name="calling-a-paramarray"></a>Aufrufen eines ParamArray-Parametern  
+ Wenn Sie eine Prozedur aufrufen, die ein Parameter Array definiert, können Sie das Argument auf eine der folgenden Arten angeben:  
   
-- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
+- Nothing – das heißt, Sie können das [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) -Argument weglassen. In diesem Fall wird ein leeres Array an die Prozedur übermittelt. Wenn Sie das [Nothing](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort explizit übergeben, wird ein NULL-Array an die Prozedur übergeben und kann zu einer NullReferenceException führen, wenn die aufgerufene Prozedur nicht auf diese Bedingung überprüft.
   
-- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
+- Eine Liste mit einer beliebigen Anzahl von Argumenten, die durch Kommas getrennt sind. Der Datentyp der einzelnen Argumente muss implizit in den `ParamArray` Elementtyp konvertierbar sein.  
   
-- An array with the same element type as the parameter array's element type.  
+- Ein Array mit demselben Elementtyp wie der Elementtyp des Parameter Arrays.  
   
- In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
+ In allen Fällen behandelt der Code in der Prozedur das Parameter Array als eindimensionales Array mit Elementen desselben Datentyps wie der `ParamArray` Datentyp.  
   
 > [!IMPORTANT]
-> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. Weitere Informationen finden Sie unter [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+> Wenn Sie sich mit einem Array befassen, das unbegrenzt groß sein kann, besteht das Risiko, dass eine interne Kapazität der Anwendung überschritten wird. Wenn Sie ein Parameter Array akzeptieren, sollten Sie die Größe des Arrays testen, das dem aufrufenden Code übergeben wurde. Führen Sie die entsprechenden Schritte aus, wenn Sie für Ihre Anwendung zu groß sind. Weitere Informationen finden Sie unter [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Beispiel  
- The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
+ Im folgenden Beispiel wird die-Funktion `calcSum`definiert und aufgerufen. Der `ParamArray` Modifizierer für den Parameter `args` ermöglicht der Funktion, eine Variable Anzahl von Argumenten zu akzeptieren.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
+ Im folgenden Beispiel wird eine Prozedur mit einem Parameter Array definiert und die Werte aller Array Elemente ausgegeben, die an das Parameter Array übergeben werden.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   
