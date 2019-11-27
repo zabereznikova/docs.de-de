@@ -19,7 +19,7 @@ ms.locfileid: "74353932"
 
 Verbleibt unkontrolliert; ein Programm durchläuft seine Anweisungen von Anfang bis Ende. Einige sehr einfache Programme können nur mit diesem unidirektionalen Ablauf geschrieben werden. Ein Großteil der Leistung und der Hilfsprogramme einer Programmiersprache stammt jedoch von der Fähigkeit, die Ausführungsreihenfolge mit Steuerungsanweisungen und Schleifen zu ändern.
 
- Steuerungsstrukturen erlauben Ihnen, den Ablauf der Ausführung Ihres Programms zu steuern. Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. Mit anderen Steuerungsstrukturen können Sie die Freigabe einer Ressource garantieren oder eine Reihe von Anweisungen auf dem gleichen Objektverweis ausführen.
+ Steuerungsstrukturen erlauben Ihnen, den Ablauf der Ausführung Ihres Programms zu steuern. Mithilfe von Steuerungsstrukturen können Sie Visual Basic Code schreiben, der Entscheidungen trifft oder Aktionen wiederholt. Mit anderen Steuerungsstrukturen können Sie die Freigabe einer Ressource garantieren oder eine Reihe von Anweisungen auf dem gleichen Objektverweis ausführen.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

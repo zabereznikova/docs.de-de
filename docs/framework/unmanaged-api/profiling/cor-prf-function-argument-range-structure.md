@@ -37,13 +37,13 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 |Member|Beschreibung|  
 |-------------|-----------------|  
-|`startAddress`|The starting address of the block.|  
-|`length`|The length of the contiguous block.|  
+|`startAddress`|Die Startadresse des Blocks.|  
+|`length`|Die Länge des zusammenhängenden Blocks.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   

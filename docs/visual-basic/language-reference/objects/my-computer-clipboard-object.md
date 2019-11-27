@@ -18,17 +18,17 @@ Stellt Methoden zur Bearbeitung der Zwischenablage bereit.
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Clipboard` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Weitere Informationen finden Sie unter [Speichern von Daten in der Zwischenablage und Lesen aus der Zwischenablage](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> Sie können auch Methoden der <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>-Klasse verwenden, um die Zwischenablage zu bearbeiten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **Klasse:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (ermöglicht den Zugriff auf <xref:System.Windows.Forms.Clipboard>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 
