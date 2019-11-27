@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449063"
 ---
-# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="e05f7-102">ISymUnmanagedENCUpdate::GetLocalVariableCount-Methode</span><span class="sxs-lookup"><span data-stu-id="e05f7-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
-<span data-ttu-id="e05f7-103">Gets the number of local variables.</span><span class="sxs-lookup"><span data-stu-id="e05f7-103">Gets the number of local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="38f68-102">ISymUnmanagedENCUpdate::GetLocalVariableCount-Methode</span><span class="sxs-lookup"><span data-stu-id="38f68-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
+<span data-ttu-id="38f68-103">Ruft die Anzahl der lokalen Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="38f68-103">Gets the number of local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e05f7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e05f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38f68-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38f68-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalVariableCount(  
@@ -33,19 +33,19 @@ HRESULT GetLocalVariableCount(
     [out] ULONG        *pcLocals);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e05f7-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e05f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="38f68-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="38f68-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="e05f7-106">[in] The metadata token of methods.</span><span class="sxs-lookup"><span data-stu-id="e05f7-106">[in] The metadata token of methods.</span></span>  
+ <span data-ttu-id="38f68-106">in Das Metadatentoken der Methoden.</span><span class="sxs-lookup"><span data-stu-id="38f68-106">[in] The metadata token of methods.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="e05f7-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span><span class="sxs-lookup"><span data-stu-id="e05f7-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
+ <span data-ttu-id="38f68-107">vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers in Zeichen empfängt, der die Anzahl der lokalen Variablen enthalten muss.</span><span class="sxs-lookup"><span data-stu-id="38f68-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e05f7-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="e05f7-108">Return Value</span></span>  
- <span data-ttu-id="e05f7-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e05f7-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="38f68-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="38f68-108">Return Value</span></span>  
+ <span data-ttu-id="38f68-109">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="38f68-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e05f7-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e05f7-110">Requirements</span></span>  
- <span data-ttu-id="e05f7-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e05f7-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38f68-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="38f68-110">Requirements</span></span>  
+ <span data-ttu-id="38f68-111">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="38f68-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e05f7-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e05f7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38f68-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38f68-112">See also</span></span>
 
-- [<span data-ttu-id="e05f7-113">ISymUnmanagedENCUpdate-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e05f7-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="38f68-113">ISymUnmanagedENCUpdate-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="38f68-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

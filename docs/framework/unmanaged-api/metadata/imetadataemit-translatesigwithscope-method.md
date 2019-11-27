@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440477"
 ---
-# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="9e3d6-102">IMetaDataEmit::TranslateSigWithScope-Methode</span><span class="sxs-lookup"><span data-stu-id="9e3d6-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
-<span data-ttu-id="9e3d6-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
+# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="d7f87-102">IMetaDataEmit::TranslateSigWithScope-Methode</span><span class="sxs-lookup"><span data-stu-id="d7f87-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
+<span data-ttu-id="d7f87-103">Importiert eine Assembly in den aktuellen Gültigkeitsbereich und ruft eine neue Metadatensignatur für den zusammengeführten Bereich ab.</span><span class="sxs-lookup"><span data-stu-id="d7f87-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e3d6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9e3d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7f87-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d7f87-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT TranslateSigWithScope (   
@@ -43,53 +43,53 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e3d6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9e3d6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d7f87-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d7f87-105">Parameters</span></span>  
  `pAssemImport`  
- <span data-ttu-id="9e3d6-106">[in] The interface for import assembly (where the signature is defined).</span><span class="sxs-lookup"><span data-stu-id="9e3d6-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
+ <span data-ttu-id="d7f87-106">in Die Schnittstelle für die importierungsassembly (in der die Signatur definiert ist).</span><span class="sxs-lookup"><span data-stu-id="d7f87-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="9e3d6-107">[in] The hash blob for the assembly.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-107">[in] The hash blob for the assembly.</span></span>  
+ <span data-ttu-id="d7f87-107">in Das hashblob für die Assembly.</span><span class="sxs-lookup"><span data-stu-id="d7f87-107">[in] The hash blob for the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="9e3d6-108">[in] The count of bytes in `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-108">[in] The count of bytes in `pbHashValue`.</span></span>  
+ <span data-ttu-id="d7f87-108">in Die Anzahl der Bytes in `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="d7f87-108">[in] The count of bytes in `pbHashValue`.</span></span>  
   
  `import`  
- <span data-ttu-id="9e3d6-109">[in] The interface for import metadata scope.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-109">[in] The interface for import metadata scope.</span></span>  
+ <span data-ttu-id="d7f87-109">in Die-Schnittstelle für den Import Metadatenbereich.</span><span class="sxs-lookup"><span data-stu-id="d7f87-109">[in] The interface for import metadata scope.</span></span>  
   
  `pbSigBlob`  
- <span data-ttu-id="9e3d6-110">[in] The signature to be imported.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-110">[in] The signature to be imported.</span></span>  
+ <span data-ttu-id="d7f87-110">in Die Signatur, die importiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="d7f87-110">[in] The signature to be imported.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="9e3d6-111">[in] The size, in bytes, of `pbSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
+ <span data-ttu-id="d7f87-111">in Die Größe `pbSigBlob`in Byte.</span><span class="sxs-lookup"><span data-stu-id="d7f87-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
   
  `pAssemEmit`  
- <span data-ttu-id="9e3d6-112">[in] The interface for export assembly.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-112">[in] The interface for export assembly.</span></span>  
+ <span data-ttu-id="d7f87-112">in Die Schnittstelle für die exportierungsassembly.</span><span class="sxs-lookup"><span data-stu-id="d7f87-112">[in] The interface for export assembly.</span></span>  
   
  `emit`  
- <span data-ttu-id="9e3d6-113">[in] The interface for export metadata scope.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-113">[in] The interface for export metadata scope.</span></span>  
+ <span data-ttu-id="d7f87-113">in Die-Schnittstelle für den Export Metadatenbereich.</span><span class="sxs-lookup"><span data-stu-id="d7f87-113">[in] The interface for export metadata scope.</span></span>  
   
  `pvTranslatedSig`  
- <span data-ttu-id="9e3d6-114">[out] The buffer to hold the translated signature blob.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-114">[out] The buffer to hold the translated signature blob.</span></span>  
+ <span data-ttu-id="d7f87-114">vorgenommen Der Puffer, der das übersetzte Signatur-BLOB enthalten soll.</span><span class="sxs-lookup"><span data-stu-id="d7f87-114">[out] The buffer to hold the translated signature blob.</span></span>  
   
  `cbTranslatedSigMax`  
- <span data-ttu-id="9e3d6-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
+ <span data-ttu-id="d7f87-115">in Die Kapazität `pvTranslatedSig`in Byte.</span><span class="sxs-lookup"><span data-stu-id="d7f87-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
   
  `pcbTranslatedSig`  
- <span data-ttu-id="9e3d6-116">[out] The number of actual bytes in the translated signature.</span><span class="sxs-lookup"><span data-stu-id="9e3d6-116">[out] The number of actual bytes in the translated signature.</span></span>  
+ <span data-ttu-id="d7f87-116">vorgenommen Die Anzahl der tatsächlichen Bytes in der übersetzten Signatur.</span><span class="sxs-lookup"><span data-stu-id="d7f87-116">[out] The number of actual bytes in the translated signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e3d6-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9e3d6-117">Requirements</span></span>  
- <span data-ttu-id="9e3d6-118">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e3d6-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7f87-117">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="d7f87-117">Requirements</span></span>  
+ <span data-ttu-id="d7f87-118">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7f87-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e3d6-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9e3d6-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d7f87-119">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="d7f87-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9e3d6-120">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9e3d6-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d7f87-120">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="d7f87-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9e3d6-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e3d6-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d7f87-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7f87-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e3d6-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9e3d6-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7f87-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d7f87-122">See also</span></span>
 
-- [<span data-ttu-id="9e3d6-123">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9e3d6-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="9e3d6-124">IMetaDataAssemblyImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9e3d6-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="9e3d6-125">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9e3d6-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="9e3d6-126">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9e3d6-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="9e3d6-127">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9e3d6-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d7f87-123">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d7f87-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="d7f87-124">IMetaDataAssemblyImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d7f87-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="d7f87-125">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d7f87-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="d7f87-126">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d7f87-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="d7f87-127">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d7f87-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426655"
 ---
-# <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="15be5-102">IMetaDataTables::GetTableInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="15be5-102">IMetaDataTables::GetTableInfo Method</span></span>
-<span data-ttu-id="15be5-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span><span class="sxs-lookup"><span data-stu-id="15be5-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  
+# <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="97e44-102">IMetaDataTables::GetTableInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="97e44-102">IMetaDataTables::GetTableInfo Method</span></span>
+<span data-ttu-id="97e44-103">Ruft den Namen, die Zeilengröße, die Anzahl der Zeilen, die Anzahl der Spalten und den Schlüssel Spalten Index der angegebenen Tabelle ab.</span><span class="sxs-lookup"><span data-stu-id="97e44-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15be5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="15be5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97e44-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="97e44-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTableInfo (  
@@ -38,35 +38,35 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15be5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="15be5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97e44-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="97e44-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="15be5-106">[in] The identifier of the table whose properties to return.</span><span class="sxs-lookup"><span data-stu-id="15be5-106">[in] The identifier of the table whose properties to return.</span></span>  
+ <span data-ttu-id="97e44-106">in Der Bezeichner der Tabelle, deren Eigenschaften zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="97e44-106">[in] The identifier of the table whose properties to return.</span></span>  
   
  `pcbRow`  
- <span data-ttu-id="15be5-107">[out] A pointer to the size, in bytes, of a table row.</span><span class="sxs-lookup"><span data-stu-id="15be5-107">[out] A pointer to the size, in bytes, of a table row.</span></span>  
+ <span data-ttu-id="97e44-107">vorgenommen Ein Zeiger auf die Größe einer Tabellenzeile in Byte.</span><span class="sxs-lookup"><span data-stu-id="97e44-107">[out] A pointer to the size, in bytes, of a table row.</span></span>  
   
  `pcRows`  
- <span data-ttu-id="15be5-108">[out] A pointer to the number of rows in the table.</span><span class="sxs-lookup"><span data-stu-id="15be5-108">[out] A pointer to the number of rows in the table.</span></span>  
+ <span data-ttu-id="97e44-108">vorgenommen Ein Zeiger auf die Anzahl der Zeilen in der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="97e44-108">[out] A pointer to the number of rows in the table.</span></span>  
   
  `pcCols`  
- <span data-ttu-id="15be5-109">[out] A pointer to the number of columns in the table.</span><span class="sxs-lookup"><span data-stu-id="15be5-109">[out] A pointer to the number of columns in the table.</span></span>  
+ <span data-ttu-id="97e44-109">vorgenommen Ein Zeiger auf die Anzahl der Spalten in der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="97e44-109">[out] A pointer to the number of columns in the table.</span></span>  
   
  `piKey`  
- <span data-ttu-id="15be5-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span><span class="sxs-lookup"><span data-stu-id="15be5-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span></span>  
+ <span data-ttu-id="97e44-110">vorgenommen Ein Zeiger auf den Index der Schlüssel Spalte oder-1, wenn die Tabelle keine Schlüssel Spalte enthält.</span><span class="sxs-lookup"><span data-stu-id="97e44-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="15be5-111">[out] A pointer to a pointer to the table name.</span><span class="sxs-lookup"><span data-stu-id="15be5-111">[out] A pointer to a pointer to the table name.</span></span>  
+ <span data-ttu-id="97e44-111">vorgenommen Ein Zeiger auf einen Zeiger auf den Tabellennamen.</span><span class="sxs-lookup"><span data-stu-id="97e44-111">[out] A pointer to a pointer to the table name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15be5-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="15be5-112">Requirements</span></span>  
- <span data-ttu-id="15be5-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15be5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97e44-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="97e44-112">Requirements</span></span>  
+ <span data-ttu-id="97e44-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97e44-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15be5-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="15be5-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="97e44-114">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="97e44-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="15be5-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="15be5-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="97e44-115">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="97e44-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="15be5-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15be5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="97e44-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97e44-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15be5-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="15be5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97e44-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97e44-117">See also</span></span>
 
-- [<span data-ttu-id="15be5-118">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="15be5-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="15be5-119">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="15be5-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="97e44-118">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="97e44-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="97e44-119">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="97e44-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

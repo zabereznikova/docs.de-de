@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::EnumerateObjectReferences
+title: 'ICorProfilerInfo10:: enumerateobjectreferences'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,11 +18,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449853"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a><span data-ttu-id="1fe54-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span><span class="sxs-lookup"><span data-stu-id="1fe54-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span></span>
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a><span data-ttu-id="5cff7-102">ICorProfilerInfo10:: enumerateobjectreferences-Methode</span><span class="sxs-lookup"><span data-stu-id="5cff7-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span></span>
 
-<span data-ttu-id="1fe54-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span><span class="sxs-lookup"><span data-stu-id="1fe54-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span></span>
+<span data-ttu-id="5cff7-103">Bei Angabe von ObjectID, Callback und clientData listet alle Objekt Verweise auf (sofern vorhanden).</span><span class="sxs-lookup"><span data-stu-id="5cff7-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1fe54-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1fe54-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="5cff7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5cff7-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
@@ -30,31 +30,31 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="1fe54-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1fe54-105">Parameters</span></span>
+#### <a name="parameters"></a><span data-ttu-id="5cff7-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5cff7-105">Parameters</span></span>
 
 `objectId` \
-<span data-ttu-id="1fe54-106">[in] The object to enumerate references on.</span><span class="sxs-lookup"><span data-stu-id="1fe54-106">[in] The object to enumerate references on.</span></span>
+<span data-ttu-id="5cff7-106">in Das Objekt, auf das Verweise aufgelistet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5cff7-106">[in] The object to enumerate references on.</span></span>
 
 `callback` \
-<span data-ttu-id="1fe54-107">[in] The function that will be called with the references for the object.</span><span class="sxs-lookup"><span data-stu-id="1fe54-107">[in] The function that will be called with the references for the object.</span></span>
+<span data-ttu-id="5cff7-107">in Die Funktion, die mit den verweisen für das-Objekt aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="5cff7-107">[in] The function that will be called with the references for the object.</span></span>
 
 `clientData` \
-<span data-ttu-id="1fe54-108">[in] Profiler-provided data to pass to the `callback` function.</span><span class="sxs-lookup"><span data-stu-id="1fe54-108">[in] Profiler-provided data to pass to the `callback` function.</span></span>
+<span data-ttu-id="5cff7-108">in Vom Profiler bereitgestellte Daten, die an die `callback`-Funktion übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="5cff7-108">[in] Profiler-provided data to pass to the `callback` function.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="1fe54-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1fe54-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5cff7-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5cff7-109">Remarks</span></span>
 
-<span data-ttu-id="1fe54-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span><span class="sxs-lookup"><span data-stu-id="1fe54-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span></span>
+<span data-ttu-id="5cff7-110">Die `EnumerateObjectReferences`-Methode ähnelt [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), mit dem Unterschied, dass Sie die Verweise nach Bedarf für den Profiler durchläuft, anstatt ein Array zum Speichern der Verweise vorab zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="5cff7-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1fe54-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1fe54-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="5cff7-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="5cff7-111">Requirements</span></span>
 
-<span data-ttu-id="1fe54-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="1fe54-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="5cff7-112">**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="5cff7-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
 
-<span data-ttu-id="1fe54-113">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1fe54-113">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="5cff7-113">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5cff7-113">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="1fe54-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1fe54-114">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="5cff7-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cff7-114">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="1fe54-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1fe54-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="5cff7-115">**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cff7-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1fe54-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1fe54-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5cff7-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5cff7-116">See also</span></span>
 
-- [<span data-ttu-id="1fe54-117">ICorProfilerInfo10 Interface</span><span class="sxs-lookup"><span data-stu-id="1fe54-117">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="5cff7-117">ICorProfilerInfo10-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5cff7-117">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

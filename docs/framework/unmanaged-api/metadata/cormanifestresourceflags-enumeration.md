@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450262"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="90dd8-102">CorManifestResourceFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="90dd8-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="90dd8-103">Indicates the visibility of resources encoded in an assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="90dd8-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="e5453-102">CorManifestResourceFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="e5453-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="e5453-103">Gibt die Sichtbarkeit der in einem Assemblymanifest codierten Ressourcen an.</span><span class="sxs-lookup"><span data-stu-id="e5453-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90dd8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="90dd8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5453-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e5453-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -36,21 +36,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="90dd8-105">Member</span><span class="sxs-lookup"><span data-stu-id="90dd8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e5453-105">Mitglieder</span><span class="sxs-lookup"><span data-stu-id="e5453-105">Members</span></span>  
   
-|<span data-ttu-id="90dd8-106">Member</span><span class="sxs-lookup"><span data-stu-id="90dd8-106">Member</span></span>|<span data-ttu-id="90dd8-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="90dd8-107">Description</span></span>|  
+|<span data-ttu-id="e5453-106">Member</span><span class="sxs-lookup"><span data-stu-id="e5453-106">Member</span></span>|<span data-ttu-id="e5453-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e5453-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="90dd8-108">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="90dd8-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="90dd8-109">The resources are public.</span><span class="sxs-lookup"><span data-stu-id="90dd8-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="90dd8-110">The resources are private.</span><span class="sxs-lookup"><span data-stu-id="90dd8-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="e5453-108">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="e5453-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="e5453-109">Die Ressourcen sind öffentlich.</span><span class="sxs-lookup"><span data-stu-id="e5453-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="e5453-110">Die Ressourcen sind privat.</span><span class="sxs-lookup"><span data-stu-id="e5453-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="90dd8-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="90dd8-111">Requirements</span></span>  
- <span data-ttu-id="90dd8-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="90dd8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5453-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e5453-111">Requirements</span></span>  
+ <span data-ttu-id="e5453-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5453-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="90dd8-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="90dd8-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="e5453-113">**Header:** Corhdr. h</span><span class="sxs-lookup"><span data-stu-id="e5453-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="90dd8-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90dd8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e5453-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5453-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90dd8-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="90dd8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5453-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e5453-115">See also</span></span>
 
-- [<span data-ttu-id="90dd8-116">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="90dd8-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="e5453-116">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="e5453-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

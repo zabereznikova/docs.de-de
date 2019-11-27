@@ -22,30 +22,30 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446622"
 ---
-# <a name="assemblyattributesgoheres"></a><span data-ttu-id="f8f8f-102">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="f8f8f-102">AssemblyAttributesGoHereS</span></span>
+# <a name="assemblyattributesgoheres"></a><span data-ttu-id="8582e-102">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="8582e-102">AssemblyAttributesGoHereS</span></span>
 
-<span data-ttu-id="f8f8f-103">Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.</span><span class="sxs-lookup"><span data-stu-id="f8f8f-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>
+<span data-ttu-id="8582e-103">Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.</span><span class="sxs-lookup"><span data-stu-id="8582e-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f8f8f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8f8f-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8582e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8582e-104">Syntax</span></span>
 
 ```csharp
 internal sealed class AssemblyAttributesGoHereS
 ```
 
-## <a name="remarks"></a><span data-ttu-id="f8f8f-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f8f8f-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8582e-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8582e-105">Remarks</span></span>
 
-<span data-ttu-id="f8f8f-106">Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Quellen benutzerdefinierte Assemblyattribute enthalten.</span><span class="sxs-lookup"><span data-stu-id="f8f8f-106">References to this type might be embedded inside netmodules whose sources contain assembly custom attributes.</span></span> <span data-ttu-id="f8f8f-107">Beim Erstellen eines Assemblymanifests aus mindestens einer NETMODULE-Datei, die Verweise auf diese Typen enthält, verwendet ALink die zu diesen Verweisen gehörenden Informationen, um echte benutzerdefinierte Attribute auszugeben.</span><span class="sxs-lookup"><span data-stu-id="f8f8f-107">When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes.</span></span> <span data-ttu-id="f8f8f-108">Daher wird dieser Typ nie instanziiert, und Verweise auf diesen Typ werden nur als Teil des Buildprozesses verwendet und erfüllen in der endgültigen Assembly keinen Zweck.</span><span class="sxs-lookup"><span data-stu-id="f8f8f-108">As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.</span></span>
+<span data-ttu-id="8582e-106">Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Quellen benutzerdefinierte Assemblyattribute enthalten.</span><span class="sxs-lookup"><span data-stu-id="8582e-106">References to this type might be embedded inside netmodules whose sources contain assembly custom attributes.</span></span> <span data-ttu-id="8582e-107">Beim Erstellen eines Assemblymanifests aus mindestens einer NETMODULE-Datei, die Verweise auf diese Typen enthält, verwendet ALink die zu diesen Verweisen gehörenden Informationen, um echte benutzerdefinierte Attribute auszugeben.</span><span class="sxs-lookup"><span data-stu-id="8582e-107">When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes.</span></span> <span data-ttu-id="8582e-108">Daher wird dieser Typ nie instanziiert, und Verweise auf diesen Typ werden nur als Teil des Buildprozesses verwendet und erfüllen in der endgültigen Assembly keinen Zweck.</span><span class="sxs-lookup"><span data-stu-id="8582e-108">As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.</span></span>
 
-<span data-ttu-id="f8f8f-109">Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f8f8f-109">References to this type indicate custom attributes that are security related and are not multiple-use.</span></span>
+<span data-ttu-id="8582e-109">Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8582e-109">References to this type indicate custom attributes that are security related and are not multiple-use.</span></span>
 
-<span data-ttu-id="f8f8f-110">These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.</span><span class="sxs-lookup"><span data-stu-id="f8f8f-110">These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.</span></span>
+<span data-ttu-id="8582e-110">Diese Typen werden innerhalb des .NET Framework als "intern" gekennzeichnet und befinden sich im <xref:System.Runtime.CompilerServices>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="8582e-110">These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f8f8f-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8f8f-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8582e-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="8582e-111">Requirements</span></span>
 
-<span data-ttu-id="f8f8f-112">mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="f8f8f-112">mscorlib.dll</span></span>
+<span data-ttu-id="8582e-112">mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="8582e-112">mscorlib.dll</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f8f8f-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8f8f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8582e-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8582e-113">See also</span></span>
 
-- [<span data-ttu-id="f8f8f-114">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="f8f8f-114">AssemblyAttributesGoHere</span></span>](assemblyattributesgohere.md)
-- [<span data-ttu-id="f8f8f-115">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="f8f8f-115">AssemblyAttributesGoHereM</span></span>](assemblyattributesgoherem.md)
-- [<span data-ttu-id="f8f8f-116">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="f8f8f-116">AssemblyAttributesGoHereSM</span></span>](assemblyattributesgoheresm.md)
+- [<span data-ttu-id="8582e-114">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="8582e-114">AssemblyAttributesGoHere</span></span>](assemblyattributesgohere.md)
+- [<span data-ttu-id="8582e-115">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="8582e-115">AssemblyAttributesGoHereM</span></span>](assemblyattributesgoherem.md)
+- [<span data-ttu-id="8582e-116">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="8582e-116">AssemblyAttributesGoHereSM</span></span>](assemblyattributesgoheresm.md)
