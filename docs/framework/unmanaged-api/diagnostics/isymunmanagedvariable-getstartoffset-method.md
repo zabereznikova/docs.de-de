@@ -22,27 +22,27 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446001"
 ---
-# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="c6287-102">ISymUnmanagedVariable::GetStartOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="c6287-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
-<span data-ttu-id="c6287-103">Gets the start offset of this variable within its parent.</span><span class="sxs-lookup"><span data-stu-id="c6287-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="c6287-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span><span class="sxs-lookup"><span data-stu-id="c6287-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="48f17-102">ISymUnmanagedVariable::GetStartOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="48f17-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
+<span data-ttu-id="48f17-103">Ruft den Start Offset dieser Variablen in ihrem übergeordneten Element ab.</span><span class="sxs-lookup"><span data-stu-id="48f17-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="48f17-104">Wenn dies eine lokale Variable innerhalb eines Bereichs ist, fällt der Start Offset in die für den Bereich definierten Offsets.</span><span class="sxs-lookup"><span data-stu-id="48f17-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6287-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c6287-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48f17-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="48f17-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c6287-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="c6287-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="48f17-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="48f17-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="c6287-107">[out] A pointer to a `ULONG32` that receives the start offset.</span><span class="sxs-lookup"><span data-stu-id="c6287-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
+ <span data-ttu-id="48f17-107">vorgenommen Ein Zeiger auf einen `ULONG32`, der den Start Offset empfängt.</span><span class="sxs-lookup"><span data-stu-id="48f17-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c6287-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c6287-108">Return Value</span></span>  
- <span data-ttu-id="c6287-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="c6287-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="48f17-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="48f17-108">Return Value</span></span>  
+ <span data-ttu-id="48f17-109">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="48f17-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6287-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c6287-110">Requirements</span></span>  
- <span data-ttu-id="c6287-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c6287-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="48f17-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="48f17-110">Requirements</span></span>  
+ <span data-ttu-id="48f17-111">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="48f17-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6287-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c6287-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48f17-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48f17-112">See also</span></span>
 
-- [<span data-ttu-id="c6287-113">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c6287-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="c6287-114">GetEndOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="c6287-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+- [<span data-ttu-id="48f17-113">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="48f17-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="48f17-114">GetEndOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="48f17-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

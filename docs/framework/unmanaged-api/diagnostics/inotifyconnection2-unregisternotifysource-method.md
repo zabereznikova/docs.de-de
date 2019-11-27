@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440987"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="87619-102">INotifyConnection2::UnregisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="87619-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="87619-103">Removes a specified notification source object from the connection.</span><span class="sxs-lookup"><span data-stu-id="87619-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="3f6a6-102">INotifyConnection2::UnregisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="3f6a6-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="3f6a6-103">Entfernt ein angegebenes Benachrichtigungs Quell Objekt aus der Verbindung.</span><span class="sxs-lookup"><span data-stu-id="3f6a6-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87619-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="87619-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f6a6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3f6a6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnregisterNotifySource  
@@ -34,19 +34,19 @@ HRESULT UnregisterNotifySource
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="87619-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="87619-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f6a6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3f6a6-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="87619-106">[in] Notification object to be unregistered.</span><span class="sxs-lookup"><span data-stu-id="87619-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="3f6a6-106">in Benachrichtigungs Objekt, deren Registrierung aufgehoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="3f6a6-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="87619-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="87619-107">Return Value</span></span>  
- <span data-ttu-id="87619-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="87619-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f6a6-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="3f6a6-107">Return Value</span></span>  
+ <span data-ttu-id="3f6a6-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="3f6a6-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87619-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="87619-109">Requirements</span></span>  
- <span data-ttu-id="87619-110">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="87619-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f6a6-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="3f6a6-109">Requirements</span></span>  
+ <span data-ttu-id="3f6a6-110">**Header:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="3f6a6-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87619-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="87619-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f6a6-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f6a6-111">See also</span></span>
 
-- [<span data-ttu-id="87619-112">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="87619-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="87619-113">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="87619-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="87619-114">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="87619-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="87619-115">RegisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="87619-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+- [<span data-ttu-id="3f6a6-112">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3f6a6-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="3f6a6-113">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3f6a6-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="3f6a6-114">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3f6a6-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="3f6a6-115">RegisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="3f6a6-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
