@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445644"
 ---
-# <a name="init-method"></a><span data-ttu-id="a00b8-102">Init-Methode</span><span class="sxs-lookup"><span data-stu-id="a00b8-102">Init Method</span></span>
-<span data-ttu-id="a00b8-103">Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.</span><span class="sxs-lookup"><span data-stu-id="a00b8-103">Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.</span></span>  
+# <a name="init-method"></a><span data-ttu-id="73f4a-102">Init-Methode</span><span class="sxs-lookup"><span data-stu-id="73f4a-102">Init Method</span></span>
+<span data-ttu-id="73f4a-103">Bereitet Objekte vor, die die [IALink-Schnittstelle](ialink-interface.md) zur Verwendung implementieren.</span><span class="sxs-lookup"><span data-stu-id="73f4a-103">Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a00b8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a00b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73f4a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="73f4a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Init(  
@@ -33,21 +33,21 @@ HRESULT Init(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a00b8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a00b8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73f4a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="73f4a-105">Parameters</span></span>  
  `pDispenser`  
- <span data-ttu-id="a00b8-106">[IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span><span class="sxs-lookup"><span data-stu-id="a00b8-106">[IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
+ <span data-ttu-id="73f4a-106">[IMetaDataDispenserEx-Schnittstellen](../metadata/imetadatadispenserex-interface.md) Zeiger auf den metadatendispenser.</span><span class="sxs-lookup"><span data-stu-id="73f4a-106">[IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
   
  `pErrorHandler`  
- <span data-ttu-id="a00b8-107">[IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span><span class="sxs-lookup"><span data-stu-id="a00b8-107">[IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
+ <span data-ttu-id="73f4a-107">[IMetaDataError-Schnittstellen](../metadata/imetadataerror-interface.md) Zeiger auf eine optionale Schnittstelle zur Fehlerbehandlung.</span><span class="sxs-lookup"><span data-stu-id="73f4a-107">[IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a00b8-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a00b8-108">Return Value</span></span>  
- <span data-ttu-id="a00b8-109">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="a00b8-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="73f4a-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="73f4a-108">Return Value</span></span>  
+ <span data-ttu-id="73f4a-109">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="73f4a-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a00b8-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a00b8-110">Requirements</span></span>  
- <span data-ttu-id="a00b8-111">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="a00b8-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73f4a-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="73f4a-110">Requirements</span></span>  
+ <span data-ttu-id="73f4a-111">Erfordert "Alink. h"</span><span class="sxs-lookup"><span data-stu-id="73f4a-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a00b8-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a00b8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73f4a-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="73f4a-112">See also</span></span>
 
-- [<span data-ttu-id="a00b8-113">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a00b8-113">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a00b8-114">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a00b8-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a00b8-115">Alink-API</span><span class="sxs-lookup"><span data-stu-id="a00b8-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="73f4a-113">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="73f4a-113">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="73f4a-114">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="73f4a-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="73f4a-115">Alink-API</span><span class="sxs-lookup"><span data-stu-id="73f4a-115">ALink API</span></span>](index.md)

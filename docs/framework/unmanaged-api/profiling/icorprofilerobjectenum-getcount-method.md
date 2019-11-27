@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428257"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="d9378-102">ICorProfilerObjectEnum::GetCount-Methode</span><span class="sxs-lookup"><span data-stu-id="d9378-102">ICorProfilerObjectEnum::GetCount Method</span></span>
-<span data-ttu-id="d9378-103">Gets the total number of frozen objects in the collection.</span><span class="sxs-lookup"><span data-stu-id="d9378-103">Gets the total number of frozen objects in the collection.</span></span>  
+# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="54092-102">ICorProfilerObjectEnum::GetCount-Methode</span><span class="sxs-lookup"><span data-stu-id="54092-102">ICorProfilerObjectEnum::GetCount Method</span></span>
+<span data-ttu-id="54092-103">Ruft die Gesamtanzahl der fixierten Objekte in der Auflistung ab.</span><span class="sxs-lookup"><span data-stu-id="54092-103">Gets the total number of frozen objects in the collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9378-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d9378-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54092-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="54092-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,21 +33,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d9378-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d9378-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54092-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="54092-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="d9378-106">[out] A pointer to the number of frozen objects in the collection.</span><span class="sxs-lookup"><span data-stu-id="d9378-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
+ <span data-ttu-id="54092-106">vorgenommen Ein Zeiger auf die Anzahl der fixierten Objekte in der Auflistung.</span><span class="sxs-lookup"><span data-stu-id="54092-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
   
- <span data-ttu-id="d9378-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span><span class="sxs-lookup"><span data-stu-id="d9378-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
+ <span data-ttu-id="54092-107">Diese Methode gibt immer 0 (null) in der .NET Framework Version 3,5 Service Pack 1 (SP1) und höheren Versionen zurück.</span><span class="sxs-lookup"><span data-stu-id="54092-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9378-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d9378-108">Requirements</span></span>  
- <span data-ttu-id="d9378-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9378-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54092-108">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="54092-108">Requirements</span></span>  
+ <span data-ttu-id="54092-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54092-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d9378-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d9378-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="54092-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="54092-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d9378-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9378-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54092-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54092-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d9378-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9378-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="54092-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54092-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9378-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9378-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54092-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="54092-113">See also</span></span>
 
-- [<span data-ttu-id="d9378-114">ICorProfilerObjectEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d9378-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="54092-114">ICorProfilerObjectEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="54092-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

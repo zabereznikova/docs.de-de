@@ -21,27 +21,27 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441622"
 ---
-# <a name="imetadataerror-interface"></a><span data-ttu-id="0313a-102">IMetaDataError-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0313a-102">IMetaDataError Interface</span></span>
-<span data-ttu-id="0313a-103">Provides a callback mechanism for reporting errors during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="0313a-103">Provides a callback mechanism for reporting errors during the metadata merge.</span></span>  
+# <a name="imetadataerror-interface"></a><span data-ttu-id="fe96d-102">IMetaDataError-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fe96d-102">IMetaDataError Interface</span></span>
+<span data-ttu-id="fe96d-103">Stellt einen Rückrufmechanismus zum Melden von Fehlern während der Metadatenzusammenführung bereit.</span><span class="sxs-lookup"><span data-stu-id="fe96d-103">Provides a callback mechanism for reporting errors during the metadata merge.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="0313a-104">The `IMetaDataError` interface must be implemented by the client.</span><span class="sxs-lookup"><span data-stu-id="0313a-104">The `IMetaDataError` interface must be implemented by the client.</span></span>  
+> <span data-ttu-id="fe96d-104">Die `IMetaDataError`-Schnittstelle muss vom Client implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="fe96d-104">The `IMetaDataError` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0313a-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="0313a-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="fe96d-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="fe96d-105">Methods</span></span>  
   
-|<span data-ttu-id="0313a-106">Methode</span><span class="sxs-lookup"><span data-stu-id="0313a-106">Method</span></span>|<span data-ttu-id="0313a-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0313a-107">Description</span></span>|  
+|<span data-ttu-id="fe96d-106">Methode</span><span class="sxs-lookup"><span data-stu-id="fe96d-106">Method</span></span>|<span data-ttu-id="fe96d-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fe96d-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0313a-108">OnError-Methode</span><span class="sxs-lookup"><span data-stu-id="0313a-108">OnError Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|<span data-ttu-id="0313a-109">Provides notification of errors that occur during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="0313a-109">Provides notification of errors that occur during the metadata merge.</span></span>|  
+|[<span data-ttu-id="fe96d-108">OnError-Methode</span><span class="sxs-lookup"><span data-stu-id="fe96d-108">OnError Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|<span data-ttu-id="fe96d-109">Gibt Benachrichtigungen zu Fehlern, die während der Zusammenführung der Metadaten auftreten.</span><span class="sxs-lookup"><span data-stu-id="fe96d-109">Provides notification of errors that occur during the metadata merge.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0313a-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0313a-110">Requirements</span></span>  
- <span data-ttu-id="0313a-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0313a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe96d-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="fe96d-110">Requirements</span></span>  
+ <span data-ttu-id="fe96d-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe96d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0313a-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0313a-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fe96d-112">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="fe96d-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0313a-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0313a-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fe96d-113">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="fe96d-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0313a-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0313a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fe96d-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe96d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0313a-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0313a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe96d-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe96d-115">See also</span></span>
 
-- [<span data-ttu-id="0313a-116">Metadatenschnittstellen</span><span class="sxs-lookup"><span data-stu-id="0313a-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="fe96d-116">Metadatenschnittstellen</span><span class="sxs-lookup"><span data-stu-id="fe96d-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

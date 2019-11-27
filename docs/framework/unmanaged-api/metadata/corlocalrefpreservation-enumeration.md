@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450242"
 ---
-# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="cf861-102">CorLocalRefPreservation-Enumeration</span><span class="sxs-lookup"><span data-stu-id="cf861-102">CorLocalRefPreservation Enumeration</span></span>
-<span data-ttu-id="cf861-103">Enthält Flagwerte für die Behandlung von lokalen Verweisen.</span><span class="sxs-lookup"><span data-stu-id="cf861-103">Contains flag values for the treatment of local references.</span></span>  
+# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="5a671-102">CorLocalRefPreservation-Enumeration</span><span class="sxs-lookup"><span data-stu-id="5a671-102">CorLocalRefPreservation Enumeration</span></span>
+<span data-ttu-id="5a671-103">Enthält Flagwerte für die Behandlung von lokalen Verweisen.</span><span class="sxs-lookup"><span data-stu-id="5a671-103">Contains flag values for the treatment of local references.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf861-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cf861-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a671-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5a671-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorLocalRefPreservation  
@@ -35,21 +35,21 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cf861-105">Member</span><span class="sxs-lookup"><span data-stu-id="cf861-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5a671-105">Member</span><span class="sxs-lookup"><span data-stu-id="5a671-105">Members</span></span>  
   
-|<span data-ttu-id="cf861-106">Member</span><span class="sxs-lookup"><span data-stu-id="cf861-106">Member</span></span>|<span data-ttu-id="cf861-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cf861-107">Description</span></span>|  
+|<span data-ttu-id="5a671-106">Member</span><span class="sxs-lookup"><span data-stu-id="5a671-106">Member</span></span>|<span data-ttu-id="5a671-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5a671-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|<span data-ttu-id="cf861-108">Preserve no local references.</span><span class="sxs-lookup"><span data-stu-id="cf861-108">Preserve no local references.</span></span>|  
-|`MDPreserveLocalTypeRef`|<span data-ttu-id="cf861-109">Preserve local type references.</span><span class="sxs-lookup"><span data-stu-id="cf861-109">Preserve local type references.</span></span>|  
-|`MDPreserveLocalMemberRef`|<span data-ttu-id="cf861-110">Preserve local member references.</span><span class="sxs-lookup"><span data-stu-id="cf861-110">Preserve local member references.</span></span>|  
+|`MDPreserveLocalRefsNone`|<span data-ttu-id="5a671-108">Behalten Sie keine lokalen Verweise bei.</span><span class="sxs-lookup"><span data-stu-id="5a671-108">Preserve no local references.</span></span>|  
+|`MDPreserveLocalTypeRef`|<span data-ttu-id="5a671-109">Lokale Typverweise beibehalten.</span><span class="sxs-lookup"><span data-stu-id="5a671-109">Preserve local type references.</span></span>|  
+|`MDPreserveLocalMemberRef`|<span data-ttu-id="5a671-110">Lokale Member-Verweise beibehalten.</span><span class="sxs-lookup"><span data-stu-id="5a671-110">Preserve local member references.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cf861-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cf861-111">Requirements</span></span>  
- <span data-ttu-id="cf861-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf861-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a671-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="5a671-111">Requirements</span></span>  
+ <span data-ttu-id="5a671-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5a671-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf861-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="cf861-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5a671-113">**Header:** Corhdr. h</span><span class="sxs-lookup"><span data-stu-id="5a671-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="cf861-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf861-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="5a671-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a671-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf861-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cf861-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a671-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a671-115">See also</span></span>
 
-- [<span data-ttu-id="cf861-116">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="cf861-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="5a671-116">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="5a671-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

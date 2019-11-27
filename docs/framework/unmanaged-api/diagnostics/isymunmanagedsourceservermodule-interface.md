@@ -21,18 +21,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446194"
 ---
-# <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="e84ba-102">ISymUnmanagedSourceServerModule-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e84ba-102">ISymUnmanagedSourceServerModule Interface</span></span>
-<span data-ttu-id="e84ba-103">Provides source server data for a module.</span><span class="sxs-lookup"><span data-stu-id="e84ba-103">Provides source server data for a module.</span></span> <span data-ttu-id="e84ba-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="e84ba-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="1cae4-102">ISymUnmanagedSourceServerModule-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1cae4-102">ISymUnmanagedSourceServerModule Interface</span></span>
+<span data-ttu-id="1cae4-103">Stellt Quell Serverdaten für ein Modul bereit.</span><span class="sxs-lookup"><span data-stu-id="1cae4-103">Provides source server data for a module.</span></span> <span data-ttu-id="1cae4-104">Rufen Sie diese Schnittstelle durch Aufrufen von `QueryInterface` für ein Objekt ab, das die [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) -Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="1cae4-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e84ba-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="e84ba-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1cae4-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="1cae4-105">Methods</span></span>  
   
-|<span data-ttu-id="e84ba-106">Methode</span><span class="sxs-lookup"><span data-stu-id="e84ba-106">Method</span></span>|<span data-ttu-id="e84ba-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e84ba-107">Description</span></span>|  
+|<span data-ttu-id="1cae4-106">Methode</span><span class="sxs-lookup"><span data-stu-id="1cae4-106">Method</span></span>|<span data-ttu-id="1cae4-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1cae4-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e84ba-108">GetSourceServerData-Methode</span><span class="sxs-lookup"><span data-stu-id="e84ba-108">GetSourceServerData Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|<span data-ttu-id="e84ba-109">Returns the source server data for the module.</span><span class="sxs-lookup"><span data-stu-id="e84ba-109">Returns the source server data for the module.</span></span>|  
+|[<span data-ttu-id="1cae4-108">GetSourceServerData-Methode</span><span class="sxs-lookup"><span data-stu-id="1cae4-108">GetSourceServerData Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|<span data-ttu-id="1cae4-109">Gibt die Quell Serverdaten für das Modul zurück.</span><span class="sxs-lookup"><span data-stu-id="1cae4-109">Returns the source server data for the module.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e84ba-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e84ba-110">Requirements</span></span>  
- <span data-ttu-id="e84ba-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e84ba-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1cae4-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="1cae4-110">Requirements</span></span>  
+ <span data-ttu-id="1cae4-111">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="1cae4-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e84ba-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e84ba-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cae4-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1cae4-112">See also</span></span>
 
-- [<span data-ttu-id="e84ba-113">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="e84ba-113">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="1cae4-113">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1cae4-113">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

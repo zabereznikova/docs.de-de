@@ -22,33 +22,33 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445903"
 ---
-# <a name="icorprofilercallbackmoduleunloadstarted-method"></a><span data-ttu-id="afb31-102">ICorProfilerCallback::ModuleUnloadStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="afb31-102">ICorProfilerCallback::ModuleUnloadStarted Method</span></span>
-<span data-ttu-id="afb31-103">Notifies the profiler that a module is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="afb31-103">Notifies the profiler that a module is being unloaded.</span></span>  
+# <a name="icorprofilercallbackmoduleunloadstarted-method"></a><span data-ttu-id="cbc68-102">ICorProfilerCallback::ModuleUnloadStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="cbc68-102">ICorProfilerCallback::ModuleUnloadStarted Method</span></span>
+<span data-ttu-id="cbc68-103">Benachrichtigt den Profiler, dass ein Modul entladen wird.</span><span class="sxs-lookup"><span data-stu-id="cbc68-103">Notifies the profiler that a module is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afb31-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="afb31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbc68-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cbc68-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ModuleUnloadStarted(  
     [in] ModuleID moduleId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="afb31-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="afb31-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cbc68-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="cbc68-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="afb31-106">[in] The ID of the module that is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="afb31-106">[in] The ID of the module that is being unloaded.</span></span>  
+ <span data-ttu-id="cbc68-106">in Die ID des Moduls, das entladen wird.</span><span class="sxs-lookup"><span data-stu-id="cbc68-106">[in] The ID of the module that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="afb31-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="afb31-107">Remarks</span></span>  
- <span data-ttu-id="afb31-108">The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.</span><span class="sxs-lookup"><span data-stu-id="afb31-108">The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbc68-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cbc68-107">Remarks</span></span>  
+ <span data-ttu-id="cbc68-108">Der Wert `moduleId` ist für eine Informationsanforderung nicht gültig, nachdem die `ModuleUnloadStarted`-Methode zurückgegeben wurde – dies ist die letzte Möglichkeit des Profilers, Informationen zu diesem Modul zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="cbc68-108">The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afb31-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="afb31-109">Requirements</span></span>  
- <span data-ttu-id="afb31-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="afb31-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbc68-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="cbc68-109">Requirements</span></span>  
+ <span data-ttu-id="cbc68-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbc68-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="afb31-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="afb31-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cbc68-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cbc68-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="afb31-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="afb31-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbc68-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbc68-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="afb31-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="afb31-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cbc68-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbc68-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afb31-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="afb31-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbc68-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cbc68-114">See also</span></span>
 
-- [<span data-ttu-id="afb31-115">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="afb31-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="afb31-116">ModuleUnloadFinished-Methode</span><span class="sxs-lookup"><span data-stu-id="afb31-116">ModuleUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)
+- [<span data-ttu-id="cbc68-115">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="cbc68-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="cbc68-116">ModuleUnloadFinished-Methode</span><span class="sxs-lookup"><span data-stu-id="cbc68-116">ModuleUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)

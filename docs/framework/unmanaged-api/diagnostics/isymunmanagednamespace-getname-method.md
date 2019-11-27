@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433972"
 ---
-# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="5600c-102">ISymUnmanagedNamespace::GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="5600c-102">ISymUnmanagedNamespace::GetName Method</span></span>
-<span data-ttu-id="5600c-103">Gets the name of this namespace.</span><span class="sxs-lookup"><span data-stu-id="5600c-103">Gets the name of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="58f00-102">ISymUnmanagedNamespace::GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="58f00-102">ISymUnmanagedNamespace::GetName Method</span></span>
+<span data-ttu-id="58f00-103">Ruft den Namen dieses Namespace ab.</span><span class="sxs-lookup"><span data-stu-id="58f00-103">Gets the name of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5600c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5600c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58f00-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="58f00-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetName(  
@@ -35,22 +35,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5600c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5600c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58f00-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="58f00-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="5600c-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="5600c-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="58f00-106">in Ein-`ULONG32`, der die Größe des `szName` Puffers angibt.</span><span class="sxs-lookup"><span data-stu-id="58f00-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="5600c-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span><span class="sxs-lookup"><span data-stu-id="5600c-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
+ <span data-ttu-id="58f00-107">vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers, der den Namespace Namen enthalten muss, einschließlich der NULL-Beendigung, in Zeichen empfängt.</span><span class="sxs-lookup"><span data-stu-id="58f00-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="5600c-108">[out] A pointer to a buffer that contains the namespace name.</span><span class="sxs-lookup"><span data-stu-id="5600c-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
+ <span data-ttu-id="58f00-108">vorgenommen Ein Zeiger auf einen Puffer, der den Namespace Namen enthält.</span><span class="sxs-lookup"><span data-stu-id="58f00-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5600c-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="5600c-109">Return Value</span></span>  
- <span data-ttu-id="5600c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="5600c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="58f00-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="58f00-109">Return Value</span></span>  
+ <span data-ttu-id="58f00-110">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="58f00-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5600c-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5600c-111">Requirements</span></span>  
- <span data-ttu-id="5600c-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5600c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58f00-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="58f00-111">Requirements</span></span>  
+ <span data-ttu-id="58f00-112">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="58f00-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5600c-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5600c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58f00-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58f00-113">See also</span></span>
 
-- [<span data-ttu-id="5600c-114">ISymUnmanagedNamespace-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5600c-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="58f00-114">ISymUnmanagedNamespace-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="58f00-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

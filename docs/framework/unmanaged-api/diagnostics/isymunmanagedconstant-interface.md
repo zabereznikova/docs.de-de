@@ -21,20 +21,20 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449258"
 ---
-# <a name="isymunmanagedconstant-interface"></a><span data-ttu-id="ba7b2-102">ISymUnmanagedConstant-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ba7b2-102">ISymUnmanagedConstant Interface</span></span>
-<span data-ttu-id="ba7b2-103">Provides access to unmanaged constants.</span><span class="sxs-lookup"><span data-stu-id="ba7b2-103">Provides access to unmanaged constants.</span></span>  
+# <a name="isymunmanagedconstant-interface"></a><span data-ttu-id="d1ecd-102">ISymUnmanagedConstant-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d1ecd-102">ISymUnmanagedConstant Interface</span></span>
+<span data-ttu-id="d1ecd-103">Ermöglicht den Zugriff auf nicht verwaltete Konstanten.</span><span class="sxs-lookup"><span data-stu-id="d1ecd-103">Provides access to unmanaged constants.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ba7b2-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="ba7b2-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d1ecd-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="d1ecd-104">Methods</span></span>  
   
-|<span data-ttu-id="ba7b2-105">Methode</span><span class="sxs-lookup"><span data-stu-id="ba7b2-105">Method</span></span>|<span data-ttu-id="ba7b2-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ba7b2-106">Description</span></span>|  
+|<span data-ttu-id="d1ecd-105">Methode</span><span class="sxs-lookup"><span data-stu-id="d1ecd-105">Method</span></span>|<span data-ttu-id="d1ecd-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d1ecd-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ba7b2-107">GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="ba7b2-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|<span data-ttu-id="ba7b2-108">Gets the name of the constant.</span><span class="sxs-lookup"><span data-stu-id="ba7b2-108">Gets the name of the constant.</span></span>|  
-|[<span data-ttu-id="ba7b2-109">GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="ba7b2-109">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|<span data-ttu-id="ba7b2-110">Gets the signature of the constant.</span><span class="sxs-lookup"><span data-stu-id="ba7b2-110">Gets the signature of the constant.</span></span>|  
-|[<span data-ttu-id="ba7b2-111">GetValue-Methode</span><span class="sxs-lookup"><span data-stu-id="ba7b2-111">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|<span data-ttu-id="ba7b2-112">Gets the value of the constant.</span><span class="sxs-lookup"><span data-stu-id="ba7b2-112">Gets the value of the constant.</span></span>|  
+|[<span data-ttu-id="d1ecd-107">GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="d1ecd-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|<span data-ttu-id="d1ecd-108">Ruft den Namen der Konstante ab.</span><span class="sxs-lookup"><span data-stu-id="d1ecd-108">Gets the name of the constant.</span></span>|  
+|[<span data-ttu-id="d1ecd-109">GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="d1ecd-109">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|<span data-ttu-id="d1ecd-110">Ruft die Signatur der Konstante ab.</span><span class="sxs-lookup"><span data-stu-id="d1ecd-110">Gets the signature of the constant.</span></span>|  
+|[<span data-ttu-id="d1ecd-111">GetValue-Methode</span><span class="sxs-lookup"><span data-stu-id="d1ecd-111">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|<span data-ttu-id="d1ecd-112">Ruft den Wert der Konstante ab.</span><span class="sxs-lookup"><span data-stu-id="d1ecd-112">Gets the value of the constant.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ba7b2-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ba7b2-113">Requirements</span></span>  
- <span data-ttu-id="ba7b2-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ba7b2-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1ecd-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="d1ecd-113">Requirements</span></span>  
+ <span data-ttu-id="d1ecd-114">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="d1ecd-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba7b2-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ba7b2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1ecd-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1ecd-115">See also</span></span>
 
-- [<span data-ttu-id="ba7b2-116">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="ba7b2-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="d1ecd-116">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d1ecd-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

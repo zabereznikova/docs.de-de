@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446451"
 ---
-# <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a><span data-ttu-id="fe278-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap-Methode</span><span class="sxs-lookup"><span data-stu-id="fe278-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap Method</span></span>
-<span data-ttu-id="fe278-103">Gets a symbol reader method, given a method token and an edit-and-continue version number.</span><span class="sxs-lookup"><span data-stu-id="fe278-103">Gets a symbol reader method, given a method token and an edit-and-continue version number.</span></span> <span data-ttu-id="fe278-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.</span><span class="sxs-lookup"><span data-stu-id="fe278-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.</span></span>  
+# <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a><span data-ttu-id="41a99-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap-Methode</span><span class="sxs-lookup"><span data-stu-id="41a99-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap Method</span></span>
+<span data-ttu-id="41a99-103">Ruft eine Symbol Lesemethode ab, wenn ein Methoden Token und eine Bearbeitungs-und Fortsetzung-Versionsnummer angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="41a99-103">Gets a symbol reader method, given a method token and an edit-and-continue version number.</span></span> <span data-ttu-id="41a99-104">Versionsnummern beginnen bei 1 und werden jedes Mal um 1 erhöht, wenn die Methode aufgrund eines Edit-and-Continue-Vorgangs geändert wird.</span><span class="sxs-lookup"><span data-stu-id="41a99-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe278-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="fe278-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41a99-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="41a99-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodByVersionPreRemap(  
@@ -34,22 +34,22 @@ HRESULT GetMethodByVersionPreRemap(
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fe278-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="fe278-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41a99-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="41a99-106">Parameters</span></span>  
  `token`  
- <span data-ttu-id="fe278-107">[in] The method metadata token.</span><span class="sxs-lookup"><span data-stu-id="fe278-107">[in] The method metadata token.</span></span>  
+ <span data-ttu-id="41a99-107">in Das Metadatentoken der Methode.</span><span class="sxs-lookup"><span data-stu-id="41a99-107">[in] The method metadata token.</span></span>  
   
  `version`  
- <span data-ttu-id="fe278-108">[in] The method version.</span><span class="sxs-lookup"><span data-stu-id="fe278-108">[in] The method version.</span></span>  
+ <span data-ttu-id="41a99-108">in Die Methoden Version.</span><span class="sxs-lookup"><span data-stu-id="41a99-108">[in] The method version.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="fe278-109">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="fe278-109">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
+ <span data-ttu-id="41a99-109">vorgenommen Ein Zeiger auf die zurückgegebene [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) -Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="41a99-109">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fe278-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="fe278-110">Return Value</span></span>  
- <span data-ttu-id="fe278-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="fe278-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="41a99-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="41a99-110">Return Value</span></span>  
+ <span data-ttu-id="41a99-111">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="41a99-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe278-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fe278-112">Requirements</span></span>  
- <span data-ttu-id="fe278-113">**Header:** CorSym.idl.</span><span class="sxs-lookup"><span data-stu-id="fe278-113">**Header:** CorSym.idl.</span></span> <span data-ttu-id="fe278-114">CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fe278-114">CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41a99-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="41a99-112">Requirements</span></span>  
+ <span data-ttu-id="41a99-113">**Header:** "Corsym. idl".</span><span class="sxs-lookup"><span data-stu-id="41a99-113">**Header:** CorSym.idl.</span></span> <span data-ttu-id="41a99-114">CorSym.h</span><span class="sxs-lookup"><span data-stu-id="41a99-114">CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe278-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe278-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41a99-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="41a99-115">See also</span></span>
 
-- [<span data-ttu-id="fe278-116">ISymUnmanagedReader2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fe278-116">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [<span data-ttu-id="41a99-116">ISymUnmanagedReader2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="41a99-116">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

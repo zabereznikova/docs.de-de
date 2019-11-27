@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449703"
 ---
-# <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a><span data-ttu-id="883cc-102">ICorProfilerInfo3::GetFunctionTailcall3Info-Methode</span><span class="sxs-lookup"><span data-stu-id="883cc-102">ICorProfilerInfo3::GetFunctionTailcall3Info Method</span></span>
-<span data-ttu-id="883cc-103">Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="883cc-103">Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function.</span></span> <span data-ttu-id="883cc-104">Diese Methode kann nur während des `FunctionTailcall3WithInfo`-Rückrufs aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="883cc-104">This method can be called only during the `FunctionTailcall3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a><span data-ttu-id="871b6-102">ICorProfilerInfo3::GetFunctionTailcall3Info-Methode</span><span class="sxs-lookup"><span data-stu-id="871b6-102">ICorProfilerInfo3::GetFunctionTailcall3Info Method</span></span>
+<span data-ttu-id="871b6-103">Stellt den Stapel Rahmen der Funktion bereit, die dem Profiler von der [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) -Funktion gemeldet wird.</span><span class="sxs-lookup"><span data-stu-id="871b6-103">Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function.</span></span> <span data-ttu-id="871b6-104">Diese Methode kann nur während des `FunctionTailcall3WithInfo`-Rückrufs aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="871b6-104">This method can be called only during the `FunctionTailcall3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="883cc-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="883cc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="871b6-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="871b6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionTailcall3Info(   
@@ -34,32 +34,32 @@ HRESULT GetFunctionTailcall3Info(
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="883cc-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="883cc-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="871b6-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="871b6-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="883cc-107">[in] The `FunctionID` of the function that is returning.</span><span class="sxs-lookup"><span data-stu-id="883cc-107">[in] The `FunctionID` of the function that is returning.</span></span>  
+ <span data-ttu-id="871b6-107">in Der `FunctionID` der Funktion, die zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="871b6-107">[in] The `FunctionID` of the function that is returning.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="883cc-108">[in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="883cc-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="883cc-109">The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.</span><span class="sxs-lookup"><span data-stu-id="883cc-109">The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.</span></span>  
+ <span data-ttu-id="871b6-108">[in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="871b6-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="871b6-109">Der Profiler sollte die gleiche `eltInfo` bereitstellen, die dem Profiler von der `FunctionTailcall3WithInfo`-Funktion übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="871b6-109">The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="883cc-110">[out] Ein nicht transparentes Handle, das Genericsinformationen zu einem bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="883cc-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="883cc-111">Dieses Handle ist nur während des `FunctionTailcall3WithInfo`-Rückrufs gültig, in dem der Profiler die `GetFunctionTailcall3Info`-Methode aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="883cc-111">This handle is valid only during the `FunctionTailcall3WithInfo` callback in which the profiler called the `GetFunctionTailcall3Info` method.</span></span>  
+ <span data-ttu-id="871b6-110">[out] Ein nicht transparentes Handle, das Genericsinformationen zu einem bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="871b6-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="871b6-111">Dieses Handle ist nur während des `FunctionTailcall3WithInfo`-Rückrufs gültig, in dem der Profiler die `GetFunctionTailcall3Info`-Methode aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="871b6-111">This handle is valid only during the `FunctionTailcall3WithInfo` callback in which the profiler called the `GetFunctionTailcall3Info` method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="883cc-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="883cc-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="871b6-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="871b6-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="883cc-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="883cc-113">Requirements</span></span>  
- <span data-ttu-id="883cc-114">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="883cc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="871b6-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="871b6-113">Requirements</span></span>  
+ <span data-ttu-id="871b6-114">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="871b6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="883cc-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="883cc-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="871b6-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="871b6-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="883cc-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="883cc-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="871b6-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="871b6-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="883cc-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="883cc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="871b6-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="871b6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="883cc-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="883cc-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="871b6-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="871b6-118">See also</span></span>
 
-- [<span data-ttu-id="883cc-119">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="883cc-119">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="883cc-120">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="883cc-120">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="883cc-121">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="883cc-121">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="883cc-122">ICorProfilerInfo3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="883cc-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="883cc-123">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="883cc-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="883cc-124">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="883cc-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="871b6-119">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="871b6-119">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="871b6-120">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="871b6-120">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="871b6-121">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="871b6-121">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="871b6-122">ICorProfilerInfo3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="871b6-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="871b6-123">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="871b6-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="871b6-124">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="871b6-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

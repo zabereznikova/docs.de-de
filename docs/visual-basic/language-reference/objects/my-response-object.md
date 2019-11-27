@@ -14,20 +14,20 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350654"
 ---
-# <a name="myresponse-object"></a><span data-ttu-id="a2fee-102">My.Response-Objekt</span><span class="sxs-lookup"><span data-stu-id="a2fee-102">My.Response Object</span></span>
-<span data-ttu-id="a2fee-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="a2fee-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="a2fee-104">Mit diesem Objekt können Sie HTTP-Antwortdaten an einen Client senden. Es enthält außerdem Informationen über diese Antwort.</span><span class="sxs-lookup"><span data-stu-id="a2fee-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
+# <a name="myresponse-object"></a><span data-ttu-id="c8b39-102">My.Response-Objekt</span><span class="sxs-lookup"><span data-stu-id="c8b39-102">My.Response Object</span></span>
+<span data-ttu-id="c8b39-103">Ruft das <xref:System.Web.HttpResponse>-Objekt ab, das der <xref:System.Web.UI.Page>zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="c8b39-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="c8b39-104">Mit diesem Objekt können Sie HTTP-Antwortdaten an einen Client senden. Es enthält außerdem Informationen über diese Antwort.</span><span class="sxs-lookup"><span data-stu-id="c8b39-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2fee-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a2fee-105">Remarks</span></span>  
- <span data-ttu-id="a2fee-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span><span class="sxs-lookup"><span data-stu-id="a2fee-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8b39-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c8b39-105">Remarks</span></span>  
+ <span data-ttu-id="c8b39-106">Das `My.Response`-Objekt enthält das aktuelle <xref:System.Web.HttpResponse>-Objekt, das der Seite zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="c8b39-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- <span data-ttu-id="a2fee-107">The `My.Response` object is only available for ASP.NET applications.</span><span class="sxs-lookup"><span data-stu-id="a2fee-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
+ <span data-ttu-id="c8b39-107">Das `My.Response`-Objekt ist nur für ASP.NET-Anwendungen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="c8b39-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2fee-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a2fee-108">Example</span></span>  
- <span data-ttu-id="a2fee-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span><span class="sxs-lookup"><span data-stu-id="a2fee-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
+## <a name="example"></a><span data-ttu-id="c8b39-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c8b39-108">Example</span></span>  
+ <span data-ttu-id="c8b39-109">Im folgenden Beispiel wird die Header Auflistung aus dem `My.Request` Objekt abgerufen und das `My.Response`-Objekt verwendet, um Sie auf die ASP.NET-Seite zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="c8b39-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="a2fee-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a2fee-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8b39-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c8b39-110">See also</span></span>
 
 - <xref:System.Web.HttpResponse>
-- [<span data-ttu-id="a2fee-111">My.Request-Objekt</span><span class="sxs-lookup"><span data-stu-id="a2fee-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [<span data-ttu-id="c8b39-111">My.Request-Objekt</span><span class="sxs-lookup"><span data-stu-id="c8b39-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)

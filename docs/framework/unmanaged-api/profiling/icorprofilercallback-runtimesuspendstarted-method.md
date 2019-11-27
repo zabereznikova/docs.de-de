@@ -22,34 +22,34 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433506"
 ---
-# <a name="icorprofilercallbackruntimesuspendstarted-method"></a><span data-ttu-id="494fc-102">ICorProfilerCallback::RuntimeSuspendStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="494fc-102">ICorProfilerCallback::RuntimeSuspendStarted Method</span></span>
-<span data-ttu-id="494fc-103">Notifies the profiler that the runtime is about to suspend all runtime threads.</span><span class="sxs-lookup"><span data-stu-id="494fc-103">Notifies the profiler that the runtime is about to suspend all runtime threads.</span></span>  
+# <a name="icorprofilercallbackruntimesuspendstarted-method"></a><span data-ttu-id="0905e-102">ICorProfilerCallback::RuntimeSuspendStarted-Methode</span><span class="sxs-lookup"><span data-stu-id="0905e-102">ICorProfilerCallback::RuntimeSuspendStarted Method</span></span>
+<span data-ttu-id="0905e-103">Benachrichtigt den Profiler, dass die Laufzeit alle Laufzeitthreads aussetzen soll.</span><span class="sxs-lookup"><span data-stu-id="0905e-103">Notifies the profiler that the runtime is about to suspend all runtime threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="494fc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="494fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0905e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0905e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeSuspendStarted(  
     [in] COR_PRF_SUSPEND_REASON suspendReason);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="494fc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="494fc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0905e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0905e-105">Parameters</span></span>  
  `suspendReason`  
- <span data-ttu-id="494fc-106">[in] A value of the [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) enumeration that indicates the reason for the suspension.</span><span class="sxs-lookup"><span data-stu-id="494fc-106">[in] A value of the [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) enumeration that indicates the reason for the suspension.</span></span>  
+ <span data-ttu-id="0905e-106">in Ein Wert der [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) -Enumeration, die den Grund für die Unterbrechung angibt.</span><span class="sxs-lookup"><span data-stu-id="0905e-106">[in] A value of the [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) enumeration that indicates the reason for the suspension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="494fc-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="494fc-107">Remarks</span></span>  
- <span data-ttu-id="494fc-108">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span><span class="sxs-lookup"><span data-stu-id="494fc-108">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span></span> <span data-ttu-id="494fc-109">At that point they will also be suspended until the runtime resumes.</span><span class="sxs-lookup"><span data-stu-id="494fc-109">At that point they will also be suspended until the runtime resumes.</span></span> <span data-ttu-id="494fc-110">This also applies to new threads that enter the runtime.</span><span class="sxs-lookup"><span data-stu-id="494fc-110">This also applies to new threads that enter the runtime.</span></span> <span data-ttu-id="494fc-111">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span><span class="sxs-lookup"><span data-stu-id="494fc-111">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0905e-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0905e-107">Remarks</span></span>  
+ <span data-ttu-id="0905e-108">Alle Laufzeitthreads in nicht verwaltetem Code können weiter ausgeführt werden, bis Sie versuchen, die Laufzeit erneut einzugeben.</span><span class="sxs-lookup"><span data-stu-id="0905e-108">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span></span> <span data-ttu-id="0905e-109">An diesem Punkt werden Sie auch angehalten, bis die Laufzeit fortgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="0905e-109">At that point they will also be suspended until the runtime resumes.</span></span> <span data-ttu-id="0905e-110">Dies gilt auch für neue Threads, die zur Laufzeit gelangen.</span><span class="sxs-lookup"><span data-stu-id="0905e-110">This also applies to new threads that enter the runtime.</span></span> <span data-ttu-id="0905e-111">Alle Threads in der Laufzeit werden entweder sofort angehalten, wenn Sie sich bereits in interruptebarem Code befinden, oder Sie werden angehalten, wenn Sie unter brechbaren Code erreichen.</span><span class="sxs-lookup"><span data-stu-id="0905e-111">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="494fc-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="494fc-112">Requirements</span></span>  
- <span data-ttu-id="494fc-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="494fc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0905e-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="0905e-112">Requirements</span></span>  
+ <span data-ttu-id="0905e-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0905e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="494fc-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="494fc-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0905e-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0905e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="494fc-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="494fc-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0905e-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0905e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="494fc-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="494fc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0905e-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0905e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="494fc-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="494fc-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0905e-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0905e-117">See also</span></span>
 
-- [<span data-ttu-id="494fc-118">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="494fc-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="494fc-119">RuntimeSuspendAborted-Methode</span><span class="sxs-lookup"><span data-stu-id="494fc-119">RuntimeSuspendAborted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)
-- [<span data-ttu-id="494fc-120">RuntimeSuspendFinished-Methode</span><span class="sxs-lookup"><span data-stu-id="494fc-120">RuntimeSuspendFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)
+- [<span data-ttu-id="0905e-118">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0905e-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="0905e-119">RuntimeSuspendAborted-Methode</span><span class="sxs-lookup"><span data-stu-id="0905e-119">RuntimeSuspendAborted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)
+- [<span data-ttu-id="0905e-120">RuntimeSuspendFinished-Methode</span><span class="sxs-lookup"><span data-stu-id="0905e-120">RuntimeSuspendFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)

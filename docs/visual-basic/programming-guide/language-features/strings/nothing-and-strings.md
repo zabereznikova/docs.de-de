@@ -11,16 +11,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344292"
 ---
-# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="e2082-102">Nothing und Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2082-102">Nothing and Strings in Visual Basic</span></span>
-<span data-ttu-id="e2082-103">The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.</span><span class="sxs-lookup"><span data-stu-id="e2082-103">The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.</span></span>  
+# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="a8952-102">Nothing und Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a8952-102">Nothing and Strings in Visual Basic</span></span>
+<span data-ttu-id="a8952-103">Die Visual Basic-Laufzeit und die .NET Framework werden `Nothing` anders ausgewertet, wenn Sie Zeichen folgen sind.</span><span class="sxs-lookup"><span data-stu-id="a8952-103">The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.</span></span>  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="e2082-104">Visual Basic Runtime and the .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e2082-104">Visual Basic Runtime and the .NET Framework</span></span>  
- <span data-ttu-id="e2082-105">Betrachten Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="e2082-105">Consider the following example:</span></span>  
+## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="a8952-104">Visual Basic Runtime und die .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a8952-104">Visual Basic Runtime and the .NET Framework</span></span>  
+ <span data-ttu-id="a8952-105">Betrachten Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="a8952-105">Consider the following example:</span></span>  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- <span data-ttu-id="e2082-106">The Visual Basic runtime usually evaluates `Nothing` as an empty string ("").</span><span class="sxs-lookup"><span data-stu-id="e2082-106">The Visual Basic runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="e2082-107">The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="e2082-107">The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
+ <span data-ttu-id="a8952-106">Die Visual Basic Runtime wertet `Nothing` in der Regel als leere Zeichenfolge ("") aus.</span><span class="sxs-lookup"><span data-stu-id="a8952-106">The Visual Basic runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="a8952-107">Der .NET Framework jedoch nicht, und löst eine Ausnahme aus, wenn versucht wird, einen Zeichen folgen Vorgang auf `Nothing`auszuführen.</span><span class="sxs-lookup"><span data-stu-id="a8952-107">The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2082-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e2082-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8952-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a8952-108">See also</span></span>
 
-- [<span data-ttu-id="e2082-109">Einführung in Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2082-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [<span data-ttu-id="a8952-109">Einführung in Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a8952-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

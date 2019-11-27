@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445616"
 ---
-# <a name="precloseassembly-method"></a><span data-ttu-id="1c12a-102">PreCloseAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="1c12a-102">PreCloseAssembly Method</span></span>
-<span data-ttu-id="1c12a-103">Closes the assembly file.</span><span class="sxs-lookup"><span data-stu-id="1c12a-103">Closes the assembly file.</span></span> <span data-ttu-id="1c12a-104">Call this method after closing all other files, but before closing the assembly file.</span><span class="sxs-lookup"><span data-stu-id="1c12a-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="1c12a-105">Do not call this method for unbound modules.</span><span class="sxs-lookup"><span data-stu-id="1c12a-105">Do not call this method for unbound modules.</span></span>  
+# <a name="precloseassembly-method"></a><span data-ttu-id="8f1f9-102">PreCloseAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="8f1f9-102">PreCloseAssembly Method</span></span>
+<span data-ttu-id="8f1f9-103">Schließt die Assemblydatei.</span><span class="sxs-lookup"><span data-stu-id="8f1f9-103">Closes the assembly file.</span></span> <span data-ttu-id="8f1f9-104">Ruft diese Methode auf, nachdem alle anderen Dateien, jedoch vor dem Schließen der Assemblydatei geschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="8f1f9-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="8f1f9-105">Diese Methode darf nicht für ungebundene Module aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="8f1f9-105">Do not call this method for unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1c12a-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="1c12a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f1f9-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="8f1f9-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT PreCloseAssembly(  
@@ -32,18 +32,18 @@ HRESULT PreCloseAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1c12a-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="1c12a-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f1f9-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="8f1f9-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="1c12a-108">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="1c12a-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="8f1f9-108">Die ID der Assembly.</span><span class="sxs-lookup"><span data-stu-id="8f1f9-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1c12a-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1c12a-109">Return Value</span></span>  
- <span data-ttu-id="1c12a-110">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="1c12a-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8f1f9-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="8f1f9-109">Return Value</span></span>  
+ <span data-ttu-id="8f1f9-110">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="8f1f9-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1c12a-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1c12a-111">Requirements</span></span>  
- <span data-ttu-id="1c12a-112">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="1c12a-112">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f1f9-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="8f1f9-111">Requirements</span></span>  
+ <span data-ttu-id="8f1f9-112">Erfordert Alink. h.</span><span class="sxs-lookup"><span data-stu-id="8f1f9-112">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c12a-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1c12a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f1f9-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8f1f9-113">See also</span></span>
 
-- [<span data-ttu-id="1c12a-114">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1c12a-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="1c12a-115">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1c12a-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="1c12a-116">Alink-API</span><span class="sxs-lookup"><span data-stu-id="1c12a-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="8f1f9-114">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8f1f9-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="8f1f9-115">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8f1f9-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="8f1f9-116">Alink-API</span><span class="sxs-lookup"><span data-stu-id="8f1f9-116">ALink API</span></span>](index.md)

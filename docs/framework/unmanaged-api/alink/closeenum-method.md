@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446560"
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="e0f74-102">CloseEnum-Methode</span><span class="sxs-lookup"><span data-stu-id="e0f74-102">CloseEnum Method</span></span>
-<span data-ttu-id="e0f74-103">Closes the indicated enumeration and frees associated resources.</span><span class="sxs-lookup"><span data-stu-id="e0f74-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="c74fb-102">CloseEnum-Methode</span><span class="sxs-lookup"><span data-stu-id="c74fb-102">CloseEnum Method</span></span>
+<span data-ttu-id="c74fb-103">Schließt die angegeben Enumeration und gibt zugeordnete Ressourcen frei.</span><span class="sxs-lookup"><span data-stu-id="c74fb-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0f74-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e0f74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c74fb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c74fb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum(  
@@ -33,18 +33,18 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0f74-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e0f74-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c74fb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c74fb-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="e0f74-106">Handle of enumeration to be closed.</span><span class="sxs-lookup"><span data-stu-id="e0f74-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="c74fb-106">Handle der Enumeration, die geschlossen werden soll.</span><span class="sxs-lookup"><span data-stu-id="c74fb-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e0f74-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="e0f74-107">Return Value</span></span>  
- <span data-ttu-id="e0f74-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="e0f74-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c74fb-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c74fb-107">Return Value</span></span>  
+ <span data-ttu-id="c74fb-108">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="c74fb-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0f74-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e0f74-109">Requirements</span></span>  
- <span data-ttu-id="e0f74-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="e0f74-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c74fb-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="c74fb-109">Requirements</span></span>  
+ <span data-ttu-id="c74fb-110">Erfordert "Alink. h"</span><span class="sxs-lookup"><span data-stu-id="c74fb-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0f74-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e0f74-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c74fb-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c74fb-111">See also</span></span>
 
-- [<span data-ttu-id="e0f74-112">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e0f74-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="e0f74-113">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e0f74-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="e0f74-114">Alink-API</span><span class="sxs-lookup"><span data-stu-id="e0f74-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="c74fb-112">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c74fb-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="c74fb-113">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c74fb-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="c74fb-114">Alink-API</span><span class="sxs-lookup"><span data-stu-id="c74fb-114">ALink API</span></span>](index.md)

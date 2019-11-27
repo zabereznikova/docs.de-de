@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449204"
 ---
-# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="3377b-102">ISymUnmanagedDocument::GetCheckSum-Methode</span><span class="sxs-lookup"><span data-stu-id="3377b-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
-<span data-ttu-id="3377b-103">Ruft die Prüfsumme ab.</span><span class="sxs-lookup"><span data-stu-id="3377b-103">Gets the checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="c72df-102">ISymUnmanagedDocument::GetCheckSum-Methode</span><span class="sxs-lookup"><span data-stu-id="c72df-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
+<span data-ttu-id="c72df-103">Ruft die Prüfsumme ab.</span><span class="sxs-lookup"><span data-stu-id="c72df-103">Gets the checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3377b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3377b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c72df-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c72df-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCheckSum(  
@@ -34,19 +34,19 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3377b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3377b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c72df-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c72df-105">Parameters</span></span>  
  `cData`  
- <span data-ttu-id="3377b-106">[in] The length of the buffer provided by the `data` parameter</span><span class="sxs-lookup"><span data-stu-id="3377b-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
+ <span data-ttu-id="c72df-106">in Die Länge des Puffers, der vom `data`-Parameter bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="c72df-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
   
  `pcData`  
- <span data-ttu-id="3377b-107">[out] The size and length of the checksum, in bytes.</span><span class="sxs-lookup"><span data-stu-id="3377b-107">[out] The size and length of the checksum, in bytes.</span></span>  
+ <span data-ttu-id="c72df-107">vorgenommen Die Größe und Länge der Prüfsumme in Bytes.</span><span class="sxs-lookup"><span data-stu-id="c72df-107">[out] The size and length of the checksum, in bytes.</span></span>  
   
  `data`  
- <span data-ttu-id="3377b-108">[out] The buffer that receives the checksum.</span><span class="sxs-lookup"><span data-stu-id="3377b-108">[out] The buffer that receives the checksum.</span></span>  
+ <span data-ttu-id="c72df-108">vorgenommen Der Puffer, der die Prüfsumme empfängt.</span><span class="sxs-lookup"><span data-stu-id="c72df-108">[out] The buffer that receives the checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3377b-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="3377b-109">Return Value</span></span>  
- <span data-ttu-id="3377b-110">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="3377b-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c72df-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c72df-109">Return Value</span></span>  
+ <span data-ttu-id="c72df-110">S_OK, wenn die Methode erfolgreich ist. andernfalls ein Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="c72df-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3377b-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3377b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c72df-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c72df-111">See also</span></span>
 
-- [<span data-ttu-id="3377b-112">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3377b-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="c72df-112">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c72df-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

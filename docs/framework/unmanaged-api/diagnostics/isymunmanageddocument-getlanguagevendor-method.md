@@ -22,23 +22,23 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449162"
 ---
-# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="b0d1a-102">ISymUnmanagedDocument::GetLanguageVendor-Methode</span><span class="sxs-lookup"><span data-stu-id="b0d1a-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
-<span data-ttu-id="b0d1a-103">Gets the language vendor of this document.</span><span class="sxs-lookup"><span data-stu-id="b0d1a-103">Gets the language vendor of this document.</span></span>  
+# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="72e7e-102">ISymUnmanagedDocument::GetLanguageVendor-Methode</span><span class="sxs-lookup"><span data-stu-id="72e7e-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
+<span data-ttu-id="72e7e-103">Ruft den Hersteller der Sprache dieses Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="72e7e-103">Gets the language vendor of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0d1a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b0d1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72e7e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="72e7e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLanguageVendor(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0d1a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b0d1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72e7e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="72e7e-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="b0d1a-106">[out] A pointer to a variable that receives the language vendor.</span><span class="sxs-lookup"><span data-stu-id="b0d1a-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
+ <span data-ttu-id="72e7e-106">vorgenommen Ein Zeiger auf eine Variable, die den Anbieter der-Sprache empfängt.</span><span class="sxs-lookup"><span data-stu-id="72e7e-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b0d1a-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="b0d1a-107">Return Value</span></span>  
- <span data-ttu-id="b0d1a-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="b0d1a-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="72e7e-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="72e7e-107">Return Value</span></span>  
+ <span data-ttu-id="72e7e-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="72e7e-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0d1a-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0d1a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72e7e-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="72e7e-109">See also</span></span>
 
-- [<span data-ttu-id="b0d1a-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0d1a-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="72e7e-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="72e7e-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

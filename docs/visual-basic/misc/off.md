@@ -14,18 +14,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331938"
 ---
-# <a name="off-visual-basic"></a><span data-ttu-id="cf716-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf716-102">Off (Visual Basic)</span></span>
-<span data-ttu-id="cf716-103">Turns a compiler option off.</span><span class="sxs-lookup"><span data-stu-id="cf716-103">Turns a compiler option off.</span></span>  
+# <a name="off-visual-basic"></a><span data-ttu-id="7280d-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7280d-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="7280d-103">Aktiviert eine Compileroption.</span><span class="sxs-lookup"><span data-stu-id="7280d-103">Turns a compiler option off.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf716-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cf716-104">Remarks</span></span>  
- <span data-ttu-id="cf716-105">Das `Off`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="cf716-105">The `Off` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7280d-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7280d-104">Remarks</span></span>  
+ <span data-ttu-id="7280d-105">Das `Off`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="7280d-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="cf716-106">Option Explicit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="cf716-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="7280d-106">Option Explicit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7280d-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="cf716-107">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="cf716-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="7280d-107">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7280d-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [<span data-ttu-id="cf716-108">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="cf716-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="7280d-108">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7280d-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cf716-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cf716-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7280d-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7280d-109">See also</span></span>
 
-- [<span data-ttu-id="cf716-110">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="cf716-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="7280d-110">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="7280d-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

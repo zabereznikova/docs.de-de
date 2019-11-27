@@ -22,25 +22,25 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435828"
 ---
-# <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a><span data-ttu-id="6e961-102">ICorProfilerCallback::ExceptionCLRCatcherFound-Methode</span><span class="sxs-lookup"><span data-stu-id="6e961-102">ICorProfilerCallback::ExceptionCLRCatcherFound Method</span></span>
-<span data-ttu-id="6e961-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span><span class="sxs-lookup"><span data-stu-id="6e961-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="6e961-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="6e961-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a><span data-ttu-id="5f38e-102">ICorProfilerCallback::ExceptionCLRCatcherFound-Methode</span><span class="sxs-lookup"><span data-stu-id="5f38e-102">ICorProfilerCallback::ExceptionCLRCatcherFound Method</span></span>
+<span data-ttu-id="5f38e-103">Wird aufgerufen, wenn ein `catch` Block für eine Ausnahme in der Common Language Runtime (CLR) selbst gefunden wird.</span><span class="sxs-lookup"><span data-stu-id="5f38e-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="5f38e-104">Diese Methode ist in der .NET Framework Version 2,0 veraltet.</span><span class="sxs-lookup"><span data-stu-id="5f38e-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e961-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="6e961-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f38e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="5f38e-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6e961-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6e961-106">Requirements</span></span>  
- <span data-ttu-id="6e961-107">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e961-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f38e-106">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="5f38e-106">Requirements</span></span>  
+ <span data-ttu-id="5f38e-107">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f38e-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e961-108">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6e961-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5f38e-108">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5f38e-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6e961-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e961-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f38e-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f38e-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e961-110">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="6e961-110">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="5f38e-110">**.NET Framework Version:** 1,0</span><span class="sxs-lookup"><span data-stu-id="5f38e-110">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e961-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6e961-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f38e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f38e-111">See also</span></span>
 
-- [<span data-ttu-id="6e961-112">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6e961-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="6e961-113">ExceptionCLRCatcherExecute-Methode</span><span class="sxs-lookup"><span data-stu-id="6e961-113">ExceptionCLRCatcherExecute Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+- [<span data-ttu-id="5f38e-112">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5f38e-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="5f38e-113">ExceptionCLRCatcherExecute-Methode</span><span class="sxs-lookup"><span data-stu-id="5f38e-113">ExceptionCLRCatcherExecute Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)

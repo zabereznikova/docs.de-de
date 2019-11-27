@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: Der Remote Server Computer ist nicht vorhanden oder nicht verfügbar.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348179"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="44efd-102">Der Remoteservercomputer ist nicht vorhanden oder nicht verfügbar (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="44efd-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
-<span data-ttu-id="44efd-103">Sie versuchen, die Verbindung mit einem Remoteserver herzustellen, der nicht verfügbar oder nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="44efd-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="44efd-104">Dieser Fehler kann durch eine unterbrochene Netzwerkverbindung verursacht werden.</span><span class="sxs-lookup"><span data-stu-id="44efd-104">This error may be caused by your network connection being lost.</span></span>  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="f3ca3-102">Der Remoteservercomputer ist nicht vorhanden oder nicht verfügbar (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="f3ca3-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
+<span data-ttu-id="f3ca3-103">Sie versuchen, die Verbindung mit einem Remoteserver herzustellen, der nicht verfügbar oder nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="f3ca3-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="f3ca3-104">Dieser Fehler kann durch eine unterbrochene Netzwerkverbindung verursacht werden.</span><span class="sxs-lookup"><span data-stu-id="f3ca3-104">This error may be caused by your network connection being lost.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="44efd-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="44efd-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f3ca3-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="f3ca3-105">To correct this error</span></span>  
   
-- <span data-ttu-id="44efd-106">Stellen Sie erneut eine Verbindung mit dem Netzwerk her, und versuchen Sie es erneut.</span><span class="sxs-lookup"><span data-stu-id="44efd-106">Reconnect to the network and try again.</span></span>  
+- <span data-ttu-id="f3ca3-106">Stellen Sie erneut eine Verbindung mit dem Netzwerk her, und versuchen Sie es erneut.</span><span class="sxs-lookup"><span data-stu-id="f3ca3-106">Reconnect to the network and try again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44efd-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="44efd-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3ca3-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f3ca3-107">See also</span></span>
 
-- [<span data-ttu-id="44efd-108">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="44efd-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="f3ca3-108">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="f3ca3-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

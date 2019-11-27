@@ -21,18 +21,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449224"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="f0f16-102">ISymUnmanagedDispose-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f0f16-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="f0f16-103">Disposes of unmanaged resources.</span><span class="sxs-lookup"><span data-stu-id="f0f16-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="03ffe-102">ISymUnmanagedDispose-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="03ffe-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="03ffe-103">Gibt nicht verwaltete Ressourcen frei.</span><span class="sxs-lookup"><span data-stu-id="03ffe-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f0f16-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="f0f16-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="03ffe-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="03ffe-104">Methods</span></span>  
   
-|<span data-ttu-id="f0f16-105">Methode</span><span class="sxs-lookup"><span data-stu-id="f0f16-105">Method</span></span>|<span data-ttu-id="f0f16-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f0f16-106">Description</span></span>|  
+|<span data-ttu-id="03ffe-105">Methode</span><span class="sxs-lookup"><span data-stu-id="03ffe-105">Method</span></span>|<span data-ttu-id="03ffe-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="03ffe-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f0f16-107">Destroy-Methode</span><span class="sxs-lookup"><span data-stu-id="f0f16-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="f0f16-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span><span class="sxs-lookup"><span data-stu-id="f0f16-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="03ffe-107">Destroy-Methode</span><span class="sxs-lookup"><span data-stu-id="03ffe-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="03ffe-108">Bewirkt, dass das zugrunde liegende-Objekt alle internen Verweise freigibt und bei allen nachfolgenden Methoden aufrufen einen Fehler zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="03ffe-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f0f16-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f0f16-109">Requirements</span></span>  
- <span data-ttu-id="f0f16-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f0f16-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03ffe-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="03ffe-109">Requirements</span></span>  
+ <span data-ttu-id="03ffe-110">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="03ffe-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0f16-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f0f16-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03ffe-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03ffe-111">See also</span></span>
 
-- [<span data-ttu-id="f0f16-112">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="f0f16-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="03ffe-112">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="03ffe-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

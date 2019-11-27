@@ -22,23 +22,23 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449113"
 ---
-# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="9b091-102">ISymUnmanagedDocument::HasEmbeddedSource-Methode</span><span class="sxs-lookup"><span data-stu-id="9b091-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
-<span data-ttu-id="9b091-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span><span class="sxs-lookup"><span data-stu-id="9b091-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
+# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="a6d63-102">ISymUnmanagedDocument::HasEmbeddedSource-Methode</span><span class="sxs-lookup"><span data-stu-id="a6d63-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
+<span data-ttu-id="a6d63-103">Gibt `true` zurück, wenn das Dokument über eine in den Debugsymbolen eingebettete Quelle verfügt. Andernfalls wird `false`zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a6d63-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b091-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9b091-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6d63-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a6d63-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9b091-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9b091-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6d63-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a6d63-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="9b091-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span><span class="sxs-lookup"><span data-stu-id="9b091-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
+ <span data-ttu-id="a6d63-106">vorgenommen Ein Zeiger auf eine Variable, die angibt, ob das Dokument in die Debugsymbole eingebettet ist.</span><span class="sxs-lookup"><span data-stu-id="a6d63-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9b091-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9b091-107">Return Value</span></span>  
- <span data-ttu-id="9b091-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9b091-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6d63-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a6d63-107">Return Value</span></span>  
+ <span data-ttu-id="a6d63-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="a6d63-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b091-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9b091-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6d63-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6d63-109">See also</span></span>
 
-- [<span data-ttu-id="9b091-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9b091-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="a6d63-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6d63-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

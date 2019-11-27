@@ -22,12 +22,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448098"
 ---
-# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="3385d-102">ICeeGen::GetSectionCreate-Methode</span><span class="sxs-lookup"><span data-stu-id="3385d-102">ICeeGen::GetSectionCreate Method</span></span>
-<span data-ttu-id="3385d-103">Generates and gets a code section using the specified name and flag values.</span><span class="sxs-lookup"><span data-stu-id="3385d-103">Generates and gets a code section using the specified name and flag values.</span></span>  
+# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="23edf-102">ICeeGen::GetSectionCreate-Methode</span><span class="sxs-lookup"><span data-stu-id="23edf-102">ICeeGen::GetSectionCreate Method</span></span>
+<span data-ttu-id="23edf-103">Generiert einen Code Abschnitt unter Verwendung des angegebenen Namens und der Flagwerte und ruft diesen ab.</span><span class="sxs-lookup"><span data-stu-id="23edf-103">Generates and gets a code section using the specified name and flag values.</span></span>  
   
- <span data-ttu-id="3385d-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="3385d-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="23edf-104">Diese Methode ist veraltet und sollte nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="23edf-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3385d-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="3385d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23edf-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="23edf-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSectionCreate (  
@@ -37,28 +37,28 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3385d-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="3385d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23edf-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="23edf-106">Parameters</span></span>  
  `name`  
- <span data-ttu-id="3385d-107">[in] A pointer to a string that specifies the name of the section to be created.</span><span class="sxs-lookup"><span data-stu-id="3385d-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
+ <span data-ttu-id="23edf-107">in Ein Zeiger auf eine Zeichenfolge, die den Namen des zu erstellenden Abschnitts angibt.</span><span class="sxs-lookup"><span data-stu-id="23edf-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
   
  `flags`  
- <span data-ttu-id="3385d-108">[in] Flags that specify options.</span><span class="sxs-lookup"><span data-stu-id="3385d-108">[in] Flags that specify options.</span></span>  
+ <span data-ttu-id="23edf-108">in Flags, die Optionen angeben.</span><span class="sxs-lookup"><span data-stu-id="23edf-108">[in] Flags that specify options.</span></span>  
   
  `section`  
- <span data-ttu-id="3385d-109">[out] A pointer to the newly created code section.</span><span class="sxs-lookup"><span data-stu-id="3385d-109">[out] A pointer to the newly created code section.</span></span>  
+ <span data-ttu-id="23edf-109">vorgenommen Ein Zeiger auf den neu erstellten Code Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="23edf-109">[out] A pointer to the newly created code section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3385d-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3385d-110">Remarks</span></span>  
- <span data-ttu-id="3385d-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="3385d-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23edf-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="23edf-110">Remarks</span></span>  
+ <span data-ttu-id="23edf-111">Wenn Sie über besondere Abschnitts Anforderungen verfügen, die nicht von anderen Methoden behandelt werden, wenden Sie `GetSectionCreate` nur an.</span><span class="sxs-lookup"><span data-stu-id="23edf-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3385d-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3385d-112">Requirements</span></span>  
- <span data-ttu-id="3385d-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3385d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23edf-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="23edf-112">Requirements</span></span>  
+ <span data-ttu-id="23edf-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23edf-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3385d-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3385d-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="23edf-114">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="23edf-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3385d-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3385d-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="23edf-115">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="23edf-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3385d-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3385d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="23edf-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23edf-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3385d-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3385d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23edf-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="23edf-117">See also</span></span>
 
-- [<span data-ttu-id="3385d-118">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3385d-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="23edf-118">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="23edf-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

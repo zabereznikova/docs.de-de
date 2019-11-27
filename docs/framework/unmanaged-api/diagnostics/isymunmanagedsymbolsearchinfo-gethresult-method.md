@@ -22,26 +22,26 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446185"
 ---
-# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="38f4e-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT-Methode</span><span class="sxs-lookup"><span data-stu-id="38f4e-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
-<span data-ttu-id="38f4e-103">Gets the HRESULT.</span><span class="sxs-lookup"><span data-stu-id="38f4e-103">Gets the HRESULT.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="25192-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT-Methode</span><span class="sxs-lookup"><span data-stu-id="25192-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
+<span data-ttu-id="25192-103">Ruft das HRESULT ab.</span><span class="sxs-lookup"><span data-stu-id="25192-103">Gets the HRESULT.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38f4e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38f4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25192-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="25192-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHRESULT(  
     [out] HRESULT *phr);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="38f4e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="38f4e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25192-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="25192-105">Parameters</span></span>  
  `phr`  
- <span data-ttu-id="38f4e-106">[out] A pointer to the HRESULT.</span><span class="sxs-lookup"><span data-stu-id="38f4e-106">[out] A pointer to the HRESULT.</span></span>  
+ <span data-ttu-id="25192-106">vorgenommen Ein Zeiger auf das HRESULT.</span><span class="sxs-lookup"><span data-stu-id="25192-106">[out] A pointer to the HRESULT.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="38f4e-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="38f4e-107">Return Value</span></span>  
- <span data-ttu-id="38f4e-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="38f4e-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="25192-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="25192-107">Return Value</span></span>  
+ <span data-ttu-id="25192-108">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="25192-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38f4e-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="38f4e-109">Requirements</span></span>  
- <span data-ttu-id="38f4e-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="38f4e-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25192-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="25192-109">Requirements</span></span>  
+ <span data-ttu-id="25192-110">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="25192-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38f4e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38f4e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25192-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="25192-111">See also</span></span>
 
-- [<span data-ttu-id="38f4e-112">ISymUnmanagedSymbolSearchInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="38f4e-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="25192-112">ISymUnmanagedSymbolSearchInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="25192-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
