@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443560"
 ---
-# <a name="coreventattr-enumeration"></a><span data-ttu-id="fc496-102">CorEventAttr-Enumeration</span><span class="sxs-lookup"><span data-stu-id="fc496-102">CorEventAttr Enumeration</span></span>
-<span data-ttu-id="fc496-103">Enthält Werte, die die Metadaten eines Ereignisses beschreiben.</span><span class="sxs-lookup"><span data-stu-id="fc496-103">Contains values that describe the metadata of an event.</span></span>  
+# <a name="coreventattr-enumeration"></a><span data-ttu-id="95fcd-102">CorEventAttr-Enumeration</span><span class="sxs-lookup"><span data-stu-id="95fcd-102">CorEventAttr Enumeration</span></span>
+<span data-ttu-id="95fcd-103">Enthält Werte, die die Metadaten eines Ereignisses beschreiben.</span><span class="sxs-lookup"><span data-stu-id="95fcd-103">Contains values that describe the metadata of an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc496-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fc496-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95fcd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="95fcd-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorEventAttr {  
@@ -37,21 +37,21 @@ typedef enum CorEventAttr {
 } CorEventAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fc496-105">Member</span><span class="sxs-lookup"><span data-stu-id="fc496-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="95fcd-105">Member</span><span class="sxs-lookup"><span data-stu-id="95fcd-105">Members</span></span>  
   
-|<span data-ttu-id="fc496-106">Member</span><span class="sxs-lookup"><span data-stu-id="fc496-106">Member</span></span>|<span data-ttu-id="fc496-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc496-107">Description</span></span>|  
+|<span data-ttu-id="95fcd-106">Member</span><span class="sxs-lookup"><span data-stu-id="95fcd-106">Member</span></span>|<span data-ttu-id="95fcd-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="95fcd-107">Description</span></span>|  
 |------------|-----------------|  
-|`evSpecialName`|<span data-ttu-id="fc496-108">Specifies that the event is special, and that its name describes how.</span><span class="sxs-lookup"><span data-stu-id="fc496-108">Specifies that the event is special, and that its name describes how.</span></span>|  
-|`evReservedMask`|<span data-ttu-id="fc496-109">Reserved for internal use by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="fc496-109">Reserved for internal use by the common language runtime.</span></span>|  
-|`evRTSpecialName`|<span data-ttu-id="fc496-110">Specifies that the common language runtime should check the encoding of the event name.</span><span class="sxs-lookup"><span data-stu-id="fc496-110">Specifies that the common language runtime should check the encoding of the event name.</span></span>|  
+|`evSpecialName`|<span data-ttu-id="95fcd-108">Gibt an, dass das Ereignis ein besonderes Ereignis ist, und dass der Name die Vorgehensweise beschreibt.</span><span class="sxs-lookup"><span data-stu-id="95fcd-108">Specifies that the event is special, and that its name describes how.</span></span>|  
+|`evReservedMask`|<span data-ttu-id="95fcd-109">Reserviert für die interne Verwendung durch den Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="95fcd-109">Reserved for internal use by the common language runtime.</span></span>|  
+|`evRTSpecialName`|<span data-ttu-id="95fcd-110">Gibt an, dass die Common Language Runtime die Codierung des Ereignis namens überprüfen soll.</span><span class="sxs-lookup"><span data-stu-id="95fcd-110">Specifies that the common language runtime should check the encoding of the event name.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fc496-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fc496-111">Requirements</span></span>  
- <span data-ttu-id="fc496-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc496-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95fcd-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="95fcd-111">Requirements</span></span>  
+ <span data-ttu-id="95fcd-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95fcd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc496-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="fc496-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="95fcd-113">**Header:** Corhdr. h</span><span class="sxs-lookup"><span data-stu-id="95fcd-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="fc496-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc496-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="95fcd-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95fcd-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc496-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc496-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95fcd-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="95fcd-115">See also</span></span>
 
-- [<span data-ttu-id="fc496-116">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="fc496-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="95fcd-116">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="95fcd-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

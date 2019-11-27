@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447719"
 ---
-# <a name="imetadataemitsettypedefprops-method"></a><span data-ttu-id="d9968-102">IMetaDataEmit::SetTypeDefProps-Methode</span><span class="sxs-lookup"><span data-stu-id="d9968-102">IMetaDataEmit::SetTypeDefProps Method</span></span>
-<span data-ttu-id="d9968-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="d9968-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsettypedefprops-method"></a><span data-ttu-id="ec8a0-102">IMetaDataEmit::SetTypeDefProps-Methode</span><span class="sxs-lookup"><span data-stu-id="ec8a0-102">IMetaDataEmit::SetTypeDefProps Method</span></span>
+<span data-ttu-id="ec8a0-103">Legt Funktionen eines Typs fest, der durch einen vorherigen [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9968-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d9968-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec8a0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ec8a0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetTypeDefProps (  
@@ -36,29 +36,29 @@ HRESULT SetTypeDefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d9968-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d9968-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ec8a0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ec8a0-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="d9968-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="d9968-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+ <span data-ttu-id="ec8a0-106">in Ein `mdTypeDef` Token, das vom ursprünglichen [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="d9968-107">[in] `TypeDef` attributes.</span><span class="sxs-lookup"><span data-stu-id="d9968-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="d9968-108">This is a bitmask of `CorTypeAttr` values.</span><span class="sxs-lookup"><span data-stu-id="d9968-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
+ <span data-ttu-id="ec8a0-107">[in] `TypeDef` Attribute.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="ec8a0-108">Dies ist eine Bitmaske von `CorTypeAttr` Werten.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="d9968-109">[in] The `mdToken` of the base class.</span><span class="sxs-lookup"><span data-stu-id="d9968-109">[in] The `mdToken` of the base class.</span></span> <span data-ttu-id="d9968-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span><span class="sxs-lookup"><span data-stu-id="d9968-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span></span>  
+ <span data-ttu-id="ec8a0-109">in Der `mdToken` der Basisklasse.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-109">[in] The `mdToken` of the base class.</span></span> <span data-ttu-id="ec8a0-110">Abgerufen von einem vorherigen-Befehl an [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)oder `null`.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span></span>  
   
  `rtkImplements[]`  
- <span data-ttu-id="d9968-111">[in] An array of tokens for the interfaces that this type implements.</span><span class="sxs-lookup"><span data-stu-id="d9968-111">[in] An array of tokens for the interfaces that this type implements.</span></span> <span data-ttu-id="d9968-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span><span class="sxs-lookup"><span data-stu-id="d9968-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span></span> <span data-ttu-id="d9968-113">The last element of the array is must be `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="d9968-113">The last element of the array is must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="ec8a0-111">in Ein Array von Token für die Schnittstellen, die von diesem Typ implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-111">[in] An array of tokens for the interfaces that this type implements.</span></span> <span data-ttu-id="ec8a0-112">Diese `mdTypeRef` Token werden mithilfe von [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)abgerufen.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span></span> <span data-ttu-id="ec8a0-113">Das letzte Element des Arrays muss `mdTokenNil`werden.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-113">The last element of the array is must be `mdTokenNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9968-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d9968-114">Requirements</span></span>  
- <span data-ttu-id="d9968-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9968-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec8a0-114">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="ec8a0-114">Requirements</span></span>  
+ <span data-ttu-id="ec8a0-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec8a0-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d9968-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d9968-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ec8a0-116">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ec8a0-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d9968-117">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d9968-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ec8a0-117">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="ec8a0-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d9968-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9968-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ec8a0-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec8a0-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9968-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9968-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec8a0-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec8a0-119">See also</span></span>
 
-- [<span data-ttu-id="d9968-120">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d9968-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="d9968-121">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d9968-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="ec8a0-120">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ec8a0-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="ec8a0-121">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ec8a0-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

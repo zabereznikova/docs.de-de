@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450122"
 ---
-# <a name="correftodefcheck-enumeration"></a><span data-ttu-id="4e0e1-102">CorRefToDefCheck-Enumeration</span><span class="sxs-lookup"><span data-stu-id="4e0e1-102">CorRefToDefCheck Enumeration</span></span>
-<span data-ttu-id="4e0e1-103">Gibt Flags an, mit denen gesteuert wird, welche Elemente, auf die verwiesen wird, zur Optimierung des Codes in ihre Definitionen konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  
+# <a name="correftodefcheck-enumeration"></a><span data-ttu-id="bb7f3-102">CorRefToDefCheck-Enumeration</span><span class="sxs-lookup"><span data-stu-id="bb7f3-102">CorRefToDefCheck Enumeration</span></span>
+<span data-ttu-id="bb7f3-103">Gibt Flags an, mit denen gesteuert wird, welche Elemente, auf die verwiesen wird, zur Optimierung des Codes in ihre Definitionen konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e0e1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4e0e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb7f3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bb7f3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorRefToDefCheck {  
@@ -36,23 +36,23 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4e0e1-105">Member</span><span class="sxs-lookup"><span data-stu-id="4e0e1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bb7f3-105">Member</span><span class="sxs-lookup"><span data-stu-id="bb7f3-105">Members</span></span>  
   
-|<span data-ttu-id="4e0e1-106">Member</span><span class="sxs-lookup"><span data-stu-id="4e0e1-106">Member</span></span>|<span data-ttu-id="4e0e1-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4e0e1-107">Description</span></span>|  
+|<span data-ttu-id="bb7f3-106">Member</span><span class="sxs-lookup"><span data-stu-id="bb7f3-106">Member</span></span>|<span data-ttu-id="bb7f3-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bb7f3-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|<span data-ttu-id="4e0e1-108">Specifies that type references and member references should be converted to definitions.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-108">Specifies that type references and member references should be converted to definitions.</span></span> <span data-ttu-id="4e0e1-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span><span class="sxs-lookup"><span data-stu-id="4e0e1-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span></span>|  
-|`MDRefToDefAll`|<span data-ttu-id="4e0e1-110">Specifies that all referenced items should be converted to definitions.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-110">Specifies that all referenced items should be converted to definitions.</span></span>|  
-|`MDRefToDefNone`|<span data-ttu-id="4e0e1-111">Specifies that no referenced items should be converted to definitions.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-111">Specifies that no referenced items should be converted to definitions.</span></span>|  
-|`MDTypeRefToDef`|<span data-ttu-id="4e0e1-112">Specifies that only type references should be converted to type definitions.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-112">Specifies that only type references should be converted to type definitions.</span></span>|  
-|`MDMemberRefToDef`|<span data-ttu-id="4e0e1-113">Specifies that only member references should be converted to definitions.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-113">Specifies that only member references should be converted to definitions.</span></span> <span data-ttu-id="4e0e1-114">That is, member references should be converted to either method definitions or field definitions.</span><span class="sxs-lookup"><span data-stu-id="4e0e1-114">That is, member references should be converted to either method definitions or field definitions.</span></span>|  
+|`MDRefToDefDefault`|<span data-ttu-id="bb7f3-108">Gibt an, dass Typverweise und Element Verweise in Definitionen konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-108">Specifies that type references and member references should be converted to definitions.</span></span> <span data-ttu-id="bb7f3-109">Dies ist der Standardwert (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span><span class="sxs-lookup"><span data-stu-id="bb7f3-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span></span>|  
+|`MDRefToDefAll`|<span data-ttu-id="bb7f3-110">Gibt an, dass alle referenzierten Elemente in Definitionen konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-110">Specifies that all referenced items should be converted to definitions.</span></span>|  
+|`MDRefToDefNone`|<span data-ttu-id="bb7f3-111">Gibt an, dass keine referenzierten Elemente in Definitionen konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-111">Specifies that no referenced items should be converted to definitions.</span></span>|  
+|`MDTypeRefToDef`|<span data-ttu-id="bb7f3-112">Gibt an, dass nur Typverweise in Typdefinitionen konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-112">Specifies that only type references should be converted to type definitions.</span></span>|  
+|`MDMemberRefToDef`|<span data-ttu-id="bb7f3-113">Gibt an, dass nur Member-Verweise in Definitionen konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-113">Specifies that only member references should be converted to definitions.</span></span> <span data-ttu-id="bb7f3-114">Das heißt, dass Element Verweise entweder in Methoden Definitionen oder Feld Definitionen konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="bb7f3-114">That is, member references should be converted to either method definitions or field definitions.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4e0e1-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4e0e1-115">Requirements</span></span>  
- <span data-ttu-id="4e0e1-116">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4e0e1-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb7f3-115">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="bb7f3-115">Requirements</span></span>  
+ <span data-ttu-id="bb7f3-116">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb7f3-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e0e1-117">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4e0e1-117">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="bb7f3-117">**Header:** Corhdr. h</span><span class="sxs-lookup"><span data-stu-id="bb7f3-117">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="4e0e1-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e0e1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bb7f3-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb7f3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e0e1-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4e0e1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb7f3-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bb7f3-119">See also</span></span>
 
-- [<span data-ttu-id="4e0e1-120">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="4e0e1-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="bb7f3-120">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="bb7f3-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

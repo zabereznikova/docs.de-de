@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446497"
 ---
-# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="7203f-102">EmitInternalExportedTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="7203f-102">EmitInternalExportedTypes Method</span></span>
-<span data-ttu-id="7203f-103">Emits types added to the assembly.</span><span class="sxs-lookup"><span data-stu-id="7203f-103">Emits types added to the assembly.</span></span> <span data-ttu-id="7203f-104">Call this method after known internal types have been added.</span><span class="sxs-lookup"><span data-stu-id="7203f-104">Call this method after known internal types have been added.</span></span>  
+# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="60010-102">EmitInternalExportedTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="60010-102">EmitInternalExportedTypes Method</span></span>
+<span data-ttu-id="60010-103">Gibt Typen aus, die der Assembly hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="60010-103">Emits types added to the assembly.</span></span> <span data-ttu-id="60010-104">Ruft diese Methode auf, nachdem bekannte interne Typen hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="60010-104">Call this method after known internal types have been added.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7203f-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="7203f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60010-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="60010-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitInternalExportedTypes(  
@@ -33,18 +33,18 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7203f-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="7203f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="60010-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="60010-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="7203f-107">ID of assembly.</span><span class="sxs-lookup"><span data-stu-id="7203f-107">ID of assembly.</span></span>  
+ <span data-ttu-id="60010-107">Die ID der Assembly.</span><span class="sxs-lookup"><span data-stu-id="60010-107">ID of assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7203f-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7203f-108">Return Value</span></span>  
- <span data-ttu-id="7203f-109">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="7203f-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="60010-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="60010-108">Return Value</span></span>  
+ <span data-ttu-id="60010-109">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="60010-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7203f-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7203f-110">Requirements</span></span>  
- <span data-ttu-id="7203f-111">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="7203f-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="60010-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="60010-110">Requirements</span></span>  
+ <span data-ttu-id="60010-111">Erfordert "Alink. h"</span><span class="sxs-lookup"><span data-stu-id="60010-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7203f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7203f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60010-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60010-112">See also</span></span>
 
-- [<span data-ttu-id="7203f-113">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7203f-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="7203f-114">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7203f-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="7203f-115">Alink-API</span><span class="sxs-lookup"><span data-stu-id="7203f-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="60010-113">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="60010-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="60010-114">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="60010-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="60010-115">Alink-API</span><span class="sxs-lookup"><span data-stu-id="60010-115">ALink API</span></span>](index.md)

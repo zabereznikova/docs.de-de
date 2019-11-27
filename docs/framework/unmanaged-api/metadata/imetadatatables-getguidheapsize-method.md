@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443498"
 ---
-# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="18f8f-102">IMetaDataTables::GetGuidHeapSize-Methode</span><span class="sxs-lookup"><span data-stu-id="18f8f-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
-<span data-ttu-id="18f8f-103">Gets the size, in bytes, of the GUID heap.</span><span class="sxs-lookup"><span data-stu-id="18f8f-103">Gets the size, in bytes, of the GUID heap.</span></span>  
+# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="5d1f8-102">IMetaDataTables::GetGuidHeapSize-Methode</span><span class="sxs-lookup"><span data-stu-id="5d1f8-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
+<span data-ttu-id="5d1f8-103">Ruft die Größe des GUID-Heaps in Bytes ab.</span><span class="sxs-lookup"><span data-stu-id="5d1f8-103">Gets the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18f8f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="18f8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d1f8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5d1f8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGuidHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetGuidHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18f8f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="18f8f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d1f8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5d1f8-105">Parameters</span></span>  
  `pcbGuids`  
- <span data-ttu-id="18f8f-106">[out] A pointer to the size, in bytes, of the GUID heap.</span><span class="sxs-lookup"><span data-stu-id="18f8f-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
+ <span data-ttu-id="5d1f8-106">vorgenommen Ein Zeiger auf die Größe des GUID-Heaps in Bytes.</span><span class="sxs-lookup"><span data-stu-id="5d1f8-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18f8f-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="18f8f-107">Requirements</span></span>  
- <span data-ttu-id="18f8f-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="18f8f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d1f8-107">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="5d1f8-107">Requirements</span></span>  
+ <span data-ttu-id="5d1f8-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d1f8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18f8f-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="18f8f-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5d1f8-109">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="5d1f8-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="18f8f-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="18f8f-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5d1f8-110">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="5d1f8-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="18f8f-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18f8f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5d1f8-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d1f8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18f8f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="18f8f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d1f8-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5d1f8-112">See also</span></span>
 
-- [<span data-ttu-id="18f8f-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="18f8f-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="18f8f-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="18f8f-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="5d1f8-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5d1f8-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="5d1f8-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5d1f8-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

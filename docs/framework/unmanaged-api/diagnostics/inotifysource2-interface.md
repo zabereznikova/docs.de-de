@@ -21,20 +21,20 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448702"
 ---
-# <a name="inotifysource2-interface"></a><span data-ttu-id="56b88-102">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="56b88-102">INotifySource2 Interface</span></span>
-<span data-ttu-id="56b88-103">Declares a method for setting notification filters.</span><span class="sxs-lookup"><span data-stu-id="56b88-103">Declares a method for setting notification filters.</span></span>  
+# <a name="inotifysource2-interface"></a><span data-ttu-id="08e15-102">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="08e15-102">INotifySource2 Interface</span></span>
+<span data-ttu-id="08e15-103">Deklariert eine Methode zum Festlegen von Benachrichtigungs filtern.</span><span class="sxs-lookup"><span data-stu-id="08e15-103">Declares a method for setting notification filters.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="56b88-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="56b88-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="08e15-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="08e15-104">Methods</span></span>  
   
-|<span data-ttu-id="56b88-105">Methode</span><span class="sxs-lookup"><span data-stu-id="56b88-105">Method</span></span>|<span data-ttu-id="56b88-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56b88-106">Description</span></span>|  
+|<span data-ttu-id="08e15-105">Methode</span><span class="sxs-lookup"><span data-stu-id="08e15-105">Method</span></span>|<span data-ttu-id="08e15-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="08e15-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="56b88-107">SetNotifyFilter-Methode</span><span class="sxs-lookup"><span data-stu-id="56b88-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="56b88-108">Assigns a notification filter for use with this source.</span><span class="sxs-lookup"><span data-stu-id="56b88-108">Assigns a notification filter for use with this source.</span></span>|  
+|[<span data-ttu-id="08e15-107">SetNotifyFilter-Methode</span><span class="sxs-lookup"><span data-stu-id="08e15-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="08e15-108">Weist einen Benachrichtigungs Filter zur Verwendung mit dieser Quelle zu.</span><span class="sxs-lookup"><span data-stu-id="08e15-108">Assigns a notification filter for use with this source.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="56b88-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="56b88-109">Requirements</span></span>  
- <span data-ttu-id="56b88-110">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="56b88-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08e15-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="08e15-109">Requirements</span></span>  
+ <span data-ttu-id="08e15-110">**Header:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="08e15-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56b88-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56b88-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08e15-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="08e15-111">See also</span></span>
 
-- [<span data-ttu-id="56b88-112">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="56b88-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="56b88-113">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="56b88-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="56b88-114">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="56b88-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="08e15-112">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="08e15-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="08e15-113">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="08e15-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="08e15-114">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="08e15-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

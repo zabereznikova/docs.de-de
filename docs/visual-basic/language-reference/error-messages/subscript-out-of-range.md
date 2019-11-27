@@ -11,14 +11,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350792"
 ---
-# <a name="subscript-out-of-range-visual-basic"></a><span data-ttu-id="5f8ad-102">Index außerhalb des definierten Bereichs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f8ad-102">Subscript out of range (Visual Basic)</span></span>
-<span data-ttu-id="5f8ad-103">An array subscript is not valid because it falls outside the allowable range.</span><span class="sxs-lookup"><span data-stu-id="5f8ad-103">An array subscript is not valid because it falls outside the allowable range.</span></span> <span data-ttu-id="5f8ad-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span><span class="sxs-lookup"><span data-stu-id="5f8ad-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span></span>  
+# <a name="subscript-out-of-range-visual-basic"></a><span data-ttu-id="caef0-102">Index außerhalb des definierten Bereichs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="caef0-102">Subscript out of range (Visual Basic)</span></span>
+<span data-ttu-id="caef0-103">Ein Index Index ist ungültig, da er außerhalb des zulässigen Bereichs liegt.</span><span class="sxs-lookup"><span data-stu-id="caef0-103">An array subscript is not valid because it falls outside the allowable range.</span></span> <span data-ttu-id="caef0-104">Der niedrigste Index Wert für eine Dimension ist immer 0, und der höchste Index Wert wird durch die `GetUpperBound`-Methode für diese Dimension zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="caef0-104">The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5f8ad-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="5f8ad-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="caef0-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="caef0-105">To correct this error</span></span>  
   
-- <span data-ttu-id="5f8ad-106">Change the subscript so it falls within the valid range.</span><span class="sxs-lookup"><span data-stu-id="5f8ad-106">Change the subscript so it falls within the valid range.</span></span>  
+- <span data-ttu-id="caef0-106">Ändern Sie den Index so, dass er innerhalb des gültigen Bereichs liegt.</span><span class="sxs-lookup"><span data-stu-id="caef0-106">Change the subscript so it falls within the valid range.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f8ad-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f8ad-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="caef0-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="caef0-107">See also</span></span>
 
 - <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="5f8ad-108">Arrays</span><span class="sxs-lookup"><span data-stu-id="5f8ad-108">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="caef0-108">Arrays</span><span class="sxs-lookup"><span data-stu-id="caef0-108">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

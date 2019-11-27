@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450114"
 ---
-# <a name="corregflags-enumeration"></a><span data-ttu-id="34fc2-102">CorRegFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="34fc2-102">CorRegFlags Enumeration</span></span>
-<span data-ttu-id="34fc2-103">Provides flag values used for registration when installing a module or composite image.</span><span class="sxs-lookup"><span data-stu-id="34fc2-103">Provides flag values used for registration when installing a module or composite image.</span></span>  
+# <a name="corregflags-enumeration"></a><span data-ttu-id="3dd7e-102">CorRegFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="3dd7e-102">CorRegFlags Enumeration</span></span>
+<span data-ttu-id="3dd7e-103">Stellt Flagwerte bereit, die bei der Installation eines Moduls oder eines zusammengesetzten Bilds für die Registrierung</span><span class="sxs-lookup"><span data-stu-id="3dd7e-103">Provides flag values used for registration when installing a module or composite image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34fc2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="34fc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3dd7e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3dd7e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum   
@@ -35,23 +35,23 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="34fc2-105">Member</span><span class="sxs-lookup"><span data-stu-id="34fc2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3dd7e-105">Member</span><span class="sxs-lookup"><span data-stu-id="3dd7e-105">Members</span></span>  
   
-|<span data-ttu-id="34fc2-106">Member</span><span class="sxs-lookup"><span data-stu-id="34fc2-106">Member</span></span>|<span data-ttu-id="34fc2-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="34fc2-107">Description</span></span>|  
+|<span data-ttu-id="3dd7e-106">Member</span><span class="sxs-lookup"><span data-stu-id="3dd7e-106">Member</span></span>|<span data-ttu-id="3dd7e-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3dd7e-107">Description</span></span>|  
 |------------|-----------------|  
-|`regNoCopy`|<span data-ttu-id="34fc2-108">Specifies that files should not be copied into the destination.</span><span class="sxs-lookup"><span data-stu-id="34fc2-108">Specifies that files should not be copied into the destination.</span></span>|  
-|`regConfig`|<span data-ttu-id="34fc2-109">Specifies that the module or composite is a configuration.</span><span class="sxs-lookup"><span data-stu-id="34fc2-109">Specifies that the module or composite is a configuration.</span></span>|  
-|`regHasRefs`|<span data-ttu-id="34fc2-110">Specifies that the module or composite has class references.</span><span class="sxs-lookup"><span data-stu-id="34fc2-110">Specifies that the module or composite has class references.</span></span>|  
+|`regNoCopy`|<span data-ttu-id="3dd7e-108">Gibt an, dass Dateien nicht in das Ziel kopiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3dd7e-108">Specifies that files should not be copied into the destination.</span></span>|  
+|`regConfig`|<span data-ttu-id="3dd7e-109">Gibt an, dass das Modul oder das zusammengesetzte eine Konfiguration ist.</span><span class="sxs-lookup"><span data-stu-id="3dd7e-109">Specifies that the module or composite is a configuration.</span></span>|  
+|`regHasRefs`|<span data-ttu-id="3dd7e-110">Gibt an, dass das Modul oder das zusammengesetzte Klassen Verweise enthält.</span><span class="sxs-lookup"><span data-stu-id="3dd7e-110">Specifies that the module or composite has class references.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="34fc2-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="34fc2-111">Requirements</span></span>  
- <span data-ttu-id="34fc2-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34fc2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3dd7e-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="3dd7e-111">Requirements</span></span>  
+ <span data-ttu-id="3dd7e-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3dd7e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34fc2-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="34fc2-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3dd7e-113">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="3dd7e-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="34fc2-114">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="34fc2-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3dd7e-114">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="3dd7e-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="34fc2-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34fc2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3dd7e-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3dd7e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34fc2-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="34fc2-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3dd7e-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3dd7e-116">See also</span></span>
 
-- [<span data-ttu-id="34fc2-117">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="34fc2-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="3dd7e-117">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="3dd7e-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

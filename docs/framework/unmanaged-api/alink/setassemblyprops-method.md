@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445572"
 ---
-# <a name="setassemblyprops-method"></a><span data-ttu-id="7b94c-102">SetAssemblyProps-Methode</span><span class="sxs-lookup"><span data-stu-id="7b94c-102">SetAssemblyProps Method</span></span>
-<span data-ttu-id="7b94c-103">Assigns assembly-level properties.</span><span class="sxs-lookup"><span data-stu-id="7b94c-103">Assigns assembly-level properties.</span></span>  
+# <a name="setassemblyprops-method"></a><span data-ttu-id="4a460-102">SetAssemblyProps-Methode</span><span class="sxs-lookup"><span data-stu-id="4a460-102">SetAssemblyProps Method</span></span>
+<span data-ttu-id="4a460-103">Weist Eigenschaften auf Assemblyebene zu.</span><span class="sxs-lookup"><span data-stu-id="4a460-103">Assigns assembly-level properties.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b94c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7b94c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a460-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4a460-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyProps(  
@@ -35,27 +35,27 @@ HRESULT SetAssemblyProps(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7b94c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7b94c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a460-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4a460-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="7b94c-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="7b94c-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="4a460-106">Die ID der Assembly.</span><span class="sxs-lookup"><span data-stu-id="4a460-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="7b94c-107">File that defines the property.</span><span class="sxs-lookup"><span data-stu-id="7b94c-107">File that defines the property.</span></span> <span data-ttu-id="7b94c-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span><span class="sxs-lookup"><span data-stu-id="7b94c-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="4a460-107">Eine Datei, die die Eigenschaft definiert.</span><span class="sxs-lookup"><span data-stu-id="4a460-107">File that defines the property.</span></span> <span data-ttu-id="4a460-108">Kann NULL sein, wenn `AssemblyID` keinen ungebundenen NetModule angibt.</span><span class="sxs-lookup"><span data-stu-id="4a460-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `Option`  
- <span data-ttu-id="7b94c-109">Indicates the option to modify.</span><span class="sxs-lookup"><span data-stu-id="7b94c-109">Indicates the option to modify.</span></span>  
+ <span data-ttu-id="4a460-109">Gibt die Option an, die geändert werden soll.</span><span class="sxs-lookup"><span data-stu-id="4a460-109">Indicates the option to modify.</span></span>  
   
  `Value`  
- <span data-ttu-id="7b94c-110">New value of the option.</span><span class="sxs-lookup"><span data-stu-id="7b94c-110">New value of the option.</span></span>  
+ <span data-ttu-id="4a460-110">Neuer Wert der Option.</span><span class="sxs-lookup"><span data-stu-id="4a460-110">New value of the option.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7b94c-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7b94c-111">Return Value</span></span>  
- <span data-ttu-id="7b94c-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="7b94c-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4a460-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="4a460-111">Return Value</span></span>  
+ <span data-ttu-id="4a460-112">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="4a460-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7b94c-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7b94c-113">Requirements</span></span>  
- <span data-ttu-id="7b94c-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="7b94c-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a460-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="4a460-113">Requirements</span></span>  
+ <span data-ttu-id="4a460-114">Erfordert Alink. h.</span><span class="sxs-lookup"><span data-stu-id="4a460-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b94c-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7b94c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a460-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4a460-115">See also</span></span>
 
-- [<span data-ttu-id="7b94c-116">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7b94c-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="7b94c-117">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7b94c-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="7b94c-118">Alink-API</span><span class="sxs-lookup"><span data-stu-id="7b94c-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="4a460-116">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4a460-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="4a460-117">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4a460-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="4a460-118">Alink-API</span><span class="sxs-lookup"><span data-stu-id="4a460-118">ALink API</span></span>](index.md)

@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427272"
 ---
-# <a name="cor_prf_snapshot_info-enumeration"></a><span data-ttu-id="70469-102">COR_PRF_SNAPSHOT_INFO-Enumeration</span><span class="sxs-lookup"><span data-stu-id="70469-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
-<span data-ttu-id="70469-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="70469-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
+# <a name="cor_prf_snapshot_info-enumeration"></a><span data-ttu-id="e77fc-102">COR_PRF_SNAPSHOT_INFO-Enumeration</span><span class="sxs-lookup"><span data-stu-id="e77fc-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
+<span data-ttu-id="e77fc-103">Gibt an, wie viele Daten bei jedem Abruf der [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) -Funktion des Profilers mit einer Stapel Momentaufnahme zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="e77fc-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70469-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="70469-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e77fc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e77fc-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
@@ -34,27 +34,27 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="70469-105">Member</span><span class="sxs-lookup"><span data-stu-id="70469-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e77fc-105">Member</span><span class="sxs-lookup"><span data-stu-id="e77fc-105">Members</span></span>  
   
-|<span data-ttu-id="70469-106">Member</span><span class="sxs-lookup"><span data-stu-id="70469-106">Members</span></span>|<span data-ttu-id="70469-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="70469-107">Description</span></span>|  
+|<span data-ttu-id="e77fc-106">Member</span><span class="sxs-lookup"><span data-stu-id="e77fc-106">Members</span></span>|<span data-ttu-id="e77fc-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e77fc-107">Description</span></span>|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="70469-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span><span class="sxs-lookup"><span data-stu-id="70469-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="70469-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span><span class="sxs-lookup"><span data-stu-id="70469-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="70469-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span><span class="sxs-lookup"><span data-stu-id="70469-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="e77fc-108">Gibt an, dass Werte für alle `StackSnapshotCallback` Parameter übergeben werden müssen, mit Ausnahme des `context`-Parameters.</span><span class="sxs-lookup"><span data-stu-id="e77fc-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="e77fc-109">Gibt an, dass Werte für alle `StackSnapshotCallback`-Parameter übergeben werden müssen, einschließlich des `context`-Parameters.</span><span class="sxs-lookup"><span data-stu-id="e77fc-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="e77fc-110">Gibt an, dass ein einfacherer, alternativer Stapel gehenden Algorithmus verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e77fc-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="70469-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="70469-111">Remarks</span></span>  
- <span data-ttu-id="70469-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="70469-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e77fc-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e77fc-111">Remarks</span></span>  
+ <span data-ttu-id="e77fc-112">Werte, die von der `COR_PRF_SNAPSHOT_INFO`-Enumeration bereitgestellt werden, werden als Parameter an die [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) -Methode übermittelt.</span><span class="sxs-lookup"><span data-stu-id="e77fc-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70469-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="70469-113">Requirements</span></span>  
- <span data-ttu-id="70469-114">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70469-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e77fc-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e77fc-113">Requirements</span></span>  
+ <span data-ttu-id="e77fc-114">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e77fc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70469-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="70469-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e77fc-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e77fc-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="70469-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70469-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e77fc-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e77fc-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="70469-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70469-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e77fc-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e77fc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70469-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70469-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e77fc-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e77fc-118">See also</span></span>
 
-- [<span data-ttu-id="70469-119">DoStackSnapshot-Methode</span><span class="sxs-lookup"><span data-stu-id="70469-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [<span data-ttu-id="70469-120">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="70469-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="e77fc-119">DoStackSnapshot-Methode</span><span class="sxs-lookup"><span data-stu-id="e77fc-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [<span data-ttu-id="e77fc-120">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="e77fc-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449268"
 ---
-# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="26271-102">ISymUnmanagedConstant::GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="26271-102">ISymUnmanagedConstant::GetSignature Method</span></span>
-<span data-ttu-id="26271-103">Gets the signature of the constant.</span><span class="sxs-lookup"><span data-stu-id="26271-103">Gets the signature of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="551a9-102">ISymUnmanagedConstant::GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="551a9-102">ISymUnmanagedConstant::GetSignature Method</span></span>
+<span data-ttu-id="551a9-103">Ruft die Signatur der Konstante ab.</span><span class="sxs-lookup"><span data-stu-id="551a9-103">Gets the signature of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26271-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="26271-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="551a9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="551a9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -35,24 +35,24 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="26271-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="26271-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="551a9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="551a9-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="26271-106">[in] The length of the buffer that the `pcSig` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="26271-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
+ <span data-ttu-id="551a9-106">in Die Länge des Puffers, auf den der `pcSig`-Parameter verweist.</span><span class="sxs-lookup"><span data-stu-id="551a9-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="26271-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span><span class="sxs-lookup"><span data-stu-id="26271-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="551a9-107">vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Signatur enthalten muss, in Zeichen empfängt.</span><span class="sxs-lookup"><span data-stu-id="551a9-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="26271-108">[out] The buffer that stores the signature.</span><span class="sxs-lookup"><span data-stu-id="26271-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="551a9-108">vorgenommen Der Puffer, in dem die Signatur gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="551a9-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="26271-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="26271-109">Return Value</span></span>  
- <span data-ttu-id="26271-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="26271-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="551a9-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="551a9-109">Return Value</span></span>  
+ <span data-ttu-id="551a9-110">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="551a9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26271-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="26271-111">Requirements</span></span>  
- <span data-ttu-id="26271-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="26271-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="551a9-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="551a9-111">Requirements</span></span>  
+ <span data-ttu-id="551a9-112">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="551a9-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26271-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="26271-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="551a9-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="551a9-113">See also</span></span>
 
-- [<span data-ttu-id="26271-114">ISymUnmanagedConstant-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="26271-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="26271-115">GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="26271-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="26271-116">GetValue-Methode</span><span class="sxs-lookup"><span data-stu-id="26271-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [<span data-ttu-id="551a9-114">ISymUnmanagedConstant-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="551a9-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="551a9-115">GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="551a9-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="551a9-116">GetValue-Methode</span><span class="sxs-lookup"><span data-stu-id="551a9-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
