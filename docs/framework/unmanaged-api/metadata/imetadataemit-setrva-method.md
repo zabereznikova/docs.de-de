@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426821"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="e7239-102">IMetaDataEmit::SetRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="e7239-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="e7239-103">Sets the relative virtual address of the specified method.</span><span class="sxs-lookup"><span data-stu-id="e7239-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="38c39-102">IMetaDataEmit::SetRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="38c39-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="38c39-103">Legt die relative virtuelle Adresse der angegebenen Methode fest.</span><span class="sxs-lookup"><span data-stu-id="38c39-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7239-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e7239-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38c39-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38c39-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetRVA (  
@@ -34,23 +34,23 @@ HRESULT SetRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7239-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e7239-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="38c39-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="38c39-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="e7239-106">[in] The token for the target method or method implementation.</span><span class="sxs-lookup"><span data-stu-id="e7239-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="38c39-106">in Das Token für die Ziel Methode oder Methoden Implementierung.</span><span class="sxs-lookup"><span data-stu-id="38c39-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="e7239-107">[in] The address of the code or data area.</span><span class="sxs-lookup"><span data-stu-id="e7239-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="38c39-107">in Die Adresse des Codes oder des Datenbereichs.</span><span class="sxs-lookup"><span data-stu-id="38c39-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7239-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e7239-108">Requirements</span></span>  
- <span data-ttu-id="e7239-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7239-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38c39-108">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="38c39-108">Requirements</span></span>  
+ <span data-ttu-id="38c39-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38c39-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7239-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e7239-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="38c39-110">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="38c39-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e7239-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e7239-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="38c39-111">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="38c39-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e7239-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7239-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="38c39-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38c39-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7239-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7239-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38c39-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38c39-113">See also</span></span>
 
-- [<span data-ttu-id="e7239-114">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e7239-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="e7239-115">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e7239-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="38c39-114">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="38c39-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="38c39-115">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="38c39-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

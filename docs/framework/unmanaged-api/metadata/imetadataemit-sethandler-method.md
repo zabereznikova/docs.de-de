@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442157"
 ---
-# <a name="imetadataemitsethandler-method"></a><span data-ttu-id="7b9b3-102">IMetaDataEmit::SetHandler-Methode</span><span class="sxs-lookup"><span data-stu-id="7b9b3-102">IMetaDataEmit::SetHandler Method</span></span>
-<span data-ttu-id="7b9b3-103">Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.</span><span class="sxs-lookup"><span data-stu-id="7b9b3-103">Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.</span></span>  
+# <a name="imetadataemitsethandler-method"></a><span data-ttu-id="228a6-102">IMetaDataEmit::SetHandler-Methode</span><span class="sxs-lookup"><span data-stu-id="228a6-102">IMetaDataEmit::SetHandler Method</span></span>
+<span data-ttu-id="228a6-103">Legt die Methode, auf die der angegebene `IUnknown` Zeiger verweist, als Benachrichtigungs Rückruf für die Tokenneuzuordnung fest.</span><span class="sxs-lookup"><span data-stu-id="228a6-103">Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b9b3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7b9b3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="228a6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="228a6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetHandler (   
@@ -33,25 +33,25 @@ HRESULT SetHandler (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7b9b3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7b9b3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="228a6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="228a6-105">Parameters</span></span>  
  `pUnk`  
- <span data-ttu-id="7b9b3-106">[in] The handler to register.</span><span class="sxs-lookup"><span data-stu-id="7b9b3-106">[in] The handler to register.</span></span>  
+ <span data-ttu-id="228a6-106">in Der zu Registrier gende Handler.</span><span class="sxs-lookup"><span data-stu-id="228a6-106">[in] The handler to register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7b9b3-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7b9b3-107">Remarks</span></span>  
- <span data-ttu-id="7b9b3-108">The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.</span><span class="sxs-lookup"><span data-stu-id="7b9b3-108">The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="228a6-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="228a6-107">Remarks</span></span>  
+ <span data-ttu-id="228a6-108">Die metadatenengine sendet mithilfe der von `SetHandler`bereitgestellten Methode eine Benachrichtigung an Compiler, die keine Datensätze auf optimierte Weise generieren und gespeicherte Datensätze optimieren möchten.</span><span class="sxs-lookup"><span data-stu-id="228a6-108">The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.</span></span>  
   
- <span data-ttu-id="7b9b3-109">If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.</span><span class="sxs-lookup"><span data-stu-id="7b9b3-109">If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.</span></span>  
+ <span data-ttu-id="228a6-109">Wenn die Rückruf Methode nicht über `SetHandler`bereitgestellt wird, wird beim Speichern nur dann eine Optimierung durchgeführt, wenn mehrere Import Bereiche mithilfe `IMapToken` bei Merge für jeden Bereich zusammengeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="228a6-109">If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7b9b3-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7b9b3-110">Requirements</span></span>  
- <span data-ttu-id="7b9b3-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b9b3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="228a6-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="228a6-110">Requirements</span></span>  
+ <span data-ttu-id="228a6-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="228a6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7b9b3-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7b9b3-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="228a6-112">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="228a6-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7b9b3-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7b9b3-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="228a6-113">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="228a6-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7b9b3-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b9b3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="228a6-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="228a6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b9b3-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7b9b3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="228a6-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="228a6-115">See also</span></span>
 
-- [<span data-ttu-id="7b9b3-116">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7b9b3-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="7b9b3-117">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7b9b3-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="228a6-116">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="228a6-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="228a6-117">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="228a6-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

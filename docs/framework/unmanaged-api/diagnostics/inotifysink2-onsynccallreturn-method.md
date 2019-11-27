@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435968"
 ---
-# <a name="inotifysink2onsynccallreturn-method"></a><span data-ttu-id="a17aa-102">INotifySink2::OnSyncCallReturn-Methode</span><span class="sxs-lookup"><span data-stu-id="a17aa-102">INotifySink2::OnSyncCallReturn Method</span></span>
-<span data-ttu-id="a17aa-103">Gets invoked when a call returns.</span><span class="sxs-lookup"><span data-stu-id="a17aa-103">Gets invoked when a call returns.</span></span>  
+# <a name="inotifysink2onsynccallreturn-method"></a><span data-ttu-id="a7191-102">INotifySink2::OnSyncCallReturn-Methode</span><span class="sxs-lookup"><span data-stu-id="a7191-102">INotifySink2::OnSyncCallReturn Method</span></span>
+<span data-ttu-id="a7191-103">Wird aufgerufen, wenn ein Aufruf zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="a7191-103">Gets invoked when a call returns.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a17aa-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a17aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7191-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a7191-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnSyncCallReturn  
@@ -36,24 +36,24 @@ HRESULT OnSyncCallReturn
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a17aa-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a17aa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7191-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a7191-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="a17aa-106">[in] ID of the call being returned from.</span><span class="sxs-lookup"><span data-stu-id="a17aa-106">[in] ID of the call being returned from.</span></span> <span data-ttu-id="a17aa-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="a17aa-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="a7191-106">in ID des von zurückgegebenen Aufrufes.</span><span class="sxs-lookup"><span data-stu-id="a7191-106">[in] ID of the call being returned from.</span></span> <span data-ttu-id="a7191-107">Siehe [CALL_ID Struktur](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="a7191-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `in_pBuffer`  
- <span data-ttu-id="a17aa-108">[in] Call buffer.</span><span class="sxs-lookup"><span data-stu-id="a17aa-108">[in] Call buffer.</span></span>  
+ <span data-ttu-id="a7191-108">in Der Rückruf Puffer.</span><span class="sxs-lookup"><span data-stu-id="a7191-108">[in] Call buffer.</span></span>  
   
  `in_BufferSize`  
- <span data-ttu-id="a17aa-109">[in] Size of the call buffer, in bytes.</span><span class="sxs-lookup"><span data-stu-id="a17aa-109">[in] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="a7191-109">in Größe des Aufrufpuffers in Bytes.</span><span class="sxs-lookup"><span data-stu-id="a7191-109">[in] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a17aa-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a17aa-110">Return Value</span></span>  
- <span data-ttu-id="a17aa-111">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="a17aa-111">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a7191-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a7191-110">Return Value</span></span>  
+ <span data-ttu-id="a7191-111">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="a7191-111">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a17aa-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a17aa-112">Requirements</span></span>  
- <span data-ttu-id="a17aa-113">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="a17aa-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7191-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="a7191-112">Requirements</span></span>  
+ <span data-ttu-id="a7191-113">**Header:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="a7191-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a17aa-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a17aa-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7191-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a7191-114">See also</span></span>
 
-- [<span data-ttu-id="a17aa-115">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a17aa-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="a17aa-116">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a17aa-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="a17aa-117">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a17aa-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="a7191-115">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a7191-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="a7191-116">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a7191-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="a7191-117">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a7191-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

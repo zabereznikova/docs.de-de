@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431134"
 ---
-# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="24a1a-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="24a1a-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
-<span data-ttu-id="24a1a-103">Diese Methode ist nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="24a1a-103">This method is not implemented.</span></span> <span data-ttu-id="24a1a-104">If called, it returns E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="24a1a-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="6db6c-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="6db6c-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
+<span data-ttu-id="6db6c-103">Diese Methode ist nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="6db6c-103">This method is not implemented.</span></span> <span data-ttu-id="6db6c-104">Wenn Sie aufgerufen wird, wird E_NOTIMPL zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="6db6c-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24a1a-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="24a1a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6db6c-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="6db6c-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenScopeOnITypeInfo (  
@@ -36,29 +36,29 @@ HRESULT OpenScopeOnITypeInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="24a1a-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="24a1a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6db6c-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="6db6c-106">Parameters</span></span>  
  `pITI`  
- <span data-ttu-id="24a1a-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span><span class="sxs-lookup"><span data-stu-id="24a1a-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
+ <span data-ttu-id="6db6c-107">in Ein Zeiger auf eine [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) -Schnittstelle, die die Typinformationen bereitstellt, für die der Bereich geöffnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="6db6c-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="24a1a-108">[in] The open mode flags.</span><span class="sxs-lookup"><span data-stu-id="24a1a-108">[in] The open mode flags.</span></span>  
+ <span data-ttu-id="6db6c-108">in Die Open Mode-Flags.</span><span class="sxs-lookup"><span data-stu-id="6db6c-108">[in] The open mode flags.</span></span>  
   
  `riid`  
- <span data-ttu-id="24a1a-109">[in] The desired interface.</span><span class="sxs-lookup"><span data-stu-id="24a1a-109">[in] The desired interface.</span></span>  
+ <span data-ttu-id="6db6c-109">in Die gewünschte Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="6db6c-109">[in] The desired interface.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="24a1a-110">[out] Pointer to a pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="24a1a-110">[out] Pointer to a pointer to the returned interface.</span></span>  
+ <span data-ttu-id="6db6c-110">vorgenommen Zeiger auf einen Zeiger auf die zurückgegebene Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="6db6c-110">[out] Pointer to a pointer to the returned interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24a1a-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="24a1a-111">Requirements</span></span>  
- <span data-ttu-id="24a1a-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24a1a-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6db6c-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="6db6c-111">Requirements</span></span>  
+ <span data-ttu-id="6db6c-112">**Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6db6c-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24a1a-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="24a1a-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6db6c-113">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="6db6c-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="24a1a-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="24a1a-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6db6c-114">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="6db6c-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="24a1a-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24a1a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6db6c-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6db6c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24a1a-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24a1a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6db6c-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6db6c-116">See also</span></span>
 
-- [<span data-ttu-id="24a1a-117">IMetaDataDispenserEx-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="24a1a-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="24a1a-118">IMetaDataDispenser-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="24a1a-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="6db6c-117">IMetaDataDispenserEx-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6db6c-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="6db6c-118">IMetaDataDispenser-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6db6c-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

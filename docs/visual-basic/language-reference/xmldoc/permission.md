@@ -12,32 +12,32 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352262"
 ---
-# <a name="permission-visual-basic"></a><span data-ttu-id="3db07-101">\<permission> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3db07-101">\<permission> (Visual Basic)</span></span>
-<span data-ttu-id="3db07-102">Specifies a required permission for the member.</span><span class="sxs-lookup"><span data-stu-id="3db07-102">Specifies a required permission for the member.</span></span>  
+# <a name="permission-visual-basic"></a><span data-ttu-id="ec81c-101">\<Berechtigung > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec81c-101">\<permission> (Visual Basic)</span></span>
+<span data-ttu-id="ec81c-102">Gibt eine erforderliche Berechtigung für den Member an.</span><span class="sxs-lookup"><span data-stu-id="ec81c-102">Specifies a required permission for the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3db07-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="3db07-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec81c-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="ec81c-103">Syntax</span></span>  
   
 ```xml  
 <permission cref="member">description</permission>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3db07-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="3db07-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ec81c-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="ec81c-104">Parameters</span></span>  
  `member`  
- <span data-ttu-id="3db07-105">Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="3db07-105">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="3db07-106">Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.</span><span class="sxs-lookup"><span data-stu-id="3db07-106">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="3db07-107">Enclose `member` in quotation marks (" ").</span><span class="sxs-lookup"><span data-stu-id="3db07-107">Enclose `member` in quotation marks (" ").</span></span>  
+ <span data-ttu-id="ec81c-105">Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="ec81c-105">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="ec81c-106">Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.</span><span class="sxs-lookup"><span data-stu-id="ec81c-106">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="ec81c-107">Schließen Sie `member` in Anführungszeichen ("") ein.</span><span class="sxs-lookup"><span data-stu-id="ec81c-107">Enclose `member` in quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="3db07-108">Eine Beschreibung des Zugriffs auf den Member</span><span class="sxs-lookup"><span data-stu-id="3db07-108">A description of the access to the member.</span></span>  
+ <span data-ttu-id="ec81c-108">Eine Beschreibung des Zugriffs auf den Member</span><span class="sxs-lookup"><span data-stu-id="ec81c-108">A description of the access to the member.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3db07-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3db07-109">Remarks</span></span>  
- <span data-ttu-id="3db07-110">Use the `<permission>` tag to document the access of a member.</span><span class="sxs-lookup"><span data-stu-id="3db07-110">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="3db07-111">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span><span class="sxs-lookup"><span data-stu-id="3db07-111">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ec81c-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ec81c-109">Remarks</span></span>  
+ <span data-ttu-id="ec81c-110">Verwenden Sie das `<permission>`-Tag, um den Zugriff eines Members zu dokumentieren.</span><span class="sxs-lookup"><span data-stu-id="ec81c-110">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="ec81c-111">Verwenden Sie die <xref:System.Security.PermissionSet>-Klasse, um den Zugriff auf einen Member anzugeben.</span><span class="sxs-lookup"><span data-stu-id="ec81c-111">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
   
- <span data-ttu-id="3db07-112">Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="3db07-112">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="ec81c-112">Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="ec81c-112">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3db07-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3db07-113">Example</span></span>  
- <span data-ttu-id="3db07-114">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span><span class="sxs-lookup"><span data-stu-id="3db07-114">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
+## <a name="example"></a><span data-ttu-id="ec81c-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ec81c-113">Example</span></span>  
+ <span data-ttu-id="ec81c-114">In diesem Beispiel wird das `<permission>`-Tags verwendet, um zu beschreiben, dass die <xref:System.Security.Permissions.FileIOPermission> von der `ReadFile`-Methode benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="ec81c-114">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a><span data-ttu-id="3db07-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3db07-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec81c-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec81c-115">See also</span></span>
 
-- [<span data-ttu-id="3db07-116">XML-Kommentartags</span><span class="sxs-lookup"><span data-stu-id="3db07-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="ec81c-116">XML-Kommentartags</span><span class="sxs-lookup"><span data-stu-id="ec81c-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

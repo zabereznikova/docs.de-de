@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426216"
 ---
-# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="e0de5-102">IMetaDataTables2::GetMetaDataStreamInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="e0de5-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
-<span data-ttu-id="e0de5-103">Gets the name, size, and contents of the metadata stream at the specified index.</span><span class="sxs-lookup"><span data-stu-id="e0de5-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
+# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="9835a-102">IMetaDataTables2::GetMetaDataStreamInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="9835a-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
+<span data-ttu-id="9835a-103">Ruft den Namen, die Größe und den Inhalt des Metadatenstreams am angegebenen Index ab.</span><span class="sxs-lookup"><span data-stu-id="9835a-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0de5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e0de5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9835a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9835a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaDataStreamInfo (  
@@ -36,29 +36,29 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0de5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e0de5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9835a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9835a-105">Parameters</span></span>  
  `ix`  
- <span data-ttu-id="e0de5-106">[in] The index of the requested metadata stream.</span><span class="sxs-lookup"><span data-stu-id="e0de5-106">[in] The index of the requested metadata stream.</span></span>  
+ <span data-ttu-id="9835a-106">in Der Index des angeforderten Metadatenstreams.</span><span class="sxs-lookup"><span data-stu-id="9835a-106">[in] The index of the requested metadata stream.</span></span>  
   
  `ppchName`  
- <span data-ttu-id="e0de5-107">[out] A pointer to the name of the stream.</span><span class="sxs-lookup"><span data-stu-id="e0de5-107">[out] A pointer to the name of the stream.</span></span>  
+ <span data-ttu-id="9835a-107">vorgenommen Ein Zeiger auf den Namen des Streams.</span><span class="sxs-lookup"><span data-stu-id="9835a-107">[out] A pointer to the name of the stream.</span></span>  
   
  `ppv`  
- <span data-ttu-id="e0de5-108">[out] A pointer to the metadata stream.</span><span class="sxs-lookup"><span data-stu-id="e0de5-108">[out] A pointer to the metadata stream.</span></span>  
+ <span data-ttu-id="9835a-108">vorgenommen Ein Zeiger auf den Metadatenstream.</span><span class="sxs-lookup"><span data-stu-id="9835a-108">[out] A pointer to the metadata stream.</span></span>  
   
  `pcb`  
- <span data-ttu-id="e0de5-109">[out] The size, in bytes, of `ppv`.</span><span class="sxs-lookup"><span data-stu-id="e0de5-109">[out] The size, in bytes, of `ppv`.</span></span>  
+ <span data-ttu-id="9835a-109">vorgenommen Die Größe `ppv`in Byte.</span><span class="sxs-lookup"><span data-stu-id="9835a-109">[out] The size, in bytes, of `ppv`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0de5-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e0de5-110">Requirements</span></span>  
- <span data-ttu-id="e0de5-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0de5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9835a-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="9835a-110">Requirements</span></span>  
+ <span data-ttu-id="9835a-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9835a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0de5-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e0de5-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9835a-112">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="9835a-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e0de5-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e0de5-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9835a-113">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="9835a-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e0de5-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0de5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9835a-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9835a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0de5-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e0de5-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9835a-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9835a-115">See also</span></span>
 
-- [<span data-ttu-id="e0de5-116">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e0de5-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="e0de5-117">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e0de5-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="9835a-116">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9835a-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="9835a-117">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9835a-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

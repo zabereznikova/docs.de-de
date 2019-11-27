@@ -22,11 +22,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448734"
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="5f231-102">EnumImportTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="5f231-102">EnumImportTypes Method</span></span>
+# <a name="enumimporttypes-method"></a><span data-ttu-id="2c689-102">EnumImportTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="2c689-102">EnumImportTypes Method</span></span>
 
-<span data-ttu-id="5f231-103">Enumerates each type in each scope.</span><span class="sxs-lookup"><span data-stu-id="5f231-103">Enumerates each type in each scope.</span></span>
+<span data-ttu-id="2c689-103">Listet jeden Typ in jedem Bereich auf.</span><span class="sxs-lookup"><span data-stu-id="2c689-103">Enumerates each type in each scope.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5f231-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5f231-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2c689-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2c689-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumImportTypes(
@@ -37,30 +37,30 @@ HRESULT EnumImportTypes(
 ) PURE;
 ```
 
-## <a name="parameters"></a><span data-ttu-id="5f231-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5f231-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2c689-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2c689-105">Parameters</span></span>
 
 `hEnum`\
-<span data-ttu-id="5f231-106">Handle for enumerator.</span><span class="sxs-lookup"><span data-stu-id="5f231-106">Handle for enumerator.</span></span>
+<span data-ttu-id="2c689-106">Handle für Enumerator.</span><span class="sxs-lookup"><span data-stu-id="2c689-106">Handle for enumerator.</span></span>
 
 `dwMax`\
-<span data-ttu-id="5f231-107">Maximum number of types to retrieve.</span><span class="sxs-lookup"><span data-stu-id="5f231-107">Maximum number of types to retrieve.</span></span>
+<span data-ttu-id="2c689-107">Maximale Anzahl der abzurufenden Typen.</span><span class="sxs-lookup"><span data-stu-id="2c689-107">Maximum number of types to retrieve.</span></span>
 
 `aTypeDefs`\
-<span data-ttu-id="5f231-108">Receives type tokens, not to exceed `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="5f231-108">Receives type tokens, not to exceed `dwMax`.</span></span>
+<span data-ttu-id="2c689-108">Empfängt Typtoken, ohne dass die `dwMax`überschritten wird.</span><span class="sxs-lookup"><span data-stu-id="2c689-108">Receives type tokens, not to exceed `dwMax`.</span></span>
 
 `pdwCount`\
-<span data-ttu-id="5f231-109">Receives actual number of type in `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="5f231-109">Receives actual number of type in `aTypeDefs`.</span></span>
+<span data-ttu-id="2c689-109">Empfängt die tatsächliche Anzahl von Typen in `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="2c689-109">Receives actual number of type in `aTypeDefs`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="5f231-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="5f231-110">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2c689-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2c689-110">Return Value</span></span>
 
-<span data-ttu-id="5f231-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="5f231-111">Returns S_OK if the method succeeds.</span></span>
+<span data-ttu-id="2c689-111">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="2c689-111">Returns S_OK if the method succeeds.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5f231-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5f231-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2c689-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="2c689-112">Requirements</span></span>
 
-<span data-ttu-id="5f231-113">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="5f231-113">Requires alink.h</span></span>
+<span data-ttu-id="2c689-113">Erfordert "Alink. h"</span><span class="sxs-lookup"><span data-stu-id="2c689-113">Requires alink.h</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5f231-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f231-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c689-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2c689-114">See also</span></span>
 
-- [<span data-ttu-id="5f231-115">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5f231-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="5f231-116">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5f231-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="5f231-117">Alink-API</span><span class="sxs-lookup"><span data-stu-id="5f231-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="2c689-115">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2c689-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="2c689-116">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2c689-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="2c689-117">Alink-API</span><span class="sxs-lookup"><span data-stu-id="2c689-117">ALink API</span></span>](index.md)

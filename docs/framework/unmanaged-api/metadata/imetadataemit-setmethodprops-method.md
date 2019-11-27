@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442115"
 ---
-# <a name="imetadataemitsetmethodprops-method"></a><span data-ttu-id="8d5ac-102">IMetaDataEmit::SetMethodProps-Methode</span><span class="sxs-lookup"><span data-stu-id="8d5ac-102">IMetaDataEmit::SetMethodProps Method</span></span>
-<span data-ttu-id="8d5ac-103">Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).</span><span class="sxs-lookup"><span data-stu-id="8d5ac-103">Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).</span></span>  
+# <a name="imetadataemitsetmethodprops-method"></a><span data-ttu-id="03714-102">IMetaDataEmit::SetMethodProps-Methode</span><span class="sxs-lookup"><span data-stu-id="03714-102">IMetaDataEmit::SetMethodProps Method</span></span>
+<span data-ttu-id="03714-103">Legt die Funktion, die bei der angegebenen relativen virtuellen Adresse gespeichert ist, für eine Methode fest oder aktualisiert Sie, die durch einen früheren [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)-aufzurufen ist.</span><span class="sxs-lookup"><span data-stu-id="03714-103">Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d5ac-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8d5ac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03714-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="03714-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetMethodProps (   
@@ -36,29 +36,29 @@ HRESULT SetMethodProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8d5ac-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8d5ac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03714-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="03714-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="8d5ac-106">[in] The token for the method to be changed.</span><span class="sxs-lookup"><span data-stu-id="8d5ac-106">[in] The token for the method to be changed.</span></span>  
+ <span data-ttu-id="03714-106">in Das Token für die zu ändernde Methode.</span><span class="sxs-lookup"><span data-stu-id="03714-106">[in] The token for the method to be changed.</span></span>  
   
  `dwMethodFlags`  
- <span data-ttu-id="8d5ac-107">[in] The member attributes.</span><span class="sxs-lookup"><span data-stu-id="8d5ac-107">[in] The member attributes.</span></span>  
+ <span data-ttu-id="03714-107">in Die Element Attribute.</span><span class="sxs-lookup"><span data-stu-id="03714-107">[in] The member attributes.</span></span>  
   
  `ulCodeRVA`  
- <span data-ttu-id="8d5ac-108">[in] The address of the code.</span><span class="sxs-lookup"><span data-stu-id="8d5ac-108">[in] The address of the code.</span></span>  
+ <span data-ttu-id="03714-108">in Die Adresse des Codes.</span><span class="sxs-lookup"><span data-stu-id="03714-108">[in] The address of the code.</span></span>  
   
  `dwImplFlags`  
- <span data-ttu-id="8d5ac-109">[in] The implementation flags for the method.</span><span class="sxs-lookup"><span data-stu-id="8d5ac-109">[in] The implementation flags for the method.</span></span>  
+ <span data-ttu-id="03714-109">in Die Implementierungsflags für die Methode.</span><span class="sxs-lookup"><span data-stu-id="03714-109">[in] The implementation flags for the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8d5ac-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8d5ac-110">Requirements</span></span>  
- <span data-ttu-id="8d5ac-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d5ac-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03714-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="03714-110">Requirements</span></span>  
+ <span data-ttu-id="03714-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03714-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d5ac-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8d5ac-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="03714-112">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="03714-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8d5ac-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8d5ac-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="03714-113">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="03714-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8d5ac-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d5ac-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="03714-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03714-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d5ac-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8d5ac-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03714-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03714-115">See also</span></span>
 
-- [<span data-ttu-id="8d5ac-116">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8d5ac-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="8d5ac-117">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8d5ac-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="03714-116">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="03714-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="03714-117">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="03714-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

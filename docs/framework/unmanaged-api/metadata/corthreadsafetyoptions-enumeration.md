@@ -21,11 +21,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442465"
 ---
-# <a name="corthreadsafetyoptions-enumeration"></a><span data-ttu-id="8004a-102">CorThreadSafetyOptions-Enumeration</span><span class="sxs-lookup"><span data-stu-id="8004a-102">CorThreadSafetyOptions Enumeration</span></span>
+# <a name="corthreadsafetyoptions-enumeration"></a><span data-ttu-id="229d6-102">CorThreadSafetyOptions-Enumeration</span><span class="sxs-lookup"><span data-stu-id="229d6-102">CorThreadSafetyOptions Enumeration</span></span>
 
-<span data-ttu-id="8004a-103">Gibt Flags für die Auswahl von Optionen für die Threadsicherheit an.</span><span class="sxs-lookup"><span data-stu-id="8004a-103">Specifies flags to select options for thread safety.</span></span>
+<span data-ttu-id="229d6-103">Gibt Flags für die Auswahl von Optionen für die Threadsicherheit an.</span><span class="sxs-lookup"><span data-stu-id="229d6-103">Specifies flags to select options for thread safety.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="8004a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8004a-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="229d6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="229d6-104">Syntax</span></span>
 
 ```cpp
 typedef enum CorThreadSafetyOptions {
@@ -35,22 +35,22 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a><span data-ttu-id="8004a-105">Member</span><span class="sxs-lookup"><span data-stu-id="8004a-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="229d6-105">Mitglieder</span><span class="sxs-lookup"><span data-stu-id="229d6-105">Members</span></span>
 
-|<span data-ttu-id="8004a-106">Member</span><span class="sxs-lookup"><span data-stu-id="8004a-106">Member</span></span>|<span data-ttu-id="8004a-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8004a-107">Description</span></span>|
+|<span data-ttu-id="229d6-106">Member</span><span class="sxs-lookup"><span data-stu-id="229d6-106">Member</span></span>|<span data-ttu-id="229d6-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="229d6-107">Description</span></span>|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|<span data-ttu-id="8004a-108">Default value.</span><span class="sxs-lookup"><span data-stu-id="8004a-108">Default value.</span></span> <span data-ttu-id="8004a-109">Wie in `MDThreadSafetyOff`.</span><span class="sxs-lookup"><span data-stu-id="8004a-109">Same as `MDThreadSafetyOff`.</span></span>|
-|`MDThreadSafetyOff`|<span data-ttu-id="8004a-110">Indicates that a reader/writer lock cannot be set.</span><span class="sxs-lookup"><span data-stu-id="8004a-110">Indicates that a reader/writer lock cannot be set.</span></span>|
-|`MDThreadSafetyOn`|<span data-ttu-id="8004a-111">Indicates that a reader/writer lock can be set.</span><span class="sxs-lookup"><span data-stu-id="8004a-111">Indicates that a reader/writer lock can be set.</span></span>|
+|`MDThreadSafetyDefault`|<span data-ttu-id="229d6-108">Standardwert</span><span class="sxs-lookup"><span data-stu-id="229d6-108">Default value.</span></span> <span data-ttu-id="229d6-109">Identisch mit `MDThreadSafetyOff`.</span><span class="sxs-lookup"><span data-stu-id="229d6-109">Same as `MDThreadSafetyOff`.</span></span>|
+|`MDThreadSafetyOff`|<span data-ttu-id="229d6-110">Gibt an, dass keine Lese-/Schreibsperre festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="229d6-110">Indicates that a reader/writer lock cannot be set.</span></span>|
+|`MDThreadSafetyOn`|<span data-ttu-id="229d6-111">Gibt an, dass eine Lese-/Schreibsperre festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="229d6-111">Indicates that a reader/writer lock can be set.</span></span>|
 
-## <a name="requirements"></a><span data-ttu-id="8004a-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8004a-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="229d6-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="229d6-112">Requirements</span></span>
 
-<span data-ttu-id="8004a-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8004a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="229d6-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="229d6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="8004a-114">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8004a-114">**Header:** CorHdr.h</span></span>
+<span data-ttu-id="229d6-114">**Header:** Corhdr. h</span><span class="sxs-lookup"><span data-stu-id="229d6-114">**Header:** CorHdr.h</span></span>
 
-<span data-ttu-id="8004a-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8004a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+<span data-ttu-id="229d6-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="229d6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8004a-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8004a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="229d6-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="229d6-116">See also</span></span>
 
-- [<span data-ttu-id="8004a-117">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="8004a-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="229d6-117">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="229d6-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

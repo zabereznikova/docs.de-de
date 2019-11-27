@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436246"
 ---
-# <a name="imetadatadispenserdefinescope-method"></a><span data-ttu-id="e6ddb-102">IMetaDataDispenser::DefineScope-Methode</span><span class="sxs-lookup"><span data-stu-id="e6ddb-102">IMetaDataDispenser::DefineScope Method</span></span>
-<span data-ttu-id="e6ddb-103">Creates a new area in memory in which you can create new metadata.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-103">Creates a new area in memory in which you can create new metadata.</span></span>  
+# <a name="imetadatadispenserdefinescope-method"></a><span data-ttu-id="84fa8-102">IMetaDataDispenser::DefineScope-Methode</span><span class="sxs-lookup"><span data-stu-id="84fa8-102">IMetaDataDispenser::DefineScope Method</span></span>
+<span data-ttu-id="84fa8-103">Erstellt einen neuen Bereich im Arbeitsspeicher, in dem Sie neue Metadaten erstellen können.</span><span class="sxs-lookup"><span data-stu-id="84fa8-103">Creates a new area in memory in which you can create new metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6ddb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e6ddb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84fa8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="84fa8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineScope (  
@@ -36,39 +36,39 @@ HRESULT DefineScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e6ddb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e6ddb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84fa8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="84fa8-105">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="e6ddb-106">[in] The CLSID of the version of metadata structures to be created.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-106">[in] The CLSID of the version of metadata structures to be created.</span></span> <span data-ttu-id="e6ddb-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span></span>  
+ <span data-ttu-id="84fa8-106">in Die CLSID der Version der zu erstellenden Metadatenstrukturen.</span><span class="sxs-lookup"><span data-stu-id="84fa8-106">[in] The CLSID of the version of metadata structures to be created.</span></span> <span data-ttu-id="84fa8-107">Dieser Wert muss für die .NET Framework Version 2,0 CLSID_CorMetaDataRuntime werden.</span><span class="sxs-lookup"><span data-stu-id="84fa8-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span></span>  
   
  `dwCreateFlags`  
- <span data-ttu-id="e6ddb-108">[in] Flags that specify options.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-108">[in] Flags that specify options.</span></span> <span data-ttu-id="e6ddb-109">This value must be zero for the .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-109">This value must be zero for the .NET Framework 2.0.</span></span>  
+ <span data-ttu-id="84fa8-108">in Flags, die Optionen angeben.</span><span class="sxs-lookup"><span data-stu-id="84fa8-108">[in] Flags that specify options.</span></span> <span data-ttu-id="84fa8-109">Dieser Wert muss für den .NET Framework 2,0 den Wert 0 (null) aufweisen.</span><span class="sxs-lookup"><span data-stu-id="84fa8-109">This value must be zero for the .NET Framework 2.0.</span></span>  
   
  `riid`  
- <span data-ttu-id="e6ddb-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span></span>  
+ <span data-ttu-id="84fa8-110">in Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll. der Aufrufer verwendet die-Schnittstelle, um die neuen Metadaten zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="84fa8-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span></span>  
   
- <span data-ttu-id="e6ddb-111">The value of `riid` must specify one of the "emit" interfaces.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-111">The value of `riid` must specify one of the "emit" interfaces.</span></span> <span data-ttu-id="e6ddb-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span></span>  
+ <span data-ttu-id="84fa8-111">Der Wert `riid` muss eine der Schnittstellen "ausgeben" angeben.</span><span class="sxs-lookup"><span data-stu-id="84fa8-111">The value of `riid` must specify one of the "emit" interfaces.</span></span> <span data-ttu-id="84fa8-112">Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit oder IID_IMetaDataEmit2.</span><span class="sxs-lookup"><span data-stu-id="84fa8-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="e6ddb-113">[out] The pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-113">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="84fa8-113">vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="84fa8-113">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e6ddb-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e6ddb-114">Remarks</span></span>  
- <span data-ttu-id="e6ddb-115">`DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-115">`DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84fa8-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="84fa8-114">Remarks</span></span>  
+ <span data-ttu-id="84fa8-115">`DefineScope` erstellt einen Satz von Metadatentabellen im Arbeitsspeicher, generiert eine eindeutige GUID (Modul Versions Bezeichner oder MVID) für die Metadaten und erstellt einen Eintrag in der Modul Tabelle für die ausgegebene Kompilierungseinheit.</span><span class="sxs-lookup"><span data-stu-id="84fa8-115">`DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span></span>  
   
- <span data-ttu-id="e6ddb-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span><span class="sxs-lookup"><span data-stu-id="e6ddb-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span></span>  
+ <span data-ttu-id="84fa8-116">Sie können Attribute an den Metadatenbereich als Ganzes anfügen, indem Sie je nach Bedarf die [IMetaDataEmit:: setmodulerequior](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) [IMetaDataEmit::D efinecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) -Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="84fa8-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e6ddb-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e6ddb-117">Requirements</span></span>  
- <span data-ttu-id="e6ddb-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6ddb-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84fa8-117">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="84fa8-117">Requirements</span></span>  
+ <span data-ttu-id="84fa8-118">**Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84fa8-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e6ddb-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e6ddb-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="84fa8-119">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="84fa8-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e6ddb-120">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e6ddb-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="84fa8-120">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="84fa8-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e6ddb-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6ddb-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="84fa8-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84fa8-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6ddb-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6ddb-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84fa8-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="84fa8-122">See also</span></span>
 
-- [<span data-ttu-id="e6ddb-123">IMetaDataDispenser-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e6ddb-123">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="e6ddb-124">IMetaDataDispenserEx-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e6ddb-124">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="e6ddb-125">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e6ddb-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="e6ddb-126">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e6ddb-126">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="e6ddb-127">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e6ddb-127">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="84fa8-123">IMetaDataDispenser-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="84fa8-123">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="84fa8-124">IMetaDataDispenserEx-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="84fa8-124">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="84fa8-125">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="84fa8-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="84fa8-126">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="84fa8-126">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="84fa8-127">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="84fa8-127">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -14,25 +14,25 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448539"
 ---
-# <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="08cd3-102">Diagnosesymbolspeicher-Enumerationen</span><span class="sxs-lookup"><span data-stu-id="08cd3-102">Diagnostics Symbol Store Enumerations</span></span>
-<span data-ttu-id="08cd3-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span><span class="sxs-lookup"><span data-stu-id="08cd3-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
+# <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="ea318-102">Diagnosesymbolspeicher-Enumerationen</span><span class="sxs-lookup"><span data-stu-id="ea318-102">Diagnostics Symbol Store Enumerations</span></span>
+<span data-ttu-id="ea318-103">In diesem Thema werden die nicht verwalteten Enumerationen beschrieben, die von der Diagnose Symbol Speicher-API verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea318-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="08cd3-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="08cd3-104">In This Section</span></span>  
- [<span data-ttu-id="08cd3-105">CorSymAddrKind-Enumeration</span><span class="sxs-lookup"><span data-stu-id="08cd3-105">CorSymAddrKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- <span data-ttu-id="08cd3-106">Indicates the type of memory address.</span><span class="sxs-lookup"><span data-stu-id="08cd3-106">Indicates the type of memory address.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ea318-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="ea318-104">In This Section</span></span>  
+ [<span data-ttu-id="ea318-105">CorSymAddrKind-Enumeration</span><span class="sxs-lookup"><span data-stu-id="ea318-105">CorSymAddrKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
+ <span data-ttu-id="ea318-106">Gibt den Typ der Speicheradresse an.</span><span class="sxs-lookup"><span data-stu-id="ea318-106">Indicates the type of memory address.</span></span>  
   
- [<span data-ttu-id="08cd3-107">CorSymSearchPolicyAttributes-Enumeration</span><span class="sxs-lookup"><span data-stu-id="08cd3-107">CorSymSearchPolicyAttributes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- <span data-ttu-id="08cd3-108">Specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="08cd3-108">Specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ [<span data-ttu-id="ea318-107">CorSymSearchPolicyAttributes-Enumeration</span><span class="sxs-lookup"><span data-stu-id="ea318-107">CorSymSearchPolicyAttributes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
+ <span data-ttu-id="ea318-108">Gibt die Richtlinie an, die bei einer Suche nach einem Symbol Leser verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ea318-108">Specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
- [<span data-ttu-id="08cd3-109">CorSymVarFlag-Enumeration</span><span class="sxs-lookup"><span data-stu-id="08cd3-109">CorSymVarFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- <span data-ttu-id="08cd3-110">Indicates whether a variable is compiler-generated.</span><span class="sxs-lookup"><span data-stu-id="08cd3-110">Indicates whether a variable is compiler-generated.</span></span>  
+ [<span data-ttu-id="ea318-109">CorSymVarFlag-Enumeration</span><span class="sxs-lookup"><span data-stu-id="ea318-109">CorSymVarFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
+ <span data-ttu-id="ea318-110">Gibt an, ob eine Variable vom Compiler generiert wird.</span><span class="sxs-lookup"><span data-stu-id="ea318-110">Indicates whether a variable is compiler-generated.</span></span>  
   
- [<span data-ttu-id="08cd3-111">NOTIFY_FILTER-Enumeration</span><span class="sxs-lookup"><span data-stu-id="08cd3-111">NOTIFY_FILTER Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- <span data-ttu-id="08cd3-112">Identifies callbacks for debugger functions.</span><span class="sxs-lookup"><span data-stu-id="08cd3-112">Identifies callbacks for debugger functions.</span></span>  
+ [<span data-ttu-id="ea318-111">NOTIFY_FILTER-Enumeration</span><span class="sxs-lookup"><span data-stu-id="ea318-111">NOTIFY_FILTER Enumeration</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
+ <span data-ttu-id="ea318-112">Identifiziert Rückrufe für Debugger-Funktionen.</span><span class="sxs-lookup"><span data-stu-id="ea318-112">Identifies callbacks for debugger functions.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="08cd3-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="08cd3-113">Related Sections</span></span>  
- [<span data-ttu-id="08cd3-114">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="08cd3-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="ea318-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="ea318-113">Related Sections</span></span>  
+ [<span data-ttu-id="ea318-114">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="ea318-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [<span data-ttu-id="08cd3-115">Diagnosesymbolspeicher-Strukturen</span><span class="sxs-lookup"><span data-stu-id="08cd3-115">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [<span data-ttu-id="ea318-115">Diagnosesymbolspeicher-Strukturen</span><span class="sxs-lookup"><span data-stu-id="ea318-115">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
- [<span data-ttu-id="08cd3-116">Debuggen</span><span class="sxs-lookup"><span data-stu-id="08cd3-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [<span data-ttu-id="ea318-116">Debuggen</span><span class="sxs-lookup"><span data-stu-id="ea318-116">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
