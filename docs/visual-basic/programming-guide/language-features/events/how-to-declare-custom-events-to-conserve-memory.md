@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345131"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Gewusst wie: Deklarieren von benutzerdefinierten Ereignissen, um Speicherplatz zu sparen (Visual Basic)
-There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
+Es gibt verschiedene Situationen, in denen es wichtig ist, dass eine Anwendung die Speicherauslastung niedrig hält. Benutzerdefinierte Ereignisse ermöglichen es der Anwendung, Arbeitsspeicher nur für die Ereignisse zu verwenden, die Sie verarbeitet.  
   
- By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
+ Wenn eine Klasse ein Ereignis deklariert, ordnet der Compiler standardmäßig Speicher für ein Feld zu, um die Ereignis Informationen zu speichern. Wenn eine Klasse über viele nicht verwendete Ereignisse verfügt, nehmen Sie unnötigerweise Speicherplatz in Anspruch.  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
+ Anstatt die Standard Implementierung von Ereignissen zu verwenden, die Visual Basic bereitstellt, können Sie benutzerdefinierte Ereignisse verwenden, um die Speicherauslastung sorgfältiger zu verwalten.  
   
 ## <a name="example"></a>Beispiel  
- In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
+ In diesem Beispiel verwendet die-Klasse eine Instanz der <xref:System.ComponentModel.EventHandlerList>-Klasse, die im `Events` Feld gespeichert ist, um Informationen über die verwendeten Ereignisse zu speichern. Die <xref:System.ComponentModel.EventHandlerList>-Klasse ist eine optimierte Listen Klasse, die Delegaten enthalten soll.  
   
- All events in the class use the `Events` field to keep track of what methods are handling each event.  
+ Alle Ereignisse in der-Klasse verwenden das `Events` Feld, um nachzuverfolgen, welche Methoden die einzelnen Ereignisse verarbeiten.  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   

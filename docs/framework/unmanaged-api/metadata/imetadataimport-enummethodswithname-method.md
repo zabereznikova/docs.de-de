@@ -40,39 +40,39 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `cl`  
- [in] A TypeDef token representing the type whose methods to enumerate.  
+ in Ein TypeDef-Token, das den Typ darstellt, dessen Methoden aufgelistet werden sollen.  
   
  `szName`  
- [in] The name that limits the scope of the enumeration.  
+ in Der Name, der den Bereich der-Enumeration einschränkt.  
   
  `rMethods`  
- [out] The array used to store the MethodDef tokens.  
+ vorgenommen Das Array, das zum Speichern der MethodDef-Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMethods`-Arrays.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ vorgenommen Die Anzahl der MethodDef-Token, die in `rMethods`zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
+ Diese Methode listet Felder und Methoden auf, aber keine Eigenschaften oder Ereignisse. Im Gegensatz zu [IMetaDataImport:: EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md)verwirft `EnumMethodsWithName` alle Methoden Token, die nicht über den angegebenen Namen verfügen.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodsWithName` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

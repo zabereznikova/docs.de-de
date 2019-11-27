@@ -1,5 +1,5 @@
 ---
-title: Message.BodyToString Method (System.ServiceModel.Channels)
+title: Message. bodydestring-Methode (System. Service Model. Channels)
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,9 +18,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451311"
 ---
-# <a name="messagebodytostring-method"></a>Message.BodyToString Method
+# <a name="messagebodytostring-method"></a>Message. bodydestring-Methode
 
-Converts the message body into a string by calling the <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> method.
+Konvertiert den Nachrichtentext in eine Zeichenfolge, indem die <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType>-Methode aufgerufen wird.
 
 ```csharp
 internal void BodyToString(XmlDictionaryWriter writer);
@@ -29,19 +29,19 @@ internal void BodyToString(XmlDictionaryWriter writer);
 ## <a name="parameters"></a>Parameter
 
 - `writer` <xref:System.Xml.XmlDictionaryWriter>\
-  The writer that is used to convert the message body to a string.
+  Der Writer, der verwendet wird, um den Nachrichtentext in eine Zeichenfolge zu konvertieren.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!WARNING]
-> The `Message.BodyToString` method is internal and is not meant to be used directly in your code.
+> Die `Message.BodyToString`-Methode ist intern und sollte nicht direkt im Code verwendet werden.
 >
-> Microsoft does not support the use of this method in a production application under any circumstance.
+> Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Namespace:** <xref:System.ServiceModel.Channels>
 
-**Assembly:** System.ServiceModel.dll
+**Assembly:** System. Service Model. dll
 
-**.NET Framework versions:** Available since 3.0.
+**.NET Framework Versionen:** Verfügbar seit 3,0.

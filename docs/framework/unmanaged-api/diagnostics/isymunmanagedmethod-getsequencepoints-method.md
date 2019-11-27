@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448876"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints-Methode
-Gets all the sequence points within this method.  
+Ruft alle Sequenz Punkte innerhalb dieser Methode ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,34 +41,34 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parameter  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ in Eine `ULONG32`, die die Größe der Arrays `offsets`, `documents`, `lines`, `columns`, `endLines`und `endColumns` empfängt.  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der die Länge des Puffers empfängt, der zum enthalten der Sequenz Punkte benötigt wird.  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ in Ein Array, in dem die MSIL-Offsets (Microsoft Intermediate Language) vom Anfang der Methode für die Sequenz Punkte gespeichert werden sollen.  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ in Ein Array, in dem die Dokumente gespeichert werden sollen, in denen sich die Sequenz Punkte befinden.  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ in Ein Array, in dem die Zeilen in den Dokumenten gespeichert werden sollen, in denen sich die Sequenz Punkte befinden.  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ in Ein Array, in dem die Spalten in den Dokumenten gespeichert werden sollen, in denen sich die Sequenz Punkte befinden.  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ in Das Array von Zeilen in den Dokumenten, in denen die Sequenz Punkte enden.  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ in Das Array von Spalten in den Dokumenten, in denen die Sequenz Punkte enden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

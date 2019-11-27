@@ -18,30 +18,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348724"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Typkonvertierung in Visual Basic
-The process of changing a value from one data type to another type is called *conversion*. Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved. They are also *implicit* or *explicit*, depending on the syntax in the source code.  
+Der Prozess der Änderung eines Werts von einem Datentyp in einen anderen Typ wird als *Konvertierung*bezeichnet. Konvertierungen werden entweder *erweitert* oder einschränkend *, abhängig*von den Datenkapazitäten der beteiligten Typen. Sie sind auch *implizit* oder *explizit*, abhängig von der Syntax im Quellcode.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Explains conversions classified by whether the destination type can hold the data.  
+ Erläutert Konvertierungen, die durch den Zieltyp klassifiziert werden, der die Daten enthalten kann.  
   
  [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Discusses conversions classified by whether Visual Basic performs them automatically.  
+ Erläutert Konvertierungen, die von der Visual Basic automatisch durchführt.  
   
  [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Illustrates converting between strings and numeric, `Boolean`, or date/time values.  
+ Veranschaulicht die Typumwandlung zwischen Zeichen folgen und numerischen Werten, `Boolean`oder Datums-/Uhrzeitwerten.  
   
- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Shows how to convert an `Object` variable to any other data type.  
+ [Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Zeigt, wie eine `Object` Variable in einen beliebigen anderen Datentyp konvertiert wird.  
   
  [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Steps you through the process of converting between arrays of different data types.  
+ Führt Sie schrittweise durch den Prozess der Typumwandlung zwischen Arrays verschiedener Datentypen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Führt die Visual Basic Datentypen ein und beschreibt, wie diese verwendet werden.  
   
  [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.  
+ Listet die von Visual Basic bereitgestellten elementaren Datentypen auf.  
   
  [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- Discusses some common problems that can arise when working with data types.
+ Erläutert einige häufige Probleme, die bei der Arbeit mit Datentypen auftreten können.

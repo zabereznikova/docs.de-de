@@ -38,26 +38,26 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parameter  
  `file`  
- [in] The metadata token that specifies the `File` metadata structure to be modified.  
+ in Das Metadatentoken, das die zu ändernde `File` Metadatenstruktur angibt.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the file.  
+ in Ein Zeiger auf die Hashdaten, die der Datei zugeordnet sind.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ in Die Größe `pbHashValue`in Byte.  
   
  `dwFileFlags`  
- [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
+ in Eine bitweise Kombination von [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) -Werten, die verschiedene Attribute der Datei angeben.  
   
 ## <a name="remarks"></a>Hinweise  
- To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+ Um eine `File` Metadatenstruktur zu erstellen, verwenden Sie die [IMetaDataAssemblyEmit::D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) -Methode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

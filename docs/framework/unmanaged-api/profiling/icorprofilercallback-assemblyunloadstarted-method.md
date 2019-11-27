@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445137"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted-Methode
-Notifies the profiler that an assembly is being unloaded.  
+Benachrichtigt den Profiler, dass eine Assembly entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +34,12 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Parameter  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ in Identifiziert die Assembly, die entladen wird.  
   
 ## <a name="remarks"></a>Hinweise  
- The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
+ Der Wert `assemblyId` ist für eine Informationsanforderung nicht gültig, nachdem die `AssemblyUnloadStarted`-Methode zurückgegeben wurde – dies ist die letzte Möglichkeit des Profilers, Informationen zu dieser Assembly zu erhalten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

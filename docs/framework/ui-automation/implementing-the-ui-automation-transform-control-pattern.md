@@ -37,14 +37,14 @@ ms.locfileid: "74447056"
 ## <a name="required-members-for-itransformprovider"></a>Erforderliche Member für ITransformProvider  
  Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.ITransformProvider>erforderlich.  
   
-|Erforderliche Member|Memberart|Notizen|  
+|Erforderliche Member|Elementtyp|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Methode|Keine|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "74447056"
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> : Wenn die <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> false ist.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> : Wenn die <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> false ist.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> : Wenn die <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> false ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

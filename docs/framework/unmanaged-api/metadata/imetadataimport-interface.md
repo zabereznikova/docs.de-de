@@ -102,12 +102,12 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
   
 - Die Get-Methoden wurden speziell dafür entwickelt, um einwertige Eigenschaften eines Metadatenelements zurückzugeben. Wenn die Eigenschaft ein Verweis auf ein anderes Element ist, wird ein Token für dieses Element zurückgegeben. Jeder Zeigereingabetyp kann NULL sein, um anzugeben, dass der betreffende Wert nicht angefordert wird. Verwenden Sie zum Abrufen von Eigenschaften, die im Wesentlichen Auflistungsobjekte sind (z. B. die Auflistung der Schnittstellen, die eine Klasse implementiert) die Enumerationsmethoden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

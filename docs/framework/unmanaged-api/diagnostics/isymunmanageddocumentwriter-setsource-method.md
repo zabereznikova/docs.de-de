@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449072"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource-Methode
-Sets embedded source for a document that is being written.  
+Legt die eingebettete Quelle für ein Dokument fest, das geschrieben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,16 +35,16 @@ HRESULT SetSource(
   
 ## <a name="parameters"></a>Parameter  
  `sourceSize`  
- [in] A `ULONG32` that contains the size of the `source` buffer.  
+ in Ein-`ULONG32`, der die Größe des `source` Puffers enthält.  
   
  `source`  
- [in] The buffer that stores the embedded source.  
+ in Der Puffer, in dem die eingebettete Quelle gespeichert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

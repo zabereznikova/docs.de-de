@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445200"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished-Methode
-Notifies the profiler that an application domain has been unloaded from a process.  
+Benachrichtigt den Profiler, dass eine Anwendungsdomäne von einem Prozess entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>Parameter  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ in Identifiziert die Domäne, in der die Assemblys der Anwendung gespeichert werden.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
+ in Ein HRESULT, das angibt, ob die Anwendungsdomäne erfolgreich entladen wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
+ Der Wert `appDomainId` ist für eine Informationsanforderung nicht gültig, nachdem die [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) -Methode zurückgegeben wurde.  
   
- Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
+ Einige Teile des Entladen der Anwendungsdomäne können nach dem `AppDomainCreationFinished` Rückruf fortgesetzt werden. Ein HRESULT-Fehler in `hrStatus` deutet auf einen Fehler hin. Ein HRESULT mit Erfolg in `hrStatus` gibt jedoch nur an, dass der erste Teil des Ladens der Anwendungsdomäne erfolgreich war.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

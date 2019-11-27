@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449063"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount-Methode
-Gets the number of local variables.  
+Ruft die Anzahl der lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,16 +35,16 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="parameters"></a>Parameter  
  `mdMethodToken`  
- [in] The metadata token of methods.  
+ in Das Metadatentoken der Methoden.  
   
  `pcLocals`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers in Zeichen empfängt, der die Anzahl der lokalen Variablen enthalten muss.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

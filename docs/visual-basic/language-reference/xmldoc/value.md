@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352177"
 ---
-# <a name="value-visual-basic"></a>\<value> (Visual Basic)
-Specifies the description of a property.  
+# <a name="value-visual-basic"></a>\<Wert > (Visual Basic)
+Gibt die Beschreibung einer Eigenschaft an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,12 +26,12 @@ Specifies the description of a property.
  Eine Beschreibung der Eigenschaft  
   
 ## <a name="remarks"></a>Hinweise  
- Use the `<value>` tag to describe a property. Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property. You should then manually add a `<value>` tag to describe the value that the property represents.  
+ Verwenden Sie das `<value>`-Tag, um eine Eigenschaft zu beschreiben. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mithilfe des Code-Assistenten in der Visual Studio-Entwicklungsumgebung eine [\<Zusammenfassungs >](../../../visual-basic/language-reference/xmldoc/summary.md) -Tags für die neue Eigenschaft hinzugefügt wird. Sie sollten dann manuell ein `<value>`-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the `<value>` tag to describe what value the `Counter` property holds.  
+ In diesem Beispiel wird das `<value>`-Tag verwendet, um den Wert zu beschreiben, den die `Counter` Eigenschaft enthält.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

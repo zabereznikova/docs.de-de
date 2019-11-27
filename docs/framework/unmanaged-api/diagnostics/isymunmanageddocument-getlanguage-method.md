@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449182"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage-Methode
-Gets the language identifier of this document  
+Ruft den sprach Bezeichner für dieses Dokument ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ HRESULT GetLanguage(
   
 ## <a name="parameters"></a>Parameter  
  `pRetVal`  
- [out] A pointer to a variable that receives the language identifier.  
+ vorgenommen Ein Zeiger auf eine Variable, die den sprach Bezeichner empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds.  
+ S_OK, wenn die Methode erfolgreich ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

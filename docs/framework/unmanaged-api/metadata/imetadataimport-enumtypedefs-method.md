@@ -38,33 +38,33 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ vorgenommen Ein Zeiger auf den neuen Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ in Das Array, das zum Speichern der TypeDef-Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rTypeDefs`-Arrays.  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ vorgenommen Die Anzahl der in `rTypeDefs`zurückgegebenen TypeDef-Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|`EnumTypeDefs` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTypeDefs` gleich 0 (null) ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+ Das TypeDef-Token stellt einen Typ dar, z. b. eine Klasse oder eine Schnittstelle, sowie alle Typen, die über einen Erweiterbarkeits Mechanismus hinzugefügt werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:
+Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabe Aufforderungs Verzeichnis in den Ordner .NET Framework 4 (%windir%\Microsoft.NET\Framework [64] \v4.\<.NET-Version > \). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:
 
 `wevtutil im CLR-ETW.man`
 
@@ -55,9 +55,9 @@ Zum Aktivieren der Protokollierung müssen Benutzer drei Informationen angeben:
 
     - Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.
 
-    - `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.
+    - `0x1CCBD` gibt die Kategorien von Ereignissen an, die ausgelöst werden.
 
-    - `0x5` legt die Ebene der Protokollierung fest (in diesem Fall "Ausführlich" (5)).
+    - `0x5` legt die Protokollierungsebene fest (in diesem Fall ausführlich (5)).
 
     - Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.
 

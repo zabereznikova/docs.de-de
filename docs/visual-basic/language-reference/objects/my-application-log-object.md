@@ -17,17 +17,17 @@ Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis- und Ausnahmeinf
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Application.Log` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Weitere Informationen finden Sie unter [Protokollieren von Informationen aus der Anwendung](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
 > Sie können darüber hinaus Klassen in .NET Framework zum Protokollieren von Informationen aus Ihrer Anwendung verwenden. Weitere Informationen finden Sie unter [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

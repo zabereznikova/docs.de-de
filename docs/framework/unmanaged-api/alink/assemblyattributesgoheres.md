@@ -38,9 +38,9 @@ Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Que
 
 Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Diese Typen werden innerhalb des .NET Framework als "intern" gekennzeichnet und befinden sich im <xref:System.Runtime.CompilerServices>-Namespace.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 mscorlib.dll
 

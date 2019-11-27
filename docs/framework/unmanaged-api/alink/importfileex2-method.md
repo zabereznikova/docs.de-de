@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445692"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2-Methode
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+Importiert Assemblys und ungebundene Module. Diese Methode verhält sich wie die [ImportFile-Methode](importfile-method.md), funktioniert aber auch dann, wenn die zu importierende Datei nicht auf dem Datenträger vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,34 +41,34 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>Parameter  
  `pszFilename`  
- Name of file to be imported.  
+ Der Name der zu importierenden Datei.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Optionaler Name der Zieldatei.  
   
  `pAssemblyScopeIn`  
- Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ Optionaler Import Bereich [IMetaDataAssemblyImport Schnittstellen](../metadata/imetadataassemblyimport-interface.md) Schnittstelle.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ TRUE gibt an, dass ImportTypes verwendet wird. andernfalls muss der Import manuell ausgeführt werden.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Flags, die an die [OpenScope-Methode](../metadata/imetadatadispenser-openscope-method.md)weitergegeben werden sollen.  
   
  `pImportToken`  
- Receives unique ID for the assembly or file.  
+ Empfängt eine eindeutige ID für die Assembly oder Datei.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Can be NULL if the file is not an assembly.  
+ Empfängt assemblyimportierungsbereich [IMetaDataAssemblyImport Schnittstellen](../metadata/imetadataassemblyimport-interface.md) Schnittstelle. Kann NULL sein, wenn die Datei keine Assembly ist.  
   
  `pdwCountOfScopes`  
- Receives the number of files and/or scopes imported.  
+ Empfängt die Anzahl der importierten Dateien und/oder Bereiche.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h.  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 

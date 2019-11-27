@@ -20,29 +20,29 @@ ms.locfileid: "74351264"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+Gibt an, dass ein deklariertes Programmier Element ein identisch benanntes Element oder einen Satz überladener Elemente in einer Basisklasse erneut deklariert und verbirgt.
 
 ## <a name="remarks"></a>Hinweise
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+Der Hauptzweck von Shadowing(das auch als ausblenden *nach Name*bezeichnet wird) besteht darin, die Definition der Klassenmember beizubehalten. Die Basisklasse kann einer Änderung unterzogen werden, die ein Element mit dem gleichen Namen erstellt, den Sie bereits definiert haben. In diesem Fall erzwingt der `Shadows` Modifizierer, dass Verweise durch Ihre Klasse in den von Ihnen definierten Member aufgelöst werden, anstatt das neue Basisklassen Element zu verwenden.
 
-Sowohl das Shadowing als auch das Überschreiben definieren ein geerbtes Element neu, es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+Sowohl das Shadowing als auch das Überschreiben definieren ein geerbtes Element neu, es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen. Weitere Informationen finden Sie unter [shadowingin Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
 ## <a name="rules"></a>Regeln
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Deklarations Kontext.** Sie können `Shadows` nur auf Klassenebene verwenden. Dies bedeutet, dass der Deklarations Kontext für ein `Shadows` Element eine Klasse sein muss und keine Quelldatei, ein Namespace, eine Schnittstelle, ein Modul, eine Struktur oder eine Prozedur sein darf.
 
-  You can declare only one shadowing element in a single declaration statement.
+  Sie können nur ein Shadowingelement in einer einzelnen Deklarations Anweisung deklarieren.
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **Kombinierte modifiziererer.** Sie können `Shadows` nicht mit `Overloads`, `Overrides`oder `Static` in derselben Deklaration angeben.
 
-- **Element Types.** Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen. If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **Element Typen.** Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen. Wenn Sie eine Eigenschaft oder Prozedur mit einer anderen Eigenschaft oder Prozedur überschatten, müssen die Parameter und der Rückgabetyp nicht mit denen in der Basisklassen Eigenschaft oder-Prozedur identisch sein.
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **Den.** Das Shadowing-Element in der Basisklasse ist normalerweise nicht in der abgeleiteten Klasse verfügbar, die es Shadowing durchführt. Es gelten jedoch die folgenden Überlegungen.
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - Wenn auf das Shadowing-Element nicht über den Code zugegriffen werden kann, auf das verwiesen wird, wird der Verweis in das Shadowing-Element aufgelöst. Wenn z. b. ein `Private` Element ein Basisklassen Element Shadowing, greift Code, der nicht über die Berechtigung für den Zugriff auf das `Private` Element verfügt, stattdessen auf das Basisklassen Element zu.
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - Wenn Sie einen Schatten für ein Element durchlaufen, können Sie weiterhin auf das Shadowing Element über ein Objekt zugreifen, das mit dem Typ der Basisklasse deklariert wurde. Sie können auch über `MyBase`darauf zugreifen.
 
 Der `Shadows`-Modifizierer kann in folgenden Kontexten verwendet werden:
 
@@ -79,7 +79,7 @@ Der `Shadows`-Modifizierer kann in folgenden Kontexten verwendet werden:
 - [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Überladungen](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadodown in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

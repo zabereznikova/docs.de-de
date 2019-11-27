@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446539"
 ---
 # <a name="embedresource-method"></a>EmbedResource-Methode
-Declares an embedded resource. This method does not actually embed the resource.  
+Deklariert eine eingebettete Ressource. Diese Methode bettet die Ressource nicht ein.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID of the assembly.  
+ Die ID der Assembly.  
   
  `FileToken`  
- File token or assembly ID of file that contains the resource.  
+ Dateitoken oder Assembly-ID der Datei, die die Ressource enthält.  
   
  `pszResourceName`  
  Name der Ressource.  
   
  `dwOffset`  
- Offset of resource from RVA.  
+ Offset der Ressource von RVA.  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Barrierefreiheits Flags wie `mrPublic` und `mrPrivate`. Diese Flags können an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h.  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448758"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType-Enumeration
-Specifies the type of a module.  
+Gibt den Typ eines Moduls an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,20 +43,20 @@ typedef enum
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|Das Modul ist ein ungültiger Typ.|  
+|`ValidatorModuleTypeMin`|Der minimale Wert der `CorValidatorModuleType` Enumeration.|  
+|`ValidatorModuleTypePE`|Das Modul ist eine portable ausführbare Datei (PE).|  
+|`ValidatorModuleTypeObj`|Das Modul ist eine OBJ-Datei.|  
+|`ValidatorModuleTypeEnc`|Das Modul ist eine Debugger-Sitzung zum Bearbeiten und fortfahren.|  
+|`ValidatorModuleTypeIncr`|Dabei handelt es sich um ein Modul, das inkrementell erstellt wurde.|  
+|`ValidatorModuleTypeMax`|Der Höchstwert der `CorValidatorModuleType` Enumeration.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

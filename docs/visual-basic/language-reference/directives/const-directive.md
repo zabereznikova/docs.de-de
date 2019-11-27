@@ -24,7 +24,7 @@ ms.locfileid: "74343846"
 ---
 # <a name="const-directive"></a>#Const-Anweisung
 
-Defines conditional compiler constants for Visual Basic.  
+Definiert bedingte Compilerkonstanten für Visual Basic.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,19 +32,19 @@ Defines conditional compiler constants for Visual Basic.
 #Const constname = expression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
 
  `constname`  
- Erforderlich. Name of the constant being defined.  
+ Erforderlich Der Name der Konstanten, die definiert wird.  
   
  `expression`  
- Erforderlich. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ Erforderlich Literale, andere Bedingte Compilerkonstante oder eine beliebige Kombination, die beliebige oder alle arithmetischen oder logischen Operatoren mit Ausnahme von `Is`enthält.  
   
 ## <a name="remarks"></a>Hinweise  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ Bedingte Compilerkonstanten sind immer privat für die Datei, in der Sie angezeigt werden. Sie können keine öffentlichen Compilerkonstanten mithilfe der `#Const`-Direktive erstellen; Sie können nur auf der Benutzeroberfläche oder mit der `/define`-Compileroption erstellt werden.  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ In `expression`können nur bedingte Compilerkonstanten und Literale verwendet werden. Wenn eine mit `Const` definierte Standard Konstante verwendet wird, wird ein Fehler verursacht. Umgekehrt können Sie mit dem `#Const`-Schlüsselwort definierte Konstanten nur für die bedingte Kompilierung verwenden. Konstanten können ebenfalls nicht definiert werden. in diesem Fall haben Sie den Wert `Nothing`.  
   
 ## <a name="example"></a>Beispiel  
 

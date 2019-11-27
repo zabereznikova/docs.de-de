@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448086"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen-Methode
-Gets the length of the specified section.  
+Ruft die Länge des angegebenen Abschnitts ab.  
   
- This method is obsolete and should not be used.  
+ Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +38,20 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- [in] The data section whose length will be retrieved.  
+ in Der Daten Abschnitt, dessen Länge abgerufen wird.  
   
  `dataLen`  
- [out] The returned length of the specified section.  
+ vorgenommen Die zurückgegebene Länge des angegebenen Abschnitts.  
   
 ## <a name="remarks"></a>Hinweise  
- Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
+ Wenn Sie über besondere Abschnitts Anforderungen verfügen, die nicht von anderen Methoden behandelt werden, wenden Sie `GetSectionDataLen` nur an.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

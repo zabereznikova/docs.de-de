@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436022"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout-Methode
-Gets information about where the specified value type is located when it is boxed.  
+Ruft Informationen darüber ab, wo sich der angegebene Werttyp befindet, wenn er gekapselt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ in Die ID der Klasse, die den zu boachtelten Werttyp beschreibt.  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ vorgenommen Eine ganze Zahl, die den Offset des Werttyps relativ zum Objekt-ID-Zeiger des Objekts ist.  
   
 ## <a name="remarks"></a>Hinweise  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+ Der `pBufferOffset` Wert ist der Speicherort des Werttyps in einem Feld. Nachdem `pBufferOffset` auf ein geachteltes Objekt angewendet wurde, kann das Klassen Layout des Werttyps verwendet werden, um den Wert des Objekts zu interpretieren.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

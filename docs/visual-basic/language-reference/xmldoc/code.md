@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354321"
 ---
-# <a name="code-visual-basic"></a>\<code> (Visual Basic)
-Indicates that the text is multiple lines of code.  
+# <a name="code-visual-basic"></a>\<Code > (Visual Basic)
+Gibt an, dass der Text mehrere Codezeilen ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -23,15 +23,15 @@ Indicates that the text is multiple lines of code.
   
 ## <a name="parameters"></a>Parameter  
  `content`  
- The text to mark as code.  
+ Der Text, der als Code markiert werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Use the `<code>` tag to indicate multiple lines as code. Mit [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) wird angegeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.  
+ Verwenden Sie das `<code>`-Tag, um mehrere Zeilen als Code anzugeben. Mit [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) wird angegeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the \<code> tag to include example code for using the `ID` field.  
+ In diesem Beispiel wird der \<Code >-Tag verwendet, um Beispielcode für die Verwendung des `ID`-Felds einzuschließen.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

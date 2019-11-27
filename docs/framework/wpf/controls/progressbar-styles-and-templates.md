@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="progressbar-parts"></a>ProgressBar-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.ProgressBar>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|Das Objekt, das den Fortschritt angibt.|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|Das-Objekt, das den Pfad der Statusanzeige definiert.|  

@@ -59,7 +59,7 @@ Diese Diagramme können dann mithilfe der dashboardfunktion in den Azure-Portal 
 ![ein Beispiel Power BI Dashboard](./media/azure-monitor.png)
 **Abbildung 7-12**. Ein Beispiel Power BI-Dashboard.
 
-## <a name="alerts"></a>Benachrichtigungen
+## <a name="alerts"></a>Warnungen
 
 Manchmal reicht es nicht aus, Daten Dashboards zu haben. Wenn niemand aktiv ist, um die Dashboards zu beobachten, kann es nach wie vor viele Stunden dauern, bis ein Problem behoben oder sogar erkannt wird. Zu diesem Zweck stellt Azure Monitor auch eine Lösung mit der höchsten [Lösung](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)bereit. Warnungen können durch eine Vielzahl von Bedingungen ausgelöst werden, darunter:
 

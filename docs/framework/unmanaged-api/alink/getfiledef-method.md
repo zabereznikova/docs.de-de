@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426050"
 ---
 # <a name="getfiledef-method"></a>GetFileDef-Methode
-Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
+Ruft das tatsächliche FileDef-Token ab, das in den Metadaten verwendet wird (im Gegensatz zum von ALink zugewiesenen Token).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID of the assembly.  
+ Die ID der Assembly.  
   
  `TargetFile`  
- Token of the added file as retrieved from AddFile Method or AddImport Method.  
+ Token der hinzugefügten Datei, das von der AddFile-Methode oder der AddImport-Methode abgerufen wird.  
   
  `pScope`  
- Receives the FileDef token.  
+ Empfängt das FileDef-Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 

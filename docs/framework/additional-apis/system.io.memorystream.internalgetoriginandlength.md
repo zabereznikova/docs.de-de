@@ -41,7 +41,7 @@ internal void InternalGetOriginAndLength(out int origin, out int length)
 >
 > Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Namespace:** <xref:System.IO>
 

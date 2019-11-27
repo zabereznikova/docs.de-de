@@ -39,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ in Ein TypeDef-Token, das den Typ mit den aufzuzählenden Methoden darstellt.  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ vorgenommen Das Array zum Speichern der MethodDef-Token.  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ in Die maximale Größe des MethodDef-`rMethods` Arrays.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ vorgenommen Die Anzahl der MethodDef-Token, die in `rMethods`zurückgegeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine MethodDef-Token zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

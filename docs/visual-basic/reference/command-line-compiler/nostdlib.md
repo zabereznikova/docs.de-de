@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347910"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-Causes the compiler not to automatically reference the standard libraries.  
+Bewirkt, dass der Compiler nicht automatisch auf die Standardbibliotheken verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -23,16 +23,16 @@ Causes the compiler not to automatically reference the standard libraries.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file. The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.  
+ Die Option `-nostdlib` entfernt den automatischen Verweis auf die Assembly "System. dll" und verhindert, dass der Compiler die Datei "Vbc. rsp" liest. Die Datei "Vbc. rsp", die sich im selben Verzeichnis wie die Datei "Vbc. exe" befindet, verweist auf die häufig verwendeten .NET Framework Assemblys und importiert die `System` und `Microsoft.VisualBasic` Namespaces.  
   
 > [!NOTE]
-> The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.  
+> Auf die Assemblys "mscorlib. dll" und "Microsoft. VisualBasic. dll" wird immer verwiesen.  
   
 > [!NOTE]
-> The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Die `-nostdlib`-Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- The following code compiles `T2.vb` without referencing the standard libraries. You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.  
+ Der folgende Code kompiliert `T2.vb`, ohne auf die Standardbibliotheken zu verweisen. Sie müssen die Konstante für die `_MYTYPE` bedingte Kompilierung auf die Zeichenfolge "Empty" festlegen, um das `My` Objekt zu entfernen.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

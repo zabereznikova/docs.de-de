@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440477"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope-Methode
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+Importiert eine Assembly in den aktuellen Gültigkeitsbereich und ruft eine neue Metadatensignatur für den zusammengeführten Bereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,44 +45,44 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parameter  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ in Die Schnittstelle für die importierungsassembly (in der die Signatur definiert ist).  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ in Das hashblob für die Assembly.  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ in Die Anzahl der Bytes in `pbHashValue`.  
   
  `import`  
- [in] The interface for import metadata scope.  
+ in Die-Schnittstelle für den Import Metadatenbereich.  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ in Die Signatur, die importiert werden soll.  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ in Die Größe `pbSigBlob`in Byte.  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ in Die Schnittstelle für die exportierungsassembly.  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ in Die-Schnittstelle für den Export Metadatenbereich.  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ vorgenommen Der Puffer, der das übersetzte Signatur-BLOB enthalten soll.  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ in Die Kapazität `pvTranslatedSig`in Byte.  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ vorgenommen Die Anzahl der tatsächlichen Bytes in der übersetzten Signatur.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

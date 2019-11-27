@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448925"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges-Methode
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+Gibt ein Array von Start-und Endoffset Paaren zurück, die den Bereichen der Microsoft Intermediate Language (MSIL) entsprechen, die von der Position innerhalb dieser Methode abgedeckt werden, wenn eine Position in einem Dokument verfügbar ist. Das Array ist ein Array aus ganzen Zahlen und hat das Format [Start, End, Start, End]. Die Anzahl der Bereichs Paare ist die Länge des Arrays dividiert durch 2.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,28 +40,28 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Parameter  
  `document`  
- [in] The document for which the offset is requested.  
+ in Das Dokument, für das der Offset angefordert wird.  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ in Die Dokument Zeile, die den Bereichen entspricht.  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ in Die Dokument Spalte, die den Bereichen entspricht.  
   
  `cRanges`  
  [in] Die Größe des `ranges`-Arrays.  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers empfängt, der zum enthalten der Bereiche erforderlich ist.  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ vorgenommen Ein Zeiger auf den Puffer, der die Bereiche empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

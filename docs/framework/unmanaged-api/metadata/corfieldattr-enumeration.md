@@ -56,34 +56,34 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Mitglieder  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
+|`fdFieldAccessMask`|Gibt Barrierefreiheits Informationen an.|  
 |`fdPrivateScope`|Gibt an, dass auf das Feld nicht verwiesen werden kann.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
+|`fdPrivate`|Gibt an, dass auf das Feld nur über den übergeordneten Typ zugegriffen werden kann.|  
+|`fdFamANDAssem`|Gibt an, dass abgeleitete Klassen in der Assembly auf das Feld zugreifen.|  
+|`fdAssembly`|Gibt an, dass auf das Feld für alle Typen in der Assembly zugegriffen werden kann.|  
+|`fdFamily`|Gibt an, dass auf das Feld nur über den Typ und die abgeleiteten Klassen zugegriffen werden kann.|  
+|`fdFamORAssem`|Gibt an, dass auf das Feld von abgeleiteten Klassen und von allen Typen in der Assembly zugegriffen werden kann.|  
+|`fdPublic`|Gibt an, dass auf das Feld alle Typen mit Sichtbarkeit dieses Bereichs zugreifen kann.|  
+|`fdStatic`|Gibt an, dass das Feld ein Member seines Typs und kein Instanzmember ist.|  
+|`fdInitOnly`|Gibt an, dass das Feld nicht geändert werden kann, nachdem es initialisiert wurde.|  
+|`fdLiteral`|Gibt an, dass der Feldwert eine Kompilierzeit Konstante ist.|  
+|`fdNotSerialized`|Gibt an, dass das Feld nicht serialisiert wird, wenn der Typ Remote ist.|  
+|`fdSpecialName`|Gibt an, dass es sich um ein spezielles Feld handelt und wie der Name beschreibt.|  
+|`fdPinvokeImpl`|Gibt an, dass die Feld Implementierung über PInvoke weitergeleitet wird.|  
+|`fdReservedMask`|Reserviert für die interne Verwendung durch den Common Language Runtime.|  
+|`fdRTSpecialName`|Gibt an, dass die Common Language Runtime Metadaten-internen APIs die Codierung des Namens überprüfen sollen.|  
+|`fdHasFieldMarshal`|Gibt an, dass das Feld Marshallinginformationen enthält.|  
 |`fdHasDefault`|Gibt an, dass das Feld einen Standardwert besitzt.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdHasFieldRVA`|Gibt an, dass das Feld über eine relative virtuelle Adresse verfügt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

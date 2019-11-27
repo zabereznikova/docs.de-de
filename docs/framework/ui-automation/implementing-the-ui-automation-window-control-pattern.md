@@ -19,7 +19,7 @@ ms.locfileid: "74447034"
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IWindowProvider>, einschließlich Informationen über <xref:System.Windows.Automation.WindowPattern> -Eigenschaften, -Methoden und -Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
- The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
+ Das <xref:System.Windows.Automation.WindowPattern>-Steuerelement Muster wird zur Unterstützung von Steuerelementen verwendet, die grundlegende fensterbasierte Funktionen in einer herkömmlichen grafischen Benutzeroberfläche (GUI) bereitstellen. Beispiele für Steuerelemente, die dieses Steuerelement Muster implementieren müssen, sind u. a. Anwendungsfenster der obersten Ebene, untergeordnete MDI-Fenster (Multiple Document Interface), in der Größe umsetzbare Steuerelemente für geteilte Bereiche, Modale Dialoge und  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
@@ -39,20 +39,20 @@ ms.locfileid: "74447034"
 ## <a name="required-members-for-iwindowprovider"></a>Erforderliche Member für IWindowProvider  
  Die folgenden Eigenschaften, Methoden und Ereignisse sind für die IWindowProvider-Schnittstelle erforderlich.  
   
-|Erforderliche Member|Memberart|Notizen|  
+|Erforderliche Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|property|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Die Eigenschaften-|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Die Eigenschaften-|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Die Eigenschaften-|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Die Eigenschaften-|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Die Eigenschaften-|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Die Eigenschaften-|Keiner|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keiner|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keiner|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowInteractionState>|event|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Ereignis|Keiner|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Ereignis|Keiner|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Ereignis|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -60,13 +60,13 @@ ms.locfileid: "74447034"
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> : Wenn ein Steuerelement ein angefordertes Verhalten nicht unterstützt.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Wenn der-Parameter keine gültige Zahl ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

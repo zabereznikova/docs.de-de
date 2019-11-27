@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430108"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError-Methode
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Benachrichtigt den Profiler, dass der JIT-Compiler (Just-in-Time) einen Fehler im neukompilierungs Prozess festgestellt hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parameter  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ in Die `ModuleID`, in der der fehlgeschlagene neukompilierungs Versuch erfolgte.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ in Der `MethodDef` der Methode, für die der fehlgeschlagene neukompilierungs Versuch durchgeführt wurde.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ in Die Funktions Instanz, die erneut kompiliert oder für die Neukompilierung markiert wird. Dieser Wert kann `NULL` sein, wenn der Fehler nicht pro Instanziierung, sondern pro Methode aufgetreten ist (z. b. wenn der Profiler ein ungültiges Metadatentoken für die neu zu kompilierende Methode angegeben hat).  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ in Ein HRESULT, das die Art des Fehlers angibt. Eine Liste der Werte finden Sie im Abschnitt "Status-HRESULTs".  
   
 ## <a name="return-value"></a>Rückgabewert  
  Rückgabewerte von diesem Rückruf werden ignoriert.  
@@ -55,14 +55,14 @@ HRESULT ReJITError(
   
 |Statusarray HRESULT|Beschreibung|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|E_INVALIDARG|Die `moduleID` oder `methodDef` Token ist `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Das Modul ist noch nicht vollständig geladen, oder es wird gerade entladen.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Andere|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Das angegebene Modul wurde dynamisch generiert (z. b. durch `Reflection.Emit`) und wird daher von dieser Methode nicht unterstützt.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Die-Methode wird in einer entladbaren Assembly instanziiert und kann daher nicht erneut kompiliert werden. Beachten Sie, dass Typen und Funktionen, die in einem nicht Reflektionskontext (z. b. `List<MyCollectibleStruct>`) definiert sind, in einer entladbaren Assembly instanziiert werden können.|  
+|E_OUTOFMEMORY|Die CLR hatte beim Versuch, die angegebene Methode für die JIT-Neukompilierung zu markieren, nicht genügend Arbeitsspeicher.|  
+|Andere|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Wenn beispielsweise ein Systemaufrufe zum Ändern des Zugriffs Schutzes einer Arbeitsspeicher Seite fehlschlägt, wird der Fehler des Betriebssystems angezeigt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -25,7 +25,7 @@ ms.locfileid: "74439228"
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo-Methode
 Ruft den Wertebereich des nativen Codes ab, der der angegebenen Funktions-ID zugeordnet ist.  
   
- Diese Methode ist veraltet. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ Diese Methode ist veraltet. Verwenden Sie stattdessen die [ICorProfilerInfo2:: GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,14 +51,14 @@ HRESULT GetCodeInfo(
   
  Diese Funktion verwendet vom Aufrufer reservierte Puffer.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework Versionen:** 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -24,7 +24,7 @@ ms.locfileid: "74447569"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc-Methode
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+Versucht, eine angegebene Arbeitsspeicher Menge für einen neuen MSIL-Funktions Text (Microsoft Intermediate Language) zuzuordnen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,15 +37,15 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parameter
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+in Die Anzahl der Bytes, die für den Methoden Text zuzuordnen sind.
 
 ## <a name="remarks"></a>Hinweise
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ Der zugewiesene Arbeitsspeicher beginnt bei einer Adresse, die größer ist als die Basisadresse des Moduls, das mit dieser Zuweisung verknüpft ist. Anders ausgedrückt, wird jede Zuweisung für ein bestimmtes Modul erstellt, und es wird versucht, Arbeitsspeicher in einem positiven Offset von der Basisadresse zuzuweisen. Wenn `Alloc` die angeforderte Anzahl von Bytes bei einer Adresse, die größer als die Basisadresse des Moduls ist, nicht zuordnen kann, wird unabhängig von der tatsächlich verfügbaren Speicherplatz Menge E_OUTOFMEMORY zurückgegeben.
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ Die `Alloc`-Methode sollte in Verbindung mit der [ICorProfilerInfo:: abtilfunctionbody](icorprofilerinfo-setilfunctionbody-method.md) -Methode verwendet werden.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
  **Header:** CorProf.idl, CorProf.h

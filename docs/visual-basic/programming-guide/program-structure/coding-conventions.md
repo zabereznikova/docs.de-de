@@ -26,7 +26,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
-- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
+- Informationen zu Benennungs Richtlinien finden Sie im Thema [Benennungs Richtlinien](../../../standard/design-guidelines/naming-guidelines.md) .  
   
 - Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens. Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.  
   
@@ -36,7 +36,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 - Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.  
   
-- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Verwenden Sie eine **ganz Zahl Auflistung (Neuformatierung) von Code** , um den Code im Code-Editor neu zu formatieren. Weitere Informationen finden Sie unter [Optionen, Text-Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
 - Verwenden Sie pro Zeile nur eine Anweisung. Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).  
   
@@ -44,7 +44,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 - Verwenden Sie pro Zeile nur eine Deklaration.  
   
-- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
+- Wenn **durch eine Auflistung (Neuformatierung) des Codes** keine Fortsetzungs Zeilen automatisch formatiert werden, werden Fortsetzungs Zeilen manuell mit einem Tabstopp Einzug eingelesen. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
   
     ```vb  
     a As Integer,  
@@ -159,7 +159,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.  
+- Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. `RaiseEvent` überprüft `Nothing`, bevor das-Ereignis ausgelöst wird.  
   
 ### <a name="using-shared-members"></a>Verwenden von Shared-Membern  
  Rufen Sie `Shared`-Member über den Klassennamen auf, nicht von einer Instanzvariablen aus.  

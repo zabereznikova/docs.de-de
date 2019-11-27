@@ -22,27 +22,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341223"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Unterschiede zwischen Eigenschaften und Variablen in Visual Basic
-Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
+Variablen und Eigenschaften stellen Werte dar, auf die Sie zugreifen können. Es gibt jedoch Unterschiede bei der Speicherung und Implementierung.  
   
 ## <a name="variables"></a>Variablen  
- A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
+ Eine *Variable* entspricht direkt einem Speicherort. Sie definieren eine Variable mit einer einzelnen Deklarations Anweisung. Eine Variable kann eine *lokale Variable*sein, die innerhalb einer Prozedur definiert ist und nur innerhalb dieser Prozedur verfügbar ist. Sie kann auch eine Element *Variable*sein, die in einem Modul, einer Klasse oder einer Struktur definiert ist, aber nicht in einer Prozedur. Eine Member-Variable wird auch als *Feld*bezeichnet.  
   
 ## <a name="properties"></a>Eigenschaften  
- A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
+ Eine *Eigenschaft* ist ein Datenelement, das für ein Modul, eine Klasse oder eine Struktur definiert ist. Sie definieren eine Eigenschaft mit einem Codeblock zwischen den Anweisungen `Property` und `End Property`. Der Codeblock enthält eine `Get` Prozedur, eine `Set` Prozedur oder beides. Diese Prozeduren werden als *Eigenschaften Prozeduren* oder *Eigenschaften Accessoren*bezeichnet. Zusätzlich zum Abrufen oder Speichern des Eigenschafts Werts können auch benutzerdefinierte Aktionen durchgeführt werden, z. b. das Aktualisieren eines Zugriffs Zählers.  
   
-## <a name="differences"></a>Differences  
- The following table shows some important differences between variables and properties.  
+## <a name="differences"></a>Differenz  
+ In der folgenden Tabelle werden einige wichtige Unterschiede zwischen Variablen und Eigenschaften angezeigt.  
   
-|Point of difference|Variable|property|  
+|Differenz Punkt|Variable|Die Eigenschaften-|  
 |-------------------------|--------------|--------------|  
-|Deklaration|Single declaration statement|Series of statements in a code block|  
-|Implementierung|Single storage location|Executable code (property procedures)|  
-|Speicher|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
-|Executable code|Keiner|Must have at least one procedure|  
-|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
-|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
+|Deklaration|Single Declaration-Anweisung|Eine Reihe von Anweisungen in einem Codeblock|  
+|Implementierung|Einzelner Speicherort|Ausführbarer Code (Eigenschaften Prozeduren)|  
+|Speicher|Direkt dem Wert der Variablen zugeordnet|In der Regel ist interner Speicher außerhalb der enthaltenden Klasse oder des Moduls der Eigenschaft nicht verfügbar.<br /><br /> Der Eigenschafts Wert ist möglicherweise nicht als gespeicherter Element <sup>1</sup> vorhanden.|  
+|Ausführbarer Code|Keiner|Mindestens eine Prozedur muss vorhanden sein.|  
+|Lese-und Schreibzugriff|Lese-/Schreibzugriff oder schreibgeschützt|Lese-/Schreibzugriff, schreibgeschützt oder schreibgeschützt|  
+|Benutzerdefinierte Aktionen (zusätzlich zur Annahme oder Rückgabe von Wert)|Nicht möglich|Kann als Teil der Einstellung oder dem Abrufen des Eigenschafts Werts ausgeführt werden.|  
   
- <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
+ <sup>1</sup> im Gegensatz zu einer Variablen entspricht der Wert einer Eigenschaft möglicherweise nicht direkt einem einzelnen Speicher Element. Der Speicher kann aus Gründen der Sicherheit oder der Sicherheit in Teile aufgeteilt werden, oder der Wert kann in verschlüsselter Form gespeichert werden. In diesen Fällen würde die `Get` Prozedur die Teile zusammenstellen oder den gespeicherten Wert entschlüsseln, und die `Set` Prozedur würde den neuen Wert verschlüsseln oder in den einzelnen Speicher aufteilen. Ein Eigenschafts Wert kann kurzlebig sein, wie z. b. die Tageszeit. in diesem Fall würde die `Get` Prozedur Sie bei jedem Zugriff auf die Eigenschaft bei der Ausführung berechnen.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -53,6 +53,6 @@ Variables and properties both represent values that you can access. However, the
 - [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)
 - [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Vorgehensweise: Deklarieren und Abrufen einer Standard Eigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
 - [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)

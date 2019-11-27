@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parameter  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ in Ein FieldDef-Token, das das Feld darstellt, für das zugeordnete Metadaten zu erhalten sind.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ vorgenommen Ein Zeiger auf ein TypeDef-Token, das den Typ der Klasse darstellt, zu der das Feld gehört.  
   
  `szField`  
- [out] The name of the field.  
+ vorgenommen Der Name des Felds.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ in Die Größe des Puffers für *szField*in breit Zeichen.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ vorgenommen Die tatsächliche Größe des zurückgegebenen Puffers.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ vorgenommen Flags, die den Metadaten des Felds zugeordnet sind.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ in Ein Zeiger auf den binären Metadatenwert, der das Feld beschreibt.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ vorgenommen Die Größe `ppvSigBlob`in Byte.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ vorgenommen Ein Flag, das den Werttyp des Felds angibt.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ vorgenommen Ein konstanter Wert für das Feld.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ vorgenommen Die Größe in Zeichen `ppValue`oder 0 (null), wenn keine Zeichenfolge vorhanden ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

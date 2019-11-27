@@ -1,5 +1,5 @@
 ---
-title: '&amp;= Operator'
+title: '&amp;=-Operator'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -17,8 +17,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350266"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= Operator (Visual Basic)
-Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.  
+# <a name="amp-operator-visual-basic"></a>&amp;=-Operator (Visual Basic)
+Verkettet einen `String` Ausdruck zu einer `String` Variablen oder Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,21 +26,21 @@ Concatenates a `String` expression to a `String` variable or property and assign
 variableorproperty &= expression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `variableorproperty`  
- Erforderlich. Any `String` variable or property.  
+ Erforderlich Beliebige `String` Variable oder Eigenschaft.  
   
  `expression`  
- Erforderlich. Beliebiger `String` -Ausdruck.  
+ Erforderlich Beliebiger `String` -Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- The element on the left side of the `&=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `&=` operator concatenates the `String` expression on its right to the `String` variable or property on its left, and assigns the result to the variable or property on its left.  
+ Das Element auf der linken Seite des `&=` Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md) Der `&=`-Operator verkettet den `String` Ausdruck auf der rechten Seite mit der `String` Variable oder Eigenschaft auf der linken Seite und weist das Ergebnis der Variablen oder der Eigenschaft auf der linken Seite zu.  
   
 ## <a name="overloading"></a>Überladen  
- The [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `&` operator affects the behavior of the `&=` operator. If your code uses `&=` on a class or structure that overloads `&`, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `&` Operators wirkt sich auf das Verhalten des `&=` Operators aus. Wenn Ihr Code `&=` in einer Klasse oder Struktur verwendet, die `&`überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `&=` operator to concatenate two `String` variables and assign the result to the first variable.  
+ Im folgenden Beispiel wird der `&=`-Operator verwendet, um zwei `String` Variablen zu verketten und das Ergebnis der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   

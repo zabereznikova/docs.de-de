@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450214"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef-Methode
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+Erstellt eine Typdefinition für einen Common Language Runtime Typ und ruft ein Metadatentoken für diese Typdefinition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,33 +39,33 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parameter  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ in Der Name des Typs in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] `TypeDef` Attribute. Dies ist eine Bitmaske von `CoreTypeAttr` Werten.  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ in Das Token der Basisklasse. Dabei muss es sich entweder um einen `mdTypeDef` oder um ein `mdTypeRef` Token handeln.  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ in Ein Array von-Token, das die Schnittstellen angibt, die diese Klasse oder Schnittstelle implementiert.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ vorgenommen Das zugewiesene `mdTypeDef` Token.  
   
 ## <a name="remarks"></a>Hinweise  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+ Ein Flag in `dwTypeDefFlags` gibt an, ob der erstellte Typ ein allgemeiner Typsystem-Verweistyp (Klasse oder Schnittstelle) oder ein allgemeiner Typsystem-Werttyp ist.  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ Abhängig von den angegebenen Parametern kann diese Methode als Nebeneffekt auch einen `mdInterfaceImpl` Datensatz für jede Schnittstelle erstellen, die von diesem Typ geerbt oder implementiert wird. Diese Methode gibt jedoch keines dieser `mdInterfaceImpl` Token zurück. Wenn ein Client ein `mdInterfaceImpl` Token später hinzufügen oder ändern möchte, muss er die `IMetaDataImport`-Schnittstelle verwenden, um Sie aufzulisten. Wenn Sie die com-Semantik der `[default]`-Schnittstelle verwenden möchten, sollten Sie die Standardschnittstelle als erstes Element in `rtkImplements`bereitstellen. ein benutzerdefiniertes Attribut, das für die Klasse festgelegt ist, gibt an, dass die Klasse über eine Standardschnittstelle verfügt (bei der es sich immer um das erste `mdInterfaceImpl` Token handelt, das für die Klasse deklariert ist  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ Jedes Element des `rtkImplements` Arrays enthält ein `mdTypeDef` oder `mdTypeRef` Token. Das letzte Element im Array muss `mdTokenNil`werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

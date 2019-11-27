@@ -15,42 +15,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346197"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Übersicht zu XML-Literalen (Visual Basic)
-An *XML literal* allows you to incorporate XML directly into your Visual Basic code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is the similar to the XML 1.0 syntax. This makes it easier to create XML elements and documents programmatically because your code has the same structure as the final XML.  
+Mithilfe eines *XML-Literals* können Sie XML direkt in den Visual Basic-Code einbinden. Die XML-Literalsyntax stellt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte dar und ähnelt der Syntax von XML 1,0. Dadurch wird das programmgesteuerte Erstellen von XML-Elementen und-Dokumenten vereinfacht, da der Code die gleiche Struktur wie der endgültige XML-Code aufweist.  
   
- Visual Basic compiles XML literals into [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides a simple object model for creating and manipulating XML, and this model integrates well with [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
+ Visual Basic kompiliert XML-Literale in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet ein einfaches Objektmodell zum Erstellen und Bearbeiten von XML, und dieses Modell lässt sich gut in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]integrieren. Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
   
- You can embed a Visual Basic expression in an XML literal. At run time, your application creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for each literal, incorporating the values of the embedded expressions. This lets you specify dynamic content inside an XML literal. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Sie können einen Visual Basic Ausdruck in ein XML-Literalformat einbetten. Zur Laufzeit erstellt die Anwendung ein [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Objekt für jedes literalobjekt, das die Werte der eingebetteten Ausdrücke einbezieht. Auf diese Weise können Sie dynamischen Inhalt innerhalb eines XML-Literals angeben. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- For more information about the differences between the XML literal syntax and the XML 1.0 syntax, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+ Weitere Informationen zu den Unterschieden zwischen der XML-Literalsyntax und der Syntax von XML 1,0 finden Sie unter [XML-Literale und die XML 1,0-Spezifikation](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
   
-## <a name="simple-literals"></a>Simple Literals  
- You can create a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object in your Visual Basic code by typing or pasting in valid XML. An XML element literal returns an <xref:System.Xml.Linq.XElement> object. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). The following example creates an XML element that has several child elements.  
+## <a name="simple-literals"></a>Einfache Literale  
+ Sie können ein [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekt im Visual Basic Code erstellen, indem Sie ein gültiges XML eingeben oder einfügen. Ein XML-Elementliteral gibt ein <xref:System.Xml.Linq.XElement> Objekt zurück. Weitere Informationen finden Sie unter [XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) - [Elementliterale und XML-Literale und in der XML 1,0-Spezifikation](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). Im folgenden Beispiel wird ein XML-Element erstellt, das über mehrere untergeordnete Elemente verfügt.  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- You can create an XML document by starting an XML literal with `<?xml version="1.0"?>`, as shown in the following example. An XML document literal returns an <xref:System.Xml.Linq.XDocument> object. For more information, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
+ Sie können ein XML-Dokument erstellen, indem Sie ein XML-wahrsten mit `<?xml version="1.0"?>`starten, wie im folgenden Beispiel gezeigt. Ein XML-Dokumentliteral gibt ein <xref:System.Xml.Linq.XDocument> Objekt zurück. Weitere Informationen finden Sie unter [XML Document Literale](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
-> The XML literal syntax in Visual Basic is not identical to the syntax in the XML 1.0 specification. For more information, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+> Die XML-Literalsyntax in Visual Basic ist nicht identisch mit der Syntax in der XML 1,0-Spezifikation. Weitere Informationen finden Sie unter [XML-Literale und die XML 1,0-Spezifikation](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
   
-## <a name="line-continuation"></a>Line Continuation  
- An XML literal can span multiple lines without using line continuation characters (the space-underscore-enter sequence). This makes it easier to compare XML literals in code with XML documents.  
+## <a name="line-continuation"></a>Zeilen Fortsetzung  
+ Ein XML-Literalwert kann sich über mehrere Zeilen erstrecken, ohne Zeilen Fortsetzungs Zeichen (die Zeichenfolge mit Leerzeichen) zu verwenden. Dies erleichtert das Vergleichen von XML-Literalen im Code mit XML-Dokumenten.  
   
- The compiler treats line continuation characters as part of an XML literal. Therefore, you should use the space-underscore-enter sequence only when it belongs in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.  
+ Der Compiler behandelt Zeilen Fortsetzungs Zeichen als Teil eines XML-Literals. Daher sollten Sie die Leertaste für Leerzeichen nur verwenden, wenn Sie in das [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekt gehört.  
   
- However, you do need line continuation characters if you have a multiline expression in an embedded expression. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Sie benötigen jedoch Zeilen Fortsetzungs Zeichen, wenn ein mehrzeiligen Ausdruck in einem eingebetteten Ausdruck vorhanden ist. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
-## <a name="embedding-queries-in-xml-literals"></a>Embedding Queries in XML Literals  
- You can use a query in an embedded expression. When you do this, the elements returned by the query are added to the XML element. This lets you add dynamic content, such as the result of a user's query, to an XML literal.  
+## <a name="embedding-queries-in-xml-literals"></a>Einbetten von Abfragen in XML-Literale  
+ Sie können eine Abfrage in einem eingebetteten Ausdruck verwenden. Wenn Sie dies tun, werden die von der Abfrage zurückgegebenen Elemente dem XML-Element hinzugefügt. Auf diese Weise können Sie einen dynamischen Inhalt, z. b. das Ergebnis der Abfrage eines Benutzers, einem XML-Literalzeichen hinzufügen.  
   
- For example, the following code uses an embedded query to create XML elements from the members of the `phoneNumbers2` array and then add those elements as children of `contact2`.  
+ Im folgenden Code wird z. b. eine eingebettete Abfrage verwendet, um XML-Elemente aus den Membern des `phoneNumbers2` Arrays zu erstellen und diese Elemente dann als untergeordnete Elemente `contact2`hinzuzufügen.  
   
  [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
-## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>How the Compiler Creates Objects from XML Literals  
- The Visual Basic compiler translates XML literals into calls to the equivalent [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] constructors to build up the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. For example, the Visual Basic compiler will translate the following code example into a call to the <xref:System.Xml.Linq.XProcessingInstruction> constructor for the XML version instruction, calls to the <xref:System.Xml.Linq.XElement> constructor for the `<contact>`, `<name>`, and `<phone>` elements, and calls to the <xref:System.Xml.Linq.XAttribute> constructor for the `type` attribute. Specifically, given the attributes in the following sample, the Visual Basic compiler will call the <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> constructor twice. The first will pass the value `type` for the `name` parameter and the value `home` for the `value` parameter. The second will also pass the value `type` for the `name` parameter, but the value `work` for the `value` parameter.  
+## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>So erstellt der Compiler Objekte aus XML-Literalen  
+ Der Visual Basic-Compiler übersetzt XML-Literale in Aufrufe der entsprechenden [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Konstruktoren, um das [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Objekt zu erstellen. Der Visual Basic-Compiler übersetzt z. b. das folgende Codebeispiel in einen Aufruf des <xref:System.Xml.Linq.XProcessingInstruction> Konstruktors für die XML-Versions Anweisung, Aufrufe des <xref:System.Xml.Linq.XElement>-Konstruktors für die Elemente `<contact>`, `<name>`und `<phone>` und ruft den <xref:System.Xml.Linq.XAttribute>-Konstruktor für das `type`-Attribut auf. Insbesondere, wenn die Attribute im folgenden Beispiel angegeben sind, ruft der Visual Basic Compiler den <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>-Konstruktor zweimal auf. Der erste übergibt den Wert `type` für den Parameter `name` und den Wert, der für den Parameter `value` `home` wird. Die zweite übergibt auch den Wert `type` für den Parameter `name`, aber der Wert `work` für den `value` Parameter.  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   

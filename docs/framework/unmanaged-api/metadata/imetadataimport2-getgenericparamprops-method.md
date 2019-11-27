@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427296"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps-Methode
-Gets the metadata associated with the generic parameter represented by the specified token.  
+Ruft die Metadaten ab, die dem durch das angegebene Token dargestellten generischen Parameter zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Parameter  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ in Das Token, das den generischen Parameter darstellt, für den Metadaten zurückgegeben werden sollen.  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ vorgenommen Die Ordinalposition des `Type`-Parameters im übergeordneten Konstruktor oder in der Methode.  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ vorgenommen Ein Wert der [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) -Enumeration, der die `Type` für den generischen Parameter beschreibt.  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ vorgenommen Ein TypeDef-oder MethodDef-Token, das den Besitzer des Parameters darstellt.  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ vorgenommen Reserviert für zukünftige Erweiterbarkeit.  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ vorgenommen Der Name des generischen Parameters.  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ in Die Größe des `wzName` Puffers.  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ vorgenommen Die zurückgegebene Größe des Namens in breit Zeichen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
