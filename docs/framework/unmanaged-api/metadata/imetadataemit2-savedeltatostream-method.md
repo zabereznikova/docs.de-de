@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 270fdecb6afbf252b7d0531cab0f18dded44298d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777120"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447875"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream-Methode
-Speichert Änderungen aus der aktuellen Sitzung mit bearbeiten und fortfahren, in den angegebenen Stream.  
+Speichert Änderungen aus der aktuellen Edit-and-Continue-Sitzung in den angegebenen Stream.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +36,17 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>Parameter  
  `pIStream`  
- [in] Ein Schnittstellenzeiger auf den schreibbaren Datenstrom an, um Änderungen zu speichern.  
+ in Ein Schnittstellen Zeiger auf den beschreibbaren Stream, in dem die Änderungen gespeichert werden sollen.  
   
  `dwSaveFlags`  
- [in] Reserviert. Dieser Wert muss 0 (null) sein.  
+ [in]: Reserviert Dieser Wert muss 0 (null) sein.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

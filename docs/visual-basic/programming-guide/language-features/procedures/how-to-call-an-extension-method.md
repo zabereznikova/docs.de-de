@@ -14,9 +14,9 @@ ms.locfileid: "74340399"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Gewusst wie: Aufrufen einer Erweiterungsmethode (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
+Erweiterungs Methoden ermöglichen Ihnen das Hinzufügen von Methoden zu einer vorhandenen Klasse. Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingefügt wurde, können Sie Sie wie eine Instanzmethode des Typs, der Sie erweitert, abrufen. Weitere Informationen zum Schreiben einer Erweiterungsmethode finden Sie unter Gewusst [wie: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md).
 
- The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
+ Die folgenden Anweisungen beziehen sich auf die Erweiterungsmethode `PrintAndPunctuate`, die die Zeichen folgen Instanz anzeigt, die diese aufruft, gefolgt von dem Wert, der für den zweiten Parameter, `punc`, gesendet wird.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-The method must be in scope when it is called.
+Die Methode muss sich im Gültigkeitsbereich befinden, wenn Sie aufgerufen wird.
 
-### <a name="to-call-an-extension-method"></a>To call an extension method
+### <a name="to-call-an-extension-method"></a>So greifen Sie auf eine Erweiterungsmethode zu
 
-1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
+1. Deklarieren Sie eine Variable, die den Datentyp des ersten Parameters der Erweiterungsmethode aufweist. Für `PrintAndPunctuate`benötigen Sie eine <xref:System.String> Variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
+2. Diese Variable Ruft die Erweiterungsmethode auf, und ihr Wert wird an den ersten Parameter, `aString`, gebunden. Mit der folgenden aufrufenden Anweisung wird `Ready?`angezeigt.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
+     Beachten Sie, dass der Aufrufen dieser Erweiterungsmethode genau wie ein Aufrufen einer der <xref:System.String> Instanzmethoden aussieht, die einen Parameter erfordern:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Declare another string variable and call the method again to see that it works with any string.
+3. Deklarieren Sie eine weitere Zeichen folgen Variable, und rufen Sie die Methode erneut auf, um zu überprüfen, ob Sie mit
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     The result this time is: `or not!!!`.
+     Das Ergebnis ist dieses Mal: `or not!!!`.
 
 ## <a name="example"></a>Beispiel
- The following code is a complete example of the creation and use of a simple extension method.
+ Der folgende Code ist ein umfassendes Beispiel für die Erstellung und Verwendung einer einfachen Erweiterungsmethode.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -99,4 +99,4 @@ End Module
 
 - [Gewusst wie: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md)
 - [Erweiterungsmethoden](./extension-methods.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Bereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

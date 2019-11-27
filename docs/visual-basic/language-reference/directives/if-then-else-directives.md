@@ -27,7 +27,7 @@ ms.locfileid: "74343815"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else-Anweisung
 
-Conditionally compiles selected blocks of Visual Basic code.
+Kompiliert bedingt ausgewählte Blöcke Visual Basic Codes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,29 +44,29 @@ Conditionally compiles selected blocks of Visual Basic code.
 #End If
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 `expression`  
-Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
+Erforderlich für `#If`-und `#ElseIf`-Anweisungen, optional an anderer Stelle. Ein beliebiger Ausdruck, der ausschließlich aus einer oder mehreren bedingten Compilerkonstanten, Literalen und Operatoren besteht, die als `True` oder `False`ausgewertet werden.
 
 `statements`  
-Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
+Erforderlich für `#If`-Anweisungsblock, optional an anderer Stelle. Visual Basic Programmzeilen oder Compilerdirektiven, die kompiliert werden, wenn der zugehörige Ausdruck zu `True`ausgewertet wird.
 
 `#End If`  
-Terminates the `#If` statement block.
+Beendet den `#If`-Anweisungsblock.
 
 ## <a name="remarks"></a>Hinweise
 
-On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
+Auf der-Oberfläche wird das Verhalten der `#If...Then...#Else` Direktiven genauso wie die der `If...Then...Else`-Anweisungen angezeigt. Die `#If...Then...#Else` Direktiven Werten jedoch aus, was vom Compiler kompiliert wird, während die `If...Then...Else` Anweisungen Bedingungen zur Laufzeit auswerten.
 
-Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
+Die bedingte Kompilierung wird normalerweise verwendet, um dasselbe Programm für verschiedene Plattformen zu kompilieren. Außerdem wird es verwendet, um zu verhindern, dass Debugcode in einer ausführbaren Datei angezeigt wird. Code, der während der bedingten Kompilierung ausgeschlossen wird, wird in der endgültigen ausführbaren Datei vollständig ausgelassen und hat daher keine Auswirkung auf die Größe oder Leistung.
 
-Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
+Unabhängig vom Ergebnis einer Auswertung werden alle Ausdrücke mithilfe von `Option Compare Binary`ausgewertet. Die `Option Compare`-Anweisung wirkt sich nicht auf Ausdrücke in `#If`-und `#ElseIf`-Anweisungen aus.
 
 > [!NOTE]
-> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
+> Es sind keine einzeiligen Formen der `#If`-, `#Else`-, `#ElseIf`-und `#End If`-Direktive vorhanden. Es kann kein anderer Code in derselben Zeile wie eine der Direktiven angezeigt werden.
 
-The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
+Die Anweisungen in einem Block für die bedingte Kompilierung müssen komplette logische Anweisungen sein. Beispielsweise können Sie die Attribute einer Funktion nicht bedingt kompilieren, Sie können die Funktion aber bedingt zusammen mit ihren Attributen deklarieren:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Beispiel
 
-This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
+In diesem Beispiel wird das `#If...Then...#Else`-Konstrukt verwendet, um zu bestimmen, ob bestimmte Anweisungen kompiliert werden.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

@@ -31,52 +31,52 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346312"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Numerische Datentypen (Visual Basic)
-Visual Basic supplies several *numeric data types* for handling numbers in various representations. *Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.  
+Visual Basic stellt mehrere *numerische Datentypen* für die Verarbeitung von Zahlen in verschiedenen Darstellungen bereit. Ganzzahlige Typen stellen nur ganze Zahlen dar (positiv, negativ und null), und *nicht* ganzzahlige *Typen stellen* Zahlen mit ganzzahligen und Bruchteilen dar.  
   
- For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Eine Tabelle, die einen parallelen Vergleich der Visual Basic-Datentypen anzeigt, finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="integral-numeric-types"></a>Integral Numeric Types  
- *Integral data types* are those that represent only numbers without fractional parts.  
+## <a name="integral-numeric-types"></a>Ganzzahlige numerische Typen  
+ Ganzzahlige *Datentypen* sind solche, die nur Zahlen ohne Bruchteile darstellen.  
   
- The *signed* integral data types are [SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit), [Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit), [Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit), and [Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit). If a variable always stores integers rather than fractional numbers, declare it as one of these types.  
+ Die [ganzzahligen](../../../../visual-basic/language-reference/data-types/integer-data-type.md) Datentypen mit Vorzeichen sind [SByte-Datentyp](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-Bit), [Short-Datentyp](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-Bit), Integer-Datentyp (32 Bit) und [Long-Datentyp](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64 Bit). Wenn eine Variable immer ganze Zahlen und keine Bruchzahlen speichert, deklarieren Sie Sie als einen dieser Typen.  
   
- The *unsigned* integral types are [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit), and [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit). If a variable contains binary data, or data of unknown nature, declare it as one of these types.  
-  
-### <a name="performance"></a>Leistung  
- Arithmetic operations are faster with integral types than with other data types. They are fastest with the `Integer` and `UInteger` types in Visual Basic.  
-  
-### <a name="large-integers"></a>Large Integers  
- If you need to hold an integer larger than the `Integer` data type can hold, you can use the `Long` data type instead. `Long` variables can hold numbers from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807. Operations with `Long` are slightly slower than with `Integer`.  
-  
- If you need even larger values, you can use the [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). You can hold numbers from -79,228,162,514,264,337,593,543,950,335 through 79,228,162,514,264,337,593,543,950,335 in a `Decimal` variable if you do not use any decimal places. However, operations with `Decimal` numbers are considerably slower than with any other numeric data type.  
-  
-### <a name="small-integers"></a>Small Integers  
- If you do not need the full range of the `Integer` data type, you can use the `Short` data type, which can hold integers from -32,768 through 32,767. For the smallest integer range, the `SByte` data type holds integers from -128 through 127. If you have a very large number of variables that hold small integers, the common language runtime can sometimes store your `Short` and `SByte` variables more efficiently and save memory consumption. However, operations with `Short` and `SByte` are somewhat slower than with `Integer`.  
-  
-### <a name="unsigned-integers"></a>Unsigned Integers  
- If you know that your variable never needs to hold a negative number, you can use the *unsigned types*`Byte`, `UShort`, `UInteger`, and `ULong`. Each of these data types can hold a positive integer twice as large as its corresponding signed type (`SByte`, `Short`, `Integer`, and `Long`). In terms of performance, each unsigned type is exactly as efficient as its corresponding signed type. In particular, `UInteger` shares with `Integer` the distinction of being the most efficient of all the elementary numeric data types.  
-  
-## <a name="nonintegral-numeric-types"></a>Nonintegral Numeric Types  
- *Nonintegral data types* are those that represent numbers with both integer and fractional parts.  
-  
- The nonintegral numeric data types are `Decimal` (128-bit fixed point), [Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit floating point), and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit floating point). They are all signed types. If a variable can contain a fraction, declare it as one of these types.  
-  
- `Decimal` is not a floating-point data type. `Decimal` numbers have a binary integer value and an integer scaling factor that specifies what portion of the value is a decimal fraction.  
-  
- You can use `Decimal` variables for money values. The advantage is the precision of the values. The `Double` data type is faster and requires less memory, but it is subject to rounding errors. The `Decimal` data type retains complete accuracy to 28 decimal places.  
-  
- Floating-point (`Single` and `Double`) numbers have larger ranges than `Decimal` numbers but can be subject to rounding errors. Floating-point types support fewer significant digits than `Decimal` but can represent values of greater magnitude.  
-  
- Nonintegral number values can be expressed as mmmEeee, in which mmm is the *mantissa* (the significant digits) and eee is the *exponent* (a power of 10). The highest positive values of the nonintegral types are 7.9228162514264337593543950335E+28 for `Decimal`, 3.4028235E+38 for `Single`, and 1.79769313486231570E+308 for `Double`.  
+ Die ganzzahligen Typen *ohne* Vorzeichen sind [Byte-Datentyp](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-Bit), [UShort-Datentyp](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-Bit), [UInteger-Datentyp](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32 Bit) und [ULong-Datentyp](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64 Bit). Wenn eine Variable Binärdaten oder Daten unbekannter Natur enthält, deklarieren Sie Sie als einen dieser Typen.  
   
 ### <a name="performance"></a>Leistung  
- `Double` is the most efficient of the fractional data types, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.  
+ Arithmetische Operationen sind bei ganzzahligen Typen schneller als bei anderen Datentypen. Sie sind am schnellsten mit den `Integer`-und `UInteger` Typen in Visual Basic.  
   
-### <a name="small-magnitudes"></a>Small Magnitudes  
- For numbers with the smallest possible magnitude (closest to 0), `Double` variables can hold numbers as small as -4.94065645841246544E-324 for negative values and 4.94065645841246544E-324 for positive values.  
+### <a name="large-integers"></a>Große ganze Zahlen  
+ Wenn Sie eine ganze Zahl speichern müssen, die größer ist als die `Integer` Datentyp enthalten kann, können Sie stattdessen den `Long`-Datentyp verwenden. `Long` Variablen können Zahlen von-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 enthalten. Vorgänge mit `Long` sind etwas langsamer als bei der `Integer`.  
   
-### <a name="small-fractional-numbers"></a>Small Fractional Numbers  
- If you do not need the full range of the `Double` data type, you can use the `Single` data type, which can hold floating-point numbers from -3.4028235E+38 through 3.4028235E+38. The smallest magnitudes for `Single` variables are -1.401298E-45 for negative values and 1.401298E-45 for positive values. If you have a very large number of variables that hold small floating-point numbers, the common language runtime can sometimes store your `Single` variables more efficiently and save memory consumption.  
+ Wenn Sie noch größere Werte benötigen, können Sie den [Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)verwenden. Sie können Zahlen von 337 bis 337 in einer `Decimal` Variablen speichern, wenn Sie keine Dezimalstellen verwenden. Vorgänge mit `Decimal` Zahlen sind jedoch deutlich langsamer als bei einem anderen numerischen Datentyp.  
+  
+### <a name="small-integers"></a>Kleine ganze Zahlen  
+ Wenn Sie nicht den vollständigen Bereich des `Integer`-Datentyps benötigen, können Sie den Datentyp `Short` verwenden, der ganzzahlige Werte von-32.768 bis 32.767 enthalten kann. Für den kleinsten ganzzahligen Bereich enthält der `SByte`-Datentyp ganze Zahlen von-128 bis 127. Wenn Sie über eine sehr große Anzahl von Variablen mit kleinen ganzen Zahlen verfügen, kann der Common Language Runtime manchmal ihre `Short` und `SByte` Variablen effizienter speichern und den Speicherverbrauch verbrauchen. Vorgänge mit `Short` und `SByte` sind jedoch etwas langsamer als mit `Integer`.  
+  
+### <a name="unsigned-integers"></a>Ganze Zahlen ohne Vorzeichen  
+ Wenn Sie wissen, dass die Variable nie eine negative Zahl enthalten muss, können Sie die *unsignierten Typen*`Byte`, `UShort`, `UInteger`und `ULong`verwenden. Jeder dieser Datentypen kann eine positive Ganzzahl doppelt so groß wie der entsprechende signierte Typ (`SByte`, `Short`, `Integer`und `Long`) enthalten. Im Hinblick auf die Leistung ist jeder nicht signierte Typ genau so effizient wie der zugehörige signierte Typ. Insbesondere `UInteger` Freigaben mit `Integer` den Unterschied zwischen allen elementaren numerischen Datentypen.  
+  
+## <a name="nonintegral-numeric-types"></a>Nicht ganzzahlige numerische Typen  
+ *Nicht integrale Datentypen* sind solche, die Zahlen mit ganzzahligen und Bruchteilen darstellen.  
+  
+ Die nicht ganzzahligen numerischen Datentypen sind `Decimal` (128-Bit-fester Punkt), [einzelner Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32 Bit Gleit Komma) und [Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-Bit Gleit Komma). Sie sind alle signierte Typen. Wenn eine Variable einen Bruchteil enthalten kann, deklarieren Sie Sie als einen dieser Typen.  
+  
+ `Decimal` ist kein Gleit Komma Datentyp. `Decimal` Zahlen haben einen binären ganzzahligen Wert und einen ganzzahligen Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimal Bruch ist.  
+  
+ Sie können `Decimal` Variablen für Money-Werte verwenden. Der Vorteil ist die Genauigkeit der Werte. Der `Double`-Datentyp ist schneller und erfordert weniger Arbeitsspeicher, aber es liegen Rundungsfehler vor. Der `Decimal`-Datentyp behält die komplette Genauigkeit bei 28 Dezimalstellen bei.  
+  
+ Gleit Komma Zahlen (`Single` und `Double`) weisen größere Bereiche auf als `Decimal` Zahlen, können jedoch Rundungsfehler unterliegen. Gleit Komma Typen unterstützen weniger signifikante Ziffern als `Decimal`, können jedoch Werte höherer Größe darstellen.  
+  
+ Nicht ganzzahlige Zahlenwerte können als mmmeeee ausgedrückt werden, wobei MMM die *Mantisse* (die signifikanten Ziffern) und Eee der *Exponent* (eine Potenz von 10) ist. Die höchsten positiven Werte der nicht ganzzahligen Typen sind 7.9228162514264337593543950335 e + 28 für `Decimal`, 3.4028235 e + 38 für `Single`und 1.79769313486231570 e + 308 für `Double`.  
+  
+### <a name="performance"></a>Leistung  
+ `Double` ist die effizienteste der Bruch Datentypen, da die Prozessoren auf aktuellen Plattformen Gleit Komma Vorgänge mit doppelter Genauigkeit ausführen. Vorgänge mit `Double` sind jedoch nicht so schnell wie bei den ganzzahligen Typen wie `Integer`.  
+  
+### <a name="small-magnitudes"></a>Kleine Größenordnungen  
+ Für Zahlen mit der kleinsten möglichen Größe (die am nächsten 0 liegt) können `Double` Variablen Zahlen wie-4.94065645841246544 e-324 für negative Werte und 4.94065645841246544 e-324 für positive Werte enthalten.  
+  
+### <a name="small-fractional-numbers"></a>Kleine Bruchzahlen  
+ Wenn Sie nicht den vollständigen Bereich des `Double`-Datentyps benötigen, können Sie den `Single`-Datentyp verwenden, der Gleit Komma Zahlen von-3.4028235 e + 38 bis 3.4028235 e + 38 enthalten kann. Die kleinsten Größen für `Single` Variablen sind- -1 401298E e-45 für negative Werte und -1 401298E e-45 für positive Werte. Wenn Sie über eine sehr große Anzahl von Variablen verfügen, die kleine Gleit Komma Zahlen enthalten, können die Common Language Runtime manchmal ihre `Single` Variablen effizienter speichern und die Arbeitsspeicher Nutzung verbrauchen.  
   
 ## <a name="see-also"></a>Siehe auch
 

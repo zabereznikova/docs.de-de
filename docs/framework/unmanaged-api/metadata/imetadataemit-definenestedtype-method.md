@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431708"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType-Methode
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+Erstellt die Metadatensignatur einer Typdefinition, gibt ein `mdTypeDef` Token für diesen Typ zurück und gibt an, dass der definierte Typ ein Member des Typs ist, auf den vom `tdEncloser`-Parameter verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,29 +40,29 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parameter  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ in Der Name des Typs in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` Attribute. Dies ist eine Bitmaske von `CorTypeAttr` Werten.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ in Das Token der Basisklasse. Dabei handelt es sich entweder um ein `mdTypeDef`-oder ein `mdTypeRef` Token.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ in Ein Array von Token, die die Schnittstellen angeben, die von dieser Klasse oder Schnittstelle implementiert werden.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ in Das Token des einschließenden Typs. Das letzte Element des Arrays muss `mdTokenNil`werden.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ vorgenommen Das zugewiesene `mdTypeDef` Token.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

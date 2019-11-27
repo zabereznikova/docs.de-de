@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442157"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler-Methode
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+Legt die Methode, auf die der angegebene `IUnknown` Zeiger verweist, als Benachrichtigungs Rückruf für die Tokenneuzuordnung fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,19 +35,19 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>Parameter  
  `pUnk`  
- [in] The handler to register.  
+ in Der zu Registrier gende Handler.  
   
 ## <a name="remarks"></a>Hinweise  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+ Die metadatenengine sendet mithilfe der von `SetHandler`bereitgestellten Methode eine Benachrichtigung an Compiler, die keine Datensätze auf optimierte Weise generieren und gespeicherte Datensätze optimieren möchten.  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ Wenn die Rückruf Methode nicht über `SetHandler`bereitgestellt wird, wird beim Speichern nur dann eine Optimierung durchgeführt, wenn mehrere Import Bereiche mithilfe `IMapToken` bei Merge für jeden Bereich zusammengeführt wurden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446340"
 ---
 # <a name="isymunmanagedscopegetlocalcount-method"></a>ISymUnmanagedScope::GetLocalCount-Methode
-Gets a count of the local variables defined within this scope.  
+Ruft die Anzahl der in diesem Bereich definierten lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,13 @@ HRESULT GetLocalCount(
   
 ## <a name="parameters"></a>Parameter  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the count of local variables.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Anzahl der lokalen Variablen empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

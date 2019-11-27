@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450359"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody-Methode
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Ruft einen Zeiger auf den Text einer Methode im MSIL-Code (Microsoft Intermediate Language) ab, beginnend bei der Kopfzeile.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,23 +37,23 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Parameter  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ in Die ID des Moduls, in dem sich die Funktion befindet.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ in Das Metadatentoken für die Methode.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ vorgenommen Ein Zeiger auf den-Header der Methode.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ vorgenommen Eine ganze Zahl, die die Größe der Methode angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ Eine Methode wird durch das Modul festgelegt, in dem Sie sich befindet. Da die `GetILFunctionBody`-Methode so konzipiert ist, dass ein Tool Zugriff auf den MSIL-Code erhält, bevor Sie von der Common Language Runtime (CLR) geladen wurde, wird das Metadatentoken der-Methode verwendet, um die gewünschte Instanz zu suchen.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody` können ein CORPROF_E_FUNCTION_NOT_IL HRESULT zurückgeben, wenn die `methodId` auf eine Methode ohne MSIL-Code (z. b. eine abstrakte Methode oder eine Platt Form Aufruf Methode (PInvoke)) verweist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

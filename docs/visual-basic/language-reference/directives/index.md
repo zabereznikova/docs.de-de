@@ -19,15 +19,15 @@ In den Themen in diesem Abschnitt werden die Visual Basic-Quellcode-Compilerdire
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [#Const Direktive](../../../visual-basic/language-reference/directives/const-directive.md) : Definieren einer Compilerkonstante  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [#ExternalSource-Direktive](../../../visual-basic/language-reference/directives/externalsource-directive.md) : gibt eine Zuordnung zwischen Quellzeilen und Text außerhalb der Quelle an.  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Then... #else Direktiven](../../../visual-basic/language-reference/directives/if-then-else-directives.md) : Kompilieren Sie ausgewählte Code Blöcke.  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [#Region Direktive](../../../visual-basic/language-reference/directives/region-directive.md) : reduzieren und Ausblenden von Code Abschnitten im Visual Studio-Editor  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable #enable** -deaktivieren und aktivieren Sie bestimmte Warnungen für Code Bereiche.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

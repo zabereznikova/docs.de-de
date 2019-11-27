@@ -21,8 +21,8 @@ ms.locfileid: "74445707"
  Dieser Abschnitt enthält ausführliche Informationen zum Implementieren von Steuerelementmustern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](expose-the-content-of-a-table-using-ui-automation.md)  
- [Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung](get-supported-ui-automation-control-patterns.md)  
- [Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung](invoke-a-control-using-ui-automation.md)  
- [Verschieben eines Benutzeroberflächenautomatisierungs-Elements](move-a-ui-automation-element.md)
+ [Expose the Content of a Table Using UI Automation](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Get Supported UI Automation Control Patterns](get-supported-ui-automation-control-patterns.md)  
+ [Get the Toggle State of a Check Box Using UI Automation](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)

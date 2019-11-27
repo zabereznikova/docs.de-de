@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447215"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps-Methode
-Gets the properties of the file with the specified metadata signature.  
+Ruft die Eigenschaften der Datei mit der angegebenen Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parameter  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ in Das `mdFile` Metadatentoken, das die Datei darstellt, für die die Eigenschaften zu erhalten sind.  
   
  `szName`  
- [out] The simple name of the file.  
+ vorgenommen Der einfache Name der Datei.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ in Die Größe `szName`in breiten Zeichen.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ vorgenommen Die Anzahl der breit Zeichen, die in `szName`tatsächlich zurückgegeben werden.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ vorgenommen Ein Zeiger auf den Hashwert. Dies ist der Hash, der den SHA-1-Algorithmus der Datei verwendet.  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ vorgenommen Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ vorgenommen Ein Zeiger auf die Flags, die die auf eine Datei angewendeten Metadaten beschreiben. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) -Werten.  
   
-## <a name="requirements"></a>Anforderungen  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440863"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2-Funktion
-Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. This function supersedes the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) function.  
+Benachrichtigt den Profiler, dass die Steuerung an eine Funktion übermittelt wird, und stellt Informationen über den Stapel Rahmen und die Funktionsargumente bereit. Diese Funktion löst die [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) -Funktion aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,40 +37,40 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="parameters"></a>Parameter  
  `funcId`  
- [in] The identifier of the function to which control is passed.  
+ in Der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.  
   
  `clientData`  
- [in] The remapped function identifier, which the profiler previously specified by using the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
+ in Der neu zugeordnete Funktions Bezeichner, den der Profiler zuvor mithilfe der [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) -Funktion angegeben hat.  
   
  `func`  
- [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
+ in Ein `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen zeigt.  
   
- The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
+ Der Profiler sollte dies als ein undurchsichtiges Handle behandeln, das an die Ausführungs-Engine in der [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) -Methode zurückgegeben werden kann.  
   
  `argumentInfo`  
- [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that specifies the locations in memory of the function's arguments.  
+ in Ein Zeiger auf eine [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) -Struktur, die die Speicherorte der Argumente der Funktion angibt.  
   
- In order to access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
+ Um auf Argument Informationen zugreifen zu können, muss das `COR_PRF_ENABLE_FUNCTION_ARGS`-Flag festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen.  
   
 ## <a name="remarks"></a>Hinweise  
- The values of the `func` and `argumentInfo` parameters are not valid after the `FunctionEnter2` function returns because the values may change or be destroyed.  
+ Die Werte der Parameter "`func`" und "`argumentInfo`" sind nicht gültig, nachdem die `FunctionEnter2` Funktion zurückgegeben wurde, da sich die Werte ändern oder gelöscht werden können.  
   
- The `FunctionEnter2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ Die `FunctionEnter2` Funktion ist ein Rückruf. Sie müssen ihn implementieren. Die-Implementierung muss das `__declspec`(`naked`)-Speicher Klassen Attribut verwenden.  
   
- The execution engine does not save any registers before calling this function.  
+ Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
   
- The implementation of `FunctionEnter2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter2` returns.  
+ Die Implementierung von `FunctionEnter2` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionEnter2` zurückgibt.  
   
- Also, the `FunctionEnter2` function must not call into managed code or in any way cause a managed memory allocation.  
+ Außerdem darf die `FunctionEnter2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   

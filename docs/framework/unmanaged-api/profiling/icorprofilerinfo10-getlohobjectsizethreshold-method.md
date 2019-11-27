@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::GetLOHObjectSizeThreshold
+title: 'ICorProfilerInfo10:: getlohobjectsizethreshold'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427022"
 ---
-# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10::GetLOHObjectSizeThreshold Method
+# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: getlohobjectsizethreshold-Methode
 
-Gets the value of the configured large object heap (LOH) threshold.
+Ruft den Wert des konfigurierten Heap-Schwellenwerts (Large Object Heap) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,22 +31,22 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 #### <a name="parameters"></a>Parameter
 
 `pThreshold` \
-[out] The large object heap threshold in bytes.
+vorgenommen Der Schwellenwert für große Objekt Heaps in Bytes.
 
 ## <a name="remarks"></a>Hinweise
 
-Objects larger than the large object heap threshold will be allocated on the large object heap. Starting with .NET Core 3.0 the large object heap threshold is configurable, `pThreshold` will contain the active large object heap threshold size in bytes.
+Objekte, die größer sind als der Schwellenwert für den großen Objekt Heap, werden auf dem großen Objekt Heap zugeordnet. Ab .net Core 3,0 ist der Schwellenwert für den großen Objekt Heap konfigurierbar, `pThreshold` den Schwellenwert für den aktiven Heap für große Objekte in Bytes enthält.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Header:** CorProf.idl, CorProf.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

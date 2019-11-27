@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345816"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (Visual Basic)
 Sie können einer vorhandenen XML-Struktur Inhalt (Elemente, Attribute, Kommentare, Verarbeitungsanweisungen, Text und CDATA) hinzufügen.  
   
 ## <a name="methods-for-adding-content"></a>Methoden zum Hinzufügen von Inhalt  
@@ -64,7 +64,7 @@ xmlTree.Add(srcTree.Element("Child9"))
 Console.WriteLine(xmlTree)  
 ```  
   
-### <a name="comments"></a>Kommentare  
+### <a name="comments"></a>Comments  
  Dieser Code erzeugt die folgende Ausgabe:  
   
 ```xml  
@@ -82,4 +82,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

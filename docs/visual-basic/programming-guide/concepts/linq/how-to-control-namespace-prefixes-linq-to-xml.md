@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: 'Gewusst wie: Steuern von Namespace Präfixen (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -15,7 +15,7 @@ In diesem Thema wird beschrieben, wie Sie Namespacepräfixe steuern können.
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Dieses Beispiel deklariert zwei Namespaces. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ Dieses Beispiel deklariert zwei Namespaces. Er gibt an, dass der `http://www.adventure-works.com` Namespace das Präfix `aw`hat und dass der `www.fourthcoffee.com` Namespace das Präfix `fc`hat.  
   
 ### <a name="code"></a>Code  
   
@@ -40,7 +40,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Kommentare  
+### <a name="comments"></a>Comments  
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
 ```xml  
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

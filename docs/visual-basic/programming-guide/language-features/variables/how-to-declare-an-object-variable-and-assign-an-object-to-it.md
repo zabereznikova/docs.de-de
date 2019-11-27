@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: 'Gewusst wie: Deklarieren einer Objektvariablen und Zuweisen eines Objekts'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,18 +14,18 @@ ms.locfileid: "74352907"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Gewusst wie: Deklarieren einer Objektvariablen und Zuweisen eines entsprechenden Objekts in Visual Basic
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+Sie deklarieren eine Variable des [Object-Datentyps](../../../../visual-basic/language-reference/data-types/object-data-type.md) , indem Sie `As Object` in einer [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)angeben. Sie weisen einer solchen Variablen ein Objekt zu, indem Sie das-Objekt nach dem Gleichheitszeichen (`=`) in einer Zuweisungsanweisung oder Initialisierungs Klausel platzieren.
 
 ## <a name="example"></a>Beispiel
 
-The following example declares an `Object` variable and assigns the current instance to it.
+Im folgenden Beispiel wird eine `Object` Variable deklariert und der aktuellen Instanz zugewiesen.
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+Sie können die Deklaration und Zuweisung kombinieren, indem Sie die Variable als Teil der Deklaration initialisieren. Das folgende Beispiel entspricht dem vorherigen Beispiel.
 
 ```vb
 Dim thisObject As Object= "This is an Object"
@@ -33,20 +33,20 @@ Dim thisObject As Object= "This is an Object"
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Für dieses Beispiel benötigen Sie Folgendes:
+Dieses Beispiel erfordert Folgendes:
 
 - Einen Verweis auf den <xref:System>-Namespace
 
-- A class, structure, or module in which to put the `Dim` statement.
+- Eine Klasse, Struktur oder ein Modul, in das die `Dim`-Anweisung eingefügt werden soll.
 
-- A procedure in which to put the assignment statement.
+- Eine Prozedur, in der die Zuweisungsanweisung eingefügt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -49,10 +49,10 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`celt` Elemente wurden zurückgegeben.|  
+|S_OK|Es wurden `celt` Elemente zurückgegeben.|  
 |S_FALSE|Es wurden weniger als `celt`-Elemente zurückgegeben, wodurch angegeben ist, dass die Enumeration abgeschlossen ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

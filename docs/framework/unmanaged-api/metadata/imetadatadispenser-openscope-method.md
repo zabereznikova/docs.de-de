@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442332"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope-Methode
-Opens an existing, on-disk file and maps its metadata into memory.  
+Öffnet eine vorhandene Datei auf dem Datenträger und ordnet Ihre Metadaten dem Arbeitsspeicher zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,34 +38,34 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Parameter  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ in Der Name der Datei, die geöffnet werden soll. Die Datei muss Common Language Runtime (CLR)-Metadaten enthalten.  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ in Ein Wert der [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) -Enumeration, mit dem der Modus (lesen, schreiben usw.) zum Öffnen angegeben wird.  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ in Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll. der Aufrufer verwendet die-Schnittstelle, um Metadaten zu importieren (lesen) oder auszugeben (schreiben).  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ Der Wert `riid` muss eine der Schnittstellen "Import" oder "ausgeben" angeben. Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 oder IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ Die in-Memory-Kopie der Metadaten kann mithilfe von Methoden einer der "Import"-Schnittstellen abgefragt oder mithilfe von Methoden aus einer der "Ausgabe"-Schnittstellen hinzugefügt werden.  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ Wenn die Zieldatei keine CLR-Metadaten enthält, kann die `OpenScope` Methode nicht ausgeführt werden.  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ Wenn in der .NET Framework Version 1,0 und Version 1,1 ein Bereich geöffnet wird, für den `dwOpenFlags` auf ofRead festgelegt ist, ist er für die Freigabe berechtigt. Das heißt, wenn bei nachfolgenden Aufrufen von `OpenScope` der Name einer zuvor geöffneten Datei übergeben wird, wird der vorhandene Bereich wieder verwendet, und es wird kein neuer Satz von Datenstrukturen erstellt. Probleme können jedoch aufgrund dieser Freigabe auftreten.  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ In der .NET Framework Version 2,0 werden Bereiche, die mit `dwOpenFlags` auf ofRead festgelegt wurden, nicht mehr freigegeben. Verwenden Sie den ofReadOnly-Wert, damit der Bereich freigegeben werden kann. Wenn ein Bereich freigegeben wird, schlagen Abfragen, die "Lese-/Schreib-Metadatenschnittstellen" verwenden, fehl.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

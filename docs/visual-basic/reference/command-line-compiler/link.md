@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335849"
 ---
-# <a name="-link-visual-basic"></a>-link (Visual Basic)
+# <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,7 +37,7 @@ oder
   
 |Begriff|Definition|  
 |---|---|  
-|`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
+|`fileList`|Erforderlich Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Option `-link` ermöglicht es Ihnen, eine Anwendung mit eingebetteten Typinformationen bereitzustellen. Die Anwendung kann dann Typen in einer Runtime-Assembly verwenden, die die eingebetteten Typinformationen implementieren, ohne dass ein Verweis auf die Runtime-Assembly erforderlich ist. Wenn verschiedene Versionen der Runtime-Assembly veröffentlicht werden, kann die Anwendung, die die eingebetteten Typinformationen enthält, mit den verschiedenen Versionen arbeiten, ohne neu kompiliert werden zu müssen. Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md).  
@@ -57,9 +57,9 @@ oder
   
 - Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
- Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
+ Verwenden Sie [-LIBPATH](libpath.md) , um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden.  
   
- Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
+ Wie die [-Reference-](reference.md) Compileroption verwendet die `-link`-Compileroption die Antwortdatei "Vbc. rsp", die auf häufig verwendete .NET Framework Assemblys verweist. Verwenden Sie die [-noconfig-](noconfig.md) Compileroption, wenn Sie nicht möchten, dass der Compiler die Datei "Vbc. rsp" verwendet.  
   
  Die Kurzform von `-link` ist `-l`.  
   
@@ -83,7 +83,7 @@ oder
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Beispiel  
- The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
+ Mit der folgenden Befehlszeile werden Quelldatei `OfficeApp.vb` und Verweisassemblys aus `COMData1.dll` kompiliert und `COMData2.dll`, um `OfficeApp.exe`zu erstellen.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Visual Basic-Befehlszeilencompiler](index.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference (Visual Basic)](reference.md)
+- [-Verweis (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

@@ -12,13 +12,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430484"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<gccpugroup >-Element
 
 Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gccpugroup >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,7 +29,7 @@ Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 
@@ -46,7 +46,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+None.
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -57,10 +57,10 @@ Keine
 
 ## <a name="remarks"></a>Hinweise
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+Wenn ein Computer über mehrere CPU-Gruppen verfügt und Server Garbage Collection aktiviert ist (siehe das [\<gcserver >](gcserver-element.md) -Element), erweitert das Aktivieren dieses Elements Garbage Collection auf alle CPU-Gruppen und übernimmt beim Erstellen und Ausgleichen von Heaps alle Kerne.
 
 > [!NOTE]
-> Dieses Element gilt nur für Garbage Collection-Threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> Dieses Element gilt nur für Garbage Collection-Threads. Damit die Laufzeit Benutzerthreads über alle CPU-Gruppen hinweg verteilen kann, müssen Sie auch das [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) -Element aktivieren.
 
 ## <a name="example"></a>Beispiel
 
@@ -79,5 +79,5 @@ Im folgenden Beispiel wird das Aktivieren der Garbage Collection für mehrere CP
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [So deaktivieren Sie die parallele Garbage Collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

@@ -15,13 +15,13 @@ ms.locfileid: "74351892"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Gewusst wie: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
 
-Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
+Da Arrays Objekte sind, können Sie Sie in Zuweisungs Anweisungen wie anderen Objekttypen verwenden. Eine Array Variable enthält einen Zeiger auf die Daten, die die Array Elemente und die Rang-und Längen Informationen bilden, und eine Zuweisung kopiert nur diesen Zeiger.
 
-### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
+### <a name="to-assign-one-array-to-another-array"></a>So weisen Sie ein Array einem anderen Array zu
 
-1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
+1. Stellen Sie sicher, dass die beiden Arrays denselben Rang (Anzahl von Dimensionen) und kompatible Element Datentypen aufweisen.
 
-2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
+2. Verwenden Sie eine Standard Zuweisungsanweisung zum Zuweisen des Quell Arrays zum Zielarray. Folgen Sie keinem der Array Namen mit Klammern.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Because arrays are objects, you can use them in assignment statements like other
     controlArray = formArray
     ```
 
-When you assign one array to another, the following rules apply:
+Wenn Sie ein Array einem anderen zuweisen, gelten die folgenden Regeln:
 
-- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
+- **Gleiche Ränge.** Der Rang (Anzahl der Dimensionen) des Zielarrays muss mit dem des Quell Arrays identisch sein.
 
-  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
+  Wenn die Ränge der beiden Arrays gleich sind, müssen die Dimensionen nicht gleich sein. Die Anzahl von Elementen in einer bestimmten Dimension kann sich während der Zuweisung ändern.
 
-- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Typen.** Beide Arrays müssen über *Verweistyp* Elemente verfügen, oder beide Arrays müssen *Werttyp* Elemente aufweisen. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
+  - Wenn beide Arrays Werttyp Elemente aufweisen, müssen die Element Datentypen exakt identisch sein. Die einzige Ausnahme besteht darin, dass Sie ein Array von `Enum` Elementen einem Array des Basistyps dieses `Enum`zuweisen können.
 
-  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
+  - Wenn beide Arrays Verweistyp Elemente aufweisen, muss der Quell Elementtyp vom Ziel Elementtyp abgeleitet werden. Wenn dies der Fall ist, haben die beiden Arrays dieselbe Vererbungs Beziehung wie ihre Elemente. Dies wird als *Array Kovarianz*bezeichnet.
 
-The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
+Der Compiler meldet einen Fehler, wenn die oben genannten Regeln verletzt werden, z. b. wenn die Datentypen nicht kompatibel sind oder die Ränge ungleich sind. Sie können dem Code Fehlerbehandlung hinzufügen, um sicherzustellen, dass die Arrays kompatibel sind, bevor Sie eine Zuweisung versuchen. Sie können auch das [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) Schlüsselwort verwenden, wenn Sie keine Ausnahme auslösen möchten.
 
 ## <a name="see-also"></a>Siehe auch
 

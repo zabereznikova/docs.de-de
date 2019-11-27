@@ -23,20 +23,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351486"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
+Gibt an, dass eine Eigenschaft oder Prozedur nicht in dieser Klasse implementiert wird und in einer abgeleiteten Klasse überschrieben werden muss, bevor Sie verwendet werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ Sie können `MustOverride` nur in einer Eigenschaft oder Prozedur Deklarations Anweisung verwenden. Die Eigenschaft oder Prozedur, die angibt, `MustOverride` muss ein Member einer Klasse sein, und die Klasse muss als [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)markiert werden.  
   
 ## <a name="rules"></a>Regeln  
   
-- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
+- **Unvollständige Deklaration.** Wenn Sie `MustOverride`angeben, geben Sie keine zusätzlichen Codezeilen für die Eigenschaft oder Prozedur an, nicht sogar für die `End Function`, `End Property`oder `End Sub` Anweisung.  
   
-- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
+- **Kombinierte modifiziererer.** Sie können `MustOverride` nicht mit `NotOverridable`, `Overridable`oder `Shared` in derselben Deklaration angeben.  
   
-- **Shadowing and Overriding.** Sowohl das Shadowing als auch das Überschreiben definieren ein geerbtes Element neu, es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Shadogerichteten und überschreiben.** Sowohl das Shadowing als auch das Überschreiben definieren ein geerbtes Element neu, es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen. Weitere Informationen finden Sie unter [shadowingin Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
+- **Alternative Begriffe.** Ein Element, das nur in einer außer Kraft Setzung verwendet werden kann, wird manchmal als *reines virtuelles* Element bezeichnet.  
   
  Der `MustOverride`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
@@ -49,8 +49,8 @@ Specifies that a property or procedure is not implemented in this class and must
 ## <a name="see-also"></a>Siehe auch
 
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Shadodown in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

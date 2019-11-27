@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344312"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Einführung in Zeichenfolgen in Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+In diesem Abschnitt werden die grundlegenden Konzepte für die Verwendung von Zeichen folgen in Visual Basic beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlagen zu Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Führt die grundlegenden Konzepte der Verwendung von Zeichen folgen und Zeichen folgen Variablen ein.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Typen von Zeichen folgen Bearbeitungsmethoden in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Bietet verschiedene Möglichkeiten, Zeichen folgen zu analysieren und zu bearbeiten.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Auswirkungen der Kultur auf Zeichen folgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Erläutert, wie Visual Basic Kultur Informationen verwendet, um Zeichen folgen Konvertierungen und Vergleiche auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch
 

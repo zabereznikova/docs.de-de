@@ -25,17 +25,17 @@ Stellt Eigenschaften und Methoden für die Arbeit mit Laufwerken, Dateien und Ve
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.FileSystem` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Weitere Informationen finden Sie unter [Dateizugriff mit Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> Sie können auch Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, um mit Laufwerken, Dateien und Verzeichnissen zu arbeiten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Klasse:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (ermöglicht den Zugriff auf <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -24,7 +24,7 @@ ms.locfileid: "74448734"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes-Methode
 
-Enumerates each type in each scope.
+Listet jeden Typ in jedem Bereich auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,24 +40,24 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>Parameter
 
 `hEnum`\
-Handle for enumerator.
+Handle für Enumerator.
 
 `dwMax`\
-Maximum number of types to retrieve.
+Maximale Anzahl der abzurufenden Typen.
 
 `aTypeDefs`\
-Receives type tokens, not to exceed `dwMax`.
+Empfängt Typtoken, ohne dass die `dwMax`überschritten wird.
 
 `pdwCount`\
-Receives actual number of type in `aTypeDefs`.
+Empfängt die tatsächliche Anzahl von Typen in `aTypeDefs`.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Returns S_OK if the method succeeds.
+Gibt S_OK zurück, wenn die Methode erfolgreich ist.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
-Requires alink.h
+Erfordert "Alink. h"
 
 ## <a name="see-also"></a>Siehe auch
 

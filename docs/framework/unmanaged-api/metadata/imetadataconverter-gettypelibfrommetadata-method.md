@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436252"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData-Methode
-Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
+Ruft einen Zeiger auf eine `ITypeLib`-Instanz ab, die die Typbibliothek mit den angegebenen Bibliotheks-und Modulnamen darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>Parameter  
  `strModule`  
- [in] The name of the type library's module.  
+ in Der Name des Moduls der Typbibliothek.  
   
  `strTlbName`  
- [in] The name of the type library.  
+ in Der Name der Typbibliothek.  
   
  `ppITL`  
- [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
+ vorgenommen Ein Zeiger auf einen Speicherort, der die Adresse der `ITypeLib` Instanz empfängt, die die Typbibliothek darstellt.  
   
-## <a name="requirements"></a>Anforderungen  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -18,8 +18,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330946"
 ---
-# <a name="-operator"></a>\\= Operator
-Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.  
+# <a name="-operator"></a>\\=-Operator
+Dividiert den Wert einer Variablen oder Eigenschaft durch den Wert eines Ausdrucks und weist das ganzzahlige Ergebnis der Variablen oder Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -27,32 +27,32 @@ Divides the value of a variable or property by the value of an expression and as
 variableorproperty \= expression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `variableorproperty`  
- Erforderlich. Any numeric variable or property.  
+ Erforderlich Eine beliebige numerische Variable oder Eigenschaft.  
   
  `expression`  
- Erforderlich. Ein beliebiger numerischer Ausdruck.  
+ Erforderlich Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Das Element auf der linken Seite des `\=` Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left  
+ Der `\=`-Operator dividiert den Wert einer Variablen oder Eigenschaft auf der linken Seite durch den Wert auf der rechten Seite und weist das ganzzahlige Ergebnis der Variablen oder der Eigenschaft auf der linken Seite zu.  
   
- For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
+ Weitere Informationen zur ganzzahligen Division finden Sie unter [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
 ## <a name="overloading"></a>Überladen  
- The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `\` operator affects the behavior of the `\=` operator. If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `\`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `\` Operators wirkt sich auf das Verhalten des `\=` Operators aus. Wenn Ihr Code `\=` in einer Klasse oder Struktur verwendet, die `\`überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.  
+ Im folgenden Beispiel wird der `\=`-Operator verwendet, um eine `Integer` Variable durch eine Sekunde zu teilen und das ganzzahlige Ergebnis der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operator \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Operator/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)

@@ -14,12 +14,12 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441818"
 ---
 # <a name="ialink-interface"></a>IALink-Schnittstelle
-Helps in constructing .NET Framework assemblies. Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.  
+Unterstützt das Erstellen von .NET Framework Assemblys. Die-Schnittstelle enthält unter anderem Methoden, die das Schreiben von Assemblymanifesten für Assemblys mit mehreren Modulen, Signieren von Assemblys mit starken Namen und das Erstellen von netmodules  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [AddFile Method](addfile-method.md)  
+ [AddFile-Methode](addfile-method.md)  
   
- [AddImport Method](addimport-method.md)  
+ [AddImport-Methode](addimport-method.md)  
   
  [CloseAssembly-Methode](closeassembly-method.md)  
   
@@ -51,7 +51,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [GetResolutionScope-Methode](getresolutionscope-method.md)  
   
- [GetScope Method](getscope-method.md)  
+ [GetScope-Methode](getscope-method.md)  
   
  [GetWin32ResBlob-Methode](getwin32resblob-method.md)  
   
@@ -61,7 +61,7 @@ Helps in constructing .NET Framework assemblies. Among other things, the interfa
   
  [ImportTypes-Methode](importtypes-method.md)  
   
- "Init Method"  
+ "Init-Methode"  
   
  [LinkResource-Methode](linkresource-method.md)  
   

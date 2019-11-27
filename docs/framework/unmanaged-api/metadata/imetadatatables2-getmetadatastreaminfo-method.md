@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426216"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo-Methode
-Gets the name, size, and contents of the metadata stream at the specified index.  
+Ruft den Namen, die Größe und den Inhalt des Metadatenstreams am angegebenen Index ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,23 +38,23 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>Parameter  
  `ix`  
- [in] The index of the requested metadata stream.  
+ in Der Index des angeforderten Metadatenstreams.  
   
  `ppchName`  
- [out] A pointer to the name of the stream.  
+ vorgenommen Ein Zeiger auf den Namen des Streams.  
   
  `ppv`  
- [out] A pointer to the metadata stream.  
+ vorgenommen Ein Zeiger auf den Metadatenstream.  
   
  `pcb`  
- [out] The size, in bytes, of `ppv`.  
+ vorgenommen Die Größe `ppv`in Byte.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,9 +14,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348577"
 ---
-# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
+# <a name="-refonly-visual-basic"></a>-Ref only (Visual Basic)
 
-The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. Der Parameter `-refonly` deaktiviert im Hintergrund die Ausgabe von PDBs, da Verweisassemblys nicht ausgeführt werden können.
+Die Option **-rebonly** gibt an, dass die primäre Ausgabe der Kompilierung eine Verweisassembly anstelle einer Implementierungsassembly sein sollte. Der Parameter `-refonly` deaktiviert im Hintergrund die Ausgabe von PDBs, da Verweisassemblys nicht ausgeführt werden können.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,7 +28,7 @@ The **-refonly** option indicates that the primary output of the compilation sho
 
 ## <a name="remarks"></a>Hinweise
 
-Visual Basic supports the `-refonly` switch starting with version 15.3.
+Visual Basic unterstützt den `-refonly` Switch ab Version 15,3.
 
 Verweisassemblys sind eine besondere Art von Assembly, die nur die Mindestmenge an Metadaten enthalten, die zum Darstellen der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie beinhalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools von Bedeutung sind, schließen aber alle Memberimplementierungen und Deklarationen privater Member aus, die keine beobachtbaren Auswirkungen auf ihren API-Vertrag haben. Weitere Informationen finden Sie unter [Verweisassemblys](../../../standard/assembly/reference-assemblies.md) im .NET-Leitfaden.
 

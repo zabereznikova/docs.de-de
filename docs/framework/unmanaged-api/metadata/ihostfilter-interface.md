@@ -22,23 +22,23 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426140"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter-Schnittstelle
-Provides a method to indicate that a specified token will be processed.  
+Stellt eine Methode bereit, mit der angegeben wird, dass ein angegebenes Token verarbeitet wird.  
   
 > [!NOTE]
-> The `IHostFilter` interface must be implemented by the client.  
+> Die `IHostFilter`-Schnittstelle muss vom Client implementiert werden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[MarkToken-Methode](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
+|[MarkToken-Methode](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Gibt an, dass das angegebene Metadatentoken verarbeitet wird.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

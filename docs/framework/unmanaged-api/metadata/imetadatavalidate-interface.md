@@ -31,12 +31,12 @@ Stellt Methoden zum Überprüfen von Metadatensignaturen bereit.
 |[ValidateMetaData-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Überprüft die Metadatensignatur der Objekte im aktuellen Metadatenbereich.|  
 |[ValidatorInit-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Setzt ein Flag, das den Typ des Moduls im aktuellen Metadatenbereich angibt, und registriert die angegebene Rückrufmethode für Überprüfungsfehler.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

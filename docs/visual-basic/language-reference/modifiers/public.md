@@ -16,24 +16,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351293"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+Gibt an, dass ein oder mehrere deklarierte Programmier Elemente über keine Zugriffs Einschränkungen verfügen.  
   
 ## <a name="remarks"></a>Hinweise  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+ Wenn Sie eine Komponente oder eine Gruppe von Komponenten veröffentlichen (z. b. eine Klassenbibliothek), möchten Sie in der Regel von jedem Code, der mit der Assembly interagiert, auf die Programmier Elemente zugreifen können. Um einen solchen uneingeschränkten Zugriff auf ein Element zu gewähren, können Sie es mit `Public`deklarieren.  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ Der öffentliche Zugriff ist die normale Ebene für ein Programmier Element, wenn Sie den Zugriff darauf nicht einschränken müssen. Beachten Sie, dass die Zugriffsebene eines Elements, das in einer Schnittstelle, einem Modul, einer Klasse oder einer Struktur deklariert ist, standardmäßig `Public`, wenn Sie es nicht anders deklarieren.  
   
 ## <a name="rules"></a>Regeln  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **Deklarations Kontext.** Sie können `Public` nur auf der Ebene "Module", "Interface" oder "Namespace" verwenden. Dies bedeutet, dass der Deklarations Kontext für ein `Public` Element eine Quelldatei, ein Namespace, eine Schnittstelle, ein Modul, eine Klasse oder eine Struktur sein muss und keine Prozedur sein muss.  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **Zugriffsebene.** Sämtlicher Code, der auf ein Modul, eine Klasse oder eine Struktur zugreifen kann, kann auf seine `Public` Elemente zugreifen.  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **Standard Zugriff.** Lokale Variablen innerhalb einer Prozedur werden standardmäßig auf den öffentlichen Zugriff fest, und Sie können keine Zugriffsmodifizierer verwenden.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Zugriffsmodifizierer** Die Schlüsselwörter für die Zugriffsebene werden als *Zugriffsmodifizierer*bezeichnet. Einen Vergleich der Zugriffsmodifizierer finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Der `Public`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
@@ -57,7 +57,7 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -72,7 +72,7 @@ Specifies that one or more declared programming elements have no access restrict
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

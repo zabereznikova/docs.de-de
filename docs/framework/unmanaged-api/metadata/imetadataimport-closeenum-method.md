@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440117"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum-Methode
-Closes the enumerator that is identified by the specified handle.  
+Schließt den Enumerator, der durch das angegebene Handle identifiziert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ void CloseEnum (
   
 ## <a name="parameters"></a>Parameter  
  `hEnum`  
- [in] The handle for the enumerator to close.  
+ in Das Handle für den Enumerator, der geschlossen werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ Das durch `hEnum` angegebene Handle wird von einem vorherigen `Enum`*namens* aufrufruf abgerufen (z. b. [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

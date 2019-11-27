@@ -18,10 +18,10 @@ Stellt den Zugriff auf Informationen über den aktuellen Benutzer bereit.
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.User` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Weitere Informationen finden Sie unter [zugreifen auf Benutzerdaten](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
-## <a name="requirements"></a>Anforderungen  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+## <a name="requirements"></a>Voraussetzungen  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

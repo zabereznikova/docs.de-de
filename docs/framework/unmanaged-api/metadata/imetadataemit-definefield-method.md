@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432544"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField-Methode
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+Erstellt eine Definition für ein Feld mit der angegebenen Metadatensignatur und ruft ein Token für diese Felddefinition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ in Das `mdTypeDef` Token für die einschließende Klasse oder Schnittstelle.  
   
  `szName`  
- [in] The field name in Unicode.  
+ in Der Feldname in Unicode.  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ in Die Feld Attribute. Dies ist eine Bitmaske von `CorFieldAttr` Werten.  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ in Die Feld Signatur als BLOB.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ in Die Anzahl der Bytes in `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ in Der `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein `CorElementType` Wert. Wenn Sie keinen konstanten Wert für das Feld definieren, verwenden Sie `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] The constant value for the field.  
+ in Der Konstante Wert für das Feld.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ in Die Größe in (Unicode)-Zeichen `pValue`.  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ vorgenommen Das zugewiesene `mdFieldDef` Token.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

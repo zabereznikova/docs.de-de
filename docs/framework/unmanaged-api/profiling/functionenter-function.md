@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440818"
 ---
 # <a name="functionenter-function"></a>FunctionEnter-Funktion
-Notifies the profiler that control is being passed to a function.  
+Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übermittelt wird.  
   
 > [!NOTE]
-> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
+> Die `FunctionEnter`-Funktion ist in der .NET Framework Version 2,0 veraltet, und ihre Verwendung führt zu einer Leistungs Einbuße. Verwenden Sie stattdessen die [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) -Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,29 +37,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parameter  
  `funcID`  
- [in] The identifier of the function to which control is passed.  
+ in Der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ Die `FunctionEnter` Funktion ist ein Rückruf. Sie müssen ihn implementieren. Die-Implementierung muss das `__declspec`(`naked`)-Speicher Klassen Attribut verwenden.  
   
- The execution engine does not save any registers before calling this function.  
+ Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
   
- The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
+ Die Implementierung von `FunctionEnter` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionEnter` zurückgibt.  
   
- Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
+ Außerdem darf die `FunctionEnter` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework Versionen:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

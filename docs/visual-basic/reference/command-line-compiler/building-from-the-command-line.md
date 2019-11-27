@@ -22,32 +22,32 @@ ms.locfileid: "74344792"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Erstellen von der Befehlszeile aus (Visual Basic)
 
-A Visual Basic project is made up of one or more separate source files. During the process known as compilation, these files are brought together into one package—a single executable file that can be run as an application.
+Ein Visual Basic Projekt besteht aus einer oder mehreren separaten Quelldateien. Während des Prozesses, der als Kompilierung bezeichnet wird, werden diese Dateien in einem Paket zusammengefasst – einer einzelnen ausführbaren Datei, die als Anwendung ausgeführt werden kann.
 
-Visual Basic provides a command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The command-line compiler is designed for situations in which you do not require the full set of features in the IDE—for example, when you are using or writing for computers with limited system memory or storage space.
+Visual Basic stellt einen Befehlszeilen Compiler als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bereit. Der Befehlszeilen Compiler ist für Situationen konzipiert, in denen Sie den vollständigen Funktions Satz in der IDE nicht benötigen – beispielsweise wenn Sie für Computer mit eingeschränktem System Arbeitsspeicher oder Speicherplatz schreiben oder schreiben.
 
-To compile source files from within the Visual Studio IDE, choose the **Build** command from the **Build** menu.
+Wenn Sie Quelldateien in der Visual Studio-IDE kompilieren möchten, wählen Sie im Menü **Erstellen** den Befehl **Build** aus.
 
 > [!TIP]
-> When you build project files by using the Visual Studio IDE, you can display information about the associated **vbc** command and its switches in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
+> Wenn Sie Projektdateien mithilfe der Visual Studio-IDE erstellen, können Sie Informationen über den zugehörigen **vbc** -Befehl und seine Switches im Ausgabefenster anzeigen. Um diese Informationen anzuzeigen, öffnen Sie das [Dialog Feld Optionen, Projekte und Projektmappen, erstellen und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **Ausführlichkeit der MSBuild-Projektbuildausgabe** auf **Normal** oder eine höhere ausführlichkeits Stufe fest. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).
 
-You can compile project (.vbproj) files at a command prompt by using MSBuild. For more information, see [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) and [Walkthrough: Using MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
+Sie können Projektdateien (. vbproj) mithilfe von MSBuild an einer Eingabeaufforderung kompilieren. Weitere Informationen finden Sie unter [Befehlszeilen Referenz](/visualstudio/msbuild/msbuild-command-line-reference) und Exemplarische Vorgehensweise [: Verwenden von MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[How to: Invoke the Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
-Describes how to invoke the command-line compiler at the MS-DOS prompt or from a specific subdirectory.
+Gewusst [wie: Aufrufen des Befehlszeilen-Compiler \](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+Beschreibt, wie der Befehlszeilen Compiler an der MS-DOS-Eingabeaufforderung oder in einem bestimmten Unterverzeichnis aufgerufen wird.
 
-[Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
-Provides a list of sample command lines that you can modify for your own use.
+[Beispiel für Kompilierungs Befehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+Enthält eine Liste mit Beispiel Befehlszeilen, die Sie für Ihre eigene Verwendung ändern können.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
 [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md) \
-Provides lists of compiler options, organized alphabetically or by purpose.
+Bietet Listen von Compileroptionen, die alphabetisch oder nach Zweck angeordnet sind.
 
-[Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
-Describes how to compile particular sections of code.
+[Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+Beschreibt, wie bestimmte Code Abschnitte kompiliert werden.
 
 [Erstellen und Bereinigen von Projekten und Projektmappen in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
-Describes how to organize what will be included in different builds, choose project properties, and ensure that projects build in the correct order.
+Beschreibt, wie Sie die in verschiedenen Builds enthaltenen Elemente organisieren, Projekteigenschaften auswählen und sicherstellen, dass Projekte in der richtigen Reihenfolge erstellt werden.

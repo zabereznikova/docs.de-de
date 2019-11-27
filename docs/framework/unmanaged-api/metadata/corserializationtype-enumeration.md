@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432875"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType-Enumeration
-Specifies how an object is serialized by the common language runtime.  
+Gibt an, wie ein Objekt vom Common Language Runtime serialisiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,31 +57,31 @@ typedef enum CorSerializationType {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Die Serialisierung des Objekts ist nicht definiert.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Das Objekt wird als boolescher Typ serialisiert.|  
+|`SERIALIZATION_TYPE_CHAR`|Das Objekt wird als Zeichentyp serialisiert.|  
+|`SERIALIZATION_TYPE_I1`|Das Objekt wird als 1-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_U1`|Das Objekt wird als 1-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_I2`|Das Objekt wird als eine ganze 2-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_U2`|Das Objekt wird als ganze 2-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_I4`|Das Objekt wird als eine ganze 4-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_U4`|Das Objekt wird als ganze 4-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_I8`|Das Objekt wird als ganze 8-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_U8`|Das Objekt wird als ganze 8-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_R4`|Das Objekt wird als 4-Byte-Gleit Komma Wert serialisiert.|  
+|`SERIALIZATION_TYPE_R8`|Das Objekt wird als 8-Byte-Gleit Komma Wert serialisiert.|  
+|`SERIALIZATION_TYPE_STRING`|Das Objekt wird als System. String-Typ serialisiert.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Das Objekt wird als eindimensionales und NULL-Array mit niedriger Grenze serialisiert.|  
+|`SERIALIZATION_TYPE_TYPE`|Das Objekt wird als generischer Typ serialisiert.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Das Objekt wird als gemarkigtes Objekt serialisiert.|  
+|`SERIALIZATION_TYPE_FIELD`|Das Objekt wird als Feld serialisiert.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Das Objekt wird als Eigenschaft serialisiert.|  
+|`SERIALIZATION_TYPE_ENUM`|Das Objekt wird als Enumeration serialisiert.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

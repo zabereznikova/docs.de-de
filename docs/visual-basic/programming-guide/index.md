@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345443"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic-Programmierhandbuch
-As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
+Wie jede moderne Programmiersprache unterstützt Visual Basic viele gängige Programmierungskonstrukte und Sprachelemente. In dieser Anleitung werden alle Hauptelemente der Programmierung mit Visual Basic beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Programmstruktur und Codekonventionen](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
+ Enthält Dokumentation über die grundlegende Struktur und die Code Konventionen von Visual Basic, z. b. Benennungs Konventionen, Kommentare im Code und Einschränkungen in Visual Basic.  
   
  [Funktionen von Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
  Bietet Links zu Themen, die wichtige Funktionen von Visual Basic vorstellen und erläutern, darunter LINQ und XML-Literale.  
@@ -28,7 +28,7 @@ As with any modern programming language, Visual Basic supports many common progr
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information about various aspects of Visual Basic programming.  
+ Enthält Referenzinformationen zu verschiedenen Aspekten der Visual Basic Programmierung.  
   
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
+ Bietet Informationen zur Verwendung des Visual Basic Befehlszeilen Compilers, der Compileroptionen und des Tools zum Aktualisieren von Schlüsselwörtern.

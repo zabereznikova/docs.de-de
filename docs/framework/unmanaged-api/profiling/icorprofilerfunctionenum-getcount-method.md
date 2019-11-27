@@ -33,9 +33,9 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [out] The number of functions that were loaded.  
+ vorgenommen Die Anzahl der Funktionen, die geladen wurden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

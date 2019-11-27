@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353075"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Gewusst wie: Debuggen von leeren Abfrageergebnis Sätzen (Visual Basic)
 
 Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.
 
@@ -17,7 +17,7 @@ Der erste Satz von Beispielen in diesem Thema zeigt eine typische Vorgehensweise
 
 Der zweite Satz von Beispielen zeigt die notwendigen Korrekturen, die durchgeführt werden müssen, damit XML in einem Namespace abgefragt werden kann.
 
-For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -54,7 +54,7 @@ End of result set
 
 Dieses Beispiel zeigt die Erstellung von XML in einem Namespace und eine Abfrage, die korrekt codiert ist.
 
-The solution is to declare and initialize a global default namespace. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.
+Die Lösung besteht darin, einen globalen Standard Namespace zu deklarieren und zu initialisieren. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -94,4 +94,4 @@ End of result set
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

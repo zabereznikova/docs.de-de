@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440437"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps-Methode
-Sets property values for the generic parameter definition referenced by the specified token.  
+Legt Eigenschaftswerte für die generische Parameterdefinition fest, auf die durch das angegebene Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,26 +39,26 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parameter  
  `gp`  
- [in] The token for the generic parameter definition for which to set values.  
+ in Das Token für die generische Parameterdefinition, für die Werte festgelegt werden sollen.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ in Ein Wert der [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) -Enumeration, der den Typ für den generischen Parameter beschreibt.  
   
  `szName`  
- [in] Optional. The name of the parameter for which to set values.  
+ [in] Optional. Der Name des Parameters, für den Werte festgelegt werden sollen.  
   
  `reserved`  
  [in] Für zukünftige Erweiterungen reserviert.  
   
  `rtkConstraints`  
- [in] Optional. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ [in] Optional. Ein mit Null endendes Array von Typeinschränkungen. Array Elemente müssen ein `mdTypeDef`-, `mdTypeRef`-oder `mdTypeSpec` Metadatentoken sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

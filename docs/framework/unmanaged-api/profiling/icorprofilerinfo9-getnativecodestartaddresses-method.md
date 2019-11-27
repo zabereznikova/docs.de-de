@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo9::GetNativeCodeStartAddresses
+title: 'ICorProfilerInfo9:: getnativecodestartadressen'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444718"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: getnativecodestartadressen-Methode
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+Listet bei Angabe von FunctionID und rejitid die Startadresse des systemeigenen Codes aller JIT-Versionen dieses Codes auf, die derzeit vorhanden sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Parameter
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+in Die ID der Funktion, deren Start Adressen für den ursprünglichen Code zurückgegeben werden sollen.
 
 `reJitId` \
 [in] Die Identität der erneut JIT-kompilierten Funktion.
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] Die maximale Größe des `codeStartAddresses`-Arrays.
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+vorgenommen Die Anzahl der verfügbaren Adressen.
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+vorgenommen Ein Array von `UINT_PTR`, von denen jedes die Startadresse für einen systemeigenen Text für die angegebene Funktion ist.
 
 ## <a name="remarks"></a>Hinweise
 
-When tiered compilation is enabled, a function may have more than one native code body.
+Wenn die mehrstufige Kompilierung aktiviert ist, kann eine Funktion mehr als einen nativen Code Körper aufweisen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Header:** CorProf.idl, CorProf.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

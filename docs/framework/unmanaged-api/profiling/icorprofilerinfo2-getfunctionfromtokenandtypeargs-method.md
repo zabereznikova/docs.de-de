@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433209"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs-Methode
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+Ruft den `FunctionID` einer Funktion mit dem angegebenen Metadatentoken, der enthaltenden Klasse und `ClassID` Werten beliebiger Typargumente ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,31 +39,31 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parameter  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ in Die ID des Moduls, in dem sich die Funktion befindet.  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ in Ein `mdMethodDef` Metadatentoken, das auf die Funktion verweist.  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ in Die ID der enthaltenden Klasse der Funktion.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ in Die Anzahl der Typparameter für die angegebene Funktion. Dieser Wert muss für nicht generische Funktionen 0 (null) sein.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ in Ein Array von `ClassID` Werten, von denen jeder ein Argument der Funktion ist. Der Wert `typeArgs` kann NULL sein, wenn `cTypeArgs` auf NULL festgelegt ist.  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ vorgenommen Ein Zeiger auf den `FunctionID` der angegebenen Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ Wenn Sie die `GetFunctionFromTokenAndTypeArgs`-Methode mit einem `mdMethodRef`-Metadaten anstelle eines `mdMethodDef` Metadatentokens aufrufen, kann dies zu unvorhersehbaren Ergebnissen führen. Aufrufer sollten die `mdMethodRef` bei der Übergabe in eine `mdMethodDef` auflösen.  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Wenn die Funktion nicht bereits geladen ist, wird beim Aufrufen von `GetFunctionFromTokenAndTypeArgs` das Laden ausgelöst. Dies ist ein gefährlicher Vorgang in vielen Kontexten. Wenn Sie diese Methode beispielsweise beim Laden von Modulen oder Typen aufrufen, kann dies zu einer Endlosschleife führen, da die Laufzeit versucht, Vorgänge zirkulär zu laden.  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ Im Allgemeinen wird die Verwendung von `GetFunctionFromTokenAndTypeArgs` davon abgeraten. Wenn Profiler an Ereignissen für eine bestimmte Funktion interessiert sind, sollten Sie die `ModuleID` und `mdMethodDef` dieser Funktion Speichern und [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) verwenden, um zu überprüfen, ob ein bestimmter `FunctionID` der der gewünschten Funktion entspricht.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

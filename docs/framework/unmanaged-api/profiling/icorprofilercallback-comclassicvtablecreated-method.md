@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445058"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated-Methode
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+Benachrichtigt den Profiler, dass eine COM-Interop-Vtable für die angegebene IID und Klasse erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,23 +37,23 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parameter  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ in Die ID der Klasse, für die die Vtable erstellt wurde.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ in Die ID der Schnittstelle, die von der-Klasse implementiert wird. Dieser Wert kann NULL sein, wenn die Schnittstelle nur intern ist.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ in Ein Zeiger auf den Anfang der vtable.  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ in Die Anzahl der Slots in der vtable.  
   
 ## <a name="remarks"></a>Hinweise  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Der Profiler sollte in seiner Implementierung dieser Methode nicht blockieren, da sich der Stapel möglicherweise nicht in einem Zustand befindet, der Garbage Collection zulässt, und daher können präemptiv Garbage Collection nicht aktiviert werden. Wenn der Profiler hier blockiert wird und Garbage Collection versucht wird, wird die Laufzeit blockiert, bis dieser Rückruf zurückgegeben wird.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Die Implementierung dieser Methode des Profilers sollte nicht in verwalteten Code oder auf irgendeine Weise eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

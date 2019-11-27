@@ -17,28 +17,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350776"
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
-A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
+Eine *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (User-Defined Type, UDT), der von früheren Versionen von Visual Basic unterstützt wird. Zusätzlich zu den Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können individuelle Zugriffsebenen für jedes Feld deklarieren.  
   
- You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
+ Sie können Datenelemente verschiedener Typen kombinieren, um eine-Struktur zu erstellen. Eine-Struktur ordnet ein oder mehrere- *Elemente* einander und der-Struktur zu. Wenn Sie eine Struktur deklarieren, wird Sie zu einem zusammen *gesetzten Datentyp*, und Sie können Variablen dieses Typs deklarieren.  
   
- Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
+ Strukturen sind nützlich, wenn eine einzelne Variable mehrere verwandte Informationen enthalten soll. Beispielsweise können Sie den Namen, die telefonerweiterung und das Gehalt eines Mitarbeiters gleichzeitig aufbewahren. Sie können für diese Informationen mehrere Variablen verwenden, oder Sie können eine Struktur definieren und für eine einzelne Mitarbeiter Variable verwenden. Der Vorteil der-Struktur wird offensichtlich, wenn Sie über viele Mitarbeiter und somit viele Instanzen der Variablen verfügen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Shows how to declare a structure and its elements.  
+ Zeigt, wie Sie eine Struktur und deren Elemente deklarieren.  
   
  [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Covers assigning a structure to a variable and accessing its elements.  
+ Umfasst das Zuweisen einer Struktur zu einer Variablen und das Zugreifen auf ihre Elemente.  
   
  [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Summarizes how structures interact with arrays, objects, procedures, and each other.  
+ Fasst zusammen, wie Strukturen mit Arrays, Objekten, Prozeduren und einander interagieren.  
   
  [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Describes the similarities and differences between structures and classes.  
+ Beschreibt die Ähnlichkeiten und Unterschiede zwischen Strukturen und Klassen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Führt die Visual Basic Datentypen ein und beschreibt, wie diese verwendet werden.  
   
  [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.
+ Listet die von Visual Basic bereitgestellten elementaren Datentypen auf.

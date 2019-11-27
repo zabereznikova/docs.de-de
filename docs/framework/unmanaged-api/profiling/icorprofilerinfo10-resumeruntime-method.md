@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::ResumeRuntime
+title: 'ICorProfilerInfo10:: resumeruntime'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449802"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10::ResumeRuntime Method
+# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: resumeruntime-Methode
 
-Resumes the runtime without performing a GC.
+Setzt die Laufzeit fort, ohne eine GC auszuführen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,16 +28,16 @@ Resumes the runtime without performing a GC.
 HRESULT ResumeRuntime();
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Header:** CorProf.idl, CorProf.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

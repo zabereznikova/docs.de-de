@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Document with Namespaces (LINQ to XML)'
+title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
@@ -18,7 +18,7 @@ In diesem Thema wird das Erstellen eines Dokuments mit Namespaces in Visual Basi
   
  Standardnamespaces und Namespaces mit einem Präfix werden mit dem `Imports`-Schlüsselwort definiert.  
   
- For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Weitere Informationen finden Sie unter [Einführung in XML-Literale in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
  Beachten Sie, dass der XML-Standardnamespace nur für Elemente, nicht aber für Attribute gültig ist. Attribute befinden sind standardmäßig nie in einem Namespace. Sie können aber ein Namespacepräfix verwenden, um ein Attribut in einen Namespace zu setzen.  
   
@@ -116,4 +116,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

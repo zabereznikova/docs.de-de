@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352896"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Gewusst wie: Entfernen aller Verweise einer Objektvariablen auf Instanzen (Visual Basic)
-You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+Sie können eine Objekt Variable von einer beliebigen Objektinstanz trennen, indem Sie Sie auf " [Nothing](../../../../visual-basic/language-reference/nothing.md)" festlegen.  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>So trennen Sie eine Objekt Variable zu einer Objektinstanz  
   
-- Set the variable to `Nothing` in an assignment statement.  
+- Legen Sie die Variable auf `Nothing` in einer Zuweisungsanweisung fest.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,10 +26,10 @@ You can disassociate an object variable from any object instance by setting it t
     ```  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
+ Wenn Ihr Code versucht, auf einen Member einer Objektvariablen zuzugreifen, die auf `Nothing`festgelegt wurde, tritt ein <xref:System.NullReferenceException> auf. Wenn Sie festgelegt haben, dass eine Objekt Variable häufig `Nothing` wird, oder wenn es möglich ist, dass die Variable nicht initialisiert ist, empfiehlt es sich, die Member-Zugriffe in einem `Try...Catch...Finally` Block zu schließen.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Wenn Sie eine Objekt Variable für Objekte verwenden, die vertrauliche oder sensible Daten enthalten, können Sie die Variable auf `Nothing` festlegen, wenn Sie nicht aktiv mit einem dieser Objekte arbeiten. Dadurch wird die Wahrscheinlichkeit verringert, dass bösartiger Code Zugriff auf die Daten erhält.  
   
 ## <a name="see-also"></a>Siehe auch
 

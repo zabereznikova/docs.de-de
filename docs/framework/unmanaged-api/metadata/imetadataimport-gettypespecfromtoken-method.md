@@ -37,23 +37,23 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>Parameter  
  `typespec`  
- [in] The TypeSpec token associated with the requested metadata signature.  
+ in Das TypeSpec-Token, das der angeforderten Metadatensignatur zugeordnet ist.  
   
  `ppvSig`  
- [out] A pointer to the binary metadata signature.  
+ vorgenommen Ein Zeiger auf die binäre Metadatensignatur.  
   
  `pcbSig`  
- [out] The size, in bytes, of the metadata signature.  
+ vorgenommen Die Größe (in Bytes) der Metadatensignatur.  
   
 ## <a name="return-value"></a>Rückgabewert  
- An HRESULT that indicates success or failure. Failures can be tested with the FAILED macro.  
+ Ein HRESULT, das den Erfolg oder Misserfolg angibt. Fehler können mit dem fehlgeschlagenen Makro getestet werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

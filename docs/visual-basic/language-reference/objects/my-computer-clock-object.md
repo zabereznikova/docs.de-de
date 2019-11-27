@@ -17,12 +17,12 @@ Stellt Eigenschaften für den Zugriff auf die aktuelle lokale Zeit und die koord
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Clock` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Clock>.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352262"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
-Specifies a required permission for the member.  
+# <a name="permission-visual-basic"></a>\<Berechtigung > (Visual Basic)
+Gibt eine erforderliche Berechtigung für den Member an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -23,18 +23,18 @@ Specifies a required permission for the member.
   
 ## <a name="parameters"></a>Parameter  
  `member`  
- Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. Enclose `member` in quotation marks (" ").  
+ Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. Schließen Sie `member` in Anführungszeichen ("") ein.  
   
  `description`  
  Eine Beschreibung des Zugriffs auf den Member  
   
 ## <a name="remarks"></a>Hinweise  
- Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
+ Verwenden Sie das `<permission>`-Tag, um den Zugriff eines Members zu dokumentieren. Verwenden Sie die <xref:System.Security.PermissionSet>-Klasse, um den Zugriff auf einen Member anzugeben.  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
+ In diesem Beispiel wird das `<permission>`-Tags verwendet, um zu beschreiben, dass die <xref:System.Security.Permissions.FileIOPermission> von der `ReadFile`-Methode benötigt wird.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

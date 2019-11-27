@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341358"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Vorgehensweise: Aufteilen einer Datei in viele Dateien mithilfe von Gruppen (LINQ) (Visual Basic)
 
 Dieses Beispiel zeigt eine Möglichkeit, den Inhalt von zwei Dateien zusammenführen und dann einen Satz von neuen Dateien zu erstellen, die die Daten auf neue Weise organisieren.
 
@@ -118,9 +118,9 @@ Das Programm schreibt eine separate Datei für jede Gruppe im gleichen Ordner wi
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ und Zeichen folgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

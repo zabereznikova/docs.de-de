@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347729"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Gewusst wie: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (Visual Basic)
 Das folgende Beispiel zeigt, wie LINQ mit Reflektion verwendet werden kann, um bestimmte Metadaten über Methoden abzurufen, die einem angegebenen Suchkriterium entsprechen. In diesem Fall findet die Abfrage die Namen aller Methoden in der Assembly, die aufzählbare Typen zurückgeben wie z.B. Arrays.  
   
 ## <a name="example"></a>Beispiel  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
-Im Beispiel wird die <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>-Methode verwendet, um ein Array von Typen in der angegebenen Assembly zurückzugeben. The [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md) filter is applied so that only public types are returned. Für jeden öffentlichen Typ wird mit dem <xref:System.Reflection.MethodInfo>-Array eine Unterabfrage generiert, die vom <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>-Aufruf zurückgegeben wird. Diese Ergebnisse werden gefiltert, damit nur die Methoden zurückgegeben werden, deren Rückgabetyp ein Array oder ein Typ ist, der <xref:System.Collections.Generic.IEnumerable%601> implementiert. Abschließend werden die Ergebnisse mithilfe des Typnamens als Schlüssel gruppiert.  
+Im Beispiel wird die <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>-Methode verwendet, um ein Array von Typen in der angegebenen Assembly zurückzugeben. Der Filter [WHERE-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md) wird angewendet, sodass nur öffentliche Typen zurückgegeben werden. Für jeden öffentlichen Typ wird mit dem <xref:System.Reflection.MethodInfo>-Array eine Unterabfrage generiert, die vom <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>-Aufruf zurückgegeben wird. Diese Ergebnisse werden gefiltert, damit nur die Methoden zurückgegeben werden, deren Rückgabetyp ein Array oder ein Typ ist, der <xref:System.Collections.Generic.IEnumerable%601> implementiert. Abschließend werden die Ergebnisse mithilfe des Typnamens als Schlüssel gruppiert.  
   
 ## <a name="see-also"></a>Siehe auch
 

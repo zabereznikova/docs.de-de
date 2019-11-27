@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428011"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable-Methode
-Definiert eine einzelne Variable im aktuellen lexikalischen Gültigkeitsbereich. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+Definiert eine einzelne Variable im aktuellen lexikalischen Gültigkeitsbereich. Diese Methode kann mehrmals für eine Variable mit demselben Namen aufgerufen werden, die über mehrere Häuser innerhalb eines Bereichs verfügt. In diesem Fall dürfen sich die Werte der Parameter "`startOffset`" und "`endOffset`" jedoch nicht überlappen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,40 +43,40 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- [in] A pointer to a `WCHAR` that defines the local variable name.  
+ in Ein Zeiger auf einen `WCHAR`, der den Namen der lokalen Variablen definiert.  
   
  `attributes`  
- [in] The local variable attributes.  
+ in Die Attribute der lokalen Variablen.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
+ in Ein-`ULONG32`, der die Größe des `signature` Puffers in Bytes angibt.  
   
  `signature`  
- [in] The local variable signature.  
+ in Die Signatur der lokalen Variablen.  
   
  `addrKind`  
- [in] The address type.  
+ in Der adrestyp.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ in Die erste Adresse für die Parameter Spezifikation.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ in Die zweite Adresse für die Parameter Spezifikation.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ in Die dritte Adresse für die Parameter Spezifikation.  
   
  `startOffset`  
- [in] The start offset for the variable. Dieser Parameter ist optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ in Der Anfangs Offset für die Variable. Dieser Parameter ist optional. Wenn der Wert 0 ist, wird dieser Parameter ignoriert, und die Variable wird im gesamten Bereich definiert. Wenn es sich um einen Wert ungleich 0 (null) handelt, fällt die Variable innerhalb der Offsets des aktuellen Gültigkeits Bereichs.  
   
  `endOffset`  
- [in] The end offset for the variable. Dieser Parameter ist optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ in Der Endoffset für die Variable. Dieser Parameter ist optional. Wenn der Wert 0 ist, wird dieser Parameter ignoriert, und die Variable wird im gesamten Bereich definiert. Wenn es sich um einen Wert ungleich 0 (null) handelt, fällt die Variable innerhalb der Offsets des aktuellen Gültigkeits Bereichs.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

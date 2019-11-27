@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438413"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder-Methode
-Adds a type forwarder for a nested type to the type table of the given assembly.  
+Fügt der Typtabelle der angegebenen Assembly eine Typweiterleitung für einen geblierten Typ hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID of the assembly to export from.  
+ Die ID der Assembly, aus der exportiert werden soll.  
   
  `FileToken`  
- File token or assembly ID of file that defines the type.  
+ Dateitoken oder Assembly-ID der Datei, die den Typ definiert.  
   
  `TypeToken`  
- Token for the type.  
+ Token für den Typ.  
   
  `ParentType`  
- Token of parent type.  
+ Token des übergeordneten Typs.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Der voll qualifizierte Typname, der exportiert werden soll.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`.  
+ `ComType` Flags, z. b. `tdPublic` oder `tdNested`.  
   
  `pType`  
- Receives token of export type. This is necessary only for emitting nested types.  
+ Empfängt das Token des Export Typs. Dies ist nur für das Ausgeben von Untertypen erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 

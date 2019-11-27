@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7ece16d8dcdc685db960a485cd19261f6b9f2fbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afd60cdf566bea459816ee890d44cc09258de516
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757592"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435947"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save-Methode
-Speichert alle Metadaten im aktuellen Bereich in die Datei an der angegebenen Adresse an.  
+Speichert alle Metadaten im aktuellen Gültigkeitsbereich in der Datei an der angegebenen Adresse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +36,17 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Parameter  
  `wzFile`  
- [in] Der Name der Datei zu speichern. Wenn dieser Wert null ist, wird der in-Memory-Kopie mit dem letzten Speicherort gespeichert, der verwendet wurde.  
+ in Der Name der Datei, in der gespeichert werden soll. Wenn dieser Wert NULL ist, wird die in-Memory-Kopie am letzten verwendeten Speicherort gespeichert.  
   
  `dwSaveFlags`  
- [in] Reserviert. NULL muss sein.  
+ [in]: Reserviert Muss 0 (null) sein.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

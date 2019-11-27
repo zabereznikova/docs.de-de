@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: Übersicht über Attribute
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -27,7 +27,7 @@ Attribute verfügen über die folgenden Eigenschaften:
 
 Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In Visual Basic ist ein Attribut in spitzen Klammern eingeschlossen (\< >). Es muss in derselben Zeile direkt vor dem Element angezeigt werden, auf das es angewendet wird.
 
-In diesem Beispiel wird das Attribut <xref:System.SerializableAttribute> benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
+In diesem Beispiel wird das <xref:System.SerializableAttribute>-Attribut benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
 
 ```vb
 <System.Serializable()> Public Class SampleClass

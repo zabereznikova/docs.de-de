@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428057"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument-Methode
-Definiert ein Quelldokument. GUIDs are provided for known languages, vendors, and document types.  
+Definiert ein Quelldokument. GUIDs werden für bekannte Sprachen, Anbieter und Dokumenttypen bereitgestellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parameter  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ in Ein Zeiger auf einen `WCHAR`, der die URL (Uniform Resource Serverlocatorpunkt) definiert, die das Dokument identifiziert.  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ in Ein Zeiger auf eine GUID, die die Dokument Sprache definiert.  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ in Ein Zeiger auf eine GUID, die die Identität des Herstellers für die Dokument Sprache definiert.  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ in Ein Zeiger auf eine GUID, die den Typ des Dokuments definiert.  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ vorgenommen Ein Zeiger auf die zurückgegebene [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) -Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

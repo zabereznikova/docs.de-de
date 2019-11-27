@@ -1,5 +1,5 @@
 ---
-title: 'How to: Iterate Through An Enumeration'
+title: 'Gewusst wie: Durchlaufen einer Enumeration'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
@@ -14,18 +14,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354023"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Gewusst wie: Durchlaufen einer Enumeration in Visual Basic
-Durch Enumerationen wird ein bequemer Weg bereitgestellt, um mit Sätzen verknüpfter Konstanten zu arbeiten, und um konstanten Werten Namen zuzuweisen. To iterate through an enumeration, you can move it into an array using the <xref:System.Enum.GetValues%2A> method. You could also iterate through an enumeration using a `For...Each` statement, using the <xref:System.Enum.GetNames%2A> or <xref:System.Enum.GetValues%2A> method to extract the string or numeric value.  
+Durch Enumerationen wird ein bequemer Weg bereitgestellt, um mit Sätzen verknüpfter Konstanten zu arbeiten, und um konstanten Werten Namen zuzuweisen. Um eine Enumeration zu durchlaufen, können Sie Sie mithilfe der <xref:System.Enum.GetValues%2A>-Methode in ein Array verschieben. Sie können auch eine Enumeration mithilfe einer `For...Each`-Anweisung durchlaufen, indem Sie die <xref:System.Enum.GetNames%2A>-oder <xref:System.Enum.GetValues%2A>-Methode verwenden, um die Zeichenfolge oder den numerischen Wert zu extrahieren.  
   
-### <a name="to-iterate-through-an-enumeration"></a>To iterate through an enumeration  
+### <a name="to-iterate-through-an-enumeration"></a>So durchlaufen Sie eine Enumeration  
   
-- Declare an array and convert the enumeration to it with the <xref:System.Enum.GetValues%2A> method before passing the array as you would any other variable. The following example displays each member of the enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> as it iterates through the enumeration.  
+- Deklarieren Sie ein Array, und konvertieren Sie die Enumeration mit der <xref:System.Enum.GetValues%2A>-Methode, bevor Sie das Array wie jede andere Variable übergeben. Im folgenden Beispiel werden die einzelnen Member der-Enumeration beim Durchlaufen der-Enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> angezeigt.  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Gewusst wie: Deklarieren einer Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Situationen für die Verwendung von Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Gewusst wie: Bestimmen der einem Enumerationswert zugeordnete Zeichenfolge](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Gewusst wie: Verweisen auf einen Enumerationsmember](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)

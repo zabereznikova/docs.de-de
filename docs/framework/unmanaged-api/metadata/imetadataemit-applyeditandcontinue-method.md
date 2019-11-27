@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432695"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue-Methode
-Updates the current assembly scope with the changes made in the specified metadata.  
+Aktualisiert den aktuellen Assemblybereich mit den Änderungen, die in den angegebenen Metadaten vorgenommen wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,16 +35,16 @@ HRESULT ApplyEditAndContinue (
   
 ## <a name="parameters"></a>Parameter  
  `pImport`  
- \[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.
+ \[in\] Zeiger auf ein [IUnknown](/cpp/atl/iunknown) -Objekt, das die Delta Metadaten aus der portablen ausführbaren Datei (PE) darstellt.
   
- The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.  
+ Die Delta Metadaten sind der Metadatenblock, der die Änderungen enthält, die an der Kopie der eigentlichen Metadaten des Moduls vorgenommen wurden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

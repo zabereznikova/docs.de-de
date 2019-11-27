@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428296"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs-Methode
-Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.  
+Ruft einen Enumerator für ein Array von MethodSpec-Token ab, das mit dem angegebenen MethodDef-oder mitgliedsverweistoken verknüpft ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,33 +39,33 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator for `rMethodSpecs`.  
+ [in, out] Ein Zeiger auf den Enumerator für `rMethodSpecs`.  
   
  `tk`  
- [in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated. If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.  
+ in Das mitgliedsverweis-oder MethodDef-Token, das die Methode darstellt, deren MethodSpec-Token aufgelistet werden sollen. Wenn der Wert von `tk` 0 (null) ist, werden alle MethodSpec-Token im Bereich aufgelistet.  
   
  `rMethodSpecs`  
- [out] The array of MethodSpec tokens to enumerate.  
+ vorgenommen Das Array von MethodSpec-Token, das aufgelistet werden soll.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rMethodSpecs`.  
+ in Die angeforderte maximale Anzahl von Token, die in `rMethodSpecs`platziert werden sollen.  
   
  `pcMethodSpecs`  
- [out] The returned number of tokens placed in `rMethodSpecs`.  
+ vorgenommen Die zurückgegebene Anzahl von Token, die in `rMethodSpecs`platziert werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcMethodSpecs` is set to 0 (zero).|  
+|`S_OK`|`EnumMethodSpecs` erfolgreich zurückgegeben.|  
+|`S_FALSE`|`phEnum` hat keine Member-Elemente. In diesem Fall wird `pcMethodSpecs` auf 0 (null) festgelegt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

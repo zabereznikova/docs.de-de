@@ -28,17 +28,17 @@ ms.locfileid: "74441080"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Steuerelementansicht|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Inhaltsansicht|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataGrid<br /><br /> <ul><li>Header (0, 1 oder 2)<br /><br /> <ul><li>HeaderItem (Anzahl von Spalten oder Zeilen)</li></ul></li><li>DataItem (0 oder mehr, kann hierarchisch strukturiert werden)</li></ul>|DataGrid<br /><br /> -   DataItem (0 or more; can be structured in hierarchy)|  
+|DataGrid<br /><br /> <ul><li>Header (0, 1 oder 2)<br /><br /> <ul><li>HeaderItem (Anzahl von Spalten oder Zeilen)</li></ul></li><li>DataItem (0 oder mehr, kann hierarchisch strukturiert werden)</li></ul>|DataGrid<br /><br /> -DataItem (0 oder mehr; kann in der Hierarchie strukturiert werden)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
- In der folgenden Tabelle werden die Eigenschaften aufgelistet, deren Werte oder Definitionen für Datenratser-Steuerelemente besonders relevant sind. For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
+ In der folgenden Tabelle werden die Eigenschaften aufgelistet, deren Werte oder Definitionen für Datenratser-Steuerelemente besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie unter [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](ui-automation-properties-for-clients.md).  
   
-|property|Wert|Notizen|  
+|Die Eigenschaften-|Wert|Hinweise|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Siehe Hinweise.|Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht auf jeden Punkt innerhalb des umschließenden Rechtecks geklickt werden kann, und Sie spezielle Treffertests ausführen, setzen Sie die Eigenschaft außer Kraft, und stellen Sie dann einen klickbaren Punkt bereit.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Siehe Hinweise.|Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht auf jeden Punkt innerhalb des umschließenden Rechtecks geklickt werden kann, und Sie spezielle Treffertests ausführen, setzen Sie einen Punkt, auf den geklickt werden kann, außer Kraft und stellen ihn anschließend bereit.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|DataGrid|Dieser Wert ist für alle Benutzeroberflächenframeworks gleich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Diese Eigenschaft muss immer den Wert „True“ haben. Dies bedeutet, dass das Datenraster-Steuerelement immer in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struktur enthalten sein muss.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Diese Eigenschaft muss immer den Wert „True“ haben. Dies bedeutet, dass das Datenraster-Steuerelement immer in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struktur enthalten sein muss.|  
@@ -48,9 +48,9 @@ ms.locfileid: "74441080"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Das Datenraster-Steuerelement ruft in der Regel den Wert für seine `Name` -Eigenschaft aus einer statischen Textbezeichnung ab. Ist keine statische Textbezeichnung vorhanden, muss ein Anwendungsentwickler einen Wert für die `Name` -Eigenschaft zuweisen. Der Wert der `Name` -Eigenschaft darf nie der Textinhalt des Bearbeitungssteuerelements sein.|  
   
 ## <a name="required-ui-automation-control-patterns"></a>Erforderliche Benutzeroberflächenautomatisierungs-Steuerelementmuster  
- In der folgenden Tabelle werden die Steuerelementmuster aufgelistet, die von allen Datenraster-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
+ In der folgenden Tabelle werden die Steuerelementmuster aufgelistet, die von allen Datenraster-Steuerelementen unterstützt werden müssen. Weitere Informationen über Steuerelementmuster finden Sie unter [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
-|Steuerelementmuster|Unterstützung|Notizen|  
+|Steuerelementmuster|Unterstützungswert|Hinweise|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|Ja|Das Datenraster-Steuerelement selbst unterstützt immer das Raster-Steuerelementmuster (Grid), da die in ihm enthaltenen Elemente Metadaten sind, die in einem Raster angeordnet sind.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Variabel|Die Möglichkeit, im Datenraster zu scrollen, hängt vom Inhalt und davon ab, ob Scrollleisten vorhanden sind.|  
@@ -71,7 +71,7 @@ ms.locfileid: "74441080"
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
  In der folgenden Tabelle sind die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse aufgelistet, die von allen Datenraster-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Notizen|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützungswert|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
 |Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
@@ -91,15 +91,15 @@ ms.locfileid: "74441080"
 ## <a name="date-grid-control-type-example"></a>Beispiel für DataGrid-Steuerelementtyp  
  Das folgende Bild zeigt ein Listenansicht-Steuerelement, für das der DataGrid-Steuerelementtyp implementiert ist.  
   
- ![Graphic of a List View control with two data items](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Grafik eines Listenansicht-Steuer Elements mit zwei Datenelementen](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  Die Steuerelementansicht und die Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, die zum Listenansicht-Steuerelement gehört, werden unten dargestellt. Die Steuerelementmuster für jedes Automatisierungselement sind in Klammern aufgeführt.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Steuerelementansicht|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Inhaltsansicht|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem „Name“ (Invoke)</li><li>HeaderItem „Änderungsdatum“ (Invoke)</li><li>HeaderItem „Größe“ (Invoke)</li></ul></li><li>Group "Contoso" (TableItem, GridItem, SelectionItem, Table*, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Group "Contoso" (TableItem, GridItem, SelectionItem, Table*, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem „Name“ (Invoke)</li><li>HeaderItem „Änderungsdatum“ (Invoke)</li><li>HeaderItem „Größe“ (Invoke)</li></ul></li><li>Gruppe "Configuration Manager" (TableItem, GridItem, SelectionItem, Tabelle *, Raster\*)<br /><br /> <ul><li>DataItem "Accounts Receivable. doc" (SelectionItem, Aufruf, TableItem\*, GridItem\*)</li><li>DataItem "Accounts bezahlbar. doc" (SelectionItem, Aufruf, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Gruppe "Configuration Manager" (TableItem, GridItem, SelectionItem, Tabelle *, Raster\*)<br /><br /> <ul><li>DataItem "Accounts Receivable. doc" (SelectionItem, Aufruf, TableItem\*, GridItem\*)</li><li>DataItem "Accounts bezahlbar. doc" (SelectionItem, Aufruf, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
- \* The previous example shows a DataGrid that contains multiple levels of controls. Das Gruppensteuerelement („Contoso“) enthält zwei Datenelement-Steuerelemente („Accounts Receivable.doc“ und „Accounts Payable.doc“). Ein DataGrid/GridItem-Paar ist unabhängig von einem Paar auf einer anderen Ebene. Die Datenelement-Steuerelemente (DataItem) unter einer Gruppe können auch, statt als einfache Datenelemente, als ListItem-Steuerelementtyp verfügbar gemacht werden, wodurch sie deutlicher als auswählbare Objekte dargestellt werden können. Dieses Beispiel enthält nicht die Unterelemente der gruppierten Datenelemente.  
+ \* im vorherigen Beispiel wird ein DataGrid-Steuerelement gezeigt, das mehrere Ebenen von Steuerelementen enthält. Das Gruppensteuerelement („Contoso“) enthält zwei Datenelement-Steuerelemente („Accounts Receivable.doc“ und „Accounts Payable.doc“). Ein DataGrid/GridItem-Paar ist unabhängig von einem Paar auf einer anderen Ebene. Die Datenelement-Steuerelemente (DataItem) unter einer Gruppe können auch, statt als einfache Datenelemente, als ListItem-Steuerelementtyp verfügbar gemacht werden, wodurch sie deutlicher als auswählbare Objekte dargestellt werden können. Dieses Beispiel enthält nicht die Unterelemente der gruppierten Datenelemente.  
   
 ## <a name="see-also"></a>Siehe auch
 

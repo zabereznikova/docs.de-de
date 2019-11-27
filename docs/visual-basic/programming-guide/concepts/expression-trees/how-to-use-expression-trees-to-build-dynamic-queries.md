@@ -9,9 +9,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344717"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Gewusst wie: Verwenden von Ausdrucks Baumstrukturen zum Erstellen dynamischer Abfragen (Visual Basic)
 
-Ausdrucksbaumstrukturen werden in LINQ dazu verwendet, strukturierte Abfragen für Datenquellen zu repräsentieren, die <xref:System.Linq.IQueryable%601> implementieren. Der LINQ-Anbieter implementiert z.B. die <xref:System.Linq.IQueryable%601>-Schnittstelle, um relationale Datenspeicher abzufragen. The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime. Anschließend kann der Abfrageanbieter die Datenstruktur der Ausdrucksbaumstruktur durchlaufen und in eine für die Datenquelle geeignete Abfragesprache übersetzen.
+Ausdrucksbaumstrukturen werden in LINQ dazu verwendet, strukturierte Abfragen für Datenquellen zu repräsentieren, die <xref:System.Linq.IQueryable%601> implementieren. Der LINQ-Anbieter implementiert z.B. die <xref:System.Linq.IQueryable%601>-Schnittstelle, um relationale Datenspeicher abzufragen. Der Visual Basic Compiler kompiliert Abfragen, die auf solche Datenquellen abzielen, in den Code, der zur Laufzeit eine Ausdrucks Baumstruktur erstellt. Anschließend kann der Abfrageanbieter die Datenstruktur der Ausdrucksbaumstruktur durchlaufen und in eine für die Datenquelle geeignete Abfragesprache übersetzen.
 
 Ausdrucksbaumstrukturen werden in LINQ außerdem dazu verwendet, Lambdaausdrücke zu repräsentieren, die Variablen den Typs <xref:System.Linq.Expressions.Expression%601> zugewiesen sind.
 
@@ -107,9 +107,9 @@ In diesem Code wird in dem an die `Queryable.Where`-Methode übergebenen Prädik
 
 - Binden Sie den System.Linq.Expressions-Namespace ein.
 
-- Copy the code from the example and paste it into the `Main` `Sub` procedure.
+- Kopieren Sie den Code aus dem Beispiel, und fügen Sie ihn in das `Main` `Sub` Prozedur ein.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Vorgehensweise: Ausführen von Ausdrucks Baumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

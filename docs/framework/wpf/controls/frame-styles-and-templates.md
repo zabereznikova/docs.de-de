@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="frame-parts"></a>Frame Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Frame>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|Der Inhalts Bereich.|  
   

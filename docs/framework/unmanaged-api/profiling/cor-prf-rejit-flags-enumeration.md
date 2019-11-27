@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450402"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS-Enumeration
-Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.  
+Enthält Werte, die angeben, wie sich die [ICorProfilerInfo10:: requestrejitwithinliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) -API Verhalten soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Mitglieder  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted methods will be blocked from being inlined in other methods. |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted. |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| Die Verwendung von rejitted-Methoden in anderen Methoden wird blockiert. |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| Empfangen Sie `GetFunctionParameters` Rückrufe für alle Methoden, die Inline-Methoden für die erneute kompizierer Anforderung angefordert haben. |  
 
-## <a name="requirements"></a>Anforderungen  
- **Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
   
  **Header:** CorProf.idl, CorProf.h  
   

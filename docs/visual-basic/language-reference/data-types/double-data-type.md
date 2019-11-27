@@ -28,34 +28,34 @@ ms.locfileid: "74344013"
 ---
 # <a name="double-data-type-visual-basic"></a>Double-Datentyp (Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+Enthält signierte IEEE 64-Bit (8-Byte)-Gleit Komma Zahlen mit doppelter Genauigkeit, die den Wert from-1.79769313486231570 e + 308 bis-4.94065645841246544 e-324 für negative Werte und von 4.94065645841246544 e-324 bis 1.79769313486231570 e + 308 für positive Werte. Zahlen mit doppelter Genauigkeit speichern eine Näherung einer reellen Zahl.
 
 ## <a name="remarks"></a>Hinweise
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+Der `Double`-Datentyp bietet die größte und kleinste mögliche Vergrößerung für eine Zahl.
 
 Der Standardwert von `Double` lautet 0.
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **Präziser.** Beachten Sie beim Arbeiten mit Gleit Komma Zahlen, dass Sie nicht immer über eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen bestimmter Vorgänge führen, wie z. b. Wert Vergleiche und der `Mod`-Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **Nachfolgende Nullen.** Die Gleit Komma Datentypen verfügen über keine interne Darstellung von nachfolgenden NULL-Zeichen. Sie unterscheiden z. b. nicht zwischen 4,2000 und 4,2. Folglich werden nachfolgende NULL-Zeichen nicht angezeigt, wenn Sie Gleit Komma Werte anzeigen oder drucken.
 
-- **Type Characters.** Durch Anhängen des Literaltypzeichens `R` an ein Literal wird der `Double`-Datentyp erzwungen. For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **Geben Sie Zeichen ein.** Durch Anhängen des Literaltypzeichens `R` an ein Literal wird der `Double`-Datentyp erzwungen. Wenn z. b. auf einen ganzzahligen Wert `R`folgt, wird der Wert in einen `Double`geändert.
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  Durch Anhängen des Typkennzeichens `#` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Double`-Datentyp erzwungen. In the following example, the variable `num` is typed as a `Double`:
+  Durch Anhängen des Typkennzeichens `#` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Double`-Datentyp erzwungen. Im folgenden Beispiel wird die Variable `num` als `Double`typisiert:
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** Der entsprechende Typ in .NET Framework ist die <xref:System.Double?displayProperty=nameWithType>-Struktur.
+- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Double?displayProperty=nameWithType>-Struktur.
 
 ## <a name="see-also"></a>Siehe auch
 

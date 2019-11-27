@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436029"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo-Methode
-Gets detailed information about an array object.  
+Ruft ausführliche Informationen zu einem Array Objekt ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,24 +38,24 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parameter  
  `objectId`  
- [in] The ID of a valid array object.  
+ in Die ID eines gültigen Array Objekts.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ in Der Rang (Anzahl der Dimensionen) des Arrays.  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ vorgenommen Ein Array, das ganze Zahlen enthält, die jeweils die Größe einer Dimension des Arrays darstellen.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ vorgenommen Ein Array, das ganze Zahlen enthält, die jeweils die untere Grenze einer Dimension des Arrays darstellen.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ vorgenommen Ein Zeiger auf die Adresse des Rohdaten Puffers für das Array, das entsprechend der C++ Konvention angeordnet ist.  
   
 ## <a name="remarks"></a>Hinweise  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ Die `pDimensionSizes` und `pDimensionLowerBounds` sind parallele Arrays, sodass die Elemente, die sich am selben Index in jedem Array befinden, Merkmale derselben Entität sind.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

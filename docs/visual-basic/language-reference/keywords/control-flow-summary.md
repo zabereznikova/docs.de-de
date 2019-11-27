@@ -16,13 +16,13 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
   
 |Aktion|Sprachelement|  
 |------------|----------------------|  
-|Branch.|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md), [On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
-|Beenden oder Anhalten eines Programms|[End](../../../visual-basic/language-reference/statements/end-statement.md), [Exit](../../../visual-basic/language-reference/statements/exit-statement.md), [Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|  
-|Loop|[Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md), [For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md), [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
-|Treffen von Entscheidungen|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md), [Select Case](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
-|Verwenden von Prozeduren|[Call](../../../visual-basic/language-reference/statements/call-statement.md), [Function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
+|Branch.|Gehe [zu](../../../visual-basic/language-reference/statements/goto-statement.md), [bei Fehler](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
+|Beenden oder Anhalten eines Programms|[Beenden](../../../visual-basic/language-reference/statements/end-statement.md), [Beenden](../../../visual-basic/language-reference/statements/exit-statement.md), [Beenden](../../../visual-basic/language-reference/statements/stop-statement.md)|  
+|Loop|[Do... Schleife](../../../visual-basic/language-reference/statements/do-loop-statement.md), [für... Als nächstes](../../../visual-basic/language-reference/statements/for-next-statement.md) [... Als nächstes](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [während... Ende](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [mit](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
+|Treffen von Entscheidungen|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [Wenn... Dann... ](../../../visual-basic/language-reference/statements/if-then-else-statement.md)Andernfalls [Select Case](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
+|Verwenden von Prozeduren|[Call,](../../../visual-basic/language-reference/statements/call-statement.md) [Function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350431"
 ---
 # <a name="let-clause-visual-basic"></a>Let-Klausel (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+Berechnet einen Wert und weist ihn einer neuen Variablen in der Abfrage zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -24,20 +24,20 @@ Computes a value and assigns it to a new variable within the query.
 Let variable = expression [, ...]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`variable`|Erforderlich. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|Erforderlich. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|Erforderlich Ein Alias, der zum Verweisen auf die Ergebnisse des angegebenen Ausdrucks verwendet werden kann.|  
+|`expression`|Erforderlich Ein Ausdruck, der ausgewertet und der angegebenen Variablen zugewiesen wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+ Mit der `Let`-Klausel können Sie Werte für jedes Abfrageergebnis berechnen und mithilfe eines Alias referenzieren. Der Alias kann in anderen Klauseln verwendet werden, z. b. in der `Where`-Klausel. Mit der `Let`-Klausel können Sie eine Abfrage Anweisung erstellen, die leichter lesbar ist, da Sie einen Alias für eine in der Abfrage enthaltene Ausdrucks Klausel angeben und bei jeder Verwendung der Expression-Klausel den Alias ersetzen können.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ Sie können eine beliebige Anzahl von `variable`-und `expression` Zuweisungen in die `Let`-Klausel einschließen. Trennen Sie jede Zuweisung durch ein Komma (,).  
   
 ## <a name="example"></a>Beispiel  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ Im folgenden Codebeispiel wird die `Let`-Klausel verwendet, um einen Rabatt von 10% auf Produkte zu berechnen.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

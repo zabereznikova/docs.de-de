@@ -28,7 +28,7 @@ Gibt die Anzahl von Heaps/Threads an, die für Server Garbage Collection verwend
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 

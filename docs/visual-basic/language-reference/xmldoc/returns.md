@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352245"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<gibt > (Visual Basic) zurück.
+Gibt den Rückgabewert der Eigenschaft oder Funktion an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,12 +26,12 @@ Specifies the return value of the property or function.
  Eine Beschreibung des Rückgabewerts.  
   
 ## <a name="remarks"></a>Hinweise  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+ Verwenden Sie das `<returns>`-Tag im Kommentar für eine Methoden Deklaration, um den Rückgabewert zu beschreiben.  
   
  Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ In diesem Beispiel wird das `<returns>`-Tag verwendet, um die Rückgabe der `DoesRecordExist`-Funktion zu erläutern.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

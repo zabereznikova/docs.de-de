@@ -38,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ vorgenommen Das Array, das zum Speichern der mitgliedungstokentoken verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMethods`-Arrays.  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ vorgenommen Die Anzahl der in `rMethods`zurückgegebenen mitgliedungstokentoken.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumUnresolvedMethods` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+ Eine nicht aufgelöste Methode ist eine Methode, die deklariert, aber nicht implementiert wurde. Eine-Methode ist in der-Enumeration enthalten, wenn die-Methode als `miForwardRef` gekennzeichnet ist und entweder `mdPinvokeImpl` oder `miRuntime` auf 0 (null) festgelegt ist. Anders ausgedrückt: eine nicht aufgelöste Methode ist eine Klassenmethode, die als `miForwardRef` gekennzeichnet ist, aber nicht in nicht verwaltetem Code (über PInvoke erreicht) implementiert ist und nicht intern von der Laufzeit selbst implementiert wird.  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ Die-Enumeration schließt alle Methoden aus, die entweder im Modul Bereich (Globals) oder in Schnittstellen oder abstrakten Klassen definiert sind.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

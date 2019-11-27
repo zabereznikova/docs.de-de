@@ -14,22 +14,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351525"
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
-Specifies that a function or `Get` accessor is an iterator.  
+Gibt an, dass eine Funktion oder ein `Get` Accessor ein Iterator ist.  
   
 ## <a name="remarks"></a>Hinweise  
- An *iterator* performs a custom iteration over a collection. An iterator uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element in the collection one at a time. When a `Yield` statement is reached, the current location in code is retained. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
+ Ein *Iterator* führt eine benutzerdefinierte iterierung für eine Auflistung aus. Ein Iterator verwendet die [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) -Anweisung, um jedes Element in der Auflistung einzeln zurückzugeben. Wenn eine `Yield`-Anweisung erreicht wird, wird die aktuelle Position im Code beibehalten. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
   
- An iterator can be implemented as a function or as a `Get` accessor of a property definition. The `Iterator` modifier appears in the declaration of the iterator function or `Get` accessor.  
+ Ein Iterator kann als Funktion oder als `Get`-Accessor einer Eigenschafts Definition implementiert werden. Der `Iterator`-Modifizierer wird in der Deklaration der Iteratorfunktion oder `Get` Zugriffsmethode angezeigt.  
   
- You call an iterator from client code by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ Sie verwenden einen Iterator aus dem Client Code, indem Sie eine [for each-... Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- The return type of an iterator function or `Get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
+ Der Rückgabetyp einer Iteratorfunktion oder eines `Get` Accessor kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>oder <xref:System.Collections.Generic.IEnumerator%601>sein.  
   
- An iterator cannot have any `ByRef` parameters.  
+ Ein Iterator kann keine `ByRef` Parameter aufweisen.  
   
  Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Destruktor vorkommen.  
   
- An iterator can be an anonymous function. Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
+ Ein Iterator kann eine anonyme Funktion sein. Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Verwendung  
  Der `Iterator`-Modifizierer kann in folgenden Kontexten verwendet werden:  
@@ -39,16 +39,16 @@ Specifies that a function or `Get` accessor is an iterator.
 - [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Beispiel  
- The following example demonstrates an iterator function. The iterator function has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. Jeder Aufruf der Iteratorfunktion führt bei der nächsten Iteration der `Yield`-Schleife zur nächsten Ausführung der `For…Next`-Anweisung.  
+ Im folgenden Beispiel wird eine Iteratorfunktion veranschaulicht. Die Iteratorfunktion verfügt über eine `Yield`-Anweisung, die sich innerhalb einer [for... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. Jede Iterationen des " [for each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) "-Anweisungs Texts in `Main` erstellt einen aufzurufenden `Power` Iteratorfunktion. Jeder Aufruf der Iteratorfunktion führt bei der nächsten Iteration der `Yield`-Schleife zur nächsten Ausführung der `For…Next`-Anweisung.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt einen `Get`-Accessor, der ein Iterator ist. The `Iterator` modifier is in the property declaration.  
+ Das folgende Beispiel zeigt einen `Get`-Accessor, der ein Iterator ist. Der `Iterator` Modifizierer befindet sich in der Eigenschafts Deklaration.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ Weitere Beispiele finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -292,7 +292,7 @@ Der [Ordner Komponententests](https://github.com/dotnet/corefx/blob/master/src/S
 * `List<T>` Konverter, der externe Daten annimmt
 * `Long[]` Konverter, der mit einer durch Trennzeichen getrennten Liste von Zahlen funktioniert. 
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 * [Übersicht über System. Text. JSON](system-text-json-overview.md)
 * [System. Text. JSON-API-Referenz](xref:System.Text.Json)

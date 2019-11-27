@@ -35,21 +35,21 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Mitglieder  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|Major|Major version build number.|  
-|Minor|Minor version build number.|  
-|Sub|Sub-build number.|  
-|Build|Build number.|  
+|Major|Buildnummer der Hauptversion.|  
+|„Kleinere Änderung“|Buildnummer der neben Version.|  
+|Abonnement|Subbuildnummer.|  
+|Erstellen|Buildnummer.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

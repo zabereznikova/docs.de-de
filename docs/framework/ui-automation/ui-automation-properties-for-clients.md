@@ -27,15 +27,15 @@ ms.locfileid: "74441361"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften sind schreibgeschützt. Um Eigenschaften eines Steuerelements festzulegen, müssen Sie die Methoden des entsprechenden Steuerelementmusters verwenden. Verwenden Sie z. B. <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> , um die Positionswerte eines Bildlauffensters zu ändern.  
   
- Um die Leistung zu verbessern, können Eigenschaftswerte von Steuerelementen und Steuerelementmustern zwischengespeichert werden, wenn <xref:System.Windows.Automation.AutomationElement> -Objekte abgerufen werden. For more information, see [Caching in UI Automation Clients](caching-in-ui-automation-clients.md).  
+ Um die Leistung zu verbessern, können Eigenschaftswerte von Steuerelementen und Steuerelementmustern zwischengespeichert werden, wenn <xref:System.Windows.Automation.AutomationElement> -Objekte abgerufen werden. Weitere Informationen finden Sie unter [Caching in Benutzeroberflächenautomatisierungs-Clients](caching-in-ui-automation-clients.md).  
   
 ## <a name="property-ids"></a>Eigenschaften-IDs  
- Property identifiers (IDs) are unique, constant values that are encapsulated in <xref:System.Windows.Automation.AutomationProperty> objects. UI Automation client applications get these IDs from the <xref:System.Windows.Automation.AutomationElement> class or from the appropriate control pattern class, such as <xref:System.Windows.Automation.ScrollPattern>. Benutzeroberflächenautomatisierungs-Anbieter rufen sie aus <xref:System.Windows.Automation.AutomationElementIdentifiers> oder aus einer der Klassen von Steuerelementmuster-IDs ab, z. B. aus <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+ Eigenschafts Bezeichner (IDs) sind eindeutige, Konstante Werte, die in <xref:System.Windows.Automation.AutomationProperty>-Objekten gekapselt sind. Benutzeroberflächenautomatisierungs-Client Anwendungen erhalten diese IDs von der <xref:System.Windows.Automation.AutomationElement>-Klasse oder von der entsprechenden Steuerelement Muster Klasse, z. b. <xref:System.Windows.Automation.ScrollPattern>. Benutzeroberflächenautomatisierungs-Anbieter rufen sie aus <xref:System.Windows.Automation.AutomationElementIdentifiers> oder aus einer der Klassen von Steuerelementmuster-IDs ab, z. B. aus <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
  Die numerische <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> einer <xref:System.Windows.Automation.AutomationProperty> wird von Anbietern zum Identifizieren von Eigenschaften verwendet, die in der <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> -Methode abgefragt werden. Im Allgemeinen müssen Clientanwendungen die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>nicht prüfen. Der <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> wird nur zum Debuggen und für Diagnosezwecke verwendet.  
   
 ## <a name="property-conditions"></a>Eigenschaftsbedingungen  
- The property IDs are used in constructing <xref:System.Windows.Automation.PropertyCondition> objects used to find <xref:System.Windows.Automation.AutomationElement> objects. Sie möchten z. B. ein <xref:System.Windows.Automation.AutomationElement> mit einem bestimmten Namen oder alle aktivierten Steuerelemente suchen. Jede <xref:System.Windows.Automation.PropertyCondition> gibt eine <xref:System.Windows.Automation.AutomationProperty> -ID und den Wert an, mit dem die Eigenschaft übereinstimmen muss.  
+ Die Eigenschaften-IDs werden zum Erstellen von <xref:System.Windows.Automation.PropertyCondition> Objekten verwendet, die für die Suche nach <xref:System.Windows.Automation.AutomationElement> Objekten verwendet werden. Sie möchten z. B. ein <xref:System.Windows.Automation.AutomationElement> mit einem bestimmten Namen oder alle aktivierten Steuerelemente suchen. Jede <xref:System.Windows.Automation.PropertyCondition> gibt eine <xref:System.Windows.Automation.AutomationProperty> -ID und den Wert an, mit dem die Eigenschaft übereinstimmen muss.  
   
  Weitere Informationen finden Sie unter den folgenden Referenzthemen:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "74441361"
 ## <a name="additional-automationelement-properties"></a>Zusätzliche AutomationElement-Eigenschaften  
  Neben der <xref:System.Windows.Automation.AutomationElement.Current%2A> -Eigenschaftenstruktur und der <xref:System.Windows.Automation.AutomationElement.Cached%2A> -Eigenschaftenstruktur besitzt <xref:System.Windows.Automation.AutomationElement> die folgenden Eigenschaften, die über einfache Eigenschaftenaccessoren abgerufen werden.  
   
-|property|Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|Eine Auflistung von untergeordneten <xref:System.Windows.Automation.AutomationElement> -Objekten im Cache.|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|Ein übergeordnetes <xref:System.Windows.Automation.AutomationElement> -Objekt im Cache.|  
@@ -99,6 +99,6 @@ ms.locfileid: "74441361"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](caching-in-ui-automation-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
 - [Server-Side UI Automation Provider Implementation](server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
 - [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](subscribe-to-ui-automation-events.md)

@@ -9,13 +9,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344499"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
-This topic shows how to create an XML tree in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysieren einer Zeichenfolge (Visual Basic)
+In diesem Thema wird gezeigt, wie eine XML- C#Struktur in erstellt wird.  
   
 ## <a name="example"></a>Beispiel  
- You can parse a string in Visual Basic by using the `XElement.Parse` method. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
+ Sie können eine Zeichenfolge in Visual Basic analysieren, indem Sie die `XElement.Parse`-Methode verwenden. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
   
- By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
+ Mithilfe von XML-Literalen können Sie den XML-Code einfach kopieren und in das Visual Basic Programm einfügen.  
   
 > [!NOTE]
 > Das Analysieren von Text oder das Laden eines XML-Dokuments aus einer Textdatei ist weniger effizient als die funktionale Konstruktion. Wenn Sie eine XML-Struktur aus Code initialisieren, verbraucht die funktionale Konstruktion weniger Verarbeitungszeit als das Analysieren des Textes.  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353468"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Functional Construction (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>Funktionale Konstruktion (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet mit der *funktionalen Konstruktion* eine leistungsfähige Möglichkeit zur Erstellung von XML-Elementen. Funktionale Konstruktion ist die Fähigkeit, eine XML-Struktur in einer einzelnen Anweisung zu erstellen.  
   
  Es gibt mehrere wichtige Features der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Programmierschnittstelle, die für die funktionale Konstruktion verantwortlich sind:  
@@ -20,9 +20,9 @@ ms.locfileid: "74353468"
   
 - Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XElement>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Dies ist wichtig, da Sie auf diese Weise die Ergebnisse einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage an den Konstruktor übergeben können.  
   
- Im Folgenden finden Sie ein Beispiel dazu:  
+ Hier ein Beispiel:  
   
- These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:  
+ Diese Funktionen ermöglichen Ihnen das Schreiben von Code mithilfe von XML-Literalen zum Erstellen einer XML-Struktur und das Schreiben von Code, der die Ergebnisse [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen verwendet, wenn Sie eine XML-Struktur erstellen:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -58,4 +58,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

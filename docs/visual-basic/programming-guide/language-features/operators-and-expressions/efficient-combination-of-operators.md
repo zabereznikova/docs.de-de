@@ -21,36 +21,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348993"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Effiziente Kombination von Operatoren (Visual Basic)
-Complex expressions can contain many different operators. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+Komplexe Ausdrücke können viele verschiedene Operatoren enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Creating complex expressions such as the one in the preceding example requires a thorough understanding of the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ Das Erstellen komplexer Ausdrücke, wie z. b. der im vorherigen Beispiel, erfordert ein umfassendes Verständnis der Regeln der Operator Rangfolge. Weitere Informationen finden Sie unter [Operator Rangfolge in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- Often you want operations to proceed in a different order from that determined by operator precedence. Betrachten Sie das folgende Beispiel.  
+## <a name="parenthetical-expressions"></a>Klammer Ausdrücke  
+ Häufig möchten Sie, dass Vorgänge in einer anderen Reihenfolge ausgeführt werden, die von der Operator Rangfolge bestimmt wird. Betrachten Sie das folgende Beispiel.  
   
  `x = z * y + 4`  
   
- The preceding example multiplies `z` by `y`, then adds the result to `4`. But if you want to add `y` and `4` before multiplying the result by `z`, you can override normal operator precedence by using parentheses. By enclosing an expression in parentheses, you force that expression to be evaluated first, regardless of operator precedence. To force the preceding example to do the addition first, you could rewrite it as in the following example.  
+ Im vorherigen Beispiel wird `z` mit `y`multipliziert und das Ergebnis dann `4`hinzugefügt. Wenn Sie jedoch `y` und `4` hinzufügen möchten, bevor Sie das Ergebnis mit `z`multiplizieren, können Sie die normale Operator Rangfolge mithilfe von Klammern überschreiben. Wenn Sie einen Ausdruck in Klammern einschließen, erzwingen Sie, dass dieser Ausdruck unabhängig von der Operator Rangfolge zuerst ausgewertet wird. Um das vorangehende Beispiel zu erzwingen, müssen Sie es wie im folgenden Beispiel neu schreiben.  
   
  `x = z * (y + 4)`  
   
- The preceding example adds `y` and `4`, then multiplies that sum by `z`.  
+ Im vorangehenden Beispiel werden `y` und `4`hinzugefügt. Anschließend wird diese Summe mit `z`multipliziert.  
   
-### <a name="nested-parenthetical-expressions"></a>Nested Parenthetical Expressions  
- You can nest expressions in multiple levels of parentheses to override precedence even further. The expressions most deeply nested in parentheses are evaluated first, followed by the next most deeply nested, and so on to the least deeply nested, and finally the expressions outside parentheses. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+### <a name="nested-parenthetical-expressions"></a>Eingeklamlierte Klammer Ausdrücke  
+ Sie können Ausdrücke in mehreren Ebenen von Klammern schachteln, um die Rangfolge noch weiter zu überschreiben. Die Ausdrücke, die in Klammern am tiefsten geschachtelt sind, werden zuerst ausgewertet, gefolgt von der nächst tiefen geschachtelten, usw. bis zu der am wenigsten tief geschachtelten und schließlich den Ausdrücken außerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- In the preceding example, `z + 2` is evaluated first, then the other parenthetical expressions. Exponentiation, which normally has higher precedence than addition or multiplication, is evaluated last in this example because the other expressions are enclosed in parentheses.  
+ Im vorherigen Beispiel wird `z + 2` zuerst ausgewertet, dann die anderen Klammer Ausdrücke. Die exponentiierung, bei der normalerweise eine höhere Rangfolge als Addition oder Multiplikation fest steht, wird in diesem Beispiel zuletzt ausgewertet, da die anderen Ausdrücke in Klammern eingeschlossen werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Arithmetische Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Vergleichs Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logische/bitweise Operatoren (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Boolesche Ausdrücke](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Wertvergleiche](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Gewusst wie: Berechnen von numerischen Werten](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)

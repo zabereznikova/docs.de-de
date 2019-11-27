@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335390"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals-Klausel (Visual Basic)
-Compares keys from collections being joined.  
+Vergleicht Schlüssel von Auflistungen, die verknüpft werden.  
   
 ## <a name="remarks"></a>Hinweise  
- The `Equals` keyword is used in the following contexts:  
+ Das `Equals`-Schlüsselwort wird in den folgenden Kontexten verwendet:  
   
  [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -25,4 +25,4 @@ Compares keys from collections being joined.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

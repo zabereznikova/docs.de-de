@@ -18,14 +18,14 @@ ms.locfileid: "74441506"
   
  In diesem Thema wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Ereignisse von Benutzeroberflächenautomatisierungs-Clients verwendet werden.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht es Clients, Ereignisse zu abonnieren. Diese Fähigkeit verbessert die Leistung, weil es nicht mehr erforderlich ist, alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elemente im System ständig daraufhin abzufragen, ob sich eine Information, eine Struktur oder ein Zustand geändert hat.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht Clients das Abonnieren von Ereignissen, die von Interesse sind. Diese Fähigkeit verbessert die Leistung, weil es nicht mehr erforderlich ist, alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elemente im System ständig daraufhin abzufragen, ob sich eine Information, eine Struktur oder ein Zustand geändert hat.  
   
  Die Effizienz wird auch durch die Möglichkeit verbessert, Ereignissen nur innerhalb eines definierten Umfangs zu lauschen. Beispielsweise kann ein Client den Fokusänderungsereignisse aller [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Elemente in der Struktur oder nur einem Element und dessen Nachfolgerelementen lauschen.  
   
 > [!NOTE]
 > Gehen Sie nicht davon aus, dass alle möglichen Ereignisse von einem [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Anbieter ausgelöst werden. Beispielsweise werden nicht bei allen Eigenschaftenänderungen Ereignisse von den Standardproxyanbietern für [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]- oder [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]-Steuerelemente ausgelöst.  
   
- For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
+ Einen umfassenderen Überblick über [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ereignisse finden Sie unter [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Abonnieren von Ereignissen  
@@ -55,11 +55,11 @@ ms.locfileid: "74441506"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Hebt die Registrierung eines Ereignishandlers auf, der mit <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> registriert wurde.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Hebt die Registrierung aller registrierten Ereignishandler auf.|  
   
- For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ Beispielcode finden Sie unter [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](subscribe-to-ui-automation-events.md)
 - [Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse](ui-automation-events-overview.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften](ui-automation-properties-overview.md)
-- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

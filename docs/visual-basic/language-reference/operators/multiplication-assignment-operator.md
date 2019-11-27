@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349788"
 ---
 # <a name="-operator-visual-basic"></a>*=-Operator (Visual Basic)
-Multiplies the value of a variable or property by the value of an expression and assigns the result to the variable or property.  
+Multipliziert den Wert einer Variablen oder Eigenschaft mit dem Wert eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,23 +26,23 @@ Multiplies the value of a variable or property by the value of an expression and
 variableorproperty *= expression  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `variableorproperty`  
- Erforderlich. Any numeric variable or property.  
+ Erforderlich Eine beliebige numerische Variable oder Eigenschaft.  
   
  `expression`  
- Erforderlich. Ein beliebiger numerischer Ausdruck.  
+ Erforderlich Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- The element on the left side of the `*=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Das Element auf der linken Seite des `*=` Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- The `*=` operator first multiplies the value of the expression (on the right-hand side of the operator) by the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
+ Der `*=` Operator multipliziert zuerst den Wert des Ausdrucks (auf der rechten Seite des Operators) mit dem Wert der Variablen oder der Eigenschaft (auf der linken Seite des Operators). Der-Operator weist dann das Ergebnis dieses Vorgangs der Variablen oder der Eigenschaft zu.  
   
 ## <a name="overloading"></a>Überladen  
- The [* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `*` operator affects the behavior of the `*=` operator. If your code uses `*=` on a class or structure that overloads `*`, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [Operator *](../../../visual-basic/language-reference/operators/multiplication-operator.md) kann *überladen*werden. das bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `*` Operators wirkt sich auf das Verhalten des `*=` Operators aus. Wenn Ihr Code `*=` in einer Klasse oder Struktur verwendet, die `*`überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `*=` operator to multiply one `Integer` variable by a second and assign the result to the first variable.  
+ Im folgenden Beispiel wird der `*=`-Operator verwendet, um eine `Integer` Variable durch eine Sekunde zu multiplizieren und das Ergebnis der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   

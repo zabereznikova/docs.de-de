@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427816"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint-Methode
-Specifies the user-defined method that is the entry point for this module. For example, this entry point could be the user's main method instead of compiler-generated stubs before main.  
+Gibt die benutzerdefinierte Methode an, die der Einstiegspunkt für dieses Modul ist. Dieser Einstiegspunkt kann z. b. die Hauptmethode des Benutzers anstelle der vom Compiler generierten Stub vor "Main" sein.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,13 @@ HRESULT SetUserEntryPoint(
   
 ## <a name="parameters"></a>Parameter  
  `entryMethod`  
- [in] The metadata token for the method that is the user entry point.  
+ in Das Metadatentoken für die Methode, die der Benutzer Einstiegspunkt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

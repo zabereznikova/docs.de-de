@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442989"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads-Methode
-Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.  
+Gibt einen Enumerator zurück, der Methoden zum sequenziellen durchlaufen der Auflistung aller verwalteten Threads im Profil Erstellungs Prozess bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,11 +34,11 @@ HRESULT EnumThreads([out]
   
 ## <a name="parameters"></a>Parameter  
  `ppEnum`  
- [out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.  
+ vorgenommen Ein Zeiger auf eine [icorprofilerthreaderum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) -Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347146"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projizieren von XML in eine andere Form (Visual Basic)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  
   
  Viele typische XML-Transformationen bestehen aus verketteten Abfragen. Dies trifft auch auf dieses Beispiel zu. Üblicherweise wird mit einer bestimmten Form von XML begonnen, die Zwischenergebnisse werden als Auflistungen anonymer Typen oder benannter Typen projiziert und zum Schluss werden die Ergebnisse zurück in XML projiziert, das eine vollkommen andere Form als das Quell-XML besitzt.  
@@ -17,7 +17,7 @@ In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere 
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem identifiziert es die Formatvorlage und den Text der einzelnen Absätze. Schließlich projiziert das Beispiel XML mit einer anderen Form. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf. Die neue Anweisung, die die Projektion ausführt, wird im Code unten durch entsprechende Kommentare gekennzeichnet.  
   
- For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel finden Sie unter [Erstellen des Quell-Office Open-XML-Dokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel werden Sie eine Abfrage erstellen, die sämtlichen Text in einem Word-Dokument ermittelt:  
   
-- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Suchen von Text in Word-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

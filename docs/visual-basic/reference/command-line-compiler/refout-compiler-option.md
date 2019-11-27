@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348656"
 ---
-# <a name="-refout-visual-basic"></a>-refout (Visual Basic)
+# <a name="-refout-visual-basic"></a>-reout (Visual Basic)
 
 Die Option **-refout** gibt einen Dateipfad an, an den die Verweisassembly ausgegeben werden soll.
 
@@ -29,11 +29,11 @@ Die Option **-refout** gibt einen Dateipfad an, an den die Verweisassembly ausge
 ## <a name="arguments"></a>Argumente
 
 `filepath`  
-The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. Die empfohlene Konvention (von MSBuild verwendet) ist die, die Verweisassembly in einem „ref/“-Unterordner zu platzieren, der relativ zur primären Assembly ist. All folders in `filepath` must exist; the compiler does not create them.
+Der Pfad und der Dateiname der Verweisassembly. Er sollte sich in der Regel in einem Unterordner der primären Assembly befinden. Die empfohlene Konvention (von MSBuild verwendet) ist die, die Verweisassembly in einem „ref/“-Unterordner zu platzieren, der relativ zur primären Assembly ist. Alle Ordner in `filepath` müssen vorhanden sein. der Compiler erstellt diese nicht.
 
 ## <a name="remarks"></a>Hinweise
 
-Visual Basic supports the `-refout` switch starting with version 15.3.
+Visual Basic unterstützt den `-refout` Switch ab Version 15,3.
 
 Verweisassemblys sind eine besondere Art von Assembly, die nur die Mindestmenge an Metadaten enthalten, die zum Darstellen der öffentlichen API-Oberfläche der Bibliothek erforderlich sind. Sie beinhalten Deklarationen für alle Member, die beim Verweis auf eine Assembly in Buildtools von Bedeutung sind, schließen aber alle Memberimplementierungen und Deklarationen privater Member aus, die keine beobachtbaren Auswirkungen auf ihren API-Vertrag haben. Weitere Informationen finden Sie unter [Verweisassemblys](../../../standard/assembly/reference-assemblies.md) im .NET-Leitfaden.
 

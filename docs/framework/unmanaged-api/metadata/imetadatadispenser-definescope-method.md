@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436246"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope-Methode
-Creates a new area in memory in which you can create new metadata.  
+Erstellt einen neuen Bereich im Arbeitsspeicher, in dem Sie neue Metadaten erstellen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,30 +38,30 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>Parameter  
  `rclsid`  
- [in] The CLSID of the version of metadata structures to be created. This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.  
+ in Die CLSID der Version der zu erstellenden Metadatenstrukturen. Dieser Wert muss für die .NET Framework Version 2,0 CLSID_CorMetaDataRuntime werden.  
   
  `dwCreateFlags`  
- [in] Flags that specify options. This value must be zero for the .NET Framework 2.0.  
+ in Flags, die Optionen angeben. Dieser Wert muss für den .NET Framework 2,0 den Wert 0 (null) aufweisen.  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.  
+ in Die IID der gewünschten Metadatenschnittstelle, die zurückgegeben werden soll. der Aufrufer verwendet die-Schnittstelle, um die neuen Metadaten zu erstellen.  
   
- The value of `riid` must specify one of the "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.  
+ Der Wert `riid` muss eine der Schnittstellen "ausgeben" angeben. Gültige Werte sind IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit oder IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- `DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.  
+ `DefineScope` erstellt einen Satz von Metadatentabellen im Arbeitsspeicher, generiert eine eindeutige GUID (Modul Versions Bezeichner oder MVID) für die Metadaten und erstellt einen Eintrag in der Modul Tabelle für die ausgegebene Kompilierungseinheit.  
   
- You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.  
+ Sie können Attribute an den Metadatenbereich als Ganzes anfügen, indem Sie je nach Bedarf die [IMetaDataEmit:: setmodulerequior](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) [IMetaDataEmit::D efinecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) -Methode verwenden.  
   
-## <a name="requirements"></a>Anforderungen  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Voraussetzungen  
+ **Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
