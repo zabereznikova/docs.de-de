@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446482"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest-Methode
-Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
+Gibt das endgültige Manifest aus. Ruft diese Methode auf, nachdem alle anderen Dateien importiert und alle Optionen festgelegt wurden. Diese Methode darf nicht für ungebundene Module aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID of the assembly.  
+ Die ID der Assembly.  
   
  `pdwReserveSize`  
- Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
+ Empfängt die von der [StrongNameSignatureSize-Funktion](../strong-naming/strongnamesignaturesize-function.md)abgerufene Größe in der Assemblydatei.  
   
  `ptkManifest`  
- Optionally receives the assembly manifest token.  
+ Empfängt optional das assemblymanifestoken.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h.  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
