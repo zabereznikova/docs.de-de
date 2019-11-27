@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447733"
 ---
-# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="d6008-102">ISymUnmanagedReader::GetNamespaces-Methode</span><span class="sxs-lookup"><span data-stu-id="d6008-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
-<span data-ttu-id="d6008-103">Gets the namespaces defined at global scope within this symbol store.</span><span class="sxs-lookup"><span data-stu-id="d6008-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
+# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="51a3c-102">ISymUnmanagedReader::GetNamespaces-Methode</span><span class="sxs-lookup"><span data-stu-id="51a3c-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
+<span data-ttu-id="51a3c-103">Ruft die Namespaces ab, die im globalen Gültigkeitsbereich innerhalb dieses Symbol Speicher definiert sind.</span><span class="sxs-lookup"><span data-stu-id="51a3c-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6008-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d6008-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51a3c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="51a3c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNamespaces (  
@@ -36,22 +36,22 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d6008-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d6008-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="51a3c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="51a3c-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="d6008-106">[in] The size of the namespaces array.</span><span class="sxs-lookup"><span data-stu-id="d6008-106">[in] The size of the namespaces array.</span></span>  
+ <span data-ttu-id="51a3c-106">in Die Größe des Namespaces-Arrays.</span><span class="sxs-lookup"><span data-stu-id="51a3c-106">[in] The size of the namespaces array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="d6008-107">[out] A pointer to a variable that receives the length of the namespace list.</span><span class="sxs-lookup"><span data-stu-id="d6008-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
+ <span data-ttu-id="51a3c-107">vorgenommen Ein Zeiger auf eine Variable, die die Länge der Namespace Liste empfängt.</span><span class="sxs-lookup"><span data-stu-id="51a3c-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="d6008-108">[out] A pointer to a variable that receives the namespace list.</span><span class="sxs-lookup"><span data-stu-id="d6008-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
+ <span data-ttu-id="51a3c-108">vorgenommen Ein Zeiger auf eine Variable, die die Namespace Liste empfängt.</span><span class="sxs-lookup"><span data-stu-id="51a3c-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d6008-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d6008-109">Return Value</span></span>  
- <span data-ttu-id="d6008-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d6008-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="51a3c-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="51a3c-109">Return Value</span></span>  
+ <span data-ttu-id="51a3c-110">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="51a3c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6008-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d6008-111">Requirements</span></span>  
- <span data-ttu-id="d6008-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d6008-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="51a3c-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="51a3c-111">Requirements</span></span>  
+ <span data-ttu-id="51a3c-112">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="51a3c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6008-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6008-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51a3c-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51a3c-113">See also</span></span>
 
-- [<span data-ttu-id="d6008-114">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d6008-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="51a3c-114">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="51a3c-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
