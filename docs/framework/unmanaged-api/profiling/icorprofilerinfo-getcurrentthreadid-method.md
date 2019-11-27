@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450385"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID-Methode
-Gets the ID of the current thread, if it is a managed thread.  
+Ruft die ID des aktuellen Threads ab, wenn es sich um einen verwalteten Thread handelt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +34,12 @@ HRESULT GetCurrentThreadID(
   
 ## <a name="parameters"></a>Parameter  
  `pThreadId`  
- [out] A pointer to the returned ID of the managed thread.  
+ vorgenommen Ein Zeiger auf die zurückgegebene ID des verwalteten Threads.  
   
 ## <a name="remarks"></a>Hinweise  
- If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.  
+ Wenn der aktuelle Thread ein interner Lauf Zeit Thread oder ein anderer nicht verwalteter Thread ist, gibt `GetCurrentThreadID` CORPROF_E_NOT_MANAGED_THREAD als HRESULT zurück, und der zurückgegebene Wert des `pThreadId`-Parameters ist NULL.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

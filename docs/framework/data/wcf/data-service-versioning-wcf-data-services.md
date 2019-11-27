@@ -37,12 +37,12 @@ Mit dem Open Data Protocol (odata) können Sie Datendienste erstellen, damit Cli
 |Entitätenmengen|-Entitätenmenge entfernen|-Abgeleiteten Typ hinzufügen<br />-Basistyp ändern<br />-Entitätenmenge hinzufügen|
 |Feedanpassung|-Entitäts Eigenschafts Zuordnung ändern||
 
- <sup>1</sup> Dies hängt möglicherweise davon ab, wie stark eine Clientanwendung auf den Empfang eines bestimmten Fehlercodes basiert.
+ <sup>1</sup> dies hängt möglicherweise davon ab, wie streng eine Client Anwendung auf den Empfang eines bestimmten Fehlercodes basiert.
 
- <sup>2</sup> Sie können die <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>-Eigenschaft auf `true` festlegen, sodass der Client alle neuen Eigenschaften ignoriert, die vom Datendienst gesendet werden und nicht im Client definiert werden. Wenn aber Einfügungen vorgenommen werden, werden die nicht vom Client einbezogenen Eigenschaften in der POST-Anforderung auf ihre Standardwerte festgelegt. Bei Aktualisierungen können vorhandene Daten in einer Eigenschaft, die dem Client nicht bekannt ist, mit Standardwerten überschrieben werden. In diesem Fall sollten Sie die Aktualisierung als MERGE-Anforderung senden. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [Verwalten des Datendienst Kontexts](managing-the-data-service-context-wcf-data-services.md).
+ <sup>2</sup> Sie können die <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>-Eigenschaft auf `true` festlegen, damit der Client alle neuen Eigenschaften ignoriert, die vom Datendienst gesendet werden, die nicht auf dem Client definiert sind. Wenn aber Einfügungen vorgenommen werden, werden die nicht vom Client einbezogenen Eigenschaften in der POST-Anforderung auf ihre Standardwerte festgelegt. Bei Aktualisierungen können vorhandene Daten in einer Eigenschaft, die dem Client nicht bekannt ist, mit Standardwerten überschrieben werden. In diesem Fall sollten Sie die Aktualisierung als MERGE-Anforderung senden. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [Verwalten des Datendienst Kontexts](managing-the-data-service-context-wcf-data-services.md).
 
 ### <a name="how-to-version-a-data-service"></a>So versionieren Sie einen Datendienst
- Bei Bedarf wird eine neue Datendienstversion definiert, indem eine neue Instanz des Diensts mit einem aktualisierten Dienstvertrag oder einem Datenmodell erstellt wird. Dieser neue Dienst wird dann mit einem neuen URI-Endpunkt verfügbar gemacht, der sich von der früheren Version unterscheidet. Zum Beispiel:
+ Bei Bedarf wird eine neue Datendienstversion definiert, indem eine neue Instanz des Diensts mit einem aktualisierten Dienstvertrag oder einem Datenmodell erstellt wird. Dieser neue Dienst wird dann mit einem neuen URI-Endpunkt verfügbar gemacht, der sich von der früheren Version unterscheidet. Beispiel:
 
 - Alte Version: `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
@@ -65,7 +65,7 @@ Mit dem Open Data Protocol (odata) können Sie Datendienste erstellen, damit Cli
 |Odata-Protokoll Version|Unterstützt seit...|
 |-----------------------------------------------------------------------------------|----------------------------|
 |Version 1|-.NET Framework 3,5 Service Pack 1 (SP1)<br />-Silverlight, Version 3|
-|Version 2|-.NET Framework 4<br />: Ein Update für .NET Framework 3,5 SP1. Sie können das Update aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125)herunterladen und installieren.<br />-Silverlight, Version 4|
+|Version 2|-.NET Framework 4<br />: Ein Update für .NET Framework 3,5 SP1. Sie können das Update vom [Microsoft Download-Center](https://go.microsoft.com/fwlink/?LinkId=158125) herunterladen und anschließend installieren.<br />-Silverlight, Version 4|
 |Version 3|-Sie können eine Vorabversion herunterladen und installieren, die odata-Version 3 aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885)unterstützt.|
 
 ### <a name="metadata-versions"></a>Metadatenversionen

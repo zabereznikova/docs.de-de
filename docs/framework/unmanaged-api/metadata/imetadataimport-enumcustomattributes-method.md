@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440241"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes-Methode
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+Listet benutzerdefinierte Attribut Definitions Token auf, die dem angegebenen Typ oder Member zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [in, out] Ein Zeiger auf den zurückgegebenen Enumerator.  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ in Ein Token für den Bereich der-Enumeration oder 0 (null) für alle benutzerdefinierten Attribute.  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ in Ein Token für den Konstruktor des Typs der Attribute, die aufgelistet werden sollen, oder für alle Typen `null`.  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ vorgenommen Ein Array von benutzerdefinierten Attribut Token.  
   
  `cMax`  
  [in] Die maximale Größe des `rCustomAttributes`-Arrays.  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [out, optional] Die tatsächliche Anzahl der Tokenwerte, die in `rCustomAttributes`zurückgegeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine benutzerdefinierten Attribute zum Auflisten vorhanden. In diesem Fall `pcCustomAttributes` gleich 0 (null) ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

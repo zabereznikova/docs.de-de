@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350192"
 ---
 # <a name="addhandler-statement"></a>AddHandler-Anweisung
-Associates an event with an event handler at run time.  
+Ordnet ein Ereignis einem Ereignishandler zur Laufzeit zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -24,22 +24,22 @@ Associates an event with an event handler at run time.
 AddHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
 |||
 |---|---|
-|event|The name of the event to handle.|  
-|`eventhandler`|The name of a procedure that handles the event.|
+|event|Der Name des zu behandelnden Ereignisses.|  
+|`eventhandler`|Der Name einer Prozedur, die das Ereignis behandelt.|
 |||
   
 ## <a name="remarks"></a>Hinweise  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.  
+ Die Anweisungen `AddHandler` und `RemoveHandler` ermöglichen das Starten und Abbrechen der Ereignis Behandlung während der Programmausführung.  
   
- The signature of the `eventhandler` procedure must match the signature of the event `event`.  
+ Die Signatur der `eventhandler` Prozedur muss mit der Signatur des Ereignis `event`identisch sein.  
   
- Mit dem Schlüsselwort `Handles` und der Anweisung `AddHandler` können Sie angeben, dass diese bestimmten Prozeduren bestimmte Ereignisse verarbeiten. Es bestehen jedoch keine Unterschiede. Die Anweisung `AddHandler` verbindet Prozeduren zur Laufzeit mit Ereignissen. Verwenden Sie das Schlüsselwort `Handles`, wenn Sie eine Prozedur definieren, um anzugeben, dass sie ein bestimmtes Ereignis verarbeitet. For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ Mit dem Schlüsselwort `Handles` und der Anweisung `AddHandler` können Sie angeben, dass diese bestimmten Prozeduren bestimmte Ereignisse verarbeiten. Es bestehen jedoch keine Unterschiede. Die Anweisung `AddHandler` verbindet Prozeduren zur Laufzeit mit Ereignissen. Verwenden Sie das Schlüsselwort `Handles`, wenn Sie eine Prozedur definieren, um anzugeben, dass sie ein bestimmtes Ereignis verarbeitet. Weitere Informationen finden Sie unter [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Für benutzerdefinierte Ereignisse ruft die `AddHandler`-Anweisung den `AddHandler` Accessor des Ereignisses auf. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

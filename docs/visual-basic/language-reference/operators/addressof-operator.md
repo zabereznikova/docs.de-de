@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350280"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf-Operator (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+Erstellt eine Delegatinstanz, die auf die jeweilige Prozedur verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -24,22 +24,22 @@ Creates a delegate instance that references the specific procedure.
 AddressOf procedurename  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `procedurename`  
- Erforderlich. Specifies the procedure to be referenced by the newly created delegate.  
+ Erforderlich Gibt die Prozedur an, auf die durch den neu erstellten Delegaten verwiesen werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+ Der `AddressOf`-Operator erstellt einen Delegaten, der auf die untergeordnete Funktion oder Funktion verweist, die durch `procedurename`angegeben wird Wenn die angegebene Prozedur eine Instanzmethode ist, verweist der Delegat sowohl auf die-Instanz als auch auf die-Methode. Wenn der Delegat aufgerufen wird, wird die angegebene Methode der angegebenen-Instanz aufgerufen.  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ Der `AddressOf`-Operator kann als Operand eines Delegatkonstruktors oder in einem Kontext verwendet werden, in dem der Typ des Delegaten vom Compiler bestimmt werden kann.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ In diesem Beispiel wird der `AddressOf`-Operator verwendet, um einen Delegaten zum Behandeln des `Click` Ereignisses einer Schaltfläche festzulegen.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ Im folgenden Beispiel wird der `AddressOf`-Operator verwendet, um die Startup-Funktion für einen Thread festzulegen.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

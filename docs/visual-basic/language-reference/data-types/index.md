@@ -46,54 +46,54 @@ ms.locfileid: "74344001"
 ---
 # <a name="data-type-summary-visual-basic"></a>Datentyp: Zusammenfassung (Visual Basic)
 
-The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.  
+In der folgenden Tabelle werden die Visual Basic-Datentypen, ihre unterstützenden Common Language Runtime Typen, ihre nominale Speicher Belegung und ihre Wertebereiche angezeigt.  
   
-|Visual Basic type|Common language runtime type structure|Nominal storage allocation|Wertebereich|  
+|Visual Basic-Typ|Common Language Runtime-Typstruktur|Nominale Speicher Belegung|Gültigkeitsbereich|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Depends on implementing platform|`True` oder `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 Byte|0 through 255 (unsigned)|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (single character)|<xref:System.Char>|2 Bytes|0 through 65535 (unsigned)|  
-|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 Bytes|0:00:00 (midnight) on January 1, 0001 through 11:59:59 PM on December 31, 9999|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 Bytes|0 through +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E+28) <sup>†</sup> with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal;<br /><br /> smallest nonzero number is +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (double-precision floating-point)|<xref:System.Double>|8 Bytes|-1.79769313486231570E+308 through -4.94065645841246544E-324 <sup>†</sup> for negative values;<br /><br /> 4.94065645841246544E-324 through 1.79769313486231570E+308 <sup>†</sup> for positive values|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 Bytes|-2,147,483,648 through 2,147,483,647 (signed)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)|<xref:System.Int64>|8 Bytes|-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18 <sup>†</sup>) (signed)|  
-|[Objekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (class)|4 bytes on 32-bit platform<br /><br /> 8 bytes on 64-bit platform|Any type can be stored in a variable of type `Object`|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 Byte|-128 through 127 (signed)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short integer)|<xref:System.Int16>|2 Bytes|-32,768 through 32,767 (signed)|  
-|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (single-precision floating-point)|<xref:System.Single>|4 Bytes|-3.4028235E+38 through -1.401298E-45 <sup>†</sup> for negative values;<br /><br /> 1.401298E-45 through 3.4028235E+38 <sup>†</sup> for positive values|  
-|[String](../../../visual-basic/language-reference/data-types/string-data-type.md) (variable-length)|<xref:System.String> (class)|Depends on implementing platform|0 to approximately 2 billion Unicode characters|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 Bytes|0 through 4,294,967,295 (unsigned)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 Bytes|0 through 18,446,744,073,709,551,615 (1.8...E+19 <sup>†</sup>) (unsigned)|  
-|[User-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)|(inherits from <xref:System.ValueType>)|Depends on implementing platform|Each member of the structure has a range determined by its data type and independent of the ranges of the other members|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 Bytes|0 through 65,535 (unsigned)|  
+|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Hängt von der implementierenden Plattform ab|`True` oder `False`|  
+|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 Byte|0 bis 255 (ohne Vorzeichen)|  
+|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (einzelnes Zeichen)|<xref:System.Char>|2 Bytes|0 bis 65535 (ohne Vorzeichen)|  
+|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 Bytes|0:00:00 (Mitternacht) am 1. Januar 0001 bis 11:59:59 Uhr am 31. Dezember 9999|  
+|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 Bytes|0 bis +/-337 (+/-7.9...E + 28) <sup>†</sup> ohne Dezimaltrennzeichen; 0 bis +/-7.9228162514264337593543950335 mit 28 Stellen rechts vom Dezimaltrennzeichen.<br /><br /> die kleinste Zahl ungleich 0 (null) ist +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
+|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (Gleit Komma mit doppelter Genauigkeit)|<xref:System.Double>|8 Bytes|-1.79769313486231570 e + 308 bis-4.94065645841246544 e-324 <sup>†</sup> bei negativen Werten;<br /><br /> 4.94065645841246544 e-324 bis 1.79769313486231570 e + 308 <sup>†</sup> für positive Werte|  
+|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 Bytes|-2.147.483.648 bis 2.147.483.647 (signiert)|  
+|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (lange ganze Zahl)|<xref:System.Int64>|8 Bytes|-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 (9.2... E + 18 <sup>†</sup>) (signiert)|  
+|[Objekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (Klasse)|4 Bytes auf 32-Bit-Plattform<br /><br /> 8 Bytes auf 64-Bit-Plattform|Jeder Typ kann in einer Variablen vom Typ gespeichert werden `Object`|  
+|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 Byte|-128 bis 127 (signiert)|  
+|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (kurze ganze Zahl)|<xref:System.Int16>|2 Bytes|-32.768 bis 32.767 (signiert)|  
+|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (Gleit Komma mit einfacher Genauigkeit)|<xref:System.Single>|4 Bytes|-3.4028235 e + 38 bis- -1 401298E e-45 <sup>†</sup> bei negativen Werten;<br /><br /> -1 401298E e-45 bis 3.4028235 e + 38 <sup>†</sup> für positive Werte|  
+|[Zeichenfolge](../../../visual-basic/language-reference/data-types/string-data-type.md) (Variable Länge)|<xref:System.String> (Klasse)|Hängt von der implementierenden Plattform ab|0 bis ungefähr 2 Milliarden Unicode-Zeichen|  
+|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 Bytes|0 bis 4.294.967.295 (ohne Vorzeichen)|  
+|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 Bytes|0 bis 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (unsigniert)|  
+|[Benutzer definiert](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (Struktur)|(erbt von <xref:System.ValueType>)|Hängt von der implementierenden Plattform ab|Jeder Member der Struktur hat einen Bereich, der durch seinen Datentyp und unabhängig von den Bereichen der anderen Member bestimmt wird.|  
+|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 Bytes|0 bis 65.535 (ohne Vorzeichen)|  
   
- <sup>†</sup> In *scientific notation*, "E" refers to a power of 10. So 3.56E+2 signifies 3.56 x 10<sup>2</sup> or 356, and 3.56E-2 signifies 3.56 / 10<sup>2</sup> or 0.0356.  
+ <sup>†</sup> In *wissenschaftlicher Schreib*Weise bezieht sich "E" auf eine Potenz von 10. "3,56 e + 2" steht für 3,56 x 10<sup>2</sup> oder 356, und "3,56 e-2" bedeutet 3,56/10<sup>2</sup> oder 0,0356.  
   
 > [!NOTE]
-> For strings containing text, use the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function to convert from one text format to another.  
+> Verwenden Sie für Zeichen folgen, die Text enthalten, die <xref:Microsoft.VisualBasic.Strings.StrConv%2A>-Funktion, um ein Textformat in ein anderes zu konvertieren.  
   
- In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements by using a type character. See [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+ Zusätzlich zur Angabe eines Datentyps in einer Deklarations Anweisung können Sie den Datentyp einiger Programmier Elemente mithilfe eines Typzeichens erzwingen. Siehe [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="memory-consumption"></a>Speicherverbrauch  
 
- When you declare an elementary data type, it is not safe to assume that its memory consumption is the same as its nominal storage allocation. This is due to the following considerations:  
+ Beim Deklarieren eines elementaren Datentyps ist es nicht sicher anzunehmen, dass der Arbeitsspeicher Verbrauch mit der nominalen Speicher Belegung identisch ist. Dies ist auf folgende Aspekte zurückzuführen:  
   
-- **Storage Assignment.** The common language runtime can assign storage based on the current characteristics of the platform on which your application is executing. If memory is nearly full, it might pack your declared elements as closely together as possible. In other cases it might align their memory addresses to natural hardware boundaries to optimize performance.  
+- **Speicherzuweisung.** Der Common Language Runtime kann Speicher auf der Grundlage der aktuellen Merkmale der Plattform zuweisen, auf der die Anwendung ausgeführt wird. Wenn der Arbeitsspeicher fast voll ist, werden die deklarierten Elemente möglicherweise so nah wie möglich verpackt. In anderen Fällen kann es Ihre Speicheradressen an natürliche Hardware Grenzen ausrichten, um die Leistung zu optimieren.  
   
-- **Platform Width.** Storage assignment on a 64-bit platform is different from assignment on a 32-bit platform.  
+- **Platt Form Breite.** Die Speicherzuweisung auf einer 64-Bit-Plattform unterscheidet sich von der Zuweisung auf einer 32-Bit-Plattform.  
   
 ### <a name="composite-data-types"></a>Zusammengesetzte Datentypen  
 
- The same considerations apply to each member of a composite data type, such as a structure or an array. You cannot rely on simply adding together the nominal storage allocations of the type's members. Furthermore, there are other considerations, such as the following:  
+ Die gleichen Überlegungen gelten für jedes Element eines zusammengesetzten Datentyps, wie z. b. eine Struktur oder ein Array. Sie können sich nicht darauf verlassen, dass Sie einfach die nominalen Speicher Belegungen der typmitglieder hinzufügen. Außerdem gibt es weitere Überlegungen, wie z. b. Folgendes:  
   
-- **Overhead.** Some composite types have additional memory requirements. For example, an array uses extra memory for the array itself and also for each dimension. On a 32-bit platform, this overhead is currently 12 bytes plus 8 bytes for each dimension. On a 64-bit platform this requirement is doubled.  
+- **KV.** Einige zusammengesetzte Typen haben zusätzliche Arbeitsspeicher Anforderungen. Ein Array verwendet beispielsweise zusätzlichen Arbeitsspeicher für das Array selbst und für jede Dimension. Auf einer 32-Bit-Plattform beträgt dieser Aufwand derzeit 12 Bytes plus 8 Bytes für jede Dimension. Auf einer 64-Bit-Plattform wird diese Anforderung verdoppelt.  
   
-- **Storage Layout.** You cannot safely assume that the order of storage in memory is the same as your order of declaration. You cannot even make assumptions about byte alignment, such as a 2-byte or 4-byte boundary. If you are defining a class or structure and you need to control the storage layout of its members, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the class or structure.  
+- **Speicher Layout.** Sie können nicht sicher davon ausgehen, dass die Speicher Reihenfolge im Speicher mit der Deklarations Reihenfolge identisch ist. Sie können nicht sogar Annahmen über die Byte Ausrichtung treffen, z. b. eine 2-Byte-oder 4-Byte-Begrenzung. Wenn Sie eine Klasse oder Struktur definieren und das Speicher Layout der Member steuern müssen, können Sie das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut auf die Klasse oder Struktur anwenden.  
   
-### <a name="object-overhead"></a>Object Overhead  
+### <a name="object-overhead"></a>Objekt Aufwand  
 
- An `Object` referring to any elementary or composite data type uses 4 bytes in addition to the data contained in the data type.  
+ Eine `Object`, die auf einen beliebigen elementaren oder zusammengesetzten Datentyp verweist, verwendet zusätzlich zu den im-Datentyp enthaltenen Daten 4 Bytes.  
   
 ## <a name="see-also"></a>Siehe auch
 

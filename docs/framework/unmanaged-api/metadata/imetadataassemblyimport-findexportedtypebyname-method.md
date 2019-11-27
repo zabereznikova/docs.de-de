@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449449"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName-Methode
-Gets a pointer to an exported type, given its name and enclosing type.  
+Ruft bei Angabe des Namens und des einschließenden Typs einen Zeiger auf einen exportierten Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- [in] The name of the exported type.  
+ in Der Name des exportierten Typs.  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ in Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert ist `mdExportedTypeNil`, wenn der angeforderte exportierte Typ kein Typ ist.  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ vorgenommen Ein Zeiger auf das `mdExportedType` Token, das den exportierten Typ darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ Die `FindExportedTypeByName`-Methode verwendet die Standardregeln, die vom Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

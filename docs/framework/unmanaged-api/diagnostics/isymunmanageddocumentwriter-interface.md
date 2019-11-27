@@ -29,10 +29,10 @@ Stellt Methoden zum Schreiben in ein Dokument bereit, auf das ein Symbolspeicher
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[SetCheckSum-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Legt Prüfsummeninformationen fest.|  
-|[SetSource-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Sets embedded source for a document that is being written.|  
+|[SetSource-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Legt die eingebettete Quelle für ein Dokument fest, das geschrieben wird.|  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

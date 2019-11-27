@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: 'Gewusst wie: Erstellen einer Mehrfachdateiassembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429565"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>Gewusst wie: Erstellen einer Mehrfachdateiassembly
 
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.
 
@@ -95,7 +95,7 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
    vbc /t:module Stringer.vb
    ```
 
-   Durch die Compileroption **/t:** in Verbindung mit dem Parameter *module* wird die Datei als Modul kompiliert, nicht als Assembly. Der Compiler erzeugt ein Modul mit dem Namen *Stringer.netmodule*, das anschließend einer Assembly hinzugefügt werden kann.
+   Durch die Compileroption */t:* in Verbindung mit dem Parameter **module** wird die Datei als Modul kompiliert, nicht als Assembly. Der Compiler erzeugt ein Modul mit dem Namen *Stringer.netmodule*, das anschließend einer Assembly hinzugefügt werden kann.
 
 3. Kompilieren Sie alle weiteren Module unter Verwendung der erforderlichen Compileroptionen, um die anderen Module anzugeben, auf die im Code verwiesen wird. In diesem Schritt kommt die **/addmodule**-Compileroption zum Einsatz.
 
@@ -224,6 +224,6 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Assemblys](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [Vorgehensweise: Anzeigen des assemblyinhalts](../../standard/assembly/view-contents.md)
 - [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Mehrfachdateiassemblys](multifile-assemblies.md)

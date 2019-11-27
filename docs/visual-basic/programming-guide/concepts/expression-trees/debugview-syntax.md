@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: Syntax, die von der DebugView-Eigenschaft verwendet wird
 description: Beschreibt die spezielle Syntax, die von der DebugView-Eigenschaft verwendet wird, um eine Zeichenfolgendarstellung von Ausdrucksbaumstrukturen zu erzeugen.
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346868"
 
 Die `DebugView`-Eigenschaft (nur beim Debuggen verfügbar) bietet eine Zeichenfolgendarstellung von Ausdrucksbaumstrukturen. Der größte Teil der Syntax ist recht einfach zu verstehen; einige Sonderfälle werden in den folgenden Abschnitten beschrieben.
 
-Each example is followed by a comment block containing the `DebugView`.
+Auf jedes Beispiel folgt ein Kommentar Block, der die `DebugView`enthält.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,15 +45,15 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Für <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType>-Objekte, die ganzzahlige Werte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante angezeigt.
 
-For some numeric types, a suffix is added to the value:
+Bei manchen numerischen Typen wird dem Wert ein Suffix hinzugefügt:
 
-| Geben Sie Folgendes ein: | Stichwort | Suffix |
+| Typ | Stichwort | Suffix |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | C |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Beispiele

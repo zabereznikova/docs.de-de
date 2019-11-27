@@ -27,23 +27,23 @@ ms.locfileid: "74343914"
 ---
 # <a name="string-data-type-visual-basic"></a>String-Datentyp (Visual Basic)
 
-Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character. A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.  
+Enthält Sequenzen von 16-Bit-Code Punkten (2 Bytes) ohne Vorzeichen, die den Wert zwischen 0 und 65535 liegen. Jeder *Codepunkt*oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar. Eine Zeichenfolge kann zwischen 0 und ungefähr 2 Milliarden (2 ^ 31) Unicode-Zeichen enthalten.  
   
 ## <a name="remarks"></a>Hinweise  
 
- Use the `String` data type to hold multiple characters without the array management overhead of `Char()`, an array of `Char` elements.  
+ Verwenden Sie den `String`-Datentyp, um mehrere Zeichen ohne den zusätzlichen Verwaltungsaufwand `Char()`, ein Array von `Char` Elementen, zu speichern.  
   
- The default value of `String` is `Nothing` (a null reference). Note that this is not the same as the empty string (value `""`).  
+ Der Standardwert `String` ist `Nothing` (ein NULL-Verweis). Beachten Sie, dass dies nicht mit der leeren Zeichenfolge (Wert `""`) identisch ist.  
   
 ## <a name="unicode-characters"></a>Unicode-Zeichen  
 
- The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols. This includes worldwide textual characters, diacritics, and mathematical and technical symbols.  
+ Die ersten 128-Code Punkte (0 – 127) von Unicode entsprechen den Buchstaben und Symbolen in einer standardmäßigen US-Tastatur. Diese ersten 128-Code Punkte sind identisch mit denen, die der ASCII-Zeichensatz definiert. Die zweiten 128-Code Punkte (128 – 255) stellen Sonderzeichen dar, wie z. b. lateinische, Buchstaben, Akzente, Währungssymbole und Bruchteile. Unicode verwendet die verbleibenden Code Punkte (256-65535) für eine Vielzahl von Symbolen. Dies schließt weltweite Textzeichen, Diakritik und mathematische und technische Symbole ein.  
   
- You can use methods such as <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on an individual character in a `String` variable to determine its Unicode classification.  
+ Sie können Methoden wie <xref:System.Char.IsDigit%2A> und <xref:System.Char.IsPunctuation%2A> eines einzelnen Zeichens in einer `String` Variablen verwenden, um die Unicode-Klassifizierung zu bestimmen.  
   
 ## <a name="format-requirements"></a>Formatanforderungen  
 
- You must enclose a `String` literal within quotation marks (`" "`). If you must include a quotation mark as one of the characters in the string, you use two contiguous quotation marks (`""`). Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie müssen eine `String` Literals in Anführungszeichen (`" "`) einschließen. Wenn Sie ein Anführungszeichen als eines der Zeichen in die Zeichenfolge einschließen müssen, verwenden Sie zwei zusammenhängende Anführungszeichen (`""`). Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -55,13 +55,13 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Note that the contiguous quotation marks that represent a quotation mark in the string are independent of the quotation marks that begin and end the `String` literal.  
+ Beachten Sie, dass die zusammenhängenden Anführungszeichen, die ein Anführungszeichen in der Zeichenfolge darstellen, unabhängig von den Anführungszeichen sind, die den `String` literalen beginnen und beenden.  
   
-## <a name="string-manipulations"></a>String Manipulations  
+## <a name="string-manipulations"></a>Zeichen folgen Manipulationen  
 
- Once you assign a string to a `String` variable, that string is *immutable*, which means you cannot change its length or contents. When you alter a string in any way, Visual Basic creates a new string and abandons the previous one. The `String` variable then points to the new string.  
+ Wenn Sie einer `String` Variablen eine Zeichenfolge zuweisen, ist diese Zeichenfolge *unveränderlich*. Dies bedeutet, dass Sie Ihre Länge oder ihren Inhalt nicht ändern können. Wenn Sie eine Zeichenfolge in irgendeiner Weise ändern, erstellt Visual Basic eine neue Zeichenfolge und gibt die vorherige zurück. Die `String` Variable zeigt dann auf die neue Zeichenfolge.  
   
- You can manipulate the contents of a `String` variable by using a variety of string functions. The following example illustrates the <xref:Microsoft.VisualBasic.Strings.Left%2A> function  
+ Sie können den Inhalt einer `String` Variablen bearbeiten, indem Sie eine Vielzahl von Zeichen folgen Funktionen verwenden. Im folgenden Beispiel wird die <xref:Microsoft.VisualBasic.Strings.Left%2A>-Funktion veranschaulicht.  
   
 ```vb  
 Dim S As String = "Database"  
@@ -69,19 +69,19 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- A string created by another component might be padded with leading or trailing spaces. If you receive such a string, you can use the <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, and <xref:Microsoft.VisualBasic.Strings.RTrim%2A> functions to remove these spaces.  
+ Eine von einer anderen Komponente erstellte Zeichenfolge kann mit führenden oder nachfolgenden Leerzeichen aufgefüllt werden. Wenn Sie eine solche Zeichenfolge erhalten, können Sie diese Leerzeichen mit den Funktionen <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>und <xref:Microsoft.VisualBasic.Strings.RTrim%2A> entfernen.  
   
- For more information about string manipulations, see [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Weitere Informationen zu Zeichen folgen Manipulationen finden Sie unter Zeichen [folgen.](../../../visual-basic/programming-guide/language-features/strings/index.md)  
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
-- **Negative Numbers.** Remember that the characters held by `String` are unsigned and cannot represent negative values. In any case, you should not use `String` to hold numeric values.  
+- **Negative Zahlen.** Beachten Sie, dass die von `String` gehaltenen Zeichen nicht signiert sind und keine negativen Werte darstellen können. In jedem Fall sollten Sie `String` nicht verwenden, um numerische Werte zu speichern.  
   
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that string characters have a different data width (8 bits) in other environments. If you are passing a string argument of 8-bit characters to such a component, declare it as `Byte()`, an array of `Byte` elements, instead of `String` in your new Visual Basic code.  
+- **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass Zeichen folgen Zeichen in anderen Umgebungen eine andere Daten Breite (8 Bits) aufweisen. Wenn Sie ein Zeichen folgen Argument von 8-Bit-Zeichen an eine solche Komponente übergeben, deklarieren Sie es als `Byte()`, ein Array von `Byte` Elementen, anstatt `String` in den neuen Visual Basic Code.  
   
-- **Type Characters.** Appending the identifier type character `$` to any identifier forces it to the `String` data type. `String` has no literal type character. However, the compiler treats literals enclosed in quotation marks (`" "`) as `String`.  
+- **Geben Sie Zeichen ein.** Das Anfügen des Bezeichnertyp Zeichens `$` an einen beliebigen Bezeichner zwingt ihn in den `String`-Datentyp. `String` hat kein Literalzeichen. Der Compiler behandelt jedoch Literale, die in Anführungszeichen (`" "`) eingeschlossen sind, als `String`.  
   
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.String?displayProperty=nameWithType> class.  
+- **Frameworktyp.** Der entsprechende Typ in der .NET Framework ist die <xref:System.String?displayProperty=nameWithType> Klasse.  
   
 ## <a name="see-also"></a>Siehe auch
 

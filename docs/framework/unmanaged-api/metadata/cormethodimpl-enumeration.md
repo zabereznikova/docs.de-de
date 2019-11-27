@@ -52,31 +52,31 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Mitglieder  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|Flags, die den Codetyp beschreiben.|  
+|`miIL`|Gibt an, dass die Methoden Implementierung Microsoft Intermediate Language (MSIL) ist.|  
 |`miNative`|Gibt an, dass die Methodenimplementierung nativ ist.|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|Gibt an, dass die Methoden Implementierung OPTIL ist.|  
+|`miRuntime`|Gibt an, dass die Methoden Implementierung vom Common Language Runtime bereitgestellt wird.|  
+|`miManagedMask`|Flags, die angeben, ob der Code verwaltet oder nicht verwaltet wird.|  
+|`miUnmanaged`|Gibt an, dass die Methoden Implementierung nicht verwaltet wird.|  
+|`miManaged`|Gibt an, dass die Methoden Implementierung verwaltet wird.|  
+|`miForwardRef`|Gibt an, dass die-Methode definiert ist. Dieses Flag wird primär in zusammenlaufverfolgungsszenarios verwendet.|  
+|`miPreserveSig`|Gibt an, dass die Methoden Signatur für eine HRESULT-Konvertierung nicht geändert werden kann.|  
+|`miInternalCall`|Reserviert für die interne Verwendung durch den Common Language Runtime.|  
+|`miSynchronized`|Gibt an, dass die Methode einen Single Thread durch Ihren Text enthält.|  
 |`miNoInlining`|Gibt an, dass die Methode nicht intern sein kann.|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|Gibt an, dass die Methode nach Möglichkeit Inline sein soll.|  
+|`miNoOptimization`|Gibt an, dass die Methode nicht optimiert werden soll.|  
+|`miMaxMethodImplVal`|Der Höchstwert für einen `CorMethodImpl`.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

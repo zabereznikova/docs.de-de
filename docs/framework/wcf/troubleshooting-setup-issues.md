@@ -25,7 +25,7 @@ In diesem Thema wird beschrieben, wie Probleme beim Einrichten von Windows Commu
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- Die Schlüssel werden nicht erneut erstellt, wenn Sie das Reparaturprogramm mit dem .NET Framework&#160;3.0-Installationsprogramm verwenden, das über das Applet **Software** in der **Systemsteuerung** aufgerufen wird. Um diese Schlüssel ordnungsgemäß neu zu erstellen, muss der Benutzer .NET Framework 3.0 deinstallieren und anschließend neu installieren.  
+ Die Schlüssel werden nicht neu erstellt, wenn Sie die Reparatur mithilfe des Installationsprogramms .NET Framework 3,0 ausführen, das über das Applet **Programme hinzufügen/entfernen** in der **Systemsteuerung**gestartet wurde. Um diese Schlüssel ordnungsgemäß neu zu erstellen, muss der Benutzer .NET Framework 3.0 deinstallieren und anschließend neu installieren.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI Service Corruption blockiert möglicherweise die Installation des Windows Communication Foundation-WMI-Anbieters während der Installation des .NET Framework&#160;3.0-Pakets.  
  WMI Service Corruption blockiert möglicherweise die Installation des Windows Communication Foundation-WMI-Anbieters. Während der Installation kann das Windows Communication Foundation-Installationsprogramm die WCF-.mof-Datei nicht mit der mofcomp.exe-Komponente registrieren. Im Folgenden erhalten Sie eine Liste der Symptome:  
@@ -46,7 +46,7 @@ In diesem Thema wird beschrieben, wie Probleme beim Einrichten von Windows Commu
   
      oder:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Die Datei oder Assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' oder eine Abhängigkeit davon wurde nicht gefunden. Die angegebene Datei wurde nicht gefunden.“  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Die Datei oder Assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' oder eine Abhängigkeit davon wurde nicht gefunden. Das System konnte die angegebene Datei nicht finden.  
   
      Dateiname: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
@@ -54,7 +54,7 @@ In diesem Thema wird beschrieben, wie Probleme beim Einrichten von Windows Commu
   
 1. Führen Sie [den WMI-Diagnosehilfsprogramm, Version 2,0, aus,](https://go.microsoft.com/fwlink/?LinkId=94685) um den WMI-Dienst zu reparieren. Weitere Informationen zur Verwendung dieses Tools finden Sie im [WMI-Diagnosehilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=94686) Thema.  
   
- Reparieren Sie die .NET Framework 3.0-Installation mit dem Applet **Software** in der **Systemsteuerung**, oder deinstallieren Sie .NET Framework 3.0, bzw. installieren Sie es neu.  
+ Reparieren Sie die Installation des .NET Framework 3,0 mithilfe des Applets " **Programme hinzufügen/entfernen** " in der **Systemsteuerung**, oder deinstallieren Sie die .NET Framework 3,0, und installieren Sie Sie erneut.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Durch eine Reparatur von .NET Framework&#160;3.0 nach der .NET Framework&#160;3.5-Installation werden Konfigurationselemente entfernt, die von .NET Framework&#160;3.5 in machine.config eingefügt wurden  
  Wenn Sie nach der Installation .NET Framework 3,5 eine Reparatur von .NET Framework 3,0 ausführen, werden die von .NET Framework 3,5 in Machine. config eingeführten Konfigurationselemente entfernt. Die Datei web.config bleibt jedoch intakt. Die Problem Umgehung besteht darin, .NET Framework 3,5 nach diesem über ARP zu reparieren oder das Tool für die [Workflow Dienst Registrierung (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) mit dem `/c`-Schalter zu verwenden.  

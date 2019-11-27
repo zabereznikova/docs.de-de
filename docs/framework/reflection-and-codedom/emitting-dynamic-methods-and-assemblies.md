@@ -34,7 +34,7 @@ Die Reflektionsausgabe bietet die folgenden Funktionen:
   
 Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden. Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.  
   
-In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf der [ECMA-Website](https://www.ecma-international.org/publications/standards/Ecma-335.htm)verfügbar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
   
@@ -53,7 +53,7 @@ Zeigt, wie einfache generische Methoden erstellt, ausgegeben und aufgerufen werd
 [Entladbare Assemblys für die dynamische Typgenerierung](collectible-assemblies.md)   
 Führt in das Thema „entladbare Assemblys“ ein. Dabei handelt es sich um dynamische Assemblys, die entladen werden können, ohne gleichzeitig auch die Anwendungsdomäne zu entladen, in der sie erstellt wurden.
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Hier werden die MSIL-Anweisungcodes zum Erstellen von Methodentexten katalogisiert.  

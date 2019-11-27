@@ -40,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Ein Zeiger auf den Enumerator.  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ in Ein TypeDef-Token, das den Typ mit aufzuzählenden Membern darstellt.  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ in Der Elementname, der den Bereich des Enumerators einschränkt.  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ vorgenommen Das Array, das zum Speichern der mitgliedungstokentoken verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMembers`-Arrays.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ vorgenommen Die tatsächliche Anzahl der in `rMembers`zurückgegebenen mitgliedsdef-Token.  
   
 ## <a name="remarks"></a>Hinweise  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+ Diese Methode listet Felder und Methoden auf, aber keine Eigenschaften oder Ereignisse. Anders als [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)verwirft `EnumMembersWithName` alle Feld-und Element Token, die nicht über den angegebenen Namen verfügen.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumTypeDefs` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine mitgliedungstokentoken zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

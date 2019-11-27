@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428427"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog-Methode
-Resets the edit-and-continue log and starts a new session.  
+Setzt das Edit-and-Continue-Protokoll zurück und startet eine neue Sitzung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,14 +32,14 @@ HRESULT ResetENCLog ();
 ```  
   
 ## <a name="parameters"></a>Parameter  
- `ResetENCLog` takes no parameters.  
+ `ResetENCLog` nimmt keine Parameter an.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

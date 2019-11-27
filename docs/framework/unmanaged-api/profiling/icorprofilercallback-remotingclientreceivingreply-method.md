@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445810"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply-Methode
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+Benachrichtigt den Profiler, dass der serverseitige Teil eines remotingaufrufes abgeschlossen wurde und der Client die Antwort nun empfängt und verarbeitet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,20 +35,20 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parameter  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ in Ein Wert, der dem Wert entspricht, der in [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) unter den folgenden Bedingungen bereitgestellt wird:  
   
-- Remoting GUID cookies are active.  
+- Remoting-GUID-Cookies sind aktiv.  
   
-- The channel succeeds in transmitting the message.  
+- Der Kanal hat die Nachricht erfolgreich übertragen.  
   
-- GUID cookies are active on the server-side process.  
+- GUID-Cookies sind im serverseitigen Prozess aktiv.  
   
- This allows easy pairing of remoting calls.  
+ Dies ermöglicht eine einfache Kopplung von Remoting-aufrufen.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ in Ein-Wert, der `true` wird, wenn der-Befehl asynchron ist. Andernfalls `false`.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

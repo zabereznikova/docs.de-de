@@ -18,7 +18,7 @@ ms.locfileid: "74441459"
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ Dieser Abschnitt enthält ausführliche Informationen zur Verwendung von [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Steuerelement Mustern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Implementieren des Dock-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-dock-control-pattern.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "74441459"
  [Implementieren des Transformieren-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-transform-control-pattern.md)  
  [Implementieren des Value-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-value-control-pattern.md)  
  [Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-window-control-pattern.md)  
- [Themen zu Vorgehensweisen](ui-automation-control-patterns-how-to-topics.md)
+ [Themen zur Vorgehensweise zu einem Expander](ui-automation-control-patterns-how-to-topics.md)
