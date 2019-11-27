@@ -21,10 +21,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438015"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="1227d-102">SYMLINEDELTA-Struktur</span><span class="sxs-lookup"><span data-stu-id="1227d-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="1227d-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span><span class="sxs-lookup"><span data-stu-id="1227d-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="0475d-102">SYMLINEDELTA-Struktur</span><span class="sxs-lookup"><span data-stu-id="0475d-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="0475d-103">Stellt Informationen für den Symbol Handler über Methoden bereit, die aufgrund von Änderungen verschoben wurden.</span><span class="sxs-lookup"><span data-stu-id="0475d-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1227d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1227d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0475d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0475d-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -34,16 +34,16 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1227d-105">Member</span><span class="sxs-lookup"><span data-stu-id="1227d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0475d-105">Member</span><span class="sxs-lookup"><span data-stu-id="0475d-105">Members</span></span>  
   
-|<span data-ttu-id="1227d-106">Member</span><span class="sxs-lookup"><span data-stu-id="1227d-106">Member</span></span>|<span data-ttu-id="1227d-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1227d-107">Description</span></span>|  
+|<span data-ttu-id="0475d-106">Member</span><span class="sxs-lookup"><span data-stu-id="0475d-106">Member</span></span>|<span data-ttu-id="0475d-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0475d-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="1227d-108">The method's metadata token.</span><span class="sxs-lookup"><span data-stu-id="1227d-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="1227d-109">The number of lines the method was moved.</span><span class="sxs-lookup"><span data-stu-id="1227d-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="0475d-108">Das Metadatentoken der Methode.</span><span class="sxs-lookup"><span data-stu-id="0475d-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="0475d-109">Die Anzahl der Zeilen, die die Methode verschoben wurde.</span><span class="sxs-lookup"><span data-stu-id="0475d-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1227d-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1227d-110">Requirements</span></span>  
- <span data-ttu-id="1227d-111">**Header:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="1227d-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0475d-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="0475d-110">Requirements</span></span>  
+ <span data-ttu-id="0475d-111">**Header:** Corsym. idl</span><span class="sxs-lookup"><span data-stu-id="0475d-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1227d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1227d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0475d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0475d-112">See also</span></span>
 
-- [<span data-ttu-id="1227d-113">Diagnosesymbolspeicher-Strukturen</span><span class="sxs-lookup"><span data-stu-id="1227d-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="0475d-113">Diagnosesymbolspeicher-Strukturen</span><span class="sxs-lookup"><span data-stu-id="0475d-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

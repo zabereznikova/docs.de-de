@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: 'Gewusst wie: übergeben von Prozeduren an eine andere Prozedur'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -12,42 +12,42 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345246"
 ---
-# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="4fd9b-102">Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4fd9b-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
-<span data-ttu-id="4fd9b-103">This example shows how to use delegates to pass a procedure to another procedure.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  
+# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="284a7-102">Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="284a7-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
+<span data-ttu-id="284a7-103">In diesem Beispiel wird gezeigt, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="284a7-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  
   
- <span data-ttu-id="4fd9b-104">A delegate is a type that you can use like any other type in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-104">A delegate is a type that you can use like any other type in Visual Basic.</span></span> <span data-ttu-id="4fd9b-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span></span>  
+ <span data-ttu-id="284a7-104">Ein Delegat ist ein Typ, den Sie wie jeden anderen Typ in Visual Basic verwenden können.</span><span class="sxs-lookup"><span data-stu-id="284a7-104">A delegate is a type that you can use like any other type in Visual Basic.</span></span> <span data-ttu-id="284a7-105">Der `AddressOf`-Operator gibt ein Delegatobjekt zurück, wenn es auf einen Prozedur Namen angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="284a7-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span></span>  
   
- <span data-ttu-id="4fd9b-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span></span>  
+ <span data-ttu-id="284a7-106">Dieses Beispiel enthält eine Prozedur mit einem Delegatparameter, der einen Verweis auf eine andere Prozedur annehmen kann, die mit dem `AddressOf`-Operator abgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="284a7-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span></span>  
   
-### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="4fd9b-107">Create the delegate and matching procedures</span><span class="sxs-lookup"><span data-stu-id="4fd9b-107">Create the delegate and matching procedures</span></span>  
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="284a7-107">Erstellen des Delegaten und der entsprechenden Prozeduren</span><span class="sxs-lookup"><span data-stu-id="284a7-107">Create the delegate and matching procedures</span></span>  
   
-1. <span data-ttu-id="4fd9b-108">Create a delegate named `MathOperator`.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-108">Create a delegate named `MathOperator`.</span></span>  
+1. <span data-ttu-id="284a7-108">Erstellen Sie einen Delegaten mit dem Namen `MathOperator`.</span><span class="sxs-lookup"><span data-stu-id="284a7-108">Create a delegate named `MathOperator`.</span></span>  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. <span data-ttu-id="4fd9b-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span></span>  
+2. <span data-ttu-id="284a7-109">Erstellen Sie eine Prozedur mit dem Namen `AddNumbers` mit Parametern und Rückgabe Werten, die mit denen `MathOperator`identisch sind, damit die Signaturen einander entsprechen.</span><span class="sxs-lookup"><span data-stu-id="284a7-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span></span>  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. <span data-ttu-id="4fd9b-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span></span>  
+3. <span data-ttu-id="284a7-110">Erstellen Sie eine Prozedur mit dem Namen `SubtractNumbers` mit einer Signatur, die mit `MathOperator`übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="284a7-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span></span>  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. <span data-ttu-id="4fd9b-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span></span>  
+4. <span data-ttu-id="284a7-111">Erstellen Sie eine Prozedur mit dem Namen `DelegateTest`, die einen Delegaten als Parameter annimmt.</span><span class="sxs-lookup"><span data-stu-id="284a7-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span></span>  
   
-     <span data-ttu-id="4fd9b-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span></span>  
+     <span data-ttu-id="284a7-112">Diese Prozedur kann einen Verweis auf `AddNumbers` oder `SubtractNumbers`akzeptieren, da ihre Signaturen der `MathOperator` Signatur entsprechen.</span><span class="sxs-lookup"><span data-stu-id="284a7-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span></span>  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. <span data-ttu-id="4fd9b-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span></span>  
+5. <span data-ttu-id="284a7-113">Erstellen Sie eine Prozedur mit dem Namen `Test`, die `DelegateTest` einmal mit dem Delegaten für `AddNumbers` als Parameter aufruft, und wieder mit dem Delegaten für `SubtractNumbers` als Parameter.</span><span class="sxs-lookup"><span data-stu-id="284a7-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span></span>  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     <span data-ttu-id="4fd9b-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span></span> <span data-ttu-id="4fd9b-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span><span class="sxs-lookup"><span data-stu-id="4fd9b-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span></span>  
+     <span data-ttu-id="284a7-114">Wenn `Test` aufgerufen wird, zeigt es zuerst das Ergebnis `AddNumbers` an, das auf `5` und `3`(8) wirkt.</span><span class="sxs-lookup"><span data-stu-id="284a7-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span></span> <span data-ttu-id="284a7-115">Anschließend wird das Ergebnis der `SubtractNumbers`, die auf `9` und `3` reagieren, angezeigt, d. h. 6.</span><span class="sxs-lookup"><span data-stu-id="284a7-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4fd9b-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4fd9b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="284a7-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="284a7-116">See also</span></span>
 
-- [<span data-ttu-id="4fd9b-117">Delegaten</span><span class="sxs-lookup"><span data-stu-id="4fd9b-117">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="4fd9b-118">AddressOf-Operator</span><span class="sxs-lookup"><span data-stu-id="4fd9b-118">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [<span data-ttu-id="4fd9b-119">Delegate-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4fd9b-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="4fd9b-120">Gewusst wie: Aufrufen einer Delegatenmethode</span><span class="sxs-lookup"><span data-stu-id="4fd9b-120">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [<span data-ttu-id="284a7-117">Delegaten</span><span class="sxs-lookup"><span data-stu-id="284a7-117">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="284a7-118">AddressOf-Operator</span><span class="sxs-lookup"><span data-stu-id="284a7-118">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="284a7-119">Delegate-Anweisung</span><span class="sxs-lookup"><span data-stu-id="284a7-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="284a7-120">Gewusst wie: Aufrufen einer Delegatenmethode</span><span class="sxs-lookup"><span data-stu-id="284a7-120">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

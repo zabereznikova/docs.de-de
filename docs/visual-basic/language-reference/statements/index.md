@@ -11,27 +11,27 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353570"
 ---
-# <a name="statements-visual-basic"></a><span data-ttu-id="a52ac-102">Anweisungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a52ac-102">Statements (Visual Basic)</span></span>
-<span data-ttu-id="a52ac-103">Die Themen in diesem Abschnitt enthalten Tabellen von der Visual Basic-Deklaration und den ausführbaren Anweisungen und Tabellen von wichtigen Listen, die für viele Anweisungen gelten.</span><span class="sxs-lookup"><span data-stu-id="a52ac-103">The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.</span></span>  
+# <a name="statements-visual-basic"></a><span data-ttu-id="8e2b0-102">Anweisungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e2b0-102">Statements (Visual Basic)</span></span>
+<span data-ttu-id="8e2b0-103">Die Themen in diesem Abschnitt enthalten Tabellen von der Visual Basic-Deklaration und den ausführbaren Anweisungen und Tabellen von wichtigen Listen, die für viele Anweisungen gelten.</span><span class="sxs-lookup"><span data-stu-id="8e2b0-103">The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a52ac-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a52ac-104">In This Section</span></span>  
- [<span data-ttu-id="a52ac-105">Anweisungen A – E</span><span class="sxs-lookup"><span data-stu-id="a52ac-105">A-E Statements</span></span>](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8e2b0-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="8e2b0-104">In This Section</span></span>  
+ [<span data-ttu-id="8e2b0-105">Anweisungen A – E</span><span class="sxs-lookup"><span data-stu-id="8e2b0-105">A-E Statements</span></span>](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
- [<span data-ttu-id="a52ac-106">Anweisungen F – P</span><span class="sxs-lookup"><span data-stu-id="a52ac-106">F-P Statements</span></span>](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [<span data-ttu-id="8e2b0-106">Anweisungen F – P</span><span class="sxs-lookup"><span data-stu-id="8e2b0-106">F-P Statements</span></span>](../../../visual-basic/language-reference/statements/f-p-statements.md)  
   
- [<span data-ttu-id="a52ac-107">Anweisungen Q – Z</span><span class="sxs-lookup"><span data-stu-id="a52ac-107">Q-Z Statements</span></span>](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [<span data-ttu-id="8e2b0-107">Anweisungen Q – Z</span><span class="sxs-lookup"><span data-stu-id="8e2b0-107">Q-Z Statements</span></span>](../../../visual-basic/language-reference/statements/q-z-statements.md)  
   
- [<span data-ttu-id="a52ac-108">Klauseln</span><span class="sxs-lookup"><span data-stu-id="a52ac-108">Clauses</span></span>](../../../visual-basic/language-reference/statements/clauses.md)  
+ [<span data-ttu-id="8e2b0-108">Klauseln</span><span class="sxs-lookup"><span data-stu-id="8e2b0-108">Clauses</span></span>](../../../visual-basic/language-reference/statements/clauses.md)  
   
- [<span data-ttu-id="a52ac-109">Deklarationskontexte und Standardzugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="a52ac-109">Declaration Contexts and Default Access Levels</span></span>](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ [<span data-ttu-id="8e2b0-109">Deklarationskontexte und Standardzugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="8e2b0-109">Declaration Contexts and Default Access Levels</span></span>](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
   
- [<span data-ttu-id="a52ac-110">Attributliste</span><span class="sxs-lookup"><span data-stu-id="a52ac-110">Attribute List</span></span>](../../../visual-basic/language-reference/statements/attribute-list.md)  
+ [<span data-ttu-id="8e2b0-110">Attributliste</span><span class="sxs-lookup"><span data-stu-id="8e2b0-110">Attribute List</span></span>](../../../visual-basic/language-reference/statements/attribute-list.md)  
   
- [<span data-ttu-id="a52ac-111">Parameterliste</span><span class="sxs-lookup"><span data-stu-id="a52ac-111">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [<span data-ttu-id="8e2b0-111">Parameterliste</span><span class="sxs-lookup"><span data-stu-id="8e2b0-111">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
   
- [<span data-ttu-id="a52ac-112">Typliste</span><span class="sxs-lookup"><span data-stu-id="a52ac-112">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
+ [<span data-ttu-id="8e2b0-112">Typliste</span><span class="sxs-lookup"><span data-stu-id="8e2b0-112">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="a52ac-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a52ac-113">Related Sections</span></span>  
- [<span data-ttu-id="a52ac-114">Sprachreferenz zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a52ac-114">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="8e2b0-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="8e2b0-113">Related Sections</span></span>  
+ [<span data-ttu-id="8e2b0-114">Sprachreferenz zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8e2b0-114">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [<span data-ttu-id="a52ac-115">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a52ac-115">Visual Basic</span></span>](../../../visual-basic/index.md)
+ [<span data-ttu-id="8e2b0-115">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8e2b0-115">Visual Basic</span></span>](../../../visual-basic/index.md)

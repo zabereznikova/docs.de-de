@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442042"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="6910f-102">IMetaDataTables::GetBlobHeapSize-Methode</span><span class="sxs-lookup"><span data-stu-id="6910f-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="6910f-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span><span class="sxs-lookup"><span data-stu-id="6910f-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="127bd-102">IMetaDataTables::GetBlobHeapSize-Methode</span><span class="sxs-lookup"><span data-stu-id="127bd-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="127bd-103">Ruft die Größe des Binary Large Object (BLOB)-Heaps in Bytes ab.</span><span class="sxs-lookup"><span data-stu-id="127bd-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6910f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6910f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="127bd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="127bd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBlobHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6910f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6910f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="127bd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="127bd-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="6910f-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span><span class="sxs-lookup"><span data-stu-id="6910f-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="127bd-106">vorgenommen Ein Zeiger auf die Größe des BLOB-Heaps in Bytes.</span><span class="sxs-lookup"><span data-stu-id="127bd-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6910f-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6910f-107">Requirements</span></span>  
- <span data-ttu-id="6910f-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6910f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="127bd-107">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="127bd-107">Requirements</span></span>  
+ <span data-ttu-id="127bd-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="127bd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6910f-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6910f-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="127bd-109">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="127bd-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6910f-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6910f-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="127bd-110">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="127bd-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6910f-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6910f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="127bd-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="127bd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6910f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6910f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="127bd-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="127bd-112">See also</span></span>
 
-- [<span data-ttu-id="6910f-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6910f-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="6910f-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6910f-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="127bd-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="127bd-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="127bd-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="127bd-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

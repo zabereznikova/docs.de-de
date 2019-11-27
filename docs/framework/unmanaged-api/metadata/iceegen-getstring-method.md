@@ -22,12 +22,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426170"
 ---
-# <a name="iceegengetstring-method"></a><span data-ttu-id="b6731-102">ICeeGen::GetString-Methode</span><span class="sxs-lookup"><span data-stu-id="b6731-102">ICeeGen::GetString Method</span></span>
-<span data-ttu-id="b6731-103">Gets the string stored at the specified relative virtual address.</span><span class="sxs-lookup"><span data-stu-id="b6731-103">Gets the string stored at the specified relative virtual address.</span></span>  
+# <a name="iceegengetstring-method"></a><span data-ttu-id="94857-102">ICeeGen::GetString-Methode</span><span class="sxs-lookup"><span data-stu-id="94857-102">ICeeGen::GetString Method</span></span>
+<span data-ttu-id="94857-103">Ruft die Zeichenfolge ab, die bei der angegebenen relativen virtuellen Adresse gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="94857-103">Gets the string stored at the specified relative virtual address.</span></span>  
   
- <span data-ttu-id="b6731-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="b6731-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="94857-104">Diese Methode ist veraltet und sollte nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="94857-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6731-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6731-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94857-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="94857-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetString (  
@@ -36,22 +36,22 @@ HRESULT GetString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6731-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="b6731-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94857-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="94857-106">Parameters</span></span>  
  `RVA`  
- <span data-ttu-id="b6731-107">[in] The relative virtual address of the string to return.</span><span class="sxs-lookup"><span data-stu-id="b6731-107">[in] The relative virtual address of the string to return.</span></span>  
+ <span data-ttu-id="94857-107">in Die relative virtuelle Adresse der zurück zugebende Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="94857-107">[in] The relative virtual address of the string to return.</span></span>  
   
  `lpString`  
- <span data-ttu-id="b6731-108">[out] The returned string.</span><span class="sxs-lookup"><span data-stu-id="b6731-108">[out] The returned string.</span></span>  
+ <span data-ttu-id="94857-108">vorgenommen Die zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="94857-108">[out] The returned string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6731-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b6731-109">Requirements</span></span>  
- <span data-ttu-id="b6731-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6731-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94857-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="94857-109">Requirements</span></span>  
+ <span data-ttu-id="94857-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94857-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6731-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b6731-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="94857-111">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="94857-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6731-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b6731-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="94857-112">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="94857-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b6731-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6731-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="94857-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94857-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6731-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6731-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94857-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="94857-114">See also</span></span>
 
-- [<span data-ttu-id="b6731-115">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b6731-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="94857-115">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="94857-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

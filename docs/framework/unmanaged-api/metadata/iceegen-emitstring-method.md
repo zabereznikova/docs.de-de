@@ -22,12 +22,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436382"
 ---
-# <a name="iceegenemitstring-method"></a><span data-ttu-id="fc87d-102">ICeeGen::EmitString-Methode</span><span class="sxs-lookup"><span data-stu-id="fc87d-102">ICeeGen::EmitString Method</span></span>
-<span data-ttu-id="fc87d-103">Emits the specified string into the code base.</span><span class="sxs-lookup"><span data-stu-id="fc87d-103">Emits the specified string into the code base.</span></span>  
+# <a name="iceegenemitstring-method"></a><span data-ttu-id="0804b-102">ICeeGen::EmitString-Methode</span><span class="sxs-lookup"><span data-stu-id="0804b-102">ICeeGen::EmitString Method</span></span>
+<span data-ttu-id="0804b-103">Gibt die angegebene Zeichenfolge in der Codebasis aus.</span><span class="sxs-lookup"><span data-stu-id="0804b-103">Emits the specified string into the code base.</span></span>  
   
- <span data-ttu-id="fc87d-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="fc87d-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="0804b-104">Diese Methode ist veraltet und sollte nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0804b-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc87d-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="fc87d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0804b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="0804b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitString (  
@@ -36,22 +36,22 @@ HRESULT EmitString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fc87d-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="fc87d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0804b-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="0804b-106">Parameters</span></span>  
  `lpString`  
- <span data-ttu-id="fc87d-107">[in] The string to emit.</span><span class="sxs-lookup"><span data-stu-id="fc87d-107">[in] The string to emit.</span></span>  
+ <span data-ttu-id="0804b-107">in Die auszugebende Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="0804b-107">[in] The string to emit.</span></span>  
   
  `RVA`  
- <span data-ttu-id="fc87d-108">[out] The relative virtual address of the emitted string.</span><span class="sxs-lookup"><span data-stu-id="fc87d-108">[out] The relative virtual address of the emitted string.</span></span>  
+ <span data-ttu-id="0804b-108">vorgenommen Die relative virtuelle Adresse der ausgegebenen Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="0804b-108">[out] The relative virtual address of the emitted string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fc87d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fc87d-109">Requirements</span></span>  
- <span data-ttu-id="fc87d-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc87d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0804b-109">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="0804b-109">Requirements</span></span>  
+ <span data-ttu-id="0804b-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0804b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc87d-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fc87d-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0804b-111">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="0804b-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fc87d-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fc87d-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0804b-112">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="0804b-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fc87d-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc87d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0804b-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0804b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc87d-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc87d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0804b-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0804b-114">See also</span></span>
 
-- [<span data-ttu-id="fc87d-115">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fc87d-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="0804b-115">ICeeGen-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0804b-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

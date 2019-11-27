@@ -22,10 +22,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436710"
 ---
-# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="93456-102">IMetaDataImport::GetTypeRefProps-Methode</span><span class="sxs-lookup"><span data-stu-id="93456-102">IMetaDataImport::GetTypeRefProps Method</span></span>
-<span data-ttu-id="93456-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span><span class="sxs-lookup"><span data-stu-id="93456-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="be701-102">IMetaDataImport::GetTypeRefProps-Methode</span><span class="sxs-lookup"><span data-stu-id="be701-102">IMetaDataImport::GetTypeRefProps Method</span></span>
+<span data-ttu-id="be701-103">Ruft die Metadaten ab, die dem <xref:System.Type> zugeordnet sind, auf den vom angegebenen TypeRef-Token verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="be701-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93456-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="93456-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be701-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="be701-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeRefProps (  
@@ -37,32 +37,32 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93456-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="93456-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be701-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="be701-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="93456-106">[in] The TypeRef token that represents the type to return metadata for.</span><span class="sxs-lookup"><span data-stu-id="93456-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="be701-106">in Das TypeRef-Token, das den Typ darstellt, für den Metadaten zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="be701-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
   
  `ptkResolutionScope`  
- <span data-ttu-id="93456-107">[out] A pointer to the scope in which the reference is made.</span><span class="sxs-lookup"><span data-stu-id="93456-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="93456-108">This value is an AssemblyRef or ModuleRef token.</span><span class="sxs-lookup"><span data-stu-id="93456-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
+ <span data-ttu-id="be701-107">vorgenommen Ein Zeiger auf den Bereich, in dem der Verweis erfolgt.</span><span class="sxs-lookup"><span data-stu-id="be701-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="be701-108">Dieser Wert ist ein AssemblyRef-oder ModuleRef-Token.</span><span class="sxs-lookup"><span data-stu-id="be701-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
   
  `szName`  
- <span data-ttu-id="93456-109">[out] A buffer containing the type name.</span><span class="sxs-lookup"><span data-stu-id="93456-109">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="be701-109">vorgenommen Ein Puffer, der den Typnamen enthält.</span><span class="sxs-lookup"><span data-stu-id="be701-109">[out] A buffer containing the type name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="93456-110">[in] The requested size in wide characters of `szName`.</span><span class="sxs-lookup"><span data-stu-id="93456-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="be701-110">in Die angeforderte Größe in breit Zeichen `szName`.</span><span class="sxs-lookup"><span data-stu-id="be701-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="93456-111">[out] The returned size in wide characters of `szName`.</span><span class="sxs-lookup"><span data-stu-id="93456-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="be701-111">vorgenommen Die zurückgegebene Größe in breit Zeichen `szName`.</span><span class="sxs-lookup"><span data-stu-id="be701-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93456-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="93456-112">Requirements</span></span>  
- <span data-ttu-id="93456-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93456-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be701-112">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="be701-112">Requirements</span></span>  
+ <span data-ttu-id="be701-113">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be701-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93456-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="93456-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="be701-114">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="be701-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="93456-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="93456-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="be701-115">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="be701-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="93456-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93456-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="be701-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be701-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93456-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93456-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be701-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="be701-117">See also</span></span>
 
-- [<span data-ttu-id="93456-118">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="93456-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="93456-119">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="93456-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="be701-118">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="be701-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="be701-119">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="be701-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

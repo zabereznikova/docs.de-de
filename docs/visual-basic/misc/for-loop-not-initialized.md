@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: For-Schleife nicht initialisiert
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -11,14 +11,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348442"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="a8f6c-102">Die For-Schleife wurde nicht initialisiert (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="a8f6c-102">For loop not initialized (Visual Basic)</span></span>
-<span data-ttu-id="a8f6c-103">Es erfolgte ein Sprung in die Mitte einer `For...Next` -Schleife.</span><span class="sxs-lookup"><span data-stu-id="a8f6c-103">You jumped into the middle of a `For...Next` loop.</span></span>  
+# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="e07a6-102">Die For-Schleife wurde nicht initialisiert (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="e07a6-102">For loop not initialized (Visual Basic)</span></span>
+<span data-ttu-id="e07a6-103">Es erfolgte ein Sprung in die Mitte einer `For...Next` -Schleife.</span><span class="sxs-lookup"><span data-stu-id="e07a6-103">You jumped into the middle of a `For...Next` loop.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a8f6c-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a8f6c-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e07a6-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="e07a6-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="a8f6c-105">Entfernen Sie den Sprung in die Schleife.</span><span class="sxs-lookup"><span data-stu-id="a8f6c-105">Remove the jump into the loop.</span></span>  
+1. <span data-ttu-id="e07a6-105">Entfernen Sie den Sprung in die Schleife.</span><span class="sxs-lookup"><span data-stu-id="e07a6-105">Remove the jump into the loop.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8f6c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a8f6c-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e07a6-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e07a6-106">See also</span></span>
 
-- [<span data-ttu-id="a8f6c-107">For Each...Next-Anweisung</span><span class="sxs-lookup"><span data-stu-id="a8f6c-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="a8f6c-108">Gewusst wie: Bezeichnen von Anweisungen</span><span class="sxs-lookup"><span data-stu-id="a8f6c-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+- [<span data-ttu-id="e07a6-107">For Each...Next-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e07a6-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="e07a6-108">Gewusst wie: Bezeichnen von Anweisungen</span><span class="sxs-lookup"><span data-stu-id="e07a6-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
