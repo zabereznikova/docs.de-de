@@ -14,13 +14,13 @@ Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die
   
 - **URIs und URI-Verarbeitung** URIs spielen eine zentrale Rolle beim Entwerfen von Web-http-Diensten. Das WCF-Web-HTTP-Programmiermodell verwendet die Klassen <xref:System.UriTemplate> und <xref:System.UriTemplateTable>, um URI-Verarbeitungsfunktionen bereitzustellen.  
   
-- **Unterstützung für GET- und POST-Operationen**: WEB-HTTP-Dienste nutzen neben den verschiedenen Aufrufverben für Datenbearbeitung und Remoteaufrufe das GET-Verb für den Datenabruf. Das WCF-Web-HTTP-Programmiermodell verwendet die <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute>, um Dienst Vorgänge sowohl Get-als auch anderen HTTP-Verben wie Put, Post und DELETE zuzuordnen.  
+- **Unterstützung für Get-und Post-Vorgänge** Web-HTTP-Dienste nutzen das Get-Verb für den Datenabruf, zusätzlich zu den verschiedenen Aufruf Verben für die Datenänderung und den Remote Aufruf. Das WCF-Web-HTTP-Programmiermodell verwendet die <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute>, um Dienst Vorgänge sowohl Get-als auch anderen HTTP-Verben wie Put, Post und DELETE zuzuordnen.  
   
-- **Mehrere Datenformate**: Webdienste verarbeiten zusätzlich zu SOAP-Nachrichten viele weitere Arten von Daten. Das WCF-Web-HTTP-Programmiermodell verwendet die <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior>, um viele verschiedene Datenformate zu unterstützen, z. b. XML-Dokumente, JSON-Datenobjekte und Streams von Binär Inhalten wie Bildern, Videodateien oder nur-Text.  
+- **Mehrere Datenformate** Webdienste verarbeiten viele Arten von Daten zusätzlich zu SOAP-Nachrichten. Das WCF-Web-HTTP-Programmiermodell verwendet die <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior>, um viele verschiedene Datenformate zu unterstützen, z. b. XML-Dokumente, JSON-Datenobjekte und Streams von Binär Inhalten wie Bildern, Videodateien oder nur-Text.  
   
  Das WCF-Web-HTTP-Programmiermodell erweitert die Reichweite von WCF auf Szenarien im Webstil, die Web-HTTP-Dienste, AJAX-und JSON-Dienste sowie Syndikation-Feeds (Atom/RSS) enthalten. Weitere Informationen zu AJAX-und JSON-Diensten finden Sie [unter AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Weitere Informationen zur Syndizierung finden Sie unter [Übersicht über die WCF-Syndizierung](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Weitere Informationen zu den standardmäßig unterstützten Typen finden Sie im Abschnitt **UriTemplate-Abfragezeichenfolgenparameter und URLs** weiter unten. Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Weitere Informationen zu den standardmäßig unterstützten Typen finden Sie unten im Abschnitt " **UriTemplate-Abfrage Zeichenfolgen-Parameter und-URLs** ". Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 > Mit dem WCF-Web-HTTP-Programmiermodell geschriebene Dienste verwenden keine SOAP-Nachrichten. Da SOAP nicht verwendet wird, können die von WCF bereitgestellten Sicherheitsfunktionen nicht verwendet werden. Sie können jedoch transportbasierte Sicherheit verwenden, indem Sie den Dienst mit HTTPS hosten. Weitere Informationen zur WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md) .  
@@ -45,7 +45,7 @@ Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die
   
  .NET Framework stellt eine API mit dem Namen <xref:System.UriTemplate> zum Arbeiten mit URI-Vorlagen bereit. `UriTemplates` können Sie folgende Aufgaben ausführen:  
   
-- Sie können eine der `Bind`-Methoden mit einem Satz von Parametern aufrufen, um einen der Vorlage entsprechenden *vollständig geschlossenen URI* zu erzeugen. Dies bedeutet, dass alle Variablen innerhalb der URI-Vorlage durch Istwerte ersetzt werden.  
+- Sie können eine der `Bind` Methoden mit einer Reihe von Parametern aufzurufen, um einen *vollständig geschlossenen URI* zu erstellen, der mit der Vorlage übereinstimmt. Dies bedeutet, dass alle Variablen innerhalb der URI-Vorlage durch Istwerte ersetzt werden.  
   
 - Sie können `Match`() mit einem potenziellen URI aufrufen. Diese Methode schlüsselt den potenziellen URI mithilfe einer Vorlage in seine Bestandteile auf und gibt ein Wörterbuch zurück, in dem die verschiedenen URI-Teile mit den zugehörigen Variablen aus der Vorlage verzeichnet sind.  
   
@@ -113,11 +113,11 @@ interface ICustomer
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
 |<xref:System.Single>|-3.402823e38 - 3.402823e38 (Exponentennotation nicht erforderlich)|  
 |<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308 (Exponentennotation nicht erforderlich)|  
-|<xref:System.Char>|Ein beliebiges einzelnes Zeichen|  
+|<xref:System.Char>|Alle einzelnen Zeichen|  
 |<xref:System.Decimal>|Eine beliebige Dezimalzahl in Standardnotation (kein Exponent)|  
 |<xref:System.Boolean>|True oder False (Groß-/Kleinschreibung wird nicht berücksichtigt)|  
 |<xref:System.String>|Beliebige Zeichenfolge (leere Zeichenfolgen werden nicht unterstützt, und es werden keine Escapezeichen hinzugefügt)|  
-|<xref:System.DateTime>|MM/TT/JJJJ<br /><br /> mm/dd/yyyy HH: mm: SS [am&#124;pm]<br /><br /> Monat Tag Jahr<br /><br /> Monat Tag Jahr hh: mm: SS [am&#124;pm]|  
+|<xref:System.DateTime>|TT.MM.JJJJ<br /><br /> mm/dd/yyyy HH: mm: SS [am&#124;pm]<br /><br /> Monat Tag Jahr<br /><br /> Monat Tag Jahr hh: mm: SS [am&#124;pm]|  
 |<xref:System.TimeSpan>|TT.HH:MM:SS<br /><br /> Wobei TT = Tage, HH = Stunden, MM = Minuten, SS = Sekunden|  
 |<xref:System.Guid>|Ein GUID, beispielsweise:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/TT/JJJJ HH:MM:SS MM:SS<br /><br /> Wobei TT = Tage, HH = Stunden, MM = Minuten, SS = Sekunden|  

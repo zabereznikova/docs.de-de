@@ -24,7 +24,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 
 In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.PasswordBox>-Steuerelement aufgelistet.
 
-|Segment|Typ|Beschreibung|
+|-Komponente|Typ|Beschreibung|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Ein visuelles Element, das ein <xref:System.Windows.FrameworkElement>enthalten kann. Der Text des <xref:System.Windows.Controls.PasswordBox> wird in diesem Element angezeigt.|
 
@@ -36,7 +36,7 @@ In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Wi
 |-|-|-|
 |Normal|CommonStates|Der Standardzustand|
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|

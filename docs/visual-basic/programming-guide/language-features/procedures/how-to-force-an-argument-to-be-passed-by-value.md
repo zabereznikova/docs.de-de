@@ -22,35 +22,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344514"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)
-The procedure declaration determines the passing mechanism. If a parameter is declared [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic expects to pass the corresponding argument by reference. This allows the procedure to change the value of the programming element underlying the argument in the calling code. If you wish to protect the underlying element against such change, you can override the `ByRef` passing mechanism in the procedure call by enclosing the argument name in parentheses. These parentheses are in addition to the parentheses enclosing the argument list in the call.  
+Die Prozedur Deklaration bestimmt den Übergabe Mechanismus. Wenn ein Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)deklariert wird, erwartet Visual Basic, dass das entsprechende Argument als Verweis übergeben wird. Dies ermöglicht es der Prozedur, den Wert des Programmier Elements zu ändern, das dem Argument im aufrufenden Code zugrunde liegt. Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie den `ByRef` Übergabe Mechanismus im Prozedur aufzurufen überschreiben, indem Sie den Argument Namen in Klammern einschließen. Diese Klammern sind zusätzlich zu den Klammern angegeben, die die Argumentliste im-Befehl einschließen.  
   
- The calling code cannot override a [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanism.  
+ Der Aufruf Code kann einen [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) -Mechanismus nicht überschreiben.  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>To force an argument to be passed by value  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>So erzwingen Sie, dass ein Argument als Wert übermittelt wird  
   
-- If the corresponding parameter is declared `ByVal` in the procedure, you do not need to take any additional steps. Visual Basic already expects to pass the argument by value.  
+- Wenn der entsprechende Parameter in der Prozedur `ByVal` deklariert ist, müssen Sie keine weiteren Schritte ausführen. Visual Basic erwartet bereits, dass das Argument als Wert übergeben wird.  
   
-- If the corresponding parameter is declared `ByRef` in the procedure, enclose the argument in parentheses in the procedure call.  
+- Wenn der entsprechende Parameter in der Prozedur `ByRef` deklariert wird, schließen Sie das Argument in Klammern in den Prozedur aufrufen ein.  
   
 ## <a name="example"></a>Beispiel  
- The following example overrides a `ByRef` parameter declaration. In the call that forces `ByVal`, note the two levels of parentheses.  
+ Im folgenden Beispiel wird eine `ByRef` Parameter Deklaration überschrieben. Beachten Sie in dem-Befehl, der `ByVal`erzwingt, die zwei Ebenen von Klammern.  
   
  [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
  [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
- When `str` is enclosed in extra parentheses within the argument list, the `setNewString` procedure cannot change its value in the calling code, and `MsgBox` displays "Cannot be replaced if passed ByVal". When `str` is not enclosed in extra parentheses, the procedure can change it, and `MsgBox` displays "This is a new value for the inString argument."  
+ Wenn `str` in der Argumentliste in zusätzliche Klammern eingeschlossen ist, kann die `setNewString` Prozedur ihren Wert im aufrufenden Code nicht ändern, und `MsgBox` anzeigen "kann nicht ersetzt werden, wenn ByVal übergeben wird". Wenn `str` nicht in zusätzliche Klammern eingeschlossen ist, kann Sie von der Prozedur geändert werden, und `MsgBox` wird angezeigt, dass dies ein neuer Wert für das inString-Argument ist.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ Wenn Sie eine Variable als Verweis übergeben, müssen Sie das `ByRef`-Schlüsselwort verwenden, um diesen Mechanismus anzugeben.  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ Der Standardwert in Visual Basic besteht darin, Argumente als Wert zu übergeben. Es ist jedoch eine gute Programmier Übung, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) -oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jedem deklarierten Parameter einzuschließen. Dadurch wird Ihr Code leichter lesbar.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- If a procedure declares a parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the correct execution of the code might depend on being able to change the underlying element in the calling code. If the calling code overrides this calling mechanism by enclosing the argument in parentheses, or if it passes a nonmodifiable argument, the procedure cannot change the underlying element. This might produce unexpected results in the calling code.  
+ Wenn eine Prozedur einen [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)-Parameter deklariert, hängt die korrekte Ausführung des Codes möglicherweise davon ab, ob das zugrunde liegende Element im aufrufenden Code geändert werden kann. Wenn der aufrufende Code diesen Aufruf Mechanismus überschreibt, indem das Argument in Klammern eingeschlossen wird, oder wenn er ein nicht änderbares Argument übergibt, kann die Prozedur das zugrunde liegende Element nicht ändern. Dies kann zu unerwarteten Ergebnissen im aufrufenden Code führen.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Es besteht immer ein potenzielles Risiko, dass eine Prozedur den Wert ändern kann, der einem Argument im aufrufenden Code zugrunde liegt. Stellen Sie sicher, dass dieser Wert geändert wird, und dass Sie darauf vorbereitet sind, ihn vor der Verwendung auf Gültigkeit zu überprüfen.  
   
 ## <a name="see-also"></a>Siehe auch
 

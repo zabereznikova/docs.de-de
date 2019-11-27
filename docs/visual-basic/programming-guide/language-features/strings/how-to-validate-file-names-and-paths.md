@@ -1,5 +1,5 @@
 ---
-title: 'How to: Validate File Names and Paths'
+title: 'Gewusst wie: Überprüfen von Dateinamen und Pfaden'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], validating
@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344365"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Gewusst wie: Überprüfen von Dateinamen und Pfaden in Visual Basic
-This example returns a `Boolean` value that indicates whether a string represents a file name or path. The validation checks if the name contains characters that are not allowed by the file system.  
+In diesem Beispiel wird ein `Boolean` Wert zurückgegeben, der angibt, ob eine Zeichenfolge einen Dateinamen oder einen Pfad darstellt. Die Validierung prüft, ob der Name Zeichen enthält, die vom Dateisystem nicht zugelassen werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbcnRegEx#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#4)]  
   
- This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length. It also does not check if the application has permission to access the file-system resource with the specified name.  
+ In diesem Beispiel wird nicht überprüft, ob der Name falsch platzierte Doppelpunkte oder Verzeichnisse ohne Namen enthält oder ob die Länge des Namens die vom System definierte maximale Länge überschreitet. Außerdem wird nicht überprüft, ob die Anwendung über die Berechtigung zum Zugreifen auf die Dateisystem Ressource mit dem angegebenen Namen verfügt.  
   
 ## <a name="see-also"></a>Siehe auch
 

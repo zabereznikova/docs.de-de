@@ -15,17 +15,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352682"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML-Achseneigenschaften (Visual Basic)
-The topics in this section document the syntax of XML axis properties in Visual Basic. The XML axis properties make it easy to access XML directly in your code.  
+Die Themen in diesem Abschnitt dokumentieren die Syntax von XML-Achsen Eigenschaften in Visual Basic. Die XML-Achsen Eigenschaften erleichtern den direkten Zugriff auf XML in Ihrem Code.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Topic|Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[XML-Attributachseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Describes how to access the attributes of an <xref:System.Xml.Linq.XElement> object.|  
-|[Untergeordnete XML-Achseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Describes how to access the children of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML-Nachfolger-Achseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Describes how to access the descendants of an <xref:System.Xml.Linq.XElement> object.|  
-|[Erweiterungsindexereigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Describes how to access individual elements in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
-|[XML-Value-Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Describes how to access the value of the first element of a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
+|[XML-Attributachseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Beschreibt, wie auf die Attribute eines <xref:System.Xml.Linq.XElement> Objekts zugegriffen wird.|  
+|[Untergeordnete XML-Achseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Beschreibt, wie auf die untergeordneten Elemente eines <xref:System.Xml.Linq.XElement> Objekts zugegriffen wird.|  
+|[XML-Nachfolger-Achseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Beschreibt, wie auf die Nachfolger eines <xref:System.Xml.Linq.XElement> Objekts zugegriffen wird.|  
+|[Erweiterungsindexereigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Beschreibt den Zugriff auf einzelne Elemente in einer Auflistung von <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XAttribute>-Objekten.|  
+|[XML-Value-Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Beschreibt den Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XAttribute>-Objekten.|  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350621"
 ---
-# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
+# <a name="set-operations-visual-basic"></a>Set-Vorgänge (Visual Basic)
 
 Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen erzeugen, der auf der Existenz oder Abwesenheit äquivalenter Elemente in derselben oder in einer getrennten Auflistung (oder einem Satz) basiert.
 
@@ -17,7 +17,7 @@ Die Methoden des Standardabfrageoperators, die Mengenoperationen ausführen, sin
 
 ## <a name="methods"></a>Methoden
 
-|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|
+|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|Entfernt doppelte Werte aus einer Auflistung|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
 |Except|Gibt die festgelegte Differenz zurück, was bedeutet, dass die Elemente in einer Auflistung nicht in einer zweiten Auflistung angezeigt werden|Nicht zutreffend.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
@@ -36,7 +36,7 @@ Die folgende Abbildung veranschaulicht das Verhalten der Methode <xref:System.Li
 
 Die folgende Abbildung veranschaulicht das Verhalten von <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Die zurückgegebene Sequenz enthält nur die Elemente aus der ersten Eingabesequenz, die sich nicht in der zweiten Eingabesequenz befinden.
 
-![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
+![Grafische Darstellung der Aktion Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Zeigt das Verhalten von Except an.")
 
 ### <a name="intersect"></a>Überschneiden
 
@@ -52,7 +52,7 @@ Die folgende Abbildung stellt einen Union-Vorgang zweier Zeichensequenzen dar. D
 
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax
 
-The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
+Im folgenden Beispiel wird die `Distinct`-Klausel in einer LINQ-Abfrage verwendet, um die eindeutigen Zahlen aus einer Liste von ganzen Zahlen zurückzugeben.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
@@ -61,5 +61,5 @@ The following example uses the `Distinct` clause in a LINQ query to return the u
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct-Klausel](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [Vorgehensweise: kombinieren und Vergleichen von Zeichen folgen Auflistungen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

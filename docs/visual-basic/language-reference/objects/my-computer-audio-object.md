@@ -18,14 +18,14 @@ Stellt Methoden zur Soundwiedergabe bereit.
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Computer.Audio` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Audio>.  
   
- For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ Weitere Informationen finden Sie unter [Abspielen von Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

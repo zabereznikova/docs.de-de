@@ -23,12 +23,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351461"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
-Specifies that a class cannot be used as a base class.  
+Gibt an, dass eine Klasse nicht als Basisklasse verwendet werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- **Alternate Terms**. A class that cannot be inherited is sometimes called a *sealed* class.  
+ **Alternative Begriffe**. Eine Klasse, die nicht vererbt werden kann, wird manchmal als *versiegelte* Klasse bezeichnet.  
   
- The `NotInheritable` modifier can be used in this context:  
+ Der `NotInheritable` Modifizierer kann in diesem Kontext verwendet werden:  
   
  [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -36,4 +36,4 @@ Specifies that a class cannot be used as a base class.
 
 - [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

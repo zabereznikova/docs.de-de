@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431860"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember-Methode
-Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.  
+Erstellt einen Verweis auf den angegebenen Member eines Typs oder Moduls, der außerhalb des aktuellen Bereichs definiert ist, und definiert ein Token für diesen Verweis.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,46 +42,46 @@ HRESULT DefineImportMember (
   
 ## <a name="parameters"></a>Parameter  
  `pAssemImport`  
- [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target member is imported.  
+ in Eine [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) -Schnittstelle, die die Assembly darstellt, aus der der Zielmember importiert wird.  
   
  `pbHashValue`  
- [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
+ in Ein Array, das den Hash für die durch `pAssemImport`angegebene Assembly enthält.  
   
  `cbHashValue`  
  [in] Die Anzahl der Bytes im `pbHashValue`-Array.  
   
  `pImport`  
- [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target member is imported.  
+ in Eine [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Schnittstelle, die den Metadatenbereich darstellt, aus dem der Zielmember importiert wird.  
   
  `mbMember`  
- [in] The metadata token that specifies the target member. The token can be an `mdMethodDef` (for a member method), `mdProperty` (for a member property), or `mdFieldDef` (for a member field) token.  
+ in Das Metadatentoken, das den Zielmember angibt. Das Token kann eine `mdMethodDef` (für eine Member-Methode), `mdProperty` (für eine Element Eigenschaft) oder `mdFieldDef` (für ein Element Feld) sein.  
   
  `pAssemEmit`  
- [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target member is imported.  
+ in Eine [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) -Schnittstelle, die die Assembly darstellt, in die der Zielmember importiert wird.  
   
  `tkParent`  
- [in] The `mdTypeRef` or `mdModuleRef` token for the type or module, respectively, that owns the target member.  
+ in Die `mdTypeRef` oder `mdModuleRef` Token für den Typ bzw. das Modul, das den Zielmember besitzt.  
   
  `pmr`  
- [out] The `mdMemberRef` token that is defined in the current scope for the member reference.  
+ vorgenommen Das `mdMemberRef` Token, das im aktuellen Gültigkeitsbereich für den Element Verweis definiert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- The `DefineImportMember` method looks up the member, specified by `mbMember`, that is defined in another scope, specified by `pImport`, and retrieves its properties. It uses this information to call the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method in the current scope to create the member reference.  
+ Die `DefineImportMember`-Methode sucht nach dem durch `mbMember`angegebenen Member, der in einem anderen Bereich definiert ist, der durch `pImport`angegeben wird, und ruft seine Eigenschaften ab. Diese Informationen werden verwendet, um die [IMetaDataEmit::D efinemembership Ref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) -Methode im aktuellen Bereich aufzurufen, um den Element Verweis zu erstellen.  
   
- Generally, before you use the `DefineImportMember` method, you must create, in the current scope, a type reference or module reference for the target member's parent class, interface, or module. The metadata token for this reference is then passed in the `tkParent` argument. You do not need to create a reference to the target member's parent if it will be resolved later by the compiler or linker. Zusammenfassung:  
+ Im Allgemeinen müssen Sie, bevor Sie die `DefineImportMember`-Methode verwenden, im aktuellen Bereich einen Typverweis oder Modul Verweis für die übergeordnete Klasse, Schnittstelle oder das Modul des Zielmembers erstellen. Das Metadatentoken für diesen Verweis wird dann im `tkParent` Argument weitergegeben. Sie müssen keinen Verweis auf das übergeordnete Element des Zielmembers erstellen, wenn es später durch den Compiler oder den Linker aufgelöst wird. Zusammenfassung:  
   
-- If the target member is a field or method, use either the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) or the [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) method to create a type reference, in the current scope, for the member's parent class or parent interface.  
+- Wenn das Zielmember ein Feld oder eine Methode ist, verwenden Sie entweder die [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) -Methode oder die [IMetaDataEmit::D efineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) -Methode, um im aktuellen Bereich einen Typverweis für die übergeordnete Klasse oder übergeordnete Schnittstelle des Elements zu erstellen.  
   
-- If the target member is a global variable or global function (that is, not a member of a class or interface), use the [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) method to create a module reference, in the current scope, for the member's parent module.  
+- Wenn das Zielmember eine globale Variable oder globale Funktion (d. h. kein Member einer Klasse oder Schnittstelle) ist, verwenden Sie die [IMetaDataEmit::D efinemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) -Methode, um einen Modul Verweis im aktuellen Bereich für das übergeordnete Modul des Elements zu erstellen.  
   
-- If the target member's parent will be resolved later by the compiler or linker, then pass `mdTokenNil` in `tkParent`. The only scenario in which this applies is when a global function or global variable is being imported from a .obj file that will ultimately be linked into the current module and the metadata merged.  
+- Wenn das übergeordnete Element des Zielmembers später durch den Compiler oder den Linker aufgelöst wird, übergeben Sie `mdTokenNil` in `tkParent`. Das einzige Szenario, in dem dies zutrifft, ist, wenn eine globale Funktion oder globale Variable aus einer OBJ-Datei importiert wird, die letztendlich mit dem aktuellen Modul und den zusammengeführten Metadaten verknüpft wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

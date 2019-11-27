@@ -40,29 +40,29 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ in Ein FieldDef-oder MethodDef-Token, für das die PInvoke-Mapping-Metadaten zu erhalten sind.  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ vorgenommen Ein Zeiger auf Flags, die für die Zuordnung verwendet werden. Dieser Wert ist eine Bitmaske aus der [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) -Enumeration.  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ vorgenommen Der Name der nicht verwalteten Ziel-dll.  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ in Die Größe in breit Zeichen `szImportName`.  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ vorgenommen Die Anzahl der breit Zeichen, die in `szImportName`zurückgegeben werden.  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ vorgenommen Ein Zeiger auf ein ModuleRef-Token, das die nicht verwaltete Zielobjekt Bibliothek darstellt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433872"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash-Methode
-Retrieves a hash blob for a given assembly.  
+Ruft ein hashblob für eine angegebene Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parameter  
  `FileToken`  
- ID of assembly to which the hash will refer.  
+ Die ID der Assembly, auf die der Hash verweist.  
   
  `ppvHash`  
- Receives the resulting hash blob.  
+ Empfängt das resultierende hashblob.  
   
  `pcbHash`  
- Receives size, in bytes, of hash blob.  
+ Empfängt die Größe des hashblobs in Byte.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 

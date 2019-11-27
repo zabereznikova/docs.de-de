@@ -38,7 +38,7 @@ Zertifikate werden in Speichern abgelegt. Die zwei Hauptspeicherorte sind in wei
 
 Diese beiden Speicher teilen sich in weitere Unterspeicher auf. Die wichtigsten Unterspeicher für die Programmierung mit WCF sind folgende:
 
-- **Vertrauenswürdige Stammzertifizierungsstellen**. Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.
+- **Vertrauenswürdige Stammzertifizierungsstellen** Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.
 
   > [!IMPORTANT]
   > Der lokale Computer stuft alle Zertifikate in diesem Speicher als implizit vertrauenswürdig ein; dies gilt auch, wenn das Zertifikat im Speicher nicht von einer vertrauenswürdigen Zertifizierungsstelle eines Drittanbieters stammt. Aus diesem Grund sollten Sie in diesem Speicher nur Zertifikate ablegen, wenn Sie dem Aussteller uneingeschränkt vertrauen und sich der möglichen Folgen bewusst sind.
@@ -113,7 +113,7 @@ Im Zusammenhang mit Zertifikaten wird häufig danach gefragt, welches Zertifikat
 
 ### <a name="service-certificates"></a>Dienstzertifikate
 
-Dienstzertifikate werden in erster Linie zur Authentifizierung von Servern gegenüber Clients verwendet. Bei der Authentifizierung eines Servers durch einen Client wird u. a. zunächst überprüft, ob der Wert im Feld **Antragsteller** mit dem Uniform Resource Identifier (URI) übereinstimmt, der zum Herstellen der Verbindung mit dem Dienst verwendet wird: das DNS von Client und Server muss übereinstimmen. Wenn der URI des Dienstanbieter beispielsweise `http://www.contoso.com/endpoint/` ist, muss das Feld **Betreff** auch den Wert `www.contoso.com`enthalten.
+Dienstzertifikate werden in erster Linie zur Authentifizierung von Servern gegenüber Clients verwendet. Bei der Authentifizierung eines Servers durch einen Client wird u.a. zunächst überprüft, ob der Wert im Feld **Antragsteller** mit dem Uniform Resource Identifier (URI) übereinstimmt, der zum Herstellen der Verbindung mit dem Dienst verwendet wird: das DNS von Client und Server muss übereinstimmen. Wenn der URI des Dienstanbieter beispielsweise `http://www.contoso.com/endpoint/` ist, muss das Feld **Betreff** auch den Wert `www.contoso.com`enthalten.
 
 Das Feld kann mehrere Werte enthalten, denen jeweils eine Initialisierung zur Angabe des Werts vorangeht. In den meisten Fällen ist die Initialisierung "CN" (allgemeiner Name), z. b. `CN = www.contoso.com`. Das Feld **Antragsteller** kann auch leer sein. In diesem Fall kann das Feld **Alternativer Antragstellername** den Wert **DNS-Name** enthalten.
 

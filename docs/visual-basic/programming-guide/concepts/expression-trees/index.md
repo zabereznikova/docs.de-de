@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksbaumstrukturen
+title: Expression Trees
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
 ms.openlocfilehash: 4ca3b56f48368e465560fc5edd60c0df8dd4e1c0
@@ -144,8 +144,8 @@ Console.WriteLine(expr.Compile()(4))
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Expressions>
-- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Vorgehensweise: Ausführen von Ausdrucks Baumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Vorgehensweise: Ändern von Ausdrucks Baumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
 - [Lambda-Ausdrücke](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Übersicht über die Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Programming Concepts (Visual Basic) (Programmierkonzepte (Visual Basic))](../../../../visual-basic/programming-guide/concepts/index.md)

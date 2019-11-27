@@ -379,7 +379,7 @@ Im folgenden finden Sie ein Beispiel Objekt für die Serialisierung und JSON-Aus
 
 |Die Eigenschaften- |Wert  |
 |---------|---------|
-| Datum    | 8/1/2019 12:00:00 Uhr-07:00|
+| Date    | 8/1/2019 12:00:00 Uhr-07:00|
 | TemperatureCelsius| 25 |
 | Zusammenfassung| null|
 
@@ -571,11 +571,11 @@ Wenn Sie den JSON-Code deserialisieren, der in den angezeigten Typ angezeigt wir
 
 Wenn Sie den zuvor gezeigten JSON-Code in diesen Beispieltyp deserialisieren, werden die zusätzlichen Daten zu Schlüssel-Wert-Paaren der `ExtensionData`-Eigenschaft:
 
-|Die Eigenschaften- |Wert  |Notizen  |
+|Die Eigenschaften- |Wert  |Hinweise  |
 |---------|---------|---------|
-| Datum    | 8/1/2019 12:00:00 Uhr-07:00||
+| Date    | 8/1/2019 12:00:00 Uhr-07:00||
 | TemperatureCelsius| 0 | Unterscheidung nach Groß-/Kleinschreibung (`temperatureCelsius` im JSON-Code), sodass die-Eigenschaft nicht festgelegt ist. |
-| Zusammenfassung | Luft ||
+| Zusammenfassung | Hohe Auslastung ||
 | ExtensionData | TemperatureCelsius: 25 |Da die Groß-/Kleinschreibung nicht entsprach, ist diese JSON-Eigenschaft ein zusätzliches und wird zu einem Schlüssel-Wert-Paar im Wörterbuch.|
 || Datesavailable:<br>  8/1/2019 12:00:00 Uhr-07:00<br>8/2/2019 12:00:00 Uhr-07:00 |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
 | |Summarywords:<br>Toll<br>Digen<br>Feu |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
@@ -714,7 +714,7 @@ Im folgenden finden Sie ein JSON-Beispiel, das der vorherige Code lesen kann. Di
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 * [Übersicht über System. Text. JSON](system-text-json-overview.md)
 * [System. Text. JSON-API-Referenz](xref:System.Text.Json)

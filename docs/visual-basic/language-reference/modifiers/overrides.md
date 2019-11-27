@@ -1,5 +1,5 @@
 ---
-title: Overrides
+title: Außerkraftsetzungen
 ms.date: 07/20/2015
 f1_keywords:
 - Overrides
@@ -26,11 +26,11 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur mit 
 
 ## <a name="rules"></a>Regeln
 
-- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
+- **Deklarations Kontext.** Sie können `Overrides` nur in einer Eigenschaft oder Prozedur Deklarations Anweisung verwenden.
 
-- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. Da ein überschreibendes Element implizit überschreibbar ist, können Sie `Overridable` nicht mit `Overrides` kombinieren.
+- **Kombinierte modifiziererer.** Sie können `Overrides` nicht mit `Shadows` oder `Shared` in derselben Deklaration angeben. Da ein überschreibendes Element implizit überschreibbar ist, können Sie `Overridable` nicht mit `Overrides` kombinieren.
 
-- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. Das bedeutet, dass die Anzahl, die Reihenfolge und die Datentypen der Parameter in den Parameterlisten gleich sein müssen.
+- **Übereinstimmende Signaturen.** Die Signatur dieser Deklaration muss genau mit der *Signatur* der Eigenschaft oder Prozedur übereinstimmen, die Sie überschreibt. Das bedeutet, dass die Anzahl, die Reihenfolge und die Datentypen der Parameter in den Parameterlisten gleich sein müssen.
 
   Neben der Signatur müssen auch die folgenden Elemente der überschreibenden Deklaration genau übereinstimmen:
 
@@ -38,17 +38,17 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur mit 
 
   - Der Rückgabetyp, falls vorhanden
 
-- **Generic Signatures.** Bei einer generischen Prozedur umfasst die Signatur die Anzahl der Typparameter. Daher muss die überschreibende Deklaration auch in dieser Hinsicht mit der Basisklassenversion übereinstimmen.
+- **Generische Signaturen.** Bei einer generischen Prozedur umfasst die Signatur die Anzahl der Typparameter. Daher muss die überschreibende Deklaration auch in dieser Hinsicht mit der Basisklassenversion übereinstimmen.
 
-- **Additional Matching.** Diese Deklaration muss nicht nur in Bezug auf die Signatur, sondern auch in folgenden Punkten mit der Basisklassenversion übereinstimmen:
+- **Weitere Übereinstimmungen.** Diese Deklaration muss nicht nur in Bezug auf die Signatur, sondern auch in folgenden Punkten mit der Basisklassenversion übereinstimmen:
 
-  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
+  - Modifizierer auf Zugriffsebene (z. b. [Public](../../../visual-basic/language-reference/modifiers/public.md))
 
-  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Übergabe Mechanismus jedes Parameters ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
   - Einschränkungslisten für jeden Typparameter einer generischen Prozedur
 
-- **Shadowing and Overriding.** Sowohl das Shadowing als auch das Überschreiben definieren ein geerbtes Element neu, es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Shadogerichteten und überschreiben.** Sowohl das Shadowing als auch das Überschreiben definieren ein geerbtes Element neu, es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen. Weitere Informationen finden Sie unter [shadowingin Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
 Beim Verwenden von `Overrides` fügt der Compiler implizit `Overloads` hinzu, sodass Ihre Bibliotheks-APIs leichter mit C# verwendet werden können.
 
@@ -64,8 +64,8 @@ Der `Overrides`-Modifizierer kann in folgenden Kontexten verwendet werden:
 
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Shadodown in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Typliste](../../../visual-basic/language-reference/statements/type-list.md)

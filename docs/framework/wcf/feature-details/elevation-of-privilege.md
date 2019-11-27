@@ -84,7 +84,7 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Überlegungen zur Sicherheit](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

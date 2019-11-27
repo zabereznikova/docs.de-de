@@ -12,7 +12,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351684"
 ---
 # <a name="registry-summary-visual-basic"></a>Registrierung: Zusammenfassung (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Visual Studio-sprach Schlüsselwörter und-Member der Lauf Zeit Bibliothek sind nach Zweck und Verwendung organisiert.  
   
  Die Verwendung der `My`-Funktion ermöglicht bei Registrierungsoperationen mehr Produktivität und Leistung als diese Elemente. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
@@ -24,6 +24,6 @@ Visual Studio language keywords and run-time library members are organized by pu
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Lesen aus der und Schreiben in die Registrierung](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
