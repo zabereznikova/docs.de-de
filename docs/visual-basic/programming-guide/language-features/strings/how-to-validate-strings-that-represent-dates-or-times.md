@@ -13,16 +13,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344355"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Gewusst wie: Überprüfen von Zeichenfolgen, die Datumsangaben oder Uhrzeiten darstellen (Visual Basic)
-The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.  
+Im folgenden Codebeispiel wird ein `Boolean` Wert festgelegt, der angibt, ob eine Zeichenfolge ein gültiges Datum oder eine gültige Uhrzeit darstellt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Replace `("01/01/03")` and `"9:30 PM"` with the date and time you want to validate. You can replace the string with another hard-coded string, with a `String` variable, or with a method that returns a string, such as `InputBox`.  
+ Ersetzen Sie `("01/01/03")` und `"9:30 PM"` durch das Datum und die Uhrzeit, die Sie überprüfen möchten. Sie können die Zeichenfolge durch eine andere hart codierte Zeichenfolge ersetzen, durch eine `String` Variable oder durch eine Methode, die eine Zeichenfolge zurückgibt, wie z. b. `InputBox`.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Use this method to validate the string before trying to convert the `String` to a `DateTime` variable. By checking the date or time first, you can avoid generating an exception at run time.  
+## <a name="robust-programming"></a>Robuste Programmierung  
+ Verwenden Sie diese Methode, um die Zeichenfolge zu validieren, bevor Sie die `String` in eine `DateTime` Variable konvertieren. Wenn Sie das Datum oder die Uhrzeit zuerst überprüfen, können Sie verhindern, dass zur Laufzeit eine Ausnahme ausgelöst wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

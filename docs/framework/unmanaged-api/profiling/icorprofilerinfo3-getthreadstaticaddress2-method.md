@@ -38,32 +38,32 @@ HRESULT GetThreadStaticAddress2(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] The ID of the class that contains the requested thread-static field.  
+ in Die ID der Klasse, die das angeforderte Thread statische Feld enthält.  
   
  `fieldToken`  
- [in] The metadata token for the requested thread-static field.  
+ in Das Metadatentoken für das angeforderte Thread statische Feld.  
   
  `appDomainId`  
  [in] Die ID der Anwendungsdomäne.  
   
  `threadId`  
- [in] The ID of the thread that is the scope for the requested static field.  
+ in Die ID des Threads, bei dem es sich um den Bereich für das angeforderte statische Feld handelt.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified thread.  
+ vorgenommen Ein Zeiger auf die Adresse des statischen Felds, das sich im angegebenen Thread befindet.  
   
 ## <a name="remarks"></a>Hinweise  
- The `GetThreadStaticAddress2` method may return one of the following:  
+ Die `GetThreadStaticAddress2`-Methode kann eine der folgenden Methoden zurückgeben:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- Ein CORPROF_E_DATAINCOMPLETE HRESULT, wenn dem angegebenen statischen Feld keine Adresse im angegebenen Kontext zugewiesen wurde.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Die Adressen von Objekten, die sich möglicherweise im Garbage Collection Heap befinden. Diese Adressen können nach Garbage Collection ungültig werden. Daher sollten Profiler nach Garbage Collection nicht davon ausgehen, dass Sie gültig sind.  
   
- Before a class’s class constructor is completed, `GetThreadStaticAddress2` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, gibt `GetThreadStaticAddress2` CORPROF_E_DATAINCOMPLETE für alle statischen Felder zurück, obwohl einige der statischen Felder möglicherweise bereits initialisiert sind und Garbage Collection Objekte rooting.  
   
- The [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) method is similar to the `GetThreadStaticAddress2` method, but does not accept an application domain argument.  
+ Die [ICorProfilerInfo2:: GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) -Methode ähnelt der `GetThreadStaticAddress2`-Methode, akzeptiert jedoch kein Anwendungs Domänen Argument.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

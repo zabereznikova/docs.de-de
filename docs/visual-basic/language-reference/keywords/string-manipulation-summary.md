@@ -21,7 +21,7 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Vergleichen von zwei Zeichenfolgen|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
 |Konvertieren von Zeichenfolgen|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
 |Umkehren einer Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
-|Konvertieren in Groß- oder Kleinschreibung|<xref:Microsoft.VisualBasic.Strings.Format%2A>ist <xref:Microsoft.VisualBasic.Strings.LCase%2A>ist <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|Konvertieren in Groß- oder Kleinschreibung|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
 |Erstellen einer Zeichenfolge aus sich wiederholenden Zeichen|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
 |Suchen der Länge einer Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
 |Formatieren einer Zeichenfolge|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
@@ -34,5 +34,5 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

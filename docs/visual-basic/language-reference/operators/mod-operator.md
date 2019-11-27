@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350916"
 ---
-# <a name="mod-operator-visual-basic"></a>Mod operator (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Mod-Operator (Visual Basic)
 
-Divides two numbers and returns only the remainder.
+Dividiert zwei Zahlen und gibt nur den Rest zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,29 +29,29 @@ Divides two numbers and returns only the remainder.
 result = number1 Mod number2
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 `result` \
-Erforderlich. Any numeric variable or property.
+Erforderlich Eine beliebige numerische Variable oder Eigenschaft.
 
 `number1` \
-Erforderlich. Ein beliebiger numerischer Ausdruck.
+Erforderlich Ein beliebiger numerischer Ausdruck.
 
 `number2` \
-Erforderlich. Ein beliebiger numerischer Ausdruck.
+Erforderlich Ein beliebiger numerischer Ausdruck.
 
-## <a name="supported-types"></a>Supported types
+## <a name="supported-types"></a>Unterstützte Typen
 
-allen numerischen Typen This includes the unsigned and floating-point types and `Decimal`.
+allen numerischen Typen Dies schließt die unsignierten und Gleit Komma Typen und `Decimal`ein.
 
 ## <a name="result"></a>Ergebnis
 
-The result is the remainder after `number1` is divided by `number2`. For example, the expression `14 Mod 4` evaluates to 2.
+Das Ergebnis ist der Rest, nachdem `number1` durch `number2`dividiert wurde. Der Ausdruck `14 Mod 4` z. b. zu 2 ausgewertet.
 
 > [!NOTE]
-> There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers. The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.
+> Es gibt einen Unterschied zwischen *Rest* und *Modulo* in der Mathematik mit unterschiedlichen Ergebnissen für negative Zahlen. Der `Mod`-Operator in Visual Basic, der .NET Framework `op_Modulus`-Operator und die zugrunde liegende [REM](<xref:System.Reflection.Emit.OpCodes.Rem>) Il-Anweisung führen einen Rest-Vorgang aus.
 
-The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative. The result is always in the range (-`number2`, `number2`), exclusive. Beispiel:
+Das Ergebnis einer `Mod` Operation behält das Vorzeichen der Dividende `number1`bei und ist daher möglicherweise positiv oder negativ. Das Ergebnis liegt immer im Bereich (-`number2`, `number2`), exklusiv. Beispiel:
 
 ```vb
 Public Module Example
@@ -71,48 +71,48 @@ End Module
 
 ## <a name="remarks"></a>Hinweise
 
-If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned. The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.
+Wenn entweder `number1` oder `number2` ein Gleit Komma Wert ist, wird der Rest der Division zurückgegeben. Der Datentyp des Ergebnisses ist der kleinste Datentyp, der alle möglichen Werte enthalten kann, die aus der Division mit den Datentypen `number1` und `number2`resultieren.
 
-If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.
+Wenn `number1` oder `number2` als " [Nothing](../../../visual-basic/language-reference/nothing.md)" ausgewertet wird, wird es als 0 (null) behandelt.
 
-Related operators include the following:
+Verwandte Operatoren umfassen Folgendes:
 
-- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division. For example, the expression `14 \ 4` evaluates to 3.
+- Der [Operator \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) gibt den ganzzahligen Quotienten einer Division zurück. Der Ausdruck `14 \ 4` z. b. zu 3 ausgewertet.
 
-- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number. For example, the expression `14 / 4` evaluates to 3.5.
+- Der [Operator/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) gibt den vollständigen Quotienten, einschließlich des Restwerts, als Gleit Komma Zahl zurück. Der Ausdruck `14 / 4` z. b. zu 3,5 ausgewertet.
 
-## <a name="attempted-division-by-zero"></a>Attempted division by zero
+## <a name="attempted-division-by-zero"></a>Versuchte Division durch Null
 
-If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:
+Wenn `number2` als 0 (null) ausgewertet wird, hängt das Verhalten des `Mod` Operators vom Datentyp der Operanden ab:
 
-- An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542 Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.
-- A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.
+- Eine ganzzahlige Division löst eine <xref:System.DivideByZeroException> Ausnahme aus, wenn `number2` nicht in der Kompilierzeit bestimmt werden kann, und generiert einen Kompilierzeitfehler `BC30542 Division by zero occurred while evaluating this expression`, wenn `number2` zur Kompilierzeit auf 0 (null) ausgewertet wird.
+- Eine Gleit Komma Division gibt <xref:System.Double.NaN?displayProperty=nameWithType>zurück.
 
-## <a name="equivalent-formula"></a>Equivalent formula
+## <a name="equivalent-formula"></a>Äquivalente Formel
 
-The expression `a Mod b` is equivalent to either of the following formulas:
+Der Ausdruck `a Mod b` entspricht einer der folgenden Formeln:
 
 `a - (b * (a \ b))`
 
 `a - (b * Fix(a / b))`
 
-## <a name="floating-point-imprecision"></a>Floating-point imprecision
+## <a name="floating-point-imprecision"></a>Ungenauigkeit von Gleit Komma Werten
 
-When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory. This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+Beachten Sie beim Arbeiten mit Gleit Komma Zahlen, dass Sie nicht immer über eine genaue Dezimal Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen bestimmter Vorgänge führen, wie z. b. Wert Vergleiche und der `Mod`-Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="overloading"></a>Überladen
 
-The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior. If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+Der `Mod`-Operator kann *überladen*werden, was bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann. Wenn Ihr Code `Mod` auf eine Instanz einer Klasse oder Struktur anwendet, die eine solche Überladung enthält, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Beispiel
 
-The following example uses the `Mod` operator to divide two numbers and return only the remainder. If either number is a floating-point number, the result is a floating-point number that represents the remainder.
+Im folgenden Beispiel wird der `Mod`-Operator verwendet, um zwei Zahlen aufzuteilen und nur den Rest zurückzugeben. Wenn eine der Zahlen eine Gleit Komma Zahl ist, ist das Ergebnis eine Gleit Komma Zahl, die den Restwert darstellt.
 
 [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>Beispiel
 
-The following example demonstrates the potential imprecision of floating-point operands. In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.
+Im folgenden Beispiel wird die mögliche Ungenauigkeit von Gleit Komma Operanden veranschaulicht. In der ersten Anweisung sind die Operanden `Double`, und 0,2 ist ein unendlich wiederholter binärer Bruchteil mit einem gespeicherten Wert von 0.20000000000000001. In der zweiten Anweisung erzwingt das Literaltypzeichen `D` beide Operanden zu `Decimal`, und 0,2 hat eine genaue Darstellung.
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
@@ -124,5 +124,5 @@ The following example demonstrates the potential imprecision of floating-point o
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operator \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

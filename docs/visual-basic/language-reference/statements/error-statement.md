@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351236"
 ---
 # <a name="error-statement"></a>Error-Anweisung
-Simulates the occurrence of an error.  
+Simuliert das Auftreten eines Fehlers.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,41 +26,41 @@ Simulates the occurrence of an error.
 Error errornumber  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `errornumber`  
- Erforderlich. Can be any valid error number.  
+ Erforderlich Kann eine beliebige gültige Fehlernummer sein.  
   
 ## <a name="remarks"></a>Hinweise  
- The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
+ Die `Error`-Anweisung wird aus Gründen der Abwärtskompatibilität unterstützt. Verwenden Sie in neuem Code, insbesondere beim Erstellen von-Objekten, die `Raise`-Methode des `Err` Objekts, um Laufzeitfehler zu generieren.  
   
- If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
+ Wenn `errornumber` definiert ist, ruft die `Error` Anweisung den Fehlerhandler auf, nachdem den Eigenschaften des `Err`-Objekts die folgenden Standardwerte zugewiesen wurden:  
   
-|property|Wert|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
-|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
-|`Source`|Name of the current Visual Basic project.|  
-|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
-|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
-|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
-|`LastDLLError`|Zero.|  
+|`Number`|Der als Argument für `Error` Anweisung angegebene Wert. Kann eine beliebige gültige Fehlernummer sein.|  
+|`Source`|Der Name des aktuellen Visual Basic Projekts.|  
+|`Description`|Zeichen folgen Ausdruck, der dem Rückgabewert der `Error`-Funktion für die angegebene `Number`entspricht, wenn diese Zeichenfolge vorhanden ist. Wenn die Zeichenfolge nicht vorhanden ist, enthält `Description` eine Zeichenfolge der Länge 0 ("").|  
+|`HelpFile`|Das voll qualifizierte Laufwerk, der Pfad und der Dateiname der entsprechenden Visual Basic Hilfedatei.|  
+|`HelpContext`|Die entsprechende Visual Basic Hilfedatei-Kontext-ID für den Fehler, der der `Number`-Eigenschaft entspricht.|  
+|`LastDLLError`|Zins.|  
   
- If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
+ Wenn kein Fehlerhandler vorhanden ist oder keine aktiviert ist, wird eine Fehlermeldung erstellt und in den Eigenschaften des `Err` Objekts angezeigt.  
   
 > [!NOTE]
-> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
+> Einige Visual Basic Host Anwendungen können keine Objekte erstellen. Informationen zum Erstellen von Klassen und Objekten finden Sie in der Dokumentation der Host Anwendung.  
   
 ## <a name="example"></a>Beispiel  
- This example uses the `Error` statement to generate error number 11.  
+ In diesem Beispiel wird die `Error`-Anweisung verwendet, um die Fehlernummer 11 zu generieren.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>Voraussetzungen  
+ **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")  
   
 ## <a name="see-also"></a>Siehe auch
 

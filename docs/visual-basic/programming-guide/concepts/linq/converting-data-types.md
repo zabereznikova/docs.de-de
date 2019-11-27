@@ -9,11 +9,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354255"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Datentypen werden umgerechnet (Visual Basic)
 
 Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
 
- Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. The following are some examples:
+ Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Es folgen einige Beispiele:
 
 - Die <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>-Methode kann zum Ausblenden einer benutzerdefinierten Implementierung eines Standardabfrageoperators eines Typs verwendet werden.
 
@@ -27,7 +27,7 @@ Die folgende Tabelle enthält die Standardabfrageoperator-Methoden, die Datentyp
 
 Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen, ändern den statischen Typ der Quellauflistung, listen ihn jedoch nicht auf. Die Methoden, deren Namen mit „To“ anfangen, listen die Quellauflistung auf und verschieben die Elemente in den entsprechenden Auflistungstyp.
 
-|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|
+|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601> typisiert zurück|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>-Element in ein (generisches) <xref:System.Linq.IQueryable>-Element|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -40,7 +40,7 @@ Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen,
 
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+Im folgenden Codebeispiel wird die `From As`-Klausel verwendet, um einen Typ in einen Untertyp umzuwandeln, bevor auf einen Member zugegriffen wird, der nur für den Untertyp verfügbar ist.
 
 ```vb
 Class Plant
@@ -85,4 +85,4 @@ End Sub
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

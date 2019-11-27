@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350585"
 ---
-# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
+# <a name="sorting-data-visual-basic"></a>Sortieren von Daten (Visual Basic)
 
 Bei einem Sortiervorgang werden die Elemente einer Sequenz auf Grundlage eines oder mehrerer Attribute sortiert. Mit dem ersten Sortierkriterium wird eine primäre Sortierung der Elemente ausgeführt. Sie können die Elemente innerhalb jeder primären Sortiergruppe sortieren, indem Sie ein zweites Sortierkriterium angeben.
 
@@ -21,7 +21,7 @@ Die Methoden des Standardabfrageoperators, die Daten sortieren, sind im folgende
 
 ## <a name="methods"></a>Methoden
 
-|Methodenname|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|
+|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|Sortiert Werte in aufsteigender Reihenfolge|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|Sortiert Werte in absteigender Reihenfolge|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -153,4 +153,4 @@ MsgBox(sb.ToString())
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By-Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [Gewusst wie: Sortieren von Abfrageergebnissen](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Gewusst wie: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

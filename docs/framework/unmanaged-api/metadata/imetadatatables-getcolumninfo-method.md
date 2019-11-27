@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436093"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo-Methode
-Gets data about the specified column in the specified table.  
+Ruft Daten über die angegebene Spalte in der angegebenen Tabelle ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,55 +42,55 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ in Der Index der gewünschten Tabelle.  
   
  `ixCol`  
- [in] The index of the desired column.  
+ in Der Index der gewünschten Spalte.  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ vorgenommen Ein Zeiger auf den Offset der Spalte in der Zeile.  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ vorgenommen Ein Zeiger auf die Größe der Spalte in Bytes.  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ vorgenommen Ein Zeiger auf den Typ der Werte in der Spalte.  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ vorgenommen Ein Zeiger auf einen Zeiger auf den Spaltennamen.  
  
 ## <a name="remarks"></a>Hinweise
 
-The returned column type falls within a range of values:
+Der zurückgegebene Spaltentyp liegt innerhalb eines Wertebereichs:
 
-| pType                    | Beschreibung   | Helper function                   |
+| pType                    | Beschreibung   | Hilfsfunktion                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
-| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
-| `iLONG` (98)             | Int32         | **IsFixedType**                   |
-| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
-| `iSTRING` (101)          | Zeichenfolge        | **IsHeapType**                    |
-| `iGUID` (102)            | GUID          | **IsHeapType**                    |
-| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0.. 63)   | Gesagt           | **Isridtype**<br>**Isridortoken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Codiertes Token | **Iscodeddekentype** <br>**Isridortoken** |
+| `iSHORT` (96)            | Int16         | **Isfixedtype**                   |
+| `iUSHORT` (97)           | UInt16        | **Isfixedtype**                   |
+| `iLONG` (98)             | Int32         | **Isfixedtype**                   |
+| `iULONG` (99)            | UInt32        | **Isfixedtype**                   |
+| `iBYTE` (100)            | Byte          | **Isfixedtype**                   |
+| `iSTRING` (101)          | String        | **Isheaptype**                    |
+| `iGUID` (102)            | Guid          | **Isheaptype**                    |
+| `iBLOB` (103)            | Blob          | **Isheaptype**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+Werte, die im *Heap* gespeichert sind (d. h. `IsHeapType == true`), können mithilfe von gelesen werden:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GetGuid**
+- `iBLOB`: **IMetadataTables. getBlob**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> Um die in der obigen Tabelle definierten Konstanten zu verwenden, schließen Sie die-Direktive `#define _DEFINE_META_DATA_META_CONSTANTS` ein, die von der *Cor. h* -Header Datei bereitgestellt wird
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

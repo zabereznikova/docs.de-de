@@ -26,8 +26,8 @@ Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandel
   
 |Begriff|Definition|  
 |---|---|  
-|+ &#124; -|Dies ist optional. Standardmäßig ist `-warnaserror-` aktiviert, sodass Warnungen den Compiler nicht daran hindern, eine Ausgabedatei zu erstellen. Die `-warnaserror`-Option, die mit `-warnaserror+` identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.|  
-|`numberList`|Dies ist optional. Mit Kommas als Trennzeichen getrennte Liste der Warnungs-ID-Nummern, für die die `-warnaserror`-Option gilt. Ist keine Warnungs-ID angegeben, gilt die `-warnaserror`-Option für alle Warnungen.|  
+|+ &#124; -|Optional. Standardmäßig ist `-warnaserror-` aktiviert, sodass Warnungen den Compiler nicht daran hindern, eine Ausgabedatei zu erstellen. Die `-warnaserror`-Option, die mit `-warnaserror+` identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.|  
+|`numberList`|Optional. Mit Kommas als Trennzeichen getrennte Liste der Warnungs-ID-Nummern, für die die `-warnaserror`-Option gilt. Ist keine Warnungs-ID angegeben, gilt die `-warnaserror`-Option für alle Warnungen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `-warnaserror`-Option bewirkt, dass alle Warnungen als Fehler behandelt werden. Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet. Der Compiler meldet weitere Vorkommen derselben Warnung als Warnungen.  
@@ -41,11 +41,11 @@ Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandel
   
 |So legen Sie „-warnaserror“ so fest, dass alle Warnungen in der Visual Studio-IDE als Fehler behandelt werden|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2. Klicken Sie auf die Registerkarte **Kompilieren** .<br />3. Stellen Sie sicher, dass das Kontrollkästchen **alle Warnungen deaktivieren deaktiviert** ist.<br />4. Aktivieren Sie das Kontrollkästchen **alle Warnungen als Fehler behandeln** .|  
   
 |So legen Sie „-warnaserror“ so fest, dass bestimmte Warnungen in der Visual Studio-IDE als Fehler behandelt werden|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />2. Klicken Sie auf die Registerkarte **Kompilieren** .<br />3. Stellen Sie sicher, dass das Kontrollkästchen **alle Warnungen deaktivieren deaktiviert** ist.<br />4. Stellen Sie sicher, dass das Kontrollkästchen **alle Warnungen als Fehler behandeln** deaktiviert ist.<br />5. Wählen Sie in der **Benachrichtigungs** Spalte neben der Warnung einen **Fehler** aus, der als Fehler behandelt werden soll.|  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Code wird `In.vb` kompiliert und wird der Compiler angewiesen, für das erste Vorkommen jeder von ihm gefundenen Warnung einen Fehler anzuzeigen.  
@@ -65,4 +65,4 @@ vbc -warnaserror:42024 t2.vb
 
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
+- [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

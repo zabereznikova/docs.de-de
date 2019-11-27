@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437788"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef-Methode
-Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.  
+Ruft einen Zeiger auf das TypeRef-Token für den <xref:System.Type> Verweis ab, der sich im angegebenen Bereich befindet und den angegebenen Namen aufweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT FindTypeRef (
   
 ## <a name="parameters"></a>Parameter  
  `tkResolutionScope`  
- [in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.  
+ in Ein ModuleRef-, AssemblyRef-oder TypeRef-Token, das bzw. die das Modul, die Assembly oder den Typ angibt, in dem der Typverweis definiert ist.  
   
  `szName`  
- [in] The name of the type reference to search for.  
+ in Der Name des Typverweises, nach dem gesucht werden soll.  
   
  `ptr`  
- [out] A pointer to the matching TypeRef token.  
+ vorgenommen Ein Zeiger auf das übereinstimmende TypeRef-Token.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

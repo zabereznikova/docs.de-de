@@ -27,12 +27,12 @@ ms.locfileid: "74447976"
  Benutzeroberflächenautomatisierungs-Anbieter werden in zwei Kategorien unterteilt: clientseitige und serverseitige Anbieter.  
   
 ### <a name="client-side-providers"></a>Clientseitige Anbieter  
- Clientseitige Anbieter werden von Benutzeroberflächenautomatisierungs-Clients für die Kommunikation mit einer Anwendung implementiert, die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht oder nicht vollständig unterstützt. Client-side providers usually communicate with the server across the process boundary by sending and receiving Windows messages.  
+ Clientseitige Anbieter werden von Benutzeroberflächenautomatisierungs-Clients für die Kommunikation mit einer Anwendung implementiert, die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht oder nicht vollständig unterstützt. Client seitige Anbieter kommunizieren in der Regel über die Prozess Grenze hinweg mit dem Server, indem Sie Windows-Nachrichten senden und empfangen.  
   
- Because UI Automation providers for controls in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applications are supplied as part of the operating system, client applications seldom have to implement their own providers, and this overview does not cover them further.  
+ Da Benutzeroberflächenautomatisierungs-Anbieter für Steuerelemente in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]-, Windows Forms-oder [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Anwendungen als Teil des Betriebssystems bereitgestellt werden, müssen Client Anwendungen selten eigene Anbieter implementieren, und in dieser Übersicht werden Sie nicht näher behandelt.  
   
 ### <a name="server-side-providers"></a>Serverseitiger Anbieter  
- Server-side providers are implemented by custom controls or by applications that are based on a UI framework other than [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, or [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Server seitige Anbieter werden von benutzerdefinierten Steuerelementen oder Anwendungen implementiert, die auf einem anderen Benutzeroberflächen Framework als [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms oder [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]basieren.  
   
  Serverseitige Anbieter kommunizieren mit Clientanwendungen über Prozessgrenzen hinweg, indem sie Schnittstellen für das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kernsystem verfügbar machen, das wiederum Anforderungen von Clients bereitstellt.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74447976"
 ## <a name="ui-automation-provider-concepts"></a>Konzepte für Benutzeroberflächenautomatisierungs-Anbieter  
  Dieser Abschnitt bietet kurze Erläuterungen zu einer Auswahl von Schlüsselkonzepten, die Sie kennen müssen, um Benutzeroberflächenautomatisierungs-Anbieter implementieren zu können.  
   
-### <a name="elements"></a>Elements  
+### <a name="elements"></a>Elemente  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Elemente sind Bestandteile der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , die für Benutzeroberflächenautomatisierungs-Clients angezeigt werden. Zu den entsprechenden Beispielen zählen Anwendungsfenster, Bereiche, Schaltflächen, QuickInfos, Listenfelder und Listenelemente.  
   
 ### <a name="navigation"></a>Navigation  
@@ -55,7 +55,7 @@ ms.locfileid: "74447976"
 |-|-|  
 |Rohdatenansicht|Enthält alle Elemente.|  
 |Steuerelementansicht|Enthält Elemente, die Steuerelemente sind.|  
-|Inhaltsansicht|Enthält Elemente mit Inhalten.|  
+|Ansicht Inhalt|Enthält Elemente mit Inhalten.|  
   
  Weitere Informationen zu Clientansichten der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur finden Sie unter [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74447976"
   
  [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Containersteuerelemente, z. B. Listenfelder und Strukturansichten, werden als Frameworks betrachtet, da sie ihren eigenen Code zum Rendern der untergeordneten Elemente und zum Ausführen der zugehörigen Treffertests enthalten. Im Gegensatz dazu ist ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Listenfeld kein Framework, da Rendering und Treffertests vom enthaltenen [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Fenster übernommen werden.  
   
- Die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in einer Anwendung kann aus verschiedenen Frameworks bestehen. For example, an HWND application window might contain Dynamic HTML (DHTML) which in turn contains a component such as a combo box in an HWND.  
+ Die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in einer Anwendung kann aus verschiedenen Frameworks bestehen. Beispielsweise kann ein HWND-Anwendungsfenster dynamisches HTML (DHTML) enthalten, das wiederum eine Komponente enthält, z. b. ein Kombinations Feld in einem HWND.  
   
 ### <a name="fragments"></a>Fragmente  
  Ein Fragment ist eine vollständige Unterstruktur von Elementen eines bestimmten Frameworks. Das Element im Stammknoten der Unterstruktur wird als Fragmentstamm bezeichnet. Ein Fragmentstamm besitzt kein übergeordnetes Element, wird aber innerhalb eines anderen Frameworks gehostet, in der Regel in einem [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Fenster (HWND).  

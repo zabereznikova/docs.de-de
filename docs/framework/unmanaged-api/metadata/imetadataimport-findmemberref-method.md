@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437955"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef-Methode
-Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Ruft einen Zeiger auf das Mitgliedschaft Verweis Token für den Element Verweis ab, der durch die angegebene <xref:System.Type> und den angegebenen Namen und die angegebene Metadatensignatur eingeschlossen ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,33 +39,33 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
+ in Das TypeRef-Token für die Klasse oder Schnittstelle, die den zu suchenden Element Verweis einschließt. Wenn dieser Wert `mdTokenNil`ist, erfolgt die Suche für eine globale Variable oder einen globalen Funktions Verweis.  
   
  `szName`  
- [in] The name of the member reference to search for.  
+ in Der Name des Element Verweises, nach dem gesucht werden soll.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member reference.  
+ in Ein Zeiger auf die binäre Metadatensignatur des Element Verweises.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ in Die Größe `pvSigBlob`in Byte.  
   
  `pmr`  
- [out] A pointer to the matching MemberRef token.  
+ vorgenommen Ein Zeiger auf das übereinstimmende mitgliedlinienref-Token.  
   
 ## <a name="remarks"></a>Hinweise  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+ Sie geben den Member mithilfe der einschließenden Klasse oder Schnittstelle (`td`), dessen Namen (`szName`) und optional dessen Signatur (`pvSigBlob`) an.  
   
- The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
+ Die an `FindMemberRef` über gegebene Signatur muss im aktuellen Gültigkeitsbereich generiert worden sein, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, das den einschließenden Klassen-oder Werttyp identifiziert. Das Token ist ein Index in der lokalen Tabelle "Typedef". Sie können keine Lauf Zeit Signatur außerhalb des Kontexts des aktuellen Bereichs erstellen und diese Signatur als Eingabe für `FindMemberRef`verwenden.  
   
- `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
+ `FindMemberRef` findet nur Member-Verweise, die direkt in der Klasse oder Schnittstelle definiert wurden. vererbte Element Verweise werden nicht gefunden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

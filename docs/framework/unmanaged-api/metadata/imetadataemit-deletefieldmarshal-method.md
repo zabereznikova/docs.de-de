@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434367"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a>IMetaDataEmit::DeleteFieldMarshal-Methode
-Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.  
+Zerstört die PInvoke-marshallingmetadatensignatur für das Objekt, auf das durch das angegebene Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,14 @@ HRESULT DeleteFieldMarshal (
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- [in] An `mdFieldDef` or `mdParamDef` token that represents the field or parameter for which to delete the marshaling metadata signature.  
+ in Ein `mdFieldDef` oder `mdParamDef` Token, das das Feld oder den Parameter darstellt, für das die marshallingmetadatensignatur gelöscht werden soll.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

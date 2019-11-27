@@ -51,7 +51,7 @@ HRESULT AttachProfiler(
  [in] Der vollständige Pfad zur DLL-Datei des Profilers, der geladen werden soll. Diese Zeichenfolge darf, einschließlich des NULL-Abschlusszeichens, nicht mehr als 260 Zeichen enthalten. Wenn `wszProfilerPath` gleich NULL oder eine leere Zeichenfolge ist, versucht die Common Language Runtime (CLR), den Speicherort der DLL-Datei des Profilers zu ermitteln, indem sie in der Registrierung nach der CLSID von diesem `pClsidProfiler` sucht.  
   
  `pvClientData`  
- [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. Der Triggerprozess kann diesen Arbeitsspeicher wiederverwenden, nachdem `AttachProfiler` beendet wurde. Wenn `pvClientData` gleich NULL ist, muss `cbClientData` gleich 0 (null) sein.  
+ in Ein Zeiger auf Daten, die von der [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) -Methode an den Profiler übermittelt werden sollen. Der Triggerprozess kann diesen Arbeitsspeicher wiederverwenden, nachdem `AttachProfiler` beendet wurde. Wenn `pvClientData` gleich NULL ist, muss `cbClientData` gleich 0 (null) sein.  
   
  `cbClientData`  
  [in] Die Größe der Daten in Bytes, auf die `pvClientData` verweist.  
@@ -72,14 +72,14 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Das Timeout ist abgelaufen, ohne dass mit dem Laden des Profilers begonnen wurde. Sie können den Anfügevorgang wiederholen. Timeouts treten auf, wenn ein Finalizer im Zielprozess für einen längeren Zeitraum als durch den Timeoutwert angegeben ausgeführt wird.|  
 |E_INVALIDARG|Mindestens ein Parameter hat ungültige Werte.|  
 |E_FAIL|Ein anderer, nicht angegebener Fehler ist aufgetreten.|  
-|Sonstige Fehlercodes|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. In diesem Fall wird E_NOTIMPL in CORPROF_E_PROFILER_NOT_ATTACHABLE konvertiert.|  
+|Sonstige Fehlercodes|Wenn die [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) -Methode des Profilers ein HRESULT zurückgibt, das einen Fehler angibt, gibt `AttachProfiler` dasselbe HRESULT zurück. In diesem Fall wird E_NOTIMPL in CORPROF_E_PROFILER_NOT_ATTACHABLE konvertiert.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="memory-management"></a>Speicherverwaltung  
  Entsprechend den COM-Konventionen ist der Aufrufer von `AttachProfiler` (z. B. der vom Profilerentwickler erstellte Triggercode) für das Zuordnen und Freigeben des Arbeitsspeichers für die Daten zuständig, auf die der `pvClientData`-Parameter verweist. Wenn die CLR den `AttachProfiler`-Aufruf ausführt, erstellt sie eine Kopie des Arbeitsspeichers, auf den `pvClientData` verweist, und sie überträgt die Kopie an den Zielprozess. Wenn die CLR im Zielprozess ihre eigene Kopie des `pvClientData`-Blocks empfängt, übergibt sie den Block über die `InitializeForAttach`-Methode an den Profiler, und dann gibt sie ihre Kopie der `pvClientData`-Blocks aus dem Zielprozess frei.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343775"
 ---
 # <a name="from-clause-visual-basic"></a>From-Klausel (Visual Basic)
-Specifies one or more range variables and a collection to query.  
+Gibt eine oder mehrere Bereichs Variablen und eine abzufragende Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -27,45 +27,45 @@ From element [ As type ] In collection [ _ ]
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`element`|Erforderlich. A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
-|`type`|Dies ist optional. Der `element`-Typ. If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Erforderlich. Refers to the collection to be queried. Must be an enumerable type.|  
+|`element`|Erforderlich Eine *Bereichs Variable* , die verwendet wird, um die Elemente der Auflistung zu durchlaufen. Eine Bereichs Variable wird verwendet, um auf die einzelnen Member des `collection` zu verweisen, während die Abfrage die `collection`durchläuft. Muss ein Aufzähl Bare-Typ sein.|  
+|`type`|Optional. Der `element`-Typ. Wenn keine `type` angegeben wird, wird der Typ der `element` von `collection`abgeleitet.|  
+|`collection`|Erforderlich Verweist auf die Auflistung, die abgefragt werden soll. Muss ein Aufzähl Bare-Typ sein.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Die `From`-Klausel wird verwendet, um die Quelldaten für eine Abfrage und die Variablen zu identifizieren, die verwendet werden, um auf ein Element aus der Quell Auflistung zu verweisen. Diese Variablen werden als *Bereichs Variablen*bezeichnet. Die `From`-Klausel ist für eine Abfrage erforderlich, außer wenn die `Aggregate`-Klausel verwendet wird, um eine Abfrage zu identifizieren, die nur aggregierte Ergebnisse zurückgibt. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
+ Sie können mehrere `From` Klauseln in einer Abfrage angeben, um mehrere Sammlungen zu identifizieren, die verknüpft werden sollen. Wenn mehrere Sammlungen angegeben werden, werden Sie unabhängig voneinander durchlaufen, oder Sie können Sie verknüpfen, wenn Sie verknüpft sind. Sie können Auflistungen implizit mit der `Select`-Klausel oder explizit mithilfe der Klauseln `Join` oder `Group Join` verknüpfen. Als Alternative können Sie mehrere Bereichs Variablen und Auflistungen in einer einzigen `From`-Klausel angeben, wobei jede zugehörige Bereichs Variable und Auflistung durch ein Komma von den anderen getrennt werden. Das folgende Codebeispiel zeigt beide Syntax Optionen für die `From`-Klausel.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
+ Die `From`-Klausel definiert den Gültigkeitsbereich einer Abfrage, die dem Bereich einer `For` Schleife ähnelt. Daher muss jede `element` Range-Variable im Gültigkeitsbereich einer Abfrage einen eindeutigen Namen aufweisen. Da Sie mehrere `From` Klauseln für eine Abfrage angeben können, können nachfolgende `From` Klauseln auf Bereichs Variablen in der `From`-Klausel verweisen, oder Sie können in einer früheren `From`-Klausel auf Bereichs Variablen verweisen. Das folgende Beispiel zeigt beispielsweise eine `From`-Klausel, bei der die Auflistung in der zweiten Klausel auf einer Eigenschaft der Bereichs Variablen in der ersten Klausel basiert.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
+ Auf jede `From`-Klausel kann eine beliebige Kombination zusätzlicher Abfrage Klauseln folgen, um die Abfrage zu verfeinern. Es gibt folgende Möglichkeiten, um die Abfrage zu verfeinern:  
   
-- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
+- Kombinieren Sie mehrere Auflistungen implizit mithilfe der Klauseln `From` und `Select` oder explizit mithilfe der Klauseln `Join` oder `Group Join`.  
   
-- Use the `Where` clause to filter the query result.  
+- Verwenden Sie die `Where`-Klausel, um das Abfrageergebnis zu filtern.  
   
-- Sort the result by using the `Order By` clause.  
+- Sortieren Sie das Ergebnis mithilfe der `Order By`-Klausel.  
   
-- Group similar results together by using the `Group By` clause.  
+- Gruppieren Sie ähnliche Ergebnisse mit der `Group By`-Klausel.  
   
-- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
+- Verwenden Sie die `Aggregate`-Klausel, um Aggregatfunktionen zu identifizieren, die für das gesamte Abfrageergebnis ausgewertet werden sollen.  
   
-- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
+- Verwenden Sie die `Let`-Klausel, um eine Iterations Variable einzuführen, deren Wert durch einen Ausdruck anstelle einer Auflistung bestimmt wird.  
   
-- Use the `Distinct` clause to ignore duplicate query results.  
+- Verwenden Sie die `Distinct`-Klausel, um doppelte Abfrageergebnisse zu ignorieren.  
   
-- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
+- Identifizieren Sie mithilfe der Klauseln `Skip`, `Take`, `Skip While`und `Take While` Teile des Ergebnisses, das zurückgegeben werden soll.  
   
 ## <a name="example"></a>Beispiel  
- The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
+ Der folgende Abfrage Ausdruck verwendet eine `From`-Klausel, um für jedes `Customer`-Objekt in der `customers` Auflistung eine Bereichs Variable `cust` zu deklarieren. Die `Where`-Klausel verwendet die Range-Variable, um die Ausgabe auf Kunden aus dem angegebenen Bereich zu beschränken. Die `For Each`-Schleife zeigt den Firmennamen für jeden Kunden im Abfrageergebnis an.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   

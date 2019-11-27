@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430282"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed-Methode
-Notifies the profiler that the specified thread has resumed after being suspended.  
+Benachrichtigt den Profiler, dass der angegebene Thread nach dem aussetzen fortgesetzt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,9 +34,9 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>Parameter  
  `threadId`  
- [in] The ID of the thread that has been resumed.  
+ in Die ID des Threads, der fortgesetzt wurde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

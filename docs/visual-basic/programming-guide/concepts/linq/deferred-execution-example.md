@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354228"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>Beispiel für eine verzögerte Ausführung (Visual Basic)
 
 In diesem Thema wird gezeigt, wie sich die verzögerte Ausführung (Deferred Execution) und die verzögerte Auswertung (Lazy Evaluation) auf die Ausführung Ihrer LINQ to XML-Abfragen auswirken.
 
@@ -63,4 +63,4 @@ Wie Sie sehen, wird das gesamte Array von Zeichenfolgen erst dann in Großbuchst
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Tutorial: verzögerte Ausführung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

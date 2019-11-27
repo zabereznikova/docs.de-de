@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353223"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.  
+Bewirkt, dass die aktuelle Klasse oder Schnittstelle die Attribute, Variablen, Eigenschaften, Prozeduren und Ereignisse von einer anderen Klasse oder Gruppe von Schnittstellen erbt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -24,44 +24,44 @@ Causes the current class or interface to inherit the attributes, variables, prop
 Inherits basetypenames  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`basetypenames`|Erforderlich. The name of the class from which this class derives.<br /><br /> - oder -<br /><br /> The names of the interfaces from which this interface derives. Use commas to separate multiple names.|  
+|`basetypenames`|Erforderlich Der Name der Klasse, von der diese Klasse abgeleitet wird.<br /><br /> \- oder -<br /><br /> Die Namen der Schnittstellen, von denen diese Schnittstelle abgeleitet ist. Trennen Sie mehrere Namen mithilfe von Kommas.|  
   
 ## <a name="remarks"></a>Hinweise  
- If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition. It should immediately follow the `Class` or `Interface` statement.  
+ Wenn die `Inherits`-Anweisung verwendet wird, muss es sich um die erste nicht leere Zeile, die keine Kommentarzeile in einer Klassen-oder Schnittstellen Definition ist. Er sollte direkt der `Class`-oder `Interface`-Anweisung folgen.  
   
- You can use `Inherits` only in a class or interface. This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.  
+ Sie können `Inherits` nur in einer Klasse oder Schnittstelle verwenden. Dies bedeutet, dass der Deklarations Kontext für eine Vererbung keine Quelldatei, ein Namespace, eine Struktur, ein Modul, eine Prozedur oder ein Block sein kann.  
   
 ## <a name="rules"></a>Regeln  
   
-- **Class Inheritance.** If a class uses the `Inherits` statement, you can specify only one base class.  
+- **Klassen Vererbung.** Wenn eine Klasse die `Inherits`-Anweisung verwendet, können Sie nur eine Basisklasse angeben.  
   
-     A class cannot inherit from a class nested within it.  
+     Eine Klasse kann nicht von einer Klasse erben, die darin geschachtelt ist.  
   
-- **Interface Inheritance.** If an interface uses the `Inherits` statement, you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
+- **Schnittstellen Vererbung.** Wenn eine Schnittstelle die `Inherits`-Anweisung verwendet, können Sie eine oder mehrere Basis Schnittstellen angeben. Sie können von zwei Schnittstellen erben, auch wenn Sie jeweils einen Member mit demselben Namen definieren. Wenn Sie dies tun, muss der implementierende Code die namens Qualifizierung verwenden, um anzugeben, welcher Member implementiert wird.  
   
-     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
+     Eine Schnittstelle kann nicht von einer anderen Schnittstelle mit einer restriktiveren Zugriffsebene erben. Beispielsweise kann eine `Public`-Schnittstelle nicht von einer `Friend`-Schnittstelle erben.  
   
-     An interface cannot inherit from an interface nested within it.  
+     Eine Schnittstelle kann nicht von einer Schnittstelle erben, die darin geschachtelt ist.  
   
- An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class. This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.  
+ Ein Beispiel für die Klassen Vererbung in der .NET Framework ist die <xref:System.ArgumentException> Klasse, die von der <xref:System.SystemException>-Klasse erbt. Dadurch werden alle vordefinierten Eigenschaften und Prozeduren <xref:System.ArgumentException>, die für System Ausnahmen erforderlich sind, wie z. b. die <xref:System.Exception.Message%2A>-Eigenschaft und die <xref:System.Exception.ToString%2A>-Methode.  
   
- An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface. This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.  
+ Ein Beispiel für eine Schnittstellen Vererbung in der .NET Framework ist die <xref:System.Collections.ICollection>-Schnittstelle, die von der <xref:System.Collections.IEnumerable>-Schnittstelle erbt. Dies bewirkt, dass <xref:System.Collections.ICollection> die Definition des Enumerators erbt, der zum Durchlaufen einer Auflistung erforderlich ist.  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.  
+ Im folgenden Beispiel wird die `Inherits`-Anweisung verwendet, um anzuzeigen, wie eine Klasse mit dem Namen `thisClass` alle Member einer Basisklasse mit dem Namen `anotherClass`erben kann.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Beispiel  
- The following example shows inheritance of multiple interfaces.  
+ Das folgende Beispiel zeigt die Vererbung mehrerer Schnittstellen.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`. A class that implements `thisInterface` must implement every member of every base interface.  
+ Die-Schnittstelle mit dem Namen "`thisInterface`" enthält jetzt alle Definitionen der Schnittstellen "<xref:System.IComparable>", "<xref:System.IDisposable>" und "<xref:System.IFormattable>", die die geerbten Member für typspezifische Vergleiche von zwei Objekten bereitstellen, zugeordnete Ressourcen freigeben und den Wert eines Objekts als `String`Ausdrücken. Eine Klasse, die `thisInterface` implementiert, muss jeden Member jeder Basisschnittstelle implementieren.  
   
 ## <a name="see-also"></a>Siehe auch
 

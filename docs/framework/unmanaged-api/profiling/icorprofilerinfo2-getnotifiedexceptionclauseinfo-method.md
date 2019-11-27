@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433068"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo-Methode
-Gets the native address and frame information for the exception clause (`catch`/`finally`/`filter`) that is about to be run or has just been run.  
+Ruft die nativen Adress-und Frame Informationen für die Ausnahmeklausel (`catch`/`finally`/`filter`) ab, die gerade ausgeführt oder gerade ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,14 +34,14 @@ HRESULT GetNotifiedExceptionClauseInfo(
   
 ## <a name="parameters"></a>Parameter  
  `pinfo`  
- [out] A pointer to a [COR_PRF_EX_CLAUSE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md) structure that describes the current exception clause instance and its associated frame.  
+ vorgenommen Ein Zeiger auf eine [COR_PRF_EX_CLAUSE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md) -Struktur, die die aktuelle Exception-klauselinstanz und den zugehörigen Frame beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- When an exception notification is received, `GetNotifiedExceptionClauseInfo` can be used to get the native address and frame information for the exception clause (`catch`/`finally`/`filter`) that is about to be run ([ICorProfilerCallback::ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md), [ICorProfilerCallback::ExceptionUnwindFinallyEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md), or [ICorProfilerCallback::ExceptionSearchFilterEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md) callback is received by the profiler) or has just been run ([ICorProfilerCallback::ExceptionCatcherLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md), [ICorProfilerCallback::ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md), or [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md) callback is received by the profiler).  
+ Wenn eine Ausnahme Benachrichtigung empfangen wird, können `GetNotifiedExceptionClauseInfo` verwendet werden, um die systemeigene Adresse und die Frame Informationen für die Ausnahmeklausel (`catch`/`finally`/`filter`), die ausgeführt werden soll, zu erhalten ([ICorProfilerCallback:: exceptioncallcherenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md), [ICorProfilerCallback:: ExceptionUnwindFinallyEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)oder [ICorProfilerCallback:: ExceptionSearchFilterEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md) Callback wird vom Profiler empfangen) oder gerade ausgeführt ([ICorProfilerCallback:: exceptioncallcherleave ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md), [ICorProfilerCallback:: ExceptionUnwindFinallyLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)oder [ICorProfilerCallback:: ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md) -Rückruf wird vom Profiler empfangen).  
   
- This call can be made at any time after one of the Enter callbacks above until either the matching Leave callback is received or a nested exception is thrown in the current clause, in which case there is no Leave notification for that clause. Note that it is not possible for a thrown exception to escape a `filter` exception clause, so there is always a Leave notification in that case.  
+ Dieser Aufruf kann jederzeit nach einer der obigen Eingabe Rückrufe erfolgen, bis entweder der übereinstimmende Leave-Rückruf empfangen oder eine geschpostete Ausnahme in der aktuellen Klausel ausgelöst wird. in diesem Fall gibt es keine Benachrichtigung über die Überschreibung für diese Klausel. Beachten Sie, dass es für eine ausgelöste Ausnahme nicht möglich ist, eine `filter` Exception-Klausel mit Escapezeichen zu versehen  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445629"
 ---
 # <a name="linkresource-method"></a>LinkResource-Methode
-Links in a resource.  
+Verknüpfungen in einer Ressource.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,25 +38,25 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID of the assembly.  
+ Die ID der Assembly.  
   
  `pszFileName`  
  Der Name der Datei.  
   
  `pszNewLocation`  
- Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
+ Optionaler neuer Dateiname. Wenn der Wert nicht NULL ist, werden `pszFileName` in pszNewLocation kopiert.  
   
  `pszResourceName`  
  Name der Ressource.  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Barrierefreiheits Flags wie `mrPublic` und `mrPrivate`. Dieser Parameter kann an die [DefineManifestResource-Methode](../metadata/imetadataassemblyemit-definemanifestresource-method.md)übergeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Returns S_OK if the method succeeds.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
- Requires alink.h.  
+## <a name="requirements"></a>Voraussetzungen  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 

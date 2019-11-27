@@ -18,14 +18,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351649"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the entire assembly.  
+Gibt an, dass ein Attribut am Anfang einer Quelldatei für die gesamte Assembly gilt.  
   
 ## <a name="remarks"></a>Hinweise  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ Viele Attribute beziehen sich auf ein einzelnes Programmier Element, z. b. eine Klasse oder Eigenschaft. Sie wenden ein derartiges Attribut an, indem Sie den Attribut Block in spitzen Klammern (`< >`) direkt an die Deklarations Anweisung anfügen.  
   
- If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword. If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.  
+ Wenn sich ein Attribut nicht nur auf das folgende Element bezieht, sondern auf die gesamte Assembly, platzieren Sie den-Attribut Block am Anfang der Quelldatei und identifizieren das-Attribut mit dem `Assembly`-Schlüsselwort. Wenn dies für das aktuelle Assemblymodul gilt, verwenden Sie das [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) -Schlüsselwort.  
   
- You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.  
+ Sie können auch ein Attribut auf eine Assembly in der Datei AssemblyInfo. vb anwenden. in diesem Fall müssen Sie keinen Attribut Block in der Haupt Quell Code Datei verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
 

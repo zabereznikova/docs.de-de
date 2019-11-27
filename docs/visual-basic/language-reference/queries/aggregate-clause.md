@@ -1,5 +1,5 @@
 ---
-title: Aggregate Clause
+title: Aggregate-Klausel
 ms.date: 08/28/2018
 f1_keywords:
 - vb.QueryAggregateIn
@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350871"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate-Klausel (Visual Basic)
-Applies one or more aggregate functions to a collection.  
+Wendet eine oder mehrere Aggregatfunktionen auf eine Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,92 +29,92 @@ Aggregate element [As type] In collection _
   Into expressionList  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
   
 |Begriff|Definition|  
 |---|---|  
-|`element`|Erforderlich. Variable used to iterate through the elements of the collection.|  
-|`type`|Dies ist optional. Der `element`-Typ. If no type is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Erforderlich. Refers to the collection to operate on.|  
-|`clause`|Dies ist optional. One or more query clauses, such as a `Where` clause, to refine the query result to apply the aggregate clause or clauses to.|  
-|`expressionList`|Erforderlich. One or more comma-delimited expressions that identify an aggregate function to apply to the collection. You can apply an alias to an aggregate function to specify a member name for the query result. If no alias is supplied, the name of the aggregate function is used. For examples, see the section about aggregate functions later in this topic.|  
+|`element`|Erforderlich Variable, mit der die Elemente der Auflistung durchlaufen werden.|  
+|`type`|Optional. Der `element`-Typ. Wenn kein Typ angegeben ist, wird der Typ der `element` von `collection`abgeleitet.|  
+|`collection`|Erforderlich Verweist auf die Auflistung, die verwendet werden soll.|  
+|`clause`|Optional. Eine oder mehrere Abfrage Klauseln, wie z. b. eine `Where`-Klausel, um das Abfrageergebnis zum Anwenden der Aggregat Klausel oder-Klauseln zu verfeinern.|  
+|`expressionList`|Erforderlich Mindestens ein durch Trennzeichen getrennter Ausdruck, der eine Aggregatfunktion identifiziert, die auf die Auflistung angewendet werden soll. Sie können einen Alias auf eine Aggregatfunktion anwenden, um einen Elementnamen für das Abfrageergebnis anzugeben. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet. Beispiele finden Sie im Abschnitt zu Aggregatfunktionen weiter unten in diesem Thema.|  
   
 ## <a name="remarks"></a>Hinweise  
- The `Aggregate` clause can be used to include aggregate functions in your queries. Aggregate functions perform checks and computations over a set of values and return a single value. You can access the computed value by using a member of the query result type. The standard aggregate functions that you can use are the `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum` functions. These functions are familiar to developers who are familiar with aggregates in SQL. They are described in the following section of this topic.  
+ Die `Aggregate`-Klausel kann verwendet werden, um Aggregatfunktionen in Ihre Abfragen einzubeziehen. Aggregatfunktionen führen Überprüfungen und Berechnungen für einen Satz von Werten aus und geben einen einzelnen Wert zurück. Sie können auf den berechneten Wert zugreifen, indem Sie einen Member des Abfrageergebnis Typs verwenden. Die standardmäßigen Aggregatfunktionen, die Sie verwenden können, sind die Funktionen `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`und `Sum`. Diese Funktionen sind Entwicklern vertraut, die mit Aggregaten in SQL vertraut sind. Diese werden im folgenden Abschnitt dieses Themas beschrieben.  
   
- The result of an aggregate function is included in the query result as a field of the query result type. You can supply an alias for the aggregate function result to specify the name of the member of the query result type that will hold the aggregate value. If no alias is supplied, the name of the aggregate function is used.  
+ Das Ergebnis einer Aggregatfunktion ist im Abfrageergebnis als Feld des Abfrageergebnis Typs enthalten. Sie können einen Alias für das Aggregat Funktionsergebnis angeben, um den Namen des Members des Abfrageergebnis Typs anzugeben, der den Aggregatwert enthalten soll. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet.  
   
- The `Aggregate` clause can begin a query, or it can be included as an additional clause in a query. If the `Aggregate` clause begins a query, the result is a single value that is the result of the aggregate function specified in the `Into` clause. If more than one aggregate function is specified in the `Into` clause, the query returns a single type with a separate property to reference the result of each aggregate function in the `Into` clause. If the `Aggregate` clause is included as an additional clause in a query, the type returned in the query collection will have a separate property to reference the result of each aggregate function in the `Into` clause.  
+ Die `Aggregate`-Klausel kann eine Abfrage beginnen, oder Sie kann als zusätzliche Klausel in eine Abfrage eingeschlossen werden. Wenn die `Aggregate`-Klausel eine Abfrage startet, ist das Ergebnis ein einzelner Wert, der das Ergebnis der in der `Into`-Klausel angegebenen Aggregatfunktion ist. Wenn in der `Into`-Klausel mehr als eine Aggregatfunktion angegeben wird, gibt die Abfrage einen einzelnen Typ mit einer separaten Eigenschaft zurück, um auf das Ergebnis jeder Aggregatfunktion in der `Into`-Klausel zu verweisen. Wenn die `Aggregate`-Klausel als zusätzliche Klausel in einer Abfrage enthalten ist, verfügt der in der Abfrage Auflistung zurückgegebene Typ über eine separate Eigenschaft, um auf das Ergebnis jeder Aggregatfunktion in der `Into`-Klausel zu verweisen.  
   
 ## <a name="aggregate-functions"></a>Aggregatfunktionen
 
-The following are the standard aggregate functions that can be used with the `Aggregate` clause.  
+Die folgenden standardmäßigen Aggregatfunktionen können mit der `Aggregate`-Klausel verwendet werden.  
   
 ### <a name="all"></a>Alle
 
-Returns `true` if all elements in the collection satisfy a specified condition; otherwise returns `false`. Im Folgenden finden Sie ein Beispiel dazu:
+Gibt `true` zurück, wenn alle Elemente in der Auflistung eine angegebene Bedingung erfüllen. Andernfalls wird `false`zurückgegeben. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Beliebig
 
-Returns `true` if any element in the collection satisfies a specified condition; otherwise returns `false`. Im Folgenden finden Sie ein Beispiel dazu:
+Gibt `true` zurück, wenn ein beliebiges Element in der Auflistung eine angegebene Bedingung erfüllt. Andernfalls wird `false`zurückgegeben. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
-### <a name="average"></a>Average
+### <a name="average"></a>Durchschnitt
 
-Computes the average of all elements in the collection, or computes a supplied expression for all elements in the collection. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet den Durchschnitt aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Anzahl
 
-Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Im Folgenden finden Sie ein Beispiel dazu:
+Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `Boolean` Ausdruck angeben, um nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
-### <a name="group"></a>Gruppieren
+### <a name="group"></a>Gruppe
 
-Refers to query results that are grouped as a result of a `Group By` or `Group Join` clause. The `Group` function is valid only in the `Into` clause of a `Group By` or `Group Join` clause. For more information and examples, see [Group By Clause](../../../visual-basic/language-reference/queries/group-by-clause.md) and [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md).
+Bezieht sich auf Abfrageergebnisse, die als Ergebnis einer `Group By`-oder `Group Join`-Klausel gruppiert werden. Die `Group`-Funktion ist nur in der `Into`-Klausel einer `Group By` oder `Group Join`-Klausel gültig. Weitere Informationen und Beispiele finden Sie unter [Group By-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md) und [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Returns the result as a `Long`. For an example, see the `Count` aggregate function.
+Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `Boolean` Ausdruck angeben, um nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Gibt das Ergebnis als `Long`zurück. Ein Beispiel finden Sie in der `Count`-Aggregatfunktion.
 
-### <a name="max"></a>Max.
+### <a name="max"></a>Max
 
-Computes the maximum value from the collection, or computes a supplied expression for all elements in the collection. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet den maximalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
-### <a name="min"></a>Min.
+### <a name="min"></a>Min
 
-Computes the minimum value from the collection, or computes a supplied expression for all elements in the collection. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet den minimalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
-### <a name="sum"></a>Summe
+### <a name="sum"></a>Sum
 
-Computes the sum of all elements in the collection, or computes a supplied expression for all elements in the collection. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet die Summe aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Hier ein Beispiel:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Beispiel  
 
-The following example shows how to use the `Aggregate` clause to apply aggregate functions to a query result.  
+Im folgenden Beispiel wird gezeigt, wie Sie mit der `Aggregate`-Klausel Aggregatfunktionen auf ein Abfrageergebnis anwenden können.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>Creating User-Defined Aggregate Functions
+## <a name="creating-user-defined-aggregate-functions"></a>Erstellen von benutzerdefinierten Aggregatfunktionen
 
- You can include your own custom aggregate functions in a query expression by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> type. Your custom method can then perform a calculation or operation on the enumerable collection that has referenced your aggregate function. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Extension Methods (Erweiterungsmethoden)](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Sie können eigene benutzerdefinierte Aggregatfunktionen in einen Abfrage Ausdruck einschließen, indem Sie dem <xref:System.Collections.Generic.IEnumerable%601>-Typ Erweiterungs Methoden hinzufügen. Die benutzerdefinierte Methode kann dann eine Berechnung oder einen Vorgang für die Aufzähl Bare-Auflistung ausführen, die auf die Aggregatfunktion verwiesen hat. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Extension Methods (Erweiterungsmethoden)](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
- For example, the following example shows a custom aggregate function that calculates the median value of a collection of numbers. There are two overloads of the `Median` extension method. The first overload accepts, as input, a collection of type `IEnumerable(Of Double)`. If the `Median` aggregate function is called for a query field of type `Double`, this method will be called. The second overload of the `Median` method can be passed any generic type. The generic overload of the `Median` method takes a second parameter that references the `Func(Of T, Double)` lambda expression to project a value for a type (from a collection) as the corresponding value of type `Double`. It then delegates the calculation of the median value to the other overload of the `Median` method. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Das folgende Beispiel zeigt beispielsweise eine benutzerdefinierte Aggregatfunktion, die den Medianwert einer Auflistung von Zahlen berechnet. Es gibt zwei über Ladungen der `Median`-Erweiterungsmethode. Die erste Überladung akzeptiert als Eingabe eine Auflistung vom Typ `IEnumerable(Of Double)`. Wenn die `Median` Aggregatfunktion für ein Abfragefeld vom Typ `Double`aufgerufen wird, wird diese Methode aufgerufen. Der zweiten Überladung der `Median`-Methode können alle generischen Typen übergebenen werden. Die generische Überladung der `Median`-Methode nimmt einen zweiten Parameter an, der auf den `Func(Of T, Double)` Lambda-Ausdruck verweist, um einen Wert für einen Typ (aus einer Auflistung) als entsprechenden Wert des Typs `Double`zu projizieren. Anschließend wird die Berechnung des Median Werts an die andere Überladung der `Median` Methode delegiert. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- The following example shows sample queries that call the `Median` aggregate function on a collection of type `Integer`, and a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Double` calls the overload of the `Median` method that accepts, as input, a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Integer` calls the generic overload of the `Median` method.  
+ Das folgende Beispiel zeigt Beispielabfragen, die die `Median` Aggregatfunktion für eine Auflistung vom Typ "`Integer`" und eine Auflistung vom Typ "`Double`" aufzurufen. Die Abfrage, die die `Median` Aggregatfunktion für die-Auflistung vom Typ aufruft `Double` die-Überladung der `Median`-Methode aufruft, die als Eingabe eine Auflistung vom Typ `Double`akzeptiert. Die Abfrage, die die `Median` Aggregatfunktion für die-Auflistung vom Typ aufruft `Integer` die generische Überladung der `Median`-Methode aufruft.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   

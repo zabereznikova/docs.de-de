@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448412"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob-Methode
-Gets the index of the next binary large object (BLOB) in the table.  
+Ruft den Index des nächsten Binary Large Object (BLOB) in der Tabelle ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,17 +36,17 @@ HRESULT GetNextBlob (
   
 ## <a name="parameters"></a>Parameter  
  `ixBlob`  
- [in] The index, as returned from a column of BLOBs.  
+ in Der Index, wie von einer blobspalte zurückgegeben.  
   
  `pNext`  
- [out] A pointer to the index of the next BLOB.  
+ vorgenommen Ein Zeiger auf den Index des nächsten BLOBs.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -44,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parameter  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ in Das MethodDef-Token, das die Methode darstellt, für die Metadaten zurückgegeben werden sollen.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ vorgenommen Ein Zeiger auf ein TypeDef-Token, das den Typ darstellt, der die Methode implementiert.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ vorgenommen Ein Zeiger auf einen Puffer, der den Methodennamen aufweist.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ in Die angeforderte Größe `szMethod`.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ vorgenommen Ein Zeiger auf die Größe in breit Zeichen `szMethod`oder im Fall von abschneiden die tatsächliche Anzahl der breit Zeichen im Methodennamen.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ vorgenommen Ein Zeiger auf alle Flags, die der Methode zugeordnet sind.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ vorgenommen Ein Zeiger auf die binäre Metadatensignatur der Methode.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ vorgenommen Ein Zeiger auf die Größe `ppvSigBlob`in Byte.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ vorgenommen Ein Zeiger auf die relative virtuelle Adresse der Methode.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ vorgenommen Ein Zeiger auf alle Implementierungsflags für die Methode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

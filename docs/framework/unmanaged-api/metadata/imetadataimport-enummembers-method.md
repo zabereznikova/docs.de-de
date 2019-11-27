@@ -39,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Ein Zeiger auf den Enumerator.  
   
  `cl`  
- [in] A TypeDef token representing the type whose members are to be enumerated.  
+ in Ein TypeDef-Token, das den Typ darstellt, dessen Member aufgelistet werden sollen.  
   
  `rMembers`  
- [out] The array used to hold the MemberDef tokens.  
+ vorgenommen Das Array, das zum Speichern der mitgliedtendef-Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rMembers`-Arrays.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ vorgenommen Die tatsächliche Anzahl der in `rMembers`zurückgegebenen mitgliedsdef-Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMembers` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine mitgliedungstokentoken zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
+ Beim Auflisten von Auflistungen von Membern für eine Klasse gibt `EnumMembers` nur Member (Felder und Methoden, aber **keine** Eigenschaften oder Ereignisse) zurück, die direkt in der Klasse definiert sind. Er gibt keine Member zurück, die die Klasse erbt, selbst wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzuzählen, muss der Aufrufer die Vererbungs Kette explizit durchlaufen. Beachten Sie, dass die Regeln für die Vererbungs Kette abhängig von der Sprache oder dem Compiler variieren können, die die ursprünglichen Metadaten ausgegeben haben.
  
- Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
+ Eigenschaften und Ereignisse werden nicht durch `EnumMembers`aufgezählt. Um diese aufzulisten, verwenden Sie [EnumProperties](imetadataimport-enumproperties-method.md) oder [EnumEvents](imetadataimport-enumevents-method.md).
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

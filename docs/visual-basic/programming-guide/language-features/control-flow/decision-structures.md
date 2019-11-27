@@ -17,33 +17,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353967"
 ---
 # <a name="decision-structures-visual-basic"></a>Entscheidungsstrukturen (Visual Basic)
-Visual Basic lets you test conditions and perform different operations depending on the results of that test. You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.  
+Mit Visual Basic können Sie Bedingungen testen und abhängig von den Ergebnissen dieses Tests verschiedene Vorgänge durchführen. Sie können prüfen, dass eine Bedingung true oder false ist, für verschiedene Werte eines Ausdrucks oder für verschiedene Ausnahmen, die beim Ausführen einer Reihe von Anweisungen generiert werden.  
   
- The following illustration shows a decision structure that tests for a condition being true and takes different actions depending on whether it is true or false.  
+ In der folgenden Abbildung wird eine Entscheidungsstruktur dargestellt, die überprüft, ob eine Bedingung wahr ist, und abhängig davon, ob Sie true oder false ist, verschiedene Aktionen unternimmt.  
   
- ![A flow chart of an If...Then...Else construction.](./media/decision-structures/if-then-else-construction.gif)  
+ ![Ein Flussdiagramm einer If...Then...Else-Konstruktion.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
- `If...Then...Else` constructions let you test for one or more conditions and run one or more statements depending on each condition. You can test conditions and take actions in the following ways:  
+## <a name="ifthenelse-construction"></a>If...Then...Else-Konstruktion  
+ mit `If...Then...Else` Konstruktionen können Sie eine oder mehrere Bedingungen testen und eine oder mehrere-Anweisungen abhängig von den einzelnen Bedingungen ausführen. Es gibt folgende Möglichkeiten, um Bedingungen zu testen und Aktionen auszuführen:  
   
-- Run one or more statements if a condition is `True`  
+- Führen Sie eine oder mehrere-Anweisungen aus, wenn eine Bedingung `True`  
   
-- Run one or more statements if a condition is `False`  
+- Führen Sie eine oder mehrere-Anweisungen aus, wenn eine Bedingung `False`  
   
-- Run some statements if a condition is `True` and others if it is `False`  
+- Führen Sie einige Anweisungen aus, wenn eine Bedingung `True` ist, und andere, wenn Sie `False`  
   
-- Test an additional condition if a prior condition is `False`  
+- Testen einer zusätzlichen Bedingung, wenn eine vorherige Bedingung `False`  
   
- The control structure that offers all these possibilities is the [If...Then...Else Statement](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). You can use a single-line version if you have just one test and one statement to run. If you have a more complex set of conditions and actions, you can use the multiple-line version.  
+ Die Steuerelement Struktur, die alle diese Möglichkeiten bietet, ist der [If... Dann... Else-Anweisung](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sie können eine einzeilige Version verwenden, wenn Sie nur einen Test und eine Anweisung ausführen müssen. Wenn Sie einen komplexeren Satz von Bedingungen und Aktionen haben, können Sie die mehrzeilige Version verwenden.  
   
-## <a name="selectcase-construction"></a>Select...Case Construction  
- The `Select...Case` construction lets you evaluate an expression one time and run different sets of statements based on different possible values. For more information, see [Select...Case Statement](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case Konstruktion  
+ Mit der `Select...Case` Konstruktion können Sie einen Ausdruck einmal auswerten und verschiedene Sätze von Anweisungen basierend auf anderen möglichen Werten ausführen. Weitere Informationen finden Sie unter [SELECT... Case-Anweisung](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Construction  
- `Try...Catch...Finally` constructions let you run a set of statements under an environment that retains control if any one of your statements causes an exception. You can take different actions for different exceptions. You can optionally specify a block of code that runs before you exit the whole `Try...Catch...Finally` construction, regardless of what occurs. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Konstruktion  
+ mit `Try...Catch...Finally` Konstruktionen können Sie eine Reihe von-Anweisungen in einer Umgebung ausführen, die die Steuerung beibehält, wenn eine der Anweisungen eine Ausnahme auslöst. Sie können verschiedene Aktionen für verschiedene Ausnahmen durchführen. Sie können optional einen Codeblock angeben, der ausgeführt wird, bevor Sie die gesamte `Try...Catch...Finally` Konstruktion beenden, unabhängig davon, was passiert. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
-> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
+> Wenn Sie für viele Steuerungsstrukturen auf ein Schlüsselwort klicken, werden alle Schlüsselwörter in der Struktur hervorgehoben. Wenn Sie beispielsweise in einer `If...Then...Else` Konstruktion auf `If` klicken, werden alle Instanzen von `If`, `Then`, `ElseIf`, `Else`und `End If` in der Konstruktion hervorgehoben. Um zum nächsten oder vorherigen hervorgehobenen Schlüsselwort zu wechseln, drücken Sie STRG + UMSCHALT + nach-unten oder STRG + UMSCHALT + nach-oben-Taste.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431368"
 ---
 # <a name="ialink2-interface"></a>IALink2-Schnittstelle
-Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md). Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.  
+Ergänzt die [IALink-Schnittstelle](ialink-interface.md) durch Deklarieren von Methoden, die auf neueren Metadatenschnittstellen wie der [IMetaDataEmit2-Schnittstelle](../metadata/imetadataemit2-interface.md)funktionieren. Außerdem deklariert IALink2 Methoden, die zusätzliche Verwendungs Flexibilität über die ursprünglichen IALink-Schnittstellen bereitstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [AddFile2-Methode](addfile2-method.md)  

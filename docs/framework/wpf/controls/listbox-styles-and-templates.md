@@ -41,9 +41,9 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
   
 |VisualState-Name|VisualStateGroup-Name|Beschreibung|  
 |-|-|-|  
-|Normal|CommonStates|Der Standardzustand|  
+|Normal|CommonStates|Der Standardstatus.|  
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
-|Disabled|CommonStates|Das Element ist deaktiviert.|  
+|Deaktiviert|CommonStates|Das Element ist deaktiviert.|  
 |Mit Fokus|FocusStates|Das Element besitzt den Fokus.|  
 |Ohne Fokus|FocusStates|Das Element besitzt den Fokus nicht.|  
 |Nicht markiert|SelectionStates|Das Element ist nicht ausgewählt.|  

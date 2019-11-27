@@ -22,7 +22,7 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 ## <a name="documentviewer-parts"></a>DocumentViewer-Teile  
  In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.DocumentViewer>-Steuerelement aufgelistet.  
   
-|Segment|Typ|Beschreibung|  
+|-Komponente|Typ|Beschreibung|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|Der Inhalt und der scrollbereich.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|Das Suchfeld, das standardmäßig unten angezeigt wird.|  

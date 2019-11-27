@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426724"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints-Methode
-Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
+Ruft einen Enumerator für ein Array von generischen Parameter Einschränkungen ab, die dem generischen Parameter zugeordnet sind, der durch das angegebene Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,33 +39,33 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in, out] Ein Zeiger auf den Enumerator.  
   
  `tk`  
- [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
+ in   Ein Token, das den generischen Parameter darstellt, dessen Einschränkungen aufgelistet werden sollen.  
   
  `rGenericParamConstraints`  
- [out] The array of generic parameter constraints to enumerate.  
+ vorgenommen Das Array der zu enumerieren generischen Parameter Einschränkungen.  
   
  `cMax`  
- [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
+ in   Die angeforderte maximale Anzahl von Token, die in `rGenericParamConstraints`platziert werden sollen.  
   
  `pcGenericParamConstraints`  
- [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
+ vorgenommen Ein Zeiger auf die Anzahl von Token, die in `rGenericParamConstraints`platziert werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` erfolgreich zurückgegeben.|  
+|`S_FALSE`|`phEnum` hat keine Member-Elemente. In diesem Fall wird `pcGenericParameterConstraints` auf 0 (null) festgelegt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

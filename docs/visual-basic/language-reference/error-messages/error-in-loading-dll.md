@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329562"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Fehler beim Laden der DLL (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+Eine Dynamic Link Library (dll) ist eine Bibliothek, die in der `Lib`-Klausel einer `Declare`-Anweisung angegeben ist. Mögliche Ursachen für diesen Fehler:  
   
-- The file is not DLL executable.  
+- Die Datei ist keine ausführbare DLL-Datei.  
   
-- The file is not a Microsoft Windows DLL.  
+- Bei der Datei handelt es sich nicht um eine Microsoft Windows-DLL.  
   
-- The DLL references another DLL that is not present.  
+- Die dll verweist auf eine andere dll, die nicht vorhanden ist.  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- Die dll oder die referenzierte DLL befindet sich nicht in einem Verzeichnis, das im Pfad angegeben ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- Handelt es sich bei der Datei um eine Quell Textdatei und somit nicht um eine ausführbare DLL-Datei, muss sie kompiliert und mit einem ausführbaren DLL-Formular verknüpft werden.  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- Wenn die Datei keine Microsoft Windows-dll ist, müssen Sie die Microsoft Windows-Entsprechung abrufen.  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- Wenn die dll auf eine andere dll verweist, die nicht vorhanden ist, können Sie die referenzierte DLL abrufen und verfügbar machen.  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- Wenn sich die dll oder die referenzierte DLL nicht in einem Verzeichnis befindet, das durch den Pfad angegeben ist, verschieben Sie die dll in ein referenziertes Verzeichnis.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -30,12 +30,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353819"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
-Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine. The `On Error` statement is used in unstructured error handling and can be used instead of structured exception handling. [Structured exception handling](../../../standard/exceptions/index.md) is built into .NET, is generally more efficient, and so is recommended when handling runtime errors in your application.
+Aktiviert eine Fehler Behandlungs Routine und gibt den Speicherort der Routine innerhalb einer Prozedur an. kann auch verwendet werden, um eine Fehler Behandlungs Routine zu deaktivieren. Die `On Error`-Anweisung wird bei der unstrukturierten Fehlerbehandlung verwendet und kann anstelle der strukturierten Ausnahmebehandlung verwendet werden. Die [strukturierte Ausnahmebehandlung](../../../standard/exceptions/index.md) ist in .NET integriert, ist im Allgemeinen effizienter und wird daher empfohlen, wenn Laufzeitfehler in der Anwendung behandelt werden.
 
- Without error handling or exception handling, any run-time error that occurs is fatal: an error message is displayed, and execution stops.
+ Ohne Fehlerbehandlung oder Ausnahmebehandlung ist jeder auftretende Laufzeitfehler schwerwiegend: eine Fehlermeldung wird angezeigt, und die Ausführung wird beendet.
 
 > [!NOTE]
-> The `Error` keyword is also used in the [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), which is supported for backward compatibility.
+> Das `Error`-Schlüsselwort wird auch in der [Error-Anweisung](../../../visual-basic/language-reference/statements/error-statement.md)verwendet, die aus Gründen der Abwärtskompatibilität unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,78 +43,78 @@ Enables an error-handling routine and specifies the location of the routine with
 On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 |Begriff|Definition|
 |---|---|
-|`GoTo` *line*|Enables the error-handling routine that starts at the line specified in the required *line* argument. The *line* argument is any line label or line number. If a run-time error occurs, control branches to the specified line, making the error handler active. The specified line must be in the same procedure as the `On Error` statement or a compile-time error will occur.|
-|`GoTo 0`|Disables enabled error handler in the current procedure and resets it to `Nothing`.|
-|`GoTo -1`|Disables enabled exception in the current procedure and resets it to `Nothing`.|
-|`Resume Next`|Specifies that when a run-time error occurs, control goes to the statement immediately following the statement where the error occurred, and execution continues from that point. Use this form rather than `On Error GoTo` when accessing objects.|
+|`GoTo` *Zeile*|Aktiviert die Fehler Behandlungs Routine, die an der im erforderlichen *Zeilen* Argument angegebenen Zeile beginnt. Das *Zeilen* Argument ist eine beliebige Zeilen Bezeichnung oder Zeilennummer. Wenn ein Laufzeitfehler auftritt, Steuern Sie Verzweigungen in die angegebene Zeile, sodass der Fehlerhandler aktiv wird. Die angegebene Zeile muss sich in derselben Prozedur wie die `On Error`-Anweisung befinden, oder es tritt ein Kompilierzeitfehler auf.|
+|`GoTo 0`|Deaktiviert den aktivierten Fehlerhandler in der aktuellen Prozedur und setzt ihn auf `Nothing`zurück.|
+|`GoTo -1`|Deaktiviert die aktivierte Ausnahme in der aktuellen Prozedur und setzt Sie auf `Nothing`zurück.|
+|`Resume Next`|Gibt an, dass die Steuerung bei Auftreten eines Lauf zeitfehlers direkt nach der Anweisung, in der der Fehler aufgetreten ist, an die Anweisung weitergeleitet wird und die Ausführung von diesem Punkt aus fortgesetzt wird. Verwenden Sie dieses Formular anstelle von `On Error GoTo`, wenn Sie auf-Objekte zugreifen.|
 
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
-> We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` statement. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> Es empfiehlt sich, nach Möglichkeit eine strukturierte Ausnahmebehandlung in Ihrem Code zu verwenden, anstatt eine unstrukturierte Ausnahmebehandlung und die `On Error`-Anweisung zu verwenden. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
- An "enabled" error handler is one that is turned on by an `On Error` statement. An "active" error handler is an enabled handler that is in the process of handling an error.
+ Ein "aktivierter" Fehlerhandler ist ein Fehlerhandler, der von einer `On Error`-Anweisung aktiviert wird. Ein "aktiver" Fehlerhandler ist ein aktivierter Handler, der gerade einen Fehler behandelt.
 
- If an error occurs while an error handler is active (between the occurrence of the error and a `Resume`, `Exit Sub`, `Exit Function`, or `Exit Property` statement), the current procedure's error handler cannot handle the error. Control returns to the calling procedure.
+ Wenn ein Fehler auftritt, während ein Fehlerhandler aktiv ist (zwischen dem Auftreten des Fehlers und einer `Resume`-, `Exit Sub`-, `Exit Function`-oder `Exit Property`-Anweisung), kann der Fehlerhandler der aktuellen Prozedur den Fehler nicht verarbeiten. Die Steuerung wird an die aufrufenden Prozedur zurückgegeben.
   
- If the calling procedure has an enabled error handler, it is activated to handle the error. If the calling procedure's error handler is also active, control passes back through previous calling procedures until an enabled, but inactive, error handler is found. If no such error handler is found, the error is fatal at the point at which it actually occurred.
+ Wenn die aufrufende Prozedur einen aktivierten Fehlerhandler aufweist, wird Sie zur Behandlung des Fehlers aktiviert. Wenn der Fehlerhandler der aufrufenden Prozedur ebenfalls aktiv ist, wird die Steuerung durch vorherige Aufruf Prozeduren zurückgeleitet, bis ein aktivierter, jedoch inaktiver Fehlerhandler gefunden wird. Wenn kein solcher Fehlerhandler gefunden wird, ist der Fehler an dem Punkt, an dem er tatsächlich aufgetreten ist, schwerwiegend.
   
- Each time the error handler passes control back to a calling procedure, that procedure becomes the current procedure. Once an error is handled by an error handler in any procedure, execution resumes in the current procedure at the point designated by the `Resume` statement.
+ Jedes Mal, wenn der Fehlerhandler die Steuerung zurück an eine aufrufenden Prozedur übergibt, wird dieses Verfahren zur aktuellen Prozedur. Sobald ein Fehlerhandler in einer Prozedur behandelt wird, wird die Ausführung in der aktuellen Prozedur an dem durch die `Resume`-Anweisung festgelegten Punkt fortgesetzt.
   
 > [!NOTE]
-> An error-handling routine is not a `Sub` procedure or a `Function` procedure. It is a section of code marked by a line label or a line number.
+> Eine Fehler Behandlungs Routine ist keine `Sub` Prozedur oder eine `Function` Prozedur. Es handelt sich um einen Code Abschnitt, der durch eine Zeilen Bezeichnung oder eine Zeilennummer gekennzeichnet ist.
   
-## <a name="number-property"></a>Number Property
- Error-handling routines rely on the value in the `Number` property of the `Err` object to determine the cause of the error. The routine should test or save relevant property values in the `Err` object before any other error can occur or before a procedure that might cause an error is called. The property values in the `Err` object reflect only the most recent error. The error message associated with `Err.Number` is contained in `Err.Description`.  
+## <a name="number-property"></a>Number-Eigenschaft
+ Fehlerbehandlungsroutinen basieren auf dem Wert in der `Number`-Eigenschaft des `Err`-Objekts, um die Ursache des Fehlers zu bestimmen. Die Routine sollte relevante Eigenschaftswerte im `Err` Objekt testen oder speichern, bevor ein anderer Fehler auftreten kann, oder bevor eine Prozedur aufgerufen wird, die möglicherweise einen Fehler verursacht. Die Eigenschaftswerte im `Err` Objekt spiegeln nur den letzten Fehler wider. Die mit `Err.Number` verknüpfte Fehlermeldung ist in `Err.Description`enthalten.  
   
 ## <a name="throw-statement"></a>Throw-Anweisung  
- An error that is raised with the `Err.Raise` method sets the `Exception` property to a newly created instance of the <xref:System.Exception> class. In order to support the raising of exceptions of derived exception types, a `Throw` statement is supported in the language. This takes a single parameter that is the exception instance to be thrown. The following example shows how these features can be used with the existing exception handling support:
+ Ein Fehler, der durch die `Err.Raise`-Methode ausgelöst wird, legt die `Exception`-Eigenschaft auf eine neu erstellte Instanz der <xref:System.Exception>-Klasse fest. Um das Auftreten von Ausnahmen abgeleiteter Ausnahme Typen zu unterstützen, wird in der Sprache eine `Throw`-Anweisung unterstützt. Dabei wird ein einzelner Parameter benötigt, bei dem es sich um die Ausnahme Instanz handelt. Im folgenden Beispiel wird gezeigt, wie diese Funktionen mit der vorhandenen Unterstützung für die Ausnahmebehandlung verwendet werden können:
 
  [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
- Notice that the `On Error GoTo` statement traps all errors, regardless of the exception class.
+ Beachten Sie, dass die `On Error GoTo`-Anweisung alle Fehler unabhängig von der Exception-Klasse abgefangen.
   
-## <a name="on-error-resume-next"></a>On Error Resume Next
- `On Error Resume Next` causes execution to continue with the statement immediately following the statement that caused the run-time error, or with the statement immediately following the most recent call out of the procedure containing the `On Error Resume Next` statement. This statement allows execution to continue despite a run-time error. You can place the error-handling routine where the error would occur rather than transferring control to another location within the procedure. An `On Error Resume Next` statement becomes inactive when another procedure is called, so you should execute an `On Error Resume Next` statement in each called routine if you want inline error handling within that routine.
+## <a name="on-error-resume-next"></a>Bei Fehler fortsetzen als nächstes
+ `On Error Resume Next` bewirkt, dass die Ausführung mit der Anweisung unmittelbar nach der-Anweisung fortgesetzt wird, die den Laufzeitfehler verursacht hat, oder mit der-Anweisung, die unmittelbar nach dem letzten Aufruf der Prozedur, die die `On Error Resume Next`-Anweisung enthält, ausgeführt wird. Mit dieser Anweisung kann die Ausführung trotz eines Lauf zeitfehlers fortgesetzt werden. Sie können die Fehler Behandlungs Routine platzieren, in der der Fehler auftritt, anstatt die Steuerung an einen anderen Speicherort innerhalb der Prozedur zu übertragen. Eine `On Error Resume Next`-Anweisung wird inaktiv, wenn eine andere Prozedur aufgerufen wird. Daher sollten Sie in jeder aufgerufenen Routine eine `On Error Resume Next` Anweisung ausführen, wenn Sie eine Inline Fehlerbehandlung innerhalb dieser Routine ausführen möchten.
   
 > [!NOTE]
-> The `On Error Resume Next` construct may be preferable to `On Error GoTo` when handling errors generated during access to other objects. Checking `Err` after each interaction with an object removes ambiguity about which object was accessed by the code. You can be sure which object placed the error code in `Err.Number`, as well as which object originally generated the error (the object specified in `Err.Source`).
+> Beim Behandeln von Fehlern, die während des Zugriffs auf andere Objekte generiert werden, ist das `On Error Resume Next` Konstrukt möglicherweise `On Error GoTo` vorzuziehen. Wenn Sie `Err` nach jeder Interaktion mit einem Objekt überprüfen, entfernen Sie die Mehrdeutigkeit, auf welches Objekt der Code zugegriffen hat. Sie können sicherstellen, welches Objekt den Fehlercode in `Err.Number`abgelegt hat, und welches Objekt den Fehler ursprünglich generiert hat (das in `Err.Source`angegebene Objekt).
 
-## <a name="on-error-goto-0"></a>On Error GoTo 0
- `On Error GoTo 0` disables error handling in the current procedure. It doesn't specify line 0 as the start of the error-handling code, even if the procedure contains a line numbered 0. Without an `On Error GoTo 0` statement, an error handler is automatically disabled when a procedure is exited.
+## <a name="on-error-goto-0"></a>Bei Fehler "GoTo 0"
+ `On Error GoTo 0` deaktiviert die Fehlerbehandlung in der aktuellen Prozedur. Die Zeile 0 wird nicht als Start des Fehler Behandlungs Codes angegeben, auch wenn die Prozedur eine Zeile mit der nummerierten 0 enthält. Ohne eine `On Error GoTo 0`-Anweisung wird ein Fehlerhandler automatisch deaktiviert, wenn eine Prozedur beendet wird.
 
-## <a name="on-error-goto--1"></a>On Error GoTo -1
- `On Error GoTo -1` disables the exception in the current procedure. It does not specify line -1 as the start of the error-handling code, even if the procedure contains a line numbered -1. Without an `On Error GoTo -1` statement, an exception is automatically disabled when a procedure is exited.
+## <a name="on-error-goto--1"></a>Bei Fehler "GoTo-1"
+ `On Error GoTo -1` deaktiviert die Ausnahme in der aktuellen Prozedur. Die Zeile-1 wird nicht als Start des Fehler Behandlungs Codes angegeben, auch wenn die Prozedur eine Zeile mit der nummerierten-1 enthält. Ohne eine `On Error GoTo -1`-Anweisung wird eine Ausnahme automatisch deaktiviert, wenn eine Prozedur beendet wird.
 
- To prevent error-handling code from running when no error has occurred, place an `Exit Sub`, `Exit Function`, or `Exit Property` statement immediately before the error-handling routine, as in the following fragment:
+ Um zu verhindern, dass der Fehler Behandlungs Code ausgeführt wird, wenn kein Fehler aufgetreten ist, platzieren Sie eine `Exit Sub`-, `Exit Function`-oder `Exit Property`-Anweisung unmittelbar vor der Fehler Behandlungs Routine, wie im folgenden Fragment:
 
  [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]
 
- Here, the error-handling code follows the `Exit Sub` statement and precedes the `End Sub` statement to separate it from the procedure flow. You can place error-handling code anywhere in a procedure.
+ Hier folgt der Fehler Behandlungs Code der `Exit Sub`-Anweisung und steht vor der `End Sub` Anweisung, um Sie vom Ablauf der Prozedur zu trennen. Sie können den Code für die Fehlerbehandlung an beliebiger Stelle in einer Prozedur platzieren.
 
-## <a name="untrapped-errors"></a>Untrapped Errors
- Untrapped errors in objects are returned to the controlling application when the object is running as an executable file. Within the development environment, untrapped errors are returned to the controlling application only if the proper options are set. See your host application's documentation for a description of which options should be set during debugging, how to set them, and whether the host can create classes.
+## <a name="untrapped-errors"></a>Nicht aufgetreppte Fehler
+ Nicht aufgetreppte Fehler in Objekten werden an die steuernde Anwendung zurückgegeben, wenn das Objekt als ausführbare Datei ausgeführt wird. Innerhalb der Entwicklungsumgebung werden nicht aufgetreppte Fehler nur dann an die steuernde Anwendung zurückgegeben, wenn die richtigen Optionen festgelegt sind. Eine Beschreibung der Optionen, die während des Debuggens festgelegt werden müssen, und der Art und Weise, wie der Host Klassen erstellen kann, finden Sie in der Dokumentation der Host Anwendung.
 
- If you create an object that accesses other objects, you should try to handle any unhandled errors they pass back. If you cannot, map the error codes in `Err.Number` to one of your own errors and then pass them back to the caller of your object. You should specify your error by adding your error code to the `VbObjectError` constant. For example, if your error code is 1052, assign it as follows:
+ Wenn Sie ein Objekt erstellen, das auf andere Objekte zugreift, sollten Sie versuchen, nicht behandelte Fehler zu behandeln, die zurückgegeben werden. Wenn dies nicht möglich ist, ordnen Sie die Fehlercodes in `Err.Number` einem ihrer eigenen Fehler zu, und übergeben Sie Sie dann wieder an den Aufrufer Ihres Objekts. Sie sollten den Fehler angeben, indem Sie den Fehlercode der `VbObjectError` Konstante hinzufügen. Wenn der Fehlercode z. b. 1052 lautet, weisen Sie ihn wie folgt zu:
 
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
-> System errors during calls to Windows dynamic-link libraries (DLLs) do not raise exceptions and cannot be trapped with Visual Basic error trapping. When calling DLL functions, you should check each return value for success or failure (according to the API specifications), and in the event of a failure, check the value in the `Err` object's `LastDLLError` property.
+> System Fehler bei Aufrufen von Windows Dynamic Link Libraries (DLLs) geben keine Ausnahmen aus und können nicht mit Visual Basic fehlerabfang nicht erfasst werden. Wenn Sie DLL-Funktionen aufrufen, sollten Sie jeden Rückgabewert auf Erfolg oder Fehler (gemäß den API-Spezifikationen) überprüfen und im Fall eines Fehlers den Wert in der `LastDLLError`-Eigenschaft des `Err` Objekts überprüfen.
 
 ## <a name="example"></a>Beispiel
- This example first uses the `On Error GoTo` statement to specify the location of an error-handling routine within a procedure. In the example, an attempt to divide by zero generates error number 6. The error is handled in the error-handling routine, and control is then returned to the statement that caused the error. The `On Error GoTo 0` statement turns off error trapping. Then the `On Error Resume Next` statement is used to defer error trapping so that the context for the error generated by the next statement can be known for certain. Note that `Err.Clear` is used to clear the `Err` object's properties after the error is handled.
+ In diesem Beispiel wird zuerst die `On Error GoTo`-Anweisung verwendet, um den Speicherort einer Fehler Behandlungs Routine innerhalb einer Prozedur anzugeben. Im Beispiel generiert ein Versuch, eine Division durch 0 (null), die Fehlernummer 6. Der Fehler wird in der Fehler Behandlungs Routine behandelt, und die Steuerung wird dann an die Anweisung zurückgegeben, die den Fehler verursacht hat. Mit der `On Error GoTo 0`-Anweisung wird die Fehler Abfang-Anweisung deaktiviert. Anschließend wird die `On Error Resume Next`-Anweisung verwendet, um das Abfangen von Fehlern zu verzögern, sodass der Kontext für den von der nächsten Anweisung generierten Fehler auf bestimmte Weise bekannt ist. Beachten Sie, dass `Err.Clear` verwendet wird, um die Eigenschaften des `Err` Objekts zu löschen, nachdem der Fehler behandelt wurde.
 
  [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]
 
-## <a name="requirements"></a>Anforderungen
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="requirements"></a>Voraussetzungen
+ **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
 
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")
 
 ## <a name="see-also"></a>Siehe auch
 

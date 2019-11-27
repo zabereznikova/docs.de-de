@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: Das Objekt unterstützt die aktuelle Gebiets Schema Einstellung nicht
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447

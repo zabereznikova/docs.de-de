@@ -33,13 +33,13 @@ Eine Klasse, die *Typparameter* akzeptiert, wird *generische Klasse*genannt. Wen
   
  Zusätzlich zu generischen Klassen können Sie auch generische Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden.  
   
- The following procedure takes a generic class defined in the .NET Framework and creates an instance from it.  
+ Im folgenden Verfahren wird eine generische Klasse, die in der .NET Framework definiert ist, und eine Instanz daraus erstellt.  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Eine Klasse verwenden, die einen Typparameter braucht  
   
-1. At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. Dadurch können Sie auf die <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>-Klasse verweisen, ohne sie zur Unterscheidung von anderen Warteschlangenklassen wie z.B. <xref:System.Collections.Queue?displayProperty=nameWithType> vollständig qualifizieren zu müssen.  
+1. Fügen Sie am Anfang der Quelldatei eine [Imports-Anweisung (.NET-Namespace und-Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ein, um den <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace zu importieren. Dadurch können Sie auf die <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>-Klasse verweisen, ohne sie zur Unterscheidung von anderen Warteschlangenklassen wie z.B. <xref:System.Collections.Queue?displayProperty=nameWithType> vollständig qualifizieren zu müssen.  
   
-2. Create the object in the normal way, but add `(Of type)` immediately after the class name.  
+2. Erstellen Sie das Objekt auf normale Weise, aber fügen Sie `(Of type)` direkt nach dem Klassennamen hinzu.  
   
      Im folgenden Beispiel wird dieselbe Klasse (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) verwendet, um zwei Warteschlangenobjekte zu erstellen, die Artikel mit unterschiedlichen Datentypen enthalten. Es fügt Elemente am Ende jeder Warteschlange ein und entfernt und zeigt Elemente am Beginn jeder Warteschlange.  
   

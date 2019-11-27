@@ -24,21 +24,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351447"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifies that a property or procedure cannot be overridden in a derived class.  
+Gibt an, dass eine Eigenschaft oder Prozedur in einer abgeleiteten Klasse nicht überschrieben werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ Der `NotOverridable` Modifizierer verhindert, dass eine Eigenschaft oder Methode in einer abgeleiteten Klasse überschrieben wird.  Der [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) -Modifizierer ermöglicht, dass eine Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben wird. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ Wenn die `Overridable` oder `NotOverridable` Modifizierer nicht angegeben ist, hängt die Standardeinstellung davon ab, ob die Eigenschaft oder Methode eine Basisklassen Eigenschaft oder-Methode überschreibt. Wenn die Eigenschaft oder Methode eine Basisklassen Eigenschaft oder-Methode überschreibt, ist die Standardeinstellung `Overridable`. Andernfalls ist es `NotOverridable`.  
   
- An element that cannot be overridden is sometimes called a *sealed* element.  
+ Ein Element, das nicht überschrieben werden kann, wird manchmal als *versiegeltes* Element bezeichnet.  
   
- You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
+ Sie können `NotOverridable` nur in einer Eigenschaft oder Prozedur Deklarations Anweisung verwenden. Sie können `NotOverridable` nur für eine Eigenschaft oder Prozedur angeben, die eine andere Eigenschaft oder Prozedur überschreibt, d. h. nur in Kombination mit `Overrides`.  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>Kombinierte modifiziererer  
+ Sie können `Overridable` oder `NotOverridable` nicht für eine `Private` Methode angeben.  
   
- You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
+ Sie können `NotOverridable` nicht mit `MustOverride`, `Overridable`oder `Shared` in derselben Deklaration angeben.  
   
 ## <a name="usage"></a>Verwendung  
  Der `NotOverridable`-Modifizierer kann in folgenden Kontexten verwendet werden:  
@@ -54,7 +54,7 @@ Specifies that a property or procedure cannot be overridden in a derived class.
 - [Modifizierer](../../../visual-basic/language-reference/modifiers/index.md)
 - [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Shadodown in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

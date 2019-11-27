@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350892"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf-Operator (Visual Basic)
-Checks whether the runtime type of an expression's result is type-compatible with the specified type.
+Überprüft, ob der Lauf Zeittyp des Ergebnisses eines Ausdrucks typkompatibel mit dem angegebenen Typ ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,15 +32,15 @@ result = TypeOf objectexpression Is typename
 result = TypeOf objectexpression IsNot typename  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a>-Komponenten  
  `result`  
  Wird zurückgegeben. Ein `Boolean`-Wert.  
   
  `objectexpression`  
- Erforderlich. Jeder Ausdruck, der als ein Verweistyp ausgewertet wird.  
+ Erforderlich Jeder Ausdruck, der als ein Verweistyp ausgewertet wird.  
   
  `typename`  
- Erforderlich. Ein beliebiger Datentypname.  
+ Erforderlich Ein beliebiger Datentypname.  
   
 ## <a name="remarks"></a>Hinweise  
  Der `TypeOf`-Operator bestimmt, ob der Laufzeittyp von `objectexpression` mit `typename` kompatibel ist. Die Kompatibilität hängt von der Typkategorie von `typename` ab. Die folgende Tabelle zeigt, wie die Kompatibilität bestimmt wird.  
@@ -49,11 +49,11 @@ result = TypeOf objectexpression IsNot typename
 |---------------------------------|-----------------------------|  
 |Klasse|`objectexpression` ist vom Typ `typename` oder erbt von `typename`|  
 |Struktur|`objectexpression` ist vom Typ `typename`|  
-|Interface|`objectexpression` implementiert `typename` oder erbt von einer Klasse, die `typename` implementiert|  
+|Schnittstelle|`objectexpression` implementiert `typename` oder erbt von einer Klasse, die implementiert `typename`|  
   
  Wenn der Laufzeittyp von `objectexpression` das Kompatibilitätskriterium erfüllt, ist `result``True`. Andernfalls lautet `result` `False`.  Wenn `objectexpression` null ist, dann gibt `TypeOf`...`Is``False` zurück, und ...`IsNot` gibt `True` zurück.  
   
- `TypeOf` wird immer mit dem Schlüsselwort `Is` verwendet, um einen `TypeOf`...`Is`-Ausdruck zu erstellen, oder mit dem Schlüsselwort `IsNot`, um einen `TypeOf`...`IsNot`-Ausdruck zu erstellen.  
+ `TypeOf` wird immer mit dem Schlüsselwort `Is` verwendet, um einen `TypeOf`...`Is` Ausdruck zu erstellen, oder mit dem `IsNot`-Schlüsselwort, um einen `TypeOf`Ausdruck`IsNot`... zu erstellen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden `TypeOf`...`Is`-Ausdrücke zum Testen der Typkompatibilität von zwei Objektverweisvariablen mit verschiedenen Datentypen verwendet.  
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Vergleichs Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

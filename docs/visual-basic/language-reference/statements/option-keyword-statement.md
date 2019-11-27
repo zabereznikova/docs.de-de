@@ -13,11 +13,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353773"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<-Schlüsselwort > Anweisung
+Führt eine-Anweisung ein, die eine Compileroption angibt, die für die gesamte Quelldatei gilt.  
   
 ## <a name="remarks"></a>Hinweise  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ Die Compileroptionen können steuern, ob alle Variablen explizit deklariert werden müssen, ob einschränkende Typkonvertierungen explizit sein müssen oder ob Zeichen folgen als Text oder als binäre Mengen verglichen werden sollen.  
   
  Das `Option`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
@@ -31,4 +31,4 @@ Introduces a statement that specifies a compiler option that applies to the enti
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

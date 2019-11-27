@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434381"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName-Methode
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+Ruft ein Metadatentoken für einen Typ ab, der im angegebenen Bereich definiert ist, der außerhalb des aktuellen Gültigkeits Bereichs liegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,30 +37,30 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Parameter  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ in Das Token, das den Auflösungs Bereich angibt. Die folgenden Tokentypen sind gültig:  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- `mdModuleRef`, wenn der Typ in derselben Assembly definiert ist, in der der Aufrufer definiert ist.  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- `mdAssemblyRef`, wenn der Typ in einer anderen Assembly als der definiert ist, in der der Aufrufer definiert ist.  
   
-- `mdTypeRef`, if the type is a nested type.  
+- `mdTypeRef`, wenn der Typ ein ein Typ ist.  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- `mdModule`, wenn der Typ im gleichen Modul definiert ist, in dem der Aufrufer definiert ist.  
   
-- Null, if the type is defined globally.  
+- NULL, wenn der Typ Global definiert ist.  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ in Der Name des Zieltyps in Unicode.  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ vorgenommen Ein Zeiger auf das `mdTypeRef` Token, das dem Typ zugewiesen ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

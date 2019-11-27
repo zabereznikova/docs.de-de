@@ -21,7 +21,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351087"
 ---
 # <a name="goto-statement"></a>GoTo-Anweisung
-Branches unconditionally to a specified line in a procedure.  
+Verzweigt bedingungslos in eine angegebene Zeile in einer Prozedur.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,35 +29,35 @@ Branches unconditionally to a specified line in a procedure.
 GoTo line  
 ```  
   
-## <a name="part"></a>Segment  
+## <a name="part"></a>-Komponente  
  `line`  
- Erforderlich. Any line label.  
+ Erforderlich Eine beliebige Zeilen Bezeichnung.  
   
 ## <a name="remarks"></a>Hinweise  
- The `GoTo` statement can branch only to lines in the procedure in which it appears. The line must have a line label that `GoTo` can refer to. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ Die `GoTo`-Anweisung kann nur bis Zeilen in der Prozedur verzweigt werden, in der Sie angezeigt wird. Die Linie muss über eine Zeilen Bezeichnung verfügen, auf die `GoTo` verweisen kann. Weitere Informationen finden Sie unter Gewusst [wie: bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> `GoTo` statements can make code difficult to read and maintain. Whenever possible, use a control structure instead. For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> mit `GoTo`-Anweisungen kann der Code schwierig zu lesen und zu warten. Verwenden Sie, wenn möglich, stattdessen eine Steuerelement Struktur. Weitere Informationen finden Sie unter [Ablauf Steuerung](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.  
+ Eine `GoTo`-Anweisung kann nicht verwendet werden, um von außerhalb eines `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`oder `Using`...`End Using` Erstellung zu einer Bezeichnung in zu verzweigen.  
   
-## <a name="branching-and-try-constructions"></a>Branching and Try Constructions  
- Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.  
+## <a name="branching-and-try-constructions"></a>Verzweigungen und Versuchs Konstruktionen  
+ Innerhalb einer `Try`...`Catch`...`Finally` Konstruktion werden die folgenden Regeln für die Verzweigung mit der `GoTo`-Anweisung angewendet.  
   
-|Block or region|Branching in from outside|Branching out from inside|  
+|Block oder Region|Verzweigungen von außerhalb|Verzweigungen aus innerhalb|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` block|Only from a `Catch` block of the same construction <sup>1</sup>|Only to outside the whole construction|  
-|`Catch` block|Never allowed|Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup>|  
-|`Finally` block|Never allowed|Never allowed|  
+|`Try`-Block|Nur aus einem `Catch` Block desselben Baus <sup>1</sup>|Nur für die gesamte Konstruktion|  
+|`Catch`-Block|Nie zulässig|Nur für die gesamte Konstruktion oder den `Try` Block desselben Aufbaus <sup>1</sup>|  
+|`Finally`-Block|Nie zulässig|Nie zulässig|  
   
- <sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block. A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.  
+ <sup>1</sup> wenn eine `Try`...`Catch`...`Finally` Konstruktion in einer anderen geschachtelt ist, kann ein `Catch` Block in den `Try` Block auf der eigenen Schachtelungs Ebene verzweigt werden, aber nicht in einen anderen `Try` Block. Eine geschachtelte `Try`...`Catch`...`Finally` Konstruktion muss vollständig in einem `Try` oder `Catch` Block der Konstruktion enthalten sein, in der Sie geschachtelt ist.  
   
- The following illustration shows one `Try` construction nested within another. Various branches among the blocks of the two constructions are indicated as valid or invalid.  
+ Die folgende Abbildung zeigt eine `Try` in einer anderen geschachtelte Konstruktion. Verschiedene Verzweigungen zwischen den Blöcken der beiden Konstruktionen werden als gültig oder ungültig angegeben.  
   
  ![Grafisches Diagramm der Verzweigung in Try-Konstrukten](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Beispiel  
- The following example uses the `GoTo` statement to branch to line labels in a procedure.  
+ Im folgenden Beispiel wird die `GoTo`-Anweisung verwendet, um Zeilen Bezeichnungen in einer-Prozedur zu verzweigen.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445385"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter-Methode
-Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.  
+Benachrichtigt den Profiler, dass die Such Phase der Ausnahmebehandlung mit dem Ausführen eines benutzerdefinierten Ausnahme Filters begonnen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,9 +34,9 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="parameters"></a>Parameter  
  `functionId`  
- [in] The ID of the function that contains the filter.  
+ in Die ID der Funktion, die den Filter enthält.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

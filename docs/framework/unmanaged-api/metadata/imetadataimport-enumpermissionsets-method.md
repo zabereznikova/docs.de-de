@@ -40,36 +40,36 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
  `tk`  
- [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
+ in Ein Metadatentoken, das den Suchbereich einschränkt, oder NULL, um den größtmöglichen Bereich zu durchsuchen.  
   
  `dwActions`  
- [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
+ in Flags, die die <xref:System.Security.Permissions.SecurityAction> Werte darstellen, die in `rPermission`eingeschlossen werden sollen, oder NULL, um alle Aktionen zurückzugeben.  
   
  `rPermission`  
- [out] The array used to store the Permission tokens.  
+ vorgenommen Das Array, das zum Speichern der Berechtigungs Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rPermission`-Arrays.  
   
  `pcTokens`  
- [out] The number of Permission tokens returned in `rPermission`.  
+ vorgenommen Die Anzahl der Berechtigungs Token, die in `rPermission`zurückgegeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumPermissionSets` erfolgreich zurückgegeben.|  
+|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

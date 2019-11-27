@@ -16,7 +16,7 @@ ms.locfileid: "74351426"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (generischer Modifizierer) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+Bei generischen Typparametern gibt das `Out`-Schlüsselwort an, dass der Typ kovariant ist.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -26,7 +26,7 @@ Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../progr
 
 ## <a name="rules"></a>Regeln
 
-Sie können das `Out`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.
+Sie können das Schlüsselwort `Out` in generischen Schnittstellen und Delegaten verwenden.
 
 In einer generischen Schnittstelle kann ein Typparameter als kovariant deklariert werden, wenn er die folgenden Bedingungen erfüllt:
 
@@ -37,11 +37,11 @@ In einer generischen Schnittstelle kann ein Typparameter als kovariant deklarier
 
 - Der Typparameter wird nicht als generische Einschränkung für die Schnittstellenmethoden verwendet.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+In einem generischen Delegaten kann ein Typparameter als kovariant deklariert werden, wenn er nur als Methoden Rückgabetyp verwendet und nicht für Methodenargumente verwendet wird.
 
 Kovarianz und Kontravarianz werden für Verweistypen unterstützt, aber nicht für Werttypen.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+In Visual Basic können Sie Ereignisse nicht in kovarianten Schnittstellen deklarieren, ohne den Delegattyp anzugeben. Außerdem können kovariante Schnittstellen keine Unterklassen, enumerationsstrukturen oder Strukturen enthalten, aber Sie können über eine Schnittstelle verfügen.
 
 ## <a name="behavior"></a>Verhalten
 
@@ -57,7 +57,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie eine kovariante generische Schnittst
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie einen kovarianten generischen Delegaten deklarieren, instanziieren und aufrufen. It also shows how you can use implicit conversion for delegate types.
+Das folgende Beispiel zeigt, wie Sie einen kovarianten generischen Delegaten deklarieren, instanziieren und aufrufen. Außerdem wird gezeigt, wie Sie die implizite Konvertierung für Delegattypen verwenden können.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437916"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember-Methode
-Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Ruft einen Zeiger auf das mitgliedtendef-Token für das Feld oder die Methode ab, das durch den angegebenen <xref:System.Type> und den angegebenen Namen und die angegebene Metadatensignatur eingeschlossen ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,36 +39,36 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
+ in Das TypeDef-Token für die Klasse oder Schnittstelle, die den Member einschließt, nach dem gesucht werden soll. Wenn dieser Wert `mdTokenNil`ist, wird die Suche für eine globale Variable oder globale Funktion durchgeführt.  
   
  `szName`  
- [in] The name of the member to search for.  
+ in Der Name des zu suchenden Members.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member.  
+ in Ein Zeiger auf die binäre Metadatensignatur des Members.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ in Die Größe `pvSigBlob`in Byte.  
   
  `pmb`  
- [out] A pointer to the matching MemberDef token.  
+ vorgenommen Ein Zeiger auf das übereinstimmende mitgliedtdef-Token.  
   
 ## <a name="remarks"></a>Hinweise  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
+ Sie geben den Member mithilfe der einschließenden Klasse oder Schnittstelle (`td`), dessen Namen (`szName`) und optional dessen Signatur (`pvSigBlob`) an. In einer Klasse oder Schnittstelle können mehrere Member mit demselben Namen vorhanden sein. Übergeben Sie in diesem Fall die Signatur des Members, um die eindeutige Entsprechung zu finden.  
   
- The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
+ Die an `FindMember` über gegebene Signatur muss im aktuellen Gültigkeitsbereich generiert worden sein, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, das den einschließenden Klassen-oder Werttyp identifiziert. Das Token ist ein Index in der lokalen Tabelle "Typedef". Sie können keine Lauf Zeit Signatur außerhalb des Kontexts des aktuellen Bereichs erstellen und diese Signatur als Eingabe für die Eingabe in `FindMember`verwenden.  
   
- `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
+ `FindMember` findet nur Elemente, die direkt in der Klasse oder Schnittstelle definiert wurden. geerbte Member werden nicht gefunden.  
   
 > [!NOTE]
-> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+> `FindMember` ist eine Hilfsmethode. Es wird [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); aufgerufen. Wenn dieser Aufruf keine Entsprechung findet, ruft `FindMember` dann [IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)auf.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

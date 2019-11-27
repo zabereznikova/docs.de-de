@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427425"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2-Funktion
-Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.  
+Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Endaufruf einer anderen Funktion ausführt und Informationen über den Stapel Rahmen bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,37 +36,37 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Parameter  
  `funcId`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ in Der Bezeichner der aktuell ausgeführten Funktion, die einen Tail-Aufruf durchführen soll.  
   
  `clientData`  
- [in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.  
+ in Der neu zugeordnete Funktions Bezeichner, den der Profiler zuvor über [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)angegeben hat, der aktuell ausgeführten Funktion, die einen Tail-Aufruf durchführen soll.  
   
  `func`  
- [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
+ in Ein `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen zeigt.  
   
- The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
+ Der Profiler sollte dies als ein undurchsichtiges Handle behandeln, das an die Ausführungs-Engine in der [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) -Methode zurückgegeben werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.  
+ Die Zielfunktion des Tail-Aufrufs verwendet den aktuellen Stapel Rahmen und kehrt direkt zum Aufrufer der Funktion zurück, die den Tail-Aufruf durchgeführt hat. Dies bedeutet, dass ein [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) -Rückruf nicht für eine Funktion ausgegeben wird, die das Ziel eines Tail-Aufrufs ist.  
   
- The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.  
+ Der Wert des `func`-Parameters ist nicht gültig, nachdem die `FunctionTailcall2`-Funktion zurückgegeben wurde, da sich der Wert ändern oder zerstört werden kann.  
   
- The `FunctionTailcall2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ Die `FunctionTailcall2` Funktion ist ein Rückruf. Sie müssen ihn implementieren. Die-Implementierung muss das `__declspec`(`naked`)-Speicher Klassen Attribut verwenden.  
   
- The execution engine does not save any registers before calling this function.  
+ Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
   
- The implementation of `FunctionTailcall2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.  
+ Die Implementierung von `FunctionTailcall2` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionTailcall2` zurückgibt.  
   
- Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.  
+ Außerdem darf die `FunctionTailcall2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   

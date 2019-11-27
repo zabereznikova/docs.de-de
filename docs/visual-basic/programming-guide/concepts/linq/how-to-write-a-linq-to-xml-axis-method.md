@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348346"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>How to: Write a LINQ to XML Axis Method (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Gewusst wie: Schreiben einer LINQ to XML Achsen Methode (Visual Basic)
 Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer XML-Struktur abrufen. Eine der geeignetsten Methoden dafür besteht darin, eine Erweiterungsmethode zu schreiben, die eine Auflistung von Elementen oder Attributen zurückgibt. Die Grundlage für das Schreiben Ihrer Erweiterungsmethode zum Zurückgeben eines bestimmten Teilsatzes von Elementen oder Attributen bilden die Anforderungen Ihrer Anwendung.  
   
 ## <a name="example"></a>Beispiel  
@@ -217,4 +217,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Erweiterte Abfrage Techniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

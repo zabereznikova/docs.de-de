@@ -19,7 +19,7 @@ ms.locfileid: "74353266"
 ---
 # <a name="join-clause-visual-basic"></a>Join-Klausel (Visual Basic)
 
-Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. The join operation is based on matching keys and uses the `Equals` operator.
+Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. Der Joinvorgang basiert auf übereinstimmenden Schlüsseln und verwendet den `Equals`-Operator.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,47 +30,47 @@ Join element In collection _
 On key1 Equals key2 [ And key3 Equals key4 [... ]
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
-`element` ist erforderlich. The control variable for the collection being joined.
+`element` ist erforderlich. Die Steuerelement Variable für die Auflistung, die verknüpft wird.
 
 `collection`  
-Erforderlich. The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
+Erforderlich Die Auflistung, die mit der auf der linken Seite des `Join` Operators identifizierten Auflistung kombiniert werden soll. Eine `Join`-Klausel kann in einer anderen `Join`-Klausel oder in einer `Group Join`-Klausel eingefügt werden.
 
 `joinClause`  
-Dies ist optional. One or more additional `Join` clauses to further refine the query.
+Optional. Mindestens eine zusätzliche `Join`-Klausel, um die Abfrage weiter zu verfeinern.
 
 `groupJoinClause`  
-Dies ist optional. One or more additional `Group Join` clauses to further refine the query.
+Optional. Mindestens eine zusätzliche `Group Join`-Klausel, um die Abfrage weiter zu verfeinern.
 
 `key1` `Equals` `key2`  
-Erforderlich. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
+Erforderlich Identifiziert Schlüssel für die Auflistungen, die verknüpft werden. Sie müssen den `Equals`-Operator verwenden, um Schlüssel aus den Auflistungen zu vergleichen, die verknüpft werden. Joinbedingungen können mithilfe des `And`-Operators kombiniert werden, um mehrere Schlüssel zu identifizieren. `key1` muss von der Auflistung auf der linken Seite des `Join` Operators sein. `key2` muss von der Auflistung auf der rechten Seite des `Join` Operators sein.
 
-The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
+Die in der Join-Bedingung verwendeten Schlüssel können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jeder Schlüssel Ausdruck kann jedoch nur Elemente aus der jeweiligen Auflistung enthalten.
 
 ## <a name="remarks"></a>Hinweise
 
-The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
+Die `Join`-Klausel kombiniert zwei Auflistungen basierend auf übereinstimmenden Schlüsselwerten aus den verbundenen Sammlungen. Die resultierende Auflistung kann eine beliebige Kombination von Werten aus der Auflistung enthalten, die auf der linken Seite des `Join` Operators und der in der `Join`-Klausel identifizierten Auflistung identifiziert werden. Die Abfrage gibt nur Ergebnisse zurück, für die die vom `Equals` Operator angegebene Bedingung erfüllt wird. Dies entspricht einer `INNER JOIN` in SQL.
 
-You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
+Sie können mehrere `Join` Klauseln in einer Abfrage verwenden, um zwei oder mehr Auflistungen in einer einzelnen Auflistung zu verknüpfen.
 
-You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
+Sie können einen impliziten Join ausführen, um Auflistungen ohne die `Join`-Klausel zu kombinieren. Fügen Sie zu diesem Zweck mehrere `In`-Klauseln in Ihre `From`-Klausel ein, und geben Sie eine `Where`-Klausel an, die die Schlüssel angibt, die Sie für den Join verwenden möchten.
 
-You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
+Sie können die `Group Join`-Klausel verwenden, um Auflistungen in einer einzelnen hierarchischen Auflistung zu kombinieren. Dies ist wie eine `LEFT OUTER JOIN` in SQL.
 
 ## <a name="example"></a>Beispiel
 
-The following code example performs an implicit join to combine a list of customers with their orders.
+Im folgenden Codebeispiel wird ein impliziter Join durchführt, um eine Liste von Kunden mit Ihren Aufträgen zu kombinieren.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>Beispiel
 
-The following code example joins two collections by using the `Join` clause.
+Im folgenden Codebeispiel werden zwei Auflistungen mithilfe der `Join`-Klausel miteinander verbunden.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-This example will produce output similar to the following:
+In diesem Beispiel wird eine Ausgabe ähnlich der folgenden erzeugt:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ This example will produce output similar to the following:
 
 ## <a name="example"></a>Beispiel
 
-The following code example joins two collections by using the `Join` clause with two key columns.
+Im folgenden Codebeispiel werden zwei Auflistungen mithilfe der `Join`-Klausel mit zwei Schlüssel Spalten verbunden.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-The example will produce output similar to the following:
+Im Beispiel wird eine Ausgabe ähnlich der folgenden erzeugt:
 
 `winlogon (968), Windows Logon, Priority = 13`
 

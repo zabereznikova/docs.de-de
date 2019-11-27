@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442855"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs-Methode
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+Gibt ein Array von IDs zurück, die alle JIT-neu kompilierten Versionen der angegebenen Funktion identifizieren, die noch zugeordnet sind. Dies schließt JIT-kompilierte Versionen von Funktionen ein, die anschließend wieder hergestellt, aber noch nicht freigegeben wurden (z. b. wenn die Anwendungsdomäne, die die wiederhergestellte Funktion enthält, noch verwendet wird).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,21 +37,21 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parameter  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ in Der `FunctionID` der Funktions Instanz, für die Versionen aufgelistet werden sollen.  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ in Die Anzahl der im `reJitIds` Array zugeordneten JIT-neu kompilierten IDs.  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ vorgenommen Die tatsächliche Anzahl der JIT-neu kompilierten IDs.  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ vorgenommen Ein vom Aufrufer zugewiesenes Array, das die JIT-neu kompilierten IDs für die angegebene Funktion enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+ `GetReJITIDs` listet die aktiven JIT-neu kompilierten IDs für eine angegebene Funktions Instanz auf. Es folgt dem gleichen Verwendungs Muster wie andere `ICorProfilerInfo` Funktionen, die vom Aufrufer zugewiesene Puffer akzeptieren.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

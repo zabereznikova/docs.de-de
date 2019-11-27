@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438121"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2-Methode
-Opens a method and provides its real section offset in the image.  
+Öffnet eine-Methode und stellt den tatsächlichen Abschnitts Offset im Bild bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parameter  
  `method`  
- [in] The metadata token for the method to be opened.  
+ in Das Metadatentoken für die Methode, die geöffnet werden soll.  
   
  `isect`  
- [in] The section offset in the image.  
+ in Der Abschnitts Offset im Bild.  
   
  `offset`  
- [in] The offset in the image.  
+ in Der Offset im Bild.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

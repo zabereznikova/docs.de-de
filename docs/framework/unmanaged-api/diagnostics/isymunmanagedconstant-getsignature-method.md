@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449268"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature-Methode
-Gets the signature of the constant.  
+Ruft die Signatur der Konstante ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parameter  
  `cSig`  
- [in] The length of the buffer that the `pcSig` parameter points to.  
+ in Die Länge des Puffers, auf den der `pcSig`-Parameter verweist.  
   
  `pcSig`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Signatur enthalten muss, in Zeichen empfängt.  
   
  `sig`  
- [out] The buffer that stores the signature.  
+ vorgenommen Der Puffer, in dem die Signatur gespeichert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

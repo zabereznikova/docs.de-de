@@ -13,7 +13,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352384"
 ---
-# <a name="-out-visual-basic"></a>-out (Visual Basic)
+# <a name="-out-visual-basic"></a>-Out (Visual Basic)
 Gibt den Namen der Ausgabedatei an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,19 +26,19 @@ Gibt den Namen der Ausgabedatei an.
   
 |Begriff|Definition|  
 |---|---|  
-|`filename`|Erforderlich. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|Erforderlich Der Name der Ausgabedatei, die vom Compiler erstellt wird. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen ("") einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ Geben Sie den vollständigen Namen und die Erweiterung der zu erstellenden Datei an. Wenn Sie dies nicht tun, wird der Name der exe-Datei aus der Quell Code Datei mit der `Sub Main` Prozedur und die DLL-Datei aus der ersten Quell Code Datei abgeleitet.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ Wenn Sie einen Dateinamen ohne Erweiterung ". exe" oder ". dll" angeben, fügt der Compiler die Erweiterung automatisch hinzu, je nachdem, welcher Wert für die `-target`-Compileroption angegeben wurde.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|So richten Sie in der integrierten Entwicklungsumgebung von Visual Studio ein|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2. Klicken Sie auf die Registerkarte **Anwendung** .<br />3. ändern Sie den Wert im Feld AssemblyName.|  
   
 ## <a name="example"></a>Beispiel  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ Der folgende Code kompiliert `T2.vb` und erstellt die Ausgabedatei `T2.exe`.  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -47,5 +47,5 @@ vbc t2.vb -out:t3.exe
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

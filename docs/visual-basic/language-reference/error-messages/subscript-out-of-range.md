@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350792"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Index außerhalb des definierten Bereichs (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+Ein Index Index ist ungültig, da er außerhalb des zulässigen Bereichs liegt. Der niedrigste Index Wert für eine Dimension ist immer 0, und der höchste Index Wert wird durch die `GetUpperBound`-Methode für diese Dimension zurückgegeben.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Change the subscript so it falls within the valid range.  
+- Ändern Sie den Index so, dass er innerhalb des gültigen Bereichs liegt.  
   
 ## <a name="see-also"></a>Siehe auch
 

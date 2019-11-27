@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448641"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset-Methode
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+Ruft die einem Offset zugeordneten Zeilen Informationen ab. Wenn der Offset Parameter (`dwOffset`) kein Sequenz Punkt ist, ruft diese Methode die dem vorherigen Offset zugeordneten Zeilen Informationen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parameter  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ in Eine `ULONG32`, die den Offset enthält.  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Zeile empfängt.  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der die Spalte empfängt.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Endzeile empfängt.  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ vorgenommen Ein Zeiger auf eine `ULONG32`, die die Endspalte empfängt.  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ vorgenommen Ein Zeiger auf einen `ULONG32`, der den zugeordneten Sequenz Punkt empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

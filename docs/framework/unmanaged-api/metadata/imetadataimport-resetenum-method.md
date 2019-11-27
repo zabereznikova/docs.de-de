@@ -36,17 +36,17 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>Parameter  
  `hEnum`  
- [in] The enumerator to reset.  
+ in Der zurück zusetzenden Enumerator.  
   
  `ulPos`  
- [in] The new position at which to place the enumerator.  
+ in Die neue Position, an der der Enumerator platziert werden soll.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

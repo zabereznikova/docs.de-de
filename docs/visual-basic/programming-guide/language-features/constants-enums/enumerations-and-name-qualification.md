@@ -25,35 +25,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347501"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Enumerationen und Namensqualifikation (Visual Basic)
-Normally, when referring to a member of an enumeration, you must qualify the member name with the enumeration name. For example, to refer to the `Sunday` member of your `Days` enumeration, you would use the following syntax:  
+Normalerweise müssen Sie beim Verweisen auf einen Member einer Enumeration den Elementnamen mit dem Enumerationsnamen qualifizieren. Wenn Sie z. b. auf den `Sunday` Member ihrer `Days`-Enumeration verweisen möchten, verwenden Sie die folgende Syntax:  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
-## <a name="using-the-imports-statement"></a>Using the Imports Statement  
- You can avoid using fully qualified names by adding an `Imports` statement to the namespace declarations section of your code, as in the following example:  
+## <a name="using-the-imports-statement"></a>Verwenden der Imports-Anweisung  
+ Sie können die Verwendung voll qualifizierter Namen vermeiden, indem Sie dem Abschnitt Namespace Deklarationen in Ihrem Code eine `Imports`-Anweisung hinzufügen, wie im folgenden Beispiel gezeigt:  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
- An `Imports` statement imports namespace names from referenced projects and assemblies and from within the same project as the module in which the statement appears. Once this statement is added, you can refer to your enumeration members without qualification, as in the following example:  
+ Eine `Imports`-Anweisung importiert Namespace Namen aus referenzierten Projekten und Assemblys und innerhalb desselben Projekts wie das Modul, in dem die-Anweisung angezeigt wird. Nachdem diese Anweisung hinzugefügt wurde, können Sie ohne Qualifizierung auf Ihre Enumerationsmember verweisen, wie im folgenden Beispiel gezeigt:  
   
  [!code-vb[VbEnumsTask#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#24)]  
   
- By organizing sets of related constants in enumerations, you can use the same constant names in different contexts. For example, you can use the same names for the weekday constants in the `Days` and `WorkDays` enumerations. If you use the `Imports` statement with your enumerations, you must be careful to avoid ambiguous references. Betrachten Sie das folgende Beispiel:  
+ Wenn Sie Sätze verwandter Konstanten in Enumerationen organisieren, können Sie dieselben Konstanten Namen in unterschiedlichen Kontexten verwenden. Beispielsweise können Sie in den `Days`-und `WorkDays` Enumerationen die gleichen Namen für die Wochentagskonstanten verwenden. Wenn Sie die `Imports`-Anweisung mit ihren Enumerationen verwenden, müssen Sie darauf achten, mehrdeutige Verweise zu vermeiden. Betrachten Sie das folgende Beispiel:  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
  [!code-vb[VbEnumsTask#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#25)]  
   
- Assuming that `Monday` is a member of both the `Days` enumeration and the `Workdays` enumeration, this code generates a compiler error. To avoid ambiguous references when referring to an individual constant, qualify the constant name with its enumeration. The following code refers to the `Saturday` constants in the `Days` and `WorkDays` enumerations.  
+ Wenn `Monday` ein Member der `Days` Enumeration und der `Workdays`-Enumeration ist, generiert dieser Code einen Compilerfehler. Um mehrdeutige Verweise zu vermeiden, wenn Sie auf eine einzelne Konstante verweisen, qualifizieren Sie den konstanten Namen durch seine Enumeration. Der folgende Code bezieht sich auf die `Saturday` Konstanten in den `Days`-und `WorkDays`-Enumerationen.  
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Gewusst wie: Deklarieren einer Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Gewusst wie: Verweisen auf einen Enumerationsmember](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [Gewusst wie: Durchlaufen einer Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Gewusst wie: Bestimmen der einem Enumerationswert zugeordnete Zeichenfolge](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Situationen für die Verwendung von Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Konstanten und literale Datentypen](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

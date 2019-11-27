@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445415"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags-Enumeration
-Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+Enthält Werte, die den in einem [IMetaDataAssemblyEmit::D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)-Befehl definierten Dateityp beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +39,13 @@ typedef enum CorFileFlags {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Indicates that the file is not a resource file.|  
-|`ffContainsNoMetaData`|Indicates that the file, possibly a resource file, does not contain metadata.|  
+|`ffContainsMetaData`|Gibt an, dass die Datei keine Ressourcen Datei ist.|  
+|`ffContainsNoMetaData`|Gibt an, dass die Datei, möglicherweise eine Ressourcen Datei, keine Metadaten enthält.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Header:** Corhdr. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

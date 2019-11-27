@@ -23,7 +23,7 @@ ms.locfileid: "74352786"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw-Anweisung (Visual Basic)
 
-Throws an exception within a procedure.
+Löst eine Ausnahme in einer Prozedur aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,22 +31,22 @@ Throws an exception within a procedure.
 Throw [ expression ]
 ```
 
-## <a name="part"></a>Segment
+## <a name="part"></a>-Komponente
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+Stellt Informationen über die Ausnahme bereit, die ausgelöst werden soll. Ist optional, wenn Sie sich in einer `Catch`-Anweisung befindet, andernfalls erforderlich.
 
 ## <a name="remarks"></a>Hinweise
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+Die `Throw`-Anweisung löst eine Ausnahme aus, die Sie mit strukturiertem Ausnahme Behandlungs Code (`Try`...`Catch`...`Finally`) oder unstrukturiertem Ausnahme Behandlungs Code (`On Error GoTo`) behandeln können. Sie können die `Throw`-Anweisung verwenden, um Fehler in Ihrem Code abzufangen, da Visual Basic die aufrufsstapel nach oben verschiebt, bis der entsprechende Ausnahme Behandlungs Code gefunden wird.
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+Eine `Throw`-Anweisung ohne Ausdruck kann nur in einer `Catch`-Anweisung verwendet werden. in diesem Fall löst die-Anweisung die Ausnahme, die derzeit von der `Catch`-Anweisung behandelt wird, erneut aus.
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+Die `Throw`-Anweisung setzt die aufrufsstapel für die `expression` Ausnahme zurück. Wenn `expression` nicht angegeben wird, bleibt die-aufrufsstapel unverändert. Sie können über die <xref:System.Exception.StackTrace%2A>-Eigenschaft auf die aufrufsstapel für die Ausnahme zugreifen.
 
 ## <a name="example"></a>Beispiel
 
-The following code uses the `Throw` statement to throw an exception:
+Im folgenden Code wird die `Throw`-Anweisung verwendet, um eine Ausnahme auszulösen:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

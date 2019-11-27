@@ -48,7 +48,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
   
  Eine Analogie hierzu ist ein Schraubendrehersatz mit auswechselbaren Spitzen. Sie sehen sich die Schraube an, die Sie drehen müssen, und wählen die geeignete Spitze für diese Schraube aus (geschlitzt, gekreuzt oder mit Stern). Sobald Sie die richtige Spitze in den Schraubendreher gesteckt haben, führen Sie mit dem Schraubendreher genau diese Funktion aus, d. h., Sie drehen die Schraube.  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![Diagramm eines Schraubendreher Satzes mit unterschiedlichen Köpfen.](./media/generic-types/generic-screwdriver-set.gif)  
   
  Wenn Sie einen generischen Typ definieren, parametrisieren Sie ihn mit mindestens einem Datentyp. Dies ermöglicht es, die Datentypen mithilfe von Code an die Anforderungen anzupassen. Im Code können Sie mehrere unterschiedliche Programmierelemente anhand des generischen Elements deklarieren, von denen jedes für eine andere Gruppe von Datentypen ausgeführt wird. Die deklarierten Elemente führen jedoch alle dieselbe Logik aus, unabhängig davon, welche Datentypen von ihnen verwendet werden.  
   
@@ -73,10 +73,10 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Ein ausführlichere Beispiel finden Sie unter Gewusst [wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Geeignete Programmierelemente  
- Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. Der <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit. Bevor Sie ein eigenes generisches Element definieren, überprüfen Sie, ob es bereits in <xref:System.Collections.Generic?displayProperty=nameWithType>verfügbar ist.  
+ Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass der .NET Framework mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen. Der <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit. Bevor Sie ein eigenes generisches Element definieren, überprüfen Sie, ob es bereits in <xref:System.Collections.Generic?displayProperty=nameWithType>verfügbar ist.  
   
  Prozeduren sind keine Typen, Sie können aber generische Prozeduren definieren und verwenden. Siehe [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -91,7 +91,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
   
 - **Typsicherheit** . Generische Typen erzwingen die Typüberprüfung zur Kompilierzeit. Auf `Object` basierende Typen akzeptieren jeden Datentyp, und Sie müssen Code schreiben, der überprüft, ob ein Eingabedatentyp zulässig ist. Mit generischen Typen kann der Compiler Typenkonflikte vor der Laufzeit abfangen.  
   
-- **Leistung:** Generische Typen müssen kein *Boxing* und *Unboxing* für Daten ausführen, da jeder Typ speziell für einen Datentyp verwendet wird. Operationen, die auf `Object` basierend, müssen für Eingabedatentypen Boxing ausführen, um sie in `Object` zu konvertieren, und Unboxing für Daten ausführen, die für die Ausgabe vorgesehen sind. Durch Boxing und Unboxing wird die Leistung verringert.  
+- **Leistung** Generische Typen müssen kein *Boxing* und *unBoxing* für Daten ausführen, da jeder Typ speziell für einen Datentyp verwendet wird. Operationen, die auf `Object` basierend, müssen für Eingabedatentypen Boxing ausführen, um sie in `Object` zu konvertieren, und Unboxing für Daten ausführen, die für die Ausgabe vorgesehen sind. Durch Boxing und Unboxing wird die Leistung verringert.  
   
      Typen, die auf `Object` basieren, sind außerdem spät gebunden, d. h., dass der Zugriff auf ihre Member zusätzlichen Code zur Laufzeit erfordert. Hierdurch wird die Leistung ebenfalls verringert.  
   
@@ -124,7 +124,7 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
   
 - Das Typargument muss ein *Verweistyp*oder *Werttyp*sein.  
   
- Wenn Sie mehrere Einschränkungen erzwingen müssen, verwenden Sie eine durch Trennzeichen getrennte *Einschränkungsliste* in geschweiften Klammern (`{ }`). To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. Um festzulegen, dass ein Verweistyp erforderlich ist, fügen Sie das `Class` -Schlüsselwort ein. Um festzulegen, dass ein Werttyp erforderlich ist, fügen Sie das `Structure` -Schlüsselwort ein.  
+ Wenn Sie mehrere Einschränkungen erzwingen müssen, verwenden Sie eine durch Trennzeichen getrennte *Einschränkungsliste* in geschweiften Klammern (`{ }`). Wenn Sie einen barrierefreien Konstruktor benötigen, fügen Sie das [neue Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort in die Liste ein. Um festzulegen, dass ein Verweistyp erforderlich ist, fügen Sie das `Class` -Schlüsselwort ein. Um festzulegen, dass ein Werttyp erforderlich ist, fügen Sie das `Structure` -Schlüsselwort ein.  
   
  Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
@@ -151,11 +151,11 @@ Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst,
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Typkonvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Kovarianz und Kontravarianz](../../concepts/covariance-contravariance/index.md)
 - [Iteratoren](../../../../visual-basic/programming-guide/concepts/iterators.md)

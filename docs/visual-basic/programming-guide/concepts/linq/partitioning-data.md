@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353155"
 ---
-# <a name="partitioning-data-visual-basic"></a>Partitioning Data (Visual Basic)
+# <a name="partitioning-data-visual-basic"></a>Partitionierung von Daten (Visual Basic)
 Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
   
  Die folgende Abbildung zeigt das Ergebnis von drei verschiedenen Partitionierungsvorgängen einer Zeichensequenz. Der erste Vorgang gibt die ersten drei Elemente in der Sequenz zurück. Der zweite Vorgang überspringt die ersten drei Elemente und gibt die übrigen Elemente zurück. Der dritte Vorgang überspringt die ersten beiden Elemente in der Sequenz und gibt die nächsten drei Elemente zurück.  
@@ -20,7 +20,7 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
   
 ## <a name="operators"></a>Operatoren  
   
-|Name des Operators|Beschreibung|Visual Basic Query Expression Syntax|Weitere Informationen|  
+|Name des Operators|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
 |Skip|Überspringt Elemente bis zu einer angegebenen Position in einer Sequenz|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Überspringt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element die Bedingung nicht erfüllt|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -30,22 +30,22 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="skip"></a>Skip  
- The following code example uses the `Skip` clause in Visual Basic to skip over the first four strings in an array of strings before returning the remaining strings in the array.  
+ Im folgenden Codebeispiel wird die `Skip`-Klausel in Visual Basic verwendet, um die ersten vier Zeichen folgen in einem Array von Zeichen folgen zu überspringen, bevor die restlichen Zeichen folgen im Array zurückgegeben werden.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- The following code example uses the `Skip While` clause in Visual Basic to skip over the strings in an array while the first letter of the string is "a". The remaining strings in the array are returned.  
+ Im folgenden Codebeispiel wird die `Skip While`-Klausel in Visual Basic verwendet, um die Zeichen folgen in einem Array zu überspringen, während der erste Buchstabe der Zeichenfolge "a" ist. Die verbleibenden Zeichen folgen im Array werden zurückgegeben.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- The following code example uses the `Take` clause in Visual Basic to return the first two strings in an array of strings.  
+ Im folgenden Codebeispiel wird die `Take`-Klausel in Visual Basic verwendet, um die ersten beiden Zeichen folgen in einem Array von Zeichen folgen zurückzugeben.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- The following code example uses the `Take While` clause in Visual Basic to return strings from an array while the length of the string is five or less.  
+ Im folgenden Codebeispiel wird die `Take While`-Klausel in Visual Basic verwendet, um Zeichen folgen aus einem Array zurückzugeben, während die Länge der Zeichenfolge fünf oder kleiner ist.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   

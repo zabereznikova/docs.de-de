@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447356"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>COR_PRF_GC_ROOT_KIND-Enumeration
-Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+Gibt die Art des Garbage Collection Stamms an, der durch den Rückruf " [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) " verfügbar gemacht wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,12 +39,12 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|The root is a variable on the stack.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|The root is an entry in the finalizer queue.|  
-|`COR_PRF_GC_ROOT_HANDLE`|The root is a garbage collection handle.|  
-|`COR_PRF_GC_ROOT_OTHER`|The kind of root is unspecified.|  
+|`COR_PRF_GC_ROOT_STACK`|Der Stamm ist eine Variable auf dem Stapel.|  
+|`COR_PRF_GC_ROOT_FINALIZER`|Der Stamm ist ein Eintrag in der Finalizer-Warteschlange.|  
+|`COR_PRF_GC_ROOT_HANDLE`|Der Stamm ist ein Garbage Collection Handle.|  
+|`COR_PRF_GC_ROOT_OTHER`|Die Art des Stamms ist nicht angegeben.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

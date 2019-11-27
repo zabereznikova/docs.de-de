@@ -55,7 +55,7 @@ Keine `ObjectID`-Werte, die von der `ConditionalWeakTableElementReferences`-Meth
 
 ## <a name="example"></a>Beispiel
 
-The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
+Im folgenden Codebeispiel wird veranschaulicht, wie [ICorProfilerCallback5](icorprofilercallback5-interface.md) implementiert und diese Methode verwendet wird.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,9 +80,9 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Hinweise
 
-A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
+Ein Profiler für die .NET Framework 4,5 oder höhere Versionen implementiert die [ICorProfilerCallback5](icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die von der `ConditionalWeakTableElementReferences`-Methode angegebenen Abhängigkeiten auf. `ICorProfilerCallback5` bietet den gesamten Satz an Abhängigkeiten zwischen Live Objekten, die durch `ConditionalWeakTable` Einträge dargestellt werden. Diese Abhängigkeiten und die Element Feldverweise, die von der [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) -Methode angegeben werden, ermöglichen einem verwalteten Profiler das Generieren des vollständigen Objekt Diagramms von Live-Objekten.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 

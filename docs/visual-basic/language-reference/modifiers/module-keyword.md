@@ -1,5 +1,5 @@
 ---
-title: Module <keyword>
+title: Modul <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,15 +15,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351554"
 ---
-# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
+# <a name="module-keyword-visual-basic"></a>Module \<-Schlüsselwort > (Visual Basic)
+Gibt an, dass ein Attribut am Anfang einer Quelldatei für das aktuelle Assemblymodul gilt.  
   
 ## <a name="remarks"></a>Hinweise  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ Viele Attribute beziehen sich auf ein einzelnes Programmier Element, z. b. eine Klasse oder Eigenschaft. Sie wenden ein derartiges Attribut an, indem Sie den Attribut Block in spitzen Klammern (`< >`) direkt an die Deklarations Anweisung anfügen.  
   
- If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
+ Wenn ein Attribut nicht nur dem folgenden Element, sondern dem aktuellen Assemblymodul entspricht, platzieren Sie den-Attribut Block am Anfang der Quelldatei und identifizieren das-Attribut mit dem `Module`-Schlüsselwort. Wenn Sie für die gesamte Assembly gilt, verwenden Sie das [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) -Schlüsselwort.  
   
- The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+ Der `Module` Modifizierer ist nicht mit der [Modul Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)identisch.  
   
 ## <a name="see-also"></a>Siehe auch
 

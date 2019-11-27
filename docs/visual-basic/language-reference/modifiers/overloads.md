@@ -23,15 +23,15 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw.
 
 ## <a name="remarks"></a>Hinweise
 
-*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
+Bei der *Überladung* wird die Bereitstellung von mehr als einer Definition für eine bestimmte Eigenschaft oder einen bestimmten Prozedur Namen im selben Bereich beschrieben. Das erneute Deklarieren einer Eigenschaft oder Prozedur mit einer anderen Signatur wird manchmal als ausblenden *nach Signatur*bezeichnet.
 
 ## <a name="rules"></a>Regeln
 
-- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
+- **Deklarations Kontext.** Sie können `Overloads` nur in einer Eigenschaft oder Prozedur Deklarations Anweisung verwenden.
 
-- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
+- **Kombinierte modifiziererer.** Sie können `Overloads` [nicht mit](../../../visual-basic/language-reference/modifiers/shadows.md) Shadowing in derselben Prozedur Deklaration angeben.
 
-- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. Die Signatur besteht aus der Eigenschaft oder dem Prozedurnamen und dem Folgenden:
+- **Erforderliche Unterschiede.** Die *Signatur* in dieser Deklaration muss sich von der Signatur jeder Eigenschaft oder Prozedur unterscheiden, die Sie über lädt. Die Signatur besteht aus der Eigenschaft oder dem Prozedurnamen und dem Folgenden:
 
   - der Anzahl der Parameter
 
@@ -45,7 +45,7 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw.
 
   Alle Überladungen müssen denselben Namen aufweisen. Jede muss sich jedoch von allen anderen in mindestens einem der vorstehenden Punkte unterscheiden. Dadurch kann der Compiler unterscheiden, welche Version verwendet werden muss, wenn der Code die Eigenschaft oder Prozedur aufruft.
 
-- **Disallowed Differences.** Das Ändern von mindestens einem der folgenden Punkte ist für das Überladen einer Eigenschaft oder Prozedur nicht gültig, da sie kein Bestandteil der Signatur sind:
+- **Unzulässige Unterschiede.** Das Ändern von mindestens einem der folgenden Punkte ist für das Überladen einer Eigenschaft oder Prozedur nicht gültig, da sie kein Bestandteil der Signatur sind:
 
   - ob ein Wert (für eine Prozedur) zurückgegeben wird
 
@@ -59,9 +59,9 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw.
 
   - Eigenschaft oder Prozedurmodifiziererschlüsselwörter (wie `Public` oder `Shared`)
 
-- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. Wenn Sie jedoch `Overloads` in einer der Deklarationen verwenden, müssen Sie sie in allen davon verwenden.
+- **Optionaler Modifizierer.** Sie müssen den `Overloads` Modifizierer nicht verwenden, wenn Sie mehrere überladene Eigenschaften oder Prozeduren in derselben Klasse definieren. Wenn Sie jedoch `Overloads` in einer der Deklarationen verwenden, müssen Sie sie in allen davon verwenden.
 
-- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. Wenn Sie `Overloads` auf diese Art und Weise verwenden, deklarieren Sie die Eigenschaft oder Methode mit demselben Namen und derselben Parameterliste als Basisklassenmember, und Sie stellen das `Shadows`-Schlüsselwort nicht bereit.
+- **Shadoading und überladen.** `Overloads` können auch verwendet werden, um ein vorhandenes Element oder einen Satz überladener Member in einer Basisklasse zu überschatten. Wenn Sie `Overloads` auf diese Art und Weise verwenden, deklarieren Sie die Eigenschaft oder Methode mit demselben Namen und derselben Parameterliste als Basisklassenmember, und Sie stellen das `Shadows`-Schlüsselwort nicht bereit.
 
 Beim Verwenden von `Overrides` fügt der Compiler implizit `Overloads` hinzu, sodass Ihre Bibliotheks-APIs leichter mit C# verwendet werden können.
 
@@ -69,7 +69,7 @@ Der `Overloads`-Modifizierer kann in folgenden Kontexten verwendet werden:
 
 - [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 
 - [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
 

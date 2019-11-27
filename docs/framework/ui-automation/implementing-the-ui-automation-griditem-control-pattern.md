@@ -29,7 +29,7 @@ ms.locfileid: "74435255"
   
 - Zusammengeführte Zellen geben ihre <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>-Eigenschaft und <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>-Eigenschaft entsprechend ihrer zugrunde liegenden Ankerzelle an, wie sie vom Benutzeroberflächenautomatisierungs-Anbieter definiert ist. In der Regel sind dies die oberste Zeile und die am weitesten links liegende Spalte.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> bietet keine aktive Bearbeitung des Rasters wie etwa Zusammenführen oder Teilen von Zellen.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> bietet keine aktive Bearbeitung des Rasters, z. b. das Zusammenführen oder aufteilen von Zellen.  
   
 - Steuerelemente, die <xref:System.Windows.Automation.Provider.IGridItemProvider> implementieren, können meist mithilfe der Tastatur durchlaufen werden (d. h., ein Benutzeroberflächenautomatisierungs-Client kann zu benachbarten Steuerelementen wechseln).  
   
@@ -37,13 +37,13 @@ ms.locfileid: "74435255"
 ## <a name="required-members-for-igriditemprovider"></a>Erforderliche Member für IGridItemProvider  
  Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.IGridItemProvider>erforderlich.  
   
-|Erforderliche Member|Memberart|Notizen|  
+|Erforderliche Member|Elementtyp|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|property|Keiner|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|property|Keiner|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Eigenschaft|Keine|  
   
  Diesem Steuerelementmuster sind keine Methoden oder Ereignisse zugeordnet.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74435255"
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung](implementing-the-ui-automation-grid-control-pattern.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

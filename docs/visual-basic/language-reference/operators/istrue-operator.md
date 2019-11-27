@@ -15,32 +15,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349517"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue-Operator (Visual Basic)
-Determines whether an expression is `True`.  
+Bestimmt, ob ein Ausdruck `True`wird.  
   
- You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses. If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.  
+ Sie können `IsTrue` nicht explizit in Ihrem Code aufzurufen, aber der Visual Basic Compiler kann ihn verwenden, um Code aus `OrElse` Klauseln zu generieren. Wenn Sie eine Klasse oder Struktur definieren und dann eine Variable dieses Typs in einer `OrElse`-Klausel verwenden, müssen Sie `IsTrue` für diese Klasse oder Struktur definieren.  
   
- The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
+ Der Compiler betrachtet die Operatoren "`IsTrue`" und "`IsFalse`" als *übereinstimmendes Paar*. Dies bedeutet, dass Sie, wenn Sie einen von Ihnen definieren, auch den anderen definieren müssen.  
   
-## <a name="compiler-use-of-istrue"></a>Compiler Use of IsTrue  
- When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause. If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition. It searches for a suitable operator in the following order:  
+## <a name="compiler-use-of-istrue"></a>Compilerverwendung von IsTrue  
+ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie eine Variable dieses Typs in einer `For`-, `If`-, `Else If`-oder `While`-Anweisung oder in einer `When`-Klausel verwenden. Wenn Sie dies tun, benötigt der Compiler einen Operator, der den Typ in einen `Boolean` Wert konvertiert, damit eine Bedingung getestet werden kann. Er sucht in der folgenden Reihenfolge nach einem passenden Operator:  
   
-1. A widening conversion operator from your class or structure to `Boolean`.  
+1. Ein erweiterter Konvertierungs Operator von der Klasse oder Struktur zum `Boolean`.  
   
-2. A widening conversion operator from your class or structure to `Boolean?`.  
+2. Ein erweiterter Konvertierungs Operator von der Klasse oder Struktur zum `Boolean?`.  
   
-3. The `IsTrue` operator on your class or structure.  
+3. Der `IsTrue`-Operator für die Klasse oder Struktur.  
   
-4. A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.  
+4. Eine einschränkende Konvertierung in `Boolean?`, die keine Konvertierung von `Boolean` in `Boolean?`einschließt.  
   
-5. A narrowing conversion operator from your class or structure to `Boolean`.  
+5. Ein einschränkende Konvertierungs Operator von der Klasse oder Struktur zum `Boolean`.  
   
- If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.  
+ Wenn Sie keine Konvertierung in `Boolean` oder einen `IsTrue` Operator definiert haben, signalisiert der Compiler einen Fehler.  
   
 > [!NOTE]
-> The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Der `IsTrue`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn der Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
+ Im folgenden Codebeispiel wird die Gliederung einer Struktur definiert, die Definitionen für die `IsFalse`-und `IsTrue`-Operatoren enthält.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

@@ -18,7 +18,7 @@ ms.locfileid: "74352758"
 ---
 # <a name="using-statement-visual-basic"></a>Using-Anweisung (Visual Basic)
 
-Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.
+Deklariert den Anfang eines `Using` Blocks und ruft optional die Systemressourcen ab, die der Block steuert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,64 +28,64 @@ Using { resourcelist | resourceexpression }
 End Using
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 |Begriff|Definition|  
 |---|---|  
-|`resourcelist`|Required if you do not supply `resourceexpression`. List of one or more system resources that this `Using` block controls, separated by commas.|  
-|`resourceexpression`|Required if you do not supply `resourcelist`. Reference variable or expression referring to a system resource to be controlled by this `Using` block.|  
-|`statements`|Dies ist optional. Block of statements that the `Using` block runs.|  
-|`End Using`|Erforderlich. Terminates the definition of the `Using` block and disposes of all the resources that it controls.|  
+|`resourcelist`|Erforderlich, wenn Sie keine `resourceexpression`bereitstellen. Eine Liste mit einer oder mehreren Systemressourcen, die von dieser `Using` blockiert werden, durch Kommas getrennt.|  
+|`resourceexpression`|Erforderlich, wenn Sie keine `resourcelist`bereitstellen. Verweis Variable oder-Ausdruck, die auf eine System Ressource verweist, die von diesem `Using` Block gesteuert werden soll.|  
+|`statements`|Optional. Ein Block von-Anweisungen, die der `Using`-Block ausführt.|  
+|`End Using`|Erforderlich Beendet die Definition des `Using` Blocks und gibt alle von ihm kontrollierten Ressourcen frei.|  
 
- Each resource in the `resourcelist` part has the following syntax and parts:
+ Jede Ressource im `resourcelist` Teil hat die folgende Syntax und die folgenden Teile:
 
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`
 
- - oder -
+ \- oder -
 
  `resourcename As resourcetype = resourceexpression`
 
-## <a name="resourcelist-parts"></a>resourcelist Parts
+## <a name="resourcelist-parts"></a>resourceList-Teile
 
 |Begriff|Definition|  
 |---|---|  
-|`resourcename`|Erforderlich. Reference variable that refers to a system resource that the `Using` block controls.|  
-|`New`|Required if the `Using` statement acquires the resource. If you have already acquired the resource, use the second syntax alternative.|  
-|`resourcetype`|Erforderlich. The class of the resource. The class must implement the <xref:System.IDisposable> interface.|  
-|`arglist`|Dies ist optional. List of arguments you are passing to the constructor to create an instance of `resourcetype`. See [Parameter List](parameter-list.md).|  
-|`resourceexpression`|Erforderlich. Variable or expression referring to a system resource satisfying the requirements of `resourcetype`. If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.|  
+|`resourcename`|Erforderlich Verweis Variable, die auf eine System Ressource verweist, die von der `Using` blockiert wird.|  
+|`New`|Erforderlich, wenn die `Using`-Anweisung die Ressource abruft. Wenn Sie die Ressource bereits abgerufen haben, verwenden Sie die zweite Syntax Alternative.|  
+|`resourcetype`|Erforderlich Die Klasse der Ressource. Die-Klasse muss die <xref:System.IDisposable>-Schnittstelle implementieren.|  
+|`arglist`|Optional. Liste von Argumenten, die Sie an den Konstruktor übergeben, um eine Instanz von `resourcetype`zu erstellen. Siehe [Parameter Liste](parameter-list.md).|  
+|`resourceexpression`|Erforderlich Eine Variable oder ein Ausdruck, der auf eine System Ressource verweist, die die Anforderungen von `resourcetype`erfüllt. Wenn Sie die zweite Syntax Alternative verwenden, müssen Sie die Ressource abrufen, bevor Sie die Steuerung an die `Using`-Anweisung übergeben.|  
   
 ## <a name="remarks"></a>Hinweise
 
- Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection. A `Using` block guarantees the disposal of one or more such resources when your code is finished with them. This makes them available for other code to use.
+ Manchmal erfordert Ihr Code eine nicht verwaltete Ressource, z. b. ein Datei Handle, einen COM-Wrapper oder eine SQL-Verbindung. Ein `Using` Block gewährleistet, dass mindestens eine solche Ressource freigegeben wird, wenn der Code damit fertig ist. Dies macht Sie für anderen Code verfügbar.
 
- Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part. You do not need a `Using` block for managed resources. However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.
+ Verwaltete Ressourcen werden vom .NET Framework Garbage Collector (GC) verworfen, ohne dass zusätzliche Codierungen vorhanden sind. Sie benötigen keinen `Using`-Block für verwaltete Ressourcen. Sie können jedoch weiterhin einen `Using`-Block verwenden, um die Freigabe einer verwalteten Ressource zu erzwingen, anstatt auf die Garbage Collector zu warten.
 
- A `Using` block has three parts: acquisition, usage, and disposal.
+ Ein `Using`-Block besteht aus drei Teilen: Erwerb, Verwendung und Entsorgung.
 
-- *Acquisition* means creating a variable and initializing it to refer to the system resource. The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement. If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.
+- Der *Erwerb* bedeutet, dass eine Variable erstellt und initialisiert wird, um auf die System Ressource zu verweisen. Mit der `Using`-Anweisung können Sie eine oder mehrere Ressourcen abrufen, oder Sie können genau eine Ressource abrufen, bevor Sie den Block eingeben und für die `Using`-Anweisung bereitstellen. Wenn Sie `resourceexpression`bereitstellen, müssen Sie die Ressource abrufen, bevor Sie die Steuerung an die `Using`-Anweisung übergeben.
 
-- *Usage* means accessing the resources and performing actions with them. The statements between `Using` and `End Using` represent the usage of the resources.
+- *Verwendung* bedeutet, dass auf die Ressourcen zugegriffen und Aktionen mit Ihnen durchgeführt werden. Die Anweisungen zwischen `Using` und `End Using` repräsentieren die Verwendung der Ressourcen.
 
-- *Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`. This allows the object to cleanly terminate its resources. The `End Using` statement disposes of the resources under the `Using` block's control.
+- Die *Beseitigung* bedeutet, dass die <xref:System.IDisposable.Dispose%2A>-Methode für das-Objekt in `resourcename`aufgerufen wird. Dies ermöglicht es dem-Objekt, seine Ressourcen ordnungsgemäß zu beenden. Die `End Using`-Anweisung gibt die Ressourcen unter dem Steuerelement des `Using` Blocks frei.
 
 ## <a name="behavior"></a>Verhalten
 
- A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them. Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block. This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.
+ Ein `Using`-Block verhält sich wie ein `Try`...`Finally` Konstruktion, in der der `Try` Block die Ressourcen verwendet und der `Finally` Block diese freigibt. Aus diesem Grund wird durch den `Using` Block die Beseitigung der Ressourcen garantiert, unabhängig davon, wie Sie den Block beenden. Dies gilt auch im Fall einer nicht behandelten Ausnahme, mit Ausnahme eines <xref:System.StackOverflowException>.
 
- The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.
+ Der Gültigkeitsbereich jeder Ressourcenvariablen, die durch die `Using`-Anweisung abgerufen wird, ist auf den `Using`-Block beschränkt.
 
- If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.
+ Wenn Sie in der `Using`-Anweisung mehr als eine System Ressource angeben, ist der Effekt identisch mit der geschachtelten `Using` Blöcke innerhalb einer anderen.
 
- If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.
+ Wenn `resourcename` `Nothing`ist, wird kein <xref:System.IDisposable.Dispose%2A> aufgerufen, und es wird keine Ausnahme ausgelöst.
 
-## <a name="structured-exception-handling-within-a-using-block"></a>Structured Exception Handling Within a Using Block
+## <a name="structured-exception-handling-within-a-using-block"></a>Strukturierte Ausnahmebehandlung innerhalb eines using-Blocks
 
- If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it. If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.
+ Wenn Sie eine Ausnahme behandeln müssen, die möglicherweise im `Using`-Block auftritt, können Sie eine komplette `Try`...`Finally`-Konstruktion hinzufügen. Wenn Sie den Fall behandeln müssen, in dem die `Using`-Anweisung beim Abrufen einer Ressource nicht erfolgreich ist, können Sie überprüfen, ob `resourcename` `Nothing`ist.
 
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Structured Exception Handling Instead of a Using Block
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Strukturierte Ausnahmebehandlung anstelle eines using-Blocks
 
- If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction. The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.
+ Wenn Sie eine präzisere Kontrolle über den Erwerb der Ressourcen benötigen oder zusätzlichen Code im `Finally`-Block benötigen, können Sie den `Using`-Block als `Try`...`Finally` Konstruktion umschreiben. Im folgenden Beispiel werden Skeleton `Try` und `Using` Konstruktionen veranschaulicht, die im Erwerb und der Entsorgung von `resource`äquivalent sind.
 
 ```vb
 Using resource As New resourceType
@@ -105,13 +105,13 @@ End Try
 ```
 
 > [!NOTE]
-> The code inside the `Using` block should not assign the object in `resourcename` to another variable. When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.
+> Der Code innerhalb des `Using` Blocks sollte das Objekt in `resourcename` nicht einer anderen Variablen zuweisen. Wenn Sie den `Using`-Block beenden, wird die Ressource verworfen, und die andere Variable kann nicht auf die Ressource zugreifen, auf die Sie verweist.
 
 ## <a name="example"></a>Beispiel
 
- The following example creates a file that is named log.txt and writes two lines of text to the file. The example also reads that same file and displays the lines of text:
+ Im folgenden Beispiel wird eine Datei mit dem Namen Log. txt erstellt, und es werden zwei Textzeilen in die Datei geschrieben. Das Beispiel liest auch dieselbe Datei und zeigt die Textzeilen an:
 
- Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.
+ Da die Klassen <xref:System.IO.TextWriter> und <xref:System.IO.TextReader> die <xref:System.IDisposable>-Schnittstelle implementieren, kann der Code `Using`-Anweisungen verwenden, um sicherzustellen, dass die Datei nach den Schreib-und Lesevorgängen ordnungsgemäß geschlossen wird.
 
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]
 

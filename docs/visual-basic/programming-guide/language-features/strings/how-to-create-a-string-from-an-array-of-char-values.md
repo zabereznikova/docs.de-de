@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344387"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Gewusst wie: Erstellen einer Zeichenfolge aus einem Array mit Char-Werten (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+In diesem Beispiel wird die Zeichenfolge "abcd" aus einzelnen Zeichen erstellt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- This method has no special requirements.  
+ Diese Methode hat keine besonderen Anforderungen.  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ Die Syntax `"a"c`, bei der ein einzelner `c` einem einzelnen Zeichen in Anführungszeichen folgt, wird zum Erstellen eines Zeichenliterals verwendet.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+## <a name="robust-programming"></a>Robuste Programmierung  
+ NULL-Zeichen (äquivalent zu `Chr(0)`) in der Zeichenfolge führen zu unerwarteten Ergebnissen, wenn die Zeichenfolge verwendet wird. Das NULL-Zeichen wird in die Zeichenfolge eingeschlossen, jedoch werden Zeichen, die auf das NULL-Zeichen folgen, in einigen Situationen nicht angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
 

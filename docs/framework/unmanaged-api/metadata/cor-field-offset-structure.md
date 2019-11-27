@@ -37,16 +37,16 @@ typedef struct COR_FIELD_OFFSET {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`ridOfField`|An `mdFieldDef` metadata token that represents the field.|  
-|`ulOffset`|The field's offset within its class.|  
+|`ridOfField`|Ein `mdFieldDef` Metadatentoken, das das Feld darstellt.|  
+|`ulOffset`|Der Offset des Felds in der Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- [IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.  
+ Die [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) -Methode und die [IMetaDataEmit:: SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) -Methode übernehmen einen Parameter vom Typ `COR_FIELD_OFFSET`.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h, CorProf.idl  
+ **Header:** Corhdr. h, Corprof. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -16,15 +16,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352445"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Gewusst wie: Konvertieren einer Zeichenfolge in ein Zeichenfolgenarray in Visual Basic
-Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string, such as when you are parsing a string. This example shows how you can get an array of the characters in a string by calling the string's <xref:System.String.ToCharArray%2A> method.  
+Manchmal ist es sinnvoll, Daten über die Zeichen in der Zeichenfolge und die Positionen der Zeichen in der Zeichenfolge zu erhalten, z. b. Wenn Sie eine Zeichenfolge in eine Zeichenfolge schreiben. Dieses Beispiel zeigt, wie Sie ein Array von Zeichen in einer Zeichenfolge abrufen können, indem Sie die <xref:System.String.ToCharArray%2A>-Methode der Zeichenfolge aufrufen.  
   
 ## <a name="example"></a>Beispiel  
- This example demonstrates how to split a string into a `Char` array, and how to split a string into a `String` array of its Unicode text characters. The reason for this distinction is that Unicode text characters can be composed of two or more `Char` characters (such as a surrogate pair or a combining character sequence). For more information, see <xref:System.Globalization.TextElementEnumerator> and [The Unicode Standard](https://www.unicode.org/standard/standard.html).  
+ In diesem Beispiel wird veranschaulicht, wie Sie eine Zeichenfolge in ein `Char` Array aufteilen und eine Zeichenfolge in ein `String` Array ihrer Unicode-Textzeichen aufteilen. Der Grund für diesen Unterschied besteht darin, dass Unicode-Textzeichen aus mindestens zwei `Char` Zeichen bestehen können (z. b. ein Ersatz Zeichenpaar oder eine kombinierte Zeichen Sequenz). Weitere Informationen finden Sie unter <xref:System.Globalization.TextElementEnumerator> und [im Unicode-Standard](https://www.unicode.org/standard/standard.html).  
   
  [!code-vb[VbVbalrStrings#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#75)]  
   
 ## <a name="example"></a>Beispiel  
- It is more difficult to split a string into its Unicode text characters, but this is necessary if you need information about the visual representation of a string. This example uses the <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> method to get information about the Unicode text characters that make up a string.  
+ Es ist schwieriger, eine Zeichenfolge in die Unicode-Textzeichen aufzuteilen, aber dies ist erforderlich, wenn Sie Informationen zur visuellen Darstellung einer Zeichenfolge benötigen. In diesem Beispiel wird die <xref:System.Globalization.StringInfo.SubstringByTextElements%2A>-Methode verwendet, um Informationen über die Unicode-Textzeichen, die eine Zeichenfolge bilden, zu erhalten.  
   
  [!code-vb[VbVbalrStrings#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#76)]  
   

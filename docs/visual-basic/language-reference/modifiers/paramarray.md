@@ -1,5 +1,5 @@
 ---
-title: ParamArray
+title: ByRef
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ParamArray
@@ -16,15 +16,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351370"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Specifies that a procedure parameter takes an optional array of elements of the specified type. `ParamArray` can be used only on the last parameter of a parameter list.  
+Gibt an, dass ein Prozedur Parameter ein optionales Array von Elementen vom angegebenen Typ annimmt. `ParamArray` können nur für den letzten Parameter einer Parameterliste verwendet werden.  
   
 ## <a name="remarks"></a>Hinweise  
- `ParamArray` allows you to pass an arbitrary number of arguments to the procedure. A `ParamArray` parameter is always declared using [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+ `ParamArray` ermöglicht es Ihnen, eine beliebige Anzahl von Argumenten an die Prozedur zu übergeben. Ein `ParamArray` Parameter wird immer mit [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)deklariert.  
   
- You can supply one or more arguments to a `ParamArray` parameter by passing an array of the appropriate data type, a comma-separated list of values, or nothing at all. For details, see "Calling a ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ Sie können einem `ParamArray` Parameter ein oder mehrere Argumente bereitstellen, indem Sie ein Array des entsprechenden Datentyps, eine durch Trennzeichen getrennte Liste von Werten oder überhaupt nichts übergeben. Weitere Informationen finden Sie unter "Aufrufen eines ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
-> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array from the calling code, you should test its length and take appropriate steps if it is too large for your application.  
+> Wenn Sie sich mit einem Array befassen, das unbegrenzt groß sein kann, besteht das Risiko, dass eine interne Kapazität der Anwendung überschritten wird. Wenn Sie ein Parameter Array aus dem aufrufenden Code akzeptieren, sollten Sie seine Länge testen und entsprechende Schritte ausführen, wenn es für Ihre Anwendung zu groß ist.  
   
  Der `ParamArray`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
@@ -38,5 +38,5 @@ Specifies that a procedure parameter takes an optional array of elements of the 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Parameterarrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)

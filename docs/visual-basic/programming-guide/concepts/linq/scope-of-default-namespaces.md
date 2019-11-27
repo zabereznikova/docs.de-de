@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343647"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Bereich von Standardnamespaces in Visual Basic
 Standardnamespaces, wie sie in der XML-Struktur dargestellt werden, befinden sich bei Abfragen nicht innerhalb des gültigen Bereichs. Bei XML, das sich in einem Standardnamespace befindet, müssen Sie weiterhin eine <xref:System.Xml.Linq.XNamespace>-Variable deklarieren und diese Variable mit dem lokalen Namen kombinieren, um einen qualifizierten Namen zu erhalten, der in der Abfrage verwendet werden kann.  
   
  Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  
@@ -47,7 +47,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Kommentare  
+### <a name="comments"></a>Comments  
  Dieses Beispiel liefert das folgende Ergebnis:  
   
 ```console  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Erstellung von XML in einem Namespace und eine Abfrage, die korrekt codiert ist.  
   
- In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.  
+ Im Gegensatz zum falsch codierten Beispiel oben besteht der richtige Ansatz bei der Verwendung Visual Basic darin, einen globalen Standard Namespace zu deklarieren und zu initialisieren. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.  
   
 ### <a name="code"></a>Code  
   
@@ -88,7 +88,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Kommentare  
+### <a name="comments"></a>Comments  
  Dieses Beispiel liefert das folgende Ergebnis:  
   
 ```console  
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

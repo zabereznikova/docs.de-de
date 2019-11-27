@@ -34,13 +34,13 @@ With objectExpression
 End With
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 |Begriff|Definition|
 |---|---|
-|`objectExpression`|Erforderlich. Ein Ausdruck, der zu einem Objekt ausgewertet wird. Der Ausdruck kann von beliebiger Komplexität sein und wird nur einmal ausgewertet. Der Ausdruck kann einen beliebigen Datentyp ergeben, u. a. auch einen elementaren Datentyp.|
-|`statements`|Dies ist optional. Eine oder mehrere Anweisungen zwischen `With` und `End With`, die auf Member eines Objekts verweisen können, das durch die Auswertung von `objectExpression` erstellt wird.|
-|`End With`|Erforderlich. Beendet die Definition des `With`-Blocks.|
+|`objectExpression`|Erforderlich Ein Ausdruck, der zu einem Objekt ausgewertet wird. Der Ausdruck kann von beliebiger Komplexität sein und wird nur einmal ausgewertet. Der Ausdruck kann einen beliebigen Datentyp ergeben, u. a. auch einen elementaren Datentyp.|
+|`statements`|Optional. Eine oder mehrere Anweisungen zwischen `With` und `End With`, die auf Member eines Objekts verweisen können, das durch die Auswertung von `objectExpression` erstellt wird.|
+|`End With`|Erforderlich Beendet die Definition des `With`-Blocks.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -64,10 +64,10 @@ Sie können eine `With...End With`-Anweisung in eine andere einfügen. Geschacht
 
 Sie können von außerhalb eines Blocks keine Verzweigung in einen `With`-Anweisungsblock vornehmen.
 
-Sofern der Block keine Schleife enthält, werden die Anweisungen nur einmal ausgeführt. Sie können verschiedene Arten von Steuerungsstrukturen schachteln. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Sofern der Block keine Schleife enthält, werden die Anweisungen nur einmal ausgeführt. Sie können verschiedene Arten von Steuerungsstrukturen schachteln. Weitere Informationen finden Sie unter [Struktur von Struktur Steuer](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)Elementen.
 
 > [!NOTE]
-> Das `With`-Schlüsselwort kann auch in Objektinitialisierern verwendet werden. For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> Das `With`-Schlüsselwort kann auch in Objektinitialisierern verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) und [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Wenn Sie einen `With`-Block nur zum Initialisieren der Eigenschaften oder Felder eines soeben instanziierten Objekts verwenden, sollten Sie stattdessen einen Objektinitialisierer verwenden.
 

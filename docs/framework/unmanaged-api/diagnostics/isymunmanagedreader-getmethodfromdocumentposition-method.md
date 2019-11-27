@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426737"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition-Methode
-Returns the method that contains the breakpoint at the given position in a document.  
+Gibt die Methode zurück, die den Breakpoint an der angegebenen Position in einem Dokument enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +37,22 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>Parameter  
  `document`  
- [in] The specified document.  
+ in Das angegebene Dokument.  
   
  `line`  
- [in] The line of the specified document.  
+ in Die Zeile des angegebenen Dokuments.  
   
  `column`  
- [in] The column of the specified document.  
+ in Die Spalte des angegebenen Dokuments.  
   
  `pRetVal`  
- [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ISymUnmanagedMethod-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) Objekts, das die Methode darstellt, die den Breakpoint enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>Voraussetzungen  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

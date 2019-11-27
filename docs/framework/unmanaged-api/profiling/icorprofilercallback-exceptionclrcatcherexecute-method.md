@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444941"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute-Methode
-Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
+Wird aufgerufen, wenn ein `catch`-Block für eine Ausnahme innerhalb der Common Language Runtime (CLR) selbst ausgeführt wird. Diese Methode ist in der .NET Framework Version 2,0 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,14 +31,14 @@ Called when a `catch` block for an exception is executed inside the common langu
 HRESULT ExceptionCLRCatcherExecute();  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework Versionen:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

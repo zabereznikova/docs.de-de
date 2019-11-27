@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435911"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished-Methode
-Notifies the profiler that a class has finished unloading.  
+Benachrichtigt den Profiler, dass eine Klasse das entladen abgeschlossen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ in Identifiziert die Klasse, die entladen wurde.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ in Ein HRESULT, das angibt, ob die Klasse erfolgreich entladen wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+ Einige Teile des Entladen der-Klasse können nach dem `ClassUnloadFinished`-Rückruf fortgesetzt werden. Ein HRESULT-Fehler in `hrStatus` deutet auf einen Fehler hin. Ein HRESULT-Erfolg in `hrStatus` gibt jedoch nur an, dass der erste Teil des Entladens der Klasse erfolgreich war.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

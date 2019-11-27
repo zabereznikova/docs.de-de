@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437680"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName-Methode
-Gets the custom attribute, given its name and owner.  
+Ruft das benutzerdefinierte Attribut ab, wenn Name und Besitzer angegeben sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,26 +38,26 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>Parameter  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ in Ein Metadatentoken, das das Objekt darstellt, das das benutzerdefinierte Attribut besitzt.  
   
  `szName`  
- [in] The name of the custom attribute.  
+ in Der Name des benutzerdefinierten Attributs.  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ vorgenommen Ein Zeiger auf ein Array von Daten, das den Wert des benutzerdefinierten Attributs ist.  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ vorgenommen Die Größe der Daten in Bytes, die in *`ppData`zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+ Es ist zulässig, mehrere benutzerdefinierte Attribute für denselben Besitzer zu definieren. Sie haben möglicherweise sogar denselben Namen. `GetCustomAttributeByName` gibt jedoch nur eine Instanz zurück. (`GetCustomAttributeByName` gibt die erste Instanz zurück, die erkannt wird.) Um alle Instanzen eines benutzerdefinierten Attributs zu suchen, müssen Sie die [IMetaDataImport:: enumcustomtribute](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) -Methode aufzurufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438724"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass-Methode
-Determines whether the specified class is an array class.  
+Bestimmt, ob die angegebene Klasse eine Array Klasse ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,21 +37,21 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parameter  
  `classId`  
- [in] The ID of the class to be examined.  
+ in Die ID der zu überprüfenden Klasse.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ vorgenommen Ein Zeiger auf einen Wert der CorElementType-Enumeration, der den Typ der Array Elemente angibt.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ vorgenommen Ein Zeiger auf die Klassen-ID der Array Elemente (falls verfügbar).  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ vorgenommen Ein Zeiger auf eine ganze Zahl, die den Rang (d. h. die Anzahl der Dimensionen) des Arrays angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ Wenn die angegebene Klasse eine Array Klasse ist, gibt die `IsArrayClass` Methode eine S_OK HRESULT und Werte für alle Ausgabeparameter ungleich NULL zurück. Andernfalls wird S_FALSE zurückgegeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345962"
 ---
 # <a name="optional-parameters-visual-basic"></a>Optionale Parameter (Visual Basic)
-Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. Dabei gelten folgende Regeln:  
+Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* werden durch das `Optional`-Schlüsselwort in der Prozedur Definition angegeben. Dabei gelten folgende Regeln:  
   
 - Für jeden optionalen Parameter in der Prozedurdefinition muss ein Standardwert angegeben werden.  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- Im folgenden Beispiel wird die `MsgBox`-Funktion mehrmals aufgerufen. `MsgBox` besitzt einen erforderlichen Parameter und zwei optionale Parameter.  
+ Im folgenden Beispiel wird die `MsgBox`-Funktion mehrmals aufgerufen. `MsgBox` verfügt über einen erforderlichen Parameter und zwei optionale Parameter.  
   
  Beim ersten Aufruf von `MsgBox` werden alle drei Argumente in der Reihenfolge angegeben, in der sie von `MsgBox` definiert werden. Beim zweiten Aufruf wird nur das erforderliche Argument angegeben. Beim dritten und vierten Aufruf werden das erste und dritte Argument angegeben. Im dritten Aufruf geschieht dies über die Position, im vierten Aufruf über den Namen.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Bestimmen, ob ein optionales Argument vorhanden ist  
- Prozeduren können zur Laufzeit nicht feststellen, ob ein bestimmtes Argument ausgelassen oder der Standardwert durch den Aufrufcode explizit bereitgestellt wurde. Wenn diese Unterscheidung wichtig ist, sollten Sie einen unwahrscheinlichen Standardwert festlegen. The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ Prozeduren können zur Laufzeit nicht feststellen, ob ein bestimmtes Argument ausgelassen oder der Standardwert durch den Aufrufcode explizit bereitgestellt wurde. Wenn diese Unterscheidung wichtig ist, sollten Sie einen unwahrscheinlichen Standardwert festlegen. Im folgenden Verfahren wird der optionale Parameter `office`definiert und der Standardwert `QJZ`getestet, um festzustellen, ob er im-Befehl ausgelassen wurde:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   

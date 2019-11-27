@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427272"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO-Enumeration
-Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.  
+Gibt an, wie viele Daten bei jedem Abruf der [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) -Funktion des Profilers mit einer Stapel Momentaufnahme zurückgegeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 |Member|Beschreibung|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indicates that a simpler, alternative stack-walking algorithm will be used.|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|Gibt an, dass Werte für alle `StackSnapshotCallback` Parameter übergeben werden müssen, mit Ausnahme des `context`-Parameters.|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Gibt an, dass Werte für alle `StackSnapshotCallback`-Parameter übergeben werden müssen, einschließlich des `context`-Parameters.|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Gibt an, dass ein einfacherer, alternativer Stapel gehenden Algorithmus verwendet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+ Werte, die von der `COR_PRF_SNAPSHOT_INFO`-Enumeration bereitgestellt werden, werden als Parameter an die [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) -Methode übermittelt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

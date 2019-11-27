@@ -16,15 +16,15 @@ ms.locfileid: "74351864"
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
 
-An array is a set of values, which are termed *elements*, that are logically related to each other. For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade. Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.
+Ein Array ist ein Satz von Werten, die als *Elemente*bezeichnet werden, die logisch miteinander verknüpft sind. Ein Array kann z. b. aus der Anzahl von Schülern in den einzelnen Stufen in einer Grammatikschule bestehen. jedes Element des Arrays ist die Anzahl der Schüler/Studenten in einer einzelnen Klasse. Ebenso kann ein Array aus den Noten eines Studenten für eine Klasse bestehen. jedes Element des Arrays ist eine einzelne Klasse.
 
-It is possible individual variables to store each of our data items. For example, if our application analyzes student grades, we can use a separate variable for each student's grade, such as `englishGrade1`, `englishGrade2`, etc. This approach has three major limitations:
+Einzelne Variablen können jedes unserer Datenelemente speichern. Wenn unsere Anwendung z. b. die Studenten Qualitäten analysiert, können wir eine separate Variable für die Qualität der Schüler/Studenten, z. b. `englishGrade1`, `englishGrade2`usw., verwenden. Dieser Ansatz hat drei wesentliche Einschränkungen:
 
-- We have to know at design time exactly how many grades we have to handle.
-- Handling large numbers of grades quickly becomes unwieldy. This in turn makes an application much more likely to have serious bugs.
-- It is difficult to maintain. Each new grade that we add requires that the application be modified, recompiled, and redeployed.
+- Wir müssen zur Entwurfszeit genau wissen, wie viele Qualitäten verarbeitet werden müssen.
+- Die Verarbeitung einer großen Anzahl von Noten wird schnell zu unhandlich. Dies wiederum führt zu einer größeren Wahrscheinlichkeit, dass eine Anwendung schwerwiegende Fehler aufweist.
+- Die Wartung ist schwierig. Jede neue, von uns hinzu zufügende Stufe erfordert, dass die Anwendung geändert, neu kompiliert und erneut bereitgestellt wird.
 
-By using an array, you can refer to these related values by the same name, and use a number that’s called an *index* or *subscript* to identify an individual element based on its position in the array. The indexes of an array range from 0 to one less than the total number of elements in the array. When you use Visual Basic syntax to define the size of an array, you specify its highest index, not the total number of elements in the array. You can work with the array as a unit, and the ability to iterate its elements frees you from needing to know exactly how many elements it contains at design time.
+Mithilfe eines Arrays können Sie mit demselben Namen auf diese verknüpften Werte verweisen und eine Zahl verwenden, die als *Index oder Index* bezeichnet *wird, um* ein einzelnes Element auf der Grundlage seiner Position im Array zu identifizieren. Die Indizes eines Arrays reichen von 0 bis eins kleiner als die Gesamtzahl der Elemente im Array. Wenn Sie Visual Basic Syntax verwenden, um die Größe eines Arrays zu definieren, geben Sie den höchsten Index und nicht die Gesamtzahl der Elemente im Array an. Sie können mit dem Array als Einheit arbeiten, und durch die Möglichkeit, seine Elemente zu durchlaufen, müssen Sie nicht genau wissen, wie viele Elemente es zur Entwurfszeit enthält.
 
 Hier einige Beispiele, bevor wir mit den Erklärungen starten:
 
@@ -51,111 +51,111 @@ Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
 Dim sales()() As Double = New Double(11)() {}
 ```
 
-## <a name="array-elements-in-a-simple-array"></a>Array elements in a simple array
+## <a name="array-elements-in-a-simple-array"></a>Array Elemente in einem einfachen Array
 
-Let's create an array named `students` to store the number of students in each grade in a grammar school. Die Indizes der Elemente reichen von 0 bis 6. Using this array is simpler than declaring seven variables.
+Wir erstellen nun ein Array mit dem Namen `students`, um die Anzahl von Schülern in den einzelnen Stufen in einer Grammatikschule zu speichern. Die Indizes der Elemente reichen von 0 bis 6. Die Verwendung dieses Arrays ist einfacher, als sieben Variablen zu deklarieren.
 
-The following illustration shows the `students` array. Für jedes Element des Arrays gilt:
+Die folgende Abbildung zeigt das `students` Array. Für jedes Element des Arrays gilt:
 
 - Der Index des Elements steht für die Jahrgangsstufe (Index 0 (null) steht für die erste Jahrgangsstufe).
 
 - Der im Element enthaltene Wert steht für die Anzahl der Schüler in dieser Jahrgangsstufe.
 
-![Diagram showing an array of the numbers of students](./media/index/students-array-elements.gif)
+![Diagramm mit einem Array der Anzahl von Schülern](./media/index/students-array-elements.gif)
 
-The following example contains the Visual Basic code that creates and uses the array:
+Das folgende Beispiel enthält den Visual Basic Code, der das Array erstellt und verwendet:
 
 [!code-vb[simple-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/simple-array.vb)]
 
-The example does three things:
+Im Beispiel werden drei Dinge ausgeführt:
 
-- It declares a `students` array with seven elements. The number `6` in the array declaration indicates the last index in the array; it is one less than the number of elements in the array.
-- It assigns values to each element in the array. Array elements are accessed by using the array name and including the index of the individual element in parentheses.
-- It lists each value of the array. The example uses a [`For`](../../../language-reference/statements/for-next-statement.md) statement to access each element of the array by its index number.
+- Er deklariert ein `students` Array mit sieben Elementen. Die Anzahl `6` in der Array Deklaration gibt den letzten Index im Array an. Es ist ein kleiner als die Anzahl der Elemente im Array.
+- Jedem Element im Array werden Werte zugewiesen. Der Zugriff auf Array Elemente erfolgt über den Namen des Arrays und einschließlich des Index des einzelnen Elements in Klammern.
+- Sie Listet jeden Wert des Arrays auf. Im Beispiel wird eine [`For`](../../../language-reference/statements/for-next-statement.md) -Anweisung verwendet, um auf die einzelnen Elemente des Arrays über die Indexnummer zuzugreifen.
 
-The `students` array in the preceding example is a one-dimensional array because it uses one index. An array that uses more than one index or subscript is called *multidimensional*. For more information, see the rest of this article and [Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md).
+Das `students` Array im vorangehenden Beispiel ist ein eindimensionales Array, da es einen Index verwendet. Ein Array, das mehr als einen Index oder Index verwendet, wird mehr *dimensional*genannt. Weitere Informationen finden Sie im restlichen Artikel und [in den Array Dimensionen in Visual Basic](../../language-features/arrays/array-dimensions.md).
 
-## <a name="creating-an-array"></a>Creating an array
+## <a name="creating-an-array"></a>Erstellen eines Arrays
 
-You can define the size of an array in several ways:
+Sie können die Größe eines Arrays auf verschiedene Arten definieren:
 
-- You can specify the size when the array is declared:
+- Sie können die Größe angeben, wenn das Array deklariert wird:
 
   [!code-vb[creating1](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]
 
-- You can use a `New` clause to supply the size of an array when it’s created:
+- Mit einer `New`-Klausel können Sie die Größe eines Arrays bei der Erstellung angeben:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-If you have an existing array, you can redefine its size by using the [`ReDim`](../../../language-reference/statements/redim-statement.md) statement. You can specify that the `ReDim` statement keep the values that are in the array, or you can specify that it create an empty array. Im folgenden Beispiel werden andere Möglichkeiten veranschaulicht, um mit der `ReDim` -Anweisung die Größe eines vorhandenen Arrays zu ändern.
+Wenn Sie über ein vorhandenes Array verfügen, können Sie dessen Größe mit der [`ReDim`](../../../language-reference/statements/redim-statement.md) -Anweisung neu definieren. Sie können angeben, dass die `ReDim`-Anweisung die Werte im Array behält, oder Sie können angeben, dass ein leeres Array erstellt werden soll. Im folgenden Beispiel werden andere Möglichkeiten veranschaulicht, um mit der `ReDim` -Anweisung die Größe eines vorhandenen Arrays zu ändern.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
-For more information, see the [ReDim Statement](../../../language-reference/statements/redim-statement.md).
+Weitere Informationen finden Sie in der [ReDim-Anweisung](../../../language-reference/statements/redim-statement.md).
 
-## <a name="storing-values-in-an-array"></a>Storing values in an array
+## <a name="storing-values-in-an-array"></a>Speichern von Werten in einem Array
 
-Sie können mit einem Index vom Typ `Integer`auf die einzelnen Positionen in einem Array zugreifen. Die Werte in einem Array können gespeichert und abgerufen werden, indem mit dem entsprechenden in Klammern eingeschlossenen Index auf die einzelnen Arraypositionen verwiesen wird. Indexes for multidimensional arrays are separated by commas (,). Sie benötigen einen Index für jede Arraydimension.
+Sie können mit einem Index vom Typ `Integer`auf die einzelnen Positionen in einem Array zugreifen. Die Werte in einem Array können gespeichert und abgerufen werden, indem mit dem entsprechenden in Klammern eingeschlossenen Index auf die einzelnen Arraypositionen verwiesen wird. Indizes für mehrdimensionale Arrays sind durch Kommas (,) getrennt. Sie benötigen einen Index für jede Arraydimension.
 
-The following example shows some statements that store and retrieve values in arrays.
+Im folgenden Beispiel werden einige Anweisungen gezeigt, die Werte in Arrays speichern und abrufen.
 
 [!code-vb[store-and-retrieve](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/store-and-retrieve.vb)]
 
-## <a name="populating-an-array-with-array-literals"></a>Populating an array with array literals
+## <a name="populating-an-array-with-array-literals"></a>Auffüllen eines Arrays mit Array literalen
 
-By using an array literal, you can populate an array with an initial set of values at the same time that you create it. Ein Arrayliteral besteht aus einer Liste von durch Trennzeichen getrennten Werten, die in geschweifte Klammern (`{}`) eingeschlossen sind.
+Mithilfe eines Arrayliterals können Sie ein Array mit einem anfänglichen Satz von Werten gleichzeitig auffüllen, wenn Sie es erstellen. Ein Arrayliteral besteht aus einer Liste von durch Trennzeichen getrennten Werten, die in geschweifte Klammern (`{}`) eingeschlossen sind.
 
-Beim Erstellen eines Arrays mit einem Arrayliteral können Sie den Arraytyp entweder angeben oder mittels Typrückschluss bestimmen. The following example shows both options.
+Beim Erstellen eines Arrays mit einem Arrayliteral können Sie den Arraytyp entweder angeben oder mittels Typrückschluss bestimmen. Im folgenden Beispiel werden beide Optionen gezeigt.
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-When you use type inference, the type of the array is determined by the *dominant type* in the list of literal values. The dominant type is the type to which all other types in the array can widen. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, auf den alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. Wenn die für das Arrayliteral angegebene Liste der Werte z. B. Werte vom Typ `Integer`, `Long`und `Double`enthält, weist das erhaltene Array den Typ `Double`auf. Because `Integer` and `Long` widen only to `Double`, `Double` is the dominant type. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md).
+Wenn Sie den Typrückschluss verwenden, wird der Typ des Arrays durch den *vorherrschenden Typ* in der Liste der Literalwerte bestimmt. Der vorherrschende Typ ist der Typ, auf den alle anderen Typen im Array ausgedehnt werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, auf den alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. Wenn die für das Arrayliteral angegebene Liste der Werte z. B. Werte vom Typ `Integer`, `Long`und `Double`enthält, weist das erhaltene Array den Typ `Double`auf. Da `Integer` und `Long` nur auf `Double`ausgedehnt werden, ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md).
 
 > [!NOTE]
-> You can use type inference only for arrays that are defined as local variables in a type member. If an explicit type definition is absent, arrays defined with array literals at the class level are of type `Object[]`. For more information, see [Local type inference](../variables/local-type-inference.md).
+> Sie können den Typrückschluss nur für Arrays verwenden, die in einem Typmember als lokale Variablen definiert sind. Wenn eine explizite Typdefinition nicht vorhanden ist, sind Arrays, die mit Array literalen auf Klassenebene definiert sind, vom Typ `Object[]`. Weitere Informationen finden Sie unter [lokaler Typrückschluss](../variables/local-type-inference.md).
 
-Note that the previous example defines `values` as an array of type `Double` even though all the array literals are of type `Integer`. You can create this array because the values in the array literal can widen to `Double` values.
+Beachten Sie, dass das vorherige Beispiel `values` als Array vom Typ `Double` definiert, auch wenn alle Array Literale den Typ `Integer`haben. Sie können dieses Array erstellen, da die Werte im arrayliteralwert auf `Double` Werte ausgedehnt werden können.
 
-You can also create and populate a multidimensional array by using *nested array literals*. Nested array literals must have a number of dimensions that’s consistent with the resulting array. The following example creates a two-dimensional array of integers by using nested array literals.
+Sie können auch ein mehrdimensionales Array erstellen und Auffüllen, indem Sie die *Literale des arrayarrays*verwenden. Die Literale für das arsted Array müssen über eine Reihe von Dimensionen verfügen, die mit dem resultierenden Array konsistent sind. Im folgenden Beispiel wird ein zweidimensionales Array von ganzen Zahlen erstellt, wobei die Literale des arrayarrays verwendet werden.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
-When using nested array literals to create and populate an array, an error occurs if the number of elements in the nested array literals don't match. An error also occurs if you explicitly declare the array variable to have a different number of dimensions than the array literals.
+Wenn Sie zum Erstellen und Auffüllen eines Arrays ein Array verwenden, tritt ein Fehler auf, wenn die Anzahl der Elemente in den nicht übereinten Array literalen nicht entspricht. Ein Fehler tritt auch auf, wenn Sie die Array Variable explizit so deklarieren, dass Sie eine andere Anzahl von Dimensionen als die Array Literale hat.
 
-Just as you can for one-dimensional arrays, you can rely on type inference when creating a multidimensional array with nested array literals. The inferred type is the dominant type for all the values in all the array literals for all nesting level. The following example creates a two-dimensional array of type `Double[,]` from values that are of type `Integer` and `Double`.
+Ebenso wie bei eindimensionalen Arrays können Sie den Typrückschluss beim Erstellen eines mehrdimensionalen Arrays mit den literalen des masted-Arrays unterstützen. Der abherleitet Typ ist der bestimmende Typ für alle Werte in allen Arrayliteralen für alle Schachtelungs Ebenen. Im folgenden Beispiel wird ein zweidimensionales Array vom Typ erstellt `Double[,]` aus Werten vom Typ `Integer` und `Double`.
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
 Weitere Beispiele finden Sie unter [How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic).
 
-## <a name="iterating-through-an-array"></a>Iterating through an array
+## <a name="iterating-through-an-array"></a>Durchlaufen eines Arrays
 
-When you iterate through an array, you access each element in the array from the lowest index to the highest or from the highest to the lowest. Typically, use either the [For...Next Statement](../../../language-reference/statements/for-next-statement.md) or the [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md) to iterate through the elements of an array. When you don't know the upper bounds of the array, you can call the <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> method to get the highest value of the index. Although lowest index value is almost always 0, you can call the <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> method to get the lowest value of the index.
+Wenn Sie ein Array durchlaufen, greifen Sie auf jedes Element im Array vom niedrigsten Index bis zum höchsten oder vom höchsten zum niedrigsten zu. Verwenden Sie in der Regel entweder den [for... Next-Anweisung](../../../language-reference/statements/for-next-statement.md) oder die [for each-Anweisung... Nächste Anweisung](../../../language-reference/statements/for-each-next-statement.md) zum Durchlaufen der Elemente eines Arrays. Wenn Sie die oberen Begrenzungen des Arrays nicht kennen, können Sie die <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>-Methode zum Abrufen des höchsten Index Werts abrufen. Obwohl der niedrigste Indexwert fast immer 0 ist, können Sie die <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>-Methode zum Abrufen des niedrigsten Index Werts abrufen.
 
-The following example iterates through a one-dimensional array by using the [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement.
+Im folgenden Beispiel wird ein eindimensionales Array mithilfe der [`For...Next`](../../../language-reference/statements/for-next-statement.md) -Anweisung durchlaufen.
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-The following example iterates through a multidimensional array by using a [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement. Die <xref:System.Array.GetUpperBound%2A> -Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)` returns the highest index of the first dimension, and `GetUpperBound(1)` returns the highest index of the second dimension.
+Im folgenden Beispiel wird ein mehrdimensionales Array mit einer [`For...Next`](../../../language-reference/statements/for-next-statement.md) -Anweisung durchlaufen. Die <xref:System.Array.GetUpperBound%2A> -Methode enthält einen Parameter, der die Dimension angibt. `GetUpperBound(0)` gibt den höchsten Index der ersten Dimension zurück, und `GetUpperBound(1)` gibt den höchsten Index der zweiten Dimension zurück.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-The following example uses a [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md)to iterate through a one-dimensional array and a two-dimensional array.
+Im folgenden Beispiel wird ein [for each verwendet... Nächste Anweisung](../../../language-reference/statements/for-each-next-statement.md)zum Durchlaufen eines eindimensionalen Arrays und eines zweidimensionalen Arrays.
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
-## <a name="array-size"></a>Array size
+## <a name="array-size"></a>Array Größe
 
-Die Größe eines Arrays ist das Produkt der Längen aller seiner Dimensionen. Sie stellt die Gesamtzahl der Elemente dar, die derzeit im Array enthalten sind.  For example, the following example declares a 2-dimensional array with four elements in each dimension. As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).
+Die Größe eines Arrays ist das Produkt der Längen aller seiner Dimensionen. Sie stellt die Gesamtzahl der Elemente dar, die derzeit im Array enthalten sind.  Im folgenden Beispiel wird z. b. ein zweidimensionales Array mit vier Elementen in jeder Dimension deklariert. Wie die Ausgabe des Beispiels zeigt, ist die Größe des Arrays 16 (oder (3 + 1) * (3 + 1).
 
 [!code-vb[array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]
 
 > [!NOTE]
-> This discussion of array size does not apply to jagged arrays. For information on jagged arrays and determining the size of a jagged array, see the [Jagged arrays](#jagged-arrays) section.
+> Diese Erörterung der Array Größe gilt nicht für verzweigte Arrays. Informationen zu verzweigten Arrays und zum Ermitteln der Größe einer Jagged Array finden Sie im Abschnitt verzweigte [Arrays](#jagged-arrays) .
 
-Sie können die Größe eines Arrays mithilfe der <xref:System.Array.Length%2A?displayProperty=nameWithType>-Eigenschaft bestimmen. You can find the length of each dimension of a multidimensional array by using the <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
+Sie können die Größe eines Arrays mithilfe der <xref:System.Array.Length%2A?displayProperty=nameWithType>-Eigenschaft bestimmen. Sie können die Länge der einzelnen Dimensionen eines mehrdimensionalen Arrays mithilfe der <xref:System.Array.GetLength%2A?displayProperty=nameWithType>-Methode ermitteln.
 
-You can resize an array variable by assigning a new array object to it or by using the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md) statement. The following example uses the `ReDim` statement to change a 100-element array to a 51-element array.
+Sie können die Größe einer Array Variablen ändern, indem Sie Ihr ein neues Array Objekt zuweisen oder indem Sie die Anweisung [`ReDim` Anweisung](../../../language-reference/statements/redim-statement.md) verwenden. Im folgenden Beispiel wird die `ReDim`-Anweisung verwendet, um ein 100-Element-Array in ein 51-Element-Array zu ändern.
 
 [!code-vb[resize-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]
 
@@ -163,69 +163,69 @@ Mehrere Faktoren wirken sich auf die Arraygröße aus.
 
 |||
 |---|---|
-|Dimensionslänge|The index of each dimension is 0-based, which means it ranges from 0 to its upper bound. Therefore, the length of a given dimension is one greater than the declared upper bound of that dimension.|
-|Längenbeschränkungen|The length of every dimension of an array is limited to the maximum value of the `Integer` data type, which is <xref:System.Int32.MaxValue?displayProperty=nameWithType> or (2 ^ 31) - 1. Die Gesamtgröße eines Arrays richtet sich nach dem verfügbaren Arbeitsspeicher des Systems und ist damit ebenfalls beschränkt. If you attempt to initialize an array that exceeds the amount of available memory, the runtime throws an <xref:System.OutOfMemoryException>.|
-|Größe und Elementgröße|Die Größe eines Arrays ist vom Datentyp seiner Elemente unabhängig. The size always represents the total number of elements, not the number of bytes that they consume in memory.|
+|Dimensionslänge|Der Index jeder Dimension ist 0-basiert, d. h., er reicht von 0 bis zur oberen Grenze. Daher ist die Länge einer bestimmten Dimension eine größer als die deklarierte obere Grenze dieser Dimension.|
+|Längenbeschränkungen|Die Länge jeder Dimension eines Arrays ist auf den maximalen Wert des `Integer` Datentyps beschränkt, der <xref:System.Int32.MaxValue?displayProperty=nameWithType> oder (2 ^ 31)-1 ist. Die Gesamtgröße eines Arrays richtet sich nach dem verfügbaren Arbeitsspeicher des Systems und ist damit ebenfalls beschränkt. Wenn Sie versuchen, ein Array zu initialisieren, das die Menge des verfügbaren Arbeitsspeichers überschreitet, löst die Laufzeit eine <xref:System.OutOfMemoryException>aus.|
+|Größe und Elementgröße|Die Größe eines Arrays ist vom Datentyp seiner Elemente unabhängig. Die Größe stellt immer die Gesamtzahl der Elemente dar, nicht die Anzahl der Bytes, die Sie im Arbeitsspeicher verbrauchen.|
 |Speicherverbrauch|Es gibt keine verbindlichen Angaben darüber, wie ein Array gespeichert wird. Der Speicherverbrauch variiert auf Plattformen mit unterschiedlichen Datenbreiten, d. h. ein und dasselbe Array kann auf einem 64-Bit-System mehr Speicherplatz benötigen als auf einem 32-Bit-System. Abhängig von der Systemkonfiguration beim Initialisieren eines Arrays kann die Common Language Runtime (CLR) Speicher so zuweisen, dass die Elemente auf sehr engem Raum gespeichert werden oder nur die natürlichen Hardwarebeschränkungen gelten. Ein Array benötigt außerdem zusätzlichen Speicher für seine Steuerungsinformationen. Der Bedarf an zusätzlichem Speicher nimmt mit jeder hinzugefügten Dimension zu.|
 
-## <a name="the-array-type"></a>The array type
+## <a name="the-array-type"></a>Der Arraytyp.
 
-Every array has a data type, which differs from the data type of its elements. Es gibt keinen universellen Datentyp, der sich für alle Arrays eignet. Stattdessen wird der Datentyp eines Arrays durch die Anzahl der Dimensionen (den *Rang*) des Arrays bestimmt, sowie durch den Datentyp der Elemente im Array. Two array variables are of the same data type only when they have the same rank and their elements have the same data type. The lengths of the dimensions of an array do not influence the array data type.
+Jedes Array weist einen Datentyp auf, der vom Datentyp seiner Elemente abweicht. Es gibt keinen universellen Datentyp, der sich für alle Arrays eignet. Stattdessen wird der Datentyp eines Arrays durch die Anzahl der Dimensionen (den *Rang*) des Arrays bestimmt, sowie durch den Datentyp der Elemente im Array. Zwei Array Variablen weisen denselben Datentyp auf, wenn Sie denselben Rang aufweisen und deren Elemente denselben Datentyp aufweisen. Die Längen der Dimensionen eines Arrays beeinflussen den Array Datentyp nicht.
 
-Jedes Array erbt aus der <xref:System.Array?displayProperty=nameWithType>-Klasse. Sie können eine Variable des Typs `Array` deklarieren, ein Array des Typs `Array` können Sie jedoch nicht erstellen. For example, although the following code declares the `arr` variable to be of type `Array` and calls the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method to instantiate the array, the array's type proves to be Object[].
+Jedes Array erbt aus der <xref:System.Array?displayProperty=nameWithType>-Klasse. Sie können eine Variable des Typs `Array` deklarieren, ein Array des Typs `Array` können Sie jedoch nicht erstellen. Der folgende Code deklariert z. b. die `arr` Variable als Typ `Array` und ruft die <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>-Methode auf, um das Array zu instanziieren. der Typ des Arrays erweist sich als Object [].
 
 [!code-vb[array-class](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)]
 
-Die [ReDim-Anweisung](../../../language-reference/statements/redim-statement.md) kann nicht für eine Variable verwendet werden, die mit dem Typ `Array` deklariert ist. For these reasons, and for type safety, it is advisable to declare every array as a specific type.
+Die [ReDim-Anweisung](../../../language-reference/statements/redim-statement.md) kann nicht für eine Variable verwendet werden, die mit dem Typ `Array` deklariert ist. Aus diesen Gründen und aus Gründen der Typsicherheit empfiehlt es sich, jedes Array als bestimmten Typ zu deklarieren.
 
 Sie können den Datentyp eines Arrays oder seiner Elemente auf verschiedene Arten ermitteln.
 
-- You can call the <xref:System.Object.GetType%2A> method on the variable to get a <xref:System.Type> object that represents the run-time type of the variable. Das <xref:System.Type> -Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.
-- You can pass the variable to the <xref:Microsoft.VisualBasic.Information.TypeName%2A> function to get a `String` with the name of run-time type.
+- Sie können die <xref:System.Object.GetType%2A>-Methode für die Variable zum Abrufen eines <xref:System.Type> Objekts, das den Lauf Zeittyp der Variablen darstellt, abrufen. Das <xref:System.Type> -Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.
+- Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.TypeName%2A>-Funktion übergeben, um eine `String` mit dem Namen des Lauf Zeit Typs zu erhalten.
 
-The following example calls the both the `GetType` method and the `TypeName` function to determine the type of an array. The array type is `Byte(,)`. Note that the <xref:System.Type.BaseType%2A?displayProperty=nameWithType> property also indicates that the base type of the byte array is the <xref:System.Array> class.
+Im folgenden Beispiel werden sowohl die `GetType`-Methode als auch die `TypeName`-Funktion aufgerufen, um den Typ eines Arrays zu bestimmen. Der Arraytyp ist `Byte(,)`. Beachten Sie, dass die <xref:System.Type.BaseType%2A?displayProperty=nameWithType>-Eigenschaft auch angibt, dass der Basistyp des Bytearrays die <xref:System.Array> Klasse ist.
 
 [!code-vb[array-type](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]
 
-## <a name="arrays-as-return-values-and-parameters"></a>Arrays as return values and parameters
+## <a name="arrays-as-return-values-and-parameters"></a>Arrays als Rückgabewerte und Parameter
 
 Damit eine `Function`-Prozedur ein Array zurückgibt, geben Sie den Arraydatentyp und die Anzahl der Dimensionen als Rückgabetyp für die [Function-Anweisung](../../../language-reference/statements/function-statement.md) an. Deklarieren Sie in der Funktion eine lokale Arrayvariable mit dem gleichen Datentyp und der gleichen Anzahl an Dimensionen. Schließen Sie die lokale Arrayvariable ohne Klammern in die [Return-Anweisung](../../../language-reference/statements/return-statement.md) ein.
 
-Um ein Array als Parameter für eine `Sub` - oder `Function` -Prozedur anzugeben, definieren Sie den Parameter als Array mit einem bestimmten Datentyp und einer bestimmten Anzahl von Dimensionen. In the call to the procedure, pass an array variable with the same data type and number of dimensions.
+Um ein Array als Parameter für eine `Sub` - oder `Function` -Prozedur anzugeben, definieren Sie den Parameter als Array mit einem bestimmten Datentyp und einer bestimmten Anzahl von Dimensionen. Übergeben Sie im aufzurufenden Vorgang eine Array Variable mit dem gleichen Datentyp und der gleichen Anzahl von Dimensionen.
 
-In the following example, the `GetNumbers` function returns an `Integer()`, a one-dimensional array of type `Integer`. Die Prozedur `ShowNumbers` akzeptiert ein Argument `Integer()` .
+Im folgenden Beispiel gibt die `GetNumbers`-Funktion ein `Integer()`zurück, ein eindimensionales Array vom Typ `Integer`. Die Prozedur `ShowNumbers` akzeptiert ein Argument `Integer()` .
 
 [!code-vb[return-value-and-params](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params.vb)]
 
-In the following example, the `GetNumbersMultiDim` function returns an `Integer(,)`, a two-dimensional array of type `Integer`.  Die Prozedur `ShowNumbersMultiDim` akzeptiert ein Argument `Integer(,)` .
+Im folgenden Beispiel gibt die `GetNumbersMultiDim`-Funktion ein `Integer(,)`zurück, ein zweidimensionales Array vom Typ `Integer`.  Die Prozedur `ShowNumbersMultiDim` akzeptiert ein Argument `Integer(,)` .
 
 [!code-vb[multidimensional-return-value](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params-2d.vb)]
 
 ## <a name="jagged-arrays"></a>Verzweigte Arrays
 
-In einigen Fällen ist die Datenstruktur in einer Anwendung zweidimensional, jedoch nicht rechteckig. For example, you might use an array to store data about the high temperature of each day of the month. The first dimension of the array represents the month, but the second dimension represents the number of days, and the number of days in a month is not uniform. A *jagged array*, which is also called an *array of arrays*, is designed for such scenarios. A jagged array is an array whose elements are also arrays. Ein verzweigtes Array und jedes Element in einem verzweigten Array können über eine oder mehrere Dimensionen verfügen.
+In einigen Fällen ist die Datenstruktur in einer Anwendung zweidimensional, jedoch nicht rechteckig. Beispielsweise können Sie ein Array verwenden, um Daten über die Hochtemperatur der einzelnen Tage des Monats zu speichern. Die erste Dimension des Arrays stellt den Monat dar, die zweite Dimension stellt jedoch die Anzahl von Tagen dar, und die Anzahl von Tagen in einem Monat ist nicht einheitlich. Ein *Jagged Array*, das auch als *Array von Arrays*bezeichnet wird, ist für derartige Szenarios konzipiert. Ein Jagged Array ist ein Array, dessen Elemente ebenfalls Arrays sind. Ein verzweigtes Array und jedes Element in einem verzweigten Array können über eine oder mehrere Dimensionen verfügen.
 
-The following example uses an array of months, each element of which is an array of days. The example uses a jagged array because different months have different numbers of days.  The example shows how to create a jagged array, assign values to it, and retrieve and display its values.
+Im folgenden Beispiel wird ein Array von Monaten verwendet, wobei jedes Element ein Array von Tagen ist. Im Beispiel wird eine Jagged Array verwendet, da für verschiedene Monate eine unterschiedliche Anzahl von Tagen verwendet wird.  Das Beispiel zeigt, wie Sie eine Jagged Array erstellen, Werte zuweisen und ihre Werte abrufen und anzeigen können.
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-The previous example assigns values to the jagged array on an element-by-element basis by using a `For...Next` loop. You can also assign values to the elements of a jagged array by using nested array literals. However, the attempt to use nested array literals (for example, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generates compiler error [BC30568](../../../,,/../misc/bc30568.md). To correct the error, enclose the inner array literals in parentheses. The parentheses force the array literal expression to be evaluated, and the resulting values are used with the outer array literal, as the following example shows.
+Im vorherigen Beispiel werden der Jagged Array auf Element Weise Werte mithilfe einer `For...Next`-Schleife zugewiesen. Sie können auch den Elementen einer Jagged Array Werte zuweisen, indem Sie die in einem Array verwendeten Literale verwenden. Der Versuch der Verwendung von mit einem Array verknüpften Array Literalen (z. b. `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generiert jedoch Compilerfehler [BC30568](../../../,,/../misc/bc30568.md). Um den Fehler zu beheben, schließen Sie die inneren Array Literale in Klammern ein. Die Klammern erzwingen das Auswerten des Arrayliteralen Ausdrucks, und die resultierenden Werte werden mit dem äußeren Arrayliteralen verwendet, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
-A jagged array is a one-dimensional array whose elements contain arrays. Therefore, the <xref:System.Array.Length%2A?displayProperty=nameWithType> property and the `Array.GetLength(0)` method return the number of elements in the one-dimensional array, and `Array.GetLength(1)` throws an <xref:System.IndexOutOfRangeException> because a jagged array is not multidimensional. You determine the number of elements in each subarray by retrieving the value of each subarray's <xref:System.Array.Length%2A?displayProperty=nameWithType> property. The following example illustrates how to determine the number of elements in a jagged array.
+Ein Jagged Array ist ein eindimensionales Array, dessen Elemente Arrays enthalten. Daher geben die <xref:System.Array.Length%2A?displayProperty=nameWithType>-Eigenschaft und die `Array.GetLength(0)`-Methode die Anzahl der Elemente im eindimensionalen Array zurück, und `Array.GetLength(1)` löst eine <xref:System.IndexOutOfRangeException> aus, da eine Jagged Array nicht mehrdimensional ist. Sie bestimmen die Anzahl der Elemente in jedem Unterarray, indem Sie den Wert der <xref:System.Array.Length%2A?displayProperty=nameWithType>-Eigenschaft jedes Unterarrays abrufen. Im folgenden Beispiel wird veranschaulicht, wie die Anzahl der Elemente in einer Jagged Array bestimmt wird.
 
 [!code-vb[jagged-array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)]
 
-## <a name="zero-length-arrays"></a>Zero-length arrays
+## <a name="zero-length-arrays"></a>Arrays der Länge 0 (null)
 
-Visual Basic differentiates between a uninitialized array (an array whose value is `Nothing`) and a *zero-length array* or empty array (an array that has no elements.) An uninitialized array is one that has not been dimensioned or had any values assigned to it. Beispiel:
+Visual Basic unterscheidet zwischen einem nicht initialisierten Array (einem Array, dessen Wert `Nothing`ist) und einem *Array der Länge 0 (null* ) oder einem leeren Array (ein Array ohne Elemente). Ein nicht initialisiertes Array ist ein Array, das nicht dimensioniert wurde oder dem ein Wert zugewiesen wurde. Beispiel:
 
 ```vb
 Dim arr() As String
 ```
 
-A zero-length array is declared with a dimension of -1. Beispiel:
+Ein Array der Länge 0 (null) wird mit der Dimension-1 deklariert. Beispiel:
 
 ```vb
 Dim arrZ(-1) As String
@@ -233,64 +233,64 @@ Dim arrZ(-1) As String
 
 Unter den folgenden Bedingungen müssen Sie eventuell ein Array der Länge 0 (null) erstellen:
 
-- Without risking a <xref:System.NullReferenceException> exception, your code must access members of the <xref:System.Array> class, such as <xref:System.Array.Length%2A> or <xref:System.Array.Rank%2A>, or call a Visual Basic function such as <xref:Microsoft.VisualBasic.Information.UBound%2A>.
+- Ohne das Risiko einer <xref:System.NullReferenceException> Ausnahme muss Ihr Code auf Member der <xref:System.Array> Klasse zugreifen, wie z. b. <xref:System.Array.Length%2A> oder <xref:System.Array.Rank%2A>, oder eine Visual Basic Funktion aufrufen, z. b. <xref:Microsoft.VisualBasic.Information.UBound%2A>.
 
-- You want to keep your code simple by not having to check for `Nothing` as a special case.
+- Sie möchten Ihren Code einfach halten, indem Sie nicht nach `Nothing` als Sonderfall suchen müssen.
 
 - Der Code interagiert mit einer API (Application Programming Interface), die entweder verlangt, dass mindestens einer Prozedur ein Array der Länge Null übergeben wird. Oder er interagiert mit einer API, die ein solches Array von mindestens einer Prozedur zurückgibt.
 
-## <a name="splitting-an-array"></a>Splitting an array
+## <a name="splitting-an-array"></a>Aufteilen eines Arrays
 
-In some cases, you may need to split a single array into multiple arrays. This involves identifying the point or points at which the array is to be split, and then spitting the array into two or more separate arrays.
+In einigen Fällen müssen Sie möglicherweise ein einzelnes Array in mehrere Arrays aufteilen. Dies umfasst die Identifizierung der Punkte oder Punkte, an denen das Array aufgeteilt werden soll, und das anschließende auslassen des Arrays in zwei oder mehr separate Arrays.
 
 > [!NOTE]
-> This section does not discuss splitting a single string into a string array based on some delimiter. For information on splitting a string, see the <xref:System.String.Split%2A?displayProperty=nameWithType> method.
+> In diesem Abschnitt wird das Aufteilen einer einzelnen Zeichenfolge in ein Zeichen folgen Array auf der Grundlage eines Trenn Zeichens nicht erläutert. Informationen zum Aufteilen einer Zeichenfolge finden Sie in der <xref:System.String.Split%2A?displayProperty=nameWithType>-Methode.
 
-The most common criteria for splitting an array are:
+Die gängigsten Kriterien für das Aufteilen eines Arrays lauten:
 
-- Die Anzahl der Elemente im Array. For example, you might want to split an array of more than a specified number of elements into a number of approximately equal parts. For this purpose, you can use the value returned by either the <xref:System.Array.Length%2A?displayProperty=nameWithType> or <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
+- Die Anzahl der Elemente im Array. Beispielsweise können Sie ein Array mit mehr als einer angegebenen Anzahl von Elementen in eine Anzahl von ungefähr gleichen Teilen aufteilen. Zu diesem Zweck können Sie den Wert verwenden, der entweder von der <xref:System.Array.Length%2A?displayProperty=nameWithType> oder <xref:System.Array.GetLength%2A?displayProperty=nameWithType>-Methode zurückgegeben wird.
 
-- The value of an element, which serves as a delimiter that indicates where the array should be split. You can search for a specific value by calling the <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> and <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> methods.
+- Der Wert eines Elements, das als Trennzeichen dient, das angibt, wo das Array aufgeteilt werden soll. Sie können nach einem bestimmten Wert suchen, indem Sie die Methoden <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> und <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> aufrufen.
 
-Once you've determined the index or indexes at which the array should be split, you can then create the individual arrays by calling the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
+Nachdem Sie den Index oder die Indizes festgelegt haben, an dem das Array aufgeteilt werden soll, können Sie die einzelnen Arrays erstellen, indem Sie die <xref:System.Array.Copy%2A?displayProperty=nameWithType>-Methode aufrufen.
 
-The following example splits an array into two arrays of approximately equal size. (If the total number of array elements is odd, the first array has one more element than the second.)
+Im folgenden Beispiel wird ein Array in zwei Arrays von ungefähr gleicher Größe aufgeteilt. (Wenn die Gesamtzahl der Array Elemente ungerade ist, verfügt das erste Array über ein Element, das größer als das zweite ist.)
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-The following example splits a string array into two arrays based on the presence of an element whose value is "zzz", which serves as the array delimiter. The new arrays do not include the element that contains the delimiter.
+Im folgenden Beispiel wird ein Zeichen folgen Array basierend auf dem vorhanden sein eines Elements, dessen Wert "zzz" ist, in zwei Arrays aufgeteilt, das als Array Trennzeichen fungiert. Die neuen Arrays enthalten kein-Element, das das Trennzeichen enthält.
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>Joining arrays
+## <a name="joining-arrays"></a>Beitreten zu Arrays
 
-You can also combine a number of arrays into a single larger array. To do this, you also use the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
+Sie können auch eine Reihe von Arrays in einem einzelnen größeren Array kombinieren. Zu diesem Zweck verwenden Sie auch die <xref:System.Array.Copy%2A?displayProperty=nameWithType>-Methode.
 
 > [!NOTE]
-> This section does not discuss joining a string array into a single string. For information on joining a string array, see the <xref:System.String.Join%2A?displayProperty=nameWithType> method.
+> In diesem Abschnitt wird nicht erläutert, wie ein Zeichen folgen Array einer einzelnen Zeichenfolge hinzufügen wird. Weitere Informationen zum beitreten zu einem Zeichen folgen Array finden Sie unter <xref:System.String.Join%2A?displayProperty=nameWithType>-Methode.
 
-Before copying the elements of each array into the new array, you must first ensure that you have initialized the array so that it is large enough to accommodate the new array. Dazu haben Sie zwei Möglichkeiten:
+Vor dem Kopieren der Elemente jedes Arrays in das neue Array müssen Sie zunächst sicherstellen, dass Sie das Array initialisiert haben, damit es groß genug ist, um das neue Array aufnehmen zu können. Dazu haben Sie zwei Möglichkeiten:
 
-- Use the [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) statement to dynamically expand the array before adding new elements to it. This is the easiest technique, but it can result in performance degradation and excessive memory consumption when you are copying large arrays.
-- Calculate the total number of elements needed for the new large array, then add the elements of each source array to it.
+- Verwenden Sie die [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) -Anweisung, um das Array dynamisch zu erweitern, bevor Sie neue Elemente hinzufügen. Dies ist die einfachste Methode, kann jedoch zu Leistungseinbußen und übermäßig hohem Speicherverbrauch führen, wenn Sie große Arrays kopieren.
+- Berechnen Sie die Gesamtanzahl der Elemente, die für das neue große Array benötigt werden, und fügen Sie dann die Elemente der einzelnen Quell Arrays hinzu.
 
-The following example uses the second approach to add four arrays with ten elements each to a single array.
+Im folgenden Beispiel wird der zweite Ansatz verwendet, um vier Arrays mit jeweils zehn Elementen zu einem einzelnen Array hinzuzufügen.
 
 [!code-vb[joining-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)]
 
-Since in this case the source arrays are all small, we can also dynamically expand the array as we add the elements of each new array to it. In folgendem Beispiel wird dies getan.
+Da in diesem Fall die Quell Arrays klein sind, können wir das Array auch dynamisch erweitern, während wir die Elemente jedes neuen Arrays hinzufügen. In folgendem Beispiel wird dies getan.
 
 [!code-vb[joining-an-array-dynamically](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join2.vb)]
 
-## <a name="collections-as-an-alternative-to-arrays"></a>Collections as an alternative to arrays
+## <a name="collections-as-an-alternative-to-arrays"></a>Sammlungen als Alternative zu Arrays
 
-Arrays eignen sich bestens zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ. Auflistungen ermöglichen ein flexibleres Arbeiten mit Objektgruppen. Unlike arrays, which require that you explicitly change the size of an array with the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md), collections grow and shrink dynamically as the needs of an application change.
+Arrays eignen sich bestens zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ. Auflistungen ermöglichen ein flexibleres Arbeiten mit Objektgruppen. Anders als bei Arrays, bei denen es erforderlich ist, dass Sie die Größe eines Arrays explizit mit der [`ReDim`-Anweisung](../../../language-reference/statements/redim-statement.md)ändern, werden Auflistungen dynamisch vergrößert und verkleinert, wenn sich die Anforderungen einer Anwendung ändern.
 
-When you use `ReDim` to redimension an array, Visual Basic creates a new array and releases the previous one. Dies nimmt Ausführungszeit in Anspruch. Therefore, if the number of items you are working with changes frequently, or you cannot predict the maximum number of items you need, you'll usually obtain better performance by using a collection.
+Wenn Sie `ReDim` verwenden, um ein Array neu zu formatieren, erstellt Visual Basic ein neues Array und gibt das vorherige frei. Dies nimmt Ausführungszeit in Anspruch. Wenn sich die Anzahl der Elemente, mit denen Sie arbeiten, häufig ändert oder Sie die maximale Anzahl von Elementen, die Sie benötigen, nicht vorhersagen können, erzielen Sie in der Regel eine bessere Leistung, indem Sie eine Sammlung verwenden.
 
 Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.
 
-Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann.
+Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann.
 
 Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](../../concepts/collections.md).
 

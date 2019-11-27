@@ -15,49 +15,49 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347138"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Gewusst wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)
-Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
+Objektinitialisierer ermöglichen es Ihnen, eine Instanz einer Klasse in einer einzelnen Anweisung zu deklarieren und zu instanziieren. Außerdem können Sie einen oder mehrere Member der-Instanz gleichzeitig initialisieren, ohne einen parametrisierten Konstruktor aufzurufen.  
   
- When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
+ Wenn Sie einen Objektinitialisierer verwenden, um eine Instanz eines benannten Typs zu erstellen, wird der Parameter lose Konstruktor für die Klasse aufgerufen, gefolgt von der Initialisierung der designierten Elemente in der von Ihnen angegebenen Reihenfolge.  
   
- The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
+ Im folgenden Verfahren wird gezeigt, wie Sie eine Instanz einer `Student`-Klasse auf drei verschiedene Arten erstellen. Die Klasse verfügt unter anderem über die Eigenschaften "Vorname", "Nachname" und "Klassen Jahr". Jede der drei Deklarationen erstellt eine neue Instanz `Student`, bei der die-`First` Eigenschaft auf "Michael" festgelegt ist, die-`Last` Eigenschaft auf "Tucker" festgelegt ist und alle anderen Member auf ihre Standardwerte festgelegt sind. Das Ergebnis jeder Deklaration in der Prozedur entspricht dem folgenden Beispiel, in dem kein Objektinitialisierer verwendet wird.  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
+ Eine Implementierung der `Student`-Klasse finden Sie unter Gewusst [wie: Erstellen einer Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Sie können den Code aus diesem Thema kopieren, um die-Klasse einzurichten und eine Liste mit `Student` Objekten zu erstellen, mit denen Sie arbeiten möchten.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>So erstellen Sie ein Objekt einer benannten Klasse mithilfe eines Objektinitialisierers  
   
-1. Begin the declaration as if you planned to use a constructor.  
+1. Beginnen Sie die Deklaration, als ob Sie einen Konstruktor verwenden möchten.  
   
      `Dim student1 As New Student`  
   
-2. Type the keyword `With`, followed by an initialization list in braces.  
+2. Geben Sie das Schlüsselwort `With`ein, gefolgt von einer Initialisierungs Liste in geschweiften Klammern.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
+3. Fügen Sie in der Initialisierungs Liste jede Eigenschaft ein, die Sie initialisieren möchten, und weisen Sie Ihr einen Anfangswert zu. Dem Namen der Eigenschaft wird ein Zeitraum vorangestellt.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     You can initialize one or more members of the class.  
+     Sie können einen oder mehrere Member der-Klasse initialisieren.  
   
-4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
+4. Alternativ können Sie eine neue Instanz der Klasse deklarieren und ihr dann einen Wert zuweisen. Deklarieren Sie zuerst eine Instanz von `Student`:  
   
      `Dim student2 As Student`  
   
-5. Begin the creation of an instance of `Student` in the normal way.  
+5. Beginnen Sie mit der Erstellung einer Instanz von `Student` auf die übliche Weise.  
   
      `Dim student2 As Student = New Student`  
   
-6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
+6. Geben Sie `With` und dann einen Objektinitialisierer ein, um einen oder mehrere Member der neuen Instanz zu initialisieren.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
+7. Sie können die Definition im vorherigen Schritt vereinfachen, indem Sie `As Student`weglassen. Wenn Sie dies tun, bestimmt der Compiler, dass `student3` eine Instanz von `Student` ist, indem der lokale Typrückschluss verwendet wird.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     Weitere Informationen finden Sie unter [lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

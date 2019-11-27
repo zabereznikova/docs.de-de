@@ -18,25 +18,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350865"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)
-If a procedure has one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters, you cannot define an overloaded version matching any of its implicit overloads. For more information, see "Implicit Overloads for Optional Parameters" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+Wenn eine Prozedur über mindestens einen [optionalen](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter verfügt, können Sie keine überladene Version definieren, die mit einer der impliziten über Ladungen übereinstimmt. Weitere Informationen finden Sie unter "implizite über Ladungen für optionale Parameter" in über [Legungen zu überladenden Prozeduren](./considerations-in-overloading-procedures.md).  
   
-## <a name="one-optional-parameter"></a>One Optional Parameter  
+## <a name="one-optional-parameter"></a>Ein optionaler Parameter  
   
-#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>To overload a procedure that takes one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>So überladen Sie eine Prozedur, die einen optionalen Parameter annimmt  
   
-1. Write a `Sub` or `Function` declaration statement that includes the optional parameter in the parameter list. Do not use the `Optional` keyword in this overloaded version.  
+1. Schreiben Sie eine `Sub` oder `Function` Deklarations Anweisung, die den optionalen Parameter in der Parameterliste enthält. Verwenden Sie das `Optional`-Schlüsselwort nicht in dieser überladenen Version.  
   
-2. Precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+2. Vor dem `Sub` oder `Function`-Schlüsselwort mit dem [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) -Schlüsselwort.  
   
-3. Write the procedure code that should execute when the calling code supplies the optional argument.  
+3. Schreiben Sie den Prozedur Code, der ausgeführt werden soll, wenn der aufrufende Code das optionale Argument bereitstellt.  
   
-4. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+4. Beenden Sie die Prozedur mit der Anweisung `End Sub` oder `End Function`.  
   
-5. Write a second declaration statement that is identical to the first declaration except that it does not include the optional parameter in the parameter list.  
+5. Schreiben Sie eine zweite Deklarations Anweisung, die mit der ersten Deklaration identisch ist, mit dem Unterschied, dass Sie nicht den optionalen Parameter in der Parameterliste enthält.  
   
-6. Write the procedure code that should execute when the calling code does not supply the optional argument. Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.  
+6. Schreiben Sie den Prozedur Code, der ausgeführt werden soll, wenn der aufrufende Code das optionale Argument nicht bereitstellt. Beenden Sie die Prozedur mit der Anweisung `End Sub` oder `End Function`.  
   
-     The following example shows a procedure defined with an optional parameter,  an equivalent set of two overloaded procedures, and finally examples of both invalid and valid overloaded versions.  
+     Das folgende Beispiel zeigt eine Prozedur, die mit einem optionalen Parameter definiert ist, einen entsprechenden Satz von zwei überladenen Prozeduren und schließlich Beispiele für ungültige und gültige überladene Versionen.  
   
      [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
@@ -44,22 +44,22 @@ If a procedure has one or more [Optional](../../../../visual-basic/language-refe
   
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
-## <a name="multiple-optional-parameters"></a>Multiple Optional Parameters  
- For a procedure with more than one optional parameter, you normally need more than two overloaded versions. For example, if there are two optional parameters, and the calling code can supply or omit each one independently of the other, you need four overloaded versions, one for each possible combination of supplied arguments.  
+## <a name="multiple-optional-parameters"></a>Mehrere optionale Parameter  
+ Für eine Prozedur mit mehr als einem optionalen Parameter benötigen Sie normalerweise mehr als zwei überladene Versionen. Wenn z. b. zwei optionale Parameter vorhanden sind und der Aufruf Code die einzelnen Parameter unabhängig vom anderen angeben oder weglassen kann, benötigen Sie vier überladene Versionen, eine für jede mögliche Kombination von bereitgestellten Argumenten.  
   
- As the number of optional parameters increases, the complexity of the overloading increases. Unless some combinations of supplied arguments are not acceptable, for N optional parameters you need 2 ^ N overloaded versions. Depending on the nature of the procedure, you might find that the clarity of logic justifies the extra effort of defining all the overloaded versions.  
+ Wenn die Anzahl der optionalen Parameter zunimmt, erhöht sich die Komplexität der Überladung. Wenn keine Kombinationen von bereitgestellten Argumenten zulässig sind, benötigen Sie für N optionale Parameter 2 ^ N überladene Versionen. Abhängig von der Art der Prozedur können Sie feststellen, dass die Übersichtlichkeit der Logik den zusätzlichen Aufwand zum Definieren aller überladenen Versionen rechtfertigt.  
   
-#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>To overload a procedure that takes more than one optional parameter  
+#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>So überladen Sie eine Prozedur, die mehr als einen optionalen Parameter annimmt  
   
-1. Determine which combinations of supplied optional arguments are acceptable to the logic of the procedure. An unacceptable combination might arise if one optional parameter depends on another. For example, if one parameter accepts a person's name and another accepts the person's age, a combination of arguments supplying the age but omitting the name is unacceptable.  
+1. Bestimmen Sie, welche Kombinationen von optionalen Argumenten für die Logik der Prozedur zulässig sind. Eine akzeptable Kombination kann auftreten, wenn ein optionaler Parameter von einem anderen abhängig ist. Wenn z. b. ein Parameter den Namen einer Person akzeptiert und ein anderer das Alter der Person annimmt, ist eine Kombination von Argumenten, die das Alter angeben, aber nicht den Namen weglassen, nicht akzeptabel.  
   
-2. For each acceptable combination of supplied optional arguments, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use the `Optional` keyword.  
+2. Schreiben Sie für jede akzeptable Kombination von angegebenen optionalen Argumenten eine `Sub`-oder `Function` Deklarations Anweisung, die die entsprechende Parameterliste definiert. Verwenden Sie das `Optional`-Schlüsselwort nicht.  
   
-3. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
+3. Stellen Sie in jeder Deklaration dem `Sub`-oder `Function`-Schlüsselwort mit dem [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) -Schlüsselwort voran.  
   
-4. Following each declaration, write the procedure code that should execute when the calling code supplies an argument list corresponding to that declaration's parameter list.  
+4. Schreiben Sie nach jeder Deklaration den Prozedur Code, der ausgeführt werden soll, wenn der aufrufende Code eine Argumentliste bereitstellt, die der Parameterliste der Deklaration entspricht.  
   
-5. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
+5. Beenden Sie die einzelnen Prozeduren entsprechend der Anweisung `End Sub` oder `End Function`.  
   
 ## <a name="see-also"></a>Siehe auch
 

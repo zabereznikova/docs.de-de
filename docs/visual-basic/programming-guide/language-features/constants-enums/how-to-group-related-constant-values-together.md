@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354031"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>Gewusst wie: Gruppieren verwandter konstanter Werte (Visual Basic)
-An enumeration is the best way to group related constants together. You create an enumeration with the `Enum` statement in the declarations section of a class or a module. For more information, see [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
+Eine Enumeration ist die beste Möglichkeit, Verwandte Konstanten zusammen zu gruppieren. Sie erstellen eine Enumeration mit der `Enum`-Anweisung im Deklarations Abschnitt einer Klasse oder eines Moduls. Weitere Informationen finden Sie unter Gewusst [wie: Deklarieren einer Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
   
-### <a name="to-group-related-constant-values"></a>To group related constant values  
+### <a name="to-group-related-constant-values"></a>Gruppieren verwandter konstanter Werte  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name. This example creates the `Private` enumeration, `temperatureValues`.  
+1. Schreiben Sie eine Deklaration, die eine Code Zugriffsebene, das `Enum`-Schlüsselwort und einen gültigen Namen enthält. In diesem Beispiel wird die `Private`-Enumeration erstellt, `temperatureValues`.  
   
      [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   
-2. Define the constants in the enumeration. This example creates the `Public` enumeration `temperatureValues` and assigns its values.  
+2. Definieren Sie die Konstanten in der-Enumeration. In diesem Beispiel werden die `Public`-Enumeration `temperatureValues` erstellt und deren Werte zugewiesen.  
   
      [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   

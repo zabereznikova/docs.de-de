@@ -31,7 +31,7 @@ ms.locfileid: "74351197"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next-Anweisung (Visual Basic)
 
-Repeats a group of statements for each element in a collection.
+Wiederholt eine Gruppe von-Anweisungen für jedes Element in einer Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,114 +45,114 @@ For Each element [ As datatype ] In group
 Next [ element ]
 ```
 
-## <a name="parts"></a>Teile
+## <a name="parts"></a>-Komponenten
 
 |Begriff|Definition|
 |---|---|
-|`element`|Required in the `For Each` statement. Optional in the `Next` statement. Variable. Used to iterate through the elements of the collection.|
-|`datatype`|Optional if [`Option Infer`](option-infer-statement.md) is on (the default) or `element` is already declared; required if `Option Infer` is off and `element` isn't already declared. Der Datentyp von `element`.|
-|`group`|Erforderlich. A variable with a type that's a collection type or Object. Refers to the collection over which the `statements` are to be repeated.|
-|`statements`|Dies ist optional. One or more statements between `For Each` and `Next` that run on each item in `group`.|
-|`Continue For`|Dies ist optional. Transfers control to the start of the `For Each` loop.|
-|`Exit For`|Dies ist optional. Transfers control out of the `For Each` loop.|
-|`Next`|Erforderlich. Terminates the definition of the `For Each` loop.|
+|`element`|Erforderlich in der `For Each`-Anweisung. Optional in der `Next`-Anweisung. Veränder. Wird verwendet, um die Elemente der Auflistung zu durchlaufen.|
+|`datatype`|Optional, wenn [`Option Infer`](option-infer-statement.md) aktiviert ist (Standard) oder `element` bereits deklariert ist. erforderlich, wenn `Option Infer` deaktiviert ist und `element` nicht bereits deklariert ist. Der Datentyp von `element`.|
+|`group`|Erforderlich Eine Variable mit einem Typ, der ein Auflistungstyp oder ein Objekt ist. Verweist auf die Auflistung, über die die `statements` wiederholt werden sollen.|
+|`statements`|Optional. Eine oder mehrere Anweisungen zwischen `For Each` und `Next`, die für jedes Element in `group`ausgeführt werden.|
+|`Continue For`|Optional. Überträgt die Steuerung an den Anfang der `For Each` Schleife.|
+|`Exit For`|Optional. Überträgt die Steuerung aus der `For Each` Schleife.|
+|`Next`|Erforderlich Beendet die Definition der `For Each` Schleife.|
 
-## <a name="simple-example"></a>Simple Example
+## <a name="simple-example"></a>Einfaches Beispiel
 
-Use a `For Each`...`Next` loop when you want to repeat a set of statements for each element of a collection or array.
+Verwenden Sie eine `For Each`...`Next`-Schleife, wenn Sie einen Satz von-Anweisungen für jedes Element einer Auflistung oder eines Arrays wiederholen möchten.
 
 > [!TIP]
-> A [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) works well when you can associate each iteration of a loop with a control variable and determine that variable's initial and final values. However, when you are dealing with a collection, the concept of initial and final values isn't meaningful, and you don't necessarily know how many elements the collection has. In this kind of case, a `For Each`...`Next` loop is often a better choice.
+> Ein [für... Die nächste Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md) funktioniert gut, wenn Sie jede Iterationen einer Schleife einer Steuerelement Variablen zuordnen und die Anfangs-und Endwerte der Variablen ermitteln können. Wenn Sie sich jedoch mit einer Auflistung beschäftigen, ist das Konzept der Anfangs-und Endwerte nicht sinnvoll, und Sie wissen nicht unbedingt, wie viele Elemente die Auflistung enthält. In dieser Art von Fall ist eine `For Each`...`Next`-Schleife oft die bessere Wahl.
 
-In the following example, the `For Each`…`Next` statement iterates through all the elements of a List collection.
+Im folgenden Beispiel wird die `For Each`...`Next` die-Anweisung durchläuft alle Elemente einer Listen Auflistung.
 
 [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
 
-For more examples, see [Collections](../../../standard/collections/index.md) and [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Weitere Beispiele finden Sie unter [Sammlungen](../../../standard/collections/index.md) und [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-## <a name="nested-loops"></a>Nested Loops
+## <a name="nested-loops"></a>Geschachtelte Schleifen
 
-You can nest `For Each` loops by putting one loop within another.
+Sie können `For Each` Schleifen schachteln, indem Sie eine Schleife in eine andere einfügen.
 
-The following example demonstrates nested `For Each`…`Next` structures.
+Im folgenden Beispiel wird die `For Each`...`Next` Gebäuden.
 
 [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
 
-When you nest loops, each loop must have a unique `element` variable.
+Wenn Sie Schleifen schachteln, muss jede Schleife über eine eindeutige `element` Variable verfügen.
 
-You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Sie können auch verschiedene Arten von Steuerungsstrukturen ineinander schachteln. Weitere Informationen finden Sie unter [Struktur von Struktur Steuer](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)Elementen.
 
-## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
+## <a name="exit-for-and-continue-for"></a>Exit for und Continue für
 
-The [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) statement causes execution to exit the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
+Die [Exit for](../../../visual-basic/language-reference/statements/exit-statement.md) -Anweisung bewirkt, dass die Ausführung der `For`...`Next` -Schleife und überträgt die Steuerung an die-Anweisung, die auf die `Next`-Anweisung folgt.
 
-The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
+Die `Continue For`-Anweisung überträgt die Steuerung sofort an die nächste Iterations Schleife. Weitere Informationen finden Sie unter [Continue-Anweisung](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-The following example shows how to use the `Continue For` and `Exit For` statements.
+Im folgenden Beispiel wird gezeigt, wie die Anweisungen `Continue For` und `Exit For` verwendet werden.
 
 [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
 
-You can put any number of `Exit For` statements in a `For Each` loop. When used within nested `For Each` loops, `Exit For` causes execution to exit the innermost loop and transfers control to the next higher level of nesting.
+Sie können eine beliebige Anzahl von `Exit For`-Anweisungen in einer `For Each`-Schleife platzieren. Bei Verwendung in geschachtelten `For Each` Schleifen bewirkt `Exit For`, dass die Ausführung die innerste Schleife verlässt und die Steuerung an die nächsthöhere Schachtelungs Ebene überträgt.
 
-`Exit For` is often used after an evaluation of some condition, for example, in an `If`...`Then`...`Else` structure. You might want to use `Exit For` for the following conditions:
+`Exit For` wird häufig nach der Auswertung einer Bedingung verwendet, z. b. in einer `If`...`Then`...`Else` Struktur. Möglicherweise möchten Sie `Exit For` für die folgenden Bedingungen verwenden:
 
-- Continuing to iterate is unnecessary or impossible. This might be caused by an erroneous value or a termination request.
+- Das Fortsetzen der durchlaufen ist unnötig oder unmöglich. Dies kann durch einen fehlerhaften Wert oder eine Beendigungs Anforderung verursacht werden.
 
-- An exception is caught in a `Try`...`Catch`...`Finally`. You might use `Exit For` at the end of the `Finally` block.
+- Eine Ausnahme wird in einem `Try`...`Catch`...`Finally`abgefangen. Sie können `Exit For` am Ende des `Finally`-Blocks verwenden.
 
-- There an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- Es gibt eine Endlosschleife, bei der es sich um eine Schleife handelt, die eine große oder sogar unendliche Anzahl von Zeiten ausführen kann. Wenn eine solche Bedingung erkannt wird, können Sie mit `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [Do... Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>Iteratoren
 
-You use an *iterator* to perform a custom iteration over a collection. An iterator can be a function or a `Get` accessor. It uses a `Yield` statement to return each element of the collection one at a time.
+Sie verwenden einen *Iterator* , um eine benutzerdefinierte iterierung für eine Auflistung auszuführen. Ein Iterator kann eine Funktion oder ein `Get` Accessor sein. Er verwendet eine `Yield`-Anweisung, um jedes Element der Auflistung einzeln zurückzugeben.
 
-You call an iterator by using a `For Each...Next` statement. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. When a `Yield` statement is reached in the iterator, the expression in the `Yield` statement is returned, and the current location in code is retained. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
+Ein Iterator wird mithilfe einer `For Each...Next`-Anweisung aufgerufen. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield`-Anweisung im Iterator erreicht wird, wird der Ausdruck in der `Yield`-Anweisung zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
 
-The following example uses an iterator function. The iterator function has a `Yield` statement that's inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. In the `ListEvenNumbers` method, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.
+Im folgenden Beispiel wird eine Iteratorfunktion verwendet. Die Iteratorfunktion verfügt über eine `Yield`-Anweisung, die sich innerhalb einer [for... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. In der `ListEvenNumbers`-Methode erstellt jede Iterationen des `For Each`-Anweisungs Texts einen aufzurufenden Iteratorfunktion, der mit der nächsten `Yield`-Anweisung fortfährt.
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 
-For more information, see [Iterators](../../programming-guide/concepts/iterators.md), [Yield Statement](../../../visual-basic/language-reference/statements/yield-statement.md), and [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
+Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md), [yield-Anweisung](../../../visual-basic/language-reference/statements/yield-statement.md)und [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 ## <a name="technical-implementation"></a>Technische Implementierung
 
-When a `For Each`…`Next` statement runs, Visual Basic evaluates the collection only one time, before the loop starts. If your statement block changes `element` or `group`, these changes don't affect the iteration of the loop.
+Wenn ein `For Each`...`Next` die-Anweisung wird ausgeführt, Visual Basic die Auflistung nur einmal auswertet, bevor die Schleife gestartet wird. Wenn die-Anweisung Änderungen `element` oder `group`blockiert, wirken sich diese Änderungen nicht auf die Iterationen der Schleife aus.
 
-When all the elements in the collection have been successively assigned to `element`, the `For Each` loop stops and control passes to the statement following the `Next` statement.
+Wenn alle Elemente in der Auflistung `element`nacheinander zugewiesen wurden, wird die `For Each`-Schleife angehalten, und die Steuerung wird an die Anweisung nach der `Next`-Anweisung weitergeleitet.
 
-If [Option Infer](option-infer-statement.md) is on (its default setting), the Visual Basic compiler can infer the data type of `element`. If it is off and `element` hasn't been declared outside the loop, you must declare it in the `For Each` statement. To declare the data type of `element` explicitly, use an `As` clause. Unless the data type of element is defined outside the `For Each`...`Next` construct, its scope is the body of the loop. Note that you cannot declare `element` both outside and inside the loop.
+Wenn die [Option ableiten](option-infer-statement.md) auf ON festgelegt ist (die Standardeinstellung), kann der Visual Basic Compiler den Datentyp `element`ableiten. Wenn Sie deaktiviert ist und `element` nicht außerhalb der Schleife deklariert wurde, müssen Sie Sie in der `For Each`-Anweisung deklarieren. Um den Datentyp von `element` explizit zu deklarieren, verwenden Sie eine `As`-Klausel. Wenn der Datentyp des Elements nicht außerhalb des `For Each`...`Next`-Konstrukts definiert ist, ist sein Bereich der Text der Schleife. Beachten Sie, dass Sie `element` nicht sowohl außerhalb als auch innerhalb der Schleife deklarieren können.
 
-You can optionally specify `element` in the `Next` statement. This improves the readability of your program, especially if you have nested `For Each` loops. You must specify the same variable as the one that appears in the corresponding `For Each` statement.
+Sie können optional `element` in der `Next`-Anweisung angeben. Dies verbessert die Lesbarkeit des Programms, insbesondere, wenn Sie `For Each` Schleifen eingefügt haben. Sie müssen dieselbe Variable angeben wie die, die in der entsprechenden `For Each`-Anweisung angezeigt wird.
 
-You might want to avoid changing the value of `element` inside a loop. Doing this can make it more difficult to read and debug your code. Changing the value of `group` doesn't affect the collection or its elements, which were determined when the loop was first entered.
+Möglicherweise möchten Sie den Wert `element` in einer Schleife nicht ändern. Dadurch kann es schwieriger sein, den Code zu lesen und zu debuggen. Wenn Sie den Wert von `group` ändern, wirkt sich dies nicht auf die Auflistung oder die zugehörigen Elemente aus, die beim ersten eingeben der Schleife festgelegt wurden.
 
-When you're nesting loops, if a `Next` statement of an outer nesting level is encountered before the `Next` of an inner level, the compiler signals an error. However, the compiler can detect this overlapping error only if you specify `element` in every `Next` statement.
+Wenn Sie Schachtelungs Schleifen verwenden, signalisiert der Compiler einen Fehler, wenn eine `Next` Anweisung einer äußeren Schachtelungs Ebene vor der `Next` einer inneren Ebene gefunden wird. Der Compiler kann diesen überlappenden Fehler jedoch nur erkennen, wenn Sie in jeder `Next` Anweisung `element` angeben.
 
-If your code depends on traversing a collection in a particular order, a `For Each`...`Next` loop isn't the best choice, unless you know the characteristics of the enumerator object the collection exposes. The order of traversal isn't determined by Visual Basic, but by the <xref:System.Collections.IEnumerator.MoveNext%2A> method of the enumerator object. Therefore, you might not be able to predict which element of the collection is the first to be returned in `element`, or which is the next to be returned after a given element. You might achieve more reliable results using a different loop structure, such as `For`...`Next` or `Do`...`Loop`.
+Wenn Ihr Code davon abhängt, eine Auflistung in einer bestimmten Reihenfolge zu durchlaufen, ist eine `For Each`...`Next`-Schleife nicht die beste Wahl, es sei denn, Sie wissen die Merkmale des Enumeratorobjekts, das die Auflistung verfügbar macht. Die Reihenfolge des Durchlaufs wird nicht durch Visual Basic bestimmt, sondern durch die <xref:System.Collections.IEnumerator.MoveNext%2A>-Methode des Enumeratorobjekts. Daher können Sie möglicherweise nicht vorhersagen, welches Element der Auflistung das erste ist, das in `element`zurückgegeben werden soll, oder das nächste Element, das nach einem bestimmten Element zurückgegeben wird. Sie können mit einer anderen Schleifen Struktur, wie z. b. `For`...`Next` oder `Do`...`Loop`, zuverlässigere Ergebnisse erzielen.
 
-The runtime must be able to convert the elements in `group` to `element`. The [`Option Strict`] statement controls whether both widening and narrowing conversions are allowed (`Option Strict` is off, its default value), or whether only widening conversions are allowed (`Option Strict` is on). For more information, see [Narrowing conversions](#narrowing-conversions).
+Die Laufzeit muss die Elemente in `group` in `element`konvertieren können. Die [`Option Strict`]-Anweisung steuert, ob erweiternde und einschränkende Konvertierungen zulässig sind (`Option Strict` ist off, der Standardwert) oder ob nur Erweiterungs Konvertierungen zulässig sind (`Option Strict` ist aktiviert). Weitere Informationen finden Sie unter einschränkende [Konvertierungen](#narrowing-conversions).
 
-The data type of `group` must be a reference type that refers to a collection or an array that's enumerable. Most commonly this means that `group` refers to an object that implements the <xref:System.Collections.IEnumerable> interface of the `System.Collections` namespace or the <xref:System.Collections.Generic.IEnumerable%601> interface of the `System.Collections.Generic` namespace. `System.Collections.IEnumerable` defines the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method, which returns an enumerator object for the collection. The enumerator object implements the `System.Collections.IEnumerator` interface of the `System.Collections` namespace and exposes the <xref:System.Collections.IEnumerator.Current%2A> property and the <xref:System.Collections.IEnumerator.Reset%2A> and <xref:System.Collections.IEnumerator.MoveNext%2A> methods. Visual Basic uses these to traverse the collection.
+Der Datentyp von `group` muss ein Verweistyp sein, der auf eine Auflistung oder ein Array verweist, das Aufzähl Bar ist. In der Regel bedeutet dies, dass `group` auf ein Objekt verweist, das die <xref:System.Collections.IEnumerable>-Schnittstelle des `System.Collections`-Namespace oder die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle des `System.Collections.Generic`-Namespace implementiert. in `System.Collections.IEnumerable` wird die <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode definiert, die ein Enumeratorobjekt für die Auflistung zurückgibt. Das Enumeratorobjekt implementiert die `System.Collections.IEnumerator`-Schnittstelle des `System.Collections`-Namespace und macht die <xref:System.Collections.IEnumerator.Current%2A>-Eigenschaft sowie die Methoden <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.MoveNext%2A> verfügbar. Visual Basic verwendet diese, um die Auflistung zu durchlaufen.
 
-### <a name="narrowing-conversions"></a>Eingrenzungskonvertierungen
+### <a name="narrowing-conversions"></a>Einschränkende Konvertierungen
 
-When `Option Strict` is set to `On`, narrowing conversions ordinarily cause compiler errors. In a `For Each` statement, however, conversions from the elements in `group` to `element` are evaluated and performed at run time, and compiler errors caused by narrowing conversions are suppressed.
+Wenn `Option Strict` auf `On`festgelegt ist, verursachen einschränkende Konvertierungen normalerweise Compilerfehler. In einer `For Each`-Anweisung werden Konvertierungen von Elementen in `group` in `element` jedoch zur Laufzeit ausgewertet und ausgeführt, und Compilerfehler, die durch einschränkende Konvertierungen verursacht werden, werden unterdrückt.
 
-In the following example, the assignment of `m` as the initial value for `n` doesn't compile when `Option Strict` is on because the conversion of a `Long` to an `Integer` is a narrowing conversion. In the `For Each` statement, however, no compiler error is reported, even though the assignment to `number` requires the same conversion from `Long` to `Integer`. In the `For Each` statement that contains a large number, a run-time error occurs when <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> is applied to the large number.
+Im folgenden Beispiel wird die Zuweisung von `m` als Anfangswert für `n` nicht kompiliert, wenn `Option Strict` auf ON fest liegt, da die Konvertierung eines `Long` in eine `Integer` eine einschränkende Konvertierung ist. In der `For Each`-Anweisung wird jedoch kein Compilerfehler gemeldet, auch wenn für die Zuweisung zu `number` die gleiche Konvertierung von `Long` in `Integer`erforderlich ist. In der `For Each`-Anweisung, die eine große Zahl enthält, tritt ein Laufzeitfehler auf, wenn <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> auf die große Zahl angewendet wird.
 
 [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
 
-### <a name="ienumerator-calls"></a>IEnumerator Calls
+### <a name="ienumerator-calls"></a>IEnumerator-Aufrufe
 
-When execution of a `For Each`...`Next` loop starts, Visual Basic verifies that `group` refers to a valid collection object. If not, it throws an exception. Otherwise, it calls the <xref:System.Collections.IEnumerator.MoveNext%2A> method and the <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object to return the first element. If `MoveNext` indicates that there is no next element, that is, if the collection is empty, the `For Each` loop stops and control passes to the statement following the `Next` statement. Otherwise, Visual Basic sets `element` to the first element and runs the statement block.
+Wenn die Ausführung einer `For Each`...`Next`-Schleife gestartet wird, überprüft Visual Basic, ob `group` auf ein gültiges Auflistungs Objekt verweist. Wenn dies nicht der Fall ist, wird eine Ausnahme ausgelöst. Andernfalls werden die <xref:System.Collections.IEnumerator.MoveNext%2A>-Methode und die <xref:System.Collections.IEnumerator.Current%2A>-Eigenschaft des Enumeratorobjekts aufgerufen, um das erste Element zurückzugeben. Wenn `MoveNext` angibt, dass kein nächstes Element vorhanden ist, d. h., wenn die Auflistung leer ist, wird die `For Each`-Schleife angehalten, und die Steuerung wird an die Anweisung nach der `Next`-Anweisung weitergeleitet. Andernfalls legt Visual Basic `element` auf das erste Element fest und führt den Anweisungsblock aus.
 
-Each time Visual Basic encounters the `Next` statement, it returns to the `For Each` statement. Again it calls `MoveNext` and `Current` to return the next element, and again it either runs the block or stops the loop depending on the result. This process continues until `MoveNext` indicates that there is no next element or an `Exit For` statement is encountered.
+Jedes Mal, wenn Visual Basic auf die `Next`-Anweisung stößt, wird die `For Each`-Anweisung zurückgegeben. Wieder wird `MoveNext` aufgerufen und `Current`, um das nächste Element zurückzugeben. Außerdem wird der Block entweder ausgeführt, oder die Schleife wird abhängig vom Ergebnis angehalten. Dieser Prozess wird fortgesetzt, bis `MoveNext` anzeigt, dass kein nächstes Element vorhanden ist oder eine `Exit For`-Anweisung gefunden wurde.
 
-**Modifying the Collection.** The enumerator object returned by <xref:System.Collections.IEnumerable.GetEnumerator%2A> normally doesn't let you change the collection by adding, deleting, replacing, or reordering any elements. If you change the collection after you have initiated a `For Each`...`Next` loop, the enumerator object becomes invalid, and the next attempt to access an element causes an <xref:System.InvalidOperationException> exception.
+**Ändern der Auflistung.** Das von <xref:System.Collections.IEnumerable.GetEnumerator%2A> zurückgegebene Enumeratorobjekt ermöglicht es Ihnen nicht, die Auflistung zu ändern, indem Sie Elemente hinzufügen, löschen, ersetzen oder neu anordnen. Wenn Sie die Sammlung ändern, nachdem Sie eine `For Each`...`Next`-Schleife initiiert haben, wird das Enumeratorobjekt ungültig, und der nächste Versuch, auf ein Element zuzugreifen, verursacht eine <xref:System.InvalidOperationException> Ausnahme.
 
-However, this blocking of modification isn't determined by Visual Basic, but rather by the implementation of the <xref:System.Collections.IEnumerable> interface. It is possible to implement `IEnumerable` in a way that allows for modification during iteration. If you are considering doing such dynamic modification, make sure that you understand the characteristics of the `IEnumerable` implementation on the collection you are using.
+Diese Blockierung der Änderung wird jedoch nicht durch Visual Basic bestimmt, sondern durch die Implementierung der <xref:System.Collections.IEnumerable>-Schnittstelle. Es ist möglich, `IEnumerable` auf eine Weise zu implementieren, die Änderungen während der Iterationen ermöglicht. Wenn Sie diese dynamische Änderung in Erwägung ziehen, sollten Sie sicherstellen, dass Sie die Merkmale der `IEnumerable` Implementierung in der von Ihnen verwendeten Sammlung verstanden haben.
 
-**Modifying Collection Elements.** The <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object is [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), and it returns a local copy of each collection element. This means that you cannot modify the elements themselves in a `For Each`...`Next` loop. Any modification you make affects only the local copy from `Current` and isn't reflected back into the underlying collection. However, if an element is a reference type, you can modify the members of the instance to which it points. The following example modifies the `BackColor` member of each `thisControl` element. You cannot, however, modify `thisControl` itself.
+**Ändern von Auflistungs Elementen.** Die <xref:System.Collections.IEnumerator.Current%2A>-Eigenschaft des Enumeratorobjekts ist Schreib [geschützt, und es wird eine](../../../visual-basic/language-reference/modifiers/readonly.md)lokale Kopie der einzelnen Auflistungs Elemente zurückgegeben. Dies bedeutet, dass Sie die Elemente selbst in einer `For Each`...`Next`-Schleife nicht ändern können. Änderungen, die Sie vornehmen, wirken sich nur auf die lokale Kopie von `Current` aus und werden nicht wieder in die zugrunde liegende Auflistung übernommen. Wenn ein Element jedoch ein Verweistyp ist, können Sie die Member der Instanz ändern, auf die es verweist. Im folgenden Beispiel wird der `BackColor` Member jedes `thisControl` Elements geändert. Sie können `thisControl` jedoch nicht ändern.
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -162,21 +162,21 @@ Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
 End Sub
 ```
 
-The previous example can modify the `BackColor` member of each `thisControl` element, although it cannot modify `thisControl` itself.
+Im vorherigen Beispiel kann der `BackColor` Member jedes `thisControl`-Elements geändert werden, obwohl es sich nicht ändern kann `thisControl` selbst.
 
-**Traversing Arrays.** Because the <xref:System.Array> class implements the <xref:System.Collections.IEnumerable> interface, all arrays expose the <xref:System.Array.GetEnumerator%2A> method. This means that you can iterate through an array with a `For Each`...`Next` loop. However, you can only read the array elements. You cannot change them.
+**Durchlaufen von Arrays.** Da die <xref:System.Array>-Klasse die <xref:System.Collections.IEnumerable>-Schnittstelle implementiert, machen alle Arrays die <xref:System.Array.GetEnumerator%2A>-Methode verfügbar. Dies bedeutet, dass Sie ein Array mit einer `For Each`...`Next`-Schleife durchlaufen können. Sie können jedoch nur die Array Elemente lesen. Diese können nicht geändert werden.
 
 ## <a name="example"></a>Beispiel
 
-The following example lists all the folders in the C:\ directory by using the <xref:System.IO.DirectoryInfo> class.
+Im folgenden Beispiel werden alle Ordner in C:\ aufgelistet. Verzeichnis mithilfe der <xref:System.IO.DirectoryInfo>-Klasse.
 
 [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein Verfahren zum Sortieren einer Auflistung. The example sorts instances of a `Car` class that are stored in a <xref:System.Collections.Generic.List%601>. Die `Car`-Klasse implementiert die <xref:System.IComparable%601>-Schnittstelle, die die Implementierung der <xref:System.IComparable%601.CompareTo%2A>-Methode erfordert.
+Das folgende Beispiel zeigt ein Verfahren zum Sortieren einer Auflistung. Im Beispiel werden Instanzen einer `Car`-Klasse sortiert, die in einem <xref:System.Collections.Generic.List%601>gespeichert sind. Die `Car`-Klasse implementiert die <xref:System.IComparable%601>-Schnittstelle, die die Implementierung der <xref:System.IComparable%601.CompareTo%2A>-Methode erfordert.
 
-Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that's used for sorting. Vom Benutzer erstellter Code in der `CompareTo`-Methode gibt einen Wert für jeden Vergleich des aktuellen Objekts mit einem anderen Objekt zurück. Der zurückgegebene Wert ist kleiner als Null, wenn das aktuelle Objekt kleiner ist als das andere Objekt, größer als Null, wenn das aktuelle Objekt größer als das andere Objekt ist und Null, wenn beide Objekt gleich groß sind. Dies ermöglicht es Ihnen, in dem Code die Kriterien für größer als, kleiner als und gleich zu definieren.
+Jeder Aufrufe der <xref:System.IComparable%601.CompareTo%2A>-Methode führt einen einzelnen Vergleich aus, der für die Sortierung verwendet wird. Vom Benutzer erstellter Code in der `CompareTo`-Methode gibt einen Wert für jeden Vergleich des aktuellen Objekts mit einem anderen Objekt zurück. Der zurückgegebene Wert ist kleiner als Null, wenn das aktuelle Objekt kleiner ist als das andere Objekt, größer als Null, wenn das aktuelle Objekt größer als das andere Objekt ist und Null, wenn beide Objekt gleich groß sind. Dies ermöglicht es Ihnen, in dem Code die Kriterien für größer als, kleiner als und gleich zu definieren.
 
 In der `ListCars`-Methode sortiert die `cars.Sort()`-Anweisung die Liste. Dieser Aufruf der <xref:System.Collections.Generic.List%601.Sort%2A>-Methode von <xref:System.Collections.Generic.List%601> führt dazu, dass die `CompareTo`-Methode für die `Car`-Objekte in der `List` automatisch aufgerufen wird.
 
