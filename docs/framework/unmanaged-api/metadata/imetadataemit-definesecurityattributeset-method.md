@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428245"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet-Methode
-Creates a set of security permissions to attach to the object referenced by the specified token.  
+Erstellt einen Satz von Sicherheits Berechtigungen zum Anfügen an das Objekt, auf das durch das angegebene Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,23 +38,23 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Parameter  
  `tkObj`  
- [in] The token to which the security information is attached.  
+ in Das Token, an das die Sicherheitsinformationen angefügt werden.  
   
  `rSecAttrs`  
- [in] An array of `COR_SECATTR` structures.  
+ in Ein Array von `COR_SECATTR` Strukturen.  
   
  `cSecAttrs`  
- [in] The number of elements in `rSecAttrs`.  
+ in Die Anzahl der Elemente in `rSecAttrs`.  
   
  `pulErrorAttr`  
- [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
+ vorgenommen Wenn die Methode fehlschlägt, gibt den Index in `rSecAttrs` des Elements an, das das Problem verursacht hat.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

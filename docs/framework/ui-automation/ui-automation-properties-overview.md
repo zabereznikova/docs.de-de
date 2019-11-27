@@ -20,17 +20,17 @@ ms.locfileid: "74447953"
   
  In diesem Abschnitt finden Sie eine allgemeine Übersicht über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Eigenschaften. Speziellere Informationen finden Sie in folgenden Themen:  
   
-- [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](ui-automation-properties-for-clients.md)  
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
   
 - [Server-Side UI Automation Provider Implementation](server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Eigenschaftsbezeichner  
- Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Providers use the numeric IDs to identify incoming property requests. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
+ Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Anbieter verwenden die numerischen IDs, um eingehende Eigenschaften Anforderungen zu identifizieren. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
   
  <xref:System.Windows.Automation.AutomationProperty> -Objekte, die bestimmte Eigenschaften darstellen, sind als Felder in verschiedenen Klassen verfügbar. Aus Sicherheitsgründen rufen Benutzeroberflächenautomatisierungs-Anbieter diese Objekte aus einem separaten Satz von Klassen ab, die in „Uiautomationtypes.dll“ enthalten sind.  
   
- The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
+ In der folgenden Tabelle werden die Eigenschaften durch die Klassen, die die <xref:System.Windows.Automation.AutomationProperty>-IDs enthalten, kategorisiert.  
   
 |Arten von Eigenschaften|Clients rufen IDs ab von|Anbieter rufen IDs ab von|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,14 +53,14 @@ ms.locfileid: "74447953"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>Eigenschaften nach Kategorie  
- The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. Diese Eigenschaften hat jedes der Steuerelemente. Bis auf einige Ausnahmen sind wahrscheinlich alle diese Eigenschaften während der gesamten Lebensdauer der Anbieteranwendung statisch. Die meisten dynamischen Eigenschaften sind mit Steuerelementmustern verknüpft.  
+ In den folgenden Tabellen sind die Eigenschaften kategorisiert, deren IDs in <xref:System.Windows.Automation.AutomationElement> und <xref:System.Windows.Automation.AutomationElementIdentifiers>gefunden werden. Diese Eigenschaften hat jedes der Steuerelemente. Bis auf einige Ausnahmen sind wahrscheinlich alle diese Eigenschaften während der gesamten Lebensdauer der Anbieteranwendung statisch. Die meisten dynamischen Eigenschaften sind mit Steuerelementmustern verknüpft.  
   
  In der Spalte **Eigenschaftenzugriff** werden zusätzlich zu <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> und <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>alle weiteren Accessoren für jede Eigenschaft aufgeführt. Weitere Informationen zum Abrufen von Eigenschaften in einer Clientanwendung finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
 > Spezielle Informationen zu jeder Eigenschaft finden Sie über den Link in der Spalte **Eigenschaftenzugriff** .  
   
-### <a name="display-characteristics"></a>Anzeigen von Merkmalen  
+### <a name="display-characteristics"></a>Merkmale anzeigen  
   
 |Eigenschaftenbezeichner|Eigenschaftenzugriff|  
 |-------------------------|---------------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "74447953"
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Elementtyp  
+### <a name="element-type"></a>Type-Element  
   
 |Eigenschaftenbezeichner|Eigenschaftenzugriff|  
 |-------------------------|---------------------|  
@@ -93,7 +93,7 @@ ms.locfileid: "74447953"
 |<xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty>|<xref:System.Windows.Automation.AutomationElement.GetRuntimeId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.NativeWindowHandleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.NativeWindowHandle%2A>|  
   
-### <a name="interaction"></a>Interaktion  
+### <a name="interaction"></a>Interaktiv  
   
 |Eigenschaftenbezeichner|Eigenschaftenzugriff|  
 |-------------------------|---------------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "74447953"
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### <a name="miscellaneous"></a>Sonstiges  
+### <a name="miscellaneous"></a>Verschiedenes  
   
 |Eigenschaftenbezeichner|Eigenschaftenzugriff|  
 |-------------------------|---------------------|  
@@ -161,8 +161,8 @@ ms.locfileid: "74447953"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](caching-in-ui-automation-clients.md)
-- [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](ui-automation-properties-for-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
+- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
 - [Server-Side UI Automation Provider Implementation](server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
 - [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](return-properties-from-a-ui-automation-provider.md)

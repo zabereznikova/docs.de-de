@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350672"
 ---
 # <a name="mylog-object"></a>My.Log-Objekt
-Provides a property and methods for writing event and exception information to the application's log listeners.  
+Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis-und Ausnahme Informationen in die Protokolllistener der Anwendung bereit.  
   
 ## <a name="remarks"></a>Hinweise  
  Informationen zu den Methoden und Eigenschaften des `My.Log` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
- The `My.Log` object is available for ASP.NET applications only. For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ Das `My.Log`-Objekt ist nur für ASP.NET-Anwendungen verfügbar. Verwenden Sie für Client Anwendungen das [My. Application. Log-Objekt](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
  **Klasse:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Assembly:** Visual Basic-Lauf Zeit Bibliothek (in "Microsoft. VisualBasic. dll")

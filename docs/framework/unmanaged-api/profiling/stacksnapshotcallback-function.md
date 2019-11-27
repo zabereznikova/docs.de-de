@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427077"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback-Funktion
-Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+Stellt dem Profiler Informationen über jeden verwalteten Frame und jede ausführen nicht verwalteter Frames auf dem Stapel während eines Stackwalk bereit, der von der [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) -Methode initiiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,34 +39,34 @@ HRESULT __stdcall StackSnapshotCallback (
   
 ## <a name="parameters"></a>Parameter  
  `funcId`  
- [in] If this value is zero, this callback is for a run of unmanaged frames; otherwise, it is the identifier of a managed function and this callback is for a managed frame.  
+ in Wenn dieser Wert 0 (null) ist, ist dieser Rückruf für die Durchführung nicht verwalteter Frames vorgesehen. andernfalls handelt es sich um den Bezeichner einer verwalteten Funktion, und dieser Rückruf gilt für einen verwalteten Frame.  
   
  `ip`  
- [in] The value of the native code instruction pointer in the frame.  
+ in Der Wert des systemeigenen Code Anweisungs Zeigers im Frame.  
   
  `frameInfo`  
- [in] A `COR_PRF_FRAME_INFO` value that references information about the stack frame. This value is valid for use only during this callback.  
+ in Ein `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen verweist. Dieser Wert kann nur während dieses Rückrufs verwendet werden.  
   
  `contextSize`  
- [in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.  
+ in Die Größe der `CONTEXT`-Struktur, auf die vom `context`-Parameter verwiesen wird.  
   
  `context`  
- [in] A pointer to a Win32 `CONTEXT` structure that represents the state of the CPU for this frame.  
+ in Ein Zeiger auf eine Win32-`CONTEXT`-Struktur, die den Zustand der CPU für diesen Frame darstellt.  
   
- The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in `ICorProfilerInfo2::DoStackSnapshot`.  
+ Der `context`-Parameter ist nur gültig, wenn das COR_PRF_SNAPSHOT_CONTEXT-Flag `ICorProfilerInfo2::DoStackSnapshot`übergeben wurde.  
   
  `clientData`  
- [in] A pointer to the client data, which is passed straight through from `ICorProfilerInfo2::DoStackSnapshot`.  
+ in Ein Zeiger auf die Client Daten, die direkt von `ICorProfilerInfo2::DoStackSnapshot`geleitet werden.  
   
 ## <a name="remarks"></a>Hinweise  
- The `StackSnapshotCallback` function is implemented by the profiler writer. You must limit the complexity of work done in `StackSnapshotCallback`. For example, when using `ICorProfilerInfo2::DoStackSnapshot` in an asynchronous manner, the target thread may be holding locks. If code within `StackSnapshotCallback` requires the same locks, a deadlock could ensue.  
+ Die `StackSnapshotCallback`-Funktion wird vom Profiler-Writer implementiert. Sie müssen die Komplexität der in `StackSnapshotCallback`ausgeführten Arbeit begrenzen. Wenn Sie `ICorProfilerInfo2::DoStackSnapshot` z. b. asynchron verwenden, kann der Zielthread Sperren aufrechterhalten. Wenn Code innerhalb `StackSnapshotCallback` die gleichen Sperren erfordert, könnte ein Deadlock entstehen.  
   
- The `ICorProfilerInfo2::DoStackSnapshot` method calls the `StackSnapshotCallback` function once per managed frame or once per run of unmanaged frames. If `StackSnapshotCallback` is called for a run of unmanaged frames, the profiler may use the register context (referenced by the `context` parameter) to perform its own unmanaged stack walk. In this case, the Win32 `CONTEXT` structure represents the CPU state for the most recently pushed frame within the run of unmanaged frames. Although the Win32 `CONTEXT` structure includes values for all registers, you should rely only on the values of the stack pointer register, frame pointer register, instruction pointer register, and the nonvolatile (that is, preserved) integer registers.  
+ Die `ICorProfilerInfo2::DoStackSnapshot`-Methode ruft die `StackSnapshotCallback`-Funktion einmal pro verwaltetem Frame oder einmal pro ausführen nicht verwalteter Frames auf. Wenn `StackSnapshotCallback` für die Ausführung nicht verwalteter Frames aufgerufen wird, kann der Profiler den Registrierungs Kontext (auf den der `context`-Parameter verweist) verwenden, um einen eigenen, nicht verwalteten Stapel Durchlauf auszuführen. In diesem Fall stellt die Win32-`CONTEXT` Struktur den CPU-Status für den zuletzt über drückten Rahmen während der Durchführung nicht verwalteter Frames dar. Obwohl die Win32-`CONTEXT` Struktur Werte für alle Register enthält, sollten Sie sich nur auf die Werte der Stapelzeiger Register, das Frame Zeiger Register, das Anweisungs Zeiger Register und die nicht flüchtigen (d. h. beibehaltenen) ganzzahligen Register verlassen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   

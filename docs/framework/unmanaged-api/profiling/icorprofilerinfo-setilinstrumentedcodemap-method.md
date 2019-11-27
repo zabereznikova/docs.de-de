@@ -24,10 +24,10 @@ ms.locfileid: "74449864"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap-Methode
 
-Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.
+Legt einen Code Map für die angegebene Funktion mithilfe der angegebenen MSIL (Microsoft Intermediate Language)-Zuordnungs Einträge fest.
 
 > [!NOTE]
-> In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.
+> In der .NET Framework Version 2,0 wirkt sich das Aufrufen von `SetILInstrumentedCodeMap` auf einem `FunctionID`, das eine generische Funktion in einer bestimmten Anwendungsdomäne darstellt, auf alle Instanzen dieser Funktion in der Anwendungsdomäne aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,50 +42,50 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parameter
 
 `functionId`\
-[in] The ID of the function for which to set the code map.
+in Die ID der Funktion, für die die Code Map festgelegt werden soll.
 
 `fStartJit`\
-[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`. Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.
+in Ein boolescher Wert, der angibt, ob der aufzurufende `SetILInstrumentedCodeMap`-Methode der erste für eine bestimmte `FunctionID`ist. Legen Sie `fStartJit` auf `true` im ersten `SetILInstrumentedCodeMap` für eine angegebene `FunctionID`und `false` danach fest.
 
 `cILMapEntries`\
-[in] The number of elements in the `cILMapEntries` array.
+in Die Anzahl der Elemente im `cILMapEntries` Array.
 
 `rgILMapEntries`\
-[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.
+in Ein Array von COR_IL_MAP-Strukturen, von denen jede einen MSIL-Offset angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached). `SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations. A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.
+Ein Profiler fügt häufig Anweisungen innerhalb des Quellcodes einer Methode ein, um diese Methode zu instrumentieren (z. b. um zu benachrichtigen, wenn eine bestimmte Quellzeile erreicht ist). `SetILInstrumentedCodeMap` ermöglicht einem Profiler, die ursprünglichen MSIL-Anweisungen ihren neuen Speicherorten zuzuordnen. Ein Profiler kann die [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) -Methode verwenden, um den ursprünglichen MSIL-Offset für einen angegebenen systemeigenen Offset zu erhalten.
 
-The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code. The map should be sorted in increasing order. For stepping to work properly, follow these guidelines:
+Der Debugger geht davon aus, dass jeder alte Offset in dem ursprünglichen, nicht geänderten MSIL-Code auf einen MSIL-Offset verweist und dass jeder neue Offset auf den MSIL-Offset innerhalb des neuen, instrumentierten Codes verweist. Die Zuordnung sollte in steigender Reihenfolge sortiert werden. Befolgen Sie die folgenden Richtlinien, um die ordnungsgemäße Ausführung von Schritt zu
 
-- Do not reorder instrumented MSIL code.
+- Instrumentierte MSIL-Code nicht neu anordnen.
 
-- Do not remove the original MSIL code.
+- Entfernen Sie den ursprünglichen MSIL-Code nicht.
 
-- Include entries for all the sequence points from the program database (PDB) file in the map. The map does not interpolate missing entries. So, given the following map:
+- Fügen Sie Einträge für alle Sequenz Punkte aus der Programm Datenbankdatei (PDB) in die Zuordnung ein. Fehlende Einträge werden von der Zuordnung nicht interpolieren. Bei der folgenden Karte:
 
-  (0 old, 0 new)
+  (0 alt, 0 neu)
 
-  (5 old, 10 new)
+  (5 alt, 10 neu)
 
-  (9 old, 20 new)
+  (9 alte, 20 neue)
 
-  - An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.
+  - Der alte Offset 0, 1, 2, 3 oder 4 wird dem neuen Offset 0 zugeordnet.
 
-  - An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.
+  - Der alte Offset 5, 6, 7 oder 8 wird dem neuen Offset 10 zugeordnet.
 
-  - An old offset of 9 or higher will be mapped to new offset 20.
+  - Ein Alter Offset von 9 oder höher wird dem neuen Offset 20 zugeordnet.
 
-  - A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.
+  - Der neue Offset 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 wird dem alten Offset 0 zugeordnet.
 
-  - A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.
+  - Ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 wird dem alten Offset 5 zugeordnet.
 
-  - A new offset of 20 or higher will be mapped to old offset 9.
+  - Ein neuer Offset von 20 oder höher wird dem alten Offset 9 zugeordnet.
 
-In the .NET Framework 3.5 and previous versions, you allocate the `rgILMapEntries` array by calling the [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) method. Because the runtime takes ownership of this memory, the profiler should not attempt to free it.
+In den .NET Framework 3,5 und früheren Versionen weisen Sie das `rgILMapEntries` Array zu, indem Sie die [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) -Methode aufrufen. Da die Laufzeit den Besitz dieses Speichers übernimmt, sollte der Profiler nicht versuchen, ihn freizugeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 

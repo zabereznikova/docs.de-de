@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432151"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map-Methode
-Maps a relationship between the assemblies using metadata signatures.  
+Ordnet mithilfe von Metadatensignaturen eine Beziehung zwischen den Assemblys zu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +36,20 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parameter  
  `tkImp`  
- [in] The metadata token that represents the imported code object.  
+ in Das Metadatentoken, das das importierte Code Objekt darstellt.  
   
  `tkEmit`  
- [in] The metadata token that represents the emitted code object.  
+ in Das Metadatentoken, das das ausgegebene Code Objekt darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
+ Wenn die erneute Zuordnung des Tokens während einer Zusammenführung auftritt, wird das ursprüngliche Token in den importierten (Quell-) Metadatenbereich festgelegt, und das neue Token wird im ausgegebenen (Ziel-) Metadatenbereich festgelegt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Voraussetzungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
