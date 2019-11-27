@@ -1,5 +1,5 @@
 ---
-title: 'How to: Validate File Names and Paths'
+title: 'Gewusst wie: Überprüfen von Dateinamen und Pfaden'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], validating
@@ -14,15 +14,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344365"
 ---
-# <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a><span data-ttu-id="12028-102">Gewusst wie: Überprüfen von Dateinamen und Pfaden in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="12028-102">How to: Validate File Names and Paths in Visual Basic</span></span>
-<span data-ttu-id="12028-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span><span class="sxs-lookup"><span data-stu-id="12028-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span></span> <span data-ttu-id="12028-104">The validation checks if the name contains characters that are not allowed by the file system.</span><span class="sxs-lookup"><span data-stu-id="12028-104">The validation checks if the name contains characters that are not allowed by the file system.</span></span>  
+# <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a><span data-ttu-id="32222-102">Gewusst wie: Überprüfen von Dateinamen und Pfaden in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="32222-102">How to: Validate File Names and Paths in Visual Basic</span></span>
+<span data-ttu-id="32222-103">In diesem Beispiel wird ein `Boolean` Wert zurückgegeben, der angibt, ob eine Zeichenfolge einen Dateinamen oder einen Pfad darstellt.</span><span class="sxs-lookup"><span data-stu-id="32222-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span></span> <span data-ttu-id="32222-104">Die Validierung prüft, ob der Name Zeichen enthält, die vom Dateisystem nicht zugelassen werden.</span><span class="sxs-lookup"><span data-stu-id="32222-104">The validation checks if the name contains characters that are not allowed by the file system.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="12028-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="12028-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="32222-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="32222-105">Example</span></span>  
  [!code-vb[VbVbcnRegEx#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#4)]  
   
- <span data-ttu-id="12028-106">This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length.</span><span class="sxs-lookup"><span data-stu-id="12028-106">This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length.</span></span> <span data-ttu-id="12028-107">It also does not check if the application has permission to access the file-system resource with the specified name.</span><span class="sxs-lookup"><span data-stu-id="12028-107">It also does not check if the application has permission to access the file-system resource with the specified name.</span></span>  
+ <span data-ttu-id="32222-106">In diesem Beispiel wird nicht überprüft, ob der Name falsch platzierte Doppelpunkte oder Verzeichnisse ohne Namen enthält oder ob die Länge des Namens die vom System definierte maximale Länge überschreitet.</span><span class="sxs-lookup"><span data-stu-id="32222-106">This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length.</span></span> <span data-ttu-id="32222-107">Außerdem wird nicht überprüft, ob die Anwendung über die Berechtigung zum Zugreifen auf die Dateisystem Ressource mit dem angegebenen Namen verfügt.</span><span class="sxs-lookup"><span data-stu-id="32222-107">It also does not check if the application has permission to access the file-system resource with the specified name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12028-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12028-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32222-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32222-108">See also</span></span>
 
 - <xref:System.IO.Path.GetInvalidPathChars%2A>
-- [<span data-ttu-id="12028-109">Überprüfen von Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="12028-109">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [<span data-ttu-id="32222-109">Überprüfen von Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="32222-109">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
