@@ -11,25 +11,25 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354137"
 ---
-# <a name="clauses-visual-basic"></a><span data-ttu-id="3007c-102">Klauseln (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3007c-102">Clauses (Visual Basic)</span></span>
-<span data-ttu-id="3007c-103">The topics in this section document Visual Basic run-time clauses.</span><span class="sxs-lookup"><span data-stu-id="3007c-103">The topics in this section document Visual Basic run-time clauses.</span></span>  
+# <a name="clauses-visual-basic"></a><span data-ttu-id="b3177-102">Klauseln (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3177-102">Clauses (Visual Basic)</span></span>
+<span data-ttu-id="b3177-103">In den Themen in diesem Abschnitt werden Visual Basic Lauf Zeit Klauseln dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="b3177-103">The topics in this section document Visual Basic run-time clauses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3007c-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3007c-104">In This Section</span></span>  
- [<span data-ttu-id="3007c-105">Alias</span><span class="sxs-lookup"><span data-stu-id="3007c-105">Alias</span></span>](../../../visual-basic/language-reference/statements/alias-clause.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b3177-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b3177-104">In This Section</span></span>  
+ [<span data-ttu-id="b3177-105">Alias</span><span class="sxs-lookup"><span data-stu-id="b3177-105">Alias</span></span>](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
- [<span data-ttu-id="3007c-106">As</span><span class="sxs-lookup"><span data-stu-id="3007c-106">As</span></span>](../../../visual-basic/language-reference/statements/as-clause.md)  
+ [<span data-ttu-id="b3177-106">As</span><span class="sxs-lookup"><span data-stu-id="b3177-106">As</span></span>](../../../visual-basic/language-reference/statements/as-clause.md)  
   
- [<span data-ttu-id="3007c-107">Handles</span><span class="sxs-lookup"><span data-stu-id="3007c-107">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [<span data-ttu-id="b3177-107">Handles</span><span class="sxs-lookup"><span data-stu-id="b3177-107">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
   
- [<span data-ttu-id="3007c-108">Implements</span><span class="sxs-lookup"><span data-stu-id="3007c-108">Implements</span></span>](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [<span data-ttu-id="b3177-108">Implements</span><span class="sxs-lookup"><span data-stu-id="b3177-108">Implements</span></span>](../../../visual-basic/language-reference/statements/implements-clause.md)  
   
- [<span data-ttu-id="3007c-109">In</span><span class="sxs-lookup"><span data-stu-id="3007c-109">In</span></span>](../../../visual-basic/language-reference/statements/in-clause.md)  
+ [<span data-ttu-id="b3177-109">In</span><span class="sxs-lookup"><span data-stu-id="b3177-109">In</span></span>](../../../visual-basic/language-reference/statements/in-clause.md)  
   
- [<span data-ttu-id="3007c-110">Into</span><span class="sxs-lookup"><span data-stu-id="3007c-110">Into</span></span>](../../../visual-basic/language-reference/statements/into-clause.md)  
+ [<span data-ttu-id="b3177-110">Into</span><span class="sxs-lookup"><span data-stu-id="b3177-110">Into</span></span>](../../../visual-basic/language-reference/statements/into-clause.md)  
   
- [<span data-ttu-id="3007c-111">Of</span><span class="sxs-lookup"><span data-stu-id="3007c-111">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="b3177-111">Of</span><span class="sxs-lookup"><span data-stu-id="b3177-111">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="3007c-112">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3007c-112">Related Sections</span></span>  
- [<span data-ttu-id="3007c-113">Sprachreferenz zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3007c-113">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="b3177-112">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b3177-112">Related Sections</span></span>  
+ [<span data-ttu-id="b3177-113">Sprachreferenz zu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b3177-113">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [<span data-ttu-id="3007c-114">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3007c-114">Visual Basic</span></span>](../../../visual-basic/index.md)
+ [<span data-ttu-id="b3177-114">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b3177-114">Visual Basic</span></span>](../../../visual-basic/index.md)
