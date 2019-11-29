@@ -2,12 +2,12 @@
 title: Identityserver für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 3797214685d20109b2c5dc4440ae5fc64dfddce6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841786"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568467"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Identityserver für Native Cloud-Anwendungen
 
@@ -45,7 +45,7 @@ Identityserver stellt Middleware zur Verfügung, die in einer ASP.net Core Anwen
 
 IdentityServer4 ist Open Source und kann kostenlos verwendet werden. Sie können Sie mithilfe ihrer nuget-Pakete zu Ihren Anwendungen hinzufügen. Das Hauptpaket ist [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) , das über 4 Millionen mal heruntergeladen wurde. Das Basispaket enthält keinen Code für die Benutzeroberfläche und unterstützt nur die Konfiguration im Arbeitsspeicher. Um ihn mit einer Datenbank zu verwenden, benötigen Sie auch einen Datenanbieter wie [IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) , der Entity Framework Core verwendet, um Konfigurations-und Betriebsdaten für identityserver zu speichern. Für die Benutzeroberfläche können Sie Dateien aus dem [Schnellstart-UI-Repository](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) in Ihre ASP.net Core MVC-Anwendung kopieren, um Unterstützung für die Anmeldung und Abmeldung mithilfe der identityserver-Middleware hinzuzufügen.
 
-## <a name="configuration"></a>Konfiguration
+## <a name="configuration"></a>-Konfiguration
 
 Identityserver unterstützt verschiedene Arten von Protokollen und Anbietern sozialer Authentifizierung, die im Rahmen jeder benutzerdefinierten Installation konfiguriert werden können. Dies erfolgt in der Regel in der `Startup` Klasse der ASP.net Core Anwendung in der `ConfigureServices`-Methode. Die Konfiguration umfasst die Angabe der unterstützten Protokolle und der Pfade zu den Servern und Endpunkten, die verwendet werden. In Abbildung 8-2 wird ein Beispiel für die Konfiguration des Benutzeroberflächen Projekts "IdentityServer4 Quick Start" gezeigt:
 
@@ -65,7 +65,7 @@ public class Startup
                 options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
 
                 options.ClientId = "<insert here>";
-                options.ClientSecret = "<inser here>";
+                options.ClientSecret = "<insert here>";
             })
             .AddOpenIdConnect("demoidsrv", "IdentityServer", options =>
             {
