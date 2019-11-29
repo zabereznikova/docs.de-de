@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#Dokumentation
+summary: Erfahren Sie, wie Sie eine beliebige Anwendung F# mithilfe der Programmiersprache in .net schreiben.
+metadata:
+  title: 'F#Dokumentation: Einstieg, Tutorials, Referenz.'
+  description: 'Erlernen F# der Programmierung: für Entwickler, F#die für Entwickler F# neu sind und erfahrene/.NET-Entwickler'
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553062"
+landingContent:
+- title: Erlernen Sie das Programmieren inF#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Was ist F#?
+      url: what-is-fsharp.md
+    - text: Installieren von F#
+      url: get-started/install-fsharp.md
+    - text: Einstieg F# in Visual Studio
+      url: get-started/get-started-visual-studio.md
+    - text: Beginnen Sie mit F# in Visual Studio Code
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: Herunterladen der .net Core SDK
+      url: https://dotnet.microsoft.com/download
+- title: F#lagen
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Einführung in F#
+      url: tour.md
+    - text: Einführung in die funktionale Programmierung mit F#
+      url: introduction-to-functional-programming/index.md
+    - text: Funktionen erster Klasse
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: F#-Styleguide
+      url: style-guide/index.md
+    - text: Richtlinien für das Formatieren von F#-Code
+      url: style-guide/formatting.md
+    - text: Codekonventionen für F#
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: Asynchrone Programmierung inF#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#Sprachreferenz
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Sprachreferenz
+      url: language-reference/index.md
+    - text: Schlüsselwort Verweis
+      url: language-reference/keyword-reference.md
+    - text: Symbol-und Operator Verweis
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: Funktionen
+      url: language-reference/functions/index.md
+    - text: F#solche
+      url: language-reference/fsharp-types.md

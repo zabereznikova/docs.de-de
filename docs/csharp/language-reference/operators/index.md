@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039013"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552475"
 ---
 # <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
 
-C# bietet eine Reihe von Operatoren, die von den integrierten Typen unterstützt werden. Beispielsweise führen [arithmetische Operatoren](arithmetic-operators.md) arithmetische Vorgänge mit numerischen Operanden durch, und [boolesche logische Operatoren](boolean-logical-operators.md) führen logische Vorgänge mit den [bool](../keywords/bool.md)-Operanden durch. Bestimmte Operatoren können [überladen](operator-overloading.md) werden. Mit Operatorüberladung können Sie das Operatorverhalten für die Operanden eines benutzerdefinierten Typs angeben.
+C# bietet eine Reihe von Operatoren, die von den integrierten Typen unterstützt werden. Beispielsweise führen [arithmetische Operatoren](arithmetic-operators.md) arithmetische Vorgänge mit numerischen Operanden durch, und [boolesche logische Operatoren](boolean-logical-operators.md) führen logische Vorgänge mit den [bool](../builtin-types/bool.md)-Operanden durch. Bestimmte Operatoren können [überladen](operator-overloading.md) werden. Mit Operatorüberladung können Sie das Operatorverhalten für die Operanden eines benutzerdefinierten Typs angeben.
 
 In einem [Ausdruck](../../programming-guide/statements-expressions-operators/expressions.md) legen die Operatorrangfolge und -assoziativität die Reihenfolge fest, in der die Vorgänge durchgeführt werden. Sie können Klammern verwenden, um die Reihenfolge der Auswertung zu ändern, die durch die Operatorrangfolge und -assoziativität festgelegt wird.
 

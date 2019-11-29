@@ -1,44 +1,43 @@
 ---
 title: Typanbieter
-description: Erfahren Sie, wie ein F#-Typanbieter eine Komponente, die Typen, Eigenschaften und Methoden für die Verwendung in Ihren Programmen bereitstellt.
+description: Erfahren Sie, F# wie ein Typanbieter eine Komponente ist, die Typen, Eigenschaften und Methoden zur Verwendung in ihren Programmen bereitstellt.
 ms.date: 04/02/2018
-ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7fa0ff6b5f2b0bc978df2988f22b2042acc22320
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645164"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552918"
 ---
 # <a name="type-providers"></a>Typanbieter
 
-Ein F#-Typanbieter ist eine Komponente, die Typen, Eigenschaften und Methoden zur Verwendung im Programm bereitstellt. Typanbieter generiert, so genannten **bereitgestellten Typen**, die von F#-Compiler generiert werden und basieren auf einer externen Datenquelle.
+Ein F#-Typanbieter ist eine Komponente, die Typen, Eigenschaften und Methoden zur Verwendung im Programm bereitstellt. Typanbieter generieren die als **bereitgestellte Typen bezeichneten Typen**, die vom F# Compiler generiert werden und auf einer externen Datenquelle basieren.
 
-Beispielsweise können ein F#-Typanbieter für SQL Typen darstellt, Tabellen und Spalten in einer relationalen Datenbank generieren. In der Tat genau hierfür gibt es die [SQLProvider](https://fsprojects.github.io/SQLProvider/) Typanbieter ist.
+Beispielsweise kann ein F# Typanbieter für SQL Typen generieren, die Tabellen und Spalten in einer relationalen Datenbank darstellen. Tatsächlich ist dies das, was der [SqlProvider](https://fsprojects.github.io/SQLProvider/) -Typanbieter tut.
 
-Vorausgesetzt, dass die Typen von Eingabeparametern für ein Typanbieter abhängig sind. Diese Eingabe kann eine Beispieldatenquelle (z. B. eine JSON-Schema-Datei) werden eine URL, die direkt an einen externen Dienst oder eine Verbindungszeichenfolge für eine Datenquelle verweist. Ein Typanbieter können auch sicherstellen, dass Gruppen von Typen nur bei Bedarf erweitert werden; d. h., sie werden erweitert, wenn die Typen tatsächlich von Ihrem Programm verwiesen werden. Dies ermöglicht die direkte, bedarfsabhängige und stark typisierte Integration von umfangreichen Informationsquellen, z. B. Onlinedatenanbietern.
+Die bereitgestellten Typen hängen von den Eingabe Parametern eines Typanbieters ab. Diese Eingabe kann eine Beispiel Datenquelle (z. b. eine JSON-Schema Datei), eine URL, die direkt auf einen externen Dienst verweist, oder eine Verbindungs Zeichenfolge für eine Datenquelle sein. Ein Typanbieter kann außerdem sicherstellen, dass Gruppen von Typen nur Bedarfs gesteuert erweitert werden. Das heißt, Sie werden erweitert, wenn das Programm tatsächlich auf die Typen verweist. Dies ermöglicht die direkte, bedarfsabhängige und stark typisierte Integration von umfangreichen Informationsquellen, z. B. Onlinedatenanbietern.
 
-## <a name="generative-and-erased-type-providers"></a>Produktive und gelöschten Typanbietern
+## <a name="generative-and-erased-type-providers"></a>Generativer und gelöschter Typanbieter
 
-Typanbieter gibt zwei Arten: Produktive und gelöschten.
+Typanbieter verfügen über zwei Formen: generativ und gelöscht.
 
-Produktive Typanbieter erzeugen, Typen, die als Typen in .NET in die Assembly geschrieben werden können in denen sie erstellt wurden. Dadurch können sie aus Code in anderen Assemblys verwendet werden. Dies bedeutet, dass die typisierte Darstellung der Datenquelle in der Regel eine sein muss, die mit .NET-Typen darstellen möglich ist.
+Generare Typanbieter erzeugen Typen, die als .NET-Typen in die Assembly geschrieben werden können, in der Sie erstellt werden. Dies ermöglicht die Verwendung von Code in anderen Assemblys. Dies bedeutet, dass die typisierte Darstellung der Datenquelle in der Regel eine solche sein muss, die mit .NET-Typen dargestellt werden kann.
 
-Löschung Typanbieter erzeugen, Typen, die nur genutzt werden können, in der Assembly oder das Projekt, das sie generiert werden. Die Typen sind kurzlebige; d. h. sie werden nicht in eine Assembly geschrieben und können nicht von Code in anderen Assemblys genutzt werden. Sie können enthalten *verzögert* Member, da Sie die bereitgestellten Typen aus einer potenziell unbegrenzte Informationen. Sie eignen sich für eine kleine Teilmenge der eine große und miteinander verknüpfte Datenquelle verwenden.
+Das Löschen von typanbietern erzeugt Typen, die nur in der Assembly oder im Projekt verwendet werden können, von der Sie generiert werden. Die Typen sind kurzlebig. Das heißt, Sie werden nicht in eine Assembly geschrieben und können nicht von Code in anderen Assemblys verwendet werden. Sie können *verzögerte* Elemente enthalten, sodass Sie die bereitgestellten Typen aus einem potenziell unendlichen Informationsbereich verwenden können. Sie sind nützlich, um eine kleine Teilmenge einer großen und verbundenen Datenquelle zu verwenden.
 
-## <a name="commonly-used-type-providers"></a>Häufig verwendete Typanbietern
+## <a name="commonly-used-type-providers"></a>Häufig verwendete Typanbieter
 
-Die folgenden häufig verwendeten Bibliotheken enthalten Typanbieter für unterschiedliche Verwendungszwecke:
+Die folgenden häufig verwendeten Bibliotheken enthalten Typanbieter für verschiedene Verwendungen:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) Typanbieter enthält, für die JSON, XML, CSV und HTML-Formate und Ressourcen zu dokumentieren.
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) stellt stark typisierten Zugriff auf die Beziehung-Datenbanken über den Objekt-Zuordnung und F# LINQ-Abfragen für diese Datenquellen.
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) hat eine Reihe von Typanbieter für zur Kompilierzeit überprüft Einbetten von T-SQL-Code in F#.
-- [Azure Storage-Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/) umfasst Typen für die Azure-Blobs, Tabellen und Warteschlangen, sodass Sie auf diese Ressourcen zugreifen, ohne dass Ressourcennamen als Zeichenfolgen im gesamten Programm angeben müssen.
-- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) enthält die **GraphQLProvider**, die Typen basierend auf einem angegebenen URL GraphQL-Server bereitstellt.
+- [FSharp. Data](https://fsharp.github.io/FSharp.Data/) umfasst Typanbieter für JSON-, XML-, CSV-und HTML-Dokumentformate und-Ressourcen.
+- [SqlProvider](https://fsprojects.github.io/SQLProvider/) bietet mithilfe der Objekt Zuordnung und LINQ- F# Abfragen für diese Datenquellen einen stark typisierten Zugriff auf beziehungsdatenbanken.
+- [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) verfügt über einen Satz von typanbietern für die Kompilierzeit-überprüfte F#Einbettung von T-SQL in.
+- [Azure Storage Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/) bietet Typen für Azure-blobdateien,-Tabellen und-Warteschlangen, sodass Sie auf diese Ressourcen zugreifen können, ohne dass Sie Ressourcennamen im gesamten Programm als Zeichen folgen angeben müssen.
+- [FSharp. Data. graphql](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) enthält den **graphqlprovider**, der Typen auf Grundlage eines von URL angegebenen graphql-Servers bereitstellt.
 
-Bei Bedarf können Sie [erstellen eigene benutzerdefinierte Typanbieter](creating-a-type-provider.md), oder verweisen Sie Typanbieter, die von anderen Benutzern erstellt wurden. Angenommen, in einer Organisation wird ein Datendienst verwendet, der eine große und wachsende Anzahl von benannten Datasets bereitstellt, die alle ein eigenes, stabiles Datenschema verwenden. Sie möchten einen Typanbieter erstellen, der die Schemas liest und die neuesten verfügbaren Datasets auf eine stark typisierte Weise für den Programmierer darstellt.
+Bei Bedarf können Sie [eigene benutzerdefinierte Typanbieter erstellen](creating-a-type-provider.md)oder auf Typanbieter verweisen, die von anderen Benutzern erstellt wurden. Angenommen, in einer Organisation wird ein Datendienst verwendet, der eine große und wachsende Anzahl von benannten Datasets bereitstellt, die alle ein eigenes, stabiles Datenschema verwenden. Sie möchten einen Typanbieter erstellen, der die Schemas liest und die neuesten verfügbaren Datasets auf eine stark typisierte Weise für den Programmierer darstellt.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Tutorial: Erstellen eines Typanbieters](creating-a-type-provider.md)
 - [F#-Sprachreferenz](../../language-reference/index.md)
-- [Visual F#](../../index.md)

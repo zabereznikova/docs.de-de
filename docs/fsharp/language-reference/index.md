@@ -2,12 +2,12 @@
 title: F#-Sprachreferenz
 description: Hier F# finden Sie Informationen zu sprach Features aus diesem Verweis zu sprach Token, Konzepten, Typen, Ausdrücken und vom Compiler unterstützten Erstellungs Themen.
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424990"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552907"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
@@ -17,7 +17,7 @@ Dieser Abschnitt ist ein Verweis auf die F# Sprache, eine Programmiersprache mit
 
 Die folgende Tabelle enthält Referenzthemen, die Tabellen der Schlüsselwörter, Symbole und Literale bereitstellen, die als Token in F# verwendet werden.
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----|-----------|
 |[Schlüsselwortreferenz](keyword-reference.md)|Enthält Links zu Informationen über alle F#-Schlüsselwörter.|
 |[Symbol- und Operatorenreferenz](./symbol-and-operator-reference/index.md)|Enthält eine Tabelle mit Symbolen und Operatoren, die in der Sprache F# verwendet werden.|
@@ -27,7 +27,7 @@ Die folgende Tabelle enthält Referenzthemen, die Tabellen der Schlüsselwörter
 
 Die folgende Tabelle listet die verfügbare Referenzthemen auf, die Sprachkonzepte beschreiben.
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----|-----------|
 |[Funktionen](./functions/index.md)|Funktionen sind die grundlegende Einheit für die Ausführung des Programms in einer beliebigen Programmiersprache. So wie in anderen Sprachen auch, verfügt eine F#-Funktion über einen Namen, kann Parameter besitzen und Argumente verwenden und verfügt über Text. F# unterstützt auch funktionale Konstrukte der Programmierung, z.B. das Behandeln von Funktionen als Werte, Verwenden von unbenannten Funktionen als Ausdrücke, die Zusammensetzung von Funktionen zum Bilden neuer Funktionen, Funktionen mit Currying sowie die implizite Definition von Funktionen mit der teilweise Anwendung von Funktionsargumenten.|
 |[F#-Typen](fsharp-types.md)|Beschreibt die Typen, die in F# verwendet werden und wie F#-Typen benannt und beschrieben werden.|
@@ -56,7 +56,7 @@ Die folgende Tabelle listet die verfügbare Referenzthemen auf, die Sprachkonzep
 
 Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstützte Typen beschreiben.
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----|-----------|
 |[Werte](./values/index.md)|Beschreibt Werte, die unveränderliche Mengen darstellen und einen bestimmten Typ aufweisen. Werte können Ganzzahlen oder Gleitkommazahlen, Zeichen oder Text, Listen, Sequenzen, Arrays, Tupeln, Unterscheidungs-Unions, Datensätze, Klassentypen oder Funktionswerte sein.|
 |[Grundlegende Typen](basic-types.md)|Beschreibt die grundlegenden Typen, die in der F# Sprache verwendet werden. Darüber hinaus werden die entsprechenden Typen in .NET und die minimalen und maximalen Werte für jeden Typ bereitgestellt.|
@@ -87,7 +87,7 @@ Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstütz
 
 Die folgende Tabelle enthält Themen, in denen F#-Ausdrücke beschrieben werden.
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----|-----------|
 |[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Beschreibt den `if...then...else`-Ausdruck, der unterschiedliche Codezweige ausführt und je nach angegebenem booleschen Ausdruck ebenso einen anderen Wert ergibt.|
 |[Vergleichsausdrücke](match-expressions.md)|Beschreibt den `match`-Ausdruck, der die Verzweigungssteuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einer Reihe von Mustern basiert.|
@@ -110,7 +110,3 @@ Die folgende Tabelle enthält Themen, die bestimmte compilerunterstützte Konstr
 |[Compileroptionen](compiler-options.md)|Beschreibt die Befehlszeilenoptionen für den F#-Compiler.|
 |[Compileranweisungen](compiler-directives.md)|Beschreibt Prozessor- und Compileranweisungen.|
 |[Quellzeilen-, Datei- und Pfadbezeichner](source-line-file-path-identifiers.md)|Beschreibt die Bezeichner `__LINE__`, `__SOURCE_DIRECTORY__` und `__SOURCE_FILE__`, die integrierte Werte darstellen, mit denen Sie auf die Zeilennummer der Quelle sowie auf das Verzeichnis und den Dateinamen in Ihrem Code zugreifen können.|
-
-## <a name="see-also"></a>Siehe auch
-
-- [Visual F#](../index.md)

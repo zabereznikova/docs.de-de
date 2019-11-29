@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 34c6cb8cbe815e33658f38ee0e6aff581ea0ff74
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961167"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552687"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>Entwickeln von Dienst orientierten Anwendungen mit WCF
 
@@ -71,9 +71,6 @@ Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communicati
 
  [Allgemeine Referenz](general-reference.md)\
  Der Abschnitt beschreibt die Elemente, die zum Konfigurieren der Windows Communication Foundation-Clients und -Dienste verwendet werden.
-
- [Feedback und Community](feedback-and-community.md) -\
- Informationen dazu, wie Sie Feedback zu Windows Communication Foundation bereitstellen
 
  [Datenschutzinformationen](privacy-information.md)\
  Informationen zum Datenschutz und WCF
