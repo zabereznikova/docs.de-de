@@ -2,12 +2,12 @@
 title: Optionen und Richtlinien der ADO.NET-Technologie
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: d0f363d5eb102edf965c9c6068873fce0721d288
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785773"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569436"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Optionen und Richtlinien der ADO.NET-Technologie
 Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erforderlichem Code und den Verwaltungsaufwand reduziert, da Entwickler bei der Programmierung auf konzeptionelle EDMs zurückgreifen können. Diese Plattform enthält das ADO.NET Entity Framework und verwandte Technologien.  
@@ -37,7 +37,7 @@ Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erf
  LINQ to SQL ist eine Implementierung der objektrelationalen Zuordnung, mit deren Hilfe Sie eine SQL Server-Datenbank unter Verwendung von .NET Framework-Klassen modellieren können. Mit LINQ to SQL können Sie die Datenbank mittels LINQ abfragen sowie Daten in der Datenbank aktualisieren, einfügen und löschen. LINQ to SQL unterstützt Transaktionen, Sichten und gespeicherte Prozeduren und bietet so eine einfache Möglichkeit zum Integrieren von Datenvalidierungs- und Geschäftslogikregeln in das Datenmodell. Mit dem Object Relational Designer (O/R-Designer) können Sie die Entitätsklassen und Zuordnungen modellieren, die auf Objekten in einer Datenbank basieren. Weitere Informationen finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] stellt Datendienste im Internet oder in einem Intranet bereit. Die Daten werden gemäß den Spezifikationen des Entity Data Model in Entitäten und Beziehungen strukturiert. Die in diesem Modell bereitgestellten Daten sind durch das Standard-HTTP-Protokoll adressierbar. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../wcf/index.md).  
+ WCF Data Services stellt Datendienste im Internet oder in einem Intranet bereit. Die Daten werden gemäß den Spezifikationen des Entity Data Model in Entitäten und Beziehungen strukturiert. Die in diesem Modell bereitgestellten Daten sind durch das Standard-HTTP-Protokoll adressierbar. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../wcf/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bb6447c39c3de9605f6f7bc280da2778be2b3070
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975154"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568857"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Vorgehensweise: Angeben von Clientanmeldeinformationen für eine Datendienstanforderung (WCF Data Services)
-Standardmäßig werden beim Senden einer Anforderung an einen odata-Dienst von der Client Bibliothek keine Anmelde Informationen bereitgestellt. Sie können jedoch angeben, dass Anmeldeinformationen zum Authentifizieren von Anforderungen an den Datendienst gesendet werden, indem Sie <xref:System.Net.NetworkCredential> für die <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext> angeben. Weitere Informationen finden Sie unter [Securing WCF Data Services](securing-wcf-data-services.md). Das Beispiel in diesem Thema veranschaulicht das explizite Angeben von Anmeldeinformationen, die beim Anfordern von Daten vom Datendienst vom [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client verwendet werden.  
+Standardmäßig werden beim Senden einer Anforderung an einen odata-Dienst von der Client Bibliothek keine Anmelde Informationen bereitgestellt. Sie können jedoch angeben, dass Anmeldeinformationen zum Authentifizieren von Anforderungen an den Datendienst gesendet werden, indem Sie <xref:System.Net.NetworkCredential> für die <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext> angeben. Weitere Informationen finden Sie unter [Securing WCF Data Services](securing-wcf-data-services.md). Im Beispiel in diesem Thema wird gezeigt, wie beim Anfordern von Daten vom Datendienst explizit Anmelde Informationen bereitgestellt werden, die vom WCF Data Services-Client verwendet werden.  
   
  Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen. Sie können auch den [Northwind-Beispiel Datendienst](https://go.microsoft.com/fwlink/?LinkId=187426) verwenden, der auf der odata-Website veröffentlicht wird. dieser Beispiel Datendienst ist schreibgeschützt. Wenn Sie versuchen, Änderungen zu speichern, wird ein Fehler zurückgegeben. Die Beispiel Datendienste auf der odata-Website lassen die anonyme Authentifizierung zu.  
   
@@ -41,7 +41,7 @@ Standardmäßig werden beim Senden einer Anforderung an einen odata-Dienst von d
   
  [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Die folgenden Überlegungen zur Sicherheit gelten für das Beispiel in diesem Thema:  
   
 - Um zu überprüfen, ob die angegebenen Anmeldeinformationen in diesem Beispiel funktionieren, muss für den Northwind-Datendienst ein anderes Authentifizierungsschema als der anonyme Zugriff verwendet werden. Andernfalls werden von der Website, die den Datendienst hostet, keine Anmeldeinformationen angefordert.  

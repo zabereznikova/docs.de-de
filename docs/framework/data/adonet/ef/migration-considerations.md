@@ -2,12 +2,12 @@
 title: Migrationsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: e3e4caf79c1e75708e266e625a4271bc0c90747b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 168aec6ef369f446cfac22ee5c4361fa06aaf16d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854421"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569438"
 ---
 # <a name="migration-considerations-entity-framework"></a>Migrationsüberlegungen (Entity Framework)
 Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhandene Anwendung. Einer der wichtigsten dieser Vorteile ist die Möglichkeit, mithilfe eines konzeptionellen Modells von der Anwendung verwendete Datenstrukturen vom Schema in der Datenquelle zu trennen. Damit können Änderungen am Speichermodell oder an der Datenquelle selbst vorgenommen werden, ohne dass entsprechende Änderungen an der Anwendung notwendig werden. Weitere Informationen zu den Vorteilen der Verwendung des Entity Framework finden Sie unter [Entity Framework Übersicht](overview.md) und [Entity Data Model](../entity-data-model.md).  
@@ -29,7 +29,7 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
  Der Pfad zum Migrieren einer vorhandenen Anwendung zum Entity Framework hängt sowohl vom Anwendungstyp als auch von der vorhandenen Datenzugriffs Strategie ab. Beim Migrieren einer vorhandenen Anwendung zum Entity Framework müssen Sie jedoch immer die folgenden Aufgaben ausführen:  
   
 > [!NOTE]
-> Alle diese Aufgaben werden automatisch ausgeführt, wenn Sie die Entity Data Model Tools verwenden, die mit Visual Studio 2008 beginnen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie den Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))-Assistenten.  
+> Alle diese Aufgaben werden automatisch ausgeführt, wenn Sie die Entity Data Model Tools verwenden, die mit Visual Studio 2008 beginnen. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden des Entity Data Model-Assistenten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 1. Aktualisieren der Anwendung.  
   
@@ -37,23 +37,23 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 2. Definieren der Modelle und Zuordnungen.  
   
-     Die Modell- und Zuordnungsdateien definieren Entitäten im konzeptionellen Modell, Strukturen in der Datenquelle, wie Tabellen, gespeicherte Prozeduren und Ansichten, und die Zuordnung zwischen den Entitäten und Datenquellenstrukturen. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Definieren der Modell-und](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))Mapping-Dateien.  
+     Die Modell- und Zuordnungsdateien definieren Entitäten im konzeptionellen Modell, Strukturen in der Datenquelle, wie Tabellen, gespeicherte Prozeduren und Ansichten, und die Zuordnung zwischen den Entitäten und Datenquellenstrukturen. Weitere Informationen finden Sie unter Gewusst [wie: Manuelles Definieren der Modell-und Mapping-Dateien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
   
-     Die im Speichermodell definierten Typen müssen mit dem Namen der Objekte in der Datenquelle übereinstimmen. Wenn die vorhandene Anwendung Daten als Objekte bereitstellt, müssen Sie sicherstellen, dass die Entitäten und Eigenschaften, die im konzeptionellen Modell definiert werden, mit den Namen der bestehenden Datenklassen und Eigenschaften übereinstimmen. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Modellierungs-und Zuordnungs Dateien für die](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))Arbeit mit benutzerdefinierten Objekten.  
+     Die im Speichermodell definierten Typen müssen mit dem Namen der Objekte in der Datenquelle übereinstimmen. Wenn die vorhandene Anwendung Daten als Objekte bereitstellt, müssen Sie sicherstellen, dass die Entitäten und Eigenschaften, die im konzeptionellen Modell definiert werden, mit den Namen der bestehenden Datenklassen und Eigenschaften übereinstimmen. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen von Modellierungs-und Zuordnungs Dateien für die Arbeit mit benutzerdefinierten Objekten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100)).  
   
     > [!NOTE]
     > Der Entity Data Model-Designer wird verwendet, um Entitäten im konzeptionellen Modell umzubenennen, damit sie mit bestehenden Objekten übereinstimmen. Weitere Informationen finden Sie unter [Entity Data Model-Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
 3. Definieren der Verbindungszeichenfolge.  
   
-     Der Entity Framework verwendet eine speziell formatierte Verbindungs Zeichenfolge beim Ausführen von Abfragen für ein konzeptionelles Modell. Diese Verbindungszeichenfolge kapselt Informationen über die Modell- und Zuordnungsdateien und die Verbindung zur Datenquelle. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie die Verbindungs](how-to-define-the-connection-string.md)Zeichenfolge.  
+     Der Entity Framework verwendet eine speziell formatierte Verbindungs Zeichenfolge beim Ausführen von Abfragen für ein konzeptionelles Modell. Diese Verbindungszeichenfolge kapselt Informationen über die Modell- und Zuordnungsdateien und die Verbindung zur Datenquelle. Weitere Informationen finden Sie unter Gewusst [wie: Definieren der Verbindungs Zeichenfolge](how-to-define-the-connection-string.md).  
   
 4. Konfigurieren Sie das Visual Studio-Projekt.  
   
-     Verweise auf Entity Framework Assemblys und die Modell-und Zuordnungsdateien müssen dem Visual Studio-Projekt hinzugefügt werden. Sie können diese Mappingdateien dem Projekt hinzufügen, um zu gewährleisten, dass sie mit der Anwendung am in der Verbindungszeichenfolge angegebenen Speicherort bereitgestellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Konfigurieren eines Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Projekts.  
+     Verweise auf Entity Framework Assemblys und die Modell-und Zuordnungsdateien müssen dem Visual Studio-Projekt hinzugefügt werden. Sie können diese Mappingdateien dem Projekt hinzufügen, um zu gewährleisten, dass sie mit der Anwendung am in der Verbindungszeichenfolge angegebenen Speicherort bereitgestellt werden. Weitere Informationen finden Sie unter Vorgehens [Weise: Manuelles Konfigurieren eines Entity Framework Projekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Überlegungen für Anwendungen mit vorhandenen Objekten  
- Beginnend mit dem .NET Framework 4 unterstützt das Entity Framework "Plain Old" CLR Objects (poco), auch Persistenz ignorierende Objekte genannt. In den meisten Fällen können vorhandene Objekte mit dem Entity Framework arbeiten, indem kleinere Änderungen vorgenommen werden. Weitere Informationen finden Sie unter [Arbeiten mit poco-Entitäten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Sie können eine Anwendung auch zum Entity Framework migrieren und die Daten Klassen verwenden, die von den Entity Framework Tools generiert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie den Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))-Assistenten.  
+ Beginnend mit dem .NET Framework 4 unterstützt das Entity Framework "Plain Old" CLR Objects (poco), auch Persistenz ignorierende Objekte genannt. In den meisten Fällen können vorhandene Objekte mit dem Entity Framework arbeiten, indem kleinere Änderungen vorgenommen werden. Weitere Informationen finden Sie unter [Arbeiten mit poco-Entitäten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Sie können eine Anwendung auch zum Entity Framework migrieren und die Daten Klassen verwenden, die von den Entity Framework Tools generiert werden. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden des Entity Data Model-Assistenten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Überlegungen für Anwendungen, die ADO.NET-Anbieter verwenden  
  ADO.NET-Anbieter, wie z. b. SqlClient, ermöglichen es Ihnen, eine Datenquelle abzufragen, um Tabellendaten zurückzugeben. Daten können auch in ein ADO.NET-DataSet geladen werden. In der folgenden Liste werden Überlegungen zum Aktualisieren einer Anwendung beschrieben, die einen vorhandenen ADO.NET-Anbieter verwendet:  
@@ -73,7 +73,7 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 - Binden von Daten an Steuerelemente.  
 
-  Wenn Sie das konzeptionelle Modell Abfragen, gibt der Entity Framework die Daten als Objekte zurück, die Instanzen von Entitäts Typen sind. Diese Objekte können direkt an Steuerelemente gebunden werden, und diese Bindung unterstützt Updates. Dies bedeutet, dass Änderungen an den Daten in einem-Steuerelement, z. <xref:System.Windows.Forms.DataGridView>b. eine Zeile in, automatisch in der <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Datenbank gespeichert werden, wenn die-Methode aufgerufen wird.  
+  Wenn Sie das konzeptionelle Modell Abfragen, gibt der Entity Framework die Daten als Objekte zurück, die Instanzen von Entitäts Typen sind. Diese Objekte können direkt an Steuerelemente gebunden werden, und diese Bindung unterstützt Updates. Dies bedeutet, dass Änderungen an Daten in einem Steuerelement, z. b. eine Zeile in einer <xref:System.Windows.Forms.DataGridView>, automatisch in der Datenbank gespeichert werden, wenn die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>-Methode aufgerufen wird.  
   
   Wenn Ihre Anwendung die Ergebnisse einer Abfrage auflistet, um Daten in einem <xref:System.Windows.Forms.DataGridView> oder einem anderen die Datenbindung unterstützenden Steuerelement anzuzeigen, können Sie die Anwendung ändern, um das Steuerelement an das Ergebnis eines <xref:System.Data.Objects.ObjectQuery%601> zu binden.  
   
@@ -92,7 +92,7 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 - Anwendungen, die XML-Daten verwenden.  
 
-  Die Objektserialisierung ermöglicht es Ihnen, Entity Framework Data Services zu erstellen. Diese Dienste stellen Daten für Anwendungen bereit, die XML-Daten verwenden, z. B. AJAX-basierte Internetanwendungen. Erwägen Sie in diesen Fällen die Verwendung von [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Diese Datendienste basieren auf dem Entity Data Model und bieten dynamischen Zugriff auf Entitäts Daten mithilfe von standardmäßigen Representational State Transfer (Rest) http-Aktionen wie Get, Put und Post. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../../wcf/index.md).  
+  Die Objektserialisierung ermöglicht es Ihnen, Entity Framework Data Services zu erstellen. Diese Dienste stellen Daten für Anwendungen bereit, die XML-Daten verwenden, z. B. AJAX-basierte Internetanwendungen. In diesen Fällen sollten Sie WCF Data Services verwenden. Diese Datendienste basieren auf dem Entity Data Model und bieten dynamischen Zugriff auf Entitäts Daten mithilfe von standardmäßigen Representational State Transfer (Rest) http-Aktionen wie Get, Put und Post. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../../wcf/index.md).  
   
   Der Entity Framework unterstützt keinen systemeigenen XML-Datentyp. Das bedeutet, dass beim Mapping einer Entität zu einer Tabelle mit einer XML-Spalte die entsprechende Entitätseigenschaft für die XML-Spalte eine Zeichenfolge ist. Objekte können getrennt und als XML serialisiert werden. Weitere Informationen finden Sie unter [Serialisieren von Objekten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   

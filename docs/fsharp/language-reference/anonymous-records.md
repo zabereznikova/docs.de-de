@@ -1,21 +1,21 @@
 ---
 title: Anonyme Datensätze
-description: Informationen Sie zum Erstellen und anonyme Datensätze, eine Sprachfunktion, die mit der Bearbeitung von Daten unterstützen.
+description: Erfahren Sie, wie Sie die Erstellung und Verwendung anonymer Datensätze verwenden, einem sprach Feature, das die Bearbeitung von Daten unterstützt.
 ms.date: 06/12/2019
-ms.openlocfilehash: e576210d4fb76ccfd09f8feb157ef4542aa94ccf
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 0a7a819cc471c6579feacd621ed15aa89a6423ba
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041804"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569470"
 ---
 # <a name="anonymous-records"></a>Anonyme Datensätze
 
-Anonyme Datensätze sind einfache Aggregate benannter Werte, die nicht vor der Verwendung deklariert werden müssen. Sie können diese als entweder Strukturen oder Verweistypen deklarieren. Sie sind Verweistypen standardmäßig.
+Anonyme Datensätze sind einfache Aggregate benannter Werte, die nicht vor der Verwendung deklariert werden müssen. Sie können Sie als Strukturen oder Verweis Typen deklarieren. Sie sind standardmäßig Verweis Typen.
 
 ## <a name="syntax"></a>Syntax
 
-Die folgenden Beispiele veranschaulichen die Syntax für anonyme Datensatz. Elemente wie Trennzeichen `[item]` sind optional.
+In den folgenden Beispielen wird die anonyme Daten Satz Syntax veranschaulicht. Elemente, die als `[item]` getrennt sind, sind optional.
 
 ```fsharp
 // Construct an anonymous record
@@ -30,12 +30,11 @@ let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ..
 
 ## <a name="basic-usage"></a>Grundlegende Verwendung
 
-Anonyme Datensätze werden am besten als betrachtet F# Eintragstypen, die nicht vor der Instanziierung deklariert werden müssen.
+Anonyme Datensätze werden am besten als F# Daten Satz Typen betrachtet, die vor der Instanziierung nicht deklariert werden müssen.
 
-Erzeugt z. B. wie Sie mit einer Funktion interagieren können hier, die einen anonymen-Eintrag:
+Hier finden Sie beispielsweise Informationen zum interagieren mit einer Funktion, die einen anonymen Datensatz erzeugt:
 
 ```fsharp
-
 open System
 
 let getCircleStats radius =
@@ -51,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-Das folgende Beispiel baut auf dem vorherigen Beispiel mit einem `printCircleStats` -Funktion, einen anonyme Datensatz als Eingabe akzeptiert:
+Im folgenden Beispiel wird das vorherige mit einer `printCircleStats` Funktion erweitert, die einen anonymen Datensatz als Eingabe annimmt:
 
 ```fsharp
 open System
@@ -72,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-Aufrufen von `printCircleStats` mit jeder anonyme Datensatztyp, in denen die gleiche "Form" nicht wie der Eingabetyp nicht kompiliert:
+Das Aufrufen von `printCircleStats` mit anonymen Daten Satz Typen, die nicht die gleiche Form aufweisen wie der Eingabetyp, kann nicht kompiliert werden:
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -80,9 +79,9 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 // '["Area"; "Circumference"; "Diameter"]' and '["Area"; "Diameter"; "MyCircumference"]'
 ```
 
-## <a name="struct-anonymous-records"></a>Anonyme Struktur-Datensätze
+## <a name="struct-anonymous-records"></a>Anonyme Strukturdaten Sätze
 
-Anonyme Datensätze können auch festgelegt werden, als Struktur mit dem optionalen `struct` Schlüsselwort. Im folgende Beispiel erweitert das vorherige Beispiel von erzeugen und nutzen einen anonyme Struktur-Eintrag:
+Anonyme Datensätze können auch als struct mit dem optionalen `struct`-Schlüsselwort definiert werden. Im folgenden Beispiel wird die vorherige Struktur durch Erstellen und Verwenden eines anonymen Struktur-Datensatzes erweitert:
 
 ```fsharp
 open System
@@ -105,9 +104,9 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-### <a name="structness-inference"></a>Structness Typrückschluss
+### <a name="structness-inference"></a>Struktur Rückschluss
 
-Anonyme Struktur-Datensätze auch zulassen "Structness Typrückschluss", in dem Sie müssen nicht an die `struct` Schlüsselwort an der Aufrufsite. In diesem Beispiel ist Sie elide der `struct` Schlüsselwort beim Aufrufen von `printCircleStats`:
+Die anonymen Struktur-Datensätze ermöglichen auch "structness Inference", wobei Sie das `struct`-Schlüsselwort nicht an der aufrufssite angeben müssen. In diesem Beispiel entfernen Sie das `struct`-Schlüsselwort, wenn Sie `printCircleStats`aufrufen:
 
 ```fsharp
 
@@ -118,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-Das Gegenteil des Musters - Angabe `struct` fehl, wenn der Eingabetyp nicht um eine anonyme Struktur-Eintrags: ist zum Kompilieren.
+Das umgekehrte Muster: beim angeben `struct`, wenn der Eingabetyp kein der anonyme Struktur-Datensatz ist, kann nicht kompiliert werden.
 
-## <a name="embedding-anonymous-records-within-other-types"></a>Einbetten von anonymen Datensätze in andere Typen
+## <a name="embedding-anonymous-records-within-other-types"></a>Einbetten anonymer Datensätze in andere Typen
 
-Es ist sinnvoll, deklarieren Sie [Unterscheidungs-Unions](discriminated-unions.md) , dessen Fälle sind Datensätze. Aber wenn die Daten in den Datensätzen der gleiche Typ wie die Unterscheidungs-Union ist, müssen Sie alle Typen definieren, als sich gegenseitig rekursiv. Mit anonymen Datensätze vermeidet diese Einschränkung. Im folgenden ist ein Beispiel für Typ und Funktion dieses Muster entspricht, darüber:
+Es ist hilfreich, Unterscheidungs- [Unions](discriminated-unions.md) zu deklarieren, deren Fälle Datensätze sind. Wenn die Daten in den Datensätzen jedoch denselben Typ wie die Unterscheidungs-Union haben, müssen Sie alle Typen als gegenseitig rekursiv definieren. Diese Einschränkung wird durch die Verwendung anonymer Datensätze vermieden. Dabei handelt es sich um einen Beispieltyp und eine Funktion, die mit dem Muster übereinstimmen:
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -140,23 +139,23 @@ let getFirstName e =
     | Executive ex -> ex.Name.FirstName
 ```
 
-## <a name="copy-and-update-expressions"></a>Kopieren und Aktualisieren von Ausdrücken
+## <a name="copy-and-update-expressions"></a>Copy-und Update-Ausdrücke
 
-Anonyme Datensätzen unterstützen die Erstellung mit [kopieren und aktualisieren Sie die Ausdrücke](copy-and-update-record-expressions.md). Beispielsweise sieht wie Sie eine neue Instanz eines anonymen Datensatzes erstellen können, die kopiert eine vorhandene aus der Daten:
+Anonyme Datensätze unterstützen die Erstellung mit [Kopier-und Update Ausdrücken](copy-and-update-record-expressions.md). So können Sie z. b. eine neue Instanz eines anonymen Datensatzes erstellen, der die Daten eines vorhandenen Datensatzes kopiert:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-Im Gegensatz zu benannten Datensätze können anonyme Datensätze Sie ganz unterschiedliche Formen mit Kopie erstellen und Aktualisieren von Ausdrücken. Im folgenden Beispiel wird den gleiche anonyme Datensatz aus dem vorherigen Beispiel und erweitert er in einen neuen anonymen Datensatz:
+Im Gegensatz zu benannten Datensätzen können Sie mit anonymen Datensätzen jedoch ganz unterschiedliche Formulare mit Kopier-und Update Ausdrücken erstellen. Im folgenden Beispiel wird derselbe anonyme Datensatz aus dem vorherigen Beispiel angenommen und in einen neuen anonymen Datensatz erweitert:
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let expandedData = {| data with Z = 3 |} // Gives {| X=1; Y=2; Z=3 |}
 ```
 
-Es ist auch möglich, anonyme Datensätze aus Instanzen von benannten Datensätze zu erstellen:
+Es ist auch möglich, anonyme Datensätze aus Instanzen benannter Datensätze zu erstellen:
 
 ```fsharp
 type R = { X: int }
@@ -164,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-Sie können auch Daten in und aus Verweis und Struktur anonyme Datensätze kopieren:
+Sie können auch Daten in und aus Verweis-und Struktur anonymen Datensätzen kopieren:
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -184,22 +183,22 @@ let data2 = {| r1 with Y = 1 |}
 let data3 = struct {| data2 with Z = r2.X |}
 ```
 
-## <a name="properties-of-anonymous-records"></a>Eigenschaften des anonymen Datensätze
+## <a name="properties-of-anonymous-records"></a>Eigenschaften anonymer Datensätze
 
-Anonyme Datensätze haben es sich um eine Reihe von Eigenschaften, die wesentlich für dessen vollständig zu verstehen, wie sie verwendet werden können.
+Anonyme Datensätze verfügen über eine Reihe von Merkmalen, die für ein vollständiges Verständnis der Verwendung von verwendet werden können.
 
-### <a name="anonymous-records-are-nominal"></a>Anonyme Datensätze sind geringe
+### <a name="anonymous-records-are-nominal"></a>Anonyme Datensätze sind nominell
 
-Anonyme Datensätze sind [Nominale Typen](https://en.wikipedia.org/wiki/Nominal_type_system). Sie sind bewährte Gedanken, wie mit dem Namen [Datensatz](records.md) Typen (die auch nominale sind), die nicht die Deklaration ein Investitionen erforderlich sind.
+Anonyme Datensätze sind [Nominale Typen](https://en.wikipedia.org/wiki/Nominal_type_system). Sie sind am besten als benannte [Daten Satz](records.md) Typen (auch nominale), für die keine vorabdeklaration erforderlich ist.
 
-Betrachten Sie das folgende Beispiel mit zwei Deklarationen von anonymen Datensatz:
+Beachten Sie das folgende Beispiel mit zwei anonymen Daten Satz Deklarationen:
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-Die `x` und `y` Werte verschiedene Typen aufweisen und nicht miteinander kompatibel sind. Sie sind nicht gleichwertige, und sie sind nicht vergleichbar. Um dies zu veranschaulichen, betrachten Sie einen benannten Eintrag entspricht:
+Die Werte für `x` und `y` haben unterschiedliche Typen und sind nicht miteinander kompatibel. Sie sind nicht gleich stellbar und nicht vergleichbar. Um dies zu veranschaulichen, sollten Sie eine benannte Daten Satz Entsprechung beachten:
 
 ```fsharp
 type X = { X: int }
@@ -209,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-Es gibt keine irgendetwas grundsätzlich über anonyme Datensätze bei den entsprechenden benannten Eintrag verglichen wird, wenn der Typ Äquivalenz oder der Vergleichsspalte zu.
+Es gibt keine Unterschiede zu anonymen Datensätzen, wenn Sie mit ihren benannten Daten Satz Entsprechungen verglichen werden, wenn die typäquivalenz oder der Vergleich vorliegt.
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Anonyme Datensätze verwenden, strukturelle Gleichheit und Vergleich
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a>Anonyme Datensätze verwenden strukturelle Gleichheit und Vergleich
 
-Wie Record-Typen werden anonyme Datensätze strukturell gleichwertige und vergleichbar. Dies ist nur true, wenn alle enthaltenen Typen Gleichheits- und Vergleichsoperatoren, wie mit Record-Typen unterstützt. Um auf Gleichheit oder Vergleich zu unterstützen, müssen zwei anonyme Datensätze die gleiche "Form".
+Ebenso wie Daten Satz Typen sind anonyme Datensätze strukturell gleich und vergleichbar. Dies gilt nur, wenn alle konstituierenden Typen Gleichheit und Vergleich unterstützen, wie z. b. Daten Satz Typen. Um Gleichheit oder Vergleiche zu unterstützen, müssen zwei anonyme Datensätze die gleiche Form aufweisen.
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -223,9 +222,9 @@ Wie Record-Typen werden anonyme Datensätze strukturell gleichwertige und vergle
 {| a = 1 + 1 |} = {| a = 2;  b = 1|}
 ```
 
-### <a name="anonymous-records-are-serializable"></a>Anonyme Datensätze sind serialisierbar
+### <a name="anonymous-records-are-serializable"></a>Anonyme Datensätze sind serialisierbar.
 
-Sie können anonyme Datensätze serialisieren, ebenso wie mit benannten Datensätzen. Es folgt ein Beispiel mit ["newtonsoft.JSON"](https://www.nuget.org/packages/Newtonsoft.Json/):
+Sie können anonyme Datensätze genauso wie mit benannten Datensätzen serialisieren. Hier ist ein Beispiel für die Verwendung von " [newtonsoft. JSON](https://www.nuget.org/packages/Newtonsoft.Json/)":
 
 ```fsharp
 open Newtonsoft.Json
@@ -237,11 +236,11 @@ let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(str)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-Anonyme Datensätze sind nützlich für das Senden von geringe Menge von Daten über ein Netzwerk, ohne dass eine Domäne für die Typen für serialisiert bzw. deserialisiert wurden vorab definieren.
+Anonyme Datensätze sind nützlich, um Lightweight-Daten über ein Netzwerk zu senden, ohne dass Sie vorab eine Domäne für die serialisierten/deserialisierten Typen definieren müssen.
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Anonyme Datensätze Interoperabilität mit C# anonyme Typen
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>Anonyme Datensätze interagieren mit C# anonymen Typen
 
-Es ist möglich, eine .NET API verwenden, die die Verwendung von erfordert [ C# anonyme Typen](../../csharp/programming-guide/classes-and-structs/anonymous-types.md). C#anonyme Typen sind einfach, die über anonyme Datensätze mit zusammenarbeiten. Das folgende Beispiel zeigt, wie Sie anonyme Datensätze verwenden, um das Aufrufen einer [LINQ](../../csharp/programming-guide/concepts/linq/index.md) Überladung, die einen anonymen Typ ist erforderlich:
+Es ist möglich, eine .NET-API zu verwenden, die die Verwendung [ C# anonymer Typen](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)erfordert. C#anonyme Typen sind trivial für die Interoperabilität mit mithilfe anonymer Datensätze. Im folgenden Beispiel wird gezeigt, wie anonyme Datensätze verwendet werden, um eine [LINQ](../../csharp/programming-guide/concepts/linq/index.md) -Überladung aufzurufen, die einen anonymen Typ erfordert:
 
 ```fsharp
 open System.Linq
@@ -252,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-Es gibt eine Vielzahl von anderen APIs in .NET verwendet, die Übergabe eines anonymen Typs erfordern. Anonyme Datensätze sind Ihr Tool für die Arbeit mit ihnen.
+Es gibt zahlreiche andere APIs, die in .NET verwendet werden und die Verwendung der Übergabe eines anonymen Typs erfordern. Anonyme Datensätze sind das Tool für die Arbeit mit Ihnen.
 
 ## <a name="limitations"></a>Einschränkungen
 
-Anonyme Datensätze sind einige Einschränkungen, in deren Verwendung. Einige sind Bestandteil der videomonitore, andere dagegen offener gegenüber Änderungen.
+Für anonyme Datensätze gelten einige Einschränkungen bei der Verwendung. Einige sind in Ihrem Design verankert, andere können jedoch geändert werden.
 
-### <a name="limitations-with-pattern-matching"></a>Einschränkungen mit Mustervergleich
+### <a name="limitations-with-pattern-matching"></a>Einschränkungen bei der Muster Übereinstimmung
 
-Mustervergleich, im Gegensatz zu Datensätzen mit benannten unterstützt anonyme Datensätze nicht. Es gibt drei Gründe:
+Anonyme Datensätze unterstützen im Gegensatz zu benannten Datensätzen keinen Musterabgleich. Es gibt drei Gründe:
 
-1. Ein Muster müssten für jedes Feld eines anonymen-Datensatzes, im Gegensatz zu benannten Datensatztypen berücksichtigen. Dies ist da anonyme Datensätze nicht die strukturellen Untertypen unterstützen – sie Nominale Typen sind.
-2. Wegen (1) gibt es keine Möglichkeit, zusätzliche Mustern in einem Vergleichsausdruck Muster, da jede unterschiedliches Muster für einen anderen anonyme Datensatztyp nahelegt.
-3. Aufgrund von (3) wäre anonymen Datensatzmuster ausführlicher als die Verwendung der Schreibweise von "Punkt".
+1. Ein Muster muss jedes Feld eines anonymen Datensatzes berücksichtigen, anders als benannte Daten Satz Typen. Dies liegt daran, dass anonyme Datensätze keine strukturelle unter Typisierung unterstützen – Sie sind Nominale Typen.
+2. Aufgrund von (1) gibt es keine Möglichkeit, zusätzliche Muster in einem Muster Vergleichs Ausdruck zu haben, da jedes unterschiedliche Muster einen anderen anonymen Daten Satz Typ impliziert.
+3. Aufgrund von (3) wären alle anonymen Daten Satzmuster ausführlicher als die Verwendung der "Punkt"-Notation.
 
-Es ist eine open Language Vorschlag, [ermöglichen Musterabgleich in begrenzte Kontexte](https://github.com/fsharp/fslang-suggestions/issues/713).
+Es gibt einen offenen sprach Vorschlag, um den Musterabgleich [in eingeschränkten Kontexten zuzulassen](https://github.com/fsharp/fslang-suggestions/issues/713).
 
-### <a name="limitations-with-mutability"></a>Einschränkungen im Zusammenhang mit Veränderlichkeit
+### <a name="limitations-with-mutability"></a>Einschränkungen mit Veränderlichkeit
 
-Es ist nicht aktuell möglich ist, definieren Sie einen anonyme Datensatz mit `mutable` Daten. Gibt es eine [öffnen Sprache Vorschlag](https://github.com/fsharp/fslang-suggestions/issues/732) um änderbare Daten zu ermöglichen.
+Es ist derzeit nicht möglich, einen anonymen Datensatz mit `mutable` Daten zu definieren. Es gibt einen [offenen sprach Vorschlag](https://github.com/fsharp/fslang-suggestions/issues/732) , um änderbare Daten zuzulassen.
 
-### <a name="limitations-with-struct-anonymous-records"></a>Einschränkungen im Zusammenhang mit einer anonymen Struktur-Datensätze
+### <a name="limitations-with-struct-anonymous-records"></a>Einschränkungen mit anonymen Strukturdaten Sätzen
 
-Es ist nicht möglich, die Struktur anonyme Datensätze als deklarieren `IsByRefLike` oder `IsReadOnly`. Gibt es eine [Sprache Vorschlag öffnen](https://github.com/fsharp/fslang-suggestions/issues/712) zu für `IsByRefLike` und `IsReadOnly` anonyme Datensätze.
+Es ist nicht möglich, die anonymen Strukturdaten Sätze als `IsByRefLike` oder `IsReadOnly`zu deklarieren. Für `IsByRefLike` und `IsReadOnly` anonyme Datensätze ist ein [offener sprach Vorschlag](https://github.com/fsharp/fslang-suggestions/issues/712) vorhanden.

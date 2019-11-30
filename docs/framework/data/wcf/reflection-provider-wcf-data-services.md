@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: c3e160f96be2a95262776994152a06b42b475887
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0eeb223093d709cfe2722c2ad7cf622164eab32f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779809"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568877"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Reflektionsanbieter (WCF Data Services)
 
-Zusätzlich zu Daten aus einem Datenmodell über das Entity Framework kann [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Daten verfügbar machen, die in einem entitätsbasierten Modell nicht streng definiert sind. Der Reflexionsanbieter macht Daten in Klassen verfügbar, die Typen zurückgeben, die die <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet Reflexion, um ein Datenmodell für diese Klassen abzuleiten, und kann adressenbasierte Abfragen nach Ressourcen in LINQ (Language Integrated Query)-basierte Abfragen nach den verfügbar gemachten <xref:System.Linq.IQueryable%601>-Typen übersetzen.
+Zusätzlich zur Bereitstellung von Daten aus einem Datenmodell über das Entity Framework können WCF Data Services Daten verfügbar machen, die nicht streng in einem Entitäts basierten Modell definiert sind. Der Reflexionsanbieter macht Daten in Klassen verfügbar, die Typen zurückgeben, die die <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren. WCF Data Services verwendet Reflektion, um ein Datenmodell für diese Klassen abzuleiten, und kann Adressen basierte Abfragen für Ressourcen in LINQ (Language Integrated Query)-basierte Abfragen für die verfügbar gemachten <xref:System.Linq.IQueryable%601> Typen übersetzen.
 
 > [!NOTE]
 > Sie können eine <xref:System.Linq.Queryable.AsQueryable%2A>-Schnittstelle mithilfe der <xref:System.Linq.IQueryable%601>-Methode aus einer Klasse zurückgeben, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert. Dies ermöglicht die Verwendung der meisten generischen Auflistungstypen als Datenquelle für den Datendienst.
 
-Der Reflektionsanbieter unterstützt Typhierarchien. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Datendienst mithilfe des reflektionsanbieters](create-a-data-service-using-rp-wcf-data-services.md).
+Der Reflektionsanbieter unterstützt Typhierarchien. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen eines Daten Dienstanbieters mit dem reflektionsanbieter](create-a-data-service-using-rp-wcf-data-services.md).
 
 ## <a name="inferring-the-data-model"></a>Herleiten des Datenmodells
 
@@ -46,7 +46,7 @@ Wenn Sie den Datendienst erstellen, leitet der Anbieter das Datenmodell mithilfe
   - Wenn es sich beim Rückgabetyp der Eigenschaft um einen Werttyp handelt, stellt die Eigenschaft einen komplexen Typ dar.
 
 > [!NOTE]
-> Im Gegensatz zu einem Datenmodell, das auf dem Entitätsbeziehungsmodell basiert, verstehen auf dem Reflektionsanbieter basierende Modelle keine relationalen Daten. Verwenden Sie das Entity Framework, um relationale Daten über [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar zu machen.
+> Im Gegensatz zu einem Datenmodell, das auf dem Entitätsbeziehungsmodell basiert, verstehen auf dem Reflektionsanbieter basierende Modelle keine relationalen Daten. Sie sollten die Entity Framework verwenden, um relationale Daten über WCF Data Services verfügbar zu machen.
 
 ## <a name="data-type-mapping"></a>Datentypzuordnung
 
@@ -73,7 +73,7 @@ Wenn ein Datenmodell aus .NET Framework-Klassen abgeleitet wird, werden die prim
 
 ## <a name="enabling-updates-in-the-data-model"></a>Aktivieren von Updates im Datenmodell
 
-Der Reflektionsanbieter definiert eine <xref:System.Data.Services.IUpdatable>-Schnittstelle, um Updates für Daten zu ermöglichen, die durch diese Art von Datenmodell verfügbar gemacht werden. Diese Schnittstelle weist den Datendienst an, wie Updates für die verfügbar gemachten Typen beibehalten werden. Die Entitätscontainerklasse muss die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren, um Updates für vom Datenmodell definierte Ressourcen zu aktivieren. Ein Beispiel für eine Implementierung der <xref:System.Data.Services.IUpdatable> -Schnittstelle finden [Sie unter Gewusst wie: Erstellen Sie einen Datendienst mit einer LINQ to SQL Daten](create-a-data-service-using-linq-to-sql-wcf.md)Quelle.
+Der Reflektionsanbieter definiert eine <xref:System.Data.Services.IUpdatable>-Schnittstelle, um Updates für Daten zu ermöglichen, die durch diese Art von Datenmodell verfügbar gemacht werden. Diese Schnittstelle weist den Datendienst an, wie Updates für die verfügbar gemachten Typen beibehalten werden. Die Entitätscontainerklasse muss die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren, um Updates für vom Datenmodell definierte Ressourcen zu aktivieren. Ein Beispiel für eine Implementierung der <xref:System.Data.Services.IUpdatable>-Schnittstelle finden [Sie unter How to: Create a Data Service using an LINQ to SQL Data Source](create-a-data-service-using-linq-to-sql-wcf.md).
 
 Die <xref:System.Data.Services.IUpdatable>-Schnittstelle erfordert, dass die folgenden Member implementiert werden, damit Updates mit dem Reflektionsanbieter zur Datenquelle weitergegeben werden können:
 
@@ -94,11 +94,11 @@ Die <xref:System.Data.Services.IUpdatable>-Schnittstelle erfordert, dass die fol
 
 ## <a name="handling-concurrency"></a>Behandeln von Parallelität
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt ein Modell vollständiger Parallelität, indem es Ihnen das Definieren eines Parallelitätstokens für eine Entität ermöglicht. Dieses Parallelitätstoken, das eine oder mehrere Eigenschaften der Entität beinhaltet, wird vom Datendienst verwendet, um zu bestimmen, ob eine Änderung in den angeforderten, aktualisierten oder gelöschten Daten aufgetreten ist. Wenn Tokenwerte die vom eTag in der Anforderung abgerufen wurden, sich von den aktuellen Werten der Entität unterscheiden, löst der Datendienst eine Ausnahme aus. Das <xref:System.Data.Services.ETagAttribute> wird auf einen Entitätstyp angewendet, um im Reflektionsanbieter ein Parallelitätstoken zu definieren. Im Parallelitätstoken darf keine Schlüsseleigenschaft oder Navigationseigenschaft enthalten sein. Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).
+WCF Data Services unterstützt ein optimistisches Parallelitäts Modell, indem es Ihnen ermöglicht, ein Parallelitäts Token für eine Entität zu definieren. Dieses Parallelitätstoken, das eine oder mehrere Eigenschaften der Entität beinhaltet, wird vom Datendienst verwendet, um zu bestimmen, ob eine Änderung in den angeforderten, aktualisierten oder gelöschten Daten aufgetreten ist. Wenn Tokenwerte die vom eTag in der Anforderung abgerufen wurden, sich von den aktuellen Werten der Entität unterscheiden, löst der Datendienst eine Ausnahme aus. Das <xref:System.Data.Services.ETagAttribute> wird auf einen Entitätstyp angewendet, um im Reflektionsanbieter ein Parallelitätstoken zu definieren. Im Parallelitätstoken darf keine Schlüsseleigenschaft oder Navigationseigenschaft enthalten sein. Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).
 
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Verwenden von LINQ to SQL mit dem Reflektionsanbieter
 
-Da das Entity Framework standardmäßig systemintern unterstützt wird, ist es der empfohlene Datenanbieter zum Verwenden von relationalen Daten mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Sie können allerdings LINQ to SQL-Klassen mithilfe des Reflektionsanbieters mit einem Datendienst verwenden. Die <xref:System.Data.Linq.Table%601> Resultsets, die von Methoden für das <xref:System.Data.Linq.DataContext> zurückgegeben werden, das vom LINQ to SQL objektrelationaler Designer (O/R- <xref:System.Linq.IQueryable%601> Designer) generiert wird, implementieren die-Schnittstelle. Dies ermöglicht dem Reflektionsanbieter, auf diese Methoden zuzugreifen und mit den generierten LINQ to SQL-Klassen Entitätsdaten aus SQL Server zurückzugeben. Da LINQ to SQL die <xref:System.Data.Services.IUpdatable>-Schnittstelle nicht implementiert, müssen Sie jedoch eine partielle Klasse hinzufügen, die die vorhandene partielle <xref:System.Data.Linq.DataContext>-Klasse erweitert, um die <xref:System.Data.Services.IUpdatable>-Implementierung hinzuzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Datendienst mit einer LINQ to SQL Daten](create-a-data-service-using-linq-to-sql-wcf.md)Quelle.
+Da der Entity Framework standardmäßig System intern unterstützt wird, ist es der empfohlene Datenanbieter zum Verwenden von relationalen Daten mit WCF Data Services. Sie können allerdings LINQ to SQL-Klassen mithilfe des Reflektionsanbieters mit einem Datendienst verwenden. Die <xref:System.Data.Linq.Table%601> Resultsets, die von Methoden auf dem vom LINQ to SQL objektrelationaler Designer (O/R-Designer) generierten <xref:System.Data.Linq.DataContext> zurückgegeben werden, implementieren die <xref:System.Linq.IQueryable%601>-Schnittstelle. Dies ermöglicht dem Reflektionsanbieter, auf diese Methoden zuzugreifen und mit den generierten LINQ to SQL-Klassen Entitätsdaten aus SQL Server zurückzugeben. Da LINQ to SQL die <xref:System.Data.Services.IUpdatable>-Schnittstelle nicht implementiert, müssen Sie jedoch eine partielle Klasse hinzufügen, die die vorhandene partielle <xref:System.Data.Linq.DataContext>-Klasse erweitert, um die <xref:System.Data.Services.IUpdatable>-Implementierung hinzuzufügen. Weitere Informationen finden Sie unter [How to: Create a Data Service using a LINQ to SQL Data Source](create-a-data-service-using-linq-to-sql-wcf.md).
 
 ## <a name="see-also"></a>Siehe auch
 

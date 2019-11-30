@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anpassen des Daten Bindungs Verhaltens (WCF Data Services)'
+title: 'Gewusst wie: Anpassen des Datenbindungsverhaltens (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: c878096cba7d31e0b48727213ee1bb8239b8f690
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 453562dd1b86756bf9fc1684dc649dba1c24c578
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790752"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569165"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Vorgehensweise: Anpassen des Daten Bindungs Verhaltens (WCF Data Services)
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie benutzerdefinierte Logik angeben, die von der <xref:System.Data.Services.Client.DataServiceCollection%601> aufgerufen wird, wenn ein Objekt hinzugefügt oder aus der Bindungsauflistung entfernt wird oder wenn eine Eigenschaftenänderung erkannt wird. Diese benutzerdefinierte Logik wird als Methoden bereitgestellt, <xref:System.Func%602> auf `false` die als Delegaten verwiesen wird, die den Wert zurückgeben, wenn das Standardverhalten weiterhin ausgeführt werden `true` soll, wenn die benutzerdefinierte Methode abgeschlossen wird und wenn die nachfolgende Verarbeitung des das Ereignis sollte beendet werden.  
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Gewusst wie: Anpassen des Datenbindungsverhaltens (WCF Data Services)
+Mit WCF Data Services können Sie benutzerdefinierte Logik angeben, die vom <xref:System.Data.Services.Client.DataServiceCollection%601> aufgerufen wird, wenn ein Objekt der Bindungs Auflistung hinzugefügt oder daraus entfernt wird oder wenn eine Eigenschaften Änderung erkannt wird. Diese benutzerdefinierte Logik wird als Methoden bereitgestellt, auf die als <xref:System.Func%602> Delegaten verwiesen wird, die den Wert `false` zurückgeben, wenn das Standardverhalten weiterhin ausgeführt werden soll, wenn die benutzerdefinierte Methode abgeschlossen ist, und `true`, wenn die nachfolgende Verarbeitung des Ereignisses beendet werden soll.  
   
  In den Beispielen in diesem Thema werden benutzerdefinierte Methoden für die Parameter `entityChanged` und `entityCollectionChanged` von <xref:System.Data.Services.Client.DataServiceCollection%601> angegeben. In den Beispielen in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Clientdatendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   

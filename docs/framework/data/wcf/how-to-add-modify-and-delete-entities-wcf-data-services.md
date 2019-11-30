@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen, ändern und Löschen von Entitäten (WCF Data Services)'
+title: 'Gewusst wie: Hinzufügen, Ändern und Löschen von Entitäten (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 501bec59a61b51ec4bece4b0ce2f941189b35ed0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780249"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569197"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Vorgehensweise: Hinzufügen, ändern und Löschen von Entitäten (WCF Data Services)
-Mit den [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client Bibliotheken können Sie Entitäts Daten in einem Datendienst erstellen, aktualisieren und löschen, indem Sie entsprechende Aktionen für Objekte <xref:System.Data.Services.Client.DataServiceContext>im ausführen. Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Gewusst wie: Hinzufügen, Ändern und Löschen von Entitäten (WCF Data Services)
+Mit den WCF Data Services-Client Bibliotheken können Sie Entitäts Daten in einem Datendienst erstellen, aktualisieren und löschen, indem Sie entsprechende Aktionen für Objekte im <xref:System.Data.Services.Client.DataServiceContext>ausführen. Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).  
   
  Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   
@@ -46,6 +46,6 @@ Mit den [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client Bibli
 ## <a name="see-also"></a>Siehe auch
 
 - [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
-- [Vorgehensweise: Eine vorhandene Entität an DataServiceContext anfügen](attach-an-existing-entity-to-dc-wcf-data.md)
-- [Vorgehensweise: Definieren von Entitäts Beziehungen](how-to-define-entity-relationships-wcf-data-services.md)
+- [Vorgehensweise: Anfügen einer vorhandenen Entität an DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
+- [Vorgehensweise: Definieren von Entitätsbeziehungen](how-to-define-entity-relationships-wcf-data-services.md)
 - [Batchvorgänge](batching-operations-wcf-data-services.md)

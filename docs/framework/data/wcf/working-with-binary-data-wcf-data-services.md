@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: e088383adf2345f9a2698d0f8794765461cdbaad
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9a09908a2a998d5da739b28aefda3d5aecdc08e0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975023"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568739"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Arbeiten mit Binärdaten (WCF-Datendienste)
 
-Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client Bibliothek ermöglicht das Abrufen und Aktualisieren von Binärdaten aus einem Open Data Protocol (odata)-Feed auf eine der folgenden Arten:
+Die WCF Data Services-Client Bibliothek ermöglicht das Abrufen und Aktualisieren von Binärdaten aus einem Open Data Protocol (odata)-Feed auf eine der folgenden Arten:
 
 - Als primitive Typeigenschaft einer Entität. Dies ist die empfohlene Methode für das Arbeiten mit kleinen Binärdatenobjekten, die problemlos in den Arbeitsspeicher geladen werden können. In diesem Fall handelt es sich bei der binären Eigenschaft um eine vom Datenmodell verfügbar gemachte Entitätseigenschaft. Der Datendienst serialisiert die Binärdaten als binär codiertes base64-XML in der Antwortnachricht.
 
 - Als separater binärer Ressourcenstream. Dies ist die empfohlene Methode für den Zugriff auf BLOB-Daten (Binary Large Object), die ein Foto, Video oder einen beliebigen anderen Typ binär codierter Daten darstellen, und das Ändern dieser Daten.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementiert das Streaming von Binärdaten mithilfe von http, wie in odata definiert. In diesem Mechanismus werden Binärdaten als Medien Ressource behandelt, die von einer Entität getrennt ist, aber mit dieser verknüpft ist. Dies wird als Medien Link Eintrag bezeichnet. Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).
+WCF Data Services implementiert das Streaming von Binärdaten mithilfe von http, wie in odata definiert. In diesem Mechanismus werden Binärdaten als Medien Ressource behandelt, die von einer Entität getrennt ist, aber mit dieser verknüpft ist. Dies wird als Medien Link Eintrag bezeichnet. Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Ein Schritt-für-Schritt-Beispiel für die Erstellung einer WPF-Client Anwendung (Windows Presentation Foundation), mit der binäre Bilddateien von einem odata-Dienst heruntergeladen werden, der Fotos speichert, finden Sie im Beitrag [Data Services Streaming Provider Series-Part 2: Zugreifen auf einen medienressourcenstream vom Client](https://go.microsoft.com/fwlink/?LinkId=201637). Den Beispielcode für den Stream Photo Data Service, der im Blogbeitrag vorgestellt wird, finden Sie im [Beispiel Streaming Photo Data Service (Streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) ) in der MSDN Code Gallery.
@@ -34,11 +34,11 @@ Eine Entität mit einem verknüpften Medienressourcenstream wird in den Metadate
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Die verbleibenden Beispiele in diesem Thema zeigen, wie Sie auf den Medienressourcenstream zugreifen und ihn ändern. Ein umfassendes Beispiel für die Nutzung eines Medienressourcen Datenstroms in einer .NET Framework Client Anwendung mithilfe der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client Bibliothek finden Sie im Beitrag [zugreifen auf einen Medienressourcen-Stream vom Client](https://go.microsoft.com/fwlink/?LinkID=201637).
+Die verbleibenden Beispiele in diesem Thema zeigen, wie Sie auf den Medienressourcenstream zugreifen und ihn ändern. Ein umfassendes Beispiel für die Nutzung eines Medienressourcen Datenstroms in einer .NET Framework Client Anwendung mithilfe der WCF Data Services-Client Bibliothek finden Sie im Beitrag [zugreifen auf einen Medienressourcen-Stream vom Client](https://go.microsoft.com/fwlink/?LinkID=201637).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Zugreifen auf den binären Ressourcenstream
 
-Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client Bibliothek stellt Methoden für den Zugriff auf binäre Ressourcenstreams von einem odata-basierten Datendienst bereit. Wenn Sie eine Medienressource herunterladen, können Sie entweder den URI der Medienressource verwenden oder einen binären Stream abrufen, der die Medienressource selbst enthält. Sie können Medienressourcendaten auch als binären Stream hochladen.
+Die WCF Data Services-Client Bibliothek stellt Methoden für den Zugriff auf binäre Ressourcenstreams von einem odata-basierten Datendienst bereit. Wenn Sie eine Medienressource herunterladen, können Sie entweder den URI der Medienressource verwenden oder einen binären Stream abrufen, der die Medienressource selbst enthält. Sie können Medienressourcendaten auch als binären Stream hochladen.
 
 > [!TIP]
 > Ein Schritt-für-Schritt-Beispiel für die Erstellung einer WPF-Client Anwendung (Windows Presentation Foundation), mit der binäre Bilddateien von einem odata-Dienst heruntergeladen werden, der Fotos speichert, finden Sie im Beitrag [Data Services Streaming Provider Series-Part 2: Zugreifen auf einen medienressourcenstream vom Client](https://go.microsoft.com/fwlink/?LinkId=201637). Den Beispielcode für den Stream Photo Data Service, der im Blogbeitrag vorgestellt wird, finden Sie im [Beispiel Streaming Photo Data Service (Streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) ) in der MSDN Code Gallery.

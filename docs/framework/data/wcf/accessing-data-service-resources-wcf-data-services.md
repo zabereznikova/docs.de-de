@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975432"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569403"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die Open Data Protocol (odata), um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
+WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
   
 ## <a name="addressing-resources"></a>Adressieren von Ressourcen  
  In odata adressieren Sie alle Daten, die vom Datenmodell mithilfe eines URI verfügbar gemacht werden. Der folgende URI gibt z. b. einen Feed zurück, bei dem es sich um die Entitätenmenge Customers handelt, die Einträge für alle Instanzen des Customer-Entitäts Typs enthält:  
@@ -56,7 +56,7 @@ ms.locfileid: "73975432"
   
  Die Einträge des zurückgegebenen Feeds werden zudem nach dem Wert der ShipCity-Eigenschaft der Bestellungen geordnet.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die folgenden odata-System Abfrage Optionen:  
+ WCF Data Services unterstützt die folgenden odata-System Abfrage Optionen:  
   
 |Abfrageoption|Beschreibung|  
 |------------------|-----------------|  

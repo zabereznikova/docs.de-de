@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975125"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568806"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 
@@ -25,7 +25,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
 
 - Medienlinkeintrag – eine Entität, die über einen Verweis auf einen zugehörigen Medienressourcenstream verfügt.
 
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] definieren Sie einen binären Ressourcenstream durch das Implementieren eines Streamingdatenanbieters. Die streaminganbieter-Implementierung stellt dem Datendienst den Medienressourcen Datenstrom bereit, der einer bestimmten Entität zugeordnet ist, als <xref:System.IO.Stream> Objekt. Diese Implementierung ermöglicht dem Datendienst, Medienressourcen über HTTP als binäre Datenströme eines angegebenen MIME-Typs zu akzeptieren und zurückzugeben.
+Mit WCF Data Services definieren Sie einen binären Ressourcenstream, indem Sie einen streamingdatenanbieter implementieren. Die streaminganbieter-Implementierung stellt dem Datendienst den Medienressourcen Datenstrom bereit, der einer bestimmten Entität zugeordnet ist, als <xref:System.IO.Stream> Objekt. Diese Implementierung ermöglicht dem Datendienst, Medienressourcen über HTTP als binäre Datenströme eines angegebenen MIME-Typs zu akzeptieren und zurückzugeben.
 
 Folgende Schritte sind erforderlich, um einen Datendienst zu konfigurieren, der das Streaming von Binärdaten unterstützt:
 
@@ -67,7 +67,7 @@ Wenn Sie benutzerdefinierte Dienstanbieter verwenden, implementieren Sie die <xr
 
 Um einen Datendienst zu erstellen, der binäre Datenströme unterstützt, müssen Sie die <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Schnittstelle implementieren. Diese Implementierung ermöglicht dem Datendienst, Binärdaten als Datenstrom an den Client zurückzugeben und Binärdaten als einen vom Client gesendeten Datenstrom zu nutzen. Der Datendienst erstellt immer dann eine Instanz dieser Schnittstelle, wenn er auf Binärdaten als Datenstrom zugreifen muss. Die <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Schnittstelle legt die folgenden Member fest:
 
-|Membername|Beschreibung|
+|Mitgliedsname|Beschreibung|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|Diese Methode wird vom Datendienst aufgerufen, um die entsprechende Medienressource zu löschen, wenn ihr Medienlinkeintrag gelöscht wird. Wenn Sie <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementieren, enthält diese Methode den Code, mit dem die dem angegebenen Medienlinkeintrag zugeordnete Medienressource gelöscht wird.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|Diese Methode wird vom Datendienst aufgerufen, um eine Medienressource als Datenstrom zurückzugeben. Wenn Sie <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementieren, enthält diese Methode den Code, der einen Datenstrom bereitstellt, der vom Datendienst zum Zurückgeben der dem bereitgestellten Medienlinkeintrag zugeordneten Medienressource verwendet wird.|
@@ -79,7 +79,7 @@ Um einen Datendienst zu erstellen, der binäre Datenströme unterstützt, müsse
 
 ## <a name="creating-the-streaming-data-service"></a>Erstellen des Streamingdatendiensts
 
-Damit die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Laufzeit auf die <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Implementierung zugreifen kann, muss der Datendienst, den Sie erstellen, auch die <xref:System.IServiceProvider>-Schnittstelle implementieren. Im folgenden Beispiel wird gezeigt, wie die <xref:System.IServiceProvider.GetService%2A>-Methode implementiert wird, um eine Instanz der `PhotoServiceStreamProvider`-Klasse zurückzugeben, die <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementiert.
+Um der WCF Data Services Laufzeit Zugriff auf die <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Implementierung bereitzustellen, muss der von Ihnen erstellte Datendienst auch die <xref:System.IServiceProvider>-Schnittstelle implementieren. Im folgenden Beispiel wird gezeigt, wie die <xref:System.IServiceProvider.GetService%2A>-Methode implementiert wird, um eine Instanz der `PhotoServiceStreamProvider`-Klasse zurückzugeben, die <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementiert.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdiens
 
 ## <a name="using-data-streams-in-a-client-application"></a>Verwenden von Datenströmen in einer Clientanwendung
 
-Mithilfe der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek können Sie diese verfügbar gemachten Ressourcen als binäre Datenströme auf dem Client abrufen und aktualisieren. Weitere Informationen finden Sie unter [Arbeiten mit Binärdaten](working-with-binary-data-wcf-data-services.md).
+Mit der WCF Data Services-Client Bibliothek können Sie diese verfügbar gemachten Ressourcen als binäre Streams auf dem Client abrufen und aktualisieren. Weitere Informationen finden Sie unter [Arbeiten mit Binärdaten](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Überlegungen zum Arbeiten mit einem Streaminganbieter
 

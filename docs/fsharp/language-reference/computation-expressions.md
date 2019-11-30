@@ -2,18 +2,18 @@
 title: Berechnungsausdrücke
 description: Erfahren Sie, wie Sie eine bequeme Syntax zum Schreiben von F# Berechnungen in erstellen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können.
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976785"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569459"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
 Berechnungs Ausdrücke in F# bieten eine bequeme Syntax zum Schreiben von Berechnungen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können. Abhängig von der Art des Berechnungs Ausdrucks können Sie sich als Möglichkeit vorstellen, Monads, Monoids, Monad-Transformatoren und Anwendungs Funktoren auszudrücken. Im Gegensatz zu anderen Sprachen (z. b. *do-Notation* in Haskell) sind Sie jedoch nicht an eine einzelne Abstraktion gebunden, und Sie verlassen sich nicht auf Makros oder andere Formen der Metaprogrammierung, um eine bequeme und kontextabhängige Syntax zu erreichen.
 
-## <a name="overview"></a>Übersicht
+## <a name="overview"></a>Übersicht über
 
 Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung ist die Ausführung mit nur einem Thread, die leicht verständlich und geändert werden kann. Allerdings sind nicht alle Berechnungs Formen so einfach wie die Ausführung mit einem Thread. Beispiele:
 
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-Ab 4,5 F# können Sie mit dem`match!`-Schlüsselwort einen aufzurufenden Berechnungs Ausdruck in eine Inline-und Muster Übereinstimmung für das Ergebnis überführen:
+Mit dem `match!`-Schlüsselwort können Sie einen anderen Berechnungs Ausdruck Inline aufzurufen und die Muster Übereinstimmung für das Ergebnis erreichen:
 
 ```fsharp
 let doThingsAsync url =
@@ -250,7 +250,7 @@ In der folgenden Tabelle werden die Methoden beschrieben, die in einer Workflow 
 |`Zero`|`unit -> M<'T>`|Wird für leere `else` branches von `if...then` Ausdrücken in Berechnungs Ausdrücken aufgerufen.|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Gibt an, dass der Berechnungs Ausdruck als Anführungszeichen an den `Run` Member übermittelt wird. Dabei werden alle Instanzen einer Berechnung in ein Anführungszeichen übersetzt.|
 
-Viele der Methoden in einer Generator-Klasse verwenden und geben ein `M<'T>` Konstrukt zurück. Hierbei handelt es sich in der Regel um einen separat definierten Typ, der die Art der zu kombinierenden Berechnungen kennzeichnet, z. b. `Async<'T>` für asynchrone Workflows und `Seq<'T>` für die Sequenz. Workflows. Mit den Signaturen dieser Methoden können Sie kombiniert und miteinander verknüpft werden, sodass das von einem Konstrukt zurückgegebene Workflow Objekt an das nächste weitergegeben werden kann. Wenn der Compiler einen Berechnungs Ausdruck analysiert, konvertiert er den Ausdruck in eine Reihe von geschalbten Funktionsaufrufen, indem er die Methoden in der vorangehenden Tabelle und den Code im Berechnungs Ausdruck verwendet.
+Viele der Methoden in einer Generator-Klasse verwenden und geben ein `M<'T>` Konstrukt zurück. Hierbei handelt es sich in der Regel um einen separat definierten Typ, der die Art der zu kombinierenden Berechnungen kennzeichnet, z. b. `Async<'T>` für asynchrone Workflows und `Seq<'T>` für Sequenz Workflows. Mit den Signaturen dieser Methoden können Sie kombiniert und miteinander verknüpft werden, sodass das von einem Konstrukt zurückgegebene Workflow Objekt an das nächste weitergegeben werden kann. Wenn der Compiler einen Berechnungs Ausdruck analysiert, konvertiert er den Ausdruck in eine Reihe von geschalbten Funktionsaufrufen, indem er die Methoden in der vorangehenden Tabelle und den Code im Berechnungs Ausdruck verwendet.
 
 Der-Ausdruck hat die folgende Form:
 
@@ -258,7 +258,7 @@ Der-Ausdruck hat die folgende Form:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Im obigen Code werden die Aufrufe von `Run` und `Delay` ausgelassen, wenn Sie in der Berechnungs Ausdrucks-Generator-Klasse nicht definiert sind. Der Text des Berechnungs Ausdrucks, der hier als `{| cexpr |}`bezeichnet wird, wird in Aufrufe übersetzt, die die Methoden der Generator-Klasse durch die in der folgenden Tabelle beschriebenen Übersetzungen einschließen. Der Berechnungs Ausdrucks `{| cexpr |}` wird rekursiv gemäß diesen Übersetzungen definiert, wobei `expr` F# ein Ausdruck und`cexpr`ein Berechnungs Ausdruck ist.
+Im obigen Code werden die Aufrufe von `Run` und `Delay` ausgelassen, wenn Sie in der Berechnungs Ausdrucks-Generator-Klasse nicht definiert sind. Der Text des Berechnungs Ausdrucks, der hier als `{| cexpr |}`bezeichnet wird, wird in Aufrufe übersetzt, die die Methoden der Generator-Klasse durch die in der folgenden Tabelle beschriebenen Übersetzungen einschließen. Der Berechnungs Ausdrucks `{| cexpr |}` wird rekursiv gemäß diesen Übersetzungen definiert, wobei `expr` F# ein Ausdruck und `cexpr` ein Berechnungs Ausdruck ist.
 
 |expression|Übersetzung|
 |----------|-----------|

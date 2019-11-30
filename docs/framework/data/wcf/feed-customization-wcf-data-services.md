@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 56c91fd1e9ea4a2e35bacbebab0f489e337cfec5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975290"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569222"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet die Open Data Protocol (odata), um Daten als Feed verfügbar zu machen. Odata unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Wenn Sie einen Atom-Feed verwenden, stellt odata eine Standardmethode zum Serialisieren von Daten (z. b. Entitäten und Beziehungen) in ein XML-Format bereit, das in den Text der HTTP-Nachricht aufgenommen werden kann. Odata definiert eine standardmäßige Entitäts Eigenschafts Zuordnung zwischen den Daten, die in Entitäten und Atom-Elementen enthalten sind. Weitere Informationen finden Sie unter [odata: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Data Services verwendet die Open Data Protocol (odata), um Daten als Feed verfügbar zu machen. Odata unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Wenn Sie einen Atom-Feed verwenden, stellt odata eine Standardmethode zum Serialisieren von Daten (z. b. Entitäten und Beziehungen) in ein XML-Format bereit, das in den Text der HTTP-Nachricht aufgenommen werden kann. Odata definiert eine standardmäßige Entitäts Eigenschafts Zuordnung zwischen den Daten, die in Entitäten und Atom-Elementen enthalten sind. Weitere Informationen finden Sie unter [odata: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  In Ihrem Anwendungsszenario ist es möglicherweise erforderlich, dass die vom Datendienst zurückgegebenen Eigenschaftendaten benutzerdefiniert serialisiert werden anstatt im Standardfeedformat. Mit odata können Sie die Serialisierung in einem Datenfeed anpassen, damit Eigenschaften einer Entität nicht verwendeten Elementen und Attributen eines Eintrags oder benutzerdefinierten Elementen eines Eintrags im Feed zugeordnet werden können.  
   
 > [!NOTE]
 > Die Feedanpassung wird nur für Atom-Feeds unterstützt. Benutzerdefinierte Feeds werden nicht zurückgegeben, wenn das JSON (JavaScript Object Notation)-Format für den zurückgegebenen Feed angefordert wird.  
   
- Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie eine alternative Entitätseigenschaftszuordnung für eine Atom-Nutzlast definieren, indem Sie Attribute manuell auf Entitätstypen im Datenmodell anwenden. Der Datenquellenanbieter des Datendiensts bestimmt, wie diese Attribute angewendet werden.  
+ Mit WCF Data Services können Sie eine Alternative Entitäts Eigenschafts Zuordnung für eine Atom-Nutzlast definieren, indem Sie Attribute manuell auf Entitäts Typen im Datenmodell anwenden. Der Datenquellenanbieter des Datendiensts bestimmt, wie diese Attribute angewendet werden.  
   
 > [!IMPORTANT]
 > Wenn Sie benutzerdefinierte Feeds definieren, müssen Sie gewährleisten, dass alle Entitätseigenschaften, für die benutzerdefinierte Zuordnungen definiert wurden, in der Projektion enthalten sind. Wenn eine zugeordnete Entitätseigenschaft nicht in der Projektion enthalten ist, könnten Datenverluste auftreten. Weitere Informationen finden Sie unter [Abfrage Projektionen](query-projections-wcf-data-services.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "73975290"
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|Gibt den Inhaltstyp an. Die folgenden Schlüsselwörter definieren Syndication-Inhaltstypen.<br /><br /> `text:` wird der Eigenschafts Wert im Feed als Text angezeigt.<br /><br /> `html:` wird der-Eigenschafts Wert im Feed als HTML angezeigt.<br /><br /> `xhtml:` der-Eigenschafts Wert im Feed als XML-formatierter HTML-Code angezeigt wird.<br /><br /> Diese Schlüsselwörter entsprechen den Werten der mit dem Reflexionsanbieter verwendeten <xref:System.Data.Services.Common.SyndicationTextContentKind>-Enumeration.<br /><br /> Dieses Attribut wird nicht unterstützt, wenn das `FC_NsPrefix`-Attribut und das `FC_NsUri`-Attribut verwendet werden.<br /><br /> Wenn Sie den Wert `xhtml` für das `FC_ContentKind`-Attribut angeben, müssen Sie sicherstellen, dass der Eigenschaftswert ordnungsgemäß formatiertes XML enthält. Der Datendienst gibt den Wert zurück, ohne irgendwelche Transformationen auszuführen. Sie müssen auch sicherstellen, dass alle XML-Elementpräfixe im zurückgegebenen XML einen Namespace-URI und ein Präfix haben, die im zugeordneten Feed definiert sind.|  
-|`FC_KeepInContent`|Gibt an, dass der Eigenschaftswert, auf den verwiesen wird, sowohl im Inhaltsabschnitt des Feeds als auch im zugeordneten Speicherort enthalten sein soll. Gültige Werte sind `true` und `false`. Um den resultierenden Feed abwärts kompatibel mit früheren Versionen von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zu machen, geben Sie den Wert `true` an, um sicherzustellen, dass der Wert im Inhalts Abschnitt des Feeds enthalten ist.|  
+|`FC_KeepInContent`|Gibt an, dass der Eigenschaftswert, auf den verwiesen wird, sowohl im Inhaltsabschnitt des Feeds als auch im zugeordneten Speicherort enthalten sein soll. Gültige Werte sind `true` und `false`. Um den resultierenden Feed abwärts kompatibel mit früheren Versionen von WCF Data Services zu machen, geben Sie den Wert `true` an, um sicherzustellen, dass der Wert im Inhalts Abschnitt des Feeds enthalten ist.|  
 |`FC_NsPrefix`|Das Namespacepräfix des XML-Elements in einer Nicht-Syndication-Zuordnung. Dieses Attribut muss zusammen mit dem `FC_NsUri`-Attribut und kann nicht zusammen mit dem `FC_ContentKind`-Attribut verwendet werden.|  
 |`FC_NsUri`|Der Namespace-URI des XML-Elements in einer Nicht-Syndication-Zuordnung. Dieses Attribut muss zusammen mit dem `FC_NsPrefix`-Attribut und kann nicht zusammen mit dem `FC_ContentKind`-Attribut verwendet werden.|  
 |`FC_SourcePath`|Der Pfad der Eigenschaft der Entität, für die diese Feedzuordnungsregel gilt. Dieses Attribut wird nur unterstützt, wenn es in einem `EntityType`-Element verwendet wird.<br /><br /> Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A>-Eigenschaft kann nicht direkt auf einen komplexen Typ verweisen. Für komplexe Typen müssen Sie einen Pfadausdruck verwenden, in dem Eigenschaftennamen durch einen umgekehrten Schrägstrich (`/`) getrennt werden. Die folgenden Werte sind z. b. für einen Entitätstyp `Person` mit einer ganzzahligen Eigenschaft `Age` und einer komplexen Eigenschaft zulässig.<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> Die <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A>-Eigenschaft kann nicht auf einen Wert festgelegt werden, der ein Leerzeichen oder ein anderes Zeichen enthält, das in einem Eigenschaftennamen ungültig ist.|  
@@ -83,7 +83,7 @@ ms.locfileid: "73975290"
 ## <a name="feed-customization-considerations"></a>Überlegungen zur Feedanpassung  
  Beim Definieren von benutzerdefinierten Feedzuordnungen sollten Sie Folgendes betrachten.  
   
-- Der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client behandelt zugeordnete Elemente in einem Feed als leer, wenn Sie nur Leerraum enthalten. Aus diesem Grund werden zugeordnete Elemente, die nur Leerzeichen enthalten, auf dem Client nicht mit demselben Leerraum materialisiert. Wenn Sie diesen Leerraum auf dem Client beibehalten möchten, müssen Sie den Wert von `KeepInContext` auf `true` im Feed-Zuordnungsattribut festlegen.  
+- Der WCF Data Services Client behandelt zugeordnete Elemente in einem Feed als leer, wenn Sie nur Leerraum enthalten. Aus diesem Grund werden zugeordnete Elemente, die nur Leerzeichen enthalten, auf dem Client nicht mit demselben Leerraum materialisiert. Wenn Sie diesen Leerraum auf dem Client beibehalten möchten, müssen Sie den Wert von `KeepInContext` auf `true` im Feed-Zuordnungsattribut festlegen.  
   
 ## <a name="versioning-requirements"></a>Versionsanforderungen  
  Für die Feed-Anpassung gelten die folgenden Anforderungen an die odata-Protokoll Versionsverwaltung:  

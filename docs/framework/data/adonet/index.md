@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783811"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569411"
 ---
 # <a name="adonet"></a>ADO.NET
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
@@ -51,7 +51,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Enthält Links zu LINQ-Themen und-Beispielen mithilfe von Visual Basic.  
   
  [WCF Data Services 4.5](../wcf/index.md)  
- Beschreibt die Verwendung von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum Bereitstellen von Datendiensten, die das Open Data Protocol (OData) implementieren, im Internet oder in einem Intranet.  
+ Beschreibt, wie WCF Data Services verwendet wird, um Datendienste im Internet oder in einem Intranet bereitzustellen, die die Open Data Protocol (odata) implementieren.  
   
  [Entwicklungshandbuch für .NET Framework](../../development-guide.md)  
  Stellt Links zu Informationen über Standardentwicklungsaufgaben in .NET Framework bereit.  

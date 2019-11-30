@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren eines Dienst Vorgangs (WCF Data Services)'
+title: 'Gewusst wie: Definieren eines Dienstvorgangs (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e9d15698c1e020f5b4179efb3e8492f3754ff02f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780085"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569126"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Vorgehensweise: Definieren eines Dienst Vorgangs (WCF Data Services)
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Gewusst wie: Definieren eines Dienstvorgangs (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] macht auf dem Server als Dienstvorgänge definierte Methoden verfügbar. Dienst Vorgänge ermöglichen einem Datendienst, den Zugriff über einen URI auf eine Methode bereitzustellen, die auf dem Server definiert ist. Um einen Dienst Vorgang zu definieren, wenden Sie`WebGet]` das `[WebInvoke]` [-oder-Attribut auf die-Methode an. Um Abfrage Operatoren zu unterstützen, muss der Dienst <xref:System.Linq.IQueryable%601> Vorgang eine-Instanz zurückgeben. Dienstvorgänge können unter Umständen über die <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>-Eigenschaft für den <xref:System.Data.Services.DataService%601> auf die zugrunde liegende Datenquelle zugreifen. Weitere Informationen finden Sie unter [Dienst Vorgänge](service-operations-wcf-data-services.md).
+WCF Data Services Methoden verfügbar machen, die auf dem Server als Dienst Vorgänge definiert sind. Dienst Vorgänge ermöglichen einem Datendienst, den Zugriff über einen URI auf eine Methode bereitzustellen, die auf dem Server definiert ist. Um einen Dienst Vorgang zu definieren, wenden Sie das Attribut [`WebGet]` oder `[WebInvoke]` auf die Methode an. Um Abfrage Operatoren zu unterstützen, muss der Dienst Vorgang eine <xref:System.Linq.IQueryable%601> Instanz zurückgeben. Dienstvorgänge können unter Umständen über die <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>-Eigenschaft für den <xref:System.Data.Services.DataService%601> auf die zugrunde liegende Datenquelle zugreifen. Weitere Informationen finden Sie unter [Dienst Vorgänge](service-operations-wcf-data-services.md).
 
 Im Beispiel in diesem Thema wird ein Dienstvorgang mit dem Namen `GetOrdersByCity` definiert, der eine gefilterte <xref:System.Linq.IQueryable%601>-Instanz des `Orders`-Objekts und des verknüpften `Order_Details`-Objekts zurückgibt. Im Beispiel wird auf die <xref:System.Data.Objects.ObjectContext>-Instanz zugegriffen, die die Datenquelle für den Northwind-Beispieldatendienst ist. Dieser Dienst wird erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.
 

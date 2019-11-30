@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975411"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569310"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Aufrufen von Dienstvorgängen (WCF Data Services)
-Der Open Data Protocol (odata) definiert Dienst Vorgänge für einen Datendienst. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, solche Vorgänge als Methoden im Datendienst zu definieren. Wie andere Datendienstressourcen werden diese Dienstvorgänge durch URIs adressiert. Ein Dienstvorgang kann Auflistungen von Entitätstypen, einzelnen Entitätstypinstanzen und primitiven Typen zurückgeben, z. B. ganze Zahl und Zeichenfolge. Ein Dienstvorgang kann auch `null` (`Nothing` in Visual Basic) zurückgeben. Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek kann verwendet werden, um auf Dienstvorgänge zuzugreifen, die HTTP-GET-Anforderungen unterstützen. Diese Arten von Dienstvorgängen werden als Methoden definiert, die über das <xref:System.ServiceModel.Web.WebGetAttribute> verfügen. Weitere Informationen finden Sie unter [Dienst Vorgänge](service-operations-wcf-data-services.md).  
+Der Open Data Protocol (odata) definiert Dienst Vorgänge für einen Datendienst. WCF Data Services ermöglicht es Ihnen, solche Vorgänge als Methoden für den Datendienst zu definieren. Wie andere Datendienstressourcen werden diese Dienstvorgänge durch URIs adressiert. Ein Dienstvorgang kann Auflistungen von Entitätstypen, einzelnen Entitätstypinstanzen und primitiven Typen zurückgeben, z. B. ganze Zahl und Zeichenfolge. Ein Dienstvorgang kann auch `null` (`Nothing` in Visual Basic) zurückgeben. Die WCF Data Services-Client Bibliothek kann verwendet werden, um auf Dienst Vorgänge zuzugreifen, die HTTP GET-Anforderungen unterstützen. Diese Arten von Dienstvorgängen werden als Methoden definiert, die über das <xref:System.ServiceModel.Web.WebGetAttribute> verfügen. Weitere Informationen finden Sie unter [Dienst Vorgänge](service-operations-wcf-data-services.md).  
   
- Dienst Vorgänge werden in den Metadaten verfügbar gemacht, die von einem Datendienst zurückgegeben werden, der odata implementiert. In den Metadaten werden Dienstvorgänge als `FunctionImport`-Elemente dargestellt. Beim Generieren des stark typisierten <xref:System.Data.Services.Client.DataServiceContext> ignorieren die Tools Dienstverweis hinzufügen und DataSvcUtil.exe dieses Element. Daher finden Sie keine Methode im Kontext, die zum direkten Aufrufen eines Dienstvorgangs verwendet werden kann. Sie können Dienstvorgänge jedoch mithilfe des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients auf eine der beiden folgenden Weisen aufrufen:  
+ Dienst Vorgänge werden in den Metadaten verfügbar gemacht, die von einem Datendienst zurückgegeben werden, der odata implementiert. In den Metadaten werden Dienstvorgänge als `FunctionImport`-Elemente dargestellt. Beim Generieren des stark typisierten <xref:System.Data.Services.Client.DataServiceContext> ignorieren die Tools Dienstverweis hinzufügen und DataSvcUtil.exe dieses Element. Daher finden Sie keine Methode im Kontext, die zum direkten Aufrufen eines Dienstvorgangs verwendet werden kann. Sie können jedoch weiterhin den WCF Data Services-Client verwenden, um Dienst Vorgänge auf eine der beiden folgenden Arten aufzurufen:  
   
 - Durch das Aufrufen der <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode im <xref:System.Data.Services.Client.DataServiceContext> und das Angeben des URI des Dienstvorgangs zusammen mit Parametern. Diese Methode wird verwendet, um GET-Dienstvorgänge aufzurufen.  
   
 - Verwenden Sie die <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>-Methode für den <xref:System.Data.Services.Client.DataServiceContext>, um ein <xref:System.Data.Services.Client.DataServiceQuery%601>-Objekt zu erstellen. Beim Aufruf von <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> wird der Name des Dienstvorgangs im `entitySetName`-Parameter angegeben. Diese Methode gibt ein <xref:System.Data.Services.Client.DataServiceQuery%601>-Objekt zurück, das den Dienstvorgang bei einer Enumeration oder bei einem Aufruf der <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A>-Methode aufruft. Diese Methode wird verwendet, um GET-Dienstvorgänge aufzurufen, die eine Auflistung zurückgeben. Ein einzelner Parameter kann mit der <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode angegeben werden. Das von dieser Methode zurückgegebene <xref:System.Data.Services.Client.DataServiceQuery%601>-Objekt kann wie jedes andere Abfrageobjekt weiter zusammengesetzt werden. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="considerations-for-calling-service-operations"></a>Überlegungen zum Aufrufen von Dienstvorgängen  
- Die folgenden Überlegungen betreffen den Aufruf von Dienstvorgängen mithilfe des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients.  
+ Die folgenden Überlegungen gelten, wenn Sie den WCF Data Services-Client zum Abrufen von Dienst Vorgängen verwenden.  
   
 - Wenn Sie asynchron auf den Datendienst zugreifen, müssen Sie die entsprechenden asynchronen <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> Methoden auf <xref:System.Data.Services.Client.DataServiceContext> oder <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> Methoden auf <xref:System.Data.Services.Client.DataServiceQuery%601>verwenden.  
   
-- Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek kann die Ergebnisse eines Dienstvorgangs nicht materialisieren, der eine Auflistung von primitiven Typen zurückgibt.  
+- Die WCF Data Services Client Bibliothek kann die Ergebnisse eines Dienst Vorgangs, der eine Auflistung primitiver Typen zurückgibt, nicht materialisieren.  
   
-- Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek unterstützt das Aufrufen von POST-Dienstvorgängen nicht. Dienstvorgänge, die durch HTTP POST aufgerufen werden, werden mithilfe des <xref:System.ServiceModel.Web.WebInvokeAttribute> mit dem `Method="POST"`-Parameter definiert. Um einen Dienstvorgang mit einer HTTP-POST-Anforderung aufzurufen, müssen Sie stattdessen eine <xref:System.Net.HttpWebRequest> verwenden.  
+- Die WCF Data Services-Client Bibliothek unterstützt das Aufrufen von Post Dienst Vorgängen nicht. Dienstvorgänge, die durch HTTP POST aufgerufen werden, werden mithilfe des <xref:System.ServiceModel.Web.WebInvokeAttribute> mit dem `Method="POST"`-Parameter definiert. Um einen Dienstvorgang mit einer HTTP-POST-Anforderung aufzurufen, müssen Sie stattdessen eine <xref:System.Net.HttpWebRequest> verwenden.  
   
 - Sie können einen GET-Dienstvorgang, der ein einzelnes Ergebnis des Typs Entität oder Primitiv zurückgibt oder mehr als einen Eingabeparameter erfordert, nicht mithilfe von <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> aufrufen. Sie müssen stattdessen die <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode aufrufen.  
   
@@ -37,7 +37,7 @@ Der Open Data Protocol (odata) definiert Dienst Vorgänge für einen Datendienst
 - Wenn Sie <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> verwenden, um einen Dienst Vorgang aufzurufen, werden von der Client Bibliothek automatisch die Zeichen, die für die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> bereitgestellt werden, durch die prozentuale Codierung von reservierten Zeichen, wie z. b. kaufmännisches und-Zeichen (&), und das Escapezeichen in Zeichen folgen Wenn Sie jedoch eine der *Execute* -Methoden zum aufzurufen eines Dienst Vorgangs aufzurufen, müssen Sie daran denken, dass Sie diese Escapezeichen für alle vom Benutzer bereitgestellten Zeichen folgen Werte ausführen müssen. Einfache Anführungszeichen in URIs werden als Paare einfacher Anführungszeichen mit Escapezeichen versehen.  
   
 ## <a name="examples-of-calling-service-operations"></a>Beispiele für das Aufrufen von Dienstvorgängen  
- Dieser Abschnitt enthält die folgenden Beispiele zum Aufrufen von Dienstvorgängen mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek:  
+ Dieser Abschnitt enthält die folgenden Beispiele für das Abrufen von Dienst Vorgängen mit der WCF Data Services-Client Bibliothek:  
   
 - [Aufrufen von Execute&lt;t&gt;, um eine Auflistung von Entitäten zurückzugeben](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   

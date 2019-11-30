@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden (WCF Data Services)'
+title: 'Gewusst wie: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 942fc6d6cbfb35d836ca5881958e7c9965a7d08b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 43833566d59b15ef382872b0c40f452192b59bac
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779836"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568926"
 ---
-# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Vorgehensweise: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden (WCF Data Services)
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie die Anzahl von Entitäten bestimmen, die in der durch einen Abfrage-URI angegebenen Entitätenmenge enthalten sind. Diese Anzahl kann entweder zusammen mit dem Abfrageergebnis oder als ganzzahliger Wert einbezogen werden. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Gewusst wie: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden (WCF Data Services)
+Mit WCF Data Services können Sie die Anzahl der Entitäten ermitteln, die in der durch einen Abfrage-URI angegebenen Entitätenmenge liegen. Diese Anzahl kann entweder zusammen mit dem Abfrageergebnis oder als ganzzahliger Wert einbezogen werden. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
  Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975194"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568911"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Objektmaterialisierung (WCF Data Services)
 
 Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " verwenden, um einen Open Data Protocol (odata)-Feed in einer .NET Framework basierten Client Anwendung zu nutzen, werden für jeden Entitätstyp im Datenmodell, das vom Feed verfügbar gemacht wird, äquivalente Daten Klassen generiert. Weitere Informationen finden Sie unter [Erstellen der Datendienst-Client Bibliothek](generating-the-data-service-client-library-wcf-data-services.md). Entitätsdaten, die von einer Abfrage zurückgegeben werden, werden in eine Instanz einer dieser generierten Client-Datendienstklassen materialisiert. Informationen zu mergeoptionen und zur Identitäts Auflösung für nach verfolgte Objekte finden Sie unter [Verwalten des Datendienst Kontexts](managing-the-data-service-context-wcf-data-services.md).
 
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie auch eigene Client-Datendienstklassen definieren, anstatt die von Tools generierten Datenklassen zu verwenden. Dies ermöglicht es Ihnen, eigene Datenklassen zu verwenden, die auch als POCO (plain-old CLR object)-Datenklassen bezeichnet werden. Wenn Sie diese Typen von benutzerdefinierten Daten Klassen verwenden, sollten Sie die Datenklasse entweder mit <xref:System.Data.Services.Common.DataServiceKeyAttribute> oder <xref:System.Data.Services.Common.DataServiceEntityAttribute> versehen und sicherstellen, dass die Typnamen für den Client Typnamen im Datenmodell des Daten Dienstanbieter entsprechen.
+WCF Data Services können Sie auch Ihre eigenen Client Datendienst Klassen definieren, anstatt die vom Tool generierten Daten Klassen zu verwenden. Dies ermöglicht es Ihnen, eigene Datenklassen zu verwenden, die auch als POCO (plain-old CLR object)-Datenklassen bezeichnet werden. Wenn Sie diese Typen von benutzerdefinierten Daten Klassen verwenden, sollten Sie die Datenklasse entweder mit <xref:System.Data.Services.Common.DataServiceKeyAttribute> oder <xref:System.Data.Services.Common.DataServiceEntityAttribute> versehen und sicherstellen, dass die Typnamen für den Client Typnamen im Datenmodell des Daten Dienstanbieter entsprechen.
 
 Nachdem die Bibliothek die Abfrage Antwortnachricht empfangen hat, materialisiert Sie die zurückgegebenen Daten aus dem odata-Feed in Instanzen von Client Datendienst Klassen, die den Typ der Abfrage haben. Zur Materialisierung dieser Objekte werden die folgenden allgemeinen Schritte ausgeführt:
 

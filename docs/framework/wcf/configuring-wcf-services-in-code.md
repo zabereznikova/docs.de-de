@@ -2,12 +2,12 @@
 title: Konfigurieren von WCF-Diensten in Code
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320641"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569507"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
 Windows Communication Foundation (WCF) ermöglicht es Entwicklern, Dienste mithilfe von Konfigurationsdateien oder Code zu konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht Ihnen außerdem das Konfigurieren von Diensten im Code. In früheren Versionen von WCF (4,0 und früher) war das Konfigurieren von Diensten im Code in selbstgeh osteten Szenarien ganz einfach. mit der <xref:System.ServiceModel.ServiceHost>-Klasse haben Sie die Möglichkeit, Endpunkte und Verhaltensweisen vor dem Aufrufen von Service Host. Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4,5 bietet WCF eine einfachere Möglichkeit, selbstgeh ostete und im Internet gehostete Dienste im Code zu konfigurieren.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) ermöglicht es Entwicklern, Dienste mithi
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Die Configure-Methode akzeptiert eine <xref:System.ServiceModel.ServiceConfiguration>-Instanz, die es den Entwicklern ermöglicht, Endpunkte und Verhalten hinzuzufügen. Diese Methode wird von WCF aufgerufen, bevor der Dienst Host geöffnet wird. Sofern definiert, werden alle Dienstkonfigurationseinstellungen in der Datei {1}app.config{2} oder {3}web.config{4} ignoriert.  
+ Die Configure-Methode akzeptiert eine <xref:System.ServiceModel.ServiceConfiguration>-Instanz, die es den Entwicklern ermöglicht, Endpunkte und Verhalten hinzuzufügen. Diese Methode wird von WCF aufgerufen, bevor der Dienst Host geöffnet wird. Sofern definiert, werden alle Dienstkonfigurationseinstellungen in der Datei app.config oder web.config ignoriert.  
   
  Der folgende Codeausschnitt zeigt, wie die `Configure`-Methode definiert wird und ein Dienstendpunkt, ein Endpunktverhalten und Dienstverhalten hinzugefügt werden:  
   
@@ -56,7 +56,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Um ein Protokoll, z. B. HTTPS, für einen Dienst zu aktivieren, können Sie entweder explizit einen Endpunkt hinzufügen, der das Protokoll verwendet, oder Sie können automatisch Endpunkte durch Aufrufen von {1}ServiceConfiguration.EnableProtocol(Binding){2} hinzufügen. Dabei wird ein Endpunkt für jede Basisadresse, die mit dem Protokoll kompatibel ist, und für jeden definierten Dienstvertrag hinzugefügt. Der folgende Code veranschaulicht die Verwendung der ServiceConfiguration.EnableProtocol-Methode:  
+ Um ein Protokoll, z. B. HTTPS, für einen Dienst zu aktivieren, können Sie entweder explizit einen Endpunkt hinzufügen, der das Protokoll verwendet, oder Sie können automatisch Endpunkte durch Aufrufen von ServiceConfiguration.EnableProtocol(Binding) hinzufügen. Dabei wird ein Endpunkt für jede Basisadresse, die mit dem Protokoll kompatibel ist, und für jeden definierten Dienstvertrag hinzugefügt. Der folgende Code veranschaulicht die Verwendung der ServiceConfiguration.EnableProtocol-Methode:  
   
 ```csharp  
 public class Service1 : IService1   
@@ -68,7 +68,7 @@ public class Service1 : IService1
        config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
        // set up support for http, https, net.tcp, net.pipe   
        config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpBinding());   
+       config.EnableProtocol(new BasicHttpsBinding());   
        config.EnableProtocol(new NetTcpBinding());   
        config.EnableProtocol(new NetNamedPipeBinding());   
        // add an extra BasicHttpBinding endpoint at http:///basic   

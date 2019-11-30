@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c254a7362c7bc28f4b38fc0189ae0ea763bc90cc
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894272"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568849"
 ---
 # <a name="service-operations-wcf-data-services"></a>Dienstvorgänge (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Beispielsweise übergibt der folgende Dienst Vorgangs-URI (basierend auf dem [Schnellstart](quickstart-wcf-data-services.md) -Datendienst) den `London` Wert an `city` den-Parameter:
+WCF Data Services ermöglicht es Ihnen, Dienst Vorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Beispielsweise übergibt der folgende Dienst Vorgangs-URI (basierend auf dem [Schnellstart](quickstart-wcf-data-services.md) -Datendienst) den Wert `London` an den `city`-Parameter:
 
 ```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,7 +28,7 @@ Die Definition für diesen Dienstvorgang lautet wie folgt:
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-Sie können mit der <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> des <xref:System.Data.Services.DataService%601> direkt auf die Datenquelle zugreifen, die der Datendienst verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie einen Dienst](how-to-define-a-service-operation-wcf-data-services.md)Vorgang.
+Sie können mit der <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> des <xref:System.Data.Services.DataService%601> direkt auf die Datenquelle zugreifen, die der Datendienst verwendet. Weitere Informationen finden Sie unter Gewusst [wie: Definieren eines Dienst Vorgangs](how-to-define-a-service-operation-wcf-data-services.md).
 
 Informationen zum Aufrufen eines Dienst Vorgangs aus einer .NET Framework Client Anwendung finden Sie unter Aufrufen von [Dienst Vorgängen](calling-service-operations-wcf-data-services.md).
 
@@ -80,7 +80,7 @@ Nachfolgend sind gültige Rückgabetypen für einen Dienstvorgang aufgeführt:
 
 |Gültige Rückgabetypen|URI-Regeln|
 |------------------------|---------------|
-|`void` (`Nothing` in Visual Basic)<br /><br /> -oder-<br /><br /> Entitätstypen<br /><br /> -oder-<br /><br /> Primitive Typen|Der URI muss ein einzelnes Pfadsegment sein, das den Namen des Dienstvorgangs trägt. Abfrageoptionen sind nicht zulässig.|
+|`void` (`Nothing` in Visual Basic)<br /><br /> \- oder -<br /><br /> Entitätstypen<br /><br /> \- oder -<br /><br /> Primitive Typen|Der URI muss ein einzelnes Pfadsegment sein, das den Namen des Dienstvorgangs trägt. Abfrageoptionen sind nicht zulässig.|
 |<xref:System.Collections.Generic.IEnumerable%601>|Der URI muss ein einzelnes Pfadsegment sein, das den Namen des Dienstvorgangs trägt. Da der Ergebnistyp kein <xref:System.Linq.IQueryable%601>-Typ ist, sind keine Abfrageoptionen zulässig.|
 |<xref:System.Linq.IQueryable%601>|Abfragepfadsegmente zusätzlich zum Pfad, der der Name des Dienstvorgangs ist, sind zulässig. Abfrageoptionen sind ebenfalls zulässig.|
 
@@ -100,7 +100,7 @@ Dienstweite Sichtbarkeit der Dienstvorgänge wird durch die <xref:System.Data.Se
 > [!NOTE]
 > Wenn ein Dienstvorgang einen Rückgabetyp aufweist, der durch das Beschränken des Zugriff auf die zugrunde liegenden Entitätenmengen ausgeblendet wurde, dann steht der Dienstvorgang Clientanwendungen nicht zur Verfügung.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie einen Dienst](how-to-define-a-service-operation-wcf-data-services.md)Vorgang.
+Weitere Informationen finden Sie unter Gewusst [wie: Definieren eines Dienst Vorgangs](how-to-define-a-service-operation-wcf-data-services.md).
 
 ## <a name="raising-exceptions"></a>Auslösen von Ausnahmen
 

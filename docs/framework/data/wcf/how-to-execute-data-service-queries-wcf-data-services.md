@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von Datendienst Abfragen (WCF Data Services)'
+title: 'Gewusst wie: Ausführen von Datendienstabfragen (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b06a21a45dcf6e67c41287c4cd59cdda4aa7b447
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780065"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569082"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Vorgehensweise: Ausführen von Datendienst Abfragen (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, mit den generierten Clientdatendienstklassen einen Datendienst aus einer .NET Framework-basierten Clientanwendung abzufragen. Für die Ausführung der Abfragen stehen folgende Methoden zur Verfügung:  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Gewusst wie: Ausführen von Datendienstabfragen (WCF Data Services)
+WCF Data Services ermöglicht es Ihnen, mithilfe der generierten Client Datendienst Klassen einen Datendienst von einer .NET Framework basierten Client Anwendung abzufragen. Für die Ausführung der Abfragen stehen folgende Methoden zur Verfügung:  
   
 - Ausführen einer LINQ-Abfrage für die benannte <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz, die Sie aus dem <xref:System.Data.Services.Client.DataServiceContext>-Objekt abrufen, den das Tool `Add Data Service Reference` generiert.  
   
@@ -49,4 +49,4 @@ ms.locfileid: "70780065"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Hinzufügen von Abfrage Optionen zu einer Datendienst Abfrage](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Vorgehensweise: Hinzufügen von Abfrageoptionen zu einer Datendienstabfrage](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

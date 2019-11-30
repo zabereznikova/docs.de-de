@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren von Entitäts Beziehungen (WCF Data Services)'
+title: 'Gewusst wie: Definieren von Entitätsbeziehungen (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: 63714f97e691b2ba0177a36a599b62ca7681dcf6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f693579883ae03a6c8df3e9a9f4941e1f9940a4c
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790647"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569119"
 ---
-# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Vorgehensweise: Definieren von Entitäts Beziehungen (WCF Data Services)
-Wenn Sie eine neue Entität in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hinzufügen, werden Beziehungen zwischen der neuen Entität und verknüpften Entitäten nicht automatisch definiert. Sie können Beziehungen zwischen Entitätsinstanzen erstellen und ändern und die Clientbibliothek diese Änderungen im Datendienst widerspiegeln lassen. Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Gewusst wie: Definieren von Entitätsbeziehungen (WCF Data Services)
+Wenn Sie in WCF Data Services eine neue Entität hinzufügen, werden alle Beziehungen zwischen der neuen Entität und verknüpften Entitäten nicht automatisch definiert. Sie können Beziehungen zwischen Entitätsinstanzen erstellen und ändern und die Clientbibliothek diese Änderungen im Datendienst widerspiegeln lassen. Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).  
   
  Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   
@@ -34,4 +34,4 @@ Wenn Sie eine neue Entität in [!INCLUDE[ssAstoria](../../../../includes/ssastor
 ## <a name="see-also"></a>Siehe auch
 
 - [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
-- [Vorgehensweise: Hinzufügen, ändern und Löschen von Entitäten](how-to-add-modify-and-delete-entities-wcf-data-services.md)
+- [Vorgehensweise: Hinzufügen, Ändern und Löschen von Entitäten](how-to-add-modify-and-delete-entities-wcf-data-services.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von asynchronen Datendienst Abfragen (WCF Data Services)'
+title: 'Gewusst wie: Ausführen von asynchronen Datendienstabfragen (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 14bfc138c5ece45184fb939f19aaf3d7e73e7294
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68e2035315780b7c6dd60e93ae6eb10d252aabb3
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790572"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569070"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Vorgehensweise: Ausführen von asynchronen Datendienst Abfragen (WCF Data Services)
-Mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek können Sie Client/Server-Vorgänge wie das Ausführen von Abfragen und das Speichern von Änderungen asynchron ausführen. Weitere Informationen finden Sie unter [asynchrone Vorgänge](asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Gewusst wie: Ausführen von asynchronen Datendienstabfragen (WCF Data Services)
+Mithilfe der WCF Data Services-Client Bibliothek können Sie Client/Server-Vorgänge wie das Ausführen von Abfragen und das Speichern von Änderungen asynchron ausführen. Weitere Informationen finden Sie unter [asynchrone Vorgänge](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
 > In einer Anwendung, wo der Rückruf auf einem bestimmten Thread aufgerufen werden muss, müssen Sie explizites Marshalling der Ausführung der <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>-Methode durchführen. Weitere Informationen finden Sie unter [asynchrone Vorgänge](asynchronous-operations-wcf-data-services.md).  

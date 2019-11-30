@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 50e481dd67a56233fcbb3714c86d71dd7e5307e8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975418"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569393"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Anwendungsszenarios (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt einen Kernsatz von Szenarien für das verfügbar machen und Nutzen von Daten als Open Data Protocol (odata)-Feeds. Dieses Thema verweist auf die für diese Szenarios relevanten Themen.
+WCF Data Services unterstützt einen Kernsatz von Szenarien für das verfügbar machen und Nutzen von Daten als Open Data Protocol (odata)-Feeds. Dieses Thema verweist auf die für diese Szenarios relevanten Themen.
 
 Machen Sie relationale Daten aus einer Datenbank als odata-Feed verfügbar.
 

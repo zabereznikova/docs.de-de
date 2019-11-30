@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975164"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568879"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Abfragen des Datendiensts (WCF Data Services)
 
-Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek ermöglicht es Ihnen, mit vertrauten .NET Framework-Programmierungsmustern Abfragen für einen Datendienst auszuführen und hierbei auch LINQ (Language Integrated Query) zu verwenden. Die Clientbibliothek übersetzt eine Abfrage, die auf dem Client als Instanz der <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse definiert wird, in eine HTTP GET-Anforderungsnachricht. Die Bibliothek empfängt die Antwortnachricht und übersetzt Sie in Instanzen von Client Datendienst Klassen. Diese Klassen werden vom <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem <xref:System.Data.Services.Client.DataServiceQuery%601> gehört.
+Mit der WCF Data Services-Client Bibliothek können Sie Abfragen für einen Datendienst ausführen, indem Sie vertraute .NET Framework Programmier Muster verwenden, einschließlich der Verwendung von LINQ (Language Integrated Query). Die Clientbibliothek übersetzt eine Abfrage, die auf dem Client als Instanz der <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse definiert wird, in eine HTTP GET-Anforderungsnachricht. Die Bibliothek empfängt die Antwortnachricht und übersetzt Sie in Instanzen von Client Datendienst Klassen. Diese Klassen werden vom <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem <xref:System.Data.Services.Client.DataServiceQuery%601> gehört.
 
 ## <a name="data-service-queries"></a>Datendienstabfragen
 
@@ -45,11 +45,11 @@ Wenn die folgende Abfrage ausgeführt wird, gibt sie alle `Customers`-Entitäten
 
 Weitere Informationen finden Sie unter Gewusst [wie: Ausführen von Datendienst Abfragen](how-to-execute-data-service-queries-wcf-data-services.md).
 
-Der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client unterstützt Abfragen für spät gebundene Objekte, z. b. bei Verwendung des *dynamischen* Typs C#in. Aus Leistungsgründen sollten für den Datendienst jedoch immer stark typisierte Abfragen verfasst werden. Der <xref:System.Tuple>-Typ und dynamische Objekte werden nicht vom Client unterstützt.
+Der WCF Data Services Client unterstützt Abfragen für spät gebundene Objekte, z. b. bei Verwendung des *dynamischen* Typs C#in. Aus Leistungsgründen sollten für den Datendienst jedoch immer stark typisierte Abfragen verfasst werden. Der <xref:System.Tuple>-Typ und dynamische Objekte werden nicht vom Client unterstützt.
 
 ## <a name="linq-queries"></a>LINQ-Abfragen
 
-Da die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse die von LINQ definierte <xref:System.Linq.IQueryable%601> Schnittstelle implementiert, kann die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client Bibliothek LINQ-Abfragen für entitätenmengendaten in einen URI transformieren, der einen für eine Datendienst Ressource ausgewerteten Abfrage Ausdruck darstellt. Das folgende Beispiel ist eine LINQ-Abfrage, die der vorherigen <xref:System.Data.Services.Client.DataServiceQuery%601>-Abfrage entspricht, die `Orders` mit Frachtkosten von mehr als $30 zurückgibt und die Ergebnisse nach den Frachtkosten sortiert:
+Da die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse die von LINQ definierte <xref:System.Linq.IQueryable%601> Schnittstelle implementiert, kann die WCF Data Services-Client Bibliothek LINQ-Abfragen für entitätenmengendaten in einen URI transformieren, der einen für eine Datendienst Ressource ausgewerteten Abfrage Ausdruck darstellt. Das folgende Beispiel ist eine LINQ-Abfrage, die der vorherigen <xref:System.Data.Services.Client.DataServiceQuery%601>-Abfrage entspricht, die `Orders` mit Frachtkosten von mehr als $30 zurückgibt und die Ergebnisse nach den Frachtkosten sortiert:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie unter [LINQ-Überlegungen](linq-considerations-
 
 ## <a name="adding-query-options"></a>Hinzufügen von Abfrageoptionen
 
-Datendienstabfragen unterstützen alle Abfrageoptionen, die in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar sind. Sie rufen die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode auf, um einer <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz Abfrageoptionen hinzuzufügen. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> gibt eine neue <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz zurück, die der ursprünglichen Abfrage entspricht, aber die neuen Abfrageoptionen enthält. Wenn die folgende Abfrage ausgeführt wird, gibt sie `Orders`-Objekte zurück, die nach dem `Freight`-Wert gefiltert und in absteigender Reihenfolge nach dem Wert von `OrderID` sortiert werden:
+Data Service-Abfragen unterstützen alle Abfrage Optionen, die von WCF Data Servicess bereitstellt werden. Sie rufen die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode auf, um einer <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz Abfrageoptionen hinzuzufügen. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> gibt eine neue <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz zurück, die der ursprünglichen Abfrage entspricht, aber die neuen Abfrageoptionen enthält. Wenn die folgende Abfrage ausgeführt wird, gibt sie `Orders`-Objekte zurück, die nach dem `Freight`-Wert gefiltert und in absteigender Reihenfolge nach dem Wert von `OrderID` sortiert werden:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ Der <xref:System.Data.Services.Client.QueryOperationResponse%601> verfügt auch 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>- gibt ein <xref:System.Data.Services.Client.DataServiceQueryContinuation>-Objekt zurück, das den URI der nächsten Seite mit Ergebnissen enthält.
 
-Standardmäßig gibt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] nur Daten zurück, die explizit durch den Abfrage-URI ausgewählt werden. Dies gibt Ihnen die Möglichkeit, bei Bedarf weitere Daten explizit vom Datendienst zu laden. Jedes Mal, wenn Daten explizit aus dem Datendienst geladen werden, wird eine Anforderung an den Datendienst gesendet. Zu den Daten, die explizit geladen werden können, gehören verknüpfte Entitäten, ausgelagerte Antwortdaten und Binärdatenströme.
+Standardmäßig gibt WCF Data Services nur Daten zurück, die explizit durch den Abfrage-URI ausgewählt werden. Dies gibt Ihnen die Möglichkeit, bei Bedarf weitere Daten explizit vom Datendienst zu laden. Jedes Mal, wenn Daten explizit aus dem Datendienst geladen werden, wird eine Anforderung an den Datendienst gesendet. Zu den Daten, die explizit geladen werden können, gehören verknüpfte Entitäten, ausgelagerte Antwortdaten und Binärdatenströme.
 
 > [!NOTE]
 > Da ein Datendienst möglicherweise eine ausgelagerte Antwort zurückgibt, empfiehlt es sich, dass die Anwendung das Programmiermuster zur Behandlung ausgelagerter Datendienstantworten verwendet. Weitere Informationen finden Sie unter [Laden von verzögertem Inhalt](loading-deferred-content-wcf-data-services.md).
