@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195486"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204588"
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -24,7 +24,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](./language-reference/keywords/async.md) und [Await](./language-reference/operators/await.md).  
   
  [Erstellen einer Windows-Runtime-Komponente in C# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Veranschaulicht das Erstellen eines Windows-Runtime-Typs, das Verpacken in einer Windows-Runtime-Komponente und den anschließenden Aufruf der Komponente aus einer [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-App, die mithilfe von JavaScript für Windows erstellt wurde.  
+ Veranschaulicht das Erstellen eines Windows-Runtime-Typs, das Packen in einer Windows-Runtime-Komponente und den anschließenden Aufruf der Komponente aus einer Windows 8.x Store-App, die mithilfe von JavaScript für Windows erstellt wurde.  
   
  [Office-Programmierung (C# und Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Veranschaulicht das Erstellen einer Excel-Arbeitsmappe und eines Word-Dokuments mithilfe von C# und Visual Basic.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417797"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204639"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -20,16 +20,14 @@ Einschränkungen informieren den Compiler über die Funktionen, über die ein Ty
 
 |Constraint|BESCHREIBUNG|
 |----------------|-----------------|
-|`where T : struct`|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable%601> kann angegeben werden. Weitere Informationen zu Nullable-Werttypen finden Sie unter [Nullable-Werttypen](../nullable-types/index.md).|
+|`where T : struct`|Das Typargument muss ein Nicht-Nullable-Werttyp sein. Weitere Informationen zu Nullable-Werttypen finden Sie unter [Nullable-Werttypen](../../language-reference/builtin-types/nullable-value-types.md). Da alle Werttypen einen parameterlosen Konstruktor aufweisen, auf den zugegriffen werden kann, impliziert die `struct`-Einschränkung die `new()`-Einschränkung und kann nicht mit der `new()`-Einschränkung kombiniert werden. Ferner kann auch die `struct`-Einschränkung nicht mit der `unmanaged`-Einschränkung kombiniert werden.|
 |`where T : class`|Das Typargument muss ein Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
 |`where T : notnull`|Das Typargument muss ein Nicht-Nullable-Typ sein. Das Argument kann ein Nicht-Nullable-Verweistyp in C# 8.0 oder höher oder ein Nicht-Nullable-Werttyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
-|`where T : unmanaged`|Das Typargument muss ein [nicht verwalteter Typ](../../language-reference/builtin-types/unmanaged-types.md) sein.|
-|`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.|
+|`where T : unmanaged`|Das Typargument muss ein [nicht verwalteter Non-Nullable-Typ](../../language-reference/builtin-types/unmanaged-types.md) sein. Die `unmanaged`-Einschränkung impliziert die `struct`-Einschränkung und kann weder mit der `struct`- noch mit der `new()`-Einschränkung kombiniert werden.|
+|`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden. Die `new()`-Einschränkung kann nicht mit der `struct`- oder `unmanaged`-Einschränkung kombiniert werden.|
 |`where T :` *\<Basisklassenname>*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden.|
 |`where T :` *\<Schnittstellenname>*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein.|
 |`where T : U`|Das Typargument, das für T angegeben wurde, muss das für T angegebene Argument sein oder von diesem abgeleitet werden.|
-
-Einige der Einschränkungen schließen einander aus. Alle Werttypen müssen einen zugänglichen, parameterlosen Konstruktor haben. Die `struct`-Einschränkung impliziert die `new()`-Einschränkung, und die `new()`-Einschränkung kann nicht mit der `struct`-Einschränkung kombiniert werden. Die `unmanaged`-Einschränkung impliziert die `struct`-Einschränkung. Die `unmanaged`-Einschränkung kann weder mit der `struct`- noch mit der `new()`-Einschränkung kombiniert werden.
 
 ## <a name="why-use-constraints"></a>Weshalb Einschränkungen?
 
@@ -85,11 +83,13 @@ Im Gegensatz zu anderen Einschränkungen generiert der Compiler eine Warnung, we
 
 ## <a name="unmanaged-constraint"></a>Nicht verwaltete Einschränkungen
 
-Ab C# 7.3 können Sie die `unmanaged`-Einschränkung nutzen, um anzugeben, dass der Typparameter ein [nicht verwalteter Typ](../../language-reference/builtin-types/unmanaged-types.md) sein muss. Die `unmanaged`-Einschränkung ermöglicht Ihnen das Schreiben von wiederverwendbarer Routinen zum Arbeiten mit Typen, die als Speicherblöcke bearbeitet werden können, wie im folgenden Beispiel gezeigt:
+Ab C# 7.3 können Sie die `unmanaged`-Einschränkung nutzen, um anzugeben, dass der Typparameter ein [nicht verwalteter Non-Nullable-Typ](../../language-reference/builtin-types/unmanaged-types.md) sein muss. Die `unmanaged`-Einschränkung ermöglicht Ihnen das Schreiben von wiederverwendbarer Routinen zum Arbeiten mit Typen, die als Speicherblöcke bearbeitet werden können, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
 Die vorherige Methode muss in einen `unsafe`-Kontext kompiliert werden, da sie den `sizeof`-Operator für einen nicht bekannten Typ verwendet, der ein integrierter Typ ist. Ohne die `unmanaged`-Einschränkung ist der `sizeof`-Operator nicht verfügbar.
+
+Die `unmanaged`-Einschränkung impliziert die `struct`-Einschränkung und kann nicht mit ihr kombiniert werden. Da die `struct`-Einschränkung die `new()`-Einschränkung impliziert, kann die `unmanaged`-Einschränkung ebenso wenig mit der `new()`-Einschränkung kombiniert werden.
 
 ## <a name="delegate-constraints"></a>Delegieren von Einschränkungen
 

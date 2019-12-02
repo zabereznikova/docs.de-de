@@ -1,17 +1,17 @@
 ---
-title: Der große Objektheap auf Windows-Systemen
+title: LOH unter Windows – .NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120934"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283623"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -22,7 +22,7 @@ Der .NET Garbage Collector (GC) teilt Objekte in die Kategorie „klein“ oder 
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Wie ein Objekt in den großen Objektheap gelangt und wie der Garbage Collector dieses verarbeitet
 
-Ein Objekt wird als großes Objekt betrachtet, wenn es eine Größe von mindestens 85.000 Byte aufweist. Diese Zahl wurde von der Leistungsoptimierung ermittelt. Wenn die Zuordnungsanforderung für ein Objekt über 85.000 Byte beträgt, ordnet die Runtime diese dem großen Objektheap zu.
+Ein Objekt wird als großes Objekt betrachtet, wenn es eine Größe von mindestens 85.000 Byte aufweist. Diese Zahl wurde von der Leistungsoptimierung ermittelt. Wenn die Zuordnungsanforderung für ein Objekt über 85.000 Byte beträgt, ordnet die Runtime diese dem großen Objektheap zu.
 
 Im Folgenden werden einige Grundlagen über den .NET Garbage Collector erläutert, um dies besser nachvollziehen zu können.
 
@@ -154,7 +154,7 @@ Diese Speicherleistungsindikatoren sind in der Regel ein guter erster Schritt be
 
 Eine allgemeine Möglichkeit zum Anzeigen von Leistungsindikatoren ist die Verwendung des Systemmonitors (perfmon.exe). Fügen Sie den entsprechenden Indikator für Prozesse, die für Sie wichtig sind, mithilfe von „Leistungsindikatoren hinzufügen“ hinzu. Sie können die Leistungsindikatordaten im Systemmonitor wie in Abbildung 4 dargestellt in einer Protokolldatei speichern:
 
-![Screenshot zeigt Hinzufügen von Leistungsindikatoren.](media/large-object-heap/add-performance-counter.png)
+![Screenshot, der das Hinzufügen von Leistungsindikatoren zeigt.](media/large-object-heap/add-performance-counter.png)
 Abbildung 4: Der große Objektheap nach einer Garbage Collection für Generation 2
 
 Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benutzer sammeln die Leistungsdaten auf diese Weise im Rahmen ihrer alltäglichen Testprozesse. Wenn Indikatoren mit ungewöhnlichen Werten angezeigt werden, können dann mithilfe anderer Methoden detailliertere Daten abgerufen werden, um die Untersuchung zu erleichtern.
@@ -306,7 +306,7 @@ Sie können überprüfen, ob der große Objektheap die Fragmentierung des virtue
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Dieser Befehl unterbricht den Debugger und zeigt die Aufrufliste nur an, wenn [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) mit einer Zuordnungsgröße aufgerufen wird, die größer als 8 MB (0x800000) ist.
+Dieser Befehl unterbricht den Debugger und zeigt die Aufrufliste nur an, wenn [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) mit einer Zuordnungsgröße aufgerufen wird, die größer als 8 MB (0x800000) ist.
 
 In CLR 2.0 wurde ein Feature namens *VM Hoarding* hinzugefügt, das für Szenarios nützlich ist, in denen Segmente (einschließlich des großen und des kleinen Objektheaps) häufig abgerufen und freigegeben werden. Wenn Sie das Feature „VM Hoarding“ definieren möchten, geben Sie ein Startflag namens `STARTUP_HOARD_GC_VM` über die Hosting-API an. Die CLR hebt den Arbeitsspeicher für diese Segmente auf, und setzt diese auf eine Standbyliste, anstatt leere Segmente wieder für das Betriebssystem freizugeben. (Beachten Sie, dass die CLR dies nicht für Segmente durchführen kann, die zu groß sind.) Die CLR verwendet diese Segmente später, um Anforderungen für neue Segmente zu erfüllen. Wenn Ihre App das nächste Mal ein neues Segment benötigt, verwendet die CLR eines von dieser Standbyliste, wenn sie eines finden kann, das groß genug ist.
 

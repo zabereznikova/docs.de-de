@@ -3,12 +3,12 @@ title: 'Nicht verwaltete Typen: C#-Verweis'
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 25aa42ba8c8f0023b4f818feb2edbb325f805fb6
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 81eef59ceb20bcae6c749dd59578ce35da253826
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374112"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204474"
 ---
 # <a name="unmanaged-types-c-reference"></a>Nicht verwaltete Typen (C#-Verweis)
 
@@ -19,7 +19,7 @@ Ein Typ ist ein **nicht verwalteter Typ**, wenn es sich um einen der folgenden T
 - Beliebiger [Zeigertyp](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - Jeder benutzerdefinierte [Strukturtyp](../keywords/struct.md), der nur Felder mit nicht verwalteten Typen enthält und – in C# 7.3 und früher – kein konstruierter Typ ist (ein konstruierter Typ ist ein Typ, der mindestens ein Typargument enthält)
 
-Ab C# 7.3 können Sie die [`unmanaged`-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) verwenden, um anzugeben, dass ein Typparameter ein nicht verwalteter Nichtzeigertyp ist.
+Ab C# 7.3 können Sie die [`unmanaged`-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) verwenden, um anzugeben, dass ein Typparameter ein nicht verwalteter Nicht-Nullable-Nichtzeigertyp ist.
 
 Ab C# 8.0 ist ein *konstruierter* Strukturtyp, der Felder mit nicht verwalteten Typen enthält, ebenfalls nicht verwaltet, wie das folgende Beispiel zeigt:
 
