@@ -1,5 +1,7 @@
-- name: 'Leitfaden für F#'
-  href: index.md
+- name: 'F#-Dokumentation'
+  href: index.yml
+- name: 'Was ist F#?'
+  href: what-is-fsharp.md
 - name: Erste Schritte
   href: get-started/index.md
   items:
@@ -13,8 +15,6 @@
       href: get-started/get-started-command-line.md
     - name: 'Erste Schritte mit F# in Visual Studio für Mac'
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'Was ist F#?'
-  href: what-is-fsharp.md
 - name: 'Einführung in F#'
   href: tour.md
 - name: Tutorials
@@ -39,6 +39,14 @@
           href: tutorials/type-providers/troubleshooting-type-providers.md
     - name: 'F# Interactive'
       href: tutorials/fsharp-interactive/index.md
+- name: 'Neues in F#'
+  items:
+    - name: 'F# 4.7'
+      href: whats-new/fsharp-47.md
+    - name: 'F# 4.6'
+      href: whats-new/fsharp-46.md
+    - name: 'F# 4.5'
+      href: whats-new/fsharp-45.md
 - name: 'F#-Sprachreferenz'
   href: language-reference/index.md
   items:
