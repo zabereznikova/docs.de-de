@@ -1,15 +1,15 @@
 ---
-title: Auswerten von Breaking Changes – .NET Core
-description: Erfahren Sie mehr darüber, wie .NET Core versucht, die Kompatibilität für Entwickler in allen .NET-Versionen aufrechtzuerhalten.
+title: Typen von Breaking Changes – .NET Core
+description: Erfahren Sie, wie .NET Core versucht, die Kompatibilität für Entwickler für alle .NET-Versionen zu gewährleisten und welche Änderung als Breaking Change angesehen wird.
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973650"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567715"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>Auswerten von Breaking Changes in .NET Core
+# <a name="changes-that-affect-compatibility"></a>Änderungen, die sich auf die Kompatibilität auswirken
 
 Im Laufe seines Bestehens hat .NET versucht, ein hohes Maß an Kompatibilität von Version zu Version und zwischen den verschiedenen Varianten von.NET aufrechtzuerhalten. Dies gilt auch für .NET Core. Obwohl .NET Core als eine von .NET Framework unabhängige neue Technologie betrachtet werden kann, schränken zwei wesentliche Faktoren die Möglichkeit von .NET Core ein, von .NET Framework abzuweichen:
 
@@ -31,7 +31,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 ## <a name="modifications-to-the-public-contract"></a>Änderungen am öffentlichen Vertrag
 
-Änderungen in dieser Kategorie *modifizieren* die öffentliche Oberfläche eines Typs. Die meisten Änderungen in dieser Kategorie sind unzulässig, da sie die *Abwärtskompatibilität* verletzen (die Fähigkeit einer Anwendung, die mit einer früheren Version einer API entwickelt wurde, ohne Neukompilierung auf einer späteren Version ausgeführt zu werden).
+Änderungen in dieser Kategorie modifizieren die öffentliche Oberfläche eines Typs. Die meisten Änderungen in dieser Kategorie sind unzulässig, da sie die *Abwärtskompatibilität* verletzen (die Fähigkeit einer Anwendung, die mit einer früheren Version einer API entwickelt wurde, ohne Neukompilierung auf einer späteren Version ausgeführt zu werden).
 
 ### <a name="types"></a>Typen
 

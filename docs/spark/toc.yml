@@ -21,6 +21,8 @@
   items:
     - name: Debuggen der Anwendung
       href: how-to-guides/debug.md
+    - name: Übermitteln von Aufträgen an HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
 - name: Referenz
   items:
     - name: API-Referenz

@@ -1,42 +1,32 @@
-- name: Anwendungskompatibilität
+- name: Was sind Breaking Changes?
+  href: index.md
+- name: Kategorien von Breaking Changes
+  href: categories.md
+- name: Seitenselektoren
+  href: breaking-changes.md
+- name: Nach Version
   items:
-    - name: Bewerten von Breaking Changes
-      href: index.md
-    - name: Breaking Change-Kategorien
-      href: categories.md
-    - name: Breaking Change-Selektor
-      href: breaking-changes.md
-    - name: Nach Version
-      items:
-        - name: 3.0 zu 3.1
-          href: 3.0-3.1.md
-        - name: 3.0 Preview 9 zu 3.0
-          href: 3.0.9-3.0rc1.md
-        - name: "3.0 Preview\_8 zu 3.0 Preview\_9"
-          href: 3.0.8-3.0.9.md
-        - name: "3.0 Preview\_7 zu 3.0 Preview\_8"
-          href: 3.0.7-3.0.8.md
-        - name: "3.0 Preview\_6 zu 3.0 Preview\_7"
-          href: 3.0.6-3.0.7.md
-        - name: 2.2 zu 3.0
-          href: 2.2-3.0.md
-        - name: .NET Framework zu .NET Core
-          href: framework-core.md
-    - name: Nach Kategorie
-      items:
-        - name: ASP.NET Core
-          href: aspnetcore.md
-        - name: CoreFx
-          href: corefx.md
-        - name: Kryptografie
-          href: cryptography.md
-        - name: Entity Framework Core
-          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
-        - name: Globalisierung
-          href: globalization.md
-        - name: Netzwerk
-          href: networking.md
-        - name: Visual Basic
-          href: visualbasic.md
-        - name: Windows Forms
-          href: winforms.md
+    - name: 3.0 zu 3.1
+      href: 3.0-3.1.md
+    - name: 2.2 zu 3.1
+      href: 2.2-3.1.md
+    - name: 2.2 zu 3.0
+      href: 2.2-3.0.md
+- name: Nach Bereich
+  items:
+    - name: ASP.NET Core
+      href: aspnetcore.md
+    - name: CoreFx
+      href: corefx.md
+    - name: Kryptografie
+      href: cryptography.md
+    - name: Entity Framework Core
+      href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+    - name: Globalisierung
+      href: globalization.md
+    - name: Netzwerk
+      href: networking.md
+    - name: Visual Basic
+      href: visualbasic.md
+    - name: Windows Forms
+      href: winforms.md
