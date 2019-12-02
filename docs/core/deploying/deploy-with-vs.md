@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd6861a71bdaac2d3500be52ae29c9fdb383a574
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092709"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428895"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -24,7 +24,7 @@ Die folgenden Abschnitte zeigen, wie Sie Microsoft Visual Studio zum Erstellen d
 - Eigenständige Bereitstellung
 - Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
-Informationen zur Verwendung von Visual Studio zur Entwicklung von .NET Core-Anwendungen finden Sie unter [Voraussetzungen für .NET Core unter Windows](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
+Informationen zur Verwendung von Visual Studio für die Entwicklung von .NET Core-Anwendungen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Framework-abhängige Bereitstellung
 
@@ -71,7 +71,7 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens ein
 
 1. Verwenden Sie den **NuGet-Paket-Manager**, um einem NuGet-Paket einen Verweis für Ihr Projekt hinzuzufügen. Falls das Paket noch nicht auf Ihrem System verfügbar ist, installieren Sie es. Wählen Sie zum Öffnen des Paket-Managers **Tools** > **NuGet-Paket-Manager** > **NuGet-Pakete für Projektmappe verwalten** aus.
 
-1. Bestätigen Sie, dass `Newtonsoft.Json` auf Ihrem System installiert ist. Falls nicht, installieren Sie es. Die Registerkarte **Installiert** listet NuGet-Pakete auf, die auf Ihrem System installiert sind. Wenn `Newtonsoft.Json` hier nicht aufgelistet ist, wählen Sie die Registerkarte **Durchsuchen** aus, und geben Sie „Newtonsoft.Json“ in das Suchfeld ein. Wählen Sie `Newtonsoft.Json` aus, und wählen Sie im rechten Bereich Ihre Projekt, bevor Sie auf **Installieren** klicken.
+1. Bestätigen Sie, dass Ihre Drittanbieterabhängigkeiten (z. B. `Newtonsoft.Json`) auf Ihrem System installiert sind. Falls dies nicht der Fall ist, installieren Sie sie. Die Registerkarte **Installiert** listet NuGet-Pakete auf, die auf Ihrem System installiert sind. Wenn `Newtonsoft.Json` hier nicht aufgelistet ist, wählen Sie die Registerkarte **Durchsuchen** aus, und geben Sie „Newtonsoft.Json“ in das Suchfeld ein. Wählen Sie `Newtonsoft.Json` aus, und wählen Sie im rechten Bereich Ihre Projekt, bevor Sie auf **Installieren** klicken.
 
 1. Wenn `Newtonsoft.Json` bereits auf Ihrem System installiert ist, fügen Sie es Ihrem Projekt hinzu, indem Sie Ihr Projekt im rechten Bereich der Registerkarte **Pakete für Projektmappe verwalten** auswählen.
 
@@ -98,7 +98,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf Ihr Projekt (nicht auf die Projektmappe), und klicken Sie auf **SCD.csproj bearbeiten** oder **SCD.vbproj bearbeiten**. Fügen Sie der Datei dann die folgenden hervorgehobenen Zeilen hinzu:
 
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
 1. Erstellen Sie einen Debugbuild Ihrer Anwendung.
 
@@ -268,7 +268,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren D
 
 1. Verwenden Sie den **NuGet-Paket-Manager**, um einem NuGet-Paket einen Verweis für Ihr Projekt hinzuzufügen. Falls das Paket noch nicht auf Ihrem System verfügbar ist, installieren Sie es. Wählen Sie zum Öffnen des Paket-Managers **Tools** > **NuGet-Paket-Manager** > **NuGet-Pakete für Projektmappe verwalten** aus.
 
-1. Bestätigen Sie, dass `Newtonsoft.Json` auf Ihrem System installiert ist. Falls nicht, installieren Sie es. Die Registerkarte **Installiert** listet NuGet-Pakete auf, die auf Ihrem System installiert sind. Wenn `Newtonsoft.Json` hier nicht aufgelistet ist, wählen Sie die Registerkarte **Durchsuchen** aus, und geben Sie „Newtonsoft.Json“ in das Suchfeld ein. Wählen Sie `Newtonsoft.Json` aus, und wählen Sie im rechten Bereich Ihre Projekt, bevor Sie auf **Installieren** klicken.
+1. Bestätigen Sie, dass Ihre Drittanbieterabhängigkeiten (z. B. `Newtonsoft.Json`) auf Ihrem System installiert sind. Falls dies nicht der Fall ist, installieren Sie sie. Die Registerkarte **Installiert** listet NuGet-Pakete auf, die auf Ihrem System installiert sind. Wenn `Newtonsoft.Json` hier nicht aufgelistet ist, wählen Sie die Registerkarte **Durchsuchen** aus, und geben Sie „Newtonsoft.Json“ in das Suchfeld ein. Wählen Sie `Newtonsoft.Json` aus, und wählen Sie im rechten Bereich Ihre Projekt, bevor Sie auf **Installieren** klicken.
 
 1. Wenn `Newtonsoft.Json` bereits auf Ihrem System installiert ist, fügen Sie es Ihrem Projekt hinzu, indem Sie Ihr Projekt im rechten Bereich der Registerkarte **Pakete für Projektmappe verwalten** auswählen.
 

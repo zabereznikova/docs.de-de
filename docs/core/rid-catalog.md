@@ -2,12 +2,12 @@
 title: .NET Core Runtime-ID-Katalog (RID)
 description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 ms.date: 02/22/2019
-ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f90aabf0d10ce61dc10fcd952d66ca00e66d282d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100921"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428740"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -108,7 +108,7 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
   - `win10-arm`
   - `win10-arm64`
 
-Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](windows-prerequisites.md).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="linux-rids"></a>RIDs für Linux
 
@@ -126,7 +126,7 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Linux (Erforderliche Komponenten für .NET Core unter Linux)](linux-prerequisites.md).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="macos-rids"></a>Relative IDs für macOS
 
@@ -145,7 +145,7 @@ Relative IDs für macOS verwenden das ältere Branding „OSX“. Nur allgemeine
 - macOS 10.14 Mojave (.NET Core 1.1 oder höher)
   - `osx.10.14-x64`
 
-Weitere Informationen finden Sie unter [Prerequisites for .NET Core on macOS (Erforderliche Komponenten für .NET Core unter macOS)](macos-prerequisites.md).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?tabs=netcore30&pivots=os-macos).
 
 ## <a name="see-also"></a>Siehe auch
 

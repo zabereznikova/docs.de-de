@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139987"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204545"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasiertes asynchrones Programmieren
 
@@ -268,7 +268,7 @@ Die TPL beinhaltet zahlreiche neue öffentliche Typen, die sowohl in parallelen,
 
 Es wird empfohlen, nicht von <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> zu erben. Stattdessen sollten Sie die <xref:System.Threading.Tasks.Task.AsyncState%2A>-Eigenschaft verwenden, um einem <xref:System.Threading.Tasks.Task>-Objekt oder einem <xref:System.Threading.Tasks.Task%601>-Objekt zusätzliche Daten oder einen zusätzlichen Zustand zuzuordnen. Sie können auch Erweiterungsmethoden verwenden, um die Funktionen der <xref:System.Threading.Tasks.Task>-Klasse und der <xref:System.Threading.Tasks.Task%601>-Klasse zu erweitern. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Erweiterungsmethoden](../../csharp/programming-guide/classes-and-structs/extension-methods.md) und [Erweiterungsmethoden](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
-Wenn Sie von <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> erben müssen, können Sie weder <xref:System.Threading.Tasks.Task.Run%2A> und <xref:System.Threading.Tasks.Task.Run%2A> noch die Klassen <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> zum Erstellen von Instanzen des benutzerdefinierten Aufgabentyps verwenden, da von diesen Mechanismen nur <xref:System.Threading.Tasks.Task>-Objekte und <xref:System.Threading.Tasks.Task%601>-Objekte erstellt werden. Außerdem können Sie nicht die von <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> und <xref:System.Threading.Tasks.TaskFactory%601> bereitgestellten Aufgabenfortsetzungsmechanismen verwenden, um Instanzen des benutzerdefinierten Aufgabentyps zu erstellen, da mit diesen Mechanismen ebenfalls nur <xref:System.Threading.Tasks.Task>-Objekte und <xref:System.Threading.Tasks.Task%601>-Objekte erstellt werden.
+Wenn Sie von <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> erben müssen, können Sie nicht <xref:System.Threading.Tasks.Task.Run%2A> oder die Klassen <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> zum Erstellen von Instanzen des benutzerdefinierten Aufgabentyps verwenden, da von diesen Mechanismen nur <xref:System.Threading.Tasks.Task>- und <xref:System.Threading.Tasks.Task%601>-Objekte erstellt werden. Außerdem können Sie nicht die von <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> und <xref:System.Threading.Tasks.TaskFactory%601> bereitgestellten Aufgabenfortsetzungsmechanismen verwenden, um Instanzen des benutzerdefinierten Aufgabentyps zu erstellen, da mit diesen Mechanismen ebenfalls nur <xref:System.Threading.Tasks.Task>-Objekte und <xref:System.Threading.Tasks.Task%601>-Objekte erstellt werden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

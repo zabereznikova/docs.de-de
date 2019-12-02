@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 8b2810af81a57cf21b9a2e2438f7f6aa2cb7a669
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772075"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429493"
 ---
 # <a name="using-structs-c-programming-guide"></a>Verwenden von Strukturen (C#-Programmierhandbuch)
 
-Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B. `Point`, `Rectangle`und `Color`. Obwohl es ebenso einfach ist, einen Punkt als [Klasse](../../language-reference/keywords/class.md) mit [automatisch implementierten Eigenschaften](./auto-implemented-properties.md)darzustellen, kann eine [Struktur](../../language-reference/keywords/struct.md) in verschiedenen Szenarien effizienter sein. Bei der Deklaration eines Arrays mit 1.000 `Point` -Objekten belegen Sie z. B. zusätzlichen Arbeitsspeicher, damit auf jedes Objekt verwiesen werden kann. In diesem Fall wäre eine Struktur weniger speicherintensiv. Da .NET Framework ein Objekt mit dem Namen <xref:System.Drawing.Point> enthält, hat die Struktur in diesem Beispiel stattdessen den Namen `Coords`.
+Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B. `Point`, `Rectangle`und `Color`. Obwohl es ebenso einfach ist, einen Punkt als [Klasse](../../language-reference/keywords/class.md) mit [automatisch implementierten Eigenschaften](./auto-implemented-properties.md)darzustellen, kann eine [Struktur](../../language-reference/keywords/struct.md) in verschiedenen Szenarien effizienter sein. Bei der Deklaration eines Arrays mit 1.000 `Point` -Objekten belegen Sie z. B. zusätzlichen Arbeitsspeicher, damit auf jedes Objekt verwiesen werden kann. In diesem Fall wäre eine Struktur weniger speicherintensiv. Da .NET bereits ein Objekt mit dem Namen <xref:System.Drawing.Point> enthält, hat die Struktur in diesem Beispiel stattdessen den Namen `Coords`.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

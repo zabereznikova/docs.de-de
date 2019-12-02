@@ -1,20 +1,22 @@
 ---
 title: Laden von Daten aus Dateien und anderen Quellen
-description: Diese Anleitung zeigt Ihnen, wie Sie Daten für die Verarbeitung und das Training in ML.NET laden. Die Daten werden ursprünglich in Dateien oder anderen Datenquellen wie Datenbanken, JSON, XML oder In-Memory-Sammlungen gespeichert.
-ms.date: 09/11/2019
+description: Diese Anleitung zeigt Ihnen, wie Sie Daten mithilfe der API für die Verarbeitung und das Training in ML.NET laden. Daten werden in Dateien, Datenbanken, JSON, XML oder In-Memory-Sammlungen gespeichert.
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991363"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344755"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Laden von Daten aus Dateien und anderen Quellen
 
-Diese Anleitung zeigt Ihnen, wie Sie Daten für die Verarbeitung und das Training in ML.NET laden. Die Daten werden ursprünglich in Dateien oder anderen Datenquellen wie Datenbanken, JSON, XML oder In-Memory-Sammlungen gespeichert.
+Diese Anleitung zeigt Ihnen, wie Sie Daten mithilfe der API für die Verarbeitung und das Training in ML.NET laden. Die Daten werden ursprünglich in Dateien oder anderen Datenquellen wie Datenbanken, JSON, XML oder In-Memory-Sammlungen gespeichert.
+
+Wenn Sie den Modell-Generator verwenden, finden Sie weitere Informationen unter [Laden von Trainingsdaten in den Modell-Generator](load-data-model-builder.md).
 
 ## <a name="create-the-data-model"></a>Erstellen des Datenmodells
 
@@ -107,18 +109,19 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>Laden von Daten aus einer relationalen Datenbank
 
-> [!NOTE]
-> DatabaseLoader befindet sich derzeit in der Vorschauphase. Sie kann verwendet werden, indem Sie auf die NuGet-Pakete [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) und [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) verweisen.
-
 ML.NET unterstützt das Laden von Daten aus einer Vielzahl von relationalen Datenbanken, die von [`System.Data`](xref:System.Data) unterstützt werden, darunter SQL Server, Azure SQL-Datenbank, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 und viele mehr.
+
+> [!NOTE]
+> Um `DatabaseLoader`zu verwenden, verweisen Sie auf das NuGet-Paket [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient).
 
 Bei einer Datenbank mit einer Tabelle mit dem Namen `House` und dem folgenden Schema:
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,6 +132,8 @@ Die Daten können durch eine Klasse wie `HouseData` modelliert werden.
 public class HouseData
 {
     public float Size { get; set; }
+
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
@@ -147,12 +152,14 @@ Definieren Sie die Verbindungszeichenfolge sowie den SQL-Befehl, der für die Da
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-Verwenden Sie schließlich die `Load`-Methode, um die Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView)-Schnittstelle zu laden.
+Numerische Daten, die nicht vom Typ [`Real`](xref:System.Data.SqlDbType) sind, müssen in [`Real`](xref:System.Data.SqlDbType) konvertiert werden. Der [`Real`](xref:System.Data.SqlDbType)-Typ wird als Gleitkommawert mit einfacher Genauigkeit oder [`Single`](xref:System.Single) dargestellt (der von ML.NET-Algorithmen erwartete Eingabetyp). In diesem Beispiel ist die Spalte `NumBed` eine ganze Zahl in der Datenbank. Mithilfe der integrierten Funktion `CAST` wird sie in [`Real`](xref:System.Data.SqlDbType) konvertiert. Da die `Price`-Eigenschaft bereits vom Typ [`Real`](xref:System.Data.SqlDbType) ist, wird sie unverändert geladen.
+
+Verwenden Sie die `Load`-Methode, um die Daten in ein [`IDataView`](xref:Microsoft.ML.IDataView)-Element zu laden.
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +212,8 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- Informationen zum Bereinigen oder anderweitigen Verarbeiten von Daten finden Sie unter [Vorbereiten von Daten für die Modellerstellung](prepare-data-ml-net.md).
+- Wenn Sie bereit sind, ein Modell zu erstellen, finden Sie weitere Informationen unter [Trainieren und Auswerten eines Modells](train-machine-learning-model-ml-net.md).
