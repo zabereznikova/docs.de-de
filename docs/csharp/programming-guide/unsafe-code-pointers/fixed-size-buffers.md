@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 33af43a69587ffaadd7fcb42fa1d30ee9fc41989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429400"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552394"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 
@@ -37,7 +37,7 @@ Die Größe des 128-Element-`char`-Arrays beträgt 256 Bytes. [Char](../../langu
 
 Im obigen Beispiel wird der Zugriff auf `fixed`-Felder ohne Anheften dargestellt – diese Funktionalität ist ab C# 7.3 verfügbar.
 
-Ein anderes häufiges Array mit fester Größe ist das [bool](../../language-reference/keywords/bool.md)-Array. Die Elemente in einem `bool`-Array sind immer ein Byte groß. `bool`-Arrays eignen sich nicht zum Erstellen von Bitarrays oder Puffern.
+Ein anderes häufiges Array mit fester Größe ist das [bool](../../language-reference/builtin-types/bool.md)-Array. Die Elemente in einem `bool`-Array sind immer ein Byte groß. `bool`-Arrays eignen sich nicht zum Erstellen von Bitarrays oder Puffern.
 
 > [!NOTE]
 > Mit Ausnahme von Arbeitsspeicher, der mithilfe von [stackalloc](../../language-reference/operators/stackalloc.md) erstellt wurde, führen der C#-Compiler und die Common Language Runtime (CLR) keine Sicherheitsüberprüfungen für Pufferüberlauf aus. Lassen Sie, wie bei jedem unsicheren Code, Vorsicht walten.

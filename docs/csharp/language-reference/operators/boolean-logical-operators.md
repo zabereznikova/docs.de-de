@@ -32,16 +32,16 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e4efb283c835a703ec64b6ec5995b821c995dc60
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737892"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552492"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren (C#-Referenz)
 
-Die folgenden Operatoren führen logische Vorgänge mit [bool](../keywords/bool.md)-Operanden durch:
+Die folgenden Operatoren führen logische Vorgänge mit [bool](../builtin-types/bool.md)-Operanden durch:
 
 - Unärer [`!` (logische Negation)](#logical-negation-operator-) Operator.
 - Binäre [`&` (logisch AND)](#logical-and-operator-), [`|` (logisch OR)](#logical-or-operator-) und [`^` (logisch exklusiv OR)](#logical-exclusive-or-operator-) Operatoren. Diese Operatoren werten immer beide Operanden aus.

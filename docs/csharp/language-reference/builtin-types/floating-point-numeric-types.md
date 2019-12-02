@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771901"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552279"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Numerische Gleitkommatypen (C#-Referenz)
 
@@ -52,8 +52,8 @@ Da der Typ `decimal` über eine höhere Genauigkeit und einen kleineren Bereich 
 
 Sie können [integrale](integral-numeric-types.md) Typen und Gleitkommatypen in einem Ausdruck kombinieren. In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert. Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:
 
-- Wenn einer der Gleitkommatypen `double` ist, wird der Ausdruck in `double` oder in [bool](../keywords/bool.md) in relationalen Vergleichen oder in Vergleichen auf Gleichheit ausgewertet.
-- Wenn kein `double`-Typ im Ausdruck vorhanden ist, wird der Ausdruck in `float` oder in relationalen Vergleichen oder Vergleichen auf Gleichheit in [bool](../keywords/bool.md) ausgewertet.
+- Wenn einer der Gleitkommatypen `double` ist, wird der Ausdruck in `double` oder in [bool](bool.md) in relationalen Vergleichen oder in Vergleichen auf Gleichheit ausgewertet.
+- Wenn kein `double`-Typ im Ausdruck vorhanden ist, wird der Ausdruck in `float` oder in relationalen Vergleichen oder Vergleichen auf Gleichheit in [bool](bool.md) ausgewertet.
 
 Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:
 
