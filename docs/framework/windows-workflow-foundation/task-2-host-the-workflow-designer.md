@@ -2,34 +2,34 @@
 title: 'Aufgabe 2: Hosten des Workflow-Designers'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 15657ad79632812d3802e4da22b9ef297d08f932
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 8e4c17ed182cec7748b9a1f11f76ff90aa60c39e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180259"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715791"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Aufgabe 2: Hosten des Workflow-Designers
 
-In diesem Thema wird das Verfahren zum Hosting einer Instanz des [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in einer Windows Presentation Foundation (WPF)-Anwendung beschrieben.
+In diesem Thema wird das Verfahren zum Hosting einer Instanz des Windows-Workflow-Designer in einer Windows Presentation Foundation (WPF)-Anwendung beschrieben.
 
-Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthält, erstellt Programm gesteuert eine Instanz der <xref:System.Activities.Presentation.WorkflowDesigner>, die eine standardmäßige <xref:System.Activities.Statements.Sequence> Aktivität enthält, registriert die Designer Metadaten, um Designer Unterstützung für alle integrierten Aktivitäten bereitzustellen, und hostet die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in der WPF-Anwendung.
+Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthält, erstellt Programm gesteuert eine Instanz der <xref:System.Activities.Presentation.WorkflowDesigner>, die eine standardmäßige <xref:System.Activities.Statements.Sequence> Aktivität enthält, registriert die Designer Metadaten, um Designer Unterstützung für alle integrierten Aktivitäten bereitzustellen, und hostet die Workflow-Designer in der WPF-Anwendung.
 
 ## <a name="to-host-the-workflow-designer"></a>So hosten Sie den Workflow-Designer
 
 1. Öffnen Sie das HostingApplication-Projekt, das Sie in [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation Anwendung](task-1-create-a-new-wpf-app.md)erstellt haben.
 
-2. Passen Sie die Fenstergröße an, um die Verwendung des [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] einfacher zu machen. Wählen Sie hierzu im Designer **MainWindow** , drücken Sie F4, um das **Eigenschaften** Fenster anzuzeigen, und legen Sie im Abschnitt **Layout** die **Breite** auf den Wert 600 und die **Höhe** auf 350 fest.
+2. Passen Sie die Größe des Fensters an, um die Verwendung des Workflow-Designer zu vereinfachen. Wählen Sie hierzu im Designer **MainWindow** , drücken Sie F4, um das **Eigenschaften** Fenster anzuzeigen, und legen Sie im Abschnitt **Layout** die **Breite** auf den Wert 600 und die **Höhe** auf 350 fest.
 
 3. Legen Sie den Raster Namen fest, indem Sie im Designer den **Raster** Bereich auswählen (Klicken Sie auf das Feld im **MainWindow**), und legen Sie die **Name** -Eigenschaft oben im **Eigenschaften** Fenster auf "grid1" fest.
 
 4. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte ( **...** ) neben der `ColumnDefinitions`-Eigenschaft, um das Dialogfeld Auflistungs- **Editor** zu öffnen.
 
-5. Klicken Sie im Dialogfeld Auflistungs- **Editor** drei Mal auf die Schaltfläche **Hinzufügen** , um drei Spalten in das Layout einzufügen. Die erste Spalte enthält die **Toolbox**, die zweite Spalte hostet die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], und die dritte Spalte wird für die Eigenschaften Analyse verwendet.
+5. Klicken Sie im Dialogfeld Auflistungs- **Editor** drei Mal auf die Schaltfläche **Hinzufügen** , um drei Spalten in das Layout einzufügen. Die erste Spalte enthält die **Toolbox**, die zweite Spalte hostet die Workflow-Designer, und die dritte Spalte wird für die Eigenschaften Analyse verwendet.
 
 6. Legen Sie die `Width`-Eigenschaft der mittleren Spalte auf den Wert "4 *" fest.
 
-7. Klicken Sie auf **OK**, um die Änderungen zu speichern. Der folgenden XAML-Code wird der Datei " *MainWindow. XAML* " hinzugefügt:
+7. Klicken Sie auf **OK** , um die Änderungen zu speichern. Der folgenden XAML-Code wird der Datei " *MainWindow. XAML* " hinzugefügt:
 
     ```xaml
     <Grid Name="grid1">
@@ -88,7 +88,7 @@ Die Prozedur konfiguriert das **Raster** Steuerelement, das den Designer enthäl
         }
         ```
 
-    4. Registrieren Sie die Designer-Metadaten, um Designerunterstützung für alle integrierten Aktivitäten hinzuzufügen. Dies ermöglicht Ihnen, Aktivitäten aus der Toolbox auf der ursprünglichen <xref:System.Activities.Statements.Sequence>-Aktivität im [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] abzulegen. Fügen Sie zu diesem Zweck der `MainWindow`-Klasse die `RegisterMetadata`-Methode hinzu:
+    4. Registrieren Sie die Designer-Metadaten, um Designerunterstützung für alle integrierten Aktivitäten hinzuzufügen. Auf diese Weise können Sie Aktivitäten aus der Toolbox auf die ursprüngliche <xref:System.Activities.Statements.Sequence> Aktivität in der Workflow-Designer ablegen. Fügen Sie zu diesem Zweck der `MainWindow`-Klasse die `RegisterMetadata`-Methode hinzu:
 
         ```csharp
         private void RegisterMetadata()

@@ -2,12 +2,12 @@
 title: Debugverhalten von Diensten
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 67ae8cf72baf2d6a54010a05ca4c5e047120617a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6a0a1c5d9f9741da978c633d35ea1e39664bed5b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044742"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716310"
 ---
 # <a name="service-debug-behavior"></a>Debugverhalten von Diensten
 
@@ -32,14 +32,14 @@ Die Datei Web.config für den Server definiert das Debugverhalten des Diensts, u
 </behaviors>
 ```
 
-serviceDebug-> ist das Konfigurationselement, das das Ändern der Eigenschaften des dienstdebugverhaltens ermöglicht. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Der Benutzer kann dieses Verhalten ändern, um Folgendes zu erreichen:
+[\<serviceDebug->](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) ist das Konfigurationselement, das das Ändern der Eigenschaften des dienstdebugverhaltens ermöglicht. Der Benutzer kann dieses Verhalten ändern, um Folgendes zu erreichen:
 
 - Dadurch kann der Dienst Ausnahmen zurückgeben, die von der Anwendung ausgelöst werden, auch wenn die Ausnahmen nicht mit <xref:System.ServiceModel.FaultContractAttribute> deklariert sind. `includeExceptionDetailInFaults` wird dazu auf `true` festgelegt. Diese Einstellung ist in Debuggingfällen hilfreich, in denen der Server eine unerwartete Ausnahme ausgibt.
 
   > [!IMPORTANT]
   > Es ist nicht sicher, diese Einstellung in einer Produktionsumgebung zu aktivieren. Eine unerwartete Ausnahme des Servers besitzt möglicherweise Informationen, die nicht für den Client bestimmt sind. Wenn `includeExceptionDetailsInFaults` auf `true` festgelegt ist, kann es möglicherweise zu Informationsverlusten kommen.
 
-- Der serviceDebug-> ermöglicht es Benutzern auch, die Hilfeseite zu aktivieren oder zu deaktivieren. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Jeder Dienst kann optional eine Hilfeseite verfügbar machen, die Informationen zum Dienst enthält, einschließlich des Endpunkts, um WSDL für den Dienst abzurufen. Dies kann durch Festlegen von `httpHelpPageEnabled` auf `true` aktiviert werden. Dadurch kann die Hilfeseite an eine GET-Anforderung der Basisadresse des Diensts zurückgegeben werden. Durch Festlegen des Attributs `httpHelpPageUrl` können Sie diese Adresse ändern. Sie können dies sichern, indem Sie HTTPS statt HTTP verwenden. Legen Sie dazu `httpsHelpPageEnabled` auf `httpsHelpPageUrl` fest.
+- Der [\<serviceDebug->](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) ermöglicht es Benutzern auch, die Hilfeseite zu aktivieren oder zu deaktivieren. Jeder Dienst kann optional eine Hilfeseite verfügbar machen, die Informationen zum Dienst enthält, einschließlich des Endpunkts, um WSDL für den Dienst abzurufen. Dies kann durch Festlegen von `httpHelpPageEnabled` auf `true` aktiviert werden. Dadurch kann die Hilfeseite an eine GET-Anforderung der Basisadresse des Diensts zurückgegeben werden. Durch Festlegen des Attributs `httpHelpPageUrl` können Sie diese Adresse ändern. Sie können dies sichern, indem Sie HTTPS statt HTTP verwenden. Legen Sie dazu `httpsHelpPageEnabled` auf `httpsHelpPageUrl` fest.
 
 Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Die ersten drei Vorgänge (Add, Subtract und Multiply) müssen erfolgreich sein. Der letzte Vorgang ("divide") schlägt mit einer Ausnahme, der Division durch 0 (null), fehl.
 
@@ -56,6 +56,6 @@ Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für de
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`

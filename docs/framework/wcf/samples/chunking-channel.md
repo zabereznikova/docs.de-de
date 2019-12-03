@@ -2,12 +2,12 @@
 title: Segmentierungskanal
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3811f7e7229dec1a46585a558b96f94bb202902f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990116"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716030"
 ---
 # <a name="chunking-channel"></a>Segmentierungskanal
 
@@ -23,7 +23,7 @@ Die Segmentierung sollte stets nur dann eingesetzt werden, wenn die gesamte Nach
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -256,7 +256,7 @@ Hier einige Details, die beachtet werden sollten:
 
 - Der an Send übergebene Timeout dient als Timeout für den gesamten Sendevorgang, der das Senden aller Segmente umfasst.
 
-- Der benutzerdefinierte <xref:System.Xml.XmlDictionaryWriter>-Entwurf wurde ausgewählt, um zu vermeiden, dass der gesamte Text der ursprünglichen Nachricht gepuffert wird. Wenn mithilfe von <xref:System.Xml.XmlDictionaryReader> ein `message.GetReaderAtBodyContents` für den Text verwendet würde, würde der gesamte Nachrichtentext gepuffert. Stattdessen verfügen wir über ein Benutzer <xref:System.Xml.XmlDictionaryWriter> definiertes, das `message.WriteBodyContents`an die Übergabe erfolgt. Wenn die Nachricht WriteBase64 beim Writer aufruft, fasst der Writer Segmente zu Nachrichten zusammen und sendet sie über den inneren Kanal. WriteBase64 blockiert, bis das Segment gesendet wurde.
+- Der benutzerdefinierte <xref:System.Xml.XmlDictionaryWriter>-Entwurf wurde ausgewählt, um zu vermeiden, dass der gesamte Text der ursprünglichen Nachricht gepuffert wird. Wenn mithilfe von <xref:System.Xml.XmlDictionaryReader> ein `message.GetReaderAtBodyContents` für den Text verwendet würde, würde der gesamte Nachrichtentext gepuffert. Stattdessen verfügen wir über eine benutzerdefinierte <xref:System.Xml.XmlDictionaryWriter>, die an `message.WriteBodyContents`übermittelt wird. Wenn die Nachricht WriteBase64 beim Writer aufruft, fasst der Writer Segmente zu Nachrichten zusammen und sendet sie über den inneren Kanal. WriteBase64 blockiert, bis das Segment gesendet wurde.
 
 ## <a name="implementing-the-receive-operation"></a>Implementieren des Empfangsvorgangs (Receive)
 
@@ -282,7 +282,7 @@ Hier einige Details, die beachtet werden sollten:
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` legt zuerst `stopReceive` auf `true` fest, um zu signalisieren, dass der ausstehende`ReceiveChunkLoop` beendet werden soll. Er wartet dann auf das `receiveStopped` <xref:System.Threading.ManualResetEvent>, das festgelegt wird `ReceiveChunkLoop` , wenn beendet wird. Angenommen, `ReceiveChunkLoop` wird innerhalb des angegebenen Timeouts beendet, dann ruft `OnClose` mit dem restlichen Timeout `innerChannel.Close` auf.
+`OnClose` legt zuerst `stopReceive` auf `true` fest, um zu signalisieren, dass der ausstehende`ReceiveChunkLoop` beendet werden soll. Dann wartet Sie auf die `receiveStopped` <xref:System.Threading.ManualResetEvent>, die festgelegt wird, wenn `ReceiveChunkLoop` angehalten wird. Angenommen, `ReceiveChunkLoop` wird innerhalb des angegebenen Timeouts beendet, dann ruft `OnClose` mit dem restlichen Timeout `innerChannel.Close` auf.
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ Der `ChunkingChannelListener` ist ein Wrapper um einen inneren Kanallistener. Ne
 
 ## <a name="implementing-binding-element-and-binding"></a>Implementieren von Bindungselement und Bindung
 
-`ChunkingBindingElement` ist für das Erstellen der `ChunkingChannelFactory` und des `ChunkingChannelListener` verantwortlich. \< `CanBuildChannelListener` `IDuplexSessionChannel` Überprüft, ob t in `CanBuildChannelFactory`t > und \<t > vom Typ ist (der einzige Kanal, der vom Segmentierungs Kanal unterstützt wird) und dass die anderen Bindungs Elemente in der Bindung dies unterstützen. `ChunkingBindingElement` Kanaltyp.
+`ChunkingBindingElement` ist für das Erstellen der `ChunkingChannelFactory` und des `ChunkingChannelListener` verantwortlich. Der `ChunkingBindingElement` überprüft, ob t in `CanBuildChannelFactory`\<t > und `CanBuildChannelListener`\<t > den Typ `IDuplexSessionChannel` hat (der einzige Kanal, der vom Segmentierungs Kanal unterstützt wird) und dass die anderen Bindungs Elemente der Bindung diesen Kanaltyp unterstützen.
 
-`BuildChannelFactory`\<T > zuerst überprüft, ob der angeforderte Kanaltyp erstellt werden kann, und anschließend wird eine Liste der zu segmentierenden Nachrichten Aktionen abgerufen. Weitere Informationen finden Sie in folgendem Abschnitt. Anschließend erstellt es einen neuen `ChunkingChannelFactory`, dem es die innere Kanalfactory (wie aus `context.BuildInnerChannelFactory<IDuplexSessionChannel>` zurückgegeben), die Liste der Nachrichtenaktionen und die maximale Anzahl der beim Empfang zu puffernden Segmente übergibt. Die maximale Anzahl an Segmenten stammt aus einer Eigenschaft namens `MaxBufferedChunks`, die vom `ChunkingBindingElement` verfügbar gemacht wird.
+`BuildChannelFactory`\<t > zuerst überprüft, ob der angeforderte Kanaltyp erstellt werden kann, und anschließend wird eine Liste der zu segmentierenden Nachrichten Aktionen abgerufen. Weitere Informationen finden Sie in folgendem Abschnitt. Anschließend erstellt es einen neuen `ChunkingChannelFactory`, dem es die innere Kanalfactory (wie aus `context.BuildInnerChannelFactory<IDuplexSessionChannel>` zurückgegeben), die Liste der Nachrichtenaktionen und die maximale Anzahl der beim Empfang zu puffernden Segmente übergibt. Die maximale Anzahl an Segmenten stammt aus einer Eigenschaft namens `MaxBufferedChunks`, die vom `ChunkingBindingElement` verfügbar gemacht wird.
 
 `BuildChannelListener<T>` hat zum Erstellen von `ChunkingChannelListener` und zur Übergabe an den inneren Kanallistener eine ähnliche Implementierung.
 
@@ -320,7 +320,7 @@ In diesem Beispiel ist eine Beispielbindung namens `TcpChunkingBinding` enthalte
 
 Der Segmentierungskanal segmentiert nur die Nachrichten, die über das `ChunkingBehavior`-Attribut identifiziert wurden. Die `ChunkingBehavior`-Klasse implementiert `IOperationBehavior` und wird durch Aufrufen der `AddBindingParameter`-Methode implementiert. In dieser Methode untersucht `ChunkingBehavior` den Wert dieser `AppliesTo`-Eigenschaft (`InMessage`, `OutMessage` oder beides), um zu bestimmen, welche Nachrichten segmentiert werden sollen. Anschließend ruft es die Aktion jeder diese Nachrichten ab (aus der Nachrichtenauflistung unter `OperationDescription`) und fügt sie einer Zeichenfolgenauflistung hinzu, die in einer Instanz von `ChunkingBindingParameter` enthalten ist. Anschließend wird dieser `ChunkingBindingParameter` der angegebenen `BindingParameterCollection` hinzugefügt.
 
-Diese `BindingParameterCollection` wird innerhalb von `BindingContext` an die einzelnen Bindungselemente in der Bindung übergeben, wenn das betreffende Bindungselement die Kanalfactory oder den Kanallistener erstellt. Die `ChunkingBindingElement`-Implementierung von `BuildChannelFactory<T>` und `BuildChannelListener<T>` ruft diese `ChunkingBindingParameter` aus den `BindingContext’`s `BindingParameterCollection`ab. Die Auflistung der in `ChunkingBindingParameter` enthaltenen Aktionen wird anschließend an `ChunkingChannelFactory` oder `ChunkingChannelListener` übergeben, von wo aus sie wiederum an `ChunkingDuplexSessionChannel` übergeben wird.
+Diese `BindingParameterCollection` wird innerhalb von `BindingContext` an die einzelnen Bindungselemente in der Bindung übergeben, wenn das betreffende Bindungselement die Kanalfactory oder den Kanallistener erstellt. Die `ChunkingBindingElement`Implementierung von `BuildChannelFactory<T>` und `BuildChannelListener<T>` Pull dieses `ChunkingBindingParameter` aus den `BindingContext’`s `BindingParameterCollection`. Die Auflistung der in `ChunkingBindingParameter` enthaltenen Aktionen wird anschließend an `ChunkingChannelFactory` oder `ChunkingChannelListener` übergeben, von wo aus sie wiederum an `ChunkingDuplexSessionChannel` übergeben wird.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 

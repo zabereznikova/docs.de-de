@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336265"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712347"
 ---
 # <a name="await-operator-visual-basic"></a>Await-Operator (Visual Basic)
 
@@ -23,7 +23,7 @@ Die Methode, in der `Await` verwendet wird, muss einen [Async](../../../visual-b
 > [!NOTE]
 > Die Schlüsselwörter `Async` und `Await` wurden in Visual Studio 2012 eingeführt. Eine Einführung in die asynchrone Programmierung finden Sie unter [asynchrone Programmierung mit Async und warten](../../../visual-basic/programming-guide/concepts/async/index.md).
 
-In der Regel ist die Aufgabe, auf die Sie den `Await`-Operator anwenden, der Rückgabewert eines Aufrufes einer Methode, die das [aufgabenbasierte asynchrone Muster](https://go.microsoft.com/fwlink/?LinkId=204847)implementiert, d. h. eine <xref:System.Threading.Tasks.Task> oder eine <xref:System.Threading.Tasks.Task%601>.
+In der Regel ist die Aufgabe, auf die Sie den `Await`-Operator anwenden, der Rückgabewert eines Aufrufes einer Methode, die das [aufgabenbasierte asynchrone Muster](https://www.microsoft.com/download/details.aspx?id=19957)implementiert, d. h. eine <xref:System.Threading.Tasks.Task> oder eine <xref:System.Threading.Tasks.Task%601>.
 
 Im folgenden Code gibt die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>`getContentsTask`, eine `Task(Of Byte())` zurück. Die Aufgabe enthält das Versprechen, das tatsächliche Bytearray zu erzeugen, wenn die Operation abgeschlossen ist. Der Operator `Await` wird auf `getContentsTask` angewendet, um die Ausführung in `SumPageSizesAsync` anzuhalten, bis `getContentsTask` abgeschlossen wurde. In der Zwischenzeit wird die Steuerung wieder an den Aufrufer von `SumPageSizesAsync` übergeben. Wenn `getContentsTask` beendet ist, wird der `Await`-Ausdruck in ein Bytearray ausgewertet.
 

@@ -2,12 +2,12 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2a8e93604654d20c210015896e02d76b4b8bd36e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037900"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715933"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 
@@ -51,17 +51,17 @@ Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachu
 
 4. Öffnen Sie im Datei-Explorer den WCF-Test Client.
 
-    Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Ordner "Visual Studio 2010-Installationsordner" > Ordner "\common7\ide\".
+    Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Visual Studio 2010-Installationsordner > Ordner "\common7\ide\".
 
     Der Standard Installationsordner von Visual Studio 2010 ist c:\Programme\Microsoft Visual Studio 10,0.
 
 5. Wählen Sie im WCF-Test Client im Menü **Datei** die Option **Dienst hinzufügen** aus.
 
-    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist `http://localhost:53797/SampleWorkflowService.xamlx`.
+    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Der Standardwert ist `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Öffnen Sie die Ereignisanzeige.
 
-    Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das Startmenü, wählen Sie **Ausführen** aus, `eventvwr.exe`und geben Sie ein. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
+    Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das **Startmenü** , wählen Sie **Ausführen** aus, und geben Sie `eventvwr.exe`ein. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
 
 7. Navigieren Sie in der Strukturansicht des Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs-und Dienst Protokolle**und **Microsoft**. Klicken Sie mit der rechten Maustaste auf **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle anzeigen** , um die analytischen und Debugprotokolle
 
@@ -77,7 +77,7 @@ Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachu
 
 10. Achten Sie auf die vom Workflow ausgegebenen Ereignisse.
 
-    Wechseln Sie zurück zu Ereignisanzeige, und navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustasteauf **Analyse** , und wählen Sie
+    Wechseln Sie zurück zu Ereignisanzeige, und navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustaste auf **Analyse** , **und wählen Sie**
 
     Die Workflowereignisse werden in der Ereignisanzeige angezeigt. Beachten Sie, dass Workflowausführungsereignisse angezeigt werden und dass es sich bei einem dieser Ereignisse um eine unbehandelte Ausnahme handelt, die dem Fehler im Workflow entspricht. Es wird auch ein Warnungsereignis von der Workflowaktivität ausgegeben, das angibt, dass die Aktivität einen Fehler auslöst.
 
@@ -138,7 +138,7 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 > [!NOTE]
 > Es gibt ein bekanntes Problem in der Ereignisanzeige, bei dem bei der Decodierung von ETW-Ereignissen ein Fehler auftritt. Möglicherweise wird eine Fehlermeldung ähnlich der Folgenden angezeigt.
 >
-> Die Beschreibung für die Ereignis \<-ID-ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
+> Die Beschreibung für die Ereignis-ID \<ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
 >
 > Wenn dieser Fehler auftritt, klicken Sie im Aktionsbereich auf "Aktualisieren". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.
 
@@ -147,7 +147,7 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 

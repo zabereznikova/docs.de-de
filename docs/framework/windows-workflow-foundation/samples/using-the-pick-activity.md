@@ -2,12 +2,12 @@
 title: Verwenden der Pick-Aktivität
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037882"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715526"
 ---
 # <a name="using-the-pick-activity"></a>Verwenden der Pick-Aktivität
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Statements.Pick>-Aktivität verwendet wird.
@@ -24,17 +24,17 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Stateme
 
  Designer-Workflow die Designer-Version des Beispiels veranschaulicht, wie ein Workflow im Designer erstellt wird. Die folgenden Dateien sind enthalten:
 
-- Program.cs: Schließt die `Main` Funktion ein, die den Beispiel Workflow ausführt.
+- Program.cs: schließt die `Main`-Funktion ein, die den Beispielworkflow ausführt.
 
-- ReadString.cs: Eine benutzerdefinierte Aktivität, die Eingaben aus der Konsole liest.
+- ReadString.cs: eine benutzerdefinierte Aktivität, die Eingaben aus der Konsole liest.
 
-- Sequence1. XAML: Ein Workflow, der mit dem Designer erstellt wurde, der Pick verwendet.
+- Sequence1.xaml: ein Workflow, der mit dem Designer erstellt wurde, der Pick verwendet.
 
  Codierter Workflow die codierte Version des Beispiels veranschaulicht, wie ein Workflow im Designer erstellt wird. Die folgenden Dateien sind enthalten:
 
-- Program.cs: Schließt die `Main` Funktion ein, die den Beispiel Workflow ausführt.
+- Program.cs: schließt die `Main`-Funktion ein, die den Beispielworkflow ausführt.
 
-- ReadString.cs: Eine benutzerdefinierte Aktivität, die Eingaben aus der Konsole liest.
+- ReadString.cs: eine benutzerdefinierte Aktivität, die Eingaben aus der Konsole liest.
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
@@ -49,6 +49,6 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Stateme
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

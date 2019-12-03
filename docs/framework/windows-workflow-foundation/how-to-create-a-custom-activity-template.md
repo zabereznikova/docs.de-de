@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Erstellen einer benutzerdefinierten Aktivitätsvorlage'
+title: 'Gewusst wie: Erstellen einer benutzerdefinierten Aktivitätsvorlage'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f910d1367c941dbc319421d402cae8f4194872e5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989711"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715256"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Aktivitätsvorlage
+# <a name="how-to-create-a-custom-activity-template"></a>Gewusst wie: Erstellen einer benutzerdefinierten Aktivitätsvorlage
 
-Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration von Aktivitäten, einschließlich benutzerdefinierter zusammengesetzter Aktivitäten, anzupassen. Dadurch müssen Benutzer die Aktivitäten nicht einzeln erstellen und alle zugehörigen Eigenschaften und anderen Einstellungen manuell konfigurieren. Diese benutzerdefinierten Vorlagen können in der **Toolbox** im [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] oder in einem neu gehosteten Designer verfügbar gemacht werden, über den Benutzer Sie auf die vorkonfigurierte Entwurfs Oberfläche ziehen können. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]enthält gute Beispiele für solche Vorlagen: den [sendandreceivereply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) -Vorlagen Designer und den [receiveandsendreply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) -Vorlagen Designer in der Kategorie der [Messaging-Aktivitäts Designer](/visualstudio/workflow-designer/messaging-activity-designers) .
+Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration von Aktivitäten, einschließlich benutzerdefinierter zusammengesetzter Aktivitäten, anzupassen. Dadurch müssen Benutzer die Aktivitäten nicht einzeln erstellen und alle zugehörigen Eigenschaften und anderen Einstellungen manuell konfigurieren. Diese benutzerdefinierten Vorlagen können in der **Toolbox** auf dem Windows-Workflow-Designer oder einem neu gehosteten Designer verfügbar gemacht werden, über den Benutzer Sie auf die vorkonfigurierte Entwurfs Oberfläche ziehen können. Workflow-Designer enthält gute Beispiele für solche Vorlagen: den [sendandreceivereply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) -Vorlagen Designer und den [receiveandsendreply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) -Vorlagen Designer in der Kategorie der [Messaging-Aktivitäts Designer](/visualstudio/workflow-designer/messaging-activity-designers) .
 
- Das erste Verfahren in diesem Thema beschreibt, wie eine benutzerdefinierte Aktivitäts Vorlage für eine **Verzögerungs** Aktivität erstellt wird, und das zweite Verfahren beschreibt kurz, wie Sie [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in einem verfügbar gemacht wird, um zu überprüfen, ob die benutzerdefinierte Vorlage funktioniert.
+ Das erste Verfahren in diesem Thema beschreibt, wie eine benutzerdefinierte Aktivitäts Vorlage für eine **Verzögerungs** Aktivität erstellt wird, und das zweite Verfahren beschreibt kurz, wie Sie in einem Workflow-Designer verfügbar gemacht wird, um zu überprüfen, ob die benutzerdefinierte Vorlage funktioniert.
 
  Benutzerdefinierte Aktivitätsvorlagen müssen <xref:System.Activities.Presentation.IActivityTemplateFactory> implementieren. Die Schnittstelle verfügt über eine einzelne <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A>-Methode, mit der Sie die in der Vorlage verwendeten Aktivitätsinstanzen erstellen und konfigurieren können.
 
@@ -29,7 +29,7 @@ Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration vo
 
 4. Wählen Sie im Bereich **Vorlagen** die Option **Aktivitäts Bibliothek**aus.
 
-5. Geben Sie `DelayActivityTemplate`im Feld Name den Namen ein.
+5. Geben Sie im Feld **Name** `DelayActivityTemplate`ein.
 
 6. Akzeptieren Sie die Standardwerte in den Textfeldern **Speicherort** und Projektmappenname, und klicken Sie dann auf **OK**.
 
@@ -76,7 +76,7 @@ Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration vo
 
 1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die Projekt Mappe Delta activitytemplate, und wählen Sie **Hinzufügen** und dann **Neues Projekt** aus, um das Dialogfeld **Neues Projekt hinzufügen** zu öffnen
 
-2. Wählen Sie die Vorlage **Konsolenanwendung für Workflows** aus `CustomActivityTemplateApp`, benennen Sie Sie, und klicken Sie dann auf **OK**.
+2. Wählen Sie die Vorlage **Konsolenanwendung für Workflows** aus, benennen Sie Sie `CustomActivityTemplateApp`, und klicken Sie dann auf **OK**.
 
 3. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Verzeichnis Verweise des Projekts customactivitytemplateapp, und wählen Sie **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** zu öffnen.
 
@@ -90,7 +90,7 @@ Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration vo
 
 8. Öffnen Sie die Datei Workflow1. XAML, und öffnen Sie die **Toolbox**.
 
-9. Suchen Sie in der Kategorie " **Delta activitytemplate** " die Vorlage **mydelta-Activity** . Ziehen Sie sie auf die Entwurfsoberfläche. Vergewissern Sie sich im Fenster **Eigenschaften** , `Duration` dass die Eigenschaft auf 10 Sekunden festgelegt wurde.
+9. Suchen Sie in der Kategorie " **Delta activitytemplate** " die Vorlage **mydelta-Activity** . Ziehen Sie sie auf die Entwurfsoberfläche. Vergewissern Sie sich im **Eigenschaften** Fenster, dass die `Duration`-Eigenschaft auf 10 Sekunden festgelegt wurde.
 
 ## <a name="example"></a>Beispiel
  Die Datei "MyDelayActivity.cs" sollte den folgenden Code enthalten.

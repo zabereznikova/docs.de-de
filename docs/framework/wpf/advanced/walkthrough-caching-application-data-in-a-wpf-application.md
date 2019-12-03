@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920319"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715893"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
@@ -78,7 +78,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
      Der WPF-Designer wird in der **Entwurfs** Ansicht geöffnet und zeigt die Datei "MainWindow. XAML" an. Visual Studio erstellt den Ordner " **My Project** ", die Datei "Application. XAML" und die Datei "MainWindow. XAML".
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework und Hinzufügen eines Verweises auf die cacheassemblys
- Standardmäßig Zielen WPF-Anwendungen auf das [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]ab. Um den <xref:System.Runtime.Caching>-Namespace in einer WPF-Anwendung zu verwenden, muss die Anwendung auf .NET Framework 4 (nicht auf den [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) abzielen und muss einen Verweis auf den-Namespace enthalten.
+ Standardmäßig richten sich WPF-Anwendungen an das .NET Framework 4 Client Profile. Um den <xref:System.Runtime.Caching>-Namespace in einer WPF-Anwendung zu verwenden, muss die Anwendung auf .NET Framework 4 (nicht auf das .NET Framework 4-Client Profil) abzielen und muss einen Verweis auf den-Namespace enthalten.
 
  Der nächste Schritt besteht daher darin, das .NET Framework Ziel zu ändern und einen Verweis auf den <xref:System.Runtime.Caching>-Namespace hinzuzufügen.
 
@@ -97,7 +97,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Das Dialogfeld **Erweiterte Compilereinstellungen** wird angezeigt.
 
-4. Wählen Sie in der Liste **Ziel Framework (alle Konfigurationen)** die Option .NET Framework 4 aus. (Wählen Sie [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]nicht aus.)
+4. Wählen Sie in der Liste **Ziel Framework (alle Konfigurationen)** die Option .NET Framework 4 aus. (Wählen Sie nicht .NET Framework 4 Client Profil aus.)
 
 5. Klicken Sie auf **OK**.
 
@@ -284,7 +284,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 12. Klicken Sie im Menü **Erstellen** auf **wpfcaching erstellen** , um das Projekt zu erstellen.
 
 ## <a name="testing-caching-in-the-wpf-application"></a>Testen der Zwischenspeicherung in der WPF-Anwendung
- Sie können die Anwendung jetzt testen.
+ Die Anwendung kann nun getestet werden.
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>So testen Sie die Zwischenspeicherung in der WPF-Anwendung
 

@@ -2,12 +2,12 @@
 title: ASP.NET-Zwischenspeicherungsintegration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 56f686b83deb576f1245a9d4b9df2df433ea1e2f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045776"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716175"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
 
@@ -22,27 +22,27 @@ Integration in den ASP.NET-Ausgabecache
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>Diskussion
 
-Im Beispiel wird der <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> verwendet, um das ASP.net-Ausgabe Caching mit dem Windows Communication Foundation (WCF)-Dienst zu nutzen. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> wird auf Dienstvorgänge angewendet und gibt den Namen eines Cacheprofils in einer Konfigurationsdatei an, die auf Antworten vom angegebenen Vorgang angewendet werden soll.
+Das Beispiel verwendet die <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, um das ASP.net-Ausgabe Caching mit dem Windows Communication Foundation (WCF)-Dienst zu nutzen. Das <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> wird auf Dienstvorgänge angewendet und gibt den Namen eines Cacheprofils in einer Konfigurationsdatei an, die auf Antworten vom angegebenen Vorgang angewendet werden soll.
 
-In der Service.cs-Datei des Beispiel Dienst Projekts sind der `GetCustomer` -Vorgang und der- `GetCustomers` Vorgang mit <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>dem gekennzeichnet, der den Cache Profilnamen "CacheFor60Seconds" bereitstellt. In der Datei "Web. config" des Dienst Projekts wird das Cache Profil "CacheFor60Seconds" unter dem <`caching`>-Element von <`system.web`> bereitgestellt. Für dieses Cache Profil lautet der Wert des `duration` Attributs "60", sodass die diesem Profil zugeordneten Antworten für 60 Sekunden im ASP.net-Ausgabe Cache zwischengespeichert werden. Außerdem wird für dieses Cache Profil das `varmByParam` -Attribut auf "Format" festgelegt, sodass Anforderungen mit unterschiedlichen Werten für den `format` Abfrage Zeichen folgen Parameter separat zwischengespeichert werden. Schließlich wird das-Attribut des `varyByHeader` Cache Profils auf "Accept" festgelegt, sodass Anforderungen mit unterschiedlichen Accept-Header Werten separat zwischengespeichert werden.
+In der Service.cs-Datei des Beispiel Dienst Projekts werden die `GetCustomer`-und `GetCustomers` Vorgänge mit dem <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>gekennzeichnet, das den Cache Profilnamen "CacheFor60Seconds" bereitstellt. In der Datei "Web. config" des Dienst Projekts wird das Cache Profil "CacheFor60Seconds" unter dem <`caching`>-Element <`system.web`> bereitgestellt. Für dieses Cache Profil lautet der Wert des `duration`-Attributs "60", sodass die diesem Profil zugeordneten Antworten für 60 Sekunden im ASP.net-Ausgabe Cache zwischengespeichert werden. Außerdem wird für dieses Cache Profil das `varmByParam`-Attribut auf "Format" festgelegt, sodass Anforderungen mit unterschiedlichen Werten für den `format` Abfrage Zeichenfolgen-Parameter separat zwischengespeichert werden. Schließlich wird das `varyByHeader`-Attribut des Cache Profils auf "Accept" festgelegt, sodass Anforderungen mit unterschiedlichen Accept-Header Werten separat zwischengespeichert werden.
 
-Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, über andere .NET Framework Klassen wie die WCF-Kanalfactory und <xref:System.Net.WebClient>auf den Dienst zuzugreifen. Andere Beispiele im SDK (z. b. das Beispiel für den [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) ) veranschaulichen, wie diese Klassen verwendet werden, um mit einem WCF-Dienst zu kommunizieren.
+Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework Klassen wie der WCF-Kanalfactory und <xref:System.Net.WebClient>auf den Dienst zuzugreifen. Andere Beispiele im SDK (z. b. das Beispiel für den [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) ) veranschaulichen, wie diese Klassen verwendet werden, um mit einem WCF-Dienst zu kommunizieren.
 
 ## <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus
 
 Das Beispiel umfasst drei Projekte:
 
-- **Dienst:** Ein Webanwendungs Projekt, das einen in ASP.net gehosteten WCF-HTTP-Dienst enthält.
+- **Service**: ein Webanwendungs Projekt, das einen in ASP.net gehosteten WCF-HTTP-Dienst enthält.
 
-- **Client**: Ein Konsolenanwendungsprojekt, das Aufrufe an den Dienst ausführt.
+- **Client**: ein Konsolen Anwendungsprojekt, das Aufrufe an den Dienst ausführt.
 
-- **Allgemein**: Eine freigegebene Bibliothek, die den vom Client und Dienst verwendeten Customer-Typ enthält.
+- **Common**: eine freigegebene Bibliothek, die den vom Client und Dienst verwendeten Customer-Typ enthält.
 
 Während die Clientkonsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.
 
@@ -66,4 +66,4 @@ Während die Clientkonsolenanwendung ausgeführt wird, sendet der Client Anforde
 
 9. Drücken Sie UMSCHALT+F5, um das Debugging des Diensts zu beenden.
 
-10. Klicken Sie im Windows-Benachrichtigungsbereich mit der rechten Maustaste auf das ASP.netDevelopment Server-Symbol, und wählen Sie dann
+10. Klicken Sie im Windows-Benachrichtigungsbereich mit der rechten Maustaste auf das ASP.NET Development Server-Symbol, **und wählen Sie**dann

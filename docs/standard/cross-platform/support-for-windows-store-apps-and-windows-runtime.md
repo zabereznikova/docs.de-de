@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204956"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714489"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
 
@@ -32,7 +32,7 @@ In diesem Thema wird die Unterstützung erläutert, die der .NET Framework für 
 
 ## <a name="the-basics"></a>Die Grundlagen
 
-Der .NET Framework unterstützt die drei zuvor aufgeführten Entwicklungsszenarien, indem er [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]bereitstellt und die Windows-Runtime selbst unterstützt.
+Der .NET Framework unterstützt die drei zuvor aufgeführten Entwicklungsszenarien durch Bereitstellen von .net für Windows 8. x Store-Apps und durch Unterstützung der Windows-Runtime selbst.
 
 - [.NET Framework und Windows-Runtime Namespaces](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) bietet eine optimierte Ansicht der .NET Framework-Klassenbibliotheken und umfasst nur die Typen und Member, die Sie zum Erstellen von Windows 8. x Store-Apps und Windows-Runtime Komponenten verwenden können.
 
@@ -42,7 +42,7 @@ Der .NET Framework unterstützt die drei zuvor aufgeführten Entwicklungsszenari
 
   - Funktionen, die einfach die Betriebssystem-API einbinden, werden ebenfalls entfernt, da die Windows-Runtime einfach aus verwaltetem Code aufgerufen werden kann.
 
-  Weitere Informationen zum [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]finden Sie in der [Übersicht über .net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Weitere Informationen zum API-Auswahlprozess finden Sie im .net [-Blog für apps im Metro-Stil](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .
+  Weitere Informationen zu .net für Windows 8. x Store-Apps finden Sie unter [Übersicht über .net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Weitere Informationen zum API-Auswahlprozess finden Sie im .net [-Blog für apps im Metro-Stil](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .
 
 - Der [Windows-Runtime](/uwp/api/) stellt die Benutzeroberflächen Elemente zum Entwickeln von Windows 8. x Store-Apps bereit und ermöglicht den Zugriff auf Betriebssystemfunktionen. Wie die .NET Framework verfügt der Windows-Runtime über Metadaten, die es C# den-und-Visual Basic-Compilern ermöglichen, die Windows-Runtime so zu verwenden, wie Sie die .NET Framework-Klassenbibliotheken verwenden. Der .NET Framework erleichtert die Verwendung der Windows-Runtime, indem einige Unterschiede ausgeblendet werden:
 
@@ -88,7 +88,7 @@ In komplexeren Programmier Szenarien, wie z. b. der Verwendung einer Windows-Run
 
 In der Windows-Runtime werden `IMap<K, V>` und `IMapView<K, V>` mithilfe von `IKeyValuePair`durchlaufen. Wenn Sie sie an verwalteten Code übergeben, werden sie als `IDictionary<TKey, TValue>` und `IReadOnlyDictionary<TKey, TValue>` angezeigt. Daher können Sie `System.Collections.Generic.KeyValuePair<TKey, TValue>` verwenden, um sie aufzulisten.
 
-Die Darstellungsweise von Schnittstellen in verwaltetem Code wirkt sich auf die Darstellungsweise der Typen aus, die diese Schnittstellen implementieren. Die `PropertySet`-Klasse implementiert beispielsweise `IMap<K, V>`, die in verwaltetem Code als `IDictionary<TKey, TValue>` angezeigt wird. `PropertySet` wird so angezeigt, als ob es `IDictionary<TKey, TValue>` anstelle von `IMap<K, V>`implementiert hat, sodass es in verwaltetem Code eine `Add`-Methode hat, die sich wie die `Add`-Methode in .NET Framework Wörterbüchern verhält. Eine `Insert`-Methode ist scheinbar nicht vorhanden.
+Die Darstellungsweise von Schnittstellen in verwaltetem Code wirkt sich auf die Darstellungsweise der Typen aus, die diese Schnittstellen implementieren. Die `PropertySet`-Klasse implementiert beispielsweise `IMap<K, V>`, die in verwaltetem Code als `IDictionary<TKey, TValue>` angezeigt wird. `PropertySet` wird angezeigt, als ob es `IDictionary<TKey, TValue>` anstelle von `IMap<K, V>` implementiert. In verwaltetem Code verfügt die Klasse scheinbar über eine `Add`-Methode, die sich wie die `Add`-Methode in .NET Framework-Wörterbüchern verhält. Eine `Insert`-Methode ist scheinbar nicht vorhanden.
 
 Weitere Informationen zur Verwendung der .NET Framework zum Erstellen einer Windows-Runtime-Komponente sowie eine exemplarische Vorgehensweise, die zeigt, wie eine solche Komponente mit JavaScript verwendet wird, finden Sie unter [Erstellen von Windows-Runtime Komponenten C# in und Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
@@ -157,7 +157,7 @@ Sie können verwalteten Code aus Ihren vorhandenen Desktop-Apps als eigenständi
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[.NET für Windows Store-Apps – Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Beschreibt die .NET Framework Typen und Member, die Sie zum Erstellen von Windows 8. x Store-Apps und Windows runtimecomponents verwenden können. (Im Windows Developer Center)|
 |[Roadmap für Windows Store-Apps C# , die oder Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Bietet wichtige Ressourcen, die Ihnen den Einstieg in die Entwicklung von Windows 8. x Store C# -Apps mithilfe von oder Visual Basic erleichtern, einschließlich vielen Schnellstart Themen, Richtlinien und bewährten Methoden. (Im Windows Developer Center)|

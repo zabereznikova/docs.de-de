@@ -2,18 +2,18 @@
 title: Programmiermodell-Elementstruktur
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f2d89cb2a3b0f6167f043148ea793ec1c264a556
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: efda69ac568b0ad9c5fdcf4d42722c5b7dadd3f3
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038175"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715666"
 ---
 # <a name="programming-model-item-tree"></a>Programmiermodell-Elementstruktur
-In diesem Beispiel wird veranschaulicht, wie <xref:System.Activities.Presentation.Model.ModelItem> die Struktur mithilfe der deklarativen Datenbindung aus der Windows Presentation Foundation (WPF)-Strukturansicht navigiert wird.
+In diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Presentation.Model.ModelItem> Struktur mithilfe der deklarativen Datenbindung aus der Windows Presentation Foundation (WPF)-Strukturansicht navigiert wird.
 
 ## <a name="sample-details"></a>Beispieldetails
- Die <xref:System.Activities.Presentation.Model.ModelItem>-Struktur ist die von der [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]-Infrastruktur verwendete Abstraktion zur Verfügbarmachung der Daten zur zugrunde liegenden Instanz, die bearbeitet wird. Die folgende Abbildung ist eine Darstellung der verschiedenen Ebenen der Infrastruktur innerhalb des [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
+ Die <xref:System.Activities.Presentation.Model.ModelItem> Tree ist die Abstraktion, die von der Windows Workflow-Designer-Infrastruktur verwendet wird, um die Daten über die zugrunde liegende Instanz verfügbar zu machen, die bearbeitet wird. Die folgende Abbildung zeigt eine Darstellung der verschiedenen Ebenen der Infrastruktur innerhalb der Workflow-Designer.
 
  ![Diagramm, das die Workflow-Designer Architektur anzeigt.](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
@@ -35,7 +35,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 3. Drücken Sie F5, um die Anwendung auszuführen. Daraufhin wird das WPF-Formular angezeigt.
 
-4. Klicken Sie auf die Schaltfläche zum Laden <xref:System.Activities.Presentation.Model.ModelItem> von **WF** , um das zu laden und an die Strukturansicht zu binden.
+4. Klicken Sie auf die Schaltfläche **WF laden** , um die <xref:System.Activities.Presentation.Model.ModelItem> zu laden und an die Strukturansicht zu binden.
 
 5. Wenn Sie auf die Schaltfläche **Modellelement Struktur ändern** klicken, wird der vorangehende Code ausgeführt, um der Struktur ein Element hinzuzufügen und eine Eigenschaft festzulegen.
 
@@ -44,7 +44,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   

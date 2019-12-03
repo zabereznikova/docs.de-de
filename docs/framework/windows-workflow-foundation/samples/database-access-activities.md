@@ -2,12 +2,12 @@
 title: Datenbankzugriffsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 31794a583e87b5948457fac754cb5bf66fafa09c
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710857"
 ---
 # <a name="database-access-activities"></a>Datenbankzugriffsaktivitäten
 
@@ -18,7 +18,7 @@ Mit Datenbankzugriffsaktivitäten können Sie auf eine Datenbank innerhalb eines
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu (Downloadseite), um alle Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu (Downloadseite), um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
 
@@ -79,7 +79,7 @@ Public class DbUpdate: AsyncCodeActivity
 |ConfigName|Name des Abschnitts in der Konfigurationsdatei, in dem die Verbindungsinformationen gespeichert sind. Wenn dieses Argument festgelegt wird, sind `ProviderName` und `ConnectionString` nicht erforderlich.|
 |CommandType|Der auszuführende <xref:System.Data.Common.DbCommand>-Typ.|
 |Sql|Der auszuführende SQL-Befehl.|
-|Parameter|Auflistung der Parameter der SQL-Abfrage.|
+|Parameters|Auflistung der Parameter der SQL-Abfrage.|
 |AffectedRecords|Anzahl der vom letzten Vorgang betroffenen Datensätze.|
 
 ## <a name="dbqueryscalar"></a>DbQueryScalar
@@ -92,7 +92,7 @@ Sie können die Verbindungsinformationen konfigurieren, indem Sie einen invarian
 
 Die auszuführende Abfrage wird in der `Sql`-Eigenschaft konfiguriert, und die Parameter werden über die `Parameters`-Auflistung übergeben.
 
-Nachdem `DbQueryScalar` ausgeführt wurde, wird der Skalarwert `Result out` im Argument (vom Typ `TResult`, der in der Basisklasse <xref:System.Activities.AsyncCodeActivity%601>definiert ist) zurückgegeben.
+Nachdem `DbQueryScalar` ausgeführt wurde, wird der Skalarwert im Argument `Result out` zurückgegeben (vom Typ `TResult`, der in der Basisklasse <xref:System.Activities.AsyncCodeActivity%601>definiert ist).
 
 ```csharp
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -133,18 +133,18 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |ConfigName|Name des Abschnitts in der Konfigurationsdatei, in dem die Verbindungsinformationen gespeichert sind. Wenn dieses Argument festgelegt wird, sind `ProviderName` und `ConnectionString` nicht erforderlich.|
 |CommandType|Der auszuführende <xref:System.Data.Common.DbCommand>-Typ.|
 |Sql|Der auszuführende SQL-Befehl.|
-|Parameter|Auflistung der Parameter der SQL-Abfrage.|
+|Parameters|Auflistung der Parameter der SQL-Abfrage.|
 |Ergebnis|Skalarwert, der nach Ausführung der Abfrage zurückgegeben wird. Dieses Argument ist vom Typ `TResult`.|
 
 ## <a name="dbquery"></a>DbQuery
 
-Führt eine Abfrage aus, die eine Liste von Objekten abruft. Nachdem die Abfrage ausgeführt wurde, wird eine Zuordnungs Funktion ausgeführt (Sie kann <xref:System.Func%601>sein `TResult` < `TResult` < `DbDataReader`, > oder <xref:System.Activities.ActivityFunc%601> `DbDataReader`>). Diese Zuordnungsfunktion ruft einen Datensatz in einem `DbDataReader` ab und ordnet diesen dem zurückzugebenden Objekt zu.
+Führt eine Abfrage aus, die eine Liste von Objekten abruft. Nach der Ausführung der Abfrage wird eine Zuordnungs Funktion ausgeführt (Sie kann <xref:System.Func%601><`DbDataReader`, `TResult`> oder eine <xref:System.Activities.ActivityFunc%601><`DbDataReader``TResult`>) werden. Diese Zuordnungsfunktion ruft einen Datensatz in einem `DbDataReader` ab und ordnet diesen dem zurückzugebenden Objekt zu.
 
 Sie können die Verbindungsinformationen konfigurieren, indem Sie einen invarianten Anbieternamen (`ProviderName`) und die Verbindungszeichenfolge (`ConnectionString`) festlegen oder indem Sie einen Namen zur Konfiguration der Verbindungszeichenfolge (`ConfigFileSectionName`) aus der Anwendungskonfigurationsdatei verwenden.
 
 Die auszuführende Abfrage wird in der `Sql`-Eigenschaft konfiguriert, und die Parameter werden über die `Parameters`-Auflistung übergeben.
 
-Die Ergebnisse der SQL-Abfrage werden mit einem `DbDataReader` abgerufen. Die Aktivität durchläuft den `DbDataReader` und ordnet die Zeilen im `DbDataReader` einer Instanz von `TResult` zu. Der Benutzer von `DbQuery` muss den Zuordnungscode bereitstellen. Dies kann auf zwei Arten erfolgen: mithilfe <xref:System.Func%601>einer `TResult` `DbDataReader` < < `DbDataReader`, > oder <xref:System.Activities.ActivityFunc%601>einer `TResult`>. Im ersten Fall erfolgt die Zuordnung in einem Ausführungsschritt. Diese Variante ist schneller, kann aber nicht in XAML serialisiert werden. Im zweiten Fall erfolgt die Zuordnung in mehreren Schritten. Diese Variante ist möglicherweise langsamer, kann aber in XAML serialisiert und deklarativ erstellt werden (d. h. jede vorhandene Aktivität kann Teil der Zuordnung sein).
+Die Ergebnisse der SQL-Abfrage werden mit einem `DbDataReader` abgerufen. Die Aktivität durchläuft den `DbDataReader` und ordnet die Zeilen im `DbDataReader` einer Instanz von `TResult` zu. Der Benutzer von `DbQuery` muss den Zuordnungscode bereitstellen. Dies kann auf zwei Arten erfolgen: mit einem <xref:System.Func%601><`DbDataReader``TResult`> oder <xref:System.Activities.ActivityFunc%601><`DbDataReader``TResult`>. Im ersten Fall erfolgt die Zuordnung in einem Ausführungsschritt. Diese Variante ist schneller, kann aber nicht in XAML serialisiert werden. Im zweiten Fall erfolgt die Zuordnung in mehreren Schritten. Diese Variante ist möglicherweise langsamer, kann aber in XAML serialisiert und deklarativ erstellt werden (d. h. jede vorhandene Aktivität kann Teil der Zuordnung sein).
 
 ```csharp
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class
@@ -193,20 +193,20 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |ConfigName|Name des Abschnitts in der Konfigurationsdatei, in dem die Verbindungsinformationen gespeichert sind. Wenn dieses Argument festgelegt wird, sind `ProviderName` und `ConnectionString` nicht erforderlich.|
 |CommandType|Der auszuführende <xref:System.Data.Common.DbCommand>-Typ.|
 |Sql|Der auszuführende SQL-Befehl.|
-|Parameter|Auflistung der Parameter der SQL-Abfrage.|
-|Mapper|Zuordnungs Funktion<xref:System.Func%601>(<`DbDataReader`, `DataReader` `TResult` >), die einen Datensatz im Ergebnis der Ausführung der Abfrage abfragt und eine Instanz eines Objekts vom Typ zurückgibt, das der hinzugefügt werden soll. `TResult` `Result` Sammlung.<br /><br /> In diesem Fall erfolgt die Zuordnung in einem Schritt, kann aber nicht im Designer deklarativ erstellt werden.|
-|MapperFunc|Zuordnungs Funktion<xref:System.Activities.ActivityFunc%601>(<`DbDataReader`, `DataReader` `TResult` >), die einen Datensatz im Ergebnis der Ausführung der Abfrage abfragt und eine Instanz eines Objekts vom Typ zurückgibt, das der hinzugefügt werden soll. `TResult` `Result` Sammlung.<br /><br /> In diesem Fall erfolgt die Zuordnung in mehreren Schritten. Diese Funktion kann in XAML serialisiert und deklarativ erstellt werden (d. h. jede vorhandene Aktivität kann Teil der Zuordnung sein).|
+|Parameters|Auflistung der Parameter der SQL-Abfrage.|
+|Mapper|Die Zuordnungs Funktion (<xref:System.Func%601><`DbDataReader`, `TResult`>), die einen Datensatz in der `DataReader` abstammt, der als Ergebnis der Ausführung der Abfrage abgerufen wurde, und gibt eine Instanz eines Objekts vom Typ `TResult` zurück, das der `Result` Auflistung hinzugefügt werden soll.<br /><br /> In diesem Fall erfolgt die Zuordnung in einem Schritt, kann aber nicht im Designer deklarativ erstellt werden.|
+|MapperFunc|Die Zuordnungs Funktion (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), die einen Datensatz in der `DataReader` abstammt, der als Ergebnis der Ausführung der Abfrage abgerufen wurde, und gibt eine Instanz eines Objekts vom Typ `TResult` zurück, das der `Result` Auflistung hinzugefügt werden soll.<br /><br /> In diesem Fall erfolgt die Zuordnung in mehreren Schritten. Diese Funktion kann in XAML serialisiert und deklarativ erstellt werden (d. h. jede vorhandene Aktivität kann Teil der Zuordnung sein).|
 |Ergebnis|Eine Liste mit Objekten, die als Ergebnis der Ausführung der Abfrage und der Zuordnungsfunktion für jeden Datensatz im `DataReader` zurückgegeben wird.|
 
 ## <a name="dbquerydataset"></a>DbQueryDataSet
 
-Führt eine Abfrage aus, die ein <xref:System.Data.DataSet> zurückgibt. Die Ausführung dieser Klasse erfolgt asynchron. Sie wird von <xref:System.Activities.AsyncCodeActivity> <>abgeleitetund verwendetdieasynchronenFunktionen`TResult`.
+Führt eine Abfrage aus, die ein <xref:System.Data.DataSet> zurückgibt. Die Ausführung dieser Klasse erfolgt asynchron. Sie wird von <xref:System.Activities.AsyncCodeActivity><`TResult`> abgeleitet und verwendet die asynchronen Funktionen.
 
 Sie können die Verbindungsinformationen konfigurieren, indem Sie einen invarianten Anbieternamen (`ProviderName`) und die Verbindungszeichenfolge (`ConnectionString`) festlegen oder indem Sie einen Namen zur Konfiguration der Verbindungszeichenfolge (`ConfigFileSectionName`) aus der Anwendungskonfigurationsdatei verwenden.
 
 Die auszuführende Abfrage wird in der `Sql`-Eigenschaft konfiguriert, und die Parameter werden über die `Parameters`-Auflistung übergeben.
 
-Nachdem der `DbQueryDataSet` ausgeführt wurde, `DataSet` wird der im `Result out` -Argument (vom Typ `TResult`, der in der Basisklasse <xref:System.Activities.AsyncCodeActivity%601>definiert ist) zurückgegeben.
+Nachdem der `DbQueryDataSet` ausgeführt wurde, wird der `DataSet` im `Result out` Argument (vom Typ `TResult`zurückgegeben, der in der Basisklasse <xref:System.Activities.AsyncCodeActivity%601>definiert ist).
 
 ```csharp
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -247,14 +247,14 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |ConfigName|Name des Abschnitts in der Konfigurationsdatei, in dem die Verbindungsinformationen gespeichert sind. Wenn dieses Argument festgelegt wird, sind `ProviderName` und `ConnectionString` nicht erforderlich.|
 |CommandType|Der auszuführende <xref:System.Data.Common.DbCommand>-Typ.|
 |Sql|Der auszuführende SQL-Befehl.|
-|Parameter|Auflistung der Parameter der SQL-Abfrage.|
+|Parameters|Auflistung der Parameter der SQL-Abfrage.|
 |Ergebnis|<xref:System.Data.DataSet>, das nach Ausführung der Abfrage zurückgegeben wird.|
 
 ## <a name="configuring-connection-information"></a>Konfigurieren von Verbindungsinformationen
 
 Für alle Datenbankaktivitäten gelten die gleichen Konfigurationsparameter. Für die Konfiguration gibt es zwei Möglichkeiten:
 
-- `ConnectionString + InvariantName`: Legen Sie den invarianten Namen und die Verbindungs Zeichenfolge des ADO.NET Anbieters fest
+- `ConnectionString + InvariantName`: Legen Sie den invarianten Namen und die Verbindungszeichenfolge für den ADO.NET-Anbieter fest.
 
   ```csharp
   Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -267,7 +267,7 @@ Für alle Datenbankaktivitäten gelten die gleichen Konfigurationsparameter. Fü
   };
   ```
 
-- `ConfigName`: Legen Sie den Namen des Konfigurations Abschnitts fest, der die Verbindungsinformationen enthält.
+- `ConfigName`: Geben Sie den Namen des Abschnitts in der Konfigurationsdatei an, der die Verbindungsinformationen enthält.
 
   ```xml
   <connectionStrings>
@@ -333,6 +333,6 @@ Das Skript "Setup.cmd" ruft die Skriptdatei "CreateDb.sql" auf, die SQL-Befehle 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

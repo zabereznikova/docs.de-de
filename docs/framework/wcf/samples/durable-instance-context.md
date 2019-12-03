@@ -2,12 +2,12 @@
 title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 4c2e39aa257d4b4b9b3bd28e0cd469f09cae0766
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351620"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711942"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-Diese beiden Methoden nutzen `IContextManager`-Implementierungen, um die Kontext-ID auf Nachrichten zu schreiben und von ihnen zu lesen. (`IContextManager` ist eine benutzerdefinierte Schnittstelle, die verwendet wird, um den Vertrag für alle Kontext-Manager zu definieren.) Der Kanal kann entweder die Kontext-ID in einem benutzerdefinierten SOAP-Header oder in einem HTTP-Cookieheader enthalten. Jede Kontextmanagerimplementierung erbt von der `ContextManagerBase`-Klasse, die die allgemeine Funktionalität für alle Kontextmanager enthält. Die `GetContextId`-Methode in dieser Klasse wird verwendet, um die Kontext-ID vom Client zu erzeugen. Wenn eine Kontext-ID ist zum ersten Mal erzeugt wird, wird sie mithilfe dieser Methode in einer Textdatei gespeichert, deren Name von der Remote-Endpunktadresse erstellt wird (in den typischen URI werden ungültige Zeichen im Dateinamen durch @-Zeichen ersetzt).
+Diese beiden Methoden nutzen `IContextManager`-Implementierungen, um die Kontext-ID auf Nachrichten zu schreiben und von ihnen zu lesen. (`IContextManager` ist eine benutzerdefinierte Schnittstelle, die verwendet wird, um den Vertrag für alle Kontext Manager zu definieren.) Der Kanal kann entweder die Kontext-ID in einem benutzerdefinierten SOAP-Header oder in einem HTTP-Cookie-Header enthalten. Jede Kontextmanagerimplementierung erbt von der `ContextManagerBase`-Klasse, die die allgemeine Funktionalität für alle Kontextmanager enthält. Die `GetContextId`-Methode in dieser Klasse wird verwendet, um die Kontext-ID vom Client zu erzeugen. Wenn eine Kontext-ID ist zum ersten Mal erzeugt wird, wird sie mithilfe dieser Methode in einer Textdatei gespeichert, deren Name von der Remote-Endpunktadresse erstellt wird (in den typischen URI werden ungültige Zeichen im Dateinamen durch @-Zeichen ersetzt).
 
 Wird die Kontext-ID später für denselben Remote-Endpunkt benötigt, überprüft diese Methode, ob eine entsprechende Datei vorhanden ist. Wenn dies der Fall ist, liest sie die Kontext-ID und gibt sie zurück. Andernfalls gibt sie eine neu generierte Kontext-ID zurück und speichert sie in einer Datei. In der Standardkonfiguration werden diese Dateien in einem Verzeichnis namens "ContextStore" abgelegt. Es befindet sich im temporären Verzeichnis des aktuellen Benutzers. Dieser Speicherort ist jedoch mit dem Bindungselement konfigurierbar.
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-Diese Channelimplementierungen werden dann der WCF-Channel-Laufzeit von der `DurableInstanceContextBindingElement` -Klasse `DurableInstanceContextBindingElementSection` und der-Klasse entsprechend hinzugefügt. Weitere Informationen zu Bindungs Elementen und Bindungs Element Abschnitten finden Sie in der Beispiel Dokumentation zum [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) -Channel.
+Diese Kanal Implementierungen werden dann der WCF-Channel-Laufzeit von der `DurableInstanceContextBindingElement`-Klasse und `DurableInstanceContextBindingElementSection`-Klasse entsprechend hinzugefügt. Weitere Informationen zu Bindungs Elementen und Bindungs Element Abschnitten finden Sie in der Beispiel Dokumentation zum [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) -Channel.
 
 ## <a name="service-model-layer-extensions"></a>Erweiterungen der Dienstmodellebene
 
@@ -234,13 +234,13 @@ Die notwendige Infrastruktur zum Lesen und Schreiben von Instanzen aus dem perma
 
 Zuerst muss die Kontext-ID gespeichert werden, die über die Kanalschicht zur aktuellen InstanceContext übertragen wurde. InstanceContext ist eine Laufzeitkomponente, die als Link zwischen dem WCF-Verteiler und der Dienst Instanz fungiert. Sie kann verwendet werden, um der Dienstinstanz einen zusätzlichen Zustand und zusätzliches Verhalten bereitzustellen. Dies ist notwendig, da die Kontext-ID in einer sitzungsbasierten Kommunikation nur mit der ersten Nachricht gesendet wird.
 
-WCF ermöglicht die Erweiterung der InstanceContext-Laufzeitkomponente durch Hinzufügen eines neuen Zustands und Verhaltens mithilfe des erweiterbaren Objekt Musters. Das Extensible Object-Muster wird in WCF verwendet, um vorhandene Lauf Zeit Klassen um neue Funktionen zu erweitern oder um neue Zustands Funktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster: IExtensibleObject\<t >, IExtension\<t > und IExtensionCollection\<t >:
+WCF ermöglicht die Erweiterung der InstanceContext-Laufzeitkomponente durch Hinzufügen eines neuen Zustands und Verhaltens mithilfe des erweiterbaren Objekt Musters. Das Extensible Object-Muster wird in WCF verwendet, um vorhandene Lauf Zeit Klassen um neue Funktionen zu erweitern oder um neue Zustands Funktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im Extensible Object Pattern-IExtensibleObject\<t >, IExtension\<t > und IExtensionCollection\<t >:
 
-- Die IExtensibleObject\<T->-Schnittstelle wird von Objekten implementiert, die Erweiterungen zulassen, die ihre Funktionalität anpassen.
+- Die IExtensibleObject-Schnittstelle\<t > wird von Objekten implementiert, die Erweiterungen zulassen, die ihre Funktionalität anpassen.
 
-- Die IExtension\<T >-Schnittstelle wird von Objekten implementiert, die Erweiterungen von Klassen des Typs t sind.
+- Die IExtension\<t >-Schnittstelle wird von Objekten implementiert, die Erweiterungen von Klassen des Typs t sind.
 
-- Die IExtensionCollection\<T->-Schnittstelle ist eine Auflistung von iextensions, die das Abrufen von iextensions nach ihrem Typ ermöglicht.
+- Die IExtensionCollection\<t >-Schnittstelle ist eine Auflistung von iextensions, die das Abrufen von iextensions nach ihrem Typ ermöglicht.
 
 Es sollte deshalb eine InstanceContextExtension-Klasse erstellt werden, die die IExtension-Schnittstelle implementiert und den erforderlichen Zustand zum Speichern der Kontext-ID definiert. Diese Klasse bietet auch den Zustand, um den verwendeten Speicher-Manager aufzunehmen. Sobald der neue Zustand gespeichert ist, sollte es nicht mehr möglich sein, ihn zu ändern. Deshalb wird der Zustand zum Erstellungszeitpunkt bereitgestellt und in der Instanz gespeichert. Anschließend kann nur über schreibgeschützte Eigenschaften darauf zugegriffen werden.
 
@@ -351,7 +351,7 @@ Bisher resultiert aus diesem Beispiel ein Kanal, der das benutzerdefinierte Vers
 
 Nun muss nur noch die Dienstinstanz im permanenten Speicher gespeichert werden. Wie zuvor erläutert gibt es bereits die erforderliche Funktionalität, den Zustand in einer `IStorageManager`-Implementierung zu speichern. Wir müssen dies jetzt in die WCF-Laufzeit integrieren. Es ist ein weiteres Attribut erforderlich, dass auf die Methoden in der Dienstimplementierungsklasse angewendet werden kann. Dieses Attribut soll auf die Methoden angewendet werden, die den Zustand der Dienstinstanz ändern.
 
-Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Außerdem implementiert `IOperationBehavior` es die-Klasse, um die WCF-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut markiert ist, ruft die WCF-Laufzeit `ApplyBehavior` die-Methode auf `DispatchOperation` , während die entsprechende erstellt wird. In dieser Methodenimplementierung ist eine Codezeile vorhanden:
+Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Außerdem implementiert es `IOperationBehavior`-Klasse, um die WCF-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut markiert ist, ruft die WCF-Laufzeit die `ApplyBehavior` Methode auf, während der entsprechende `DispatchOperation` erstellt wird. In dieser Methodenimplementierung ist eine Codezeile vorhanden:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -418,7 +418,7 @@ Jetzt kann das Bindungselement wie andere Standardbindungselemente mit einer ben
 </bindings>
 ```
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Schlussfolgerung
 
 In diesem Beispiel wurde gezeigt, wie ein benutzerdefinierter Protokollkanal erstellt wird und wie das Dienstverhalten angepasst werden muss, um diesen Protokollkanal zu aktivieren.
 
@@ -457,6 +457,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

@@ -2,12 +2,12 @@
 title: Sperre der PII-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044789"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714631"
 ---
 # <a name="pii-security-lockdown"></a>Sperre der PII-Sicherheit
 In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevante Features eines Windows Communication Foundation (WCF)-Diensts wie folgt steuern:  
@@ -23,7 +23,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
@@ -37,17 +37,17 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
  Dieses Beispiel veranschaulicht das Steuern der Protokollierung von bekannten personenbezogenen Informationen (PII, Personally Identifiable Information) in Ablaufverfolgungs- und Nachrichtenprotokollen, beispielsweise Benutzername und Kennwort. Standardmäßig ist die Protokollierung von bekannten PII deaktiviert. Allerdings kann in bestimmten Situationen die Protokollierung von PII beim Debuggen einer Anwendung wichtig sein. Dieses Beispiel basiert [auf den ersten](../../../../docs/framework/wcf/samples/getting-started-sample.md)Schritten. In diesem Beispiel werden außerdem Ablaufverfolgungs- und Nachrichtenprotokollierung verwendet. Weitere Informationen finden Sie im Beispiel Ablauf [Verfolgung und Nachrichten Protokollierung](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) .  
   
 ## <a name="encrypting-configuration-file-elements"></a>Verschlüsseln von Konfigurationsdateielementen  
- Aus Sicherheitsgründen kann es in einer freigegebenen Webhostingumgebung wünschenswert sein, bestimmte Konfigurationselemente zu verschlüsseln, wie beispielsweise Datenbankverbindungszeichenfolgen, die vertrauliche Informationen enthalten. Ein Konfigurationselement kann mit dem Tool "Aspnet_regiis. exe", das sich im Ordner ".NET Framework" befindet, z. b.%windir%\Microsoft.Net\Framework\v4.0.20728.  
+ Aus Sicherheitsgründen kann es in einer freigegebenen Webhostingumgebung wünschenswert sein, bestimmte Konfigurationselemente zu verschlüsseln, wie beispielsweise Datenbankverbindungszeichenfolgen, die vertrauliche Informationen enthalten. Ein Konfigurationselement kann mit dem Tool "Aspnet_regiis. exe" im Ordner ".NET Framework" verschlüsselt werden, z. b .%windir%\Microsoft.Net\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>So verschlüsseln Sie die Werte im Abschnitt appSettings in Web.config für das Beispiel  
   
-1. Öffnen Sie eine Eingabeaufforderung mithilfe von Start-> Run.... Geben Sie ein, undklickenSieauf`cmd` OK.  
+1. Öffnen Sie eine Eingabeaufforderung mithilfe von Start-> Run.... Geben Sie `cmd` ein, und klicken Sie auf **OK**.  
   
 2. Navigieren Sie zum aktuellen .NET Framework-Verzeichnis, indem Sie folgenden Befehl ausgeben: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
 3. Verschlüsseln Sie die appSettings-Konfigurationseinstellungen im Web.config-Ordner, indem Sie folgenden Befehl ausgeben: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Weitere Informationen zum Verschlüsseln von Abschnitten von Konfigurationsdateien finden Sie unter Vorgehensweise bei DPAPI in der ASP.NET-Konfiguration ([aufbauen von sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)) und eine Vorgehensweise bei RSA in der ASP.NET-Konfiguration[(Vorgehensweise: Verschlüsseln Sie die Konfigurations Abschnitte in ASP.NET 2,0](https://go.microsoft.com/fwlink/?LinkId=95138)mit RSA).  
+ Weitere Informationen zum Verschlüsseln von Abschnitten von Konfigurationsdateien finden Sie unter Vorgehensweise bei DPAPI in der ASP.NET-Konfiguration (entwickeln von[sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)) und in einer Vorgehensweise bei RSA in ASP.net Configuration (Gewusst[wie: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mit RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Sperren von Konfigurationsdateielementen  
  In im Internet gehosteten Szenarien ist es möglich, Dienste in Unterverzeichnissen von Diensten zu haben. In diesen Situationen werden die Konfigurationswerte für den Dienst im Unterverzeichnis berechnet durch die Überprüfung von Werten in "Machine.config", darauf folgendes Zusammenfügen mit Web.config-Dateien in übergeordneten Verzeichnissen im Verzeichnisbaum nach unten gehend sowie durch das Zusammenfügen der Web.config-Datei im Verzeichnis, das den Dienst enthält. Das Standardverhalten der meisten Konfigurationselemente besteht darin, zu erlauben, dass Konfigurationsdateien in Unterverzeichnissen die in den übergeordneten Verzeichnissen gesetzten Werte überschreiben. In bestimmten Situationen kann es erwünscht sein, dass die Konfigurationsdateien in den Unterverzeichnissen die in der Konfiguration des übergeordneten Verzeichnisses gesetzten Werte nicht überschreiben.  
@@ -76,7 +76,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
 ## <a name="pii-logging-configuration"></a>Konfiguration von PII-Protokollierung  
  Die Protokollierung von PII wird über zwei Schalter gesteuert: eine computerweite Einstellung in Machine.config, die es einem Computeradministrator ermöglicht, die Protokollierung von PII zu erlauben oder zu verweigern, und eine Anwendungseinstellung, die es einem Anwendungsadministrator ermöglicht, die Protokollierung von PII für jede Quelle in einer Web.config- oder App.config-Datei ein- bzw. auszuschalten.  
   
- Die computerweite Einstellung wird in Machine.config im Abschnitt `enableLoggingKnownPii` mithilfe von `true` gesteuert, indem dieser Wert auf `false` oder `machineSettings` festgelegt wird. Dass Anwendungen die Protokollierung von PII aktivieren wird beispielsweise folgendermaßen ermöglicht.  
+ Die Computer weite Einstellung wird durch Festlegen von `enableLoggingKnownPii` auf `true` oder `false`im `machineSettings`-Element in Machine. config gesteuert. Mit dem folgenden Beispiel können Anwendungen die Protokollierung von PII aktivieren.  
   
 ```xml  
 <configuration>  
@@ -120,13 +120,13 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
 > System.Diagnostics ignoriert alle Attribute auf allen Quellen, ausgenommen der zuerst in der Konfigurationsdatei aufgelisteten. Das Hinzufügen des `logKnownPii`-Attributs zur zweiten Quelle in der Konfigurationsdatei hat keine Auswirkungen.  
   
 > [!IMPORTANT]
-> Die Ausführung dieses Beispiels erfordert die manuelle Änderung von "Machine.config". Die Änderung von "Machine.config" sollte vorsichtig vorgenommen werden, da falsche Werte oder Syntax dazu führen können, dass die Ausführung aller .NET Framework-Anwendungen verhindert wird.  
+> Zum Ausführen dieses Beispiels gehört die manuelle Änderung von "Machine. config". Wenn Sie "Machine. config" ändern, sollten Sie beim Ändern von "Machine. config" darauf achten, dass alle .NET Framework Anwendungen nicht ausgeführt werden.  
   
  Es ist auch möglich, Konfigurationsdateielemente mit DPAPI und RSA zu verschlüsseln. Weitere Informationen finden Sie unter den folgenden Links:  
   
 - [Aufbauen von sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [How To: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mithilfe von RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Gewusst wie: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mit RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus  
   

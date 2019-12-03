@@ -2,12 +2,12 @@
 title: Verteilen nach Textelement
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 307d6bbbab118392ef079942eae367a4c6792c22
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039763"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712031"
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
 Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen eingehender Nachrichten zu Vorgängen implementiert wird.  
@@ -120,9 +120,9 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>Implementieren des Diensts  
  Das in diesem Beispiel implementierte Verhalten wirkt sich unmittelbar darauf aus, wie übermittelte Nachrichten interpretiert und verteilt werden. Dies ist eine Funktion des Dienstvertrags. Daher sollte das Verhalten auf Dienstvertragsebene in jeder Dienstimplementierung deklariert werden, die das Verhalten verwendet.  
   
- Der Beispiel Projekt Dienst wendet das `DispatchByBodyElementBehaviorAttribute` Vertrags Verhalten auf den `IDispatchedByBody` Dienstvertrag an und beschriftet jeden der beiden Vorgänge `OperationForBodyA()` und `OperationForBodyB()` mit einem `DispatchBodyElementAttribute` Vorgangs Verhalten. Wenn ein Diensthost für einen Dienst, der diesen Vertrag implementiert, geöffnet wird, werden diese Metadaten von dem Verteilungsersteller wie zuvor erläutert ausgewählt.  
+ Der Beispiel Projekt Dienst wendet das `DispatchByBodyElementBehaviorAttribute` Vertrags Verhalten auf den `IDispatchedByBody` Dienstvertrag an und bezeichnet jeden der beiden Vorgänge `OperationForBodyA()` und `OperationForBodyB()` mit einem `DispatchBodyElementAttribute` Vorgangs Verhalten. Wenn ein Diensthost für einen Dienst, der diesen Vertrag implementiert, geöffnet wird, werden diese Metadaten von dem Verteilungsersteller wie zuvor erläutert ausgewählt.  
   
- Da die Vorgangsauswahl die Verteilung nur auf der Grundlage des Nachrichtentexts ausführt und die "Aktion" ignoriert, muss der Laufzeit mitgeteilt werden, nicht die Aktionsheader in den zurückgegebenen Antworten zu überprüfen. Weisen Sie dazu der `ReplyAction`-Eigenschaft von <xref:System.ServiceModel.OperationContractAttribute> den Platzhalter "*" zu. Außerdem ist ein Standard Vorgang erforderlich, bei dem die Eigenschaft "action" auf den Platzhalter "\*" festgelegt ist. Der Standardvorgang empfängt alle Nachrichten, die nicht verteilt werden können und kein `DispatchBodyElementAttribute` besitzen:  
+ Da die Vorgangsauswahl die Verteilung nur auf der Grundlage des Nachrichtentexts ausführt und die "Aktion" ignoriert, muss der Laufzeit mitgeteilt werden, nicht die Aktionsheader in den zurückgegebenen Antworten zu überprüfen. Weisen Sie dazu der `ReplyAction`-Eigenschaft von <xref:System.ServiceModel.OperationContractAttribute> den Platzhalter "*" zu. Außerdem ist ein Standard Vorgang erforderlich, bei dem die Eigenschaft "action" auf das Platzhalter Zeichen "\*" festgelegt ist. Der Standardvorgang empfängt alle Nachrichten, die nicht verteilt werden können und kein `DispatchBodyElementAttribute` besitzen:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -175,6 +175,6 @@ public interface IDispatchedByBody
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

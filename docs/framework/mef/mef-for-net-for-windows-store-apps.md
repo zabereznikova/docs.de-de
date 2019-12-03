@@ -2,15 +2,15 @@
 title: MEF für .NET für Windows Store-Apps
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: a9c6e757cebc5dd1ad501c1cf1e2c2b666f385a1
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 6c1d4be7e2596446d4d3195d3c80207cfb3db400
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204708"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74713938"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF für .NET für Windows Store-Apps
-<xref:System.Composition?displayProperty=nameWithType> und die dazugehörigen untergeordneten Namespaces enthalten Typen für die Entwicklung erweiterbarer Windows 8. x Store-Apps mit Managed Extensibility Framework (MEF). Diese Namespaces gehören zur [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]-Teilmenge für das [!INCLUDE[win8](../../../includes/win8-md.md)]-Betriebssystem.  
+<xref:System.Composition?displayProperty=nameWithType> und die dazugehörigen untergeordneten Namespaces enthalten Typen für die Entwicklung erweiterbarer Windows 8. x Store-Apps mit Managed Extensibility Framework (MEF). Diese Namespaces sind Teil der .net for Windows 8. x Store-App-Teilmenge für das Betriebssystem [!INCLUDE[win8](../../../includes/win8-md.md)].  
   
  Diese Namespaces sind nicht Teil der Kernklassenbibliothek, die mit .NET Framework verteilt wird. Zum Installieren dieser Namespaces öffnen Sie das Projekt in Visual Studio, wählen aus dem Menü **Projekt** den Eintrag **NuGet-Pakete verwalten** aus und suchen anschließend online nach dem Microsoft.Composition-Paket.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "74204708"
   
 - <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> stellt MEF-Typen bereit, die von der Kompositions-Engine intern verwendet werden.  
   
- Weitere Informationen zu [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] und einer Liste von Namespaces und Typen, die darin enthalten sind, finden Sie unter [Übersicht über .net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
+ Weitere Informationen zu .net für Windows 8. x Store-Apps und eine Liste der in ihr enthaltenen Namespaces und Typen finden Sie unter [Übersicht über .net für Windows Store-Apps](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
   
 ## <a name="see-also"></a>Siehe auch
 
