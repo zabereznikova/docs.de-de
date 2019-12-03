@@ -2,12 +2,12 @@
 title: Dienst-Netzen-GrpC für WCF-Entwickler
 description: Verwenden eines Dienst Netzes zum Weiterleiten und Ausgleichen von Anforderungen an GrpC-Dienste in einem Kubernetes-Cluster.
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966968"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711277"
 ---
 # <a name="service-meshes"></a>Dienst-Netzen
 
@@ -21,7 +21,7 @@ Ein Dienst Netz ist eine Infrastrukturkomponente, die die Steuerung der Routing 
 
 Kubernetes Service-Netzen arbeiten durch Hinzufügen eines zusätzlichen Containers ( *Sidecar Proxy*) zu jedem Pod, der im Mesh enthalten ist. Der Proxy übernimmt die Verarbeitung aller eingehenden und ausgehenden Netzwerk Anforderungen, sodass die Konfiguration und Verwaltung von Netzwerken von den Anwendungs Containern getrennt gehalten werden und in vielen Fällen, ohne dass Änderungen am Anwendungscode erforderlich sind.
 
-Nehmen Sie im vorherigen Kapitel das Beispiel, in dem die GrpC-Anforderungen von der Webanwendung an eine einzelne Instanz des GrpC [-Diensts](kubernetes.md#testing-the-application)weitergeleitet wurden. Dies liegt daran, dass der Hostname des Dienstanbieter in eine IP-Adresse aufgelöst wird und diese IP-Adresse für die Lebensdauer der `HttpClientHandler` Instanz zwischengespeichert wird. Es kann möglich sein, dieses Problem zu umgehen, indem DNS-Suchen manuell verarbeitet oder mehrere Clients erstellt werden. Dies würde jedoch den Anwendungscode erheblich erschweren, ohne einen geschäftlichen oder Kunden Wert hinzuzufügen.
+Nehmen Sie im vorherigen Kapitel das Beispiel, in dem die GrpC-Anforderungen von der Webanwendung an eine einzelne Instanz des GrpC [-Diensts](kubernetes.md#test-the-application)weitergeleitet wurden. Dies liegt daran, dass der Hostname des Dienstanbieter in eine IP-Adresse aufgelöst wird und diese IP-Adresse für die Lebensdauer der `HttpClientHandler` Instanz zwischengespeichert wird. Es kann möglich sein, dieses Problem zu umgehen, indem DNS-Suchen manuell verarbeitet oder mehrere Clients erstellt werden. Dies würde jedoch den Anwendungscode erheblich erschweren, ohne einen geschäftlichen oder Kunden Wert hinzuzufügen.
 
 Mithilfe eines Dienst Netzes werden die Anforderungen aus dem Anwendungs Container an den Sidecar-Proxy gesendet, der Sie auf intelligente Weise über alle Instanzen des anderen Dienstanbieter verteilen kann. Das Mesh kann auch folgende Aktionen ausführen:
 

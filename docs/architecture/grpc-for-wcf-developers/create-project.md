@@ -1,62 +1,62 @@
 ---
 title: 'Erstellen eines neuen ASP.net Core GrpC-Projekts: GrpC für WCF-Entwickler'
-description: Erfahren Sie, wie Sie ein GrpC-Projekt mithilfe von Visual Studio oder über die Befehlszeile erstellen.
+description: Erfahren Sie, wie Sie ein GrpC-Projekt mithilfe von Visual Studio oder der Befehlszeile erstellen.
 ms.date: 09/02/2019
-ms.openlocfilehash: 992c3f57be25ae2517d41437170dc287f58934b6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967893"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711449"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Erstellen eines neuen ASP.NET Core gRPC-Projekts
 
-.Net Core verfügt über ein leistungsfähiges CLI-Tool, `dotnet`, das es Ihnen ermöglicht, Projekte und Projektmappen über die Befehlszeile zu erstellen und zu verwalten. Das Tool ist eng in Visual Studio integriert, sodass alles auch über die vertraute GUI-Oberfläche verfügbar ist. In diesem Kapitel werden beide Methoden zum Erstellen eines neuen ASP.net Core GrpC-Projekts gezeigt: zuerst mit Visual Studio, dann mit dem .net Core-CLI.
+Die .net Core SDK verfügt über ein leistungsfähiges CLI-Tool `dotnet`, mit dem Sie Projekte und Projektmappen über die Befehlszeile erstellen und verwalten können. Das SDK ist eng in Visual Studio integriert, sodass alles auch über die vertraute grafische Benutzeroberfläche verfügbar ist. Dieses Kapitel zeigt beide Möglichkeiten zum Erstellen eines neuen ASP.net Core GrpC-Projekts.
 
-## <a name="create-the-project-using-visual-studio"></a>Erstellen des Projekts mit Visual Studio
+## <a name="create-the-project-by-using-visual-studio"></a>Erstellen des Projekts mithilfe von Visual Studio
 
 > [!IMPORTANT]
-> Zum Entwickeln einer ASP.net Core 3,0-App benötigen Sie Visual Studio 2019,3 oder höher mit installierter **ASP.net-und Webentwicklungs-** Arbeitsauslastung.
+> Zum Entwickeln einer ASP.net Core 3,0-App benötigen Sie Visual Studio 2019 16,3 oder höher mit installierter **ASP.net-und Webentwicklungs-** Arbeitsauslastung.
 
-Erstellen Sie eine leere Projekt Mappe mit dem Namen **tradersys** aus der Vorlage *leere* Projekt Mappe. Fügen Sie einen Projektmappenordner namens `src`hinzu, klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie im Kontextmenü > **Neues Projekt** **Hinzufügen** aus. Geben Sie im Feld für die Vorlagen Suche `grpc` ein, und Sie sollten eine Projektvorlage mit dem Namen `gRPC Service`sehen.
+Erstellen Sie eine leere Projekt Mappe mit dem Namen **tradersys** aus der Vorlage *leere* Projekt Mappe. Fügen Sie einen Projektmappenordner namens `src`hinzu. Klicken Sie dann mit der rechten Maustaste auf den Ordner, und wählen Sie > **Neues Projekt** **Hinzufügen** aus. Geben Sie im Feld für die Vorlagen Suche `grpc` ein, und Sie sollten eine Projektvorlage mit dem Namen `gRPC Service`sehen.
 
-![Dialogfeld "Neues Projekt hinzufügen" mit der Projektvorlage "GrpC](media/create-project/new-grpc-project.png)
+![Screenshot des Dialog Felds "Neues Projekt hinzufügen"](media/create-project/new-grpc-project.png)
 
-Klicken Sie auf weiter **, um mit** dem Dialogfeld **Projekt konfigurieren** fortzufahren, benennen Sie das Projekt `TraderSys.Portfolios`, und fügen Sie dem **Speicherort**ein `src` Unterverzeichnis hinzu.
+Wählen **Sie weiter aus** , um mit dem Dialogfeld **Neues Projekt konfigurieren** fortzufahren. Benennen Sie das Projekt `TraderSys.Portfolios`, und fügen Sie dem **Speicherort**ein `src` Unterverzeichnis hinzu.
 
-![Dialogfeld "Projekt konfigurieren](media/create-project/configure-project.png)
+![Screenshot des Dialog Felds "Neues Projekt konfigurieren"](media/create-project/configure-project.png)
 
-Klicken **Sie auf weiter** , um zum Dialogfeld **Neues GrpC-Projekt** zu klicken.
+Wählen **Sie weiter aus** , um mit dem Dialogfeld **neuen GrpC-Dienst erstellen** fortzufahren.
 
-![Neues GrpC-Projekt Dialogfeld](media/create-project/create-new-grpc-service.png)
+![Screenshot des Dialog Felds "neuen GrpC-Dienst erstellen"](media/create-project/create-new-grpc-service.png)
 
-Derzeit sind für die Dienst Erstellung begrenzte Optionen verfügbar. Docker wird später im Buch eingeführt, lassen Sie das Kontrollkästchen jetzt deaktiviert, und klicken Sie auf **Erstellen**. Ihr erstes ASP.net Core 3,0-GrpC-Projekt wird generiert und der Projekt Mappe hinzugefügt. Wenn Sie nicht wissen möchten, wie Sie mit dem `dotnet CLI`arbeiten, fahren Sie mit dem Abschnitt [Bereinigen des Beispielcodes](#clean-up-the-example-code) fort.
+Derzeit haben Sie eingeschränkte Optionen für die Dienst Erstellung. Docker wird später eingeführt, lassen Sie diese Option vorerst deaktiviert. Wählen Sie einfach **Erstellen**aus. Ihr erstes ASP.net Core 3,0-GrpC-Projekt wird generiert und der Projekt Mappe hinzugefügt. Wenn Sie nicht wissen möchten, wie Sie mit dem `dotnet CLI`arbeiten, fahren Sie mit dem Abschnitt [Bereinigen des Beispielcodes](#clean-up-the-example-code) fort.
 
-## <a name="create-the-project-using-the-net-core-cli"></a>Erstellen Sie das Projekt mit dem .net Core-CLI
+## <a name="create-the-project-by-using-the-net-core-cli"></a>Erstellen Sie das Projekt mithilfe des .net Core-CLI
 
 In diesem Abschnitt wird die Erstellung von Projektmappen und Projekten von der Befehlszeile aus behandelt.
 
-Erstellen Sie die Lösung wie unten gezeigt. Das Flag `-o` (oder `--output`) gibt das Ausgabeverzeichnis an, das im aktuellen Verzeichnis erstellt wird, wenn es nicht vorhanden ist. Die Lösung erhält denselben Namen wie das Verzeichnis, d. h. `TraderSys.sln`. Mit dem `-n`-Flag (oder `--name`) können Sie einen anderen Namen angeben.
+Erstellen Sie die Projekt Mappe, wie im folgenden Befehl gezeigt. Das Flag `-o` (oder `--output`) gibt das Ausgabeverzeichnis an, das im aktuellen Verzeichnis erstellt wird, wenn es nicht bereits vorhanden ist. Die Projekt Mappe hat denselben Namen wie das Verzeichnis: `TraderSys.sln`. Sie können einen anderen Namen angeben, indem Sie das Flag `-n` (oder `--name`) verwenden.
 
 ```dotnetcli
 dotnet new sln -o TraderSys
 cd TraderSys
 ```
 
-In ASP.net Core 3,0 ist eine CLI-Vorlage für GrpC-Dienste verfügbar. Erstellen Sie das neue Projekt mithilfe dieser Vorlage, und legen Sie es in einem `src` Unterverzeichnis ab, das der Konvention für ASP.net Core Projekte entspricht. Das Projekt wird nach dem Verzeichnis benannt (d. h. `TraderSys.Portfolios.csproj`), es sei denn, Sie geben einen anderen Namen mit dem `-n`-Flag an.
+In ASP.net Core 3,0 ist eine CLI-Vorlage für GrpC-Dienste verfügbar. Erstellen Sie das neue Projekt mithilfe dieser Vorlage, und platzieren Sie es in einem `src` Unterverzeichnis, das für ASP.net Core Projekte konventionell ist. Das Projekt wird nach dem Verzeichnis (`TraderSys.Portfolios.csproj`) benannt, es sei denn, Sie geben einen anderen Namen mit dem `-n`-Flag an.
 
 ```dotnetcli
 dotnet new grpc -o src/TraderSys.Portfolios
 ```
 
-Fügen Sie schließlich das Projekt der Projekt Mappe mit dem Befehl `dotnet sln` hinzu.
+Fügen Sie schließlich das Projekt der Projekt Mappe hinzu, indem Sie den `dotnet sln`-Befehl verwenden:
 
 ```dotnetcli
 dotnet sln add src/TraderSys.Portfolios
 ```
 
 > [!TIP]
-> Da das angegebene Verzeichnis nur eine einzige `.csproj` Datei enthält, können Sie mit der Angabe des Verzeichnisses, in dem die Typisierung gespeichert wird, nicht nur das Verzeichnis angeben.
+> Da das jeweilige Verzeichnis nur eine einzige `.csproj` Datei enthält, können Sie nur das Verzeichnis angeben, um die Typisierung zu speichern.
 
 Sie können diese Projekt Mappe jetzt in Visual Studio 2019, Visual Studio Code oder einem beliebigen Editor öffnen.
 
@@ -66,7 +66,7 @@ Sie haben nun einen Beispiel Dienst mithilfe der GrpC-Vorlage erstellt, die weit
 
 ### <a name="rename-and-edit-the-proto-file"></a>Umbenennen und Bearbeiten der Proto-Datei
 
-Benennen Sie die Datei `Protos/greet.proto` in `Protos/portfolios.proto` um, und öffnen Sie Sie im Editor. Löschen Sie alles nach der `package` Zeile, ändern Sie die Namen der `option csharp_namespace`, `package` und `service`, und entfernen Sie den Standard-`SayHello` Dienst, sodass der Code wie folgt aussieht.
+Benennen Sie die Datei `Protos/greet.proto` in `Protos/portfolios.proto`um, und öffnen Sie Sie im Editor. Löschen Sie alles nach der `package` Zeile. Ändern Sie dann die Namen der `option csharp_namespace`, `package` und `service`, und entfernen Sie den Standard `SayHello` Dienst. Der Code sieht nun wie folgt aus:
 
 ```protobuf
 syntax = "proto3";
@@ -93,9 +93,9 @@ In den GrpC-Build-Zielen gibt es ein `Protobuf` Item-Element, mit dem Sie angebe
 </ItemGroup>
 ```
 
-### <a name="rename-the-greeterservice-class"></a>Umbenennen der greeterservice-Klasse
+### <a name="rename-the-greeterservice-class"></a>Umbenennen der `GreeterService` Klasse
 
-Die `GreeterService`-Klasse befindet sich im Ordner `Services` und erbt von `Greeter.GreeterBase`. Benennen Sie es in `PortfolioService` um, und ändern Sie die Basisklasse in `Portfolios.PortfoliosBase`. Löschen Sie die `override` Methoden.
+Die `GreeterService`-Klasse befindet sich im Ordner `Services` und erbt von `Greeter.GreeterBase`. Benennen Sie es in `PortfolioService`um, und ändern Sie die Basisklasse in `Portfolios.PortfoliosBase`. Löschen Sie die `override` Methoden.
 
 ```csharp
 public class PortfolioService : Portfolios.PortfoliosBase

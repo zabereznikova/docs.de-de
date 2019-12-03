@@ -2,12 +2,12 @@
 title: Kubernetes-GrpC für WCF-Entwickler
 description: Ausführen ASP.net Core GrpC-Dienste in einem Kubernetes-Cluster.
 ms.date: 09/02/2019
-ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 22271343f8f0d0454469b2f35e717f5b7e939294
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967570"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711290"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -25,11 +25,11 @@ In diesem Kapitel wird ausführlich beschrieben, wie Sie einen ASP.net Core GrpC
 
 ## <a name="kubernetes-terminology"></a>Kubernetes-Terminologie
 
-Kubernetes verwendet *die Konfiguration des gewünschten Zustands*: die API wird verwendet, um Objekte wie *Pods*, bereit *Stellungen* und *Dienste*zu beschreiben, und die *Steuerungsebene* übernimmt die Implementierung des gewünschten Zustands auf allen *Knoten* in einem *Cluster*. Ein Kubernetes-Cluster verfügt über einen *Master* Knoten, der die *Kubernetes-API*ausführt, die mit Programm gesteuert oder über das Befehlszeilen Tool `kubectl` kommuniziert werden kann. `kubectl` können-Objekte mit Befehlszeilen Argumenten erstellen und verwalten, funktionieren aber am besten mit YAML-Dateien, die Deklarations Daten für Kubernetes-Objekte enthalten.
+Kubernetes verwendet *die Konfiguration des gewünschten Zustands*: die API wird verwendet, um Objekte wie *Pods*, bereit *Stellungen*und *Dienste*zu beschreiben, und die *Steuerungsebene* übernimmt die Implementierung des gewünschten Zustands auf allen *Knoten* in einem *Cluster*. Ein Kubernetes-Cluster verfügt über einen *Master* Knoten, der die *Kubernetes-API*ausführt, mit der Sie Programm gesteuert oder über das Befehlszeilen Tool `kubectl` kommunizieren können. `kubectl` können Objekte über Befehlszeilenargumente erstellen und verwalten, aber es funktioniert am besten mit YAML-Dateien, die Deklarations Daten für Kubernetes-Objekte enthalten.
 
 ### <a name="kubernetes-yaml-files"></a>Kubernetes-YAML-Dateien
 
-Jede Kubernetes YAML-Datei verfügt über mindestens drei Eigenschaften der obersten Ebene.
+Jede Kubernetes YAML-Datei verfügt über mindestens drei Eigenschaften der obersten Ebene:
 
 ```yaml
 apiVersion: v1
@@ -38,7 +38,7 @@ metadata:
   # Object properties
 ```
 
-Die `apiVersion`-Eigenschaft wird verwendet, um anzugeben, für welche Version (und welche API) die Datei vorgesehen ist. Die `kind`-Eigenschaft gibt die Art des Objekts an, das YAML darstellt. Die `metadata`-Eigenschaft enthält Objekteigenschaften, z. b. `name`, `namespace`oder `labels`.
+Die `apiVersion`-Eigenschaft wird verwendet, um anzugeben, für welche Version (und welche API) die Datei vorgesehen ist. Die `kind`-Eigenschaft gibt die Art des Objekts an, das YAML darstellt. Die `metadata`-Eigenschaft enthält Objekteigenschaften wie `name`, `namespace`und `labels`.
 
 Die meisten Kubernetes YAML-Dateien enthalten außerdem einen `spec` Abschnitt, der die Ressourcen und die Konfiguration beschreibt, die zum Erstellen des Objekts erforderlich sind.
 
@@ -52,25 +52,25 @@ Dienste sind Metadatenobjekte, die Pods (oder Gruppen von Pods) beschreiben und 
 
 ### <a name="deployments"></a>Bereitstellungen
 
-Bereit Stellungen sind die *beschriebenen Zustands* Objekte für Pods. Wenn Sie einen Pod manuell erstellen, wird er beim Beenden nicht neu gestartet. Mithilfe von bereit Stellungen wird dem Cluster mitgeteilt, welche Pods und wie viele Replikate dieser Pods zum aktuellen Zeitpunkt ausgeführt werden sollen.
+Bereit Stellungen sind die *gewünschten Zustands* Objekte für Pods. Wenn Sie einen Pod manuell erstellen, wird er nicht neu gestartet, wenn er beendet wird. Mithilfe von bereit Stellungen wird dem Cluster mitgeteilt, welche Pods und wie viele Replikate dieser Pods zum aktuellen Zeitpunkt ausgeführt werden sollen.
 
 ### <a name="other-objects"></a>Andere Objekte
 
-Pods, Dienste und bereit Stellungen sind nur drei der grundlegendsten Objekttypen. Es gibt Dutzende von anderen Typen von Objekten, die von einem Kubernetes-Cluster verwaltet werden. Weitere Informationen finden Sie in der Dokumentation zu [Kubernetes Concepts](https://kubernetes.io/docs/concepts/) .
+Pods, Dienste und bereit Stellungen sind nur drei der grundlegendsten Objekttypen. Es gibt Dutzende von anderen Objekttypen, die von Kubernetes-Clustern verwaltet werden. Weitere Informationen finden Sie in der Dokumentation zu [Kubernetes Concepts](https://kubernetes.io/docs/concepts/) .
 
-### <a name="namespaces"></a>Namespaces
+### <a name="namespaces"></a>-Namespaces
 
-Kubernetes-Cluster sind so konzipiert, dass Sie auf Hunderte oder Tausende von Knoten skaliert werden und eine ähnliche Anzahl von Diensten ausführen. Zum Vermeiden von Konflikten zwischen Objektnamen werden Namespaces zum Gruppieren von Objekten als Teil größerer Anwendungen verwendet. Kubernetes eigene Dienste werden in einem `default` Namespace ausgeführt. Alle Benutzer Objekte sollten in ihren eigenen Namespaces erstellt werden, um potenzielle Konflikte mit Standardobjekten oder anderen Mandanten im Cluster zu vermeiden.
+Kubernetes-Cluster sind so konzipiert, dass Sie auf Hunderte oder Tausende von Knoten skaliert werden und eine ähnliche Anzahl von Diensten ausführen. Zum Vermeiden von Konflikten zwischen Objektnamen werden Namespaces zum Gruppieren von Objekten als Teil größerer Anwendungen verwendet. Die eigenen Dienste von Kubernetes werden in einem `default` Namespace ausgeführt. Alle Benutzer Objekte sollten in ihren eigenen Namespaces erstellt werden, um potenzielle Konflikte mit Standardobjekten oder anderen Mandanten im Cluster zu vermeiden.
 
 ## <a name="get-started-with-kubernetes"></a>Einstieg in Kubernetes
 
-Wenn Sie docker Desktop für Windows oder macOS ausführen, ist Kubernetes bereits verfügbar. Aktivieren Sie Sie einfach im Abschnitt "Kubernetes" des Fensters "Einstellungen".
+Wenn Sie docker Desktop für Windows oder docker Desktop für Mac ausführen, ist Kubernetes bereits verfügbar. Aktivieren Sie Sie einfach im Abschnitt " **Kubernetes** " des Fensters " **Einstellungen** ":
 
 ![Aktivieren von Kubernetes in docker Desktop](media/kubernetes/enable-kubernetes-docker-desktop.png)
 
-Wenn Sie einen lokalen Kubernetes-Cluster unter Linux ausführen möchten, betrachten Sie [minikube](https://github.com/kubernetes/minikube)oder [MicroK8s](https://microk8s.io/) , wenn Ihre Linux-Distribution [dockt](https://snapcraft.io/)unterstützt.
+Wenn Sie einen lokalen Kubernetes-Cluster unter Linux ausführen möchten, sollten Sie [minikube](https://github.com/kubernetes/minikube)oder [MicroK8s](https://microk8s.io/) in Erwägung gezogen, wenn die Linux-Distribution [dockt](https://snapcraft.io/)unterstützt.
 
-Führen Sie den Befehl `kubectl version` aus, um zu überprüfen, ob der Cluster ausgeführt wird und erreichbar ist.
+Führen Sie den `kubectl version` Befehl aus, um zu bestätigen, dass der Cluster ausgeführt wird und darauf zugegriffen werden kann:
 
 ```console
 kubectl version
@@ -82,9 +82,9 @@ In diesem Beispiel werden die `kubectl` CLI und der Kubernetes-Server Version 1.
 
 ## <a name="run-services-on-kubernetes"></a>Ausführen von Diensten auf Kubernetes
 
-Die Beispielanwendung verfügt über ein `kube` Verzeichnis, das drei YAML-Dateien enthält. Die `namespace.yml` Datei deklariert einen benutzerdefinierten Namespace, `stocks`. Die `stockdata.yml` Datei deklariert die Bereitstellung und den Dienst für die GrpC-Anwendung, und die `stockweb.yml` Datei deklariert die Bereitstellung und den Dienst für eine ASP.net Core 3,0 MVC-Webanwendung, die den GrpC-Dienst nutzt.
+Die Beispielanwendung verfügt über ein `kube` Verzeichnis, das drei YAML-Dateien enthält. Die `namespace.yml` Datei deklariert einen benutzerdefinierten Namespace: `stocks`. Die `stockdata.yml` Datei deklariert die Bereitstellung und den Dienst für die GrpC-Anwendung, und die `stockweb.yml` Datei deklariert die Bereitstellung und den Dienst für eine ASP.net Core 3,0 MVC-Webanwendung, die den GrpC-Dienst nutzt.
 
-Um eine `YAML`-Datei mit `kubectl`zu verwenden, verwenden Sie den Befehl `apply -f`.
+Um eine `YAML`-Datei mit `kubectl`zu verwenden, führen Sie den Befehl `apply -f` aus:
 
 ```console
 kubectl apply -f object.yml
@@ -94,7 +94,7 @@ Der Befehl `apply` überprüft die Gültigkeit der YAML-Datei und zeigt alle Feh
 
 ### <a name="the-namespace-declaration"></a>Die Namespace Deklaration
 
-Die Namespace Deklaration ist einfach und erfordert nur das Zuweisen einer `name`.
+Die Namespace Deklaration ist einfach und erfordert nur das Zuweisen einer `name`:
 
 ```yaml
 apiVersion: v1
@@ -103,7 +103,7 @@ metadata:
   name: stocks
 ```
 
-Verwenden Sie `kubectl`, um die `namespace.yml` Datei anzuwenden, und überprüfen Sie, ob der Namespace erfolgreich erstellt wurde.
+Verwenden Sie `kubectl`, um die `namespace.yml` Datei anzuwenden und zu bestätigen, dass der Namespace erfolgreich erstellt wurde:
 
 ```console
 > kubectl apply -f namespace.yml
@@ -120,7 +120,7 @@ Die `stockdata.yml` Datei deklariert zwei Objekte: eine Bereitstellung und einen
 
 #### <a name="the-stockdata-deployment"></a>Die StockData-Bereitstellung
 
-Der Bereitstellungs Teil stellt die `spec` für die Bereitstellung selbst bereit, einschließlich der Anzahl der erforderlichen Replikate und einer `template`, dass die Pod-Objekte von der Bereitstellung erstellt und verwaltet werden. Beachten Sie, dass Bereitstellungs Objekte mit der `apps`-API verwaltet werden, wie in `apiVersion`angegeben, anstelle der Kubernetes-Haupt-API.
+Der Bereitstellungs Teil der YAML-Datei stellt die `spec` für die Bereitstellung selbst bereit, einschließlich der Anzahl der erforderlichen Replikate und einer `template`, dass die Pod-Objekte von der Bereitstellung erstellt und verwaltet werden. Beachten Sie, dass Bereitstellungs Objekte von der `apps`-API verwaltet werden, wie in `apiVersion`angegeben, anstelle der Kubernetes-Haupt-API.
 
 ```yaml
 apiVersion: apps/v1
@@ -157,12 +157,12 @@ Der `template.spec` Abschnitt deklariert den Container, der ausgeführt werden s
 > [!IMPORTANT]
 > Standardmäßig sucht Kubernetes immer nach und versucht, ein neues Bild abzurufen. Wenn das Image in keinem der bekannten Depots gefunden werden kann, tritt bei der Pod-Erstellung ein Fehler auf. Legen Sie zum Arbeiten mit lokalen Images die `imagePullPolicy` auf `Never`fest.
 
-Die `ports`-Eigenschaft gibt an, welche containerports auf dem Pod veröffentlicht werden sollen.  Das `stockservice`-Image führt den Dienst auf dem HTTP-Standardport aus, sodass Port 80 veröffentlicht wird.
+Die `ports`-Eigenschaft gibt an, welche containerports auf dem Pod veröffentlicht werden sollen. Das `stockservice`-Image führt den Dienst auf dem HTTP-Standardport aus, sodass Port 80 veröffentlicht wird.
 
 Der `resources` Abschnitt wendet Ressourcen Limits auf den Container an, der im Pod ausgeführt wird. Dies ist eine bewährte Vorgehensweise, da Sie verhindert, dass ein einzelner Pod die gesamte verfügbare CPU oder den Arbeitsspeicher auf einem Knoten verbraucht.
 
 > [!NOTE]
-> ASP.net Core 3,0 wurde optimiert und optimiert, um in ressourcenbeschränkten Containern ausgeführt zu werden, und das `dotnet/core/aspnet` docker-Image legt eine Umgebungsvariable fest, um der `dotnet` Laufzeit mitzuteilen, dass Sie sich in einem Container befindet.
+> ASP.net Core 3,0 wurde optimiert und optimiert, um in ressourcenbeschränkten Containern ausgeführt zu werden. Das `dotnet/core/aspnet` docker-Image legt eine Umgebungsvariable fest, um der `dotnet` Laufzeit mitzuteilen, dass Sie sich in einem Container befindet.
 
 #### <a name="the-stockdata-service"></a>Der StockData-Dienst
 
@@ -181,11 +181,11 @@ spec:
     run: stockdata
 ```
 
-Die Dienst Spezifikation verwendet die `selector`-Eigenschaft, um die Ausführung `Pods`abzugleichen, in diesem Fall nach Pods mit einer Bezeichnung `run: stockdata`. Die angegebenen `port` auf übereinstimmenden Pods werden vom benannten Dienst veröffentlicht. Andere Pods, die im `stocks`-Namespace ausgeführt werden, können mit `http://stockdata` als Adresse auf http für diesen Dienst zugreifen. Pods, die in anderen Namespaces ausgeführt werden, können den `http://stockdata.stocks` Hostnamen verwenden. Sie können den Namespace-Dienst Zugriff mithilfe von [Netzwerk Richtlinien](https://kubernetes.io/docs/concepts/services-networking/network-policies/)steuern.
+Der Dienst `spec` verwendet die `selector`-Eigenschaft, um die Ausführung `Pods`abzugleichen. in diesem Fall wird nach Pods gesucht, die über eine Bezeichnung `run: stockdata`verfügen. Der angegebene `port` auf übereinstimmenden Pods wird vom benannten Dienst veröffentlicht. Andere Pods, die im `stocks`-Namespace ausgeführt werden, können mithilfe `http://stockdata` als Adresse auf http für diesen Dienst zugreifen. Pods, die in anderen Namespaces ausgeführt werden, können den `http://stockdata.stocks` Hostnamen verwenden. Sie können den Namespace-Dienst Zugriff mithilfe von [Netzwerk Richtlinien](https://kubernetes.io/docs/concepts/services-networking/network-policies/)steuern.
 
 #### <a name="deploy-the-stockdata-application"></a>Bereitstellen der StockData-Anwendung
 
-Verwenden Sie `kubectl`, um die `stockdata.yml` Datei anzuwenden und zu überprüfen, ob die Bereitstellung und der Dienst erstellt wurden.
+Verwenden Sie `kubectl`, um die `stockdata.yml` Datei anzuwenden und zu bestätigen, dass die Bereitstellung und der Dienst erstellt wurden:
 
 ```console
 > kubectl apply -f .\stockdata.yml
@@ -254,31 +254,31 @@ spec:
 
 #### <a name="environment-variables"></a>Umgebungsvariablen
 
-Der `env` Abschnitt des Bereitstellungs Objekts gibt Umgebungsvariablen an, die in dem Container festgelegt werden müssen, der die `stockweb:1.0.0` Abbilder ausführen soll.
+Der `env` Abschnitt des Bereitstellungs Objekts gibt die Umgebungsvariablen an, die in dem Container festgelegt werden sollen, der die `stockweb:1.0.0` Abbilder ausgeführt wird.
 
 Die **`StockData__Address`** -Umgebungsvariable wird der `StockData:Address` Konfigurationseinstellung Dank des Umgebungsvariablen-Konfigurations Anbieters zugeordnet. Diese Einstellung verwendet doppelte Unterstriche zwischen Namen zum Trennen von Abschnitten. Die Adresse verwendet den Dienstnamen des `stockdata` Dienstanbieter, der im gleichen Kubernetes-Namespace ausgeführt wird.
 
-Mit der **`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT`** -Umgebungsvariablen wird ein <xref:System.AppContext> Switch festgelegt, der unverschlüsselte http/2-Verbindungen für <xref:System.Net.Http.HttpClient>ermöglicht. Diese Umgebungsvariable entspricht dem Festlegen des Schalters im Code, wie hier gezeigt.
+Mit der **`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT`** -Umgebungsvariablen wird ein <xref:System.AppContext> Switch festgelegt, der unverschlüsselte http/2-Verbindungen für <xref:System.Net.Http.HttpClient>ermöglicht. Diese Umgebungsvariable bewirkt dasselbe wie das Festlegen des Schalters im Code, wie hier gezeigt:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 ```
 
-Die Verwendung einer Umgebungsvariablen für den Switch bedeutet, dass die Einstellung je nach Kontext, in dem die Anwendung ausgeführt wird, leicht geändert werden kann.
+Wenn Sie eine Umgebungsvariable für den-Schalter verwenden, können Sie den Kontext leicht ändern, je nachdem, in welchem Kontext die Anwendung ausgeführt wird.
 
 #### <a name="service-types"></a>Dienst Typen
 
-Um die Webanwendung von außerhalb des Clusters zugänglich zu machen, wird die `type: NodePort`-Eigenschaft verwendet. Dieser Eigenschaftentyp bewirkt, dass Kubernetes Port 80 für den Dienst an einem beliebigen Port auf den externen Netzwerksockets des Clusters veröffentlicht. Der zugewiesene Port kann mit dem `kubectl get service` Befehl gefunden werden.
+Die `type: NodePort`-Eigenschaft wird verwendet, um die Webanwendung von außerhalb des Clusters zugänglich zu machen. Dieser Eigenschaftentyp bewirkt, dass Kubernetes Port 80 für den Dienst an einem beliebigen Port auf den externen Netzwerksockets des Clusters veröffentlicht. Sie finden den zugewiesenen Port mit dem `kubectl get service` Befehl.
 
-Der `stockdata` Dienst sollte nicht von außerhalb des Clusters zugänglich sein, sodass er den Standardtyp `ClusterIP`verwendet.
+Der `stockdata` Dienst sollte nicht von außerhalb des Clusters zugänglich sein, daher wird der Standardtyp `ClusterIP`verwendet.
 
 Produktionssysteme verwenden wahrscheinlich einen integrierten Load Balancer, um öffentliche Anwendungen für externe Consumer verfügbar zu machen. Dienste, die auf diese Weise verfügbar gemacht werden, sollten den `LoadBalancer` Typ verwenden.
 
-Weitere Informationen zu Dienst Typen finden Sie in der Dokumentation zu den [Kubernetes-Veröffentlichungen](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) .
+Weitere Informationen zu Dienst Typen finden Sie in der Dokumentation zu [Kubernetes Publishing Services](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) .
 
 #### <a name="deploy-the-stockweb-application"></a>Bereitstellen der stockweb-Anwendung
 
-Verwenden Sie `kubectl`, um die `stockweb.yml` Datei anzuwenden und zu überprüfen, ob die Bereitstellung und der Dienst erstellt wurden.
+Verwenden Sie `kubectl`, um die `stockweb.yml` Datei anzuwenden und zu bestätigen, dass die Bereitstellung und der Dienst erstellt wurden:
 
 ```console
 > kubectl apply -f .\stockweb.yml
@@ -294,23 +294,23 @@ NAME       TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 stockweb   NodePort   10.106.141.5   <none>        80:32564/TCP   13s
 ```
 
-Die Ausgabe des Befehls `get service` zeigt, dass der HTTP-Port auf dem Port `32564` im externen Netzwerk veröffentlicht wurde. für docker Desktop ist dies "localhost". Sie können auf die Anwendung zugreifen, indem Sie zu `http://localhost:32564`navigieren.
+Die Ausgabe des Befehls `get service` zeigt, dass der HTTP-Port an Port 32564 im externen Netzwerk veröffentlicht wurde. Für docker Desktop ist dies "localhost". Sie können auf die Anwendung zugreifen, indem Sie zu `http://localhost:32564`navigieren.
 
-### <a name="testing-the-application"></a>Testen der Anwendung
+### <a name="test-the-application"></a>Testen der Anwendung
 
-Die stockweb-Anwendung zeigt eine Liste der von einem einfachen Anforderung-Antwort-Dienst abgerufenen NASDAQ-Bestände an. Zu Demonstrationszwecken zeigt jede Zeile auch die eindeutige ID der Dienst Instanz an, die Sie zurückgegeben hat.
+Die stockweb-Anwendung zeigt eine Liste der von einem einfachen Anforderung-Antwort-Dienst abgerufenen NASDAQ-Bestände an. Für diese Demonstration zeigt jede Zeile auch die eindeutige ID der Dienst Instanz an, die Sie zurückgegeben hat.
 
 ![Stockweb-Bildschirmfoto](media/kubernetes/stockweb-screenshot.png)
 
 Wenn die Anzahl der Replikate des `stockdata` Dienstanbieter zunimmt, können Sie davon ausgehen, dass der Wert des **Servers** von Zeile zu Zeile geändert wird, aber tatsächlich werden alle 100-Datensätze immer von derselben Instanz zurückgegeben. Wenn Sie die Seite alle paar Sekunden aktualisieren, bleibt die Server-ID unverändert. Warum passiert dies? Hier gibt es zwei Faktoren.
 
-Zuerst verwendet das Kubernetes-Dienst Ermittlungssystem standardmäßig den Lastenausgleich "Roundrobin". Beim ersten Abfragen des DNS-Servers wird die erste übereinstimmende IP-Adresse für den Dienst zurückgegeben. Wenn das nächste Mal, die nächste IP-Adresse in der Liste usw., bis zum Ende, wird die Schleife zurück zum Start.
+Zuerst verwendet das Kubernetes-Dienst Ermittlungssystem standardmäßig Roundrobin-Lastenausgleich. Beim ersten Abfragen des DNS-Servers wird die erste übereinstimmende IP-Adresse für den Dienst zurückgegeben. Beim nächsten Mal wird die nächste IP-Adresse in der Liste usw. bis zum Ende zurückgegeben. An diesem Punkt werden Sie zurück zum Start.
 
-Zweitens wird der `HttpClient`, der für den GrpC-Client der stockweb-Anwendung verwendet wird, vom [ASP.net Core httpclientfactory](../microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md)erstellt und verwaltet, und für jeden Aufrufe der Seite wird eine einzelne Instanz dieses Clients verwendet. Der Client führt nur eine DNS-Suche durch, sodass alle Anforderungen an dieselbe IP-Adresse weitergeleitet werden. Da der `HttpClientHandler` aus Leistungsgründen zwischengespeichert wird, verwenden mehrere Anforderungen in schneller Folge *alle* die gleiche IP-Adresse, bis der zwischengespeicherte DNS-Eintrag abläuft oder die Handlerinstanz aus irgendeinem Grund verworfen wird.
+Zweitens wird der `HttpClient`, der für den GrpC-Client der stockweb-Anwendung verwendet wird, vom [ASP.net Core httpclientfactory](../microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md)erstellt und verwaltet, und für jeden Aufrufe der Seite wird eine einzelne Instanz dieses Clients verwendet. Der Client führt nur eine DNS-Suche durch, sodass alle Anforderungen an dieselbe IP-Adresse weitergeleitet werden. Und da die `HttpClientHandler` aus Leistungsgründen zwischengespeichert wird, verwenden mehrere Anforderungen in schneller Folge *alle* die gleiche IP-Adresse, bis der zwischengespeicherte DNS-Eintrag abläuft oder die Handlerinstanz aus irgendeinem Grund verworfen wird.
 
-Dies bedeutet, dass Anforderungen an einen GrpC-Dienst standardmäßig nicht über alle Instanzen dieses Dienstanbieter im Cluster hinweg ausgeglichen werden. Verschiedene Consumer verwenden verschiedene Instanzen, aber dies garantiert keine gute Verteilung von Anforderungen und eine ausgeglichene Nutzung von Ressourcen.
+Das Ergebnis ist, dass Anforderungen an einen GrpC-Dienst standardmäßig nicht über alle Instanzen dieses Dienstanbieter im Cluster hinweg ausgeglichen werden. Verschiedene Consumer verwenden verschiedene Instanzen, aber dies garantiert keine gute Verteilung von Anforderungen oder eine ausgeglichene Nutzung von Ressourcen.
 
-Im nächsten Kapitel, [Service Meshes](service-mesh.md), wird erläutert, wie Sie dieses Problem beheben.
+Im nächsten Kapitel, [Service Netzen](service-mesh.md), wird dieses Problem behandelt.
 
 >[!div class="step-by-step"]
 >[Zurück](docker.md)
