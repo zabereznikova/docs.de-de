@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204801"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716270"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 
@@ -143,11 +143,11 @@ Weitere Informationen finden Sie unter [Isolierter Speicher](isolated-storage.md
 
 ## <a name="io-operations-in-windows-store-apps"></a>E/A-Vorgänge in Windows Store-Apps
 
-Das [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] enthält viele der Typen zum Lesen und Schreiben in Streams. Jedoch sind nicht alle E/A-Typen von .NET Framework verfügbar.
+Die .NET für Windows 8.x Store-Apps enthalten viele der Typen zum Lesen und Schreiben in Streams. Jedoch sind nicht alle E/A-Typen von .NET Framework verfügbar.
 
 Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in Windows Store-Apps Version 8.x verwenden:
 
-- Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace der Windows-Runtime, wie z.B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.
+- Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind in den .NET für Windows 8.x Store-Apps nicht enthalten. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace der Windows-Runtime, wie z.B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.
 
 - Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

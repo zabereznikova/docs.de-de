@@ -47,21 +47,21 @@
   items:
     - name: 'Erste Schritte mit C# und Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Erstellen einer „Hallo Welt“-App in C# mit .NET Core in Visual Studio 2017'
+    - name: 'Erstellen einer „Hallo Welt“-App in C# in Visual Studio'
       href: tutorials/with-visual-studio.md
-    - name: Erstellen einer „Hallo Welt“-App in Visual Basic mit .NET Core in Visual Studio 2017
+    - name: Erstellen einer „Hallo Welt“-App in Visual Basic in Visual Studio
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017'
+    - name: Debuggen einer Anwendung mit Visual Studio
       href: tutorials/debugging-with-visual-studio.md
-    - name: Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
+    - name: Veröffentlichen einer Anwendung mit Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Erstellen einer .NET Standard-Bibliothek mit C# und .NET Core in Visual Studio 2017'
+    - name: 'Erstellen einer .NET Standard-Bibliothek mit C# in Visual Studio'
       href: tutorials/library-with-visual-studio.md
-    - name: Erstellen einer .NET Standard-Bibliothek mit Visual Basic und .NET Core in Visual Studio 2017
+    - name: Erstellen einer .NET Standard-Bibliothek mit Visual Basic in Visual Studio
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio 2017
+    - name: Testen einer .NET Standard-Bibliothek in Visual Studio
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
+    - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Neuigkeiten in .NET Core
   items:
@@ -128,11 +128,11 @@
   items:
     - name: .NET Core 2.0 bis 2.1
       href: migration/20-21.md
-    - name: Migrieren über „project.json“
+    - name: Migrieren aus „project.json“
       href: migration/index.md
-    - name: Die Zuordnung zwischen project.json und csproj
+    - name: Zuordnung zwischen „project.json“ und „csproj“
       href: tools/project-json-to-csproj.md
-    - name: Migrieren über DNX
+    - name: Migrieren aus DNX
       href: migration/from-dnx.md
 - name: Anwendungsbereitstellung
   href: deploying/index.md
@@ -171,7 +171,7 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
-- name: Unittests
+- name: Komponententest
   href: testing/index.md
   items:
     - name: Bewährte Methoden für Komponententests
@@ -194,7 +194,7 @@
       href: testing/unit-testing-visual-basic-with-nunit.md
     - name: Komponententests in VB mit MSTest
       href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: Ausführen von selektiven Komponententests
+    - name: Ausführen selektiver Komponententests
       href: testing/selective-unit-tests.md
     - name: Veröffentlichte Ausgabe von Komponententests
       href: testing/unit-testing-published-output.md
@@ -207,7 +207,7 @@
   items:
     - name: .NET Core-Versionsauswahl
       href: versions/selection.md
-    - name: Entfernen von veralteten Runtimes und SDKs
+    - name: Entfernen veralteter Runtimes und SDKs
       href: versions/remove-runtime-sdk-versions.md
 - name: Runtime-ID-Katalog (RID)
   href: rid-catalog.md

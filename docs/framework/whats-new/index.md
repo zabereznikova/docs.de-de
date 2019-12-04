@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281655"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714496"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -685,7 +685,7 @@ Eine Liste der neuen APIs, die .NET Framework 4.7 hinzugefügt wurden, finden Si
 
 .NET Framework 4.7 verbessert die Serialisierung durch die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)** *
+**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)***
 
 In .NET Framework 4.7 wurden `ImportParameters(ECParameters)`-Methoden den Klassen <xref:System.Security.Cryptography.ECDsa> und <xref:System.Security.Cryptography.ECDiffieHellman> hinzugefügt, damit ein Objekt einen bereits eingerichteten Schlüssel darstellen kann. Eine `ExportParameters(Boolean)`-Methode wurde auch zum Exportieren des Schlüssels unter Verwendung expliziter Kurvenparameter hinzugefügt.
 
@@ -2116,13 +2116,13 @@ Weitere Informationen finden Sie unter [Neues in Windows Workflow Foundation](ht
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>.NET für Windows 8.x Store-Apps
 
-Windows 8.x Store-Apps werden für bestimmte Formfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von .NET Framework 4.5 oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von Windows 8.x Store-Apps für Windows verwendet werden. Diese Teilmenge wird [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] genannt und in einer [Übersicht](https://go.microsoft.com/fwlink/?LinkId=228491) im Windows Developer Center erläutert.
+Windows 8.x Store-Apps werden für bestimmte Formfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von .NET Framework 4.5 oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von Windows 8.x Store-Apps für Windows verwendet werden. Diese Teilmenge wird .NET for Windows 8.x Store genannt und in einer [Übersicht](https://go.microsoft.com/fwlink/?LinkId=228491) im Windows Developer Center erläutert.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Portable Klassenbibliotheken <a name="portable" />
 
-Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folgeversionen) können Sie verwaltete Assemblys, die auf mehreren .NET Framework-Plattformen ausgeführt werden können, schreiben und erstellen. Mit einem "Portable Klassenbibliothek"-Projekt wählen Sie die Zielplattformen (wie Windows Phone und [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]). Die verfügbaren Typen und Member im Projekt werden automatisch auf die allgemeinen Typen und Member dieser Plattformen beschränkt. Weitere Informationen finden Sie in der Dokumentation zur [Portablen Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folgeversionen) können Sie verwaltete Assemblys, die auf mehreren .NET Framework-Plattformen ausgeführt werden können, schreiben und erstellen. Bei Verwenden eines Projekts des Typs „Portable Klassenbibliothek“ wählen Sie die Zielplattformen (wie Windows Phone- und .NET für Windows 8.x Store-Apps) aus. Die verfügbaren Typen und Member im Projekt werden automatisch auf die allgemeinen Typen und Member dieser Plattformen beschränkt. Weitere Informationen finden Sie in der Dokumentation zur [Portablen Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Siehe auch
 

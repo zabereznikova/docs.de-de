@@ -4,21 +4,21 @@
   href: standard/
 - name: Leitfaden für .NET Core
   href: core/
-- name: .NET Framework – Leitfaden
+- name: Leitfaden für .NET Framework
   href: framework/
-- name: .NET-Desktopleitfaden (WPF)
+- name: Leitfaden für .NET Desktop – WPF
   href: desktop-wpf/
-- name: 'Leitfaden für C#'
+- name: 'Anleitung für C#'
   href: csharp/index.yml
 - name: 'Leitfaden für F#'
   href: fsharp/
 - name: Leitfaden für Visual Basic
   href: visual-basic/
-- name: Leitfaden für ML.NET
+- name: Leitfaden für ML.MET
   href: machine-learning/index.yml
 - name: Leitfaden für .NET für Apache Spark
   href: spark/index.yml
 - name: Leitfaden zur .NET-Anwendungsarchitektur
   href: architecture/index.yml
-- name: Beispiele und Lernprogramme
+- name: Beispiele und Tutorials
   href: samples-and-tutorials/index.md
