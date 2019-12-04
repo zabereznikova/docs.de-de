@@ -1,70 +1,26 @@
 ---
 title: Breaking Changes bei Windows Forms – .NET Core
 description: Listet die Breaking Changes bei Windows Forms für .NET Core auf.
-ms.date: 11/21/2019
-ms.openlocfilehash: 7b086ff41b41aa210b53a46700fc92ea4adb4077
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 11/27/2019
+ms.openlocfilehash: 8fefa6e2f5a004e8bbe0e6e715f7fd467debb7a4
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429221"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567357"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="6c70e-103">Breaking Changes bei Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6c70e-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms-net-core-to-net-core"></a><span data-ttu-id="2620c-103">Listet die Breaking Changes bei Windows Forms (.NET Core zu .NET Core) auf.</span><span class="sxs-lookup"><span data-stu-id="2620c-103">Breaking changes in Windows Forms (.NET Core to .NET Core)</span></span>
 
-<span data-ttu-id="6c70e-104">Im Folgenden sind die Breaking Changes bei Windows Forms in .NET Core aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="6c70e-104">The following is a list of breaking changes in Windows Forms by .NET Core version.</span></span>
+<span data-ttu-id="2620c-104">Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2620c-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="2620c-105">In diesem Artikel werden Breaking Changes für Windows Forms anhand der .NET Core-Version aufgeführt, in der sie eingeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="2620c-105">This articles lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="2620c-106">Wenn Sie ein Upgrade einer Windows Forms-App von einer früheren Version von .NET Core (3.0 oder höher) durchführen, gilt dieser Artikel für Sie.</span><span class="sxs-lookup"><span data-stu-id="2620c-106">If you're upgrading a Windows Forms app from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span> <span data-ttu-id="2620c-107">Wenn Sie eine Windows Forms-App von .NET Framework zu .NET Core migrieren, finden Sie weitere Informationen unter [Breaking Changes für Windows Forms (.NET Framework zu .NET Core)](../porting/winforms-breaking-changes.md).</span><span class="sxs-lookup"><span data-stu-id="2620c-107">If you're migrating a Windows Forms app from .NET Framework to .NET Core, see [Breaking changes for Windows Forms (.NET Framework to .NET Core)](../porting/winforms-breaking-changes.md).</span></span>
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="6c70e-105">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="6c70e-105">.NET Core 3.0 Preview 9</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="2620c-108">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="2620c-108">.NET Core 3.1</span></span>
 
-[!INCLUDE[Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-allowupdatechildcontrolindexfortabcontrols.md)]
-
-***
-
-[!INCLUDE[Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-donotloadlatestricheditcontrol.md)]
+[!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
 ***
 
-[!INCLUDE[Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-donotsupportselectallshortcutinmultilinetextbox.md)]
+[!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
 
-***
+## <a name="see-also"></a><span data-ttu-id="2620c-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2620c-109">See also</span></span>
 
-[!INCLUDE[Switch.System.Windows.Forms.DontSupportReentrantFilterMessage compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-dontsupportreentrantfiltermessage.md)]
-
-***
-
-[!INCLUDE[Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-uselegacyscrolling.md)]
-
-***
-
-[!INCLUDE[Switch.System.Windows.Forms.EnableVisualStyleValidation compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-enablevisualstylevalidation.md)]
-
-***
-
-[!INCLUDE[Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-uselegacycontextmenustripsourcecontrolvalue.md)]
-
-***
-
-[!INCLUDE[Switch.System.Windows.Forms.UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-uselegacyimages.md)]
-
-***
-
-[!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/remove-serializationattribute.md)]
-
-## <a name="net-core-30-rc1"></a><span data-ttu-id="6c70e-106">.NET Core 3.0 RC1</span><span class="sxs-lookup"><span data-stu-id="6c70e-106">.NET Core 3.0 RC1</span></span>
-
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/remove-duplicated-apis.md)]
-
-## <a name="net-core-30"></a><span data-ttu-id="6c70e-107">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="6c70e-107">.NET Core 3.0</span></span>
-
-[!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
-
-***
-
-[!INCLUDE[Modernization of the FolderBrowserDialog](~/includes/core-changes/windowsforms/modernized-folderbrowserdialog.md)]
-
-## <a name="net-core-31"></a><span data-ttu-id="6c70e-108">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="6c70e-108">.NET Core 3.1</span></span>
-
-[!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/remove-controls-3.1.md)]
+- [<span data-ttu-id="2620c-110">Breaking Changes für Windows Forms (.NET Framework zu .NET Core)</span><span class="sxs-lookup"><span data-stu-id="2620c-110">Breaking changes for Windows Forms (.NET Framework to .NET Core)</span></span>](../porting/winforms-breaking-changes.md)
