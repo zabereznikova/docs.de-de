@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975141"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800352"
 ---
 # <a name="quickstart-wcf-data-services"></a>Schnellstart (WCF Data Services)
 
 Dieser Schnellstart hilft Ihnen, sich mit WCF Data Services und der Open Data Protocol (odata) durch eine Reihe von Aufgaben vertraut zu machen, die die [Themen in den](getting-started-with-wcf-data-services.md)ersten Schritten unterstützen.
 
-## <a name="what-youll-learn"></a>Was Sie lernen
+## <a name="what-youll-learn"></a>Ihre Lernziele
 
 Die erste Aufgabe in diesem Schnellstart zeigt, wie Sie einen Datendienst erstellen, um einen odata-Feed aus der Northwind-Beispieldatenbank verfügbar zu machen. In späteren Themen greifen Sie mithilfe eines Webbrowsers auf den odata-Feed zu und erstellen eine Windows Presentation Foundation (WPF)-Client Anwendung, die den odata-Feed mithilfe von Client Bibliotheken nutzt.
 
@@ -24,9 +24,9 @@ Die erste Aufgabe in diesem Schnellstart zeigt, wie Sie einen Datendienst erstel
 
 Um diesen Schnellstart durchzuführen, müssen Sie die folgenden Komponenten installieren:
 
-- Visual Studio
+- öffnen
 
-- Eine Instanz von SQL Server. Dies umfasst SQL Server Express, das in einer Standardinstallation von Visual Studio 2015 enthalten ist, oder als Teil der Arbeitsauslastung für die **Datenspeicherung und-Verarbeitung** in Visual Studio 2017.
+- Eine Instanz von SQL Server. Dies umfasst SQL Server Express, das in einer Standardinstallation von Visual Studio 2015 enthalten ist, oder als Teil der Arbeitsauslastung für die **Datenspeicherung und-Verarbeitung** in Visual Studio 2017 oder höher.
 
 - Die Beispieldatenbank Northwind. Diese Beispieldatenbank kann von der Downloadseite [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)heruntergeladen werden.
 

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: adb1d10e659254b5fa326e7c598107d768aa2685
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040409"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800292"
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  Hilfstechnologieprodukte und Testskripts navigieren durch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur, um Informationen über die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] und deren Elemente zu sammeln.  
   
- Innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur befindet sich ein root-<xref:System.Windows.Automation.AutomationElement.RootElement%2A>Element (), das den aktuellen Desktop darstellt und dessen untergeordnete Elemente Anwendungsfenster darstellen. Jedes dieser untergeordneten Elemente kann Elemente enthalten, die Komponenten der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] darstellen, z. B. Menüs, Schaltflächen, Symbolleisten und Listenfelder. Diese Elemente können wiederum Elemente, etwa Listeneinträge, enthalten.  
+ Innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struktur gibt es ein root-Element (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>), das den aktuellen Desktop darstellt und dessen untergeordnete Elemente Anwendungsfenster darstellen. Jedes dieser untergeordneten Elemente kann Elemente enthalten, die Komponenten der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] darstellen, z. B. Menüs, Schaltflächen, Symbolleisten und Listenfelder. Diese Elemente können wiederum Elemente, etwa Listeneinträge, enthalten.  
   
  Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur ist keine feststehende Struktur und wird selten vollständig angezeigt, da sie Tausende von Elementen enthalten kann. Teile der Struktur werden bei Bedarf erstellt, und die Struktur kann sich durch Hinzufügen, Verschieben oder Entfernen von Elementen ändern.  
   

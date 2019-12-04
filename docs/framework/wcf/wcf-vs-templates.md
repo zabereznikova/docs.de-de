@@ -2,12 +2,12 @@
 title: WCF Visual Studio-Vorlagen
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197191"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802348"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
 Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte Projekt-und Element Vorlagen, die Sie in Visual Studio verwenden können, um schnell WCF-Dienste und umgebende Anwendungen zu erstellen.  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte
  Wenn Sie die Adresse des Feeds ändern, müssen Sie auch die Adresse auf der Registerkarte " **Debuggen** " ändern. Wenn Sie dies nicht tun, versucht Internet Explorer, den Feed unter der Standardadresse zu öffnen, und schlägt fehl.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX-aktivierte WCF-Dienstelementvorlage  
- Diese Vorlage stellt ein AJAX-Steuerelement als WCF-Dienst zur Verfügung. Weitere Informationen zu AJAX-Steuerelementen finden Sie in der [Dokumentation zu AJAX-Steuer](https://go.microsoft.com/fwlink/?LinkId=96717)Elementen.  
+ Diese Vorlage stellt ein AJAX-Steuerelement als WCF-Dienst zur Verfügung. Weitere Informationen zu AJAX-Steuerelementen finden Sie in der [Dokumentation zu AJAX-Steuer](https://docs.microsoft.com/aspnet/ajax/)Elementen.  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight-aktivierte WCF-Dienstelementvorlage  
  Diese Vorlage erstellt einen Webdienst, der Daten für einen Silverlight-Client oder für ein Silverlight-Front-End bereitstellt. Die Vorlage kann einem Website-oder Webanwendungs Projekt hinzugefügt werden, um einen WCF-Dienst zu erstellen, der Dienst Code und die Konfiguration enthält, die die Kommunikation mit einem Silverlight-Client unterstützen. Anschließend können Sie mit **Dienstverweis hinzufügen** einen Client Proxy des Dienstanbieter zum Client hinzufügen und Daten zwischen dem Silverlight-Client und dem Silverlight-fähigen WCF-Dienst austauschen.  

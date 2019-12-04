@@ -2,12 +2,12 @@
 title: Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: de0a0474f0a996ce8c781064f56c03b483ca1bb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fb9536d5ee7a31039d77deffc3c0b0c7a6263b66
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283192"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802569"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 Bei der <xref:System.Activities.Statements.Interop> Aktivität handelt es sich um eine [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5)-Aktivität, die eine .NET Framework 3,5 (WF 3,5)-Aktivität innerhalb eines [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflows umschließt. Die WF 3-Aktivität kann eine einzelne Blattaktivität oder eine ganze Aktivitätsstruktur darstellen. Die Ausführung (einschließlich Abbruch und Ausnahmebehandlung) und die Persistenz der .NET Framework 3,5-Aktivität erfolgen innerhalb des Kontexts der [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflow Instanz, die ausgeführt wird.  
@@ -24,7 +24,7 @@ Bei der <xref:System.Activities.Statements.Interop> Aktivität handelt es sich u
   
 - Die WF 3-Aktivität muss über einen öffentlichen Parameter losen Konstruktor verfügen.  
   
-- Aufgrund von Einschränkungen bei den Schnittstellentypen, die die <xref:System.Activities.Statements.Interop>-Aktivität unterstützen kann, können das <xref:System.Workflow.Activities.HandleExternalEventActivity>-Objekt und das <xref:System.Workflow.Activities.CallExternalMethodActivity>-Objekt nicht direkt verwendet werden. Abgeleitete Aktivitäten, die mit dem Tool für Workflow-Kommunikationsaktivitäten (WCA.exe) erstellt wurden, können jedoch verwendet werden. Weitere Informationen finden Sie unter [Windows Workflow Foundation Tools](https://go.microsoft.com/fwlink/?LinkId=178889) .  
+- Aufgrund von Einschränkungen bei den Schnittstellentypen, die die <xref:System.Activities.Statements.Interop>-Aktivität unterstützen kann, können das <xref:System.Workflow.Activities.HandleExternalEventActivity>-Objekt und das <xref:System.Workflow.Activities.CallExternalMethodActivity>-Objekt nicht direkt verwendet werden. Abgeleitete Aktivitäten, die mit dem Tool für Workflow-Kommunikationsaktivitäten (WCA.exe) erstellt wurden, können jedoch verwendet werden. Weitere Informationen finden Sie unter [Windows Workflow Foundation Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) .  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Konfigurieren einer WF 3-Aktivität innerhalb einer Interop-Aktivität  
  Um Daten zu konfigurieren und in bzw. aus einer WF 3-Aktivität über die Grenzen der Interoperation zu übergeben, werden die Eigenschaften und die Metadateneigenschaften der WF 3-Aktivität von der <xref:System.Activities.Statements.Interop>-Aktivität verfügbar gemacht. Die Metadateneigenschaften der WF 3-Aktivität (z. B. <xref:System.Workflow.ComponentModel.Activity.Name%2A>) werden über die <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>-Auflistung verfügbar gemacht. Dies ist eine Auflistung von Name-Wert-Paaren, mit denen die Werte für die Metadateneigenschaften der WF 3-Aktivität definiert werden. Eine Metadateneigenschaft ist eine Eigenschaft, die von der Abhängigkeitseigenschaft unterstützt wird, für die das <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>-Kennzeichen festgelegt ist.  
@@ -34,13 +34,13 @@ Bei der <xref:System.Activities.Statements.Interop> Aktivität handelt es sich u
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Einschränkungen bei der Verwendung einer WF 3-Aktivität innerhalb einer Interop-Aktivität  
  Die vom System bereitgestellten WF 3-Aktivitäten können nicht direkt in einer <xref:System.Activities.Statements.Interop>-Aktivität umschlossen werden. Bei einigen WF 3-Aktivitäten ist der Grund hierfür, dass es eine analoge WF 4.5-Aktivität wie z. B. <xref:System.Workflow.Activities.DelayActivity> gibt. Bei anderen rührt dies daher, dass die Funktionalität der Aktivität nicht unterstützt wird. Viele vom System bereitgestellte WF 3-Aktivitäten können in Workflows verwendet werden, die von der <xref:System.Activities.Statements.Interop>-Aktivität umschlossen werden, jedoch mit folgenden Einschränkungen:  
   
-1. <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> können nicht in einer <xref:System.Activities.Statements.Interop> Aktivität verwendet werden.  
+1. Das <xref:System.ServiceModel.Activities.Send>-Objekt und das <xref:System.ServiceModel.Activities.Receive>-Objekt können nicht in einer <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden.  
   
-2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>und <xref:System.Workflow.Activities.WebServiceFaultActivity> können nicht innerhalb einer <xref:System.Activities.Statements.Interop> Aktivität verwendet werden.  
+2. Die Objekte <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity> und <xref:System.Workflow.Activities.WebServiceFaultActivity> können nicht in einer <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden.  
   
-3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> kann nicht innerhalb einer <xref:System.Activities.Statements.Interop> Aktivität verwendet werden.  
+3. Das <xref:System.Workflow.Activities.InvokeWorkflowActivity>-Objekt kann nicht in einer <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden.  
   
-4. <xref:System.Workflow.ComponentModel.SuspendActivity> kann nicht innerhalb einer <xref:System.Activities.Statements.Interop> Aktivität verwendet werden.  
+4. Das <xref:System.Workflow.ComponentModel.SuspendActivity>-Objekt kann nicht in einer <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden.  
   
 5. Kompensationsbezogene Aktivitäten können nicht in einer <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden.  
   

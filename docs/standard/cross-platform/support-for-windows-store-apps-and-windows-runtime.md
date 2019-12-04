@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714489"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802751"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
 
@@ -112,7 +112,7 @@ Weitere grundlegende, häufig verwendete Windows-Runtime Typen, die in verwaltet
 
 ### <a name="other-differences"></a>Weitere Unterschiede
 
-In einigen Fällen erfordert die Tatsache, dass .NET Framework Typen in Ihrem Code statt Windows-Runtime Typen angezeigt werden, eine Aktion Ihrerseits. Beispielsweise wird die <xref:Windows.Foundation.Uri?displayProperty=nameWithType>-Klasse in .NET Framework Code als <xref:System.Uri?displayProperty=nameWithType> angezeigt. <xref:System.Uri?displayProperty=nameWithType> eine relative URI zulässt, aber <xref:Windows.Foundation.Uri?displayProperty=nameWithType> einen absoluten URI erfordert. Wenn Sie einen URI an eine Windows-Runtime Methode übergeben, müssen Sie daher sicherstellen, dass er absolut ist. Weitere Informationen finden [Sie unter Übergeben eines URI an den Windows-Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+In einigen Fällen erfordert die Tatsache, dass .NET Framework Typen in Ihrem Code statt Windows-Runtime Typen angezeigt werden, eine Aktion Ihrerseits. Beispielsweise wird die <xref:Windows.Foundation.Uri?displayProperty=nameWithType>-Klasse in .NET Framework Code als <xref:System.Uri?displayProperty=nameWithType> angezeigt. <xref:System.Uri?displayProperty=nameWithType> eine relative URI zulässt, aber <xref:Windows.Foundation.Uri?displayProperty=nameWithType> einen absoluten URI erfordert. Wenn Sie einen URI an eine Windows-Runtime Methode übergeben, müssen Sie daher sicherstellen, dass er absolut ist. Weitere Informationen finden Sie unter [Übergeben eines URI an die Windows-Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -137,7 +137,7 @@ Die Szenarien, die für verwaltete Windows-Runtime-Komponenten unterstützt werd
 - Die Typen in der Komponente können von Windows-Runtime Typen abgeleitet werden. Steuerelemente können von den primitiven Steuerelement Typen im <xref:Windows.UI.Xaml.Controls.Primitives>-Namespace oder von besser abgeschlossenen Steuerelementen wie <xref:Windows.UI.Xaml.Controls.Button>abgeleitet werden.
 
   > [!IMPORTANT]
-  > Ab [!INCLUDE[win8](../../../includes/win8-md.md)] und .NET Framework 4,5 müssen alle öffentlichen Typen in einer verwalteten Windows-Runtime-Komponente versiegelt sein. Ein Typ in einer anderen Windows-Runtime Komponente kann nicht von Ihnen abgeleitet werden. Wenn Sie polymorphes Verhalten in der Komponente ermöglichen möchten, können Sie eine Schnittstelle erstellen und sie in polymorphen Typen implementieren.
+  > Ab Windows 8 und der .NET Framework 4,5 müssen alle öffentlichen Typen in einer verwalteten Windows-Runtime Komponente versiegelt sein. Ein Typ in einer anderen Windows-Runtime Komponente kann nicht von Ihnen abgeleitet werden. Wenn Sie polymorphes Verhalten in der Komponente ermöglichen möchten, können Sie eine Schnittstelle erstellen und sie in polymorphen Typen implementieren.
 
 - Alle Parameter und Rückgabe Typen für die öffentlichen Typen in der Komponente müssen Windows-Runtime Typen sein (einschließlich der Windows-Runtime Typen, die von der Komponente definiert werden).
 

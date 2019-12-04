@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: b706ec49db123f33b3fc1ab0f420ed9a47e32f67
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd7a1399dd575ad1a4b6c95e0e0510670eb13b51
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320951"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802295"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs
 In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang asynchron oder synchron implementiert werden, ohne dem Client zu diktieren, wie er aufgerufen werden soll. Asynchrone Dienst Vorgänge können z. b. synchron aufgerufen werden, und synchrone Dienst Vorgänge können asynchron aufgerufen werden. Ein Beispiel, das zeigt, wie ein Vorgang asynchron in einer Client Anwendung aufgerufen wird, finden Sie unter Gewusst [wie: Asynchrones Abrufen von Dienst Vorgängen](./feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [Entwerfen von Dienstverträgen](designing-service-contracts.md) und [synchronen und asynchronen Vorgängen](synchronous-and-asynchronous-operations.md). In diesem Thema wird die grundlegende Struktur eines asynchronen Dienstvorgangs beschrieben (der Code ist nicht vollständig). Ein umfassendes Beispiel sowohl der Dienst-als auch der Clientseite finden Sie unter [Asynchronous](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Asynchrones Implementieren eines Dienstvorgangs  
   
-1. Deklarieren Sie im Dienstvertrag ein asynchrones Methodenpaar entsprechend den .NET-Richtlinien für den asynchronen Entwurf. Die Methode `Begin` nimmt einen Parameter, ein Rückrufobjekt und ein Statusobjekt und gibt eine <xref:System.IAsyncResult?displayProperty=nameWithType>-Methode und eine entsprechende `End`-Methode aus, die ein <xref:System.IAsyncResult?displayProperty=nameWithType> nimmt und den Rückgabewert ausgibt. Weitere Informationen zu asynchronen Aufrufen finden Sie unter [Entwurfsmuster für die asynchrone Programmierung](https://go.microsoft.com/fwlink/?LinkId=248221).  
+1. Deklarieren Sie im Dienstvertrag ein asynchrones Methodenpaar entsprechend den .NET-Richtlinien für den asynchronen Entwurf. Die Methode `Begin` nimmt einen Parameter, ein Rückrufobjekt und ein Statusobjekt und gibt eine <xref:System.IAsyncResult?displayProperty=nameWithType>-Methode und eine entsprechende `End`-Methode aus, die ein <xref:System.IAsyncResult?displayProperty=nameWithType> nimmt und den Rückgabewert ausgibt. Weitere Informationen zu asynchronen Aufrufen finden Sie unter [Entwurfsmuster für die asynchrone Programmierung](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
 2. Markieren Sie die Methode `Begin` des asynchronen Methodenpaars mit dem Attribut <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType>, und legen Sie die Eigenschaft <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> auf `true` fest. Der folgende Code führt beispielsweise die Schritte 1 und 2 aus.  
   

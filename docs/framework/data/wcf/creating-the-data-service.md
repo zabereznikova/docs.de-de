@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975398"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802267"
 ---
 # <a name="create-the-data-service"></a>Erstellen des Datendiensts
 
@@ -26,7 +26,7 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
 
 ## <a name="create-the-aspnet-web-app"></a>Erstellen der ASP.net-Web-App
 
-1. Wählen Sie in Visual Studio im Menü **Datei** die Option **neu**  > **Projekt**aus.
+1. Wählen Sie in Visual Studio im Menü **Datei** die Optionen **Neu** > **Projekt** aus.
 
 1. Wählen Sie im Dialogfeld **Neues Projekt** unter entweder Visual Basic oder Visual C# die Kategorie **Web** aus, und wählen Sie dann **ASP.NET Webanwendung**aus.
 
@@ -71,7 +71,7 @@ In diesem Thema erstellen Sie einen Beispiel Datendienst, der WCF Data Services 
    ![WCF Data Service-Element Vorlage in Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017.
+   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017 oder höher.
 
 3. Geben Sie `Northwind`als Namen für den Dienst ein.
 

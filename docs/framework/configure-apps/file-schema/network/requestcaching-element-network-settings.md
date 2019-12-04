@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697829"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802128"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching>-Element (Netzwerkeinstellungen)
 Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.  
@@ -29,7 +29,7 @@ Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.
   isPrivateCache ="true|false"  
   disableAllCaching="true|false"  
   defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss">  
+  unspecifiedMaximumAge= "d.hh:mm:ss">  
     <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
     <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
 </requestCaching>
@@ -42,14 +42,14 @@ Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`isPrivateCache`|Gibt an, ob der Cache eine Isolation zwischen den Informationen verschiedener Benutzer bereitstellt. Der Standardwert ist `true`. Dieser Wert sollte für Anwendungen der mittleren Ebene `false` werden.|  
+|`isPrivateCache`|Gibt an, ob der Cache eine Isolation zwischen den Informationen verschiedener Benutzer bereitstellt. Der Standardwert ist `true`sein. Dieser Wert sollte für Anwendungen der mittleren Ebene `false` werden.|  
 |`disableAllCaching`|Gibt an, dass das Zwischenspeichern für alle Webanwendungen deaktiviert ist und nicht Programm gesteuert überschrieben werden kann.|  
-|`defaultPolicyLevel`|Einer der Werte in der <xref:System.Net.Cache.RequestCacheLevel>-Enumeration. Der Standardwert ist `BypassCache`.|  
+|`defaultPolicyLevel`|Einer der Werte in der <xref:System.Net.Cache.RequestCacheLevel>-Enumeration. Der Standardwert ist `BypassCache`sein.|  
 |`unspecifiedMaximumAge`|Gibt die Standardzeit an, nach der der Inhalt als abgelaufen gekennzeichnet wird.|  
   
 ## <a name="policylevel-attribute"></a>PolicyLevel-Attribut  
   
-|Wert|Beschreibung|  
+|{2&gt;Wert&lt;2}|Beschreibung|  
 |-----------|-----------------|  
 |`Default`|Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource neu ist, die Länge des Inhalts genau ist und die Attribute für die Ablauf-, Änderungs-und Inhalts Länge vorhanden sind.|  
 |`BypassCache`|Gibt die Ressource vom Server zurück.|  

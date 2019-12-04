@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für die Persistenz
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 399d2f5dbb5f3114a58cc7fdaede249b253089c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ffbb3ebfa8f85e2b0052a9df9ada30766accd8e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592124"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802517"
 ---
 # <a name="persistence-best-practices"></a>Empfohlene Vorgehensweisen für die Persistenz
 In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfiguration von Workflows bezüglich der Workflowpersistenz behandelt.  
@@ -21,7 +21,7 @@ In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfigurat
   
  Bei Workflows, die über einen langen Zeitraum ausgelastet sind, wird empfohlen, die Workflowinstanz in diesem Zeitraum regelmäßig persistent zu speichern. Hierzu können Sie <xref:System.Activities.Statements.Persist>-Aktivitäten in der Abfolge von Aktivitäten einfügen, durch die die Workflowinstanz ausgelastet ist. Bei einer Wiederherstellung der Anwendungsdomäne oder einem Ausfall des Hosts oder Computers wird das System dann nicht wieder auf den Anfang des Auslastungszeitraums zurückgesetzt. Bedenken Sie, dass das Hinzufügen von <xref:System.Activities.Statements.Persist>-Aktivitäten zum Workflow zu Leistungseinbußen führen kann.  
   
- Windows Server AppFabric erleichtert die Konfiguration und Verwendung von Persistenz erheblich. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric erleichtert die Konfiguration und Verwendung von Persistenz erheblich. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10)) .  
   
 ## <a name="configuration-of-scalability-parameters"></a>Konfiguration von Skalierbarkeitsparametern  
  Die Einstellungen der folgenden Parameter hängen von den Anforderungen an die Skalierbarkeit und Leistung ab:  
@@ -34,7 +34,7 @@ In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfigurat
   
  Diese Parameter sollten in Abhängigkeit vom aktuellen Szenario wie nachfolgend angegeben festgelegt werden.  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Szenario: Eine kleine Anzahl von Workflowinstanzen, die eine optimale Reaktionszeit erfordern  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Szenario: Wenige Workflowinstanzen, die eine optimale Reaktionszeit erfordern  
  Bei diesem Szenario sollten alle Workflowinstanzen auch im Leerlauf geladen bleiben. Legen Sie <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> auf einen hohen Wert fest. Diese Einstellung verhindert eine Verschiebung von Workflowinstanzen zwischen Computern. Verwenden Sie diese Einstellung nur, wenn mindestens eine der folgenden Bedingungen erfüllt ist:  
   
 - Eine Workflowinstanz empfängt eine einzelne Nachricht während des Lebenszyklus.  
@@ -45,15 +45,15 @@ In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfigurat
   
  Verwenden Sie <xref:System.Activities.Statements.Persist>-Aktivitäten, oder legen Sie <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> auf 0 (null) fest, um eine Wiederherstellung der Workflowinstanz nach einem Ausfall des Diensthosts oder Computers zu ermöglichen.  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Szenario: Workflowinstanzen werden für längere Zeit im Leerlauf  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Szenario: Workflowinstanzen befinden sich über lange Zeiträume im Leerlauf  
  Legen Sie <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> in diesem Szenario auf 0 (null) fest, um Ressourcen so bald wie möglich freizugeben.  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Szenario: Workflowinstanzen empfangen mehrere Nachrichten innerhalb kurzer Zeit  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Szenario: Workflowinstanzen empfangen mehrere Nachrichten in einem kurzen Zeitraum  
  Legen Sie <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> in diesem Szenario auf 60 Sekunden fest, wenn die Nachrichten auf demselben Computer empfangen werden. Dadurch wird auch eine rasche Abfolge des Entladens und Ladens einer Workflowinstanz verhindert. Gleichzeitig verbleibt die Instanz nicht unnötig lange im Speicher.  
   
  Legen Sie <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> auf 0 (null) fest, und legen Sie <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> auf BasicRetry oder AggressiveRetry fest, wenn die Nachrichten auf verschiedenen Computern empfangen werden können. Dadurch kann die Workflowinstanz von einem anderen Computer geladen werden.  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Szenario: Workflow Verzögerungsaktivitäten mit kurzen Zeitspannen  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Szenario: Workflow mit Verzögerungsaktivitäten und kurzen Zeitspannen  
  In diesem Szenario wird die Persistenzdatenbank vom <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> in regelmäßigen Abständen nach Instanzen abgefragt, die aufgrund einer abgelaufenen <xref:System.Activities.Statements.Delay>-Aktivität geladen werden sollen. Wenn <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> einen Timer ermittelt, der während des nächsten Abrufintervalls abläuft, wird das Abrufintervall vom SQL-Workflowinstanzspeicher verkürzt. Der nächste Abruf erfolgt dann unmittelbar nach Ablauf des Timers. Auf diese Weise erreicht der SQL-Workflowinstanzspeicher eine hohe Genauigkeit für Timer, deren Ausführungsdauer das Abfrageintervall übersteigt, das durch <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> festgelegt ist. Damit eine rechtzeitige Verarbeitung kürzerer Verzögerungen gewährleistet ist, muss die Workflowinstanz mindestens für ein Abfrageintervall im Speicher verbleiben.  
   
  Legen Sie <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> auf 0 (null) fest, um die Ablaufzeit in die Persistenzdatenbank zu schreiben.  

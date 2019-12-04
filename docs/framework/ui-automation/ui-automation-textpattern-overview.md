@@ -6,17 +6,17 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975492"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800202"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
 
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).
 
 In dieser Übersicht wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um den Textinhalt (einschließlich Format- und Stilattributen) von Textsteuerelementen auf Plattformen mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Unterstützung verfügbar zu machen. Zu diesen Steuerelementen gehören das Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> sowie deren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Entsprechungen.
 
@@ -50,14 +50,14 @@ Ein eigenständiges Textsteuerelement kann als Bezeichnung oder statischer Text 
 > [!NOTE]
 > Textsteuerelemente werden möglicherweise nicht in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt (weitere Informationen finden Sie unter [UI Automation Tree Overview](ui-automation-tree-overview.md)). Dies liegt daran, dass Textsteuerelemente häufig durch die Name-Eigenschaft eines anderen Steuerelements angezeigt werden. Beispielsweise wird der Text für die Bezeichnung eines Bearbeitungssteuerelements über die Name-Eigenschaft des Bearbeitungssteuerelements verfügbar gemacht. Da sich das Bearbeitungssteuerelement in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur befindet, muss das Textelement selbst nicht in dieser Ansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur vorhanden sein. In der Inhaltsansicht wird nur Text angezeigt, der kein Text mit redundanten Informationen ist. Dadurch kann jede Hilfstechnologie schnell genau die Informationen herausfiltern, die die Benutzer benötigen.
 
-### <a name="edit"></a>Bearbeiten
+### <a name="edit"></a>Edit
 
 Mit einem Bearbeitungssteuerelement kann ein Benutzer eine einzelne Textzeile anzeigen und bearbeiten
 
 > [!NOTE]
 > Die einzelne Textzeile wird in bestimmten Layoutszenarien möglicherweise umbrochen.
 
-### <a name="document"></a>Dokument
+### <a name="document"></a>Dokumentieren
 
 Mit einem Dokumentsteuerelement kann ein Benutzer in mehreren Textseiten navigieren und Informationen aus diesen Textseiten abrufen.
 

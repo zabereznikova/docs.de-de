@@ -1,15 +1,15 @@
 ---
-title: WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
+title: WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 224777fe5bf8e8d832ede582f460a8fa6ae6181d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425269"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802334"
 ---
-# <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
+# <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)
 Das WS-AtomicTransaction-Konfigurationsdienstprogramm wird zur Konfiguration von grundlegenden WS-AtomicTransaction-Unterstützungseinstellungen verwendet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,29 +25,29 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ausführen, müssen Sie vor dem Ausführen von WsatConfig.exe ein Update herunterladen. Weitere Informationen zu diesem Update finden Sie unter [Update for Commerce Server 2007 (KB912817)](https://go.microsoft.com/fwlink/?LinkId=95340) und [Availability of Windows XP com+ Hotfixrollup Package 13](https://go.microsoft.com/fwlink/?LinkId=95341).  
+ Wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ausführen, müssen Sie vor dem Ausführen von WsatConfig.exe ein Update herunterladen. Weitere Informationen zu diesem Update finden Sie unter [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/en-us/download/details.aspx?id=21520).  
   
  In der folgenden Tabelle werden die Optionen angezeigt, die mit dem WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe) verwendet werden können.  
   
 > [!NOTE]
 > Wenn Sie ein SSL-Zertifikat für einen bestimmten Port festlegen, wird dabei das ursprüngliche SSL-Zertifikat überschrieben, das diesem Port zugeordnet ist (sofern vorhanden).  
   
-|Optionen|Beschreibung|  
+|Options|Beschreibung|  
 |-------------|-----------------|  
-|-Konten: \<konto, >|Gibt eine durch Trennzeichen getrennte Liste von Konten an, die von WS-AtomicTransaction verwendet werden können. Die Gültigkeit dieser Konten wird nicht überprüft.|  
-|-accountsCerts: \<thumb >&#124;"issuer\subjetname", >|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
-|-endpointCert: < Computer&#124;\<thumb >&#124;"issuer\subjetname" >|Verwendet das Computerzertifikat oder ein anderes lokales Endpunktzertifikat, das vom Fingerabdruck oder Issuer\SubjectName-Paar angegeben wird. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
-|-MaxTimeout: \<sek >|Gibt das maximale Timeout in Sekunden an. Gültige Werte sind 0 bis 3600.|  
-|-Network: \<enable&#124;deaktivieren >|Aktiviert oder deaktiviert die WS-AtomicTransaction-Netzwerkunterstützung.|  
-|-Port: \<portnum >|Legt den HTTPS-Anschluss für WS-AtomicTransaction fest.<br /><br /> Wenn Sie die Firewall schon vor dem Ausführen dieses Tools aktiviert haben, wird der Anschluss automatisch in der Ausnahmeliste registriert. Wenn die Firewall vor dem Ausführen dieses Tools deaktiviert wird, werden keine zusätzlichen Konfigurationen in Bezug auf die Firewall vorgenommen.<br /><br /> Wenn Sie die Firewall nach der Konfiguration von WS-AT aktivieren, müssen Sie dieses Tool erneut ausführen und die Anschlussnummer mit diesem Parameter angeben. Wenn Sie die Firewall nach der Konfiguration deaktivieren, wird WS-AT ohne zusätzliche Eingabe ausgeführt.|  
-|-Timeout: \<sek. >|Gibt das Standardtimeout in Sekunden an. Gültige Werte reichen von 1 bis 3600.|  
-|-traceActivity: \<enable&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Aktivitätsereignissen.|  
-|-TraceLevel: \<off&#124;Fehler&#124;kritische&#124;Warnung&#124;Informationen&#124; ausführlich&#124;alle >}|Gibt die Ablaufverfolgungsebene an.|  
-|-tracePII: \<enable&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von persönlich identifizierbaren Informationen.|  
-|-TraceProp: \<enable&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Propagierungsereignissen.|  
+|-Konten:\<Konto, >|Gibt eine durch Trennzeichen getrennte Liste von Konten an, die von WS-AtomicTransaction verwendet werden können. Die Gültigkeit dieser Konten wird nicht überprüft.|  
+|-accountsCerts:\<Thumb >&#124;"issuer\subjetname", >|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
+|-endpointCert: < Computer&#124;\<Thumb >&#124;"issuer\subjetname" >|Verwendet das Computerzertifikat oder ein anderes lokales Endpunktzertifikat, das vom Fingerabdruck oder Issuer\SubjectName-Paar angegeben wird. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
+|-MaxTimeout:\<Sek. >|Gibt das maximale Timeout in Sekunden an. Gültige Werte sind 0 bis 3600.|  
+|-Network:\<deaktivieren&#124;> aktivieren|Aktiviert oder deaktiviert die WS-AtomicTransaction-Netzwerkunterstützung.|  
+|-Port:\<portnum >|Legt den HTTPS-Anschluss für WS-AtomicTransaction fest.<br /><br /> Wenn Sie die Firewall schon vor dem Ausführen dieses Tools aktiviert haben, wird der Anschluss automatisch in der Ausnahmeliste registriert. Wenn die Firewall vor dem Ausführen dieses Tools deaktiviert wird, werden keine zusätzlichen Konfigurationen in Bezug auf die Firewall vorgenommen.<br /><br /> Wenn Sie die Firewall nach der Konfiguration von WS-AT aktivieren, müssen Sie dieses Tool erneut ausführen und die Anschlussnummer mit diesem Parameter angeben. Wenn Sie die Firewall nach der Konfiguration deaktivieren, wird WS-AT ohne zusätzliche Eingabe ausgeführt.|  
+|-Timeout:\<Sek. >|Gibt das Standardtimeout in Sekunden an. Gültige Werte reichen von 1 bis 3600.|  
+|-traceActivity:\<Aktivierung&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Aktivitätsereignissen.|  
+|-TraceLevel:&#124;\<Fehler&#124;kritische&#124;Warnung&#124;Informationen ausführlich&#124; &#124;alle >}|Gibt die Ablaufverfolgungsebene an.|  
+|-tracePII:\<deaktivierte > aktivieren&#124;|Aktiviert oder deaktiviert die Ablaufverfolgung von persönlich identifizierbaren Informationen.|  
+|-TraceProp:\<Aktivierung&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Propagierungsereignissen.|  
 |-restart|Startet MSDTC neu, um Änderungen sofort zu aktivieren. Wenn dies nicht angegeben wird, werden die Änderungen erst wirksam, wenn MSDTC neu gestartet wird.|  
 |-show|Zeigt die aktuellen WS-AtomicTransaction-Protokolleinstellungen an.|  
-|-virtualserver: \<virtualserver >|Gibt den DTC-Ressourcenclusternamen an.|  
+|-virtualserver:\<virtualserver >|Gibt den DTC-Ressourcenclusternamen an.|  
   
 ## <a name="see-also"></a>Siehe auch
 

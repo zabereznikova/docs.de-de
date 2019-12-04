@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975609"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802093"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a>Beim Entwickeln von eigenständigen und im Browser gehosteten Anwendungen für Windows Presentation Foundation (WPF) müssen Sie das Sicherheitsmodell in Erwägung gezogen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen (CAS**FullTrust** -Berechtigungs Satz) ausgeführt, unabhängig davon, ob Sie mit Windows Installer (. msi), xcopy oder ClickOnce bereitgestellt werden. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Allerdings kann eine voll vertrauenswürdige Host Anwendung eine teilweise vertrauenswürdige <xref:System.AppDomain> mithilfe des .NET Framework Add-in-Modells erstellen. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-ins](./app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "73975609"
 |Ressource|Dateien, die einem Projekt mit dem Buildtyp **Ressource**hinzugefügt werden.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Inhalt|Dateien, die einem Projekt mit dem Buildtyp **Inhalt**hinzugefügt werden.|`pack://application:,,,/MyContentFile.xaml`|  
 |Ursprungswebsite|Dateien, die einem Projekt mit dem Buildtyp " **keine**" hinzugefügt werden.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Anwendungscode|XAML-Ressourcen mit kompiliertem Code-Behind<br /><br /> - oder -<br /><br /> XAML-Dateien, die einem Projekt mit dem Buildtyp **Page**hinzugefügt werden.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Anwendungscode|XAML-Ressourcen mit kompiliertem Code-Behind<br /><br /> \- oder -<br /><br /> XAML-Dateien, die einem Projekt mit dem Buildtyp **Page**hinzugefügt werden.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 > Weitere Informationen zu Anwendungs Datendateien und Paket-URIs finden Sie unter [WPF-Anwendungs Ressource, Inhalts-und Datendateien](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "73975609"
 ### <a name="browser-navigation-security"></a>Sicherheit von Browsernavigation  
  Browsernavigation wird nur unter den folgenden Bedingungen als sicher betrachtet:  
   
-- **Benutzernavigation**. Der Benutzer navigiert, indem er auf ein <xref:System.Windows.Documents.Hyperlink> Element klickt, das sich innerhalb des Haupt <xref:System.Windows.Navigation.NavigationWindow> befindet, nicht in einem geschachtelten <xref:System.Windows.Controls.Frame>.  
+- **Benutzernavigation**. Der Benutzer navigiert, indem er auf ein <xref:System.Windows.Documents.Hyperlink> Element klickt, das sich innerhalb des Haupt <xref:System.Windows.Navigation.NavigationWindow>befindet, nicht in einem geschachtelten <xref:System.Windows.Controls.Frame>.  
   
 - **Zone**. Der Inhalt, in dem navigiert wird, befindet sich im Internet oder im lokalen Intranet.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73975609"
   
 - Downloads  
   
-- Skripterstellung  
+- Skripts  
   
 - Benutzerauthentifizierung  
   
@@ -209,7 +209,7 @@ ms.locfileid: "73975609"
   
  Wenn Sie eine teilweise vertrauenswürdige XAML-Browser Anwendung (XBAP) ausführen, die ein WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement in Windows Internet Explorer enthält, hostet WPF das WebBrowser-ActiveX-Steuerelement im Adressraum des Internet Explorer-Prozesses. Da das WebBrowser-ActiveX-Steuerelement im Internet Explorer-Prozess gehostet wird, sind alle Featuresteuerelemente für Internet Explorer auch für das WebBrowser-ActiveX-Steuerelement aktiviert.  
   
- XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheit besteht darin, dass Internet Explorer und somit das WebBrowser-ActiveX-Steuerelement standardmäßig unter Windows Vista und [!INCLUDE[win7](../../../includes/win7-md.md)]im geschützten Modus ausgeführt wird. Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and working in Protected Mode Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheit besteht darin, dass Internet Explorer und somit das WebBrowser-ActiveX-Steuerelement unter Windows Vista und Windows 7 standardmäßig im geschützten Modus ausgeführt wird. Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and working in Protected Mode Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
 > Wenn Sie versuchen, eine XBAP auszuführen, die ein WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement in Firefox enthält, wird in der Internet Zone ein <xref:System.Security.SecurityException> ausgelöst. Dies geschieht aufgrund der WPF-Sicherheitsrichtlinie.  
@@ -249,7 +249,7 @@ ms.locfileid: "73975609"
   
  Das Sicherheits Verhalten unterscheidet sich jedoch, wenn Lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien entweder aus einem <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> in einer eigenständigen Anwendung navigiert werden.  
   
- In beiden Fällen erbt die lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei, zu der navigiert wird, die Berechtigungen Ihrer Host Anwendung. Dieses Verhalten kann jedoch aus Sicherheitsgründen nicht erwünscht sein, insbesondere dann, wenn eine lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei von einer nicht vertrauenswürdigen oder unbekannten Entität erzeugt wurde. Dieser Inhaltstyp wird als *externer Inhalt*bezeichnet, und sowohl <xref:System.Windows.Controls.Frame> als auch <xref:System.Windows.Navigation.NavigationWindow> können so konfiguriert werden, dass Sie bei der Navigation zu isoliert werden. Die Isolation wird erreicht, indem die **SandboxExternalContent** -Eigenschaft auf true festgelegt wird, wie in den folgenden Beispielen für <xref:System.Windows.Controls.Frame> und <xref:System.Windows.Navigation.NavigationWindow> gezeigt:  
+ In beiden Fällen erbt die lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei, zu der navigiert wird, die Berechtigungen Ihrer Host Anwendung. Dieses Verhalten kann jedoch aus Sicherheitsgründen nicht erwünscht sein, insbesondere dann, wenn eine lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei von einer nicht vertrauenswürdigen oder unbekannten Entität erzeugt wurde. Dieser Inhaltstyp wird als *externer Inhalt*bezeichnet, und sowohl <xref:System.Windows.Controls.Frame> als auch <xref:System.Windows.Navigation.NavigationWindow> können so konfiguriert werden, dass Sie bei der Navigation zu isoliert werden. Die Isolation wird erreicht, indem die **SandboxExternalContent** -Eigenschaft auf true festgelegt wird, wie in den folgenden Beispielen für <xref:System.Windows.Controls.Frame> und <xref:System.Windows.Navigation.NavigationWindow>gezeigt:  
   
  [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
@@ -258,13 +258,13 @@ ms.locfileid: "73975609"
  Mit dieser Einstellung wird der externe Inhalt in einen Prozess geladen, der von dem Prozess getrennt ist, der die Anwendung hostet. Dieser Prozess ist auf den Standardberechtigungssatz für die Internetzone beschränkt, wodurch er effizient von der Hostanwendung und dem Clientcomputer isoliert ist.  
   
 > [!NOTE]
-> Obwohl die Navigation zu losen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien entweder von einem <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> in einer eigenständigen Anwendung basierend auf der WPF-Browser-Hostinginfrastruktur implementiert ist, die den PresentationHost-Prozess umfasst, ist die Sicherheitsstufe etwas kleiner als der Inhalt, der direkt in Internet Explorer unter Windows Vista geladen wird, und [!INCLUDE[win7](../../../includes/win7-md.md)] (der weiterhin über PresentationHost wäre). Dies liegt daran, dass eine eigenständige WPF-Anwendung, die einen Webbrowser verwendet, die zusätzliche „Geschützter Modus“-Sicherheitsfunktion von Internet Explorer nicht bereitstellt.  
+> Obwohl die Navigation zu losen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien aus einem <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> in einer eigenständigen Anwendung basierend auf der WPF-Browser-Hostinginfrastruktur implementiert ist, die den PresentationHost-Prozess beinhaltet, ist die Sicherheitsstufe etwas kleiner als der Inhalt, der direkt in Internet Explorer unter Windows Vista und Windows 7 geladen wird (was noch über PresentationHost erfolgt). Dies liegt daran, dass eine eigenständige WPF-Anwendung, die einen Webbrowser verwendet, die zusätzliche „Geschützter Modus“-Sicherheitsfunktion von Internet Explorer nicht bereitstellt.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Ressourcen zum Entwickeln von WPF-Anwendungen, die die Sicherheit erhöhen  
  Im folgenden finden Sie einige zusätzliche Ressourcen, die Sie beim entwickeln [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Anwendungen unterstützen, die die Sicherheit erhöhen:  
   
-|Bereich|Ressource|  
+|Fläche|Ressource|  
 |----------|--------------|  
 |Verwalteter Code|[Sicherheits Leit Faden zu Mustern und Vorgehensweisen für Anwendungen](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |CAS|[Codezugriffssicherheit](../misc/code-access-security.md)|  

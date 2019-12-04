@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180159"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802712"
 ---
 # <a name="json-serialization-in-net---overview"></a>JSON-Serialisierung in .net-Übersicht
 
@@ -32,13 +32,13 @@ Die Bibliothek stellt außerdem Klassen zum Arbeiten mit einem Dokument Objektmo
   * .NET Framework 4.6.1 und spätere Versionen
   * .Net Core 2,0, 2,1 und 2,2
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 * [Verwenden der Bibliothek](system-text-json-how-to.md)
-* [Quellcode](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [Quellcode](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [API-Referenz](xref:System.Text.Json)
-* [Roadmap](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [Roadmap](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * GitHub-Probleme im dotnet/corefx-Repository
-  * [Erörterung der Entwicklung von "System. Text. JSON"](https://github.com/dotnet/corefx/issues/33115)
-  * [Alle System. Text. JSON-Probleme](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [System. Text. JSON-Probleme mit der Bezeichnung JSON-funktionsdoc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [Erörterung der Entwicklung von "System. Text. JSON"](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [Alle System. Text. JSON-Probleme](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [System. Text. JSON-Probleme mit der Bezeichnung JSON-funktionsdoc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

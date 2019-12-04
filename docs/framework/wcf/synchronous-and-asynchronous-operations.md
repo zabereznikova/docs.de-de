@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281633"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802439"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -76,10 +76,10 @@ public class SampleService:ISampleService
  Der SampleMethodTaskAsync-Vorgang gibt Task\<string> zurück, da die logische Operation eine Zeichenfolge zurückgibt. Weitere Informationen über das taskbasierte asynchrone Muster finden Sie unter [Taskbasiertes asynchrones Muster](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
-> Bei Verwendung des taskbasierten asynchronen Musters kann bei einer Ausnahme eine {1}T:System.AggregateException{2} ausgelöst werden, während auf den Abschluss des Vorgangs gewartet wird. Diese Ausnahme kann für Clients oder Dienste auftreten.  
+> Bei Verwendung des taskbasierten asynchronen Musters kann bei einer Ausnahme eine T:System.AggregateException ausgelöst werden, während auf den Abschluss des Vorgangs gewartet wird. Diese Ausnahme kann für Clients oder Dienste auftreten.  
   
 #### <a name="event-based-asynchronous-pattern"></a>Ereignisbasiertes asynchrones Muster  
- Ein Dienst, der das ereignisbasierte asynchrone Muster unterstützt, verfügt über einen oder mehrere Vorgänge mit dem Namen {1}MethodNameAsync{2}. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein MethodNameCompleted-Ereignis und eine MethodNameAsyncCancel-Methode (kurz {1}CancelAsync{2}) verfügen. Ein Client, der den Vorgang aufrufen möchte, definiert einen Ereignishandler, der bei Abschluss des Vorgangs aufgerufen wird.  
+ Ein Dienst, der das ereignisbasierte asynchrone Muster unterstützt, verfügt über einen oder mehrere Vorgänge mit dem Namen MethodNameAsync. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein MethodNameCompleted-Ereignis und eine MethodNameAsyncCancel-Methode (kurz CancelAsync) verfügen. Ein Client, der den Vorgang aufrufen möchte, definiert einen Ereignishandler, der bei Abschluss des Vorgangs aufgerufen wird.  
   
  Der folgende Codeausschnitt veranschaulicht, wie asynchrone Vorgänge unter Verwendung des ereignisbasierten asynchronen Musters deklariert werden.  
   
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- Weitere Informationen über das ereignisbasierte asynchrone Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](https://go.microsoft.com/fwlink/?LinkId=232515).  
+ Weitere Informationen über das ereignisbasierte asynchrone Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Das asynchrone IAsyncResult-Muster  
  Ein Dienst Vorgang kann asynchron implementiert werden, indem das .NET Framework asynchrone Programmier Muster verwendet und die `<Begin>`-Methode mit der Eigenschaft <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> auf `true`festgelegt wird. In diesem Fall wird der asynchrone Vorgang in Metadaten in der gleichen Form wie ein synchroner Vorgang verfügbar gemacht: Er wird als einzelner Vorgang mit einer Anforderungsnachricht und einer korrelierten Antwortnachricht verfügbar gemacht. Clientprogrammierungsmodelle haben dann eine Wahl. Sie können dieses Muster als synchronen oder als asynchronen Vorgang darstellen, solange beim Aufrufen des Diensts ein Anforderung-Antwort-Nachrichtenaustausch stattfindet.  

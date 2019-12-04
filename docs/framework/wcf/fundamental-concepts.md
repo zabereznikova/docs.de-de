@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319845"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802316"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 
@@ -90,7 +90,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Eine Komponente, die verschiedene Laufzeitaspekte eines Diensts, eines Endpunkts, eines bestimmten Vorgangs oder eines Clients steuert. Verhalten werden gemäß ihrem Umfang gruppiert: allgemeine Verhalten, die alle Endpunkte global beeinflussen, Dienstverhalten, die nur dienstbezogene Aspekte beeinflussen, Endpunktverhalten, die nur endpunktbezogene Eigenschaften beeinflussen, und Verhalten auf Vorgangsebene, die bestimmte Vorgänge beeinflussen. Eines der Dienstverhalten ist beispielsweise die Drosselung, die festlegt, wie ein Dienst reagiert, wenn zu viele Nachrichten seine Abwicklungskapazitäten zu überlasten drohen. Ein Endpunktverhalten steuert wiederum nur Aspekte, die für Endpunkte relevant sind, u. a. wie und wo eine Sicherheitsanmeldeinformation zu finden ist.
 
 **Vom System bereitgestellte Bindungen**  
- WCF bietet einige vom System bereitgestellte Bindungen. Dies sind Auflistungen von Bindungselementen, die für bestimmte Szenarien optimiert werden. Beispielsweise ist die <xref:System.ServiceModel.WSHttpBinding> für die Interoperabilität mit Diensten vorgesehen, die verschiedene WS-\*-Spezifikationen implementieren. Diese vordefinierten Bindungen sparen Zeit, da sie nur diejenigen Optionen bereitstellen, die auf das spezifische Szenario korrekt angewendet werden können. Wenn eine vordefinierte Bindung die Anforderungen nicht erfüllt, können Sie eine eigene benutzerdefinierte Bindung erstellen.
+ WCF bietet einige vom System bereitgestellte Bindungen. Dies sind Auflistungen von Bindungselementen, die für bestimmte Szenarien optimiert werden. Beispielsweise ist der <xref:System.ServiceModel.WSHttpBinding> für die Interoperabilität mit Diensten vorgesehen, die verschiedene WS-\* Spezifikationen implementieren. Diese vordefinierten Bindungen sparen Zeit, da sie nur diejenigen Optionen bereitstellen, die auf das spezifische Szenario korrekt angewendet werden können. Wenn eine vordefinierte Bindung die Anforderungen nicht erfüllt, können Sie eine eigene benutzerdefinierte Bindung erstellen.
 
 **Konfiguration und Codierung**  
  Eine Anwendung kann entweder über die Codierung, über die Konfiguration oder über eine Kombination aus beidem gesteuert werden. Die Konfiguration bietet den Vorteil, dass auch andere Personen als der Entwickler (z.&#160;B. ein Netzwerkadministrator) die Client- und die Dienstparameter festlegen können, nachdem der Code geschrieben wurde, ohne dass eine neue Kompilierung erforderlich wäre. Die Konfiguration ermöglicht nicht nur das Festlegen von Werten wie Endpunktadressen, sondern auch eine weitere Steuerung durch die Möglichkeit, Endpunkte, Bindungen und Verhalten hinzuzufügen. Die Codierung ermöglicht es dem Entwickler, die genaue Kontrolle über alle Komponenten des Diensts oder Clients zu behalten, und alle Einstellungen, die über die Konfiguration gemacht werden, können überprüft und bei Bedarf vom Code aufgehoben werden.
@@ -150,7 +150,7 @@ Bei Aktivierung werden die Metadaten für den Dienst automatisch von WCF erstell
  Legt fest, dass Vertraulichkeit, Integrität und Authentifizierung über die Transportschichtmechanismen (wie HTTPS) gewährleistet werden. Bei Nutzung eines Transports wie HTTPS hat dieser Modus den Vorteil, dass er effizient und aufgrund seiner weiten Verbreitung im Internet gut verständlich ist. Der Nachteil ist, dass diese Art von Sicherheit auf jeden Hop im Kommunikationspfad einzeln angewendet wird, was die Kommunikation anfällig für einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) macht.
 
 **Nachrichten Sicherheitsmodus**  
- Gibt an, dass die Sicherheit bereitgestellt wird, indem eine oder mehrere Sicherheitsspezifikationen implementiert werden, z. b. die Spezifikation mit dem Namen [Webdienstesicherheit: SOAP-Nachrichten Sicherheit](https://go.microsoft.com/fwlink/?LinkId=94684). Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht werden, ist es auch möglich, mehrere Arten von Anmelde Informationen mit der Nachricht aufzunehmen (diese werden als _Ansprüche_bezeichnet). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.
+ Gibt an, dass die Sicherheit bereitgestellt wird, indem eine oder mehrere Sicherheitsspezifikationen implementiert werden, z. b. die Spezifikation mit dem Namen [Webdienstesicherheit: SOAP-Nachrichten Sicherheit](http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf). Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht werden, ist es auch möglich, mehrere Arten von Anmelde Informationen mit der Nachricht aufzunehmen (diese werden als _Ansprüche_bezeichnet). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.
 
 **Transport mit Nachrichten Anmelde Informationen-Sicherheitsmodus**  
  Gibt die Verwendung der Transportschicht an, um Vertraulichkeit, Authentifizierung und Integrität der Nachrichten sicherzustellen, während jede der Nachrichten mehrere Anmeldeinformationen (Ansprüche) enthalten kann, die von den Empfängern der Nachricht benötigt werden.

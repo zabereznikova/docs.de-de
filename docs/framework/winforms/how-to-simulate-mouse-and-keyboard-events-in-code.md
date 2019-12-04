@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code'
+title: 'Gewusst wie: Simulieren von Maus- und Tastaturereignissen in Code'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1a7a0fa6295cd8332313a983ca78345bfbac393e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046398"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802478"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Gewusst wie: Simulieren von Maus- und Tastaturereignissen in Code
 
 Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Maus- und Tastatureingaben bereit. Dieses Thema enthält eine Übersicht über diese Optionen.
 
@@ -29,7 +29,7 @@ Die beste Möglichkeit, Mauseingaben zu simulieren, ist ein Aufruf der `On`*Erei
 
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>So klicken Sie programmgesteuert mit der rechten Maustaste
 
-1. Erstellen Sie eine <xref:System.Windows.Forms.MouseEventArgs>-Instanz, deren <xref:System.Windows.Forms.MouseEventArgs.Button%2A>-Eigenschaft auf den Wert <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> festgelegt wird.
+1. Erstellen Sie eine <xref:System.Windows.Forms.MouseEventArgs> -Instanz, deren <xref:System.Windows.Forms.MouseEventArgs.Button%2A> -Eigenschaft auf den Wert <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> festgelegt wird.
 
 2. Rufen Sie die <xref:System.Windows.Forms.Control.OnMouseClick%2A> -Methode mit dieser <xref:System.Windows.Forms.MouseEventArgs> -Instanz als Argument auf.
 
@@ -72,7 +72,7 @@ Tastatureingaben können mit denselben Strategien simuliert werden, die hier fü
 1. Aktivieren Sie das Anwendungsfenster, das die Tastatureingaben empfängt, und rufen Sie dann die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode auf. Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, müssen Sie systemeigene Windows-Methoden verwenden, um den Fokus auf andere Anwendungen zu erzwingen. Im folgenden Codebeispiel wird ein Plattformaufruf dazu verwendet, die Methoden `FindWindow` und `SetForegroundWindow` aufzurufen, um das Anwendungsfenster Rechner zu aktivieren, und dann wird <xref:System.Windows.Forms.SendKeys.SendWait%2A> aufgerufen, um einige Berechnungselemente an Rechner zu senden.
 
     > [!NOTE]
-    > Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Im folgenden Code wird die Anwendung Rechner unter [!INCLUDE[win7](../../../includes/win7-md.md)]gesucht. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.
+    > Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Der folgende Code ermittelt die Rechner Anwendung unter Windows 7. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

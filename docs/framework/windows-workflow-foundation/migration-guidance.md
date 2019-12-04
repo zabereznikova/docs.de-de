@@ -2,12 +2,12 @@
 title: Leitfaden zur Migration
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 8abc241331b3d322763ffd67b41ff676ebc680fb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 672ed1a93b4409f491d76ffeeaaac5f67a1c4b6e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283200"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802608"
 ---
 # <a name="migration-guidance"></a>Leitfaden zur Migration
 
@@ -22,38 +22,38 @@ In der .NET Framework 4 veröffentlicht Microsoft die zweite Hauptversion von Wi
  Daher ist die Entscheidung, die .NET Framework 4 zu übernehmen, von ihrer Entscheidung getrennt, zu WF4 (System. Activities.\*) von WF3 (System. Workflow.\*) zu wechseln. Dieses Thema enthält Links zu WF-Migrationsanleitungen mit Informationen zum Arbeiten mit WF3 und WF4.  
   
 ## <a name="wf-migration-whitepapers-and-cookbooks"></a>Whitepaper und Cookbooks zur WF-Migration  
- Das Thema Übersicht über die [WF-Migration](https://go.microsoft.com/fwlink/?LinkId=153873) bietet eine umfassende Übersicht über die Beziehung zwischen WF3 und WF4 und Migrationsstrategien. Speziellere Themenbereiche werden in Begleitthemen behandelt.  
+ Das Thema Übersicht über die [WF-Migration](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)) bietet eine umfassende Übersicht über die Beziehung zwischen WF3 und WF4 und Migrationsstrategien. Speziellere Themenbereiche werden in Begleitthemen behandelt.  
   
- [Übersicht der WF-Migration](https://go.microsoft.com/fwlink/?LinkId=153873)  
+ [Übersicht der WF-Migration](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Beschreibt die Beziehung zwischen WF3 und WF4 sowie die Optionen, die Sie als Benutzer oder potenzieller Benutzer der Workflowtechnologie unter .NET 4 haben.  
   
- [WF-Migration: bewährte Methoden für die WF3-Entwicklung](https://go.microsoft.com/fwlink/?LinkId=153852)  
+ [WF-Migration: bewährte Methoden für die WF3-Entwicklung](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Beschreibt, wie Sie WF3-Artefakte so entwerfen, dass diese einfacher nach WF4 migriert werden können.  
   
- [WF-Anleitung: Regeln](https://go.microsoft.com/fwlink/?LinkId=153854)  
+ [WF-Anleitung: Regeln](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Erläutert, wie Sie Regel bezogene Investitionen in .NET Framework 4-Lösungen einbringen können.  
   
- [WF-Leitfaden: Zustands Automat](https://go.microsoft.com/fwlink/?LinkId=153855)  
+ [WF-Leitfaden: Zustands Automat](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Erläutert die WF4-Ablaufsteuerungsmodellierung bei Nichtvorhandensein einer Zustandsautomataktivität (State Machine).  
   
  Beachten Sie, dass diese Anleitung nur für Workflowprojekte gilt, die .NET Framework 4 als Zielframework verwenden. Zustandsautomatworkflows wurden in .NET 4.0.1 mit dem Plattform Update 1 hinzugefügt und in .NET Framework 4.5 beibehalten. Weitere Informationen zu Zustandsautomatworkflows in .NET 4.0.1-4.0.3 und .NET Framework 4,5 finden Sie unter [Update 4.0.1 for Microsoft .NET Framework 4 Features](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) und [State Machine Workflows](state-machine-workflows.md).  
   
- [Cookbook zur WF-Migration: benutzerdefinierte Aktivitäten](https://go.microsoft.com/fwlink/?LinkId=153856)  
+ [Cookbook zur WF-Migration: benutzerdefinierte Aktivitäten](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Enthält Beispiele und Anweisungen zum Umgestalten von benutzerdefinierten WF3-Aktivitäten unter WF4.  
   
- [Cookbook zur WF-Migration: Erweiterte benutzerdefinierte Aktivitäten](https://go.microsoft.com/fwlink/?LinkId=275560)  
+ [Cookbook zur WF-Migration: Erweiterte benutzerdefinierte Aktivitäten](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Stellt eine Anleitung zur Neuentwicklung erweiterter benutzerdefinierter WF3-Aktivitäten bereit, die WF3-Warteschlangen verwenden und untergeordnete Aktivitäten als benutzerdefinierte WF4-Aktivitäten planen.  
   
- [Cookbook zur WF-Migration: Workflows](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ [Cookbook zur WF-Migration: Workflows](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Enthält Beispiele und Anleitungen zum Umgestalten von WF3-Workflows unter WF4.  
   
- [Cookbook zur WF-Migration: Workflow Hosting](https://go.microsoft.com/fwlink/?LinkId=275561)  
+ [Cookbook zur WF-Migration: Workflow Hosting](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Stellt eine Anleitung zur Umgestaltung des WF3-Hostingcodes als WF4-Hostingcode bereit. Damit sollen die wesentlichen Unterschiede beim Workflowhosting zwischen WF3 und WF4 veranschaulicht werden.  
   
- [Cookbook zur WF-Migration: Workflow Nachverfolgung](https://go.microsoft.com/fwlink/?LinkId=275562)  
+ [Cookbook zur WF-Migration: Workflow Nachverfolgung](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Bietet Hilfestellung bei der Umgestaltung von WF3-Nachverfolgungscode und -Konfiguration mithilfe eines äquivalenten Nachverfolgungscodes und einer äquivalenten Konfiguration auf der Basis von WF4.  
   
- [WF-Anleitung: Workflow Dienste](https://go.microsoft.com/fwlink/?LinkId=275564)  
+ [WF-Anleitung: Workflow Dienste](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Stellt anhand eines Beispiels schrittweise Anweisungen zur Neuentwicklung von Workflows bereit, die in WF3 erstellte Windows Communication Foundation (WCF)-Webdienste (auch als Workflowdienste bezeichnet) für die Verwendung allgemeiner, vordefinierter Aktivitäten in WF4 implementieren.  
   
 ## <a name="see-also"></a>Siehe auch

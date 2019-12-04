@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460876"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802582"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste
 
 In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspeicher“ konfigurieren, um die Persistenz für Workflows und Workflowdienste sowohl programmgesteuert als auch mithilfe einer Konfigurationsdatei zu aktivieren.
 
-Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [App Fabric-Persistenzkonfiguration](https://go.microsoft.com/fwlink/?LinkId=201204).
+Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [App Fabric-Persistenzkonfiguration](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Erstellen Sie vor dem Verwenden der Funktion „SQL-Workflowinstanzspeicher“ eine Datenbank erstellen, die die Funktion zum Beibehalten von Workflowinstanzen verwendet. Das [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Setupprogramm kopiert die SQL-Skriptdateien, die der Funktion "SQL-Workflowinstanzspeicher" zugeordnet sind, in den Ordner "%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN". Führen Sie diese Skriptdateien für eine SQL Server 2005- oder SQL Server 2008-Datenbank aus, die der SQL-Workflowinstanzspeicher zum Beibehalten von Workflowinstanzen verwenden soll. Führen Sie zuerst die Datei "SqlWorkflowInstanceStoreSchema.sql" und dann die Datei "SqlWorkflowInstanceStoreLogic.sql" aus.
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Es wird empfohlen, keine vertraulichen Informationen wie Benutzernamen und Kennwörter in der Datei "Web.config" zu speichern. Wenn Sie vertrauliche Informationen in der Datei "Web.config" speichern, sollten Sie den Zugriff auf die Datei "Web.config" mit Dateisystem-ACLs (Zugriffssteuerungslisten) sichern. Außerdem können Sie die Konfigurationswerte in einer Konfigurationsdatei wie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://go.microsoft.com/fwlink/?LinkId=178419)beschrieben sichern.
+> Es wird empfohlen, keine vertraulichen Informationen wie Benutzernamen und Kennwörter in der Datei "Web.config" zu speichern. Wenn Sie vertrauliche Informationen in der Datei "Web.config" speichern, sollten Sie den Zugriff auf die Datei "Web.config" mit Dateisystem-ACLs (Zugriffssteuerungslisten) sichern. Außerdem können Sie die Konfigurationswerte in einer Konfigurationsdatei wie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))beschrieben sichern.
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Auf die Funktion "SQL-Workflowinstanzspeicher" bezogene Machine.config-Elemente
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: c88f4e5407e550047eaf0f5c8d0d2924da611e93
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9783844ff0fe719b0581c1c9e1fb96eb31933b89
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699225"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801873"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<ApplicationPool > Element (Webeinstellungen)
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um Prozess weites Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus unter IIS 7,0 oder einer höheren Version ausgeführt wird.  
@@ -44,7 +44,7 @@ In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeor
 |`requestQueueLimit`|Gibt die maximale Anzahl von Anforderungen an, die in einem einzelnen Prozess in eine Warteschlange eingereiht werden können. Wenn mindestens zwei ASP.NET-Anwendungen in einem einzelnen Anwendungs Pool ausgeführt werden, unterliegt der kumulative Satz von Anforderungen, die an eine beliebige Anwendung im Anwendungs Pool vorgenommen werden, dieser Einstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -59,7 +59,7 @@ Wenn Sie IIS 7,0 oder eine höhere Version im integrierten Modus ausführen, kö
 Die `applicationPool` Einstellungen gelten für alle Anwendungs Pools, die auf einer bestimmten Version des .NET Framework ausgeführt werden. Die Einstellungen sind in einer ASPNET. config-Datei enthalten. Es gibt eine Version dieser Datei für die Versionen 2,0 und 4,0 der .NET Framework. (In den Versionen 3,0 und 3,5 des .NET Framework wird die Datei Aspnet. config mit Version 2,0 gemeinsam genutzt.)  
   
 > [!IMPORTANT]
-> Wenn Sie IIS 7,0 auf [!INCLUDE[win7](../../../../../includes/win7-md.md)]ausführen, können Sie für jeden Anwendungs Pool eine separate ASPNET. config-Datei konfigurieren. Auf diese Weise können Sie die Leistung der Threads für jeden Anwendungs Pool anpassen.  
+> Wenn Sie IIS 7,0 unter Windows 7 ausführen, können Sie für jeden Anwendungs Pool eine separate ASPNET. config-Datei konfigurieren. Auf diese Weise können Sie die Leistung der Threads für jeden Anwendungs Pool anpassen.  
   
 Für die `maxConcurrentRequestsPerCPU` Einstellung deaktiviert die Standardeinstellung "5000" in der .NET Framework 4 effektiv die Anforderungs Drosselung, die von ASP.net gesteuert wird, es sei denn, Sie haben tatsächlich mindestens 5000 Anforderungen pro CPU. Die Standardeinstellung hängt stattdessen vom CLR-Thread Pool ab, um Parallelität pro CPU automatisch zu verwalten. Anwendungen, die eine umfangreiche Verwendung asynchroner Anforderungs Verarbeitung oder viele Anforderungen mit langer Ausführungszeit in Netzwerk-e/a blockieren, profitieren von der erhöhten Standardgrenze in der .NET Framework 4. Wenn Sie `maxConcurrentRequestsPerCPU` auf NULL festlegen, wird die Verwendung verwalteter Threads für die Verarbeitung von ASP.NET-Anforderungen deaktiviert. Wenn eine Anwendung in einem IIS-Anwendungs Pool ausgeführt wird, bleiben Anforderungen im IIS-e/a-Thread erhalten. Daher wird die Parallelität durch IIS-Thread Einstellungen gedrosselt.  
   
@@ -92,7 +92,7 @@ Bei den Werten im Beispiel handelt es sich um die Standardwerte.
   
 |||  
 |-|-|  
-|Namespace||  
+|-Namespace||  
 |Schemaname||  
 |Validierungsdatei||  
 |Kann leer sein||  

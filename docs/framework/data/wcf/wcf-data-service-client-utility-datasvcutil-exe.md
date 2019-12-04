@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: de260e1a6b58fdbac1a2f0f40c7ec2e50b13644e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1348ba73eb87a140b42e3565b4388a70f1f47ca1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975086"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802016"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service-Clienthilfsprogramm ("DataSvcUtil.exe")
 
 DataSvcUtil. exe ist ein von WCF Data Services bereitgestelltes Befehlszeilen Tool, das einen Open Data Protocol-Feed (odata) verwendet und die Client Datendienst Klassen generiert, die für den Zugriff auf einen Datendienst aus einer .NET Framework Client Anwendung benötigt werden. Dieses Hilfsprogramm kann Datenklassen mit den folgenden Metadaten-Quellen generieren:
 
-- Der Stamm-URI eines Datendiensts. Das Dienstprogramm fordert das Dienstmetadatendokument an, in dem das vom Datendienst verfügbar gemachte Datenmodell beschrieben wird. Weitere Informationen finden Sie unter [odata: dienstmetadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070).
+- Der Stamm-URI eines Datendiensts. Das Dienstprogramm fordert das Dienstmetadatendokument an, in dem das vom Datendienst verfügbar gemachte Datenmodell beschrieben wird. Weitere Informationen finden Sie unter [AtomPub (RFC5023)](https://tools.ietf.org/html/rfc5023#section-8).
 
-- Eine Datenmodell Datei (. CSDL), die mithilfe der konzeptionellen Schema Definitions Sprache (CSDL) definiert wird, wie in der [\[MC-CSDL\]: konzeptionelle Schema Definition-Datei Format](https://go.microsoft.com/fwlink/?LinkID=159072) Spezifikation definiert.
+- Eine Datenmodell Datei (. CSDL), die mithilfe der konzeptionellen Schema Definitions Sprache (CSDL) definiert wird, wie in der [\[MC-CSDL\]: konzeptionelle Schema Definition-Datei Format](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12) Spezifikation definiert.
 
-- Eine mit den Entity Data Model-Tools erstellte EDMX-Datei, die mit Entity Framework bereitgestellt werden. Weitere Informationen finden Sie in der Spezifikation [\[MC-edmx\]: Entity Data Model for Data Services Packaging Format](https://go.microsoft.com/fwlink/?LinkID=178833) .
+- Eine mit den Entity Data Model-Tools erstellte EDMX-Datei, die mit Entity Framework bereitgestellt werden. Weitere Informationen finden Sie in der Spezifikation [\[MC-edmx\]: Entity Data Model for Data Services Packaging Format](https://docs.microsoft.com/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16) .
 
 Weitere Informationen finden Sie unter Gewusst [wie: Manuelles Generieren von Client Datendienst Klassen](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 
@@ -33,18 +33,18 @@ Das Tool DataSvcUtil. exe wird im .NET Framework Verzeichnis installiert. In vie
 datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/language:devlang] [/nologo] [/version:ver] [/help]
 ```
 
-## <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-|Option|Beschreibung|
+|-Option|Beschreibung|
 |------------|-----------------|
 |`/dataservicecollection`|Gibt an, dass der zum Binden von Objekten an Steuerelemente erforderliche Code auch generiert wird.|
-|`/help`<br /><br /> - oder -<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
-|`/in:` *\<Datei >*|Gibt die CSDL- oder EDMX-Datei oder ein Verzeichnis an, in dem sich die Datei befindet.|
+|`/help`<br /><br /> \- oder -<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
+|`/in:` *\<file>*|Gibt die CSDL- oder EDMX-Datei oder ein Verzeichnis an, in dem sich die Datei befindet.|
 |`/language:`[VB&#124;CSharp]|Gibt die Sprache für die erstellten Quellcodedateien an. Die Standardsprache ist C#.|
 |`/nologo`|Unterdrückt die Anzeige der Copyrightmeldung.|
-|`/out:` *\<Datei >*|Gibt den Namen der Quellcodedatei an, die die generierten Clientdatendienstklassen enthält.|
-|`/uri:` *\<Zeichenfolge >*|Der URI des odata-Feeds.|
-|`/version:`[1,0&#124;2,0]|Gibt die höchste akzeptierte Version von odata an. Die Version wird basierend auf dem `DataServiceVersion`-Attribut des DataService-Elements in den zurückgegebenen Datendienst Metadaten bestimmt. Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md). Wenn Sie den `/dataservicecollection`-Parameter angeben, müssen Sie auch `/version:2.0` angeben, um die Datenbindung zu aktivieren.|
+|`/out:` *\<file>*|Gibt den Namen der Quellcodedatei an, die die generierten Clientdatendienstklassen enthält.|
+|`/uri:` *\<string>*|Der URI des odata-Feeds.|
+|`/version:`[1.0&#124;2.0]|Gibt die höchste akzeptierte Version von odata an. Die Version wird basierend auf dem `DataServiceVersion`-Attribut des DataService-Elements in den zurückgegebenen Datendienst Metadaten bestimmt. Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md). Wenn Sie den `/dataservicecollection`-Parameter angeben, müssen Sie auch `/version:2.0` angeben, um die Datenbindung zu aktivieren.|
 
 ## <a name="see-also"></a>Siehe auch
 

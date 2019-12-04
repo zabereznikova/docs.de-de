@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141873"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802595"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -95,15 +95,15 @@ Das WCF-Konfigurations Schema ist komplex und bietet Benutzern viele schwer zu s
 
 ### <a name="getting-started"></a>Erste Schritte
 
-- [Entwicklerhandbuch zu WCF 4,0](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [Entwicklerhandbuch zu WCF 4,0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Konfigurationskanalfactory](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [Konfigurationskanalfactory](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [Standard Endpunkt Element](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [Standard Endpunkt Element](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Verbesserungen der Dienst Konfiguration in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Verbesserungen der Dienst Konfiguration in .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [Häufige Benutzerfehler in .NET 4: falsch formatiping des WF/WCF-Dienst Konfigurations namens](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [Häufige Benutzerfehler in .NET 4: falsch formatiping des WF/WCF-Dienst Konfigurations namens](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>Vereinfachte Konfigurationsszenarien
 
@@ -125,9 +125,9 @@ Der [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese P
 
 ### <a name="getting-started"></a>Erste Schritte
 
-- [Dokumentation zur datenvertragsresolver-API](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [Dokumentation zur datenvertragsresolver-API](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Einführung in den datenvertragsresolver](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [Einführung in den datenvertragsresolver](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - Beispiele:
 
@@ -287,7 +287,7 @@ Der Routing Dienst in .NET 4 ist so konzipiert, dass diese Probleme leichter gel
 
 2. Beispiele: [WCF- &#91;&#93; Beispiele für Routing Dienste](../wcf/samples/routing-services.md)
 
-3. Blog: [Routing Regeln!](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. Blog: [Routing Regeln!](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Routingszenarien
 

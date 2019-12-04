@@ -2,12 +2,12 @@
 title: Behandeln von Setup-Problemen
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281608"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802426"
 ---
 # <a name="troubleshooting-setup-issues"></a>Behandeln von Setup-Problemen
 In diesem Thema wird beschrieben, wie Probleme beim Einrichten von Windows Communication Foundation (WCF) behoben werden.  
@@ -52,7 +52,7 @@ In diesem Thema wird beschrieben, wie Probleme beim Einrichten von Windows Commu
   
  Die folgenden Schritten müssen ausgeführt werden, um das zuvor beschriebene Problem zu lösen.  
   
-1. Führen Sie [den WMI-Diagnosehilfsprogramm, Version 2,0, aus,](https://go.microsoft.com/fwlink/?LinkId=94685) um den WMI-Dienst zu reparieren. Weitere Informationen zur Verwendung dieses Tools finden Sie im [WMI-Diagnosehilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=94686) Thema.  
+1. Führen Sie [den WMI-Diagnosehilfsprogramm, Version 2,0, aus,](https://go.microsoft.com/fwlink/?LinkId=94685) um den WMI-Dienst zu reparieren. Weitere Informationen zur Verwendung dieses Tools finden Sie im Artikel [WMI-Diagnosehilfsprogramm](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10)) .  
   
  Reparieren Sie die Installation des .NET Framework 3,0 mithilfe des Applets " **Programme hinzufügen/entfernen** " in der **Systemsteuerung**, oder deinstallieren Sie die .NET Framework 3,0, und installieren Sie Sie erneut.  
   

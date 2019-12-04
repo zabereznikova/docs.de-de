@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974016"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802142"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -64,7 +64,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Die folgenden Features und Funktionen sind für die Renderingebene 1 und 2 hardwarebeschleunigt:  
   
-|Feature|Notizen|  
+|Feature|Hinweise|  
 |-------------|-----------|  
 |2D-Rendering|Das meiste 2D-Rendering wird unterstützt.|  
 |3D-Rasterung|Die meisten 3D-Rasterungen werden unterstützt.|  
@@ -76,20 +76,20 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Die folgenden Features und Funktionen sind nur für die Renderingebene 2 hardwarebeschleunigt:  
   
-|Feature|Notizen|  
+|Feature|Hinweise|  
 |-------------|-----------|  
-|3D-Antialiasing|3D-Antialiasing wird nur unter Betriebssystemen unterstützt, die Windows Display Driver Model (WDDM) unterstützen, wie z. b. Windows Vista und [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|3D-Antialiasing|3D-Antialiasing wird nur unter Betriebssystemen unterstützt, die Windows Display Driver Model (WDDM) unterstützen, wie z. b. Windows Vista und Windows 7.|  
   
  Die folgenden Features und Funktionen sind **nicht** hardwarebeschleunigt:  
   
-|Feature|Notizen|  
+|Feature|Hinweise|  
 |-------------|-----------|  
 |Gedruckter Inhalt|Jeder gedruckte Inhalt wird mithilfe der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Softwarepipeline gerendert.|  
 |Rasterisierter Inhalt, der <xref:System.Windows.Media.Imaging.RenderTargetBitmap> verwendet|Alle Inhalte, die mit der <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>-Methode von <xref:System.Windows.Media.Imaging.RenderTargetBitmap>gerendert werden.|  
 |Gekachelter Inhalt, der <xref:System.Windows.Media.TileBrush> verwendet|Alle gekachelten Inhalte, in denen die <xref:System.Windows.Media.TileBrush.TileMode%2A>-Eigenschaft des <xref:System.Windows.Media.TileBrush> auf <xref:System.Windows.Media.TileMode.Tile>festgelegt ist.|  
 |Flächen, die die maximale Texturgröße der Grafikhardware überschreiten|Bei der meisten Grafikhardware sind große Flächen 2048 x 2048 oder 4096 x 4096 Pixel groß.|  
 |Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) im Windows SDK ist.|  
-|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Unter Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen (z. b. Windows Vista und [!INCLUDE[win7](../../../../includes/win7-md.md)]), werden mehrstufige Fenster Hardware beschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aktivieren, indem Sie die folgenden <xref:System.Windows.Window> Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Bei Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z. b. Windows Vista und Windows 7, sind mehrstufige Fenster Hardware beschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aktivieren, indem Sie die folgenden <xref:System.Windows.Window> Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Weitere Ressourcen  
@@ -98,7 +98,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 ### <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet vier Registrierungseinstellungen zum Steuern des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Rendering:  
   
-|Einstellung|Beschreibung|  
+|-Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**Option zum Deaktivieren der Hardwarebeschleunigung**|Gibt an, ob die Hardwarebeschleunigung aktiviert werden soll|  
 |**Maximaler Wert für Multisampling**|Gibt den Grad des multisamplinggrad für das Antialiasing von 3D-Inhalten an.|  

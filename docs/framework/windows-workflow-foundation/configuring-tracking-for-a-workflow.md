@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458900"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802673"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Weitere Informationen zu Überwachungs Profilen finden Sie unter [Überwachungs profile](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Weitere Informationen zu Überwachungs Profilen finden Sie unter [Überwachungs profile](tracking-profiles.md).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurieren der Nachverfolgung mit WorkflowInvoker
 
@@ -196,7 +196,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
     </system.serviceModel>
     ```
 
-2. Kopieren Sie die Manifest-Datei aus%windir%\Microsoft.NET\Framework\\\<neuesten Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie Sie in um. Microsoft. Windows. ApplicationServer. Applications_Provider1. man
+2. Kopieren Sie die Manifest-Datei aus%windir%\Microsoft.NET\Framework\\\<neuesten Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie Sie in Microsoft. Windows. ApplicationServer. Applications_Provider1. man um.
 
 3. Ändern Sie die GUID in der Manifestdatei in die neue GUID.
 
@@ -222,7 +222,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
 
 6. Generieren Sie die Ressourcen-DLL, indem Sie folgende Schritte ausführen.
 
-    1. Installieren Sie das Windows SDK. Die Windows SDK enthält den Nachrichten Compiler ([MC. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) und den Ressourcen Compiler ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Installieren Sie das Windows SDK. Die Windows SDK enthält den Nachrichten Compiler ([MC. exe](/windows/win32/wes/message-compiler--mc-exe-)) und den Ressourcen Compiler ([RC. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
 
     2. Führen Sie in einer Windows SDK-Eingabeaufforderung mc.exe für die neue Manifestdatei aus.
 
@@ -250,7 +250,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Verwenden Sie [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) , um das Manifest zu registrieren.
+    7. Verwenden Sie [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) , um das Manifest zu registrieren.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Windows Server-App-Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Überwachen von Anwendungen mit App-Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server-App-Fabric-Überwachung](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Überwachen von Anwendungen mit App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

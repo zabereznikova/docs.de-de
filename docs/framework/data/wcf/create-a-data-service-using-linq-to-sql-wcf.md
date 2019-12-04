@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Daten Dienstanbieter mit einer LINQ to SQL Datenquelle (WCF Data Services)'
+title: 'Gewusst wie: Erstellen eines Datendiensts mit einer LINQ to SQL-Datenquelle (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cde5b9903a1fd164ce106a6a408ac4bb79976642
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053000"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802278"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Vorgehensweise: Erstellen eines Daten Dienstanbieter mit einer LINQ to SQL Datenquelle (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Gewusst wie: Erstellen eines Datendiensts mit einer LINQ to SQL-Datenquelle (WCF Data Services)
 
-WCF Data Services macht Entitäts Daten als Datendienst verfügbar. Der reflektionsanbieter ermöglicht es Ihnen, ein Datenmodell zu definieren, das auf jeder Klasse basiert, die <xref:System.Linq.IQueryable%601> Member verfügbar macht, die eine-Implementierung zurückgeben. Damit diese Klassen Aktualisierungen an Daten in der Datenquelle vornehmen können, müssen sie auch die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [Data Services-Anbietern](data-services-providers-wcf-data-services.md). In diesem Thema wird gezeigt, wie LINQ to SQL-Klassen erstellt werden, die mit dem Reflektionsanbieter auf die Northwind-Beispieldatenbank zugreifen, und wie der Datendienst erstellt wird, der auf diesen Datenklassen basiert.
+WCF Data Services macht Entitäts Daten als Datendienst verfügbar. Der reflektionsanbieter ermöglicht es Ihnen, ein Datenmodell zu definieren, das auf einer beliebigen Klasse basiert, die Member verfügbar macht, die eine <xref:System.Linq.IQueryable%601> Implementierung zurückgeben. Damit diese Klassen Aktualisierungen an Daten in der Datenquelle vornehmen können, müssen sie auch die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [Data Services-Anbietern](data-services-providers-wcf-data-services.md). In diesem Thema wird gezeigt, wie LINQ to SQL-Klassen erstellt werden, die mit dem Reflektionsanbieter auf die Northwind-Beispieldatenbank zugreifen, und wie der Datendienst erstellt wird, der auf diesen Datenklassen basiert.
 
 ## <a name="to-add-linq-to-sql-classes-to-a-project"></a>So fügen Sie einem Projekt LINQ to SQL-Klassen hinzu
 
-1. Klicken Sie in einem Visual Basic C# oder einer Anwendung im Menü **Projekt** auf**Neues Element** **Hinzufügen** > .
+1. Klicken Sie in einem Visual Basic C# oder einer Anwendung im Menü **Projekt** auf > **Neues Element** **Hinzufügen** .
 
 2. Klicken Sie auf die Vorlage **LINQ to SQL Klassen** .
 
@@ -31,7 +31,7 @@ WCF Data Services macht Entitäts Daten als Datendienst verfügbar. Der reflekti
 
      Die Datei Northwind.dbml wird dem Projekt hinzugefügt, und der Object Relational Designer (O/R-Designer) wird geöffnet.
 
-5. Erweitern Sie in **Server**/**Datenbank-Explorer**unter Northwind den Knoten **Tabellen** , und `Customers` ziehen Sie die Tabelle auf den objektrelationaler Designer (O/R-Designer).
+5. Erweitern Sie in **Server**/**Datenbank-Explorer**unter Northwind den Knoten **Tabellen** , und ziehen Sie die Tabelle `Customers` auf den objektrelationaler Designer (O/R-Designer).
 
      Eine `Customer`-Entitätsklasse wird erstellt und auf der Entwurfsoberfläche angezeigt.
 
@@ -48,14 +48,14 @@ WCF Data Services macht Entitäts Daten als Datendienst verfügbar. Der reflekti
 
 ### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>So erstellen Sie einen Datendienst mit einem LINQ to SQL-basierten Datenmodell
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen Ihres ASP.NET-Projekts, und klicken Sie dann auf**Neues Element** **Hinzufügen** > .
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen Ihres ASP.NET-Projekts, und klicken Sie dann auf > **Neues Element** **Hinzufügen** .
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Vorlage **WCF Data Service** aus der Kategorie **Web** aus.
 
    ![WCF Data Service-Element Vorlage in Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017.
+   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017 oder höher.
 
 3. Geben Sie einen Namen für den Dienst an, und klicken Sie dann auf **OK**.
 
@@ -74,6 +74,6 @@ WCF Data Services macht Entitäts Daten als Datendienst verfügbar. Der reflekti
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erstellen eines Daten Dienstanbieter mit einer ADO.NET-Entity Framework Datenquelle](create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [Vorgehensweise: Erstellen eines Daten Dienes mithilfe des reflektionsanbieters](create-a-data-service-using-rp-wcf-data-services.md)
+- [Vorgehensweise: Erstellen eines Datendiensts mit einer ADO.NET-Entity Framework-Datenquelle](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [: Erstellen eines Datendiensts mit dem Reflektionsanbieter](create-a-data-service-using-rp-wcf-data-services.md)
 - [Datendienstanbieter](data-services-providers-wcf-data-services.md)

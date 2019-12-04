@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Entwickeln eines mit IIS ausgeführten WCF-Datendiensts'
+title: 'Vorgehensweise: Entwickeln eines WCF-Datendiensts, der auf IIS ausgeführt wird'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052974"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800512"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Vorgehensweise: Entwickeln eines WCF Data Service, der auf IIS ausgeführt wird
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Vorgehensweise: Entwickeln eines WCF-Daten Dienstanbieter unter IIS
 
 In diesem Thema wird gezeigt, wie WCF Data Services verwendet wird, um einen Datendienst zu erstellen, der auf der Northwind-Beispieldatenbank basiert, die von einer ASP.NET-Webanwendung gehostet wird, die auf Internetinformationsdienste (IIS) ausgeführt wird. Ein Beispiel für das Erstellen desselben Northwind-Daten Diensts als ASP.NET-Webanwendung, die auf dem ASP.NET Development Server ausgeführt wird, finden Sie im [WCF Data Services Schnellstart](quickstart-wcf-data-services.md).
 
@@ -25,17 +25,17 @@ In diesem Thema wird gezeigt, wie WCF Data Services verwendet wird, um einen Dat
 
 In diesem Thema wird gezeigt, wie ein Datendienst mithilfe des Entity Framework-Anbieters erstellt wird. Weitere Datendiensteanbieter sind verfügbar. Weitere Informationen finden Sie unter [Data Services-Anbietern](data-services-providers-wcf-data-services.md).
 
-Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienstressourcen bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Zugriff auf den](how-to-enable-access-to-the-data-service-wcf-data-services.md)Datendienst.
+Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienstressourcen bereitstellen. Weitere Informationen finden Sie unter Gewusst [wie: Aktivieren des Zugriffs auf den Datendienst](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Erstellen der ASP.NET-Webanwendung, die unter IIS ausgeführt wird
 
-1. Wählen Sie in Visual Studio im Menü **Datei** die Option **Neues** > **Projekt**aus.
+1. Wählen Sie in Visual Studio im Menü **Datei** die Optionen **Neu** > **Projekt** aus.
 
 2. Wählen Sie im Dialogfeld **Neues Projekt** die Kategorie **installierter** > **[ C# Visual** oder **Visual Basic**] > **Web** aus.
 
-3. Wählen Sie die Vorlage **ASP.NET Webanwendung** aus.
+3. Wählen Sie die Vorlage **ASP.NET-Webanwendung** .
 
-4. Geben `NorthwindService` Sie als Namen für das Projekt ein.
+4. Geben Sie `NorthwindService` als Namen für das Projekt ein.
 
 5. Klicken Sie auf **OK**.
 
@@ -81,9 +81,9 @@ Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienst
 
     1. Öffnen Sie den IIS-Manager, und navigieren Sie zur Anwendung "Photoservice" unter **Default Web Site**.
 
-    2. Doppelklicken Sie in der **Ansicht "Features**" auf **Authentifizierung**.
+    2. Doppelklicken Sie in der Ansicht **Features** auf **Authentifizierung**.
 
-    3. Wählen Sie auf der Seite **Authentifizierung** die Option **anonyme Authentifizierung**aus.
+    3. Wählen Sie auf der Seite **Authentifizierung** **Anonyme Authentifizierung**.
 
     4. Klicken Sie im Bereich **Aktionen** auf **Bearbeiten** , um den Sicherheits Prinzipal festzulegen, unter dem anonyme Benutzer eine Verbindung mit der Website herstellen.
 
@@ -122,19 +122,19 @@ Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienst
 
 ## <a name="define-the-data-model"></a>Definieren des Datenmodells
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts, und klicken Sie dann auf**Neues Element** **Hinzufügen** > .
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts, und klicken Sie dann auf > **Neues Element** **Hinzufügen** .
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **ADO.NET Entity Data Model**aus.
 
-3. Geben `Northwind.edmx`Sie als Name des Datenmodells ein.
+3. Geben Sie als Name des Datenmodells `Northwind.edmx`ein.
 
 4. Wählen Sie im Assistenten für Entity Data Model die Option **aus Datenbank generieren aus**, und klicken Sie dann auf **weiter**.
 
 5. Verbinden Sie das Datenmodell mit der Datenbank, indem Sie einen der folgenden Schritte ausführen, und klicken Sie dann auf **weiter**:
 
-    - Wenn Sie noch keine Datenbankverbindung konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie Verbindungen mit SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631)-Datenbanken. Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
+    - Wenn Sie noch keine Datenbankverbindung konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
 
-         \- oder –
+         \- oder -
 
     - Wenn bereits eine Datenbankverbindung für die Northwind-Datenbank konfiguriert wurde, wählen Sie diese Verbindung in der Liste der Verbindungen aus.
 
@@ -144,14 +144,14 @@ Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienst
 
 ## <a name="create-the-data-service"></a>Erstellen des Datendiensts
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen Ihres ASP.NET-Projekts, und klicken Sie dann auf**Neues Element** **Hinzufügen** > .
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen Ihres ASP.NET-Projekts, und klicken Sie dann auf > **Neues Element** **Hinzufügen** .
 
 2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **WCF Data Service**aus.
 
    ![WCF Data Service-Element Vorlage in Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017.
+   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017 oder höher.
 
 3. Geben Sie `Northwind`als Namen für den Dienst ein.
 

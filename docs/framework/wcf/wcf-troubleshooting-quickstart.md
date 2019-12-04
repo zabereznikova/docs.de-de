@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320180"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802364"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -54,7 +54,7 @@ In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden bei
  Die zweite Anforderung kann in erster Linie aus zwei Gründen fehlschlagen: (1) Das Timeout der Sitzung wurde überschritten. (2) Der Webserver, der diesen Dienst hostet, wird wiederverwendet. Im ersten Fall ist die Sitzung gültig, bis das Timeout für den Dienst eintritt. Wenn der Dienst innerhalb des in der Bindung des Diensts (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) angegebenen Zeitraums keine Anforderung vom Client empfängt, beendet der Dienst die Sicherheits Sitzung. Nachfolgende Clientnachrichten führen zu <xref:System.ServiceModel.Security.MessageSecurityException>. Der Code muss erneut eine Sicherheitssitzung mit dem Dienst herstellen, um weitere Nachrichten senden oder ein Token für den Sicherheitszustandskontext verwenden zu können. Token für den Sicherheitszustandskontext sorgen auch dafür, dass eine Sicherheitssitzung das Wiederverwenden eines Webservers überdauert. Weitere Informationen zur Verwendung von Zustands behafteten sicheren Kontext Token in einer sicheren Sitzung finden Sie unter Gewusst [wie: Erstellen eines Sicherheitskontext Tokens für eine sichere Sitzung](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Stattdessen können Sie Sicherheitssitzungen auch deaktivieren. Wenn Sie die [\<WSHttpBinding->](../configure-apps/file-schema/wcf/wshttpbinding.md) Bindung verwenden, können Sie die Eigenschaft `establishSecurityContext` auf `false` festlegen, um sichere Sitzungen zu deaktivieren. Wenn Sie Sicherheitssitzungen für andere Bindungen deaktivieren möchten, müssen Sie eine benutzerdefinierte Bindung erstellen. Ausführliche Informationen zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bevor Sie eine dieser Optionen anwenden, müssen Sie die Sicherheitsanforderungen der Anwendung kennen.  
   
 <a name="BKMK_q2"></a>   
-## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?  
+## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?  
  Standardmäßig können Dienste nur 10 Sitzungen gleichzeitig verarbeiten. Wenn die Dienstbindungen Sitzungen verwenden, akzeptiert der Dienst neue Clientverbindungen folglich, bis diese Zahl erreicht ist. Anschließend lehnt er neue Clientverbindungen ab, bis eine der aktuellen Sitzungen beendet wird. Es gibt verschiedene Möglichkeiten, mehr Clients zu unterstützen. Wenn der Dienst keine Sitzungen erfordert, verwenden Sie keine sitzungsbasierte Bindung. (Weitere Informationen finden Sie unter [Verwenden von Sitzungen](using-sessions.md).) Eine weitere Möglichkeit besteht darin, das Sitzungs Limit zu erhöhen, indem Sie den Wert der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>-Eigenschaft in die für ihre Umstände geeignete Zahl ändern.  
   
 <a name="BKMK_q3"></a>   
@@ -136,9 +136,9 @@ public class MyServiceHost : ServiceHost
   
 - [Debuggen von Windows-Authentifizierungsfehlern](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms178119(v=sql.105))  
   
-- [Informationen zu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Informationen zu Kerberos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v%3dtechnet.10))  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Wenn eine FaultException-\<Ausnahme ausgelöst wird > wobei der Typ eine Ausnahme ist, erhalte ich immer einen allgemeinen FaultException-Typ auf dem Client, nicht den generischen Typ. Woran liegt das?  
