@@ -3,13 +3,13 @@ title: Installieren von .NET Core unter Windows, Linux und macOS – .NET Core
 description: Erfahren Sie, was für die Installation von .NET Core unter Windows, Linux und macOS-Versionen benötigt wird und wo diese ausgeführt wird. Entdecken Sie die erforderlichen Abhängigkeiten, die für die Entwicklung, Bereitstellung und Ausführung von .NET Core-Apps benötigt werden.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: d4c2e8507b022d03eed482f827407db5cff8ebfe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450817"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836991"
 ---
 # <a name="download-and-install-net-core"></a>Herunterladen und Installieren von .NET Core
 

@@ -11,9 +11,9 @@
 - name: 'Anleitung für C#'
   href: csharp/index.yml
 - name: 'Leitfaden für F#'
-  href: fsharp/
+  href: fsharp/index.yml
 - name: Leitfaden für Visual Basic
-  href: visual-basic/
+  href: visual-basic/index.yml
 - name: Leitfaden für ML.MET
   href: machine-learning/index.yml
 - name: Leitfaden für .NET für Apache Spark
