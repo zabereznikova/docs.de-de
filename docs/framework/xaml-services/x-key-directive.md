@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 8321a09db31c9f6d2103a252a195fcdbf8da3e66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4ffd7a2922c7f3ba35ccb9ac7ce29a6a00cd99af
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283853"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837206"
 ---
 # <a name="xkey-directive"></a>x:Key-Anweisung
 Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erstellt und referenziert werden. Einem XAML-Objektelement einen `x:Key`-Wert hinzuzufügen, ist der üblichste Weg, um eine Ressource in einem Ressourcenwörterbuch, beispielsweise in einem WPF- <xref:System.Windows.ResourceDictionary> zu identifizieren.  
@@ -48,7 +48,7 @@ Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erste
 |`markupExtensionUsage`|Innerhalb der Markup Erweiterungs Trennzeichen {}eine Markup Erweiterungs Verwendung, die ein Objekt bereitstellt, das als Schlüssel verwendet werden soll. Siehe Hinweise.|  
   
 ## <a name="remarks"></a>Hinweise  
- `x:Key` unterstützt das XAML-Ressourcen Wörterbuch Konzept. XAML als Sprache definiert keine Ressourcenwörterbuchimplementierung, die spezifischen Benutzeroberflächen-Frameworks vorbehalten bleibt. Weitere Informationen dazu, wie XAML-Ressourcen Wörterbücher in WPF implementiert werden, finden Sie unter [XAML-Ressourcen](../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ `x:Key` unterstützt das XAML-Ressourcenwörterbuchkonzept. XAML als Sprache definiert keine Ressourcenwörterbuchimplementierung, die spezifischen Benutzeroberflächen-Frameworks vorbehalten bleibt. Weitere Informationen dazu, wie XAML-Ressourcen Wörterbücher in WPF implementiert werden, finden Sie unter [XAML-Ressourcen](../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
  In XAML 2006 und WPF müssen `x:Key` als Attribut bereitgestellt werden. Sie können immer noch Nichtzeichenfolgeschlüssel verwenden, aber dies erfordert eine Markuperweiterungsverwendung, um den Nichtzeichenfolgenwert in Attributform bereitzustellen. Wenn Sie XAML 2009 verwenden, kann `x:Key` als-Element angegeben werden, um explizit von anderen Objekttypen als Zeichen folgen verschlüsselte Wörter zu unterstützen, ohne dass eine Markup Erweiterung erforderlich ist. Weitere Informationen finden Sie im Abschnitt "XAML 2009" in diesem Thema. Der Rest des Abschnitts "Hinweise" bezieht sich speziell auf die XAML 2006-Implementierung.  
   
@@ -101,14 +101,14 @@ keyObject
 |-|-|  
 |`keyObject`|Objektelement für das Objekt, das für ein angegebenes `object` in einem spezialisierten Wörterbuch als Schlüssel verwendet wird.|  
   
-- Der Container/das übergeordnete Element für diesen Typ der Verwendung wird hier nicht angezeigt. `object` wird erwartet, dass es sich um ein untergeordnetes Element eines Objekt Elements handelt, das eine spezialisierte Wörterbuch Implementierung darstellt. `keyObject` wird eine Objektinstanz (oder ein Wert eines Werttyps) erwartet, die als Schlüssel für diese spezielle spezialisierte Wörterbuch Implementierung geeignet ist.  
+- Der Container/das übergeordnete Element für diesen Typ der Verwendung wird hier nicht angezeigt. `object` wird erwartungsgemäß ein untergeordnetes Element eines Objektelements sein, das eine spezialisierte Wörterbuchimplementierung darstellt. `keyObject` ist erwartungsgemäß eine Objektinstanz (oder ein Wert eines Werttyps), die als Schlüssel für diese bestimmte spezialisierte Wörterbuchimplementierung geeignet ist.  
   
 - WPF implementiert keine Wörterbücher, die diese Verwendung erfordern. Objektschlüssel sind eine allgemeinere Funktion der XAML-Sprache. Sie sind möglicherweise nützlich für bestimmte Benutzerwörterbuchszenarien, in denen das Erstellen des Wörterbuchs in XAML wünschenswert ist. Bei WPF-Funktionen, wie beispielsweise impliziten Stilen, die für Ressourcen Schlüssel verwenden, die keine Zeichenfolgen sind, gibt es andere Techniken für das Festlegen oder das Angeben der Schlüssel. Deshalb ist es nicht notwendig, einen Objektschlüssel zu verwenden.  
   
 - bei " *keyObject* " kann es sich auch um eine Markup Erweiterungs Verwendung im Objekt Element Formular anstelle einer direkten Objektinstanz handeln.  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight-Verwendungshinweise  
- `x:Key` für Silverlight ist separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:). Sprach Features (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
+ `x:Key` für Silverlight wird separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:). Sprach Features (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc188995(v=vs.95)).  
   
 ## <a name="see-also"></a>Siehe auch
 

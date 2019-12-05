@@ -2,12 +2,12 @@
 title: Verbundbeispiel
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716925"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837882"
 ---
 # <a name="federation-sample"></a>Verbundbeispiel
 Dieses Beispiel veranschaulicht die Verbundsicherheit.  
@@ -89,7 +89,7 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
 1. Öffnen Sie das SDK-Befehlsfenster. Führen Sie im Beispielpfad die Datei "Setup.bat" aus. Dadurch werden die erforderlichen virtuellen Verzeichnisse für das Beispiel erstellt und die erforderlichen Zertifikate mit entsprechenden Berechtigungen installiert.  
   
     > [!NOTE]
-    > Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt. Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] müssen Sie sicherstellen, dass IIS 6.0-Verwaltungskompatibilität installiert ist, da das Setup die IIS-Administratorskripts verwendet. Das Ausführen des Setupskripts über [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordert Administratorrechte.  
+    > Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt. Unter Windows Vista müssen Sie sicherstellen, dass die IIS 6,0-Verwaltungs Kompatibilität installiert ist, da für die Einrichtung IIS-Administrator Skripts verwendet werden. Das Ausführen des Setup Skripts unter Windows Vista erfordert Administratorrechte.  
   
 2. Öffnen Sie in Visual Studio die Datei FederationSample. sln, und wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus. Dadurch werden die allgemeinen Projektdateien, der Bookstore-Dienst, Bookstore-STS und HomeRealm STS erstellt und in IIS bereitgestellt. Auf diese Weise wird auch die Buchhandlungsclientanwendung erstellt, und die ausführbare Datei "BookStoreClient.exe" wird im Ordner "FederationSample\BookStoreClient\bin\Debug" gespeichert.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802093"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837297"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a>Beim Entwickeln von eigenständigen und im Browser gehosteten Anwendungen für Windows Presentation Foundation (WPF) müssen Sie das Sicherheitsmodell in Erwägung gezogen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen (CAS**FullTrust** -Berechtigungs Satz) ausgeführt, unabhängig davon, ob Sie mit Windows Installer (. msi), xcopy oder ClickOnce bereitgestellt werden. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Allerdings kann eine voll vertrauenswürdige Host Anwendung eine teilweise vertrauenswürdige <xref:System.AppDomain> mithilfe des .NET Framework Add-in-Modells erstellen. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-ins](./app-development/wpf-add-ins-overview.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "74802093"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Sicherheitseinstellungen für webbrowsende Software  
- Die Sicherheitseinstellungen auf dem Computer bestimmen, welcher Zugriff jeder webbrowsenden Software gewährt wird. Die Webbrowsersoftware umfasst alle Anwendungen oder Komponenten, die die [WinInet](https://go.microsoft.com/fwlink/?LinkId=179379) -oder [URLMON](https://go.microsoft.com/fwlink/?LinkId=179383) -APIs verwenden, einschließlich Internet Explorer und PresentationHost. exe.  
+ Die Sicherheitseinstellungen auf dem Computer bestimmen, welcher Zugriff jeder webbrowsenden Software gewährt wird. Die Webbrowsersoftware umfasst alle Anwendungen oder Komponenten, die die [WinInet](/windows/win32/wininet/portal) -oder [URLMON](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) -APIs verwenden, einschließlich Internet Explorer und PresentationHost. exe.  
   
  Internet Explorer bietet einen Mechanismus, mit dem Sie die Funktionalität konfigurieren können, die von oder aus Internet Explorer ausgeführt werden darf, einschließlich der folgenden:  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802093"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser-Steuerelement und Funktionssteuerelemente  
- Das WPF-<xref:System.Windows.Controls.WebBrowser> Steuerelement kann zum Hosten von Webinhalt verwendet werden. Die WPF-<xref:System.Windows.Controls.WebBrowser> Steuerung umschließt das zugrunde liegende WebBrowser-ActiveX-Steuerelement. WPF bietet Unterstützung für das Sichern Ihrer Anwendung, wenn Sie das WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement zum Hosten von nicht vertrauenswürdigem Webinhalt verwenden. Einige Sicherheitsfeatures müssen jedoch direkt durch die Anwendungen angewendet werden, die das <xref:System.Windows.Controls.WebBrowser>-Steuerelement verwenden. Weitere Informationen zum WebBrowser-ActiveX-Steuerelement finden Sie unter [WebBrowser-Steuerelement Übersichten und Tutorials](https://go.microsoft.com/fwlink/?LinkId=179388).  
+ Das WPF-<xref:System.Windows.Controls.WebBrowser> Steuerelement kann zum Hosten von Webinhalt verwendet werden. Die WPF-<xref:System.Windows.Controls.WebBrowser> Steuerung umschließt das zugrunde liegende WebBrowser-ActiveX-Steuerelement. WPF bietet Unterstützung für das Sichern Ihrer Anwendung, wenn Sie das WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement zum Hosten von nicht vertrauenswürdigem Webinhalt verwenden. Einige Sicherheitsfeatures müssen jedoch direkt durch die Anwendungen angewendet werden, die das <xref:System.Windows.Controls.WebBrowser>-Steuerelement verwenden. Weitere Informationen zum WebBrowser-ActiveX-Steuerelement finden Sie unter [WebBrowser-Steuerelement Übersichten und Tutorials](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85)).  
   
 > [!NOTE]
 > Dieser Abschnitt gilt auch für das <xref:System.Windows.Controls.Frame>-Steuerelement, da es die <xref:System.Windows.Controls.WebBrowser> verwendet, um zu HTML-Inhalten zu navigieren.  
   
  Wenn das WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement zum Hosten von nicht vertrauenswürdigem Webinhalt verwendet wird, sollte Ihre Anwendung eine teilweise vertrauenswürdige <xref:System.AppDomain> verwenden, um den Anwendungscode vor potenziell schädlichem HTML-Skriptcode zu isolieren. Dies trifft vor allem dann zu, wenn Ihre Anwendung mit dem gehosteten Skript interagiert, indem Sie die <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>-Methode und die <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>-Eigenschaft verwendet. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-ins](./app-development/wpf-add-ins-overview.md).  
   
- Wenn Ihre Anwendung das WPF-<xref:System.Windows.Controls.WebBrowser> Steuerelement verwendet, besteht eine weitere Möglichkeit zur Erhöhung der Sicherheit und Entschärfung von Angriffen darin, Internet Explorer-Funktions Steuerelemente zu aktivieren Funktions Steuerelemente sind Ergänzungen zu Internet Explorer, mit denen Administratoren und Entwickler Funktionen von Internet Explorer und Anwendungen konfigurieren können, die das WebBrowser-ActiveX-Steuerelement hosten, das von der WPF-<xref:System.Windows.Controls.WebBrowser> Steuerung umschlossen wird. Funktions Steuerelemente können mithilfe der [cointernetsetfeatureaktivierten](https://go.microsoft.com/fwlink/?LinkId=179394) Funktion oder durch Ändern von Werten in der Registrierung konfiguriert werden. Weitere Informationen zu Funktions Steuerelementen finden [Sie unter Einführung in Funktions Steuerelemente](https://go.microsoft.com/fwlink/?LinkId=179390) und [Internet Funktions Steuerelemente](https://go.microsoft.com/fwlink/?LinkId=179392).  
+ Wenn Ihre Anwendung das WPF-<xref:System.Windows.Controls.WebBrowser> Steuerelement verwendet, besteht eine weitere Möglichkeit zur Erhöhung der Sicherheit und Entschärfung von Angriffen darin, Internet Explorer-Funktions Steuerelemente zu aktivieren Funktions Steuerelemente sind Ergänzungen zu Internet Explorer, mit denen Administratoren und Entwickler Funktionen von Internet Explorer und Anwendungen konfigurieren können, die das WebBrowser-ActiveX-Steuerelement hosten, das von der WPF-<xref:System.Windows.Controls.WebBrowser> Steuerung umschlossen wird. Funktions Steuerelemente können mithilfe der [cointernetsetfeatureaktivierten](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) Funktion oder durch Ändern von Werten in der Registrierung konfiguriert werden. Weitere Informationen zu Funktions Steuerelementen finden [Sie unter Einführung in Funktions Steuerelemente](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) und [Internet Funktions Steuerelemente](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85)).  
   
  Wenn Sie eine eigenständige WPF-Anwendung entwickeln, die das WPF-<xref:System.Windows.Controls.WebBrowser> Steuerelement verwendet, aktiviert WPF automatisch die folgenden Featuresteuerelemente für Ihre Anwendung.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802093"
  Funktions Steuerelemente werden durch den Prozess angewendet, der das WebBrowser-ActiveX-Objekt instanziiert. Daher wird unbedingt empfohlen, beim Erstellen einer eigenständigen Anwendung, die zu nicht vertrauenswürdigem Inhalt navigieren kann, zusätzliche Funktionssteuerelemente zu aktivieren.  
   
 > [!NOTE]
-> Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden Sie in den häufig gestellten Fragen [zur Sicherheit des MSHTML-Hosts: Teil I von II](https://go.microsoft.com/fwlink/?LinkId=179396) und [MSHTML Host Security FAQ: Part II of II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden Sie in den häufig gestellten Fragen [zur Sicherheit des MSHTML-Hosts: Teil I von II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) und [MSHTML Host Security FAQ: Part II of II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
   
  Für eine ausführbare Datei sollten die folgenden Funktionssteuerelemente aktiviert werden, indem der Registrierungswert auf 1 festgelegt wird.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802093"
   
  Wenn Sie eine teilweise vertrauenswürdige XAML-Browser Anwendung (XBAP) ausführen, die ein WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement in Windows Internet Explorer enthält, hostet WPF das WebBrowser-ActiveX-Steuerelement im Adressraum des Internet Explorer-Prozesses. Da das WebBrowser-ActiveX-Steuerelement im Internet Explorer-Prozess gehostet wird, sind alle Featuresteuerelemente für Internet Explorer auch für das WebBrowser-ActiveX-Steuerelement aktiviert.  
   
- XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheit besteht darin, dass Internet Explorer und somit das WebBrowser-ActiveX-Steuerelement unter Windows Vista und Windows 7 standardmäßig im geschützten Modus ausgeführt wird. Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and working in Protected Mode Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheit besteht darin, dass Internet Explorer und somit das WebBrowser-ActiveX-Steuerelement unter Windows Vista und Windows 7 standardmäßig im geschützten Modus ausgeführt wird. Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and working in Protected Mode Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/).  
   
 > [!NOTE]
 > Wenn Sie versuchen, eine XBAP auszuführen, die ein WPF-<xref:System.Windows.Controls.WebBrowser>-Steuerelement in Firefox enthält, wird in der Internet Zone ein <xref:System.Security.SecurityException> ausgelöst. Dies geschieht aufgrund der WPF-Sicherheitsrichtlinie.  
@@ -266,7 +266,7 @@ ms.locfileid: "74802093"
   
 |Fläche|Ressource|  
 |----------|--------------|  
-|Verwalteter Code|[Sicherheits Leit Faden zu Mustern und Vorgehensweisen für Anwendungen](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|Verwalteter Code|[Sicherheits Leit Faden zu Mustern und Vorgehensweisen für Anwendungen](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Codezugriffssicherheit](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802093"
 - [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](wpf-partial-trust-security.md)
 - [WPF-Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)
 - [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](wpf-security-strategy-security-engineering.md)
-- [Sicherheits Leit Faden zu Mustern und Vorgehensweisen für Anwendungen](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Sicherheits Leit Faden zu Mustern und Vorgehensweisen für Anwendungen](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [Codezugriffssicherheit](../misc/code-access-security.md)
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Übersicht über XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

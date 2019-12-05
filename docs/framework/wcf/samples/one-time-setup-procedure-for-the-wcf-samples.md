@@ -2,12 +2,12 @@
 title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141853"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837830"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 
@@ -16,7 +16,7 @@ Die meisten Windows Communication Foundation (WCF)-Beispiele werden in Interneti
 Das virtuelle Verzeichnis **Service Model Samples** wird zum entwickeln und Ausführen aller Beispiele verwendet, die einen IIS-gehosteten Dienst verwenden. Dies ist das einzige virtuelle Verzeichnis, das zum Ausführen der Beispiele erforderlich ist. Durch die Erstellung eines Beispiels werden alle zuvor bereitgestellten Dienste in diesem virtuellen Verzeichnis ersetzt. Nur das zuletzt erstellte Beispiel wird bereitgestellt und ist dann in diesem virtuellen Verzeichnis verfügbar.
 
 > [!NOTE]
-> Sie müssen alle Befehle unter einem lokalen Administratorkonto ausführen. Wenn Sie mit Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] oder Windows Server 2008 R2 arbeiten, müssen Sie außerdem die Eingabeaufforderung mit erweiterten Berechtigungen ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Symbol für die Eingabeaufforderung, und klicken Sie dann auf **als Administrator ausführen**. Alle Befehle in diesem Thema müssen an einer Eingabeaufforderung ausgeführt werden, die über die richtigen Pfadeinstellungen verfügt.  Dies kann am einfachsten sichergestellt werden, wenn Sie die Visual Studio-Eingabeaufforderung verwenden. Klicken Sie zum Öffnen dieser Eingabeaufforderung auf **Start**, wählen Sie **Alle Programme**aus, Scrollen Sie nach unten zu **Visual Studio 2010**, wählen Sie **Visual Studio-Tools**aus, klicken Sie mit der rechten Maustaste auf **Visual Studio-Eingabeaufforderung (2010)** , und klicken Sie dann auf. Wenn Sie eine Visual Studio Express Edition installiert haben, ist diese Eingabeaufforderung nicht verfügbar. In diesem Fall müssen Sie dem Systempfad "C:\Windows\Microsoft.Net\Framework\v4.0" hinzufügen.
+> Sie müssen alle Befehle unter einem lokalen Administratorkonto ausführen. Wenn Sie mit Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] oder Windows Server 2008 R2 arbeiten, müssen Sie außerdem die Eingabeaufforderung mit erweiterten Berechtigungen ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Symbol für die Eingabeaufforderung, und klicken Sie dann auf **als Administrator ausführen**. Alle Befehle in diesem Thema müssen an einer Eingabeaufforderung ausgeführt werden, die über die richtigen Pfadeinstellungen verfügt.  Dies kann am einfachsten sichergestellt werden, wenn Sie die Visual Studio-Eingabeaufforderung verwenden. Klicken Sie zum Öffnen dieser Eingabeaufforderung auf **Start**, wählen Sie **Alle Programme**, Scrollen Sie nach unten zu **Visual Studio 2010**, wählen Sie **Visual Studio-Tools**aus, klicken Sie mit der rechten Maustaste auf **Visual Studio-Eingabeaufforderung (2010)** , und klicken Sie dann auf **als Administrator** Wenn Sie eine Visual Studio Express Edition installiert haben, ist diese Eingabeaufforderung nicht verfügbar. In diesem Fall müssen Sie dem Systempfad "C:\Windows\Microsoft.Net\Framework\v4.0" hinzufügen.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Einmaliges Setupverfahren für WCF-Beispiele
 
@@ -63,7 +63,7 @@ Das virtuelle Verzeichnis **Service Model Samples** wird zum entwickeln und Ausf
     > [!NOTE]
     > Wenn dieser Schritt nicht ausgeführt wird, lässt sich keines der von IIS gehosteten Beispiele erstellen. Legen Sie die Berechtigungen unbedingt richtig fest, oder führen Sie die SDK-Eingabeaufforderung und Visual Studio-Eingabeaufforderung (2012) als Administrator aus.
 
-11. Erstellen Sie das Verzeichnis C:\logs auf dem Computer. Möglicherweise wird es bei einigen Beispielen vorausgesetzt. Stellen Sie sicher, dass das entsprechende Konto Schreibzugriff auf diesen Ordner hat. Für Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]und Windows Server 2008 R2 ist dieses Konto **Netzwerkdienst**. Unter [!INCLUDE[lserver](../../../../includes/lserver-md.md)] ist es das Konto NT-Autorität\Netzwerkdienst. Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lautet das Konto ASPNET.
+11. Erstellen Sie das Verzeichnis C:\logs auf dem Computer. Möglicherweise wird es bei einigen Beispielen vorausgesetzt. Stellen Sie sicher, dass das entsprechende Konto Schreibzugriff auf diesen Ordner hat. Für Windows 7, Windows Vista und Windows Server 2008 R2 ist dieses Konto der **Netzwerkdienst**. Unter [!INCLUDE[lserver](../../../../includes/lserver-md.md)] ist es das Konto NT-Autorität\Netzwerkdienst. Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lautet das Konto ASPNET.
 
 12. Führen Sie die Datei "Setupcerttool.bat" aus. Diese Datei befindet sich im Ordner "\<InstallPath > \ WF_WCF_Samples \wcf\setup\".  Mit diesem Skript werden folgende Aufgaben ausgeführt:
 

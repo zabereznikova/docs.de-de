@@ -2,12 +2,12 @@
 title: Überwachungsprofile
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9217f25ba4499e7ff75020642be387aa79ba27bf
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660931"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837622"
 ---
 # <a name="tracking-profiles"></a>Überwachungsprofile
 
@@ -17,7 +17,7 @@ ms.locfileid: "67660931"
 
 Mithilfe von Nachverfolgungsprofilen wird angegeben, welche Nachverfolgungsinformationen für eine Workflowinstanz ausgegeben werden. Wenn kein Profil angegeben wird, dann werden alle Nachverfolgungsereignisse ausgegeben. Wenn ein Profil angegeben ist, werden die Nachverfolgungsereignisse, die im Profil angegeben sind, ausgegeben. Je nach Überwachungsanforderungen können Sie ein Profil schreiben, das sehr allgemein gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert. Umgekehrt ist es möglich, ein sehr ausführliches Profil zu erstellen, dessen resultierende Ereignisse umfangreich genug sind, um später einen detaillierten Ausführungsfluss zu rekonstruieren.
 
-Überwachungsprofile manifestieren sich als XML-Elemente innerhalb einer standardmäßigen .NET Framework-Konfigurationsdatei oder in Code angegeben. Das folgende Beispiel ist einem [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Überwachungsprofil in einer Konfigurationsdatei entnommen, die es einem Überwachungsteilnehmer ermöglicht, `Started`-Workflowereignisse und `Completed`-Workflowereignisse zu abonnieren.
+Überwachungs Profile werden als XML-Elemente in einer Standard-.NET Framework Konfigurationsdatei oder im Code angegeben. Das folgende Beispiel ist einem [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Überwachungsprofil in einer Konfigurationsdatei entnommen, die es einem Überwachungsteilnehmer ermöglicht, `Started`-Workflowereignisse und `Completed`-Workflowereignisse zu abonnieren.
 
 ```xml
 <system.serviceModel>
@@ -59,13 +59,13 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-Überwachungsdatensätze werden innerhalb eines Überwachungsprofils mit dem <xref:System.Activities.Tracking.ImplementationVisibility>-Attribut über den Sichtbarkeitsmodus gefiltert. Eine zusammengesetzte Aktivität ist eine allgemeine Aktivität mit weiteren Aktivitäten, die ihre Implementierung bilden. Der Sichtbarkeitsmodus gibt die von zusammengesetzten Aktivitäten in einer Workflowaktivität ausgegebenen Überwachungsdatensätze an. Damit wird bestimmt, ob Aktivitäten, aus denen die Implementierung besteht, nachverfolgt werden. Der Sichtbarkeitsmodus gilt für die Ebene des Überwachungsprofils. Die Filterung von Überwachungsdatensätzen für einzelne Aktivitäten eines Workflows wird von den Abfragen im Überwachungsprofil gesteuert. Weitere Informationen finden Sie unter den **Abfragetypen für Überwachungsprofile** Abschnitt in diesem Dokument.
+Überwachungsdatensätze werden innerhalb eines Überwachungsprofils mit dem <xref:System.Activities.Tracking.ImplementationVisibility>-Attribut über den Sichtbarkeitsmodus gefiltert. Eine zusammengesetzte Aktivität ist eine allgemeine Aktivität mit weiteren Aktivitäten, die ihre Implementierung bilden. Der Sichtbarkeitsmodus gibt die von zusammengesetzten Aktivitäten in einer Workflowaktivität ausgegebenen Überwachungsdatensätze an. Damit wird bestimmt, ob Aktivitäten, aus denen die Implementierung besteht, nachverfolgt werden. Der Sichtbarkeitsmodus gilt für die Ebene des Überwachungsprofils. Die Filterung von Überwachungsdatensätzen für einzelne Aktivitäten eines Workflows wird von den Abfragen im Überwachungsprofil gesteuert. Weitere Informationen finden Sie im Abschnitt " **Überwachungs Profil-Abfrage Typen** " in diesem Dokument.
 
 Die zwei Sichtbarkeitsmodi, die vom `implementationVisibility`-Attribut im Überwachungsprofil angegeben werden, sind `RootScope` und `All`. Durch Verwendung des `RootScope`-Modus werden Überwachungsdatensätze für Aktivitäten, die die Implementierung einer Aktivität bilden, unterdrückt, wenn der Stamm eines Workflows keine zusammengesetzte Aktivität ist. Dies bedeutet, dass nur die allgemeine Aktivität innerhalb der zusammengesetzten Aktivität nachverfolgt wird, wenn einem Workflow eine Aktivität hinzugefügt wird, die mit anderen Aktivitäten implementiert wird, und `implementationVisibility` auf RootScope festgelegt ist. Wenn eine Aktivität der Stamm des Workflows ist, stellt die Implementierung der Aktivität den Workflow selbst dar, und Überwachungsdatensätze werden für Aktivitäten ausgegeben, die die Implementierung bilden. Bei Verwendung des All-Modus werden die Überwachungsdatensätze für die Stammaktivität und alle zugehörigen zusammengesetzten Aktivitäten ausgegeben.
 
-Nehmen wir beispielsweise an *MyActivity* ist eine zusammengesetzte Aktivität, deren Implementierung zwei Aktivitäten enthält *"Activity1"* und *"activity2"* . Wenn diese Aktivität einem Workflow hinzugefügt wird und die nachverfolgung aktiviert ist, mit einem Überwachungsprofil mit `implementationVisibility` festgelegt `RootScope`, werden Überwachungsdatensätze nur für *MyActivity*. Allerdings werden keine Datensätze für Aktivitäten ausgegeben *"Activity1"* und *"activity2"* .
+Beispiel: " *MyActivity* " ist eine zusammengesetzte Aktivität, deren Implementierung zwei Aktivitäten enthält, *Activity1* und *"activity2"* . Wenn diese Aktivität zu einem Workflow hinzugefügt wird und die Nachverfolgung mit einem Überwachungs Profil aktiviert ist, `implementationVisibility` auf `RootScope`festgelegt ist, werden nach Verfolgungs Datensätze nur für *MyActivity*ausgegeben. Für Aktivitäten *Activity1* und *"activity2"* werden jedoch keine Datensätze ausgegeben.
 
-Jedoch wenn die `implementationVisibility` Attribut für das Überwachungsprofil ist auf `All`, und klicken Sie dann die Überwachungsdatensätze ausgegeben werden, nicht nur für *MyActivity*, aber auch für die Aktivitäten *"Activity1"* und  *"Activity2"* .
+Wenn das `implementationVisibility`-Attribut für das Verfolgungs Profil jedoch auf `All`festgelegt ist, werden nach Verfolgungs Datensätze nicht nur für *MyActivity*ausgegeben, sondern auch für Aktivitäten *Activity1* und *"activity2"* .
 
 Das `implementationVisibility`-Flag gilt für folgende Datensatztypen für die Nachverfolgung:
 
@@ -150,7 +150,7 @@ Die `ImplementationVisibility`-Einstellung ist für das Überwachungsprofil opti
   };
   ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery> – Hiermit können Sie die Lebenszyklusänderungen der Aktivitäten nachverfolgen, aus denen eine Workflowinstanz besteht. Beispielsweise empfiehlt es sich zum Nachverfolgen jedes Mal, wenn die Aktivität "E-Mail senden" innerhalb einer Workflowinstanz abgeschlossen wird. Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityStateRecord>-Objekte abonnieren kann. Die verfügbaren Zustände, die abonniert werden können, werden im <xref:System.Activities.Tracking.ActivityStates>-Objekt angegeben.
+- <xref:System.Activities.Tracking.ActivityStateQuery> – Hiermit können Sie die Lebenszyklusänderungen der Aktivitäten nachverfolgen, aus denen eine Workflowinstanz besteht. Beispielsweise können Sie nachverfolgen, wann die "E-Mail senden"-Aktivität innerhalb einer Workflow Instanz abgeschlossen wird. Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityStateRecord>-Objekte abonnieren kann. Die verfügbaren Zustände, die abonniert werden können, werden im <xref:System.Activities.Tracking.ActivityStates>-Objekt angegeben.
 
   Die Konfiguration und der Code zum Abonnieren von Überwachungsdatensätzen für den Aktivitätszustand, die das  <xref:System.Activities.Tracking.ActivityStateQuery>-Objekt für die `SendEmailActivity`-Aktivität verwenden, werden im folgenden Beispiel gezeigt.
 
@@ -234,7 +234,7 @@ Die `ImplementationVisibility`-Einstellung ist für das Überwachungsprofil opti
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> – Hiermit können Sie Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachverfolgen. Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CancelRequestedRecord>-Objekte abonnieren kann.
 
-  Die Konfiguration und der Code zum Abonnieren von Datensätzen im Zusammenhang mit der Aktivität den Abbruch mit <xref:System.Activities.Tracking.CancelRequestedQuery> wird im folgenden Beispiel dargestellt.
+  Die Konfiguration und der Code zum Abonnieren von Datensätzen im Zusammenhang mit dem Aktivitäts Abbruch mithilfe von <xref:System.Activities.Tracking.CancelRequestedQuery> werden im folgenden Beispiel gezeigt.
 
   ```xml
   <cancelRequestedQueries>
@@ -308,7 +308,7 @@ Die `ImplementationVisibility`-Einstellung ist für das Überwachungsprofil opti
 
 ### <a name="annotations"></a>Anmerkungen
 
-Anmerkungen ermöglichen es Ihnen, Überwachungsdatensätze mit einem beliebigen Wert zu markieren, der nach der Erstellung konfiguriert werden kann. Sie können z. B. mehrere Überwachungsdatensätze in mehreren Workflows mit "Mailserver" gekennzeichnet werden == "Mail Server1 markieren". Auf diese Weise können alle Datensätze mit diesem Tag einfach gefunden werden, wenn zu einem späteren Zeitpunkt Überwachungsdatensätze abgefragt werden.
+Anmerkungen ermöglichen es Ihnen, Überwachungsdatensätze mit einem beliebigen Wert zu markieren, der nach der Erstellung konfiguriert werden kann. Beispielsweise kann es vorkommen, dass mehrere Überwachungsdaten Sätze in mehreren Workflows mit "Mail Server" = = "Mail Server1" gekennzeichnet werden. Auf diese Weise können alle Datensätze mit diesem Tag einfach gefunden werden, wenn zu einem späteren Zeitpunkt Überwachungsdatensätze abgefragt werden.
 
 Damit dies funktioniert, wird einer Überwachungsabfrage eine Anmerkung hinzugefügt, wie im folgenden Beispiel gezeigt.
 
@@ -344,9 +344,9 @@ Mit Überwachungsabfrageelementen wird ein Überwachungsprofil erstellt. Dazu wi
 > [!WARNING]
 > Bei WF mit dem Workflowdiensthost wird das Überwachungsprofil in der Regel mit einer Konfigurationsdatei erstellt. Es ist auch möglich, ein Überwachungsprofil mit Code zu erstellen. Dazu wird die API für Überwachungsprofile und Überwachungsabfragen verwendet.
 
-Ein Profil, das als XML-Konfigurationsdatei konfiguriert ist, wird mit einer Verhaltenserweiterung auf einen Überwachungsteilnehmer angewendet. Dies wird einem WorkflowServiceHost hinzugefügt, wie weiter unten beschrieben [Konfigurieren der nachverfolgung für einen Workflow](configuring-tracking-for-a-workflow.md).
+Ein Profil, das als XML-Konfigurationsdatei konfiguriert ist, wird mit einer Verhaltenserweiterung auf einen Überwachungsteilnehmer angewendet. Dies wird einem Workflow Service Host wie im späteren Abschnitt [Konfigurieren der Überwachung für einen Workflow](configuring-tracking-for-a-workflow.md)beschrieben hinzugefügt.
 
-Der Detailliertheitsgrad der Überwachungsdatensätze, die vom Host ausgegeben werden, wird von den Konfigurationseinstellungen im Überwachungsprofil bestimmt. Ein Überwachungsteilnehmer abonniert Überwachungsdatensätze, indem einem Überwachungsprofil Abfragen hinzugefügt werden. Um alle Nachverfolgungsdatensätze zu abonnieren, muss das Überwachungsprofil alle Überwachungsabfragen mit "\*" in den Namensfeldern "in den einzelnen Abfragen.
+Der Detailliertheitsgrad der Überwachungsdatensätze, die vom Host ausgegeben werden, wird von den Konfigurationseinstellungen im Überwachungsprofil bestimmt. Ein Überwachungsteilnehmer abonniert Überwachungsdatensätze, indem einem Überwachungsprofil Abfragen hinzugefügt werden. Um alle Überwachungsdaten Sätze zu abonnieren, muss das Überwachungs Profil alle nach Verfolgungs Abfragen mithilfe von "\*" in den namens Feldern der einzelnen Abfragen angeben.
 
 Es folgen einige häufige Beispiele für Überwachungsprofile.
 
@@ -388,5 +388,5 @@ Es folgen einige häufige Beispiele für Überwachungsprofile.
 ## <a name="see-also"></a>Siehe auch
 
 - [SQL-Nachverfolgung](./samples/sql-tracking.md)
-- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server-App-Fabric-Überwachung](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Überwachen von Anwendungen mit App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

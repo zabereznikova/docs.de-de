@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 20ca8f049298f75412da4c8a7e58975954f67741
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968858"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838025"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debuggen von Windows-Authentifizierungsfehlern
 Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt die Security Support Provider-Schnittstelle (SSPI) Sicherheitsprozesse ab. Wenn auf der SSPI-Ebene Sicherheitsfehler auftreten, werden Sie von Windows Communication Foundation (WCF) angezeigt. Dieses Thema enthält ein Framework und eine Reihe von Fragen zur Diagnose der Fehler.  
@@ -36,22 +36,22 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
  Die Tabellenheader zeigen mögliche vom Server verwendete Kontotypen. Die linke Spalte zeigt mögliche vom Client verwendete Kontotypen.  
   
-||Lokaler Benutzer|Lokales System|Domänenbenutzer|Domänencomputer|  
+||Lokaler Benutzer|Lokaler Dienst|Domänenbenutzer|Domänencomputer|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Lokaler Benutzer|NTLM|NTLM|NTLM|NTLM|  
-|Lokales System|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
+|Lokaler Dienst|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
 |Domänenbenutzer|NTLM|NTLM|Kerberos|Kerberos|  
 |Domänencomputer|NTLM|NTLM|Kerberos|Kerberos|  
   
  Zu den vier Kontotypen gehören im Einzelnen:  
   
-- Lokaler Benutzer: Nur für das Computerbenutzer Profil. Beispiel: `MachineName\Administrator` oder `MachineName\ProfileName`.  
+- Lokaler Benutzer: Nur Computerbenutzerprofil. Beispiel: `MachineName\Administrator` oder `MachineName\ProfileName`.  
   
-- Lokales System: Das integrierte Konto System auf einem Computer, der keiner Domäne beigetreten ist.  
+- Lokales System: Das integrierte Konto SYSTEM auf einem Computer, der nicht mit einer Domäne verknüpft ist.  
   
-- Domänen Benutzer: Ein Benutzerkonto in einer Windows-Domäne. Beispiel: `DomainName\ProfileName`.  
+- Domänenbenutzer: Ein Benutzerkonto auf einer Windows-Domäne. Beispiel: `DomainName\ProfileName`.  
   
-- Domänen Computer: Ein Prozess mit Computer Identität, der auf einem Computer ausgeführt wird, der einer Windows-Domäne beigetreten ist. Beispiel: `MachineName\Network Service`.  
+- Domänencomputer: Ein Prozess mit Computeridentität, der auf einem Computer ausgeführt wird, der mit einer Windows-Domäne verknüpft ist. Beispiel: `MachineName\Network Service`.  
   
 > [!NOTE]
 > Die Dienstanmeldeinformationen werden aufgezeichnet, wenn die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode der <xref:System.ServiceModel.ServiceHost>-Klasse aufgerufen wird. Die Clientanmeldeinformationen werden immer dann gelesen, wenn der Client eine Nachricht sendet.  
@@ -93,12 +93,12 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
     1. Führen Sie dies mit der folgenden Anweisung in Code aus: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist im [ \<Windows->](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)enthalten.  
+    2. Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist in der [\<Windows->](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)enthalten.  
   
 ### <a name="ntlm-protocol"></a>NTLM-Protokoll  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>SSP-Aushandlung greift auf NTLM zurück, NTLM ist jedoch deaktiviert  
- Die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> -Eigenschaft ist auf `false`festgelegt, was bewirkt, dass Windows Communication Foundation (WCF) einen Best-Effort-Wert auslöst, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.  
+ Die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft ist auf `false`festgelegt, was bewirkt, dass Windows Communication Foundation (WCF) einen Best-Effort-Wert auslöst, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.  
   
  Die folgenden Schritte zeigen, wie ein Zurückgreifen auf NTLM deaktiviert wird.  
   
@@ -139,7 +139,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI ist nicht verfügbar  
- Die folgenden Betriebssysteme unterstützen die Windows-Authentifizierung nicht, wenn Sie als Server verwendet wird: [!INCLUDE[wxp](../../../../includes/wxp-md.md)]Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition und [!INCLUDE[wv](../../../../includes/wv-md.md)]Home Edition.  
+ Die folgenden Betriebssysteme unterstützen die Windows-Authentifizierung nicht, wenn Sie als Server verwendet wird: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition und Windows Vista Home Editions.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Entwickeln und Bereitstellen mit unterschiedlichen Identitäten  
  Wenn Sie Ihre Anwendung auf einem bestimmten Computer entwickeln, die Anwendung anschließend auf einem anderen Computer bereitstellen und dabei unterschiedliche Kontotypen für die Authentifizierung verwenden, kann es vorkommen, dass sich das Verhalten von Computer zu Computer unterscheidet. Ein Beispiel: Angenommen, Sie entwickeln Ihre Anwendung auf einem Computer unter Windows&#160;XP&#160;Pro und verwenden dabei den `SSPI Negotiated`-Authentifizierungsmodus. Wenn die Authentifizierung unter Verwendung eines lokalen Benutzerkontos erfolgt, wird das NTLM-Protokoll verwendet. Nachdem die Entwicklung der Anwendung abgeschlossen ist, stellen Sie den Dienst für einen Computer unter Windows Server&#160;2003 bereit, wo er im Rahmen eines Domänenkontos ausgeführt wird. Der Dienst kann nun nicht mehr vom Client authentifiziert werden, da nun Kerberos und ein Domänencontroller verwendet werden.  

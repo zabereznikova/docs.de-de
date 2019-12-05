@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: de03ce61535d4695a00d0c4b8998ef4b81583425
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347869"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838155"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Konstanten und Enumerationen (Visual Basic)
 
@@ -53,7 +53,7 @@ Visual Basic stellt eine Reihe von vordefinierten Konstanten und Enumerationen f
 
  In der folgenden Tabelle sind die von Visual Basic bereitgestellten Enumerationen aufgeführt und beschrieben.  
   
-|Enumeration|Beschreibung|  
+|-Enumeration|Beschreibung|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|Gibt den Fenster Stil an, der für das aufgerufene Programm verwendet wird, wenn die <xref:Microsoft.VisualBasic.Interaction.Shell%2A>-Funktion aufgerufen wird.|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|Gibt an, wie Sounds beim Aufrufen von Audiomethoden abgespielt werden.|  
@@ -84,6 +84,5 @@ Visual Basic stellt eine Reihe von vordefinierten Konstanten und Enumerationen f
 ## <a name="see-also"></a>Siehe auch
 
 - [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)
 - [Übersicht über Konstanten](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Übersicht über Enumerationen](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

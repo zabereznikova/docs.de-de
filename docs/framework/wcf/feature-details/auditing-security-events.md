@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 4e258da1478c089b01c773581472a2b0fa0c4013
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584987"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838090"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
-Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
+Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, können mit der Überwachungsfunktion Sicherheitsereignisse (entweder Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
   
  Mithilfe der Überwachung können Administratoren bereits stattgefundene oder gerade laufende Angriffe erkennen. Darüber hinaus können Entwickler mittels Überwachung sicherheitsrelevante Probleme debuggen. Falls beispielsweise berechtigten Benutzern versehentlich aufgrund eines Fehlers in der Konfiguration der Autorisierung oder Überprüfungsrichtlinie der Zugriff verweigert wird, kann die Ursache für diesen Fehler schnell durch Überprüfung des Ereignisprotokolls erkannt und isoliert werden.  
   
- Weitere Informationen zu WCF-Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung von WCF finden Sie unter [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Weitere Informationen zur WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zum Programmieren von WCF finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Überwachungsstufe und Überwachungsverhalten  
  Es gibt zwei Stufen für die Sicherheitsüberwachung:  
   
 - Autorisierung auf Dienstebene: Es wird ein Aufrufer autorisiert.  
   
-- Auf der Nachrichtenebene, in der WCF für die Gültigkeit der Nachricht überprüft und authentifiziert den Aufrufer.  
+- Die Nachrichten Ebene, in der WCF die Gültigkeit der Nachricht prüft und den Aufrufer authentifiziert.  
   
- Sie können beide Überwachungsstufen auf Erfolg oder Fehler, die so genannte überprüfen die *Überwachungsverhalten*.  
+ Sie können beide Überwachungs Stufen auf Erfolg oder Fehler überprüfen. Dies wird als Überwachungs *Verhalten*bezeichnet.  
   
 ## <a name="audit-log-location"></a>Auswahl des Überwachungsprotokolls  
- Nachdem Überwachungsstufe und Überwachungsverhalten festgelegt wurden, können Sie (oder ein Administrator) angeben, in welches Überwachungsprotokoll geschrieben werden soll. Die drei Optionen sind: Standard, Anwendung und Sicherheit. Wenn Sie Standard auswählen, ist das tatsächlich verwendete Protokoll vom verwendeten Betriebssystem abhängig und davon, ob auf diesem System in das Sicherheitsprotokoll geschrieben werden darf. Weitere Informationen finden Sie im Abschnitt "Betriebssystem" weiter unten in diesem Thema.  
+ Nachdem Überwachungsstufe und Überwachungsverhalten festgelegt wurden, können Sie (oder ein Administrator) angeben, in welches Überwachungsprotokoll geschrieben werden soll. Zur Auswahl stehen drei Optionen: Standard (Default), Anwendung (Application) und Sicherheit (Security). Wenn Sie Standard auswählen, ist das tatsächlich verwendete Protokoll vom verwendeten Betriebssystem abhängig und davon, ob auf diesem System in das Sicherheitsprotokoll geschrieben werden darf. Weitere Informationen finden Sie im Abschnitt "Betriebs System" weiter unten in diesem Thema.  
   
  Zum Schreiben in das Sicherheitsprotokoll ist die Berechtigungsstufe `SeAuditPrivilege` erforderlich. Standardmäßig verfügen nur die Konten "Lokales System" und "Netzwerkdienst" über diese Berechtigung. Zum Verwalten der Sicherheitsprotokollfunktionen `read` und `delete` ist die Berechtigungsstufe `SeSecurityPrivilege` erforderlich. Standardmäßig verfügen nur Administratoren über diese Berechtigung.  
   
@@ -51,10 +51,10 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Legt fest, welche Arten von Ereignissen für die Dienstautorisierung auf Dienstebene überwacht werden. Zur Auswahl stehen `None`, `Failure`, `Success` und `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Legt fest, was mit der Clientanforderung geschieht, wenn bei der Überwachung ein Fehler auftritt. Zum Beispiel, wenn der Dienst versucht, in das Sicherheitsprotokoll zu schreiben, ohne über die `SeAuditPrivilege`-Berechtigung zu verfügen. Der Standardwert `true` gibt an, dass Fehler ignoriert werden und die Clientanforderung normal verarbeitet wird.|  
   
- Ein Beispiel für das Einrichten einer Anwendung, Überwachungsereignisse zu protokollieren, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Ein Beispiel für das Einrichten einer Anwendung zum Protokollieren von Überwachungs Ereignissen finden Sie unter Vorgehensweise: Überwachen von [Sicherheits Ereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-### <a name="configuration"></a>Konfiguration  
- Sie können auch die Konfiguration verwenden, an Überwachungsverhalten durch Hinzufügen einer [ \<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) unter der [ \<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Sie müssen das Element unter Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) wie im folgenden Code gezeigt.  
+### <a name="configuration"></a>-Konfiguration  
+ Sie können auch die Konfiguration verwenden, um das Überwachungs Verhalten anzugeben, indem Sie eine [\<serviceSecurityAudit->](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) unter dem [\<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)hinzufügen. Sie müssen das-Element unter einem [\<Verhaltens >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) hinzufügen, wie im folgenden Code gezeigt.  
   
 ```xml  
 <configuration>  
@@ -73,10 +73,10 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 </configuration>  
 ```  
   
- Falls bei aktivierter Überwachung `auditLogLocation` nicht angegeben wird, lautet der standardmäßige Protokollname "Security" bei Plattformen, auf denen in das Sicherheitsprotokoll geschrieben werden darf. Andernfalls wird "Application" verwendet. Das Schreiben in das Sicherheitsprotokoll wird nur von den Betriebssystemen [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt. Weitere Informationen finden Sie im Abschnitt "Betriebssystem" weiter unten in diesem Thema.  
+ Falls bei aktivierter Überwachung `auditLogLocation` nicht angegeben wird, lautet der standardmäßige Protokollname "Security" bei Plattformen, auf denen in das Sicherheitsprotokoll geschrieben werden darf. Andernfalls wird "Application" verwendet. Nur die Betriebssysteme [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und Windows Vista unterstützen das Schreiben in das Sicherheitsprotokoll. Weitere Informationen finden Sie im Abschnitt "Betriebs System" weiter unten in diesem Thema.  
   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
- Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen finden Sie unter den Microsoft Support-Artikel zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige in Windows XP unter [anzeigen und Verwalten von Ereignisprotokollen in der Ereignisanzeige in Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
+ Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen finden Sie im Microsoft-Support Artikel zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe des Ereignisanzeige in Windows XP unter [anzeigen und Verwalten von Ereignisprotokollen in Ereignisanzeige in Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sind die in das Anwendungsprotokoll geschriebenen Überwachungsereignisse für alle authentifizierten Benutzer sichtbar.  
   
@@ -87,8 +87,8 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
   
 |System|Anwendungsprotokoll|Sicherheitsprotokoll|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] oder höher|Unterstützt|Nicht unterstützt|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)]|Unterstützt|Threadkontext muss `SeAuditPrivilege` verarbeiten|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] oder höher|unterstützt|Nicht unterstützt|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] und Windows Vista|unterstützt|Threadkontext muss `SeAuditPrivilege` verarbeiten|  
   
 #### <a name="other-factors"></a>Andere Faktoren  
  Neben dem Betriebssystem wird die Aktivierung der Protokollierung noch durch andere, in der folgenden Tabelle beschriebene Einstellungen gesteuert.  
@@ -107,4 +107,4 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 - [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

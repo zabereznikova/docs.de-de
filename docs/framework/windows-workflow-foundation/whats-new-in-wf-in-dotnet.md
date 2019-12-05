@@ -2,12 +2,12 @@
 title: Neues in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 0244457a051740f37c11c48f41d98bdb2d741aec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142032"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837583"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Neues in Windows Workflow Foundation in .NET 4.5
 
@@ -19,17 +19,17 @@ Windows Workflow Foundation (WF) in .NET Framework 4,5 führt viele neue Feature
 > - C#Ausdrücke werden im Designer ersetzt, wobei der Nachrichten **Wert in XAML festgelegt wurde**.
 > - Viele Erstellungsfehler einschließlich des folgenden Fehlers treten auf.
 >
-> **das Dateiformat ist mit dem aktuellen Ziel Ziel Framework nicht kompatibel. Zum Konvertieren des Dateiformats müssen Sie die Datei explizit speichern. Diese Fehlermeldung wird entfernt, nachdem Sie die Datei gespeichert und den Designer erneut geöffnet haben.**
+> **Das Dateiformat ist mit dem aktuellen Ziel Ziel Framework nicht kompatibel. Speichern Sie die Datei explizit, um das Dateiformat zu konvertieren. Diese Fehlermeldung wird entfernt, nachdem Sie die Datei gespeichert und den Designer erneut geöffnet haben.**
 
 ## <a name="BKMK_Versioning"></a>Workflow Versionsverwaltung
 
 In .NET Framework 4,5 wurden mehrere neue Versions Verwaltungsfunktionen eingeführt, die auf der neuen <xref:System.Activities.WorkflowIdentity> Klasse basieren. <xref:System.Activities.WorkflowIdentity> bietet Anwendern von Workflowanwendungen einen Mechanismus, um ihrer Definition eine persistente Workflowinstanz zuzuordnen.
 
-- Entwickler, die das <xref:System.Activities.WorkflowApplication>-Hosting verwenden, können mit <xref:System.Activities.WorkflowIdentity> das parallele Hosten mehrerer Versionen eines Workflows aktivieren. Persistente Workflowinstanzen können mit der neuen <xref:System.Activities.WorkflowApplicationInstance>-Klasse geladen werden, und anschließend kann <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> vom Host verwendet werden, um beim Instanziieren von <xref:System.Activities.WorkflowApplication> die richtige Version der Workflowdefinition bereitzustellen. Weitere Informationen finden Sie unter [Verwenden von workflowidentity und Versions](using-workflowidentity-and-versioning.md) Verwaltung und [Vorgehensweise: Hosten Sie mehrere Versionen eines Workflows nebeneinander](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Entwickler, die das <xref:System.Activities.WorkflowApplication>-Hosting verwenden, können mit <xref:System.Activities.WorkflowIdentity> das parallele Hosten mehrerer Versionen eines Workflows aktivieren. Persistente Workflowinstanzen können mit der neuen <xref:System.Activities.WorkflowApplicationInstance>-Klasse geladen werden, und anschließend kann <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> vom Host verwendet werden, um beim Instanziieren von <xref:System.Activities.WorkflowApplication> die richtige Version der Workflowdefinition bereitzustellen. Weitere Informationen finden Sie unter [Verwenden von workflowidentity und Versions](using-workflowidentity-and-versioning.md) Verwaltung und Gewusst [wie: Hosten mehrerer Versionen eines Workflows nebeneinander](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 - <xref:System.ServiceModel.WorkflowServiceHost> ist jetzt ein versionsübergreifender Host. Wenn eine neue Version eines Workflowdiensts bereitgestellt wird, werden neue Instanzen mithilfe des neuen Diensts erstellt, während vorhandene Instanzen mit der vorherigen Version abgeschlossen werden. Weitere Informationen finden Sie unter parallele [Versionsverwaltung in Workflow Service Host](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- Dynamische Updates werden eingeführt, die einen Mechanismus zum Aktualisieren der Definition einer persistenten Workflowinstanz bereitstellen. Weitere Informationen finden Sie unter [dynamisches Update](dynamic-update.md) und [Vorgehensweise: Aktualisieren Sie die Definition einer laufenden Workflow Instanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
+- Dynamische Updates werden eingeführt, die einen Mechanismus zum Aktualisieren der Definition einer persistenten Workflowinstanz bereitstellen. Weitere Informationen finden Sie unter [dynamisches Update](dynamic-update.md) und Gewusst [wie: Aktualisieren der Definition einer laufenden Workflow Instanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 - Ein sqlworkflowinstancestoreschemaupgrade. SQL-Datenbankskript wird zur Aktualisierung von Persistenzdatenbanken bereitgestellt, die mit den .NET Framework 4-Daten Bank Skripts erstellt Dieses Skript aktualisiert .NET Framework 4-Persistenzdatenbanken zur Unterstützung der neuen Versions Verwaltungsfunktionen in .NET Framework 4,5. Den persistenten Workflowinstanzen in der Datenbank werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein. Weitere Informationen finden [Sie unter Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflow Versions](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)Verwaltung.
 
@@ -192,7 +192,7 @@ In .NET Framework 4 konnten nicht aktivitätenelemente debugbreakpunkte nicht un
 
 ### <a name="BKMK_ActivityDelegates"></a>Definieren und Verarbeiten von activitydelegatobjekten im Designer
 
-Die Aktivitäten in .NET Framework 4 wurden <xref:System.Activities.ActivityDelegate> Objekten verwendet, um Ausführungs Punkte verfügbar zu machen, an denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten, aber die Verwendung dieser Ausführungs Punkte erforderte normalerweise eine ziemlich große Menge an Code. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Verarbeiten von Aktivitäts Delegaten im Workflow-Designer](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+Die Aktivitäten in .NET Framework 4 wurden <xref:System.Activities.ActivityDelegate> Objekten verwendet, um Ausführungs Punkte verfügbar zu machen, an denen andere Teile des Workflows mit der Ausführung eines Workflows interagieren konnten, aber die Verwendung dieser Ausführungs Punkte erforderte normalerweise eine ziemlich große Menge an Code. In diesem Release können Entwickler die Aktivitätsdelegaten mit dem Workflow-Designer definieren und nutzen. Weitere Informationen finden Sie unter Gewusst [wie: definieren und](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)verarbeiten von Aktivitäts Delegaten im Workflow-Designer.
 
 ### <a name="BKMK_BuildTimeValidation"></a>Überprüfung der Build-Zeit
 
@@ -220,7 +220,7 @@ Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Wor
 
 ### <a name="BKMK_StateMachine"></a>Zustandsautomatworkflows
 
-Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
+Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im [Microsoft .NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
 
 1. Festlegen von Haltepunkten für Zustände
 
@@ -230,7 +230,7 @@ Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im
 
 4. Aktivitäten, die zum Erstellen von Zustandsautomatworkflows verwendet werden, darunter: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> und <xref:System.Activities.Statements.Transition>
 
-Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus dem Schritt " [Getting Started Tutorial](getting-started-tutorial.md) " [Vorgehensweise: Erstellen Sie einen Zustands Automaten Workflow](how-to-create-a-state-machine-workflow.md).
+Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus dem Schritt " [Getting Started Tutorial](getting-started-tutorial.md) " Gewusst [wie: Erstellen eines Zustands Automaten Workflows](how-to-create-a-state-machine-workflow.md).
 
 ![Die Abbildung zeigt den abgeschlossenen Zustandsautomatworkflow.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
@@ -238,4 +238,4 @@ Weitere Informationen zum Erstellen von Zustandsautomatworkflows finden Sie unte
 
 ### <a name="BKMK_ContractFirst"></a>Vertrag zuerst-Workflow Entwicklung
 
-Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter [Vorgehensweise: Erstellen Sie einen Workflow Dienst, der einen vorhandenen Dienstvertrags](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.
+Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter Gewusst [wie: Erstellen eines Workflow Dienstanbieter, der einen vorhandenen Dienstvertrag](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.

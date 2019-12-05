@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349955"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837089"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic-Sprachreferenz
 
@@ -29,7 +29,7 @@ Dieser Abschnitt enthält Referenzinformationen zu verschiedenen Aspekten der Vi
  [Member der Visual Basic-Laufzeitbibliothek](../../visual-basic/language-reference/runtime-library-members.md)  
  Führt die Klassen und Module des <xref:Microsoft.VisualBasic?displayProperty=nameWithType>-Namespace auf, zusammen mit Links zu ihren Memberfunktionen, Methoden, Eigenschaften, Konstanten und Enumerationen.  
   
- [Schlüsselwörter](../../visual-basic/language-reference/keywords/index.md)  
+ [Stichwörter](../../visual-basic/language-reference/keywords/index.md)  
  Führt alle Visual Basic-Schlüsselwörter und stellt Link zu weiteren Informationen bereit.  
   
  [Attribute (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
@@ -85,8 +85,5 @@ Dieser Abschnitt enthält Referenzinformationen zu verschiedenen Aspekten der Vi
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
- [Visual Basic](../../visual-basic/index.md)  
- Bietet umfassende Hilfe zu allen Bereichen der Visual Basic Sprache.  
-  
  [Visual Basic-Befehlszeilencompiler](../../visual-basic/reference/command-line-compiler/index.md)  
  Beschreibt, wie der Befehlszeilen Compiler als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (IDE) von Visual Studio verwendet wird.

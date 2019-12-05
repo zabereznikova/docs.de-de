@@ -1,19 +1,19 @@
 ---
 title: Wertoptionen
 description: Erfahren Sie mehr F# über den Wert Optionstyp, bei dem es sich um eine Struktur Version des Options Typs handelt.
-ms.date: 02/06/2019
-ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: 0e9882ab4acdf2757705ef6022516d3572d87ef2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424022"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837115"
 ---
 # <a name="value-options"></a>Wertoptionen
 
-Der Wert Optionstyp in F# wird verwendet, wenn die folgenden beiden Bedingungen vorliegen:
+Die Option "Value"-Typ in F# wird verwendet, wenn halten die folgenden Fällen:
 
-1. Ein Szenario ist für eine [ F# Option](options.md)geeignet.
+1. Ein Szenario eignet sich für ein [F#-Option](options.md).
 2. Die Verwendung einer Struktur bietet einen Leistungsvorteil in Ihrem Szenario.
 
 Nicht alle Leistungs sensiblen Szenarios werden mithilfe von Strukturen "gelöst". Sie müssen die zusätzlichen Kosten für das Kopieren in Erwägung gezogen, wenn Sie Sie anstelle von Verweis Typen verwenden. Große F# Programme instanziieren jedoch häufig viele optionale Typen, die durch heiße Pfade fließen, und in solchen Fällen können Strukturen im Laufe der Lebensdauer eines Programms häufig eine bessere Gesamtleistung erzielen.
@@ -63,15 +63,13 @@ Zu diesem Zeitpunkt gibt es eine Eigenschaft für Wert Optionen: `Value`. Wenn d
 
 ## <a name="value-option-functions"></a>Optionen für Wert Optionen
 
-Zurzeit gibt es eine Modul gebundene Funktion für Wert Optionen `defaultValueArg`:
+Das `ValueOption`-Modul in FSharp. Core enthält eine entsprechende Funktionalität für das `Option` Modul. Es gibt einige Unterschiede im Namen, wie z. b. `defaultValueArg`:
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-Wie bei der `defaultArg`-Funktion gibt `defaultValueArg` den zugrunde liegenden Wert der angegebenen Wert Option zurück, wenn dieser vorhanden ist. Andernfalls wird der angegebene Standardwert zurückgegeben.
-
-Zurzeit sind keine weiteren Modul gebundenen Funktionen für Wert Optionen vorhanden.
+Dies verhält sich wie `defaultArg` im `Option`-Modul, arbeitet jedoch stattdessen mit einer Wert Option.
 
 ## <a name="see-also"></a>Siehe auch
 

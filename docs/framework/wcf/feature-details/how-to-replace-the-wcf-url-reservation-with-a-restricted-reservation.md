@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 981c4890b11130b937e176da78f378340c0d3894
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991667"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837388"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung
 Mithilfe einer URL-Reservierung können Sie einschränken, wer Nachrichten von einer URL oder einem Satz von URLs empfangen darf. Eine Reservierung besteht aus einer URL-Vorlage, einer Zugriffssteuerungsliste (ACL) und einer Gruppe von Flags. Die URL-Vorlage definiert, auf welche URLs sich die Reservierung auswirkt. Weitere Informationen zur Verarbeitung von URL-Vorlagen finden Sie unter [Routing eingehender Anforderungen](https://go.microsoft.com/fwlink/?LinkId=136764). Die ACL steuert, welche Benutzer oder Benutzergruppen Nachrichten von den angegebenen URLs empfangen dürfen. Die Flags geben an, ob die Reservierung einem Benutzer oder einer Benutzergruppe die Berechtigung erteilt, die URL direkt zu überwachen oder die Überwachungsberechtigung an einen anderen Prozess zu übergeben.  
   
  Im Rahmen der Standardkonfiguration des Betriebssystems erstellt Windows Communication Foundation (WCF) eine Global barrierefreie Reservierung für Port 80, um allen Benutzern das Ausführen von Anwendungen zu ermöglichen, die eine duale HTTP-Bindung für die Duplex Kommunikation verwenden. Da die ACL bei dieser Reservierung allen Benutzern zur Verfügung steht, können Administratoren die Berechtigung, eine URL oder einen Satz von URLs zu überwachen, nicht explizit zulassen oder verweigern. In diesem Thema wird erläutert, wie Sie diese Reservierung löschen und mit einer eingeschränkten ACL neu erstellen.  
   
- Unter [!INCLUDE[wv](../../../../includes/wv-md.md)] oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)] können Sie alle HTTP-URL-Reservierungen von einer Eingabeaufforderung auf höherer Ebene aus anzeigen, indem Sie `netsh http show urlacl` eingeben.  Das folgende Beispiel zeigt, was eine WCF-URL-Reservierung ähneln sollte.  
+ Unter Windows Vista oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)] können Sie alle HTTP URL-Reservierungen an einer Eingabeaufforderung mit erhöhten Rechten anzeigen, indem Sie `netsh http show urlacl`eingeben.  Das folgende Beispiel zeigt, was eine WCF-URL-Reservierung ähneln sollte.  
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -30,7 +30,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **Zubehör**, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung** , und klicken Sie im angezeigten Kontextmenü auf **als Administrator ausführen** . Klicken Sie im Fenster "Benutzerkontensteuerung" auf " **weiter** ", um möglicherweise Berechtigungen zum Fortfahren anzufordern.  
   
-2. Geben Sie im Eingabe Aufforderungs Fenster **Netsh HTTP DELETE http://+:80/Temporary_Listen_Addresses/ urlacl URL =** ein.  
+2. Geben Sie im Eingabe Aufforderungs Fenster **Netsh HTTP DELETE urlacl URL =http://+:80/Temporary_Listen_Addresses/** ein.  
   
 3. Wenn die Reservierung erfolgreich gelöscht wurde, wird die folgende Meldung angezeigt. **URL-Reservierung erfolgreich gelöscht**  
   
@@ -41,7 +41,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **Zubehör**, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung** , und klicken Sie im angezeigten Kontextmenü auf **als Administrator ausführen** . Klicken Sie im Fenster "Benutzerkontensteuerung" auf " **weiter** ", um möglicherweise Berechtigungen zum Fortfahren anzufordern.  
   
-2. Geben Sie in der Eingabeaufforderung " **net localgroup\<" Name der Sicherheits\<Gruppe > "/comment:" Sicherheitsgruppen Beschreibung > "/Add** ein. **Ersetzen\<** Sie den Namen der Sicherheitsgruppe > durch den Namen der Sicherheitsgruppe, die Sie erstellen möchten, und  **\<die Beschreibung der Sicherheitsgruppe >** mit einer passenden Beschreibung für die Sicherheitsgruppe.  
+2. Geben Sie **"net localgroup"\<Sicherheitsgruppen Name > "/comment:"\<Sicherheitsgruppen Beschreibung > "/Add** an der Eingabeaufforderung ein. Ersetzen Sie **\<Name der Sicherheitsgruppe >** durch den Namen der Sicherheitsgruppe, die Sie erstellen möchten, und\<Sie die **Beschreibung der Sicherheitsgruppe >** mit einer geeigneten Beschreibung für die Sicherheitsgruppe.  
   
 3. Wenn die Sicherheitsgruppe erfolgreich erstellt wurde, wird die folgende Meldung angezeigt. **Der Befehl wurde erfolgreich abgeschlossen.**  
   
@@ -55,6 +55,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **Zubehör**, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung** , und klicken Sie im angezeigten Kontextmenü auf **als Administrator ausführen** . Klicken Sie im Fenster "Benutzerkontensteuerung" auf " **weiter** ", um möglicherweise Berechtigungen zum Fortfahren anzufordern.  
   
-2. Geben Sie an der Eingabeaufforderung **http://+:80/Temporary_Listen_Addresses/ netsh http add urlacl URL = User =\\ "\< Computername >\> < Sicherheitsgruppen Name** ein. **\<** Ersetzen  **\<** Sie den Computernamen > durch den Namen des Computers, auf dem die Gruppe erstellt werden muss, und den Namen der Sicherheitsgruppe mit dem Namen der zuvor erstellten Sicherheitsgruppe >.  
+2. Geben Sie an der Eingabeaufforderung **netsh http add urlacl URL =http://+:80/Temporary_Listen_Addresses/ User = "\< Computername >\\ < Name der Sicherheitsgruppe** ein. Ersetzen Sie **\<Computername >** durch den Namen des Computers, auf dem die Gruppe erstellt werden muss, und **\<Name der Sicherheitsgruppe** mit dem Namen der zuvor erstellten Sicherheitsgruppe >.  
   
 3. Wenn die Reservierung erfolgreich erstellt wurde, wird die folgende Meldung angezeigt. **URL-Reservierung wurde erfolgreich hinzugefügt**.

@@ -2,12 +2,12 @@
 title: Nachverfolgung von Variablen und Argumenten
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 75ec8124200b146965214d161d0e6f246888542c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c5d3fe6626c22184edd83de6aedad8589ab2ef35
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640983"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837544"
 ---
 # <a name="variable-and-argument-tracking"></a>Nachverfolgung von Variablen und Argumenten
 Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Daten oft als nützlich erweisen. Sie stellt zusätzlichen Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] können Sie alle sichtbaren Variablen oder Argumente innerhalb des Bereichs einer Aktivität in einem Workflow mithilfe der Nachverfolgung extrahieren. Überwachungsprofile vereinfachen das Extrahieren von Daten.  
@@ -17,7 +17,7 @@ Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Dat
   
 - Wenn eine Variable über den Variablennamen angegeben wird, sucht die Nachverfolgung in der aktuellen Aktivität, die nachverfolgt wird, und in den übergeordneten Aktivitäten nach der Variable. Es wird im aktuellen Aktivitätsbereich und im übergeordneten Bereich nach der Variablen gesucht.  
   
-- Wenn zu extrahierenden Variablen angegeben werden, mit Name = "*", und klicken Sie dann alle Variablen innerhalb der aktuellen Aktivität, die verfolgt werden extrahiert. In diesem Fall werden keine Variablen extrahiert, die innerhalb des Bereichs liegen, jedoch in übergeordneten Aktivitäten definiert sind.  
+- Wenn Variablen, die extrahiert werden sollen, mit Name = "\*" angegeben werden, werden alle Variablen innerhalb der aktuellen Aktivität, die nachverfolgt werden, extrahiert. In diesem Fall werden keine Variablen extrahiert, die innerhalb des Bereichs liegen, jedoch in übergeordneten Aktivitäten definiert sind.  
   
  Beim Extrahieren von Argumenten sind die extrahierten Argumente vom Zustand der Aktivität abhängig. Wenn der Zustand einer Aktivität Executing ist, können nur `InArguments` extrahiert werden. Bei jedem anderen Aktivitätszustand (Closed, Faulted, Canceled) können alle Argumente, InArguments und OutArguments, extrahiert werden.  
   
@@ -48,5 +48,5 @@ Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Dat
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server-App-Fabric-Überwachung](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Überwachen von Anwendungen mit App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

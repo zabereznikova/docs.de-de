@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung inF#
 description: Erfahren Sie F# , wie Sie eine saubere Unterstützung für Asynchronie basierend auf einem Programmiermodell auf Sprachebene bereitstellen, das aus den Konzepten der funktionalen Programmierung abgeleitet ist.
 ms.date: 12/17/2018
-ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395792"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837102"
 ---
 # <a name="async-programming-in-f"></a>Async-Programmierung in F-\#
 
@@ -39,7 +39,7 @@ In praktischer Hinsicht werden asynchrone Berechnungen in F# so geplant, dass Si
 
 Das wichtigste, was Sie tun sollten, ist, dass asynchrone Berechnungen unabhängig vom Hauptprogramm Fluss sind. Obwohl es nur wenige Garantien gibt, wann oder wie eine asynchrone Berechnung ausgeführt wird, gibt es einige Ansätze zum orchestrieren und planen. Im restlichen Teil dieses Artikels werden die Kernkonzepte F# für asynchroniität und die Verwendung der in F#integrierten Typen, Funktionen und Ausdrücke erläutert.
 
-## <a name="core-concepts"></a>Grundlegende Konzepte
+## <a name="core-concepts"></a>Kernkonzepte
 
 In F#wird die asynchrone Programmierung auf drei Kernkonzepte zentriert:
 
@@ -127,6 +127,7 @@ let main argv =
     argv
     |> Array.map printTotalFileBytes
     |> Async.Sequential
+    |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
@@ -143,13 +144,13 @@ Da F# es sich bei asynchronen Berechnungen um eine _Spezifikation_ der Arbeit un
 
 Startet eine untergeordnete Berechnung in einer asynchronen Berechnung. Dies ermöglicht die gleichzeitige Ausführung mehrerer asynchroner Berechnungen. Die untergeordnete Berechnung gibt ein Abbruch Token mit der übergeordneten Berechnung frei. Wenn die übergeordnete Berechnung abgebrochen wird, wird die untergeordnete Berechnung ebenfalls abgebrochen.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-Verwendungszwecke:
+Eignung:
 
 - Wenn Sie mehrere asynchrone Berechnungen gleichzeitig statt einzeln ausführen möchten, diese jedoch nicht parallel geplant sind.
 - , Wenn die Lebensdauer einer untergeordneten Berechnung an die einer übergeordneten Berechnung gebunden werden soll.
@@ -163,13 +164,13 @@ Zu überwachende Elemente:
 
 Führt eine asynchrone Berechnung aus, die sofort im aktuellen Betriebssystemthread beginnt. Dies ist hilfreich, wenn Sie während der Berechnung etwas auf dem aufrufenden Thread aktualisieren müssen. Wenn eine asynchrone Berechnung z. b. eine Benutzeroberfläche aktualisieren muss (z. b. das Aktualisieren einer Statusanzeige), sollten `Async.StartImmediate` verwendet werden.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-Verwendungszwecke:
+Eignung:
 
 - Wenn Sie etwas auf dem aufrufenden Thread in der Mitte einer asynchronen Berechnung aktualisieren müssen.
 
@@ -181,13 +182,13 @@ Zu überwachende Elemente:
 
 Führt eine Berechnung im Threadpool aus. Gibt einen <xref:System.Threading.Tasks.Task%601> zurück, der im entsprechenden Zustand abgeschlossen wird, sobald die Berechnung beendet wird (das Ergebnis erzeugt, eine Ausnahme auslöst oder abgebrochen wird). Wenn kein Abbruch Token bereitgestellt wird, wird das Standard Abbruch Token verwendet.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-Verwendungszwecke:
+Eignung:
 
 - Wenn eine .NET-API aufgerufen werden muss, die erwartet, dass eine <xref:System.Threading.Tasks.Task%601> das Ergebnis einer asynchronen Berechnung darstellt.
 
@@ -199,7 +200,7 @@ Zu überwachende Elemente:
 
 Plant die parallele Ausführung einer Sequenz von asynchronen Berechnungen. Der Grad an Parallelität kann optional optimiert/gedrosselt werden, indem der `maxDegreesOfParallelism`-Parameter angegeben wird.
 
-Unter
+Signatur:
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -219,7 +220,7 @@ Zu überwachende Elemente:
 
 Plant eine Sequenz von asynchronen Berechnungen, die in der Reihenfolge ausgeführt werden, in der Sie übermittelt werden. Die erste Berechnung wird ausgeführt, dann die nächste, usw. Keine Berechnungen werden parallel ausgeführt.
 
-Unter
+Signatur:
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -238,13 +239,13 @@ Zu überwachende Elemente:
 
 Gibt eine asynchrone Berechnung zurück, die auf den Abschluss der angegebenen <xref:System.Threading.Tasks.Task%601> wartet und das Ergebnis als `Async<'T>` zurückgibt.
 
-Unter
+Signatur:
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
 ```
 
-Verwendungszwecke:
+Eignung:
 
 - Wenn Sie eine .NET-API verwenden, die eine <xref:System.Threading.Tasks.Task%601> in einer F# asynchronen Berechnung zurückgibt.
 
@@ -256,13 +257,13 @@ Zu überwachende Elemente:
 
 Erstellt eine asynchrone Berechnung, die eine angegebene `Async<'T>`ausführt und eine `Async<Choice<'T, exn>>`zurückgibt. Wenn die angegebene `Async<'T>` erfolgreich abgeschlossen wird, wird ein `Choice1Of2` mit dem resultierenden Wert zurückgegeben. Wenn eine Ausnahme ausgelöst wird, bevor Sie abgeschlossen wird, wird eine `Choice2of2` mit der ausgelösten Ausnahme zurückgegeben. Wenn Sie für eine asynchrone Berechnung verwendet wird, die selbst aus vielen Berechnungen besteht, und eine dieser Berechnungen eine Ausnahme auslöst, wird die umfassende Berechnung vollständig beendet.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-Verwendungszwecke:
+Eignung:
 
 - Wenn Sie asynchrone Aufgaben ausführen, die möglicherweise mit einer Ausnahme fehlschlagen, und Sie diese Ausnahme im Aufrufer behandeln möchten.
 
@@ -274,13 +275,13 @@ Zu überwachende Elemente:
 
 Erstellt eine asynchrone Berechnung, die die angegebene Berechnung ausführt und das Ergebnis ignoriert.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
 ```
 
-Verwendungszwecke:
+Eignung:
 
 - Wenn eine asynchrone Berechnung vorhanden ist, deren Ergebnis nicht benötigt wird. Dies entspricht dem `ignore`-Code für nicht asynchronen Code.
 
@@ -292,7 +293,7 @@ Zu überwachende Elemente:
 
 Führt eine asynchrone Berechnung aus und wartet auf das Ergebnis des aufrufenden Threads. Dieser Befehl blockiert.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -311,7 +312,7 @@ Zu überwachende Elemente:
 
 Startet eine asynchrone Berechnung im Thread Pool, die `unit`zurückgibt. Wartet nicht auf das Ergebnis. Mit `Async.Start` gestartete werden vollständig unabhängig von der übergeordneten Berechnung gestartet, die Sie aufgerufen hat. Ihre Lebensdauer ist nicht an eine übergeordnete Berechnung gebunden. Wenn die übergeordnete Berechnung abgebrochen wird, werden keine untergeordneten Berechnungen abgebrochen.
 
-Unter
+Signatur:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit

@@ -2,12 +2,12 @@
 title: Problembehandlung bei Nachrichtenwarteschlangen
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976049"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837310"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 
@@ -25,7 +25,7 @@ Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlu
 
 **F:** Muss ich MSMQ aktualisieren, um die <xref:System.ServiceModel.NetMsmqBinding>-und `MsmqIntegration` Bindungen zu verwenden?
 
-**A:** Nein. Beide Bindungen funktionieren mit MSMQ 3.0 unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Bestimmte Funktionen der Bindungen werden verfügbar, wenn Sie in [!INCLUDE[wv](../../../../includes/wv-md.md)] ein Upgrade auf MSMQ 4.0 ausführen.
+**A:** Nein. Beide Bindungen funktionieren mit MSMQ 3.0 unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Bestimmte Funktionen der Bindungen werden verfügbar, wenn Sie ein Upgrade auf MSMQ 4,0 in Windows Vista durchführen.
 
 **F:** Welche Features der <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> Bindungen sind in MSMQ 4,0 verfügbar, aber nicht in MSMQ 3,0?
 
@@ -134,9 +134,9 @@ Bei der systemweiten Warteschlange für unzustellbare Nachrichten und auch bei b
 
 **A:** Wenn Sie die MSMQ-Integrations Bindung verwenden, müssen Sie das Schema "MSMQ. Format Name" verwenden. Beispiel: msmq.formatname:DIRECT=OS:.\private$\OrdersQueue. Wenn Sie jedoch die benutzerdefinierte Warteschlange für unzustellbare Nachrichten angeben, müssen Sie das net.msmq-Schema verwenden.
 
-**F:** Wenn ich einen öffentlichen oder privaten Format Namen verwende und den Dienst Host auf [!INCLUDE[wv](../../../../includes/wv-md.md)]öffne, erhalte ich eine Fehlermeldung. Warum?
+**F:** Wenn ich einen öffentlichen oder privaten Format Namen verwende und den Dienst Host unter Windows Vista öffne, erhalte ich eine Fehlermeldung. Warum?
 
-**A:** Der WCF-Integrationskanal auf [!INCLUDE[wv](../../../../includes/wv-md.md)] überprüft, ob eine unter Warteschlange für die Haupt Anwendungs Warteschlange geöffnet werden kann, um nicht verarbeitbare Nachrichten zu verarbeiten. Der Name der untergeordneten Warteschlange wird von einem an den Listener übergebenen msmq.formatname-URI abgeleitet. Der Name der untergeordneten Warteschlange kann in MSMQ nur ein direkter Formatname sein. Deshalb tritt der Fehler auf. Ändern Sie den Warteschlangen-URI in einen direkten Formatnamen.
+**A:** Der WCF-Integrationskanal unter Windows Vista überprüft, ob eine unter Warteschlange für die Haupt Anwendungs Warteschlange geöffnet werden kann, um nicht verarbeitbare Nachrichten zu verarbeiten. Der Name der untergeordneten Warteschlange wird von einem an den Listener übergebenen msmq.formatname-URI abgeleitet. Der Name der untergeordneten Warteschlange kann in MSMQ nur ein direkter Formatname sein. Deshalb tritt der Fehler auf. Ändern Sie den Warteschlangen-URI in einen direkten Formatnamen.
 
 **F:** Wenn eine Nachricht von einer MSMQ-Anwendung empfangen wird, befindet sich die Nachricht in der Warteschlange und wird von der empfangenden WCF-Anwendung nicht gelesen. Warum?
 
@@ -174,7 +174,7 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 6. Fügen Sie als nächstes ein zweites Zertifikat-Snap-in mit den vorherigen Schritten hinzu. Wählen Sie dieses Mal jedoch **Computer Konto** aus, und klicken Sie auf **weiter**.
 
-7. Wählen Sie **lokaler Computer** , und klicken Sie auf **Fertig**stellen. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.
+7. Klicken Sie auf **Lokaler Computer**, und klicken Sie dann auf **Fertig stellen**. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.
 
 **F:** Wenn mein Dienst aus einer Warteschlange auf einem anderen Computer im Arbeitsgruppen Modus liest, wird eine Ausnahme vom Typ "Zugriff verweigert" angezeigt.
 
@@ -186,7 +186,7 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 ### <a name="remote-transacted-receives"></a>Remote durchgeführte Empfangsvorgänge
 
-**F:** Wenn eine Warteschlange auf Computer a vorhanden ist, und ein WCF-Dienst, der Nachrichten aus einer Warteschlange auf Computer B (dem transaktiven Remote Empfangs Szenario) liest, werden Nachrichten nicht aus der Warteschlange gelesen. Ablauf Verfolgungs Informationen geben an, dass der Empfangs Fehler mit der Meldung "die Transaktion kann nicht importiert werden". Was kann ich tun, um dieses Problem zu beheben?
+**F:** Wenn eine Warteschlange auf Computer a vorhanden ist, und ein WCF-Dienst, der Nachrichten aus einer Warteschlange auf Computer B (dem transaktiven Remote Empfangs Szenario) liest, werden Nachrichten nicht aus der Warteschlange gelesen. Ablauf Verfolgungs Informationen geben an, dass der Empfangs Fehler mit der Meldung "die Transaktion kann nicht importiert werden". Wie kann ich dieses Problem beheben?
 
 **A:** Hierfür gibt es drei mögliche Gründe:
 
@@ -200,7 +200,7 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 - Stellen Sie sicher, dass MSDTC in der Liste der Ausnahmen in den Firewalleinstellungen für die **Internet Verbindung** enthalten ist.
 
-- Stellen Sie sicher, dass Sie [!INCLUDE[wv](../../../../includes/wv-md.md)] verwenden. MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt remote durchgeführte Lesevorgänge. MSMQ in früheren Windows-Releases unterstützt keine remote durchgeführten Lesevorgänge.
+- Stellen Sie sicher, dass Sie Windows Vista verwenden. MSMQ unter Windows Vista unterstützt Remote transaktive Lesevorgänge. MSMQ in früheren Windows-Releases unterstützt keine remote durchgeführten Lesevorgänge.
 
 **F:** Warum wird beim Lesen aus der Warteschlange eine Ausnahme vom Typ "Zugriff verweigert" ausgelöst, wenn der Dienst, der aus der Warteschlange liest, ein Netzwerkdienst ist, beispielsweise in einem Webhost.
 
