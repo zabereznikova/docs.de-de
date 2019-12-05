@@ -2,12 +2,12 @@
 title: WCF-Diensthost (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423836"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802403"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 
@@ -33,7 +33,7 @@ Beachten Sie jedoch, dass Sie mit dem Tool den Host nicht konfigurieren können.
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Szenarien für die Verwendung des WCF-Diensthosts in Visual Studio
 
-In der folgenden Tabelle sind alle Parameter im Dialogfeld **Befehlszeilenargumente** aufgeführt. Sie finden diese, indem Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt klicken, **Eigenschaften**auswählen und dann das **Debuggen auswählen.** und klicken Sie auf **Projekt starten**. Diese Parameter sind nützlich beim Konfigurieren des WCF-Dienst Hosts.
+In der folgenden Tabelle sind alle Parameter im Dialogfeld **Befehlszeilenargumente** aufgeführt. Sie finden diese, indem Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt klicken, **Eigenschaften**auswählen und dann die Registerkarte **Debuggen** und dann auf **Projekt starten**klicken. Diese Parameter sind nützlich beim Konfigurieren des WCF-Dienst Hosts.
 
 |Parameter|Bedeutung|
 |---------------|-------------|
@@ -45,13 +45,13 @@ In der folgenden Tabelle sind alle Parameter im Dialogfeld **Befehlszeilenargume
 
 Nachdem Sie ein neues WCF-Dienstprojekt erstellt und F5 drücken, um den Debugger zu starten, beginnt der WCF-Dienst Host mit dem Hosten aller Dienste, die im Projekt gefunden werden. Der WCF-Test Client wird automatisch geöffnet, und es wird eine Liste der in der Konfigurationsdatei definierten Dienst Endpunkte angezeigt. Vom Hauptfenster aus können Sie die Parameter testen und den Dienst aufrufen.
 
-Um sicherzustellen, dass der WCF-Test Client verwendet wird, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und** **Wählen Sie dann die Registerkarte Debuggen aus. Befehlszeilenargumente** (Dialogfeld).
+Um sicherzustellen, dass der WCF-Test Client verwendet wird, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und wählen Sie dann** die Registerkarte **Debuggen** aus.
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Verwenden eines benutzerdefinierten Clients
 
-Wenn Sie einen benutzerdefinierten Client verwenden möchten, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, **`/client` und wählen** Sie dann die Registerkarte **Debuggen** aus., um auf den benutzerdefinierten Client zu verweisen, wie im folgenden Beispiel gezeigt.
+Um einen benutzerdefinierten Client zu verwenden, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, und wählen Sie dann die Registerkarte **Debuggen** aus. Klicken Sie auf **Projekt starten** , und bearbeiten Sie den `/client`-Parameter im Dialogfeld **Befehlszeilenargumente** , um auf den benutzerdefinierten Client
 
 `/client:"path/CustomClient.exe"`
 
@@ -67,7 +67,7 @@ So können Sie beispielsweise bei Verwendung der Vorlage für die Syndication-Di
 
 #### <a name="specifying-no-client"></a>Keine Angabe des Clients
 
-Klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und wählen Sie dann** die Registerkarte **Debuggen** aus, um anzugeben, dass nach dem Hosting des WCF-Diensts kein Client verwendet werden soll.das Dialogfeld "Zeilen Argumente" ist leer.
+Um anzugeben, dass nach dem WCF-Dienst Hosting kein Client verwendet werden soll, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und klicken Sie dann** **auf die Register** Karte **Debuggen** .
 
 #### <a name="using-a-custom-host"></a>Verwenden eines benutzerdefinierten Hosts
 
@@ -119,7 +119,7 @@ Mit dem Tool netsh.exe in [!INCLUDE[wv](../../../includes/wv-md.md)] unter dem e
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Weitere Informationen zu "Netsh. exe" finden Sie unter "Gewusst[wie: Verwenden des Tools" Netsh. exe "und Befehls Zeilenschalter](https://go.microsoft.com/fwlink/?LinkId=97877).
+Weitere Informationen zu "Netsh. exe" finden Sie unter "Gewusst[wie: Verwenden des Tools" Netsh. exe "und Befehls Zeilenschalter](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).
 
 ## <a name="see-also"></a>Siehe auch
 
