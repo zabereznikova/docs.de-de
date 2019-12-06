@@ -3,15 +3,15 @@ title: 'Tutorial: Vorhersagen von Preisen per Regression mit dem Modell-Generato
 description: In diesem Tutorial wird veranschaulicht, wie mit dem ML.NET-Modell-Generator ein Regressionsmodell für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977359"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552930"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Vorhersagen von Preisen per Regression mit dem Modell-Generator
 
@@ -38,7 +38,7 @@ Eine Liste der Voraussetzungen und Installationsanweisungen finden Sie in der [I
 
 ## <a name="create-a-console-application"></a>Erstellen einer Konsolenanwendung
 
-1. Erstellen Sie eine **.NET Core-Konsolenanwendung** mit dem Namen „TaxiFarePrediction“.
+1. Erstellen Sie eine **C# .NET Core-Konsolenanwendung** mit dem Namen „TaxiFarePrediction“. Stellen Sie sicher, dass die Option zum **Platzieren von Projektmappe und Projekt im selben Verzeichnis** **deaktiviert** (VS 2019) oder die Option **Verzeichnis für Projektmappe erstellen** **aktiviert** ist (VS 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Vorbereiten und Verstehen der Daten
 

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, 
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e1cb5b103459ff691bf6ed8f8ebc1fa3fd8487c3
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420715"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552318"
 ---
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
@@ -29,12 +29,12 @@ Folgende Informationen können in einem Typ gespeichert sein:
   
 - Die Arten von zulässigen Vorgängen  
   
-Der Compiler verwendet Typinformationen, um sicherzustellen, dass alle im Code ausgeführten Vorgänge *typsicher* sind. Wenn Sie z.B. eine Variable vom Typ [int](language-reference/builtin-types/integral-numeric-types.md) deklarieren, können Sie mit dem Compiler die Variable für Additions- und Subtraktionsvorgänge verwenden. Wenn Sie dieselben Vorgänge für eine Variable vom Typ [bool](language-reference/keywords/bool.md) ausführen möchten, generiert der Compiler einen Fehler, wie im folgenden Beispiel dargestellt:  
+Der Compiler verwendet Typinformationen, um sicherzustellen, dass alle im Code ausgeführten Vorgänge *typsicher* sind. Wenn Sie z.B. eine Variable vom Typ [int](language-reference/builtin-types/integral-numeric-types.md) deklarieren, können Sie mit dem Compiler die Variable für Additions- und Subtraktionsvorgänge verwenden. Wenn Sie dieselben Vorgänge für eine Variable vom Typ [bool](language-reference/builtin-types/bool.md) ausführen möchten, generiert der Compiler einen Fehler, wie im folgenden Beispiel dargestellt:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C- und C++-Entwickler sollten beachten, dass in C# [bool](language-reference/keywords/bool.md) nicht in [int](language-reference/builtin-types/integral-numeric-types.md) konvertiert werden kann.  
+> C- und C++-Entwickler sollten beachten, dass in C# [bool](language-reference/builtin-types/bool.md) nicht in [int](language-reference/builtin-types/integral-numeric-types.md) konvertiert werden kann.  
   
 Der Compiler bettet die Typinformationen als Metadaten in die ausführbare Datei ein. Die Common Language Runtime (CLR) verwendet diese Metadaten zur Laufzeit, um die Typsicherheit zu gewährleisten, wenn Speicherplatz belegt und freigegeben wird.  
 
@@ -48,7 +48,7 @@ Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur ang
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](language-reference/builtin-types/integral-numeric-types.md) nicht deklarieren und dieser dann den booleschen Wert [true](language-reference/keywords/true-literal.md) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
+Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Beispielsweise können Sie keinen Typ [int](language-reference/builtin-types/integral-numeric-types.md) deklarieren und diesem dann den booleschen Wert `true` zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
 
 Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](programming-guide/types/casting-and-type-conversions.md).
 

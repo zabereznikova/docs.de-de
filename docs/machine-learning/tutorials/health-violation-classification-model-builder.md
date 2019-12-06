@@ -3,15 +3,15 @@ title: 'Tutorial: Klassifizieren von Integritätsverstößen mit dem Modell-Gene
 description: In diesem Tutorial wird veranschaulicht, wie Sie mithilfe des ML.NET-Modell-Generator ein Multiklassenklassifizierungsmodell zum Klassifizieren des Schweregrads von Integritätsverletzungen in Restaurants in San Francisco erstellen.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977205"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552883"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: Klassifizieren des Schweregrads von Integritätsverletzungen in Restaurants mit dem Modell-Generator
 
@@ -41,7 +41,7 @@ In diesem Beispiel wird eine C# .NET Core-Konsolenanwendung erstellt, die mithil
 
 ## <a name="create-a-console-application"></a>Erstellen einer Konsolenanwendung
 
-1. Erstellen Sie eine **C# .NET Core-Konsolenanwendung** mit dem Namen „RestaurantViolations“.
+1. Erstellen Sie eine **C# .NET Core-Konsolenanwendung** mit dem Namen „RestaurantViolations“. Stellen Sie sicher, dass die Option zum **Platzieren von Projektmappe und Projekt im selben Verzeichnis** **deaktiviert** (VS 2019) oder die Option **Verzeichnis für Projektmappe erstellen** **aktiviert** ist (VS 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Vorbereiten und Verstehen der Daten
 
