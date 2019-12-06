@@ -2,16 +2,24 @@
 title: 'Breaking-Change-Kategorien: .NET Core'
 description: Erfahren Sie mehr über die Kategorisierung von Breaking Changes in .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739367"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567929"
 ---
 # <a name="breaking-change-categories"></a>Breaking Change-Kategorien
 
-*Kompatibilität* bezieht sich auf die Kompilierung oder Ausführung von Code in einer Version einer .NET-Implementierung, die nicht mit dem ursprünglich entwickelten Code zusammenhängt. Eine bestimmte Änderung kann die Kompatibilität auf sechs verschiedene Arten beeinträchtigen. Die [einzelnen Arten von Änderungen, die beim Auswerten der Kompatibilität berücksichtigt werden](index.md), fallen in die ersten fünf Kategorien.
+*Kompatibilität* bezieht sich auf die Kompilierung oder Ausführung von Code in einer Version einer .NET-Implementierung, die nicht mit dem ursprünglich entwickelten Code zusammenhängt. Eine bestimmte Änderung kann die Kompatibilität auf sechs verschiedene Arten beeinträchtigen. Die [einzelnen Arten von Änderungen](index.md), die beim Auswerten der Kompatibilität berücksichtigt werden, fallen unter die folgenden Kategorien:
+
+- [Verhaltensänderung](#behavioral-change)
+- [Binärkompatibilität](#binary-compatibility)
+- [Quellkompatibilität](#source-compatibility)
+- [Entwurfszeitkompatibilität](#design-time-compatibility)
+- [Abwärtskompatibilität](#backwards-compatibility)
+
+[Aufwärtskompatibilität](#forward-compatibility) ist kein Ziel von .NET Core.
 
 ## <a name="behavioral-change"></a>Behavior Change
 

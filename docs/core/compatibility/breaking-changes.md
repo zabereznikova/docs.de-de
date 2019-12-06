@@ -1,17 +1,31 @@
 ---
 title: Breaking Changes in .NET Core
 description: Hier erhalten Sie Informationen zu den Breaking Changes in den verschiedenen .NET Core-Versionen.
-ms.date: 08/12/2019
-ms.openlocfilehash: 92ebb627240bce3d9b20dca51263732d1856c2a4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 11/27/2019
+ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739764"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568030"
 ---
-# <a name="net-core-breaking-changes"></a>Breaking Changes in .NET Core
+# <a name="breaking-change-selectors"></a>Breaking Change-Selektoren
 
-Die folgende Versionsauswahl enthält eine gefilterte Liste mit Breaking Changes für .NET Core, ASP.NET Core und EF Core. Die Zielversionen umfassen nicht nur Hauptversionen wie .NET Core 2.2 und .NET Core 3.0, sondern auch Vorschauversionen, wie z. B. .NET Core 3.0 Preview 7.
+Die folgenden Versions- und Bereichsselektoren stellen eine gefilterte Liste der betreffenden Breaking Changes zwischen verschiedenen Versionen von .NET Core, ASP.NET Core und EF Core bereit. Im Inhaltsverzeichnis finden Sie Artikel zu Änderungen von Version zu Version und einzelnen Kategorien.
+
+## <a name="by-version"></a>Nach Version
+
+Wählen Sie die .NET Core-Version, die Sie aktuell anzielen, und dann die .NET Core-Version, zu der Sie migrieren möchten:
+
+[!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+
+## <a name="by-area"></a>Nach Bereich
+
+Wählen Sie den gewünschten .NET Core-Technologiebereich aus. Die einzelnen Änderungen sind nach .NET Core-Version sortiert.
+
+[!INCLUDE[categoryselector](~/includes/core-changes/categoryselector.md)]
+
+## <a name="github-issues-and-announcements"></a>GitHub-Probleme und -Ankündigungen
 
 Sie können auch einzelne Issues anzeigen, in denen die mit .NET Core eingeführten Breaking Changes in den folgenden GitHub-Repositorys ausführlich erläutert werden:
 
@@ -19,14 +33,6 @@ Sie können auch einzelne Issues anzeigen, in denen die mit .NET Core eingeführ
 - Für ASP.NET Core im [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)-Repository.
 - Für Entity Framework Core im [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)-Repository.
 
-## <a name="breaking-changes-by-version"></a>Breaking Changes nach Version
+## <a name="see-also"></a>Siehe auch
 
-Wählen Sie die .NET Core-Version, die Sie aktuell anzielen, und dann die .NET Core-Version, zu der Sie migrieren möchten:
-
-[!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-## <a name="breaking-changes-by-category"></a>Breaking Changes nach Kategorie
-
-Wählen Sie den gewünschten .NET Core-Technologiebereich aus. Die einzelnen Änderungen sind nach .NET Core-Version sortiert.
-
-[!INCLUDE[cateegoryselector](~/includes/core-changes/categoryselector.md)]
+- [Migrieren von .NET Framework zu .NET Core](../porting/index.md)

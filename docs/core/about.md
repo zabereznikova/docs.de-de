@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416745"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552240"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -29,14 +29,14 @@ C#, Visual Basic und F# können verwendet werden, um Anwendungen und Bibliotheke
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Sublime Text
 - Vim
- 
+
 Diese Integration wird teilweise dank der Mitwirkenden von [OmniSharp](https://www.omnisharp.net/) und [Ionide](http://ionide.io) bereitgestellt.
 
 ## <a name="apis"></a>APIs
 
 .NET Core stellt vielseitige APIs bereit, u.a. die folgenden:
 
-- Primitive Typen, z.B. [bool](../csharp/language-reference/keywords/bool.md) und [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
+- Primitive Typen wie <xref:System.Boolean?displayProperty=nameWithType> und <xref:System.Int32?displayProperty=nameWithType>.
 - Sammlungen, z.B. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Hilfstypen, z.B. <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> und <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Datentypen, z.B. <xref:System.Data.DataSet?displayProperty=nameWithType> und [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).

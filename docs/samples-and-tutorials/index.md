@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423569"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884435"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -25,7 +25,7 @@ Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehö
 
 ### <a name="tutorials"></a>Tutorials
 
-**[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: ausführlicher Leitfaden](../core/tutorials/using-with-xplat-cli.md)**
+**[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: ausführlicher Leitfaden](../core/tutorials/cli-create-console-app.md)**
 
 In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können. Dabei beginnen Sie mit einer einfachen Konsolen-App, die immer mehr erweitert wird und sich schließlich über mehrere Projekte mit zugehörigen Tests erstreckt. Sie fügen nach und nach Funktionen hinzu und erweitern so Ihre Kenntnisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/console-apps) finden Sie im dotnet/samples-Repository auf GitHub.
 
