@@ -2,12 +2,12 @@
 title: Runtimekonfiguration
 description: Hier erfahren Sie, wie Sie .NET Core-Anwendungen mithilfe von Runtimekonfigurationseinstellungen konfigurieren.
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567389"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801916"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Konfigurationseinstellungen für die .NET Core-Runtime
 
@@ -26,11 +26,11 @@ ms.locfileid: "74567389"
 
 - [Umgebungsvariablen](#environment-variables)
 
-Die Artikel in diesem Teil der Dokumentation sind nach Kategorie geordnet, z. B. Debuggen und Garbage Collection. Verfügbare Konfigurationsoptionen werden für *runtimeconfig.json* (nur .NET Core), *app.config* (nur .NET Framework) und Umgebungsvariablen angezeigt.
+Die Artikel in diesem Teil der Dokumentation sind nach Kategorie geordnet, z. B. Debuggen und Garbage Collection. Konfigurationsoptionen werden ggf. für *runtimeconfig.json* (nur .NET Core), *app.config* (nur .NET Framework) und Umgebungsvariablen angezeigt.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-Geben Sie die Konfigurationsoptionen für die Runtime im Abschnitt **configproperties** der *runtimeconfig.json*-Datei an. Dieser Abschnitt hat das folgende Format:
+Geben Sie die Konfigurationsoptionen für die Runtime im Abschnitt **configproperties** der *runtimeconfig.json*-Datei der App an. Dieser Abschnitt hat das folgende Format:
 
 ```json
 {
