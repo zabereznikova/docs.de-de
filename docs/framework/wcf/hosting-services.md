@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 634e34eceeb3d3b8828a6d5ed85b6194bcf8586c
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: b914d5d9f578c5ce13dfc1c520f1b26f8af1fa76
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961151"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837921"
 ---
 # <a name="hosting-services"></a>Hostingdienste
 
@@ -35,18 +35,18 @@ Die Hostingoptionen reichen von einfachen Konsolenanwendungen bis zu Serverumgeb
  Beachten Sie, dass von IIS gehostete Dienste nur den HTTP-Transport verwenden können. Mit der Implementierung in IIS&#160;5.1 wurden einige Einschränkungen in [!INCLUDE[wxp](../../../includes/wxp-md.md)]eingeführt. Durch die Nachrichten basierte Aktivierung, die von IIS 5,1 auf [!INCLUDE[wxp](../../../includes/wxp-md.md)] für einen WCF-Dienst bereitgestellt wird, werden alle anderen selbst gehosteten WCF-Dienste auf demselben Computer daran gehindert, Port 80 für die Kommunikation zu verwenden. WCF-Dienste können in der gleichen Anwendungsdomäne/dem Anwendungs Pool bzw. Arbeitsprozess wie andere Anwendungen ausgeführt werden, wenn Sie von IIS 6,0 auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]gehostet werden. Da WCF und IIS 6,0 jedoch beide den Kernel Modus-HTTP-Stapel (http. sys) verwenden, kann IIS 6,0 Port 80 für andere selbst gehostete WCF-Dienste freigeben, die auf demselben Computer ausgeführt werden, im Gegensatz zu IIS 5,1.
 
 ### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)
- Windows Process Activation Service (WAS) ist der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../includes/lserver-md.md)] , der auch unter [!INCLUDE[wv](../../../includes/wv-md.md)]verfügbar ist. Dabei werden das vertraute IIS 6,0-Prozessmodell (Anwendungs Pools und Nachrichten basierte Prozess Aktivierung) und Hostingfunktionen (z. b. der schnelle Ausfallschutz, die Systemüberwachung und Wiederverwendung) beibehalten, aber die Abhängigkeit von http von der Aktivierung wird entfernt. Architektur. IIS 7,0 verwendet was, um die Nachrichten basierte Aktivierung über HTTP durchzuführen. Zusätzliche WCF-Komponenten werden auch in was eingebunden, um die Nachrichten basierte Aktivierung über die anderen von WCF unterstützten Protokolle bereitzustellen, wie z. b. TCP, MSMQ und Named Pipes. Dies ermöglicht es Anwendungen, die mit Kommunikationsprotokollen arbeiten, die IIS-Features zu nutzen, die nur für HTTP-basierte Anwendungen verfügbar waren, beispielsweise die Prozesswiederverwendung, den schnellen Fehlerschutz und das gemeinsame Konfigurationssystem.
+ Der Windows-Prozess Aktivierungs Dienst (was) ist der neue Prozess Aktivierungsmechanismus für das [!INCLUDE[lserver](../../../includes/lserver-md.md)], das auch unter Windows Vista verfügbar ist. Dabei werden das vertraute IIS 6,0-Prozessmodell (Anwendungs Pools und Nachrichten basierte Prozess Aktivierung) und Hostingfunktionen (z. b. der schnelle Ausfallschutz, die Systemüberwachung und Wiederverwendung) beibehalten, aber die Abhängigkeit von http von der Aktivierung wird entfernt. Architektur. IIS 7,0 verwendet was, um die Nachrichten basierte Aktivierung über HTTP durchzuführen. Zusätzliche WCF-Komponenten werden auch in was eingebunden, um die Nachrichten basierte Aktivierung über die anderen von WCF unterstützten Protokolle bereitzustellen, wie z. b. TCP, MSMQ und Named Pipes. Dies ermöglicht es Anwendungen, die mit Kommunikationsprotokollen arbeiten, die IIS-Features zu nutzen, die nur für HTTP-basierte Anwendungen verfügbar waren, beispielsweise die Prozesswiederverwendung, den schnellen Fehlerschutz und das gemeinsame Konfigurationssystem.
 
  Diese Hostingoption erfordert, dass WAS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Konfigurieren von was-Hosting finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](./feature-details/how-to-host-a-wcf-service-in-was.md).
 
 ## <a name="choose-a-hosting-environment"></a>Auswählen einer Hostingumgebung
  In der folgenden Tabelle werden einige wichtige Vorteile und Szenarien im Zusammenhang mit den verschiedenen Hostingoptionen zusammengefasst.
 
-|Hostumgebung|Häufige Szenarien|Hauptvorteile und Einschränkungen|
+|Hostumgebung|Allgemeine Szenarien|Hauptvorteile und Einschränkungen|
 |-------------------------|----------------------|----------------------------------|
 |Verwaltete Anwendung ("Selbsthosting")|-Konsolen Anwendungen, die während der Entwicklung verwendet werden.<br />-Umfangreiche WinForm-und WPF-Client Anwendungen, die auf Dienste zugreifen.|Flexiblen.<br />-Die Bereitstellung ist einfach.<br />-Keine Enterprise-Lösung für Dienste.|
 |Windows-Dienste (früher als NT-Dienste bezeichnet)|-Ein WCF-Dienst mit langer Laufzeit, der außerhalb von IIS gehostet wird.|-Dienst Prozess Lebensdauer wird vom Betriebssystem gesteuert, nicht nach Nachrichten aktiviert.<br />-Wird von allen Versionen von Windows unterstützt.<br />-Sichere Umgebung.|
-|IIS 5,1, IIS 6,0|: Parallele Ausführung eines WCF-Dienstanbieter mit ASP.net-Inhalt im Internet mithilfe des HTTP-Protokolls.|-Prozess Wiederverwendung.<br />-Leerlauf heruntergefahren.<br />-Prozess Integritäts Überwachung.<br />-Nachrichten basierte Aktivierung.<br />-Nur http.|
+|IIS 5.1, IIS 6.0|: Parallele Ausführung eines WCF-Dienstanbieter mit ASP.net-Inhalt im Internet mithilfe des HTTP-Protokolls.|-Prozess Wiederverwendung.<br />-Leerlauf heruntergefahren.<br />-Prozess Integritäts Überwachung.<br />-Nachrichten basierte Aktivierung.<br />-Nur http.|
 |Windows Process Activation Service (WAS)|-Ausführen eines WCF-diensdienstanbieter, ohne IIS im Internet unter Verwendung verschiedener Transportprotokolle zu installieren.|-IIS ist nicht erforderlich.<br />-Prozess Wiederverwendung.<br />-Leerlauf heruntergefahren.<br />-Prozess Integritäts Überwachung.<br />-Nachrichten basierte Aktivierung.<br />: Funktioniert mit http, TCP, Named Pipes und MSMQ.|
 |IIS 7.0|-Ausführen eines WCF-Dienstanbieter mit ASP.net-Inhalt.<br />-Ausführen eines WCF-diensdienstanbieter mithilfe verschiedener Transportprotokolle im Internet.|-WAS-Vorteile.<br />-Integriert in ASP.net-und IIS-Inhalt.|
 
@@ -54,11 +54,11 @@ Die Hostingoptionen reichen von einfachen Konsolenanwendungen bis zu Serverumgeb
 
 |Hostumgebung|Plattformverfügbarkeit|Unterstützte Transportprotokolle|Prozess- und AppDomain-Wiederverwendung|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Verwaltete Anwendungen ("Selbsthosting")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein|
-|Windows-Dienste (früher als NT-Dienste bezeichnet)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein|
+|Verwaltete Anwendungen ("Selbsthosting")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], Windows Vista,<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein|
+|Windows-Dienste (früher als NT-Dienste bezeichnet)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], Windows Vista,<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein|
 |IIS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Ja|
-|IIS 6.0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Ja|
-|Windows Process Activation Service (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Ja|
+|IIS 6.0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Ja|
+|Windows Process Activation Service (WAS)|Windows Vista, [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Ja|
 
  Sie müssen unbedingt beachten, dass die Sicherheit gefährdet wird, wenn ein Dienst oder eine Erweiterung auf einem nicht vertrauenswürdigen Host ausgeführt wird. Beachten Sie zudem, dass eine Anwendung sicherstellen muss, dass der Benutzer nicht abgemeldet wird, wenn ein <xref:System.ServiceModel.ServiceHost> mit Identitätswechsel geöffnet wird, indem beispielsweise die <xref:System.Security.Principal.WindowsIdentity> des Benutzers zwischengespeichert wird.
 
