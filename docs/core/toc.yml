@@ -109,8 +109,18 @@
   items:
     - name: Einstellungen
       href: run-time-config/index.md
+    - name: Kompilierungseinstellungen
+      href: run-time-config/compilation.md
+    - name: Debug- und Profilerstellungseinstellungen
+      href: run-time-config/debugging-profiling.md
     - name: Garbage Collector-Einstellungen
       href: run-time-config/garbage-collector.md
+    - name: Globalisierungseinstellungen
+      href: run-time-config/globalization.md
+    - name: Netzwerkeinstellungen
+      href: run-time-config/networking.md
+    - name: Threadingeinstellungen
+      href: run-time-config/threading.md
 - name: Native Interoperabilität
   items:
     - name: Verfügbarmachen von .NET Core-Komponenten in COM
