@@ -65,6 +65,8 @@
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Neuigkeiten in .NET Core
   items:
+    - name: Neuerungen in .NET Core 3.1
+      href: whats-new/dotnet-core-3-1.md
     - name: Neuerungen in .NET Core 3.0
       href: whats-new/dotnet-core-3-0.md
     - name: Neuerungen in .NET Core 2.2
@@ -94,7 +96,7 @@
     - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Erste Schritte mit .NET Core unter Verwendung der CLI-Tools
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: Organisieren und Testen von Projekten mit .NET Core CLI
       href: tutorials/testing-with-cli.md
     - name: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
