@@ -3,12 +3,12 @@ title: C#-Programmstruktur – Überblick über C#
 description: Lernen Sie die grundlegenden Bausteine eines C#-Programms kennen.
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834155"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884383"
 ---
 # <a name="program-structure"></a>Programmstruktur
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 das Beispiel als Bibliothek (Code ohne `Main`-Einstiegspunkt) und erstellt eine Assembly mit dem Namen `acme.dll`.
 
 > [!IMPORTANT]
-> Die Beispiele oben verwenden `csc` als C#-Befehlszeilencompiler. Dieser Compiler ist eine ausführbare Windows-Datei. Um C# auf anderen Plattformen zu verwenden, sollten Sie die Tools für .NET Core verwenden. Das .NET Core-Ökosystem verwendet die `dotnet`-CLI zum Verwalten von Befehlszeilenbuilds. Dies schließt das Verwalten von Abhängigkeiten und den Aufruf des C#-Compilers ein. In [diesem Tutorial](../../core/tutorials/using-with-xplat-cli.md) finden Sie eine vollständige Beschreibung dieser Tools auf den von .NET Core unterstützten Plattformen.
+> Die Beispiele oben verwenden `csc` als C#-Befehlszeilencompiler. Dieser Compiler ist eine ausführbare Windows-Datei. Um C# auf anderen Plattformen zu verwenden, sollten Sie die Tools für .NET Core verwenden. Das .NET Core-Ökosystem verwendet die `dotnet`-CLI zum Verwalten von Befehlszeilenbuilds. Dies schließt das Verwalten von Abhängigkeiten und den Aufruf des C#-Compilers ein. In [diesem Tutorial](../../core/tutorials/cli-create-console-app.md) finden Sie eine vollständige Beschreibung dieser Tools auf den von .NET Core unterstützten Plattformen.
 
 Assemblys enthalten ausführbaren Code in Form von Zwischensprachenanweisungen (Intermediate Language, IL) und symbolischen Informationen in Form von Metadaten. Vor der Ausführung wird der IL-Code in einer Assembly automatisch durch den Just-in-Time-Compiler (JIT) der .NET Common Language Runtime in prozessorspezifischen Code konvertiert.
 

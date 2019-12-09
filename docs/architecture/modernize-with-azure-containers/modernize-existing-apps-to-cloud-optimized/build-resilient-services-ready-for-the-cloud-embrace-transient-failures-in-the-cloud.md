@@ -2,12 +2,12 @@
 title: Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739394"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711248"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
 
@@ -27,7 +27,7 @@ Ein ähnliches Szenario kann in einer App auftreten, die HTTP-Dienste nutzt. Das
 
 Eine robuste Anwendung, wie die in Abbildung 4-9 gezeigte, sollte Verfahren wie „Wiederholungsversuche mit exponentiellem Backoff“ implementieren, um der Anwendung die Möglichkeit zu geben, vorübergehende Fehler in Ressourcen zu verarbeiten. Sie sollten auch „Trennschalter“ in Ihren Anwendungen verwenden. Ein Trennschalter beendet die Versuche einer Anwendung, auf eine Ressource zuzugreifen, wenn es sich tatsächlich um einen langfristigen Fehler handelt. Durch die Verwendung eines Trennschalters vermeidet die Anwendung einen Denial-of-Service-Angriff auf sich selbst.
 
-![Diagramm der von Wiederholungsversuchen mit exponentiellem Backoff behandelten Teilfehler.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![Diagramm der von Wiederholungsversuchen mit exponentiellem Backoff behandelten Teilfehler.](./media/retry-partial-failures.png)
 
 **Abbildung 4–9.** Von Wiederholungsversuchen mit exponentiellem Backoff behandelte Teilfehler
 

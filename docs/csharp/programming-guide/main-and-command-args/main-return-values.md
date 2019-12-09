@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588881"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884396"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
 
@@ -26,7 +26,7 @@ Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgab
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet [.NET Core](../../../core/index.md) -Befehlszeilentools. Wenn Sie mit den .NET Core-Befehlszeilentools nicht vertraut sind, finden Sie weitere Informationen darüber in diesem [Artikel zu den ersten Schritten](../../../core/tutorials/using-with-xplat-cli.md).
+Dieses Beispiel verwendet [.NET Core](../../../core/index.md) -Befehlszeilentools. Wenn Sie mit den .NET Core-Befehlszeilentools nicht vertraut sind, finden Sie weitere Informationen darüber in diesem [Artikel zu den ersten Schritten](../../../core/tutorials/cli-create-console-app.md).
 
 Ändern Sie die Methode `Main` in *program.cs* folgendermaßen:
 
