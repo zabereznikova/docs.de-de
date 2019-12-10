@@ -2,12 +2,12 @@
 title: Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Integrationsereignisse zum Implementieren ereignisbasierter Kommunikation zwischen Microservices
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737116"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711226"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
@@ -126,6 +126,19 @@ public interface IEventBus
 Die `Publish`-Methode ist einfach. Der Ereignisbus sendet das an ihn weitergeleitete Integrationsereignis an alle Microservices oder auch an externe Anwendungen, die dieses Ereignis abonniert haben. Diese Methode wird von dem Microservice verwendet, der das Ereignis veröffentlicht.
 
 Die `Subscribe`-Methoden (abhängig von den Argumenten können mehrere Implementierungen verwendet werden) werden von den Microservices verwendet, die Ereignisse empfangen möchten. Diese Methode weist zwei Argumente auf. Beim ersten Argument handelt es sich um das Integrationsereignis, das abonniert werden kann (`IntegrationEvent`). Beim zweiten Argument handelt es sich um den Integrationsereignishandler (oder die Rückrufmethode) mit dem Namen `IIntegrationEventHandler<T>`. Dieses Argument wird ausgeführt, wenn der Empfängermicroservice diese Integrationsereignisnachricht empfängt.
+
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
+
+Einige Messaginglösungen, die bereit für die Produktion sind:
+
+- **Azure Service Bus** \
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+- **NServiceBus** \
+  <https://particular.net/nservicebus>
+  
+- **MassTransit** \
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [Zurück](database-server-container.md)

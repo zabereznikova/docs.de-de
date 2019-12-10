@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204779"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802452"
 ---
 # <a name="isolated-storage"></a>Isolierte Speicherung
 <a name="top"></a> Die isolierte Speicherung ist ein Mechanismus zur Datenspeicherung von Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
@@ -118,7 +118,7 @@ Gelegentlich sollten Änderungen an isolierten Speicherplätzen mit dem Dateisys
 |Windows 2000, Windows XP, Windows Server 2003 (Upgrade von Windows NT 4.0)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMSTAMM>\Profile\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMSTAMM>\Profile\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
 |Windows 2000 – Neuinstallation (und Upgrades von Windows 98 und Windows NT 3.51)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
 |Windows XP, Windows Server 2003 – Neuinstallation (und Upgrades von Windows 2000 und Windows 98)|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Anwendungsdaten<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Dokumente und Einstellungen\\<Benutzer\>\Lokale Einstellungen\Anwendungsdaten|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Benutzer\\<Benutzer\>\AppData\Roaming<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Benutzer\\<Benutzer\>\AppData\Local|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Für Roaming aktivierte Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Benutzer\\<Benutzer\>\AppData\Roaming<br /><br /> Nicht für Roaming eingerichtete Speicher =<br /><br /> \<SYSTEMLAUFWERK>\Benutzer\\<Benutzer\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 

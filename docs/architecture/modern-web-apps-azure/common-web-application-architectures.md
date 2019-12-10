@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972134"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884240"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -302,6 +302,8 @@ Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzuf
   <https://github.com/ardalis/cleanarchitecture>
 - **E-Book „Architecting Microservices“ (E-Book zur Architektur von Microservices)**  
   <https://aka.ms/MicroservicesEbook>
+- **Domänengesteuertes Design (Domain-Driven Design, DDD)**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[Zurück](architectural-principles.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132809"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884409"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Übersicht: Common Language Runtime (CLR)
 
@@ -62,20 +62,7 @@ Die Funktionen der Laufzeit werden durch Sprachcompiler und Tools auf eine Weise
 
 ## <a name="clr-versions"></a>CLR-Versionen
 
-Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnummer der enthaltenen CLR. Die folgende Tabelle zeigt, wie die beiden Versionsnummern zusammenhängen:
-
-|.NET Framework-Version|Enthält CLR-Version|
-|----------------------------|--------------------------|
-|1.0|1.0|
-|1.1|1.1|
-|2.0|2.0|
-|3.0|2.0|
-|3.5|2.0|
-|4|4|
-|4.5 (inklusive 4.5.1 und 4.5.2)|4|
-|4.6 (einschließlich 4.6.1 und 4.6.2)|4|
-|4.7 (einschließlich 4.7.1 und 4.7.2)|4|
-|4.8|4|
+Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnummer der enthaltenen CLR. Eine Liste der Versionen von .NET Framework und der dazugehörigen CLR-Versionen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../framework/migration-guide/versions-and-dependencies.md). .NET Core-Releases verfügen über eine einzelne Produktversion, d. h. es gibt keine getrennte CLR-Version. Eine Liste von .NET Core-Versionen finden Sie unter [Herunterladen von .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -85,7 +72,3 @@ Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnum
 |[Automatische Speicherverwaltung](automatic-memory-management.md)|Erläutert, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.|
 |[Übersicht über .NET Framework](../framework/get-started/overview.md)|Beschreibt die wichtigsten Konzepte von .NET Framework, z. B. das allgemeine Typsystem, sprachübergreifende Interoperabilität, verwaltete Ausführung, Anwendungsdomänen und Assemblys.|
 |[Allgemeines Typsystem](./base-types/common-type-system.md)|Enthält eine Beschreibung der Deklaration, Verwendung und Verwaltung von Typen in der Laufzeit für die Unterstützung einer sprachübergreifenden Integration.|
-
-## <a name="see-also"></a>Siehe auch
-
-- [Versionen und Abhängigkeiten](../framework/migration-guide/versions-and-dependencies.md)
