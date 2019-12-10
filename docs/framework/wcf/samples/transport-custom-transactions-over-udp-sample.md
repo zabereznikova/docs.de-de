@@ -2,12 +2,12 @@
 title: 'Transport: Beispiel für benutzerdefinierte Transaktionen über UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 09ce715da4cf4d4fb4c959f63af3bb2c8c68b841
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 00e6d593e185cd09ea66e88f38cf1d8e71785704
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712000"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960411"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Beispiel für benutzerdefinierte Transaktionen über UDP
 Dieses Beispiel basiert auf dem [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) -Beispiel in der Windows Communication Foundation (WCF)-[Transport Erweiterbarkeit](../../../../docs/framework/wcf/samples/transport-extensibility.md). Es erweitert das Beispiel für den UDP-Transport, um einen benutzerdefinierten Transaktionsfluss zu unterstützen, und veranschaulicht die Verwendung der <xref:System.ServiceModel.Channels.TransactionMessageProperty>-Eigenschaft.  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
   
-2. Das aktuelle Beispiel sollte ähnlich wie beim [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) -Beispiel ausgeführt werden. Starten Sie den Dienst mit UdpTestService.exe, um das Beispiel auszuführen. Wenn Sie [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] ausführen, müssen Sie den Dienst mit erhöhten Rechten starten. Klicken Sie hierzu mit der rechten Maustaste im Datei-Explorer auf UdpTestService. exe, und klicken Sie dann auf **als Administrator ausführen**.  
+2. Das aktuelle Beispiel sollte ähnlich wie beim [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) -Beispiel ausgeführt werden. Starten Sie den Dienst mit UdpTestService.exe, um das Beispiel auszuführen. Wenn Sie Windows Vista ausführen, müssen Sie den Dienst mit erhöhten Rechten starten. Klicken Sie hierzu mit der rechten Maustaste im Datei-Explorer auf UdpTestService. exe, und klicken Sie dann auf **als Administrator ausführen**.  
   
 3. Hierdurch wird die folgende Ausgabe generiert.  
   

@@ -2,12 +2,12 @@
 title: WS 2007 Federation-HTTP-Bindung
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714977"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960194"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federation-HTTP-Bindung
 
@@ -119,7 +119,7 @@ Mit der in diesem Beispiel enthaltenen Datei *Setup. bat* können Sie den Server
 
 1. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.
 
-2. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md). Wenn Sie [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]verwenden, müssen Sie " *Service. exe*", *"Client. exe*" und " *SecurityTokenService. exe* " mit erhöhten Rechten ausführen (Klicken Sie mit der rechten Maustaste auf die Dateien, und klicken Sie dann auf **als Administrator ausführen**).
+2. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md). Wenn Sie Windows Vista verwenden, müssen Sie " *Service. exe*", *"Client. exe*" und " *SecurityTokenService. exe* " mit erhöhten Rechten ausführen (Klicken Sie mit der rechten Maustaste auf die Dateien, und klicken Sie dann auf **als Administrator ausführen**).
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren:

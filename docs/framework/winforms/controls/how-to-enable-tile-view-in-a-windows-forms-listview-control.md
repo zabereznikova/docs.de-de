@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement von Windows Forms'
+title: 'Gewusst wie: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,24 +11,21 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 44d34ddb00005a0fb86b2d06c4c14e2a5b949819
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 489b9a9d0341391c756175acb19d962d642eb7b2
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966679"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960447"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement von Windows Forms
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Gewusst wie: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement von Windows Forms
 Mit dem Feature für "Ansicht 'Nebeneinander'" des <xref:System.Windows.Forms.ListView>-Steuerelements können Sie eine visuelle Balance zwischen grafischen und textbasierten Daten herstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Die Ansicht "Nebeneinander" funktioniert in Kombination mit den Features "Gruppieren" oder "Einfügemarke" des <xref:System.Windows.Forms.ListView>-Steuerelements.  
   
  Für die Ansicht "Nebeneinander" wird ein 32 x 32 Pixel großes Symbol mit mehreren Textzeilen verwendet, wie in den folgenden Abbildungen dargestellt.  
   
- ![Kachel Ansicht in einem ListView-Steuer] Element (./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Symbole und Text der Kachel Ansicht")  
+ ![Ansicht „Nebeneinander“ in einem ListView-Steuerelement](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Symbole und Text der Ansicht "Nebeneinander"")  
  
  Um die Ansicht "Nebeneinander" zu aktivieren, legen Sie die <xref:System.Windows.Forms.ListView.View%2A>-Eigenschaft auf <xref:System.Windows.Forms.View.Tile> fest. Sie können die Größe der Kacheln anpassen, indem Sie die <xref:System.Windows.Forms.ListView.TileSize%2A>-Eigenschaft festlegen, und Sie können die Anzahl der angezeigten Textzeilen festlegen, indem Sie die <xref:System.Windows.Forms.ListView.Columns%2A>-Auflistung anpassen.  
-  
-> [!NOTE]
-> Die Ansicht "Nebeneinander" steht unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] nur zur Verfügung, wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>-Methode aufruft. Unter älteren Betriebssystemen hat Code in Bezug auf die Ansicht "Nebeneinander" keine Auswirkungen, und das <xref:System.Windows.Forms.ListView>-Steuerelement wird in der Ansicht "Große Symbole" angezeigt. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-set-tile-view-programmatically"></a>So legen Sie die Ansicht "Nebeneinander" programmgesteuert fest  
   

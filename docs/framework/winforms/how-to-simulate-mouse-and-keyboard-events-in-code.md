@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802478"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960200"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Gewusst wie: Simulieren von Maus- und Tastaturereignissen in Code
 
@@ -72,7 +72,7 @@ Tastatureingaben können mit denselben Strategien simuliert werden, die hier fü
 1. Aktivieren Sie das Anwendungsfenster, das die Tastatureingaben empfängt, und rufen Sie dann die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode auf. Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, müssen Sie systemeigene Windows-Methoden verwenden, um den Fokus auf andere Anwendungen zu erzwingen. Im folgenden Codebeispiel wird ein Plattformaufruf dazu verwendet, die Methoden `FindWindow` und `SetForegroundWindow` aufzurufen, um das Anwendungsfenster Rechner zu aktivieren, und dann wird <xref:System.Windows.Forms.SendKeys.SendWait%2A> aufgerufen, um einige Berechnungselemente an Rechner zu senden.
 
     > [!NOTE]
-    > Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Der folgende Code ermittelt die Rechner Anwendung unter Windows 7. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.
+    > Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Der folgende Code ermittelt die Rechner Anwendung unter Windows 7. Ändern Sie unter Windows Vista den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

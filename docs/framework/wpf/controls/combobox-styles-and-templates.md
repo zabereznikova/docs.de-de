@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283790"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960376"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox-Stile und -Vorlagen
 In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ComboBox>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.  
@@ -56,10 +56,10 @@ In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Cont
 |-|-|-|  
 |Normal|CommonStates|Der Standardstatus.|  
 |Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>-Steuerelement.|  
+|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBoxItem>-Steuerelement.|  
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
-|Ausgewählt|SelectionStates|Das Element ist zurzeit ausgewählt.|  
+|Ausgewählter|SelectionStates|Das Element ist zurzeit ausgewählt.|  
 |Nicht markiert|SelectionStates|Das Element ist nicht ausgewählt.|  
 |SelectedUnfocused|SelectionStates|Das Element ist ausgewählt, besitzt jedoch keinen Fokus.|  
 |Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|  

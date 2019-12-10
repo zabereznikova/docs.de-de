@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c7859ab610f5eae54eeb31833cb370b694df6553
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802142"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959783"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -89,7 +89,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |Gekachelter Inhalt, der <xref:System.Windows.Media.TileBrush> verwendet|Alle gekachelten Inhalte, in denen die <xref:System.Windows.Media.TileBrush.TileMode%2A>-Eigenschaft des <xref:System.Windows.Media.TileBrush> auf <xref:System.Windows.Media.TileMode.Tile>festgelegt ist.|  
 |Flächen, die die maximale Texturgröße der Grafikhardware überschreiten|Bei der meisten Grafikhardware sind große Flächen 2048 x 2048 oder 4096 x 4096 Pixel groß.|  
 |Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) im Windows SDK ist.|  
-|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Bei Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z. b. Windows Vista und Windows 7, sind mehrstufige Fenster Hardware beschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aktivieren, indem Sie die folgenden <xref:System.Windows.Window> Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Bei Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z. b. Windows Vista und Windows 7, sind mehrstufige Fenster Hardware beschleunigt. Auf anderen Systemen, wie z. b. Windows XP, werden überlappende Fenster durch Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aktivieren, indem Sie die folgenden <xref:System.Windows.Window> Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Weitere Ressourcen  

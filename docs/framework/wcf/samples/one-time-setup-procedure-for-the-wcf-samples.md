@@ -2,12 +2,12 @@
 title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837830"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960136"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 
@@ -16,7 +16,7 @@ Die meisten Windows Communication Foundation (WCF)-Beispiele werden in Interneti
 Das virtuelle Verzeichnis **Service Model Samples** wird zum entwickeln und Ausführen aller Beispiele verwendet, die einen IIS-gehosteten Dienst verwenden. Dies ist das einzige virtuelle Verzeichnis, das zum Ausführen der Beispiele erforderlich ist. Durch die Erstellung eines Beispiels werden alle zuvor bereitgestellten Dienste in diesem virtuellen Verzeichnis ersetzt. Nur das zuletzt erstellte Beispiel wird bereitgestellt und ist dann in diesem virtuellen Verzeichnis verfügbar.
 
 > [!NOTE]
-> Sie müssen alle Befehle unter einem lokalen Administratorkonto ausführen. Wenn Sie mit Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] oder Windows Server 2008 R2 arbeiten, müssen Sie außerdem die Eingabeaufforderung mit erweiterten Berechtigungen ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Symbol für die Eingabeaufforderung, und klicken Sie dann auf **als Administrator ausführen**. Alle Befehle in diesem Thema müssen an einer Eingabeaufforderung ausgeführt werden, die über die richtigen Pfadeinstellungen verfügt.  Dies kann am einfachsten sichergestellt werden, wenn Sie die Visual Studio-Eingabeaufforderung verwenden. Klicken Sie zum Öffnen dieser Eingabeaufforderung auf **Start**, wählen Sie **Alle Programme**, Scrollen Sie nach unten zu **Visual Studio 2010**, wählen Sie **Visual Studio-Tools**aus, klicken Sie mit der rechten Maustaste auf **Visual Studio-Eingabeaufforderung (2010)** , und klicken Sie dann auf **als Administrator** Wenn Sie eine Visual Studio Express Edition installiert haben, ist diese Eingabeaufforderung nicht verfügbar. In diesem Fall müssen Sie dem Systempfad "C:\Windows\Microsoft.Net\Framework\v4.0" hinzufügen.
+> Sie müssen alle Befehle unter einem lokalen Administratorkonto ausführen. Wenn Sie Windows 7, Windows Vista oder Windows Server 2008 R2 verwenden, müssen Sie auch die Eingabeaufforderung mit erhöhten Rechten ausführen. Klicken Sie hierzu mit der rechten Maustaste auf das Symbol für die Eingabeaufforderung, und klicken Sie dann auf **als Administrator ausführen**. Alle Befehle in diesem Thema müssen an einer Eingabeaufforderung ausgeführt werden, die über die richtigen Pfadeinstellungen verfügt.  Dies kann am einfachsten sichergestellt werden, wenn Sie die Visual Studio-Eingabeaufforderung verwenden. Klicken Sie zum Öffnen dieser Eingabeaufforderung auf **Start**, wählen Sie **Alle Programme**, Scrollen Sie nach unten zu **Visual Studio 2010**, wählen Sie **Visual Studio-Tools**aus, klicken Sie mit der rechten Maustaste auf **Visual Studio-Eingabeaufforderung (2010)** , und klicken Sie dann auf **als Administrator** Wenn Sie eine Visual Studio Express Edition installiert haben, ist diese Eingabeaufforderung nicht verfügbar. In diesem Fall müssen Sie dem Systempfad "C:\Windows\Microsoft.Net\Framework\v4.0" hinzufügen.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Einmaliges Setupverfahren für WCF-Beispiele
 

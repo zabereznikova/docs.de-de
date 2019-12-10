@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802102"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960149"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen für das Rendern von Grafiken, die sich auf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen auswirken.  
@@ -24,7 +24,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Was sind XPDM und WDDM?  
- Einige der Registrierungseinstellungen für das Rendern von Grafiken besitzen unterschiedliche Werte, je nachdem, ob Ihre Grafikkarte einen XPDM- oder einen WDDM-Treiber verwendet. XPDM ist das [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Anzeigetreibermodell, und WDDM ist das Windows-Anzeigetreibermodell. WDDM ist auf Computern verfügbar, auf denen Windows Vista und Windows 7 ausgeführt werden. XPDM ist auf Computern verfügbar, auf denen Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]und [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]ausgeführt wird. Weitere Informationen zu WDDM finden Sie im Leitfaden für [Windows Vista-Anzeigetreibermodelle](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Einige der Registrierungseinstellungen für das Rendern von Grafiken besitzen unterschiedliche Werte, je nachdem, ob Ihre Grafikkarte einen XPDM- oder einen WDDM-Treiber verwendet. XPDM ist das Windows XP-Anzeigetreiber Modell, und WDDM ist das Windows-Anzeigetreiber Modell. WDDM ist auf Computern verfügbar, auf denen Windows Vista und Windows 7 ausgeführt werden. XPDM ist auf Computern verfügbar, auf denen Windows Vista, Microsoft Windows XP und [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]ausgeführt werden. Weitere Informationen zu WDDM finden Sie im Leitfaden für [Windows Vista-Anzeigetreibermodelle](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Registrierungseinstellungen  
@@ -57,7 +57,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- Mit dem **maximalen Multisampling-Wert** können Sie die maximale Menge an Antialiasing von 3D-Inhalten anpassen. Verwenden Sie diese Ebene, um das 3D-Antialiasing in Windows Vista zu deaktivieren oder es in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]zu aktivieren.  
+ Mit dem **maximalen Multisampling-Wert** können Sie die maximale Menge an Antialiasing von 3D-Inhalten anpassen. Verwenden Sie diese Ebene, um das 3D-Antialiasing in Windows Vista zu deaktivieren.  
   
  Der **maximale Wert für Multisampling** ist ein DWORD-Wert, der zwischen 0 und 16 liegt. Der Wert 0 bedeutet, dass bei 3D-Inhalten das Multisample-Antialiasing deaktiviert wird. Der Wert 16 versucht, bis zu 16-faches Multisample-Antialiasing zu verwenden, sofern dies von der Grafikkarte unterstützt wird. Beachten Sie, dass die Einstellung dieses Registrierungsschlüssel Werts auf Computern, die XPDM-Treiber verwenden, dazu führt, dass Anwendungen einen großen Teil des zusätzlichen Grafik Speichers verwenden, die Leistung von 3D-Rendering verringern und das Rendering von renderingfehlern und-Stabilität durchführen können. Schwierigkeiten.  
   
