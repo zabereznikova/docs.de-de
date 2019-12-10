@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449424"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714474"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
@@ -139,9 +139,9 @@ In den folgenden Tabellen werden diese Funktionen und Einschränkungen aufgefüh
 ||Hinzufügen einer Assembly|Nicht unterstützt|OK|
 ||Entfernen einer Assembly|Nicht unterstützt|OK|
 
- "Mage.exe" erstellt neue Manifeste, für die als Ziel [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]verwendet wird. ClickOnce-Anwendungen, die [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] als Ziel verwenden, können sowohl mit [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] als auch mit der Vollversion von .NET Framework 4 ausgeführt werden. Wenn für die Anwendung als Ziel die Vollversion von .NET Framework 4 verwendet wird und eine Ausführung unter [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] nicht möglich ist, entfernen Sie das Clientelement `<framework>` mit einem Text-Editor, und signieren Sie das Manifest erneut.
+ MageUI.exe erstellt neue Manifeste, die als Zielversion das .NET Framework 4 Client Profile haben. ClickOnce-Anwendungen, die .NET Framework 4 Client Profile als Ziel verwenden, können sowohl mit .NET Framework 4 Client Profile als auch mit der Vollversion von .NET Framework 4 ausgeführt werden. Wenn für die Anwendung als Ziel die Vollversion von .NET Framework 4 verwendet wird und eine Ausführung unter dem .NET Framework 4 Client Profile nicht möglich ist, entfernen Sie das Clientelement `<framework>` mit einem Text-Editor, und signieren Sie das Manifest erneut.
 
-Nachfolgend wird ein Beispiel für ein `<framework>` -Element dargestellt, für das als Ziel [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]festgelegt ist:
+Es folgt ein Beispiel eines `<framework>`-Elements mit dem .NET Framework 4 Client Profile als Ziel:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

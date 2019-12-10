@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449417"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714461"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
-"MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit "MageUI.exe" erstellt werden, wird als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von "MageUI.exe" nicht aktualisiert, um als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](mage-exe-manifest-generation-and-editing-tool.md).
+"MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit MageUI.exe erstellt werden, wird als Zielversion das .NET Framework 4 Client Profile festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von MageUI.exe nicht aktualisiert, um als Zielversion das .NET Framework 4 Client Profile festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 

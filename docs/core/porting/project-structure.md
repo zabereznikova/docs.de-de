@@ -4,12 +4,12 @@ description: Dieser Artikel soll Projektbesitzern dabei helfen, Ihre eigene Lös
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522981"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801928"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von sowohl .NET Framework als auch .NET Core
 
@@ -24,12 +24,12 @@ Erfahren Sie, wie Sie eine Lösung erstellen, die .NET Framework und .NET Core p
   - Ermöglicht das Schreiben von Code für eine bestimmte .NET Framework-Version in Ihren Bibliotheken mithilfe von Compileranweisungen.
 
   *Nicht unterstützte Szenarios:*
-  - Entwickler benötigen Visual Studio 2017, um vorhandene Projekte zu öffnen. Zur Unterstützung von älteren Versionen von Visual Studio ist es eine bessere Option, [Ihre Projektdateien in unterschiedlichen Ordnern zu speichern](#support-vs).
+  - Entwickler benötigen Visual Studio 2017 oder höher, um vorhandene Projekte zu öffnen. Zur Unterstützung von älteren Versionen von Visual Studio ist es eine bessere Option, [Ihre Projektdateien in unterschiedlichen Ordnern zu speichern](#support-vs).
 
 - <a name="support-vs"></a>[**Trennen vorhandener und neuer .NET Core-Projekte**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Es dient folgenden Zwecken:*
-  - Entwicklung in bereits erstellten Projekten wird weiterhin unterstützt. Entwickler oder Mitwirkende, die eventuell nicht über Visual Studio 2017 verfügen, müssen kein Upgrade durchführen.
+  - Unterstützung der Entwicklung in bestehenden Projekten für Entwickler und Mitwirkende, die möglicherweise nicht über Visual Studio 2017 oder eine höhere Version verfügen.
   - Minimieren der Möglichkeit, neue Probleme in vorhandenen Projekten zu erstellen, da in diesen Projekten keine Codeänderung erforderlich ist.
 
 ## <a name="example"></a>Beispiel

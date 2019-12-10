@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104643"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801836"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
@@ -126,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds` *Index*|Überprüft die Signatur an einer angegebenen Position.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Gibt einen optionalen Hashalgorithmus zum Suchen einer Datei in einem Katalog an.|  
 |`/kp`|Gibt an, dass die Überprüfung mit der Signierungsrichtlinie für Kernelmodustreiber ausgeführt werden soll.|  
-|`/ms`|Verwendet mehrere Überprüfungssemantiken. Hierbei handelt es sich um das Standardverhalten eines [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)-Aufrufs unter [!INCLUDE[win8](../../../includes/win8-md.md)] und höher.|  
+|`/ms`|Verwendet mehrere Überprüfungssemantiken. Hierbei handelt es sich um das Standardverhalten eines [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)-Aufrufs unter Windows 8 und höher.|  
 |`/o` *Version*|Überprüft die Datei anhand der Betriebssystemversion. *Version* hat das folgende Format: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* stellt den zugrundeliegenden Wert eines <xref:System.PlatformID>-Enumerationsmembers dar. **Wichtig:**  Die Verwendung des `/o`-Schalters wird empfohlen. Ohne Angabe von `/o` werden von SignTool.exe möglicherweise unerwartete Ergebnisse zurückgegeben. Beispiel: Wenn Sie den `/o`-Schalter nicht einbeziehen, werden unter älteren Betriebssystemen erfolgreich überprüfte Systemkataloge bei einem neueren Betriebssystem möglicherweise nicht ordnungsgemäß überprüft.|  
 |`/p7`|Überprüft PKCS #7-Dateien. Bei der PKCS #7-Überprüfung werden keine vorhandenen Richtlinien verwendet. Die Signatur wird überprüft, und für das Signaturzertifikat wird eine Kette erstellt.|  
 |`/pa`|Gibt an, dass die standardmäßige Authenticode-Überprüfungsrichtlinie verwendet werden soll. Ohne Angabe der `/pa`-Option wird vom Signierungstool die Windows-Treiberüberprüfungsrichtlinie verwendet. Diese Option kann nicht mit den `catdb`-Optionen verwendet werden.|  

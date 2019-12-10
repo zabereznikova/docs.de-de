@@ -2,13 +2,13 @@
 title: Befehl „dotnet nuget push“
 description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/04/2019
+ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117492"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835518"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -18,15 +18,15 @@ ms.locfileid: "71117492"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet nuget push` – Überträgt ein Paket auf den Server und veröffentlicht es.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
-    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+    [--no-service-endpoint] [-s|--source] [--skip-duplicate] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
@@ -52,7 +52,7 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
 
 * **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
 * **`--interactive`**
 
@@ -74,6 +74,10 @@ Druckt eine kurze Hilfe für den Befehl.
 
   Gibt die Server-URL an. Diese Option ist erforderlich, es sei denn, der `DefaultPushSource`-Konfigurationswert wurde in der NuGet-Konfigurationsdatei festgelegt.
 
+* **`--skip-duplicate`**
+
+  Wenn Sie mehrere Pakete per Push an einen HTTP(S)-Server senden, werden alle Antworten des Typs „409 (Konflikt)“ als Warnung behandelt, sodass der Pushvorgang fortgesetzt werden kann. Verfügbar seit .NET Core 3.1 SDK.
+                                 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Der API-Schlüssel für den Symbolserver.
@@ -127,3 +131,9 @@ Druckt eine kurze Hilfe für den Befehl.
   > [!NOTE]
   > Wenn dieser Befehl nicht funktioniert, kann dies an einem Fehler aus früheren Versionen des SDK liegen (.NET Core 2.1 SDK und frühere Versionen).
   > Führen Sie ein Upgrade für das SDK durch, oder führen Sie stattdessen den folgenden Befehl aus, um diesen Fehler zu beheben: `dotnet nuget push **/*.nupkg`.
+  
+* Überträgt alle *.nupkg*-Dateien per Push, auch wenn eine Antwort des Typs „409 (Konflikt)“ von einem HTTP(S)-Server zurückgegeben wird:
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg --skip-duplicate
+  ```

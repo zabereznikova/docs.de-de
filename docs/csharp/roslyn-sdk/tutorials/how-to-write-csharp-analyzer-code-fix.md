@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105756"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837050"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -21,7 +21,7 @@ In diesem Tutorial lernen Sie die Erstellung eines **Analysetools** und eines be
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Installieren Sie zunächst das **SDK für die .NET Compiler Platform** über das Installationsprogramm von Visual Studio:
+Installieren Sie zunächst über den Visual Studio-Installer das **SDK für die .NET Compiler Platform**:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -427,7 +427,7 @@ Sie haben es fast geschafft! Es gibt noch ein paar weitere Bedingungen, mit dene
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Darüber hinaus werden Verweistypen nicht ordnungsgemäß behandelt. Der einzige Konstantenwert, die für einen Verweistyp zulässig ist, ist `null`, abgesehen von dem Fall <xref:System.String?displayProperty=nameWIthType>, der Zeichenfolgenliterale zulässt. Das heißt, `const string s = "abc"` ist zulässig, `const object s = "abc"` aber nicht. Diese Bedingung wird mit diesem Codeausschnitt überprüft:
+Darüber hinaus werden Verweistypen nicht ordnungsgemäß behandelt. Der einzige Konstantenwert, die für einen Verweistyp zulässig ist, ist `null`, abgesehen von dem Fall <xref:System.String?displayProperty=nameWithType>, der Zeichenfolgenliterale zulässt. Das heißt, `const string s = "abc"` ist zulässig, `const object s = "abc"` aber nicht. Diese Bedingung wird mit diesem Codeausschnitt überprüft:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

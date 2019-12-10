@@ -2,18 +2,20 @@
 title: Netzwerkisolation für Windows Store-Apps
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447419"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802166"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Netzwerkisolation für Windows Store-Apps
-Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:System.Net.Http.Headers> können verwendet werden, um Windows Store-Apps oder Desktop-Apps zu entwickeln. Bei Verwendung in einer Windows Store-App sind Klassen in diesen Namespaces von Netzwerkisolation betroffen, als Teil des Anwendungssicherheitsmodells, das von [!INCLUDE[win8](../../../includes/win8-md.md)] verwendet wird. Die entsprechenden Netzwerkfunktionen müssen im App-Manifest für eine Windows Store-App aktiviert sein, damit das System den Netzwerkzugriff erlaubt.  
+
+Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:System.Net.Http.Headers> können verwendet werden, um Windows Store- oder Desktop-Apps zu entwickeln. Bei Verwendung in einer Windows Store-App sind Klassen in diesen Namespaces von Netzwerkisolation betroffen, als Teil des Anwendungssicherheitsmodells, das von Windows 8 verwendet wird. Die entsprechenden Netzwerkfunktionen müssen im App-Manifest für eine Windows Store-App aktiviert sein, damit das System den Netzwerkzugriff erlaubt.  
   
 ## <a name="checklist-for-network-isolation"></a>Prüfliste für die Netzwerkisolation  
- Verwenden Sie diese Prüfliste, um sicherzustellen, dass die Netzwerkisolation für Ihre Windows Store-App konfiguriert ist.  
+
+Verwenden Sie diese Prüfliste, um sicherzustellen, dass die Netzwerkisolation für Ihre Windows Store-App konfiguriert ist.  
   
 1. Bestimmen Sie die Richtung der Netzwerkzugriffsanforderungen, die von der App benötigt werden. Dies können entweder ausgehende, vom Client initiierte Anforderungen sein oder eingehende, unaufgeforderte Anforderungen, oder es könnte möglicherweise eine Kombination aus beiden Netzwerkanforderungstypen sein.  
   
@@ -23,7 +25,7 @@ Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:Sy
   
 4. Stellen Sie Ihre App bereit, und führen Sie diese zu Testzwecken aus, indem Sie die Netzwerkisolationstools für die Problembehandlung verwenden.  
   
- Weitere ausführliche Informationen zum Konfigurieren der Netzwerkfunktionen und der Isolationstools zur Problembehandlung im Rahmen der Netzwerkisolation finden Sie unter [So wird’s gemacht: Konfigurieren von Netzwerkisolationsfunktionen](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in der Windows 8.x Store-Entwicklerdokumentation.
+Weitere ausführliche Informationen zum Konfigurieren der Netzwerkfunktionen und der Isolationstools zur Problembehandlung im Rahmen der Netzwerkisolation finden Sie unter [So wird’s gemacht: Konfigurieren von Netzwerkisolationsfunktionen](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in der Windows 8.x Store-Entwicklerdokumentation.
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Neuigkeiten in .NET Core 2.0
 description: Informationen zu den neuen Funktionen in .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100844"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801893"
 ---
 # <a name="whats-new-in-net-core-20"></a>Neuigkeiten in .NET Core 2.0
 
@@ -136,7 +136,7 @@ Um Ihr Projekt in Visual Studio neu zuzuweisen, öffnen Sie die Registerkarte **
 
 Wenn Sie Ihren Code ändern, führt Live Unit Testing automatisch alle betroffenen Komponententests im Hintergrund aus und zeigt die Ergebnisse und die Codeabdeckung in der Visual Studio-Umgebung live an. .NET Core 2.0 unterstützt jetzt Live Unit Testing. Bisher war Live Unit Testing nur für .NET Framework-Anwendungen verfügbar.
 
-Weitere Informationen finden Sie unter [Live Unit Testing mit Visual Studio 2017](/visualstudio/test/live-unit-testing) und [Live Unit Testing – häufig gestellte Fragen](/visualstudio/test/live-unit-testing-faq).
+Weitere Informationen finden Sie unter [Live Unit Testing mit Visual Studio](/visualstudio/test/live-unit-testing) und [Live Unit Testing – häufig gestellte Fragen](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Bessere Unterstützung für mehrere Zielframeworks
 

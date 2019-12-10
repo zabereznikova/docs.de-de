@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552240"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801950"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -40,7 +40,7 @@ Diese Integration wird teilweise dank der Mitwirkenden von [OmniSharp](https://w
 - Sammlungen, z.B. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Hilfstypen, z.B. <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> und <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Datentypen, z.B. <xref:System.Data.DataSet?displayProperty=nameWithType> und [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Hochleistungstypen, z. B. <xref:System.Numerics.Vector?displayProperty=nameWithType> und [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
+- Hochleistungstypen, z. B. <xref:System.Numerics.Vector?displayProperty=nameWithType> und [Pipelines](../standard/io/pipelines.md).
 
 Durch die Implementierung der [.NET Standard](../standard/net-standard.md)-Spezifikation ist .NET Core mit .NET Framework und Mono-APIs kompatibel.
 
@@ -56,7 +56,7 @@ Mehrere Frameworks wurden basierend auf .NET Core entwickelt:
 
 .NET Core umfasst folgende Bestandteile:
 
-- Eine [.NET Core-Runtime](https://github.com/dotnet/coreclr), die ein Typsystem, eine Funktion zum Laden von Assemblys, einen Garbage Collector, natives Interop und andere grundlegende Dienste bereitstellt. [.NET Core-Frameworkbibliotheken](https://github.com/dotnet/corefx) stellen primitive Datentypen, Typen zur Anwendungsgestaltung und grundlegende Hilfsprogramme bereit.
+- Eine [.NET Core-Runtime](https://github.com/dotnet/runtime/tree/master/src/coreclr), die ein Typsystem, eine Funktion zum Laden von Assemblys, einen Garbage Collector, natives Interop und andere grundlegende Dienste bereitstellt. [.NET Core-Frameworkbibliotheken](https://github.com/dotnet/runtime/tree/master/src/libraries) stellen primitive Datentypen, Typen zur Anwendungsgestaltung und grundlegende Hilfsprogramme bereit.
 - Die [ASP.NET-Runtime](https://github.com/aspnet/home), die ein Framework zum Erstellen moderner, cloudbasierter Anwendungen mit Internetverbindung, wie etwa Web-Apps, IoT-Apps und mobile Back-Ends, bietet.
 - Die [.NET Core-CLI-Tools](https://github.com/dotnet/cli) und Sprachcompiler ([Roslyn](https://github.com/dotnet/roslyn) und [F#](https://github.com/microsoft/visualfsharp)), die Funktionen für .NET Core-Entwickler bereitstellen.
 - Der Befehl [dotnet tool](https://github.com/dotnet/core-setup), der zum Starten von .NET Core-Anwendungen und CLI-Tools verwendet wird. Er wählt und hostet die Runtime, stellt eine Richtlinie zum Laden der Assembly bereit und startet die Anwendungen und Tools.
@@ -79,17 +79,17 @@ Das Produkt ist in mehrere Teile aufgeteilt, und die verschiedenen Teile können
 
 Häufig wird die Frage gestellt, wie .NET Core so implementiert wird, dass mehrere Betriebssysteme unterstützt werden können. Dabei wird meistens gefragt, ob es separate Implementierungen gibt oder die [bedingte Kompilierung](https://en.wikipedia.org/wiki/Conditional_compilation) verwendet wird. Die Antwort lautet: Beide Ansätze werden eingesetzt, aber der Schwerpunkt liegt eindeutig auf der bedingten Kompilierung.
 
-Im folgenden Diagramm sehen Sie, dass die große Mehrheit der [CoreFX](https://github.com/dotnet/corefx)-Bibliotheken plattformneutralen Code enthalten, der auf allen Plattformen gemeinsam genutzt wird. Ein plattformneutraler Code kann als einzelne, tragbare Assembly implementiert werden, die auf allen Plattformen verwendet wird.
+Im folgenden Diagramm sehen Sie, dass die große Mehrheit der [.NET Core-Bibliotheken](https://github.com/dotnet/runtime/tree/master/src/libraries) plattformneutralen Code enthalten, der auf allen Plattformen gemeinsam genutzt wird. Ein plattformneutraler Code kann als einzelne, tragbare Assembly implementiert werden, die auf allen Plattformen verwendet wird.
 
 ![CoreFX: Codezeilen pro Plattform](../images/corefx-platforms-loc.png)
 
-Windows- und Unix-Implementierungen haben eine ähnliche Größe. Windows verfügt über eine größere Implementierung, da CoreFX einige Funktionen nur für Windows implementiert, z. B. [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry), jedoch noch nicht viele Konzepte nur für Unix implementiert. Außerdem sehen Sie, dass die Mehrheit der Linux- und Mac OS-Implementierungen für mehrere Unix-Implementierungen verwendet werden, während die spezifischen Linux- und Mac OS-Implementierungen ungefähr gleich groß sind.
+Windows- und Unix-Implementierungen haben eine ähnliche Größe. Windows verfügt über eine größere Implementierung, da .NET Core-Bibliotheken einige auf Windows beschränkte Funktionen implementieren, z. B. [Microsoft.Win32.Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry), jedoch noch nicht viele auf UNIX beschränkte Konzepte. Außerdem sehen Sie, dass die Mehrheit der Linux- und Mac OS-Implementierungen für mehrere Unix-Implementierungen verwendet werden, während die spezifischen Linux- und Mac OS-Implementierungen ungefähr gleich groß sind.
 
 Es gibt eine Mischung aus plattformspezifischen und plattformneutralen Bibliotheken in .NET Core. Sie können das Muster in einigen Beispielen sehen:
 
-- [CoreCLR](https://github.com/dotnet/coreclr) ist plattformspezifisch. Es baut auf Subsystemen des Betriebssystems auf, z.B. auf dem Speicher-Manager und dem Threadplaner.
-- [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) und [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) sind plattformspezifisch, angesichts der Tatsache, dass sich Speicher- und Kryptografie-APIs je nach Betriebssystem voneinander unterscheiden.
-- [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) und [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) sind plattformneutral, angesichts der Tatsache, dass sie Datenstrukturen erstellen und verwenden.
+- [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) ist plattformspezifisch. Es baut auf Subsystemen des Betriebssystems auf, z.B. auf dem Speicher-Manager und dem Threadplaner.
+- [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) und [System.Security.Cryptography.Algorithms](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) sind plattformspezifisch, angesichts der Tatsache, dass sich Speicher- und Kryptografie-APIs je nach Betriebssystem voneinander unterscheiden.
+- [System.Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) und [System.Linq](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) sind plattformneutral, angesichts der Tatsache, dass sie Datenstrukturen erstellen und verwenden.
 
 ## <a name="comparisons-to-other-net-implementations"></a>Vergleiche mit anderen .NET- Implementierungen
 

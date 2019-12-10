@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9b8d28f7f5508b4ba7c46306b5e78aa3d53d95e0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71263341"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802838"
 ---
 | .NET-Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
@@ -17,7 +17,7 @@ ms.locfileid: "71263341"
 | Universelle Windows-Plattform | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | Wird nachgeliefert. |
 | Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              | Wird nachgeliefert. |
 
-<sup>1 Die für .NET Frameworks aufgeführten Versionen gelten für das .NET Core 2.0 SDK und höhere Versionen des Tools. Ältere Versionen haben eine andere Zuordnung für .NET Standard 1.5 und höher verwendet. Sie können [Tools für .NET Core-Tools für Visual Studio 2015 herunterladen](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md), falls Sie kein Upgrade auf Visual Studio 2017 durchführen können.</sup>
+<sup>1 Die für .NET Frameworks aufgeführten Versionen gelten für das .NET Core 2.0 SDK und höhere Versionen des Tools. Ältere Versionen haben eine andere Zuordnung für .NET Standard 1.5 und höher verwendet. Sie können [Tools für .NET Core-Tools für Visual Studio 2015 herunterladen](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md), falls Sie kein Upgrade auf Visual Studio 2017 oder eine höhere Version durchführen können.</sup>
 
 <sup>2 Die hier aufgelisteten Versionen stellen die Regeln dar, die von NuGet verwendet werden, um zu bestimmen, ob eine vorhandene .NET Standard-Bibliothek anwendbar ist. Zwar sieht NuGet die .NET-Standards 1.5 bis 2.0 als durch .NET Framework 4.6.1 unterstützt an, jedoch treten verschiedene Probleme mit der Nutzung von .NET Standard-Bibliotheken auf, die für diese Versionen aus .NET Framework 4.6.1-Projekten erstellt wurden. Für .NET Framework-Projekte, die auf diese Bibliotheken angewiesen sind, empfehlen wir, ein Upgrade des Projekts auf die Zielplattform .NET Framework 4.7.2 oder höher durchzuführen.</sup>
 

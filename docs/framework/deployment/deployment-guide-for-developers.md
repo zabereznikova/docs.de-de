@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457992"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801878"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version von .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -51,7 +51,7 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 
 - Sie müssen über Administratorrechte verfügen, um .NET Framework 4.5 und zugehörige Punktreleases zu installieren.
 
-- .NET Framework 4.5 ist in [!INCLUDE[win8](../../../includes/win8-md.md)] und [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] enthalten. Daher müssen Sie diese Version für diese Betriebssysteme nicht mit Ihrer App bereitstellen. Ebenso ist .NET Framework 4.5.1 in [!INCLUDE[win81](../../../includes/win81-md.md)] und Windows Server 2012 R2 enthalten. .NET Framework 4.5.2 ist in keinem Betriebssystem enthalten. .NET Framework 4.6 ist in Windows 10 enthalten, .NET Framework 4.6.1 ist im November-Update von Windows 10 enthalten, und .NET Framework 4.6.2 ist im Windows 10 Anniversary Update enthalten.  .NET Framework 4.7 ist im Windows 10 Creators Update enthalten, .NET Framework 4.7.1 ist im Windows 10 Fall Creators Update enthalten, und .NET Framework 4.7.2 ist in den Windows 10-Updates von April 2018 und Oktober 2018 enthalten. .NET Framework 4.8 ist im Windows 10-Update vom Mai 2019 enthalten. Eine vollständige Liste der Hardware- und Softwareanforderungen finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
+- .NET Framework 4.5 ist Windows 8 und [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] enthalten. Daher müssen Sie diese Version für diese Betriebssysteme nicht mit Ihrer App bereitstellen. Ebenso ist .NET Framework 4.5.1 in Windows 8.1 und Windows Server 2012 R2 enthalten. .NET Framework 4.5.2 ist in keinem Betriebssystem enthalten. .NET Framework 4.6 ist in Windows 10 enthalten, .NET Framework 4.6.1 ist im November-Update von Windows 10 enthalten, und .NET Framework 4.6.2 ist im Windows 10 Anniversary Update enthalten.  .NET Framework 4.7 ist im Windows 10 Creators Update enthalten, .NET Framework 4.7.1 ist im Windows 10 Fall Creators Update enthalten, und .NET Framework 4.7.2 ist in den Windows 10-Updates von April 2018 und Oktober 2018 enthalten. .NET Framework 4.8 ist im Windows 10-Update vom Mai 2019 enthalten. Eine vollständige Liste der Hardware- und Softwareanforderungen finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
 
 - Ab .NET Framework 4.5. können die Benutzer während des Setups eine Liste der aktiven .NET Framework-Apps anzeigen und diese Apps einfach schließen. Dies hilft möglicherweise, durch .NET Framework-Installationen verursachte Systemneustarts zu vermeiden. Informationen hierzu finden Sie unter [Reduzieren von Systemneustarts](reducing-system-restarts.md).
 
@@ -276,8 +276,8 @@ Das .NET Framework-Installationsprogramm schreibt Registrierungsschlüssel, wenn
 |.NET Framework 4.6, installiert unter Windows 10|393295|
 |.NET Framework 4.6, installiert in allen Betriebssystemversionen außer Windows 10|393297|
 |.NET Framework 4.5.2|379893|
-|.NET Framework 4.5.1, installiert mit [!INCLUDE[win81](../../../includes/win81-md.md)] oder Windows Server 2012 R2|378675|
-|.NET Framework 4.5.1, installiert unter [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
+|.NET Framework 4.5.1 installiert mit Windows 8.1 oder Windows Server 2012 R2|378675|
+|.NET Framework 4.5.1, installiert unter Windows 8, Windows 7|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>Erkennen der Sprachpakete
@@ -368,7 +368,7 @@ Fügen Sie den folgenden Inhalt hinzu:
 
 ## <a name="uninstalling-the-net-framework"></a>Deinstallieren von .NET Framework
 
-Ab [!INCLUDE[win8](../../../includes/win8-md.md)] können Sie .NET Framework 4.5 oder ein zugehöriges Punktrelease über die Option **Windows-Funktionen aktivieren oder deaktivieren** in der Systemsteuerung deinstallieren. In früheren Versionen von Windows können Sie .NET Framework 4.5 oder ein zugehöriges Punktrelease über die Option **Programme hinzufügen oder entfernen** in der Systemsteuerung deinstallieren.
+Ab Windows 8 können Sie .NET Framework 4.5 oder ein zugehöriges Punktrelease über die Option **Windows-Funktionen aktivieren oder deaktivieren** in der Systemsteuerung deinstallieren. In früheren Versionen von Windows können Sie .NET Framework 4.5 oder ein zugehöriges Punktrelease über die Option **Programme hinzufügen oder entfernen** in der Systemsteuerung deinstallieren.
 
 > [!IMPORTANT]
 > Unter Windows 7 und früheren Betriebssystemen werden bei der Deinstallation von .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 oder 4.8 .NET Framework 4.5-Dateien nicht wiederhergestellt, und bei der Deinstallation von .NET Framework 4.5 werden .NET Framework 4-Dateien nicht wiederhergestellt. Wenn Sie wieder die ältere Version verwenden möchten, müssen Sie diese Version und alle Updates für sie neu installieren.
