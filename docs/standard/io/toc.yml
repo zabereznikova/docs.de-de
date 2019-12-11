@@ -8,7 +8,7 @@
       items:
         - name: 'Vorgehensweise: Kopieren von Verzeichnissen'
           href: how-to-copy-directories.md
-        - name: 'Gewusst wie: Auflisten von Verzeichnissen und Dateien'
+        - name: 'Vorgehensweise: Auflisten von Verzeichnissen und Dateien'
           href: how-to-enumerate-directories-and-files.md
         - name: 'Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei'
           href: how-to-read-and-write-to-a-newly-created-data-file.md
@@ -20,7 +20,7 @@
           href: how-to-read-text-from-a-file.md
         - name: 'Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge'
           href: how-to-read-characters-from-a-string.md
-        - name: 'Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge'
+        - name: 'Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge'
           href: how-to-write-characters-to-a-string.md
         - name: 'Vorgehensweise: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen'
           href: how-to-add-or-remove-access-control-list-entries.md
@@ -39,9 +39,9 @@
       items:
         - name: Isolationstypen
           href: types-of-isolation.md
-        - name: 'Gewusst wie: Erhalten von Speichern für isolierten Speicher'
+        - name: 'Vorgehensweise: Erhalten von Speichern für isolierten Speicher'
           href: how-to-obtain-stores-for-isolated-storage.md
-        - name: 'Gewusst wie: Auflisten von Speichern für isolierten Speicher'
+        - name: 'Vorgehensweise: Auflisten von Speichern für isolierten Speicher'
           href: how-to-enumerate-stores-for-isolated-storage.md
         - name: 'Vorgehensweise: Löschen von Speichern im isolierten Speicher'
           href: how-to-delete-stores-in-isolated-storage.md
@@ -58,11 +58,13 @@
     - name: Pipes
       href: pipe-operations.md
       items:
-        - name: 'Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
+        - name: 'Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: 'Vorgehensweise: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk'
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: Pipelines
       href: pipelines.md
+    - name: Arbeiten mit Puffern
+      href: buffers.md
     - name: Speicherabbilddateien
       href: memory-mapped-files.md
