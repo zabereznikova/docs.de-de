@@ -20,11 +20,11 @@ ms.locfileid: "71699616"
 # <a name="add-element-for-bypasslist-network-settings"></a>\<add >-Element für bypasslist (Netzwerkeinstellungen)
 Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp; @ no__t-1[**@no__t -4system. net >**](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[**\<defaultproxy >**](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[**\<bypasslist >**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<> Hinzufügen**  
   
 ## <a name="syntax"></a>Syntax  
   

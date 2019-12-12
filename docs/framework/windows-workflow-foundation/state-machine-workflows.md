@@ -21,7 +21,7 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
   
 - <xref:System.Activities.Statements.Transition>  
   
- Um einen Zustandsautomatenworkflow erstellen, werden die Zustände einer <xref:System.Activities.Statements.StateMachine>-Aktivität hinzugefügt. Übergänge werden verwendet, um den Fluss zwischen den Zuständen zu steuern. Der folgende Screenshot zeigt im Schritt " [Getting Started Tutorial](getting-started-tutorial.md) [How to: Create a State Machine Workflow](how-to-create-a-state-machine-workflow.md)" einen Zustands Automaten Workflow mit drei Zuständen und drei Übergängen. **Initialisieren des Ziels** ist der Anfangszustand und stellt den ersten Zustand im Workflow dar. Dies wird durch die Zeile festgelegt, die vom **Start** Knoten zu dieser führt. Der endgültige Zustand im Workflow heißt **FinalState**und stellt den Punkt dar, an dem der Workflow abgeschlossen ist.  
+ Um einen Zustandsautomatenworkflow erstellen, werden die Zustände einer <xref:System.Activities.Statements.StateMachine>-Aktivität hinzugefügt. Übergänge werden verwendet, um den Fluss zwischen den Zuständen zu steuern. Der folgende Screenshot aus dem Schritt " [Getting Started Tutorial](getting-started-tutorial.md) " [Vorgehensweise: Erstellen Sie einen Zustandsautomatworkflow](how-to-create-a-state-machine-workflow.md), der einen Zustands Automaten Workflow mit drei Zuständen und drei Übergängen anzeigt. **Initialisieren des Ziels** ist der Anfangszustand und stellt den ersten Zustand im Workflow dar. Dies wird durch die Zeile festgelegt, die vom **Start** Knoten zu dieser führt. Der endgültige Zustand im Workflow heißt **FinalState**und stellt den Punkt dar, an dem der Workflow abgeschlossen ist.  
   
  ![Die Abbildung zeigt den abgeschlossenen Zustandsautomatworkflow.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
 > [!NOTE]
 > Wenn die <xref:System.Activities.Statements.Transition.Condition%2A>-Aktivität eines Übergangs mit `False` ausgewertet wird (oder alle Bedingungen eines Übergangs mit freigegebenem Trigger mit `False` ausgewertet werden), erfolgt der Übergang nicht, und die Trigger aller Übergänge aus dem Zustand werden neu geplant.  
   
- Weitere Informationen zum Erstellen von Zustandsautomatworkflows finden Sie unter Vorgehens [Weise: Erstellen eines](how-to-create-a-state-machine-workflow.md)Zustandsautomatworkflows, [StateMachine-Aktivitäts Designers](/visualstudio/workflow-designer/statemachine-activity-designer), [Zustands Aktivitäts](/visualstudio/workflow-designer/state-activity-designer)Designers, [FinalState-Aktivitäts Designer](/visualstudio/workflow-designer/finalstate-activity-designer)und [Übergangs Aktivitäts Designer](/visualstudio/workflow-designer/transition-activity-designer).  
+ Weitere Informationen zum Erstellen von Zustandsautomatworkflows finden Sie unter [Vorgehensweise: Erstellen Sie einen Zustandsautomatworkflow](how-to-create-a-state-machine-workflow.md), [StateMachine-Aktivitäts-Designer](/visualstudio/workflow-designer/statemachine-activity-designer), [Zustands Aktivitäts Designer](/visualstudio/workflow-designer/state-activity-designer), [FinalState-Aktivitäts Designer](/visualstudio/workflow-designer/finalstate-activity-designer)und [Übergangs Aktivitäts Designer](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Terminologie für Zustandsautomaten  
  In diesem Abschnitt werden die in diesem Thema verwendeten Begriffe im Hinblick auf Zustandsautomaten erläutert.  
   
- Phase  
+ Status  
  Die Basiseinheit, aus der ein Zustandsautomat besteht. Ein Zustandsautomat kann zu einem bestimmten Zeitpunkt jeweils einen Zustand aufweisen.  
   
  Eingangsaktion  
@@ -94,7 +94,7 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
  Selbstübergang  
  Ein Übergang, der von einem Zustand in denselben Übergang übergeht.  
   
- Ursprünglicher Zustand  
+ Anfangszustand  
  Ein Zustand, der den Anfangspunkt des Zustandsautomaten darstellt.  
   
  Endzustand  
@@ -102,7 +102,7 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erstellen eines Zustandsautomatenworkflows](how-to-create-a-state-machine-workflow.md)
+- [Vorgehensweise: Erstellen eines Zustands Automaten Workflows](how-to-create-a-state-machine-workflow.md)
 - [StateMachine-Aktivitätsdesigner](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Zustands-Aktivitätsdesigner](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState-Aktivitätsdesigner](/visualstudio/workflow-designer/finalstate-activity-designer)
