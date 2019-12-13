@@ -2,12 +2,12 @@
 title: Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855813"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837440"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 Windows Communication Foundation (WCF) macht Inspektionsdaten eines Dienstanbieters zur Laufzeit über einen WCF-Windows-Verwaltungsinstrumentation (WMI)-Anbieter verfügbar.  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) macht Inspektionsdaten eines Dienstanbiet
   
  Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentierung zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten verfügbar, z. b. Adressen, Bindungen, Verhaltensweisen und Listener.  
   
- Der integrierte WMI-Anbieter kann in der Konfigurationsdatei der Anwendung aktiviert werden. Dies erfolgt über das `wmiProviderEnabled` -Attribut [ \<der Diagnose >](../../../configure-apps/file-schema/wcf/diagnostics.md) im [ \<Abschnitt System. Service Model >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , wie in der folgenden Beispielkonfiguration gezeigt.  
+ Der integrierte WMI-Anbieter kann in der Konfigurationsdatei der Anwendung aktiviert werden. Dies erfolgt über das `wmiProviderEnabled`-Attribut der [\<Diagnose >](../../../configure-apps/file-schema/wcf/diagnostics.md) im Abschnitt [\<System. Service Model >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , wie in der folgenden Beispielkonfiguration gezeigt.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,22 +35,22 @@ Windows Communication Foundation (WCF) macht Inspektionsdaten eines Dienstanbiet
 > [!CAUTION]
 > Bei Verwendung der von .NET Framework bereitgestellten Methoden zum programmgesteuerten Zugreifen auf WMI-Daten ist darauf zu achten, dass von solchen Methoden bei hergestellter Verbindung möglicherweise Ausnahmen ausgelöst werden. Die Verbindung ist zwar beim Erstellen der <xref:System.Management.ManagementObject>-Instanz nicht hergestellt, dies ändert sich jedoch bei der ersten Anforderung, die einen tatsächlichen Austausch von Daten erfordert. Verwenden Sie deshalb zum Abfangen möglicher Ausnahmen einen `try..catch`-Block.  
   
- Sie können die Ablaufverfolgungs- und Nachrichtenprotokollierungsebene sowie die Nachrichtenprotokollierungsoptionen für die `System.ServiceModel`-Ablaufverfolgungsquelle in WMI ändern. Dies kann durchzugreifen auf die [AppDomainInfo](appdomaininfo.md) -Instanz erfolgen, die diese booleschen Eigenschaften verfügbar `LogMessagesAtServiceLevel`macht `LogMessagesAtTransportLevel`: `LogMalformedMessages`,, `TraceLevel`und. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren.  
+ Sie können die Ablaufverfolgungs- und Nachrichtenprotokollierungsebene sowie die Nachrichtenprotokollierungsoptionen für die `System.ServiceModel`-Ablaufverfolgungsquelle in WMI ändern. Dies kann durchzugreifen auf die [AppDomainInfo](appdomaininfo.md) -Instanz erfolgen, die diese booleschen Eigenschaften verfügbar macht: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`und `TraceLevel`. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren.  
   
  Sind in der Konfigurationsdatei keine Ablaufverfolgungslistener für die Nachrichtenprotokollierung oder keine `System.ServiceModel`-Ablaufverfolgungslistener angegeben, haben die vorgenommenen Änderungen keinerlei Auswirkungen, obgleich sie von WMI akzeptiert werden. Weitere Informationen zum ordnungsgemäßen Einrichten der jeweiligen Listener finden Sie unter [Konfigurieren der Nachrichten Protokollierung](../configuring-message-logging.md) und Konfigurieren der Ablauf [Verfolgung](../tracing/configuring-tracing.md). Die Ablaufverfolgungsebene aller anderen in der Konfiguration angegebenen Ablaufverfolgungsquellen wird beim Start der Anwendung wirksam und kann nicht geändert werden.  
   
  WCF macht eine `GetOperationCounterInstanceName` Methode für die Skripterstellung verfügbar. Wird die Methode mit einem Vorgangsnamen angegeben, wird der Name einer Leistungsindikatorinstanz zurückgegeben. Die Eingabe wird jedoch nicht überprüft. Aus diesem Grund wird bei Angabe eines falschen Vorgangsnamens auch ein falscher Indikatorname zurückgegeben.  
   
- Die `OutgoingChannel` -Eigenschaft `Service` der-Instanz zählt keine Kanäle, die von einem Dienst zum Herstellen einer Verbindung mit einem anderen Dienst geöffnet wurden, wenn der WCF-Client für den `Service` Ziel Dienst nicht innerhalb der-Methode erstellt wird.  
+ Die `OutgoingChannel`-Eigenschaft der `Service` Instanz zählt keine Kanäle, die von einem Dienst zum Herstellen einer Verbindung mit einem anderen Dienst geöffnet wurden, wenn der WCF-Client für den Ziel Dienst nicht innerhalb der `Service`-Methode erstellt wird.  
   
- **Vorsicht** WMI unterstützt nur <xref:System.TimeSpan> einen Wert von bis zu 3 Dezimalstellen. Beispiel: Wird eine der Eigenschaften des Diensts auf <xref:System.TimeSpan.MaxValue> festgelegt, wird der Wert beim Anzeigen in WMI nach 3Dezimalstellen abgeschnitten.  
+ **Vorsicht** WMI unterstützt nur einen <xref:System.TimeSpan> Wert von bis zu 3 Dezimalstellen. Beispiel: Wird eine der Eigenschaften des Diensts auf <xref:System.TimeSpan.MaxValue> festgelegt, wird der Wert beim Anzeigen in WMI nach 3Dezimalstellen abgeschnitten.  
   
 ## <a name="security"></a>Sicherheit  
  Da der WCF-WMI-Anbieter die Ermittlung von Diensten in einer Umgebung zulässt, sollten Sie bei der Gewährung des Zugriffs auf die Anwendung äußerst vorsichtig vorgehen. Durch Lockern des standardmäßig auf Administratoren beschränkten Zugriffs erhalten möglicherweise weniger vertrauenswürdige Parteien Zugriff auf sensible Daten der Umgebung. Genauer gesagt: Durch eine Lockerung der Berechtigungen für den Remote-WMI-Zugriff erhöht sich das Risiko für Überlastungsangriffe. Wird ein Prozess von einer Vielzahl von WMI-Anforderungen regelrecht überschwemmt, hat dies eine Beeinträchtigung der Leistung zur Folge.  
   
  Werden die Zugriffsberechtigungen für die MOF-Datei gelockert, haben weniger vertrauenswürdige Parteien die Möglichkeit zum Manipulieren des WMI-Verhaltens sowie zum Ändern der im WMI-Schema geladenen Objekte. So können beispielsweise Felder entfernt werden, was dazu führen kann, dass dem Administrator wichtige Daten nicht mehr zur Verfügung stehen oder der Datei Felder hinzugefügt werden, die nicht ausgefüllt werden oder Ausnahmen auslösen.  
   
- Standardmäßig erteilt der WCF-WMI-Anbieter die Berechtigung "Execute Method", "Provider Write" und "Enable Account" für den Administrator, und die Berechtigung "Konto aktivieren" für ASP.net, lokaler Dienst und Netzwerkdienst. Auf Nicht-[!INCLUDE[wv](../../../../../includes/wv-md.md)]-Plattformen besitzt das ASP.NET-Konto Lesezugriff auf den WMI-ServiceModel-Namespace. Sollen diese Rechte einer bestimmten Benutzergruppe vorenthalten werden, deaktivieren Sie entweder den WMI-Anbieter (ist standardmäßig deaktiviert), oder deaktivieren Sie den Zugriff für die gewünschte Benutzergruppe.  
+ Standardmäßig erteilt der WCF-WMI-Anbieter die Berechtigung "Execute Method", "Provider Write" und "Enable Account" für den Administrator, und die Berechtigung "Konto aktivieren" für ASP.net, lokaler Dienst und Netzwerkdienst. Insbesondere auf nicht-Windows Vista-Plattformen verfügt das ASP.NET-Konto über Lesezugriff auf den WMI Service Model-Namespace. Sollen diese Rechte einer bestimmten Benutzergruppe vorenthalten werden, deaktivieren Sie entweder den WMI-Anbieter (ist standardmäßig deaktiviert), oder deaktivieren Sie den Zugriff für die gewünschte Benutzergruppe.  
   
  Darüber hinaus kann WMI beim Versuch, WMI mithilfe der Konfiguration zu aktivieren, möglicherweise aufgrund unzureichender Benutzerberechtigungen nicht aktiviert werden. Es wird jedoch kein Ereignis in das Ereignisprotokoll aufgenommen, um diesen Fehler zu protokollieren.  
   

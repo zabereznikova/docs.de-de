@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320459"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802374"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Neues in Windows Communication Foundation 4.5
 
@@ -40,7 +40,7 @@ Projekte für portable Teilmengen ermöglichen es Programmierern von .NET-Assemb
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Geänderter Standard für den ASP.NET-Kompatibilitätsmodus
 
-WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben von WCF-Diensten vollständigen Zugriff auf die Funktionen in der ASP.NET-HTTP-Pipeline gewährt. Wenn Sie diesen Modus verwenden möchten, müssen Sie das `aspNetCompatibilityEnabled`-Attribut im Abschnitt [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) von Web. config auf true festlegen. Außerdem muss für jeden Dienst in dieser AppDomain die `RequirementsMode`-Eigenschaft in der <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> festgelegt sein. Standardmäßig ist <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jetzt auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> festgelegt. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](./feature-details/wcf-services-and-aspnet.md).
+WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben von WCF-Diensten vollständigen Zugriff auf die Funktionen in der ASP.NET-HTTP-Pipeline gewährt. Um diesen Modus zu verwenden, müssen Sie das `aspNetCompatibilityEnabled`-Attribut im [\<ServiceHost->](../configure-apps/file-schema/wcf/servicehostingenvironment.md) Abschnitt der Datei "Web. config" auf "true" festlegen. Außerdem muss für jeden Dienst in dieser AppDomain die `RequirementsMode`-Eigenschaft in der <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>festgelegt sein. Standardmäßig ist <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jetzt auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>festgelegt. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 
@@ -126,7 +126,7 @@ Unterstützung für WCF-Dienste mit IDNs (Internationalized Domain Names) wurde 
 
 ## <a name="httpclient"></a>HttpClient
 
-Eine neue Klasse mit dem Namen <xref:System.Net.Http.HttpClient> wurde hinzugefügt, um das Arbeiten mit HTTP-Anforderungen erheblich zu vereinfachen. Weitere Informationen finden Sie unter [Erstellen von Apps für soziale Netzwerke und verbinden mit HTTP-Diensten](https://go.microsoft.com/fwlink/?LinkId=231886) und dem [http-Client Beispiel](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
+Eine neue Klasse mit dem Namen <xref:System.Net.Http.HttpClient> wurde hinzugefügt, um das Arbeiten mit HTTP-Anforderungen erheblich zu vereinfachen. Weitere Informationen finden Sie unter [Erstellen von Apps für soziale Netzwerke und verbinden mit HTTP-Diensten](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) und dem [http-Client Beispiel](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
 
 ## <a name="configuration-intellisense"></a>IntelliSense-Konfiguration
 

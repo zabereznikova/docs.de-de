@@ -2,15 +2,15 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955322"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837973"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
-Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) einige bestimmte Sicherheits Szenarios nicht. Beispielsweise werden [!INCLUDE[wxp](../../../../includes/wxp-md.md)] die SSPI-oder Kerberos-Authentifizierungsprotokolle von der Home Edition nicht implementiert, und WCF unterstützt daher die Ausführung eines Dienstanbieter mit Windows-Authentifizierung auf dieser Plattform nicht. Andere Authentifizierungsmechanismen, z. b. Benutzername/Kennwort und integrierte HTTP/HTTPS-Authentifizierung, werden bei der Ausführung von WCF unter Windows XP Home Edition unterstützt.  
+Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) einige bestimmte Sicherheits Szenarios nicht. Beispielsweise implementiert [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI-oder Kerberos-Authentifizierungsprotokolle nicht, weshalb WCF das Ausführen eines Dienstanbieter mit Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, z. b. Benutzername/Kennwort und integrierte HTTP/HTTPS-Authentifizierung, werden bei der Ausführung von WCF unter Windows XP Home Edition unterstützt.  
   
 ## <a name="impersonation-scenarios"></a>Identitätswechselszenarien  
   
@@ -18,7 +18,7 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
  Wenn ein WCF-Client unter Verwendung der Windows-Authentifizierung mit einem Identitätswechsel asynchrone Aufrufe eines WCF-Dienstes ausführt, kann die Authentifizierung mit der Identität des Clientprozesses anstelle der gewechselten Identität erfolgen.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP und Sicherheitskontexttoken-Cookie aktiviert  
- WCF unterstützt keinen Identitätswechsel, und <xref:System.InvalidOperationException> eine wird ausgelöst, wenn die folgenden Bedingungen erfüllt sind:  
+ WCF unterstützt keinen Identitätswechsel, und es wird eine <xref:System.InvalidOperationException> ausgelöst, wenn die folgenden Bedingungen erfüllt sind:  
   
 - Das Betriebssystem ist [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -28,15 +28,15 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
   
 - Ein statusbasiertes Sicherheitszustandskontexttoken (SCT) wird erstellt. (Standardmäßig ist die Erstellung deaktiviert.)  
   
- Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontext Token für eine sichere](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)Sitzung.) Im Code wird das Token aktiviert, indem ein Sicherheitsbindungselement erstellt wird (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>), wobei die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode verwendet wird und der `requireCancellation`-Parameter auf `false` festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.  
+ Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontext Token für eine sichere Sitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein sicherheitsbindungs Element (entweder <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) mithilfe des <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> oder der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode erstellt und der `requireCancellation` Parameter auf `false`festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.  
   
- Alternativ wird das Token in der Konfiguration aktiviert, indem`customBinding`ein < > erstellt, dann ein <`security`> Element hinzugefügt und das `authenticationMode` -Attribut auf SecureConversation und das `requireSecurityContextCancellation` -Attribut `true`auf festgelegt wird.  
+ Alternativ wird das Token in der Konfiguration aktiviert, indem ein <`customBinding`> erstellt, dann ein <`security`> Element hinzugefügt und das `authenticationMode`-Attribut auf SecureConversation und das `requireSecurityContextCancellation`-Attribut auf `true`festgelegt wird.  
   
 > [!NOTE]
 > Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Sie können es daher mit der `Required`-Option unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] verwenden.  
   
 ### <a name="possible-aspnet-conflict"></a>Möglicher ASP.NET-Konflikt  
- WCF und ASP.net können den Identitätswechsel aktivieren oder deaktivieren. Wenn ASP.net eine WCF-Anwendung hostet, besteht möglicherweise ein Konflikt zwischen den WCF-und ASP.NET-Konfigurationseinstellungen. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> , die-Eigenschaft <xref:System.ServiceModel.ImpersonationOption.NotAllowed>ist auf festgelegt. in diesem Fall hat die ASP.NET-Identitätswechsel Einstellung Vorrang.  
+ WCF und ASP.net können den Identitätswechsel aktivieren oder deaktivieren. Wenn ASP.net eine WCF-Anwendung hostet, besteht möglicherweise ein Konflikt zwischen den WCF-und ASP.NET-Konfigurationseinstellungen. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn, die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>-Eigenschaft ist auf <xref:System.ServiceModel.ImpersonationOption.NotAllowed>festgelegt. in diesem Fall hat die ASP.NET-Identitätswechsel Einstellung Vorrang.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Assembly-Ladevorgänge können beim Identitätswechsel fehlschlagen  
  Wenn der Identitätswechselkontext keine Zugriffsberechtigungen zum Laden einer Assembly hat und es das erste Mal ist, dass die Common Language Runtime (CLR) versucht, die Assembly für diese Anwendungsdomäne zu laden, speichert die <xref:System.AppDomain> den Fehler zwischen. Nachfolgende Versuche, diese Assembly(s) zu laden, schlagen fehl, selbst nach dem Zurücksetzen des Identitätswechsels und sogar wenn der zurückgesetzte Kontext die Zugriffsberechtigungen hat, die Assembly zu laden. Die Ursache dafür ist, dass die CLR nach der Änderung des Benutzerkontextes keinen weiteren Ladeversuch unternimmt. Sie müssen die Anwendungsdomäne neu starten, um nach dem Fehler wiederhergestellt zu werden.  
@@ -62,7 +62,7 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
  Die FIPS-kompatible AES-Verschlüsselung funktioniert nicht bei Duplexrückrufen unter dem Identitätswechsel auf Identifizierungsebene.  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP-Zertifikate  
- *Kryptografieapi: Next Generation (CNG* ) ist die langfristige Ersetzung der CryptoAPI. Diese API ist in nicht verwaltetem Code unter [!INCLUDE[wv](../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../includes/lserver-md.md)] und späteren Windows-Versionen verfügbar.  
+ *kryptografieapi: Next Generation (CNG)* ist die langfristige Ersetzung der CryptoAPI. Diese API ist in nicht verwaltetem Code unter Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] und höheren Windows-Versionen verfügbar.  
   
  .NET Framework 4.6.1 und frühere Versionen unterstützen diese Zertifikate nicht, da Sie die Legacy-CryptoAPI verwenden, um CNG/KSP-Zertifikate zu verarbeiten. Die Verwendung dieser Zertifikate mit .NET Framework 4.6.1 und früheren Versionen führt zu einer Ausnahme.  
   
@@ -70,14 +70,14 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
   
 - Führen Sie `p/invoke` für die `CertGetCertificateContextProperty` aus, und überprüfen Sie `dwProvType` in der zurückgegebenen `CertGetCertificateContextProperty`.  
   
-- Verwenden Sie `certutil` den Befehl in der Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [certutil-Aufgaben für die Problembehandlung von Zertifikaten](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Verwenden Sie den Befehl `certutil` in der Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [certutil-Aufgaben für die Problembehandlung von Zertifikaten](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichtensicherheit schlägt fehlt, wenn der ASP.NET-Identitätswechsel verwendet wird und die ASP.NET-Kompatibilität erforderlich ist  
  WCF unterstützt die folgende Kombination von Einstellungen nicht, da Sie verhindern können, dass die Client Authentifizierung stattfindet:  
   
-- ASP.NET Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web. config", indem `impersonate` das-Attribut des`identity`< >- `true`Elements auf festgelegt wird.  
+- ASP.NET Identitätswechsel ist aktiviert. Dies erfolgt in der Datei Web. config, indem das `impersonate`-Attribut des <`identity`> Element auf `true`festgelegt wird.  
   
-- Der ASP.NET-Kompatibilitätsmodus wird aktiviert `aspNetCompatibilityEnabled` , indem das-Attribut [ \<des servicehoststingenvironment->](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) auf `true`festgelegt wird.  
+- Der ASP.NET-Kompatibilitätsmodus wird aktiviert, indem das `aspNetCompatibilityEnabled`-Attribut des [\<ServiceHost->](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) auf `true`festgelegt wird.  
   
 - Die Nachrichtenmodussicherheit wird verwendet.  
   
@@ -93,11 +93,11 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
   
  Ein Beispiel für diese Situation ist ein Dienst mit den folgenden drei Endpunktadressen:  
   
-- `http://localhost/CalculatorService/service`(der Dienst)  
+- `http://localhost/CalculatorService/service` (Dienst)  
   
-- `http://localhost/CalculatorService/issue_ticket`(STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
-- `http://localhost/CalculatorService/mex`(der Metadatenendpunkt)  
+- `http://localhost/CalculatorService/mex` (der Metadatenendpunkt)  
   
  Dadurch wird eine Ausnahme ausgelöst.  
   
@@ -110,7 +110,7 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Überlegungen zur Sicherheit](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
