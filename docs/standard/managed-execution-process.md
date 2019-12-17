@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122007"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960390"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
@@ -95,7 +95,7 @@ ms.locfileid: "73122007"
   
  Verwaltetem Code stehen während der Ausführung verschiedene Dienste zur Verfügung, z. B. Garbage Collection, Sicherheit, Interoperabilität mit nicht verwaltetem Code, sprachübergreifende Debugunterstützung sowie verbesserte Unterstützung der Bereitstellung und Versionserstellung.  
   
- Unter Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] und [!INCLUDE[windowsver](../../includes/windowsver-md.md)]sucht das Ladeprogramm des Betriebssystems nach verwalteten Modulen, indem ein Bit im COFF-Header überprüft wird. Das festgelegte Bit steht dabei für ein verwaltetes Modul. Wenn das Ladeprogramm verwaltete Module erkennt, lädt es mscoree.dll. `_CorValidateImage` und `_CorImageUnloading` benachrichtigen das Ladeprogramm, wenn die Images der verwalteten Module geladen und entladen werden. `_CorValidateImage` führt die folgenden Aktionen aus:  
+ Unter Microsoft Windows Vista sucht das Ladeprogramm des Betriebssystems nach verwalteten Modulen, indem ein Bit im COFF-Header überprüft wird. Das festgelegte Bit steht dabei für ein verwaltetes Modul. Wenn das Ladeprogramm verwaltete Module erkennt, lädt es mscoree.dll. `_CorValidateImage` und `_CorImageUnloading` benachrichtigen das Ladeprogramm, wenn die Images der verwalteten Module geladen und entladen werden. `_CorValidateImage` führt die folgenden Aktionen aus:  
   
 1. Überprüfen, dass es sich um gültigen verwalteten Code handelt  
   

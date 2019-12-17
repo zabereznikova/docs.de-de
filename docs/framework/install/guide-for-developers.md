@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 6098c2b855e692eef198e388ba9b29a4e8cc8de1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 407c9a3fd5057a8e1d68707c9e475d76b3f266e2
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802223"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960048"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -43,8 +43,8 @@ Verwenden Sie die folgende Tabelle für Quicklinks, oder lesen Sie weiter, um Ge
 |**4.6.1**|[NET Framework 4.6.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=690706)|[Downloadseite für 4.6.1-Webinstaller](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Downloadseite für 4.6.1-Offlineinstaller](https://go.microsoft.com/fwlink/?LinkId=671744)|**Installation möglich unter:**<br /><br/> Windows 10 <br /> Windows 8.1 und früher<br /> Windows Server 2012 SP2 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
 |**4.6**|In Visual Studio 2015 enthalten<br /><br /> [Paket zur Festlegung von Zielversionen für Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Downloadseite für 4.6-Webinstaller](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Downloadseite für 4.6-Offlineinstaller](https://go.microsoft.com/fwlink/?LinkId=528233)|**Enthalten in:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Installation auch möglich unter:**<br /><br/> Windows 8.1 und früher<br /> Windows Server 2012 SP2 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Zur Verwendung mit Visual Studio 2013, Visual Studio 2012 oder anderen IDEs|[Downloadseite für 4.5.2-Webinstaller](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Downloadseite für 4.5.2-Offlineinstaller](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Installation möglich unter:**<br /><br/> Windows 8.1 und früher<br /> Windows Server 2012 SP2 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Zur Verwendung mit Visual Studio 2013, Visual Studio 2012 oder anderen IDEs|[Downloadseite für 4.5.1-Webinstaller](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Downloadseite für 4.5.1-Offlineinstaller](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Enthalten in:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Installation auch möglich unter:**<br /><br/> Windows 8 und früher<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] und früher<br />(eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
-|**4.5**|In Visual Studio 2012 enthalten<br /><br /> Auch verfügbar als Teil des Windows 8 SDK|[Downloadseite für 4.5-Webinstaller](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Enthalten in:** <br/><br /> Windows 8<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Installation auch möglich unter:**<br/><br /> Windows 7 und früher<br /> Windows Server 2008 SP2 und früher<br />(eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Zur Verwendung mit Visual Studio 2013, Visual Studio 2012 oder anderen IDEs|[Downloadseite für 4.5.1-Webinstaller](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Downloadseite für 4.5.1-Offlineinstaller](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Enthalten in:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Installation auch möglich unter:**<br /><br/> Windows 8 und früher<br /> Windows Server 2012 und früher<br />(eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
+|**4.5**|In Visual Studio 2012 enthalten<br /><br /> Auch verfügbar als Teil des Windows 8 SDK|[Downloadseite für 4.5-Webinstaller](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Enthalten in:** <br/><br /> Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Installation auch möglich unter:**<br/><br /> Windows 7 und früher<br /> Windows Server 2008 SP2 und früher<br />(eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
 
 Sie können das **Developer Pack** für eine bestimmte Version von .NET Framework, sofern verfügbar, auf allen unterstützten Plattformen installieren.
 
