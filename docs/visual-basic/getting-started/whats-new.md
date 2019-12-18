@@ -21,45 +21,45 @@ In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von 
 
 ## <a name="current-version"></a>Aktuelle Version
 
-Visual Basic 16.0/Visual Studio 2019 Version 16.0
+Visual Basic 16.0/Visual Studio 2019 Version 16.0\
 Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Frühere Versionen
 
-Visual Basic 15.8/Visual Studio 2017 Version 15.8
+Visual Basic 15.8/Visual Studio 2017 Version 15.8\
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5/Visual Studio 2017 Version 15.5
+Visual Basic 15.5/Visual Studio 2017 Version 15.5\
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3/Visual Studio 2017 Version 15.3
+Visual Basic 15.3/Visual Studio 2017 Version 15.3\
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017
+Visual Basic 2017/Visual Studio 2017\
 Informationen zu neuen Features finden Sie unter [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015
+Visual Basic/Visual Studio 2015\
 Informationen zu neuen Features finden Sie unter [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013
+Visual Basic/Visual Studio 2013\
 Technologievorschau von .NET Compiler Platform („Roslyn“)
 
-Visual Basic/Visual Studio 2012
+Visual Basic/Visual Studio 2012\
 Die Schlüsselwörter `Async` und `await`, Iteratoren, Aufruferinformationsattribute
 
-Visual Basic/Visual Studio 2010
+Visual Basic/Visual Studio 2010\
 Automatisch implementierte Eigenschaften, Auflistungsinitialisierer, implizite Zeilenfortsetzung, dynamische, generische Ko-/Kontravarianz, Zugriff auf globalen Namespace
 
-Visual Basic/Visual Studio 2008
+Visual Basic/Visual Studio 2008\
 Language Integrated Query (LINQ), XML-Literale, lokaler Typrückschluss, Objektinitialisierer, anonyme Typen, Erweiterungsmethoden, lokaler `var`-Typrückschluss, Lambda-Ausdrücke, `if`-Operator, partielle Methoden, auf NULL festlegbare Werttypen
 
-Visual Basic/Visual Studio 2005
+Visual Basic/Visual Studio 2005\
 Der `My`-Typ und Hilfstypen (Zugriff auf App, Computer, Dateisystem, Netzwerk)
 
-Visual Basic/Visual Studio .NET 2003
+Visual Basic/Visual Studio .NET 2003\
 Bitschiebeoperatoren, Deklaration von Schleifenvariablen
 
-Visual Basic/Visual Studio .NET 2002
+Visual Basic/Visual Studio .NET 2002\
 Die erste Version von Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
@@ -154,7 +154,7 @@ Wenn Sie den Wert von Tupelelementen von Variablen zuweisen, leitet Visual Basic
 
 **Zusätzliche Compileroptionen**
 
-Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
+Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[**-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -182,7 +182,7 @@ Sie können ein binäres Literal definieren, indem Sie die Präfixe `&B` oder `&
 
 Weitere Informationen finden Sie im Abschnitt „Zuweisung von Literalen“ der Datentypen [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) und [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)** ](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Ab C# 7.0 unterstützt C# Verweisrückgabewerte. Das heißt, wenn die aufrufende Methode einen von einem Verweis zurückgegebenen Wert erhält, kann sie den Wert des Verweises ändern. In Visual Basic können Sie keine Methoden mit Verweisrückgabewerten erstellen. Allerdings können Sie Verweisrückgabewerte verarbeiten und modifizieren.
 
