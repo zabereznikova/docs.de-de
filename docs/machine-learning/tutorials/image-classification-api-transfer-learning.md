@@ -94,7 +94,7 @@ Nachdem Sie nun grundlegende Kenntnisse über das Transferlernen und die Bildkla
 ### <a name="prepare-and-understand-the-data"></a>Vorbereiten und Verstehen der Daten
 
 > [!NOTE]
-> Die Datasets für dieses Tutorial stammen von Marc Maguire, Sattar Dorafshan und Robert J. Thomas, „SDNET2018: A concrete crack image dataset for machine learning applications“ (2018). Durchsuchen Sie alle Datasets. Dokument 48. https://digitalcommons.usu.edu/all_datasets/48
+> Die Datasets für dieses Tutorial stammen von Marc Maguire, Sattar Dorafshan und Robert J. Thomas, „SDNET2018: A concrete crack image dataset for machine learning applications“ (2018). Durchsuchen Sie alle Datasets. Dokument 48. [https://digitalcommons.usu.edu/all_datasets/48](https://digitalcommons.usu.edu/all_datasets/48 )
 
 SDNET2018 ist ein Bilddataset, das Anmerkungen für gerissene und nicht gerissene Betonstrukturen (Brückenbeläge, Mauern und Gehwege) enthält.
 
