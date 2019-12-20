@@ -6,19 +6,27 @@ metadata:
   title: Leitfaden zur .NET-Anwendungsarchitektur
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
-  ms.date: 06/12/2019
+  ms.date: 10/22/2019
 abstract:
   description: 'Erfahren Sie, wie Sie produktionsbereite .NET-Apps mit einer kostenlosen Anleitung für die Anwendungsarchitektur erstellen.'
 sections:
-  - title: Verfügbare E-Books
+  - title: Veröffentlichte E-Books
     items:
+      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">ASP.NET Core gRPC für WCF-Entwickler</a></p>
+      - html: '<p>In diesem Leitfaden wird erläutert, was gRPC ist, indem die einzelnen Konzepte den entsprechenden Features von WCF zugeordnet werden, und es wird ein Leitfaden zum Migrieren einer vorhandenen WCF-App zu gRPC geboten.</p></li></ul>'
       - html: <ul><li><p><a href="containerized-lifecycle/index">Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools</a></p>
       - html: '<p>Dieses Handbuch enthält eine Einführung zu den empfohlenen End-to-End-Lebenszyklusprozessen, anhand derer Sie mit Visual Studio und Microsoft Azure in Containern befindliche Docker-Anwendungen entwickeln, überprüfen und bereitstellen können.</p></li></ul>'
       - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern</a></p>
       - html: '<p>Dieses Handbuch enthält eine Einführung zu den Strategien, die zum Migrieren vorhandener Webanwendungen in die Azure-Cloud und zu Windows-Containern erforderlich sind. Sie erfahren mehr über Codestrategien, Datenmigrationen, Orchestratoren und CI/CD-Prozesse.</p></li></ul>'
       - html: <ul><li><p><a href="modern-web-apps-azure/index">Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure</a></p>
       - html: '<p>Dieses Handbuch enthält eine Einführung zur empfohlenen Architektur, zum Entwurf und zu Bereitstellungsprozessen, mit denen Sie ASP.NET- und ASP.NET Core-Anwendungen erstellen und in Azure hosten können.</p></li></ul>'
-      - html: <ul><li><p><a href="microservices/index">Architecting Container and Microservice Based Applications (Architekturcontainer und auf Microservice basierende Anwendungen)</a></p>
+      - html: <ul><li><p><a href="microservices/index">Architekturentwurf von Container- und auf Microservice basierenden Anwendungen</a></p>
       - html: <p>Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.</p></li></ul>
       - html: '<ul><li><p><a href="serverless/index">Serverlose Apps: Architektur, Muster und Azure-Implementierung</a></p>'
       - html: '<p>Dies ist eine Anleitung zum Erstellen von serverlosen Anwendungen anhand von Beispielen mithilfe von Azure. Hier werden verschiedene Architektur- und Entwurfsansätze, die Vorteile und Herausforderungen serverloser Anwendungen sowie Szenarios und Anwendungsfälle erläutert.</p></li></ul>'
+  - title: E-Books in der Vorschau anzeigen
+    items:
+      - html: <ul><li><p><a href="cloud-native/index">Architektur von cloudnativen .NET-Apps für Azure</a></p>
+      - html: '<p>In diesem Leitfaden wird definiert, was „cloudnativ“ bedeutet, eine Beispiel-App eingeführt, die cloudnative Prinzipien verwendet, und es werden Themen behandelt, die für die meisten cloudnativen Anwendungen gelten.</p></li></ul>'
+      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Blazor für ASP.NET Web Forms-Entwickler</a></p>
+      - html: '<p>Eine Einführung in Blazor für ASP.NET Web Forms-Entwickler. Erfahren Sie, wie Sie mit .NET unter Verwendung von Blazor und .NET Core auf einfache und vertraute Weise ausgewachsene Web-Apps entwickeln können.</p></li></ul>'
