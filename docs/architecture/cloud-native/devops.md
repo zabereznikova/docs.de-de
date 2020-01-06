@@ -2,12 +2,12 @@
 title: Native Cloud-devops
 description: Architektur von Cloud Native .net-apps für Azure | Native Cloud-devops
 ms.date: 06/30/2019
-ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841816"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337412"
 ---
 # <a name="cloud-native-devops"></a>Native Cloud-devops
 
@@ -238,11 +238,11 @@ Das Endergebnis eines Builds ist eine Auflistung von Dateien, die als buildartef
 
 ### <a name="azure-devops-releases"></a>Azure devops-Releases
 
-Builds übernehmen die Kompilierung der Software in ein abrechenbares Paket, aber die Artefakte müssen nach wie vor in eine Testumgebung übermittelt werden, um Continuous Delivery abzuschließen. Hierfür verwendet Azure devops ein separates Tool namens Releases. Releases verwenden die Bibliothek derselben Aufgaben, die für den Build verfügbar waren, aber ein Konzept von "Stufen" darstellen. Eine Stufe ist eine isolierte Umgebung, in der das Paket installiert wird. Beispielsweise kann ein Produkt eine Entwicklungs-, QA-und Produktionsumgebung verwenden. Der Code wird kontinuierlich in der Entwicklungsumgebung bereitgestellt, in der automatisierte Tests ausgeführt werden können. Wenn diese Tests bestanden wurden, werden die Releases für manuelle Tests in die QA-Umgebung verschoben. Schließlich wird der Code in die Produktion übermittelt, wo er für alle sichtbar ist.
+Builds übernehmen die Kompilierung der Software in ein abrechenbares Paket, aber die Artefakte müssen nach wie vor in eine Testumgebung übermittelt werden, um Continuous Delivery abzuschließen. Hierfür verwendet Azure devops ein separates Tool namens Releases. Das Releases-Tool verwendet die Bibliothek derselben Aufgaben, die für den Build verfügbar waren, aber ein Konzept von "Stufen" bereitstellt. Eine Stufe ist eine isolierte Umgebung, in der das Paket installiert wird. Beispielsweise kann ein Produkt eine Entwicklungs-, QA-und Produktionsumgebung verwenden. Der Code wird kontinuierlich in der Entwicklungsumgebung bereitgestellt, in der automatisierte Tests ausgeführt werden können. Wenn diese Tests bestanden wurden, werden die Releases für manuelle Tests in die QA-Umgebung verschoben. Schließlich wird der Code in die Produktion übermittelt, wo er für alle sichtbar ist.
 
 ![Abbildung 11-9 eine Beispiel-releasepipeline mit Entwicklungs-, QA-und Produktionsphasen](./media/release-pipeline.png)
 
-Jede Phase im Build kann automatisch durch den Abschluss der vorherigen Phase ausgelöst werden. In vielen Fällen ist dies jedoch nicht wünschenswert. Das Verschieben von Code in die Produktion erfordert möglicherweise eine Genehmigung von einem anderen Releases unterstützen dies, indem genehmigende Personen in jedem Schritt der releasepipeline zugelassen werden. Regeln können so eingerichtet werden, dass eine bestimmte Person oder Gruppe von Personen sich bei einem Release anmelden muss, bevor es in der Produktion erfolgt. Diese Gates ermöglichen manuelle Qualitätsprüfungen sowie die Einhaltung gesetzlicher Bestimmungen, die Steuern, was in die Produktion übergeht.
+Jede Phase im Build kann automatisch durch den Abschluss der vorherigen Phase ausgelöst werden. In vielen Fällen ist dies jedoch nicht wünschenswert. Das Verschieben von Code in die Produktion erfordert möglicherweise eine Genehmigung von einem anderen Das Tool Releases unterstützt dies, indem es in jedem Schritt der releasepipeline genehmigende Personen zulässt. Regeln können so eingerichtet werden, dass eine bestimmte Person oder Gruppe von Personen sich bei einem Release anmelden muss, bevor es in der Produktion erfolgt. Diese Gates ermöglichen manuelle Qualitätsprüfungen sowie die Einhaltung gesetzlicher Bestimmungen, die Steuern, was in die Produktion übergeht.
 
 ### <a name="everybody-gets-a-build-pipeline"></a>Jeder erhält eine Buildpipeline.
 

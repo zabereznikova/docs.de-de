@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit blazor e
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841960"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337402"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit blazor
 
@@ -62,7 +62,7 @@ Sie können auch eine Liste von Elementen generieren, indem Sie C# eine normale 
 
 Razor-Direktiven, wie Direktiven in ASP.net-Web Forms, Steuern viele Aspekte der Kompilierung einer Razor-Komponente. Beispiele hierfür sind:
 
-- Namespace
+- -Namespace
 - Basisklasse
 - Implementierte Schnittstellen
 - Generische Parameter
@@ -81,13 +81,13 @@ In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in blazo
 |-------------|-----------|-------|--------------------|
 |`@attribute` |Fügt der Komponente ein Attribut auf Klassenebene hinzu.|`@attribute [Authorize]`|Keine|
 |`@code`      |Fügt der Komponente Klassenmember hinzu.|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|Implementiert die angegebene Schnittstelle.|`@implements IDisposable`|Code Behind verwenden|
+|`@implements`|Implementiert die angegebene Schnittstelle.|`@implements IDisposable`|Verwenden des CodeBehinds|
 |`@inherits`  |Erbt von der angegebenen Basisklasse|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
 |`@inject`    |Fügt einen Dienst in die Komponente ein.|`@inject IJSRuntime JS`|Keine|
 |`@layout`    |Gibt eine Layoutkomponente für die Komponente an.|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
 |`@namespace` |Legt den Namespace für die Komponente fest.|`@namespace MyNamespace`|Keine|
 |`@page`      |Gibt die Route für die Komponente an.|`@page "/product/{id}"`|`<%@ Page %>`|
-|`@typeparam` |Gibt einen generischen Typparameter für die Komponente an.|`@typeparam TItem`|Code Behind verwenden|
+|`@typeparam` |Gibt einen generischen Typparameter für die Komponente an.|`@typeparam TItem`|Verwenden des CodeBehinds|
 |`@using`     |Gibt einen Namespace an, der in den Gültigkeitsbereich|`@using MyComponentNamespace`|Namespace in der Datei " *Web. config* " hinzufügen|
 
 Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenattributen* für Elemente, um verschiedene Aspekte der Kompilierung von Komponenten zu steuern (Ereignis Behandlung, Datenbindung, Verweise auf Komponenten & Elemente usw.). Direktivenattribute folgen allen allgemeinen generischen Syntax, bei der die Werte in Klammern optional sind:
@@ -98,7 +98,7 @@ Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenatt
 
 In der folgenden Tabelle werden die verschiedenen Attribute der in blazor verwendeten Razor-Direktiven zusammengefasst.
 
-|Attribut    |Beschreibung|Beispiel|
+|Attribute    |Beschreibung|Beispiel|
 |-------------|-----------|-------|
 |`@attributes`|Rendert ein Wörterbuch von Attributen.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Erstellt eine bidirektionale Datenbindung.    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,10 +110,10 @@ Die verschiedenen von blazor verwendeten Direktivenattribute (`@onclick`, `@bind
 
 Viele der Syntaxen, die in *aspx* -und *ASCX* -Dateien verwendet werden, haben eine parallele Syntax in Razor. Im folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.net Web Forms und Razor.
 
-|Funktion                      |Web Forms           |Syntax               |Razor         |Syntax |
+|Feature                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Anweisungen                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
-|Code Blöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
+|Codeblöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |Ausdrücke<br>(HTML-codiert)|`<%: %>`            |`<%:DateTime.Now %>` |Implizit: `@`<br>Explizit: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Comments                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Datenbindung                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
@@ -131,7 +131,7 @@ Verwenden Sie die `@code`-Direktive, um der Razor-Komponenten Klasse Elemente hi
 }
 ```
 
-Da Razor auf C#basiert, muss es in einem C# Projekt ( *. csproj*) kompiliert werden. *Razor* -Dateien können nicht aus einem VB-Projekt (*vbproj*) kompiliert werden. Sie können weiterhin auf VB-Projekte aus dem blazor-Projekt verweisen. Das Gegenteil gilt auch für.
+Da Razor auf C#basiert, muss es in einem C# Projekt ( *. csproj*) kompiliert werden. *Razor* -Dateien können nicht aus einem Visual Basic Projekt (*vbproj*) kompiliert werden. Sie können weiterhin auf Visual Basic Projekte aus Ihrem blazor-Projekt verweisen. Das Gegenteil gilt auch für.
 
 Eine vollständige Razor-Syntax Referenz finden Sie unter [Razor-Syntax Referenz für ASP.net Core](/aspnet/core/mvc/views/razor).
 
@@ -379,7 +379,7 @@ Um eine Bindung an einen Komponenten Parameter herzustellen, verwenden Sie ein `
 }
 ```
 
-## <a name="state-changes"></a>Zustandsänderungen
+## <a name="state-changes"></a>Statusänderungen
 
 Wenn sich der Zustand der Komponente außerhalb eines normalen UI-Ereignisses oder Ereignis Rückrufs geändert hat, muss die Komponente manuell signalisieren, dass Sie erneut gerendert werden muss. Um zu signalisieren, dass sich der Status einer Komponente geändert hat, müssen Sie die `StateHasChanged`-Methode für die Komponente aufzurufen.
 

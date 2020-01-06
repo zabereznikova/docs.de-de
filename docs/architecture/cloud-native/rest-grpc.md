@@ -3,12 +3,12 @@ title: REST und gRPC
 description: Erfahren Sie mehr über GrpC, seine Rolle in Cloud-native Anwendungen und die Unterschiede zwischen der http-Rest-Funktion
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 80960a9042b1514fb78e7a8c993a1854067407e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73842050"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337072"
 ---
 # <a name="rest-and-grpc"></a>REST und gRPC
 
@@ -26,7 +26,7 @@ GrpC ist ein modernes RPC-Framework, das einfach und leistungsfähig ist. Für d
 - Obwohl HTTP 1,1 auf die Verarbeitung von Roundtrip-Anforderungen/-Antworten auf einmal beschränkt ist, unterstützt HTTP/2 Multiplexing oder mehrere parallele Anforderungen über dieselbe Verbindung.
 - HTTP/2 unterstützt eine Vollduplex-oder bidirektionale Kommunikation, bei der sowohl der Client als auch der Server und gleichzeitig kommunizieren können. Der Client kann Anforderungs Daten hochladen, wenn der Serverantwort Daten zurücksendet.
 - Streaming ist in http/2 integriert, was bedeutet, dass sowohl Anforderungen als auch Antworten große Datensätze asynchron streamen können.
-- Die Kombination von GrpC und http/2 steigert die Leistung erheblich. In [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) -Parametern trifft die GrpC-Leistung zu und überschreitet die Geschwindigkeit und Effizienz von [NetTcp-Bindungen](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Anders als C# NetTcp ist GrpC jedoch nicht auf Microsoft-Sprachen wie oder VB.net beschränkt.
+- Die Kombination von GrpC und http/2 steigert die Leistung erheblich. In [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) -Parametern trifft die GrpC-Leistung zu und überschreitet die Geschwindigkeit und Effizienz von [NetTcp-Bindungen](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Anders als C# NetTcp ist GrpC jedoch nicht auf Microsoft-Sprachen wie oder Visual Basic beschränkt.
 
 GrpC wird auf den beliebtesten Plattformen, einschließlich Java, C#, golang und nodejs, unterstützt.
 

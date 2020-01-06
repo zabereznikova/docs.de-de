@@ -2,12 +2,12 @@
 title: 'Selbstgeh ostete GrpC-Anwendungen: GrpC für WCF-Entwickler'
 description: Bereitstellen von ASP.net Core GrpC-Anwendungen als selbstgeh ostete Dienste
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967213"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545062"
 ---
 # <a name="self-hosted-grpc-applications"></a>Selbstgeh ostete GrpC-Anwendungen
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Veröffentlichen Sie Ihre Anwendung jetzt entweder aus Visual Studio, indem Sie mit der rechten Maustaste auf das Projekt klicken und im Kontextmenü *veröffentlichen* auswählen, oder klicken Sie auf der .net Core-CLI.
 
-Wenn Sie eine .net Core-Anwendung veröffentlichen, können Sie auswählen, ob Sie eine *Framework-abhängige* Bereitstellung oder eine *eigenständige* Bereitstellung erstellen möchten. Framework-abhängige bereit Stellungen erfordern, dass die freigegebene .net Core-Laufzeit auf dem Host installiert ist, auf dem Sie ausgeführt werden. Eigenständige bereit Stellungen werden mit einer kompletten Kopie der .net Core-Laufzeit und des .net Core-Frameworks veröffentlicht und können auf jedem Host ausgeführt werden. Weitere Informationen, einschließlich der vor-und Nachteile der einzelnen Ansätze, finden Sie in der Dokumentation zur [.net Core-Anwendungs Bereitstellung](https://docs.microsoft.com/dotnet/core/deploying/) .
+Wenn Sie eine .net Core-Anwendung veröffentlichen, können Sie auswählen, ob Sie eine *Framework-abhängige* Bereitstellung oder eine *eigenständige* Bereitstellung erstellen möchten. Framework-abhängige bereit Stellungen erfordern, dass die freigegebene .net Core-Laufzeit auf dem Host installiert ist, auf dem Sie ausgeführt werden. Eigenständige bereit Stellungen werden mit einer kompletten Kopie der .net Core-Laufzeit und des .net Core-Frameworks veröffentlicht und können auf jedem Host ausgeführt werden. Weitere Informationen, einschließlich der vor-und Nachteile der einzelnen Ansätze, finden Sie in der Dokumentation zur [.net Core-Anwendungs Bereitstellung](../../core/deploying/index.md) .
 
 Um einen eigenständigen Build der Anwendung zu veröffentlichen, bei dem die .net Core 3,0-Runtime nicht auf dem Host installiert werden muss, geben Sie die Runtime an, die in die Anwendung eingeschlossen werden soll, indem Sie das Flag `-r` (oder `--runtime`) verwenden.
 
@@ -150,7 +150,7 @@ Weitere Informationen zum Abfragen des systemd-Journal von der Befehlszeile mit 
 
 Wenn Sie eine GrpC-Anwendung in der Produktionsumgebung ausführen, sollten Sie ein TLS-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle (Certificate Authority, ca) verwenden. Diese Zertifizierungsstelle kann eine öffentliche Zertifizierungsstelle oder eine interne Zertifizierungsstelle für Ihre Organisation sein.
 
-Auf Windows-Hosts kann das Zertifikat mithilfe der [X509Store-Klasse](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)aus einem sicheren [Zertifikat Speicher](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) geladen werden. Die `X509Store`-Klasse kann auch mit dem OpenSSL-Schlüsselspeicher auf einigen Linux-Hosts verwendet werden.
+Auf Windows-Hosts kann das Zertifikat mithilfe der <xref:System.Security.Cryptography.X509Certificates.X509Store>-Klasse aus einem sicheren [Zertifikat Speicher](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) geladen werden. Die `X509Store`-Klasse kann auch mit dem OpenSSL-Schlüsselspeicher auf einigen Linux-Hosts verwendet werden.
 
 Zertifikate können auch mit einem der [X509Certificate2-Konstruktoren](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)erstellt werden, entweder aus einer Datei (z. b. einer `.pfx` Datei, die durch ein sicheres Kennwort geschützt ist), oder aus Binärdaten, die von einem sicheren Speicherdienst wie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)abgerufen werden.
 

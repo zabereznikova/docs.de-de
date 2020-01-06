@@ -2,12 +2,12 @@
 title: Cloudbasierte Datenmuster
 description: Architektur von Cloud Native .net-apps für Azure | Native Cloud-Datenmuster
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841822"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337424"
 ---
 # <a name="cloud-native-data-patterns"></a>Cloudbasierte Datenmuster
 
@@ -63,13 +63,13 @@ Während Abfragen für alle mikrodienste schwierig sind, kann die Implementierun
 
 **Abbildung 5-8**. Transaktionsübergreifende Implementierung einer Transaktion
 
-Beachten Sie, dass in der vorherigen Abbildung fünf unabhängige mikrodienste alle an einer verteilten *Create Order* -Transaktion teilnehmen. Allerdings muss die Transaktion für jeden der fünf einzelnen mikrodienste erfolgreich sein, oder alle müssen den Vorgang abbrechen und einen Rollback ausführen. Obwohl die integrierte Transaktionsunterstützung innerhalb der einzelnen-Dienste verfügbar ist, gibt es keine Unterstützung für eine verteilte Transaktion in allen fünf Diensten.
+Beachten Sie, dass in der vorherigen Abbildung fünf unabhängige mikrodienste alle an einer verteilten *Create Order* -Transaktion teilnehmen. Allerdings muss die Transaktion für jeden der fünf einzelnen mikrodienste erfolgreich sein, oder der Vorgang muss abgebrochen und ein Rollback für den Vorgang durchgeführt werden. Obwohl die integrierte Transaktionsunterstützung innerhalb der einzelnen-Dienste verfügbar ist, gibt es keine Unterstützung für eine verteilte Transaktion in allen fünf Diensten.
 
 Da die Transaktionsunterstützung für diesen Vorgang unabdingbar ist, damit die Daten in den einzelnen-Diensten konsistent bleiben, müssen Sie eine verteilte Transaktion Programm gesteuert erstellen.
 
 Ein gängiges Muster für das programmgesteuerte Hinzufügen von transaktionaler Unterstützung ist das [Saga-Muster](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/). Sie wird implementiert, indem lokale Transaktionen gruppiert und nacheinander nacheinander aufgerufen werden. Wenn eine lokale Transaktion fehlschlägt, bricht die Saga den Vorgang ab und Ruft einen Satz [kompensierender Transaktionen](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction) auf, um die von den vorangehenden lokalen Transaktionen vorgenommenen Änderungen rückgängig zu machen. In Abbildung 5-9 wird eine Transaktion mit dem Muster "Saga" angezeigt.
 
-![Rollback in Saga-Muster](./media/saga-rollback-operation.png)
+![Rollback im Saga-Muster](./media/saga-rollback-operation.png)
 
 **Abbildung 5-9**. Rollback einer Transaktion
 
@@ -107,7 +107,7 @@ Keine SQL-Datenbanken auf der anderen Seite beziehen sich auf leistungsstarke, n
 
 Eine Möglichkeit, die Unterschiede zwischen diesen Datenbanktypen zu verstehen, finden Sie im [Cap-Theorem](https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e), einem Satz von Prinzipien, die auf verteilte Systeme angewendet werden können, in denen der Status gespeichert wird. In Abbildung 5-11 werden die drei Eigenschaften des Cap-Theorem angezeigt.
 
-![Cap-Theorem](./media/cap-theorem.png)
+![CAP-Theorem](./media/cap-theorem.png)
 
 **Abbildung 5-11**. Das Cap-Theorem
 
@@ -139,7 +139,7 @@ Nosql-Datenbanken können nach den folgenden vier Modellen kategorisiert werden:
 
 Nosql-Datenbanken können für den Umgang mit umfangreichen Daten optimiert werden, insbesondere dann, wenn die Daten relativ einfach sind. Beachten Sie in folgenden Fall eine nosql-Datenbank:
 
-- Ihre Arbeitsauslastung erfordert umfangreiche und hohe Parallelität.
+- Ihre Arbeitsauslastung erfordert eine umfangreiche und hohe Parallelität.
 - Sie verfügen über eine große Anzahl von Benutzern.
 - Ihre Daten können einfach ohne Beziehungen ausgedrückt werden.
 - Sie müssen Ihre Daten geografisch verteilen.

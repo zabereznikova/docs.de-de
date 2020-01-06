@@ -2,12 +2,12 @@
 title: Datenspeicherung in Azure
 description: Architektur von Cloud Native .net-apps für Azure | Datenspeicherung in Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841894"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337458"
 ---
 # <a name="data-storage-in-azure"></a>Datenspeicherung in Azure
 
@@ -63,11 +63,11 @@ Neben dem herkömmlichen Microsoft SQL Server Stack bietet Azure auch verwaltete
 
 - [Skalieren](https://docs.microsoft.com/azure/mysql/concepts-high-availability) Sie nach Bedarf innerhalb von Sekunden.
 
-- Geschützt zum Schutz sensibler Daten im Ruhezustand und in Bewegung.
+- Gesicherte Datenbank zum Schutz sensibler Daten in Ruhe und Bewegung.
 
 - [Automatische Sicherungen](https://docs.microsoft.com/azure/mysql/concepts-backup) und [Point-in-Time-Wiederherstellung](https://docs.microsoft.com/azure/mysql/concepts-backup) für bis zu 35 Tage.
 
-- Sicherheit und Compliance auf Unternehmens Niveau.
+- Sicherheit und Konformität auf Unternehmensniveau.
 
 Diese integrierten-Funktionen für die Unterstützung sind wichtig für Organisationen, die über Hunderte von "taktischen" (nicht strategischen) Datenbanken in ihren Rechenzentren verfügen, aber nicht über die Ressourcen zum Patching, zur Sicherung, zur Sicherheit und zur Leistungsüberwachung verfügen.
 
@@ -95,7 +95,7 @@ MariaDB hat eine starke Folge und wird von vielen großen Unternehmen verwendet.
 
 - [Automatische Sicherungen](https://docs.microsoft.com/azure/mariadb/concepts-backup) und [Point-in-Time-Wiederherstellung](https://docs.microsoft.com/azure/mariadb/concepts-backup) für bis zu 35 Tage.
 
-- Sicherheit und Compliance auf Unternehmens Niveau.
+- Sicherheit und Konformität auf Unternehmensniveau.
 
 ## <a name="azure-database-for-postgresql"></a>Azure Database for PostgreSQL
 
@@ -129,11 +129,11 @@ Cosmos DB unterstützt das [aktive/aktive](https://kemptechnologies.com/white-pa
 
 Die Funktion " [multimasterprotokoll](https://docs.microsoft.com/azure/cosmos-db/how-to-multi-master) " in Cosmos DB ermöglicht die folgenden Funktionen:
 
-- Unbegrenzte elastische Schreib-und Lese Skalierbarkeit.
+- Unbegrenzte elastische Schreib und Leseskalierbarkeit.
 
-- 99,999% Lese-und Schreib Verfügbarkeit auf der ganzen Welt.
+- 99,999 % Lese- und Schreibverfügbarkeit weltweit.
 
-- Garantierte Lese-und Schreibvorgänge in weniger als 10 Millisekunden im 99. Perzentil.
+- Eine garantierte Verarbeitung von Lese-/Schreibvorgängen in weniger als 10 Millisekunden im 99. Perzentil.
 
 Intern wird Cosmos DB die Datenreplikation zwischen Regionen mit Konsistenz Ebenen und finanziell abgesicherten Vereinbarungen zum Service Level behandelt.
 
@@ -141,7 +141,7 @@ Mit den Cosmos DB [Multihosting-APIs](https://docs.microsoft.com/azure/cosmos-db
 
 ### <a name="multi-model-support"></a>Unterstützung für mehrere Modelle
 
-Cosmos DB ist eine *Datenplattform mit mehreren Modellen* , mit der Sie mit Ihren Daten interagieren können, indem Sie eine Reihe von unterstützten nosql-Modellen verwenden, darunter Dokumente, Schlüssel-Wert-Paare, breit Spalten-und Diagramm Darstellungen. Intern werden Daten in einem einfachen [Struktur](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) Format gespeichert, das aus primitiven Datentypen besteht, einschließlich Zeichen folgen, bools und Zahlen. Für jede Anforderung übersetzt die Datenbank-Engine Daten in die Modell Darstellung, die Sie ausgewählt haben. Sie können eine proprietäre Cosmos DB SQL-basierte API oder eine der in Abbildung 5-14 gezeigten [Kompatibilitäts-APIs](https://www.wikiwand.com/en/Cosmos_DB) auswählen.
+Cosmos DB ist eine *Datenplattform mit mehreren Modellen* , die es Ihnen ermöglicht, mit einer Reihe von unterstützten nosql-Modellen mit Ihren Daten zu interagieren, einschließlich Dokumenten, Schlüssel-Wert-Paaren, breit Spalten-und Diagramm Darstellungen. Intern werden Daten in einem einfachen [Struktur](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) Format gespeichert, das aus primitiven Datentypen besteht, wie z. b. Zeichen folgen, boolesche Werte und Zahlen. Für jede Anforderung übersetzt die Datenbank-Engine Daten in die Modell Darstellung, die Sie ausgewählt haben. Sie können eine proprietäre Cosmos DB SQL-basierte API oder eine der in Abbildung 5-14 gezeigten [Kompatibilitäts-APIs](https://www.wikiwand.com/en/Cosmos_DB) auswählen.
 
 ![Cosmos DB Anbieter](./media/cosmos-db-providers.png)
 
@@ -157,7 +157,7 @@ Anwendungen, die für Azure Table Storage geschrieben wurden, können mithilfe d
 
 In [Brownfield](https://en.wikipedia.org/wiki/Brownfield_(software_development)) -Anwendungsszenarien können Entwicklungsteams vorhandene Mongo-, Gremlin-oder Cassandra-Datenbanken in Cosmos DB migrieren, wobei nur minimale Änderungen am vorhandenen Daten-oder Anwendungscode vorgenommen werden. Für [Greenfield](https://en.wikipedia.org/wiki/Greenfield_project) -Szenarios können Entwicklungsteams das Datenmodell auswählen, das Ihren Anforderungen und Vorlieben am besten entspricht, einschließlich vollständig unterstützter Open Source-Optionen für die Plattformen MongoDB, Cassandra und Gremlin.
 
-### <a name="consistency-models"></a>Konsistenz Modelle
+### <a name="consistency-models"></a>Konsistenzmodelle
 
 Weiter oben im Abschnitt "Relational" und " *nosql* " wurde der Betreff der *Datenkonsistenz*erläutert. Dies ist ein Begriff, der sich auf die Integrität Ihrer Daten bezieht. Verteilte Datenbanken, die sich auf die Replikation für Hochverfügbarkeit, niedrige Latenz oder beides stützen, müssen einen grundlegenden Kompromiss zwischen Lese Konsistenz, Verfügbarkeit und Latenz bilden.
 
@@ -179,7 +179,7 @@ Sie verwalten Daten in Cosmos DB Daten, indem Sie Daten [Banken, Container und E
 
 **Abbildung 5-17**: Hierarchie von Cosmos DB Entitäten
 
-Beachten Sie in Abbildung 5-17, wie Sie mit dem Erstellen einer Cosmos DB-Datenbank innerhalb eines Daten Bankkontos beginnen. Diese Datenbank wird zur Verwaltungseinheit für eine Gruppe von Containern. Ein Container ist eine Schema agnostische Gruppierung von Elementen, die basierend auf dem ausgewählten API-Anbieter (im vorherigen Abschnitt erläutert) als Auflistung, Tabelle oder Diagramm ausgedrückt werden kann. Elemente sind die Daten, die Sie dem Container hinzufügen und als Dokumente, Zeilen, Knoten oder Kanten dargestellt werden. Standardmäßig werden alle Elemente, die Sie einem Container hinzufügen, automatisch indiziert, ohne dass eine explizite Index-oder Schema Verwaltung erforderlich ist.
+Beachten Sie in Abbildung 5-17, wie Sie mit dem Erstellen einer Cosmos DB-Datenbank innerhalb eines Daten Bankkontos beginnen. Diese Datenbank wird zur Verwaltungseinheit für eine Gruppe von Containern. Ein Container ist eine Schema agnostische Gruppierung von Elementen, die basierend auf dem ausgewählten API-Anbieter (im vorherigen Abschnitt erläutert) als Auflistung, Tabelle oder Diagramm ausgedrückt werden kann. Elemente sind die Daten, die Sie dem Container hinzufügen und als Dokumente, Zeilen, Knoten oder Kanten dargestellt werden. Standardmäßig werden alle Elemente, die Sie einem Container hinzufügen, automatisch indiziert, ohne dass eine explizite Index- oder Schemaverwaltung erforderlich ist.
 
 Um den Container zu partitionieren, werden Elemente in verschiedene Teilmengen unterteilt, die als [logische Partitionen](https://docs.microsoft.com/azure/cosmos-db/partition-data)bezeichnet werden. Logische Partitionen werden basierend auf dem Wert eines Partitions Schlüssels erstellt, der jedem Element in einem Container zugeordnet ist. In Abbildung 5-18 wird gezeigt, wie alle Elemente in einer logischen Partition denselben Partitions Schlüsselwert aufweisen.
 

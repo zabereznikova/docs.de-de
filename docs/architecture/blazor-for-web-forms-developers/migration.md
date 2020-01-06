@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine vorhandene ASP.net-Web Forms-APP zu blaz
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73842038"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337453"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrieren von ASP.net Web Forms zu blazor
 
@@ -38,13 +38,13 @@ Wie im Kapitel [Hostingmodelle](hosting-models.md) beschrieben, kann eine blazor
 
 Zum Zeitpunkt des Schreibens ähnelt das serverseitige Modell Web Forms. In diesem Kapitel liegt der Schwerpunkt auf dem serverseitigen Hostingmodell, da es in der Produktion bereit ist.
 
-## <a name="create-a-new-project"></a>Erstellt ein neues Projekt
+## <a name="create-a-new-project"></a>Erstellen eines neuen Projekts
 
 Dieser erste Migrationsschritt besteht darin, ein neues Projekt zu erstellen. Dieser Projekttyp basiert auf den SDK-Stil Projekten von .net Core und vereinfacht einen Großteil der Bausteine, die in früheren Projekt Formaten verwendet wurden. Weitere Details finden Sie im Kapitel zur [Projektstruktur](project-structure.md).
 
 Nachdem das Projekt erstellt wurde, installieren Sie die Bibliotheken, die im vorherigen Projekt verwendet wurden. In älteren Web Forms Projekten haben Sie möglicherweise die Datei " *Packages. config* " verwendet, um die benötigten nuget-Pakete aufzulisten. Im neuen Projekt im SDK-Stil wurde " *Packages. config* " durch `<PackageReference>` Elemente in der Projektdatei ersetzt. Ein Vorteil dieses Ansatzes besteht darin, dass alle Abhängigkeiten transitiv installiert werden. Sie Listen nur die Abhängigkeiten auf oberster Ebene auf, für die Sie sich interessieren.
 
-Viele der von Ihnen verwendeten Abhängigkeiten sind für .net Core verfügbar, einschließlich Entity Framework 6 und log4net. Wenn keine .net Core-oder .NET Standard Version verfügbar ist, kann die .NET Framework Version häufig verwendet werden. Der Meilenstein kann variieren. Jede verwendete API, die in .net Core nicht verfügbar ist, verursacht einen Laufzeitfehler. Visual Studio benachrichtigt Sie über solche Pakete. Ein gelbes Symbol wird im Knoten **Verweise** des Projekts in **Projektmappen-Explorer**angezeigt.
+Viele der von Ihnen verwendeten Abhängigkeiten sind für .net Core verfügbar, einschließlich Entity Framework 6 und log4net. Wenn keine .net Core-oder .NET Standard Version verfügbar ist, kann die .NET Framework Version häufig verwendet werden. Ihre Erfahrungen können hiervon abweichen. Jede verwendete API, die in .net Core nicht verfügbar ist, verursacht einen Laufzeitfehler. Visual Studio benachrichtigt Sie über solche Pakete. Ein gelbes Symbol wird im Knoten **Verweise** des Projekts in **Projektmappen-Explorer**angezeigt.
 
 Im blazor-basierten eShop-Projekt können Sie die installierten Pakete sehen. Zuvor hat die Datei " *Packages. config* " jedes Paket aufgelistet, das im Projekt verwendet wird. Dies führt zu einer Datei, die fast 50 Zeilen lang ist. Ein Ausschnitt von " *Packages. config* " ist:
 
@@ -252,7 +252,7 @@ Weitere Informationen zum Starten der App finden Sie unter [App Startup](app-sta
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migrieren von HTTP-Modulen und-Handlern zu Middleware
 
-HTTP-Module und-Handler sind gängige Muster in Web Forms, um die HTTP-Anforderungs Pipeline zu steuern. Klassen, die `IHttpModule` oder `IHttpHandler` implementieren, können registriert werden und eingehende Anforderungen verarbeiten. Web Forms konfiguriert Module und Handler in der Datei " *Web. config* ". Web Forms basiert ebenfalls stark auf der Ereignis Behandlung für den App-Lebenszyklus. ASP.net Core verwendet stattdessen Middleware. Middlewares werden in der `Configure`-Methode der `Startup`-Klasse registriert. Die Ausführungsreihenfolge der Middleware wird durch die Registrierung bestimmt.
+HTTP-Module und-Handler sind gängige Muster in Web Forms, um die HTTP-Anforderungs Pipeline zu steuern. Klassen, die `IHttpModule` oder `IHttpHandler` implementieren, können registriert werden und eingehende Anforderungen verarbeiten. Web Forms konfiguriert Module und Handler in der Datei " *Web. config* ". Web Forms basiert ebenfalls stark auf der Ereignis Behandlung für den App-Lebenszyklus. ASP.net Core verwendet stattdessen Middleware. Die Middleware wird in der `Configure`-Methode der `Startup`-Klasse registriert. Die Ausführungsreihenfolge der Middleware wird durch die Registrierung bestimmt.
 
 Im Abschnitt [Startprozess aktivieren](#enable-startup-process) wurde ein Lebenszyklus Ereignis durch Web Forms als `Application_BeginRequest` Methode ausgelöst. Dieses Ereignis ist in ASP.net Core nicht verfügbar. Eine Möglichkeit, dieses Verhalten zu erreichen, besteht in der Implementierung von Middleware, wie im Beispiel für die *Startup.cs* -Datei gezeigt. Diese Middleware übernimmt dieselbe Logik und überträgt dann die Steuerung an den nächsten Handler in der middlewarepipeline.
 
@@ -653,4 +653,4 @@ Viele Vorgänge in ASP.net Core sind asynchron, wodurch das Laden von e/a-gebund
 An diesem Punkt haben Sie viele Beispiele dafür gesehen, wie Sie ein Web Forms-Projekt in blazor verschieben. Ein vollständiges Beispiel finden Sie im Projekt [eshoponblazor](https://github.com/dotnet-architecture/eShopOnBlazor) .
 
 >[!div class="step-by-step"]
->[Vorheriges](security-authentication-authorization.md)
+>[Vorherige](security-authentication-authorization.md)
