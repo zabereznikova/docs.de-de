@@ -5,8 +5,6 @@
 - name: Erste Schritte
   href: getting-started/index.md
   items:
-    - name: Wichtige Visual Basic-Änderungen in Visual Studio
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: "Zusätzliche Ressourcen für Visual\_Basic-Programmierer"
       href: getting-started/additional-resources.md
 - name: Entwickeln von Anwendungen
@@ -911,9 +909,9 @@
           href: language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md
         - name: '<proceduresignature1> ist nicht CLS-kompatibel, da es <proceduresignature2> überlädt, das sich von ihm nur durch ein Array von Arrayparametertypen oder den Rang der Arrayparametertypen unterscheidet.'
           href: language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md
-        - name: <type1> <typename> muss <membername> für die Schnittstelle <interfacename> implementieren.
+        - name: <type1><typename> muss <membername> für die Schnittstelle <interfacename> implementieren.
           href: language-reference/error-messages/type1-must-implement-membername-for-interface.md
-        - name: <type1> <typename> muss <methodname> für die Schnittstelle <interfacename> implementieren.
+        - name: <type1><typename> muss <methodname> für die Schnittstelle <interfacename> implementieren.
           href: language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md
         - name: <typename> erweitert den Zugriff der Basis-<type> außerhalb der Assembly und kann daher nicht von <basetypename> "<type>" erben.
           href: language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md
