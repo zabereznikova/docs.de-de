@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446848"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632310"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 
@@ -20,11 +20,11 @@ ms.locfileid: "74446848"
 
 In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.
 
-Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente (z. b. die für [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]entworfenen) unterscheiden sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitete Klasse. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.
+Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-WPF-Elemente (z. b. die für [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]vorgesehenen) unterscheiden sich grundlegend. WPF-Elemente bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine Klasse, die von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitet ist. Nicht-WPF-Elemente bieten Unterstützung durch Implementierungen von Anbieter Schnittstellen.
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>Überlegungen zur Sicherheit
+## <a name="security-considerations"></a>Sicherheitsüberlegungen
 
 Anbieter sollten so erstellt werden, dass sie in einer teilweise vertrauenswürdigen Umgebung funktionieren können. Da UIAutomationClient.dll nicht für die Ausführung mit teilweiser Vertrauenswürdigkeit konfiguriert ist, sollte der Anbietercode nicht auf diese Assembly verweisen. Wenn dies der Fall ist, kann der Code in einer voll vertrauenswürdigen Umgebung ausgeführt werden, während in einer teilweise vertrauenswürdigen Umgebung Fehler auftreten.
 
@@ -40,7 +40,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenauto
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Anbieterimplementierung durch Nicht-WPF-Elemente
 
-Benutzerdefinierte Steuerelemente, die nicht Teil des [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Frameworks, jedoch in verwaltetem Code geschrieben sind (hierbei handelt es sich meist um [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] -Steuerelemente), unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch das Implementieren von Schnittstellen. Jedes Element muss mindestens eine der in der ersten Tabelle des nächsten Abschnitts aufgeführten Schnittstellen implementieren. Außerdem muss ein Element, das ein oder mehrere Steuerelementmuster unterstützt, für jedes Steuerelementmuster die entsprechende Schnittstelle implementieren.
+Benutzerdefinierte Steuerelemente, die nicht Teil des WPF-Frameworks, jedoch in verwaltetem Code geschrieben sind (meistens handelt es sich hierbei um [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente), bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch Implementieren von Schnittstellen. Jedes Element muss mindestens eine der in der ersten Tabelle des nächsten Abschnitts aufgeführten Schnittstellen implementieren. Außerdem muss ein Element, das ein oder mehrere Steuerelementmuster unterstützt, für jedes Steuerelementmuster die entsprechende Schnittstelle implementieren.
 
 Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] --Anbieterprojekt muss auf die folgenden Assemblys verweisen:
 
@@ -56,7 +56,7 @@ Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation
 
 Jeder [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter muss eine der folgenden Schnittstellen implementieren.
 
-|Schnittstelle|Beschreibung|
+|Benutzeroberfläche|Beschreibung|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Stellt Funktionen für ein einfaches in einem Fenster gehostetes Steuerelement bereit, einschließlich der Unterstützung für Steuerelementmuster und Eigenschaften.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Erbt von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Fügt Funktionen für ein Element in einem komplexen Steuerelement hinzu, einschließlich Navigation im Fragment, Festlegen des Fokus und Zurückgeben des umschließenden Rechtecks des Elements.|
@@ -64,7 +64,7 @@ Jeder [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomati
 
 Die folgenden Schnittstellen stellen weitere Funktionen bereit, müssen jedoch nicht implementiert werden.
 
-|Schnittstelle|Beschreibung|
+|Benutzeroberfläche|Beschreibung|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Ermöglicht dem Anbieter, Anforderungen für Ereignisse zu verfolgen.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Ermöglicht das Neupositionieren von fensterbasierten Elementen innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur eines Fragments.|
@@ -129,7 +129,7 @@ Beispielcode finden Sie unter [Return Properties from a UI Automation Provider](
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten Ereignisse auslösen, um Clientanwendungen über Zustandsänderungen der Benutzeroberfläche zu benachrichtigen. Ereignisse werden mit den folgenden Methoden ausgelöst.
 
-|Methode|Beschreibung|
+|-Methode|Beschreibung|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Löst verschiedene Ereignisse aus, einschließlich Ereignissen, die von Steuerelementmustern ausgelöst werden.|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Löst ein Ereignis aus, wenn sich eine [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaft geändert hat.|
@@ -139,7 +139,7 @@ Der Zweck eines Ereignisses liegt im Benachrichtigen des Clients über Vorgänge
 
 Zum Optimieren der Leistung kann ein Anbieter Ereignisse selektiv auslösen oder keine Ereignisse auslösen, wenn für deren Empfang keine Clientanwendung registriert ist. Die folgenden Methoden werden zur Optimierung verwendet.
 
-|Methode|Beschreibung|
+|-Methode|Beschreibung|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Diese statische Eigenschaft gibt an, ob es Clientanwendungen gibt, die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse abonniert haben.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Durch die Implementierung dieser Schnittstelle durch den Anbieter auf einem Fragmentstamm kann kommuniziert werden, wenn Clients Registrierungen von Ereignishandlern für Ereignisse im Fragment vornehmen bzw. aufheben.|

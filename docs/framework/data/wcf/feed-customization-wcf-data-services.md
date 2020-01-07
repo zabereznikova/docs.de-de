@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f34ee198ba49a168ed8b56785bea68beee2eb214
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569222"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348128"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
-WCF Data Services verwendet die Open Data Protocol (odata), um Daten als Feed verfügbar zu machen. Odata unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Wenn Sie einen Atom-Feed verwenden, stellt odata eine Standardmethode zum Serialisieren von Daten (z. b. Entitäten und Beziehungen) in ein XML-Format bereit, das in den Text der HTTP-Nachricht aufgenommen werden kann. Odata definiert eine standardmäßige Entitäts Eigenschafts Zuordnung zwischen den Daten, die in Entitäten und Atom-Elementen enthalten sind. Weitere Informationen finden Sie unter [odata: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
+WCF Data Services verwendet die Open Data Protocol (odata), um Daten als Feed verfügbar zu machen. Odata unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Wenn Sie einen Atom-Feed verwenden, stellt odata eine Standardmethode zum Serialisieren von Daten (z. b. Entitäten und Beziehungen) in ein XML-Format bereit, das in den Text der HTTP-Nachricht aufgenommen werden kann. Odata definiert eine standardmäßige Entitäts Eigenschafts Zuordnung zwischen den Daten, die in Entitäten und Atom-Elementen enthalten sind. Weitere Informationen finden Sie unter [odata: Atom-Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
  In Ihrem Anwendungsszenario ist es möglicherweise erforderlich, dass die vom Datendienst zurückgegebenen Eigenschaftendaten benutzerdefiniert serialisiert werden anstatt im Standardfeedformat. Mit odata können Sie die Serialisierung in einem Datenfeed anpassen, damit Eigenschaften einer Entität nicht verwendeten Elementen und Attributen eines Eintrags oder benutzerdefinierten Elementen eines Eintrags im Feed zugeordnet werden können.  
   
@@ -31,7 +31,7 @@ WCF Data Services verwendet die Open Data Protocol (odata), um Daten als Feed ve
 > Wenn Sie benutzerdefinierte Feeds definieren, müssen Sie gewährleisten, dass alle Entitätseigenschaften, für die benutzerdefinierte Zuordnungen definiert wurden, in der Projektion enthalten sind. Wenn eine zugeordnete Entitätseigenschaft nicht in der Projektion enthalten ist, könnten Datenverluste auftreten. Weitere Informationen finden Sie unter [Abfrage Projektionen](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Anpassen von Feeds mit dem Entity Framework-Anbieter  
- Das mit dem Entity Framework-Anbieter verwendete Datenmodell wird in der EDMX-Datei als XML dargestellt. In diesem Fall werden dem `EntityType`-Element und dem `Property`-Element, die Entitätstypen und Eigenschaften im Datenmodell darstellen, die Attribute hinzugefügt, die benutzerdefinierte Feeds definieren. Diese feedanpassungsattribute sind nicht in [\[MC-CSDL-\]definiert: Format der konzeptionellen Schema Definitionsdatei](https://go.microsoft.com/fwlink/?LinkId=159072). Dies ist das Format, das der Entity Framework Anbieter zum Definieren des Datenmodells verwendet. Daher müssen Sie Feedanpassungsattribute in einem bestimmten Schemanamespace deklarieren, der als `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` definiert wird. Das folgende XML-Fragment zeigt auf die `Property`-Elemente des `Products`-Entitätstyps angewendete Feedanpassungsattribute, die die Eigenschaften `ProductName`, `ReorderLevel` und `UnitsInStock` definieren.  
+ Das mit dem Entity Framework-Anbieter verwendete Datenmodell wird in der EDMX-Datei als XML dargestellt. In diesem Fall werden dem `EntityType`-Element und dem `Property`-Element, die Entitätstypen und Eigenschaften im Datenmodell darstellen, die Attribute hinzugefügt, die benutzerdefinierte Feeds definieren. Diese feedanpassungsattribute sind nicht in [\[MC-CSDL-\]definiert: Format der konzeptionellen Schema Definitionsdatei](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12). Dies ist das Format, das der Entity Framework Anbieter zum Definieren des Datenmodells verwendet. Daher müssen Sie Feedanpassungsattribute in einem bestimmten Schemanamespace deklarieren, der als `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` definiert wird. Das folgende XML-Fragment zeigt auf die `Property`-Elemente des `Products`-Entitätstyps angewendete Feedanpassungsattribute, die die Eigenschaften `ProductName`, `ReorderLevel` und `UnitsInStock` definieren.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
