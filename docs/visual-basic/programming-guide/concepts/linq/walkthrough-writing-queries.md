@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351016"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636756"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
 
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Visual Basic Sprachfunktionen verwenden können, um [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Ausdrücke zu schreiben. In der exemplarischen Vorgehensweise wird veranschaulicht, wie Abfragen für eine Liste von Student-Objekten erstellt werden, wie die Abfragen ausgeführt werden und wie diese geändert werden. Die Abfragen enthalten mehrere Features, einschließlich Objektinitialisierer, lokaler Typrückschluss und anonymer Typen.
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Visual Basic Sprachfunktionen verwenden können, um LINQ-Abfrage Ausdrücke (Language-Integrated Query) zu schreiben. In der exemplarischen Vorgehensweise wird veranschaulicht, wie Abfragen für eine Liste von Student-Objekten erstellt werden, wie die Abfragen ausgeführt werden und wie diese geändert werden. Die Abfragen enthalten mehrere Features, einschließlich Objektinitialisierer, lokaler Typrückschluss und anonymer Typen.
 
-Nachdem Sie diese exemplarische Vorgehensweise durchgearbeitet haben, können Sie mit den Beispielen und der Dokumentation für den jeweiligen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Anbieter fortfahren, an dem Sie interessiert sind. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Anbieter enthalten [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+Nachdem Sie diese exemplarische Vorgehensweise abgeschlossen haben, können Sie mit den Beispielen und der Dokumentation für den jeweiligen LINQ-Anbieter fortfahren, an dem Sie interessiert sind. LINQ-Anbieter enthalten [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Erstellen eines Projekts
 
@@ -133,13 +133,13 @@ Es ist einfacher, Abfrageergebnisse zu scannen, wenn Sie in einer bestimmten Rei
 
 ## <a name="additional-examples"></a>Weitere Beispiele
 
-Nachdem Sie sich nun mit den Grundlagen vertraut gemacht haben, finden Sie im folgenden eine Liste zusätzlicher Beispiele zum Veranschaulichen der Flexibilität und Leistungsfähigkeit von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen. Jedem Beispiel wird eine kurze Beschreibung der Funktionsweise vorangestellt. Bewegen Sie den Mauszeiger über die Abfrageergebnis Variable für jede Abfrage, um den abzurufbaren Typ anzuzeigen. Verwenden Sie eine `For Each`-Schleife, um die Ergebnisse zu erzielen.
+Nachdem Sie sich nun mit den Grundlagen vertraut gemacht haben, finden Sie im folgenden eine Liste zusätzlicher Beispiele zum Veranschaulichen der Flexibilität und Leistungsfähigkeit von LINQ-Abfragen. Jedem Beispiel wird eine kurze Beschreibung der Funktionsweise vorangestellt. Bewegen Sie den Mauszeiger über die Abfrageergebnis Variable für jede Abfrage, um den abzurufbaren Typ anzuzeigen. Verwenden Sie eine `For Each`-Schleife, um die Ergebnisse zu erzielen.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 
-Nachdem Sie mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, können Sie die Dokumentation und die Beispiele für den spezifischen Typ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Anbieters lesen, an dem Sie interessiert sind:
+Nachdem Sie mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, können Sie die Dokumentation und die Beispiele für den jeweiligen Typ des LINQ-Anbieters lesen, an dem Sie interessiert sind:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 
