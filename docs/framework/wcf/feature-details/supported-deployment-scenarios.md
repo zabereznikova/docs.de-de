@@ -1,51 +1,51 @@
 ---
-title: 'Unterstützte Bereitstellungsszenarien: WCF'
+title: Unterstützte Bereitstellungsszenarien
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6898ec33564a526d0e444502ebb6ed7f142f1856
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170040"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347979"
 ---
 # <a name="supported-deployment-scenarios"></a>Unterstützte Bereitstellungsszenarien
 
-Die Teilmenge der Windows Communication Foundation (WCF)-Funktionen, die für die Verwendung in teilweise vertrauenswürdigen Anwendungen unterstützt soll die Anforderungen der einige, aber nicht alle Szenarien für die Verwendung von WCF. Auf dem Server erfüllt WCF die Internet-Skalierungsgruppe gemeinsam verwendete Hostinganbieter, die Anwendung eines Drittanbieters in den Berechtigungssatz ASP.NET 2.0 mittlere Vertrauenswürdigkeit ausführen aus Sicherheitsgründen. Auf dem Client, Unterstützung von teilweiser Vertrauenswürdigkeit WCF soll die Anforderungen von bereitstellungstechnologien erfüllen zu können, wie etwa [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) oder WPF XAML Browser Application-Technologie, die nahtlose und sichere Bereitstellung von zulassen desktopanwendungen von nicht vertrauenswürdigen Sites.
+Die Teilmenge der Windows Communication Foundation (WCF)-Funktionen, die für die Verwendung in teilweise vertrauenswürdigen Anwendungen unterstützt werden, ist so konzipiert, dass Sie die Anforderungen einiger, aber nicht aller Szenarien für die Verwendung von WCF erfüllen. Auf dem-Server erfüllt WCF die Anforderungen von freigegebenen Hostinganbietern auf Internet Ebene, die aus Sicherheitsgründen Anwendungen von Drittanbietern mit dem Berechtigungs Satz ASP.NET 2,0-mittlerer Vertrauensstellung ausführen. Auf dem Client ist die Unterstützung für teilweise vertrauenswürdige WCF-Dienste für die Anforderungen von Bereitstellungs Technologien wie der [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) oder der XAML-Browser-Anwendungs Technologie von WPF konzipiert, die eine nahtlose und sichere Bereitstellung von Desktop Anwendungen von nicht vertrauenswürdigen Sites ermöglichen.
 
-## <a name="minimum-permission-requirements"></a>Minimal erforderliche Berechtigungen
+## <a name="minimum-permission-requirements"></a>Mindestanforderungen für Berechtigungen
 
-WCF unterstützt eine Teilmenge von Funktionen in Anwendungen, die in eines der folgenden benannten Standardberechtigungssätze ausgeführt:
+WCF unterstützt eine Teilmenge von Funktionen in Anwendungen, die unter einem der folgenden benannten Standard Berechtigungs Sätze ausgeführt werden:
 
 - Berechtigungen für mittlere Vertrauenswürdigkeit
 
 - Internetzonenberechtigungen
 
-Es wird versucht, WCF in teilweise vertrauenswürdigen Anwendungen mit strikteren Berechtigungen zu verwenden, kann zur Laufzeit zu Sicherheitsausnahmen führen.
+Der Versuch, WCF in teilweise vertrauenswürdigen Anwendungen mit restriktiveren Berechtigungen zu verwenden, kann zur Laufzeit zu Sicherheits Ausnahmen führen.
 
 Weitere Informationen zu den verschiedenen Funktionen, die von diesen Berechtigungssätzen unterstützt werden, finden Sie unter [Partial Trust Feature Compatibility](partial-trust-feature-compatibility.md).
 
-## <a name="partial-trust-on-the-server"></a>Teilweise Vertrauenswürdigkeit auf dem server
+## <a name="partial-trust-on-the-server"></a>Teilweise Vertrauenswürdigkeit auf dem Server
 
-Viele kommerzielle Anbieter von Hostingdiensten ASP.NET-Webanwendung vorgeben, dass Anwendungen, die auf ihren Servern in den Satz von ASP.NET 2.0 mittlere Vertrauenswürdigkeit ausgeführt. WCF-Dienste können in diesen Umgebungen ausführen, sofern sie verwenden die <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, oder die <xref:System.ServiceModel.WSHttpBinding> mit Sicherheit auf Transportebene.
+Viele kommerzielle Anbieter von ASP.NET-Webanwendungs-Hostingdiensten legen fest, dass Anwendungen, die auf Ihren Servern ausgeführt werden, mit dem Berechtigungs Satz "ASP.NET 2,0 WCF-Dienste können in diesen Umgebungen ausgeführt werden, sofern Sie die <xref:System.ServiceModel.BasicHttpBinding>, die <xref:System.ServiceModel.WebHttpBinding>oder die <xref:System.ServiceModel.WSHttpBinding> mit Sicherheit auf Transport Ebene verwenden.
 
-WCF-Dienste in der mittleren Vertrauensebene Hostingumgebungen, können auch als Dienste der mittleren Ebene fungieren, durch Senden von Nachrichten an andere Server in Reaktion auf Clientanforderungen. Szenarien der mittleren Ebene werden auf dem Server unterstützt, wenn die Hostumgebung der Anwendung die geeignete <xref:System.Net.WebPermission> gewährt hat, damit diese ausgehende Anforderungen an den gewünschten Server senden kann.
+WCF-Dienste, die in Host Umgebungen mit mittlerer Vertrauenswürdigkeit ausgeführt werden, können auch als Dienste der mittleren Ebene fungieren, indem Nachrichten als Reaktion auf Client Anforderungen an andere Server gesendet werden. Szenarien der mittleren Ebene werden auf dem Server unterstützt, wenn die Hostumgebung der Anwendung die geeignete <xref:System.Net.WebPermission> gewährt hat, damit diese ausgehende Anforderungen an den gewünschten Server senden kann.
 
-Zusätzlich zu SOAP-Nachrichten mit einer der unterstützten SOAP-Bindungen, WCF unterstützt die <xref:System.ServiceModel.WebHttpBinding> für die Erstellung von webdienstähnlichen Diensten in teilweise vertrauenswürdigen Anwendungen. Die [WCF-HTTP-Webprogrammierungsmodell](wcf-web-http-programming-model.md), [WCF Syndication](wcf-syndication.md), und [AJAX-Integration und JSON-Unterstützung](ajax-integration-and-json-support.md) Funktionen von WCF werden alle bei teilweiser Vertrauenswürdigkeit unterstützt.
+Zusätzlich zu SOAP-Messaging, das eine der unterstützten SOAP-Bindungen verwendet, unterstützt WCF die <xref:System.ServiceModel.WebHttpBinding> zum Entwickeln von Webdiensten in teilweise vertrauenswürdigen Anwendungen. Die WCF- [Web-http-Programmier Modelle](wcf-web-http-programming-model.md), [WCF-Syndikation](wcf-syndication.md)und [AJAX-Integration und JSON-Unterstützung](ajax-integration-and-json-support.md) von WCF werden bei teilweiser Vertrauenswürdigkeit unterstützt.
 
 Workflowdienste erfordern die Berechtigung "Volles Vertrauen" und können nicht in teilweise vertrauenswürdigen Anwendungen verwendet werden.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden der mittleren Vertrauensebene in ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).
+Weitere Informationen finden Sie unter Gewusst [wie: Verwenden von mittlerer Vertrauenswürdigkeit in ASP.NET 2,0](https://go.microsoft.com/fwlink/?LinkId=84603).
 
-## <a name="partial-trust-on-the-client"></a>Teilweise Vertrauenswürdigkeit auf dem client
+## <a name="partial-trust-on-the-client"></a>Teilweise Vertrauenswürdigkeit auf dem Client
 
-Bestimmte Sicherheitsvorkehrungen müssen getroffen werden, wenn Code von nicht vertrauenswürdigen Internetsites heruntergeladen oder ausgeführt wird. Beide [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) und WPF XAML-Browseranwendung (XBAP) Technologie teilweise Vertrauenswürdigkeit verwenden, um nicht vertrauenswürdigem Code eingeschränkte Berechtigungen (Zone "Internet") gewähren.
+Bestimmte Sicherheitsvorkehrungen müssen getroffen werden, wenn Code von nicht vertrauenswürdigen Internetsites heruntergeladen oder ausgeführt wird. Sowohl die [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) als auch die XBAP-Technologie (XAML Browser Application) von WPF nutzen teilweise Vertrauenswürdigkeit, um nicht vertrauenswürdigem Code eingeschränkte Berechtigungen (Internet Zone) zu gewähren.
 
-WCF kann verwendet werden, um die Kommunikation mit Remoteservern von teilweise vertrauenswürdigen Anwendungen bereitgestellt, indem entweder [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) oder XBAP. Der Berechtigungssatz der Internetzone umfasst <xref:System.Net.WebPermission> für den Ausgangshost Dies ermöglicht es diesen Anwendungen für die Kommunikation mit ihrem Ursprungsserver, die mit einer der unterstützten WCF-Bindungen, die in beschriebenen [Partial Trust Feature Compatibility ](partial-trust-feature-compatibility.md).
+WCF kann verwendet werden, um über teilweise vertrauenswürdige Anwendungen, die von der [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) oder XBAP bereitgestellt wurden, mit Remote Servern zu kommunizieren. Der Berechtigungs Satz für die Internet Zone umfasst <xref:System.Net.WebPermission> für den Ursprungs Host, der es diesen Anwendungen ermöglicht, mit Ihrem Ursprungsserver zu kommunizieren, indem Sie eine der in der [Kompatibilität mit Teil vertrauenswürdigen Funktionen](partial-trust-feature-compatibility.md)beschriebenen unterstützten WCF-Bindungen verwenden
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Codezugriffssicherheit](../../misc/code-access-security.md)
-- [Übersicht über die im Browser gehostete Anwendungen von Windows Presentation Foundation](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [Übersicht über Windows Presentation Foundation Browser gehostete Anwendungen](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
 - [Teilweise Vertrauenswürdigkeit](partial-trust.md)
-- [ASP.NET Trust Levels and Policy Files](https://docs.microsoft.com/previous-versions/wyts434y(v=vs.140))
+- [ASP.net-Vertrauens Ebenen und-Richtlinien Dateien](https://docs.microsoft.com/previous-versions/wyts434y(v=vs.140))

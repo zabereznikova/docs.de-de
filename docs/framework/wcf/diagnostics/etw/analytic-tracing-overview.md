@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837492"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544749"
 ---
 # <a name="analytic-tracing-overview"></a>Übersicht über die analytische Ablaufverfolgung
 Die analytische Ablaufverfolgung in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] ist eine Ablaufverfolgungsfunktion mit hoher Leistung und geringer Ausführlichkeit, die auf ETW (Ereignisablaufverfolgung für Windows) aufbaut. ETW wird auf Kernelebene ausgeführt, um den Mehraufwand durch Ablaufverfolgungsvorgänge so weit wie möglich zu reduzieren. Dabei werden Benutzer- und Kernelmodusereignisse auf effiziente Weise gepuffert, und das dynamische Aktivieren ist ohne Neustarts des Diensts möglich. Die Ablaufverfolgungsdaten sind in den Ereignisprotokollen verfügbar, nachdem sie ausgegeben und empfangen wurden.  
   
  Weitere Informationen zu etw finden Sie unter verbessertes [Debugging und Leistungsoptimierung mit etw](https://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Zusätzlich zur Verwendung der Windows-System-, Sicherheits-und Anwendungs Ereignisprotokolle zur Analyse der Anwendung haben Windows Vista und [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] zusätzliche Protokolle unter dem Knoten der obersten Ebene der Anwendungs-und Dienst Protokolle eingeführt. Der Zweck dieser neuen Protokolle ist das Speichern von Ereignissen für eine bestimmte Anwendung oder eine bestimmte Komponente anstelle von globalen Ereignissen, die systemweite Auswirkungen haben (z. B. der Typ von Ereignissen, die das Sicherheitsereignisprotokoll ggf. aufzeichnet). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] vereinheitlicht und korreliert die Protokollierung von WCF-Ablauf Verfolgungs Ereignissen, WCF-Nachrichten Protokollen und [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] nach Verfolgungs Datensätzen mit den Anwendungs-und Dienst Protokollen.  
+ Zusätzlich zur Verwendung der Windows-System-, Sicherheits-und Anwendungs Ereignisprotokolle zur Analyse der Anwendung wurden in Windows Vista und Windows Server 2008 weitere Protokolle unter dem Knoten der obersten Ebene der Anwendungs-und Dienst Protokolle eingeführt. Der Zweck dieser neuen Protokolle ist das Speichern von Ereignissen für eine bestimmte Anwendung oder eine bestimmte Komponente anstelle von globalen Ereignissen, die systemweite Auswirkungen haben (z. B. der Typ von Ereignissen, die das Sicherheitsereignisprotokoll ggf. aufzeichnet). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] vereinheitlicht und korreliert die Protokollierung von WCF-Ablauf Verfolgungs Ereignissen, WCF-Nachrichten Protokollen und [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] nach Verfolgungs Datensätzen mit den Anwendungs-und Dienst Protokollen.  
   
 ## <a name="concepts-and-capabilities"></a>Konzepte und Funktionen  
  Die folgenden Konzepte und Funktionen gelten für die analytische WCF-Ablauf Verfolgung.  

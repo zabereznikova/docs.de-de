@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458737"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559819"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource-Markuperweiterung
-Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschafts Attribut bereit, indem ein Verweis auf eine bereits definierte Ressource gesucht wird. Das Suchverhalten für diese Ressource entspricht der Lade Zeit Suche, bei der nach Ressourcen gesucht wird, die zuvor aus dem Markup der aktuellen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite sowie aus anderen Anwendungs Quellen geladen wurden. Außerdem wird dieser Ressourcen Wert als Eigenschaft generiert. der Wert in den Lauf Zeit Objekten.  
+Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschafts Attribut bereit, indem ein Verweis auf eine bereits definierte Ressource gesucht wird. Das Suchverhalten für diese Ressource entspricht der Lade Zeit Suche, bei der nach Ressourcen gesucht wird, die zuvor aus dem Markup der aktuellen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite sowie aus anderen Anwendungs Quellen geladen wurden, und dieser Ressourcen Wert als Eigenschafts Wert in den Lauf Zeit Objekten generiert wird.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -38,16 +38,16 @@ Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../inclu
   
 |||  
 |-|-|  
-|`key`|Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wurde anfänglich durch die [x:Key-Direktive](../../xaml-services/x-key-directive.md) zugewiesen, wenn eine Ressource im Markup erstellt wurde, oder wurde beim Aufrufen von <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> als `key` Parameter bereitgestellt, wenn die Ressource im Code erstellt wurde.|  
+|`key`|Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wurde anfänglich durch die [x:Key-Direktive](../../../desktop-wpf/xaml-services/xkey-directive.md) zugewiesen, wenn eine Ressource im Markup erstellt wurde, oder wurde beim Aufrufen von <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> als `key` Parameter bereitgestellt, wenn die Ressource im Code erstellt wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]
 > Ein `StaticResource` darf nicht versuchen, einen vorwärts Verweis auf eine Ressource zu erstellen, die lexikalisch weiter in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei definiert ist. Der Versuch, dies zu tun, wird nicht unterstützt, und auch wenn ein solcher Verweis nicht fehlschlägt, wird beim Versuch, den vorwärts Verweis zu verwenden, eine Leistungs Einbuße bei der Ladezeit verursacht, wenn die internen Hash Tabellen, die eine <xref:System.Windows.ResourceDictionary> darstellen Um optimale Ergebnisse zu erzielen, passen Sie die Komposition ihrer Ressourcen Wörterbücher so an, dass vorwärts Verweise vermieden werden können. Wenn Sie keinen vorwärts Verweis vermeiden können, verwenden Sie stattdessen die [dynamikresource-Markup Erweiterung](dynamicresource-markup-extension.md) .  
   
- Der angegebene <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> sollte einer vorhandenen Ressource entsprechen, die mit einer [x:Key-Direktive](../../xaml-services/x-key-directive.md) auf einer bestimmten Ebene auf der Seite, Anwendung, den verfügbaren Steuerelementen und externen Ressourcen oder Systemressourcen identifiziert wird. Die Ressourcen Suche erfolgt in dieser Reihenfolge. Weitere Informationen zum Verhalten der Ressourcen Suche für statische und dynamische Ressourcen finden Sie unter [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ Der angegebene <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> sollte einer vorhandenen Ressource entsprechen, die mit einer [x:Key-Direktive](../../../desktop-wpf/xaml-services/xkey-directive.md) auf einer bestimmten Ebene auf der Seite, Anwendung, den verfügbaren Steuerelementen und externen Ressourcen oder Systemressourcen identifiziert wird. Die Ressourcen Suche erfolgt in dieser Reihenfolge. Weitere Informationen zum Verhalten der Ressourcen Suche für statische und dynamische Ressourcen finden Sie unter [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
- Ein Ressourcen Schlüssel kann eine beliebige Zeichenfolge sein, die in der [XamlName-Grammatik](../../xaml-services/xamlname-grammar.md)definiert ist. Ein Ressourcen Schlüssel kann auch andere Objekttypen sein, z. b. ein <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist von grundlegender Bedeutung für das Formatieren von Steuerelementen mithilfe eines impliziten Stil Schlüssels. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).  
+ Ein Ressourcen Schlüssel kann eine beliebige Zeichenfolge sein, die in der [XamlName-Grammatik](../../../desktop-wpf/xaml-services/xamlname-grammar.md)definiert ist. Ein Ressourcen Schlüssel kann auch andere Objekttypen sein, z. b. ein <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist von grundlegender Bedeutung für das Formatieren von Steuerelementen mithilfe eines impliziten Stil Schlüssels. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).  
   
  Die alternative deklarative Methode zum Verweisen auf eine Ressource ist eine [dynamikresource-Markup Erweiterung](dynamicresource-markup-extension.md).  
   

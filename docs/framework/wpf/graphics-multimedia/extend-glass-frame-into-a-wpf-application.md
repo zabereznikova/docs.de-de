@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977019"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636197"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Erweitern von Glasframe in eine WPF-Anwendung
 
@@ -30,7 +30,7 @@ Die folgende Abbildung veranschaulicht den Glasframe, der in der Adressleiste vo
 
 ![Screenshot mit einem Glasrahmen, der hinter der IE7-Adressleiste erweitert ist](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Um den Glasframe in einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendung zu erweitern, wird der Zugriff auf die nicht verwaltete API benötigt. Im folgenden Codebeispiel wird ein Platt Form Aufruf (PInvoke) für die beiden APIs durchführt, die benötigt werden, um den Frame in den Client Bereich zu erweitern. Jede dieser APIs wird in einer Klasse mit dem Namen **NonClientRegionAPI**deklariert.
+Um den Glasframe in einer WPF-Anwendung zu erweitern, wird der Zugriff auf die nicht verwaltete API benötigt. Im folgenden Codebeispiel wird ein Platt Form Aufruf (PInvoke) für die beiden APIs durchführt, die benötigt werden, um den Frame in den Client Bereich zu erweitern. Jede dieser APIs wird in einer Klasse mit dem Namen **NonClientRegionAPI**deklariert.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Beispiel
 
-Ein Fensterhandle muss abgerufen werden, damit die [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)-Funktion verwendet werden kann. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kann das Fenster Handle aus der <xref:System.Windows.Interop.HwndSource.Handle%2A>-Eigenschaft eines <xref:System.Windows.Interop.HwndSource>abgerufen werden. Im folgenden Beispiel wird der Frame in den Client Bereich auf dem <xref:System.Windows.FrameworkElement.Loaded>-Ereignis des-Fensters erweitert.
+Ein Fensterhandle muss abgerufen werden, damit die [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)-Funktion verwendet werden kann. In WPF kann das Fenster Handle aus der <xref:System.Windows.Interop.HwndSource.Handle%2A>-Eigenschaft eines <xref:System.Windows.Interop.HwndSource>abgerufen werden. Im folgenden Beispiel wird der Frame in den Client Bereich auf dem <xref:System.Windows.FrameworkElement.Loaded>-Ereignis des-Fensters erweitert.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,7 +145,7 @@ Das folgende Beispiel zeigt ein einfaches Fenster, in dem der Frame in den Clien
 </Window>
 ```
 
-Die folgende Abbildung veranschaulicht den in eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendung erweiterten Glasframe:
+In der folgenden Abbildung wird der in eine WPF-Anwendung erweiterte Glasframe veranschaulicht:
 
 ![Screenshot, der einen in eine WPF-Anwendung erweiterten Glasframe zeigt](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
