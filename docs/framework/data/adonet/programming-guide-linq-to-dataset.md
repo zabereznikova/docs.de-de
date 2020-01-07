@@ -2,12 +2,12 @@
 title: Programmierhandbuch (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: c971f0a92829df40a14631aaff353a268f277f11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc13af06cf6c439d739d76904f206ebc50ba3187
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783207"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634806"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programmierhandbuch (LINQ to DataSet)
 Dieser Abschnitt enthält konzeptionelle Informationen und Beispiele für die Programmierung mit LINQ to DataSet.  
@@ -23,9 +23,9 @@ Dieser Abschnitt enthält konzeptionelle Informationen und Beispiele für die Pr
  Beschreibt die Vorgehensweise bei der Verwendung des <xref:System.Data.DataRowComparer>-Objekts zum Vergleichen von Datenzeilen.  
   
  [Erstellen einer DataTable aus einer Abfrage](creating-a-datatable-from-a-query-linq-to-dataset.md)  
- Stellt Informationen zum Erstellen einer <xref:System.Data.DataTable> aus einer LINQ to DataSet Abfrage mithilfe der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> -Methode bereit.  
+ Bietet Informationen zum Erstellen einer <xref:System.Data.DataTable> aus einer LINQ to DataSet Abfrage mithilfe der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode.  
   
- [Vorgehensweise: Implementieren Sie "copydatable\<t >", wobei der generische Typ "t" keine DataRow ist.](implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Gewusst wie: Implementieren von "copydedatable\<t >", wobei der generische Typ "t" keine "DataRow" ist](implement-copytodatatable-where-type-not-a-datarow.md)  
  Beschreibt die Implementierung einer benutzerdefinierten `CopyToDataTable<T>`-Methode, wobei der generische Parameter T nicht den Typ <xref:System.Data.DataRow> aufweist.  
   
  [Generische Field- und SetField-Methoden](generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -41,7 +41,7 @@ Dieser Abschnitt enthält konzeptionelle Informationen und Beispiele für die Pr
  Beschreibt Sicherheitsprobleme in LINQ to DataSet.  
   
  [Beispiele für LINQ to DataSet](linq-to-dataset-examples.md)  
- Enthält Abfragebeispiele, in denen die [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatoren verwendet werden.  
+ Enthält Abfragebeispiele, in denen die LINQ-Operatoren verwendet werden.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Data.DataRowComparer>  

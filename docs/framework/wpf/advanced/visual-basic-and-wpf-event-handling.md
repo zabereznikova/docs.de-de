@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458304"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559858"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic- und WPF-Ereignisbehandlung
 Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspezifische `Handles`-Schlüsselwort verwenden, um Ereignishandler Instanzen zuzuordnen, anstatt Ereignishandler mit Attributen anzufügen oder die <xref:System.Windows.UIElement.AddHandler%2A>-Methode zu verwenden. Allerdings weist die `Handles`-Technik für das Anfügen von Handlern an Instanzen einige Einschränkungen auf, da die `Handles`-Syntax einige der spezifischen Funktionen von Routingereignissen des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems nicht unterstützt.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Verwenden von „Handles“ in einer WPF-Anwendung  
- Die Ereignishandler, die über `Handles` mit Instanzen und Ereignissen verbunden sind, müssen alle innerhalb der partiellen Klassendefinition der Instanz definiert sein, die auch eine Anforderung für Ereignishandler darstellt, die über Attributwerte für Elemente zugewiesen werden. Sie können nur `Handles` für ein Element auf der Seite angeben, das über einen <xref:System.Windows.FrameworkContentElement.Name%2A>-Eigenschafts Wert (oder eine [x:Name-Direktive](../../xaml-services/x-name-directive.md) deklariert) verfügt. Dies liegt daran, dass der <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] den Instanzverweis erstellt, der zur Unterstützung des instanzverweisverweisformats erforderlich ist, das von der `Handles`-Syntax benötigt wird Das einzige Element, das ohne <xref:System.Windows.FrameworkContentElement.Name%2A> Verweis für `Handles` verwendet werden kann, ist die Stamm Element Instanz, die die partielle Klasse definiert.  
+ Die Ereignishandler, die über `Handles` mit Instanzen und Ereignissen verbunden sind, müssen alle innerhalb der partiellen Klassendefinition der Instanz definiert sein, die auch eine Anforderung für Ereignishandler darstellt, die über Attributwerte für Elemente zugewiesen werden. Sie können nur `Handles` für ein Element auf der Seite angeben, das über einen <xref:System.Windows.FrameworkContentElement.Name%2A>-Eigenschafts Wert (oder eine [x:Name-Direktive](../../../desktop-wpf/xaml-services/xname-directive.md) deklariert) verfügt. Dies liegt daran, dass der <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] den Instanzverweis erstellt, der zur Unterstützung des instanzverweisverweisformats erforderlich ist, das von der `Handles`-Syntax benötigt wird Das einzige Element, das ohne <xref:System.Windows.FrameworkContentElement.Name%2A> Verweis für `Handles` verwendet werden kann, ist die Stamm Element Instanz, die die partielle Klasse definiert.  
   
  Sie können mehreren Elemente den gleichen Handler zuweisen, indem Sie *Instance.Event*-Verweise nach `Handles` durch Kommas trennen.  
   
@@ -37,7 +37,7 @@ Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspez
 > Verwenden Sie die `Handles`-Syntax in Visual Basic Code nicht, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>So implementiert WPF die „Handles“-Funktionalität  
- Wenn eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite kompiliert wird, deklariert die zwischen Datei `Friend` `WithEvents` Verweise auf jedes Element auf der Seite, das einen <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaften Satz (oder eine [x:Name-Direktive](../../xaml-services/x-name-directive.md) deklariert) aufweist. Jede benannte Instanz ist potenziell ein Element, das an einem Handler mit `Handles` zugewiesen werden kann.  
+ Wenn eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite kompiliert wird, deklariert die zwischen Datei `Friend` `WithEvents` Verweise auf jedes Element auf der Seite, das einen <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaften Satz (oder eine [x:Name-Direktive](../../../desktop-wpf/xaml-services/xname-directive.md) deklariert) aufweist. Jede benannte Instanz ist potenziell ein Element, das an einem Handler mit `Handles` zugewiesen werden kann.  
   
 > [!NOTE]
 > In Visual Studio kann IntelliSense Ihnen den Abschluss zeigen, für den Elemente für einen `Handles` Verweis in einer Seite verfügbar sind. Dies kann jedoch einen Kompilierungsschritt dauern, sodass die Zwischendatei alle `Friends`-Verweise auffüllen kann.  

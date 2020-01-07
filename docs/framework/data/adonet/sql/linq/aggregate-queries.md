@@ -2,12 +2,12 @@
 title: Aggregatabfragen
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e61b16d6337c9b40f9e94052869a4c5592291d71
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8defefb39974bea150fed84b0e7404b43882c41c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248099"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634741"
 ---
 # <a name="aggregate-queries"></a>Aggregatabfragen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Aggregatoperatoren `Average`, `Count`, `Max`, `Min` und `Sum`. Beachten Sie die folgenden Eigenschaften von Aggregatoperatoren in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -45,7 +45,7 @@ ms.locfileid: "70248099"
  Stellt Links zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen in Visual Basic und C# bereit.  
   
  [Abfragekonzepte](query-concepts.md)  
- Stellt Links zu Themen bereit, die Konzepte für das Entwickeln von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erläutern.  
+ Enthält Links zu Themen, in denen Konzepte zum Entwerfen von LINQ-Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]erläutert werden.  
   
  [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Erklärt, wie Abfragen in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] funktionieren.
+ Erläutert, wie Abfragen in LINQ funktionieren.

@@ -1,5 +1,5 @@
 ---
-title: Auf NULL festleg Bare Werttypen-Visual Basic
+title: Auf NULL festlegbare Werttypen
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732939"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347838"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Auf NULL festlegbare Werttypen (Visual Basic)
 
@@ -35,7 +35,7 @@ Sie können einen Typ, der NULL-Werte zulässt, nicht für einen Referenztyp ers
 
 Die wichtigsten Member eines Typs, der NULL-Werte zulässt, sind die Eigenschaften <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A>. Für eine Variable eines Typs, der NULL-Werte zulässt, gibt <xref:System.Nullable%601.HasValue%2A> Aufschluss darüber, ob die Variable einen definierten Wert enthält. Wenn <xref:System.Nullable%601.HasValue%2A> `True`ist, können Sie den Wert aus <xref:System.Nullable%601.Value%2A>lesen. Beachten Sie, dass sowohl <xref:System.Nullable%601.HasValue%2A> als auch <xref:System.Nullable%601.Value%2A> `ReadOnly` Eigenschaften sind.
 
-### <a name="default-values"></a>Standardwerte
+### <a name="default-values"></a>Standardwerten
 
 Wenn Sie eine Variable mit einem Typ deklarieren, der NULL-Werte zulässt, hat die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft den Standardwert `False`. Dies bedeutet, dass die Variable standardmäßig keinen definierten Wert anstelle des Standardwerts des zugrunde liegenden Werttyps aufweist. Im folgenden Beispiel hat die Variable `numberOfChildren` anfänglich keinen definierten Wert, obwohl der Standardwert des `Integer` Typs 0 ist.
 
@@ -66,7 +66,7 @@ Zum Abrufen des Werts einer Variablen eines Typs, der NULL-Werte zulässt, sollt
 
 Wenn `Boolean` Variablen, die NULL-Werte zulassen, in booleschen Ausdrücken verwendet werden, kann das Ergebnis `True`, `False`oder `Nothing`sein. Im folgenden finden Sie die Wahrheitstabelle für `And` und `Or`. Da `b1` und `b2` nun drei mögliche Werte aufweisen, gibt es neun zu bewertende Kombinationen.
 
-|Handelte|B2|B1 und B2|B1 oder B2|
+|b1|b2|B1 und B2|B1 oder B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|

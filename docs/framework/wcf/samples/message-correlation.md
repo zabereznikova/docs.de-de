@@ -2,21 +2,22 @@
 title: Nachrichtenkorrelation
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 0f5124b8172a7a4d553d19e08309affb48e7468c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adabf02cb8ec232a887bd4720ea9552a7d870fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714863"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348328"
 ---
 # <a name="message-correlation"></a>Nachrichtenkorrelation
-Dieses Beispiel veranschaulicht, wie eine Message Queuing (MSMQ)-Anwendung eine MSMQ-Nachricht an einen Windows Communication Foundation (WCF)-Dienst senden kann und wie Nachrichten zwischen Absender-und Empfänger Anwendungen in einem Anforderungs-/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. k  
-  
- Der Dienst verarbeitet die vom Sender empfangene Nachricht und sendet eine Antwortnachricht zurück an den Sender. Der Sender korreliert die Antwort, die er auf die ursprünglich gesendete Anforderung empfangen hat. Die `MessageID`-Eigenschaft und die `CorrelationID`-Eigenschaft der Nachricht werden zum Korrelieren der Anforderungs- und Antwortnachrichten verwendet.  
-  
- Der `IOrderProcessor`-Dienstvertrag definiert einen unidirektionalen Dienstvorgang, der für die Verwendung mit Warteschlangen geeignet ist. Eine MSMQ-Nachricht verfügt über keinen Aktionsheader, d h. es ist nicht möglich, verschiedene MSMQ-Nachrichten Vorgangsverträgen automatisch zuzuordnen. Deshalb kann es in diesem Fall nur einen Vorgangsvertrag geben. Wenn Sie mehrere Vorgangsverträge in dem Dienst definieren möchten, muss die Anwendung Informationen darüber bereitstellen, anhand welchen Headers in der MSMQ-Nachricht (z. B. die Bezeichnung oder die CorrelationID) entschieden werden kann, welcher Vorgangsvertrag verteilt werden soll. 
-  
- Die MSMQ-Nachricht enthält auch keine Informationen darüber, welche Header den verschiedenen Parametern des Vorgangsvertrags zugeordnet sind. Daher kann sich im Vorgangsvertrag nur ein Parameter befinden. Der-Parameter ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, der die zugrunde liegende MSMQ-Nachricht enthält. Der Typ "T" in der `MsmqMessage<T>`-Klasse stellt die Daten dar, die in den MSMQ-Nachrichtentext serialisiert sind. In diesem Beispiel wird der `PurchaseOrder`-Typ zum MSMQ-Nachrichtentext serialisiert.  
+
+Dieses Beispiel veranschaulicht, wie eine Message Queuing (MSMQ)-Anwendung eine MSMQ-Nachricht an einen Windows Communication Foundation (WCF)-Dienst senden kann und wie Nachrichten zwischen Absender-und Empfänger Anwendungen in einem Anforderungs-/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. k
+
+ Der Dienst verarbeitet die vom Sender empfangene Nachricht und sendet eine Antwortnachricht zurück an den Sender. Der Sender korreliert die Antwort, die er auf die ursprünglich gesendete Anforderung empfangen hat. Die `MessageID`-Eigenschaft und die `CorrelationID`-Eigenschaft der Nachricht werden zum Korrelieren der Anforderungs- und Antwortnachrichten verwendet.
+
+ Der `IOrderProcessor`-Dienstvertrag definiert einen unidirektionalen Dienstvorgang, der für die Verwendung mit Warteschlangen geeignet ist. Eine MSMQ-Nachricht verfügt über keinen Aktionsheader, d h. es ist nicht möglich, verschiedene MSMQ-Nachrichten Vorgangsverträgen automatisch zuzuordnen. Deshalb kann es in diesem Fall nur einen Vorgangsvertrag geben. Wenn Sie mehrere Vorgangsverträge in dem Dienst definieren möchten, muss die Anwendung Informationen darüber bereitstellen, anhand welchen Headers in der MSMQ-Nachricht (z. B. die Bezeichnung oder die CorrelationID) entschieden werden kann, welcher Vorgangsvertrag verteilt werden soll.
+
+ Die MSMQ-Nachricht enthält auch keine Informationen darüber, welche Header den verschiedenen Parametern des Vorgangsvertrags zugeordnet sind. Daher kann sich im Vorgangsvertrag nur ein Parameter befinden. Der-Parameter ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, der die zugrunde liegende MSMQ-Nachricht enthält. Der Typ "T" in der `MsmqMessage<T>`-Klasse stellt die Daten dar, die in den MSMQ-Nachrichtentext serialisiert sind. In diesem Beispiel wird der `PurchaseOrder`-Typ zum MSMQ-Nachrichtentext serialisiert.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -269,7 +270,7 @@ static void DisplayOrderStatus()
 > [!NOTE]
 > Dieses Beispiel erfordert die Installation von Message Queuing (MSMQ). Informationen dazu finden Sie in den MSMQ-Installationsanleitungen im Abschnitt "Siehe auch".
 
-### <a name="to-setup-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus
+## <a name="set-up-build-and-run-the-sample"></a>Einrichten, erstellen und Ausführen des Beispiels
 
 1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
@@ -289,7 +290,7 @@ static void DisplayOrderStatus()
 
 4. Um das Beispiel in einer Konfiguration mit einem einzelnen Computer auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus
+## <a name="run-the-sample-across-computers"></a>Führen Sie das Beispiel Computer übergreifend aus.
 
 1. Kopieren Sie die Dienstprogrammdateien aus dem Ordner \service\bin\ (unterhalb des sprachspezifischen Ordners) auf den Dienstcomputer.
 
@@ -304,14 +305,14 @@ static void DisplayOrderStatus()
 6. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.
 
 > [!IMPORTANT]
-> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
-  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

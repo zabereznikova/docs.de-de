@@ -1,13 +1,13 @@
 ---
-title: XML-Dokumentation (F#)
+title: XML-Dokumentation
 description: Erfahren Sie mehr über Unterstützung für in F#, zum Generieren von Dokumentation aus Kommentaren.
 ms.date: 05/16/2016
-ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0a87915c361fc88f0c05264e1c17278fd656a167
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630820"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344689"
 ---
 # <a name="xml-documentation"></a>XML-Dokumentation
 
@@ -26,15 +26,15 @@ Es gibt zwei Möglichkeiten zum Schreiben von XML-Dokumentations Kommentaren. Ei
 |Tagsyntax|Beschreibung|
 |----------|-----------|
 |**\<c\>** _text_ **\</c\>**|Gibt an, dass der *Text* Code ist. Dieses Tag kann von Dokumentations Generatoren zum Anzeigen von Text in einer Schriftart verwendet werden, die für Code geeignet ist.|
-|**ZusammenfassungsText\>/Summary \<** **\<\>**|Gibt an, dass der *Text* eine kurze Beschreibung des Programm Elements ist. Die Beschreibung ist in der Regel ein oder zwei Sätze.|
-|**HinweiseText\>/Remarks \<** **\<\>**|Gibt an, dass der *Text* zusätzliche Informationen zum Programmelement enthält.|
-|**\>** **param\> Name=\<** "Name" Description/param Returns  **\<**|Gibt den Namen und die Beschreibung für einen Funktions-oder Methoden Parameter an.|
-|**\>** **\<typeparamName\>**  = "Name" Description/typeparam  **\<**|Gibt den Namen und die Beschreibung für einen Typparameter an.|
+|**\<Zusammenfassung\>** _Text_ **\</Summary\>**|Gibt an, dass der *Text* eine kurze Beschreibung des Programm Elements ist. Die Beschreibung ist in der Regel ein oder zwei Sätze.|
+|**\<Hinweise\>** _Text_ **\</Remarks\>**|Gibt an, dass der *Text* zusätzliche Informationen zum Programmelement enthält.|
+|**\<Param Name = "** _Name_ **"\>** _Description_ **\</param Returns\>**|Gibt den Namen und die Beschreibung für einen Funktions-oder Methoden Parameter an.|
+|**\<typeparam Name = "** _Name_ **"\>** _Description_ **\</typeparam\>**|Gibt den Namen und die Beschreibung für einen Typparameter an.|
 |**\<returns\>** _text_ **\</returns\>**|Gibt an, dass *Text* den Rückgabewert einer Funktion oder Methode beschreibt.|
-|**\>** **Exceptionkref\> = "Type" Description/Exception\<**  **\<**|Gibt den Typ der Ausnahme an, die generiert werden kann, sowie die Umstände, unter denen Sie ausgelöst wird.|
-|**\>** **\<siehe kref=\>**  "Reference"-Text/See  **\<**|Gibt einen Inline Link zu einem anderen Programmelement an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Der *Text* ist der Text, der im Link angezeigt wird.|
-|**\>**   **\<seeauch kref = "** Verweis"/|Gibt einen Link zum Anzeigen von Links zur Dokumentation für einen anderen Typ an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Siehe auch Links unten auf einer Dokumentationsseite.|
-|**paraText\>/para \<** **\<\>**|Gibt einen Absatz von Text an. Hiermit **wird der Text** innerhalb des Kommentartags getrennt.|
+|**\<Exception kref = "** _Type_ **"\>** _Description_ **\</Exception\>**|Gibt den Typ der Ausnahme an, die generiert werden kann, sowie die Umstände, unter denen Sie ausgelöst wird.|
+|**\<siehe "** **\>/See\<** **\>** " auf der|Gibt einen Inline Link zu einem anderen Programmelement an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Der *Text* ist der Text, der im Link angezeigt wird.|
+|**\<seeauch kref = "** _Verweis_ **"/\>**|Gibt einen Link zum Anzeigen von Links zur Dokumentation für einen anderen Typ an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Siehe auch Links unten auf einer Dokumentationsseite.|
+|**\<para\>** _Text_ **\</para\>**|Gibt einen Absatz von Text an. Hiermit **wird der Text** innerhalb des Kommentartags getrennt.|
 
 ## <a name="example"></a>Beispiel
 

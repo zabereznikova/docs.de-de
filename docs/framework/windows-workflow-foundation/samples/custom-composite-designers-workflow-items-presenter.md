@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715155"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338725"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation
 
@@ -24,11 +24,13 @@ Dieses Beispiel veranschaulicht Folgendes:
 
 - Überschreiben eines standardmäßigen Designers in einer neu gehosteten Anwendung.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
+## <a name="set-up-build-and-run-the-sample"></a>Einrichten, erstellen und Ausführen des Beispiels
 
-1. Öffnen Sie die Beispiel Projekt **Mappe "usingworkflowitemspree Senter. sln** " für C# oder für VB in Visual Studio 2010.
+1. Öffnen Sie die Beispiel Projekt **Mappe "usingworkflowitemspree Senter. sln** " für C# oder für Visual Basic in Visual Studio 2010.
 
-2. Erstellen Sie die Projektmappe, und führen Sie sie aus. Eine neu gehostete Workflow-Designer-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.
+2. Erstellen Sie die Projektmappe, und führen Sie sie aus.
+
+   Eine neu gehostete Workflow-Designer-Anwendung wird geöffnet, und Sie können Aktivitäten auf den Zeichenbereich ziehen.
 
 ## <a name="sample-highlights"></a>Das Wichtigste zum Beispiel
 

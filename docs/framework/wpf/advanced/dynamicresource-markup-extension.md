@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460511"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559447"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource-Markuperweiterung
 Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschafts Attribut bereit, indem dieser Wert als Verweis auf eine definierte Ressource festgelegt wird. Das Suchverhalten für diese Ressource entspricht der Lauf Zeit Suche.  
@@ -38,7 +38,7 @@ Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../inclu
   
 |||  
 |-|-|  
-|`key`|Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wurde anfänglich durch die [x:Key-Direktive](../../xaml-services/x-key-directive.md) zugewiesen, wenn eine Ressource im Markup erstellt wurde, oder wurde beim Aufrufen von <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> als `key` Parameter bereitgestellt, wenn die Ressource im Code erstellt wurde.|  
+|`key`|Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wurde anfänglich durch die [x:Key-Direktive](../../../desktop-wpf/xaml-services/xkey-directive.md) zugewiesen, wenn eine Ressource im Markup erstellt wurde, oder wurde beim Aufrufen von <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> als `key` Parameter bereitgestellt, wenn die Ressource im Code erstellt wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein `DynamicResource` erstellt während der anfänglichen Kompilierung einen temporären Ausdruck und verzögert die Suche nach Ressourcen so lange, bis der angeforderte Ressourcen Wert tatsächlich benötigt wird, um ein Objekt zu erstellen. Dies kann möglicherweise darauf liegen, dass die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite geladen wurde. Der Ressourcen Wert wird basierend auf der Schlüsselsuche nach allen aktiven Ressourcen Wörterbüchern gefunden, beginnend ab dem aktuellen Seitenbereich, und wird durch den Platzhalter Ausdruck aus der Kompilierung ersetzt.  
@@ -48,9 +48,9 @@ Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../inclu
   
  Bestimmte Ressourcen Zugriffs Szenarien eignen sich besonders für `DynamicResource` im Gegensatz zu einer [statikresource-Markup Erweiterung](staticresource-markup-extension.md). In den [XAML-Ressourcen](xaml-resources.md) finden Sie eine Erläuterung zu den relativen Vorteilen und Leistungs Auswirkungen von `DynamicResource` und `StaticResource`.  
   
- Der angegebene <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> sollte einer vorhandenen Ressource entsprechen, die von der [x:Key-Direktive](../../xaml-services/x-key-directive.md) auf einer bestimmten Ebene auf der Seite, Anwendung, den verfügbaren Steuerelement Designs und externen Ressourcen oder Systemressourcen bestimmt wird, und die Ressourcen Suche erfolgt in Diese Reihenfolge. Weitere Informationen zur Ressourcen Suche für statische und dynamische Ressourcen finden Sie unter [XAML-Ressourcen](xaml-resources.md).  
+ Der angegebene <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> sollte einer vorhandenen Ressource entsprechen, die von der [x:Key-Direktive](../../../desktop-wpf/xaml-services/xkey-directive.md) auf einer bestimmten Ebene auf der Seite, Anwendung, den verfügbaren Steuerelement Designs und externen Ressourcen oder Systemressourcen bestimmt wird, und die Ressourcen Suche erfolgt in dieser Reihenfolge. Weitere Informationen zur Ressourcen Suche für statische und dynamische Ressourcen finden Sie unter [XAML-Ressourcen](xaml-resources.md).  
   
- Ein Ressourcen Schlüssel kann eine beliebige Zeichenfolge sein, die in der [XamlName-Grammatik](../../xaml-services/xamlname-grammar.md)definiert ist. Ein Ressourcen Schlüssel kann auch andere Objekttypen sein, z. b. ein <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist grundlegend für die Formatierung von Steuerelementen. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).  
+ Ein Ressourcen Schlüssel kann eine beliebige Zeichenfolge sein, die in der [XamlName-Grammatik](../../../desktop-wpf/xaml-services/xamlname-grammar.md)definiert ist. Ein Ressourcen Schlüssel kann auch andere Objekttypen sein, z. b. ein <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist grundlegend für die Formatierung von Steuerelementen. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).  
   
  APIs für die Suche nach Ressourcen Werten, wie z. b. <xref:System.Windows.FrameworkElement.FindResource%2A>, folgen derselben Ressourcen Suchlogik, die von `DynamicResource`verwendet wird.  
   
@@ -76,7 +76,7 @@ Stellt einen Wert für ein beliebiges [!INCLUDE[TLA2#tla_xaml](../../../../inclu
 
 - [XAML-Ressourcen](xaml-resources.md)
 - [Ressourcen und Code](resources-and-code.md)
-- [x:Key-Anweisung](../../xaml-services/x-key-directive.md)
+- [x:Key-Anweisung](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource-Markuperweiterung](staticresource-markup-extension.md)

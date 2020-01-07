@@ -2,12 +2,12 @@
 title: Referenz
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3c33613c3b20020248b0ba6bb9e17266edc07bae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 287aca605ddb80d32cdbad38181244bb57fb8337
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792832"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634287"
 ---
 # <a name="reference"></a>Referenz
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
@@ -16,25 +16,25 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Datentypen und Funktionen](data-types-and-functions.md)  
- Beschreibt, wie Common Language Runtime (CLR)-Konstrukte entsprechende Ausdrücke nur in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL enthalten, wenn explizit eine Konvertierung in der Übersetzungs-Engine bereitgestellt hat.  
+ Beschreibt, wie Common Language Runtime (CLR)-Konstrukte entsprechende Ausdrücke nur in SQL enthalten, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] explizit eine Konvertierung in der Übersetzungs-Engine bereitgestellt hat.  
   
  [Attributbasierte Zuordnung](attribute-based-mapping.md)  
- Beschreibt den [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Attribut basierten Ansatz für die Zuordnung eines [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Objektmodells zu einer SQL Server-Datenbank.  
+ Beschreibt den [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Attribut basierten Ansatz für die Zuordnung eines [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodells zu einer SQL Server-Datenbank.  
   
  [Codegenerierung in LINQ to SQL](code-generation-in-linq-to-sql.md)  
  Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Meta-Informationen aus einer Datenbank abruft und dann Codedateien erzeugt.  
   
  [External Mapping (Externe Zuordnung)](external-mapping.md)  
- Beschreibt den [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ansatz der externen Zuordnung für die Zuordnung [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eines-Objektmodells zu einer SQL Server-Datenbank. Stellt die XSD-Schemadefinition für die Dateizuordnung bereit.  
+ Beschreibt den [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] externen Mapping-Ansatz für die Zuordnung eines [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodells zu einer SQL Server-Datenbank. Stellt die XSD-Schemadefinition für die Dateizuordnung bereit.  
   
  [Häufig gestellte Fragen](frequently-asked-questions.md)  
  Bietet Antworten auf gängige Fragen zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [SQL Server Compact und LINQ to SQL](sql-server-compact-and-linq-to-sql.md)  
- Beschreibt, wie sich SQL Server Compact 3,5 von SQL Server [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in-Anwendungen unterscheidet.  
+ Beschreibt, wie sich SQL Server Compact 3,5 in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen von SQL Server unterscheidet.  
   
  [Übersetzen von Standardabfrageoperatoren](standard-query-operator-translation.md)  
- Beschreibt, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wie Standard Abfrage Operatoren in SQL-Befehle übersetzt.  
+ Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standard Abfrage Operatoren in SQL-Befehle übersetzt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [LINQ to SQL](index.md)  
@@ -42,7 +42,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
   
  [Language Integrated Query (LINQ) – C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  [Language Integrated Query (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Stellt Portale für [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Themen bereit.  
+ Stellt Portale für LINQ-Themen bereit.  
   
  [Übersicht über das LinqDataSource-Webserver Steuerelement](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Beschreibt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] , wie <xref:System.Web.UI.WebControls.LinqDataSource> das Steuerelement für Webentwickler über die Architektur des ASP.NET-Datenquellen-Steuer Elements verfügbar gemacht wird.
+ Beschreibt, wie das <xref:System.Web.UI.WebControls.LinqDataSource>-Steuerelement LINQ to Web-Entwicklern über die Architektur des ASP.NET-Datenquellen-Steuer Elements bereitstellt.

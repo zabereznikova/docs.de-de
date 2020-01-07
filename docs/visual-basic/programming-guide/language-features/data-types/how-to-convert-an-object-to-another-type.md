@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 19708d03b0514f4572c2baa53e05781e5949766b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d16e0eafc3fa9233037abe0c92dcb1945ca8da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350069"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341586"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic
 Sie konvertieren eine `Object` Variable in einen anderen Datentyp, indem Sie ein Konvertierungs Schlüsselwort wie die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)verwenden.  
@@ -28,8 +28,8 @@ End Sub
   
  Wenn Sie wissen, dass der Inhalt einer `Object` Variablen einen bestimmten Datentyp hat, ist es besser, die Variable in diesen Datentyp zu konvertieren. Wenn Sie die `Object` Variable weiterhin verwenden, werden entweder *Boxing* und *Unboxing* (bei einem Werttyp) oder eine *späte Bindung* (für einen Verweistyp) verursacht. Diese Vorgänge erfordern eine zusätzliche Ausführungszeit und machen die Leistung langsamer.  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Dieses Beispiel erfordert Folgendes:  
+## <a name="compile-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Einen Verweis auf den <xref:System?displayProperty=nameWithType>-Namespace  
   

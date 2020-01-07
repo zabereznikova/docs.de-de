@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346134"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636808"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Objektinitialisierer: Benannte und anonyme Typen (Visual Basic)
 Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks Eigenschaften für ein komplexes Objekt anzugeben. Sie können verwendet werden, um Instanzen benannter Typen und anonymer Typen zu erstellen.  
@@ -105,7 +105,7 @@ Objektinitialisierer ermöglichen es Ihnen, mithilfe eines einzelnen Ausdrucks E
   
  Da der Name des Typs nicht verfügbar ist, können Sie keine `As`-Klausel verwenden, um `cust13`zu deklarieren. Der Typ muss abgeleitet werden. Ohne die späte Bindung zu verwenden, schränkt dies die Verwendung anonymer Typen auf lokale Variablen ein.  
   
- Anonyme Typen bieten wichtige Unterstützung für [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen. Weitere Informationen zur Verwendung anonymer Typen in Abfragen finden Sie unter [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) und [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Anonyme Typen bieten wichtige Unterstützung für LINQ-Abfragen. Weitere Informationen zur Verwendung anonymer Typen in Abfragen finden Sie unter [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) und [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Hinweise zu anonymen Typen  
   

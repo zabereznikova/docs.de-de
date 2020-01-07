@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341515"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348048"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Gewusst wie: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)
 
@@ -72,9 +72,9 @@ End Class
 
 Außerdem wird in diesem Beispiel veranschaulicht, wie eine Abfrage Variable aus einer Funktion zurückgegeben wird.
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+## <a name="compile-the-code"></a>Kompilieren des Codes
 
-Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.
+Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.
 
 ## <a name="see-also"></a>Siehe auch
 

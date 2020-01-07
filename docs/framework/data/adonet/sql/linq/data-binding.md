@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: 79a14e787b4fe1aa1b16ad661b11a43b12bdd718
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c7048d292bdf5c1372d5f8f174f7f0e84efa7593
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247380"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634715"
 ---
 # <a name="data-binding"></a>Datenbindung
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt die Bindung an allgemeine Steuerelemente, z.b. Raster Steuerelemente. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Definiert insbesondere die grundlegenden Muster für das Binden an ein Datenraster und das Verarbeiten der Master-Detail-Bindung, sowohl im Hinblick auf die Anzeige als auch auf das aktualisieren.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt das Binden an allgemeine Steuerelemente, z. b. Raster Steuerelemente. Insbesondere definiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die grundlegenden Muster für das Binden an ein Datenraster und das Verarbeiten der Master-Detail-Bindung, sowohl im Hinblick auf die Anzeige als auch auf die Aktualisierung.
 
 ## <a name="underlying-principle"></a>Zugrunde liegendes Prinzip
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]übersetzt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Abfragen in SQL für die Ausführung in einer Datenbank. Die Ergebnisse sind `IEnumerable` mit strikter Typbindung. Da es sich hierbei um gewöhnliche Common Language Runtime (CLR)-Objekte handelt, lassen sich die Ergebnisse mithilfe von gewöhnlicher Objektdatenbindung darstellen. Andererseits erfordern Änderungsoperationen (Einfügungen, Aktualisieren, Löschen) zusätzliche Schritte.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt LINQ-Abfragen in SQL für die Ausführung in einer Datenbank. Die Ergebnisse sind `IEnumerable` mit strikter Typbindung. Da es sich hierbei um gewöhnliche Common Language Runtime (CLR)-Objekte handelt, lassen sich die Ergebnisse mithilfe von gewöhnlicher Objektdatenbindung darstellen. Andererseits erfordern Änderungsoperationen (Einfügungen, Aktualisieren, Löschen) zusätzliche Schritte.
 
 ## <a name="operation"></a>Vorgang
 
-Die implizite Bindung an Windows Forms-Steuerelemente erfolgt durch Implementierung von <xref:System.ComponentModel.IListSource>. Generische <xref:System.Data.Linq.Table%601> Datenquellen (`Table<T>` in C# oder `Table(Of T)` in Visual Basic) und generische `DataQuery` wurden aktualisiert, um zu <xref:System.ComponentModel.IListSource>implementieren. Datenbindungs-Engines der Benutzeroberfläche (UI) (Windows Forms und Windows Presentation Foundation) prüfen, ob ihre Datenquelle <xref:System.ComponentModel.IListSource> implementiert. Daher wird durch das Schreiben einer direkten Zuneigung einer Abfrage in eine Datenquelle eines-Steuer Elements implizit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die Sammlungs Generierung aufgerufen, wie im folgenden Beispiel gezeigt:
+Die implizite Bindung an Windows Forms-Steuerelemente erfolgt durch Implementierung von <xref:System.ComponentModel.IListSource>. Generische Datenquellen <xref:System.Data.Linq.Table%601> (`Table<T>` in C# oder `Table(Of T)` in Visual Basic) und generische `DataQuery` wurden aktualisiert, um <xref:System.ComponentModel.IListSource>zu implementieren. Datenbindungs-Engines der Benutzeroberfläche (UI) (Windows Forms und Windows Presentation Foundation) prüfen, ob ihre Datenquelle <xref:System.ComponentModel.IListSource> implementiert. Daher wird durch das Schreiben eines direkten affektaufrufs einer Abfrage in eine Datenquelle eines Steuer Elements implizit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Collection-Generierung aufgerufen, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
 [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]
@@ -36,15 +36,15 @@ Auflistungsgenerierungen werden von generischem <xref:System.Data.Linq.Table%601
 
 ## <a name="ilistsource-implementation"></a>IListSource-Implementierung
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]implementiert <xref:System.ComponentModel.IListSource> an zwei Orten:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert <xref:System.ComponentModel.IListSource> an zwei Orten:
 
 - Die Datenquelle ist eine <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchsucht die Tabelle, um eine `DataBindingList` Auflistung aufzufüllen, die einen Verweis auf die Tabelle beibehält.
 
-- Die Datenquelle ist eine <xref:System.Linq.IQueryable%601>. Es existieren zwei Szenarien:
+- Die Datenquelle ist eine <xref:System.Linq.IQueryable%601>. Zwei Szenarien sind möglich:
 
-  - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die zugrunde liegende <xref:System.Data.Linq.Table%601> von der <xref:System.Linq.IQueryable%601>sucht, lässt die Quelle die Edition zu, und die Situation entspricht der im ersten Aufzählungs Punkt.
+  - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die zugrunde liegende <xref:System.Data.Linq.Table%601> aus dem <xref:System.Linq.IQueryable%601>findet, lässt die Quelle die Edition zu, und die Situation ist die gleiche wie im ersten Aufzählungs Punkt.
 
-  - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die zugrunde liegende <xref:System.Data.Linq.Table%601>nicht finden kann, lässt die Quelle keine `groupby`Edition zu (z. b.). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]durchsucht die Abfrage, um eine generische `SortableBindingList`auszufüllen, bei der es <xref:System.ComponentModel.BindingList%601> sich um eine einfache handelt, die die Sortierfunktion für T-Entitäten für eine bestimmte Eigenschaft implementiert.
+  - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die zugrunde liegende <xref:System.Data.Linq.Table%601>nicht finden kann, lässt die Quelle keine Edition zu (z. b. `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchsucht die Abfrage, um einen generischen `SortableBindingList`auszufüllen, bei dem es sich um einen einfachen <xref:System.ComponentModel.BindingList%601> handelt, der die Sortierfunktion für t-Entitäten für eine bestimmte Eigenschaft implementiert.
 
 ## <a name="specialized-collections"></a>Spezialisierte Auflistungen
 
@@ -52,11 +52,11 @@ Bei vielen zuvor in diesem Dokument beschriebenen Funktionen wurde <xref:System.
 
 ### <a name="generic-sortablebindinglist"></a>Generische SortableBindingList
 
-Diese Klasse erbt von <xref:System.ComponentModel.BindingList%601> und ist eine durchsuchbare Version von <xref:System.ComponentModel.BindingList%601>. Die Sortierung ist eine Lösung im Arbeitsspeicher, die niemals einen Kontakt zur Datenbank herstellt. <xref:System.ComponentModel.BindingList%601> implementiert <xref:System.ComponentModel.IBindingList>, unterstützt jedoch standardmäßig keine Sortierung. Implementiert jedoch mit virtuellen Kern Methoden. <xref:System.ComponentModel.BindingList%601> <xref:System.ComponentModel.IBindingList> Sie können diese Methoden leicht überschreiben. Die generische `SortableBindingList` überschreibt <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> und <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>. `ApplySortCore` wird von <xref:System.ComponentModel.IBindingList.ApplySort%2A> aufgerufen und sortiert die Liste der T-Elemente einer gegebenen Eigenschaft.
+Diese Klasse erbt von <xref:System.ComponentModel.BindingList%601> und ist eine durchsuchbare Version von <xref:System.ComponentModel.BindingList%601>. Die Sortierung ist eine Lösung im Arbeitsspeicher, die niemals einen Kontakt zur Datenbank herstellt. <xref:System.ComponentModel.BindingList%601> implementiert <xref:System.ComponentModel.IBindingList>, unterstützt jedoch standardmäßig keine Sortierung. <xref:System.ComponentModel.BindingList%601> jedoch <xref:System.ComponentModel.IBindingList> mit virtuellen *Kern* Methoden implementiert. Sie können diese Methoden leicht überschreiben. Die generische `SortableBindingList` überschreibt <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> und <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>. `ApplySortCore` wird von <xref:System.ComponentModel.IBindingList.ApplySort%2A> aufgerufen und sortiert die Liste der T-Elemente einer gegebenen Eigenschaft.
 
 Wenn die Eigenschaft nicht zu T gehört, wird eine Ausnahme ausgelöst.
 
-Um die Sortierung zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erreichen, erstellt `SortableBindingList.PropertyComparer` eine generische Klasse, die von <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> der generischen Klasse erbt und einen Standard Vergleich für einen angegebenen `PropertyDescriptor`Typ T, eine und eine Richtung implementiert. Diese Klasse erstellt dynamisch einen `Comparer` von T, bei dem T der `PropertyType` des `PropertyDescriptor` ist. Dann wird der Standardvergleich vom statischen generischen `Comparer` abgerufen. Eine Standardinstanz wird durch Reflektion erzeugt.
+Um die Sortierung zu erreichen, erstellt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine generische `SortableBindingList.PropertyComparer` Klasse, die vom generischen <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> erbt, und implementiert einen Standardcomparer für einen bestimmten Typ t, eine `PropertyDescriptor`und eine Richtung. Diese Klasse erstellt dynamisch einen `Comparer` von T, bei dem T der `PropertyType` des `PropertyDescriptor` ist. Dann wird der Standardvergleich vom statischen generischen `Comparer` abgerufen. Eine Standardinstanz wird durch Reflektion erzeugt.
 
 Eine generische `SortableBindingList` ist auch die Basisklasse für `DataBindingList`. Eine generische `SortableBindingList` bietet zwei virtuelle Methoden zum Unterbrechen oder Fortsetzen der Verfolgung des Hinzufügens/Entfernens von Elementen. Diese beiden Methoden lassen sich für Basisfunktionen wie Sortierung verwenden, werden jedoch tatsächlich von höheren Klassen wie der generischen `DataBindingList` implementiert.
 
@@ -66,7 +66,7 @@ Diese Klasse erbt von der generischen `SortableBindingLIst`. Die generische `Dat
 
 ## <a name="binding-to-entitysets"></a>Binden an EntitySets
 
-Eine Bindung an `EntitySet` ist ein Sonderfall, da `EntitySet` bereits eine Auflistung ist, die <xref:System.ComponentModel.IBindingList> implementiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Fügt die Unterstützung für Sortierung<xref:System.ComponentModel.ICancelAddNew>und Abbruch () hinzu. Eine `EntitySet`-Klasse verwendet eine interne Liste, um Entitäten zu speichern. Diese Liste ist eine Auflistung auf niedriger Ebene, die auf einem generischen Array, der generischen `ItemList`-Klasse, basiert.
+Eine Bindung an `EntitySet` ist ein Sonderfall, da `EntitySet` bereits eine Auflistung ist, die <xref:System.ComponentModel.IBindingList> implementiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fügt Unterstützung für Sortierung und Abbruch (<xref:System.ComponentModel.ICancelAddNew>) hinzu. Eine `EntitySet`-Klasse verwendet eine interne Liste, um Entitäten zu speichern. Diese Liste ist eine Auflistung auf niedriger Ebene, die auf einem generischen Array, der generischen `ItemList`-Klasse, basiert.
 
 ### <a name="adding-a-sorting-feature"></a>Hinzufügen einer Sortierungsfunktion
 
@@ -82,11 +82,11 @@ Auf der `EntitySet`-Seite müssen Sie jetzt die Sortierungsunterstützung deklar
 
 Wenn Sie eine System. Windows. Forms. BindingSource verwenden und eine EntitySet\<TEntity-> an die System. Windows. Forms. BindingSource. DataSource binden, müssen Sie EntitySet\<TEntity > aufrufen. GetNewBindingList zum Aktualisieren von BindingSource. List.
 
-Wenn Sie eine System. Windows. Forms. BindingSource-Eigenschaft verwenden und die BindingSource. DataMember-Eigenschaft festlegen und BindingSource. DataSource auf eine Klasse mit dem Namen in BindingSource. DataMember festlegen, die die EntitySet\<TEntity-> verfügbar macht, der EntitySet\<TEntity-> muss nicht aufgerufen werden. GetNewBindingList zum Aktualisieren der BindingSource. List, aber Sie verlieren die Sortierfunktion.
+Wenn Sie eine System. Windows. Forms. BindingSource-Eigenschaft verwenden und die BindingSource. DataMember-Eigenschaft festlegen und BindingSource. DataSource auf eine Klasse mit dem Namen in BindingSource. DataMember festlegen, die die EntitySet-\<TEntity > verfügbar macht, müssen Sie EntitySet\<TEntity > nicht aufrufen. GetNewBindingList zum Aktualisieren der BindingSource. List, aber Sie verlieren die Sortierfunktion.
 
-## <a name="caching"></a>Zwischenspeicherung
+## <a name="caching"></a>Zwischenspeichern
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen <xref:System.ComponentModel.IListSource.GetList%2A>implementieren. Trifft die Windows Forms-BindingSource-Klasse auf diese Schnittstelle, wird GetList() für eine Verbindung dreimal aufgerufen. Um diese Situation zu umgehen, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert einen Cache pro Instanz, um zu speichern, und gibt immer dieselbe generierte Sammlung zurück.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen implementieren <xref:System.ComponentModel.IListSource.GetList%2A>. Trifft die Windows Forms-BindingSource-Klasse auf diese Schnittstelle, wird GetList() für eine Verbindung dreimal aufgerufen. Um diese Situation zu umgehen, implementiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einen Cache pro Instanz, um die gleiche generierte Sammlung zu speichern, und gibt Sie immer zurück.
 
 ## <a name="cancellation"></a>Abbruch
 
@@ -112,9 +112,9 @@ Dieser Abschnitt erläutert verschiedene Elemente, die Sie bei der Fehlerbehebun
 
 - Sie müssen Eigenschaften verwenden. Die ausschließliche Verwendung von Feldern genügt nicht. Windows Forms erfordert diese Verwendung.
 
-- Standardmäßig `image`werden die Daten Bank `timestamp` Typen, `varbinary`und dem Bytearray zugeordnet. Da `ToString()` in diesem Szenario nicht unterstützt wird, können diese Objekte nicht angezeigt werden.
+- Standardmäßig werden die Datenbanktypen `image`, `varbinary`und `timestamp` dem Bytearray zugeordnet. Da `ToString()` in diesem Szenario nicht unterstützt wird, können diese Objekte nicht angezeigt werden.
 
-- Ein Klassenmember, der einem Primärschlüssel zugeordnet ist, verfügt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] über einen Setter, unterstützt jedoch keine Änderung der Objekt Identität. Deshalb kann der primäre/eindeutige Schlüssel, der in der Zuordnung verwendet wird, nicht in der Datenbank aktualisiert werden. Eine Änderung im Raster löst eine Ausnahme aus, wenn aufgerufen <xref:System.Data.Linq.DataContext.SubmitChanges%2A>wird.
+- Ein Klassenmember, der einem Primärschlüssel zugeordnet ist, verfügt über einen Setter, aber [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt keine Änderung der Objekt Identität. Deshalb kann der primäre/eindeutige Schlüssel, der in der Zuordnung verwendet wird, nicht in der Datenbank aktualisiert werden. Eine Änderung im Raster löst eine Ausnahme aus, wenn Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A>aufruft.
 
 - Wird eine Entität an zwei separate Raster gebunden (z. B. für Master und Details), wird `Delete` im Master-Raster nicht an das Detail-Raster weitergeleitet&gt;.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960149"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559650"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen für das Rendern von Grafiken, die sich auf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen auswirken.  
@@ -24,7 +24,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Was sind XPDM und WDDM?  
- Einige der Registrierungseinstellungen für das Rendern von Grafiken besitzen unterschiedliche Werte, je nachdem, ob Ihre Grafikkarte einen XPDM- oder einen WDDM-Treiber verwendet. XPDM ist das Windows XP-Anzeigetreiber Modell, und WDDM ist das Windows-Anzeigetreiber Modell. WDDM ist auf Computern verfügbar, auf denen Windows Vista und Windows 7 ausgeführt werden. XPDM ist auf Computern verfügbar, auf denen Windows Vista, Microsoft Windows XP und [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]ausgeführt werden. Weitere Informationen zu WDDM finden Sie im Leitfaden für [Windows Vista-Anzeigetreibermodelle](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Einige der Registrierungseinstellungen für das Rendern von Grafiken besitzen unterschiedliche Werte, je nachdem, ob Ihre Grafikkarte einen XPDM- oder einen WDDM-Treiber verwendet. XPDM ist das Windows XP-Anzeigetreiber Modell, und WDDM ist das Windows-Anzeigetreiber Modell. WDDM ist auf Computern verfügbar, auf denen Windows Vista und Windows 7 ausgeführt werden. XPDM ist auf Computern verfügbar, auf denen Windows Vista, Microsoft Windows XP und Microsoft Windows Server 2003 ausgeführt werden. Weitere Informationen zu WDDM finden Sie im Leitfaden für [Windows Vista-Anzeigetreibermodelle](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Registrierungseinstellungen  
@@ -68,7 +68,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
 |Registrierungsschlüssel|Werttyp|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Zeichenfolge|  
   
  Im November 2004 veröffentlichte Microsoft eine neue Version der Richtlinien für Treiber Tests. die nach diesem Datum geschriebenen Treiber bieten eine bessere Stabilität. In der Standardeinstellung nutzt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die Hardwarebeschleunigungspipeline für diese Treiber und greift bei vor diesem Datum veröffentlichten XPDM-Treibern auf Softwarerendering zurück.  
   
@@ -78,7 +78,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
 | |  
 |-|  
-|*JJJJ* `/` *MM* `/` *TT*|  
+|*Yyyy* `/` *mm* `/` *DD*|  
   
  Hierbei steht *JJJJ* für das Jahr (vierstellig), *MM* für den Monat (zweistellig) und *TT* für den Tag (zweistellig). Wenn dieser Wert nicht festgelegt ist, verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] November 2004 als erforderliches Datum.  
   

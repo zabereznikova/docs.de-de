@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344587"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347509"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)
 In diesem Beispiel wird veranschaulicht, wie Sie mit LINQ zwei Listen mit Zeichenfolgen vergleichen und die Zeilen ausgeben, die in names1.txt, aber nicht in names2.txt enthalten sind.  
@@ -53,8 +53,8 @@ End Class
   
  Einige Typen von Abfrage Vorgängen in Visual Basic, z. b. <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>und <xref:System.Linq.Enumerable.Concat%2A>, können nur in Methoden basierter Syntax ausgedrückt werden.  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
-Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.
+## <a name="compile-the-code"></a>Kompilieren des Codes  
+Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.
   
 ## <a name="see-also"></a>Siehe auch
 

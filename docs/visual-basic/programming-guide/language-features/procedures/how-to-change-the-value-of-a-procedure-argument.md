@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339962"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344477"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Gewusst wie: Ändern des Werts eines Prozedurarguments (Visual Basic)
 Wenn Sie eine Prozedur aufzurufen, entspricht jedes von Ihnen bereitgestellte Argument einem der in der Prozedur definierten Parameter. In einigen Fällen kann der Prozedur Code den Wert ändern, der einem Argument im aufrufenden Code zugrunde liegt. In anderen Fällen kann die Prozedur nur die lokale Kopie eines Arguments ändern.  
@@ -69,7 +69,7 @@ Wenn Sie eine Prozedur aufzurufen, entspricht jedes von Ihnen bereitgestellte Ar
   
  Sie können verhindern, dass die Prozedur die Variable selbst im aufrufenden Code ändert. Weitere Informationen finden [Sie unter Gewusst wie: Schützen eines Prozedur Arguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
+## <a name="compile-the-code"></a>Kompilieren des Codes  
  Wenn Sie eine Variable als Verweis übergeben, müssen Sie das `ByRef`-Schlüsselwort verwenden, um diesen Mechanismus anzugeben.  
   
  Der Standardwert in Visual Basic besteht darin, Argumente als Wert zu übergeben. Es ist jedoch eine gute Programmier Übung, das [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) -oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jedem deklarierten Parameter einzuschließen. Dadurch wird Ihr Code leichter lesbar.  

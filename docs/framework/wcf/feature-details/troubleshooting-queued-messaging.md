@@ -2,12 +2,12 @@
 title: Problembehandlung bei Nachrichtenwarteschlangen
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837310"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345589"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 
@@ -25,7 +25,7 @@ Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlu
 
 **F:** Muss ich MSMQ aktualisieren, um die <xref:System.ServiceModel.NetMsmqBinding>-und `MsmqIntegration` Bindungen zu verwenden?
 
-**A:** Nein. Beide Bindungen funktionieren mit MSMQ 3.0 unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Bestimmte Funktionen der Bindungen werden verfügbar, wenn Sie ein Upgrade auf MSMQ 4,0 in Windows Vista durchführen.
+**A:** Nein. Beide Bindungen funktionieren mit MSMQ 3,0 auf [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und Windows Server 2003. Bestimmte Funktionen der Bindungen werden verfügbar, wenn Sie ein Upgrade auf MSMQ 4,0 in Windows Vista durchführen.
 
 **F:** Welche Features der <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> Bindungen sind in MSMQ 4,0 verfügbar, aber nicht in MSMQ 3,0?
 

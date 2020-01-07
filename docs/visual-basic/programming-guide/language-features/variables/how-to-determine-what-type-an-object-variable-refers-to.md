@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348617"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344201"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Gewusst wie: Bestimmen des Typs, auf den eine Objektvariable verweist (Visual Basic)
 
@@ -50,7 +50,7 @@ Eine Objekt Variable enthält einen Zeiger auf Daten, die an anderer Stelle gesp
 
     Das Kriterium für die Kompatibilität hängt davon ab, ob der angegebene Typ eine Klasse, eine Struktur oder eine Schnittstelle ist. Im Allgemeinen sind die Typen kompatibel, wenn das Objekt vom gleichen Typ ist wie, erbt von oder implementiert den angegebenen Typ. Weitere Informationen finden Sie unter [typeof-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+## <a name="compile-the-code"></a>Kompilieren des Codes
 
 Beachten Sie, dass der angegebene Typ keine Variable oder kein Ausdruck sein darf. Dabei muss es sich um den Namen eines definierten Typs handeln, z. b. eine Klasse, Struktur oder Schnittstelle. Dies schließt intrinsische Typen wie `Integer` und `String`ein.
 

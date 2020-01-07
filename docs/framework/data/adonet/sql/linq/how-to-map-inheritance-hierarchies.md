@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Zuordnen von Vererbungshierarchien'
+title: 'Gewusst wie: Zuordnen von Vererbungshierarchien'
 ms.date: 03/30/2017
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1366e8f5f79a8e695e52c405e20a894861453ae7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 737cb8743d8fd9c93cd46ebf50fba3fe554a35f2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781768"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634663"
 ---
-# <a name="how-to-map-inheritance-hierarchies"></a>Vorgehensweise: Zuordnen von Vererbungshierarchien
-Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] müssen Sie die Attribute in der Stammklasse der Vererbungshierarchie angeben. Führen Sie dazu die folgenden Schritte aus. Entwickler, die Visual Studio verwenden, können den objektrelationaler Designer verwenden, um Vererbungs Hierarchien zuzuordnen. Weitere Informationen finden Sie unter [How to: Configure inheritance by using the O/R Designer (Vorgehensweise: Konfigurieren der Vererbung mit dem O/R-Designer)](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
+# <a name="how-to-map-inheritance-hierarchies"></a>Gewusst wie: Zuordnen von Vererbungshierarchien
+Zum Implementieren der Vererbungs Zuordnung in LINQ müssen Sie die Attribute und Attribut Eigenschaften in der Stamm Klasse der Vererbungs Hierarchie angeben, wie in den folgenden Schritten beschrieben. Entwickler, die Visual Studio verwenden, können den objektrelationaler Designer verwenden, um Vererbungs Hierarchien zuzuordnen. Weitere Informationen finden Sie unter Gewusst [wie: Konfigurieren der Vererbung mit dem O/R-Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
   
 > [!NOTE]
 > Für Unterklassen sind keine besonderen Attribute oder Eigenschaften erforderlich. Beachten Sie besonders, dass Unterklassen nicht über das <xref:System.Data.Linq.Mapping.TableAttribute>-Attribut verfügen.  
@@ -43,9 +43,9 @@ Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../i
 ## <a name="example"></a>Beispiel  
   
 > [!NOTE]
-> Wenn Sie Visual Studio verwenden, können Sie das objektrelationaler Designer verwenden, um die Vererbung zu konfigurieren. Weitere Informationen finden Sie unter [How to: Konfigurieren der Vererbung mit dem O/R-Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+> Wenn Sie Visual Studio verwenden, können Sie das objektrelationaler Designer verwenden, um die Vererbung zu konfigurieren. Weitere Informationen finden Sie unter Gewusst [wie: Konfigurieren der Vererbung mit dem O/R-Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
- Im folgenden Codebeispiel ist `Vehicle` als Stammklasse definiert, und die vorherigen Schritte wurden implementiert, um die Hierarchie für [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zu beschreiben.  
+ Im folgenden Codebeispiel wird `Vehicle` als Stamm Klasse definiert, und die vorherigen Schritte wurden implementiert, um die Hierarchie für LINQ zu beschreiben.  
   
  [!code-csharp[DLinqCustomize#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#4)]
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
@@ -53,4 +53,4 @@ Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../i
 ## <a name="see-also"></a>Siehe auch
 
 - [Unterstützung von Vererbung](inheritance-support.md)
-- [Vorgehensweise: Anpassen von Entitäts Klassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -2,12 +2,12 @@
 title: Dienstidentitätsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: eb2dd3c6392164905cf755075856608ec5fcaf30
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837791"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347923"
 ---
 # <a name="service-identity-sample"></a>Dienstidentitätsbeispiel
 Dieses Dienstidentitätsbeispiel veranschaulicht das Festlegen der Identität eines Diensts. Während der Entwurfszeit kann ein Client die Identität mithilfe der Metadaten des Diensts abrufen und zur Laufzeit die Identität des Diensts authentifizieren. Das Konzept der Dienstidentität besteht darin, dass ein Client einen Dienst authentifizieren kann, bevor er einen seiner Vorgänge aufruft. Auf diese Weise wird der Client vor nicht authentifizierten Aufrufen geschützt. Bei einer sicheren Verbindung authentifiziert der Dienst auch die Anmeldeinformationen eines Clients, bevor er diesem Zugriff gewährt. Diese Funktion steht jedoch nicht im Mittelpunkt dieses Beispiels. Sehen Sie sich die Beispiele in [Client](../../../../docs/framework/wcf/samples/client.md) an, die die Server Authentifizierung anzeigen.
@@ -117,7 +117,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 1. Importieren Sie unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder Windows Vista die Identity. pfx-Zertifikat Datei im Identitäts Lösungs Ordner mithilfe des MMC-Snap-in-Tools in den Zertifikat Speicher LocalMachine/My (Personal). Diese Datei ist durch ein Kennwort geschützt. Während des Imports werden Sie um ein Kennwort gebeten. Geben Sie `xyz` in das Feld Kennwort ein. Weitere Informationen finden Sie im Thema Gewusst [wie: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Führen Sie anschließend die Datei "Setup. bat" in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten aus, die dieses Zertifikat zur Verwendung auf dem Client in den Speicher "CurrentUser/Trusted People" kopiert.
 
-2. Führen Sie auf [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]die Datei "Setup. bat" aus dem Beispiel Installationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
+2. Führen Sie unter Windows Server 2003 die Datei Setup. bat aus dem Beispiel Installationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!NOTE]
     > Die Batchdatei "Setup. bat" ist so konzipiert, dass Sie über eine Visual Studio 2012-Eingabeaufforderung ausgeführt wird. Die in der Visual Studio 2012-Eingabeaufforderung festgelegte PATH-Umgebungsvariable verweist auf das Verzeichnis, das ausführbare Dateien enthält, die für das Skript "Setup. bat" erforderlich sind. Wenn Sie mit dem Beispiel fertig sind, müssen Sie die Datei Cleanup.bat ausführen, um die Zertifikate zu entfernen. In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
