@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349458"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545119"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Untergeordnete XML-Achseneigenschaft (Visual Basic)
 Bietet Zugriff auf die untergeordneten Elemente eines <xref:System.Xml.Linq.XElement>-Objekts, eines <xref:System.Xml.Linq.XDocument>-Objekts, einer Auflistung von <xref:System.Xml.Linq.XElement>-Objekten oder einer Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|Erforderlich Ein <xref:System.Xml.Linq.XElement>Objekt, ein <xref:System.Xml.Linq.XDocument>-Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement>Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.|  
 |.<|Erforderlich Gibt den Anfang einer untergeordneten Achseneigenschaft an.|  
-|`child`|Erforderlich Der Name der untergeordneten Knoten, auf die im Format [`prefix:]name`zugegriffen werden soll.<br /><br /> -   `Prefix`: optional. XML-Namespacepräfix für den untergeordneten Knoten. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert ist.<br />-   `Name`-erforderlich. Lokaler Name des untergeordneten Knotens. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Erforderlich Der Name der untergeordneten Knoten, auf die mit dem Formular `[prefix:]name`zugegriffen werden soll.<br /><br /> -   `Prefix`: optional. XML-Namespacepräfix für den untergeordneten Knoten. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert ist.<br />-   `Name`-erforderlich. Lokaler Name des untergeordneten Knotens. Siehe [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Erforderlich Gibt das Ende einer untergeordneten Achseneigenschaft an.|  
   
 ## <a name="return-value"></a>Rückgabewert  

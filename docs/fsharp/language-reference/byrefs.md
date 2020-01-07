@@ -1,13 +1,13 @@
 ---
 title: Byrefs
-description: Erfahren Sie mehr über ByRef-und ByRef- F#ähnliche Typen in, die für die Programmierung auf niedriger Ebene verwendet werden.
+description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976826"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545130"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -104,11 +104,11 @@ Alle diese Regeln bedeuten, dass der Besitzer eines `inref` Zeigers den unmittel
 
 ### <a name="outref-semantics"></a>Leistungs Semantik
 
-Der Zweck `outref<'T>` ist, anzugeben, dass der Zeiger nur aus gelesen werden soll. Unerwartet, `outref<'T>` das Lesen des zugrunde liegenden Werts trotz seines Namens zulässt. Dies dient zu Kompatibilitätszwecken. `outref<'T>` unterscheidet sich semantisch von `byref<'T>`.
+Der Zweck `outref<'T>` ist, anzugeben, dass der Zeiger nur in den Zeiger geschrieben werden soll. Unerwartet, `outref<'T>` das Lesen des zugrunde liegenden Werts trotz seines Namens zulässt. Dies dient zu Kompatibilitätszwecken. `outref<'T>` unterscheidet sich semantisch von `byref<'T>`.
 
 ### <a name="interop-with-c"></a>Interop mit C-\#
 
-C#unterstützt die Schlüsselwörter `in ref` und `out ref` zusätzlich zu `ref`-Rückgabe. In der folgenden Tabelle wird F# gezeigt, C# wie interpretiert, was ausgibt:
+C#unterstützt die Schlüsselwörter `in ref` und `out ref` zusätzlich zu `ref`-Rückgabe. Die folgende Tabelle zeigt, wie F# interpretiert wie c# ausgibt:
 
 |C#Erstellen|F#leitet|
 |------------|---------|
@@ -117,7 +117,7 @@ C#unterstützt die Schlüsselwörter `in ref` und `out ref` zusätzlich zu `ref`
 |`in ref`-Parameter|`inref<'T>`|
 |`out ref`-Parameter|`outref<'T>`|
 
-In der folgenden Tabelle wird F# gezeigt, was ausgibt:
+Die folgende Tabelle zeigt, was F# ausgibt:
 
 |F#Erstellen|Ausgegebenes Konstrukt|
 |------------|-----------------|
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` impliziert keine `Struct`. Beides muss für den Typ vorhanden sein.
 
-Eine "`byref`-like"-Struktur F# in ist ein Stapel gebundener Werttyp. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für die Hochleistungs Programmierung, da Sie mit einer Reihe von leistungsstarken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Die Regeln lauten wie folgt:
+Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für die Hochleistungs Programmierung, da Sie mit einer Reihe von leistungsstarken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Dies sind die Regeln:
 
 * Sie können als Funktionsparameter, Methoden Parameter, lokale Variablen und Methoden Rückgaben verwendet werden.
 * Sie können keine statischen Member oder Instanzmember einer Klasse oder einer normalen Struktur sein.
@@ -179,7 +179,7 @@ Wenngleich diese Regeln die Nutzung stark einschränken, wird dies durchgeführt
 
 ## <a name="byref-returns"></a>ByRef-Rückgaben
 
-ByRef-Rückgaben von F# Funktionen oder Membern können erstellt und genutzt werden. Bei der Verwendung einer `byref`zurück gebenden Methode wird der Wert implizit dereferenziert. Beispiel:
+ByRef-Rückgaben von F#-Funktionen oder Elemente erstellt und verwendet werden können. Bei der Verwendung einer `byref`zurück gebenden Methode wird der Wert implizit dereferenziert. Beispiel:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =
