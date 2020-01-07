@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740710"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559923"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Übersicht über WPF-Globalisierung und -Lokalisierung
 
@@ -42,7 +42,7 @@ Wenn Sie einen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-w
 
 - Aktivieren Sie <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> auf <xref:System.Windows.Controls.TextBlock>, um Clipping zu vermeiden.
 
-- Legen Sie das `xml:lang` -Attribut fest. Dieses Attribut beschreibt die Kultur eines bestimmten Elements und seiner untergeordneten Elemente. Der Wert dieser Eigenschaft ändert das Verhalten mehrerer Features in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Es ändert z.B. das Verhalten von Silbentrennung, Rechtschreibprüfung, Zahlenersetzung, Formen komplexer Schriften und die Ausweich-Schriftart. Weitere Informationen zum Festlegen der [XML: lang-Behandlung in XAML](../../xaml-services/xml-lang-handling-in-xaml.md)finden Sie unter [Globalisierung für WPF](globalization-for-wpf.md) .
+- Legen Sie das `xml:lang` -Attribut fest. Dieses Attribut beschreibt die Kultur eines bestimmten Elements und seiner untergeordneten Elemente. Der Wert dieser Eigenschaft ändert das Verhalten mehrerer Features in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Es ändert z.B. das Verhalten von Silbentrennung, Rechtschreibprüfung, Zahlenersetzung, Formen komplexer Schriften und die Ausweich-Schriftart. Weitere Informationen zum Festlegen der [XML: lang-Behandlung in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)finden Sie unter [Globalisierung für WPF](globalization-for-wpf.md) .
 
 - Erstellen Sie eine angepasste zusammengesetzte Schriftart, um eine bessere Kontrolle der Schriftarten zu erhalten, die für verschiedene Sprachen verwendet werden. Standardmäßig verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die Schriftart GlobalUserInterface. Composite in Ihrem Verzeichnis Windows\Fonts.
 
@@ -148,7 +148,7 @@ Beachten Sie, dass im Beispiel das Feature für die gemeinsame Größenänderung
 
 `xml:lang="en-US"`
 
-Beachten Sie, dass die [XML: lang-Behandlung in XAML](../../xaml-services/xml-lang-handling-in-xaml.md) am Stamm Element der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]platziert wird. Diese Eigenschaft beschreibt die Kultur eines bestimmten Elements und seiner untergeordneten Elemente. Dieser Wert wird von mehreren Features in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet und sollte bei der Lokalisierung entsprechend geändert werden. Dieser Wert bestimmt, welches Sprachwörterbuch für Silbentrennung und Rechtschreibprüfung verwendet wird. Es wirkt sich auch auf die Anzeige von Ziffern aus, und wie das Fallbacksystem für Schriftarten entscheidet, welche Schriftart zu benutzen ist. Schließlich beeinflusst die Eigenschaft auch, wie Zahlen formatiert und in welcher Form komplexe Schriften dargestellt werden. Der Standardwert ist „en-US”.
+Beachten Sie, dass die [XML: lang-Behandlung in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md) am Stamm Element der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]platziert wird. Diese Eigenschaft beschreibt die Kultur eines bestimmten Elements und seiner untergeordneten Elemente. Dieser Wert wird von mehreren Features in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet und sollte bei der Lokalisierung entsprechend geändert werden. Dieser Wert bestimmt, welches Sprachwörterbuch für Silbentrennung und Rechtschreibprüfung verwendet wird. Es wirkt sich auch auf die Anzeige von Ziffern aus, und wie das Fallbacksystem für Schriftarten entscheidet, welche Schriftart zu benutzen ist. Schließlich beeinflusst die Eigenschaft auch, wie Zahlen formatiert und in welcher Form komplexe Schriften dargestellt werden. Der Standardwert ist „en-US”.
 
 **Erstellen eine Satellitenressourcenassembly**
 
@@ -178,19 +178,19 @@ Nachdem die Anwendung erstellt, ist der erste Schritt bei der Lokalisierung, die
 
 Verwenden Sie zum Bearbeiten dieser Datei Ihren bevorzugten Unicode-fähigen CSV-Editor. Filtern Sie alle Einträge mit einer Lokalisierungskategorie von „None” heraus. Sie sollten folgende Einträge sehen:
 
-|Ressourcenschlüssel|Lokalisierungskategorie|Wert|
+|Ressourcenschlüssel|Lokalisierungskategorie|{2&gt;Wert&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Schaltfläche|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Abbrechen|
-|Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen...|
+|Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Cancel|
+|Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen ...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetressource ein, damit Windows das entsprechende Objekt öffnet.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
-|Window_1:System.Windows.Window.Title|Titel|Run|
+|Window_1:System.Windows.Window.Title|Title|Führen Sie  aus.|
 
 Um die Anwendung auf Deutsch zu lokalisieren, sind die folgenden Übersetzungen erforderlich:
 
-|Ressourcenschlüssel|Lokalisierungskategorie|Wert|
+|Ressourcenschlüssel|Lokalisierungskategorie|{2&gt;Wert&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Schaltfläche|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Abbrechen|
@@ -198,7 +198,7 @@ Um die Anwendung auf Deutsch zu lokalisieren, sind die folgenden Übersetzungen 
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetressource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
-|Window_1:System.Windows.Window.Title|Titel|Run|
+|Window_1:System.Windows.Window.Title|Title|Führen Sie  aus.|
 
 **Generieren**
 
@@ -265,9 +265,9 @@ Es gibt viele Fälle, in denen Inhalt mehrdeutig und schwierig zu übersetzen se
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Dieser Kommentar wird dem TextBlock_1's-Inhalt zugeordnet, und im Fall des LocBaml-Tools (siehe [Lokalisieren einer Anwendung](how-to-localize-an-application.md)), kann er in der 6. Spalte der TextBlock_1-Zeile in der CSV-Ausgabedatei angezeigt werden:
+Dieser Kommentar wird dem Inhalt von TextBlock_1 zugeordnet, und im Fall des LocBaml-Tools (siehe [Lokalisieren einer Anwendung](how-to-localize-an-application.md)) kann er in der 6. Spalte der TextBlock_1 Zeile in der CSV-Ausgabedatei angezeigt werden:
 
-|Ressourcenschlüssel|Kategorie|Lesbar|Änderbar|Kommentar|Wert|
+|Ressourcenschlüssel|Kategorie|Lesbar|Änderbar|Anmerkungen|{2&gt;Wert&lt;2}|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|Dieses Zeichen wird als dekorative Abgrenzungslinie verwendet.|&#124;|
 
