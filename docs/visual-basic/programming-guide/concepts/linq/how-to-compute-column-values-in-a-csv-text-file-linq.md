@@ -2,20 +2,20 @@
 title: 'Gewusst wie: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9ce6ec4c8d109fa06e672e967ac36c615a8fb38e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348399"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338500"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="ce1c0-102">Gewusst wie: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce1c0-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="12db6-102">Gewusst wie: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12db6-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="ce1c0-103">In diesem Beispiel wird veranschaulicht, wie Sie Aggregatberechnungen wie „Sum“, „Average“, „Min“ und „Max“ für die Spalten einer CSV-Datei ausführen.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="ce1c0-104">Die hier gezeigten Beispielprinzipien können auf andere Typen von strukturiertem Text angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-104">The example principles that are shown here can be applied to other types of structured text.</span></span>
+<span data-ttu-id="12db6-103">In diesem Beispiel wird veranschaulicht, wie Sie Aggregatberechnungen wie „Sum“, „Average“, „Min“ und „Max“ für die Spalten einer CSV-Datei ausführen.</span><span class="sxs-lookup"><span data-stu-id="12db6-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="12db6-104">Die hier gezeigten Beispielprinzipien können auf andere Typen von strukturiertem Text angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="12db6-104">The example principles that are shown here can be applied to other types of structured text.</span></span>
 
-### <a name="to-create-the-source-file"></a><span data-ttu-id="ce1c0-105">So erstellen Sie die Quelldatei</span><span class="sxs-lookup"><span data-stu-id="ce1c0-105">To create the source file</span></span>
+### <a name="to-create-the-source-file"></a><span data-ttu-id="12db6-105">So erstellen Sie die Quelldatei</span><span class="sxs-lookup"><span data-stu-id="12db6-105">To create the source file</span></span>
 
-1. <span data-ttu-id="ce1c0-106">Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="ce1c0-107">Angenommen, die erste Spalte enthält eine Schüler-ID und die nachfolgende Spalten stellen die Noten aus vier Prüfungen dar.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>
+1. <span data-ttu-id="12db6-106">Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="12db6-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="12db6-107">Angenommen, die erste Spalte enthält eine Schüler-ID und die nachfolgende Spalten stellen die Noten aus vier Prüfungen dar.</span><span class="sxs-lookup"><span data-stu-id="12db6-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +32,7 @@ ms.locfileid: "74348399"
     122, 94, 92, 91, 91
     ```
 
-## <a name="example"></a><span data-ttu-id="ce1c0-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ce1c0-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="12db6-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="12db6-108">Example</span></span>
 
 ```vb
 Class SumColumns
@@ -141,13 +141,13 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39
 ```
 
-<span data-ttu-id="ce1c0-109">Die Abfrage nutzt die Methode <xref:System.String.Split%2A>, um jede Textzeile in ein Array zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="ce1c0-110">Jedes Arrayelement stellt eine Spalte dar.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-110">Each array element represents a column.</span></span> <span data-ttu-id="ce1c0-111">Schließlich wird der Text in jeder Spalte in die entsprechend numerische Darstellung konvertiert.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="ce1c0-112">Wenn es sich bei der Datei um eine tabstoppgetrennte Datei handelt, aktualisieren Sie einfach das Argument in der `Split`-Methode auf `\t`.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>
+<span data-ttu-id="12db6-109">Die Abfrage nutzt die Methode <xref:System.String.Split%2A>, um jede Textzeile in ein Array zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="12db6-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="12db6-110">Jedes Arrayelement stellt eine Spalte dar.</span><span class="sxs-lookup"><span data-stu-id="12db6-110">Each array element represents a column.</span></span> <span data-ttu-id="12db6-111">Schließlich wird der Text in jeder Spalte in die entsprechend numerische Darstellung konvertiert.</span><span class="sxs-lookup"><span data-stu-id="12db6-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="12db6-112">Wenn es sich bei der Datei um eine tabstoppgetrennte Datei handelt, aktualisieren Sie einfach das Argument in der `Split`-Methode auf `\t`.</span><span class="sxs-lookup"><span data-stu-id="12db6-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="ce1c0-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="ce1c0-113">Compiling the Code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="12db6-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="12db6-113">Compile the code</span></span>
 
-<span data-ttu-id="ce1c0-114">Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="ce1c0-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="12db6-114">Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="12db6-114">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ce1c0-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce1c0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12db6-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12db6-115">See also</span></span>
 
-- [<span data-ttu-id="ce1c0-116">LINQ und Zeichen folgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce1c0-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="ce1c0-117">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="ce1c0-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="12db6-116">LINQ und Zeichen folgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12db6-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="12db6-117">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="12db6-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
