@@ -3,13 +3,12 @@ title: Versionsverwaltung für .NET Core-Runtime und SDK
 description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
 author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342915"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713966"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 

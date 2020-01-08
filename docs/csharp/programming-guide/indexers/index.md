@@ -1,6 +1,5 @@
 ---
 title: Indexer – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 02dc8c21b86438c801fb151d9f02a223b60d6197
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423232"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702947"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexer (C#-Programmierhandbuch)
 
@@ -34,7 +33,7 @@ Get- oder Set-Accessoren eines Indexers bestehen häufig aus einer einzelnen Anw
 
 Beachten Sie, dass `=>` den Ausdruckstext vorstellt und dass das `get`-Schlüsselwort nicht verwendet wird. 
 
-Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermember implementiert werden. In diesem Fall müssen die Schlüsselwörter `get` und `set` verwendet werden. Beispiel:
+Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermember implementiert werden. In diesem Fall müssen die Schlüsselwörter `get` und `set` verwendet werden. Zum Beispiel:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   

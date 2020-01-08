@@ -26,14 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974668"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708370"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -133,7 +131,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
 
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|BESCHREIBUNG|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Generische Sammlungen in .NET](../../../docs/standard/generics/collections.md)|Beschreibt generische Auflistungsklassen und andere generische Auflistungstypen in .NET.|  
 |[Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Beschreibt generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.|  

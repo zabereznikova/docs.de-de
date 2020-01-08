@@ -4,13 +4,12 @@ description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bi
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.custom: seodec18
-ms.openlocfilehash: b4d3f23f457e913f62d508d9b0f57168bc101786
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343334"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714043"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Kennenlernen der .NET Core- und .NET Core SDK-Tools mithilfe der folgenden Tutorials
 

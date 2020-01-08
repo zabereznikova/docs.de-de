@@ -3,14 +3,12 @@ title: XML-Dokumente und XML-Daten
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424868"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710790"
 ---
 # <a name="xml-documents-and-data"></a>XML-Dokumente und XML-Daten
 
@@ -28,7 +26,7 @@ ms.locfileid: "73424868"
 
 Suchen Sie im [.NET-API-Browser](https://docs.microsoft.com/dotnet/api/?term=system.xml) nach „System.Xml“, um eine vollständige Liste zu erhalten.
 
-Die Klassen in diesen Namespaces unterstützen die W3C-Empfehlungen (World Wide Web Consortium). Beispiel:
+Die Klassen in diesen Namespaces unterstützen die W3C-Empfehlungen (World Wide Web Consortium). Zum Beispiel:
 
 - Die <xref:System.Xml.XmlDocument?displayProperty=nameWithType>-Klasse implementiert die W3C-Empfehlungen [Document Object Model (DOM) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) und [Document Object Model (DOM) Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/).
 
