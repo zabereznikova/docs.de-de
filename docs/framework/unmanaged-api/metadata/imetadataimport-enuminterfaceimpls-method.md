@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449526"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338066"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls-Methode
 Listet alle Schnittstellen auf, die durch die angegebene `TypeDef`implementiert werden. 
@@ -37,7 +37,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator.  
   
@@ -48,7 +48,7 @@ HRESULT EnumInterfaceImpls (
  vorgenommen Das Array, das zum Speichern der MethodDef-Token verwendet wird.  
   
  `cMax`  
- [in] Die maximale Größe des `rImpls`-Arrays.  
+ in Die maximale Länge des `rImpls` Arrays.  
   
  `pcImpls`  
  vorgenommen Die tatsächliche Anzahl von Token, die in `rImpls`zurückgegeben werden.  
@@ -64,14 +64,14 @@ HRESULT EnumInterfaceImpls (
 
 Die-Enumeration gibt eine Auflistung von `mdInterfaceImpl`-Token für jede Schnittstelle zurück, die vom angegebenen `TypeDef`implementiert wird. Schnittstellen Token werden in der Reihenfolge zurückgegeben, in der die Schnittstellen angegeben wurden (über `DefineTypeDef` oder `SetTypeDefProps`). Eigenschaften der zurückgegebenen `mdInterfaceImpl` Token können mithilfe von " [getinterfakeimplproperties](imetadataimport-getinterfaceimplprops-method.md)" abgefragt werden.
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

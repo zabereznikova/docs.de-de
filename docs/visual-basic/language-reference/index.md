@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837089"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636717"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic-Sprachreferenz
 
@@ -66,7 +66,7 @@ Dieser Abschnitt enthält Referenzinformationen zu verschiedenen Aspekten der Vi
  Dokumentiert die in Visual Basic verfügbaren Eigenschaften.  
   
  [Abfragen](../../visual-basic/language-reference/queries/index.md)  
- Stellt Verweisinformationen zur Verwendung von [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]-Ausdrücken in Ihrem Code bereit.  
+ Enthält Referenzinformationen zur Verwendung von LINQ (Language-Integrated Query)-Ausdrücken in Ihrem Code.  
   
  [Anweisungen](../../visual-basic/language-reference/statements/index.md)  
  Dokumentiert die in Visual Basic verfügbaren Deklarationen und ausführbaren Anweisungen.  

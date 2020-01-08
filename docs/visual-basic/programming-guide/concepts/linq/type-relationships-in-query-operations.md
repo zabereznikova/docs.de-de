@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350566"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636912"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
 
-Variablen, die in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgängen verwendet werden, sind stark typisiert und müssen miteinander kompatibel sein. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in der Abfrage Ausführung verwendet. In der folgenden Abbildung sind die Begriffe aufgeführt, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage verwendet werden. Weitere Informationen zu den Teilen einer Abfrage finden Sie unter [grundlegende Abfrage Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Variablen, die in LINQ-Abfrage Vorgängen (Language-Integrated Query) verwendet werden, sind stark typisiert und müssen miteinander kompatibel sein. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in der Abfrage Ausführung verwendet. In der folgenden Abbildung sind Begriffe aufgeführt, die zum Beschreiben einer LINQ-Abfrage verwendet werden. Weitere Informationen zu den Teilen einer Abfrage finden Sie unter [grundlegende Abfrage Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 ![Screenshot, der eine Pseudo Code-Abfrage mit hervorgehobenen Elementen anzeigt.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 Der Typ der Bereichs Variablen in der Abfrage muss mit dem Typ der Elemente in der Datenquelle kompatibel sein. Der Typ der Abfrage Variablen muss mit dem in der `Select`-Klausel definierten Sequence-Element kompatibel sein. Schließlich muss der Typ der Sequenz Elemente auch mit dem Typ der Schleifen Steuerungsvariablen kompatibel sein, die in der `For Each` Anweisung verwendet wird, die die Abfrage ausführt. Diese starke Typisierung vereinfacht die Identifizierung von Typfehlern zum Zeitpunkt der Kompilierung.
 
-Mit Visual Basic wird die starke Typisierung durch Implementieren des lokalen Typrückschlusses, auch als *implizite Typisierung*bezeichnet, vereinfacht. Diese Funktion wird im vorherigen Beispiel verwendet, und Sie sehen, dass Sie in den [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Beispielen und in der Dokumentation verwendet wird. In Visual Basic wird der lokale Typrückschluss einfach mithilfe einer `Dim`-Anweisung ohne `As`-Klausel erreicht. Im folgenden Beispiel wird `city` stark als Zeichenfolge typisiert.
+Mit Visual Basic wird die starke Typisierung durch Implementieren des lokalen Typrückschlusses, auch als *implizite Typisierung*bezeichnet, vereinfacht. Diese Funktion wird im vorherigen Beispiel verwendet, und Sie sehen, dass Sie in den LINQ-Beispielen und in der Dokumentation verwendet wird. In Visual Basic wird der lokale Typrückschluss einfach mithilfe einer `Dim`-Anweisung ohne `As`-Klausel erreicht. Im folgenden Beispiel wird `city` stark als Zeichenfolge typisiert.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > Der lokale Typrückschluss funktioniert nur, wenn `Option Infer` auf `On`festgelegt ist. Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-Auch wenn Sie einen lokalen Typrückschluss in einer Abfrage verwenden, sind die gleichen Typbeziehungen zwischen den Variablen in der Datenquelle, der Abfrage Variablen und der Abfrage Ausführungs Schleife vorhanden. Es ist hilfreich, wenn Sie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen schreiben oder mit den Beispielen und Codebeispielen in der-Dokumentation arbeiten.
+Auch wenn Sie einen lokalen Typrückschluss in einer Abfrage verwenden, sind die gleichen Typbeziehungen zwischen den Variablen in der Datenquelle, der Abfrage Variablen und der Abfrage Ausführungs Schleife vorhanden. Es ist hilfreich, wenn Sie LINQ-Abfragen schreiben oder mit den Beispielen und Codebeispielen in der Dokumentation arbeiten.
 
 Möglicherweise müssen Sie einen expliziten Typ für eine Bereichs Variable angeben, der nicht mit dem von der Datenquelle zurückgegebenen Typ identisch ist. Sie können den Typ der Bereichs Variablen angeben, indem Sie eine `As`-Klausel verwenden. Dies führt jedoch zu einem Fehler, wenn die Konvertierung eine einschränkende [Konvertierung](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ist und `Option Strict` auf `On`festgelegt ist. Daher wird empfohlen, die Konvertierung der aus der Datenquelle abgerufenen Werte durchzuführen. Sie können die Werte aus der Datenquelle mithilfe der <xref:System.Linq.Enumerable.Cast%2A>-Methode in den Typ der expliziten Bereichs Variablen konvertieren. Sie können auch die in der `Select`-Klausel ausgewählten Werte in einen expliziten Typ umwandeln, der sich vom Typ der Bereichs Variablen unterscheidet. Diese Punkte sind im folgenden Code dargestellt.
 
@@ -41,7 +41,7 @@ Möglicherweise müssen Sie einen expliziten Typ für eine Bereichs Variable ang
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Abfragen, die ganze Elemente der Quelldaten zurückgeben
 
-Das folgende Beispiel zeigt einen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage Vorgang, der eine Sequenz von Elementen zurückgibt, die aus den Quelldaten ausgewählt wurden. Die Quelle, `names`, enthält ein Array von Zeichen folgen, und die Abfrageausgabe ist eine Sequenz mit Zeichen folgen, die mit dem Buchstaben "M" beginnen.
+Das folgende Beispiel zeigt einen LINQ-Abfrage Vorgang, der eine Sequenz von Elementen zurückgibt, die aus den Quelldaten ausgewählt wurden. Die Quelle, `names`, enthält ein Array von Zeichen folgen, und die Abfrageausgabe ist eine Sequenz mit Zeichen folgen, die mit dem Buchstaben "M" beginnen.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 

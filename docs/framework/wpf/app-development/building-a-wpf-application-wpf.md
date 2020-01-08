@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740667"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636314"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
 
-WPF-Anwendungen (Windows Presentation Foundation) können als .NET Framework ausführbare Dateien (exe-Dateien), Bibliotheken (DLL-Dateien) oder eine Kombination aus beiden Assemblytypen erstellt werden. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.
+WPF-Anwendungen (Windows Presentation Foundation) können als .NET Framework ausführbare Dateien (exe-Dateien), Bibliotheken (DLL-Dateien) oder eine Kombination aus beiden Assemblytypen erstellt werden. In diesem Thema wird erläutert, wie WPF-Anwendungen erstellt und die wichtigsten Schritte im Buildprozess beschrieben werden.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -28,13 +28,13 @@ Zum Kompilieren einer WPF-Anwendung stehen folgende Methoden zur Verfügung:
 
 - Microsoft Build Engine (MSBuild). Neben dem Code und XAML-Dateien muss die Anwendung eine MSBuild-Projektdatei enthalten. Weitere Informationen finden Sie unter „MSBuild“.
 
-- Visual Studio. Visual Studio ist eine integrierte Entwicklungsumgebung, die WPF-Anwendungen mit MSBuild kompiliert und einen visuellen Designer für das Erstellen der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [schreiben und Verwalten von Code mithilfe von Visual Studio](/visualstudio/ide/index-writing-code) und [Entwerfen von XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+- Visual Studio erstellen. Visual Studio ist eine integrierte Entwicklungsumgebung, die WPF-Anwendungen mit MSBuild kompiliert und einen visuellen Designer für das Erstellen der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [schreiben und Verwalten von Code mithilfe von Visual Studio](/visualstudio/ide/index-writing-code) und [Entwerfen von XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
 ## <a name="wpf-build-pipeline"></a>WPF-Buildpipeline
 
-Beim Erstellen eines [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Projekts wird die Kombination aus sprachspezifischen und [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-spezifischen Zielen aufgerufen. Das Ausführen dieser Ziele wird als Buildpipeline bezeichnet. Die wichtigsten Schritte werden in der folgenden Abbildung dargestellt.
+Wenn ein WPF-Projekt erstellt wird, wird die Kombination von sprachspezifischen und WPF-spezifischen Zielen aufgerufen. Das Ausführen dieser Ziele wird als Buildpipeline bezeichnet. Die wichtigsten Schritte werden in der folgenden Abbildung dargestellt.
 
 ![WPF-Buildprozess](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ Vor dem Erstellen bestimmt MSBuild den Speicherort wichtiger Tools und Bibliothe
 
 - Die Windows SDK Verzeichnisse.
 
-- Der Speicherort von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Verweisassemblys.
+- Der Speicherort der WPF-Verweisassemblys
 
 - Die Eigenschaft für die Assemblysuchpfade.
 
@@ -58,7 +58,7 @@ Der erste Speicherort, an dem MSBuild nach Assemblys sucht, ist das verweisassem
 
 ### <a name="resolving-references"></a>Auflösen von Verweisen
 
-Der Buildprozess sucht und bindet die Assemblys, die zum Erstellen des Anwendungsprojekts erforderlich sind. Diese Logik ist in der `ResolveAssemblyReference`-Aufgabe enthalten. Alle in der Projektdatei als `Reference` deklarierten Assemblys werden der Aufgabe mit Informationen zu Suchpfaden und Metadaten für Assemblys, die bereits im System installiert sind, zur Verfügung gestellt. Die Aufgabe sucht Assemblys und verwendet die Metadaten der installierten Assembly, um die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Kernassemblys herauszufiltern, die in den Ausgabemanifesten nicht angezeigt werden müssen. Auf diese Weise vermeiden Sie redundante Informationen in den ClickOnce-Manifesten. Da "presentationframework. dll" z. b. als repräsentativ für eine Anwendung angesehen werden kann, die auf und für die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] basiert, und da alle [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assemblys am gleichen Speicherort auf jedem Computer vorhanden sind, auf dem die .NET Framework installiert ist, gibt es Es ist nicht erforderlich, alle Informationen zu allen .NET Framework Verweisassemblys in den Manifesten einzubeziehen.
+Der Buildprozess sucht und bindet die Assemblys, die zum Erstellen des Anwendungsprojekts erforderlich sind. Diese Logik ist in der `ResolveAssemblyReference`-Aufgabe enthalten. Alle in der Projektdatei als `Reference` deklarierten Assemblys werden der Aufgabe mit Informationen zu Suchpfaden und Metadaten für Assemblys, die bereits im System installiert sind, zur Verfügung gestellt. Der Task sucht Assemblys und verwendet die Metadaten der installierten Assembly, um die WPF-Kernassemblys herauszufiltern, die in den Ausgabe Manifesten nicht angezeigt werden müssen. Auf diese Weise vermeiden Sie redundante Informationen in den ClickOnce-Manifesten. Da "presentationframework. dll" beispielsweise als repräsentativ für eine Anwendung angesehen werden kann, die auf und für WPF basiert, und da alle WPF-Assemblys am gleichen Speicherort auf jedem Computer vorhanden sind, auf dem der .NET Framework installiert ist, müssen Sie nicht alle Informationen zu allen .NET Framework Verweisassemblys in den Manifesten.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ Im Anwendungsmanifest (die Datei „.exe.manifest“) werden die Anwendungsassem
 
 Diese Manifest-Dateien werden immer für XBAPs erstellt. Für installierte Anwendungen werden sie nicht erstellt, sofern die `GenerateManifests`-Eigenschaft in der Projektdatei nicht mit dem Wert `true` angegeben wird.
 
-XBAPs erhält über die Berechtigungen, die typischen Internet Zonen Anwendungen zugewiesen sind, zwei zusätzliche Berechtigungen: <xref:System.Security.Permissions.WebBrowserPermission> und <xref:System.Security.Permissions.MediaPermission>. Das [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Buildsystem deklariert diese Berechtigungen im Anwendungsmanifest.
+XBAPs erhält über die Berechtigungen, die typischen Internet Zonen Anwendungen zugewiesen sind, zwei zusätzliche Berechtigungen: <xref:System.Security.Permissions.WebBrowserPermission> und <xref:System.Security.Permissions.MediaPermission>. Das WPF-Buildsystem deklariert diese Berechtigungen im Anwendungs Manifest.
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>Unterstützung für inkrementelle Builds
 
-Das [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Buildsystem unterstützt inkrementelle Builds. An Markup oder Code vorgenommene Änderungen werden auf intelligente Weise ermittelt. Außerdem werden nur jene Artefakte kompiliert, die von den Änderungen beeinflusst wurden. Der Mechanismus für inkrementelle Builds verwendet die folgenden Dateien:
+Das WPF-Buildsystem unterstützt inkrementelle Builds. An Markup oder Code vorgenommene Änderungen werden auf intelligente Weise ermittelt. Außerdem werden nur jene Artefakte kompiliert, die von den Änderungen beeinflusst wurden. Der Mechanismus für inkrementelle Builds verwendet die folgenden Dateien:
 
 - Die Datei $(*AssemblyName*)_MarkupCompiler.Cache zum Verwalten des aktuellen Compilerzustands.
 

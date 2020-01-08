@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354179"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636535"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ in Visual Basic
-Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen zum Verständnis und zur Verwendung von Visual Basic und [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen, die Ihnen helfen, Visual Basic und sprach integrierte Abfrage (Language-Integrated Query, LINQ) zu verstehen und zu verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Bietet eine Einführung für Anbieter, Operatoren, Abfragestruktur und Sprachfunktionen von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]  
+ Bietet eine Einführung in LINQ-Anbieter,-Operatoren, Abfrage Struktur und sprach Features.  
   
  [Gewusst wie: Abfragen einer Datenbank](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  Bietet ein Beispiel zum Herstellen einer Verbindung mit einer SQL Server-Datenbank und Ausführen einer Abfrage mithilfe von LINQ  

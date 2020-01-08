@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: bd82b7e83149aaa53cf1b240cb79f8747bccba47
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bff4e9f268e9eac84c244cb58eed8b4384e717d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793914"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634689"
 ---
 # <a name="getting-started"></a>Erste Schritte
-Mithilfe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]von können Sie die [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] -Technologie verwenden, um auf SQL-Datenbanken genauso zuzugreifen wie auf eine Auflistung im Arbeitsspeicher.  
+Mithilfe von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]können Sie die LINQ-Technologie verwenden, um auf SQL-Datenbanken zuzugreifen, so wie Sie auf eine in-Memory-Sammlung zugreifen würden.  
   
  Beispielsweise wird das `nw`-Objekt im folgenden Code zur Darstellung der `Northwind`-Datenbank erzeugt. Das Ziel ist die `Customers`-Tabelle, die Zeilen werden nach `Customers` (Kunden) aus `London`, gefiltert, und die `CompanyName`-Zeichenfolge wird zum Abrufen ausgewählt.  
   
@@ -27,7 +27,7 @@ Mithilfe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]von 
   
  Versuchen Sie danach, anhand einiger exemplarischer Vorgehensweisen und Lernprogramme einen praktischen Eindruck der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zu gewinnen. Weitere Informationen finden Sie [unter Learning by Walkthrough](learning-by-walkthroughs.md).  
   
- Schließlich erfahren Sie, wie Sie mit den ersten Schritten [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für Ihr eigenes Projekt beginnen, indem Sie die [typischen Schritte zum Verwenden von LINQ to SQL](typical-steps-for-using-linq-to-sql.md)lesen.  
+ Schließlich erfahren Sie, wie Sie mit Ihrem eigenen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt beginnen, indem Sie [typische Schritte für die Verwendung von LINQ to SQL](typical-steps-for-using-linq-to-sql.md)lesen.  
   
 ## <a name="see-also"></a>Siehe auch
 
