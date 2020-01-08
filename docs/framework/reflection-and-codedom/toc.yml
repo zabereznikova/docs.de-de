@@ -44,13 +44,14 @@
     - name: Übersicht über die Dynamic Language Runtime
       href: dynamic-language-runtime-overview.md
     - name: Generieren und Kompilieren von dynamischem Quellcode
-      href: dynamic-source-code-generation-and-compilation.md
       items:
+        - name: Übersicht
+          href: dynamic-source-code-generation-and-compilation.md
         - name: Verwenden von CodeDOM
           href: using-the-codedom.md
         - name: Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: 'Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
+        - name: Erstellen einer XML-Dokumentation mit CodeDOM
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: 'Vorgehensweise: Erstellen einer Klasse mit CodeDOM'
+        - name: Erstellen einer Klasse mit CodeDOM
           href: how-to-create-a-class-using-codedom.md

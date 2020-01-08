@@ -1,5 +1,7 @@
 - name: Willkommen
   href: welcome.md
+- name: Neuerungen in der .NET-Dokumentation
+  href: whats-new/index.yml
 - name: Leitfaden für .NET
   href: standard/
 - name: Leitfaden für .NET Core
@@ -8,7 +10,7 @@
   href: framework/
 - name: Leitfaden für .NET Desktop – WPF
   href: desktop-wpf/
-- name: 'Anleitung für C#'
+- name: 'Leitfaden für C#'
   href: csharp/index.yml
 - name: 'Leitfaden für F#'
   href: fsharp/index.yml

@@ -1,34 +1,32 @@
 - name: Windows Presentation Foundation für .NET Core
+  href: overview/index.md
+- name: Erste Schritte
   items:
-    - name: Übersicht
+    - name: Erstellen einer WPF-Anwendung
+      href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
+- name: Migration
+  items:
+    - name: "Unterschiede zu .NET\_Framework"
+      href: migration/differences-from-net-framework.md
+    - name: Migration von Framework zu Core
+      href: migration/convert-project-from-net-framework.md
+- name: Grundlagen
+  items:
+    - name: XAML
+      href: fundamentals/xaml.md
+    - name: Definieren von Ressourcen
+      href: fundamentals/xaml-resources-define.md
+    - name: Stile und Vorlagen
       items:
-        - name: Was ist WPF?
-          href: overview/index.md
-    - name: Erste Schritte
-      items:
-        - name: Erstellen einer WPF-Anwendung
-          href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
-    - name: Migration
-      items:
-        - name: "Unterschiede zu .NET\_Framework"
-          href: migration/differences-from-net-framework.md
-        - name: Migration von Framework zu Core
-          href: migration/convert-project-from-net-framework.md
-    - name: Grundlagen
-      items:
-        - name: XAML
-          href: fundamentals/xaml.md
-        - name: Definieren von Ressourcen
-          href: fundamentals/xaml-resources-define.md
-        - name: Stile und Vorlagen
-          items:
-            - name: Übersicht
-              href: fundamentals/styles-templates-overview.md
-            - name: Erstellen und Anwenden eines Stils
-              href: fundamentals/styles-templates-create-apply-style.md
-            - name: Erstellen und Anwenden einer Vorlage
-              href: themes/how-to-create-apply-template.md
-    - name: Arbeiten mit Daten
-      items:
-        - name: Übersicht über Datenbindung
-          href: data/data-binding-overview.md
+        - name: Übersicht
+          href: fundamentals/styles-templates-overview.md
+        - name: Erstellen und Anwenden eines Stils
+          href: fundamentals/styles-templates-create-apply-style.md
+        - name: Erstellen und Anwenden einer Vorlage
+          href: themes/how-to-create-apply-template.md
+    - name: XAML-Programmiersprachenreferenz
+      href: xaml-services/
+- name: Arbeiten mit Daten
+  items:
+    - name: Übersicht über Datenbindung
+      href: data/data-binding-overview.md

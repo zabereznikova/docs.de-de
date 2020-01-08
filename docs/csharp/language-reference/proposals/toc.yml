@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Schreibgeschützte Instanzmember
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: stackalloc bei Verschachtelungen
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

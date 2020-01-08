@@ -7,13 +7,13 @@
   items:
     - name: 'Installieren von F#'
       href: get-started/install-fsharp.md
-    - name: 'Erste Schritte mit F# in Visual Studio'
+    - name: 'F# in Visual Studio'
       href: get-started/get-started-visual-studio.md
-    - name: 'Erste Schritte mit F# in Visual Studio Code'
+    - name: 'F# in Visual Studio Code'
       href: get-started/get-started-vscode.md
-    - name: 'Erste Schritte mit F# mit der .NET Core-CLI'
+    - name: 'F# mit der .NET Core-CLI'
       href: get-started/get-started-command-line.md
-    - name: 'Erste Schritte mit F# in Visual Studio für Mac'
+    - name: 'F# in Visual Studio für Mac'
       href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'Einführung in F#'
   href: tour.md
@@ -47,7 +47,7 @@
       href: whats-new/fsharp-46.md
     - name: 'F# 4.5'
       href: whats-new/fsharp-45.md
-- name: 'F#-Sprachreferenz'
+- name: 'F#-Referenz'
   href: language-reference/index.md
   items:
     - name: Schlüsselwortreferenz
@@ -265,7 +265,7 @@
       href: style-guide/conventions.md
     - name: 'Entwurfsrichtlinien für eine F#-Komponente'
       href: style-guide/component-design-guidelines.md
-- name: 'Verwenden von F# in Azure'
+- name: 'F# in Azure'
   href: using-fsharp-on-azure/index.md
   items:
     - name: 'Erste Schritte mit Azure Blob Storage mit F#'
