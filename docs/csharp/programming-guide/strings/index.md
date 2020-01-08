@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46820fe4137f5080b956cd1345d3e95c2e06f9ca
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969716"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635079"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -125,11 +125,11 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Zeichenfolgen, Erweiterungsmethoden und LINQ  
- Da der <xref:System.String>-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die Erweiterungsmethode verwenden, die in der <xref:System.Linq.Enumerable>-Klasse auf Zeichenfolgen definiert ist. Um „visuelle Überfrachtung“ zu vermeiden, werden diese Methode für den <xref:System.String>-Typ aus IntelliSense ausgeschlossen, nichtsdestotrotz sind sie weiterhin verfügbar. Sie können auch [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke in Zeichenfolgen verwenden. Weitere Informationen finden Sie unter [LINQ und Zeichenfolgen](../concepts/linq/linq-and-strings.md).  
+ Da der <xref:System.String>-Typ <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die Erweiterungsmethode verwenden, die in der <xref:System.Linq.Enumerable>-Klasse auf Zeichenfolgen definiert ist. Um „visuelle Überfrachtung“ zu vermeiden, werden diese Methode für den <xref:System.String>-Typ aus IntelliSense ausgeschlossen, nichtsdestotrotz sind sie weiterhin verfügbar. Sie können auch LINQ-Abfrageausdrücke in Zeichenfolgen verwenden. Weitere Informationen finden Sie unter [LINQ und Zeichenfolgen](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
 |[Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  

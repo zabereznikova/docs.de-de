@@ -6,16 +6,16 @@ helpviewer_keywords:
 - getting started, Visual C#
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6255720ad5a23bdee7fe46a6c4b9c76f045b2d06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099952"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342782"
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C\#
 
-Dieser Abschnitt bietet kurze, einfache Tutorials, mit denen Sie schnell eine Anwendung mit C# und .NET Core erstellen können. Es gibt Themen mit ersten Schritten für Visual Studio 2017 und Visual Studio Code. In diesen Artikeln wird einige Programmiererfahrung vorausgesetzt. Wenn Sie noch keine Programmiererfahrung haben, finden Sie in unseren interaktiven Tutorials [Einführung in C#](../tutorials/intro-to-csharp/index.md) hilfreiche Informationen.
+Dieser Abschnitt bietet kurze, einfache Tutorials, mit denen Sie schnell eine Anwendung mit C# und .NET Core erstellen können. Es gibt Themen zu den ersten Schritten in Visual Studio und Visual Studio Code. In diesen Artikeln wird einige Programmiererfahrung vorausgesetzt. Wenn Sie noch keine Programmiererfahrung haben, finden Sie in unseren interaktiven Tutorials [Einführung in C#](../tutorials/intro-to-csharp/index.md) hilfreiche Informationen.
 
 Folgende Themen sind verfügbar:
 
@@ -23,13 +23,13 @@ Folgende Themen sind verfügbar:
 
      Bietet eine Übersicht über die Programmiersprache C# und .NET.
 
-- [Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
+- [Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio](../../core/tutorials/with-visual-studio.md)
 
    In Visual Studio können Sie Ihre Anwendungen in einer integrierten Entwicklungsumgebung für Windows oder Mac programmieren, kompilieren, ausführen, debuggen, als Profil erstellen und veröffentlichen.
 
-   In diesem Thema erstellen Sie eine einfache „Hello World“-Anwendung, führen sie aus und ändern sie dann, um eine etwas interaktivere „Hello World“-Anwendung zu erstellen. Nachdem Sie Ihre Anwendung erstellt und ausgeführt haben, lernen Sie auch, wie Sie die Anwendung [debuggen](../../core/tutorials/debugging-with-visual-studio.md) und [veröffentlichen](../../core/tutorials/publishing-with-visual-studio.md), sodass sie auf jeder Plattform ausgeführt werden kann, die von .NET Core unterstützt wird.
+   In diesem Thema erstellen Sie eine einfache „Hallo Welt“-Anwendung, führen sie aus und ändern sie dann, um eine etwas interaktivere „Hallo Welt“-Anwendung zu erhalten. Nachdem Sie Ihre Anwendung erstellt und ausgeführt haben, lernen Sie auch, wie Sie die Anwendung [debuggen](../../core/tutorials/debugging-with-visual-studio.md) und [veröffentlichen](../../core/tutorials/publishing-with-visual-studio.md), sodass sie auf jeder Plattform ausgeführt werden kann, die von .NET Core unterstützt wird.
 
-- [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
+- [Erstellen einer Klassenbibliothek mit C# und .NET Standard in Visual Studio](../../core/tutorials/library-with-visual-studio.md)
 
    Mit einer Klassenbibliothek können Sie Typen und Typmember definieren, die von einer anderen Anwendung aufgerufen werden können. In diesem Thema erstellen Sie eine Klassenbibliothek mit einer einzigen Methode, die festlegt, ob eine Zeichenfolge mit einem Großbuchstaben beginnt. Nachdem Sie die Bibliothek erstellt haben, können Sie einen [Komponententest](../../core/tutorials/testing-library-with-visual-studio.md) entwickeln, um sicherzustellen, dass die Bibliothek wie erwartet funktioniert. Dann machen Sie die Bibliothek verfügbar für [Anwendungen, von denen sie genutzt werden soll](../../core/tutorials/consuming-library-with-visual-studio.md).
 

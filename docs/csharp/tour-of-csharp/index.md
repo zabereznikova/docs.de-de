@@ -3,16 +3,18 @@ title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7398703dc75e7ad7ab8da497eb39e8eeba6d1eba
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774073"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346866"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
-C# (Aussprache „C Sharp“) ist eine einfache, moderne, objektorientierte und typsichere Programmiersprache. C# hat seine Wurzeln in der C-Sprachenfamilie und ist Programmierern, die mit C, C++, Java und JavaScript arbeiten, sofort vertraut. Diese Einführung bietet einen Überblick über die wichtigsten Komponenten der Sprache. Wenn Sie die Sprache anhand von interaktiven Beispielen kennenlernen möchten, arbeiten Sie die Tutorials [Einführung in C#](../tutorials/intro-to-csharp/index.md) durch.
+C# (Aussprache „C Sharp“) ist eine einfache, moderne, objektorientierte und typsichere Programmiersprache. C# hat seine Wurzeln in der C-Sprachenfamilie und ist Programmierern, die mit C, C++, Java und JavaScript arbeiten, sofort vertraut.
+
+Diese Einführung bietet einen Überblick über die wichtigsten Komponenten der Sprache (C# 7 und höher). Wenn Sie die Sprache anhand von interaktiven Beispielen kennenlernen möchten, arbeiten Sie die Tutorials auf der Seite [Einführung in C#](../tutorials/intro-to-csharp/index.md) durch.
 
 C# ist eine objektorientierte Sprache, umfasst allerdings auch Unterstützung für eine ***komponentenorientierte*** Programmierung. Die Softwareentwicklung von heute beruht zunehmend auf Softwarekomponenten in Form von eigenständigen und selbstbeschreibenden Funktionspaketen. Wichtig bei solchen Komponenten ist, dass sie für ein Programmiermodell mit Eigenschaften, Methoden und Ereignissen stehen. Sie verfügen über Attribute, die deklarative Informationen zur Komponente bereitstellen, und lassen sich in ihre eigene Dokumentation integrieren. C# bietet Sprachkonstrukte zur direkten Unterstützung für diese Konzepte, wodurch C# zu einer sehr natürlichen Sprache wird, in der Softwarekomponenten erstellt und verwendet werden.
 
@@ -49,7 +51,9 @@ Die `Hello`-Klasse, die vom Programm „Hello, World“ deklariert wird, verfüg
 
 Die Ausgabe des Programms wird anhand der `WriteLine`-Methode der `Console`-Klasse im `System`-Namespace generiert. Diese Klasse wird anhand der Standardklassenbibliotheken bereitgestellt, auf die standardmäßig automatisch vom Compiler verwiesen wird.
 
-Es gibt noch viel mehr über C# zu erfahren. Die folgenden Themen bieten eine Übersicht über die Elemente der C#-Sprache. Diese Übersichten bieten grundlegende Informationen zu allen Elementen der Sprache und die erforderlichen Informationen zum tieferen Eintauchen in die Elemente der C#-Sprache:
+## <a name="elements-of-the-c-language"></a>Elemente in C#
+
+Es gibt noch viel mehr über C# zu erfahren. Die folgenden Themen bieten eine Übersicht über die Elemente der C#-Sprache. Diese Übersichten bieten grundlegende Informationen zu allen Elementen der Sprache und die erforderlichen Informationen für tiefere Einblicke:
 
 - [Programmstruktur](program-structure.md)
   - Lernen Sie die organisatorischen Schlüsselkonzepte in der C#-Sprache kennen: ***Programme***, ***Namespaces***, ***Typen***, ***Member*** und ***Assemblys***.
@@ -67,12 +71,13 @@ Es gibt noch viel mehr über C# zu erfahren. Die folgenden Themen bieten eine Ü
   - Ein ***Array*** ist eine Datenstruktur, die eine Anzahl von Variablen enthält, auf die über berechnete Indizes zugegriffen wird.
 - [Schnittstellen](interfaces.md)
   - Eine ***Schnittstelle*** definiert einen Vertrag, der von Klassen und Strukturen implementiert werden kann. Eine Schnittstelle kann Methoden, Eigenschaften, Ereignisse und Indexer enthalten. Eine Schnittstelle stellt keine Implementierungen der von ihr definierten Member bereit. Sie gibt lediglich die Member an, die von Klassen oder Strukturen bereitgestellt werden müssen, die die Schnittstelle implementieren.
-- [Enumerationen](enums.md)
-  - Ein ***Enumerationstyp*** ist ein unverwechselbarer Werttyp mit einem Satz benannter Konstanten.
 - [Delegaten](delegates.md)
   - Ein ***Delegattyp*** stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate ähneln dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 - [Attribute](attributes.md)
   - ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
+  
+> [!NOTE]
+> Diese Artikel gelten für C# 7.0 und höher. Einige Funktionen stehen in früheren Versionen möglicherweise nicht zur Verfügung.
 
 > [!div class="step-by-step"]
 > [Nächste](program-structure.md)

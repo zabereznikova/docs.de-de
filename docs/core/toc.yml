@@ -16,11 +16,11 @@
       href: install/how-to-detect-installed-versions.md
     - name: Linux-Paket-Manager
       items:
-        - name: RHEL 7
+        - name: "RHEL\_7"
           href: install/linux-package-manager-rhel7.md
         - name: RHEL 8.1
           href: install/linux-package-manager-rhel81.md
-        - name: Ubuntu 16.04
+        - name: "Ubuntu\_16.04"
           href: install/linux-package-manager-ubuntu-1604.md
         - name: Ubuntu 18.04
           href: install/linux-package-manager-ubuntu-1804.md
@@ -28,7 +28,7 @@
           href: install/linux-package-manager-ubuntu-1904.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
-        - name: Debian 10
+        - name: "Debian\_10"
           href: install/linux-package-manager-debian10.md
         - name: Fedora 29
           href: install/linux-package-manager-fedora29.md
@@ -38,27 +38,27 @@
           href: install/linux-package-manager-centos7.md
         - name: OpenSUSE 15
           href: install/linux-package-manager-opensuse15.md
-        - name: SLES 12
+        - name: "SLES\_12"
           href: install/linux-package-manager-sles12.md
-        - name: SLES 15
+        - name: "SLES\_15"
           href: install/linux-package-manager-sles15.md
+    - name: Installieren der lokalisierten IntelliSense-Instanz
+      href: install/localized-intellisense.md
 - name: Erste Schritte
   href: get-started.md
   items:
     - name: 'Erste Schritte mit C# und Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Erstellen einer „Hallo Welt“-App in C# in Visual Studio'
+    - name: Erste Schritte mit .NET Core unter macOS mithilfe von Visual Studio Code
+      href: tutorials/using-on-macos.md
+    - name: Erstellen Ihrer ersten Konsolen-App in Visual Studio
       href: tutorials/with-visual-studio.md
-    - name: Erstellen einer „Hallo Welt“-App in Visual Basic in Visual Studio
-      href: tutorials/vb-with-visual-studio.md
     - name: Debuggen einer Anwendung mit Visual Studio
       href: tutorials/debugging-with-visual-studio.md
     - name: Veröffentlichen einer Anwendung mit Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Erstellen einer .NET Standard-Bibliothek mit C# in Visual Studio'
+    - name: Erstellen einer .NET-Standardbibliothek in Visual Studio
       href: tutorials/library-with-visual-studio.md
-    - name: Erstellen einer .NET Standard-Bibliothek mit Visual Basic in Visual Studio
-      href: tutorials/vb-library-with-visual-studio.md
     - name: Testen einer .NET Standard-Bibliothek in Visual Studio
       href: tutorials/testing-library-with-visual-studio.md
     - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio
@@ -89,8 +89,6 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3. Erstellen eines Vorlagenpakets
           href: tutorials/cli-templates-create-template-pack.md
-    - name: Erste Schritte mit .NET Core unter macOS
-      href: tutorials/using-on-macos.md
     - name: Erste Schritte mit .NET Core mit Visual Studio für Mac
       href: tutorials/using-on-mac-vs.md
     - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS
@@ -173,7 +171,7 @@
       href: diagnostics/index.md
     - name: Verwaltete Debugger
       href: diagnostics/managed-debuggers.md
-    - name: Protokollierung und Nachverfolgung
+    - name: Protokollierung und Ablaufverfolgung
       href: diagnostics/logging-tracing.md
     - name: Globale .NET Core-CLI-Tools
       items:
@@ -183,7 +181,11 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
-- name: Komponententest
+    - name: Tutorials zur .NET Core-Diagnose
+      items:
+        - name: Debuggen eines Speicherverlusts
+          href: diagnostics/debug-memory-leak.md
+- name: Unittests
   href: testing/index.md
   items:
     - name: Bewährte Methoden für Komponententests
@@ -212,7 +214,7 @@
       href: testing/unit-testing-published-output.md
     - name: Live-Komponententests von .NET Core-Projekten mit Visual Studio
       href: /visualstudio/test/live-unit-testing-start
-- name: Continuous Integration
+- name: Kontinuierliche Integration
   href: tools/using-ci-with-cli.md
 - name: Versionskontrolle
   href: versions/index.md
@@ -326,6 +328,8 @@
 - name: Zusätzliche Tools für .NET Core
   href: additional-tools/index.md
   items:
+    - name: .NET Core-Deinstallationstool
+      href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference-Anbieter
       href: additional-tools/wcf-web-service-reference-guide.md
     - name: dotnet-svcutil

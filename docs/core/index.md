@@ -1,15 +1,15 @@
 ---
 title: Leitfaden für .NET Core
-description: .NET Core ist eine modulare, hochleistungsfähige Implementierung von .NET zur Erstellung von Windows-, Linux- und Mac-Apps. Erfahren Sie mehr über .NET Core, und legen Sie los.
+description: .NET Core ist eine modulare, hochleistungsfähige Implementierung von .NET, mit der Sie Windows-, Linux- und macOS-Apps erstellen können. Erfahren Sie mehr über .NET Core, und legen Sie los.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837011"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341365"
 ---
 # <a name="net-core-guide"></a>Leitfaden für .NET Core
 
@@ -27,11 +27,11 @@ Alle .NET Core-Versionen sind unter den [.NET Core-Downloads](https://dotnet.mic
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
-.NET Core 3.1 ist die neueste Version. Darin enthalten sind geringfügige Verbesserungen im Vergleich zu .NET Core 3.0. Allerdings ist .NET Core 3.1 ein langfristig unterstütztes Release. Weitere Informationen zum .NET Core 3.1-Release finden Sie unter [Neuerungen in .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
+.NET Core 3.1 ist die neueste Version. Im Vergleich zu .NET Core 3.0 enthält .NET Core 3.1 nur geringfügige Verbesserungen, wird dafür aber [für längere Zeit unterstützt](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). Weitere Informationen zum .NET Core 3.1-Release finden Sie unter [Neuerungen in .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
 
 ## <a name="create-your-first-application"></a>Erstellen Ihrer ersten Anwendung
 
-Öffnen Sie nach der Installation von .NET Core SDK eine Eingabeaufforderung. Geben Sie die folgenden `dotnet`-Befehle ein, um eine C#-Anwendung zu erstellen und zu veröffentlichen:
+Öffnen Sie nach der Installation von .NET Core SDK eine Eingabeaufforderung. Geben Sie die folgenden `dotnet`-Befehle ein, um eine C#-Anwendung zu erstellen und auszuführen:
 
 ```dotnetcli
 dotnet new console

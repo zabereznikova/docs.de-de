@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 8a03baffc17da07ccab14c89dc9f99be2fc5ba1a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039494"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635209"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 
@@ -50,7 +50,7 @@ Weitere Informationen finden Sie im Abschnitt [Namespaces](~/_csharplang/spec/na
 
 - [C#-Programmierhandbuch](../index.md)
 - [Using-Namespaces](using-namespaces.md)
-- [Vorgehensweise: Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
+- [Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
 - [using-Direktive](../../language-reference/keywords/using-directive.md)
 - [:: Operator](../../language-reference/operators/namespace-alias-qualifier.md)

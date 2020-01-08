@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: d70ec5784d56bad60fbc33ae0b992de1bebfce38
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 84a7eba7bf71f5ef5a0f46eb5863952e1af37c86
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417954"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635430"
 ---
 # <a name="events-c-programming-guide"></a>Ereignisse (C#-Programmierhandbuch)
 Ereignisse aktivieren eine [Klasse](../../language-reference/keywords/class.md) oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder *auslöst*), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder *behandeln*), werden als *Abonnenten*bezeichnet.  
   
- In einer typischen C#-Windows Forms oder Web-Anwendung abonnieren Sie Ereignisse, die von Steuerelementen wie Schaltflächen und Listenfelder ausgelöst werden. Sie können die integrierte Entwicklungsumgebung (IDE) von Visual C# zum Durchsuchen der Ereignisse verwenden, die ein Steuerelement auslöst, und diejenigen wählen, die Sie behandeln möchten. Mithilfe der IDE können eine leere Ereignishandlermethode und der Code ganz einfach automatisch zu den Abonnenten des Ereignisses hinzugefügt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](./how-to-subscribe-to-and-unsubscribe-from-events.md).  
+In einer typischen C#-Windows Forms oder Web-Anwendung abonnieren Sie Ereignisse, die von Steuerelementen wie Schaltflächen und Listenfelder ausgelöst werden. Sie können die integrierte Entwicklungsumgebung (IDE) von Visual C# zum Durchsuchen der Ereignisse verwenden, die ein Steuerelement auslöst, und diejenigen wählen, die Sie behandeln möchten. Mithilfe der IDE können eine leere Ereignishandlermethode und der Code ganz einfach automatisch zu den Abonnenten des Ereignisses hinzugefügt werden. Weitere Informationen finden Sie unter [Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](./how-to-subscribe-to-and-unsubscribe-from-events.md).
   
 ## <a name="events-overview"></a>Übersicht über Ereignisse  
  Ereignisse verfügen über folgende Eigenschaften:  
@@ -37,16 +37,16 @@ Ereignisse aktivieren eine [Klasse](../../language-reference/keywords/class.md) 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  
   
-- [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
-  
-- [Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-  
-- [Vorgehensweise: Auslösen von Basisklassenereignissen in abgeleiteten Klassen](./how-to-raise-base-class-events-in-derived-classes.md)  
-  
-- [Vorgehensweise:  Implementieren von Schnittstellenereignissen](./how-to-implement-interface-events.md)  
-  
-- [Vorgehensweise: Implementieren von benutzerdefinierten Ereigniszugriffsmethoden](./how-to-implement-custom-event-accessors.md)  
-  
+- [Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](./how-to-subscribe-to-and-unsubscribe-from-events.md)
+
+- [Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+
+- [Auslösen von Basisklassenereignissen in abgeleiteten Klassen](./how-to-raise-base-class-events-in-derived-classes.md)
+
+- [Implementieren von Schnittstellenereignissen](./how-to-implement-interface-events.md)
+
+- [Implementieren benutzerdefinierter Ereignisaccessoren](./how-to-implement-custom-event-accessors.md)
+
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
 Weitere Informationen erhalten Sie unter [Ereignisse](~/_csharplang/spec/classes.md#events) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.

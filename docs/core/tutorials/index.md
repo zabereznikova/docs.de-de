@@ -5,39 +5,38 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: b4d3f23f457e913f62d508d9b0f57168bc101786
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884201"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343334"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Lernen Sie mit diesen Tutorials .NET Core und die .NET Core SDK-Tools kennen.
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Kennenlernen der .NET Core- und .NET Core SDK-Tools mithilfe der folgenden Tutorials
 
 Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 
-## <a name="building-applications-with-visual-studio-2017"></a>Erstellen von Anwendungen mit Visual Studio 2017
+## <a name="create-applications-with-visual-studio"></a>Erstellen von Anwendungen mit Visual Studio
 
-- [Erstellen einer C#-Hello World-Anwendung](with-visual-studio.md)
-- [Debuggen einer C#-Hello World-Anwendung](debugging-with-visual-studio.md)
-- [Veröffentlichen einer C#-Hello World-Anwendung](publishing-with-visual-studio.md)
-- [Erstellen einer C#-Klassenbibliothek](library-with-visual-studio.md)
-- [Erstellen einer Klassenbibliothek mit Visual Studio](vb-library-with-visual-studio.md)
+- [Erstellen einer Hallo Welt-Konsolen-Anwendung](with-visual-studio.md)
+- [Debuggen Ihrer „Hallo Welt“-Anwendung mit Visual Studio](debugging-with-visual-studio.md)
+- [Veröffentlichen Ihrer „Hallo Welt“-Anwendung](publishing-with-visual-studio.md)
+- [Erstellen einer Klassenbibliothek](library-with-visual-studio.md)
 - [Testen einer Klassenbibliothek](testing-library-with-visual-studio.md)
 - [Nutzen einer Klassenbibliothek](consuming-library-with-visual-studio.md)
 - [Azure Cosmos DB: Erste Schritte mit der SQL-API und .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
-## <a name="building-applications-with-visual-studio-code"></a>Erstellen von Anwendungen mit Visual Studio Code
+## <a name="build-applications-with-visual-studio-code"></a>Erstellen von Anwendungen mit Visual Studio Code
 
 - [Erste Schritte mit C# und Visual Studio Code](with-visual-studio-code.md)
 - [Erste Schritte mit .NET Core unter macOS](using-on-macos.md)
 
-## <a name="building-applications-with-visual-studio-for-mac"></a>Erstellen von Anwendungen mit Visual Studio für Mac
+## <a name="build-applications-with-visual-studio-for-mac"></a>Erstellen von Anwendungen mit Visual Studio für Mac
 
 - [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](using-on-mac-vs.md)
 - [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](using-on-mac-vs-full-solution.md)
 
-## <a name="building-applications-with-the-net-core-cli-tools"></a>Erstellen von Anwendungen mit .NET Core CLI-Tools
+## <a name="build-applications-with-the-net-core-cli-tools"></a>Erstellen von Anwendungen mit .NET Core CLI-Tools
 
 - [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der .NET Core CLI-Tools](cli-create-console-app.md)
 - [Organisieren und Testen von Projekten mit .NET Core CLI-Tools](testing-with-cli.md)
