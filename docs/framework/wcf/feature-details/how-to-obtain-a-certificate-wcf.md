@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: e720a6742506f6270fda65de12f510c2a6224873
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 485741f98c4a120669eafe85d3a3810374f61378
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929192"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347142"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Vorgehensweise: Abrufen eines Zertifikats (WCF)
 Um eine der Windows Communication Foundation (WCF)-Funktionen von verwenden zu können, die X. 509-Zertifikate verwenden, erhalten Sie zuerst Zertifikate.  
@@ -20,7 +20,7 @@ Um eine der Windows Communication Foundation (WCF)-Funktionen von verwenden zu k
   
     - Erwerben Sie ein Zertifikat von einer Zertifizierungsstelle, z. B. VeriSign, Inc.  
   
-    - Richten Sie einen eigenen Zertifikatdienst ein, und lassen Sie die Zertifikate von einer Zertifizierungsstelle signieren. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows&#160;2000 Server, Windows&#160;2000 Server Datacenter und Windows&#160;2000 Datacenter Server verfügen alle über Zertifikatdienste mit Public Key Infrastructure (PKI)-Unterstützung. Verwenden Sie unter Windows Server 2008 die Rolle " [Active Directory-Zertifikat Dienste](https://go.microsoft.com/fwlink/?LinkID=153483) ", um eine Zertifizierungsstelle zu verwalten.  
+    - Richten Sie einen eigenen Zertifikatdienst ein, und lassen Sie die Zertifikate von einer Zertifizierungsstelle signieren. Windows Server 2003, Windows 2000 Server, Windows 2000 Server Datacenter und Windows 2000 Datacenter Server enthalten alle Zertifikat Dienste, die die Public Key-Infrastruktur (PKI) unterstützen. Verwenden Sie unter Windows Server 2008 die Rolle " [Active Directory-Zertifikat Dienste](https://go.microsoft.com/fwlink/?LinkID=153483) ", um eine Zertifizierungsstelle zu verwalten.  
   
     - Richten Sie einen eigenen Zertifikatsdienst ein, und lassen Sie die Zertifikate nicht signieren.  
   

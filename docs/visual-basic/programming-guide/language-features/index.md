@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345070"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636574"
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
 In den folgenden Themen werden die wesentlichen Komponenten von Visual Basic erläutert und erläutert. dabei handelt es sich um eine objektorientierte Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt Visual Basic eine Reihe allgemeiner Programmierungskonstrukte und Sprachelemente.  
@@ -54,7 +54,7 @@ In den folgenden Themen werden die wesentlichen Komponenten von Visual Basic erl
  Dieser Artikel beschreibt, was Schnittstellen sind und wie Sie diese in Ihren Anwendungen verwenden können.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Dieser Artikel stellt Links zu Themen bereit, die Features und Programmierelemente von [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] einführen.  
+ Enthält Links zu Themen, in denen LINQ-Funktionen (Language-Integrated Query) vorgestellt und programmiert werden.  
   
  [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Dieser Artikel bietet eine Übersicht über Objekte und Klassen, ihre Verwendung, ihre Beziehungen zueinander sowie die Eigenschaften, Methoden und Ereignisse, die sie verfügbar machen.  

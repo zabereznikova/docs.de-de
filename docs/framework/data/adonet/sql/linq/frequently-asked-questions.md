@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3cc879e97438138554f1d39cf588e01bfbba28a6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782145"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634702"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 
-In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.
+In den folgenden Abschnitten werden einige häufige Probleme erläutert, die bei der Implementierung von LINQ auftreten können.
 
 Bei der [Problem](troubleshooting.md)Behandlung werden weitere Probleme behandelt.
 
-## <a name="cannot-connect"></a>Es kann keine Verbindung hergestellt werden
+## <a name="cannot-connect"></a>Verbindung kann nicht hergestellt werden
 
 F. Es kann keine Verbindung mit meiner Datenbank hergestellt werden.
 
@@ -30,7 +30,7 @@ F. Änderungen an den Daten in der Datenbank sind nicht mehr vorhanden, nachdem 
 
 A. Stellen Sie sicher, dass Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen, um Ergebnisse in der Datenbank zu speichern.
 
-## <a name="database-connection-open-how-long"></a>Datenbankverbindung: Wie lange öffnen?
+## <a name="database-connection-open-how-long"></a>Wie lange kann die Datenbankverbindung geöffnet bleiben?
 
 F. Wie lange bleibt meine Datenbankverbindung geöffnet?
 
@@ -114,7 +114,7 @@ Weitere Informationen finden Sie unter [Anpassen von Vorgängen mithilfe von ges
 
 ## <a name="serialization-errors"></a>Serialisierungsfehler
 
-F. Beim Versuch, die Serialisierung auszuführen, wird der folgende Fehler angezeigt: "Typ ' System. Data. Linq. ChangeTracker + standardchangetracker '... ist nicht als serialisierbar gekennzeichnet. "
+F. Beim Versuch, die Serialisierung auszuführen, erhalte ich den folgenden Fehler: "Type ' System. Data. Linq. ChangeTracker + standardchangetracker '... ist nicht als serialisierbar gekennzeichnet. "
 
 A. Die Codegenerierung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet Unterstützung für die <xref:System.Runtime.Serialization.DataContractSerializer>-Serialisierung. <xref:System.Xml.Serialization.XmlSerializer> oder <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird nicht unterstützt. Weitere Informationen finden Sie unter [Serialization (Serialisierung)](serialization.md).
 
@@ -128,7 +128,7 @@ A. Legen Sie die Eigenschaften für den **Kontext Namespace** und den **Entität
 
 F. Bei einer Datenbanktabelle mit einer `DateCreated`-Spalte wird die Spalte standardmäßig auf SQL `Getdate()` festgelegt. Beim Versuch, mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einen neuen Datensatz einzufügen, wird der Wert auf `NULL` festgelegt. Erwartungsgemäß sollte der Wert auf den Datenbankstandard festgelegt werden.
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt diese Situation bei ID- (automatisch inkrementierten), ROWGUID- (von der Datenbank generierte GUID) und Timestamp-Spalten automatisch. In anderen Fällen sollten Sie die Eigenschaften und <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> <xref:System.Data.Linq.Mapping.AutoSync.Always> `true` = = manuell festlegen./ <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>
+A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt diese Situation bei ID- (automatisch inkrementierten), ROWGUID- (von der Datenbank generierte GUID) und Timestamp-Spalten automatisch. In anderen Fällen sollten Sie <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>=`true` manuell festlegen und =<xref:System.Data.Linq.Mapping.AutoSync.Always>/<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>/<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> Eigenschaften <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>.
 
 ## <a name="multiple-dataloadoptions"></a>Mehrere DataLoadOptions
 
@@ -152,7 +152,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 F. Ich erhalte eine Fehlermeldung, wenn ich Tabellen aus einer SQL Server Compact 3,5-Datenbank ziehe.
 
-A. Der objektrelationaler Designer unterstützt SQL Server Compact 3,5 nicht, obwohl die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Laufzeit dies tut. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.
+A. Der objektrelationaler Designer unterstützt SQL Server Compact 3,5 nicht, obwohl die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Laufzeit dies tut. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.
 
 ## <a name="errors-in-inheritance-relationships"></a>Fehler in Vererbungsbeziehungen
 
@@ -164,7 +164,7 @@ A. Es reicht nicht aus, die Beziehung zu erstellen. Sie müssen Informationen wi
 
 F. Ist ein öffentliches Anbietermodell verfügbar?
 
-A. Es ist kein öffentliches Anbietermodell verfügbar. Zu diesem Zeitpunkt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nur SQL Server und SQL Server Compact 3,5.
+A. Es ist kein öffentliches Anbietermodell verfügbar. Zurzeit unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nur SQL Server und SQL Server Compact 3,5.
 
 ## <a name="sql-injection-attacks"></a>SQL-Injection-Angriffe
 
@@ -191,9 +191,9 @@ A. Führen Sie für dieses erweiterte Szenario die folgenden Schritte aus:
 
 F. Ist System.Data.Linq für die Verwendung durch teilweise vertrauenswürdigen Code markiert?
 
-A. Ja, die System. Data. Linq. dll-Assembly gehört zu den .NET Framework Assemblys <xref:System.Security.AllowPartiallyTrustedCallersAttribute> , die mit dem-Attribut gekennzeichnet sind. Ohne diese Markierung sind Assemblys in der .NET Framework nur zur Verwendung durch voll vertrauenswürdigen Code vorgesehen.
+A. Ja, die System. Data. Linq. dll-Assembly gehört zu den .NET Framework Assemblys, die mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut gekennzeichnet sind. Ohne diese Markierung sind Assemblys in der .NET Framework nur zur Verwendung durch voll vertrauenswürdigen Code vorgesehen.
 
-Das Prinzipal Szenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in zum Zulassen von teilweise vertrauenswürdigen Aufrufern besteht darin, den Zugriff auf die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Assembly über Webanwendungen zu ermöglichen, bei denen die *Vertrauens* Konfiguration Mittel ist.
+Das Prinzipal Szenario in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um teilweise vertrauenswürdige Aufrufer zuzulassen, besteht darin, den Zugriff auf die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Assembly von Webanwendungen aus zu ermöglichen, bei denen die *Vertrauens* Konfiguration Mittel ist
 
 ## <a name="mapping-data-from-multiple-tables"></a>Zuordnen von Daten aus mehreren Tabellen
 
@@ -202,7 +202,7 @@ F. Die Daten in meiner Entität stammen aus mehreren Tabellen. Wie werden sie zu
 A. Sie können eine Ansicht in einer Datenbank erstellen und die Entität der Ansicht zuordnen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generiert für Ansichten dieselbe SQL wie für Tabellen.
 
 > [!NOTE]
-> Die Verwendung von Ansichten in diesem Szenario unterliegt Einschränkungen. Dieser Ansatz funktioniert am sichersten, wenn die für <xref:System.Data.Linq.Table%601> ausgeführten Vorgänge von der zugrunde liegenden Ansicht unterstützt werden. Nur Sie wissen, welche Vorgänge beabsichtigt sind. Die meisten Anwendungen sind z. b. schreibgeschützt, und eine weitere beträchtliche `Create` Zahl führt / / `Update` `Delete` Vorgänge nur durch die Verwendung von gespeicherten Prozeduren für Sichten aus.
+> Die Verwendung von Ansichten in diesem Szenario unterliegt Einschränkungen. Dieser Ansatz funktioniert am sichersten, wenn die für <xref:System.Data.Linq.Table%601> ausgeführten Vorgänge von der zugrunde liegenden Ansicht unterstützt werden. Nur Sie wissen, welche Vorgänge beabsichtigt sind. Die meisten Anwendungen sind z. b. schreibgeschützt, und eine weitere beträchtliche Zahl führt `Create`/`Update`/`Delete` Vorgänge nur mithilfe von gespeicherten Prozeduren für Sichten aus.
 
 ## <a name="connection-pooling"></a>Verbindungspooling
 
@@ -216,7 +216,7 @@ Sie können weiterhin das zugrunde liegende ADO.net-Verbindungspooling verwenden
 
 F. Zum Speichern von Werten in der Datenbank wurde eine Instanz von <xref:System.Data.Linq.DataContext> verwendet. Die aktualisierten Werte werden aber von einem zweiten <xref:System.Data.Linq.DataContext> in derselben Datenbank nicht angezeigt. Die zweite <xref:System.Data.Linq.DataContext>-Instanz scheint zwischengespeicherte Werte zurückzugeben.
 
-A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibt weiterhin dieselben Instanzen/Werte zurück, die in der ersten Instanz angezeigt wurden. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungs](how-to-manage-change-conflicts.md)Konflikten.
+A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibt weiterhin dieselben Instanzen/Werte zurück, die in der ersten Instanz angezeigt wurden. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter Gewusst [wie: Verwalten von Änderungs Konflikten](how-to-manage-change-conflicts.md).
 
 Sie können auch <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> auf false festlegen, wodurch das Zwischenspeichern und Nachverfolgen von Änderungen deaktiviert wird. Anschließend können Sie bei jeder Abfrage die neuesten Werte abrufen.
 

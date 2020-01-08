@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838090"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338019"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, können mit der Überwachungsfunktion Sicherheitsereignisse (entweder Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -73,7 +73,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
 </configuration>  
 ```  
   
- Falls bei aktivierter Überwachung `auditLogLocation` nicht angegeben wird, lautet der standardmäßige Protokollname "Security" bei Plattformen, auf denen in das Sicherheitsprotokoll geschrieben werden darf. Andernfalls wird "Application" verwendet. Nur die Betriebssysteme [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und Windows Vista unterstützen das Schreiben in das Sicherheitsprotokoll. Weitere Informationen finden Sie im Abschnitt "Betriebs System" weiter unten in diesem Thema.  
+ Falls bei aktivierter Überwachung `auditLogLocation` nicht angegeben wird, lautet der standardmäßige Protokollname "Security" bei Plattformen, auf denen in das Sicherheitsprotokoll geschrieben werden darf. Andernfalls wird "Application" verwendet. Nur das Betriebssystem Windows Server 2003 und Windows Vista unterstützt das Schreiben in das Sicherheitsprotokoll. Weitere Informationen finden Sie im Abschnitt "Betriebs System" weiter unten in diesem Thema.  
   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
  Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen finden Sie im Microsoft-Support Artikel zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe des Ereignisanzeige in Windows XP unter [anzeigen und Verwalten von Ereignisprotokollen in Ereignisanzeige in Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
@@ -88,7 +88,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
 |System|Anwendungsprotokoll|Sicherheitsprotokoll|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] oder höher|unterstützt|Nicht unterstützt|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] und Windows Vista|unterstützt|Threadkontext muss `SeAuditPrivilege` verarbeiten|  
+|Windows Server 2003 SP1 und Windows Vista|unterstützt|Threadkontext muss `SeAuditPrivilege` verarbeiten|  
   
 #### <a name="other-factors"></a>Andere Faktoren  
  Neben dem Betriebssystem wird die Aktivierung der Protokollierung noch durch andere, in der folgenden Tabelle beschriebene Einstellungen gesteuert.  

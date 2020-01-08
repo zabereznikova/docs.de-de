@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a977b17d4b2c797bbe38d289a57f3d9d31fa64fa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340241"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345964"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Operatorprozedur (Visual Basic)
 Sie wenden eine Operator Prozedur mit dem Operator Symbol in einem Ausdruck an. Im Fall eines Konvertierungs Operators wird die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) aufgerufen, um einen Wert von einem Datentyp in einen anderen zu konvertieren.  
@@ -50,7 +50,7 @@ Sie wenden eine Operator Prozedur mit dem Operator Symbol in einem Ausdruck an. 
   
  Ein Beispiel für den Aufruf einer Konversations Operator Prozedur finden Sie unter Gewusst [wie: Verwenden einer Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md).  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
+## <a name="compile-the-code"></a>Kompilieren des Codes  
  Stellen Sie sicher, dass die verwendete Klasse oder Struktur den Operator definiert, den Sie verwenden möchten.  
   
 ## <a name="see-also"></a>Siehe auch

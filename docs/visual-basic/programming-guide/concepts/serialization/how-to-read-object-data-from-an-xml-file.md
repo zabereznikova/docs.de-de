@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Lesen von Objektdaten aus einer XML-Datei'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: efd5fb72487c92bcccf1fc797106f93c0d2a39fc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346425"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345993"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
@@ -29,7 +29,7 @@ Public Sub ReadXML()
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
+## <a name="compile-the-code"></a>Kompilieren des Codes  
  Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Namen der Datei, die die serialisierten Daten enthält. Weitere Informationen zum Serialisieren von Daten finden Sie unter Gewusst [wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
