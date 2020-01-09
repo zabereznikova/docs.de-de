@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837999"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344626"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
 Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Diensts mit der <xref:System.ServiceModel.WSHttpBinding>-Klasse, die Transportsicherheit verwendet, müssen Sie auch einen Port mit einem X. 509-Zertifikat konfigurieren. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [http-Transport Sicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Welches Tool zum Konfigurieren eines Anschlusses verwendet wird, hängt vom Betriebssystem des Computers ab.  
   
- Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das HttpCfg.exe-Tool. Unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ist dieses Tool bereits installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)]können Sie das Tool unter [Windows XP Service Pack 2-Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606)herunterladen. Weitere Informationen finden Sie unter [Httpcfg Overview](https://go.microsoft.com/fwlink/?LinkId=88605). In der [Dokumentation zur Windows-Support Tools](https://go.microsoft.com/fwlink/?LinkId=94840) wird die Syntax für das Tool "Httpcfg. exe" erläutert.  
+ Wenn Sie Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]ausführen, verwenden Sie das Tool "Httpcfg. exe". Mit Windows Server 2003 ist dieses Tool installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)]können Sie das Tool unter [Windows XP Service Pack 2-Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606)herunterladen. Weitere Informationen finden Sie unter [Httpcfg Overview](https://go.microsoft.com/fwlink/?LinkId=88605). In der [Dokumentation zur Windows-Support Tools](https://go.microsoft.com/fwlink/?LinkId=94840) wird die Syntax für das Tool "Httpcfg. exe" erläutert.  
   
  Wenn Sie Windows Vista ausführen, verwenden Sie das Tool "Netsh. exe", das bereits installiert ist.  
   
@@ -41,7 +41,7 @@ Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Di
   
 ### <a name="to-determine-how-ports-are-configured"></a>So ermitteln Sie, wie Anschlüsse konfiguriert sind  
   
-1. Verwenden Sie in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]das Tool Httpcfg. exe, um die aktuelle Port Konfiguration mithilfe der **Abfrage** -und **SSL** -Switches anzuzeigen, wie im folgenden Beispiel gezeigt.  
+1. Verwenden Sie in Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]das Tool Httpcfg. exe, um die aktuelle Port Konfiguration mithilfe der **Abfrage** -und **SSL** -Switches anzuzeigen, wie im folgenden Beispiel gezeigt.  
   
     ```console
     httpcfg query ssl  
@@ -65,7 +65,7 @@ Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Di
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>So binden Sie ein SSL-Zertifikat an eine Anschlussnummer  
   
-1. Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das Tool-HttpCfg.exe im Secure Sockets Layer (SSL)-Speicher im Modus "Set", um das Zertifikat an eine Anschlussnummer zu binden. Das Tool verwendet den Fingerabdruck, um das Zertifikat zu identifizieren, wie im folgenden Beispiel gezeigt.  
+1. Verwenden Sie in Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]das Tool Httpcfg. exe im Modus "Set" im Secure Sockets Layer (SSL), um das Zertifikat an eine Portnummer zu binden. Das Tool verwendet den Fingerabdruck, um das Zertifikat zu identifizieren, wie im folgenden Beispiel gezeigt.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Di
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>So binden Sie ein SSL-Zertifikat an eine Anschlussnummer und unterstützen Clientzertifikate  
   
-1. Führen Sie zum Unterstützen von Clients, die die Authentifizierung mithilfe von X.509-Zertifikaten auf der Transportebene durchführen, unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] die obige Prozedur aus, übergeben Sie jedoch einen zusätzlichen Befehlszeilenparameter an HttpCfg.exe, wie im folgenden Beispiel gezeigt:  
+1. Verwenden Sie in Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], um Clients zu unterstützen, die sich bei X. 509-Zertifikaten auf der Transport Ebene authentifizieren, und übergeben Sie einen zusätzlichen Befehlszeilenparameter an HttpCfg. exe, wie im folgenden Beispiel gezeigt.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Di
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Verwenden Sie in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]das Tool "Httpcfg. exe" mit den Schlüsselwörtern " **Delete** " und " **SSL** ". Verwenden Sie den Schalter **-i** , um die `IP``port` Nummer anzugeben, und den Schalter **-h** , um den Fingerabdruck anzugeben.  
+2. Verwenden Sie in Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]das Tool Httpcfg. exe mit den Schlüsselwörtern **Delete** und **SSL** . Verwenden Sie den Schalter **-i** , um die `IP``port` Nummer anzugeben, und den Schalter **-h** , um den Fingerabdruck anzugeben.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

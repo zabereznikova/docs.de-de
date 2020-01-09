@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126383"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347628"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 
@@ -83,7 +83,7 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-In diesem Export ist der Vertragstyp `MyLogger` anstatt `IMyAddin`. Obwohl `MyLogger` `IMyAddin` implementiert und daher in ein `IMyAddin`-Objekt umgewandelt werden kann, entspricht dieser Export nicht dem vorherigen Import, da die Vertragstypen nicht identisch sind.
+In diesem Export ist der Vertragstyp `MyLogger` anstatt `IMyAddin`. Obwohl `MyLogger``IMyAddin` implementiert und daher in ein `IMyAddin`-Objekt umgewandelt werden kann, entspricht dieser Export nicht dem vorherigen Import, da die Vertragstypen nicht identisch sind.
 
 Im Allgemeinen ist es nicht notwendig, den Vertragsnamen anzugeben, und die meisten Verträge sollten im Hinblick auf den Vertragstyp und die Metadaten definiert werden. Unter bestimmten Umständen ist es jedoch wichtig, den Vertragsnamen direkt anzugeben. Der häufigste Fall ist, wenn eine Klasse mehrere Werte exportiert, die gemeinsam einen allgemeinen Typ verwenden, z. B. Primitive. Der Vertragsname kann als erster Parameter des `Import` -Attributs oder des `Export` -Attributs angegeben werden. Im folgenden Code werden ein Import und ein Export mit dem angegebenen Vertragsnamen `MajorRevision`gezeigt.
 
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-Diese Klasse definiert ein benutzerdefiniertes Attribut namens `MyAttribute` mit dem Vertragstyp `IMyData` und einige Metadaten namens `MyMetadata`. Alle Eigenschaften in einer mit dem `MetadataAttribute` -Attribut markierten Klasse werden als Metadaten betrachtet, die im benutzerdefinierten Attribut definiert sind. Die folgenden zwei Deklarationen sind gleichwertig.
+Diese Klasse definiert ein benutzerdefiniertes Attribut namens `MyAttribute` mit dem Vertragstyp `IMyAddin` und einige Metadaten namens `MyMetadata`. Alle Eigenschaften in einer mit dem `MetadataAttribute` -Attribut markierten Klasse werden als Metadaten betrachtet, die im benutzerdefinierten Attribut definiert sind. Die folgenden zwei Deklarationen sind gleichwertig.
 
 ```vb
 <Export(GetType(IMyAddin))>

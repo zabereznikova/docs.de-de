@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Projektieren eines Objektdiagramms'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 68b58226dbf30f82709a39e96bef0f8cce95d0ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347764"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636678"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Gewusst wie: Projizieren eines Objekt Diagramms (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie ein XML-Dokument für das Projizieren (oder Auffüllen) eines Objektdiagramms verwenden können.  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- In diesem Beispiel wird das Ergebnis der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage als eine <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem` zurückgegeben. Die Elemente in der `PurchaseOrder`-Klasse sind vom Typ <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem`. Der Code verwendet die <xref:System.Linq.Enumerable.ToList%2A>-Erweiterungsmethode, um aus den Ergebnissen der Abfrage eine <xref:System.Collections.Generic.List%601>-Auflistung zu erstellen.  
+ In diesem Beispiel wird das Ergebnis der LINQ-Abfrage als <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`zurückgegeben. Die Elemente in der `PurchaseOrder`-Klasse sind vom Typ <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem`. Der Code verwendet die <xref:System.Linq.Enumerable.ToList%2A>-Erweiterungsmethode, um aus den Ergebnissen der Abfrage eine <xref:System.Collections.Generic.List%601>-Auflistung zu erstellen.  
   
  Das Beispiel führt zur folgenden Ausgabe:  
   

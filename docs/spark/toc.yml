@@ -17,11 +17,13 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Bereitstellen in Databricks
       href: tutorials/databricks-deployment.md
+    - name: Batchverarbeitung
+      href: tutorials/batch-processing.md
     - name: Strukturiertes Streaming
       href: tutorials/streaming.md
 - name: Anleitungen
   items:
-    - name: Debuggen der Anwendung
+    - name: Debuggen einer Anwendung
       href: how-to-guides/debug.md
     - name: Übermitteln von Aufträgen an HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md

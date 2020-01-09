@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569363"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346181"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Asynchrone Vorgänge (WCF Data Services)
 Bei Webanwendungen muss die gegenüber Anwendungen, die in internen Netzwerken ausgeführt werden, höhere Latenz zwischen Client und Server berücksichtigt werden. Zum Optimieren der Leistung und Benutzer Leistung Ihrer Anwendung empfehlen wir die Verwendung der asynchronen Methoden der <xref:System.Data.Services.Client.DataServiceContext> und <xref:System.Data.Services.Client.DataServiceQuery%601> Klassen, wenn Sie über das Internet auf WCF Data Services Server zugreifen.  
@@ -21,7 +21,7 @@ Bei Webanwendungen muss die gegenüber Anwendungen, die in internen Netzwerken a
  Sie können asynchrone Vorgänge ausführen, indem Sie ein Methoden Paar für die <xref:System.Data.Services.Client.DataServiceContext> und <xref:System.Data.Services.Client.DataServiceQuery%601> Klassen verwenden, die mit *Begin* bzw. *End* beginnen. Die *Begin* -Methoden registrieren einen Delegaten, den der Dienst aufruft, wenn der Vorgang beendet ist. Die *End* -Methoden sollten im Delegaten aufgerufen werden, der zum Behandeln des Rückrufs von den abgeschlossenen Vorgängen registriert ist. Wenn Sie die *End* -Methode zum Ausführen eines asynchronen Vorgangs aufgerufen haben, müssen Sie dies über denselben <xref:System.Data.Services.Client.DataServiceQuery%601> oder <xref:System.Data.Services.Client.DataServiceContext> Instanz tun, die Sie zum Starten des Vorgangs verwendet haben. Jede *Begin* -Methode nimmt einen `state`-Parameter an, der ein Zustands Objekt an den Rückruf übergeben kann. Dieses Zustands Objekt wird aus dem <xref:System.IAsyncResult> abgerufen, das mit dem Rückruf angegeben wird, und wird verwendet, um die entsprechende *End* -Methode aufzurufen, um den asynchronen Vorgang abzuschließen. Wenn Sie beispielsweise die <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz als `state`-Parameter beim Aufrufen der <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>-Methode für die Instanz angeben, wird die gleiche <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz vom <xref:System.IAsyncResult> zurückgegeben. Diese Instanz von <xref:System.Data.Services.Client.DataServiceQuery%601> wird anschließend verwendet, um die <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>-Methode zum Abschließen des Abfragevorgangs aufzurufen. Weitere Informationen finden Sie unter Gewusst [wie: Ausführen von asynchronen Datendienst Abfragen](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).  
   
 > [!NOTE]
-> Nur asynchrone Vorgänge werden von den Clientbibliotheken unterstützt, die in .NET Framework für Silverlight bereitgestellt werden. Weitere Informationen finden Sie unter [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
+> Nur asynchrone Vorgänge werden von den Clientbibliotheken unterstützt, die in .NET Framework für Silverlight bereitgestellt werden. Weitere Informationen finden Sie unter [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Die .NET Framework-Clientbibliotheken unterstützen die folgenden asynchronen Vorgänge:  
   

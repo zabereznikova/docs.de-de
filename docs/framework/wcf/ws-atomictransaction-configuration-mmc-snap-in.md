@@ -2,26 +2,26 @@
 title: WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 04f9a014c3cb3ffd127ccc82fdda731e20136c52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320327"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544632"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 Das MMC-Snap-In für die WS-AtomicTransaction-Konfiguration wird zur Konfiguration eines Teils der WS-AtomicTransaction-Einstellungen auf lokalen und Remotecomputern eingesetzt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ausführen, finden Sie das MMC-Snap-in. Navigieren Sie zu **Systemsteuerung**> Verwaltung > Komponenten Dienste >, klicken Sie mit der rechten Maustaste auf **Arbeitsplatz**, und wählen Sie **Eigenschaften**aus. Dort können Sie auch den MSDTC konfigurieren. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
+ Wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder Windows Server 2003 ausführen, finden Sie das MMC-Snap-in. Navigieren Sie zu **Systemsteuerung**> Verwaltung > Komponenten Dienste >, klicken Sie mit der rechten Maustaste auf **Arbeitsplatz**, und wählen Sie **Eigenschaften**aus. Dort können Sie auch den MSDTC konfigurieren. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
   
- Wenn Sie Windows Vista oder [!INCLUDE[lserver](../../../includes/lserver-md.md)] ausführen, finden Sie das MMC-Snap-in, indem Sie auf die Schaltfläche **Start** klicken und `dcomcnfg.exe` in das **Suchfeld** eingeben. Wenn die MMC geöffnet ist, navigieren Sie zum Knoten **My computer\verteilte transaktions\lokale DTC** , klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
+ Wenn Sie Windows Vista oder Windows Server 2008 ausführen, finden Sie das MMC-Snap-in, indem Sie auf die Schaltfläche **Start** klicken und in das **Suchfeld** `dcomcnfg.exe` eingeben. Wenn die MMC geöffnet ist, navigieren Sie zum Knoten **My computer\verteilte transaktions\lokale DTC** , klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
   
- Die vorherigen Schritte werden verwendet, um das Snap-In zur Konfiguration eines lokalen Computers zu starten. Wenn Sie einen Remote Computer konfigurieren möchten, sollten Sie den Namen des Remote Computers in der Systemsteuerung > Verwaltung > **Komponenten Dienste**> ausführen und ähnliche Schritte ausführen, wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ausführen. Wenn Sie Windows Vista oder [!INCLUDE[lserver](../../../includes/lserver-md.md)] ausführen, führen Sie die vorherigen Schritte für Vista und [!INCLUDE[lserver](../../../includes/lserver-md.md)] aus, aber verwenden Sie den Knoten **verteilte transaktionskoordinator\lokale DTC** unter dem Knoten des Remote Computers.  
+ Die vorherigen Schritte werden verwendet, um das Snap-In zur Konfiguration eines lokalen Computers zu starten. Wenn Sie einen Remote Computer konfigurieren möchten, sollten Sie den Namen des Remote Computers in der Systemsteuerung > Verwaltung > **Komponenten Dienste**> ausführen und ähnliche Schritte ausführen, wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder Windows Server 2003 ausführen. Wenn Sie Windows Vista oder Windows Server 2008 ausführen, führen Sie die vorherigen Schritte für Vista und Windows Server 2008 aus, aber verwenden Sie den Knoten **verteilte transaktionskoordinator\lokale DTC** unter dem Knoten des Remote Computers.  
   
  Zum Verwenden der Benutzeroberfläche des Tools müssen Sie zuerst die Datei WsatUI.dll im folgenden Pfad registrieren:  
   
- **%ProgramFiles%\Microsoft SDKs\Windows\v6.0\bin\wsatui.dll**  
+ **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
   
  Die Registrierung kann mit folgendem Befehl vorgenommen werden:  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Autorisierte Konten**  
   
- Durch Klicken auf die Schaltfläche **auswählen** wird der Editor für die Windows-Access Control Liste aufgerufen, in dem Sie den Benutzer oder die Gruppe angeben können **, der Teil** von WS-Atomic-Transaktionen sein kann, indem Sie das Kontrollkästchen **zulassen** oder **verweigern** in Berechtigungs Gruppe.  
+ Durch Klicken auf die Schaltfläche **auswählen** wird der Editor für die Windows-Access Control Liste aufgerufen, in dem Sie den Benutzer oder die Gruppe angeben können, der Teil von WS-Atomic-Transaktionen sein kann, indem Sie das Kontrollkästchen **zulassen** oder **verweigern** in der Gruppe **Teilnahme**  
   
  **Autorisierte Zertifikate**  
   

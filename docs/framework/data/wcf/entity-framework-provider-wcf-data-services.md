@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b75e9645f05e5e83ff76cc138ee37e90600769a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569266"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346093"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework-Anbieter (WCF Data Services)
-Wie WCF Data Services basiert der ADO.NET-Entity Framework auf dem Entity Data Model, bei dem es sich um einen Typ von Entitäts Beziehungsmodell handelt. Der Entity Framework übersetzt Vorgänge für die Implementierung des Entity Data Model, die als *konzeptionelles Modell*bezeichnet wird, in entsprechende Vorgänge für eine Datenquelle. Dadurch wird die Entity Framework zu einem idealen Anbieter für Datendienste, die auf relationalen Daten basieren, und jede Datenbank mit einem Datenanbieter, der die Entity Framework unterstützt, kann mit WCF Data Services verwendet werden. Eine Liste der Datenquellen, die die Entity Framework derzeit unterstützen, finden Sie unter [Drittanbieter für die Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
+Wie WCF Data Services basiert der ADO.NET-Entity Framework auf dem Entity Data Model, bei dem es sich um einen Typ von Entitäts Beziehungsmodell handelt. Der Entity Framework übersetzt Vorgänge für die Implementierung des Entity Data Model, die als *konzeptionelles Modell*bezeichnet wird, in entsprechende Vorgänge für eine Datenquelle. Dadurch wird die Entity Framework zu einem idealen Anbieter für Datendienste, die auf relationalen Daten basieren, und jede Datenbank mit einem Datenanbieter, der die Entity Framework unterstützt, kann mit WCF Data Services verwendet werden. Eine Liste der Datenquellen, die die Entity Framework derzeit unterstützen, finden Sie unter [Entity Framework Providers](/ef/ef6/fundamentals/providers/).
   
  In einem konzeptionellen Modell ist der Entitätscontainer der Stamm des Diensts. Sie müssen in Entity Framework ein konzeptionelles Modell definieren, bevor die Daten von einem Datendienst verfügbar gemacht werden können. Weitere Informationen finden Sie unter [How to: Create a Data Service using an ADO.NET Entity Framework Data Source](create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   

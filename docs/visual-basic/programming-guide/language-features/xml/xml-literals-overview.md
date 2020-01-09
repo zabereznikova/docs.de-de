@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346197"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636080"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Übersicht zu XML-Literalen (Visual Basic)
 Mithilfe eines *XML-Literals* können Sie XML direkt in den Visual Basic-Code einbinden. Die XML-Literalsyntax stellt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte dar und ähnelt der Syntax von XML 1,0. Dadurch wird das programmgesteuerte Erstellen von XML-Elementen und-Dokumenten vereinfacht, da der Code die gleiche Struktur wie der endgültige XML-Code aufweist.  
   
- Visual Basic kompiliert XML-Literale in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet ein einfaches Objektmodell zum Erstellen und Bearbeiten von XML, und dieses Modell lässt sich gut in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]integrieren. Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
+ Visual Basic kompiliert XML-Literale in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet ein einfaches Objektmodell zum Erstellen und Bearbeiten von XML, und dieses Modell lässt sich gut in die Language Integrated Query (LINQ) integrieren. Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
   
  Sie können einen Visual Basic Ausdruck in ein XML-Literalformat einbetten. Zur Laufzeit erstellt die Anwendung ein [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Objekt für jedes literalobjekt, das die Werte der eingebetteten Ausdrücke einbezieht. Auf diese Weise können Sie dynamischen Inhalt innerhalb eines XML-Literals angeben. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Privat
+title: Private
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c855c4e08b365b4cb75ab062d2ec304a79612ab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351329"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347917"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhalb Ihres Deklarations Kontexts zugegriffen werden kann, einschließlich aus allen enthaltenen Typen.  
@@ -39,7 +39,7 @@ Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhal
   
  [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -65,7 +65,8 @@ Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhal
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- Zugriffsebenen [geschützter Freunde](./protected-friend.md)[in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)
+- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

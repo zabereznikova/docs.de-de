@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347723"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345525"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Gewusst wie: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)
 
@@ -56,9 +56,9 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+## <a name="compile-the-code"></a>Kompilieren des Codes
 
-Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.
+Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,13 +1,13 @@
 ---
-title: F#-Typen
+title: Typen
 description: Erfahren Sie mehr über die Typen, die F# in verwendet F# werden, und wie Typen benannt und beschrieben werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8f2526dce46d53a92c01c9347e1ed97681a45ecc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 70d79525318c8d2eb0711d6a1b50be1ac0cf0226
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425307"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348212"
 ---
 # <a name="f-types"></a>F#-Typen
 
@@ -33,22 +33,22 @@ Im F# Code müssen Sie häufig die Namen von Typen schreiben. Jeder Typ verfügt
 
 Die folgende Tabelle zeigt Aspekte der Typsyntax für F# -Typen.
 
-|Geben Sie Folgendes ein:|Typsyntax|Beispiele|
+|Typ|Typsyntax|Beispiele|
 |----|-----------|--------|
-|primitiver Typ|*Typname*|`int`<br /><br />`float`<br /><br />`string`|
-|Aggregattyp (Klasse, Struktur, Union, Datensatz, Enumeration usw.)|*Typname*|`System.DateTime`<br /><br />`Color`|
-|typabkürzung|*Type-Abkürzung-Name*|`bigint`|
-|voll qualifizierter Typ|*Namespaces. Type-Name*<br /><br />oder<br /><br />*Module. Type-Name*<br /><br />oder<br /><br />*Namespaces. modules. Type-Name*|`System.IO.StreamWriter`|
-|array|*Type-Name*[] oder<br /><br />*Type-Name-* Array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|primitiver Typ|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|Aggregattyp (Klasse, Struktur, Union, Datensatz, Enumeration usw.)|*type-name*|`System.DateTime`<br /><br />`Color`|
+|typabkürzung|*type-abbreviation-name*|`bigint`|
+|voll qualifizierter Typ|*namespaces.type-name*<br /><br />oder<br /><br />*modules.type-name*<br /><br />oder<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|-Array|*Type-Name*[] oder<br /><br />*Type-Name-* Array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |zweidimensionales Array|*Typname*[,]|`int[,]`<br /><br />`float[,]`|
 |dreidimensionales Array|*Typname*[,,]|`float[,,]`|
 |tuple|*Type-Name1* &#42; *Type-name2* ...|`(1,'b',3)` hat z. b. den Typ `int * char * int`|
-|generischer Typ|*Type-Parameter* *Generic-Type-Name*<br /><br />oder<br /><br />*Generic-Type-Name*&lt;*Type-Parameter-List*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|konstruierter Typ (ein generischer Typ, für den ein bestimmtes Typargument angegeben ist)|*Type-Argument* *Generic-Type-Name*<br /><br />oder<br /><br />*Generic-Type-Name*&lt;*Type-Argument-List*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|generischer Typ|*Type-Parameter* *Generic-Type-Name*<br /><br />oder<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|konstruierter Typ (ein generischer Typ, für den ein bestimmtes Typargument angegeben ist)|*Type-Argument* *Generic-Type-Name*<br /><br />oder<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |Funktionstyp, der über einen einzelnen Parameter verfügt|*Parameter-Typ1* -&gt; *Rückgabetyp*|Eine Funktion, die eine `int` annimmt und eine `string` den Typ zurückgibt `int -> string`|
 |Funktionstyp mit mehreren Parametern|*Parameter-Typ1* -&gt; *Parameter-Typ2* -&gt;...-&gt; *Rückgabetyp*|Eine Funktion, die eine `int` und eine `float` und eine `string` der den Typ zurückgibt `int -> float -> string`|
 |höhere Reihenfolge Funktion als Parameter|(*Funktionstyp*)|`List.map` hat den Typ `('a -> 'b) -> 'a list -> 'b list`|
-|-Delegat|Delegat von " *Function-Type* "|`delegate of unit -> int`|
+|Delegat|Delegat von " *Function-Type* "|`delegate of unit -> int`|
 |flexibler Typ|#*Type-Name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Verwandte Themen

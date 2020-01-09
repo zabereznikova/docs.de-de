@@ -2,12 +2,12 @@
 title: Resilienz der Azure-Plattform
 description: Architektur von Cloud Native .net-apps für Azure | Resilienz der cloudinfrastruktur mit Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "73841258"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337386"
 ---
 # <a name="azure-platform-resiliency"></a>Resilienz der Azure-Plattform
 
@@ -24,13 +24,13 @@ Wenn Sie wissen, wie diese Merkmale zusammenarbeiten und wie Sie sich auf die Ko
 
 ## <a name="design-with-redundancy"></a>Entwerfen mit Redundanz
 
-Fehler unterscheiden sich im Umfang der Auswirkungen. Ein Hardwarefehler (z. b. ein fehlerhafter Datenträger) kann sich auf einen einzelnen Knoten in einem Cluster auswirken. Ein fehlerhafter Netzwerk Switch kann sich auf ein gesamtes servergestell auswirken. Weniger häufige Fehler, wie z. b. Stromausfälle, könnten ein gesamtes Rechenzentrum stören. In seltenen Fällen steht eine gesamte Region nicht mehr zur Verfügung.
+Der Umfang und die Auswirkungen von Fehlern variieren. Ein Hardwarefehler (z. b. ein fehlerhafter Datenträger) kann sich auf einen einzelnen Knoten in einem Cluster auswirken. Ein fehlerhafter Netzwerkswitch kann sich auf ein gesamtes Serverrack auswirken. Weniger häufige Fehler, wie z. b. Stromausfälle, könnten ein gesamtes Rechenzentrum stören. In selten Fällen kommt es vor, dass eine gesamte Region nicht mehr verfügbar ist.
 
-[Redundanz](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) ist eine Möglichkeit zum Bereitstellen von Anwendungs Resilienz. Die genaue erforderliche Redundanz Ebene hängt von Ihren Geschäftsanforderungen ab und wirkt sich sowohl auf die Kosten als auch auf die Komplexität Ihres Systems aus. Beispielsweise ist eine Bereitstellung in mehreren Regionen teurer und komplexer zu verwalten als eine Bereitstellung in einer einzelnen Region. Sie benötigen betriebliche Verfahren zum Verwalten von Failover und Failback. Die zusätzlichen Kosten und die Komplexität können für einige Geschäftsszenarien und nicht für andere gerechtfertigt werden.
+[Redundanz](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) ist eine Möglichkeit zum Bereitstellen von Anwendungs Resilienz. Die genaue erforderliche Redundanz Ebene hängt von Ihren Geschäftsanforderungen ab und wirkt sich sowohl auf die Kosten als auch auf die Komplexität Ihres Systems aus. Beispielsweise ist eine Bereitstellung in mehreren Regionen teurer und komplexer zu verwalten als eine Bereitstellung in einer einzelnen Region. Sie benötigen betriebliche Verfahren zum Verwalten von Failover und Failback. Die zusätzlichen Kosten und die höhere Komplexität sind für einige Geschäftsszenarien ggf. gerechtfertigt, während dies für andere nicht der Fall ist.
 
 Um Redundanz zu entwerfen, müssen Sie die kritischen Pfade in der Anwendung identifizieren und dann bestimmen, ob an jedem Punkt im Pfad Redundanz vorliegt? Wenn bei einem Subsystem ein Fehler auftritt, führt die Anwendung ein Failover zu einem anderen aus? Schließlich benötigen Sie ein klares Verständnis der in der Azure-cloudplattform integrierten Features, die Sie nutzen können, um Ihre Redundanz Anforderungen zu erfüllen. Im folgenden finden Sie Empfehlungen für die Architektur der Redundanz:
 
-- *Stellen Sie mehrere Instanzen von Diensten bereit.* Wenn Ihre Anwendung von einer einzelnen Instanz eines Dienstanbieter abhängig ist, wird ein Single Point of Failure erstellt. Durch die Bereitstellung mehrerer Instanzen wird sowohl die Resilienz als auch die Skalierbarkeit verbessert. Beim Hosten im Azure Kubernetes-Dienst können Sie redundante Instanzen (Replikat Gruppen) deklarativ in der Kubernetes-Manifest-Datei konfigurieren. Der Wert Replikat Anzahl kann Programm gesteuert, im Portal oder mithilfe der Features für die automatische Skalierung verwaltet werden, die später erläutert werden.
+- *Stellen Sie mehrere Instanzen von Diensten bereit.* Wenn Ihre Anwendung von einer einzelnen Instanz eines Diensts abhängig ist, entsteht dadurch ein Single Point of Failure. Durch die Bereitstellung von mehreren Instanzen werden Resilienz und Skalierbarkeit verbessert. Beim Hosten im Azure Kubernetes-Dienst können Sie redundante Instanzen (Replikat Gruppen) deklarativ in der Kubernetes-Manifest-Datei konfigurieren. Der Wert Replikat Anzahl kann Programm gesteuert, im Portal oder mithilfe der Features für die automatische Skalierung verwaltet werden, die später erläutert werden.
 
 - *Nutzung eines Load Balancers.* Beim Lastenausgleich werden die Anforderungen Ihrer Anwendung an fehlerfreie Dienst Instanzen verteilt, und fehlerhafte Instanzen werden automatisch aus der Rotation entfernt. Beim Bereitstellen in Kubernetes kann der Lastenausgleich in der Kubernetes-Manifest-Datei im Abschnitt Dienste angegeben werden.
 
@@ -42,17 +42,17 @@ Um Redundanz zu entwerfen, müssen Sie die kritischen Pfade in der Anwendung ide
 
 **Abbildung 6-6**. Regions übergreifende replizierte Ressourcen
 
-- *Implementieren Sie einen Lastenausgleich für den DNS-Datenverkehr.* [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) bietet hohe Verfügbarkeit für kritische Anwendungen durch Lastenausgleich auf DNS-Ebene. Er kann Datenverkehr an verschiedene Regionen weiterleiten, basierend auf Geografie, Cluster Antwortzeit und sogar der Integrität des Anwendungs Endpunkts. Beispielsweise kann Azure Traffic Manager Kunden an die nächstgelegene AKS-Cluster-und Anwendungs Instanz weiterleiten. Wenn Sie über mehrere AKS-Cluster in verschiedenen Regionen verfügen, verwenden Sie Traffic Manager, um zu steuern, wie der Datenverkehr zu den in den einzelnen Clustern betriebenen Anwendungen verläuft. In Abbildung 6-7 wird dieses Szenario veranschaulicht.
+- *Implementieren Sie einen Lastenausgleich für den DNS-Datenverkehr.* [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) bietet hohe Verfügbarkeit für kritische Anwendungen durch Lastenausgleich auf DNS-Ebene. Er kann Datenverkehr an verschiedene Regionen weiterleiten, basierend auf Geografie, Cluster Antwortzeit und sogar der Integrität des Anwendungs Endpunkts. Beispielsweise kann Azure Traffic Manager Kunden an die nächstgelegene AKS-Cluster-und Anwendungs Instanz weiterleiten. Wenn Sie mehrere AKS-Cluster in verschiedenen Regionen bereitgestellt haben, steuern Sie die Weiterleitung des Datenverkehrs an die in jedem Cluster ausgeführten Anwendungen mit Traffic Manager. In Abbildung 6-7 wird dieses Szenario veranschaulicht.
 
 ![AKS und Azure-Traffic Manager](./media/aks-traffic-manager.png)
 
 **Abbildung 6-7**. AKS und Azure-Traffic Manager
 
-## <a name="design-for-scalability"></a>Entwurf für die Skalierbarkeit
+## <a name="design-for-scalability"></a>Skalierbarkeitsorientiertes Design
 
 Die Cloud gedeiht bei der Skalierung. Die Möglichkeit, Systemressourcen zu vergrößern oder zu verringern, um das erhöhen/verringern der System Auslastung zu beheben, ist ein wichtiger Grund Satz der Azure-Cloud. Um eine Anwendung effektiv zu skalieren, benötigen Sie jedoch ein Verständnis der Skalierungs Features der einzelnen Azure-Dienste, die Sie in Ihre Anwendung einschließen.  Hier finden Sie Empfehlungen für eine effektive Implementierung der Skalierung in Ihrem System.
 
-- *Entwurf für die Skalierung.* Eine Anwendung muss für die Skalierung entworfen werden. Zum Starten von sollten Dienste zustandslos sein, damit Anforderungen an eine beliebige Instanz weitergeleitet werden können. Die Verwendung von Zustands losen Diensten bedeutet auch, dass das Hinzufügen oder Entfernen einer Instanz die aktuellen Benutzer nicht beeinträchtigt.
+- *Berücksichtigen Sie Skalierung beim Entwurf.* Eine Anwendung muss für die Skalierung entworfen werden. Zum Starten von sollten Dienste zustandslos sein, damit Anforderungen an eine beliebige Instanz weitergeleitet werden können. Die Verwendung von Zustands losen Diensten bedeutet auch, dass das Hinzufügen oder Entfernen einer Instanz die aktuellen Benutzer nicht beeinträchtigt.
 
 - *Partitionierungs Arbeits Auslastungen*. Durch das Zerlegen von Domänen in unabhängige, eigenständige mikrodienste kann jeder Dienst unabhängig von anderen skaliert werden. In der Regel verfügen Dienste über unterschiedliche Anforderungen an die Skalierbarkeit und Anforderungen. Mithilfe der Partitionierung können Sie nur skalieren, was ohne unnötige Kosten der Skalierung einer gesamten Anwendung skaliert werden muss.
 
@@ -66,7 +66,7 @@ Die Cloud gedeiht bei der Skalierung. Die Möglichkeit, Systemressourcen zu verg
 
 - *Vermeiden Sie Affinität.* Eine bewährte Vorgehensweise besteht darin sicherzustellen, dass ein Knoten keine lokale Affinität erfordert, die *häufig als "* Kurznotiz" bezeichnet wird. Eine Anforderung sollte an eine beliebige Instanz weitergeleitet werden können. Wenn Sie den Zustand beibehalten müssen, sollte er in einem verteilten Cache gespeichert werden, z. b. [Azure redis Cache](https://azure.microsoft.com/services/cache/).
 
-- *Nutzen Sie Features für die automatische Skalierung von Plattformen.* Verwenden Sie die integrierten Features für die automatische Skalierung, wann immer möglich, anstelle von benutzerdefinierten oder Drittanbieter Mechanismen. Verwenden Sie nach Möglichkeit geplante Skalierungs Regeln, um sicherzustellen, dass Ressourcen ohne Startverzögerung verfügbar sind, und fügen Sie den Regeln nach Bedarf eine reaktive automatische Skalierung hinzu, um unerwartete Änderungen an der Nachfrage zu bewältigen. Weitere Informationen finden Sie unter [Leitfaden für die automatische Skalierung](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
+- *Nutzen Sie Features der automatischen Plattformskalierung.* Verwenden Sie die integrierten Features für die automatische Skalierung, wann immer möglich, anstelle von benutzerdefinierten oder Drittanbieter Mechanismen. Verwenden Sie nach Möglichkeit geplante Skalierungs Regeln, um sicherzustellen, dass Ressourcen ohne Startverzögerung verfügbar sind, und fügen Sie den Regeln nach Bedarf eine reaktive automatische Skalierung hinzu, um unerwartete Änderungen an der Nachfrage zu bewältigen. Weitere Informationen finden Sie im [Leitfaden für die automatische Skalierung](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
 
 - *Horizontales hochskalieren.* Eine abschließende Vorgehensweise wäre das horizontale hochskalieren, sodass Sie schnell unmittelbare Spitzen im Datenverkehr erreichen können, ohne das Geschäft zu verlieren. Und dann skalieren (d. h. nicht benötigte Instanzen entfernen), um das System stabil zu halten. Eine einfache Möglichkeit, dies zu implementieren, besteht darin, den kühl Zeitraum festzulegen. Dies ist die Zeit, die zwischen Skalierungs Vorgängen gewartet werden soll, auf fünf Minuten für das Hinzufügen von Ressourcen und bis zu 15 Minuten zum Entfernen von Instanzen.
 
@@ -78,9 +78,9 @@ Wir haben empfohlen, programmatische Wiederholungs Vorgänge in einem früheren 
 
 - *Azure Redis Cache.* Der redis stackexchange-Client verwendet eine Verbindungs-Manager-Klasse, die Wiederholungs Versuche für fehlgeschlagene Versuche einschließt. Die Anzahl der Wiederholungs Versuche, die spezifische Wiederholungs Richtlinie und die Wartezeit sind alle konfigurierbar.
 
-- *Azure Service Bus.* Der Service Bus Client stellt eine [retrypolicy-Klasse](xref:Microsoft.ServiceBus.RetryPolicy) zur Verfügung, die mit einem Backoff-Intervall, einer Wiederholungs Anzahl und <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>konfiguriert werden kann, die die maximale Zeit angibt, die ein Vorgang dauern kann. Die Standard Richtlinie ist neun maximale Wiederholungs Versuche mit einem Backoff-Zeitraum von 30 Sekunden zwischen den versuchen.
+- *Azure Service Bus.* Der Service Bus Client stellt eine [retrypolicy-Klasse](xref:Microsoft.ServiceBus.RetryPolicy) zur Verfügung, die mit einem Backoff-Intervall, einer Wiederholungs Anzahl und <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>konfiguriert werden kann, die die maximale Zeit angibt, die ein Vorgang dauern kann. Die Standard Richtlinie ist neun maximale Wiederholungs Versuche mit einem Backoff-Zeitraum von 30 Sekunden zwischen den versuchen.
 
-- *Azure SQL-Datenbank.* Wiederholungs Unterstützung wird bei Verwendung der [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) Bibliothek bereitgestellt.
+- *Azure SQL-Datenbank* Wiederholungs Unterstützung wird bei Verwendung der [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) Bibliothek bereitgestellt.
 
 - *Azure Storage.* Die Speicher Client Bibliothek unterstützt Wiederholungs Vorgänge. Die Strategien variieren in Azure Storage-Tabellen,-BLOB-und-Warteschlangen. Außerdem wechseln Alternative Wiederholungen zwischen primären und sekundären Speicherdienst Standorten, wenn das Feature für die georedundanz aktiviert ist.
 

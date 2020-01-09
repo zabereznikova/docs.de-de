@@ -2,12 +2,12 @@
 title: Firewall-Anweisungen
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837843"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544778"
 ---
 # <a name="firewall-instructions"></a>Firewall-Anweisungen
 Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit die Windows Communication Foundation (WCF)-Beispiele funktionieren können. In vielen der Beispiele findet die Kommunikation über die Ports im Bereich 8000-8003 und über Port 9000 statt. Die Firewall ist standardmäßig aktiviert und verhindert den Zugriff auf diese Ports. Um die Beispiele mit der Firewall verwenden zu können, haben Sie abhängig von Ihren Anforderungen und Ihrer Sicherheitsumgebung mehrere Möglichkeiten:  
@@ -36,7 +36,7 @@ Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit die W
   
     - Klicken Sie unter Windows 7 oder Windows Server 2008 R2 auf **Programm oder Feature durch Windows-Firewall zulassen**. Klicken Sie auf **Einstellungen ändern**, **anderes Programm**zulassen....  
   
-    - Klicken Sie unter Windows Vista oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)]auf **Programm durch die Windows-Firewall zulassen**.  
+    - Klicken Sie unter Windows Vista oder Windows Server 2008 auf **Programm durch die Windows-Firewall zulassen**.  
   
 4. Klicken Sie auf der Registerkarte **Ausnahmen** auf **Programm hinzufügen**.  
   
@@ -72,7 +72,7 @@ Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit die W
   
     10. Klicken Sie auf **ausgehende Regeln** und wiederholen Sie die Schritte c bis h.  
   
-3. Führen Sie unter Windows Vista oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)]die folgenden Schritte aus.  
+3. Führen Sie unter Windows Vista oder Windows Server 2008 die folgenden Schritte aus.  
   
     1. Klicken Sie auf **Programm durch die Windows-Firewall kommunizieren lassen**.  
   

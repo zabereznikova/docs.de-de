@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039185"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559715"
 ---
 # <a name="animation-overview"></a>Übersicht über Animationen
 
@@ -201,7 +201,7 @@ Der folgende Code zeigt, wie ein Rechteck erstellt wird, das im Code ein- und au
 
 Da Animationen Eigenschaftswerte generieren, gibt es verschiedene Animationstypen für unterschiedliche Eigenschaftentypen. Verwenden Sie zum Animieren einer Eigenschaft, die eine <xref:System.Double>annimmt, wie z. b. die <xref:System.Windows.FrameworkElement.Width%2A>-Eigenschaft eines Elements, eine Animation, die <xref:System.Double> Werte erzeugt. Verwenden Sie zum Animieren einer Eigenschaft, die einen <xref:System.Windows.Point>annimmt, eine Animation, die <xref:System.Windows.Point> Werte erzeugt, usw. Aufgrund der Anzahl unterschiedlicher Eigenschafts Typen gibt es mehrere Animations Klassen im <xref:System.Windows.Media.Animation>-Namespace. Glücklicherweise folgen sie einer strengen Benennungskonvention, die es erleichtert, sie voneinander zu unterscheiden:
 
-- \<*Typ*> Animation
+- \<*Type*>Animation
 
   Bekannt als „From/To/By“ oder „basic“ Animation, laufen die Animationen zwischen einem Start- und Ziel-Wert ab oder durch Hinzufügen eines Offsetwerts zum Startwert.
 
@@ -221,9 +221,9 @@ Da Animationen Eigenschaftswerte generieren, gibt es verschiedene Animationstype
 
   Pfadanimationen ermöglichen Ihnen einen geometrischen Pfad zu verwenden, um animierte Werte zu erzeugen.
 
-- \<*Typ*> AnimationBase
+- \<*Type*>AnimationBase
 
-  Eine abstrakte Klasse, die bei der Implementierung einen \<*Typ*>-Wert animiert. Diese Klasse dient als Basisklasse für \<*Type*> Animation und \<*Type*> AnimationUsingKeyFrames-Klassen. Sie müssen nur dann direkt mit diesen Klassen arbeiten, wenn Sie eigene benutzerdefinierte Animationen erstellen möchten. Verwenden Sie andernfalls einen \<*Typ*> Animation oder Keyframe\<*Typ*> Animation.
+  Abstrakte Klasse, die einen \<*Typ*>-Wert animiert, wenn Sie implementiert wird. Diese Klasse dient als Basisklasse für \<*Typ*>-Animation und \<*Typ*>AnimationUsingKeyFrames-Klassen. Sie müssen nur dann direkt mit diesen Klassen arbeiten, wenn Sie eigene benutzerdefinierte Animationen erstellen möchten. Verwenden Sie andernfalls eine \<*Typ*>-Animation oder KeyFrame\<*Typ*>-Animation.
 
 In den meisten Fällen empfiehlt es sich, den \<- *Typ*> Animations Klassen wie <xref:System.Windows.Media.Animation.DoubleAnimation> und <xref:System.Windows.Media.Animation.ColorAnimation>zu verwenden.
 
@@ -258,7 +258,7 @@ Die folgende Syntax zeigt eine vereinfachte Version der [!INCLUDE[TLA#tla_xaml](
 
 In der folgenden Tabelle werden mehrere <xref:System.Windows.Duration> Einstellungen und deren resultierende Werte angezeigt.
 
-|Einstellung|Ergebniswert|
+|-Einstellung|Ergebniswert|
 |-------------|---------------------|
 |0:0:5.5|5.5 Sekunden.|
 |0:30:5.5|30 Minuten und 5,5 Sekunden.|
@@ -292,7 +292,7 @@ Das Zuweisen eines Namens zu einem <xref:System.Windows.FrameworkElement> unters
 
 - Wenn Sie einen <xref:System.Windows.FrameworkElement> einem Animations Ziel erstellen möchten, geben Sie ihm einen Namen, indem Sie dessen <xref:System.Windows.FrameworkElement.Name%2A>-Eigenschaft festlegen. Im Code müssen Sie auch die <xref:System.Windows.FrameworkElement.RegisterName%2A>-Methode verwenden, um den Elementnamen mit der Seite zu registrieren, zu der er gehört.
 
-- Wenn Sie ein <xref:System.Windows.Freezable> Objekt in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]als Animations Ziel festlegen möchten, verwenden Sie die [x:Name-Direktive](../../xaml-services/x-name-directive.md) , um ihm einen Namen zuzuweisen. Im Code verwenden Sie einfach die <xref:System.Windows.FrameworkElement.RegisterName%2A>-Methode, um das Objekt bei der Seite zu registrieren, zu der es gehört.
+- Wenn Sie ein <xref:System.Windows.Freezable> Objekt in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]als Animations Ziel festlegen möchten, verwenden Sie die [x:Name-Direktive](../../../desktop-wpf/xaml-services/xname-directive.md) , um ihm einen Namen zuzuweisen. Im Code verwenden Sie einfach die <xref:System.Windows.FrameworkElement.RegisterName%2A>-Methode, um das Objekt bei der Seite zu registrieren, zu der es gehört.
 
 In den folgenden Abschnitten wird ein Beispiel für das Benennen eines Elements in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und Code bereitgestellt. Ausführlichere Informationen zum Benennen und zum Ziel finden Sie in der [Übersicht über Storyboards](storyboards-overview.md).
 
@@ -359,7 +359,7 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 
   Veranschaulicht verschiedene From, To, By-Einstellungen.
 
-- [Beispiel des Zeitsteuerungsverhaltens von Animationen](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Beispiel zum Verhalten der Animationszeitsteuerung](https://go.microsoft.com/fwlink/?LinkID=159970)
 
   Zeigt die verschiedenen Möglichkeiten, wie Sie das Zeitsteuerungsverhalten einer Animation steuern können. Dieses Beispiel zeigt auch, wie Sie die Datenbindung für den Zielwert einer Animation durchführen.
 
@@ -367,7 +367,7 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)|Beschreibt, wie das Zeit Steuerungssystem die Klassen <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> verwendet, mit denen Sie Animationen erstellen können.|
 |[Tipps und Tricks zu Animationen](animation-tips-and-tricks.md)|Hier sind hilfreiche Tipps zum Beheben von Problemen mit Animationfen, z.B. Leistungsprobleme aufgelistet.|
@@ -380,14 +380,14 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 |[Übersicht über Storyboards](storyboards-overview.md)|Beschreibt, wie Storyboards mit mehreren Zeitachsen zum Erstellen komplexer Animationen verwendet werden.|
 |[Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)|Beschreibt die <xref:System.Windows.Media.Animation.Timeline> Typen und Eigenschaften, die in Animationen verwendet werden.|
 |[Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)|Beschreibt die Ereignisse, die auf dem <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekten zum Ausführen von Code an Punkten in der Zeitachse verfügbar sind, wie z. b. Begin, Pause, Resume, Skip oder Break.|
-|[Themen zur Vorgehensweise zu einem Expander](animation-and-timing-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Animationen und Zeitachsen in der Anwendung.|
+|[Gewusst wie-Themen](animation-and-timing-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Animationen und Zeitachsen in der Anwendung.|
 |[Clocks How-to Topics (Themen zur Vorgehensweise zu Uhren)](clocks-how-to-topics.md)|Enthält Codebeispiele für die Verwendung des <xref:System.Windows.Media.Animation.Clock>-Objekts in der Anwendung.|
 |[Gewusst-wie-Themen zu Keyframes](key-frame-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Keyframe-Animationen in Ihrer Anwendung.|
-|[Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Pfadanimationen in Ihrer Anwendung.|
+|[Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Pfadanimationen in Ihrer Anwendung.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

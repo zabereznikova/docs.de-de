@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Ereignisse (Windows Forms)
+title: Übersicht über Ereignisse (Windows Forms)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, event handling
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963467"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345005"
 ---
-# <a name="events-overview-windows-forms"></a>Übersicht über Ereignisse (Windows Forms)
+# <a name="events-overview-windows-forms"></a>Übersicht über Ereignisse (Windows Forms)
 Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“ können. Ereignisse können durch eine Benutzeraktion generiert werden, z. B. durch Klicken mit der Maus oder Drücken auf eine Taste; durch Programmcode; oder durch das System.
 
  Ereignisgesteuerte Anwendungen führen Code als Reaktion auf ein Ereignis aus. Jedes Formular und jedes Steuerelement macht eine vordefinierte Gruppe von Ereignissen verfügbar, die Sie programmieren können. Wenn eines dieser Ereignisse auftritt und Code im zugeordneten Ereignishandler vorhanden ist, wird der Code aufgerufen.
@@ -31,9 +31,9 @@ Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“
 ## <a name="delegates-and-their-role"></a>Delegaten und ihre Rolle
  Delegaten sind Klassen, die im .NET Framework häufig zum Erstellen von Ereignis Behandlungs Mechanismen verwendet werden. Delegaten entsprechen in etwa den Funktions Zeigern, die häufig C++ in visuellen und anderen objektorientierten Sprachen verwendet werden. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert, typsicher und sicher. Darüber hinaus bestehen Sie im Vergleich zu Funktionszeigern, die nur einen Verweis zu einer bestimmten Funktion enthalten, aus einem Verweis zu einem Objekt und Verweisen zu einem oder mehren Methoden in dem Objekt.
 
- Dieses Ereignis Modell verwendet Delegaten, um Ereignisse an die Methoden zu binden, die für deren Behandlung verwendet werden. Mit dem Delegat können andere Klassen für eine Ereignisbenachrichtigung registriert werden, indem eine Handlermethode angegeben wird. Wenn das Ereignis auftritt, ruft der Delegat die gebundene Methode auf. Weitere Informationen zum Definieren von Delegaten finden Sie unter [Ereignisse](../../standard/events/index.md).
+ Dieses Ereignis Modell verwendet Delegaten, um *Ereignisse an die* Methoden zu binden, die für deren Behandlung verwendet werden. Mit dem Delegat können andere Klassen für eine Ereignisbenachrichtigung registriert werden, indem eine Handlermethode angegeben wird. Wenn das Ereignis auftritt, ruft der Delegat die gebundene Methode auf. Weitere Informationen zum Definieren von Delegaten finden Sie unter [Ereignisse](../../standard/events/index.md).
 
- Delegaten können an eine einzelne oder mehrere Methoden gebunden werden, das bezeichnet man als Multicasting. Wenn Sie einen Delegaten für ein Ereignis erstellen, erstellen Sie (oder das Windows) in der Regel ein Multicast Ereignis. Eine seltene Ausnahme dazu ist möglicherweise ein Ereignis, das zu einer bestimmten Prozedur führt (z. B. das Anzeigen eines Dialogfelds), die logischerweise nicht mehrmals pro Ereignis auftritt. Weitere Informationen zum Erstellen eines Multicast Delegaten finden [Sie unter Gewusst wie: Kombinieren von Delegaten (Multicast Delegaten)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
+Delegaten können an eine einzelne oder mehrere Methoden gebunden werden, das bezeichnet man als Multicasting. Wenn Sie einen Delegaten für ein Ereignis erstellen, erstellen Sie (oder das Windows) in der Regel ein Multicast Ereignis. Eine seltene Ausnahme dazu ist möglicherweise ein Ereignis, das zu einer bestimmten Prozedur führt (z. B. das Anzeigen eines Dialogfelds), die logischerweise nicht mehrmals pro Ereignis auftritt. Weitere Informationen zum Erstellen eines Multicast Delegaten finden Sie unter Gewusst wie: Kombinieren von Delegaten [(Multicast](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)Delegaten).
 
  Ein Multicast-Delegat verwaltet eine Aufrufliste der Methoden, an die er gebunden ist. Der Multicast-Delegat unterstützt eine <xref:System.Delegate.Combine%2A>-Methode zum Hinzufügen einer Methode zur Aufrufliste und eine <xref:System.Delegate.Remove%2A>-Methode, um sie zu entfernen.
 

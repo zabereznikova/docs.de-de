@@ -46,7 +46,7 @@
         - name: Vorhersagen von Preisen (Modellgenerator und Regression)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
-          href: tutorials/mlnet-cli.md
+          href: tutorials/sentiment-analysis-cli.md
         - name: Analysieren der Stimmung in Razor Pages (Modellgenerator und binäre Klassifizierung)
           href: tutorials/sentiment-analysis-model-builder.md
         - name: Kategorisieren von Integritätsverstößen (Modellgenerator und Mehrklassenklassifizierung)
@@ -57,13 +57,13 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: Konzepte
   items:
-    - name: ML.NET-Aufgaben (Modelltypen)
+    - name: ML.NET-Tasks
       href: resources/tasks.md
     - name: Algorithmen
       href: how-to-choose-an-ml-net-algorithm.md
     - name: Datentransformationen
       href: resources/transforms.md
-    - name: Metriken
+    - name: Metriken für die Modellauswertung
       href: resources/metrics.md
     - name: Verbessern der Modellgenauigkeit
       href: resources/improve-machine-learning-model-ml-net.md

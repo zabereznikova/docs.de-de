@@ -1,6 +1,5 @@
 ---
 title: Typen – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552500"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711882"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -58,7 +57,7 @@ Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur ang
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](../../language-reference/builtin-types/integral-numeric-types.md) nicht deklarieren und dieser dann den booleschen Wert `true` zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
+Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Beispielsweise können Sie keinen Typ [int](../../language-reference/builtin-types/integral-numeric-types.md) deklarieren und diesem dann den booleschen Wert `true` zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
 
 Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](./casting-and-type-conversions.md).
 
@@ -68,7 +67,7 @@ C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung
 
 ## <a name="custom-types"></a>Benutzerdefinierte Typen
 
-Sie verwenden die Konstrukte [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) und [enum](../../language-reference/keywords/enum.md), um eigene benutzerdefinierte Typen zu erstellen. Die .NET-Klassenbibliothek ist eine Auflistung benutzerdefinierter, von Microsoft bereitgestellter Typen, die Sie in Ihren eigenen Anwendungen verwenden können. Standardmäßig sind die am häufigsten verwendeten Typen in der Klassenbibliothek in jedem C#-Programm verfügbar. Andere stehen nur zur Verfügung, wenn Sie ausdrücklich einen Projektverweis auf die Assembly hinzufügen, in der diese definiert sind. Wenn der Compiler über einen Verweis auf die Assembly verfügt, können Sie Variablen (und Konstanten) des in dieser Assembly deklarierten Typs im Quellcode deklarieren. Weitere Informationen finden Sie in der Dokumentation zur [.NET-Klassenbibliothek](../../../standard/class-library-overview.md).
+Sie verwenden die Konstrukte [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) und [enum](../../language-reference/builtin-types/enum.md), um eigene benutzerdefinierte Typen zu erstellen. Die .NET-Klassenbibliothek ist eine Auflistung benutzerdefinierter, von Microsoft bereitgestellter Typen, die Sie in Ihren eigenen Anwendungen verwenden können. Standardmäßig sind die am häufigsten verwendeten Typen in der Klassenbibliothek in jedem C#-Programm verfügbar. Andere stehen nur zur Verfügung, wenn Sie ausdrücklich einen Projektverweis auf die Assembly hinzufügen, in der diese definiert sind. Wenn der Compiler über einen Verweis auf die Assembly verfügt, können Sie Variablen (und Konstanten) des in dieser Assembly deklarierten Typs im Quellcode deklarieren. Weitere Informationen finden Sie in der Dokumentation zur [.NET-Klassenbibliothek](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Das allgemeine Typsystem
 
@@ -91,7 +90,7 @@ Die folgende Abbildung zeigt Werttypen und Verweistypen im CTS:
 
 Werttypen werden von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet, was wiederum von <xref:System.Object?displayProperty=nameWithType> abgeleitet wird. Typen, die von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet werden, weisen ein besonderes Verhalten in der CLR auf. Werttypvariablen enthalten die zugehörigen Werte direkt, d. h., der Speicher wird inline in dem Kontext belegt, in dem die Variable deklariert ist. Für Werttypvariablen erfolgt keine getrennte Heapzuordnung oder ein Mehraufwand für die Garbage Collection.
 
-Zwei Kategorien von Werttypen sind verfügbar: [struct](../../language-reference/keywords/struct.md) und [enum](../../language-reference/keywords/enum.md).
+Zwei Kategorien von Werttypen sind verfügbar: [struct](../../language-reference/keywords/struct.md) und [enum](../../language-reference/builtin-types/enum.md).
 
 Die integrierten numerischen Typen sind Strukturen und verfügen über Eigenschaften und Methoden, auf die Sie zugreifen können:
 
@@ -116,13 +115,13 @@ Sie können das [struct](../../language-reference/keywords/struct.md)-Schlüssel
 
 Weitere Informationen über Strukturen finden Sie unter [Strukturen](../classes-and-structs/structs.md). Weitere Informationen über Werttypen in .NET finden Sie unter [Werttypen](../../language-reference/keywords/value-types.md).
 
-Die andere Kategorie von Werttypen ist [enum](../../language-reference/keywords/enum.md). Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten. So enthält z.B. die <xref:System.IO.FileMode?displayProperty=nameWithType>-Enumeration in der .NET-Klassenbibliothek mehrere benannte ganzzahlige Konstanten, die festlegen, wie eine Datei geöffnet werden soll. Die Definition erfolgt wie im folgenden Beispiel:
+Die andere Kategorie von Werttypen ist [enum](../../language-reference/builtin-types/enum.md). Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten. So enthält z.B. die <xref:System.IO.FileMode?displayProperty=nameWithType>-Enumeration in der .NET-Klassenbibliothek mehrere benannte ganzzahlige Konstanten, die festlegen, wie eine Datei geöffnet werden soll. Die Definition erfolgt wie im folgenden Beispiel:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 Die `System.IO.FileMode.Create`-Konstante besitzt den Wert 2. Der Name ist jedoch für Personen, die den Quellcode lesen, viel aussagekräftiger. Aus diesem Grund ist es besser, anstelle von Konstantenliteralen Enumerationen zu verwenden. Weitere Informationen finden Sie unter <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Alle Enumerationen erben von <xref:System.Enum?displayProperty=nameWithType>, was wiederum von <xref:System.ValueType?displayProperty=nameWithType> erbt. Alle Regeln, die für Strukturen gelten, gelten auch für Enumerationen. Weitere Informationen über Enumerationen finden Sie unter [Enumerationstypen](../enumeration-types.md).
+Alle Enumerationen erben von <xref:System.Enum?displayProperty=nameWithType>, was wiederum von <xref:System.ValueType?displayProperty=nameWithType> erbt. Alle Regeln, die für Strukturen gelten, gelten auch für Enumerationen. Weitere Informationen zu Enumerationen finden Sie unter [Enumerationstypen](../../language-reference/builtin-types/enum.md).
 
 ### <a name="reference-types"></a>Verweistypen
 

@@ -1,20 +1,20 @@
 ---
-title: LINQ to XML im Vergleich zu Anderen XML-Technologies2
+title: LINQ to XML im Vergleich zu anderen XML-Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 80d3d034454d4de74e8aafd41679b82d111e6f3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35d2be530c63cdbc09631c5dfc036558bb9851bc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021205"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636616"
 ---
-# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML im Vergleich zu anderen XML-Technologien
+# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML kontra anderer XML-Technologien
 In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit den folgenden XML-Technologien verglichen: <xref:System.Xml.XmlReader>, XSLT, MSXML und XmlLite. Diese Informationen helfen Ihnen bei Ihrer Entscheidung für eine dieser Technologien.  
   
- Einen Vergleich von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit dem Dokumentobjektmodell (DOM) finden Sie unter [LINQ to XML im Vergleich zu DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
+ Einen Vergleich von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit dem Dokumentobjektmodell (DOM) finden Sie unter [LINQ to XML Vs. DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML im Vergleich zu XmlReader  
+## <a name="linq-to-xml-vs-xmlreader"></a>Vergleich von LINQ to XML mit XmlReader  
  <xref:System.Xml.XmlReader> ist ein schneller Parser, der ausschließlich in Vorwärtsrichtung und ohne Zwischenspeicherung arbeitet.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wird über <xref:System.Xml.XmlReader> implementiert. Beide sind eng ineinander integriert. Sie können <xref:System.Xml.XmlReader> jedoch auch allein verwenden.  
@@ -23,7 +23,7 @@ In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit d
   
  Wenn Sie aber ein System erstellen, dass viele kleinere XML-Dokumente analysiert, die alle unterschiedlich sind, empfiehlt sich die Nutzung der höheren Produktivität, die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ermöglicht.  
   
-## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML im Vergleich zu XSLT  
+## <a name="linq-to-xml-vs-xslt"></a>Vergleich von LINQ to XML mit XSLT  
  Sowohl [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] als auch XSLT bieten umfangreiche Funktionen zum Transformieren von XML-Dokumenten. XSLT ist ein regelbasierter, deklarativer Ansatz. Erfahrene XSLT-Programmierer schreiben XSLT-Code unter Verwendung eines funktionalen Programmierstils, bei dem der zustandslose Ansatz im Vordergrund steht. Transformationen können mit reinen Funktionen geschrieben werden, die ohne Nebeneffekte implementiert werden. Dieser regelbasierte oder funktionale Ansatz ist vielen Entwicklern nicht bekannt, und das Erlernen dieses Ansatzes kann schwierig und zeitaufwändig sein.  
   
  XSLT kann ein sehr produktives System sein, das leistungsstarke Anwendungen erbringt. Einige große Internetunternehmen verwenden XSLT beispielsweise als Möglichkeit, HTML-Daten aus XML-Code zu generieren, der aus verschiedenen Datenspeichern zusammengestellt wird. Die verwaltete XSLT-Engine kompiliert XSLT in CLR-Code und erweist sich in einigen Szenarios sogar als leistungsfähiger als die systemeigene XSLT-Engine.  
@@ -38,19 +38,19 @@ In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit d
   
  XSLT ist XML und kann daher programmgesteuert bearbeitet werden.  
   
-## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML im Vergleich zu MSXML  
+## <a name="linq-to-xml-vs-msxml"></a>Vergleich von LINQ to XML mit MSXML  
  MSXML ist die COM-basierte Technologie für die XML-Verarbeitung in Microsoft Windows. MSXML stellt eine systemeigene Implementierung des DOM mit Unterstützung für XPath und XSLT bereit. Darüber hinaus enthält MSXML den ereignisbasierten, ohne Zwischenspeicherung arbeitenden Parser SAX2.  
   
  MSXML zeigt eine gute Leistung und ist in den meisten Szenarios standardmäßig sicher. Auf MSXML kann in Internet Explorer zugegriffen werden, sodass eine clientseitige XML-Verarbeitung in AJAX-Anwendungen erfolgen kann. MSXML kann mit jeder Programmiersprache verwendet werden, die COM unterstützt, wie z.B. C++, JavaScripts und Visual Basic 6.0.  
   
  Von der Verwendung von MSXML in verwaltetem Code, der auf der Common Language Runtime (CLR) basiert, wird abgeraten.  
   
-## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML im Vergleich zu XmlLite  
+## <a name="linq-to-xml-vs-xmllite"></a>Vergleich von LINQ to XML mit XmlLite  
  XmlLite ist ein Pull-Parser, der ausschließlich in Vorwärtsrichtung und ohne Zwischenspeicherung arbeitet. Entwickler verwenden XmlLite hauptsächlich zusammen mit C++. Es wird nicht empfohlen, XmlLite mit verwaltetem Code zu verwenden.  
   
  Der Hauptvorteil von XmlLite besteht darin, dass er ein leichter, schneller XML-Parser ist, der in den meisten Szenarios sicher ist. Seine Angriffsfläche ist sehr klein. Wenn Sie nicht vertrauenswürdige Dokumente analysieren müssen und sich vor Risiken, wie DoS-Angriffen oder der Offenlegung von Daten, schützen möchten, könnte XmlLite ein geeignetes Mittel der Wahl sein.  
   
- XmlLite ist nicht in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] integriert. Die Produktivitätsverbesserungen für Programmierer, die zu den großen Vorteilen von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] gehören, können mit XmlLite nicht erzielt werden.  
+ XmlLite ist nicht in Language-Integrated Query (LINQ) integriert. Sie führt nicht zu den Verbesserungen bei der Produktivität von Programmierern, die die motivierte Kraft hinter LINQ sind.  
   
 ## <a name="see-also"></a>Siehe auch
 

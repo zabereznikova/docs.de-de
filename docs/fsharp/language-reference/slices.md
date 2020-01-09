@@ -1,17 +1,17 @@
 ---
-title: Slices (F#)
-description: Erfahren Sie, wie Sie Slices für vorhandene F# Datentypen verwenden und wie Sie eigene Slices für andere Datentypen definieren.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: Slices
+description: Erfahren Sie, wie Sie Slices für F# vorhandene Datentypen verwenden und eigene Slices für andere Datentypen definieren.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733376"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545105"
 ---
 # <a name="slices"></a>Slices
 
-In F#ist ein Slice eine Teilmenge eines Datentyps. Um einen Slice eines Datentyps verwenden zu können, muss der Datentyp entweder eine `GetSlice` Methode oder eine [Typerweiterung](type-extensions.md) im Gültigkeitsbereich definieren. In diesem Artikel wird erläutert, wie Sie Slices F# aus vorhandenen Typen erstellen und eigene Typen definieren.
+In F#handelt es sich bei einem Slice um eine Teilmenge eines beliebigen Datentyps, der über eine `GetSlice`-Methode in seiner Definition oder eine in-Scope- [Typerweiterung](type-extensions.md)verfügt. Es wird am häufigsten mit F# Arrays und Listen verwendet. In diesem Artikel wird erläutert, wie Sie Slices F# aus vorhandenen Typen erstellen und eigene Slices definieren.
 
 Slices ähneln [Indexer](./members/indexed-properties.md), aber anstelle eines einzelnen Werts aus der zugrunde liegenden Datenstruktur ergeben sich mehrere Segmente.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Die F# Core-Bibliothek definiert keine`GetSlice`für 3D-Arrays. Wenn Sie diese oder andere Arrays weiterer Dimensionen segmentieren möchten, müssen Sie das `GetSlice` Member selbst definieren.
+In F# der Kernbibliothek wird derzeit nicht `GetSlice` für 3D-Arrays definiert. Wenn Sie 3D-Arrays oder andere Arrays von mehr Dimensionen segmentieren möchten, definieren Sie das `GetSlice` Member selbst.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definieren von Slices für andere Datenstrukturen
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>Integrierte F# Slices sind End-inclusive
+
+Alle systeminternen Slices F# in sind End-inclusive. Das heißt, die obere Grenze ist im Slice enthalten. Für ein bestimmtes Slice mit Start Index `x` und dem endIndex `y`enthält der resultierende Slice den Wert *YTH* .
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>Siehe auch

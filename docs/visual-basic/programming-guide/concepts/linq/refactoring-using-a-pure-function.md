@@ -2,12 +2,12 @@
 title: Umgestalten mit reiner Funktion
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: a19285e3a70c14b86898aef0e77c4d04b3abace3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ce07622a030f291bbbee54dc342562ffecd3258c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346535"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341658"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring mithilfe einer reinen Funktion (Visual Basic)
 Im folgenden Beispiel wird das vorherige Beispiel, [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), umgestaltet, um in diesem Beispiel eine reine Funktion zu verwenden. der Code für die Suche nach dem Text eines Absatzes wird in die reine statische Methode `ParagraphText`verschoben.  
@@ -67,7 +67,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If styleNode Is Nothing Then  
@@ -147,7 +147,7 @@ Module Module1
 End Module   
 ```  
   
- Dieses Beispiel erzeugt dieselbe Ausgabe wie vor dem Refactoring:  
+ Dieses Beispiel erzeugt dieselbe Ausgabe wie vor der Umgestaltung:  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

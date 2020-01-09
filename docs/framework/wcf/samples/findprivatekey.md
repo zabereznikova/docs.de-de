@@ -1,15 +1,15 @@
 ---
-title: FindPrivateKey-Beispiel-WCF
+title: FindPrivateKey-Beispiel
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989886"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346019"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey-Beispiel
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Um das Projekt herunterzuladen, besuchen Sie [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Öffnen Sie den Datei-Explorer, und navigieren Sie zum Ordner *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* unter dem Verzeichnis, in dem Sie das Beispiel installiert haben.
+1. Öffnen Sie den Datei-Explorer, und navigieren Sie zum Ordner *WF_WCF_Samples \wcf\setup\findprivatekey\cs* unter dem Verzeichnis Speicherort, in dem Sie das Beispiel installiert haben.
 
 2. Doppelklicken Sie auf das Symbol für die SLN-Datei, um diese in Visual Studio zu öffnen.
 
 3. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **neu erstellen**aus.
 
-4. Beim Aufbau der Lösung wird die folgende Datei generiert: FindPrivateKey.exe.
+4. Beim Erstellen der Projektmappe wird die Datei "FindPrivateKey.exe" erstellt.
 
 ## <a name="conventionscommand-line-entries"></a>Konventionen – Befehlszeilen Einträge
 
@@ -62,15 +62,15 @@ Um das Projekt herunterzuladen, besuchen Sie [Windows Communication Foundation (
 
  "*Option1* &#124; *Option2*" stellt eine Auswahl zwischen Options Sätzen dar.
 
- "\<*value*>" stellt einen Parameterwert dar, der eingegeben werden soll.
+ "\<*Wert*>" stellt einen Parameterwert dar, der eingegeben werden soll.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verwendungs-
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-Erläuterungen:
+Dabei gilt Folgendes:
 
 | Parameter         | Beschreibung                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|

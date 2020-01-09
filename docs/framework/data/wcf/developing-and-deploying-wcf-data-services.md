@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975317"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346112"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 
@@ -70,7 +70,7 @@ Wenn Sie einen WCF Data Service mithilfe von Visual Studio 2015 als ASP.NET-Anwe
 
 3. **Microsoft Azure-Entwicklungsumgebung**
 
-     Windows Azure-Tools für Visual Studio beinhaltet einen integrierten Satz von Tools für die Entwicklung von Windows Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der unter Windows Azure bereitgestellt werden kann, und den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools, wenn Sie Visual Studio verwenden, um einen Datendienst zu entwickeln, der auf der Windows Azure-Plattform ausgeführt wird. Sie können die Windows Azure-Tools für Visual Studio aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848)herunterladen. Weitere Informationen zum Entwickeln eines Daten Dienstanbieter, der unter Windows Azure ausgeführt wird, finden Sie im Beitrag bereitstellen [eines odata-Dienstanbieter in Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Windows Azure-Tools für Visual Studio beinhaltet einen integrierten Satz von Tools für die Entwicklung von Windows Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der unter Windows Azure bereitgestellt werden kann, und den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools, wenn Sie Visual Studio verwenden, um einen Datendienst zu entwickeln, der auf der Windows Azure-Plattform ausgeführt wird. Sie können die Windows Azure-Tools für Visual Studio aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848)herunterladen. Weitere Informationen zum Entwickeln eines Daten Dienstanbieter, der unter Windows Azure ausgeführt wird, finden Sie im Beitrag bereitstellen [eines odata-Dienstanbieter in Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="development-tips"></a>Tipps für die Entwicklung
 
@@ -80,7 +80,7 @@ Beachten Sie beim Entwickeln eines Datendiensts die folgenden Hinweise:
 
 - Ein HTTP-Überprüfungsprogramm kann beim Debuggen eines Datendiensts hilfreich sein, da es Ihnen die Möglichkeit bietet, den Inhalt von Anforderungs- und Antwortnachrichten zu überprüfen. Zum Überprüfen von HTTP-Anforderungen an den Datendienst und HTTP-Antworten vom Datendienst kann eine beliebige Netzwerkpaketanalyse verwendet werden, die die Anzeige von Rohpaketen unterstützt.
 
-- Wenn Sie einen Datendienst Debuggen, können Sie weitere Informationen zu einem Fehler vom Datendienst als während des normalen Vorgangs abrufen. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie unter WCF Data Services nach dem [Debuggen](https://go.microsoft.com/fwlink/?LinkId=201868). Sie können die Ablauf Verfolgung auch in WCF aktivieren, um Ausnahmen anzuzeigen, die in der http-Messaging Schicht ausgelöst werden. Weitere Informationen finden Sie unter [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Wenn Sie einen Datendienst Debuggen, können Sie weitere Informationen zu einem Fehler vom Datendienst als während des normalen Vorgangs abrufen. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie unter WCF Data Services nach dem [Debuggen](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Sie können die Ablauf Verfolgung auch in WCF aktivieren, um Ausnahmen anzuzeigen, die in der http-Messaging Schicht ausgelöst werden. Weitere Informationen finden Sie unter [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Ein Datendienst wird normalerweise als ASP.NET-Anwendungsprojekt entwickelt, Sie können den Datendienst aber auch als ASP.NET-Website Projekt in Visual Studio erstellen. Informationen zu den Unterschieden zwischen den beiden Projekttypen finden Sie unter [Webanwendungs Projekte im Vergleich zu Website Projekten in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -115,7 +115,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 - **Windows Azure**
 
-     Sie können einen Datendienst mithilfe der Windows Azure-Tools für Visual Studio in Windows Azure bereitstellen. Sie können die Windows Azure-Tools für Visual Studio aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848)herunterladen. Weitere Informationen zum Bereitstellen eines Daten Dienstanbieter in Windows Azure finden Sie im Beitrag bereitstellen [eines odata-Dienstanbieter in Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Sie können einen Datendienst mithilfe der Windows Azure-Tools für Visual Studio in Windows Azure bereitstellen. Sie können die Windows Azure-Tools für Visual Studio aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848)herunterladen. Weitere Informationen zum Bereitstellen eines Daten Dienstanbieter in Windows Azure finden Sie im Beitrag bereitstellen [eines odata-Dienstanbieter in Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
 
@@ -123,7 +123,7 @@ Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
 
 - Wenn Sie einen Datendienst bereitstellen, der den Entity Framework Anbieter für den Zugriff auf eine SQL Server Datenbank verwendet, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienst Bereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, und diese Skripts können im Webbereitstellungs Paket einer ASP.NET-Anwendung enthalten sein. Weitere Informationen finden Sie unter Gewusst [wie: Bereitstellen einer Datenbank mit einem Webanwendungs Projekt](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Für eine ASP.NET-Website können Sie dazu den Assistenten für die **Daten Bank Veröffentlichung** in Visual Studio verwenden. Weitere Informationen finden Sie unter [Veröffentlichen einer SQL-Datenbank](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
-- Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der unter IIS unter Windows Server bereitgestellt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Daten dienstanzdienstanbieter finden Sie im Beitrag nach [Verfolgung WCF Data Services mit Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
+- Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der unter IIS unter Windows Server bereitgestellt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Daten dienstanzdienstanbieter finden Sie im Beitrag nach [Verfolgung WCF Data Services mit Windows Server AppFabric](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/).
 
 ## <a name="see-also"></a>Siehe auch
 

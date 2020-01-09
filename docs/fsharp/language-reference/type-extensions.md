@@ -2,12 +2,12 @@
 title: Typerweiterungen
 description: Erfahren Sie F# , wie Sie mit Typerweiterungen einem zuvor definierten Objekttyp neue Member hinzufügen können.
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978249"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341568"
 ---
 # <a name="type-extensions"></a>Typerweiterungen
 
@@ -98,7 +98,7 @@ Optionale Erweiterungen werden nicht für den erweiterten Typ angezeigt, wenn Si
 
 Member optionaler Erweiterungen werden in statische Member kompiliert, für die die Objektinstanz implizit als erster Parameter übergeben wird. Sie agieren jedoch so, als ob Sie Instanzmember oder statische Member sind, je nachdem, wie Sie deklariert werden.
 
-Optionale Erweiterungs Mitglieder sind auch für C# -oder-VB-Consumer nicht sichtbar. Sie können nur in anderem F# Code verwendet werden.
+Optionale Erweiterungs Mitglieder sind auch für C# -oder-Visual Basic Consumer nicht sichtbar. Sie können nur in anderem F# Code verwendet werden.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Generische Einschränkung von systeminternen und optionalen Typerweiterungen
 
@@ -126,7 +126,7 @@ Was gewünscht ist, sind statische Methoden, die "float in Space" sind, und kön
 
 ## <a name="extension-methods"></a>Erweiterungsmethoden
 
-Schließlich können Erweiterungs Methoden (manchmal auch alsC# "Stil Erweiterungs Member" bezeichnet) als statische F# Element Methode in einer Klasse deklariert werden.
+Schließlich können Erweiterungsmethoden (manchmal als "Erweiterungsmember des C#-Stil" bezeichnet) in F# als statische Membermethode in einer Klasse deklariert werden.
 
 Erweiterungs Methoden sind hilfreich, wenn Sie Erweiterungen für einen generischen Typ definieren möchten, der die Typvariable einschränkt. Beispiel:
 
@@ -162,7 +162,7 @@ Für Typerweiterungen gibt es auch die folgenden Einschränkungen:
 - Typerweiterungen können nicht für [typabkürzungen](type-abbreviations.md)definiert werden.
 - Typerweiterungen sind für `byref<'T>` ungültig (obwohl Sie deklariert werden können).
 - Typerweiterungen sind für Attribute ungültig (Sie können jedoch als deklariert werden).
-- Sie können Erweiterungen definieren, die andere Methoden desselben Namens überladen, aber der F# Compiler bevorzugt nicht-Erweiterungs Methoden, wenn ein mehrdeutiger-Befehl vorliegt.
+- Sie können definieren, Erweiterungen, die andere Methoden, mit dem gleichen Namen zu überladen, aber F#-Compiler bevorzugt nicht-Erweiterungsmethoden gibt es ist ein Mehrdeutiger Aufruf.
 
 Wenn zum Schluss mehrere systeminterne Typerweiterungen für einen Typ vorhanden sind, müssen alle Elemente eindeutig sein. Bei optionalen Typerweiterungen können Member in unterschiedlichen Typerweiterungen, die auf den gleichen Typ erweitert werden, die gleichen Namen aufweisen. Mehrdeutigkeitsfehler treten nur auf, wenn Clientcode zwei unterschiedliche Gültigkeitsbereiche öffnet, die die gleichen Membernamen definieren.
 

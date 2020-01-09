@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 47544cf74b4fa09fd8ee868ea940ef24a453840e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834644"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347996"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Angeben von Datenübertragung in Dienstverträgen
 Die Windows Communication Foundation (WCF) kann als Messaging Infrastruktur betrachtet werden. Dienstvorgänge können Nachrichten empfangen, sie verarbeiten und ihnen Nachrichten schicken. Nachrichten werden mit Vorgangsverträgen beschrieben. Beispiel:  
@@ -141,13 +141,13 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>Beschreiben von leeren Nachrichten  
- Eine leere Anforderungsnachricht kann dadurch beschrieben werden, dass sie keine Eingabe- oder Verweisparameter aufweist. Beispiel in C#:  
+ Eine leere Anforderungsnachricht kann dadurch beschrieben werden, dass sie keine Eingabe- oder Verweisparameter aufweist. Beispiel: in C#:  
   
  `[OperationContract]`  
   
  `public int GetCurrentTemperature();`  
   
- Beispiel in VB:  
+ Beispielsweise in Visual Basic:  
   
  `<OperationContract()>`  
   
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Angeben der Verwendung und des Stils  
  Bei der Beschreibung von Diensten mithilfe von Web Services Description Language (WSDL) sind die beiden am häufigsten verwendeten Stile der Dokumentstil und der Remoteprozeduraufruf (RPC, remote procedure call). Beim Dokumentstil wird der gesamte Nachrichtentext mithilfe des Schemas beschrieben, und WSDL beschreibt die verschiedenen Nachrichtentextteile durch Verweisen auf Elemente innerhalb dieses Schemas. Beim RPC-Stil verweist WSDL auf einen Schematyp für jeden Nachrichtenteil statt auf ein Element. In einigen Fällen müssen Sie einen dieser Stile manuell auswählen. Zu diesem Zweck können Sie das <xref:System.ServiceModel.DataContractFormatAttribute>-Attribut anwenden und die `Style`-Eigenschaft festlegen (wenn das <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird), oder Sie legen `Style` in dem <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut fest (wenn das <xref:System.Xml.Serialization.XmlSerializer> verwendet wird).  
   
- Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`. `Literal` ist das am häufigsten akzeptierte Formular und ist die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird. `Encoded` ist eine Legacy Form, die in Abschnitt 5 der SOAP-Spezifikation beschrieben wird, und wird für neue Dienste nicht empfohlen. Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.  
+ Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`. `Literal` ist die am häufigsten akzeptierte Form und die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird. `Encoded` ist eine Legacyform, die in Abschnitt 5 der SOAP-Spezifikation beschrieben wird. Sie wird für neue Dienste nicht empfohlen. Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.  
   
  In den meisten Fällen sollten Sie die Standardeinstellungen für die `Style`- und die `Use`-Eigenschaft nicht ändern.  
   

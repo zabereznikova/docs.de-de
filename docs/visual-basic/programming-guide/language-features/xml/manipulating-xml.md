@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb5aed5099d81f8c8898cd61523b90a43f27db78
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330443"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636158"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Bearbeiten von XML in Visual Basic
-*XML-Literale* können zum Laden von XML aus einer externen Quelle verwendet werden, z. b. eine Zeichenfolge, eine Datei oder ein Stream. Anschließend können Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwenden, um den XML-Code zu bearbeiten und [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zum Abfragen der XML-Daten zu verwenden.  
+*XML-Literale* können zum Laden von XML aus einer externen Quelle verwendet werden, z. b. eine Zeichenfolge, eine Datei oder ein Stream. Anschließend können Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwenden, um den XML-Code zu bearbeiten, und Language-Integrated Query (LINQ) verwenden, um den XML-Code abzufragen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Laden von XML aus einer Datei, einer Zeichenfolge oder einem Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569393"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346199"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Anwendungsszenarios (WCF Data Services)
 
@@ -52,9 +52,9 @@ Nutzen eines odata-Feeds in einer AJAX-basierten Client Anwendung.
 
 - [Verwenden eines Datendiensts in einer Clientanwendung](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [Odata: URI-Konventionen](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [Odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 
-- [Odata: JavaScript Object Notation (JSON)-Format](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [Odata: JavaScript Object Notation (JSON)-Format](https://www.odata.org/developers/protocols/json-format/)
 
 Erstellen Sie eine End-to-End-Daten Lösung, die odata zum Übertragen von Daten zwischen Client und Server verwendet.
 

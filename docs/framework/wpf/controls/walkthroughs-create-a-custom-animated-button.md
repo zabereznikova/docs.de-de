@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0f881c19516eb42a71e6cd91d612caf8f5cf7b5e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460064"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636184"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche
 Wie der Name schon sagt, eignet sich Windows Presentation Foundation (WPF) hervorragend für die Erstellung umfassender Präsentations Umgebungen für Kunden. In diesen exemplarischen Vorgehensweisen wird veranschaulicht, wie das Aussehen und Verhalten einer Schaltfläche (einschließlich Animationen) angepasst wird. Diese Anpassung erfolgt mithilfe eines Stils und einer Vorlage, sodass Sie diese benutzerdefinierte Schaltfläche problemlos auf alle Schaltflächen in der Anwendung anwenden können. Die folgende Abbildung zeigt die angepasste Schaltfläche, die Sie erstellen werden.
@@ -28,8 +28,8 @@ Wie der Name schon sagt, eignet sich Windows Presentation Foundation (WPF) hervo
 ## <a name="related-sections"></a>Verwandte Abschnitte
  [Formatieren und](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Vorlagen Beschreibt, wie Stile und Vorlagen verwendet werden können, um die Darstellung und das Verhalten von Steuerelementen zu bestimmen.
 
- [Übersicht über Animationen](../graphics-multimedia/animation-overview.md) Beschreibt, wie Objekte mithilfe des [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Animation-und Zeit Steuerungssystems animiert werden können.
+ [Übersicht über Animationen](../graphics-multimedia/animation-overview.md) Beschreibt, wie Objekte mithilfe des WPF-Animations-und-Zeit Steuerungssystems animiert werden können.
 
  [Übersicht über das Zeichnen mit voll Tonfarben und Farbverläufen](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) Beschreibt, wie Pinsel Objekte zum Zeichnen mit voll Tonfarben, linearen Farbverläufen und radialen Farbverläufen verwendet werden.
 
- [Übersicht über Bitmap-Effekte](../graphics-multimedia/bitmap-effects-overview.md) Beschreibt die von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützten Bitmapeffekte und erläutert, wie Sie angewendet werden.
+ [Übersicht über Bitmap-Effekte](../graphics-multimedia/bitmap-effects-overview.md) Beschreibt die von WPF unterstützten Bitmapeffekte und erläutert, wie Sie angewendet werden.

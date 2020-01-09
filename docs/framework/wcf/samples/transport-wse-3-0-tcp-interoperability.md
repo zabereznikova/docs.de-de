@@ -2,12 +2,12 @@
 title: 'Transport: WSE 3.0-TCP-Interoperabilität'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423871"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544623"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0-TCP-Interoperabilität
 Das WSE 3,0 TCP-Interoperabilitäts Transport-Beispiel veranschaulicht, wie eine TCP-Duplex Sitzung als benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte zeigen, wie dieser benutzerdefinierte WCF-Transport erstellt wird:  
@@ -175,7 +175,7 @@ Symbols:
 1. Um dieses Beispiel ausführen zu können, müssen WSE 3.0 und das WSE-`TcpSyncStockService`-Beispiel installiert sein. Sie können [WSE 3,0 von MSDN](https://go.microsoft.com/fwlink/?LinkId=95000)herunterladen.  
   
 > [!NOTE]
-> Da WSE 3.0 von [!INCLUDE[lserver](../../../../includes/lserver-md.md)] nicht unterstützt wird, können Sie das `TcpSyncStockService`-Beispiel unter diesem Betriebssystem nicht installieren und ausführen.  
+> Da WSE 3,0 nicht unter Windows Server 2008 unterstützt wird, können Sie das `TcpSyncStockService`-Beispiel nicht auf diesem Betriebssystem installieren oder ausführen.  
   
 1. Führen Sie nach der Installation des `TcpSyncStockService`-Beispiels folgende Schritte aus:  
   

@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Herstellen einer Verbindung mit einer Datenbank'
+title: 'Gewusst wie: Verbinden mit einer Datenbank'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 48ff4af2c881104d5699910e20ef86eea0466d2a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 837919b1cfcdf46026ccfb37cbbec951c0ae41b8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793864"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634676"
 ---
-# <a name="how-to-connect-to-a-database"></a>Vorgehensweise: Herstellen einer Verbindung mit einer Datenbank
-Der <xref:System.Data.Linq.DataContext> ist die "Hauptleitung" für die Verbindung zu einer Datenbank, für das Abrufen von Objekten und für das Übergeben von Änderungen. Sie verwenden das <xref:System.Data.Linq.DataContext> genauso wie eine ADO.net. <xref:System.Data.SqlClient.SqlConnection> Tatsächlich wird der <xref:System.Data.Linq.DataContext> mit einer von Ihnen angegebenen Verbindung oder Verbindungszeichenfolge initialisiert. Weitere Informationen finden Sie unter [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
+# <a name="how-to-connect-to-a-database"></a>Gewusst wie: Verbinden mit einer Datenbank
+Der <xref:System.Data.Linq.DataContext> ist die "Hauptleitung" für die Verbindung zu einer Datenbank, für das Abrufen von Objekten und für das Übergeben von Änderungen. Sie verwenden die <xref:System.Data.Linq.DataContext> wie eine ADO.net-<xref:System.Data.SqlClient.SqlConnection>. Tatsächlich wird der <xref:System.Data.Linq.DataContext> mit einer von Ihnen angegebenen Verbindung oder Verbindungszeichenfolge initialisiert. Weitere Informationen finden Sie unter [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
   
- Der Zweck des <xref:System.Data.Linq.DataContext> besteht in der Übersetzung Ihrer Objektanforderungen in SQL-Abfragen für die Datenbank und in der anschließenden Zusammenstellung von Objekten aus den Ergebnissen. Der <xref:System.Data.Linq.DataContext> unterstützt [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] durch die Implementierung des gleichen Operatormusters wie bei den standardmäßigen Abfrageoperatoren, z. B. `Where` und `Select`.  
+ Der Zweck des <xref:System.Data.Linq.DataContext> besteht in der Übersetzung Ihrer Objektanforderungen in SQL-Abfragen für die Datenbank und in der anschließenden Zusammenstellung von Objekten aus den Ergebnissen. Der <xref:System.Data.Linq.DataContext> ermöglicht die sprach integrierte Abfrage (Language-Integrated Query, LINQ), indem das gleiche Operator Muster wie die Standard Abfrage Operatoren wie `Where` und `Select`implementiert wird.  
   
 > [!IMPORTANT]
 > Der Erhalt einer sicheren Verbindung ist von grundlegender Bedeutung. Weitere Informationen finden Sie unter [Security in LINQ to SQL](security-in-linq-to-sql.md).  

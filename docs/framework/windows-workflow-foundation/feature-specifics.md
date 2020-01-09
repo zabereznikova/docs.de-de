@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802595"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345106"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -189,7 +189,7 @@ Eine Flussdiagrammaktivität kann verwendet werden, um ein Ratespiel zu implemen
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>Verfahrensaktivitäten (Sequence, If, ForEach, Switch, Assign, DoWhile, While)
 
-Verfahrensaktivitäten stellen einen Mechanismus bereit, um sequenzielle Ablaufsteuerung mit Konzepten zu modellieren, die Programmierern vertraut sind. Diese Aktivitäten ermöglichen herkömmlich strukturierte Konstrukte der Programmiersprache und stellen ggf. Sprachparität mit allgemeinen Verfahrenssprachen wie C#/VB bereit.
+Verfahrensaktivitäten stellen einen Mechanismus bereit, um sequenzielle Ablaufsteuerung mit Konzepten zu modellieren, die Programmierern vertraut sind. Mit diesen Aktivitäten werden traditionell strukturierte programmierungssprachkonstrukte ermöglicht und, falls zutreffend, die sprach Parität mit gängigen C# prozeduralen Sprachen wie und Visual Basic bereitgestellt.
 
 ### <a name="getting-started"></a>Erste Schritte
 
@@ -231,7 +231,7 @@ Die <xref:System.Activities.Statements.InvokeMethod>-Aktivität erlaubt den Aufr
 
 ## <a name="error-handling-activities"></a>Fehlerbehandlungsaktivitäten
 
-Die <xref:System.Activities.Statements.TryCatch>-Aktivität stellt einen Mechanismus zum Abfangen von Ausnahmen bereit, die während der Ausführung eines Satzes enthaltener Aktivitäten auftreten (vergleichbar mit dem Try/Catch-Konstrukt in C#/VB). <xref:System.Activities.Statements.TryCatch> stellt eine Ausnahmebehandlung auf Workflowebene bereit. Wenn eine nicht behandelte Ausnahme ausgelöst wird, wird der Workflow abgebrochen, und der Finally-Block wird nicht ausgeführt. Dieses Verhalten ist mit C# konsistent.
+Die <xref:System.Activities.Statements.TryCatch>-Aktivität stellt einen Mechanismus zum Abfangen von Ausnahmen bereit, die während der Ausführung eines Satzes enthaltener Aktivitäten auftreten (vergleichbar mit dem Try C# /Catch-Konstrukt in und Visual Basic). <xref:System.Activities.Statements.TryCatch> stellt eine Ausnahmebehandlung auf Workflowebene bereit. Wenn eine nicht behandelte Ausnahme ausgelöst wird, wird der Workflow abgebrochen, und der Finally-Block wird nicht ausgeführt. Dieses Verhalten ist mit C# konsistent.
 
 ### <a name="getting-started"></a>Erste Schritte
 

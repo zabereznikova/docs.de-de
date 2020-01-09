@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: bd210f5119540bd35c18a07a21fc836339222bd0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341358"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348030"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Vorgehensweise: Aufteilen einer Datei in viele Dateien mithilfe von Gruppen (LINQ) (Visual Basic)
 
@@ -116,9 +116,9 @@ End Class
 
 Das Programm schreibt eine separate Datei für jede Gruppe im gleichen Ordner wie die Datendateien.
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+## <a name="compile-the-code"></a>Kompilieren des Codes
 
-Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit einer `Imports`-Anweisung für den System. Linq-Namespace.
+Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.
 
 ## <a name="see-also"></a>Siehe auch
 

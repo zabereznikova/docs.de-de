@@ -5,6 +5,7 @@
 - name: Seitenselektoren
   href: breaking-changes.md
 - name: Nach Version
+  expanded: true
   items:
     - name: 3.0 zu 3.1
       href: 3.0-3.1.md
@@ -12,7 +13,12 @@
       href: 2.2-3.1.md
     - name: 2.2 zu 3.0
       href: 2.2-3.0.md
+    - name: 2.0 zu 2.1
+      href: 2.0-2.1.md
+    - name: .NET Framework zu .NET Core
+      href: fx-core.md
 - name: Nach Bereich
+  expanded: true
   items:
     - name: ASP.NET Core
       href: aspnetcore.md

@@ -1,28 +1,33 @@
 ---
-title: Zusätzliche .NET Core-CLI-Tools
+title: Zusätzliche CLI-Tools
 description: Eine Übersicht über zusätzliche Tools, die Sie zum Unterstützen und Erweitern der .NET Core-Funktionalität installieren können.
 author: mlacouture
-ms.date: 11/27/2018
-ms.custom: mvc, seodec18
-ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.date: 12/02/2019
+ms.custom: mvc
+ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771971"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714537"
 ---
 # <a name="net-core-additional-tools-overview"></a>Zusätzliche .NET Core-Tools – Übersicht
 
 In diesem Abschnitt werden Tools aufgelistet, die die .NET Core-Funktionalität zusätzlich zu den [.NET Core-CLI-Tools](../tools/index.md) unterstützen und erweitern.
 
+## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core-Deinstallationstool](uninstall-tool.md)
+
+Mit dem [.NET Core-Deinstallationstool](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) können Sie veranlassen, dass alle auf einem System installierten .NET Core SDKs und Runtimes entfernt werden, die nicht den angegebenen Versionen entsprechen. Hierfür stehen Ihnen verschiedene Optionen zur Verfügung.
+
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference-Tool](wcf-web-service-reference-guide.md)
 
-Bei WCF Web Service Reference handelt es sich um einen mit Visual Studio verbundenen Dienstanbieter, der zuerst in [Visual Studio 2017 Version 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools) enthalten war. Dieses Tool ruft Metadaten von einem Webdienst in der aktuellen Projektmappe von einer Netzwerkadresse oder aus einer WSDL-Datei ab und generiert eine mit .NET Core kompatible Quelldatei, die eine WCF-Proxyklasse mit Methoden definiert, die Sie verwenden können, um auf die Webdienstvorgänge zuzugreifen.
+Bei WCF Web Service Reference handelt es sich um einen mit Visual Studio verbundenen Dienstanbieter, der zuerst in [Visual Studio 2017 Version 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools) enthalten war. Mit diesem Tool werden Metadaten aus einem Webdienst in der aktuellen Lösung, aus einem Netzwerkspeicherort oder aus einer WSDL-Datei abgerufen. Es generiert eine Quelldatei, die mit .NET Core kompatibel ist, und definiert eine WCF-Proxyklasse mit Methoden, die Sie für den Zugriff auf die Webdienstvorgänge verwenden können.
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF-Tool dotnet-svcutil](dotnet-svcutil-guide.md)
 
-Das WCF-Tool „dotnet-svcutil“ ist ein .NET Core-CLI-Tool, das Metadaten von einem Webdienst aus einem Netzwerkspeicherort oder einer WSDL-Datei abruft und eine mit .NET Core kompatible Quelldatei generiert, die eine WCF-Proxyklasse mit Methoden definiert, die Sie verwenden können, um auf die Webdienstvorgänge zuzugreifen.
-Das Tool **dotnet-svcutil** ist eine alternative Option zum mit Visual Studio verbundenen Dienstanbieter [**WCF Web Service Reference**](wcf-web-service-reference-guide.md), der zuerst in Visual Studio 2017 Version 15.5 enthalten war. Das Tool **dotnet-svcutil** ist plattformübergeifend als .NET Core-CLI-Tool unter Linux, macOS und Windows verfügbar.
+Das WCF-Tool (Windows Communication Foundation) dotnet-svcutil ist ein .NET Core-CLI-Tool, das Metadaten aus einem Webdienst in einem Netzwerk oder aus einer WSDL-Datei abruft. Es generiert eine Quelldatei, die mit .NET Core kompatibel ist, und definiert eine WCF-Proxyklasse mit Methoden, die Sie für den Zugriff auf die Webdienstvorgänge verwenden können.
+
+Das Tool **dotnet-svcutil** ist eine alternative Option zum mit Visual Studio verbundenen Dienstanbieter [**WCF Web Service Reference**](wcf-web-service-reference-guide.md), der zuerst in Visual Studio 2017 Version 15.5 enthalten war. Das .NET Core-CLI-Tool **dotnet-svcutil** ist für Linux, macOS und Windows verfügbar.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet-svcutil.xmlserializer-Tool](dotnet-svcutil.xmlserializer-guide.md)
 

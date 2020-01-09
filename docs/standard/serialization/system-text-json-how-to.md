@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 32c78cc48dcd3d9f2c6e1d338bdbdd359f69879f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283334"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344505"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Serialisieren und Deserialisieren von JSON in .NET
 
@@ -23,7 +23,7 @@ Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt, nicht übe
 
 Der größte Teil des Serialisierungsbeispielcodes legt <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> auf `true` fest, um die JSON-Datei formatiert auszugeben (mit Einzügen und Leerraum für bessere Lesbarkeit). In der produktiven Umgebung würden Sie für diese Einstellung in der Regel den Standardwert `false` beibehalten.
 
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a>-Namespaces
 
 Der <xref:System.Text.Json>-Namespace enthält alle Einstiegspunkte und die Haupttypen. Der <xref:System.Text.Json.Serialization>-Namespace enthält Attribute und APIs für erweiterte Szenarien und Anpassungen, die für die Serialisierung und Deserialisierung spezifisch sind. Die in diesem Artikel gezeigten Codebeispiele erfordern `using`-Direktiven für einen oder beide Namespaces:
 
@@ -184,7 +184,7 @@ Im Folgenden finden Sie eine Beispielklasse, die serialisiert werden soll und di
 
 ## <a name="customize-json-names-and-values"></a>Anpassen von JSON-Namen und -Werten
 
-Standardmäßig sind Eigenschaftsnamen und Wörterbuch-Schlüssel in der JSON-Ausgabe unverändert, einschließlich der Groß-/Kleinschreibung. Enumerationswerte werden als Zahlen dargestellt. In diesem Abschnitt wird Folgendes erläutert:
+Standardmäßig sind Eigenschaftsnamen und Wörterbuch-Schlüssel in der JSON-Ausgabe unverändert, einschließlich der Groß-/Kleinschreibung. Enumerationswerte werden als Zahlen dargestellt. In diesem Abschnitt wird Folgendes beschrieben:
 
 * [Anpassen einzelner Eigenschaftsnamen](#customize-individual-property-names)
 * [Alle Eigenschaftsnamen in Camel-Case konvertieren](#use-camel-case-for-all-json-property-names)
@@ -377,11 +377,11 @@ Um alle Eigenschaften mit NULL-Werten auszuschließen, legen Sie die <xref:Syste
 
 Im folgenden finden Sie ein Beispiel Objekt für die Serialisierung und JSON-Ausgabe:
 
-|Die Eigenschaften- |Wert  |
+|Die Eigenschaften- |{2&gt;Wert&lt;2}  |
 |---------|---------|
-| Date    | 8/1/2019 12:00:00 Uhr-07:00|
+| Datum    | 8/1/2019 12:00:00 Uhr-07:00|
 | TemperatureCelsius| 25 |
-| Zusammenfassung| null|
+| Summary| NULL|
 
 ```json
 {
@@ -460,7 +460,7 @@ Um das Schützen zu minimieren, können Sie <xref:System.Text.Encodings.Web.Java
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serialisieren von Eigenschaften abgeleiteter Klassen
 
-Die polymorphe Serialisierung wird nicht unterstützt, wenn Sie zum Zeitpunkt der Kompilierung angeben, welcher Typ serialisiert werden soll. Nehmen Sie beispielsweise an, Sie verfügen über eine `WeatherForecast`-Klasse und eine abgeleitete Klasse `WeatherForecastWithWind`:
+Die polymorphe Serialisierung wird nicht unterstützt, wenn Sie zum Zeitpunkt der Kompilierung angeben, welcher Typ serialisiert werden soll. Nehmen Sie beispielsweise an, Sie verfügen über eine `WeatherForecast`-Klasse und eine abgeleitete Klasse `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +470,7 @@ Angenommen, das Typargument der `Serialize` Methode zum Zeitpunkt der Kompilieru
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-In diesem Szenario wird die `WindSpeed`-Eigenschaft nicht serialisiert, auch wenn das `weatherForecast`-Objekt tatsächlich ein `WeatherForecastWithWind`-Objekt ist. Es werden nur die Eigenschaften der Basisklasse serialisiert:
+In diesem Szenario wird die `WindSpeed`-Eigenschaft nicht serialisiert, auch wenn das `weatherForecast`-Objekt tatsächlich ein `WeatherForecastDerived`-Objekt ist. Es werden nur die Eigenschaften der Basisklasse serialisiert:
 
 ```json
 {

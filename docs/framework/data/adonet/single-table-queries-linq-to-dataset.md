@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 8807125bd61c71217ca96f3b5a38148ed100073b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f4462f617eb81d30f893b52bdc674e1eee8961c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794374"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634767"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Abfragen für einzelne Tabellen (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]Abfragen arbeiten an Datenquellen, die die <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle <xref:System.Linq.IQueryable%601> oder die-Schnittstelle implementieren. Die <xref:System.Data.DataTable> -Klasse implementiert keine der beiden Schnittstellen, sodass Sie die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> -Methode verwenden müssen, wenn Sie <xref:System.Data.DataTable> das [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] als Quelle in der `From` -Klausel einer Abfrage verwenden möchten.  
+LINQ-Abfragen (Language-Integrated Query) funktionieren bei Datenquellen, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren. Die <xref:System.Data.DataTable>-Klasse implementiert keine der beiden Schnittstellen, daher müssen Sie die <xref:System.Data.DataTableExtensions.AsEnumerable%2A>-Methode verwenden, wenn Sie die <xref:System.Data.DataTable> als Quelle in der `From`-Klausel einer LINQ-Abfrage verwenden möchten.  
   
  Das folgende Beispiel ruft alle Onlinebestellungen aus der Tabelle SalesOrderHeader ab und zeigt in der Konsole die Auftrags-ID, das Auftragsdatum und die Auftragsnummer an.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- Die Abfrage der lokalen Variablen wird mit einem Abfrage Ausdruck initialisiert, der für eine oder mehrere Informationsquellen durch Anwenden eines oder mehrerer Abfrage Operatoren entweder von den Standard Abfrage Operatoren oder, im Fall von LINQ to DataSet, für die <xref:System.Data.DataSet>-Klasse. Der Abfrageausdruck im vorherigen Beispiel verwendet zwei der Standardabfrageoperatoren: `Where` und `Select`.  
+ Die Abfrage der lokalen Variable wird mit einem Abfrage Ausdruck initialisiert, der für eine oder mehrere Informationsquellen durch Anwenden eines oder mehrerer Abfrage Operatoren entweder aus den Standard Abfrage Operatoren oder, im Fall von LINQ to DataSet, für die <xref:System.Data.DataSet> Klasse spezifische Operatoren arbeitet. Der Abfrageausdruck im vorherigen Beispiel verwendet zwei der Standardabfrageoperatoren: `Where` und `Select`.  
   
  Die `Where`-Klausel filtert die Reihenfolge auf der Basis einer Bedingung. In diesem Fall lautet die Bedingung, dass für `OnlineOrderFlag` der Wert `true` gilt. Der `Select`-Operator ordnet ein aufzählbares Objekt zu, das die an den Operator übergebenen Argumente erfasst, und gibt das Objekt zurück. Im Beispiel oben wird ein anonymer Typ mit drei Eigenschaften erstellt: `SalesOrderID`, `OrderDate` und `SalesOrderNumber`. Als Werte für diese drei Eigenschaften werden die Werte der Spalten `SalesOrderID`, `OrderDate` und `SalesOrderNumber` aus der `SalesOrderHeader`-Tabelle verwendet.  
   

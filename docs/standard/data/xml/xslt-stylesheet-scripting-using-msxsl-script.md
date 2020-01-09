@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32695d3bc29693ab4cf1e2f9d721d35598ecfb86
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912049"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344722"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Skripterstellung für ein XSLT-Stylesheet mit \<msxsl:script>
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
@@ -31,7 +31,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Dabei ist `msxsl` ein an den Namespace `urn:schemas-microsoft-com:xslt` gebundenes Präfix.  
   
- Das `language`-Attribut ist nicht zwingend erforderlich. Wenn es jedoch angegeben wird, muss der Wert einer der folgenden sein: C#, VB, JScript, JavaScript, VisualBasic oder CSharp. Wenn es nicht angegeben wird, wird die Standardsprache JScript verwendet. Beim `language-name` wird die Groß- und Kleinschreibung nicht unterschieden, daher sind "JavaScript" und "javascript" identisch.  
+ Das `language`-Attribut ist nicht obligatorisch, aber wenn es angegeben ist, muss sein Wert einer der folgenden sein: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`oder `CSharp`. Wenn es nicht angegeben wird, wird die Standardsprache JScript verwendet. Beim `language-name` wird die Groß- und Kleinschreibung nicht unterschieden, daher sind "JavaScript" und "javascript" identisch.  
   
  Das `implements-prefix`-Attribut ist erforderlich. Mit diesem Attribut wird ein Namespace deklariert und mit dem Skriptblock verknüpft. Der Wert dieses Attributs ist das Präfix, das den Namespace darstellt. Dieser Namespace kann an einer beliebigen Stelle im Stylesheet definiert werden.  
   
@@ -49,7 +49,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. In der folgenden Tabelle werden die Namespaces angezeigt, die standardmäßig unterstützt werden. Sie können Klassen außerhalb der aufgeführten Namespaces verwenden. Diese Klassen müssen jedoch voll qualifiziert sein.  
   
-|Standardnamespaces|BESCHREIBUNG|  
+|Standardnamespaces|Beschreibung|  
 |------------------------|-----------------|  
 |System|Systemklasse.|  
 |System.Collection|Auflistungsklassen.|  
@@ -67,12 +67,12 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
 |----------|----------------------------------------------|-----------------------------|  
 |Zeichenfolge|System.String|XPath|  
-|Boolesch|System.Boolean|XPath|  
-|Anzahl|System.Double|XPath|  
+|Boolean|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |Ergebnisstrukturfragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Knotengruppe|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Wenn die Skriptfunktion einen der numerischen Typen „Int16“, „UInt16“, „Int32“, „UInt32“, „Int64“, „UInt64“, „Single“ oder „Decimal“ verwendet, werden diese Typen in „Double“ umgewandelt, wodurch eine Zuordnung zur XPath-Typnummer des W3C erfolgt. Für alle anderen Typen wird durch einen Aufruf der `ToString`-Methode eine Umwandlung in string erzwungen.  
+ Wenn die Skriptfunktion einen der folgenden numerischen Typen verwendet: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single oder Decimal, werden diese Typen in Double umgewandelt, wodurch eine Zuordnung zur XPath-Typnummer des W3C erfolgt. Für alle anderen Typen wird durch einen Aufruf der `ToString`-Methode eine Umwandlung in string erzwungen.  
   
  Wenn die Skriptfunktion einen anderen als die oben genannten Typen verwendet oder wenn sie beim Laden des Stylesheets in das <xref:System.Xml.Xsl.XslTransform>-Objekt nicht kompiliert wird, wird eine Ausnahme ausgelöst.  
   
@@ -167,7 +167,7 @@ public class Sample
 }  
 ```  
   
-## <a name="input"></a>Eingabe  
+## <a name="input"></a>Input  
  number.xml  
   
 ```xml  
@@ -216,7 +216,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

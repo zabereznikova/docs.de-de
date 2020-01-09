@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 96998b2e625c7e395dd61d6905bc437ef1ca697d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f9fc7e2e1a6d5ee26f04b239723c6b7d4283dbce
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436639"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632320"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "74436639"
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Unterstützung in der Windows Presentation Foundation  
- Windows Presentation Foundation (WPF) ist das neue Modell zum Erstellen von Benutzeroberflächen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente enthalten keine systemeigene Unterstützung für Active Accessibility. Sie unterstützen jedoch [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die die Überbrückungs Unterstützung für Active Accessibility Clients umfasst. Nur speziell für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] geschriebene Clients können die Barrierefreiheitsfeatures von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]optimal nutzen, z. B. die umfangreiche Unterstützung für Text.  
+ Windows Presentation Foundation (WPF) ist das neue Modell zum Erstellen von Benutzeroberflächen. WPF-Elemente enthalten keine systemeigene Unterstützung für Active Accessibility; Sie unterstützen jedoch [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die die Überbrückungs Unterstützung für Active Accessibility Clients umfasst. Nur speziell für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] geschriebene Clients können die Barrierefreiheits Funktionen von WPF in vollem Umfang nutzen, z. b. die umfangreiche Unterstützung für Text.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Server und Clients  
@@ -77,8 +77,8 @@ ms.locfileid: "74436639"
 |ROLE_SYSTEM_CLIENT|Benutzerdefiniert|  
 |ROLE_SYSTEM_LIST|DataGrid|  
 |ROLE_SYSTEM_LISTITEM|Datenelement|  
-|ROLE_SYSTEM_DOCUMENT|Dokument|  
-|ROLE_SYSTEM_TEXT|Bearbeiten|  
+|ROLE_SYSTEM_DOCUMENT|Dokumentieren|  
+|ROLE_SYSTEM_TEXT|Edit|  
 |ROLE_SYSTEM_GROUPING|Gruppe|  
 |ROLE_SYSTEM_LIST|Header|  
 |ROLE_SYSTEM_COLUMNHEADER|Headerelement|  
@@ -94,7 +94,7 @@ ms.locfileid: "74436639"
 |ROLE_SYSTEM_RADIOBUTTON|Optionsfeld|  
 |ROLE_SYSTEM_SCROLLBAR|Bildlaufleiste|  
 |ROLE_SYSTEM_SEPARATOR|Trennzeichen|  
-|ROLE_SYSTEM_SLIDER|Schieberegler|  
+|ROLE_SYSTEM_SLIDER|Slider|  
 |ROLE_SYSTEM_SPINBUTTON|Spinner|  
 |ROLE_SYSTEM_SPLITBUTTON|Unterteilte Schaltfläche|  
 |ROLE_SYSTEM_STATUSBAR|Statusleiste|  
@@ -105,7 +105,7 @@ ms.locfileid: "74436639"
 |ROLE_SYSTEM_INDICATOR|Miniatur|  
 |ROLE_SYSTEM_TITLEBAR|Titelleiste|  
 |ROLE_SYSTEM_TOOLBAR|Symbolleiste|  
-|ROLE_SYSTEM_TOOLTIP|ToolTip|  
+|ROLE_SYSTEM_TOOLTIP|QuickInfo|  
 |ROLE_SYSTEM_OUTLINE|Struktur|  
 |ROLE_SYSTEM_OUTLINEITEM|Strukturelement|  
 |ROLE_SYSTEM_WINDOW|Fenster|  
@@ -137,7 +137,7 @@ ms.locfileid: "74436639"
   
  In der folgenden Tabelle wird gezeigt, welche [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften Active Accessibility Zustands Konstanten entsprechen.  
   
-|Active Accessibility Status|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaft|Löst Zustandsänderung aus?|  
+|Active Accessibility Status|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Löst Zustandsänderung aus?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
 |STATE_SYSTEM_CHECKED|Für Kontrollkästchen ist dies <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Für Optionsfelder ist dies <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  

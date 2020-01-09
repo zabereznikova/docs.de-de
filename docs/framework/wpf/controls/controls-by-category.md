@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005696"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636210"
 ---
 # <a name="controls-by-category"></a>Kategorien von Steuerelementen
 WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschiedene Kategorien eingeteilt werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
@@ -56,7 +56,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Schaltflächen  
- Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe im <xref:System.Windows.Controls.Primitives.ButtonBase.Click>-Ereignis aus, wenn ein Benutzer darauf klickt.  
+ Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe im <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -87,7 +87,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.ToolBar>  
   
-## <a name="selection"></a>Auswahl  
+## <a name="selection"></a>Markierung  
  Auswahlsteuerelemente werden verwendet, damit Benutzer eine oder mehrere Optionen auswählen können.  
   
 - <xref:System.Windows.Controls.CheckBox>  
@@ -100,7 +100,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>Navigation  
+## <a name="navigation"></a>-Navigation  
  Navigationssteuerelemente verbessern oder erweitern die Anwendungsnavigation mithilfe von Zielframes oder Registerkarten.  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -140,7 +140,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Dokumente  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält mehrere spezialisierte Steuerelemente zum Anzeigen von Dokumenten. Diese Steuerelemente optimieren das Leseerlebnis basierend auf dem Zielbenutzerszenario.  
+ WPF enthält mehrere spezielle Steuerelemente zum Anzeigen von Dokumenten. Diese Steuerelemente optimieren das Leseerlebnis basierend auf dem Zielbenutzerszenario.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -152,7 +152,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Eingabe  
+## <a name="input"></a>Input  
  Eingabesteuerelemente ermöglichen dem Benutzer die Eingabe von Text und anderem Inhalt.  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -162,7 +162,7 @@ WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschie
 - <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Medien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält integrierte Unterstützung für das Hosten von Audio- und Videoinhalt sowie [Codecs] für die gängigsten Bildformate.  
+ WPF umfasst integrierte Unterstützung für das Hosting von Audioinhalten und Videoinhalten sowie [Codecs] für die meisten gängigen Bildformate.  
   
 - <xref:System.Windows.Controls.Image>  
   

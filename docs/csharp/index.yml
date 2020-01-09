@@ -6,12 +6,12 @@ metadata:
   description: 'Vermittlung von C#-Programmierkenntnissen: für angehende Entwickler, Entwickler, die neu in C# sind, und erfahrene C#-/.NET-Entwickler'
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
+  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "75303417"
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75339159"
 landingContent:
 - title: Erlernen des Programmierens in C#
   linkLists:
@@ -33,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: .NET Core SDK herunterladen
+    - text: Herunterladen des .NET Core SDK
       url: https://dotnet.microsoft.com/download
 - title: C#-Grundlagen
   linkLists:
@@ -95,6 +95,10 @@ landingContent:
       url: tutorials/mixins-with-default-interface-methods.md
     - text: Arbeiten mit Teilmengen unter Verwendung von Bereichen und Indizes
       url: tutorials/ranges-indexes.md
+  - linkListType: reference
+    links:
+    - text: Wichtige Änderungen beim C#-Compiler
+      url: whats-new/breaking-changes.md
 - title: C#-Programmiersprachenreferenz
   linkLists:
   - linkListType: reference

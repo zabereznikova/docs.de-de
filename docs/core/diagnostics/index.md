@@ -1,16 +1,14 @@
 ---
 title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
-author: sdmaclea
-ms.author: stmaclea
-ms.date: 10/14/2019
+ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0a78ec6c88f5323104277cddea4480a5e13b4e41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318346"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715571"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -22,7 +20,7 @@ Dieser Artikel hilft Ihnen bei der Suche nach den verschiedenen Tools, die Sie b
 
 [Verwaltete Debugger](managed-debuggers.md) ermöglichen Ihnen die Interaktion mit dem Programm. Durch Anhalten, das inkrementelle Ausführen, Untersuchen und Fortsetzen erhalten Sie Erkenntnisse über das Verhalten Ihres Codes. Ein Debugger ist die erste Wahl für die Diagnose funktionaler Probleme, die leicht reproduziert werden können.
 
-## <a name="logging-and-tracing"></a>Protokollierung und Nachverfolgung
+## <a name="logging-and-tracing"></a>Protokollierung und Ablaufverfolgung
 
 Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Techniken. Sie beziehen sich auf das Instrumentieren von Code zum Erstellen von Protokolldateien. In den Dateien werden die Details eines Programms aufgezeichnet. Diese Details können zur Diagnose der kompliziertesten Probleme verwendet werden. In Kombination mit Zeitstempeln sind diese Techniken auch für Leistungsuntersuchungen von Bedeutung.
 
@@ -43,3 +41,9 @@ Mit dem Tool [dotnet-dump](dotnet-dump.md) können Sie Windows- und Linux-Kernsp
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core schließt `EventPipe` ein, worüber Diagnosedaten bereitgestellt werden. Mit dem Tool [dotnet-trace](dotnet-trace.md) können Sie relevante Daten für die Profilerstellung in Ihrer App nutzen. Diese können hilfreich sein, wenn Sie die Ursache für langsame Apps ermitteln müssen.
+
+## <a name="net-core-diagnostics-tutorials"></a>Tutorials zur .NET Core-Diagnose
+
+### <a name="debug-a-memory-leak"></a>Debuggen eines Speicherverlusts
+
+[Tutorial: Debuggen eines Speicherverlusts](debug-memory-leak.md). Hier wird erläutert, wie ein Speicherverlust gefunden wird. Das [dotnet-counters](dotnet-counters.md)-Tool wird zum Bestätigen des Verlusts und das [dotnet-dump](dotnet-dump.md)-Tool zur Diagnose des Verlusts verwendet.

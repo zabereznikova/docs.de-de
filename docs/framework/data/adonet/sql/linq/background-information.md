@@ -2,12 +2,12 @@
 title: Hintergrundinformationen
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248094"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634728"
 ---
 # <a name="background-information"></a>Hintergrundinformationen
 Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die über die Grundlagen der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hinausgehen.  
@@ -18,7 +18,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
   
 - Nehmen Sie am [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488)Teil, in dem Sie komplexere Themen ausführlich mit Experten erörtern können.  
   
-- Lesen Sie das Whitepaper mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Details zur Technologie, die mit C# Visual Basic und Codebeispielen vervollständigt werden. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query für relationale Daten](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Lesen Sie das Whitepaper, in dem Details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Technologie erläutert werden C# , und vervollständigen Sie Visual Basic und Codebeispiele. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query für relationale Daten](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ADO.NET und LINQ to SQL](ado-net-and-linq-to-sql.md)  
@@ -31,7 +31,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  Beschreibt, wie Validierungscode und andere Anpassungen hinzugefügt werden.  
   
  [Datenbindung](data-binding.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] BeschreibtdieVerwendungvonzurunter<xref:System.ComponentModel.IListSource> Stützung der Datenbindung.  
+ Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.ComponentModel.IListSource> zur Unterstützung der Datenbindung verwendet.  
   
  [Unterstützung von Vererbung](inheritance-support.md)  
  Beschreibt die Rolle der Vererbung im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodell und die Verwendung von zugehörigen Operatoren in Ihren Abfragen.  
@@ -51,11 +51,11 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  [Objektzustände und Änderungsverfolgung](object-states-and-change-tracking.md)  
  Stellt ausführliche Informationen darüber bereit, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Änderungen verfolgt.  
   
- [Optimistische Parallelität: Übersicht](optimistic-concurrency-overview.md)  
+ [Vollständige Parallelität: Übersicht](optimistic-concurrency-overview.md)  
  Beschreibt vollständige Parallelität und definiert Begriffe.  
   
  [Abfragekonzepte](query-concepts.md)  
- Beschreibt Aspekte von Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die sich von Abfragen in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] unterscheiden.  
+ Beschreibt Aspekte von Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die sich von Abfragen in LINQ unterscheiden.  
   
  [Abrufen von Objekten aus dem Identitätscache](retrieving-objects-from-the-identity-cache.md)  
  Beschreibt die Typen von Abfragen, die Objekte aus dem Identitäts-Cache abrufen.  

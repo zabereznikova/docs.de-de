@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580708"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636275"
 ---
 # <a name="navigation-topologies-overview"></a>Übersicht über Navigationstopologien
-<a name="introduction"></a>Diese Übersicht bietet eine Einführung in Navigations Topologien in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Anschließend werden drei allgemeine Navigationstopologien mit Beispielen erläutert.  
+<a name="introduction"></a>Diese Übersicht bietet eine Einführung in Navigations Topologien in WPF. Anschließend werden drei allgemeine Navigationstopologien mit Beispielen erläutert.  
   
 > [!NOTE]
-> Bevor Sie dieses Thema lesen, sollten Sie mit dem Konzept der strukturierten Navigation in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mithilfe von Seitenfunktionen vertraut sein. Weitere Informationen zu diesen Themen finden Sie unter Übersicht über die [strukturierte Navigation](structured-navigation-overview.md).  
+> Bevor Sie dieses Thema lesen, sollten Sie mit dem Konzept der strukturierten Navigation in WPF mithilfe von Seitenfunktionen vertraut sein. Weitere Informationen zu diesen Themen finden Sie unter Übersicht über die [strukturierte Navigation](structured-navigation-overview.md).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72580708"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Navigationstopologien  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] besteht die Navigation in der Regel aus Seiten (<xref:System.Windows.Controls.Page>) mit Hyperlinks (<xref:System.Windows.Documents.Hyperlink>), die auf andere Seiten navigieren, wenn darauf geklickt wird. Seiten, zu denen navigiert wird, werden durch Uniform Resource Identifier (URIs) identifiziert (Weitere Informationen finden Sie unter [Paket-URIs in WPF](pack-uris-in-wpf.md)). Sehen Sie sich das folgende einfache Beispiel an, das Seiten, Hyperlinks und URIs (Uniform Resource Identifier) anzeigt:  
+ In WPF besteht die Navigation in der Regel aus Seiten (<xref:System.Windows.Controls.Page>) mit Hyperlinks (<xref:System.Windows.Documents.Hyperlink>), die zu anderen Seiten navigieren, wenn Sie darauf klicken. Seiten, zu denen navigiert wird, werden durch Uniform Resource Identifier (URIs) identifiziert (Weitere Informationen finden Sie unter [Paket-URIs in WPF](pack-uris-in-wpf.md)). Sehen Sie sich das folgende einfache Beispiel an, das Seiten, Hyperlinks und URIs (Uniform Resource Identifier) anzeigt:  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72580708"
   
  Folgende Verhaltensweisen sind für die Navigation über eine feste lineare Topologie typisch:  
   
-- Die Navigation von einer aufrufenden Seite zu einer Starterseite, die den Assistenten initialisiert und zur ersten Seite des Assistenten navigiert. Eine Start Programmseite (ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Loses <xref:System.Windows.Navigation.PageFunction%601>) ist nicht erforderlich, da eine aufrufende Seite die erste Seite des Assistenten direkt aufrufen kann. Durch die Verwendung einer Starterseite kann die Initialisierung des Assistenten jedoch vereinfacht werden.  
+- Die Navigation von einer aufrufenden Seite zu einer Starterseite, die den Assistenten initialisiert und zur ersten Seite des Assistenten navigiert. Eine Start Programmseite (ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Loses <xref:System.Windows.Navigation.PageFunction%601>) ist nicht erforderlich, da eine aufrufende Seite die erste Seite des Assistenten direkt aufrufen kann. Durch die Verwendung einer Starterseite kann die Initialisierung des Assistenten jedoch vereinfacht werden.  
   
 - Benutzer können über die Schaltflächen „Vorwärts“ und „Zurück“ (oder Links) zwischen den Seiten navigieren.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72580708"
   
  Obwohl bei dieser Topologie die Reihenfolge für die Navigation durch die Seiten einer festen hierarchischen Struktur zur Laufzeit bestimmt wird, ist die Benutzererfahrung dieselbe wie bei einer festen linearen Topologie:  
   
-- Die Navigation von einer aufrufenden Seite zu einer Starterseite, die den Assistenten initialisiert und zur ersten Seite des Assistenten navigiert. Eine Start Programmseite (ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Loses <xref:System.Windows.Navigation.PageFunction%601>) ist nicht erforderlich, da eine aufrufende Seite die erste Seite des Assistenten direkt aufrufen kann. Durch die Verwendung einer Starterseite kann die Initialisierung des Assistenten jedoch vereinfacht werden.  
+- Die Navigation von einer aufrufenden Seite zu einer Starterseite, die den Assistenten initialisiert und zur ersten Seite des Assistenten navigiert. Eine Start Programmseite (ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Loses <xref:System.Windows.Navigation.PageFunction%601>) ist nicht erforderlich, da eine aufrufende Seite die erste Seite des Assistenten direkt aufrufen kann. Durch die Verwendung einer Starterseite kann die Initialisierung des Assistenten jedoch vereinfacht werden.  
   
 - Benutzer können über die Schaltflächen „Vorwärts“ und „Zurück“ (oder Links) zwischen den Seiten navigieren.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72580708"
   
  Die Navigationsreihenfolge wird als dynamisch generierte Topologie bezeichnet. Wie bei den anderen Navigationstopologien bleibt die Benutzererfahrung dieselbe:  
   
-- Die Navigation von einer aufrufenden Seite zu einer Starterseite, die den Assistenten initialisiert und zur ersten Seite des Assistenten navigiert. Eine Start Programmseite (ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Loses <xref:System.Windows.Navigation.PageFunction%601>) ist nicht erforderlich, da eine aufrufende Seite die erste Seite des Assistenten direkt aufrufen kann. Durch die Verwendung einer Starterseite kann die Initialisierung des Assistenten jedoch vereinfacht werden.  
+- Die Navigation von einer aufrufenden Seite zu einer Starterseite, die den Assistenten initialisiert und zur ersten Seite des Assistenten navigiert. Eine Start Programmseite (ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Loses <xref:System.Windows.Navigation.PageFunction%601>) ist nicht erforderlich, da eine aufrufende Seite die erste Seite des Assistenten direkt aufrufen kann. Durch die Verwendung einer Starterseite kann die Initialisierung des Assistenten jedoch vereinfacht werden.  
   
 - Benutzer können über die Schaltflächen „Vorwärts“ und „Zurück“ (oder Links) zwischen den Seiten navigieren.  
   

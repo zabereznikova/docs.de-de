@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010279"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559421"
 ---
 # <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet umfangreiche Unterstützung für die Entwicklung weltweit einsatzfähiger Anwendungen.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet umfassende Unterstützung für die Entwicklung von weltweit einsetzbaren Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über WPF-Globalisierung und -Lokalisierung](wpf-globalization-and-localization-overview.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "62010279"
  [Übersicht über die Verwendung eines automatischen Layouts](use-automatic-layout-overview.md)  
  [Lokalisierungsattribute und -kommentare](localization-attributes-and-comments.md)  
  [Übersicht über bidirektionale Features in WPF](bidirectional-features-in-wpf-overview.md)  
- [Themen zu Vorgehensweisen](globalization-and-localization-how-to-topics.md)  
+ [Gewusst wie-Themen](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "62010279"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [xml:lang-Behandlung in XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [xml:lang-Behandlung in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte

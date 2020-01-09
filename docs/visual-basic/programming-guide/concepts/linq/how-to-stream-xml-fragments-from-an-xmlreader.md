@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Streamen von XML-Fragmenten aus einem XmlReader'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346221"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636795"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Gewusst wie: Streamen von XML-Fragmenten aus einem XmlReader-Objekt (Visual Basic)
 Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte XML-Struktur in den Arbeitsspeicher geladen werden. In diesem Thema wird gezeigt, wie mit einem <xref:System.Xml.XmlReader> Fragmente gestreamt werden können.  
@@ -23,7 +23,7 @@ Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte X
  Das Thema Gewusst [wie: Durchführen einer streamingtransformation großer XML-Dokumente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) enthält ein Beispiel für die Verwendung von LINQ to XML, um extrem große XML-Dokumente zu transformieren und gleichzeitig einen geringen Speicherbedarf zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel erstellt eine benutzerdefinierte Achsenmethode. Zum Abfragen kann eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage verwendet werden. Die benutzerdefinierte Achsenmethode `StreamRootChildDoc` eignet sich vor allem zum Lesen eines Dokuments, das ein sich wiederholendes `Child`-Element enthält.  
+ Dieses Beispiel erstellt eine benutzerdefinierte Achsenmethode. Sie können Sie mithilfe einer LINQ-Abfrage Abfragen. Die benutzerdefinierte Achsenmethode `StreamRootChildDoc` eignet sich vor allem zum Lesen eines Dokuments, das ein sich wiederholendes `Child`-Element enthält.  
   
 ```vb  
 Module Module1  

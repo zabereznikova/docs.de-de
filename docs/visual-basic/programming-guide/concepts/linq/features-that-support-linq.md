@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353515"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636860"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Visual Basic-Features, die LINQ unterstützen
-Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich auf Technologie in Visual Basic, die Abfrage Syntax und andere Sprachkonstrukte direkt in der Sprache unterstützt. Mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]müssen Sie keine neue Sprache erlernen, um eine Abfrage für eine externe Datenquelle durchzuführen. Mithilfe Visual Basic können Sie Daten in relationalen Datenbanken, XML-speichern oder Objekten Abfragen. Diese Integration von Abfragefunktionen in die-Sprache ermöglicht die Kompilierzeit Überprüfung für Syntax Fehler und Typsicherheit. Durch diese Integration wird außerdem sichergestellt, dass Sie bereits wissen, was Sie wissen müssen, um umfangreiche, unterschiedliche Abfragen in Visual Basic zu schreiben.  
+Der Name Language-Integrated Query (LINQ) bezieht sich auf Technologie in Visual Basic, die die Abfrage Syntax und andere Sprachkonstrukte direkt in der Sprache unterstützt. Mit LINQ müssen Sie keine neue Sprache erlernen, um eine externe Datenquelle abzufragen. Mithilfe Visual Basic können Sie Daten in relationalen Datenbanken, XML-speichern oder Objekten Abfragen. Diese Integration von Abfragefunktionen in die-Sprache ermöglicht die Kompilierzeit Überprüfung für Syntax Fehler und Typsicherheit. Durch diese Integration wird außerdem sichergestellt, dass Sie bereits wissen, was Sie wissen müssen, um umfangreiche, unterschiedliche Abfragen in Visual Basic zu schreiben.  
   
  In den folgenden Abschnitten werden die Sprachkonstrukte beschrieben, die LINQ in ausreichendem Detail unterstützen, um Ihnen den Einstieg in die Einführungs Dokumentation, Codebeispiele und Beispielanwendungen zu ermöglichen. Sie können auch auf die Links klicken, um ausführlichere Erläuterungen dazu zu erhalten, wie die sprach Features zusammenkommen, um die sprach integrierte Abfrage zu aktivieren. Ein guter Ausgangspunkt ist die exemplarische Vorgehensweise [: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -56,7 +56,7 @@ Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich au
  Weitere Informationen finden Sie unter [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Erweiterungs methoden  
- Erweiterungs Methoden ermöglichen es Ihnen, Methoden zu einem Datentyp oder einer Schnittstelle außerhalb der Definition hinzuzufügen. Mit dieser Funktion können Sie einem vorhandenen Typ neue Methoden hinzufügen, ohne den Typ tatsächlich zu ändern. Die Standard Abfrage Operatoren sind selbst eine Reihe von Erweiterungs Methoden, die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragefunktionen für jeden Typ bereitstellen, der <xref:System.Collections.Generic.IEnumerable%601>implementiert. Andere Erweiterungen <xref:System.Collections.Generic.IEnumerable%601> enthalten <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>und <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Erweiterungs Methoden ermöglichen es Ihnen, Methoden zu einem Datentyp oder einer Schnittstelle außerhalb der Definition hinzuzufügen. Mit dieser Funktion können Sie einem vorhandenen Typ neue Methoden hinzufügen, ohne den Typ tatsächlich zu ändern. Die Standard Abfrage Operatoren sind selbst eine Reihe von Erweiterungs Methoden, die LINQ-Abfragefunktionen für jeden Typ bereitstellen, der <xref:System.Collections.Generic.IEnumerable%601>implementiert. Andere Erweiterungen <xref:System.Collections.Generic.IEnumerable%601> enthalten <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>und <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  Die folgende Erweiterungsmethode fügt der <xref:System.String>-Klasse eine Print-Methode hinzu.  
   
@@ -77,7 +77,7 @@ Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich au
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]unterliegen Lambda-Ausdrücke vielen der Standard Abfrage Operatoren. Der Compiler erstellt Lambda-Ausdrücke, um die Berechnungen zu erfassen, die in grundlegenden Abfrage Methoden wie `Where`, `Select`, `Order By`, `Take While`und anderen definiert sind.  
+ In LINQ unterliegen Lambda-Ausdrücke vielen der Standard Abfrage Operatoren. Der Compiler erstellt Lambda-Ausdrücke, um die Berechnungen zu erfassen, die in grundlegenden Abfrage Methoden wie `Where`, `Select`, `Order By`, `Take While`und anderen definiert sind.  
   
  Der folgende Code definiert z. b. eine Abfrage, die alle leitenden Studenten aus einer Liste von Schülern zurückgibt.  
   

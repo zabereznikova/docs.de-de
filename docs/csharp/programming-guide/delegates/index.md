@@ -1,17 +1,16 @@
 ---
 title: Delegaten – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423306"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705365"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../language-reference/builtin-types/reference-types.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Nach Instanziierung eines Delegaten können Sie die Instanz mit einer beliebigen Methode verknüpfen, die eine kompatible Signatur und einen kompatiblen Rückgabetyp aufweist. Sie können die Methode über die Delegatinstanz aufrufen.  
@@ -52,9 +51,9 @@ Ein [Delegat](../../language-reference/builtin-types/reference-types.md) ist ein
   
 - [Verwenden von Varianz bei Delegaten](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Kombinieren von Delegaten (Multicastdelegaten)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Vorgehensweise: Deklarieren, Instanziieren und Verwenden von Delegaten](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Deklarieren, Instanziieren und Verwenden von Delegaten](./how-to-declare-instantiate-and-use-a-delegate.md)
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 

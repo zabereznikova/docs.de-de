@@ -3,12 +3,12 @@ title: Das .NET Compiler Platform SDK (Roslyn APIs)
 description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706545"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346954"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
@@ -17,7 +17,7 @@ Anstatt eine nicht transparente Übersetzung von Quellcode in Objektcode bereitz
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform-SDK – Begriffe
 
-Das .NET Compiler Platform-SDK vereinfacht die Erstellung von codeabhängigen Tools und Anwendungen um ein Vielfaches. Es schafft zahlreiche Innovationsmöglichkeiten in Bereichen wie etwa folgenden: Metaprogrammierung, Codegenerierung und -transformation, interaktive Nutzung der C#- und VB-Sprachen und Einbettung von C# und VB in domänenspezifischen Sprachen.
+Das .NET Compiler Platform-SDK vereinfacht die Erstellung von codeabhängigen Tools und Anwendungen um ein Vielfaches. Dieses schafft viele Möglichkeiten für Innovationen in Bereichen wie Metaprogrammierung, Codegenerierung und -transformation, die interaktive Verwendung der Programmiersprachen C# und Visual Basic und die Einbettung von C# und Visual Basic in domänenspezifische Sprachen.
 
 Mit dem .NET Compiler Platform-SDK können Sie ***Analysetools*** und ***Codefehlerbehebungen*** erstellen, die Codierungsfehler finden und korrigieren. ***Analysetools*** analysieren die Syntax und Struktur des Codes und erkennen Praktiken, die korrigiert werden sollten. ***Codefehlerbehebungen*** stellen empfohlene Updates zur Behebung von Codierungsfehlern bereit, die von Analysetools gefunden werden. In der Regel werden ein Analysetool und die zugehörigen Codefehlerbehebungen in ein einzelnes Projekt gepackt.
 

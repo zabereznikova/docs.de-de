@@ -7,15 +7,15 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010292"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559408"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Gewusst-wie-Themen zu Globalisierung und Lokalisierung
-Die Themen in diesem Abschnitt wird beschrieben, wie zum Entwickeln von weltweit einsetzbaren Anwendungen.  
+In den Themen in diesem Abschnitt wird beschrieben, wie Sie weltweit einsatzbereite Anwendungen entwickeln können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Lokalisieren einer Anwendung](how-to-localize-an-application.md)  
@@ -31,6 +31,6 @@ Die Themen in diesem Abschnitt wird beschrieben, wie zum Entwickeln von weltweit
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [xml:lang-Behandlung in XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [xml:lang-Behandlung in XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte

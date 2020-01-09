@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a5ad7d8bce9bc0a760868e483278d1836f9472af
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733562"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559702"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Gewusst wie: Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen
 In diesem Beispiel wird gezeigt, wie mithilfe einer <xref:System.Windows.Data.XmlDataProvider>eine Bindung an XML-Daten hergestellt wird.  
@@ -26,7 +26,7 @@ In diesem Beispiel wird gezeigt, wie mithilfe einer <xref:System.Windows.Data.Xm
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Wie in diesem Beispiel veranschaulicht, müssen Sie zur Erstellung derselben Bindungsdeklaration in Attributsyntax die Sonderzeichen ordnungsgemäß mit einem Escapezeichen versehen. Weitere Informationen hierzu finden Sie unter [XML-Zeichenentitäten und XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+ Wie in diesem Beispiel veranschaulicht, müssen Sie zur Erstellung derselben Bindungsdeklaration in Attributsyntax die Sonderzeichen ordnungsgemäß mit einem Escapezeichen versehen. Weitere Informationen hierzu finden Sie unter [XML-Zeichenentitäten und XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md).  
   
  In der <xref:System.Windows.Controls.ListBox> werden die folgenden Elemente angezeigt, wenn dieses Beispiel ausgeführt wird. Das sind die *Title*-Angaben aller Elemente unter *Books*, deren *Stock-Wert* entweder *out* (vergriffen) lautet oder einen *Number*-Wert von 3 bzw. größer gleich 8 aufweist. Beachten Sie, dass keine *CD* -Elemente zurückgegeben werden, da der <xref:System.Windows.Data.XmlDataProvider.XPath%2A> Wert, der auf der <xref:System.Windows.Data.XmlDataProvider> festgelegt ist, angibt, dass nur die *Bücher* Elemente verfügbar gemacht werden sollen (im Grunde ein Filter  
   
@@ -65,4 +65,4 @@ In diesem Beispiel wird gezeigt, wie mithilfe einer <xref:System.Windows.Data.Xm
 - [Verwenden des Master-/Detailmusters mit hierarchischen XML-Daten](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Übersicht über Bindungsquellen](binding-sources-overview.md)
 - [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

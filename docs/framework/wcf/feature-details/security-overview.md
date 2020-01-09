@@ -1,16 +1,16 @@
 ---
-title: Sicherheitsübersicht (WCF)
+title: Sicherheitsübersicht
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949358"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344705"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Übersicht über Windows Communication Foundation Sicherheit
 Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende verteilte Programmierplattform, und das Sichern von Nachrichten zwischen Clients und Diensten ist für den Schutz von Daten entscheidend. WCF bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf der Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
   
 - Beobachtung des Netzwerkverkehrs zum Erhalt vertraulicher Informationen. In einem Onlinebanking-Szenario fordert ein Client die Übertragung von Geldmitteln von einem Konto zu einem anderen an. Ein böswilliger Benutzer fängt die Nachricht ab und gelangt dadurch in den Besitz der Kontonummer und des Kennworts. Später überträgt er vom kompromittierten Konto Geldmittel.  
   
-- Nicht autorisierte Entitäten, die ohne Wissen des Clients als Dienste fungieren. In diesem Szenario fungiert ein böswilliger Benutzer (die nicht autorisierte Person) als Onlinedienst und fängt Nachrichten vom Client ab, um an vertrauliche Informationen zu gelangen. Dann verwendet der böswillige Benutzer die gestohlenen Daten, um Geldmittel vom kompromittierten Konto zu übertragen. Dieser Angriff wird auch als Phishingangriff bezeichnet.  
+- Nicht autorisierte Entitäten, die ohne Wissen des Clients als Dienste fungieren. In diesem Szenario fungiert ein böswilliger Benutzer (die nicht autorisierte Person) als Onlinedienst und fängt Nachrichten vom Client ab, um an vertrauliche Informationen zu gelangen. Dann verwendet der böswillige Benutzer die gestohlenen Daten, um Geldmittel vom kompromittierten Konto zu übertragen. Dieser Angriff wird auch als *Phishingangriff*bezeichnet.  
   
 - Vom Aufrufenden nicht beabsichtigte Ergebnisse aufgrund von Nachrichtenänderung. Beispielsweise ermöglicht die Änderung der Nummer eines Kontos, auf das ein Betrag eingezahlt wird, die Übertragung der Geldmittel auf ein nicht autorisiertes Konto.  
   
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
 ### <a name="standards-and-interoperability"></a>Standards und Interoperabilität  
  In einer Welt mit umfangreichen vorhandenen Bereitstellungen ist Homogenität selten. Zwischen verteilten Berechnungs-/Kommunikationsplattformen und den Technologien anderer Anbieter müssen Interaktionen möglich sein. Ebenso muss auch Sicherheit interoperabel sein.  
   
- Um interoperable Sicherheitssysteme verwenden zu können, haben Unternehmen aus der Webdienstbranche verschiedene Standards entwickelt. Insbesondere hinsichtlich der Sicherheit sind einige wichtige Standards vorgeschlagen: WS-Sicherheit: SOAP-Nachrichten Sicherheit (durch den Oasis-Standardtext und früher als WS-Security bezeichnet), WS-Trust, WS-SecureConversation und WS-SecurityPolicy.  
+ Um interoperable Sicherheitssysteme verwenden zu können, haben Unternehmen aus der Webdienstbranche verschiedene Standards entwickelt. Insbesondere im Hinblick auf Sicherheitsfragen wurden einige wichtige Standards eingeführt: WS-Sicherheit: SOAP-Nachrichtensicherheit (akzeptiert vom OASIS-Standardausschuss, früher als WS-Sicherheit bezeichnet), WS-Trust, WS-SecureConversation und WS-SecurityPolicy.  
   
  WCF unterstützt eine Vielzahl von Interoperabilitäts Szenarien. Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bezieht sich auf das Basic Security Profile (BSP), und die <xref:System.ServiceModel.WSHttpBinding>-Klasse bezieht sich auf die aktuellen Sicherheitsstandards (zum Beispiel WS-Security 1.1 und WS-SecureConversation). Durch Einhalten dieser Standards kann die WCF-Sicherheit zusammenarbeiten und in Webdienste integriert werden, die auf Betriebssystemen und anderen Plattformen als Microsoft Windows gehostet werden.  
   
@@ -94,8 +94,8 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
   
  In WCF werden Zugriffs Steuerungsfunktionen durch Integration in die Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> und durch eine Reihe von APIs bereitgestellt, die als *Identitäts Modell*bezeichnet werden. Ausführliche Informationen zur Zugriffs Steuerung und zur Anspruchs basierten Autorisierung finden Sie unter [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md).  
   
-### <a name="auditing"></a>Überwachung  
- Die Überwachung ist die Protokollierung von Sicherheits Ereignissen im Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Weitere Informationen zur Programmierung finden [Sie unter Gewusst wie: Überwachen von](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)Sicherheits Ereignissen.  
+### <a name="auditing"></a>-Überwachung  
+ Die *Überwachung ist die* Protokollierung von Sicherheits Ereignissen im Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Weitere Informationen zur Programmierung finden [Sie unter Gewusst wie:](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)überwachen von Sicherheits Ereignissen.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
 - [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
 - [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

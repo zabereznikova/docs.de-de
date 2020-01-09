@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740681"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636405"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
-Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen mithilfe der <xref:System.Windows.Window>-Klasse ihre eigenen Fenster bereit. In diesem Thema wird <xref:System.Windows.Window> vorgestellt, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
+Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige WPF-Anwendungen stellen mithilfe der <xref:System.Windows.Window>-Klasse ihre eigenen Fenster bereit. In diesem Thema wird <xref:System.Windows.Window> vorgestellt, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
   
 > [!NOTE]
-> Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich XAML-Browser Anwendungen (XBAPs) und losen [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
+> Im Browser gehostete WPF-Anwendungen, einschließlich XAML-Browser Anwendungen (XBAPs) und lose [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
@@ -49,7 +49,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Ein Fenster wird in zwei Bereiche geteilt: der Nicht-Clientbereich und der Clientbereich.  
   
- Der *nicht-Client Bereich* eines Fensters wird durch [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementiert und umfasst die Teile eines Fensters, die für die meisten Fenster gelten, einschließlich der folgenden:  
+ Der *nicht-Client Bereich* eines Fensters wird von WPF implementiert und umfasst die Teile eines Fensters, die für die meisten Fenster gelten, einschließlich der folgenden:  
   
 - Rahmen  
   
@@ -65,7 +65,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Der *Client Bereich* eines Fensters ist der Bereich im nicht-Client Bereich eines Fensters und wird von Entwicklern verwendet, um anwendungsspezifische Inhalte wie Menüleisten, Symbolleisten und Steuerelemente hinzuzufügen.  
   
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]wird ein Fenster von der <xref:System.Windows.Window>-Klasse gekapselt, die Sie für folgende Aufgaben verwenden:  
+ In WPF wird ein Fenster von der <xref:System.Windows.Window>-Klasse gekapselt, die Sie für folgende Aufgaben verwenden:  
   
 - Anzeigen eines Fensters  
   
@@ -77,7 +77,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementieren eines Fensters  
- Die Implementierung eines typischen Fensters umfasst Darstellung und Verhalten, wobei Darstellung definiert, wie ein Fenster für Benutzer und *Verhalten* aussieht, wie ein Fenster funktioniert *, wenn Benutzer* damit interagieren. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]können Sie die Darstellung und das Verhalten eines Fensters entweder mithilfe von Code oder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementieren.  
+ Die Implementierung eines typischen Fensters umfasst Darstellung und Verhalten, wobei Darstellung definiert, wie ein Fenster für Benutzer und *Verhalten* aussieht, wie ein Fenster funktioniert *, wenn Benutzer* damit interagieren. In WPF können Sie die Darstellung und das Verhalten eines Fensters entweder mithilfe von Code oder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementieren.  
   
  Im Allgemeinen wird jedoch das Aussehen eines Fensters mithilfe von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementiert, und das Verhalten wird mithilfe von Code Behind implementiert, wie im folgenden Beispiel gezeigt.  
   
@@ -124,7 +124,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
 </Project>  
 ```  
   
- Weitere Informationen zum Entwickeln von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen finden Sie unter [Building a WPF Application](building-a-wpf-application-wpf.md).  
+ Weitere Informationen zum Entwickeln von WPF-Anwendungen finden Sie unter [aufbauen einer WPF-Anwendung](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Fensterlebensdauer  
@@ -293,7 +293,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Sie können auch den ursprünglichen Speicherort eines <xref:System.Windows.Window> angeben, wenn er zum ersten Mal angezeigt wird, indem Sie die <xref:System.Windows.Window.WindowStartupLocation%2A>-Eigenschaft mit einem der folgenden <xref:System.Windows.WindowStartupLocation>-Enumerationswerte festlegen:  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner> (Standardwert)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (Standard)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Wenn Sie möchten, dass die Breite und Höhe des Fensters auf die Größe des Fenster Inhalts zugeschnitten ist, können Sie die <xref:System.Windows.Window.SizeToContent%2A>-Eigenschaft mit den folgenden Werten verwenden:  
   
-- <xref:System.Windows.SizeToContent.Manual> Keine Auswirkung (Standard).  
+- <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
   
-- <xref:System.Windows.SizeToContent.Width> An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+- <xref:System.Windows.SizeToContent.Width>. An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
-- <xref:System.Windows.SizeToContent.Height> An die Höhe des Inhalts anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
+- <xref:System.Windows.SizeToContent.Height>. An die Höhe des Inhalts anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> An Inhalts Breite und-Höhe anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts, und das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. An Inhalts Breite und-Höhe anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts, und das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   
@@ -381,7 +381,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Der Zustand eines Fensters kann durch Festlegen der <xref:System.Windows.Window.WindowState%2A>-Eigenschaft konfiguriert werden, die einen der folgenden <xref:System.Windows.WindowState> Enumerationswerte aufweisen kann:  
   
-- <xref:System.Windows.WindowState.Normal> (Standardwert)  
+- <xref:System.Windows.WindowState.Normal> (Standard)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,7 +401,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Größenänderungsmodus  
- Abhängig von der <xref:System.Windows.Window.WindowStyle%2A>-Eigenschaft können Sie steuern, wie (und ob) Benutzer die Größe des Fensters ändern können. Die Auswahl des Fenster Stils wirkt sich darauf aus, ob ein Benutzer die Größe des Fensters ändern kann, indem er seinen Rahmen mit der Maus zieht, ob die Schaltflächen **minimieren**, **maximieren**und **Größe ändern** im nicht-Client Bereich angezeigt werden, und ob Sie angezeigt werden, wenn Sie angezeigt werden. wodurch.  
+ Abhängig von der <xref:System.Windows.Window.WindowStyle%2A>-Eigenschaft können Sie steuern, wie (und ob) Benutzer die Größe des Fensters ändern können. Die Auswahl des Fenster Stils wirkt sich darauf aus, ob ein Benutzer die Größe des Fensters ändern kann, indem er den Rahmen mit der Maus zieht, unabhängig davon, ob die Schaltflächen **minimieren**, **maximieren**und **Größe ändern** im nicht-Client Bereich angezeigt werden, und wenn Sie angezeigt werden, ob Sie aktiviert sind.  
   
  Sie können konfigurieren, wie die Größe eines Fensters geändert wird, indem Sie die <xref:System.Windows.Window.ResizeMode%2A>-Eigenschaft festlegen, die einen der folgenden <xref:System.Windows.ResizeMode> Enumerationswerte aufweisen kann:  
   
@@ -409,7 +409,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize> (Standardwert)  
+- <xref:System.Windows.ResizeMode.CanResize> (Standard)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow> (Standardwert)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (Standard)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

@@ -2,12 +2,12 @@
 title: Abfragen des Inhalts von Dateien in einem Ordner (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347612"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346047"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Abfragen des Inhalts von Dateien in einem Ordner (LINQ) (Visual Basic)
 
@@ -73,9 +73,9 @@ Module Module1
 End Module
 ```
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
+## <a name="compile-the-code"></a>Kompilieren des Codes
 
-Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net, kopieren Sie das Codebeispiel, fügen Sie es ein, und passen Sie den Wert des Start Objekts in den Projekteigenschaften an.
+Erstellen Sie ein Visual Basic Konsolen Anwendungsprojekt, kopieren Sie das Codebeispiel, fügen Sie es ein, und passen Sie den Wert des Start Objekts in den Projekteigenschaften an.
 
 ## <a name="see-also"></a>Siehe auch
 

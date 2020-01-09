@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345315"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347767"
 ---
 # <a name="lifetime-in-visual-basic"></a>Lebensdauer in Visual Basic
 Die *Lebensdauer* eines deklarierten Elements ist die Zeitspanne, in der es zur Verwendung verfügbar ist. Variablen sind die einzigen Elemente, die die Lebensdauer haben. Zu diesem Zweck behandelt der Compiler Prozedur Parameter, und die Funktion gibt als Sonderfälle von Variablen zurück. Die Lebensdauer einer Variablen stellt den Zeitraum dar, in dem ein Wert gespeichert werden kann. Der Wert kann sich über seine Lebensdauer ändern, aber er hat immer einen Wert.  
@@ -65,7 +65,7 @@ Die *Lebensdauer* eines deklarierten Elements ist die Zeitspanne, in der es zur 
   
  Wenn `applesSold` ohne Verwendung `Static`deklariert wurde, werden die vorherigen akkumulierten Werte nicht über Aufrufe von `runningTotal`hinweg beibehalten. Beim nächsten Aufruf von `runningTotal` wurden `applesSold` neu erstellt und auf 0 initialisiert, und `runningTotal` hätte einfach denselben Wert zurückgegeben, mit dem Sie aufgerufen wurde.  
   
-### <a name="compiling-the-code"></a>Kompilieren des Codes  
+### <a name="compile-the-code"></a>Kompilieren des Codes  
  Sie können den Wert einer statischen lokalen Variablen als Teil der Deklaration initialisieren. Wenn Sie ein Array als `Static`deklarieren, können Sie den Rang (Anzahl der Dimensionen), die Länge jeder Dimension und die Werte der einzelnen Elemente initialisieren.  
   
 ### <a name="security"></a>Sicherheit  

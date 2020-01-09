@@ -2,14 +2,14 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968824"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342132"
 ---
-# <a name="servicehost"></a>\@Service Host
+# <a name="servicehost"></a>\@ServiceHost
 Ordnet die Factory zu, die zum Generieren des Diensthosts mit dem zu hostenden Dienst verwendet wird, sowie andere Programmieraspekte, die für den Zugriff und die Kompilierung des in der SVC-Datei enthaltenen Hostingcodes erforderlich sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,8 +35,8 @@ CodeBehind = "CodeBehind"
 #### <a name="debug"></a>Debug  
  Gibt an, ob der Windows Communication Foundation (WCF)-Dienst mit Debugsymbolen kompiliert werden soll. `true`, wenn der WCF-Dienst mit Debugsymbolen kompiliert werden soll. Andernfalls `false`.  
   
-#### <a name="language"></a>Sprache  
- Gibt die Sprache zum Kompilieren des gesamten Inlinecodes in der Datei (SVC) an. Die Werte können jede von .NET unterstützte Sprache darstellen, darunter C#, VB und JS, die sich jeweils auf C#, Visual Basic .NET und JScript .NET beziehen. Dieses Attribut ist optional.  
+#### <a name="language"></a>Language  
+ Gibt die Sprache zum Kompilieren des gesamten Inlinecodes in der Datei (SVC) an. Die Werte können beliebige darstellen. NET-unterstützte Sprache, einschließlich `C#`, `VB`und `JS`, die jeweils auf C#, Visual Basic bzw. JScript .net verweisen. Dieses Attribut ist optional.  
   
 #### <a name="codebehind"></a>CodeBehind  
  Gibt die Quelldatei an, die den XML-Webdienst implementiert, wenn sich die Klasse, die den XML-Webdienst implementiert, nicht in derselben Datei befindet und nicht in eine Assembly kompiliert oder im Verzeichnis \Bin gespeichert wurde.  

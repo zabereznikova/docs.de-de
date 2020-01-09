@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740864"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559434"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme vorgestellt, die beim Schreiben [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen für den globalen Markt zu beachten sind. Die Globalisierungs Programmier Elemente werden in .net im <xref:System.Globalization>-Namespace definiert.
@@ -36,7 +36,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Codierung
+### <a name="encoding"></a>Codierung von
  Die von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] unterstützte Codierung sind ASCII, Unicode UTF-16 und UTF-8. Die Encoding-Anweisung befindet sich am Anfang [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dokuments. Wenn kein Codierungsattribut und keine Bytereihenfolge vorhanden ist, wird der Parser automatisch auf UTF-8 festgelegt. UTF-8 und UTF-16 sind die bevorzugten Codierungen. UTF-7 wird nicht unterstützt. Im folgenden Beispiel wird veranschaulicht, wie eine UTF-8-Codierung in einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei angegeben wird.
 
 ```xaml
@@ -45,7 +45,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Sprachattribut
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verwendet [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) , um das sprach Attribut eines Elements darzustellen.  Um die <xref:System.Globalization.CultureInfo>-Klasse zu nutzen, muss der Wert des sprach Attributs einer der von <xref:System.Globalization.CultureInfo> vordefinierten Kultur Namen sein. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) ist in der Elementstruktur vererbbar (durch XML-Regeln, nicht unbedingt wegen der Vererbung einer Abhängigkeitseigenschaft) und sein Standardwert ist eine leere Zeichenfolge, wenn sie nicht explizit zugeordnet wurde.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verwendet [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) , um das sprach Attribut eines Elements darzustellen.  Wenn Sie die <xref:System.Globalization.CultureInfo>-Klasse nutzen möchten, muss der Wert des sprach Attributs einer der von <xref:System.Globalization.CultureInfo>vordefinierten Kultur Namen sein. [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) ist in der Elementstruktur vererbbar (durch XML-Regeln, nicht unbedingt wegen der Vererbung einer Abhängigkeitseigenschaft) und sein Standardwert ist eine leere Zeichenfolge, wenn sie nicht explizit zugeordnet wurde.
 
  Das Sprachattribut ist für die Angabe von Dialekten sehr nützlich. Französisch verfügt z.B. über Schreibweisen, Vokabular und Aussprache, die in Frankreich, Quebec, Belgien und der Schweiz unterschiedlich sein können. Außerdem teilen Chinesisch, Japanisch und Koreanisch Code Punkte in Unicode, aber die ideografischen Formen sind unterschiedlich und verwenden vollkommen unterschiedliche Schriftarten.
 
@@ -163,7 +163,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- Wenn Sie eine Ressource in Ihrer Anwendung verwenden möchten, instanziieren Sie eine <xref:System.Resources.ResourceManager>, und laden Sie die Ressource, die Sie verwenden möchten. Im folgenden Beispiel wird die dafür erforderliche Vorgehensweise veranschaulicht.
+ Instanziieren Sie eine <xref:System.Resources.ResourceManager>, und laden Sie die gewünschte Ressource, um eine Ressource in Ihrer Anwendung zu verwenden. Im folgenden Beispiel wird die dafür erforderliche Vorgehensweise veranschaulicht.
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
@@ -171,7 +171,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 ## <a name="using-clickonce-with-localized-applications"></a>Verwendung von ClickOnce mit lokalisierten Anwendungen
  ClickOnce ist eine neue Windows Forms Bereitstellungs Technologie, die mit Visual Studio 2005 ausgeliefert wird. Es ermöglicht die Anwendungsinstallation und die Aktualisierung von Webanwendungen. Wenn eine mit ClickOnce bereitgestellte Anwendung lokalisiert ist, kann sie nur in der lokalisierten Kultur angezeigt werden. Wenn eine bereitgestellte Anwendung z. b. in Japanisch lokalisiert ist, kann Sie nur auf japanischen Microsoft Windows-Fenstern angezeigt werden, nicht in englischen Fenstern. Dies stellt ein Problem dar, da es ein gängiges Szenario für japanische Benutzer ist, eine englische Version von Windows auszuführen.
 
- Die Lösung für dieses Problem ist die Festlegung des Attributs der neutralen Fallbacksprache. Ein Anwendungsentwickler kann optional Ressourcen aus der Hauptassembly entfernen und angeben, dass die Ressourcen in einer Satellitenassembly für eine bestimmte Kultur gefunden werden können. Um diesen Prozess zu steuern, verwenden Sie den <xref:System.Resources.NeutralResourcesLanguageAttribute>. Der Konstruktor der <xref:System.Resources.NeutralResourcesLanguageAttribute>-Klasse verfügt über zwei Signaturen: eine, die einen <xref:System.Resources.UltimateResourceFallbackLocation>-Parameter annimmt, um den Speicherort anzugeben, an dem die <xref:System.Resources.ResourceManager> die Fall Back Ressourcen extrahieren soll: Hauptassembly oder Satellitenassembly. Im folgenden Beispiel wird veranschaulicht, wie Sie das Attribut verwenden. Für den endgültigen Fall Back Speicherort bewirkt der Code, dass die <xref:System.Resources.ResourceManager> nach den Ressourcen im Unterverzeichnis "de" des Verzeichnisses der aktuell ausgeführten Assembly sucht.
+ Die Lösung für dieses Problem ist die Festlegung des Attributs der neutralen Fallbacksprache. Ein Anwendungsentwickler kann optional Ressourcen aus der Hauptassembly entfernen und angeben, dass die Ressourcen in einer Satellitenassembly für eine bestimmte Kultur gefunden werden können. Verwenden Sie die <xref:System.Resources.NeutralResourcesLanguageAttribute>, um diesen Prozess zu steuern. Der Konstruktor der <xref:System.Resources.NeutralResourcesLanguageAttribute>-Klasse verfügt über zwei Signaturen: eine, die einen <xref:System.Resources.UltimateResourceFallbackLocation>-Parameter annimmt, um den Speicherort anzugeben, an dem die <xref:System.Resources.ResourceManager> die Fall Back Ressourcen extrahieren soll: Hauptassembly oder Satellitenassembly. Im folgenden Beispiel wird veranschaulicht, wie Sie das Attribut verwenden. Für den endgültigen Fall Back Speicherort bewirkt der Code, dass der <xref:System.Resources.ResourceManager> die Ressourcen im Unterverzeichnis "de" des Verzeichnisses der aktuell ausgeführten Assembly sucht.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

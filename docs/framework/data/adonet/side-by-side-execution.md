@@ -2,12 +2,12 @@
 title: Parallele Ausführung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 0ada258f74338fc7cbc9435fdea8fc896bd2efd6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0355f375de678b2a74f8fdf58e2c58cc0bdf10ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782709"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348008"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Parallele Ausführung in ADO.NET
 Die parallele Ausführung in der .NET Framework ist die Möglichkeit, eine Anwendung auf einem Computer auszuführen, auf dem mehrere Versionen des .NET Framework installiert sind, wobei exklusiv die Version verwendet wird, für die die Anwendung kompiliert wurde. Ausführliche Informationen zum Konfigurieren der parallelen Ausführung finden Sie unter parallele [Ausführung](../../deployment/side-by-side-execution.md).  
@@ -20,30 +20,30 @@ Die parallele Ausführung in der .NET Framework ist die Möglichkeit, eine Anwen
  Abwärtskompatibilität bedeutet, dass eine Anwendung für eine neuere Version des .NET Framework kompiliert wird, aber weiterhin in früheren Versionen der .NET Framework ausgeführt wird, ohne dass die Funktionalität verloren geht. Dies ist natürlich nicht der Fall bei Features, die in einer neuen Version der .NET Framework eingeführt werden.  
   
 ## <a name="the-net-framework-data-provider-for-odbc"></a>Der .NET Framework-Datenanbieter für ODBC  
- Ab Version 1,1 ist der .NET Framework Datenanbieter für ODBC (<xref:System.Data.Odbc>) als Teil des .NET Framework enthalten. Der ODBC-Datenanbieter steht .NET Framework Entwicklern der Version 1,0 als Webdownload aus dem [Developer Center für Datenzugriff und-Speicherung](https://go.microsoft.com/fwlink/?linkid=4173)zur Verfügung. Der Namespace für den heruntergeladenen .NET Framework Datenanbieter für ODBC lautet **Microsoft. Data. ODBC**.  
+ Ab Version 1,1 ist die .NET Framework Datenanbieter für ODBC (<xref:System.Data.Odbc>) als Teil der .NET Framework enthalten.
   
- Wenn Sie über eine Anwendung verfügen, die für die .NET Framework Version 1,0 entwickelt wurde, die den ODBC-Datenanbieter verwendet, um eine Verbindung mit der Datenquelle herzustellen, und Sie diese Anwendung auf der .NET Framework Version 1,1 oder höher ausführen möchten, müssen Sie den Namespace für das ODBC-DAT aktualisieren. ein Anbieter für **System. Data. ODBC**. Sie müssen diese dann für die neuere Version des .NET Framework neu kompilieren.  
+ Wenn Sie über eine Anwendung verfügen, die für die .NET Framework Version 1,0 entwickelt wurde, die den ODBC-Datenanbieter verwendet, um eine Verbindung mit der Datenquelle herzustellen, und Sie diese Anwendung auf der .NET Framework Version 1,1 oder höher ausführen möchten, müssen Sie den Namespace für den ODBC-Datenanbieter auf **System. Data. ODBC**aktualisieren. Sie müssen diese dann für die neuere Version des .NET Framework neu kompilieren.  
   
  Wenn Sie über eine Anwendung verfügen, die für die .NET Framework Version 2,0 oder höher entwickelt wurde, die den ODBC-Datenanbieter verwendet, um eine Verbindung mit Ihrer Datenquelle herzustellen, und Sie diese Anwendung auf der .NET Framework Version 1,0 ausführen möchten, müssen Sie den ODBC-Datenanbieter herunterladen und installieren. auf dem .NET Framework-System, Version 1,0. Anschließend müssen Sie den Namespace für den ODBC-Datenanbieter in **Microsoft. Data. ODBC**ändern und die Anwendung für den .NET Framework, Version 1,0, neu kompilieren.  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>Der .NET Framework-Datenanbieter für Oracle  
- Ab Version 1,1 ist die .NET Framework Datenanbieter für Oracle (<xref:System.Data.OracleClient>) als Teil des .NET Framework enthalten. Der-Datenanbieter ist für die .NET Framework von Entwicklern der Version 1,0 als Webdownload aus dem [Developer Center für Datenzugriff und-Speicherung](https://go.microsoft.com/fwlink/?linkid=4173)verfügbar.  
+ Ab Version 1,1 ist die .NET Framework Datenanbieter für Oracle (<xref:System.Data.OracleClient>) als Teil der .NET Framework enthalten.
   
  Wenn Sie über eine Anwendung verfügen, die für die .NET Framework Version 2,0 oder höher entwickelt wurde, die den Datenanbieter verwendet, um eine Verbindung mit der Datenquelle herzustellen, und Sie diese Anwendung auf der .NET Framework-Version 1,0 ausführen möchten, müssen Sie den Datenanbieter herunterladen und auf der Datei ". ne" installieren. T Framework, Version 1,0, System.  
   
 ## <a name="code-access-security"></a>Codezugriffssicherheit  
- Die .NET Framework-Datenanbieter in .NET Framework Version 1,0 (<xref:System.Data.SqlClient>, <xref:System.Data.OleDb>) müssen mit der FullTrust-Berechtigung ausgeführt werden. Bei jedem Versuch, die .NET Framework k-Datenanbieter aus der .NET Framework Version 1,0 in einer Zone mit der Berechtigung "weniger als FullTrust" zu verwenden, wird eine <xref:System.Security.SecurityException>ausgelöst.  
+ Die .NET Framework-Datenanbieter in der .NET Framework Version 1,0 (<xref:System.Data.SqlClient>, <xref:System.Data.OleDb>) müssen mit der FullTrust-Berechtigung ausgeführt werden. Bei jedem Versuch, die .NET Framework k-Datenanbieter aus der .NET Framework Version 1,0 in einer Zone mit der Berechtigung "weniger als FullTrust" zu verwenden, wird ein <xref:System.Security.SecurityException>ausgelöst.  
   
  Ab der .NET Framework Version 2,0 können alle .NET Framework Datenanbieter jedoch in teilweise vertrauenswürdigen Zonen verwendet werden. Außerdem wurde ein neues Sicherheits Feature zu den .NET Framework-Datenanbietern in der .NET Framework-Version 1,1 hinzugefügt. Mithilfe dieser Funktion können Sie die Verbindungszeichenfolgen einschränken, die in einer bestimmten Sicherheitszone verwendet werden dürfen. Es kann auch die Verwendung leerer Kennwörter für eine bestimmte Sicherheitszone deaktiviert werden. Weitere Informationen finden Sie unter [Code Access Security and ADO.NET](code-access-security.md).  
   
  Da jede Installation des .NET Framework über eine separate Security. config-Datei verfügt, gibt es keine Kompatibilitätsprobleme mit Sicherheitseinstellungen. Wenn Ihre Anwendung jedoch von den zusätzlichen Sicherheitsfunktionen von ADO.net abhängig ist, die in der .NET Framework Version 1,1 und höher enthalten sind, können Sie Sie nicht an ein System der Version 1,0 verteilen.  
   
 ## <a name="sqlcommand-execution"></a>"SqlCommand"-Ausführung  
- Beginnend mit der .NET Framework Version 1,1 wurde die Methode <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> , mit der Befehle in der Datenquelle ausgeführt werden, geändert.  
+ Beginnend mit der .NET Framework Version 1,1 wurde die Methode, mit der <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> Befehle an der Datenquelle ausführt, geändert.  
   
  In der .NET Framework Version 1,0 hat <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> alle Befehle im Kontext der gespeicherten Prozedur **sp_executesql** ausgeführt. Dadurch gelten Befehle, die den Zustand der Verbindung betreffen (z. B. SET NOCOUNT ON), nur für die Ausführung des aktuellen Befehls. Der Zustand der Verbindung wird bei offener Verbindung für keinen der nachfolgenden ausgeführten Befehle verändert.  
   
- In der .NET Framework Version 1,1 und <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> höher führt nur einen Befehl im Kontext der gespeicherten Prozedur **sp_executesql** aus, wenn der Befehl Parameter enthält, was einen Leistungsvorteil bietet. Dadurch verändern Befehle, die den Zustand der Verbindung betreffen und die zu einem Befehl ohne Parameter gehören, den Zustand der Verbindung für alle nachfolgenden, bei offener Verbindung ausgeführten Befehle.  
+ In der .NET Framework Version 1,1 und höher führt <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> nur einen Befehl im Kontext der gespeicherten Prozedur **sp_executesql** aus, wenn der Befehl Parameter enthält, was einen Leistungsvorteil bietet. Dadurch verändern Befehle, die den Zustand der Verbindung betreffen und die zu einem Befehl ohne Parameter gehören, den Zustand der Verbindung für alle nachfolgenden, bei offener Verbindung ausgeführten Befehle.  
   
  Betrachten Sie den folgenden Batch von Befehlen, die in einem Aufruf an <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> ausgeführt werden.  
   
@@ -54,7 +54,7 @@ SELECT * FROM dbo.Customers;
   
  In der .NET Framework Version 1,1 und höher verbleibt NOCOUNT für alle nachfolgenden Befehle, die ausgeführt werden, während die Verbindung geöffnet ist. In der .NET Framework Version 1,0 ist NOCOUNT nur für die aktuelle Befehlsausführung auf on.  
   
- Diese Änderung kann sich auf die vorwärts-und Abwärtskompatibilität Ihrer Anwendung auswirken, wenn Sie vom Verhalten von <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> für eine der beiden Versionen des .NET Framework abhängig sind.  
+ Diese Änderung kann sowohl die vorwärts-als auch die Abwärtskompatibilität Ihrer Anwendung beeinträchtigen, wenn Sie vom Verhalten der <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> für eine der .NET Framework Versionen abhängig sind.  
   
  Bei Anwendungen, die sowohl in früheren als auch höheren Versionen der .NET Framework ausgeführt werden, können Sie Ihren Code schreiben, um sicherzustellen, dass das Verhalten unabhängig von der Version, auf der Sie ausgeführt werden, identisch ist. Um sicherzustellen, dass ein Befehl den Zustand der Verbindung für alle nachfolgenden Befehle verändert, wird empfohlen, den Befehl mit <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> auszuführen. Wenn Sie sicherstellen möchten, dass ein Befehl die Verbindung für alle nachfolgenden Befehle nicht verändert, wird empfohlen, in den Befehl die Befehle zu integrieren, mit denen der Zustand der Verbindung zurückgesetzt wird. Beispiel:  
   

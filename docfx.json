@@ -45,7 +45,8 @@
         "exclude": [
           "**/README.md",
           "inactive/**",
-          "rejected/**"        ]
+          "rejected/**"
+        ]
       },
       {
         "files": [
@@ -88,12 +89,18 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/dotnet/breadcrumb/toc.json",
-      "_displayLangs": ["csharp"],
-      "dev_langs": ["csharp"],
+      "_displayLangs": [
+        "csharp"
+      ],
+      "dev_langs": [
+        "csharp"
+      ],
       "ms.devlang": "dotnet",
       "author": "dotnet-bot",
       "ms.author": "dotnetcontent",
-      "searchScope": [".NET"],
+      "searchScope": [
+        ".NET"
+      ],
       "uhfHeaderId": "MSDocsHeader-DotNet",
       "apiPlatform": "dotnet",
       "ms.prod":"dotnet",
@@ -122,7 +129,12 @@
         "enable_uhf_ppe"
       ],
       "show_latex": true,
-      "disable_contribution_on_translation_quality": ["MT"]
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
     },
     "fileMetadata": {
       "feedback_system": {
@@ -137,7 +149,8 @@
       },
       "feedback_product_url": {
         "docs/fsharp/**/**.md": "https://github.com/Microsoft/visualfsharp",
-        "docs/machine-learning/**/**.md": "https://github.com/dotnet/machinelearning"
+        "docs/machine-learning/**/**.md": "https://github.com/dotnet/machinelearning",
+        "docs/standard/data/sqlite/**/*.md": "https://github.com/aspnet/EntityFrameworkCore"
       },
       "ms.prod": {
         "_csharplang/**/*.md": "dotnet-csharp",
@@ -164,8 +177,12 @@
         "docs/fsharp/language-reference/**/**.md": "language-reference"
       },
       "dev_langs": {
-        "docs/fsharp/**/**.md": ["fsharp"],
-        "docs/visual-basic/**/**.md": ["vb"]
+        "docs/fsharp/**/**.md": [
+          "fsharp"
+        ],
+        "docs/visual-basic/**/**.md": [
+          "vb"
+        ]
       },
       "ms.devlang": {
         "docs/csharp/**/**.md": "csharp",
@@ -235,8 +252,9 @@
         "docs/standard/base-types/**/**.md": "Thraka",
         "docs/standard/collections/**/**.md": "billwagner",
         "docs/standard/data/**/**.md": "gewarren",
+        "docs/standard/data/sqlite/**/**.md": "bricelam",
         "docs/standard/datetime/**/**.md": "Thraka",        
-        "docs/standard/design-guidelines/**/**.md": "mairaw",
+        "docs/standard/design-guidelines/**/**.md": "KrzysztofCwalina",
         "docs/standard/events/**/**.md": "gewarren",
         "docs/standard/exceptions/**/**.md": "tdykstra",
         "docs/standard/garbage-collection/**/**.md": "billwagner",
@@ -319,6 +337,7 @@
         "docs/standard/base-types/**/**.md": "adegeo",
         "docs/standard/collections/**/**.md": "wiwagn",
         "docs/standard/data/**/**.md": "gewarren",
+        "docs/standard/data/sqlite/**/**.md": "bricelam",
         "docs/standard/datetime/**/**.md": "adegeo",        
         "docs/standard/design-guidelines/**/**.md": "mairaw",
         "docs/standard/events/**/**.md": "gewarren",
@@ -411,6 +430,7 @@
         "docs/framework/winforms/**/**.md": "dotnet-winforms",
         "docs/framework/wpf/**/**.md": "dotnet-wpf",
         "docs/framework/xaml-services/**/**.md": "dotnet-wpf",
+        "docs/standard/data/**/**.md": "dotnet-data",
         "docs/standard/security/**/**.md": "dotnet-security",
         "docs/visual-basic/language-reference/error-messages/**/**.md": "vb-diagnostics"
       },
@@ -512,11 +532,8 @@
         "docs/core/versions/**.md": ".NET Core",
         "docs/desktop-wpf/**/**.md": "WPF",
         "docs/machine-learning/**/**.md": "ML.NET",
+        "docs/standard/data/sqlite/**/**.md": "Microsoft.Data.Sqlite",
         "docs/visual-basic/**/**.md": "Visual Basic"
-      },
-      "ms.custom": {
-        "docs/fsharp/tutorials/**/**.md": "seodec18",
-        "docs/fsharp/language-reference/**/**.md": "seodec18"
       },
       "open_to_public_contributors": {
 	      "docs/standard/design-guidelines/**.md": false

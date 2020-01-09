@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837401"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347084"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
 Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich zu machen, muss der Anwendungscode den Namen und Speicherort des Zertifikat Speicher angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels, der einem X. 509-Zertifikat in einem Zertifikat Speicher zugeordnet ist, muss WCF über die entsprechende Berechtigung verfügen. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
@@ -59,7 +59,7 @@ Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich
         |--------------|----------------------|  
         |Client (Konsole oder WinForms-Anwendung)|Aktuell angemeldeter Benutzer|  
         |Selbst gehosteter Dienst|Aktuell angemeldeter Benutzer|  
-        |Dienst, der in IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) oder IIS 7,0 (Windows Vista) gehostet wird.|NETZWERKDIENST|  
+        |Dienst, der in IIS 6,0 (Windows Server 2003) oder IIS 7,0 (Windows Vista) gehostet wird.|NETZWERKDIENST|  
         |Dienst, der in IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) gehostet wird.|Wird durch das `<processModel>`-Element in der Datei Machine.config gesteuert. ASPNET ist das Standardkonto.|  
   
     5. Erteilen Sie mithilfe eines Tools wie "icacls. exe" Lesezugriff auf die Datei, die den privaten Schlüssel für das Konto enthält, unter dem WCF ausgeführt wird.  

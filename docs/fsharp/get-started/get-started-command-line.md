@@ -1,19 +1,19 @@
 ---
 title: Erste Schritte mit F# mit Befehlszeilentools
-description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in F# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOS oder Linux) erstellen.
+description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekten F# unter Verwendung der .net Core-CLI unter einem beliebigen Betriebssystem (Windows, macOS oder Linux) erstellen können.
 ms.date: 03/26/2018
-ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117929"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559486"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Erste Schritte in F# mit der .NET Core-CLI
 
 Dieser Artikel beschreibt, wie Sie mit F# auf jedem Betriebssystem (Windows, MacOS oder Linux) unter Verwendung der .NET Core-CLI beginnen können. Dies wird an der Erstellung einer Projektmappe erläutert, die eine Klassenbibliothek enthält auf die von einer Konsolenanwendung zugegriffen wird.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Sie müssen die neueste Version des [.NET Core SDK](https://dotnet.microsoft.com/download) installieren, um zu beginnen.
 
@@ -41,7 +41,7 @@ Wechseln Sie zu dem Verzeichnis *FSNetCore*.
 Verwenden Sie den Befehl `dotnet new`, um ein neues Klassenbibliotheksprojekt unter dem Pfad **src/Library** zu erstellen.
 
 ```dotnetcli
-dotnet new classlib -lang F# -o src/Library
+dotnet new classlib -lang "F#" -o src/Library
 ```
 
 Nach dem Ausführen des vorherigen Befehls wird die folgende Verzeichnisstruktur erstellt:
@@ -85,7 +85,7 @@ Führen Sie `dotnet build`zum Erstellen des Projekts aus. Beim Erstellen werden 
 Verwenden sie den Befehl `dotnet new`, um eine Konsolenanwendung unter them Pfad **src/App** zu erstellen.
 
 ```dotnetcli
-dotnet new console -lang F# -o src/App
+dotnet new console -lang "F#" -o src/App
 ```
 
 Nach dem Ausführen des vorherigen Befehls wird die folgende Verzeichnisstruktur erstellt:
@@ -131,7 +131,7 @@ Hinzufügen des `App` Projektes zur `FSNetCore` Projektmappe mithilfe des `dotne
 dotnet sln add src/App/App.fsproj
 ```
 
-Stellen Sie die nuget- `dotnet restore` Abhängigkeiten wieder `dotnet build` her, und führen Sie zum Erstellen des Projekts aus.
+Stellen Sie die nuget-Abhängigkeiten wieder her, `dotnet restore` und führen Sie `dotnet build` zum Erstellen des Projekts aus.
 
 Wechseln Sie zum Verzeichnis der `src/App` Konsolenanwendung und führen Sie das Projekt mit `Hello World` as Argumente aus:
 

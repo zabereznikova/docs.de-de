@@ -1,17 +1,17 @@
 ---
-title: Funktionsausdruck
+title: Function-Ausdruck
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function expression [Visual Basic]
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331081"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632336"
 ---
 # <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
 Deklariert die Parameter und den Code, die einen Funktions-Lambda-Ausdruck definieren.  
@@ -30,7 +30,7 @@ End Function
   
 |Begriff|Definition|  
 |---|---|  
-|`parameterlist`|Optional. Eine Liste der Namen der lokalen Variablen, die die Parameter dieser Prozedur darstellen. Die Klammern müssen auch dann vorhanden sein, wenn die Liste leer ist. Siehe [Parameter Liste](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|Dies ist optional. Eine Liste der Namen der lokalen Variablen, die die Parameter dieser Prozedur darstellen. Die Klammern müssen auch dann vorhanden sein, wenn die Liste leer ist. Siehe [Parameter Liste](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`expression`|Erforderlich Ein einzelner Ausdruck. Der Typ des Ausdrucks ist der Rückgabetyp der Funktion.|  
 |`statements`|Erforderlich Eine Liste von-Anweisungen, die mit der `Return`-Anweisung einen Wert zurückgibt. (Siehe [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).) Der Typ des zurückgegebenen Werts ist der Rückgabetyp der Funktion.|  
   
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Beispiel  
- Lambda-Ausdrücke unterliegen vielen der Abfrage Operatoren in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]und können explizit in Methoden basierten Abfragen verwendet werden. Das folgende Beispiel zeigt eine typische [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage, gefolgt von der Übersetzung der Abfrage in das Methoden Format.  
+ Lambda-Ausdrücke unterliegen vielen der Abfrage Operatoren in LINQ (Language-Integrated Query) und können in Methoden basierten Abfragen explizit verwendet werden. Das folgende Beispiel zeigt eine typische LINQ-Abfrage, gefolgt von der Übersetzung der Abfrage in das Methoden Format.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

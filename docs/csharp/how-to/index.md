@@ -2,26 +2,26 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736887"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339222"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
-Im Abschnitt „Vorgehensweise“ des C#-Handbuchs finden Sie schnelle Antworten zu oft gestellten Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein. Diese Artikel sollten somit über verschiedene Suchwege einfach zu finden sein.
+Im Abschnitt zu den Vorgehensweisen des C#-Handbuchs finden Sie Antworten auf häufig gestellte Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein. Diese Artikel sollten somit über verschiedene Suchwege einfach zu finden sein.
 
 ## <a name="general-c-concepts"></a>Allgemeine C#-Konzepte
 
-Es gibt einige Tipps und Tricks, die allgemeine C#-Entwicklungsmethoden sind.
+Die meisten C#-Entwickler nutzen verschiedene Tipps und Tricks, wie diese hier:
 
 - [Initialisieren von Objekten mithilfe eines Objektinitialisierers](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Verwenden der Operatorüberladung](../language-reference/operators/operator-overloading.md).
 - [Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Auch C#-Programmierer sehen einen Nutzen im [Verwenden des `My`-Namespaces aus VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- [Verwenden des Visual Basic-Namespace `My`](../programming-guide/namespaces/how-to-use-the-my-namespace.md)
 - [Erstellen einer neuen Methode für einen `enum`-Typ mithilfe von Erweiterungsmethoden](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Klassen- und Strukturmember

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2c986aab33f2c4dcefb5924ea61e8b9f6b3c50a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785647"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347815"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer Datenbank, zum Ausführen von Befehlen und zum Abrufen von Ergebnissen verwendet. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. .NET Framework Datenanbieter sind einfach, und Sie erstellen eine minimale Ebene zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne die Funktionalität zu beeinträchtigen.  
@@ -19,10 +19,10 @@ Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer 
   
 |.NET Framework-Datenanbieter|Beschreibung|  
 |-------------------------------------------------------------------------------|-----------------|  
-|.NET Framework-Datenanbieter für SQL Server|Ermöglicht den Datenzugriff für Microsoft SQL Server. Verwendet den <xref:System.Data.SqlClient> -Namespace.|  
+|.NET Framework-Datenanbieter für SQL Server|Ermöglicht den Datenzugriff für Microsoft SQL Server. Verwendet den <xref:System.Data.SqlClient> -Namespace.|  
 |.NET Framework-Datenanbieter für OLE DB|Für Datenquellen, die mit OLE DB verfügbar gemacht werden. Verwendet den <xref:System.Data.OleDb> -Namespace.|  
 |.NET Framework-Datenanbieter für ODBC|Für Datenquellen, die mit ODBC verfügbar gemacht werden. Verwendet den <xref:System.Data.Odbc> -Namespace.|  
-|.NET Framework-Datenanbieter für Oracle|Für Oracle-Datenquellen. Die .NET Framework Datenanbieter für Oracle unterstützt Oracle-Client Softwareversion 8.1.7 und höher und verwendet <xref:System.Data.OracleClient> den-Namespace.|  
+|.NET Framework-Datenanbieter für Oracle|Für Oracle-Datenquellen. Die .NET Framework Datenanbieter für Oracle unterstützt Oracle-Client Softwareversion 8.1.7 und höher und verwendet den <xref:System.Data.OracleClient>-Namespace.|  
 |EntityClient-Anbieter|Stellt Datenzugriff für Entity Data Model (EDM)-Anwendungen bereit. Verwendet den <xref:System.Data.EntityClient> -Namespace.|  
 |.NET Framework Datenanbieter für SQL Server Compact 4,0.|Bietet Datenzugriff für Microsoft SQL Server Compact 4,0. Verwendet den Namespace [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
@@ -57,9 +57,9 @@ Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer 
  ![Datenanbieter](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Vergleich des .NET Framework-Datenanbieters für SQL Server und des .NET Framework-Datenanbieters für OLE DB  
   
- Die .NET Framework Datenanbieter für SQL Server-Klassen befinden sich im <xref:System.Data.SqlClient> -Namespace.  
+ Die .NET Framework Datenanbieter für SQL Server-Klassen befinden sich im <xref:System.Data.SqlClient>-Namespace.  
   
- Der .NET Framework Datenanbieter für SQL Server unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt die .NET Framework Datenanbieter für SQL Server standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponenten Diensten oder <xref:System.Transactions>ab. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
+ Der .NET Framework Datenanbieter für SQL Server unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt die .NET Framework Datenanbieter für SQL Server standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponenten Diensten oder-<xref:System.Transactions>ab. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
   
  Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.SqlClient` -Namespace in Anwendungen einbinden können.  
   
@@ -76,7 +76,7 @@ using System.Data.SqlClient;
   
  In der folgenden Tabelle sind die Anbieter aufgeführt, die mit ADO.net getestet wurden.  
   
-|Treiber|Anbieter|  
+|Treiber|anbieter|  
 |------------|--------------|  
 |SQLOLEDB|Microsoft OLE DB-Anbieter für SQL Server|  
 |MSDAORA|Microsoft OLE DB-Anbieter für Oracle|  
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  Die .NET Framework Datenanbieter für OLE DB funktioniert nicht mit dem OLE DB Anbieter für ODBC (MSDASQL). Verwenden Sie für den Zugriff auf eine ODBC-Datenquelle mithilfe von ADO.net die .NET Framework-Datenanbieter für ODBC.  
   
- .NET Framework Datenanbieter für OLE DB-Klassen befinden sich im <xref:System.Data.OleDb> -Namespace. Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.OleDb` -Namespace in Anwendungen einbinden können.  
+ .NET Framework Datenanbieter für OLE DB-Klassen befinden sich im <xref:System.Data.OleDb>-Namespace. Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.OleDb` -Namespace in Anwendungen einbinden können.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC für Oracle|  
 |Microsoft Access Driver (*.mdb)|  
   
- .NET Framework Datenanbieter für ODBC-Klassen befinden sich im <xref:System.Data.Odbc> -Namespace.  
+ .NET Framework Datenanbieter für ODBC-Klassen befinden sich im <xref:System.Data.Odbc>-Namespace.  
   
  Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.Odbc` -Namespace in Anwendungen einbinden können.  
   
@@ -123,14 +123,14 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> Die .NET Framework Datenanbieter für ODBC erfordert MDAC 2,6 oder höher, und MDAC 2,8 SP1 wird empfohlen. Sie können MDAC 2.8 SP1 aus dem [Developer Center für Datenzugriff und -speicherung](https://go.microsoft.com/fwlink/?linkid=4173)herunterladen.  
+> Die .NET Framework Datenanbieter für ODBC erfordert MDAC 2,6 oder höher, und MDAC 2,8 SP1 wird empfohlen. Sie können MDAC 2,8 SP1 aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5793)herunterladen.
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework-Datenanbieter für Oracle  
  Der .NET Framework Datenanbieter für Oracle (OracleClient) ermöglicht den Datenzugriff auf Oracle-Datenquellen über Oracle-Clientkonnektivitätssoftware. Der Datenanbieter unterstützt Oracle-Clientsoftware Version 8.1.7 oder höher. Der Datenanbieter unterstützt sowohl lokale als auch verteilte Transaktionen. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
   
  Die .NET Framework Datenanbieter für Oracle erfordert eine Oracle-Client Software (Version 8.1.7 oder eine höhere Version) im System, bevor Sie eine Verbindung mit einer Oracle-Datenquelle herstellen können.  
   
- .NET Framework Datenanbieter für Oracle-Klassen befinden sich im <xref:System.Data.OracleClient> -Namespace und sind in der `System.Data.OracleClient.dll` -Assembly enthalten. Beim Kompilieren einer Anwendung, die den Datenanbieter verwendet, müssen Sie auf die Dateien `System.Data.dll` und `System.Data.OracleClient.dll` verweisen.  
+ .NET Framework Datenanbieter für Oracle-Klassen befinden sich im <xref:System.Data.OracleClient>-Namespace und sind in der `System.Data.OracleClient.dll` Assembly enthalten. Beim Kompilieren einer Anwendung, die den Datenanbieter verwendet, müssen Sie auf die Dateien `System.Data.dll` und `System.Data.OracleClient.dll` verweisen.  
   
  Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.OracleClient` -Namespace in Anwendungen einbinden können.  
   
@@ -147,15 +147,15 @@ using System.Data.OracleClient;
 ## <a name="choosing-a-net-framework-data-provider"></a>Auswählen eines .NET Framework-Datenanbieters  
  Abhängig vom Entwurf und der Datenquelle für Ihre Anwendung kann die Auswahl des .NET Framework Datenanbieters die Leistung, die Fähigkeit und die Integrität Ihrer Anwendung verbessern. In der folgenden Tabelle werden die Vorteile und Einschränkungen der einzelnen .NET Framework-Datenanbieter erläutert.  
   
-|Anbieter|Hinweise|  
+|anbieter|Hinweise|  
 |--------------|-----------|  
-|.NET Framework-Datenanbieter für SQL Server|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Datenbank-Engine (MSDE) oder SQL Server verwenden.<br /><br /> Es wird empfohlen, den OLE DB Anbieter für SQL Server (SQLOLEDB) mit dem .NET Framework Datenanbieter für OLE DB zu verwenden.|  
+|.NET Framework-Datenanbieter für SQL Server|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Datenbank-Engine (MSDE) oder SQL Server verwenden.<br /><br /> Es wird empfohlen, den OLE DB Anbieter für SQL Server (SQLOLEDB) mit dem .NET Framework Datenanbieter für OLE DB zu verwenden.|  
 |.NET Framework-Datenanbieter für OLE DB|Für SQL Server wird anstelle dieses Anbieters die .NET Framework Datenanbieter für SQL Server empfohlen.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Access-Datenbanken verwenden. Von der Verwendung einer Access-Datenbank für eine Anwendung der mittleren Ebene wird abgeraten.|  
 |.NET Framework-Datenanbieter für ODBC|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die ODBC-Datenquellen verwenden.|  
 |.NET Framework-Datenanbieter für Oracle|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die Oracle-Datenquellen verwenden.|  
   
 ## <a name="entityclient-provider"></a>EntityClient-Anbieter  
- Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
+ Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient-Anbieter für das Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

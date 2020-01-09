@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 9cbd3d52c0e751097a937fa8781171c8c2a0058f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 426e8c43f0ff8af94ab56230cf002637f351cd75
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795042"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634858"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtern mit DataView (LINQ to DataSet)
-Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Zusätzlich zu den Funktionen <xref:System.Data.DataView> für die Zeichen folgen basierte Filterung bietet auch die Möglichkeit, Ausdrücke für die Filterkriterien zu verwenden. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filter Vorgänge als die Zeichen folgen basierte Filterung.  
+Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Zusätzlich zu den Funktionen für die Zeichen folgen basierte Filterung bietet <xref:System.Data.DataView> auch die Möglichkeit, LINQ-Ausdrücke für die Filterkriterien zu verwenden. LINQ-Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filter Vorgänge als die Zeichen folgen basierte Filterung.  
   
  Es gibt zwei Möglichkeiten, Daten mit einer <xref:System.Data.DataView> zu filtern:  
   
-- Erstellen Sie <xref:System.Data.DataView> eine aus einer LINQ to DataSet Abfrage mit einer WHERE-Klausel.  
+- Erstellen Sie eine <xref:System.Data.DataView> aus einer LINQ to DataSet Abfrage mit einer WHERE-Klausel.  
   
 - mittels der vorhandenen Funktionen für das zeichenfolgenbasierte Filtern von <xref:System.Data.DataView>  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Erstellen einer "DataView" auf der Grundlage einer Abfrage mit Filterinformationen  
- Ein <xref:System.Data.DataView> -Objekt kann aus einer LINQ to DataSet-Abfrage erstellt werden. Wenn die Abfrage eine `Where`-Klausel enthält, wird die <xref:System.Data.DataView> mit den Filterinformationen aus der Abfrage erstellt. Der Ausdruck in der `Where`-Klausel wird verwendet, um zu bestimmen, welche Datenzeilen in die <xref:System.Data.DataView> aufgenommen werden. Er bildet gleichzeitig die Basis für den Filter.  
+ Ein <xref:System.Data.DataView>-Objekt kann aus einer LINQ to DataSet Abfrage erstellt werden. Wenn die Abfrage eine `Where`-Klausel enthält, wird die <xref:System.Data.DataView> mit den Filterinformationen aus der Abfrage erstellt. Der Ausdruck in der `Where`-Klausel wird verwendet, um zu bestimmen, welche Datenzeilen in die <xref:System.Data.DataView> aufgenommen werden. Er bildet gleichzeitig die Basis für den Filter.  
   
  Ausdrucksbasierte Filter bieten leistungsfähigere und komplexere Filterfunktionen als die einfacheren zeichenfolgenbasierten Filter. Die zeichenfolgenbasierten und ausdrucksbasierten Filter schließen sich gegenseitig aus. Wenn der zeichenfolgenbasierte <xref:System.Data.DataView.RowFilter%2A> festgelegt wird, nachdem eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt wurde, wird der ausdrucksbasierte Filter, der aus der Abfrage abgeleitet wurde, gelöscht.  
   
@@ -53,7 +53,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-csharp[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvsoundexfilter)]
  [!code-vb[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvsoundexfilter)]  
   
- SoundEx ist ein ursprünglich vom U.S. Census Bureau entwickelter phonetischer Algorithmus, mit dem Namen nach ihrem Klang im Englischen indiziert werden können Statistikbehörde zur Verfügung gestellt. Die SoundEx-Methode gibt für den Namen einen vierstelligen Code zurück, der aus einem Buchstaben und drei Zahlen besteht. Der Buchstabe ist der erste Buchstabe des Namens, und die Zahlen sind die verschlüsselten restlichen Konsonanten im Namen. Ähnlich klingende Namen haben denselben SoundEx-Code. Die in der SoundEx-Methode im vorherigen Beispiel verwendete SoundEx-Implementierung sieht wie folgt aus:  
+ SoundEx ist ein ursprünglich durch das U.S. Census Bureau entwickelter phonetischer Algorithmus, mit dem Namen nach ihrem Klang im Englischen indiziert werden können. Die SoundEx-Methode gibt für den Namen einen vierstelligen Code zurück, der aus einem Buchstaben und drei Zahlen besteht. Der Buchstabe ist der erste Buchstabe des Namens, und die Zahlen sind die verschlüsselten restlichen Konsonanten im Namen. Ähnlich klingende Namen haben denselben SoundEx-Code. Die in der SoundEx-Methode im vorherigen Beispiel verwendete SoundEx-Implementierung sieht wie folgt aus:  
   
  [!code-csharp[DP DataView Samples#SoundEx](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#soundex)]
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
@@ -66,7 +66,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- Nachdem ein <xref:System.Data.DataView> aus einer <xref:System.Data.DataTable> -oder LINQ to DataSet-Abfrage erstellt wurde, können Sie die <xref:System.Data.DataView.RowFilter%2A> -Eigenschaft verwenden, um Teilmengen von Zeilen basierend auf ihren Spaltenwerten anzugeben. Die zeichenfolgenbasierten und ausdrucksbasierten Filter schließen sich gegenseitig aus. Durch Festlegen <xref:System.Data.DataView.RowFilter%2A> der-Eigenschaft wird der Filter Ausdruck gelöscht, der aus der LINQ to DataSet Abfrage abgeleitet wurde, und der Filter Ausdruck kann nicht zurückgesetzt werden.  
+ Nachdem eine <xref:System.Data.DataView> aus einer <xref:System.Data.DataTable> oder LINQ to DataSet Abfrage erstellt wurde, können Sie die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft verwenden, um Teilmengen von Zeilen basierend auf ihren Spaltenwerten anzugeben. Die zeichenfolgenbasierten und ausdrucksbasierten Filter schließen sich gegenseitig aus. Wenn Sie die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft festlegen, wird der Filter Ausdruck gelöscht, der aus der LINQ to DataSet Abfrage abgeleitet wurde, und der Filter Ausdruck kann nicht zurückgesetzt werden.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

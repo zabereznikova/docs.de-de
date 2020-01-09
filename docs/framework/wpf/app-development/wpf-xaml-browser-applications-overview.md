@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424590"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636327"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>XAML-Browser Anwendungen (XBAPs) kombiniert Features von Webanwendungen und Rich-Client-Anwendungen. Wie Webanwendungen können XBAPs auf einem Webserver bereitgestellt werden und aus Internet Explorer oder Firefox gestartet werden. Ebenso wie Rich-Client-Anwendungen können XBAPs die Funktionen von WPF nutzen. Auch die Entwicklung von XBAPs ähnelt der Rich Client-Entwicklung. Dieses Thema bietet eine allgemeine einfache Einführung in die XBAP-Entwicklung und beschreibt die Unterschiede zwischen der Entwicklung von XBAP und standardmäßigen Rich Client-Anwendungen.
@@ -45,13 +45,13 @@ ms.locfileid: "73424590"
 ## <a name="deploying-an-xbap"></a>Bereitstellen einer XBAP
  Wenn Sie eine XBAP erstellen, schließt die Ausgabe die folgenden drei Dateien ein:
 
-|Datei|Beschreibung|
+|File|Beschreibung|
 |----------|-----------------|
 |Ausführbare Datei (.exe)|Diese enthält den kompilierten Code und hat die Erweiterung EXE.|
 |Anwendungsmanifest (.manifest)|Dieses enthält die der Anwendung zugeordneten Metadaten und hat die Erweiterung MANIFEST.|
 |Bereitstellungsmanifest (.xbap)|Diese Datei enthält die Informationen, die von ClickOnce zum Bereitstellen der Anwendung verwendet werden, und hat die Erweiterung ". XBAP".|
 
- Sie können XBAPs auf einem Webserver bereitstellen, z. b. Microsoft Internetinformationsdienste (IIS) 5,0 oder höher. Sie müssen die .NET Framework nicht auf dem Webserver installieren, aber Sie müssen die MIME-Typen ([!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Multipurpose Internet Mail Extensions) und die Dateinamen Erweiterungen registrieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
+ Sie können XBAPs auf einem Webserver bereitstellen, z. b. Microsoft Internetinformationsdienste (IIS) 5,0 oder höher. Sie müssen die .NET Framework nicht auf dem Webserver installieren, aber Sie müssen die MIME-Typen (WPF Multipurpose Internet Mail Extensions) und Dateinamen Erweiterungen registrieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
 
  Zum Vorbereiten der XBAP für die Bereitstellung kopieren Sie die EXE-Datei und die zugeordneten Manifeste auf den Webserver. Erstellen Sie eine HTML-Seite, die einen Link enthält, um das Bereitstellungsmanifest zu öffnen. Dabei handelt es sich um die Datei mit der Erweiterung XBAP. Wenn der Benutzer auf den Link zur XBAP-Datei klickt, verarbeitet ClickOnce automatisch die Mechanismen zum herunterladen und Starten der Anwendung. Im folgenden Beispielcode wird eine HTML-Seite dargestellt, die einen Link enthält, der auf eine XBAP zeigt.
 
@@ -164,11 +164,11 @@ ms.locfileid: "73424590"
     ```
 
 ### <a name="deploying-a-full-trust-xbap"></a>Bereitstellen einer XBAP mit voller Vertrauenswürdigkeit
- Wenn Sie eine vollständig vertrauenswürdige XBAP bereitstellen, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgt, hängt das Verhalten bei der Ausführung der Anwendung durch den Benutzer von der Sicherheitszone ab. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.
+ Wenn Sie eine vollständig vertrauenswürdige XBAP bereitstellen, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgt, hängt das Verhalten bei der Ausführung der Anwendung durch den Benutzer von der Sicherheitszone ab. In einigen Fällen erhält der Benutzer eine Warnung, wenn er versucht, die jeweilige Anwendung zu installieren. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.
 
 |Sicherheitszone|Verhalten|Erhalten der vollen Vertrauenswürdigkeit|
 |-------------------|--------------|------------------------|
-|Lokaler Computer|Automatisch volle Vertrauenswürdigkeit|Es ist keine Aktion erforderlich.|
+|Lokaler Computer|Automatisch volle Vertrauenswürdigkeit|Keine Aktion erforderlich.|
 |Intranet und vertrauenswürdige Websites|Eingabeaufforderung für volle Vertrauenswürdigkeit|Signieren Sie die XBAP mit einem Zertifikat, damit der Benutzer die Quelle in der Eingabeaufforderung sieht.|
 |Internet|Schlägt fehl mit „Vertrauenswürdigkeit nicht gewährt“|Signieren Sie die XBAP mit einem Zertifikat.|
 

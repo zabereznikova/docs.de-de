@@ -1,18 +1,18 @@
 ---
-title: Transaktionsgrundlagen
+title: Transaction Fundamentals
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 2df782a40c74c69981e7c25300acdf18f9de3cde
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ed5865121a32f05f9b58c0ca0fca475fe7b98723
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205857"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346206"
 ---
-# <a name="transaction-fundamentals"></a>Transaktionsgrundlagen
+# <a name="transaction-fundamentals"></a>Transaction Fundamentals
 In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zuerst erstellt sie eine neue Tabelle in einer Datenbank. Danach ruft sie ein spezielles Objekt auf, um Daten zu sammeln, zu formatieren und in die neue Tabelle einzufügen. Diese beiden Aufgaben sind aufeinander bezogen und sogar voneinander abhängig, da nur dann eine neue Tabelle erstellt werden sollte, wenn diese mit Daten gefüllt werden kann. Wenn beide Aufgaben im Bereich einer Transaktion ausgeführt werden, wird die zwischen ihnen bestehende Beziehung verstärkt. Falls die zweite Aufgabe fehlschlägt, wird die erste Aufgabe bis zu einem Punkt rückgängig gemacht, der vor der Erstellung der Tabelle liegt.  
   
- Um ein vorhersagbares Verhalten sicherzustellen, müssen alle Transaktionen die vier grundlegenden Eigenschaften Unteilbarkeit, Konsistenz, Isolation und Dauerhaftigkeit besitzen. Diese Eigenschaften verstärken der Rolle termingebundener Transaktionen als Projekte, die entweder ganz oder gar nicht ausgeführt werden. Weitere Informationen zu Acid finden Sie unter [ACID-Eigenschaften](https://go.microsoft.com/fwlink/?LinkId=98791). Durch diese vier Eigenschaften wird also garantiert, dass ein Satz verwandter Aufgaben entweder insgesamt erfolgreich ausgeführt wird oder fehlschlägt. In der Terminologie der Transaktionsverarbeitung heißt dies, dass für eine Transaktion entweder ein Commit oder ein Rollback durchgeführt wird. Damit für eine Transaktion ein Commit ausgeführt werden kann, müssen alle Teilnehmer garantieren, ausschließlich permanente Änderungen an Daten vorzunehmen. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Wenn auch nur ein einziger Teilnehmer dies nicht garantieren kann, schlägt die gesamte Transaktion fehl. Alle Änderungen an Daten, die im Bereich der Transaktion vorgenommen wurden, werden bis zu einem bestimmten definierten Punkt rückgängig gemacht.  
+ Um ein vorhersagbares Verhalten sicherzustellen, müssen alle Transaktionen die vier grundlegenden Eigenschaften Unteilbarkeit, Konsistenz, Isolation und Dauerhaftigkeit besitzen. Diese Eigenschaften verstärken der Rolle termingebundener Transaktionen als Projekte, die entweder ganz oder gar nicht ausgeführt werden. Weitere Informationen zu Acid finden Sie unter [ACID-Eigenschaften](/windows/win32/cossdk/acid-properties). Durch diese vier Eigenschaften wird also garantiert, dass ein Satz verwandter Aufgaben entweder insgesamt erfolgreich ausgeführt wird oder fehlschlägt. In der Terminologie der Transaktionsverarbeitung heißt dies, dass für eine Transaktion entweder ein Commit oder ein Rollback durchgeführt wird. Damit für eine Transaktion ein Commit ausgeführt werden kann, müssen alle Teilnehmer garantieren, ausschließlich permanente Änderungen an Daten vorzunehmen. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Wenn auch nur ein einziger Teilnehmer dies nicht garantieren kann, schlägt die gesamte Transaktion fehl. Alle Änderungen an Daten, die im Bereich der Transaktion vorgenommen wurden, werden bis zu einem bestimmten definierten Punkt rückgängig gemacht.  
   
  Eine Transaktion kann auf eine einzelne Datenressource beschränkt werden, z.&#160;B. eine Datenbank oder eine Meldungswarteschlange. In diesem Szenario wird die lokale Transaktion vom dem in <xref:System.Transactions> verfügbaren Transaktions-Manager verwaltet, Da sie von der Datenressource gesteuert werden, sind diese Transaktionen effizient und leicht zu verwalten.  
   
@@ -20,9 +20,9 @@ In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#1
   
  Wenn Sie mithilfe der in <xref:System.Transactions> verfügbaren Klassen eine Transaktionsanwendung entwickeln, müssen Sie weder um den erforderlichen Typ von Transaktion noch um den benötigten Transaktions-Manager Gedanken machen. Die <xref:System.Transactions>-Infrastruktur verwaltet diese automatisch für Sie.  
   
- Beim Erstellen einer Transaktion können Sie die Isolationsstufe angeben, die für die Transaktion gelten soll. Die Isolationsstufe, die von <xref:System.Transactions.IsolationLevel> der-enum definiert wird, bestimmt, welche Zugriffsebene andere Transaktionen auf die von der Transaktion betroffenen Daten haben.  
+ Beim Erstellen einer Transaktion können Sie die Isolationsstufe angeben, die für die Transaktion gelten soll. Die Isolationsstufe, die durch die <xref:System.Transactions.IsolationLevel>-Aufzählung definiert ist, bestimmt, welche Zugriffsebene andere Transaktionen auf die Daten haben, die von der Transaktion betroffen sind.  
   
- Transaktionen können mit ADO.net, <xref:System.EnterpriseServices>oder dem <xref:System.Transactions> vom-Namespace bereitgestellten Transaktions Programmiermodell erstellt werden. Im Thema [System. Transactions-Funktionen werden](features-provided-by-system-transactions.md) die Funktionen erläutert, die Sie zum Schreiben einer Transaktions Anwendung mit dem <xref:System.Transactions> -Namespace verwenden können.  
+ Sie können Transaktionen mit ADO.net, <xref:System.EnterpriseServices>oder dem transaktionalen Programmiermodell erstellen, das vom <xref:System.Transactions>-Namespace bereitgestellt wird. In den [vom System. Transactions-Thema bereitgestellten Funktionen werden](features-provided-by-system-transactions.md) die Funktionen erläutert, die Sie zum Schreiben einer Transaktions Anwendung mithilfe des <xref:System.Transactions>-Namespace verwenden können.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425328"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636340"
 ---
 # <a name="structured-navigation-overview"></a>Übersicht über die strukturierte Navigation
 
@@ -135,7 +135,7 @@ Es ist nicht erforderlich, Parameter an die aufgerufene Seite zu übergeben. Sie
 
   - Rufen Sie die in <xref:System.Windows.Application.Properties%2A>gespeicherten Parameter ab, und verwenden Sie Sie.
 
-Sie müssen jedoch weiterhin Code verwenden, um die aufgerufene Seite zu instanzieren und zu dieser zu navigieren, sodass die von der aufgerufenen Seite zurückgegebenen Daten erfasst werden können (siehe Beschreibung weiter unten). Aus diesem Grund muss die <xref:System.Windows.Navigation.PageFunction%601> aufrechterhalten werden. Andernfalls wird bei der nächsten Navigation zum <xref:System.Windows.Navigation.PageFunction%601>[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] die <xref:System.Windows.Navigation.PageFunction%601> mit dem Parameter losen Konstruktor instanziiert.
+Sie müssen jedoch weiterhin Code verwenden, um die aufgerufene Seite zu instanzieren und zu dieser zu navigieren, sodass die von der aufgerufenen Seite zurückgegebenen Daten erfasst werden können (siehe Beschreibung weiter unten). Aus diesem Grund muss die <xref:System.Windows.Navigation.PageFunction%601> aufrechterhalten werden. Andernfalls instanziiert WPF beim nächsten navigieren zum <xref:System.Windows.Navigation.PageFunction%601>die <xref:System.Windows.Navigation.PageFunction%601> mit dem Parameter losen Konstruktor.
 
 Bevor die aufgerufene Seite wieder angezeigt werden kann, muss sie die Daten zurückgeben, die von der aufrufenden Seite abgerufen werden können.
 

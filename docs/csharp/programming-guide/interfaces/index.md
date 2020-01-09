@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120153"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635235"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -62,17 +62,17 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 [Explizite Schnittstellenimplementierung](explicit-interface-implementation.md)  
  Erläutert das Erstellen eines für eine Schnittstelle spezifischen Klassenmembers.  
   
- [Vorgehensweise: Explizites Implementieren von Schnittstellenmembern](how-to-explicitly-implement-interface-members.md)  
+ [Explizites Implementieren von Schnittstellenmembern](how-to-explicitly-implement-interface-members.md)  
  Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern.  
   
- [Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Explizites Implementieren von Membern zweier Schnittstellen](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern mit Vererbung.  
   
 ## <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte
 
 - [Schnittstelleneigenschaften](../classes-and-structs/interface-properties.md)  
 - [Indexer in Schnittstellen](../indexers/indexers-in-interfaces.md)  
-- [Vorgehensweise:  Implementieren von Schnittstellenereignissen](../events/how-to-implement-interface-events.md)  
+- [Implementieren von Schnittstellenereignissen](../events/how-to-implement-interface-events.md)
 - [Klassen und Strukturen](../classes-and-structs/index.md)  
 - [Vererbung](../classes-and-structs/inheritance.md)  
 - [Methoden](../classes-and-structs/methods.md)  

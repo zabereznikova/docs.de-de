@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455317"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636548"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
-<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig können HTML-und Client seitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Windows Presentation Foundation da vom Browser gehostete WPF-Anwendungen (WPF) über den Browser gestartet werden können, sollten Sie einen ähnlichen Satz von Einschränkungen einhalten. Um diese Einschränkungen zu erzwingen, sind [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sowohl von der Code Zugriffssicherheit (CAS) als auch von ClickOnce abhängig (siehe [WPF Security Strategy-Platform Security](wpf-security-strategy-platform-security.md)). Standardmäßig fordern von einem Browser gehostete Anwendungen den Berechtigungs Satz für Internet Zonen-CAS an, unabhängig davon, ob Sie über das Internet, das lokale Intranet oder den lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
+<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig können HTML-und Client seitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Windows Presentation Foundation da vom Browser gehostete WPF-Anwendungen (WPF) über den Browser gestartet werden können, sollten Sie einen ähnlichen Satz von Einschränkungen einhalten. Um diese Einschränkungen zu erzwingen, basiert WPF sowohl auf der Code Zugriffssicherheit (CAS) als auch auf ClickOnce (siehe [WPF Security Strategy-Platform Security](wpf-security-strategy-platform-security.md)). Standardmäßig fordern von einem Browser gehostete Anwendungen den Berechtigungs Satz für Internet Zonen-CAS an, unabhängig davon, ob Sie über das Internet, das lokale Intranet oder den lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bietet eine Vielzahl von Unterstützung, um sicherzustellen, dass so viele Funktionen wie möglich sicher bei teilweiser Vertrauenswürdigkeit eingesetzt werden können, und bietet zusätzliche Unterstützung für teilweise vertrauenswürdige Programmierung.  
+ WPF bietet eine Vielzahl von Unterstützung, um sicherzustellen, dass so viele Funktionen wie möglich sicher bei teilweiser Vertrauenswürdigkeit eingesetzt werden können, und bietet zusätzliche Unterstützung für teilweise vertrauenswürdige Programmierung.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -44,13 +44,13 @@ ms.locfileid: "73455317"
 |Bereich „Funktionen“|Feature|  
 |------------------|-------------|  
 |Allgemein|Browserfenster<br /><br /> Zugriff auf Ursprungswebsite<br /><br /> IsolatedStorage (beschränkt auf 512 KB)<br /><br /> UIAutomation-Anbieter<br /><br /> Befehle<br /><br /> Eingabemethoden-Editoren (Input Method Editors, IMEs)<br /><br /> Tablettstift und Freihandeingaben<br /><br /> Simuliertes Drag & Drop mit Ereignissen für Mausaufzeichnung und Bewegen<br /><br /> OpenFileDialog<br /><br /> XAML-Deserialisierung (über XamlReader.Load)|  
-|Webintegration|Download-Dialogfeld des Browsers<br /><br /> Vom Benutzer initiierte Navigation auf oberster Ebene<br /><br /> mailto:links<br /><br /> Uniform Resource Identifier-Parameter<br /><br /> HTTPWebRequest<br /><br /> In einem IFRAME gehosteter WPF-Inhalt<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe eines Frames<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe von WebBrowser<br /><br /> Webdienste (ASMX)<br /><br /> Webdienste (über Windows Communication Foundation)<br /><br /> Skripterstellung<br /><br /> Dokumentobjektmodell|  
+|Webintegration|Download-Dialogfeld des Browsers<br /><br /> Vom Benutzer initiierte Navigation auf oberster Ebene<br /><br /> mailto:links<br /><br /> Uniform Resource Identifier-Parameter<br /><br /> HTTPWebRequest<br /><br /> In einem IFRAME gehosteter WPF-Inhalt<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe eines Frames<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe von WebBrowser<br /><br /> Webdienste (ASMX)<br /><br /> Webdienste (über Windows Communication Foundation)<br /><br /> Skripts<br /><br /> Dokumentobjektmodell|  
 |Visuelle Objekte|2D und 3D<br /><br /> Animation<br /><br /> Medien (Ursprungswebsite und domänenübergreifend)<br /><br /> Imaging/Audio/Video|  
 |Lesen|FlowDocuments<br /><br /> XPS-Dokumente<br /><br /> Eingebettete Schriftarten und Systemschriftarten<br /><br /> CFF- und TrueType-Schriftarten|  
 |Bearbeiten|Rechtschreibprüfung<br /><br /> RichTextBox<br /><br /> Unterstützung der Zwischenablage bei Nur-Text und Freihand<br /><br /> Vom Benutzer initiiertes Einfügen<br /><br /> Kopieren von markiertem Inhalt|  
 |Steuerelemente|Allgemeine Steuerelemente|  
   
- In dieser Tabelle werden die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Features auf hoher Ebene behandelt. Ausführliche Informationen finden Sie in der Windows SDK werden die Berechtigungen dokumentiert, die für jedes Element in [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
+ In dieser Tabelle werden die WPF-Features auf hoher Ebene behandelt. Ausführlichere Informationen finden Sie in der Windows SDK werden die Berechtigungen dokumentiert, die für die einzelnen Member in WPF erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (siehe [Übersicht über XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
@@ -66,30 +66,30 @@ ms.locfileid: "73455317"
   
 - Datei öffnen (Dialog Feld) (siehe <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Features beschrieben, die innerhalb der Grenzen des Berechtigungs Satzes für die Internet Zone nicht sicher ausgeführt werden können.  
+ In der folgenden Tabelle werden die WPF-Funktionen beschrieben, die nicht sicher innerhalb der Grenzen des Berechtigungs Satzes für die Internet Zone ausgeführt werden können.  
   
  Tabelle 2: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit nicht sicher sind  
   
 |Bereich „Funktionen“|Feature|  
 |------------------|-------------|  
-|Allgemein|Fenster (anwendungsdefinierte Fenster und Dialogfelder)<br /><br /> SaveFileDialog<br /><br /> Dateisystem<br /><br /> Zugriff auf die Registrierung<br /><br /> Drag & Drop<br /><br /> XAML-Serialisierung (über XamlWriter.Save)<br /><br /> UIAutomation-Clients<br /><br /> Zugriff auf das Quellcodefenster (HwndHost)<br /><br /> Vollständige Sprachunterstützung<br /><br /> Windows Forms-Interoperabilität|  
+|Allgemein|Fenster (anwendungsdefinierte Fenster und Dialogfelder)<br /><br /> SaveFileDialog<br /><br /> Dateisystem<br /><br /> Zugriff auf die Registrierung<br /><br /> Drag &amp; Drop<br /><br /> XAML-Serialisierung (über XamlWriter.Save)<br /><br /> UIAutomation-Clients<br /><br /> Zugriff auf das Quellcodefenster (HwndHost)<br /><br /> Vollständige Sprachunterstützung<br /><br /> Windows Forms-Interoperabilität|  
 |Visuelle Objekte|Bitmapeffekte<br /><br /> Bildcodierung|  
 |Bearbeiten|Rich-Text-Format-Zwischenablage<br /><br /> Vollständige XAML-Unterstützung|  
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programmieren für teilweise Vertrauenswürdigkeit  
- Bei XBAP-Anwendungen hat Code, der den Standard Berechtigungs Satz überschreitet, abhängig von der Sicherheitszone ein anderes Verhalten. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
+ Bei XBAP-Anwendungen hat Code, der den Standard Berechtigungs Satz überschreitet, abhängig von der Sicherheitszone ein anderes Verhalten. In einigen Fällen erhält der Benutzer eine Warnung, wenn er versucht, die jeweilige Anwendung zu installieren. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
   
 |Sicherheitszone|Verhalten|Erhalten der vollen Vertrauenswürdigkeit|  
 |-------------------|--------------|------------------------|  
-|Lokaler Computer|Automatisch volle Vertrauenswürdigkeit|Es ist keine Aktion erforderlich.|  
+|Lokaler Computer|Automatisch volle Vertrauenswürdigkeit|Keine Aktion erforderlich.|  
 |Intranet und vertrauenswürdige Websites|Eingabeaufforderung für volle Vertrauenswürdigkeit|Signieren Sie die XBAP mit einem Zertifikat, damit der Benutzer die Quelle in der Eingabeaufforderung sieht.|  
 |Internet|Schlägt fehl mit „Vertrauenswürdigkeit nicht gewährt“|Signieren Sie die XBAP mit einem Zertifikat.|  
   
 > [!NOTE]
 > Das in der vorherigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce-Modell für vertrauenswürdige Bereitstellung entsprechen.  
   
- Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. CAS und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten verschiedene Verfahren für die Verwaltung dieses Szenarios.  
+ Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. CAS und WPF bieten verschiedene Verfahren zum Verwalten dieses Szenarios.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Erkennen von Berechtigungen mit CAS  
@@ -128,19 +128,19 @@ ms.locfileid: "73455317"
   
  Tabelle 3: LocalIntranet- und Internetberechtigungen  
   
-|Berechtigung|Attribut|LocalIntranet|Internet|  
+|Berechtigung|Attribute|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Zugriff auf DNS-Server|Ja|Nein|  
-|Umgebungsvariablen|Lesen|Ja|Nein|  
+|Umgebungsvariablen|Siehe|Ja|Nein|  
 |Dateidialogfelder|Öffnen|Ja|Ja|  
 |Dateidialogfelder|Uneingeschränkt|Ja|Nein|  
-|Isolierte Speicherung|Assemblyisolation durch Benutzer|Ja|Nein|  
-|Isolierte Speicherung|Unbekannte isolation|Ja|Ja|  
-|Isolierte Speicherung|Unbegrenztes Benutzerkontingent|Ja|Nein|  
+|Isolierter Speicher|Assemblyisolation durch Benutzer|Ja|Nein|  
+|Isolierter Speicher|Unbekannte isolation|Ja|Ja|  
+|Isolierter Speicher|Unbegrenztes Benutzerkontingent|Ja|Nein|  
 |Medien|Sicherheit für Audio, Video und Bilder|Ja|Ja|  
-|Drucken|Standarddruck|Ja|Nein|  
-|Drucken|Sicheres Drucken|Ja|Ja|  
-|Spiegelung|Ausgabe|Ja|Nein|  
+|Wird gedruckt|Standarddruck|Ja|Nein|  
+|Wird gedruckt|Sicheres Drucken|Ja|Ja|  
+|Reflektion|Ausgabe|Ja|Nein|  
 |Sicherheit|Ausführen von verwaltetem Code|Ja|Ja|  
 |Sicherheit|Bestätigen von erteilten Berechtigungen|Ja|Nein|  
 |Benutzeroberfläche|Uneingeschränkt|Ja|Nein|  

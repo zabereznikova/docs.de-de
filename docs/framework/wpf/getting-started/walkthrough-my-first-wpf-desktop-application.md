@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453757"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336807"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Erstellen Ihrer ersten WPF-Anwendung in Visual Studio 2019
 
@@ -41,7 +41,7 @@ Am Ende des Tutorials haben Sie eine eigenständige Windows-Anwendung erstellt, 
 >
 > Sie können die Codesprache des Beispielcodes zwischen C# und Visual Basic umschalten, indem Sie die Sprachauswahl auf dieser Seite verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter **.net-desktopentwicklungs-** Arbeitsauslastung.
 
@@ -61,7 +61,7 @@ Der erste Schritt besteht darin, die Anwendungs Infrastruktur zu erstellen, die 
       
    3. Wählen Sie die Vorlage **WPF-App (.NET Framework)** aus, und klicken Sie dann auf **weiter**. 
      
-      ![Dialogfeld "Neues Projekt erstellen"](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
+      ![Dialogfeld „Neues Projekt erstellen“](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
       Das Dialogfeld **Neues Projekt konfigurieren** wird geöffnet.
 
@@ -83,7 +83,7 @@ Der erste Schritt besteht darin, die Anwendungs Infrastruktur zu erstellen, die 
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Öffnen Sie " *MainWindow. XAML*".
+3. Öffnen Sie *MainWindow.xaml*.
 
     Diese XAML-Datei ist das Hauptfenster der Anwendung und zeigt in Seiten erstellte Inhalte an. Die <xref:System.Windows.Window>-Klasse definiert die Eigenschaften eines Fensters, z. b. Titel, Größe oder Symbol, und behandelt Ereignisse, z. b. das Schließen oder ausblenden.
 
@@ -151,7 +151,7 @@ In diesem Abschnitt fügen Sie der Anwendung zwei Seiten und ein Bild hinzu.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Öffnen Sie " *MainWindow. XAML*".
+1. Öffnen Sie *MainWindow.xaml*.
 
 1. Fügen Sie dem <xref:System.Windows.Navigation.NavigationWindow>-Element eine <xref:System.Windows.Navigation.NavigationWindow.Source%2A>-Eigenschaft hinzu, und legen Sie Sie auf "`ExpenseItHome.xaml`" fest.
 
@@ -161,7 +161,7 @@ In diesem Abschnitt fügen Sie der Anwendung zwei Seiten und ein Bild hinzu.
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    Und in C#:
+    Und in c#:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -263,7 +263,7 @@ In diesem Abschnitt erstellen Sie eine einspaltige Tabelle mit drei Zeilen und e
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Steuerelemente hinzufügen
+## <a name="add-controls"></a>Hinzufügen von Steuerelementen
 
 In diesem Abschnitt aktualisieren Sie die Benutzeroberfläche der Startseite, um eine Liste der Personen anzuzeigen, in der Sie eine Person auswählen, um Ihren Abrechnungs Bericht anzuzeigen. Steuerelemente sind Benutzeroberflächenobjekte, die Benutzern die Interaktion mit der Anwendung ermöglichen. Weitere Informationen finden Sie unter [Steuerelemente](../controls/index.md).
 
@@ -483,7 +483,7 @@ In dieser exemplarischen Vorgehensweise haben Sie eine Reihe von Techniken zum E
 
 - [WPF-Architektur](../advanced/wpf-architecture.md)
 - [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Übersicht über Abhängigkeits Eigenschaften](../advanced/dependency-properties-overview.md)
+- [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
 Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden Themen:

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740784"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559767"
 ---
 # <a name="propertypath-xaml-syntax"></a>XAML-Syntax von PropertyPath
 
@@ -192,7 +192,7 @@ Um das Klonen zum Animieren einer <xref:System.Windows.Freezable> zu unterstütz
 
 `propertyName2` muss der Name einer Abhängigkeitseigenschaft sein, die auf dem Objekt vorhanden ist, das dem Wert von `propertyName` entspricht. Anders ausgedrückt: `propertyName2` müssen als eine Abhängigkeits Eigenschaft für den Typ vorhanden sein, der die `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>ist.
 
-Die indirekte Verwendung von Animationen als Ziel ist aufgrund der angewendeten Stile und Vorlagen erforderlich. Um eine Animation als Ziel festzustellen, benötigen Sie eine <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> für ein Zielobjekt, und dieser Name wird von [x:Name](../../xaml-services/x-name-directive.md) oder <xref:System.Windows.FrameworkElement.Name%2A>festgelegt. Vorlagen- und Stilelemente können zwar ebenfalls Namen haben, aber diese Namen sind nur innerhalb des Namescope des Stils bzw. der Vorlage gültig. (Wenn Vorlagen und Stile den gleichen Namescope wie das Anwendungsmarkup verwenden würden, wären die Namen nicht eindeutig. Die Stile und Vorlagen werden buchstäblich zwischen Instanzen gemeinsam genutzt und würden doppelte Namen erhalten.) Wenn die einzelnen Eigenschaften eines Elements, das Sie möglicherweise animieren möchten, von einem Stil oder einer Vorlage stammen, müssen Sie mit einer benannten Element Instanz beginnen, die nicht aus einer Stilvorlage stammt, und dann auf die visuelle Struktur des Stils oder der Vorlage abzielen, um die Eigenschaft zu empfangen. Sie möchten animieren.
+Die indirekte Verwendung von Animationen als Ziel ist aufgrund der angewendeten Stile und Vorlagen erforderlich. Um eine Animation als Ziel festzustellen, benötigen Sie eine <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> für ein Zielobjekt, und dieser Name wird von [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) oder <xref:System.Windows.FrameworkElement.Name%2A>festgelegt. Vorlagen- und Stilelemente können zwar ebenfalls Namen haben, aber diese Namen sind nur innerhalb des Namescope des Stils bzw. der Vorlage gültig. (Wenn Vorlagen und Stile den gleichen Namescope wie das Anwendungsmarkup verwenden würden, wären die Namen nicht eindeutig. Die Stile und Vorlagen werden buchstäblich zwischen Instanzen gemeinsam genutzt und würden doppelte Namen erhalten.) Wenn die einzelnen Eigenschaften eines Elements, das Sie möglicherweise animieren möchten, von einem Stil oder einer Vorlage stammen, müssen Sie mit einer benannten Element Instanz beginnen, die nicht aus einer Stilvorlage stammt, und dann auf die visuelle Struktur des Stils oder der Vorlage abzielen, um die Eigenschaft zu empfangen. Sie möchten animieren.
 
 Die <xref:System.Windows.Controls.Panel.Background%2A>-Eigenschaft einer <xref:System.Windows.Controls.Panel> ist beispielsweise eine komplette <xref:System.Windows.Media.Brush> (tatsächlich ein <xref:System.Windows.Media.SolidColorBrush>), die aus einer Designvorlage stammt. Um eine <xref:System.Windows.Media.Brush> vollständig zu animieren, muss eine BrushAnimation (wahrscheinlich eine für jeden <xref:System.Windows.Media.Brush> Typ) vorhanden sein, und es ist kein solcher Typ vorhanden. Um einen Pinsel zu animieren, animieren Sie stattdessen die Eigenschaften eines bestimmten <xref:System.Windows.Media.Brush> Typs. Sie müssen von <xref:System.Windows.Media.SolidColorBrush> zu seiner <xref:System.Windows.Media.SolidColorBrush.Color%2A> gelangen, um eine <xref:System.Windows.Media.Animation.ColorAnimation> dort anzuwenden. Der Eigenschaftspfad für dieses Beispiel wäre `Background.Color`.
 

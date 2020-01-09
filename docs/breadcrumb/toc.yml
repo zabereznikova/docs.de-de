@@ -19,7 +19,7 @@
             - name: '.NET-Microservices: E-Book zur Architektur'
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: Cloudbasiert
+            - name: Nativer Clouddienst
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: E-Book zur Modernisierung von .NET-Apps
@@ -66,6 +66,9 @@
             - name: Entwickeln für mehrere Plattformen mit .NET
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
+            - name: Microsoft.Data.Sqlite
+              tocHref: /dotnet/standard/data/sqlite/
+              topicHref: /dotnet/standard/data/sqlite/index
             - name: XML-Dokumente und -Daten
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
@@ -223,7 +226,7 @@
                     - name: Konfigurationsabschnitt für Windows Forms
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: "Daten und Modellierung in .NET\_Framework"
+            - name: Daten und Modellierung
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -248,7 +251,7 @@
                         - name: LINQ to SQL
                           tocHref: /dotnet/framework/data/adonet/sql/linq/
                           topicHref: /dotnet/framework/data/adonet/sql/linq/index
-                - name: Transaktionsverarbeitung
+                - name: Verarbeiten von Transaktionen
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
                 - name: WCF Data Services
@@ -281,13 +284,13 @@
             - name: Kompilieren von Apps mit .NET Native
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: Netzwerkprogrammierung in .NET Framework
+            - name: Netzwerkprogrammierung
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: .NET Framework-Leistung
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: Dynamische Programmierung in .NET Framework
+            - name: Dynamische Programmierung
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: Ressourcen in Desktop-Apps
@@ -429,7 +432,7 @@
             - name: Datenbindung
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'Anleitung für C#'
+        - name: 'Leitfaden für C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:

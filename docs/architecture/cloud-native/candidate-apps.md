@@ -3,12 +3,12 @@ title: Kandidaten-Apps für die native Cloud
 description: Erfahren Sie, welche Arten von Anwendungen von einem cloudbasierten Ansatz profitieren.
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968298"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337437"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Kandidaten-Apps für die native Cloud
 
@@ -40,7 +40,7 @@ Das kostenlose e-Book von Microsoft zur [Modernisierung vorhandener .NET-Anwendu
 
 **Abbildung 1-10**. Strategien zum Migrieren von Legacy-Workloads
 
-Monolithische apps, die nicht schwerwiegend sind, profitieren größtenteils von einer schnellen Lift-and-Shift-Migration ([cloudinfrastructure-Ready](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). Hier wird die lokale Arbeitsauslastung ohne Änderungen erneut auf einem cloudbasierten virtuellen Computer gehostet. Bei diesem Ansatz wird das [IaaS-Modell (Infrastructure-as-a-Service)](https://azure.microsoft.com/overview/what-is-iaas/)verwendet. Azure umfasst mehrere Tools, wie z. b. ([Azure migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)und [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)), um eine solche Verschiebung zu vereinfachen. Wenngleich diese Strategie zu Kosteneinsparungen führen kann, sind solche Anwendungen in der Regel nicht so entworfen, dass Sie die Vorteile von Cloud Computing entsperren und nutzen können.
+Monolithische apps, die nicht schwerwiegend sind, profitieren größtenteils von einer schnellen Lift-and-Shift-Migration ([cloudinfrastructure-Ready](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)). Hier wird die lokale Arbeitsauslastung ohne Änderungen erneut auf einem cloudbasierten virtuellen Computer gehostet. Bei diesem Ansatz wird das [IaaS-Modell (Infrastructure-as-a-Service)](https://azure.microsoft.com/overview/what-is-iaas/)verwendet. Azure umfasst mehrere Tools, wie z. b. ([Azure migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)und [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)), um eine solche Verschiebung zu vereinfachen. Wenngleich diese Strategie zu Kosteneinsparungen führen kann, sind solche Anwendungen in der Regel nicht so entworfen, dass Sie die Vorteile von Cloud Computing entsperren und nutzen können.
 
 Monolithische apps, die für das Unternehmen von entscheidender Bedeutung sind, profitieren von einer verbesserten Lift-and-Shift-Migration (*cloudoptimiert*). Diese Vorgehensweise umfasst Bereitstellungs Optimierungen, die wichtige Clouddienste ermöglichen, ohne die Kernarchitektur der Anwendung zu ändern. Beispielsweise können Sie die Anwendung [containerisieren](https://docs.microsoft.com/virtualization/windowscontainers/about/) und in einem containerorchestrator wie [Azure Kubernetes Services bereitstellen](https://azure.microsoft.com/services/kubernetes-service/), der weiter unten in diesem Buch erläutert wird. In der Cloud kann die Anwendung andere Clouddienste nutzen, wie z. b. Datenbanken, Nachrichten Warteschlangen, Überwachung und verteiltes Zwischenspeichern.
 
@@ -64,7 +64,7 @@ Wenn Sie und Ihr Team der Meinung sind, dass ein cloudbasierter Ansatz geeignet 
 
 Die richtige Migrationsstrategie hängt von den Organisations Prioritäten und den Systemen ab, auf die Sie abzielen. Für viele ist es möglicherweise kostengünstiger, eine monolithische Anwendung in der Cloud zu optimieren oder einer N-Tier-App grobe Dienste hinzuzufügen. In diesen Fällen können Sie die Cloud-Funktionen wie die von Azure App Service bereitgestellten Funktionen weiterhin vollständig nutzen.
 
-## <a name="summary"></a>Zusammenfassung
+## <a name="summary"></a>Summary
 
 In diesem Kapitel haben wir das Native Cloud-Computing eingeführt. Wir haben eine Definition zusammen mit den wichtigsten Funktionen bereitgestellt, die eine in der Cloud native Anwendung fördern. Wir haben uns mit den Anwendungs Typen beschäftigt, die diese Investition und den Aufwand rechtfertigen können.
 

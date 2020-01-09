@@ -4,20 +4,20 @@ description: Erfahren Sie mehr über die Verarbeitung von HTTP-Anforderungen mit
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "73841204"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337478"
 ---
 # <a name="modules-handlers-and-middleware"></a>Module, Handler und Middleware
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Eine ASP.net Core-App basiert auf einer Reihe von Middleware. Middlewares sind Handler, die in einer Pipeline angeordnet sind, um Anforderungen und Antworten zu verarbeiten. In einer Web Forms-App lösen HTTP-Handler und-Module ähnliche Probleme aus. In ASP.net Core werden Module, Handler, *Global.asax.cs*und der Lebenszyklus der app durch Middleware ersetzt. In diesem Kapitel erfahren Sie, welche Middleware im Kontext einer blazor-App angezeigt wird.
+Eine ASP.net Core-App basiert auf einer Reihe von *Middleware*. Middleware ist Handler, die in einer Pipeline angeordnet sind, um Anforderungen und Antworten zu verarbeiten. In einer Web Forms-App lösen HTTP-Handler und-Module ähnliche Probleme aus. In ASP.net Core werden Module, Handler, *Global.asax.cs*und der Lebenszyklus der app durch Middleware ersetzt. In diesem Kapitel erfahren Sie, welche Middleware im Kontext einer blazor-App angezeigt wird.
 
-## <a name="overview"></a>Übersicht
+## <a name="overview"></a>Übersicht über
 
 Die ASP.NET Core-Anforderungspipeline besteht aus einer Sequenz von Anforderungsdelegaten, die nacheinander aufgerufen werden. Das Konzept wird im folgenden Diagramm veranschaulicht. Der Ausführungsthread folgt den schwarzen Pfeilen.
 
@@ -35,11 +35,11 @@ ASP.NET 4. x umfasst viele Module. In ähnlicher Weise verfügt ASP.net Core auc
 
 In der folgenden Tabelle werden die Ersetzungs Middleware und Komponenten in ASP.net Core aufgelistet.
 
-|Modul                 |ASP.NET 4. x-Modul           |ASP.net Core Option|
+|Module                 |ASP.NET 4. x-Modul           |ASP.net Core Option|
 |-----------------------|-----------------------------|-------------------|
 |HTTP-Fehler            |`CustomErrorModule`          |[Middleware für Statuscodeseiten](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Standarddokument       |`DefaultDocumentModule`      |[Middleware für Standarddateien](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
-|Verzeichnis durchsuchen     |`DirectoryListingModule`     |[Middleware für Verzeichnissuche](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
+|Verzeichnissuche     |`DirectoryListingModule`     |[Middleware für Verzeichnissuche](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |Dynamische Komprimierung    |`DynamicCompressionModule`   |[Antworten komprimierende Middleware](/aspnet/core/performance/response-compression)|
 |Ablauf Verfolgung für Anforderungs Fehler|`FailedRequestsTracingModule`|[ASP.NET Core-Protokollierung](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
 |Zwischenspeichern von Dateien           |`FileCacheModule`            |[Antworten zwischenspeichernde Middleware](/aspnet/core/performance/caching/middleware)|
@@ -48,7 +48,7 @@ In der folgenden Tabelle werden die Ersetzungs Middleware und Komponenten in ASP
 |HTTP-Umleitung       |`HttpRedirectionModule`      |[URL-umschreibende Middleware](/aspnet/core/fundamentals/url-rewriting)|
 |ISAPI-Filter          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
-|Anforderungs Filterung      |`RequestFilteringModule`     |[URL-Umschreib Ende Middleware-iRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
+|Anforderungsfilterung      |`RequestFilteringModule`     |[URL-Umschreib Ende Middleware-iRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
 |URL-Umschreibung&#8224;   |`RewriteModule`              |[URL-umschreibende Middleware](/aspnet/core/fundamentals/url-rewriting)|
 |Statische Komprimierung     |`StaticCompressionModule`    |[Antworten komprimierende Middleware](/aspnet/core/performance/response-compression)|
 |Statischer Inhalt         |`StaticFileModule`           |[Middleware für statische Dateien](/aspnet/core/fundamentals/static-files)|

@@ -2,13 +2,12 @@
 title: .NET Core Anwendungsbereitstellung
 description: Erfahren Sie mehr über die Möglichkeiten zum Bereitstellen einer .NET Core-Anwendung.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089196"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740810"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
@@ -64,7 +63,7 @@ Es hat auch einige Nachteile:
 
 - Die Größe Ihres Bereitstellungspakets ist relativ groß, da es auch .NET Core, Ihre Anwendung und ihre Drittanbieter-Abhängigkeiten enthält.
 
-  Ab .NET Core 2.0 können Sie die Größe Ihrer Bereitstellung auf Linux-Systemen um etwa 28 MB reduzieren, indem Sie den [*invarianten Globalisierungsmodus*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) von .NET Core verwenden. Normalerweise basiert die Globalisierungsunterstützung von .NET Core unter Linux auf den [ICU-Bibliotheken](http://icu-project.org). Im invarianten Modus werden die Bibliotheken nicht in die Bereitstellung einbezogen, und alle Kulturen verhalten sich wie die [invariante Kultur](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  Ab .NET Core 2.0 können Sie die Größe Ihrer Bereitstellung auf Linux-Systemen um etwa 28 MB reduzieren, indem Sie den [*invarianten Globalisierungsmodus*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) von .NET Core verwenden. Normalerweise basiert die Globalisierungsunterstützung von .NET Core unter Linux auf den [ICU-Bibliotheken](http://icu-project.org). Im invarianten Modus werden die Bibliotheken nicht in die Bereitstellung einbezogen, und alle Kulturen verhalten sich wie die [invariante Kultur](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.
 

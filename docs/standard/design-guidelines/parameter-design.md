@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353740"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347851"
 ---
-# <a name="parameter-design"></a>Parameterentwurf
+# <a name="parameter-design"></a>Parameter Entwurf
+
 Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschließlich Abschnitten mit Richtlinien zum Überprüfen von Argumenten. Außerdem sollten Sie die in [Benennungs Parametern](../../../docs/standard/design-guidelines/naming-parameters.md)beschriebenen Richtlinien beachten.  
   
  **✓ DO** verwenden, der am wenigsten abgeleiteten Parametertyp, die die Funktionen für das Element bereitstellt.  
@@ -40,7 +41,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
   
  Dadurch wird die Beziehung zwischen den Methoden besser kommuniziert.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Auswählen zwischen Aufzählungs-und booleschen Parametern  
+### <a name="choose-between-enum-and-boolean-parameters"></a>Auswahl zwischen Aufzählungs-und booleschen Parametern  
  **✓ DO** Enumerationen verwenden, wenn ein Element mindestens zwei boolesche Parameter hätten.  
   
  **X DO NOT** boolesche Werte verwenden, es sei denn, Sie absolut sicher, dass es werden nie mehr als zwei Werte erforderlich sind.  
@@ -49,7 +50,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
   
  **✓ CONSIDER** mit boolesche Werte für Konstruktorparameter, die tatsächlich zwei-Status-Werte sind und zur Initialisierung von boolescher Eigenschaften, die einfach verwendet werden.  
   
-### <a name="validating-arguments"></a>Validieren von Argumenten  
+### <a name="validate-arguments"></a>Validieren von Argumenten  
  **✓ DO** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Lösen Sie <xref:System.ArgumentException?displayProperty=nameWithType>oder eine der zugehörigen Unterklassen aus, wenn die Validierung fehlschlägt.  
   
  Beachten Sie, dass die tatsächliche Validierung nicht unbedingt im öffentlichen oder geschützten Member selbst erfolgen muss. Dies kann in einer privaten oder internen Routine auf einer niedrigeren Ebene vorkommen. Der Hauptgrund dafür ist, dass die gesamte Oberfläche, die den Endbenutzern zur Verfügung gestellt wird, die Argumente prüft.  
@@ -66,10 +67,10 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
   
  Wenn der Member Sicherheits sensibel ist, wird empfohlen, eine Kopie zu erstellen und dann das Argument zu validieren und zu verarbeiten.  
   
-### <a name="parameter-passing"></a>Parameterübergabe  
+### <a name="pass-parameters"></a>Übergeben von Parametern  
  Aus Sicht eines Framework-Designers gibt es drei Hauptgruppen von Parametern: nach Wert Parameter, `ref` Parameter und `out` Parameter.  
   
- Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Die gängigsten CLR-Sprachen, C#wie z. b C++., VB.net und, übergeben standardmäßig Parameter nach Wert.  
+ Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Die beliebtesten CLR-Sprachen, wie C#z. b. C++, Visual Basic und, werden standardmäßig zum Übergeben von Parametern nach Wert übergeben.  
   
  Wenn ein Argument über einen `ref`-Parameter übergeben wird, empfängt der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref` Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.  
   
@@ -140,7 +141,7 @@ public class String {
   
  Einige CLR-Sprachen, wie C++z. b., unterstützen eine alternative Konvention zum Übergeben von Variablen Parameterlisten, die als `varargs` Methoden bezeichnet Die Konvention sollte nicht in Frameworks verwendet werden, da Sie nicht CLS-kompatibel ist.  
   
-### <a name="pointer-parameters"></a>Zeigerparameter  
+### <a name="pointer-parameters"></a>Zeiger Parameter  
  Im Allgemeinen sollten Zeiger nicht in der öffentlichen Oberfläche eines gut entworfenen verwalteten Code-Frameworks angezeigt werden. In den meisten Fällen sollten Zeiger gekapselt werden. In einigen Fällen sind Zeiger aber aus Interoperabilitäts Gründen erforderlich, und die Verwendung von Zeigern in solchen Fällen ist angemessen.  
   
  **✓ DO** bieten eine Alternative für ein Element, das ein Zeigerargument akzeptiert, da Zeiger nicht CLS-kompatibel sind.  

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460093"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636171"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
 
-Diese exemplarische Vorgehensweise führt Sie durch die Erstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] angepassten Schaltfläche mit Microsoft Expression Blend.
+Diese exemplarische Vorgehensweise führt Sie durch die Erstellung einer angepassten WPF-Schaltfläche mithilfe von Microsoft Expression Blend.
 
 > [!IMPORTANT]
 > Microsoft Expression Blend funktioniert, indem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] erstellt wird, die dann kompiliert werden, um das ausführbare Programm zu erstellen. Wenn Sie lieber direkt mit XAML arbeiten, gibt es eine weitere Exemplarische Vorgehensweise, in der dieselbe Anwendung wie diese mit XAML und Visual Studio anstelle von Blend erstellt wird. Weitere Informationen finden [Sie unter Erstellen einer Schaltfläche mit XAML](walkthrough-create-a-button-by-using-xaml.md) .
@@ -40,7 +40,7 @@ Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie das benutzerde
 
 5. Benennen Sie das Projekt `CustomButton`, und klicken Sie auf **OK**.
 
-An diesem Punkt verfügen Sie über ein leeres [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Projekt. Sie können F5 drücken, um die Anwendung auszuführen. Wie Sie vielleicht erwarten, besteht die Anwendung nur aus einem leeren Fenster. Als Nächstes erstellen Sie ein abgerundetes Rechteck und konvertieren es in eine Schaltfläche.
+An diesem Punkt verfügen Sie über ein leeres WPF-Projekt. Sie können F5 drücken, um die Anwendung auszuführen. Wie Sie vielleicht erwarten, besteht die Anwendung nur aus einem leeren Fenster. Als Nächstes erstellen Sie ein abgerundetes Rechteck und konvertieren es in eine Schaltfläche.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>So konvertieren Sie ein Rechteck in eine Schaltfläche
 

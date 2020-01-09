@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346707"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344636"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 
@@ -71,7 +71,7 @@ warningLabel.Text = "Data not saved"
 
 #### <a name="intellisense-listing-of-members"></a>IntelliSense-Auflistung von Membern
 
-IntelliSense listet die Member einer Klasse auf, wenn Sie die Option „Member auflisten“ aufrufen, beispielsweise wenn Sie einen Punkt (`.`) als Memberzugriffsoperator eingeben. Wenn Sie den Punkt nach dem Namen einer Variablen eingeben, die als Instanz dieser Klasse deklariert war, listet IntelliSense alle Instanzmember und keinen der freigegebenen Member auf. Wenn Sie den Punkt nach dem Klassennamen selbst eingeben, listet IntelliSense alle freigegebenen Member und keinen der Instanzmember auf. Weitere Informationen finden Sie unter [Using IntelliSense](/visualstudio/ide/using-intellisense).
+IntelliSense listet die Member einer Klasse auf, wenn Sie die Option „Member auflisten“ aufrufen, beispielsweise wenn Sie einen Punkt (`.`) als Memberzugriffsoperator eingeben. Wenn Sie den Punkt nach dem Namen einer Variablen eingeben, die als Instanz dieser Klasse deklariert war, listet IntelliSense alle Instanzmember und keinen der freigegebenen Member auf. Wenn Sie den Punkt nach dem Klassennamen selbst eingeben, listet IntelliSense alle freigegebenen Member und keinen der Instanzmember auf. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="fields-and-properties"></a>Felder und Eigenschaften
 
@@ -212,7 +212,7 @@ Im folgenden Beispiel nehmen wir an, Sie möchten eine besondere Art eines <xref
    Public Class reversibleButton
    ```
 
-   Achten Sie darauf, dass der letzten Codezeile in der Klasse eine `End Class`-Anweisung folgt. Standardmäßig generiert die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) bei der Eingabe einer `End Class`-Anweisung automatisch ein `Class`-Element.
+   Achten Sie darauf, dass der letzten Codezeile in der Klasse eine `End Class`-Anweisung folgt. Standardmäßig generiert die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) bei der Eingabe einer `Class`-Anweisung automatisch ein `End Class`-Element.
 
 2. Der `Class`-Anweisung muss sofort eine [Inherits-Anweisung](../../../../visual-basic/language-reference/statements/inherits-statement.md) folgen. Geben Sie die Klasse an, von der Ihre neue Klasse abgeleitet wird.
 
@@ -239,7 +239,7 @@ Im folgenden Beispiel nehmen wir an, Sie möchten eine besondere Art eines <xref
 
 Abgeleitete Klassen erben Member aus der Klasse, auf der sie basieren. So können Sie die Komplexität beim Vordringen in einer Klassenhierarchie steigern. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-### <a name="compiling-the-code"></a>Kompilieren des Codes
+### <a name="compile-the-code"></a>Kompilieren des Codes
 
 Achten Sie darauf, dass der Compiler die Klasse aufrufen kann, von der Ihre neue Klasse abgeleitet werden soll. Dies kann das vollständige Qualifizieren des Namens beinhalten, wie im vorherigen Beispiel, oder das Identifizieren des Namespace in einer [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Wenn sich die Klasse in einem anderen Projekt befindet, müssen Sie möglicherweise einen Verweis auf das Projekt hinzufügen. Weitere Informationen finden Sie unter [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project).
 
@@ -247,7 +247,7 @@ Achten Sie darauf, dass der Compiler die Klasse aufrufen kann, von der Ihre neue
 
 Eine andere Möglichkeit zur Verknüpfung von Objekten ist eine *Einschlussbeziehung*. Containerobjekte schließen andere Objekte logisch ein. Beispielsweise enthält das <xref:System.OperatingSystem>-Objekt ein <xref:System.Version>-Objekt logisch, das es durch seine <xref:System.OperatingSystem.Version%2A>-Eigenschaft zurückgibt. Beachten Sie, dass das Container-Objekt physisch kein anderes Objekt enthält.
 
-#### <a name="collections"></a>Auflistungen
+#### <a name="collections"></a>Sammlungen
 
 Ein bestimmter Typ des Objekteinschlusses wird dargestellt durch *Auflistungen*. Auflistungen sind Gruppen ähnlicher Objekte, die aufgelistet werden können. Visual Basic unterstützt eine bestimmte Syntax in der [for each... Die nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) , die das Durchlaufen der Elemente einer Auflistung ermöglicht. Zudem ermöglichen Auflistungen die Verwendung eines <xref:Microsoft.VisualBasic.Collection.Item%2A>-Elements zum Abrufen von Elementen anhand ihres Indexes oder anhand der Zuordnung zu einer eindeutigen Zeichenfolge. Auflistungen können einfacher verwendet werden als Arrays, denn Sie können sie zum Hinzufügen oder Entfernen von Elementen ohne Indizes verwenden. Aufgrund ihrer Benutzerfreundlichkeit werden Auflistungen häufig zum Speichern von Formularen und Steuerelementen verwendet.
 
