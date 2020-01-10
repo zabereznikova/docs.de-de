@@ -3,26 +3,24 @@ title: Knotensätze in Transformationen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 2828b95f6a4050dd05b38e7ab6ef740ee4eb16b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957028"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710556"
 ---
-# <a name="node-sets-in-transformations"></a><span data-ttu-id="6609d-102">Knotensätze in Transformationen</span><span class="sxs-lookup"><span data-stu-id="6609d-102">Node Sets in Transformations</span></span>
-<span data-ttu-id="6609d-103">Knotengruppen stellen einen von vier Grunddatentypen dar, die von XPath-Ausdrücken (XML Path) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="6609d-103">Node sets are one of four basic data types that are returned from XML Path Language (XPath) expressions.</span></span> <span data-ttu-id="6609d-104">Eine Knotengruppe ist eine unsortierte Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde. Eine Knotengruppe kann einer Variablen in einem Stylesheet zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6609d-104">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span>  
+# <a name="node-sets-in-transformations"></a><span data-ttu-id="5f639-102">Knotensätze in Transformationen</span><span class="sxs-lookup"><span data-stu-id="5f639-102">Node Sets in Transformations</span></span>
+<span data-ttu-id="5f639-103">Knotengruppen stellen einen von vier Grunddatentypen dar, die von XPath-Ausdrücken (XML Path) zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5f639-103">Node sets are one of four basic data types that are returned from XML Path Language (XPath) expressions.</span></span> <span data-ttu-id="5f639-104">Eine Knotengruppe ist eine unsortierte Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde. Eine Knotengruppe kann einer Variablen in einem Stylesheet zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="5f639-104">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6609d-105">Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet.</span><span class="sxs-lookup"><span data-stu-id="6609d-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="6609d-106">Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.</span><span class="sxs-lookup"><span data-stu-id="6609d-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="6609d-107">Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="6609d-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="5f639-105">Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet.</span><span class="sxs-lookup"><span data-stu-id="5f639-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="5f639-106">Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.</span><span class="sxs-lookup"><span data-stu-id="5f639-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="5f639-107">Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="5f639-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="6609d-108">Knotengruppen stellen einen von vier Grunddatentypen dar, die von XPath-Ausdrücken zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="6609d-108">Node sets are one of four basic data types that are returned from XPath expressions.</span></span> <span data-ttu-id="6609d-109">Eine Knotengruppe ist eine unsortierte Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde. Eine Knotengruppe kann einer Variablen in einem Stylesheet zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6609d-109">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span> <span data-ttu-id="6609d-110">Diese Knotengruppe resultiert aus einem XPath-Ausdruck, der in einer Transformation in einem `select`-Attribut verwendet wird. Dabei entspricht das Verhalten dem einer Knotengruppe im Dokumentobjektmodell (DOM).</span><span class="sxs-lookup"><span data-stu-id="6609d-110">This node set, which is a result of an XPath expression used in a `select` attribute in a transformation, has the same behavior as a node set from the XML Document Object Model (DOM).</span></span> <span data-ttu-id="6609d-111">Anders als bei Ergebnisstrukturfragmenten oder Ergebnisstrukturfragmenten, bei denen <xref:System.Xml.XPath.XPathNodeIterator> zur Navigation verwendet wird, können Sie zur Navigation in einer Knotengruppe eine Reihe von Methoden verwenden. Diese werden unter [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) dargestellt.</span><span class="sxs-lookup"><span data-stu-id="6609d-111">You can navigate a node set using a set of methods shown in [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), unlike a result tree fragment or result tree fragment, which uses the <xref:System.Xml.XPath.XPathNodeIterator> for navigation.</span></span>  
+ <span data-ttu-id="5f639-108">Knotengruppen stellen einen von vier Grunddatentypen dar, die von XPath-Ausdrücken zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5f639-108">Node sets are one of four basic data types that are returned from XPath expressions.</span></span> <span data-ttu-id="5f639-109">Eine Knotengruppe ist eine unsortierte Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde. Eine Knotengruppe kann einer Variablen in einem Stylesheet zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="5f639-109">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span> <span data-ttu-id="5f639-110">Diese Knotengruppe resultiert aus einem XPath-Ausdruck, der in einer Transformation in einem `select`-Attribut verwendet wird. Dabei entspricht das Verhalten dem einer Knotengruppe im Dokumentobjektmodell (DOM).</span><span class="sxs-lookup"><span data-stu-id="5f639-110">This node set, which is a result of an XPath expression used in a `select` attribute in a transformation, has the same behavior as a node set from the XML Document Object Model (DOM).</span></span> <span data-ttu-id="5f639-111">Anders als bei Ergebnisstrukturfragmenten oder Ergebnisstrukturfragmenten, bei denen <xref:System.Xml.XPath.XPathNodeIterator> zur Navigation verwendet wird, können Sie zur Navigation in einer Knotengruppe eine Reihe von Methoden verwenden. Diese werden unter [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) dargestellt.</span><span class="sxs-lookup"><span data-stu-id="5f639-111">You can navigate a node set using a set of methods shown in [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), unlike a result tree fragment or result tree fragment, which uses the <xref:System.Xml.XPath.XPathNodeIterator> for navigation.</span></span>  
   
- <span data-ttu-id="6609d-112">Im folgenden Codebeispiel wird veranschaulicht, wie eine Knotengruppe durchlaufen wird, wenn ein `variable`-Element oder ein `parameter`-Element in einem Stylesheet eine Knotengruppe auswertet.</span><span class="sxs-lookup"><span data-stu-id="6609d-112">The following code sample shows how to iterate over a node set when a `variable` or `parameter` element in a style sheet evaluates to a node set.</span></span>  
+ <span data-ttu-id="5f639-112">Im folgenden Codebeispiel wird veranschaulicht, wie eine Knotengruppe durchlaufen wird, wenn ein `variable`-Element oder ein `parameter`-Element in einem Stylesheet eine Knotengruppe auswertet.</span><span class="sxs-lookup"><span data-stu-id="5f639-112">The following code sample shows how to iterate over a node set when a `variable` or `parameter` element in a style sheet evaluates to a node set.</span></span>  
   
-## <a name="style-sheet"></a><span data-ttu-id="6609d-113">Stylesheet</span><span class="sxs-lookup"><span data-stu-id="6609d-113">Style Sheet</span></span>  
+## <a name="style-sheet"></a><span data-ttu-id="5f639-113">Stylesheet</span><span class="sxs-lookup"><span data-stu-id="5f639-113">Style Sheet</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -40,7 +38,7 @@ ms.locfileid: "71957028"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a><span data-ttu-id="6609d-114">Eingabe</span><span class="sxs-lookup"><span data-stu-id="6609d-114">Input</span></span>  
+## <a name="input"></a><span data-ttu-id="5f639-114">Input</span><span class="sxs-lookup"><span data-stu-id="5f639-114">Input</span></span>  
   
 ```xml  
 <bookstore>  
@@ -58,7 +56,7 @@ ms.locfileid: "71957028"
 </bookstore>  
 ```  
   
-## <a name="output"></a><span data-ttu-id="6609d-115">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="6609d-115">Output</span></span>  
+## <a name="output"></a><span data-ttu-id="5f639-115">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="5f639-115">Output</span></span>  
   
 ```output  
 ******  
@@ -74,8 +72,8 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6609d-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6609d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f639-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f639-116">See also</span></span>
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
-- [<span data-ttu-id="6609d-117">XSLT-Transformationen mit der XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="6609d-117">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [<span data-ttu-id="6609d-118">Implementierung des XSLT-Prozessors durch die XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="6609d-118">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="5f639-117">XSLT-Transformationen mit der XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="5f639-117">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
+- [<span data-ttu-id="5f639-118">Implementierung des XSLT-Prozessors durch die XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="5f639-118">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
