@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802324"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740412"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -102,7 +102,7 @@ Integritätsendpunkte werden häufig von Orchestrierungstools verwendet, um Dien
 
 Es gibt zwei Möglichkeiten, den Integritätsendpunkt verfügbar zu machen und Integritätsinformationen des WCF-Diensts zu veröffentlichen:
 
-- Mithilfe von Code. Beispiel:
+- Mithilfe von Code. Zum Beispiel:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -124,7 +124,7 @@ Es gibt zwei Möglichkeiten, den Integritätsendpunkt verfügbar zu machen und I
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Mithilfe einer Konfigurationsdatei. Beispiel:
+- Mithilfe einer Konfigurationsdatei. Zum Beispiel:
 
   ```xml
   <behaviors>
@@ -136,7 +136,7 @@ Es gibt zwei Möglichkeiten, den Integritätsendpunkt verfügbar zu machen und I
   </behaviors>
   ```
 
-Der Integritätsstatus eines Diensts kann mithilfe von Abfrageparametern wie `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure` und `OnThrottlePercentExceeded` abgefragt werden. Für jeden Abfrageparameter kann ein HTTP-Antwortcode angegeben werden. Wenn der HTTP-Antwortcode für einen Abfrageparameter weggelassen wird, wird standardmäßig der HTTP-Antwortcode 503 verwendet. Beispiel:
+Der Integritätsstatus eines Diensts kann mithilfe von Abfrageparametern wie `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure` und `OnThrottlePercentExceeded` abgefragt werden. Für jeden Abfrageparameter kann ein HTTP-Antwortcode angegeben werden. Wenn der HTTP-Antwortcode für einen Abfrageparameter weggelassen wird, wird standardmäßig der HTTP-Antwortcode 503 verwendet. Zum Beispiel:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Mit den <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType>- und <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType>-Methoden können Sie neue <xref:System.Security.Cryptography.DSA>- oder <xref:System.Security.Cryptography.RSA>-Schlüssel mit einer bestimmten Schlüsselgröße generieren. Beispiel:
+Mit den <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType>- und <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType>-Methoden können Sie neue <xref:System.Security.Cryptography.DSA>- oder <xref:System.Security.Cryptography.RSA>-Schlüssel mit einer bestimmten Schlüsselgröße generieren. Zum Beispiel:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -467,7 +467,7 @@ NET Framework 4.7.2 fügt Unterstützung für Enclave-basiertes Always Encrypted
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>: Stellt die Nachweisparameter bereit, die von SQL Server zum Abrufen von Informationen verwendet werden, die zum Ausführen eines bestimmten Protokolls erforderlich sind.
 
-Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der abstrakten <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType>-Klasse an, die die Funktionalität für den Enclave-Anbieter bereitstellt. Beispiel:
+Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der abstrakten <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType>-Klasse an, die die Funktionalität für den Enclave-Anbieter bereitstellt. Zum Beispiel:
 
 ```xml
 <configuration>
@@ -650,7 +650,7 @@ ASP.NET verarbeitet Anforderungen in einer vordefinierten Pipeline, die 23 Ereig
 
 **SHA-2-Hashoptionen für Anmeldeinformationen für formularbasierte Authentifizierung von ASP.NET**
 
-In .NET Framework 4.7 und früheren Versionen erlaubte ASP.NET Entwicklern, Benutzeranmeldeinformationen mit Kennwörtern mit Hashes in Konfigurationsdateien unter Verwendung von MD5 oder SHA1 zu speichern. Ab .NET Framework 4.7.1 unterstützt ASP.NET auch die neuen, sicheren SHA-2-Hashoptionen wie etwa SHA256, SHA384 und SHA512. SHA1 bleibt die Standardeinstellung, und ein nicht standardmäßiger Hashalgorithmus kann in der Webkonfigurationsdatei definiert werden. Beispiel:
+In .NET Framework 4.7 und früheren Versionen erlaubte ASP.NET Entwicklern, Benutzeranmeldeinformationen mit Kennwörtern mit Hashes in Konfigurationsdateien unter Verwendung von MD5 oder SHA1 zu speichern. Ab .NET Framework 4.7.1 unterstützt ASP.NET auch die neuen, sicheren SHA-2-Hashoptionen wie etwa SHA256, SHA384 und SHA512. SHA1 bleibt die Standardeinstellung, und ein nicht standardmäßiger Hashalgorithmus kann in der Webkonfigurationsdatei definiert werden. Zum Beispiel:
 
 ```xml
 <system.web>
@@ -955,7 +955,7 @@ In.NET Framework 3.5 wurde die Unterstützung der Elliptic Curve Diffie-Hellman-
 
 Dieses Problem wurde in .NET Framework 4.6.2 behoben, indem die folgenden drei Methoden zur <xref:System.Security.Cryptography.ECDiffieHellman>-Basisklasse hinzugefügt wurden, sodass diese KDF-Routinen und deren Eingaben eindeutiger dargestellt werden:
 
-|Die ECDiffieHellman-Methode|BESCHREIBUNG|
+|Die ECDiffieHellman-Methode|Beschreibung|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Leitet Schlüsselmaterial mithilfe der Formel ab<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> wobei *x* das berechnete Ergebnis des EC Diffie-Hellman-Algorithmus ist.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Leitet Schlüsselmaterial mithilfe der Formel ab<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> wobei *x* das berechnete Ergebnis des EC Diffie-Hellman-Algorithmus ist.|
@@ -965,7 +965,7 @@ Dieses Problem wurde in .NET Framework 4.6.2 behoben, indem die folgenden drei M
 
 Die Windows-Kryptografiebibliothek (CNG) unterstützt nun die Speicherung persistenter symmetrischer Schlüssel und die Verwendung von auf der Hardware gespeicherten symmetrischen Schlüsseln. Durch .NET Framework 4.6.2 können Entwickler dieses Feature jetzt nutzen.  Da das Konzept des Schlüsselnamens und des Schlüsselanbieters implementierungsspezifisch ist, erfordert die Nutzung dieser Funktion die Verwendung des Konstruktors der konkreten Implementierungstypen anstatt der bevorzugten Herangehensweise des Unternehmens (z.B. durch aufrufen von `Aes.Create`).
 
-Die Unterstützung der symmetrischen Verschlüsselung persistenter Schlüssel ist für die Algorithmen AES (<xref:System.Security.Cryptography.AesCng>) und 3DES (<xref:System.Security.Cryptography.TripleDESCng>) verfügbar. Beispiel:
+Die Unterstützung der symmetrischen Verschlüsselung persistenter Schlüssel ist für die Algorithmen AES (<xref:System.Security.Cryptography.AesCng>) und 3DES (<xref:System.Security.Cryptography.TripleDESCng>) verfügbar. Zum Beispiel:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1240,7 +1240,7 @@ Die *nicht verwaltete Debug-API* wurde im .NET Framework 4.6.2 verbessert, um zu
 
 - Die Schnittstellen [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md), und [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), die den Ursprungsort verwalteter Variablen verfügbar machen. Dadurch können Debugger Codeflussanalysen durchführen, wenn eine <xref:System.NullReferenceException>-Klasse auftritt und auf dieser Grundlage die verwaltete Variable zu bestimmen, die dem nativen Speicherort entspricht, der `null` war.
 
-- Die Methode [ICorDebugType2::GetTypeID](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) bietet eine Zuordnung für die Schnittstelle „ICorDebugType“ zur Struktur [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), wodurch der Debugger eine [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)-Struktur ohne eine Instanz der Schnittstelle „ICorDebugType“ abrufen kann. Vorhandenen APIs auf der [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)-Struktur kann dann verwendet werden, um das Klassenlayout des Typs zu bestimmen.
+- Die Methode [ICorDebugType2::GetTypeID](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) bietet eine Zuordnung für die Schnittstelle „ICorDebugType“ zur Struktur [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), wodurch der Debugger eine [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)-Strukturohne eine Instanz der Schnittstelle „ICorDebugType“ abrufen kann. Vorhandenen APIs auf der [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)-Struktur kann dann verwendet werden, um das Klassenlayout des Typs zu bestimmen.
 
 <a name="v461" />
 
@@ -1300,7 +1300,7 @@ Kunden müssen die vom HSM-Anbieter bereitgestellten CSP-Anbieter oder CNG-Schl�
 
 **Verbessertes <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>-Verbindungsverhalten für AlwaysOn**
 
-SqlClient ermöglicht jetzt automatisch schnellere Verbindungen mit einer AlwaysOn-Verfügbarkeitsgruppe (Availability Group, AG). Er erkennt auf transparente Weise, ob die Anwendung eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe in einem anderen Subnetz herstellt, ermittelt schnell den aktiven Server und stellt eine Verbindung mit dem Server her. Vor dieser Version musste eine Anwendung `"MultisubnetFailover=true"` in die Verbindungszeichenfolge einschließen, um anzugeben, dass eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe hergestellt wurde. Wenn das Verbindungsschlüsselwort nicht auf `true` festgelegt wird, kann bei der Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe ein Anwendungstimeout auftreten. Bei dieser Version muss eine Anwendung <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> *nicht* mehr auf `true` festlegen. Weitere Informationen zur SqlClient-Unterstützung für AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+SqlClient ermöglicht jetzt automatisch schnellere Verbindungen mit einer AlwaysOn-Verfügbarkeitsgruppe (Availability Group, AG). Er erkennt auf transparente Weise, ob die Anwendung eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe in einem anderen Subnetz herstellt, ermittelt schnell den aktiven Server und stellt eine Verbindung mit dem Server her. Vor dieser Version musste eine Anwendung `"MultisubnetFailover=true"` in die Verbindungszeichenfolge einschließen, um anzugeben, dass eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe hergestellt wurde. Wenn das Verbindungsschlüsselwort nicht auf `true` festgelegt wird, kann bei der Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe ein Anwendungstimeout auftreten. Bei dieser Version muss eine Anwendung <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>*nicht* mehr auf `true` festlegen. Weitere Informationen zur SqlClient-Unterstützung für AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1707,7 +1707,7 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
   <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
   ```
 
-  Der Standardwert ist `false`sein.
+  Der Standardwert ist `false`.
 
 - **Netzwerk**
 
@@ -1755,7 +1755,7 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
 - **Open-Source-Pakete von .NET Framework**
 
-  .NET Core-Pakete wie „immutable collections“, [SIMD-APIs](https://www.nuget.org/packages/Microsoft.Bcl.Simd) und Netzwerk-APIs wie diejenigen aus dem <xref:System.Net.Http>-Namespace stehen jetzt auf [GitHub](https://github.com/) als Open Source-Pakete zur Verfügung. Informationen zum Codezugriff finden Sie unter [CoreFx auf GitHub](https://github.com/dotnet/corefx). Weitere Informationen und wie Sie zu diesen Paketen beitragen können, finden Sie unter [.NET Core und Open-Source](../get-started/net-core-and-open-source.md), [.NET-Homepage auf GitHub](https://github.com/dotnet/home).
+  .NET Core-Pakete wie „immutable collections“, [SIMD-APIs](https://www.nuget.org/packages/Microsoft.Bcl.Simd) und Netzwerk-APIs wie diejenigen aus dem <xref:System.Net.Http>-Namespace stehen jetzt auf [GitHub](https://github.com/) als Open Source-Pakete zur Verfügung. Informationen über den Codezugriff finden Sie unter [.NET auf GitHub](https://github.com/dotnet/runtime). Weitere Informationen und wie Sie zu diesen Paketen beitragen können, finden Sie unter [.NET Core und Open-Source](../get-started/net-core-and-open-source.md), [.NET-Homepage auf GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1790,7 +1790,7 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
   - Ersetzen Sie <xref:System.Transactions.IPromotableSinglePhaseNotification> durch eine <xref:System.Transactions.ISinglePhaseNotification>, eine dauerhafte Eintragung, die einphasige Commits unterstützt.
 
-  Dies kann innerhalb derselben App-Domäne erfolgen, und erfordert keinen zusätzlichen nicht verwalteten Code für die Interaktion mit MSDTC für die Höherstufung. Die neue Methode kann nur aufgerufen werden, wenn ein ausstehender Aufruf von <xref:System.Transactions?displayProperty=nameWithType> an die <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote`-Methode vorhanden ist, die von der heraufstufbaren Eintragung implementiert wird.
+  Dies kann innerhalb derselben App-Domäne erfolgen, und erfordert keinen zusätzlichen nicht verwalteten Code für die Interaktion mit MSDTC für die Höherstufung. Die neue Methode kann nur aufgerufen werden, wenn ein ausstehender Aufruf von <xref:System.Transactions?displayProperty=nameWithType> an die <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote`-Methode vorhanden ist, die von der heraufstufbaren Eintragung implementiert wird.
 
 - **Profilerstellungsverbesserungen** Die folgenden neuen, nicht verwalteten Profilerstellungs-APIs bieten eine robustere Profilerstellung:
 

@@ -3,13 +3,12 @@ title: Erstellen von .NET Core aus einer Quelle
 description: Erfahren Sie, wie Sie .NET Core und .NET Core-CLI aus dem Quellcode erstellen.
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105388"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740920"
 ---
 # <a name="build-net-core-from-source"></a>Erstellen von .NET Core aus einer Quelle
 
@@ -18,7 +17,7 @@ Dieser Artikel enthält eine Anleitung für Entwickler, die ihre eigenen Version
 
 ## <a name="build-the-clr-from-source"></a>Erstellen der CLR aus der Quelle
 
-Den Quellcode für .NET CoreCLR finden Sie im Repository [dotnet/coreclr](https://github.com/dotnet/coreclr/) auf GitHub.
+Den Quellcode für .NET CoreCLR finden Sie im Repository [dotnet/runtime](https://github.com/dotnet/runtime/) auf GitHub.
 
 Der Build hängt derzeit von folgenden Voraussetzungen ab:
 
@@ -27,7 +26,7 @@ Der Build hängt derzeit von folgenden Voraussetzungen ab:
 - [Python](https://www.python.org/)
 - ein C++-Compiler.
 
-Nach der Installation dieser Komponenten können Sie die CLR erstellen, indem Sie das Buildskript (`build.cmd` unter Windows oder `build.sh` unter Linux und macOS) an der Basis des Repositorys [dotnet/coreclr](https://github.com/dotnet/coreclr/) aufrufen.
+Nach der Installation dieser Komponenten können Sie die CLR erstellen, indem Sie das Buildskript (`build.cmd` unter Windows oder `build.sh` unter Linux und macOS) an der Basis des Repositorys [dotnet/runtime](https://github.com/dotnet/runtime/) aufrufen.
 
 Das Installieren der Komponenten unterscheidet sich je nach Betriebssystem. Weitere Informationen finden Sie in den Buildanweisungen Ihres Betriebssystems:
 
@@ -72,13 +71,13 @@ Während die „rohe“ Ausgabe des Builds in einigen Fällen nützlich ist, sin
 Es gibt zwei grundlegende Verfahren für die Verwendung der neuen Runtime:
 
  1. **Verwenden Sie zum Verfassen einer Anwendung „dotnet.exe“ und NuGet**.
-    Unter [Using Your Build (Verwenden Ihres Builds)](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) finden Sie Anweisungen zum Erstellen eines Programms, das Ihre neue Runtime verwendet, indem es die NuGet-Pakete, die Sie zuvor erstellt haben, und die „dotnet“-CLI verwendet. Diese Technik ist die erwartete Methode, mit der Entwickler ohne Runtime wahrscheinlich Ihre neue Runtime nutzen.
+    Unter [Using Your Build (Verwenden Ihres Builds)](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md) finden Sie Anweisungen zum Erstellen eines Programms, das Ihre neue Runtime verwendet, indem es die NuGet-Pakete, die Sie zuvor erstellt haben, und die „dotnet“-CLI verwendet. Diese Technik ist die erwartete Methode, mit der Entwickler ohne Runtime wahrscheinlich Ihre neue Runtime nutzen.
 
  2. **Verwenden Sie „corerun.exe“ zum Ausführen einer Anwendung, die unverpackte DLLs verwendet**.
     Dieses Repository definiert außerdem einen einfachen Host mit dem Namen „corerun.exe“, der NICHT von NuGet abhängig ist.
     Sie müssen den Host darüber informieren, wo er die benötigten DLLs erhält, die Sie tatsächlich verwenden, und Sie müssen sie manuell sammeln.
-    Diese Technik wird von allen Tests im Repository [dotnet/coreclr](https://github.com/dotnet/coreclr) verwendet und eignet sich zur schnellen lokalen „Bearbeiten-Kompilieren-Debuggen“-Schleife, z.B. für vorläufige Komponententests.
-    Weitere Informationen zur Verwendung dieser Technik finden Sie unter [Executing .NET Core Apps with CoreRun.exe (Ausführen von .NET Core-Apps mit „CoreRun.exe“)](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md).
+    Diese Technik wird von allen Tests im Repository [dotnet/runtime](https://github.com/dotnet/runtime) verwendet und eignet sich zur schnellen lokalen „Bearbeiten-Kompilieren-Debuggen“-Schleife, z. B. für vorläufige Komponententests.
+    Weitere Informationen zur Verwendung dieser Technik finden Sie unter [Executing .NET Core Apps with CoreRun.exe (Ausführen von .NET Core-Apps mit „CoreRun.exe“)](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md).
 
 ## <a name="build-the-cli-from-source"></a>Erstellen der CLI aus der Quelle
 
@@ -101,6 +100,6 @@ Verwenden Sie die ausführbare Datei `dotnet` von *artifacts/{os}-{arch}/stage2*
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET Runtime](https://github.com/dotnet/runtime/blob/master/README.md)
 - [.NET Core CLI Developer Guide (Entwicklerhandbuch für .NET Core-CLI)](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](./distribution-packaging.md)

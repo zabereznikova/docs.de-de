@@ -1,17 +1,16 @@
 ---
 title: Schnittstellen – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635235"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714614"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -54,7 +53,7 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 - Eine Schnittstelle ähnelt einer abstrakten Basisklasse, die nur abstrakte Member enthält. Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren.
 - Eine Schnittstelle kann nicht direkt instanziiert werden. Die zugehörigen Member werden durch die die Schnittstelle implementierende Klasse oder Struktur implementiert.
 - Schnittstellen können Ereignisse, Indexer, Methoden und Eigenschaften enthalten.
-- Schnittstellen enthalten keine Implementierung von Methoden.
+- In Schnittstellen sind keine Methoden implementiert (in C# 8.0 können Schnittstellen eine [Standardimplementierung für Methoden](../../whats-new/csharp-8.md#default-interface-methods) enthalten).
 - Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann eine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
