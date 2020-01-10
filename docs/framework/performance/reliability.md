@@ -8,14 +8,12 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: acb84c6617cdffabfe276895f81e7df2b04bb8bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d6601c4cbad32f768ff16301307083f35d986a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046237"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715966"
 ---
 # <a name="reliability"></a>Zuverlässigkeit
 Code, der in Serverumgebungen wie SQL Server ausgeführt wird, muss unbedingt vor asynchronen Ausnahmen geschützt werden. Die in diesem Thema dargestellte Zuverlässigkeit ist nicht nur für SQL Server relevant, sondern für jeden Host, der in einer .NET Framework-Umgebung Version 2.0 ausgeführt wird. Da jedoch SQL Server der erste Dienst ist, der die neuen Zuverlässigkeitsfunktionen von Version 2.0 umfassend verwendet, dient es hier als Beispiel.  
@@ -23,7 +21,7 @@ Code, der in Serverumgebungen wie SQL Server ausgeführt wird, muss unbedingt vo
  In SQL Server ausgeführter Code unterliegt strengeren Richtlinien zur Zuverlässigkeit als andere Serverumgebungen. Dies liegt daran, dass SQL Server ständig am Rand des Ressourcenverbrauchs betrieben wird.  Die Ausnahmen <xref:System.OutOfMemoryException> und <xref:System.Threading.ThreadAbortException> sind für die SQL Server-Umgebung nicht ungewöhnlich. Diese Richtlinien betreffen im Allgemeinen weniger die Zuverlässigkeit, sondern sind vielmehr darauf ausgerichtet, voll vertrauenswürdigen verwalteten Code bei Wiederverwendung auf <xref:System.AppDomain>-Ebene ordnungsgemäß abzubrechen. So hält der Server auf einfache Weise die Konsistenz und Verfügbarkeit aufrecht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [SQL Server Programming and Host Protection Attributes (SQL Server-Programmierung und Hostschutzattribute)](sql-server-programming-and-host-protection-attributes.md)  
+ [SQL Server-Programmierung und Hostschutzattribute](sql-server-programming-and-host-protection-attributes.md)  
  Beschreibt, wie SQL Server das <xref:System.Security.Permissions.HostProtectionAttribute>-Attribut verwendet, um die Ausführung von verwaltetem Code einzuschränken.  
   
  [Empfohlene Vorgehensweisen für die Zuverlässigkeit](reliability-best-practices.md)  

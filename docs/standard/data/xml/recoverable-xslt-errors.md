@@ -3,14 +3,12 @@ title: Wiederherstellbare XSLT-Fehler
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590058"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710374"
 ---
 # <a name="recoverable-xslt-errors"></a>Wiederherstellbare XSLT-Fehler
 Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Laut XSLT 1.0-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen gibt die Empfehlung zu XSLT 1.0 auch Maßnahmen für den Fall an, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.  
@@ -24,10 +22,10 @@ Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte 
   
 - Die Abschnittsverweise finden Sie in den W3C-Dokumenten [XSL Transformations (XSLT) Version 1.0](https://www.w3.org/TR/xslt) und [XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
-|XSLT-Bedingung|Bereich|XslCompiledTransform-Verhaltensweise|  
+|XSLT-Bedingung|Abschnitt|XslCompiledTransform-Verhaltensweise|  
 |--------------------|-------------|-----------------------------------|  
 |Ein Textknoten entspricht sowohl `xsl:strip-space` als auch `xsl:preserve-space`.|3.4|Wiederherstellen|  
-|Ein Quellknoten entspricht mehreren Vorlagenregeln.|5.5|Wiederherstellen|  
+|Ein Quellknoten entspricht mehreren Vorlagenregeln.|5,5|Wiederherstellen|  
 |Ein Namespace-URI (Uniform Resource Identifier) ist als Alias für mehrere Namespace-URIs deklariert, die alle die gleiche Importpriorität haben.|7.1.1|Wiederherstellen|  
 |Das aus einem Attributwert erstellte `name`-Attribut im `xsl:attribute` und im `xsl:element` ist kein QName.|7.1.2, 7.1.3|Fehler*|  
 |Zwei Attributgruppen mit derselben Importpriorität und demselben erweiterten Namen haben ein gemeinsames Attribut, und es gibt keine andere Attributgruppe, die das gemeinsame Attribut mit demselben Namen und einer höheren Priorität enthält.|7.1.4|Wiederherstellen|  

@@ -8,18 +8,17 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-author: KrzysztofCwalina
-ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80c16e29f1d8a0653295ebc3cf25be6fb78b7dc9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960394"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709412"
 ---
 # <a name="events-and-callbacks"></a>Ereignisse und Rückrufe
-Rückrufe sind Erweiterungspunkte, die ein Framework Rückruf in Benutzercode durch einen Delegaten zu ermöglichen. Diese Delegaten werden in der Regel für das Framework über einen Parameter einer Methode übergeben.  
+Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegaten den Benutzercode aufrufen kann. Diese Delegaten werden in der Regel über einen Parameter einer Methode an das Framework übergeben.  
   
- Ereignisse sind ein Sonderfall der Rückrufe, der bequeme, einheitliche Syntax unterstützt wird, für den Delegaten (ein Ereignishandler) angeben. Darüber hinaus bieten die Anweisungsvervollständigung und Designer von Visual Studio Hilfe bei der Verwendung von Ereignis-basierten APIs. (Finden Sie unter [Ereignisentwurf](../../../docs/standard/design-guidelines/event.md).)  
+ Ereignisse sind ein Sonderfall von Rückrufen, die eine bequeme und konsistente Syntax für die Bereitstellung des Delegaten (eines Ereignis Handlers) unterstützen. Außerdem bieten die Visual Studio-Anweisungs Vervollständigung und Designer Hilfe bei der Verwendung von ereignisbasierten APIs. (Siehe [Ereignis Entwurf](../../../docs/standard/design-guidelines/event.md).)  
   
  **✓ CONSIDER** Verwendung von Rückrufen Benutzer geben Sie benutzerdefinierten Code, der durch das Framework ausgeführt werden darf.  
   
@@ -31,17 +30,17 @@ Rückrufe sind Erweiterungspunkte, die ein Framework Rückruf in Benutzercode du
   
  **✓ DO** verwenden Sie die neue `Func<...>`, `Action<...>`, oder `Expression<...>` Typen anstelle von benutzerdefinierten Delegaten, wenn APIs mit Rückrufe zu definieren.  
   
- `Func<...>` und `Action<...>` generische Delegaten darstellen. `Expression<...>` Stellt Funktionsdefinitionen, die kompiliert und anschließend zur Laufzeit kann aber auch aufgerufen werden können, serialisiert und an remote-Prozesse übergeben werden.  
+ `Func<...>` und `Action<...>` stellen generische Delegaten dar. `Expression<...>` stellt Funktionsdefinitionen dar, die kompiliert und anschließend zur Laufzeit aufgerufen werden können, aber auch serialisiert und an Remote Prozesse weitergegeben werden können.  
   
  **✓ DO** messen und Verstehen von Auswirkungen auf die Leistung der Verwendung von `Expression<...>`, anstatt `Func<...>` und `Action<...>` Delegaten.  
   
- `Expression<...>` Typen sind in den meisten Fällen ist logisch äquivalent zur `Func<...>` und `Action<...>` Delegaten. Der Hauptunterschied zwischen diesen besteht darin, dass die Delegaten in lokalen Prozess Szenarien verwendet werden sollen; Ausdrücke werden für Fälle gedacht, bei denen es vorteilhaft und zum Auswerten des Ausdrucks in einer remote-Prozess oder Computer möglich.  
+ `Expression<...>` Typen sind in den meisten Fällen logisch äquivalent zu `Func<...>` und `Action<...>` Delegaten. Der Hauptunterschied besteht darin, dass die Delegaten in lokalen Prozess Szenarien verwendet werden sollen. Ausdrücke sind für Fälle gedacht, in denen es vorteilhaft und möglich ist, den Ausdruck in einem Remote Prozess oder-Computer auszuwerten.  
   
  **✓ DO** verstehen, dass durch den Aufruf eines Delegaten, beliebigen Code ausführen und bei denen konnte Sicherheit, Richtigkeit und Kompatibilität Verarbeitungsverhaltens.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

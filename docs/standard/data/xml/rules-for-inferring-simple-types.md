@@ -3,19 +3,17 @@ title: Regeln zum Herleiten einfacher Typen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550499"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710231"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
   
- Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet den Datentyp für Attribute und Elemente als einfache Typen her. In diesem Abschnitt werden die möglichen hergeleiteten Typen, das Abstimmen mehrerer unterschiedlicher Werte zu einem einzelnen Typ und die Behandlung von schemadefinierten `xsi`-Attributen beschrieben.  
+ Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet den Datentyp für Attribute und Elemente als einfache Typen her. In diesem Abschnitt werden die möglichen hergeleiteten Typen, das Zusammenführen mehrerer unterschiedlicher Werte zu einem einzelnen Typ und die Behandlung von schemadefinierten `xsi`-Attributen beschrieben.  
   
 ## <a name="inferred-types"></a>Hergeleitete Typen  
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet Elemente und Attribute als einfache Typen her und fügt im resultierenden Schema einen Attributtyp ein. Bei allen hergeleiteten Typen handelt es sich um einfache Typen. Basistypen oder Facets sind keine Bestandteile des resultierenden Schemas.  
@@ -37,14 +35,14 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 |unsignedLong|Ganze Zahlen im Bereich von 0 bis 18446744073709551615.|  
 |Ganze Zahl|Eine endliche Anzahl von Ziffern, möglichst mit dem Präfix "-".|  
 |decimal|Numerische Werte mit einer Genauigkeit von 0 bis 28 Stellen.|  
-|float|Dezimalzahlen, nach denen optional "E" oder "e" folgt, gefolgt von einem Ganzzahlenwert als Exponent. Dezimalwerte können im Bereich von -16777216 bis 16777216 liegen. Exponentenwerte können im Bereich von -149 bis 104 liegen.<br /><br /> Float ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Diese speziellen Werte umfassen die Folgenden: 0, -0, INF, -INF, NaN.|  
-|double|Die gleichen Werte wie bei float, allerdings können die Dezimalwerte im Bereich von -9007199254740992 bis 9007199254740992 und die Exponentenwerte zwischen –1075 und 970 liegen.<br /><br /> Double ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Diese speziellen Werte umfassen die Folgenden: 0, -0, INF, -INF, NaN.|  
+|frei verschieben|Dezimalzahlen, nach denen optional "E" oder "e" folgt, gefolgt von einem Ganzzahlenwert als Exponent. Dezimalwerte können im Bereich von -16777216 bis 16777216 liegen. Exponentenwerte können im Bereich von -149 bis 104 liegen.<br /><br /> Float ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF - INF, NaN.|  
+|Doppelt|Die gleichen Werte wie bei float, allerdings können die Dezimalwerte im Bereich von -9007199254740992 bis 9007199254740992 und die Exponentenwerte zwischen –1075 und 970 liegen.<br /><br /> Double ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF - INF, NaN.|  
 |duration|Das W3C-Format für duration.|  
 |dateTime|Das W3C-Format für dateTime.|  
-|Uhrzeit|Das W3C-Format für time.|  
+|time|Das W3C-Format für time.|  
 |date|Die Werte für Jahreszahlen sind auf einen Bereich von 0001 bis 9999 beschränkt.|  
 |gYearMonth|Das gregorianische Monats- und Zeitformat von W3C.|  
-|Zeichenfolge|Ein oder mehrere Unicode-Zeichen.|  
+|string|Ein oder mehrere Unicode-Zeichen.|  
   
 ## <a name="type-promotion"></a>Typerweiterung  
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse überprüft Attribut- und Elementwerte der Reihenfolge nach. Wenn Werte festgestellt werden, wird der am weitesten eingeschränkte Typ ohne Vorzeichen hergeleitet. Wenn für ein Attribut oder ein Element ein Typ hergeleitet wurde und einer neuer Wert festgestellt wird, der nicht mit dem aktuell hergeleiteten Typ übereinstimmt, wird der hergeleitete Typ auf einen neuen Typ heraufgestuft. Dieser Typ entspricht sowohl dem aktuell hergeleiteten Typ als auch dem neuen Wert. Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse berücksichtigt beim Heraufstufen hergeleiteter Typen vorherige Werte.  
@@ -69,7 +67,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 
 Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
   
-|Attribut|Beschreibung|  
+|Attribute|Beschreibung|  
 |---------------|-----------------|  
 |`xsi:type`|Wenn ein Element mit der Angabe `xsi:type` festgestellt wird, wird `xsi:type` ignoriert.|  
 |`xsi:nil`|Wenn ein Element mit einem `xsi:nil`-Attribut festgestellt wird, weist dessen Elementdeklaration im hergeleiteten Schema den Wert `nillable="true"` auf. Ein Element, dessen `xsi:nil`-Attribut auf `true` festgelegt wurde, darf keine untergeordneten Elemente besitzen.|  

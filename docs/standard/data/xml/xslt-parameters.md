@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306306"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709698"
 ---
 # <a name="xslt-parameters"></a>XSLT-Parameter
 XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt. Dabei werden ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
@@ -26,7 +24,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
 3. Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
   
-## <a name="parameter-types"></a>Parametertypen  
+## <a name="parameter-types"></a>Parameter Types  
  Das Parameterobjekt sollte einem W3C-Typ entsprechen. In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden Microsoft .NET-Klassen (Typen) aufgelistet. Weiterhin wird angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   
 |W3C-Typ|Entsprechende .NET-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
@@ -40,7 +38,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
  *Dies entspricht einer Knotengruppe, die einen Knoten enthält.  
   
- Wenn das Parameterobjekt keiner der oben genannten Klassen entspricht, wird es entsprechend der folgenden Regeln konvertiert. Numerische CLR-Typen (Common Language Runtime) werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable> -Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator[]** wird in <xref:System.Xml.XPath.XPathNodeIterator> konvertiert.  
+ Wenn das Parameterobjekt keiner der oben genannten Klassen entspricht, wird es entsprechend der folgenden Regeln konvertiert. Numerische CLR-Typen (Common Language Runtime) werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable>-Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator[]** wird in <xref:System.Xml.XPath.XPathNodeIterator> konvertiert.  
   
  Alle anderen Typen lösen einen Fehler aus.  
   
@@ -50,7 +48,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a>Eingabe  
+### <a name="input"></a>Input  
   
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
@@ -58,7 +56,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>Ausgabe  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -70,4 +68,4 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)

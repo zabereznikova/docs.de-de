@@ -3,14 +3,12 @@ title: Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647890"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710673"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ändern. Sie haben folgende Möglichkeiten:  
@@ -29,9 +27,9 @@ Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ände
   
 |Knotentyp|Geänderte Daten|  
 |---------------|------------------|  
-|Attribut|Der Wert des Attributs.|  
+|Attribute|Der Wert des Attributs.|  
 |CDATASection|Der Inhalt von CDATASection.|  
-|Kommentar|Der Inhalt des Kommentars.|  
+|Anmerkungen|Der Inhalt des Kommentars.|  
 |ProcessingInstruction|Der Inhalt mit Ausnahme des Ziels.|  
 |Text|Der Inhalt des Texts.|  
 |XmlDeclaration|Der Inhalt der Deklaration, ausgenommen das `<?xml`-Markup und das `?>`-Markup.|  

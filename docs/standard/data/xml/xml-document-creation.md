@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.openlocfilehash: a12555a02b45a964ff7efcbe00e0d2cb8637474a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45646180"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709984"
 ---
 # <a name="xml-document-creation"></a>Erstellen eines XML-Dokuments
 Es gibt zwei Möglichkeiten, ein XML-Dokument zu erstellen. Eine besteht darin, ein **XmlDocument** ohne Parameter zu erstellen. Die andere Möglichkeit besteht darin, ein **XmlDocument** zu erstellen und ihm eine XmlNameTable als Parameter zu übergeben. Das folgende Beispiel zeigt, wie Sie ein neues, leeres **XmlDocument** ohne Parameter erstellen.  

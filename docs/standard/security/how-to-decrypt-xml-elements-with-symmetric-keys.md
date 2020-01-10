@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
+title: 'Gewusst wie: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - Rijndael
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f45ba28a4c2d4ab56abf15f8e8b5ba4c6cb7d611
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd377cd470d361f5a46c662ab37780713a2d3804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602726"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706122"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Vorgehensweise: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Gewusst wie: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln
 Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  Die XML-Verschlüsselung ermöglicht Ihnen das Speichern oder Transportieren von vertraulichen XML-Dokumenten, ohne befürchten zu müssen, dass die Daten einfach gelesen werden können.  In diesem Codebeispiel wird ein XML-Element mithilfe des AES-Algorithmus (Advanced Encryption Standard) entschlüsselt, der auch unter dem Namen Rijndael bekannt ist.  
   
- Informationen zur Vorgehensweise beim Verschlüsseln von einem XML-Element mit diesem Verfahren finden Sie unter [Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+ Informationen dazu, wie Sie ein XML-Element mithilfe dieser Prozedur verschlüsseln, finden Sie unter Gewusst [wie: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
  Wenn Sie einen symmetrischen Algorithmus wie AES verwenden, um XML-Daten zu verschlüsseln, müssen Sie für das Verschlüsseln und Entschlüsseln der XML-Daten denselben Schlüssel verwenden.  Für das Beispiel in dieser Prozedur wird angenommen, dass das verschlüsselte XML-Element mit demselben Schlüssel verschlüsselt wurde und dass sich die verschlüsselnden und die entschlüsselnden Beteiligten über den zu verwendenden Algorithmus und Schlüssel verständigt haben.  In diesem Beispiel wird der AES-Schlüssel weder im verschlüsselten XML-Element gespeichert noch dort verschlüsselt.  
   
@@ -33,9 +31,9 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>So entschlüsseln Sie ein XML-Element mit einem symmetrischen Schlüssel  
   
-1. Verschlüsseln Sie ein XML-Element mit dem zuvor generierten Schlüssel, die mit den Verfahren, die in beschriebenen [Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1. Verschlüsseln Sie ein XML-Element mit dem zuvor generierten Schlüssel mithilfe der in Gewusst [wie: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)beschriebenen Techniken.  
   
-2. Suchen der <`EncryptedData`>-Element (definiert durch den XML-Verschlüsselungsstandard) in einer <xref:System.Xml.XmlDocument> Objekt, das den verschlüsselten XML-Code enthält, und erstellen Sie ein neues <xref:System.Xml.XmlElement> Objekt, das dieses Element darstellt.  
+2. Suchen Sie die <`EncryptedData`>-Element (definiert durch den XML-Verschlüsselungsstandard) in einem <xref:System.Xml.XmlDocument> Objekt, das den verschlüsselten XML-Code enthält, und erstellen Sie ein neues <xref:System.Xml.XmlElement> Objekt, das dieses Element darstellt.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
@@ -76,7 +74,7 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 - Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Speichern Sie einen kryptografischen Schlüssel nie im Klartextformat, und übertragen Sie einen Schlüssel nie im Klartextformat zwischen Computern.  
   
  Wenn Sie einen symmetrischen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.  
@@ -84,4 +82,4 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Cryptography.Xml>
-- [Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [Gewusst wie: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

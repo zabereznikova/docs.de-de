@@ -9,13 +9,12 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-author: KrzysztofCwalina
-ms.openlocfilehash: 967692092186b81802a7ab635ea8fe4dbacd49ed
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e3a7fa0f284ebf028a18cae37c050d7ceda9bb79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611518"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709386"
 ---
 # <a name="exceptions-and-performance"></a>Ausnahmen und Leistung
 Ein häufiges Problem im Zusammenhang mit Ausnahmen besteht darin, dass die Leistung der Implementierung nicht akzeptabel ist, wenn Ausnahmen für Code verwendet werden, der routinemäßig fehlschlägt. Dies ist ein gültiges Problem. Wenn ein Member eine Ausnahme auslöst, kann die Leistung der Größenordnung langsamer sein. Es ist jedoch möglich, eine gute Leistung zu erzielen, während Sie strikt den Ausnahme Richtlinien entsprechen, die die Verwendung von Fehlercodes nicht zulassen. In den beiden in diesem Abschnitt beschriebenen Mustern werden Möglichkeiten vorgeschlagen.
@@ -25,14 +24,14 @@ Ein häufiges Problem im Zusammenhang mit Ausnahmen besteht darin, dass die Leis
  Um die Leistung zu verbessern, können Sie entweder das Tester-doer-Muster oder das Try-Analyse-Muster verwenden, das in den folgenden beiden Abschnitten beschrieben wird.
 
 ## <a name="tester-doer-pattern"></a>Tester-doer-Muster
- Manchmal kann die Leistung eines Ausnahme auslösenden Members verbessert werden, indem der Member in zwei unterteilt wird. Sehen wir uns die <xref:System.Collections.Generic.ICollection%601.Add%2A> -Methode <xref:System.Collections.Generic.ICollection%601> der-Schnittstelle an.
+ Manchmal kann die Leistung eines Ausnahme auslösenden Members verbessert werden, indem der Member in zwei unterteilt wird. Sehen wir uns die <xref:System.Collections.Generic.ICollection%601.Add%2A>-Methode der <xref:System.Collections.Generic.ICollection%601> Schnittstelle an.
 
 ```csharp
 ICollection<int> numbers = ...
 numbers.Add(1);
 ```
 
- Die- `Add` Methode wird ausgelöst, wenn die-Auflistung schreibgeschützt ist. Dies kann ein Leistungsproblem in Szenarien sein, in denen der Methodenaufrufe häufig fehlschlägt. Eine Möglichkeit, das Problem zu beheben, besteht darin, zu testen, ob die Auflistung beschreibbar ist, bevor versucht wird, einen Wert hinzuzufügen.
+ Die-Methode `Add` ausgelöst, wenn die-Auflistung schreibgeschützt ist. Dies kann ein Leistungsproblem in Szenarien sein, in denen der Methodenaufrufe häufig fehlschlägt. Eine Möglichkeit, das Problem zu beheben, besteht darin, zu testen, ob die Auflistung beschreibbar ist, bevor versucht wird, einen Wert hinzuzufügen.
 
 ```csharp
 ICollection<int> numbers = ...
@@ -43,12 +42,12 @@ if (!numbers.IsReadOnly)
 }
 ```
 
- Der Member, der zum Testen einer Bedingung verwendet wird, die in unserem Beispiel `IsReadOnly`die-Eigenschaft ist, wird als Tester bezeichnet. Der Member, der verwendet wird, um einen potenziell auslösenden Vorgang auszuführen, die `Add` -Methode in unserem Beispiel, wird als doer bezeichnet.
+ Der zum Testen einer Bedingung verwendete Member, bei dem es sich in unserem Beispiel um die Eigenschaften `IsReadOnly`handelt, wird als Tester bezeichnet. Der Member, der verwendet wird, um einen potenziell auslösenden Vorgang auszuführen, die `Add`-Methode in unserem Beispiel, wird als doer bezeichnet.
 
  **✓ CONSIDER** der Tester-Ausführer-Muster für Member, die Ausnahmen auslösen können Szenarien, um Leistungsprobleme zu vermeiden gemeinsam mit Ausnahmen verknüpft.
 
 ## <a name="try-parse-pattern"></a>Try-Analyse Muster
- Bei extrem leistungsabhängigen APIs sollte ein noch schnelleres Muster verwendet werden, das nicht das im vorherigen Abschnitt beschriebene Tester-doer-Muster ist. Das Muster erfordert, dass der Elementname angepasst wird, um einen klar definierten Testfall zu einem Teil der Element Semantik zu machen. <xref:System.DateTime> Definiert z. b. <xref:System.DateTime.Parse%2A> eine Methode, die eine Ausnahme auslöst, wenn die Verarbeitung einer Zeichenfolge fehlschlägt. Außerdem wird eine entsprechende <xref:System.DateTime.TryParse%2A> Methode definiert, die versucht, eine Analyse durchzuführen, aber false zurückgibt, wenn die Analyse nicht erfolgreich ist und das Ergebnis einer erfolgreichen Analyse mithilfe eines `out` -Parameters zurückgibt.
+ Bei extrem leistungsabhängigen APIs sollte ein noch schnelleres Muster verwendet werden, das nicht das im vorherigen Abschnitt beschriebene Tester-doer-Muster ist. Das Muster erfordert, dass der Elementname angepasst wird, um einen klar definierten Testfall zu einem Teil der Element Semantik zu machen. Beispielsweise definiert <xref:System.DateTime> eine <xref:System.DateTime.Parse%2A> Methode, die eine Ausnahme auslöst, wenn die Verarbeitung einer Zeichenfolge fehlschlägt. Außerdem wird eine entsprechende <xref:System.DateTime.TryParse%2A> Methode definiert, die versucht, eine Analyse durchzuführen, aber false zurückgibt, wenn die Analyse nicht erfolgreich ist und das Ergebnis einer erfolgreichen Analyse mithilfe eines `out`-Parameters zurückgibt.
 
 ```csharp
 public struct DateTime
@@ -72,9 +71,9 @@ public struct DateTime
 
  **✓ DO** stellen eine Ausnahme auslösen kann für jedes Element mit dem Try-Analyse-Muster.
 
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
- *Neu gedruckt durch die Berechtigung von Pearson Education, Inc. [von Framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungs Serie.*
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>Siehe auch
 

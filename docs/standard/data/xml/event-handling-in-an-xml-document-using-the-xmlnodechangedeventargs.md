@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965890"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710894"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
 **XmlNodeChangedEventArgs** kapselt die Argumente, die den beim **XmlDocument**-Objekt zur Verarbeitung von Ereignissen registrierten Ereignishandlern übergeben werden. Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
   
-|event|Wird ausgelöst|  
+|Event|Wird ausgelöst|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wird.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wurde.|  

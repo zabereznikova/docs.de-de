@@ -1,21 +1,19 @@
 ---
 title: Marshalling von Typen – .NET
 description: Erfahren Sie, wie .NET Ihre Strukturen in eine native Darstellung marshallt.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929066"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706265"
 ---
 # <a name="type-marshaling"></a>Marshalling von Typen
 
 Das **Marshallen** bezeichnet den Vorgang zum Umwandeln von Typen, wenn diese zwischen verwaltetem und nativem Code wechseln müssen.
 
-Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem basierend auf dem Standardverhalten die richtige Aktion auszuführen. Dieses wird im vorliegenden Artikel beschrieben. In Situationen, in denen Sie zusätzliche Kontrolle benötigen, können Sie das [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute)-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn Sie beispielsweise die Zeichenfolge als nicht mit NULL endende ANSI-Zeichenfolge senden möchten, können Sie dies folgendermaßen erreichen:
+Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code haben Sie z. b. eine `String`, während Zeichen folgen in der nicht verwalteten Welt Unicode ("Wide"), nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/aufrufen-Subsystem, das richtige zu tun, basierend auf dem Standardverhalten, das in diesem Artikel beschrieben wird. In Situationen, in denen Sie zusätzliche Kontrolle benötigen, können Sie das [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute)-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn Sie beispielsweise die Zeichenfolge als nicht mit NULL endende ANSI-Zeichenfolge senden möchten, können Sie dies folgendermaßen erreichen:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

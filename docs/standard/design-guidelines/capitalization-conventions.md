@@ -9,34 +9,33 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-author: KrzysztofCwalina
-ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fee7f5b7749c97a87e37581f67cbe1b49250b9ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615254"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709529"
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
-Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, wenn stellen-IDs für Typen, Member und Parameter, die leicht lesbar konsistent angewendet.  
+Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall dar, dass, wenn Sie konsistent angewendet wird, Bezeichner für Typen, Member und Parameter leicht lesbar werden.  
   
-## <a name="capitalization-rules-for-identifiers"></a>Regeln der Groß-/Kleinschreibung für Bezeichner  
- Profitieren Sie um Wörter in einem Bezeichner zu unterscheiden, die den ersten Buchstaben jedes Worts in den Bezeichner. Verwenden Sie keine Unterstriche um Wörter zu unterscheiden oder einfach eine beliebige Stelle in Bezeichnern. Es gibt zwei geeignete Möglichkeiten, die Bezeichner, abhängig von der Verwendung des Bezeichners zu profitieren:  
+## <a name="capitalization-rules-for-identifiers"></a>Regeln für die Groß Schreibung für Bezeichner  
+ Um Wörter in einem Bezeichner zu unterscheiden, sollten Sie den ersten Buchstaben jedes Worts im Bezeichner Großbuchstaben. Verwenden Sie keine Unterstriche zur Unterscheidung von Wörtern oder an einer beliebigen Stelle in bezeichlern. Es gibt zwei geeignete Möglichkeiten, Bezeichner in Abhängigkeit von der Verwendung des Bezeichners zu nutzen:  
   
-- PascalCasing  
+- Pascalschreibweise  
   
-- camelCasing  
+- lowercamel  
   
- Die PascalCasing-Konvention für alle Bezeichner, mit Ausnahme von Parameternamen, nutzt das erste Zeichen jedes Worts (einschließlich Akronyme über zwei Buchstaben), wie in den folgenden Beispielen gezeigt:  
+ Die pascalidentifier-Konvention, die für alle Bezeichner mit Ausnahme von Parameternamen verwendet wird, erschließt das erste Zeichen jedes Worts (einschließlich der Akronyme über zwei Buchstaben), wie in den folgenden Beispielen gezeigt:  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- Ein besonderer Fall besteht für zwei Buchstaben bestehenden Akronyme, die in denen beiden Buchstaben in Großbuchstaben angegeben werden, wie in der folgenden Bezeichner dargestellt:  
+ Ein Sonderfall wird für aus zwei Buchstaben bestehende Akronyme gestellt, in denen beide Buchstaben groß geschrieben werden, wie im folgenden Bezeichner zu sehen:  
   
  `IOStream`  
   
- Die CamelCasing-Konvention, die nur für Parameternamen verwendet nutzt das erste Zeichen jedes Worts mit Ausnahme des ersten Worts, wie in den folgenden Beispielen gezeigt. Wie das Beispiel auch zeigt, sind zwei Buchstaben bestehenden Akronyme, die einen Bezeichner in Kamel-Schreibweise beginnen Kleinbuchstaben.  
+ Die für Parameternamen verwendete Konvention für die Groß-/Kleinschreibung nutzt das erste Zeichen jedes Worts außer dem ersten Wort, wie in den folgenden Beispielen gezeigt. Wie das Beispiel zeigt, sind zwei Buchstaben Akronyme, die mit einem Kamel Schreib Bezeichner beginnen, in Kleinbuchstaben.  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -46,28 +45,28 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
   
  **✓ DO** CamelCasing für Parameternamen verwenden.  
   
- Die folgende Tabelle beschreibt die Regeln der Groß-/Kleinschreibung für verschiedene Arten von Bezeichnern.  
+ In der folgenden Tabelle werden die Regeln für die Groß-und Kleinschreibung für verschiedene Bezeichner Typen beschrieben  
   
 |ID|Schreibweise|Beispiel|  
 |----------------|------------|-------------|  
-|Namespace|Pascal-Schreibweise|`namespace System.Security { ... }`|  
-|Typ|Pascal-Schreibweise|`public class StreamReader { ... }`|  
-|Interface|Pascal-Schreibweise|`public interface IEnumerable { ... }`|  
-|Methode|Pascal-Schreibweise|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Eigenschaft|Pascal-Schreibweise|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|event|Pascal-Schreibweise|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
-|Feld|Pascal-Schreibweise|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
-|Enum-Wert|Pascal-Schreibweise|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Parameter|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|-Namespace|Pas|`namespace System.Security { ... }`|  
+|Typ|Pas|`public class StreamReader { ... }`|  
+|Benutzeroberfläche|Pas|`public interface IEnumerable { ... }`|  
+|-Methode|Pas|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
+|Die Eigenschaften-|Pas|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|Event|Pas|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Field|Pas|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
+|Enumerationswert|Pas|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
+|Parameter|Groß-/Kleinschreibung gemischt|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>Profitieren Sie von einer zusammengesetzten Wörter und Begriffe  
- Die meisten zusammengesetzten Wörter werden als einzelne Wörter für Zwecke der Groß-/Kleinschreibung behandelt.  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Groß Schreibung von zusammengesetzten Wörtern und allgemeinen Begriffen  
+ Die meisten zusammengesetzten Begriffe werden als einzelne Wörter für die Groß-/Kleinschreibung behandelt.  
   
  **X DO NOT** jedes Wort in so genannten geschlossener Form zusammengesetzte Wörter profitieren.  
   
- Hierbei handelt es sich um zusammengesetzte Wörter, die als einzelnes Wort, z. B. Endpunkt geschrieben. Behandeln Sie ein zusammengesetztes Wort in geschlossener Form als einzelnes Wort, für die Richtlinien zur Groß-und Kleinschreibung. Verwenden Sie einen aktuellen Wörterbuch, um zu bestimmen, ob ein zusammengesetztes Wort in geschlossene Form geschrieben ist.  
+ Dabei handelt es sich um zusammengesetzte Wörter, die als einzelnes Wort (z. b. Endpunkt) Um Richtlinien für die Groß-/Kleinschreibung zu beachten, behandeln Sie ein zusammengesetztes Wort als einzelnes Wort. Verwenden Sie ein Aktuelles Wörterbuch, um zu bestimmen, ob ein Verbund Wort in geschlossener Form geschrieben wurde.  
   
-|Pascal-Schreibweise|Camel|Not|  
+|Pas|Groß-/Kleinschreibung gemischt|not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -96,13 +95,13 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>Groß- und Kleinschreibung  
- Sprachen, die in der CLR ausgeführt werden können sind zur Unterstützung der Instanzenmethode, nicht erforderlich, obwohl einige führen. Auch wenn Ihre Sprache unterstützt wird, werden nicht anderen Sprachen, die Ihr Framework zugreifen können. Alle APIs, die extern zugegriffen werden kann, werden verlässlich nicht aus diesem Grund Fall allein, zur Unterscheidung zwischen zwei Namen im selben Kontext.  
+ Für Sprachen, die in der CLR ausgeführt werden können, ist es nicht erforderlich, die Groß-/Kleinschreibung zu unterstützen. Auch wenn Ihre Sprache Sie unterstützt, sind andere Sprachen, die möglicherweise auf Ihr Framework zugreifen, nicht. Alle APIs, die extern zugänglich sind, können sich daher nicht allein auf die Groß-/Kleinschreibung verlassen, um zwischen zwei Namen im gleichen Kontext zu unterscheiden.  
   
- **X DO NOT** wird davon ausgegangen, dass alle Programmiersprachen die Groß-/Kleinschreibung beachtet werden. Das sind sie nicht. Namen dürfen sich nicht allein Groß-/Kleinschreibung unterscheiden.  
+ **X DO NOT** wird davon ausgegangen, dass alle Programmiersprachen die Groß-/Kleinschreibung beachtet werden. Das sind sie nicht. Namen dürfen nicht allein durch die Groß-/Kleinschreibung abweichen  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

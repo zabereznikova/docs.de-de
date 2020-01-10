@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975497"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716010"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT-ETW-Ablaufverfolgungsereignisse
 Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.
@@ -22,13 +20,13 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed-Ereignis
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Das JIT-Inlining ist fehlgeschlagen.|  
   
@@ -52,13 +50,13 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|Das Methoden-Inlining war erfolgreich.|  
   
@@ -82,13 +80,13 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Fehler beim Methodenendaufruf.|  
   
@@ -112,13 +110,13 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Ausführlich (5)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|Der Methodenendaufruf war erfolgreich.|  
   

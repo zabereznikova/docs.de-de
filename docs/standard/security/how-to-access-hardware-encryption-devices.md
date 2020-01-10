@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf Hardwaregeräte zur Verschlüsselung'
+title: 'Gewusst wie: Zugreifen auf Hardwaregeräte zur Verschlüsselung'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654380"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706174"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>Vorgehensweise: Zugreifen auf Hardwaregeräte zur Verschlüsselung
+# <a name="how-to-access-hardware-encryption-devices"></a>Gewusst wie: Zugreifen auf Hardwaregeräte zur Verschlüsselung
 Mit der <xref:System.Security.Cryptography.CspParameters>-Klasse können Sie auf Verschlüsselungsgeräte zuzugreifen. Beispielsweise können Sie diese Klasse dazu verwenden, Ihre Anwendung auf eine Smartcard, einen hardwaremäßigen Zufallszahlengenerator oder eine Hardwareimplementierung eines bestimmten kryptografischen Algorithmus abzustimmen.  
   
- Die <xref:System.Security.Cryptography.CspParameters>-Klasse erstellt einen Kryptografiedienstanbieter (Cryptographic Service Provider, CSP), der auf ein ordnungsgemäß installiertes Verschlüsselungsgerät zugreift.  Sie können die Verfügbarkeit eines CSP überprüfen, indem die folgenden Registrierungsschlüssel mit dem Registrierungs-Editor (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ Die <xref:System.Security.Cryptography.CspParameters>-Klasse erstellt einen Kryptografiedienstanbieter (Cryptographic Service Provider, CSP), der auf ein ordnungsgemäß installiertes Verschlüsselungsgerät zugreift.  Sie können die Verfügbarkeit eines CSP überprüfen, indem Sie sich mit dem Registrierungs-Editor (Regedit.exe) den folgenden Registrierungsschlüssel ansehen: HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>So signieren Sie Daten mit einer Schlüsselkarte  
   
@@ -37,7 +35,7 @@ Mit der <xref:System.Security.Cryptography.CspParameters>-Klasse können Sie auf
   
 4. Signieren Sie Ihre Daten mit einer der `Sign`-Methoden, und überprüfen Sie Ihre Daten mit einer der `Verify`-Methoden.  
   
-### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>So generieren Sie eine Zufallszahl mit einem hardwaremäßigen Zufallszahlengenerator   
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>So generieren Sie eine Zufallszahl mit einem hardwaremäßigen Zufallszahlengenerator  
   
 1. Erstellen Sie eine neue Instanz der <xref:System.Security.Cryptography.CspParameters>-Klasse, wobei Sie den ganzzahligen Anbietertyp sowie den Anbieternamen an den Konstruktor übergeben  
   

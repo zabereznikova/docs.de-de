@@ -7,14 +7,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975511"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716191"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
 ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereignisse können nach Kategorie und Ebene gefiltert werden. Ereignis- [CLR-ETW-Schlüsselwörter](#clr-etw-keywords) ermöglichen das Filtern von Ereignissen nach Kategorie. Sie werden in Kombination für die Runtime- und die Rundownanbieter verwendet. Die [Ereignisebenen](#etw-event-levels) werden durch Flags gekennzeichnet.  
@@ -36,7 +34,7 @@ ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereigniss
 ### <a name="clr-etw-runtime-keywords"></a>CLR-ETW-Laufzeitschlüsselwörter  
  In der folgenden Tabelle sind die CLR-ETW-Laufzeitschlüsselwörter, ihre Werte und ihr Verwendungszweck aufgeführt.  
   
-|Name des Laufzeitschlüsselworts|Wert|Zweck|  
+|Name des Laufzeitschlüsselworts|{2&gt;Wert&lt;2}|Zweck|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Aktiviert das Sammeln von [Garbage Collection-Ereignissen](garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Aktiviert das Sammeln von [Ladeprogrammereignissen](loader-etw-events.md).|  
@@ -59,7 +57,7 @@ ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereigniss
 ### <a name="clr-etw-rundown-keywords"></a>CLR-ETW-Rundownschlüsselwörter  
  In der folgenden Tabelle sind die CLR-ETW-Rundownschlüsselwörter, ihre Werte und ihr Verwendungszweck aufgeführt.  
   
-|Name des Rundownschlüsselworts|Wert|Zweck|  
+|Name des Rundownschlüsselworts|{2&gt;Wert&lt;2}|Zweck|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Ermöglicht das Sammeln von Ladeprogrammereignissen bei Verwendung mit `StartRundownKeyword` und `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Ermöglicht das Sammeln von methodenbezogenen `DCStart` - und `DCEnd` -Ereignissen für JIT-kompilierte Methoden bei Verwendung mit `StartRundownKeyword` und `EndRundownKeyword`.|  

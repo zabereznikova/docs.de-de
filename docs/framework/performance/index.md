@@ -5,14 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800327"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716046"
 ---
 # <a name="net-framework-performance"></a>.NET Framework-Leistung
 Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leistungsorientiert entwerfen und planen, wie Sie jede andere Funktion der App entwerfen würden. Sie können die von Microsoft bereitgestellten Tools verwenden, um die Leistung der App zu messen und gegebenenfalls Verbesserungen der Arbeitsspeichernutzung, des Codedurchsatzes und der Reaktionsfähigkeit vorzunehmen. In diesem Thema werden die von Microsoft bereitgestellten Leistungsanalysetools aufgelistet sowie Links zu anderen Themen bereitgestellt, die die Leistung für bestimmte Bereiche der App-Entwicklung behandeln.  
@@ -55,6 +53,6 @@ Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leist
 |Title|Beschreibung|  
 |-----------|-----------------|  
 |[Caching in .NET Framework Applications (Caching in .NET Framework-Anwendungen)](caching-in-net-framework-applications.md)|Beschreibt Techniken zum Zwischenspeichern von Daten, um die Leistung der Anwendung zu verbessern.|  
-|[Lazy Initialization (Verzögerte Initialisierung)](lazy-initialization.md)|Beschreibt, wie Objekte bei Bedarf initialisiert werden, um die Leistung, insbesondere beim App-Start, zu verbessern.|  
+|[Verzögerte Initialisierung](lazy-initialization.md)|Beschreibt, wie Objekte bei Bedarf initialisiert werden, um die Leistung, insbesondere beim App-Start, zu verbessern.|  
 |[Reliability (Zuverlässigkeit)](reliability.md)|Stellt Informationen zum Verhindern von asynchronen Ausnahmen in einer Serverumgebung bereit.|  
 |[Writing Large, Responsive .NET Framework Apps (Schreiben großer, reaktionsfähiger .NET Framework-Apps)](writing-large-responsive-apps.md)|Gibt Tipps zur Verbesserung der Leistung aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code und enthält echte Beispiele aus dem C#-Compiler.|

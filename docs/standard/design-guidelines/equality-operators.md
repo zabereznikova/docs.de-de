@@ -9,44 +9,43 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-author: KrzysztofCwalina
-ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31a5ce18f4526b5e3b8411365dff812601de87ad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960330"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709438"
 ---
 # <a name="equality-operators"></a>Gleichheitsoperatoren
-In diesem Abschnitt wird erläutert, das Überladen von Gleichheitsoperatoren und bezieht sich auf `operator==` und `operator!=` als Gleichheitsoperatoren.  
+`operator==` in diesem Abschnitt wird das Überladen von Gleichheits Operatoren und das `operator!=` als Gleichheits Operatoren erläutert.  
   
  **X DO NOT** die Gleichheitsoperatoren und die andere Überladung.  
   
  **✓ DO** sicher, dass <xref:System.Object.Equals%2A?displayProperty=nameWithType> und die Gleichheitsoperatoren haben genau die gleiche Semantik und ähnliche Leistungsmerkmale.  
   
- Dies bedeutet, dass häufig `Object.Equals` außer Kraft gesetzt werden, wenn die Operatoren überladen werden soll.  
+ Dies bedeutet häufig, dass `Object.Equals` überschrieben werden muss, wenn die Gleichheits Operatoren überladen werden.  
   
  **X AVOID** Auslösen von Ausnahmen von Gleichheitsoperatoren.  
   
- Z. B. false zurück, wenn eines der Argumente null statt ist `NullReferenceException`.  
+ Geben Sie beispielsweise false zurück, wenn eines der Argumente NULL ist, anstatt `NullReferenceException`auszulösen.  
   
-## <a name="equality-operators-on-value-types"></a>Operatoren für Werttypen  
+## <a name="equality-operators-on-value-types"></a>Gleichheits Operatoren für Werttypen  
  **✓ DO** Überladen von Gleichheitsoperatoren für Werttypen, wenn Gleichheit sinnvoll ist.  
   
- In den meisten Programmiersprachen, es gibt keine standardmäßige Implementierung des `operator==` für Werttypen.  
+ In den meisten Programmiersprachen gibt es keine Standard Implementierung von `operator==` für Werttypen.  
   
-## <a name="equality-operators-on-reference-types"></a>Gleichheitsoperatoren für Referenztypen  
+## <a name="equality-operators-on-reference-types"></a>Gleichheits Operatoren für Verweis Typen  
  **X AVOID** Überladen von Gleichheitsoperatoren auf änderbare Referenztypen.  
   
- Viele Sprachen haben integrierte Operatoren für Verweistypen zulässig. Die integrierte Operatoren implementieren in der Regel der Verweisgleichheit und viele Entwickler sind oft überrascht, wenn das Standardverhalten in der Wertgleichheit geändert wird.  
+ Viele Sprachen verfügen über integrierte Gleichheits Operatoren für Verweis Typen. Die integrierten Operatoren implementieren in der Regel die Verweis Gleichheit, und viele Entwickler sind überrascht, wenn das Standardverhalten in den Wert Gleichheit geändert wird.  
   
- Dieses Problem ist für Verweistypen unveränderliche verringert, weil Unveränderlichkeit dadurch viel schwieriger zu beachten Sie, dass den Unterschied zwischen Verweisgleichheit und Wertgleichheit ist.  
+ Dieses Problem wird für unveränderliche Verweis Typen behoben, da Unveränderlichkeit das Erkennen des Unterschieds zwischen Verweis Gleichheit und Wert Gleichheit erheblich erschwert.  
   
  **X AVOID** Überladen von Gleichheitsoperatoren für Verweistypen, bei die Implementierung wesentlich langsamer als der Verweisgleichheit wäre.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

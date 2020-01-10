@@ -11,26 +11,24 @@ helpviewer_keywords:
 - permissions [.NET Framework]
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917256"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705971"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsprobleme bei mobilem Code zu beheben und Komponenten die Möglichkeit einzuräumen, die Berechtigungen von Benutzern zu überprüfen.  
   
 ## <a name="type-safety-and-security"></a>Typsicherheit und Sicherheit  
- Typsicherer Code greift nur auf die Speicheradressen zu, für die er über die erforderliche Berechtigung verfügt. (Typsicherheit bezieht sich in diesem Zusammenhang auf die Typsicherheit für den Speicher, nicht zu verwechseln mit der allgemeinen Typsicherheit.) Typsicherer Code kann z. B. keine Werte aus den privaten Feldern eines anderen Objekts lesen. Der Zugriff auf Typen ist genau definiert und muss zulässig sein.  
+ Typsicherer Code greift nur auf die Speicheradressen zu, für die er über die erforderliche Berechtigung verfügt. (Die Typsicherheit bezieht sich in diesem Zusammenhang speziell auf die Sicherheit des Speicher Typs und sollte in größerem Umfang nicht mit der Typsicherheit verwechselt werden.) Typsicherer Code kann z. b. keine Werte aus den privaten Feldern eines anderen Objekts lesen. Der Zugriff auf Typen ist genau definiert und muss zulässig sein.  
   
  Während der JIT-Kompilierung (Just-In-Time) werden die Metadaten und MSIL (Microsoft Intermediate Language) einer Methode, die in systemeigenen Code des Computers JIT-kompiliert werden soll, in einem optionalen Prüfungsvorgang auf ihre Typsicherheit überprüft. Dieser Vorgang wird übersprungen, wenn der Code über die Berechtigung zum Umgehen der Überprüfung verfügt. Weitere Informationen über Überprüfung finden Sie unter [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md).  
   
  Obwohl die Überprüfung der Typsicherheit für das Ausführen von verwaltetem Code nicht zwingend erforderlich ist, spielt die Typsicherheit eine wesentliche Rolle bei der Isolation von Assemblys und der Gewährleistung von Sicherheit. Wenn Code typsicher ist, kann die Common Language Runtime Assemblys vollständig voneinander isolieren. Diese Isolation trägt dazu bei, dass Assemblys einander nicht beeinträchtigen, und erhöht gleichzeitig die Zuverlässigkeit von Anwendungen. Typsichere Komponenten können ohne Sicherheitseinbußen in demselben Prozess ausgeführt werden, selbst wenn sie unterschiedliche Vertrauensebenen aufweisen. Wenn Code nicht typsicher ist, können unerwünschte Nebeneffekte auftreten. So kann die Common Language Runtime z. B. nicht verhindern, dass verwalteter Code systemeigenen (d. h. nicht verwalteten) Code aufruft und schädliche Vorgänge ausführt. Bei typsicherem Code gewährleistet die Durchsetzung von Sicherheit durch die Laufzeit, dass dieser nur mit der entsprechenden Berechtigung auf nativen Code zugreifen kann. Zum Ausführen von nicht typsicherem Code muss die <xref:System.Security.Permissions.SecurityPermission> mit dem übergebenen Enumerationsmember <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> erteilt werden.  
   
- Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md).  
+ Weitere Informationen finden Sie unter [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md).  
   
 ## <a name="principal"></a>Principal  
  Ein Prinzipal stellt die Identität und die Rolle eines Benutzers dar und handelt stellvertretend für den Benutzer. Die rollenbasierte Sicherheit in .NET Framework unterstützt drei Arten von Prinzipals:  

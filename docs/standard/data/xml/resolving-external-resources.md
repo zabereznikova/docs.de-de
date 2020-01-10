@@ -3,14 +3,12 @@ title: Auflösen von externen Ressourcen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918207"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710270"
 ---
 # <a name="resolving-external-resources"></a>Auflösen von externen Ressourcen
 Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument**-Klasse nach Ressourcen, die sich nicht inline in den XML-Daten befinden, z.B. externe Document Type Definitions (DTDs – Dokumenttypdefinitionen), Entitäten und Schemata. Diese Elemente können in einem Netzwerk oder auf einem lokalen Laufwerk gesucht werden und sind durch einen URI (Uniform Resource Identifier) gekennzeichnet. Somit kann **XmlDocument** im Dokument vorhandene **EntityReference**-Knoten auflösen und das Dokument entsprechend der externen DTD oder dem externen Schema validieren.  
@@ -43,7 +41,7 @@ Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument*
   
 |XmlResolver-Eigenschaft|Funktion|Hinweise|  
 |--------------------------|--------------|-----------|  
-|Die **XmlResolver**-Klasse, die vom **XmlDocument** verwendet wird, ist die gleiche Klasse, die vom **XmlReader** verwendet wird.|Das **XmlDocument** verwendet den **XmlResolver**, der dem **XmlReader** zugeordnet wurde.<br /><br /> Die **XmlDocument.Resolver**-Eigenschaft kann nicht unabhängig von der Vertrauensebene des **XmlDocument** festgelegt werden, da sie einen **XmlResolver** aus dem **XmlReader** abruft. Die Einstellungen des **XmlResolver** des **XmlReader** können nicht durch Festlegen der **XmlResolver**-Eigenschaft des **XmlDocument** überschrieben werden.|Der **XmlReader** kann der **XmlTextReader**, ein validierender <xref:System.Xml.XmlReader> oder ein benutzerdefinierter Reader sein. Wenn der verwendete Reader die Entitätsauflösung unterstützt, werden externe Entitäten aufgelöst. Wenn der übergebene Reader keine Entitätsverweise unterstützt, werden Entitätsverweise nicht aufgelöst.|  
+|Die **XmlResolver**-Klasse, die vom **XmlDocument** verwendet wird, ist die gleiche Klasse, die vom **XmlReader** verwendet wird.|Das **XmlDocument** verwendet den **XmlResolver**, der dem **XmlReader** zugeordnet wurde.<br /><br /> Die **XmlDocument.Resolver**-Eigenschaft kann nicht unabhängig von der Vertrauensebene des **XmlDocument** festgelegt werden, da sie einen **XmlResolver** aus dem **XmlReader** abruft. Sie können nicht versuchen, die Einstellungen des **XmlResolver** von **XmlReaders** zu überschreiben, indem Sie die **XmlResolver** -Eigenschaft des **XmlDocument**festlegen.|Der **XmlReader** kann der **XmlTextReader**, ein validierender <xref:System.Xml.XmlReader> oder ein benutzerdefinierter Reader sein. Wenn der verwendete Reader die Entitätsauflösung unterstützt, werden externe Entitäten aufgelöst. Wenn der übergebene Reader keine Entitätsverweise unterstützt, werden Entitätsverweise nicht aufgelöst.|  
   
  Ds Festlegen des XmlResolver auf die richtigen Anmeldeinformationen ermöglicht den Zugriff auf externe Ressourcen.  
   

@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742473"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710751"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Herleiten von Schemata aus XML-Dokumenten
 In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments verwendet wird.  

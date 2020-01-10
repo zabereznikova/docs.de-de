@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 380e71e462f736d4564a37b83567007fa9461b05
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2a1dd19189ff65413255b9bc137e1a7f0227bbe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332968"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716647"
 ---
 # <a name="-imports-visual-basic"></a>-Importe (Visual Basic)
 Importiert Namespaces aus einer angegebenen Assembly.  
@@ -33,12 +33,12 @@ Importiert Namespaces aus einer angegebenen Assembly.
   
  Die Elemente in einem Namespace, der mit `-imports` angegeben wird, sind für alle Quell Code Dateien in der Kompilierung verfügbar. Verwenden Sie die [Imports-Anweisung (.NET-Namespace und-Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , um einen Namespace in einer einzelnen Quell Code Datei zu verwenden.  
   
-|So legen Sie/Imports in der integrierten Entwicklungsumgebung von Visual Studio fest|  
+|So legen Sie-Importe in der integrierten Entwicklungsumgebung von Visual Studio fest|  
 |---|  
 |1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2. Klicken Sie auf die Registerkarte **Verweise** .<br />3. Geben Sie den Namespace Namen in das Feld neben der Schaltfläche **Benutzer Import hinzufügen** ein.<br />4. Klicken Sie auf die Schaltfläche **Benutzer Import hinzufügen** .|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code wird kompiliert, wenn `/imports:system.globalization` angegeben wird. Ohne diesen Vorgang erfordert die erfolgreiche Kompilierung, dass eine `Imports System.Globalization`-Anweisung am Anfang der Quell Code Datei enthalten ist, oder dass die Eigenschaft voll qualifiziert als `System.Globalization.CultureInfo.CurrentCulture.Name`ist.
+ Der folgende Code wird kompiliert, wenn `-imports:system.globalization` angegeben wird. Ohne diesen Vorgang erfordert die erfolgreiche Kompilierung, dass eine `Imports System.Globalization`-Anweisung am Anfang der Quell Code Datei enthalten ist, oder dass die Eigenschaft voll qualifiziert als `System.Globalization.CultureInfo.CurrentCulture.Name`ist.
 
 ```vb
 Module Example

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040566"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716214"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung (Application Domain Resource Monitoring, ARM)
 
@@ -24,14 +22,14 @@ Dieses Ereignis wird auch unter dem Rundownanbieter als `ThreadDC` ausgelöst (u
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. Weitere Informationen finden Sie unter [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md).
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Information (4)|
 |`ThreadingKeyword` (0x10000)|Information (4)|
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Wird ausgelöst, wenn|
+|Event|Ereignis-ID|Wird ausgelöst, wenn|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|Ein Thread wurde für die Anwendungsdomäne erstellt.|
 
@@ -50,13 +48,13 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Information (4)|
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Wird ausgelöst, wenn|
+|Event|Ereignis-ID|Wird ausgelöst, wenn|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|Jede 4 MB des Arbeitsspeichers (ungefähr) werden in der Anwendungsdomäne zugeordnet.|
 
@@ -72,13 +70,13 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Information (4)|
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Wird ausgelöst, wenn|
+|Event|Ereignis-ID|Wird ausgelöst, wenn|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|Jede Garbage Collection wurde beendet.|
 
@@ -95,14 +93,14 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Information (4)|
 |`ThreadingKeyword` (0x10000)|Information (4)|
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Wird ausgelöst, wenn|
+|Event|Ereignis-ID|Wird ausgelöst, wenn|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|Ein Thread wechselt in eine Anwendungsdomäne.|
 
@@ -118,14 +116,14 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Information (4)|
 |`ThreadingKeyword` (0x10000)|Information (4)|
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Wird ausgelöst, wenn|
+|Event|Ereignis-ID|Wird ausgelöst, wenn|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|Ein Thread wird beendet.|
 

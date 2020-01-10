@@ -3,14 +3,12 @@ title: Entitätsverweise werden beibehalten
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0fd427388a065bd4c689d087c22fd6d69046b8a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965916"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710920"
 ---
 # <a name="entity-references-are-preserved"></a>Entitätsverweise werden beibehalten
 Wenn der Entitätsverweis nicht erweitert, sondern beibehalten wird, erstellt das XML-Dokumentobjektmodell (DOM) beim Auffinden eines Entitätsverweises einen **XmlEntityReference**-Knoten.  
@@ -24,7 +22,7 @@ Wenn der Entitätsverweis nicht erweitert, sondern beibehalten wird, erstellt da
   
  erstellt das DOM einen **XmlEntityReference**-Knoten, wenn der `&publisher;`-Verweis gefunden wird. Der **XmlEntityReference**-Knoten enthält untergeordnete Knoten, die aus dem Inhalt der Entitätsdeklaration kopiert werden. Im vorherigen Codebeispiel befindet sich Text in der Entitätsdeklaration. Daher wird ein **XmlText**-Knoten als untergeordneter Knoten des Entitätsverweisknotens erstellt.  
   
- ![Baumstruktur für beibehaltene Entitätsverweise](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
+ ![Baumstruktur für beibehaltene Entitäts Verweise](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
 Struktur für Entitätsverweise, die erhalten bleiben  
   
  Die untergeordneten Knoten von **XmlEntityReference** sind Kopien sämtlicher untergeordneter Knoten, die aus dem **XmlEntity**-Knoten erstellt wurden, als die Entitätsdeklaration gefunden wurde.  

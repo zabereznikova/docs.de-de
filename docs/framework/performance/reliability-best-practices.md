@@ -38,14 +38,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834542"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715980"
 ---
 # <a name="reliability-best-practices"></a>Empfohlene Vorgehensweisen für die Zuverlässigkeit
 
@@ -241,7 +239,7 @@ Alle Methoden, in denen Synchronisierung oder Threading zur Anwendung kommt, mü
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Nicht unbegrenzt in nicht verwaltetem Code blockieren
 
-Blockierungen in nicht verwaltetem Code anstatt in verwaltetem Code können zu einem Denial-of-Service-Angriff führen, da die CLR nicht in der Lage ist, den Thread abzubrechen.  Durch einen blockierten Thread wird – zumindest bei Verzicht auf unsichere Vorgänge – die CLR daran gehindert, die <xref:System.AppDomain> zu entladen.  Die Blockierung mithilfe eines Windows-Synchronisierungs primitiven ist ein eindeutiger Beispiel dafür, was wir nicht zulassen können.  Das Blockieren bei einem Aufruf `ReadFile` von für einen Socket sollte nach Möglichkeit vermieden werden – im Idealfall sollte die Windows-API einen Mechanismus für einen Vorgang wie diesen bereitstellen, um ein Timeout zu erzielen.
+Blockierungen in nicht verwaltetem Code anstatt in verwaltetem Code können zu einem Denial-of-Service-Angriff führen, da die CLR nicht in der Lage ist, den Thread abzubrechen.  Durch einen blockierten Thread wird – zumindest bei Verzicht auf unsichere Vorgänge – die CLR daran gehindert, die <xref:System.AppDomain> zu entladen.  Die Blockierung mithilfe eines Windows-Synchronisierungs primitiven ist ein eindeutiger Beispiel dafür, was wir nicht zulassen können.  Die Blockierung in einem Aufruf von `ReadFile` für einen Socket sollte nach Möglichkeit vermieden werden – im Idealfall sollte die Windows-API einen Mechanismus für einen Vorgang wie diesen bereitstellen, um ein Timeout zu erzielen.
 
 Jede Methode, die in nativem Code aufgerufen wird, sollte idealerweise einen Win32-Aufruf mit einem angemessenen, zeitlich begrenzten Timeout verwenden.  Wenn der Benutzer ein Timeout festlegen darf, sollte dieses nur dann zeitlich unbegrenzt sein dürfen, falls der Benutzer über bestimmte Sicherheitsberechtigungen verfügt.  Wenn eine Methode länger als ca. 10 Sekunden blockiert wird, benötigen Sie entweder eine Version, die Timeouts unterstützt, oder zusätzliche CLR-Unterstützung.
 
@@ -277,7 +275,7 @@ Sie sollten alle Stellen, an denen Ausnahmen jeden Typs abgefangen werden, so ä
 
 #### <a name="code-analysis-rule"></a>Code Analyse Regel
 
-Prüfen Sie in verwaltetem Code alle catch-Blöcke, die alle Objekte oder Ausnahmen abfangen.  In C# `catch` bedeutet dies das Kenn {} Zeichnen von und `catch(Exception)` {}.  Sie sollten entweder einen ganz bestimmten Ausnahmetyp verwenden oder den Code prüfen, um sicherzustellen, dass es beim Abfangen unerwarteter Ausnahmetypen nicht zu Fehlern kommt.
+Prüfen Sie in verwaltetem Code alle catch-Blöcke, die alle Objekte oder Ausnahmen abfangen.  In C#bedeutet dies, dass sowohl `catch` {} als auch `catch(Exception)` {}gekennzeichnet werden.  Sie sollten entweder einen ganz bestimmten Ausnahmetyp verwenden oder den Code prüfen, um sicherzustellen, dass es beim Abfangen unerwarteter Ausnahmetypen nicht zu Fehlern kommt.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Gehen Sie nicht davon aus, dass ein verwalteter Thread ein Win32-Thread ist – er ist eine Fiber.
 
@@ -316,4 +314,4 @@ Hierdurch wird der Just-In-Time-Compiler angewiesen, den gesamten Code im finall
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server Programming and Host Protection Attributes (SQL Server-Programmierung und Hostschutzattribute)](sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server-Programmierung und Hostschutzattribute](sql-server-programming-and-host-protection-attributes.md)

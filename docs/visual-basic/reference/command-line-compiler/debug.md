@@ -1,5 +1,5 @@
 ---
-title: /debug
+title: -debug
 ms.date: 03/10/2018
 helpviewer_keywords:
 - debug compiler switches
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 3beb9ad3829c2f55120a9136e6e54185551bd20b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344778"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716775"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 
@@ -34,14 +34,14 @@ oder
 
 |Begriff|Definition|
 |---|---|
-|`+` &#124; `-`|Optional. Wenn Sie `+` oder `/debug` angeben, generiert der Compiler Debuginformationen und platziert Sie in einer PDB-Datei. Das Angeben von `-` hat denselben Effekt wie das Angeben von `/debug`.|
-|`full` &#124; `pdbonly`|Optional. Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Wenn Sie `/debug:pdbonly`nicht angeben, wird der Standardwert `full`, sodass Sie einen Debugger an das laufende Programm anfügen können. Das `pdbonly`-Argument ermöglicht das Debuggen von Quellcode, wenn das Programm im Debugger gestartet wird. es wird jedoch nur assemblysprachcode angezeigt, wenn das laufende Programm an den Debugger angefügt wird.|
+|`+` &#124; `-`|Dies ist optional. Wenn Sie `+` oder `-debug` angeben, generiert der Compiler Debuginformationen und platziert Sie in einer PDB-Datei. Das Angeben von `-` hat denselben Effekt wie das Angeben von `-debug`.|
+|`full` &#124; `pdbonly`|Dies ist optional. Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Wenn Sie `-debug:pdbonly`nicht angeben, wird der Standardwert `full`, sodass Sie einen Debugger an das laufende Programm anfügen können. Das `pdbonly`-Argument ermöglicht das Debuggen von Quellcode, wenn das Programm im Debugger gestartet wird. es wird jedoch nur assemblysprachcode angezeigt, wenn das laufende Programm an den Debugger angefügt wird.|
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn Sie `/debug`, `/debug+`oder `/debug:full`nicht angeben, können Sie die Ausgabedatei Ihres Programms nicht debuggen.
+Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn Sie `-debug`, `-debug+`oder `-debug:full`nicht angeben, können Sie die Ausgabedatei Ihres Programms nicht debuggen.
 
-Standardmäßig werden keine Debuginformationen ausgegeben (`/debug-`). Um Debuginformationen auszugeben, geben Sie `/debug` oder `/debug+`an.
+Standardmäßig werden keine Debuginformationen ausgegeben (`-debug-`). Um Debuginformationen auszugeben, geben Sie `-debug` oder `-debug+`an.
 
 Informationen zur Konfiguration der Leistung einer Anwendung beim Debuggen finden Sie unter [Erleichtern des Debuggens für ein Image](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
