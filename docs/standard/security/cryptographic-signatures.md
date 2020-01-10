@@ -20,14 +20,12 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: de64af1a4617af39b0ef8e054292a402d6a145e6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1de6b3f2eb30df270339910e7b8287101bde65ca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350457"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706252"
 ---
 # <a name="cryptographic-signatures"></a>Kryptografische Signaturen
 
@@ -169,4 +167,4 @@ Dieses Codefragment zeigt "`The signature is valid`" an, wenn die Signatur gült
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

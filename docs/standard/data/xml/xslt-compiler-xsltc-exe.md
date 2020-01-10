@@ -3,14 +3,12 @@ title: XSLT-Compiler (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956996"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709724"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-Compiler (xsltc.exe)
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Sie können mit xsltc.exe keine signierten Assemblys generieren.  
@@ -29,15 +27,15 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |--------------|-----------------|  
 |`sourceFile`|Gibt den Namen des Stylesheets an. Das Stylesheet muss eine lokale Datei sein oder sich im Intranet befinden.|  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Options  
   
-|Option|Beschreibung|  
+|-Option|Beschreibung|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Gibt den Namen der Klasse für das folgende Stylesheet an. Der Klassenname kann vollqualifiziert sein.<br /><br /> In der Standardeinstellung ist der Klassenname mit dem Namen des Stylesheets identisch. Wenn zum Beispiel das Stylesheet customers.xsl kompiliert wird, lautet der standardmäßige Klassenname customers.|  
-|`/debug[`+&#124;-`]`|Gibt an, ob Debuginformationen generiert werden sollen.<br /><br /> Wenn `+` oder `/debug` angegeben wird, generiert der Compiler Debuginformationen und speichert sie in einer Programmdatenbankdatei (PDB-Datei). Der Name der generierten PDB-Datei lautet `assemblyName`.pdb.<br /><br /> Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie `/debug` nicht anzugeben, werden keine Debuginformationen erstellt. Es wird eine Retailassembly generiert. **Hinweis**:  Beim Kompilieren im Debugmodus kann sich die XSLT-Geschwindigkeit spürbar verringern.|  
+|`/debug[`+&#124;-`]`|Gibt an, ob Debuginformationen generiert werden sollen.<br /><br /> Wenn `+` oder `/debug` angegeben wird, generiert der Compiler Debuginformationen und speichert sie in einer Programmdatenbankdatei (PDB-Datei). Der Name der generierten PDB-Datei lautet `assemblyName`.pdb.<br /><br /> Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie `/debug` nicht anzugeben, werden keine Debuginformationen erstellt. Es wird eine Retailassembly generiert. **Hinweis:** Beim Kompilieren im Debugmodus kann sich die XSLT-Leistung spürbar verringern.|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |`/nologo`|Unterdrückt die Anzeige der Compilercopyrightmeldung.|  
-|`/platform:` `string`|Gibt die Plattformen an, auf denen die Assembly ausgeführt werden kann. Im Folgenden werden die gültigen Plattformwerte beschrieben:<br /><br /> `x86` kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).<br /><br /> `x64` kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.<br /><br /> Itanium kompiliert die Assembly für die 64-Bit-CLR auf einem Computer mit einem Itanium-Prozessor.<br /><br /> `anycpu` kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Dies ist die Standardeinstellung.|  
+|`/platform:` `string`|Gibt die Plattformen an, auf denen die Assembly ausgeführt werden kann. Im Folgenden werden die gültigen Plattformwerte beschrieben:<br /><br /> `x86` kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).<br /><br /> `x64` kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.<br /><br /> Itanium kompiliert die Assembly für die 64-Bit-CLR auf einem Computer mit einem Itanium-Prozessor.<br /><br /> `anycpu` kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Dies ist der Standardwert.|  
 |`/out:` `assemblyName`|Gibt den Namen der Assembly an, die ausgegeben wird. Der Assemblyname entspricht standardmäßig dem Namen des Hauptstylesheets bzw. des ersten Stylesheets, falls es mehrere Stylesheets gibt.<br /><br /> Wenn das Stylesheet Skripts enthält, werden die Skripts in einer separaten Assembly gespeichert. Die Namen der Skriptassemblys werden auf der Grundlage des Namens der Hauptassembly generiert. Wenn Sie z. B. als Assemblynamen CustOrders.dll angegeben haben, wird die erste Skriptassembly CustOrders_Script1.dll genannt.|  
 |`/settings:` `document+-, script+-, DTD+-,`|Gibt an, ob `document()`-Funktionen, XSLT-Skripts oder Dokumenttypdefinitionen (DTD) im Stylesheet zugelassen sind.<br /><br /> In der Standardeinstellung werden DTD, die `document()`-Funktion und Skripts nicht unterstützt.|  
 |`@` `file`|Ermöglicht die Angabe einer Datei, die Compileroptionen enthält.|  

@@ -1,5 +1,5 @@
 ---
-title: Serialisieren und Deserialisieren von JSON mit C# -.NET
+title: Serialisieren und Deserialisieren von JSON mit C#.NET
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 32c78cc48dcd3d9f2c6e1d338bdbdd359f69879f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344505"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705794"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Serialisieren und Deserialisieren von JSON in .NET
 
@@ -23,7 +23,7 @@ Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt, nicht übe
 
 Der größte Teil des Serialisierungsbeispielcodes legt <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> auf `true` fest, um die JSON-Datei formatiert auszugeben (mit Einzügen und Leerraum für bessere Lesbarkeit). In der produktiven Umgebung würden Sie für diese Einstellung in der Regel den Standardwert `false` beibehalten.
 
-## <a name="namespaces"></a>-Namespaces
+## <a name="namespaces"></a>Namespaces
 
 Der <xref:System.Text.Json>-Namespace enthält alle Einstiegspunkte und die Haupttypen. Der <xref:System.Text.Json.Serialization>-Namespace enthält Attribute und APIs für erweiterte Szenarien und Anpassungen, die für die Serialisierung und Deserialisierung spezifisch sind. Die in diesem Artikel gezeigten Codebeispiele erfordern `using`-Direktiven für einen oder beide Namespaces:
 

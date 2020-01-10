@@ -8,44 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-author: KrzysztofCwalina
-ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cea3c17de40a873d977223f36b6dcef4f2c2d78
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756857"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709139"
 ---
 # <a name="operator-overloads"></a>Operatorüberladungen
-Operatorüberladungen können angezeigt werden, als wären sie integrierte Sprachprimitive Framework-Typen.  
+Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wären Sie integrierte Sprach primitive.  
   
- Obwohl zulässig und in einigen Situationen nützlich, sollte die operatorüberladungen mit Vorsicht verwendet werden. Es gibt viele Fälle, die in der, die, die Operator überladen missbräuchlich verwendet wurde z. B. beim Start der Framework-Designer Verwendung Operatoren für Vorgänge, die einfache Methoden werden soll, ein. Die folgenden Richtlinien sollten Sie entscheiden, wann und wie Sie die Überladung von Operatoren verwenden können.  
+ Obwohl es in manchen Situationen zulässig und nützlich ist, sollten Operator Überladungen vorsichtig verwendet werden. Es gibt viele Fälle, in denen das Überladen von Operatoren missbraucht wurde, z. b. wenn frameworkdesigner die Verwendung von Operatoren für Vorgänge gestartet haben, die einfache Methoden sein sollten. Die folgenden Richtlinien sollten Sie bei der Entscheidung unterstützen, wann und wie die Operator Überladung verwendet werden soll.  
   
  **X AVOID** definieren operatorüberladungen, außer in Typen, die z. B. primitive (integrierte) Typen können sollten.  
   
  **✓ CONSIDER** operatorüberladungen in einen Typ, der wie ein primitiver Typ denken sollten definieren.  
   
- Z. B. <xref:System.String?displayProperty=nameWithType> hat `operator==` und `operator!=` definiert.  
+ Beispielsweise ist <xref:System.String?displayProperty=nameWithType> `operator==` und `operator!=` definiert.  
   
  **✓ DO** operatorüberladungen in Strukturen, die Zahlen darstellen definieren (z. B. <xref:System.Decimal?displayProperty=nameWithType>).  
   
  **X DO NOT** beim Definieren von operatorüberladungen nette sein.  
   
- Überladen des Operators ist hilfreich in Fällen, in denen es sofort offensichtlich wird das Ergebnis des Vorgangs. Beispielsweise ist es sinnvoll, eine subtrahieren können <xref:System.DateTime> von einem anderen `DateTime` und erhalten Sie eine <xref:System.TimeSpan>. Es ist jedoch nicht sinnvoll, logische union-Operators auf zwei-union-Datenbankabfragen verwenden oder mithilfe der UMSCHALT-Operator verwenden, um das Schreiben in einen Stream.  
+ Die Operator Überladung ist in Fällen nützlich, in denen es sofort offensichtlich ist, was das Ergebnis des Vorgangs sein wird. Beispielsweise ist es sinnvoll, eine <xref:System.DateTime> von einem anderen `DateTime` zu subtrahieren und eine <xref:System.TimeSpan>zu erhalten. Es ist jedoch nicht geeignet, den logischen Union-Operator für die Union zweier Datenbankabfragen zu verwenden oder den Shift-Operator zum Schreiben in einen Stream zu verwenden.  
   
  **X DO NOT** bieten überlädt, wenn mindestens einer der Operanden den Typ definieren die Überladung aufweist.  
   
  **✓ DO** Überladen von Operatoren symmetrisch.  
   
- Wenn Sie überladen, z. B. die `operator==`, überladen Sie auch die `operator!=`. Auf ähnliche Weise, wenn Sie überladen der `operator<`, überladen Sie auch die `operator>`und so weiter.  
+ Wenn Sie z. b. die `operator==`überladen, sollten Sie auch die `operator!=`überladen. Wenn Sie die `operator<`überladen, sollten Sie auch die `operator>`überladen usw.  
   
  **✓ CONSIDER** stellt Methoden bereit, mit dem Anzeigenamen, die entsprechen ab, zu jedem überladener Operator.  
   
- Überladen von unterstützt vielen Sprachen nicht. Aus diesem Grund empfiehlt es sich, dass Typen, die Operatoren überladen eine zweite Methode mit einem entsprechenden domänenspezifischen Namen enthalten, die entsprechende Funktionalität bietet.  
+ Viele Sprachen unterstützen das Überladen von Operatoren nicht. Aus diesem Grund wird empfohlen, dass Typen, die Operatoren überlasten, eine sekundäre Methode mit einem entsprechenden domänenspezifischen Namen enthalten, der entsprechende Funktionalität bereitstellt.  
   
- Die folgende Tabelle enthält eine Liste der Operatoren und die entsprechenden Anzeigenamen Methodennamen.  
+ Die folgende Tabelle enthält eine Liste der Operatoren und der entsprechenden anzeigen amen der Methode.  
   
-|C#-Symbol "Operator"|Metadatennamen|Angezeigter Name|  
+|C#Operator Symbol|Metadatenname|Geeigneter Name|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -86,31 +85,31 @@ Operatorüberladungen können angezeigt werden, als wären sie integrierte Sprac
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|  
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
-### <a name="overloading-operator-"></a>Überladen des ==  
- Überladen von `operator ==` ist ziemlich kompliziert. Die Semantik des Operators müssen als kompatibel mit mehrere andere Member, z. B. <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+### <a name="overloading-operator-"></a>Überladen des Operators = =  
+ Das Überladen von `operator ==` ist recht kompliziert. Die Semantik des Operators muss mit mehreren anderen Membern kompatibel sein, z. b. <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
   
 ### <a name="conversion-operators"></a>Konvertierungsoperatoren  
- Konvertierungsoperatoren sind unäre Operatoren, die Konvertierung von einem Typ in einen anderen zu ermöglichen. Die Operatoren müssen als statische Member auf den Operanden oder der Rückgabetyp definiert werden. Es gibt zwei Typen von Konvertierungsoperatoren: implizite und explizite.  
+ Konvertierungs Operatoren sind unäre Operatoren, die eine Konvertierung von einem Typ in einen anderen ermöglichen. Die Operatoren müssen als statische Member entweder für den Operanden oder den Rückgabetyp definiert werden. Es gibt zwei Typen von Konvertierungs Operatoren: implizit und explizit.  
   
  **X DO NOT** Geben Sie einen Konvertierungsoperator aus, wenn eine solche Konvertierung nicht eindeutig von den Endbenutzern erwartet wird.  
   
  **X DO NOT** Konvertierungsoperatoren außerhalb der Domäne des Typs definiert.  
   
- Z. B. <xref:System.Int32>, <xref:System.Double>, und <xref:System.Decimal> alle numerische Typen sind, während <xref:System.DateTime> nicht. Daher dürfte kein Konvertierungsoperator zum Konvertieren einer `Double(long)` zu einem `DateTime`. Ein Konstruktor wird in diesem Fall bevorzugt.  
+ Beispielsweise sind <xref:System.Int32>, <xref:System.Double>und <xref:System.Decimal> alle numerischen Typen, während <xref:System.DateTime> nicht ist. Daher sollte kein Konvertierungs Operator vorhanden sein, um eine `Double(long)` in eine `DateTime`zu konvertieren. Ein Konstruktor wird in einem solchen Fall bevorzugt.  
   
  **X DO NOT** Geben Sie einen impliziten Konvertierungsoperator, wenn die Konvertierung potenziell lossy ist.  
   
- Beispielsweise gibt es keine muss eine implizite Konvertierung von `Double` zu `Int32` da `Double` hat einen größeren Bereich als `Int32`. Ein expliziten Konvertierungsoperator kann angegeben werden, auch wenn die Konvertierung Datenverlust auftreten kann.  
+ Beispielsweise sollte keine implizite Konvertierung von `Double` in `Int32` vorhanden sein, da `Double` über einen größeren Bereich als `Int32`verfügt. Ein expliziter Konvertierungs Operator kann auch dann bereitgestellt werden, wenn die Konvertierung potenziell Verlust Haft ist.  
   
  **X DO NOT** lösen Ausnahmen aus implizite Umwandlungen.  
   
- Es ist sehr schwierig für Endbenutzer zu verstehen, was passiert, da sie nicht bewusst sein könnten, dass eine Konvertierung stattfindet.  
+ Es ist für Endbenutzer sehr schwierig, herauszufinden, was passiert, da Sie möglicherweise nicht erkennen, dass eine Konvertierung stattfindet.  
   
  **✓ DO** auslösen <xref:System.InvalidCastException?displayProperty=nameWithType> Wenn ein Aufruf an ein Cast-Operator eine verlustbehaftete Konvertierung führt und der Vertrag des Operators lossy Konvertierungen nicht zulässt.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

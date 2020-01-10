@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351716"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716687"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
 
@@ -29,7 +29,7 @@ In der folgenden Tabelle werden die Auswirkungen der Option `-target` zusammenge
 
 |**Option**|**Behavior-Klasse**|
 |----------------|------------------|
-|`-target:exe`|Bewirkt, dass der Compiler eine ausführbare Konsolenanwendung erstellt.<br /><br /> Dies ist die Standardoption, wenn keine `-target` Option angegeben wird. Die ausführbare Datei wird mit der Erweiterung ". exe" erstellt.<br /><br /> Sofern nicht anders mit der Option `/out` angegeben, nimmt der Name der Ausgabedatei den Namen der Eingabedatei an, die das `Sub Main` Verfahren enthält.<br /><br /> In den Quell Code Dateien, die in eine exe-Datei kompiliert werden, ist nur ein `Sub Main` Prozedur erforderlich. Verwenden Sie die `-main`-Compileroption, um anzugeben, welche Klasse die `Sub Main` Prozedur enthält.|
+|`-target:exe`|Bewirkt, dass der Compiler eine ausführbare Konsolenanwendung erstellt.<br /><br /> Dies ist die Standardoption, wenn keine `-target` Option angegeben wird. Die ausführbare Datei wird mit der Erweiterung ". exe" erstellt.<br /><br /> Sofern nicht anders mit der Option `-out` angegeben, nimmt der Name der Ausgabedatei den Namen der Eingabedatei an, die das `Sub Main` Verfahren enthält.<br /><br /> In den Quell Code Dateien, die in eine exe-Datei kompiliert werden, ist nur ein `Sub Main` Prozedur erforderlich. Verwenden Sie die `-main`-Compileroption, um anzugeben, welche Klasse die `Sub Main` Prozedur enthält.|
 |`-target:library`|Bewirkt, dass der Compiler eine Dynamic Link Library (dll) erstellt.<br /><br /> Die Dynamic Link Library-Datei wird mit der Erweiterung ". dll" erstellt.<br /><br /> Sofern nicht anders mit der Option `-out` angegeben, nimmt der Name der Ausgabedatei den Namen der ersten Eingabedatei.<br /><br /> Beim Aufbau einer dll ist eine `Sub Main` Prozedur nicht erforderlich.|
 |`-target:module`|Bewirkt, dass der Compiler ein Modul generiert, das einer Assembly hinzugefügt werden kann.<br /><br /> Die Ausgabedatei wird mit der Erweiterung ". netmodule" erstellt.<br /><br /> Der .NET-Common Language Runtime kann keine Datei laden, die keine Assembly enthält. Sie können eine solche Datei jedoch mit `-reference`in das Assemblymanifest einer Assembly einbinden.<br /><br /> Wenn Code in einem Modul auf interne Typen in einem anderen Modul verweist, müssen beide Module mithilfe von `-reference`in ein Assemblymanifest eingebunden werden.<br /><br /> Die Option [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importiert Metadaten aus einem Modul.|
 |`-target:winexe`|Bewirkt, dass der Compiler eine ausführbare Windows-basierte Anwendung erstellt.<br /><br /> Die ausführbare Datei wird mit der Erweiterung ". exe" erstellt. Eine Windows-basierte Anwendung ist eine, die eine Benutzeroberfläche entweder aus der .NET Framework-Klassenbibliothek oder mit den Windows-APIs bereitstellt.<br /><br /> Sofern nicht anders mit der Option `-out` angegeben, nimmt der Name der Ausgabedatei den Namen der Eingabedatei an, die das `Sub Main` Verfahren enthält.<br /><br /> In den Quell Code Dateien, die in eine exe-Datei kompiliert werden, ist nur ein `Sub Main` Prozedur erforderlich. Verwenden Sie in Fällen, in denen Ihr Code mehr als eine Klasse mit einer `Sub Main` Prozedur aufweist, die `-main`-Compileroption, um anzugeben, welche Klasse die `Sub Main` Prozedur enthält.|

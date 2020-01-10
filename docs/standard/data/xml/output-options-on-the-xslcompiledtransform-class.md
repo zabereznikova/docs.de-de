@@ -3,14 +3,12 @@ title: Ausgabeoptionen für die XslCompiledTransform-Klasse
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647843"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710504"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Ausgabeoptionen für die XslCompiledTransform-Klasse
 In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptionen. Sie können Ausgabeoptionen im Stylesheet oder in der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode angeben.  
@@ -22,11 +20,11 @@ In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptione
   
 |Attributname|Verhalten|  
 |--------------------|--------------|  
-|Methode|Unterstützt.|  
-|Version|Ignoriert. Diese Version ist immer 1.0 für XML und 4.0 für HTML.|  
+|method|Unterstützt.|  
+|-Version|Ignoriert. Diese Version ist immer 1.0 für XML und 4.0 für HTML.|  
 |encoding|Wird bei Ausgabe in einen <xref:System.IO.TextWriter> ignoriert. Stattdessen wird die <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>-Eigenschaft verwendet.|  
 |omit-xml-declaration|Unterstützt.|  
-|Eigenständig|Unterstützt.|  
+|standalone|Unterstützt.|  
 |doctype-public|Unterstützt.|  
 |doctype-system|Unterstützt.|  
 |cdata-section-elements|Unterstützt.|  

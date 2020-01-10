@@ -7,26 +7,25 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-author: KrzysztofCwalina
-ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a5f1142674f83b5ef77f9f7e7e3518afd475e7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778793"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709009"
 ---
 # <a name="unsealed-classes"></a>Unversiegelte Klassen
-Versiegelte Klassen können nicht geerbt werden, aus, und sie verhindern, dass Erweiterbarkeit. Im Gegensatz dazu sind Klassen, die von geerbt werden können, nicht versiegelte Klassen bezeichnet.  
+Versiegelte Klassen können nicht von geerbt werden und verhindern die Erweiterbarkeit. Im Gegensatz dazu werden Klassen, die von geerbt werden können, als nicht versiegelte Klassen bezeichnet.  
   
  **✓ CONSIDER** virtuelle oder geschützten Member mit nicht versiegelten Klassen ohne hinzugefügt werden, da eine hervorragende Möglichkeit zum kostengünstigen bereitstellen noch viel Erweiterbarkeit für ein Framework freuen.  
   
- Entwickler möchten häufig das nicht versiegelte Klassen, um das Hinzufügen von Mitgliedern der Einfachheit halber, z. B. benutzerdefinierten Konstruktoren, neue Methoden und methodenüberladungen erben. Z. B. `System.Messaging.MessageQueue` ist unversiegelt, und daher können Benutzer, die zum Erstellen von benutzerdefinierter Warteschlangen, die standardmäßig der Pfad einer bestimmten Warteschlange oder zum Hinzufügen von benutzerdefinierter Methoden, die die API für bestimmte Szenarien zu vereinfachen.  
+ Entwickler möchten häufig von nicht versiegelten Klassen erben, um bequeme Member wie benutzerdefinierte Konstruktoren, neue Methoden oder Methoden Überladungen hinzuzufügen. Beispielsweise ist `System.Messaging.MessageQueue` nicht versiegelt und ermöglicht es Benutzern, benutzerdefinierte Warteschlangen zu erstellen, die standardmäßig einen bestimmten Warteschlangen Pfad haben, oder benutzerdefinierte Methoden hinzuzufügen, die die API für bestimmte Szenarien vereinfachen.  
   
- Klassen sind in den meisten Programmiersprachen standardmäßig nicht versiegelt, und dies ist auch die empfohlene Standardvorgehensweise für die meisten Klassen in Frameworks. Die Erweiterbarkeit verfügbaren unversiegelte Typen ist viel geschätzt, Framework-Benutzer und recht wenig Aufwand aufgrund von mit relativ niedrigen Testkosten im Zusammenhang mit unversiegelte Typen bereitstellen.  
+ Klassen sind in den meisten Programmiersprachen standardmäßig nicht versiegelt. Dies ist auch der empfohlene Standard für die meisten Klassen in Frameworks. Die Erweiterbarkeit, die von nicht versiegelten Typen geboten wird, wird von frameworkbenutzern erheblich geschätzt und ist aufgrund relativ niedriger Testkosten, die mit nicht versiegelten Typen verbunden sind, sehr kostengünstig.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

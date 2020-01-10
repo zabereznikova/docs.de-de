@@ -12,13 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-author: KrzysztofCwalina
-ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972117"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709477"
 ---
 # <a name="constructor-design"></a>Konstruktorentwurf
 
@@ -50,7 +49,7 @@ Konstruktoren sollten nicht viel Arbeitsaufgaben ausführen, außer die Konstruk
 
 **✓ DO** Ausnahmen von Instanzkonstruktoren, falls zutreffend.
 
-"-" Wird explizit den öffentlichen Parameter losen Konstruktor in Klassen deklarieren, wenn ein solcher Konstruktor erforderlich ist.
+"-" **Wird explizit den** öffentlichen Parameter losen Konstruktor in Klassen deklarieren, wenn ein solcher Konstruktor erforderlich ist.
 
 Wenn Sie nicht explizit Konstruktoren für einen Typ deklarieren, fügen viele Sprachen (z C#. b.) automatisch einen öffentlichen Parameter losen Konstruktor hinzu. (Abstrakte Klassen erhalten einen geschützten Konstruktor.)
 
@@ -76,9 +75,9 @@ Wenn von einem Typkonstruktor eine Ausnahme ausgelöst wird, kann der Typ in der
 
 **✓ CONSIDER** statische Felder von Inline initialisieren, anstatt explizit statische Konstruktoren zu verwenden, da die Common Language Runtime ist in der Lage, zur Optimierung der Leistung von Typen, die nicht über einen explizit definierten statischen Konstruktor verfügen.
 
-*Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
+*Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
-*Neu gedruckt durch die Berechtigung von Pearson Education, Inc. [von Framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungs Serie.*
+*Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>Siehe auch
 

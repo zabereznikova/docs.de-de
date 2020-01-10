@@ -3,14 +3,12 @@ title: Regeln für Rückschlussschemaknotentypen und Struktur
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939645"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710244"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regeln für Rückschlussschemaknotentypen und Struktur
 In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem XML-Dokument auftretenden Knotentypen in eine XSD-Struktur (XML Schema Definition) übersetzt.  
@@ -138,11 +136,11 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 |Knotentyp|Übersetzung|  
 |---------------|-----------------|  
 |Verarbeitungsanweisung|Ignoriert.|  
-|Kommentar|Ignoriert.|  
+|Anmerkungen|Ignoriert.|  
 |Entitätsverweis|Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse behandelt keine Entitätsverweise. Wenn ein XML-Dokument Entitätsverweise enthält, müssen Sie einen Reader verwenden, der die Entitäten erweitert. Sie können beispielsweise eine <xref:System.Xml.XmlTextReader>-Klasse mit der <xref:System.Xml.XmlTextReader.EntityHandling%2A>-Eigenschaft übergeben, die auf den <xref:System.Xml.EntityHandling.ExpandEntities>-Member als Parameter festgelegt ist. Wenn Entitätsverweise auftreten und der Reader Entitäten nicht erweitert, wird eine Ausnahme ausgelöst.|  
 |CDATA|Alle `<![CDATA[ … ]]`-Abschnitte in einem XML-Dokument werden als `xs:string` hergeleitet.|  
 |Dokumenttyp|Ignoriert.|  
-|Namespaces|Ignoriert.|  
+|-Namespaces|Ignoriert.|  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   

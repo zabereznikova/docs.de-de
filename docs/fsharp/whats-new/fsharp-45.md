@@ -2,12 +2,12 @@
 title: Neues in F# 4,5- F# Guide
 description: Verschaffen Sie sich einen Überblick über die neuen Features F# , die in 4,5 verfügbar sind.
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644157"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715690"
 ---
 # <a name="whats-new-in-f-45"></a>Neuerungen in F# 4,5
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Dies ermöglicht es Ihnen nicht, ein änderbares Element in der Struktur zu deklarieren, und F# gibt C# Metadaten aus, die zulassen, dass und als schreibgeschützt behandelt werden, wenn Sie von einer Assembly verwendet werden. Weitere Informationen finden Sie unter schreibgeschützte [Strukturen](../language-reference/structures.md#readonly-structs) .
+Dies ermöglicht es Ihnen nicht, ein änderbares Element in der Struktur zu deklarieren, und F# gibt C# Metadaten aus, die zulassen, dass und als schreibgeschützt behandelt werden, wenn Sie von einer Assembly verwendet werden. Weitere Informationen finden Sie unter schreibgeschützte [Strukturen](../language-reference/structures.md#readonly-structs).
 
 ## <a name="void-pointers"></a>Void-Zeiger
 
@@ -88,7 +88,7 @@ Der `voidptr` Typ wird F# 4,5 hinzugefügt, wie die folgenden Funktionen:
 
 Dies ist hilfreich, wenn Sie mit einer systemeigenen Komponente interagieren, von der void-Zeiger verwendet werden.
 
-## <a name="the-match-keyword"></a>Das `match!`-Schlüsselwort
+## <a name="the-match-keyword"></a>dem `match!`-Schlüsselwort
 
 Mit dem `match!`-Schlüsselwort wird der Musterabgleich bei einem Berechnungs Ausdruck erweitert:
 

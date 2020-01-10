@@ -24,14 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975824"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709204"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -90,15 +88,15 @@ Der .NET Framework stellt die folgenden Klassen bereit, die Verschlüsselungsalg
 
 - <xref:System.Security.Cryptography.AesManaged> (eingeführt in .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> (Technisch gesehen handelt es sich hierbei um einen Algorithmus mit geheimem Schlüssel, da er einen Nachrichtenauthentifizierungscode darstellt, der mithilfe einer kryptografischen Hashfunktion und einem geheimen Schlüssel berechnet wird. Siehe [Hashwerte](#hash-values)weiter unten in diesem Thema.)
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
 ## <a name="public-key-encryption"></a>Verschlüsselung mit öffentlichem Schlüssel
 
@@ -142,7 +140,7 @@ Der .NET Framework stellt die folgenden Klassen bereit, die Verschlüsselungsalg
 
 RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur. DSA kann dagegen nur für die Signatur und Diffie-Hellman nur für die Erzeugung von Schlüsseln verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.
 
-## <a name="digital-signatures"></a>Digitale Signaturen
+## <a name="digital-signatures"></a>Digital Signatures
 
 Algorithmen mit öffentlichem Schlüssel können auch für digitale Signaturen verwendet werden. Digitale Signaturen authentifizieren die Identität eines Absenders (wenn Sie dem öffentlichen Schlüssel des Absenders vertrauen) und schützen die Datenintegrität. Mit dem von Alice erzeugten öffentlichen Schlüssel kann der Empfänger von Alices Daten überprüfen, dass sie tatsächlich von Alice gesendet wurden. Dazu vergleicht er die digitale Signatur mit Alices Daten mit ihrem öffentlichen Schlüssel.
 
@@ -187,21 +185,21 @@ Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten 
 
 Der .NET Framework stellt die folgenden Klassen bereit, die Hash Algorithmen implementieren:
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.
 
@@ -270,7 +268,7 @@ Der .NET Framework 3,5 umfasst auch eine Reihe von unterstützenden CNG-Klassen,
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Kryptografiemodell](../../../docs/standard/security/cryptography-model.md)|Beschreibt das Implementieren von Kryptografie in der Basisklassenbibliothek.|
 |[Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Veranschaulicht grundlegende Verschlüsselungs- und Entschlüsselungsaufgaben.|

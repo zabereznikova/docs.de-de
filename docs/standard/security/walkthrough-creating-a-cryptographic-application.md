@@ -10,14 +10,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895286"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705833"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird. Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen. Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards. Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.  
@@ -33,7 +31,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
  In der folgenden Tabelle sind die kryptografischen Aufgaben in diesem Thema zusammengefasst.  
   
-|Aufgabe|Beschreibung|  
+|Task|Beschreibung|  
 |----------|-----------------|  
 |Erstellen einer Windows Forms-Anwendung|Listet die Steuerelemente auf, die zum Ausführen der Anwendung erforderlich sind.|  
 |Deklarieren von globalen Objekten|Deklariert Zeichenfolgenpfadvariablen, die <xref:System.Security.Cryptography.CspParameters> und den <xref:System.Security.Cryptography.RSACryptoServiceProvider>, um den globalen Kontext der <xref:System.Windows.Forms.Form>-Klasse zu erhalten.|  
@@ -45,7 +43,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
 |Importieren eines öffentlichen Schlüssels|Lädt den Schlüssel aus einer XML-Datei in den Schlüsselcontainer.|  
 |Testen der Anwendung|Listet Verfahren zum Testen dieser Anwendung auf.|  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
 - Verweise auf die Namespaces <xref:System.IO> und <xref:System.Security.Cryptography>.  
@@ -53,7 +51,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
 ## <a name="creating-a-windows-forms-application"></a>Erstellen einer Windows Forms-Anwendung  
  Die meisten Codebeispiele in dieser exemplarischen Vorgehensweise sind als Ereignishandler für Button-Steuerelemente konzipiert. In der folgenden Tabelle sind die Steuerelemente aufgelistet, die für die Beispielanwendung und die erforderlichen Namen benötigt werden, um mit den Codebeispielen übereinzustimmen.  
   
-|Steuerelement|Name|Texteigenschaft (nach Bedarf)|  
+|Steuerelement|-Name|Texteigenschaft (nach Bedarf)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Datei verschlüsseln|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Datei entschlüsseln|  
@@ -82,7 +80,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Verschlüsseln einer Datei  
- Diese Aufgabe umfasst zwei Methoden: die Ereignishandlermethode `Encrypt File` für die`buttonEncryptFile_Click`Schaltfläche ( `EncryptFile` ) und die-Methode. Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
+ Diese Aufgabe umfasst zwei Methoden: die Ereignishandlermethode für die `Encrypt File` Schaltfläche (`buttonEncryptFile_Click`) und die `EncryptFile`-Methode. Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
   
  Der verschlüsselte Inhalt, der Schlüssel und der IV werden zusammen in einem <xref:System.IO.FileStream>-Objekt gespeichert, das als Verschlüsselungspaket bezeichnet wird.  
   

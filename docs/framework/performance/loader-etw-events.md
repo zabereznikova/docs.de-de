@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974589"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716030"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
 In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
@@ -22,7 +20,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 ## <a name="application-domain-events"></a>Anwendungsdomänenereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`AppDomainLoad_V1` und `AppDomainUnLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Information (4)|  
@@ -30,7 +28,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (protokolliert für alle Anwendungsdomänen)|156|Wird ausgelöst, wenn eine Anwendungsdomäne während der Lebensdauer eines Prozesses erstellt wird.|  
 |`AppDomainUnLoad_V1`|157|Wird ausgelöst, wenn eine Anwendungsdomäne während der Lebensdauer eines Prozesses zerstört wird.|  
@@ -50,7 +48,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 ## <a name="clr-loader-assembly-events"></a>CLR-Ladeprogramm-Assemblyereignisse  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`AssemblyLoad` und `AssemblyUnload`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Information (4)|  
@@ -58,7 +56,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Wird beim Laden einer Assembly ausgelöst.|  
 |`AssemblyUnload_V1`|155|Wird beim Entladen einer Assembly ausgelöst.|  
@@ -79,7 +77,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 ## <a name="module-events"></a>Modulereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`ModuleLoad_V2` und `ModuleUnload_V2`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Information (4)|  
@@ -88,7 +86,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Wird ausgelöst, wenn ein Modul während der Lebensdauer eines Prozesses geladen wird.|  
 |`ModuleUnload_V2`|153|Wird ausgelöst, wenn ein Modul während der Lebensdauer eines Prozesses entladen wird.|  
@@ -124,7 +122,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 ## <a name="clr-domain-module-events"></a>CLR-Domänenmodulereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0 x 8)|`DomainModuleLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Information (4)|  
@@ -132,7 +130,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Wird ausgelöst, wenn ein Modul für eine Anwendungsdomäne geladen wird.|  
 |`DomainModuleDCStart_V1`|151|Listet während eines Startrundowns für eine Anwendungsdomäne geladene Module auf und wird für alle Anwendungsdomänen protokolliert.|  
@@ -154,7 +152,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 ## <a name="module-range-events"></a>Modulbereichereignisse
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Information (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Information (4)|  
@@ -162,7 +160,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Beschreibung|  
+|Event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Dieses Ereignis ist vorhanden, wenn ein geladenes Native Image Generator (NGen)-Image mit IBC optimiert wurde und Informationen über die aktiven Bereiche des NGen-Image enthält.|  
 |`ModuleRangeDCStart`|160|Ein `ModuleRange` -Ereignis, das zu Beginn eines Rundowns ausgelöst wird.|  

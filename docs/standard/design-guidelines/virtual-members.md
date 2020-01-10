@@ -7,36 +7,35 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-author: KrzysztofCwalina
-ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c1e6d9aeafa1c9d7ee4b0c2c626b6fd7be6cf99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778702"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708970"
 ---
 # <a name="virtual-members"></a>Virtuelle Member
-Virtuelle Member können überschrieben werden, daher ändern des Verhaltens der Unterklasse. Sie sind sehr ähnlich, mit der Rückrufe in Bezug auf die Erweiterbarkeit, die sie bereitstellen, aber sie sind im Hinblick auf die, ausführungsleistung und arbeitsspeichernutzung besser. Darüber hinaus einleuchtender virtuelle Member in Szenarien, die erfordern, erstellen eine besondere Art von einem vorhandenen Typ (Spezialisierung).  
+Virtuelle Member können überschrieben werden, wodurch das Verhalten der Unterklasse geändert wird. Sie ähneln den Rückrufen in Bezug auf die Erweiterbarkeit, die Sie bereitstellen, aber Sie sind besser in Bezug auf die Ausführungs Leistung und den Arbeitsspeicher Verbrauch. Außerdem sind virtuelle Member in Szenarien, in denen eine besondere Art von vorhandenem Typ (Spezialisierung) erstellt werden muss, natürlicher.  
   
- Virtuelle Member bieten eine bessere Leistung als Rückrufe und Ereignisse, jedoch eine bessere Leistung als nicht virtuelle Methoden nicht durchführen.  
+ Virtuelle Member sind besser als Rückrufe und Ereignisse, jedoch nicht besser als nicht virtuelle Methoden.  
   
- Der Hauptnachteil der virtuelle Member ist das Verhalten eines virtuellen Members kann nur zum Zeitpunkt der Kompilierung geändert werden. Das Verhalten eines Rückrufs kann zur Laufzeit geändert werden.  
+ Der Hauptnachteil von virtuellen Membern besteht darin, dass das Verhalten eines virtuellen Members nur zum Zeitpunkt der Kompilierung geändert werden kann. Das Verhalten eines Rückrufs kann zur Laufzeit geändert werden.  
   
- Virtuelle Member, z. B. Rückrufe (und vielleicht mehr als Rückrufe), sind kostspielig zum Entwerfen, testen und verwalten, da es sich bei jedem Aufruf eines virtuellen Members kann überschrieben werden, auf unvorhersehbare Weise und kann beliebigen Code auszuführen. Darüber hinaus ist deutlich mehr Aufwand, den Vertrag des virtuelle Member, klar zu definieren, damit die Kosten für das Entwerfen und Dokumentieren sie liegt in der Regel erforderlich.  
+ Virtuelle Member, wie z. b. Rückrufe (und vielleicht mehr als Rückrufe), sind aufwendig zu entwerfen, zu testen und zu warten, da jeder Aufruf eines virtuellen Members auf unvorhersehbare Weise überschrieben werden kann und beliebigen Code ausführen kann. Außerdem ist in der Regel viel mehr Aufwand erforderlich, um den Vertrag von virtuellen Membern eindeutig zu definieren, sodass die Kosten für das Entwerfen und dokumentieren höher sind.  
   
  **X DO NOT** machen Sie Member virtuellen, es sei denn, Sie einen guten Grund haben dazu, und Sie kennen die von den Kosten, die im Zusammenhang mit entwerfen, testen und Verwalten virtueller Member.  
   
- Virtuelle Member sind weniger Datentypkonflikte in Bezug auf Änderungen, die mit ihnen hergestellt werden können, ohne wichtige Kompatibilität. Darüber hinaus sind sie langsamer ist als nicht virtuellen Member, vor allem, da Aufrufe zum virtuelle Member nicht inline ersetzt sind.  
+ Virtuelle Member sind weniger in Bezug auf Änderungen, die an Ihnen vorgenommen werden können, ohne dass die Kompatibilität unterbrochen wird. Außerdem sind Sie langsamer als nicht virtuelle Member, hauptsächlich, weil Aufrufe von virtuellen Membern nicht Inline sind.  
   
  **✓ CONSIDER** Beschränken der Erweiterbarkeit um nur was dies absolut notwendig ist.  
   
- **✓ DO** bevorzugt geschützten Zugriff über öffentlichen Zugriff für virtuelle Member. Öffentliche Member sollten Erweiterbarkeit bereitzustellen (falls erforderlich) durch den Aufruf in eine geschützte virtuelle Memberfunktion.  
+ **✓ DO** bevorzugt geschützten Zugriff über öffentlichen Zugriff für virtuelle Member. Öffentliche Member sollten bei Bedarf Erweiterbarkeit durch Aufrufen eines geschützten virtuellen Members bereitstellen.  
   
- Die öffentlichen Member einer Klasse sollte die richtige Gruppe von Funktionen für direkte Kunden dieser Klasse bereitstellen. Virtuelle Member in Unterklassen überschrieben werden sollen, und die geschützten Zugriff ist eine hervorragende Möglichkeit zum Beschränken von allen virtuellen Erweiterungspunkte, in dem sie verwendet werden können.  
+ Die öffentlichen Member einer Klasse sollten den richtigen Funktions Satz für direkte Consumer dieser Klasse bereitstellen. Virtuelle Member sind so konzipiert, dass Sie in Unterklassen überschrieben werden, und geschützter Zugriff ist eine hervorragend geeignete Möglichkeit, um alle virtuellen Erweiterbarkeits Punkte auf den Ort zu beschränken, an dem Sie verwendet werden können.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348586"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716701"
 ---
 # <a name="-reference-visual-basic"></a>-Verweis (Visual Basic)
 Bewirkt, dass der Compiler Typinformationen in den angegebenen Assemblys zur Verfügung stellt, die für das aktuell kompilierte Projekt verfügbar sind.  
@@ -52,7 +52,7 @@ oder
   
  Die Vbc. rsp-Antwortdatei, die auf häufig verwendete .NET Framework Assemblys verweist, wird standardmäßig verwendet. Verwenden Sie `-noconfig`, wenn Sie nicht möchten, dass der Compiler Vbc. rsp verwendet.  
   
- Die Kurzform von `-reference` ist `/r`.  
+ Die Kurzform von `-reference` ist `-r`.  
   
 ## <a name="example"></a>Beispiel  
  Mit dem folgenden Befehl werden Quelldatei `Input.vb` und Verweisassemblys aus `Metad1.dll` kompiliert und `Metad2.dll`, um `Out.exe`zu erstellen.  

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974918"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715996"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 
@@ -26,7 +24,7 @@ Alle Methodenereignisse werden unter dem Laufzeitanbieter vom Schlüsselwort `JI
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. Weitere Informationen finden Sie unter [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md).
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)-Laufzeitanbieter|Information (4)|
 |`NGenKeyword` (0x20)-Laufzeitanbieter|Information (4)|
@@ -35,7 +33,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. Weitere Informat
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Beschreibung|
+|Event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Wird ausgelöst, wenn eine Methode Just-in-Time geladen (JIT-geladen) oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden diese Version nicht für Methodenladevorgänge. JIT-Hilfen verwenden nie diese Version.|
 |`MethodUnLoad_V1`|137|Wird ausgelöst, wenn ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden nie diese Version für das Entladen von Methoden.|
@@ -60,7 +58,7 @@ Diese Ereignisse werden nur unter dem Rundownanbieter ausgelöst. Sie bezeichnen
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800)-Rundownanbieter|Information (4)|
 |`JitRundownKeyword` (0x10)-Rundownanbieter|Information (4)|
@@ -68,7 +66,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Beschreibung|
+|Event|Ereignis-ID|Beschreibung|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Wird vor dem Start der Enumeration während eines Startrundowns gesendet.|
 |`DCStartComplete_V1`|145|Wird am Ende der Enumeration während eines Startrundowns gesendet.|
@@ -85,7 +83,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)-Laufzeitanbieter|Ausführlich (5)|
 |`NGenKeyword` (0x20)-Laufzeitanbieter|Ausführlich (5)|
@@ -94,7 +92,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Beschreibung|
+|Event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Wird ausgelöst, wenn eine Methode JIT-geladen oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden immer diese Version für das Laden von Methoden. JIT-Hilfen verwenden immer diese Version.|
 |`MethodUnLoadVerbose_V1`|144|Wird ausgelöst, wenn eine dynamische Methode zerstört, ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden immer diese Version für das Entladen von Methoden.|
@@ -120,7 +118,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an:
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|
+|Schlüsselwort zum Auslösen des Ereignisses|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10)-Laufzeitanbieter|Ausführlich (5)|
 |`NGenKeyword` (0x20)-Laufzeitanbieter|Ausführlich (5)|
@@ -129,7 +127,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 Die folgende Tabelle zeigt die Ereignisinformationen an:
 
-|event|Ereignis-ID|Beschreibung|
+|Event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Wird ausgelöst, wenn eine Methode JIT-kompiliert wird.|
 

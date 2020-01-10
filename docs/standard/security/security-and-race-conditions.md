@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933808"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705872"
 ---
 # <a name="security-and-race-conditions"></a>Sicherheit und Racebedingungen
-Ein weiterer Bereich von Bedeutung ist, potenzielle Sicherheitslücken, die durch Racebedingungen ausgenutzt wird. Es gibt mehrere Möglichkeiten, die in denen dies geschehen kann. Die folgenden untergeordneten Themen werden einige der wichtigsten Fehlerquellen, die der Entwickler zu vermeiden, muss.  
+Ein weiterer betroffenbereich ist das Potenzial von Sicherheitslücken, die von Racebedingungen ausgenutzt werden. Es gibt mehrere Möglichkeiten, dies zu tun. In den folgenden Unterthemen werden einige der Hauptprobleme erläutert, die der Entwickler vermeiden muss.  
   
-## <a name="race-conditions-in-the-dispose-method"></a>Racebedingungen, in die Dispose-Methode  
- Wenn einer Klasse des **Dispose** Methode (Weitere Informationen finden Sie unter [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) ist nicht synchronisiert, es ist möglich, Bereinigungscode in **Dispose** kann ausgeführt werden, mehr als einmal, wie im folgenden Beispiel gezeigt.  
+## <a name="race-conditions-in-the-dispose-method"></a>Racebedingungen in der verwerfen-Methode  
+ Wenn die **verwerfen-Methode** einer Klasse (Weitere Informationen finden Sie unter [Garbage Collection](../../../docs/standard/garbage-collection/index.md)) nicht synchronisiert ist, kann der Bereinigungs **Code in "** verwerfen" mehrmals ausgeführt werden, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- Da dies **Dispose** Implementierung nicht synchronisiert wird, ist es möglich, dass `Cleanup` Aufruf durch einen Thread, und klicken Sie dann einen zweiten Thread vor dem `_myObj` nastaven NA hodnotu **null**. Ob dies ein Sicherheitsproblem ist Was geschieht, hängt bei dem `Cleanup` code ausgeführt wird. Problem mit der nicht synchronisierten **Dispose** Implementierungen schließt die Verwendung eines Ressourcenhandles, z. B. Dateien. Eine fehlerhafte Löschung kann das falsche Handle verwendet werden, was häufig zu Sicherheitsrisiken führt.  
+ Da diese **Lösch** Implementierung nicht synchronisiert ist, ist es möglich, dass `Cleanup` von dem ersten Thread und dann einem zweiten Thread aufgerufen wird, bevor `_myObj` auf **null**festgelegt wird. Ob dies ein Sicherheitsproblem ist, hängt davon ab, was geschieht, wenn der `Cleanup` Code ausgeführt wird. Ein schwerwiegendes Problem bei **nicht synchronisierten** Lösch Implementierungen umfasst die Verwendung von Ressourcen Handles wie z. b. Dateien. Eine nicht ordnungsgemäße Löschung kann dazu führen, dass das falsche Handle verwendet wird. Dies führt häufig zu Sicherheitsrisiken.  
   
 ## <a name="race-conditions-in-constructors"></a>Racebedingungen in Konstruktoren  
- In einigen Anwendungen ist es möglicherweise möglich, dass andere Threads auf Klassenmember zugegriffen wird, bevor Sie deren Klassenkonstruktoren vollständig ausgeführt haben. Sie sollten überprüfen, dass alle Klassenkonstruktoren, um sicherzustellen, dass keine Sicherheitsprobleme vorliegen, wenn dies geschehen sollte, oder Threads zu synchronisieren, falls erforderlich.  
+ In einigen Anwendungen kann es möglich sein, dass andere Threads auf Klassenmember zugreifen können, bevor deren Klassenkonstruktoren vollständig ausgeführt wurden. Überprüfen Sie alle Klassenkonstruktoren, um sicherzustellen, dass keine Sicherheitsprobleme auftreten, oder synchronisieren Sie ggf. Threads.  
   
 ## <a name="race-conditions-with-cached-objects"></a>Racebedingungen mit zwischengespeicherten Objekten  
- Code, speichert Informationen zur Sicherheit oder verwendet die Codezugriffssicherheit [Assert](../../../docs/framework/misc/using-the-assert-method.md) Vorgang möglicherweise auch Racebedingungen anfällig, wenn andere Teile der Klasse nicht ordnungsgemäß synchronisiert sind, wie im folgenden Beispiel gezeigt.  
+ Code, der Sicherheitsinformationen zwischenspeichert oder den Code Zugriffs Sicherheits- [Assert](../../../docs/framework/misc/using-the-assert-method.md) -Vorgang verwendet, ist möglicherweise auch anfällig für Racebedingungen, wenn andere Teile der Klasse nicht ordnungsgemäß synchronisiert werden, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,12 +95,12 @@ void DoOtherWork()
 }  
 ```  
   
- Wenn es gibt andere Pfade zu `DoOtherWork` , die von einem anderen Thread mit demselben Objekt aufgerufen werden kann, ein nicht vertrauenswürdiger Aufrufer Forderung verzögern kann.  
+ Wenn andere Pfade zu `DoOtherWork` vorhanden sind, die von einem anderen Thread mit demselben Objekt aufgerufen werden können, kann ein nicht vertrauenswürdiger Aufrufer über eine Anforderung hinausgehen.  
   
- Stellen Sie Informationen zur Sicherheit von Ihrem Code zwischengespeichert werden, sicher, dass es hinsichtlich dieser Schwachstelle zu überprüfen.  
+ Wenn Ihr Code Sicherheitsinformationen zwischenspeichert, stellen Sie sicher, dass Sie diese Sicherheitslücke überprüfen.  
   
-## <a name="race-conditions-in-finalizers"></a>Racebedingungen im Finalizer  
- Racebedingungen können auch in einem Objekt auftreten, die eine statische oder nicht verwaltete Ressource verweist, die dann in der Finalizer freigegeben. Wenn mehrere Objekte auf eine Ressource, die in den Finalizer einer Klasse geändert wird freigeben, müssen die Objekte alle Zugriffe auf diese Ressource synchronisieren.  
+## <a name="race-conditions-in-finalizers"></a>Racebedingungen in Finalizern  
+ Racebedingungen können auch in einem Objekt auftreten, das auf eine statische oder nicht verwaltete Ressource verweist, die Sie dann im Finalizer freigibt. Wenn mehrere Objekte eine Ressource gemeinsam verwenden, die im Finalizer einer Klasse bearbeitet wird, müssen die Objekte den gesamten Zugriff auf diese Ressource synchronisieren.  
   
 ## <a name="see-also"></a>Siehe auch
 

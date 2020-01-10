@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046739"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716180"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
@@ -37,7 +35,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
  Normalerweise wird die ETW-Protokollierung vor dem Start eines Prozesses aktiviert, und die Protokollierung wird nach dem Beenden des Prozesses deaktiviert. Wenn jedoch die ETW-Protokollierung aktiviert wird, während der Prozess ausgeführt wird, werden zusätzliche Informationen zum Prozess benötigt. Für die Symbolauflösung müssen Sie zum Beispiel Methodenereignisse für Methoden protokollieren, die bereits vor dem Aktivieren der Protokollierung geladen wurden.  
   
- Das `DCStart`-Ereignis und das `DCEnd`-Ereignis erfassen den Zustand des Prozesses, als die Datensammlung gestartet und beendet wurde. (Der Zustand verweist auf allgemeine Informationen, u. a. die bereits just-in-time (JIT) kompilierten Methoden und die bereits geladenen Assemblys.) Diese beiden Ereignisse können Informationen dazu liefern, was bereits im Prozess geschehen ist; z. B. welche Methoden JIT-kompiliert wurden usw.  
+ Das `DCStart`-Ereignis und das `DCEnd`-Ereignis erfassen den Zustand des Prozesses, als die Datensammlung gestartet und beendet wurde. (State bezieht sich auf Informationen auf hoher Ebene, einschließlich der Methoden, die bereits JIT-kompilierte (Just-in-Time)-und geladene Assemblys waren.) Diese beiden Ereignisse können Informationen darüber bereitstellen, was bereits im Prozess passiert ist. beispielsweise, welche Methoden JIT-kompiliert wurden, usw.  
   
  Nur die Ereignisse mit `DC`, `DCStart`, `DCEnd` oder `DCInit` in ihren Namen werden unter dem Rundownanbieter ausgelöst. Darüber hinaus werden diese Ereignisse nur unter dem Rundownanbieter ausgelöst.  
   

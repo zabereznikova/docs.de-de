@@ -12,13 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353697"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709217"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.  
@@ -48,9 +47,9 @@ public class String {
   
  Dieses Muster gibt normalerweise an, dass die Eigenschaft eigentlich eine Methode sein soll.  
   
- **✓ DO**: Benennen Sie Sammlungseigenschaften mit einer Phrase im Plural, mit dem die Elemente in der Sammlung beschrieben werden, anstatt mit einer Phrase im Singular, gefolgt von „List“ oder „Collection“.  
+ Der **Name der** Sammlungs Eigenschaften mit einem Plural Ausdruck, der die Elemente in der Auflistung beschreibt, anstatt einen Singular Ausdruck, gefolgt von "List" oder "Collection" zu verwenden.  
   
- **✓ DO**: Benennen Sie boolesche Eigenschaften mit einem positiven Ausdruck (`CanSeek` anstelle von `CantSeek`). Optional können Sie auch booleschen Eigenschaften „Is,“, „Can,“ oder „Has,“ voranstellen, jedoch nur, wo es Sinn ergibt.  
+ **✓ DO**: Benennen Sie boolesche Eigenschaften mit einem positiven Ausdruck (`CanSeek` anstelle von `CantSeek`). Optional können Sie auch boolesche Eigenschaften mit "is", "Can" oder "has" versehen, aber nur an der Stelle, an der der Wert hinzugefügt wird.  
   
  **✓ CONSIDER**: Ziehen Sie in Betracht, einer Eigenschaft den gleichen Namen wie ihrem Typ zu geben.  
   

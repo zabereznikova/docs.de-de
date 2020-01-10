@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969031"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709815"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -27,7 +25,7 @@ Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen C
   
  Es folgt ein Vergleich zwischen der <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse und der <xref:System.Xml.Schema.XmlSchemaSet>-Klasse.  
   
-|XmlSchemaCollection|XmlSchemaSet|  
+|XmlSchemaCollection.|XmlSchemaSet|  
 |-------------------------|------------------|  
 |Unterstützt Microsoft XDR-Schemata und XML-Schemata des W3C.|Unterstützt nur XML-Schemata des W3C.|  
 |Die Schemata werden beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Methode kompiliert.|Die Schemata werden beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode nicht kompiliert. Dadurch wird die Leistungsfähigkeit während der Erstellung der Schemabibliothek erhöht.|  

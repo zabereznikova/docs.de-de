@@ -3,14 +3,12 @@ title: Herleiten eines XML-Schemas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3056ead487cc737003f7de5b877a706f1d444c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a65247f1786acea11879abf0405038446068c118
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577620"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710764"
 ---
 # <a name="inferring-an-xml-schema"></a>Herleiten eines XML-Schemas
 Beschreibt die Verwendung der SOM-Klasse (Schema Object Model) <xref:System.Xml.Schema.XmlSchemaInference> zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments.  

@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590031"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710283"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Auflösen von externen Ressourcen während der XSLT-Verarbeitung
 Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
@@ -23,8 +21,8 @@ Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressource
   
 |XSLT-Aufgabe|Verwendung von "XmlResolver"|  
 |---------------|--------------------------------------|  
-|Kompilieren des Stylesheets.|Auflösen des URI des Stylesheets.<br /><br /> - und -<br /><br /> Auflösen von URI-Verweisen in allen `xsl:import`-Elementen oder `xsl:include`-Elementen.|  
-|Ausführen des Stylesheets.|Auflösen des URI des Kontextmenüs.<br /><br /> - und -<br /><br /> Auflösen von URI-Verweisen in beliebigen Funktionen von XSLT-`document()`.|  
+|Kompilieren des Stylesheets.|Auflösen des URI des Stylesheets.<br /><br /> -und-<br /><br /> Auflösen von URI-Verweisen in allen `xsl:import`-Elementen oder `xsl:include`-Elementen.|  
+|Ausführen des Stylesheets.|Auflösen des URI des Kontextmenüs.<br /><br /> -und-<br /><br /> Auflösen von URI-Verweisen in beliebigen Funktionen von XSLT-`document()`.|  
   
  Die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode und die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode enthalten Überladungen, die ein <xref:System.Xml.XmlResolver>-Objekt als eines ihrer Argumente verwenden. Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, wird ein Standard-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen verwendet.  
   

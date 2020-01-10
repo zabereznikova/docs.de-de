@@ -1,15 +1,13 @@
 ---
 title: 'Bewährte Methoden für native Interoperabilität: .NET'
 description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von Schnittstellen mit nativen Komponenten in .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923771"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706399"
 ---
 # <a name="native-interoperability-best-practices"></a>Bewährte Methoden für native Interoperabilität
 
@@ -29,35 +27,35 @@ Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarie
 
 ## <a name="dllimport-attribute-settings"></a>Attributeinstellungen für „DllImport“
 
-| Einstellung | Standard | Empfehlung | Details |
+| -Einstellung | Default | Empfehlung | Details |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Behalten Sie den Standardwert bei.  | Wenn diese Einstellung explizit auf „false“ festgelegt wird, werden fehlerhafte HRESULT-Rückgabewerte zu Ausnahmen umgewandelt (und der Rückgabewert in der Definition wird dadurch NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Hängt von der API ab.  | Legen Sie diese Einstellung auf „true“ fest, wenn die API „GetLastError“ verwendet, und verwenden Sie „Marshal.GetLastWin32Error“, um den Wert abzurufen. Wenn die API eine Bedingung festlegt, die besagt, dass ein Fehler vorliegt, rufen Sie den Fehler ab, bevor Sie weitere Aufrufe senden, um ein versehentliches Überschreiben zu verhindern.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` – Fallback auf das Verhalten `CharSet.Ansi`.  | Verwenden Sie explizit `CharSet.Unicode` oder `CharSet.Ansi`, wenn in der Definition Zeichenfolgen oder Zeichen vorhanden sind. | Damit wird das Marshallingverhalten von Zeichenfolgen angegeben und festgelegt, was `ExactSpelling` bei `false` ausführt. Beachten Sie, dass `CharSet.Ansi` unter Unix tatsächlich UTF8 ist. _In den meisten Fällen_ verwendet Windows Unicode, Unix verwendet UTF8. Weitere Informationen finden Sie in der [Dokumentation zu Zeichensätzen](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` – Fallback auf das Verhalten `CharSet.Ansi`.  | Verwenden Sie explizit `CharSet.Unicode` oder `CharSet.Ansi`, wenn in der Definition Zeichenfolgen oder Zeichen vorhanden sind. | Damit wird das Marshallingverhalten von Zeichenfolgen angegeben und festgelegt, was `ExactSpelling` bei `false` ausführt. Beachten Sie, dass `CharSet.Ansi` tatsächlich UTF8 oder Unix ist. _In den meisten Fällen_ verwendet Windows Unicode, Unix verwendet UTF8. Weitere Informationen finden Sie in der [Dokumentation zu Zeichensätzen](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Legen Sie diesen Wert auf „true“ fest, um einen leichten Leistungsvorteil zu erzielen, da die Runtime nicht nach alternativen Funktionsnamen mit dem Suffix „A“ oder „W“ sucht, je nach Wert der Einstellung von `CharSet` („A“ für `CharSet.Ansi` und „W“ für `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Zeichenfolgenparameter
 
-Wenn „CharSet“ auf „Unicode“ festgelegt oder das Argument explizit als `[MarshalAs(UnmanagedType.LPWSTR)]` gekennzeichnet ist _und_ die Zeichenfolge per Wert (nicht als `ref` oder `out`) übergeben wird, wird die Zeichenfolge angeheftet und vom nativen Code direkt verwendet (nicht kopiert).
+Wenn der Zeichensatz Unicode ist oder das Argument explizit als `[MarshalAs(UnmanagedType.LPWSTR)]` gekennzeichnet ist _und_ die Zeichenfolge als Wert (nicht `ref` oder `out`) übermittelt wird, wird die Zeichenfolge fixiert und direkt von System eigenem Code (anstatt kopiert) verwendet.
 
 Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei denn, Sie möchten explizit, dass Ihre Zeichenfolgen als ANSI verarbeitet werden.
 
-**❌ VERWENDEN SIE KEINE** `[Out] string`-Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+**❌ verwenden keine** `[Out] string` Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ VERMEIDEN** Sie `StringBuilder`-Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
+**❌ vermeiden** Sie `StringBuilder` Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
 
 1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
 2. Aufrufen
    1. Ordnet einen nativen Puffer zu **{2}**  
-   2. Kopiert den Inhalt im Fall von `[In]` _(Standard für einen `StringBuilder`-Parameter)_  
-   3. Kopiert den nativen Puffer in ein neu zugeordnetes verwaltetes Array im Fall von `[Out]` **{3}** _(ebenfalls Standard für `StringBuilder`)_  
+   2. Kopiert den Inhalt, wenn `[In]` _(der Standardwert für einen `StringBuilder`-Parameter)_ .  
+   3. Kopiert den systemeigenen Puffer in ein neu zugeordneter verwaltetes Array, wenn `[Out]` **{3}** _(auch der Standardwert für `StringBuilder`)_  
 3. `ToString()` ordnet ein weiteres verwaltetes Array zu **{4}**
 
 Damit haben wir *{4}* Zuordnungen, um eine Zeichenfolge aus dem nativen Code abzurufen. Die beste Möglichkeit, um dies zu beschränken, besteht darin, den `StringBuilder` in einem weiteren Aufruf wiederzuverwenden, damit wird aber dennoch nur *1* Zuordnung eingespart. Es ist viel besser, einen Zeichenpuffer aus dem `ArrayPool` zu verwenden und zwischenzuspeichern – damit benötigen Sie in nachfolgenden Aufrufen nur die Zuordnung für `ToString()`.
 
 Ein weiteres Problem bei `StringBuilder` ist, dass immer der Rückgabepuffer bis zum ersten NULL-Zeichen zurückkopiert wird. Wenn die zurückgegebene Zeichenfolge nicht beendet oder mit einem doppelten NULL-Zeichen beendet wird, ist „P/Invoke“ bestenfalls falsch.
 
-Wenn Sie `StringBuilder` *tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
+Wenn Sie `StringBuilder`*tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
 
 **✔️ ERWÄGEN** Sie die Verwendung von `char[]`s aus einem `ArrayPool`.
 
@@ -68,8 +66,8 @@ Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standa
 **Bei den meisten APIs mit Puffer für Ausgabezeichenfolgen gilt Folgendes**:  
 > Die übergebene Zeichenanzahl muss das NULL-Zeichen enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.  
 >
-> - 5 übergeben, 4 abrufen: Die Zeichenfolge ist 4 Zeichen lang und umfasst ein nachgestelltes NULL-Zeichen.
-> - 5 übergeben, 6 abrufen: Die Zeichenfolge ist 5 Zeichen lang und erfordert einen Puffer mit 6 Zeichen für das NULL-Zeichen.  
+> - Pass 5, get 4: die Zeichenfolge ist 4 Zeichen lang und weist einen nachfolgenden NULL-Wert auf.
+> - Durchlauf 5, Get 6: die Zeichenfolge ist 5 Zeichen lang, benötigt einen 6-Zeichen Puffer, um den NULL-Wert zu speichern.  
 > [Windows-Datentypen für Zeichenfolgen](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Boolesche Parameter und Felder
@@ -84,7 +82,7 @@ GUIDs können direkt in Signaturen verwendet werden. Viele Windows-APIs akzeptie
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ VERWENDEN SIE `[MarshalAs(UnmanagedType.LPStruct)]` NICHT** für etwas anderes als `ref`-GUID-Parameter.
+**❌ nicht** Verwenden Sie `[MarshalAs(UnmanagedType.LPStruct)]` für andere als `ref` GUID-Parameter.
 
 ## <a name="blittable-types"></a>Für Blitting geeignete Typen
 
@@ -124,7 +122,7 @@ Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuc
 
 **✔️ LEGEN** Sie Ihre Strukturen nach Möglichkeit als für Blitting geeignet fest.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter: .
 
 - [Blitfähige und nicht blitfähige Typen](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [Marshalling von Typen](type-marshaling.md)
@@ -143,7 +141,7 @@ IntPtr ptr = handle.AddrOfPinnedObject();
 handle.Free();
 ```
 
-Anheften ist kein Standardvorgang für `GCHandle`. Das andere wichtige Muster sieht so aus: Ein Verweis wird über nativen Code an ein verwaltetes Objekt übergeben und in der Regel über einen Rückruf wieder zurückgegeben. Hier sehen Sie das Muster:
+Anheften ist kein Standardvorgang für `GCHandle`. Das andere wichtige Muster sieht so aus: Ein Verweis wird über nativen Code an ein verwaltetes Objekt übergeben und, in der Regel über einen Rückruf, wieder zurückgegeben. Hier sehen Sie das Muster:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj);
@@ -191,7 +189,7 @@ Die folgenden Typen weisen trotz ihrer Namen die gleiche Größe wie 32- und 64-
 
 Die folgenden Typen sind Zeiger und entsprechen der Breite der Plattform. Verwenden Sie `IntPtr`/`UIntPtr` für diese.
 
-| Signierte Zeigertypen (verwenden Sie `IntPtr`) | Nicht signierte Zeigertypen (verwenden Sie `UIntPtr`) |
+| Signierte Zeigertypen (verwenden Sie `IntPtr`). | Nicht signierte Zeigertypen (verwenden Sie `UIntPtr`). |
 |:------------------------------------|:---------------------------------------|
 | `HANDLE`                            | `WPARAM`                               |
 | `HWND`                              | `UINT_PTR`                             |

@@ -6,24 +6,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: KrzysztofCwalina
-ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff38cfdc228fd1eae1ace734ed2688c62c66499a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785566"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709555"
 ---
 # <a name="attributes"></a>Attribute
-<xref:System.Attribute?displayProperty=nameWithType> eine Basisklasse wird zum Definieren von benutzerdefinierter Attributen verwendet werden.  
+<xref:System.Attribute?displayProperty=nameWithType> ist eine Basisklasse, die zum Definieren von benutzerdefinierten Attributen verwendet wird.  
   
- Attribute sind Anmerkungen, die die Programmierelemente, z. B. Assemblys, Typen, Member und Parameter hinzugefügt werden können. Sie werden in den Metadaten der Assembly gespeichert und zur Laufzeit mithilfe der Reflektions-APIs zugegriffen werden können. Das Framework definiert z. B. die <xref:System.ObsoleteAttribute>, die angewendet werden können, auf einen Typ oder ein Element aus, um anzugeben, dass der Typ oder Member veraltet ist.  
+ Attribute sind Anmerkungen, die Programmier Elementen wie Assemblys, Typen, Membern und Parametern hinzugefügt werden können. Sie werden in den Metadaten der Assembly gespeichert und können zur Laufzeit mithilfe der reflektionsapis aufgerufen werden. Das Framework definiert z. b. die <xref:System.ObsoleteAttribute>, die auf einen Typ oder einen Member angewendet werden kann, um anzugeben, dass der Typ oder Member veraltet ist.  
   
- Attribute können eine oder mehrere Eigenschaften verfügen, die zusätzliche Daten, die im Zusammenhang mit der das Attribut enthalten. Z. B. `ObsoleteAttribute` könnte natürlich zusätzliche Informationen zu dieser Version in die ein Typ oder Member als veraltet markiert wurde und die Beschreibung der neuen APIs ersetzt die veraltete API.  
+ Attribute können über eine oder mehrere Eigenschaften verfügen, die zusätzliche Daten enthalten, die sich auf das Attribut beziehen. Beispielsweise können `ObsoleteAttribute` zusätzliche Informationen über das Release enthalten, in dem ein Typ oder ein Mitglied als veraltet eingestuft wurde, und die Beschreibung der neuen APIs, die die veraltete API ersetzen.  
   
- Einige Eigenschaften eines Attributs müssen angegeben werden, wenn das Attribut angewendet wird. Diese sind als die erforderlichen Eigenschaften oder die erforderlichen Argumente bezeichnet, da sie als Konstruktorparameter mit Feldern fester Breite dargestellt werden. Z. B. die <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> Eigenschaft der <xref:System.Diagnostics.ConditionalAttribute> ist eine erforderliche Eigenschaft.  
+ Einige Eigenschaften eines Attributs müssen angegeben werden, wenn das Attribut angewendet wird. Diese werden als erforderliche Eigenschaften oder erforderliche Argumente bezeichnet, da Sie als positionelle Konstruktorparameter dargestellt werden. Die <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A>-Eigenschaft der <xref:System.Diagnostics.ConditionalAttribute> ist beispielsweise eine erforderliche Eigenschaft.  
   
- Eigenschaften, die nicht unbedingt angegeben werden, wenn das Attribut angewendet wird, werden optionale Eigenschaften (oder optionalen Argumenten) bezeichnet. Sie werden durch festlegbaren Eigenschaften dargestellt. Compiler bieten speziellen Syntax zum Festlegen dieser Eigenschaften, wenn ein Attribut angewendet wird. Z. B. die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Eigenschaft darstellt, ein optionales Argument.  
+ Eigenschaften, die nicht unbedingt angegeben werden müssen, wenn das-Attribut angewendet wird, werden optionale Eigenschaften (oder optionale Argumente) genannt. Sie werden durch festleg bare Eigenschaften dargestellt. Compiler stellen spezielle Syntax bereit, um diese Eigenschaften festzulegen, wenn ein Attribut angewendet wird. Die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType>-Eigenschaft stellt z. b. ein optionales Argument dar.  
   
  **✓ DO** benennen Sie benutzerdefinierte Attributklassen mit dem Suffix "-Attribut" an.  
   
@@ -33,21 +32,21 @@ ms.locfileid: "61785566"
   
  **✓ DO** nur Get-Eigenschaften für die erforderlichen Argumente bereitstellen.  
   
- **✓ DO** Konstruktorparameter zum Initialisieren der Eigenschaften, die erforderlichen Argumente bereitstellen. Jeder Parameter muss den gleichen Namen (auch mit unterschiedlicher Groß-/Kleinschreibung) als die entsprechende Eigenschaft verfügen.  
+ **✓ DO** Konstruktorparameter zum Initialisieren der Eigenschaften, die erforderlichen Argumente bereitstellen. Jeder Parameter sollte denselben Namen haben (obwohl er mit unterschiedlicher Groß-/Kleinschreibung identisch ist) wie die entsprechende Eigenschaft.  
   
  **X AVOID** Konstruktorparameter zum Initialisieren der Eigenschaften, die die optionalen Argumente bereitstellen.  
   
- Das heißt, keine Eigenschaften, die mit einem Setter und einen Konstruktor festgelegt werden können. Diese Richtlinie ist sehr deutlich, welche Argumente optional sind und die erforderlich sind, und vermeidet zwei Möglichkeiten zum erledigen des gleiche.  
+ Mit anderen Worten, Sie verfügen nicht über Eigenschaften, die sowohl mit einem Konstruktor als auch mit einem Setter festgelegt werden können. Diese Richtlinie gibt explizit an, welche Argumente optional und welche erforderlich sind, und vermeidet zwei Möglichkeiten, das gleiche zu tun.  
   
  **X AVOID** Überladen von Konstruktoren des benutzerdefinierten Attributs.  
   
- Müssen nur über einen Konstruktor kommuniziert eindeutig für den Benutzer der Argumente erforderlich sind und welche optional sind.  
+ Nur ein Konstruktor kommuniziert eindeutig mit dem Benutzer, welche Argumente erforderlich und welche optional sind.  
   
- **✓ DO** versiegeln Sie benutzerdefinierte Attributklassen, falls möglich. Dies beschleunigt die Suche für das Attribut.  
+ **✓ DO** versiegeln Sie benutzerdefinierte Attributklassen, falls möglich. Dadurch wird das Suchen nach dem Attribut beschleunigt.  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

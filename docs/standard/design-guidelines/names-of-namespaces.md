@@ -8,20 +8,19 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-author: KrzysztofCwalina
-ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0678f695e3ae7c40660031862c9073a21fd72491
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615220"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709230"
 ---
 # <a name="names-of-namespaces"></a>Namen von Namespaces
-Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Namespaces erstellt ausreichend Klarheit für den Programmierer mit dem Framework sofort wissen, was der Inhalt des Namespace wahrscheinlich ist. Die folgende Vorlage gibt die allgemeine Regel für die Benennung von Namespaces an:  
+Wie bei anderen Benennungs Richtlinien ist das Ziel bei der Benennung von Namespaces, dass der Programmierer, der das Framework verwendet, ausreichend Klarheit schafft, um sofort zu wissen, welcher Inhalt des Namespace wahrscheinlich ist. Die folgende Vorlage gibt die allgemeine Regel für das Benennen von Namespaces an:  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
   
- Es folgen Beispiele für:  
+ Im Folgenden finden Sie entsprechende Beispiele:  
   
  `Fabrikam.Math`  
  `Litware.Security`  
@@ -30,59 +29,59 @@ Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Names
   
  **✓ DO** ein stabiler, versionsunabhängige Produktname auf der zweiten Ebene eine Namespace-Namen verwenden.  
   
- **X DO NOT** Organisationseinheit Hierarchien für Namen in Namespacehierarchien, als Grundlage verwenden, da Gruppennamen in Unternehmen häufig kurzlebig sind. Organisieren Sie die Hierarchie der Namespaces, um Gruppen von verwandten Technologien.  
+ **X DO NOT** Organisationseinheit Hierarchien für Namen in Namespacehierarchien, als Grundlage verwenden, da Gruppennamen in Unternehmen häufig kurzlebig sind. Organisieren Sie die Hierarchie von Namespaces um Gruppen verwandter Technologien.  
   
- **✓ DO** PascalCasing und abgetrennten Namespacekomponenten mit Zeiträumen verwenden (z. B. `Microsoft.Office.PowerPoint`). Wenn Ihre Marke zwar Groß-/Kleinschreibung verwendet, sollten Sie die Groß-/Kleinschreibung, Ihre Marke definiert folgen, selbst wenn es sich von normalen Namespace Groß-/Kleinschreibung abweicht.  
+ **✓ DO** PascalCasing und abgetrennten Namespacekomponenten mit Zeiträumen verwenden (z. B. `Microsoft.Office.PowerPoint`). Wenn Ihre Marke nicht herkömmliche Schreibweise verwendet, sollten Sie die von Ihrer Marke definierte Groß-/Kleinschreibung befolgen, auch wenn Sie von der normalen Namespace-Schreibweise abweicht.  
   
  **✓ CONSIDER** plural Namespacenamen verwenden, falls zutreffend.  
   
- Verwenden Sie z. B. `System.Collections` statt `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen von dieser Regel. Verwenden Sie z. B. `System.IO` statt `System.IOs`.  
+ Verwenden Sie z. B. `System.Collections` statt `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen für diese Regel. Verwenden Sie z. B. `System.IO` statt `System.IOs`.  
   
  **X DO NOT** denselben Namen für einen Namespace und einen Typ in diesem Namespace verwenden.  
   
- Verwenden Sie z. B. nicht `Debug` als Namespace benennen, und geben Sie dann auch eine Klasse namens `Debug` im selben Namespace. Einige Compiler erfordern, dass solche Typen vollständig qualifiziert werden.  
+ Verwenden Sie z. b. `Debug` nicht als Namespace Namen, und stellen Sie dann auch eine Klasse mit dem Namen `Debug` im gleichen Namespace bereit. Mehrere Compiler erfordern, dass solche Typen voll qualifiziert sind.  
   
-### <a name="namespaces-and-type-name-conflicts"></a>Namespaces und Namenstypkonflikten  
+### <a name="namespaces-and-type-name-conflicts"></a>Namespaces und Typnamen Konflikte  
  **X DO NOT** führen Sie die generischen Namen wie z. B. `Element`, `Node`, `Log`, und `Message`.  
   
- Es ist eine sehr hohe Wahrscheinlichkeit, dass dies zur Folge hat, geben Sie den Namen in gängigen Szenarien steht in Konflikt. Sie sollten den Namen des generischen Typs zu qualifizieren (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
+ Es gibt eine sehr hohe Wahrscheinlichkeit, dass dies zu Typnamens Konflikten in gängigen Szenarien führt. Sie sollten die generischen Typnamen (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`) qualifizieren.  
   
- Es gibt bestimmte Richtlinien zum Vermeiden von namenstypkonflikten für verschiedene Kategorien von Namespaces.  
+ Es gibt spezielle Richtlinien zum Vermeiden von Typnamens Konflikten für verschiedene Namespaces-Kategorien.  
   
-- **Application-Modell-namespaces**  
+- **Namespaces des Anwendungs Modells**  
   
-     Namespaces für ein einziges Anwendungsmodell werden sehr häufig zusammen verwendet werden, aber sie werden fast nie mit Namespaces anderer Modelle für die Anwendung verwendet. Z. B. die <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace werden nur sehr selten zusammen mit den <xref:System.Web.UI?displayProperty=nameWithType> Namespace. Im folgenden finden eine Liste der bekannten Modell Namespace Anwendungsgruppen:  
+     Namespaces, die zu einem einzelnen Anwendungsmodell gehören, werden häufig zusammen verwendet, aber Sie werden fast nie mit Namespaces anderer Anwendungsmodelle verwendet. Beispielsweise wird der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace sehr selten in Verbindung mit dem <xref:System.Web.UI?displayProperty=nameWithType>-Namespace verwendet. Im folgenden finden Sie eine Liste bekannter Anwendungsmodell-Namespace Gruppen:  
   
      `System.Windows*`   
      `System.Web.UI*`  
   
      **X DO NOT** weisen den gleichen Namen auf Typen in Namespaces in einem einzigen Anwendungsmodell.  
   
-     Z. B. nicht auf einen Typ mit dem Namen hinzufügen `Page` auf die <xref:System.Web.UI.Adapters?displayProperty=nameWithType> -Namespace, da die <xref:System.Web.UI?displayProperty=nameWithType> -Namespace enthält bereits einen Typ namens `Page`.  
+     Fügen Sie z. b. dem <xref:System.Web.UI.Adapters?displayProperty=nameWithType>-Namespace keinen Typ mit dem Namen `Page` hinzu, da der <xref:System.Web.UI?displayProperty=nameWithType>-Namespace bereits einen Typ mit dem Namen `Page`enthält.  
   
-- **Infrastrukturnamespaces**  
+- **Infrastructure-Namespaces**  
   
-     Diese Gruppe enthält die Namespaces, die nur selten während der Entwicklung häufig genutzte Anwendungen importiert werden. Z. B. `.Design` Namespaces werden hauptsächlich verwendet, wenn das tools entwickeln, Programmieren. Vermeiden von Konflikten mit Typen aus den Namespaces ist unerheblich.  
+     Diese Gruppe enthält Namespaces, die nur selten während der Entwicklung allgemeiner Anwendungen importiert werden. `.Design`-Namespaces werden z. b. hauptsächlich zum Entwickeln von Programmier Tools verwendet. Es ist nicht wichtig, Konflikte mit Typen in diesen Namespaces zu vermeiden.  
   
-- **Core-namespaces**  
+- **Kernnamespaces**  
   
-     Core-Namespaces enthalten alle `System` Namespaces, mit Ausnahme von Namespaces der Anwendungsmodelle und die Infrastruktur-Namespaces. Core-Namespaces einschließen, u. a. `System`, `System.IO`, `System.Xml`, und `System.Net`.  
+     Kernnamespaces enthalten alle `System` Namespaces, ausgenommen Namespaces der Anwendungsmodelle und der Infrastructure-Namespaces. Zu den Kernnamespaces zählen unter anderem `System`, `System.IO`, `System.Xml`und `System.Net`.  
   
      **X DO NOT** erteilen, die in Konflikt stehenden Namen mit einem beliebigen Typ in den Core-Namespaces Typen.  
   
-     Verwenden Sie z. B. niemals `Stream` als Typname. Es steht in Konflikt mit <xref:System.IO.Stream?displayProperty=nameWithType>, ein sehr häufig verwendete Typ.  
+     Verwenden Sie z. b. niemals `Stream` als Typnamen. Es würde zu einem Konflikt mit <xref:System.IO.Stream?displayProperty=nameWithType>, einem sehr häufig verwendeten Typ, kommen.  
   
-- **Technologie-Namespace-Gruppen**  
+- **Technologie-Namespace Gruppen**  
   
-     Diese Kategorie enthält alle Namespaces mit den gleichen Namespaceknoten der ersten beiden `(<Company>.<Technology>*`), wie z. B. `Microsoft.Build.Utilities` und `Microsoft.Build.Tasks`. Es ist wichtig, dass Typen, die auf eine einzelne Technologie gehören nicht miteinander in Konflikt stehen.  
+     Diese Kategorie enthält alle Namespaces mit denselben ersten zwei Namespace Knoten `(<Company>.<Technology>*`), z. b. `Microsoft.Build.Utilities` und `Microsoft.Build.Tasks`. Es ist wichtig, dass Typen, die zu einer einzelnen Technologie gehören, nicht miteinander in Konflikt stehen.  
   
      **X DO NOT** Typnamen, die in Konflikt stehen würde mit anderen Typen in einer einzelnen Technologie zuweisen.  
   
      **X DO NOT** einführen Typnamenskonflikte zwischen Typen in Technologienamespaces und eine Anwendungsmodellnamespace (es sei denn, die Technologie nicht mit dem Anwendungsmodell verwendet werden sollen).  
   
- *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
 ## <a name="see-also"></a>Siehe auch
 

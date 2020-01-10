@@ -3,20 +3,18 @@ title: XML-Dokumentobjektmodell (DOM)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 160d056491ca71f6de039e8cac7302a61504fcd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662486"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709958"
 ---
 # <a name="xml-document-object-model-dom"></a>XML-Dokumentobjektmodell (DOM)
 
 Die XML-DOM-Klasse ist eine Darstellung eines XML-Dokuments im Speicher. Mit dem DOM können Sie ein XML-Dokument programmgesteuert lesen und ändern. Die **XmlReader**-Klasse liest auch XML. Sie bietet jedoch nur nicht zwischengespeicherten, schreibgeschützten Forward-Only-Zugriff. Das bedeutet, dass keine Funktionen zum Bearbeiten der Werte eines Attributs oder des Inhalts eines Elements existieren, oder dass Knoten nicht mit der **XmlReader**-Klasse eingefügt oder entfernt werden können. Der DOM erfüllt in erster Linie Bearbeitungsfunktionen. Es ist die herkömmliche strukturierte Methode, XML-Daten im Speicher darzustellen, obwohl die tatsächlichen XML-Daten linear gespeichert werden, wenn sie sich in einer Datei befinden oder aus einem anderen Objekt in eine Datei eingefügt werden. Im Folgenden werden XML-Daten dargestellt.
 
-## <a name="input"></a>Eingabe
+## <a name="input"></a>Input
 
 ```xml
 <?xml version="1.0"?>
@@ -35,7 +33,7 @@ Die XML-DOM-Klasse ist eine Darstellung eines XML-Dokuments im Speicher. Mit dem
 
 In der folgenden Abbildung wird dargestellt, wie ein Speicher strukturiert ist, wenn diese XML-Daten in die DOM-Struktur eingelesen werden.
 
-![Struktur von XML-Dokumenten](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") Struktur von XML-Dokumenten
+![XML-Dokumentstruktur](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree") XML-Dokumentstruktur
 
 Innerhalb der Struktur eines XML-Dokuments stellt jeder Kreis in dieser Abbildung einen Knoten dar, der als **XmlNode**-Objekt bezeichnet wird. Das **XmlNode**-Objekt ist das Basisobjekt in der DOM-Struktur. Die **XmlDocument**-Klasse, die das **XmlNode**-Objekt erweitert, unterstützt Methoden zum Ausführen von Vorgängen für das gesamte Dokument (z.B. Laden des Dokuments in den Speicher oder Speichern von XML-Daten in eine Datei). Außerdem bietet die **XmlDocument**-Klasse eine Möglichkeit zum Anzeigen und Ändern der Knoten im gesamten XML-Dokument. Sowohl das **XmlNode**-Objekt als auch die **XmlDocument**-Klasse sind hinsichtlich der Leistung und Benutzerfreundlichkeit verbessert worden. Sie bieten zudem Methoden und Eigenschaften für folgende Zwecke:
 

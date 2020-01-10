@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974932"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716020"
 ---
 # <a name="interop-etw-events"></a>Interop-ETW-Ereignisse
 Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
@@ -21,13 +19,13 @@ Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischen
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Der MSIL-Stub wurde generiert.|  
   
@@ -51,13 +49,13 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informa
 
 Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|Schlüsselwort zum Auslösen des Ereignisses|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|event|Ereignis-ID|Wird ausgelöst, wenn|  
+|Event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Es wurde auf den MSIL-Cache zugegriffen.|  
   

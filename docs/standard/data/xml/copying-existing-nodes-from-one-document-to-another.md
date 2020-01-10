@@ -3,14 +3,12 @@ title: Kopieren bestehender Knoten aus einem Dokument in ein anderes
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e08c86ebdd71746520085844de5743692e84640e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965930"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711024"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopieren bestehender Knoten aus einem Dokument in ein anderes
 Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine ganze Knotenunterstruktur von einem **XmlDocument** in ein anderes kopieren können. Der Knoten, der von dem Aufruf zurückgegeben wird, ist eine Kopie des Knotens aus dem Quelldokument, einschließlich Attributwerten, Knotennamen, Knotentyp und allen namespacebezogenen Attributen wie Präfix, lokaler Name und Namespace-URI (Uniform Resource Identifier). Das Quelldokument bleibt dabei unverändert. Nachdem Sie den Knoten importiert haben, müssen Sie ihn noch der Struktur hinzufügen, indem Sie eine der Methoden zum Einfügen von Knoten verwenden.  
@@ -28,7 +26,7 @@ Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine
 |XmlComment|Kopiert den Knoten einschließlich der zugehörigen Daten.|Kopiert den Knoten einschließlich der zugehörigen Daten.|  
 |XmlDocumentFragment|Die untergeordneten Elemente des Quellknotens werden rekursiv importiert. Die daraus resultierenden Knoten werden neu assembliert und bilden die entsprechende Teilstruktur.|Ein leeres **XmlDocumentFragment** wird erstellt.|  
 |XmlDocumentType|Kopiert den Knoten einschließlich der zugehörigen Daten.*|Kopiert den Knoten einschließlich der zugehörigen Daten.*|  
-|XmlElement|Die untergeordneten Elemente des Quellelements werden rekursiv importiert. Die daraus resultierenden Knoten werden neu assembliert und bilden die entsprechende Teilstruktur. **Hinweis**:  Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|Die angegebenen Attributknoten des Quellelements werden importiert, und die generierten **XmlAttribute**-Knoten werden an das neue Element angehängt. Die untergeordneten Knoten werden nicht kopiert. **Hinweis**:  Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|  
+|XmlElement|Die untergeordneten Elemente des Quellelements werden rekursiv importiert. Die daraus resultierenden Knoten werden neu assembliert und bilden die entsprechende Teilstruktur. **Hinweis:** Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|Die angegebenen Attributknoten des Quellelements werden importiert, und die generierten **XmlAttribute**-Knoten werden an das neue Element angehängt. Die untergeordneten Knoten werden nicht kopiert. **Hinweis:** Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|  
 |XmlEntityReference|Da im Quell- und Zieldokument die Entitäten unterschiedlich definiert sein können, kopiert diese Methode nur den **XmlEntityReference**-Knoten. Der Ersetzungstext ist davon nicht betroffen. Wenn die Entität des Zieldokuments definiert ist, wird deren Wert zugewiesen.|Da im Quell- und Zieldokument die Entitäten unterschiedlich definiert sein können, kopiert diese Methode nur den **XmlEntityReference**-Knoten. Der Ersetzungstext ist davon nicht betroffen. Wenn die Entität des Zieldokuments definiert ist, wird deren Wert zugewiesen.|  
 |XmlProcessingInstruction|Kopiert den Ziel- und Datenwert des importierten Knotens.|Kopiert den Ziel- und Datenwert des importierten Knotens.|  
 |XmlText|Kopiert den Knoten einschließlich der zugehörigen Daten.|Kopiert den Knoten einschließlich der zugehörigen Daten.|  
