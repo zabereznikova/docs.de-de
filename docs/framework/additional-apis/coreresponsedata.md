@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675415"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741019"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData-Klasse
 
-Die `CoreResponseData` Klasse stellt das Analysieren der HTTP-Header und Text der Antwort.
+Die `CoreResponseData`-Klasse stellt die Verarbeitung von HTTP-Headern und den Antworttext dar.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Diese API ist intern, und sie ist nicht vorgesehen, direkt in Ihrem Code verwendet werden. Sie sollten stattdessen eine <xref:System.Diagnostics.DiagnosticSource> Netzwerk-Code zu verknüpfen. Finden Sie unter [DiagnosticSource-Benutzerhandbuch](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Diese API ist intern und sollte nicht direkt im Code verwendet werden. Stattdessen sollten Sie einen <xref:System.Diagnostics.DiagnosticSource> zum Anschließen von Netzwerkcode verwenden. Weitere Informationen finden Sie [im Benutzerhandbuch für diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft unterstützt nicht die Verwendung dieser Klasse in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** System (in "System.dll")
+**Assembly:** System (in "System. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.
