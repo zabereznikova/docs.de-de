@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 22d363fde369bc7e84a9354d27f57af356f30ebb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636457"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740305"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
 Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Presentation Foundation (WPF) verwenden, über einen umfangreichen neuen Satz von Druck-und drucksystemverwaltungs-APIs. Mit Windows Vista sind einige dieser Erweiterungen des Drucksystems auch für Entwickler verfügbar, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendungen und Entwicklern mit nicht verwaltetem Code erstellen. Der Kern dieser neuen Funktionalität ist das neue XPS-Dateiformat (XML Paper Specification) und der XPS-Druckpfad.  
@@ -47,7 +47,7 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
   
 - Systemeigene Unterstützung für erweiterte Farbprofile, die auch 32 Bit pro Kanal (bpc), CMYK, benannte Farben, n-Tinten und systemeigene Unterstützung von Transparenz und Farbverläufen einschließen.  
   
-- Verbesserte Druckleistung für .NET Framework und [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] basierte Anwendungen.  
+- Verbesserte Druckleistung für .NET Framework-und Win32-basierte Anwendungen.  
   
 - Industriestandard-XPS-Format.  
   
@@ -60,9 +60,9 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
 - Erweiterbare Filterpipeline. Die Filter Pipeline des XPS-Druckertreibers (XPSDrv) wurde entwickelt, um das direkte und skalierbare Drucken von XPS-Dokumenten zu ermöglichen. Weitere Informationen finden Sie unter [XPSDrv-Druckertreiber](/windows-hardware/drivers/print/xpsdrv-printer-drivers). 
   
 ### <a name="print-path-architecture"></a>Druckpfadarchitektur  
- Während sowohl [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] als auch .NET Framework Anwendungen XPS unterstützen, verwenden [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] und Windows Forms Anwendungen eine GDI-zu-XPS-Konvertierung, um XPS-formatierten Inhalt für den XPS-Druckertreiber (XPSDrv) zu erstellen. Diese Anwendungen sind nicht erforderlich, um den XPS-Druckpfad zu verwenden, und können den erweiterten Metafile (EMF)-basierten Druck weiterhin verwenden. Die meisten XPS-Features und-Erweiterungen sind jedoch nur für Anwendungen verfügbar, die auf den XPS-Druckpfad abzielen.  
+ Obwohl sowohl Win32-als auch .NET Framework-Anwendungen XPS unterstützen, verwenden Win32-und Windows Forms-Anwendungen eine GDI-zu-XPS-Konvertierung, um XPS-formatierten Inhalt für den XPS-Druckertreiber (XPSDrv) zu erstellen. Diese Anwendungen sind nicht erforderlich, um den XPS-Druckpfad zu verwenden, und können den erweiterten Metafile (EMF)-basierten Druck weiterhin verwenden. Die meisten XPS-Features und-Erweiterungen sind jedoch nur für Anwendungen verfügbar, die auf den XPS-Druckpfad abzielen.  
   
- Um die Verwendung von XPSDrv-basierten Druckern durch [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-und Windows Forms-Anwendungen zu ermöglichen, unterstützt der XPS-Druckertreiber (XPSDrv) die Konvertierung von GDI in das XPS-Format. Das XPSDrv-Modell stellt außerdem einen Konverter für das XPS-zu-GDI-Format bereit, sodass [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendungen XPS-Dokumente drucken können. Bei WPF-Anwendungen erfolgt die Konvertierung von XPS in das GDI-Format automatisch durch die Methoden <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> der <xref:System.Windows.Xps.XpsDocumentWriter>-Klasse, wenn die Ziel Druck Warteschlange des Schreibvorgangs keinen XPSDrv-Treiber enthält. (Windows Forms Anwendungen können keine XPS-Dokumente drucken.)  
+ Um die Verwendung von XPSDrv-basierten Druckern durch Win32-und Windows Forms-Anwendungen zu ermöglichen, unterstützt der XPS-Druckertreiber (XPSDrv) die Konvertierung von GDI in das XPS-Format. Das XPSDrv-Modell stellt außerdem einen Konverter für das XPS-zu-GDI-Format bereit, sodass Win32-Anwendungen XPS-Dokumente drucken können. Bei WPF-Anwendungen erfolgt die Konvertierung von XPS in das GDI-Format automatisch durch die Methoden <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> der <xref:System.Windows.Xps.XpsDocumentWriter>-Klasse, wenn die Ziel Druck Warteschlange des Schreibvorgangs keinen XPSDrv-Treiber enthält. (Windows Forms Anwendungen können keine XPS-Dokumente drucken.)  
   
  In der folgenden Abbildung ist das Druck Subsystem dargestellt und die von Microsoft bereitgestellten Teile sowie die von Software-und Hardwareanbietern definierten Teile definiert:  
   
@@ -106,7 +106,7 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI-Druckpfad  
- Während WPF-Anwendungen den XPS-Druckpfad nativ unterstützen, können [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] und Windows Forms Anwendungen auch einige XPS-Funktionen nutzen. Der XPS-Druckertreiber (XPSDrv) kann eine GDI-basierte Ausgabe in das XPS-Format konvertieren. Für erweiterte Szenarien wird die benutzerdefinierte Konvertierung von Inhalten mithilfe von [Microsoft XPS Document Converter (mxdc)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)unterstützt. Ebenso können WPF-Anwendungen auch an den GDI-Druck Pfad ausgeben, indem Sie eine der Methoden <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> oder <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> der Klasse <xref:System.Windows.Xps.XpsDocumentWriter> aufrufen und einen nicht-XPSDrv-Drucker als Ziel Druck Warteschlange festlegen.  
+ Während WPF-Anwendungen den XPS-Druckpfad nativ unterstützen, können Win32-und Windows Forms-Anwendungen auch einige XPS-Funktionen nutzen. Der XPS-Druckertreiber (XPSDrv) kann eine GDI-basierte Ausgabe in das XPS-Format konvertieren. Für erweiterte Szenarien wird die benutzerdefinierte Konvertierung von Inhalten mithilfe von [Microsoft XPS Document Converter (mxdc)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)unterstützt. Ebenso können WPF-Anwendungen auch an den GDI-Druck Pfad ausgeben, indem Sie eine der Methoden <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> oder <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> der Klasse <xref:System.Windows.Xps.XpsDocumentWriter> aufrufen und einen nicht-XPSDrv-Drucker als Ziel Druck Warteschlange festlegen.  
 
 Bei Anwendungen, für die keine XPS-Funktionalität oder-Unterstützung erforderlich ist, bleibt der aktuelle GDI-Druckpfad unverändert.  
   

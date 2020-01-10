@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433943"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741780"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74433943"
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bedeutet Zwischenspeichern, dass Daten vorab abgerufen werden. Auf die Daten kann dann ohne weitere prozessübergreifende Kommunikation zugegriffen werden. Zwischenspeichern wird normalerweise von Benutzeroberflächenautomatisierungs-Client-Anwendungen verwendet, um Eigenschaften und Steuerelementmuster in großen Mengen abzurufen. Informationen werden dann nach Bedarf aus dem Cache abgerufen. Der Cache wird von der Anwendung regelmäßig aktualisiert, üblicherweise als Reaktion auf Ereignisse, die signalisieren, dass in der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] irgendeine Änderung vorgenommen wurde.  
   
- Die Vorteile der Zwischenspeicherung sind besonders mit Windows Presentation Foundation (WPF)-Steuerelementen und benutzerdefinierten Steuerelementen mit serverseitigen Benutzeroberflächenautomatisierungs-Anbietern erkennbar. Die Vorteile sind geringer, wenn auf clientseitige Anbieter zugegriffen wird, beispielsweise die Standardanbieter für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Steuerelemente.  
+ Die Vorteile der Zwischenspeicherung sind besonders mit Windows Presentation Foundation (WPF)-Steuerelementen und benutzerdefinierten Steuerelementen mit serverseitigen Benutzeroberflächenautomatisierungs-Anbietern erkennbar. Der Zugriff auf Client seitige Anbieter, wie z. b. die Standardanbieter für Win32-Steuerelemente, ist weniger vorteilhaft.  
   
  Zwischenspeichern findet statt, wenn die Anwendung ein <xref:System.Windows.Automation.CacheRequest> aktiviert und anschließend eine beliebige Methode oder Eigenschaft verwendet, die ein <xref:System.Windows.Automation.AutomationElement>zurückgibt, zum Beispiel <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Eine Ausnahme sind die Methoden der <xref:System.Windows.Automation.TreeWalker> -Klasse. Bei ihnen findet Zwischenspeichern nur statt, wenn als Parameter ein <xref:System.Windows.Automation.CacheRequest> angegeben ist (zum Beispiel <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>).  
   
@@ -103,6 +103,6 @@ ms.locfileid: "74433943"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](ui-automation-events-for-clients.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)
 - [FetchTimer-Beispiel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

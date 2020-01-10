@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442482"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741728"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
@@ -58,14 +58,14 @@ Ab Windows Vista ermöglicht Windows Benutzern das Ändern der dpi-Einstellung (
   
  Die Lösung besteht aus zwei Teilen.  
   
-1. Legen Sie für die Client Anwendung zunächst dpi-fähig. Rufen Sie dazu die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `SetProcessDPIAware` beim Start auf. Die folgende Deklaration stellt diese Funktion in verwaltetem Code zur Verfügung.  
+1. Legen Sie für die Client Anwendung zunächst dpi-fähig. Um dies zu erreichen, können Sie die Win32-Funktion `SetProcessDPIAware` beim Start von aufzurufen. Die folgende Deklaration stellt diese Funktion in verwaltetem Code zur Verfügung.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Diese Funktion macht den gesamten Prozess dpi-fähig, was bedeutet, dass alle Fenster, die dem Prozess angehören, nicht skaliert werden. Im [highheller-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)befinden sich beispielsweise die vier Fenster, die das Hervorhebungs Rechteck bilden, an den physischen Koordinaten, die von der Benutzeroberflächen Automatisierung bezogen werden, nicht auf die logischen Koordinaten. Wenn das Beispiel nicht dpi-fähig wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop gezeichnet werden, was zu einer falschen Platzierung in einer nicht-96-dpi-Umgebung führen würde.  
   
-2. Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
+2. Um Cursor Koordinaten abzurufen, nennen Sie die Win32-Funktion `GetPhysicalCursorPos`. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,7 +73,7 @@ Ab Windows Vista ermöglicht Windows Benutzern das Ändern der dpi-Einstellung (
 > [!CAUTION]
 > Verwenden Sie nicht <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Das Verhalten dieser Eigenschaft außerhalb der Clientfenster in einer skalierten Umgebung ist nicht definiert.  
   
- Wenn Ihre Anwendung eine direkte prozessübergreifende Kommunikation mit nicht dpi-fähigen Anwendungen ausführt, haben Sie möglicherweise eine Konvertierung zwischen logischen und physischen Koordinaten mithilfe der [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] Funktionen `PhysicalToLogicalPoint` und `LogicalToPhysicalPoint`durchführen.  
+ Wenn Ihre Anwendung eine direkte prozessübergreifende Kommunikation mit nicht dpi-fähigen Anwendungen ausführt, haben Sie möglicherweise eine Konvertierung zwischen logischen und physischen Koordinaten mithilfe der Win32-Funktionen `PhysicalToLogicalPoint` und `LogicalToPhysicalPoint`durchführen.  
   
 ## <a name="see-also"></a>Siehe auch
 

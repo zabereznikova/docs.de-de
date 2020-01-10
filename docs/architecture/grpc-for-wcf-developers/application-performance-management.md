@@ -2,12 +2,12 @@
 title: 'Anwendungs Leistungsverwaltung: GrpC für WCF-Entwickler'
 description: Protokollierung, Metriken und Ablauf Verfolgung für ASP.net Core GrpC-Anwendungen.
 ms.date: 09/02/2019
-ms.openlocfilehash: e8ec701af69e8ced674183ce0afa25547713c647
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 98da6c5391f021011e281a57e8f775709fa128ef
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711562"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740969"
 ---
 # <a name="application-performance-management"></a>Application Performance Management
 
@@ -51,7 +51,7 @@ Weitere Informationen zum Schreiben von Protokollmeldungen und verfügbaren Prot
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>Metriken in ASP.net Core GrpC
 
-Die .net Core-Laufzeit stellt eine Reihe von Komponenten zum ausgeben und beobachten von Metriken bereit. Dies schließt APIs ein, z. b. die Klassen <xref:System.Diagnostics.Tracing.EventSource> und <xref:System.Diagnostics.Tracing.EventCounter>. Diese APIs können grundlegende numerische Daten ausgeben, die von externen Prozessen wie dem [globalen dotnet-Counters-Tool](../../core/diagnostics/dotnet-counters.md)oder der Ereignis Ablauf Verfolgung für Windows genutzt werden können. Weitere Informationen zum Verwenden von `EventCounter` in Ihrem eigenen Code finden Sie unter [Einführung in eventcounter](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+Die .net Core-Laufzeit stellt eine Reihe von Komponenten zum ausgeben und beobachten von Metriken bereit. Dies schließt APIs ein, z. b. die Klassen <xref:System.Diagnostics.Tracing.EventSource> und <xref:System.Diagnostics.Tracing.EventCounter>. Diese APIs können grundlegende numerische Daten ausgeben, die von externen Prozessen wie dem [globalen dotnet-Counters-Tool](../../core/diagnostics/dotnet-counters.md)oder der Ereignis Ablauf Verfolgung für Windows genutzt werden können. Weitere Informationen zum Verwenden von `EventCounter` in Ihrem eigenen Code finden Sie unter [Einführung in eventcounter](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
 Für erweiterte Metriken und zum Schreiben von Metrikdaten in eine größere Anzahl von Daten speichern können Sie ein Open Source-Projekt mit dem Namen " [App-Metriken](https://www.app-metrics.io)" ausprobieren. Diese Sammlung von Bibliotheken bietet einen umfangreichen Satz von Typen, um Ihren Code zu instrumentieren. Außerdem werden Pakete zum Schreiben von Metriken in verschiedene Arten von Zielen angeboten, die Zeitreihen Datenbanken, wie z. b. Prometheus und Einfluss xdb, und [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)enthalten. Das nuget-Paket [app. Metrics. aspnetcore. MVC](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) fügt sogar einen umfassenden Satz grundlegender Metriken hinzu, die automatisch über die Integration in das ASP.net Core Framework generiert werden. Die Projektwebsite stellt [Vorlagen](https://www.app-metrics.io/samples/grafana/) zum Anzeigen dieser Metriken mit der [grafana](https://grafana.com/) -Visualisierungsplattform bereit.
 
@@ -61,11 +61,11 @@ Die meisten metrikplattformen unterstützen die folgenden Typen:
 
 | Metriktyp | Beschreibung |
 | ----------- | ----------- |
-| Leistungsindikator     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen und Fehler. |
-| Mess Gerät       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
+| Zähler     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen und Fehler. |
+| Messgerät       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
 | Histogramm   | Misst eine Verteilung von Werten über beliebige Grenzen hinweg. Ein Histogramm kann z. b. die Größe des Datasets verfolgen und zählen, wie viele < 10 Datensätze enthalten sind, wie viele enthaltene 11-100-Einträge, wie viele enthaltene 101-1000-Einträge und wie viele > 1000 Datensätze enthalten sind. |
 | Messen       | Misst die Rate, mit der ein Ereignis in verschiedenen Zeitspannen auftritt. |
-| Zeitgeber       | Verfolgt die Dauer der Ereignisse und die Rate, mit der es eintritt, als Histogramm gespeichert. |
+| Timer       | Verfolgt die Dauer der Ereignisse und die Rate, mit der es eintritt, als Histogramm gespeichert. |
 
 Mithilfe von *App-Metriken*kann eine `IMetrics` Schnittstelle über die Abhängigkeitsinjektion abgerufen und zum Aufzeichnen dieser Metriken für einen GrpC-Dienst verwendet werden. Im folgenden Beispiel wird gezeigt, wie die Anzahl von `Get` Anforderungen gezählt wird, die im Laufe der Zeit ausgeführt wurden:
 
@@ -108,7 +108,7 @@ Die aktuelle Lösung für die Visualisierung von Metrikdaten ist [grafana](https
 
 Die numerische Natur von Metrikdaten bedeutet, dass Sie idealerweise für Warnsysteme geeignet ist, die Entwickler oder Support Techniker Benachrichtigen, wenn ein Wert außerhalb der definierten Toleranz liegt. Die bereits erwähnten Plattformen bieten Unterstützung für Warnungen über eine Reihe von Optionen, einschließlich e-Mails, Textnachrichten oder Dashboards in Dashboards.
 
-## <a name="distributed-tracing"></a>Verteilte Ablauf Verfolgung
+## <a name="distributed-tracing"></a>Verteilte Ablaufverfolgung
 
 Die verteilte Ablauf Verfolgung ist eine relativ aktuelle Entwicklung in der Überwachung, die aus der zunehmenden Verwendung von microservices und verteilten Architekturen entstanden ist. Eine einzelne Anforderung von einem Client Browser, einer Anwendung oder einem Gerät kann in viele Schritte und untergeordnete Anforderungen aufgeteilt werden und umfasst die Verwendung vieler Dienste in einem Netzwerk. Dadurch wird es schwierig, Protokollmeldungen und Metriken mit der jeweiligen Anforderung zu korrelieren, durch die Sie ausgelöst wurden. Die verteilte Ablauf Verfolgung wendet Bezeichner auf Anforderungen an und ermöglicht das korrelieren von Protokollen und Metriken mit einem bestimmten Vorgang. Dies ist vergleichbar mit [der End-to-End-Ablauf Verfolgung von WCF](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md), wird jedoch auf mehrere Plattformen angewendet.
 
@@ -120,7 +120,7 @@ Die verteilte Ablauf Verfolgung basiert auf dem Konzept der *Spannen*: benannte,
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>Verteilte Ablauf Verfolgung mit `DiagnosticSource`
 
-.Net Core verfügt über ein internes Modul, das sich gut für verteilte Ablauf Verfolgungen und spannen zuordnet: [diagnosticsource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Das `DiagnosticSource`-Modul verfügt über das Konzept einer *Aktivität*und bietet eine einfache Möglichkeit, die Diagnose innerhalb eines Prozesses zu erzeugen und zu nutzen. Bei einer Aktivität handelt es sich tatsächlich um eine Implementierung einer verteilten Ablauf Verfolgung oder um eine Spanne innerhalb einer Ablauf Verfolgung. Die internale des Moduls kümmern sich um über-und untergeordnete Aktivitäten, einschließlich der Zuordnung von bezeichtern. Weitere Informationen zur Verwendung des `Activity` Typs finden Sie im [Benutzerhandbuch für Aktivitäten auf GitHub](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+.Net Core verfügt über ein internes Modul, das sich gut für verteilte Ablauf Verfolgungen und spannen zuordnet: [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Das `DiagnosticSource`-Modul verfügt über das Konzept einer *Aktivität*und bietet eine einfache Möglichkeit, die Diagnose innerhalb eines Prozesses zu erzeugen und zu nutzen. Bei einer Aktivität handelt es sich tatsächlich um eine Implementierung einer verteilten Ablauf Verfolgung oder um eine Spanne innerhalb einer Ablauf Verfolgung. Die internale des Moduls kümmern sich um über-und untergeordnete Aktivitäten, einschließlich der Zuordnung von bezeichtern. Weitere Informationen zur Verwendung des `Activity` Typs finden Sie im [Benutzerhandbuch für Aktivitäten auf GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
 Da `DiagnosticSource` Teil des Kern-Frameworks ist, wird es von mehreren Kernkomponenten unterstützt. Hierzu gehören <xref:System.Net.Http.HttpClient>, Entity Framework Core und ASP.net Core, einschließlich expliziter Unterstützung im GrpC-Framework. Wenn ASP.net Core eine Anforderung empfängt, überprüft er, ob ein paar von HTTP-Headern mit dem W3C-Ablauf [Verfolgungs Kontext](https://www.w3.org/TR/trace-context) Standard übereinstimmt. Wenn die Header gefunden werden, wird eine Aktivität mithilfe der Identitäts Werte und des Kontexts aus den Headern gestartet. Wenn keine Header gefunden werden, wird eine Aktivität mit generierten Identitäts Werten gestartet, die dem Standardformat entsprechen. Alle Diagnosen, die während der Lebensdauer dieser Aktivität vom Framework oder Anwendungscode generiert werden, können mit der Ablauf Verfolgung und den spannen Bezeichner gekennzeichnet werden. Die `HttpClient`-Unterstützung erweitert dies, indem bei jeder Anforderung eine aktuelle Aktivität überprüft und die Ablauf Verfolgungs Header der ausgehenden Anforderung automatisch hinzugefügt werden.
 
@@ -131,7 +131,7 @@ Die ASP.net Core GrpC-Client-und-Server Bibliotheken enthalten explizite Unterst
 
 ### <a name="add-your-own-diagnosticsource-and-activity"></a>Fügen Sie Ihre eigenen `DiagnosticSource` und `Activity`
 
-Informationen zum Hinzufügen Ihrer eigenen Diagnose oder zum Erstellen von expliziten Spannen innerhalb des Anwendungs Codes finden Sie im Benutzerhandbuch zu [diagnosticsource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) und [Aktivitäts Benutzerhandbuch](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage).
+Informationen zum Hinzufügen Ihrer eigenen Diagnose oder zum Erstellen von expliziten Spannen innerhalb des Anwendungs Codes finden Sie im Benutzerhandbuch zu [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) und [Aktivitäts Benutzerhandbuch](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage).
 
 ### <a name="store-distributed-trace-data"></a>Speichern verteilter Ablauf Verfolgungs Daten
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800300"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741375"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "74800300"
  Es wurden drei primäre Szenarien für Benutzeroberflächenautomatisierungs-Client-Anwendungen bestimmt, in denen <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwendet werden muss, damit richtige und konsistente Ergebnisse erzielt werden, wenn nach Elementen gesucht wird.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird von allen Benutzeroberflächenautomatisierungs-Elementen in der Steuerelementansicht unterstützt. Davon ausgenommen sind lediglich Anwendungsfenster der obersten Ebene, Benutzeroberflächenautomatisierungs-Elemente, die von [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelementen ohne ID oder x:Uid abgeleitet wurden, und Benutzeroberflächenautomatisierungs-Elemente, die aus [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Steuerelementen abgeleitet wurden, die keine Steuerelement-ID haben.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird von allen Benutzeroberflächenautomatisierungs-Elementen in der Steuerelement Ansicht unterstützt, ausgenommen Anwendungsfenster der obersten Ebene, Benutzeroberflächenautomatisierungs-Elemente, die von [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Steuerelementen ohne ID oder x:UID abgeleitet wurden, und Benutzeroberflächenautomatisierungs-Elemente, die von Win32-Steuerelementen abgeleitet wurden, die keine Steuerelement-  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Suchen eines bestimmten Elements in der Benutzeroberflächenautomatisierungs-Struktur anhand einer eindeutigen und erkennbaren AutomationID  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636353"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740212"
 ---
 # <a name="wpf-architecture"></a>WPF-Architektur
 Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (WPF)-Klassenhierarchie. Die meisten der wichtigsten Subsysteme von WPF werden behandelt, und es wird beschrieben, wie Sie interagieren. Außerdem werden einige der von den Architekten von WPF getroffenen Optionen ausführlich erläutert.  
@@ -38,7 +38,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- Die meisten Objekte in WPF werden von <xref:System.Windows.Threading.DispatcherObject>abgeleitet, das die grundlegenden Konstrukte für die Handhabung von Parallelität und Threading bereitstellt. WPF basiert auf einem vom Dispatcher implementierten Messaging System. Dies funktioniert ähnlich wie die vertraute [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] nachrichtenpump. tatsächlich verwendet der WPF-Verteiler User32-Nachrichten zum Ausführen von Thread übergreifenden aufrufen.  
+ Die meisten Objekte in WPF werden von <xref:System.Windows.Threading.DispatcherObject>abgeleitet, das die grundlegenden Konstrukte für die Handhabung von Parallelität und Threading bereitstellt. WPF basiert auf einem vom Dispatcher implementierten Messaging System. Dies funktioniert ähnlich wie die vertraute Win32-nachrichtenpump. tatsächlich verwendet der WPF-Verteiler User32-Nachrichten zum Ausführen von Thread übergreifenden aufrufen.  
   
  Bei der Erörterung von Parallelität in WPF gibt es wirklich zwei grundlegende Konzepte – den Verteiler und die Thread Affinität.  
   

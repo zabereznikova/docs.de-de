@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740722"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740285"
 ---
 # <a name="typography-in-wpf"></a>Typografie in WPF
 In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Zu diesen Features gehören verbesserte Qualität und Leistung von Text Rendering, Unterstützung von OpenType-typografiken, erweiterter internationaler Text, verbesserte Schriftart Unterstützung und neue Text-Anwendungs Programmierschnittstellen (APIs).  
@@ -19,7 +19,7 @@ In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[T
  Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mithilfe von Microsoft ClearType gerendert, wodurch die Übersichtlichkeit und Lesbarkeit von Text verbessert wird. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType verwendet das Subpixel-Rendering, das es ermöglicht, Text mit einer größeren Genauigkeit als echte Form anzuzeigen, indem Zeichen an einem Bruchteil eines Pixels ausgerichtet werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von ClearType in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist das Antialiasing in y-Richtung, das die Ober-und Unterstriche von flachen Kurven in Textzeichen glättet. Weitere Informationen zu ClearType-Features finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
  ![Text mit ClearType-Y-Richtung-Antialiasing](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
-Text mit ClearType-Antialiasing in y-Richtung  
+Text mit ClearType-Antialiasing auf der y-Achse  
   
  Die gesamte Textrendering-Pipeline kann in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hardwarebeschleunigt erfolgen, vorausgesetzt, dass Ihr Computer die Mindestanforderungen an die Hardware erfüllt. Rendering, das nicht mit der Hardware ausgeführt werden kann, wird als Softwarerendering ausgeführt. Die Hardware Beschleunigung wirkt sich auf alle Phasen der Textrenderingpipeline aus – von der Speicherung einzelner Symbole, der Komposition von Symbolen in Glyphe, dem Anwenden von Effekten bis zum Anwenden des ClearType-Mischungs Algorithmus auf die endgültige angezeigte Ausgabe. Weitere Informationen zur Hardware-Beschleunigung finden Sie unter [Renderingebenen für Grafiken](graphics-rendering-tiers.md).  
   
@@ -59,7 +59,7 @@ Text mit ClearType-Antialiasing in y-Richtung
   
 - Von globalen Einstellungen unabhängige Schriftartverhalten, z.B. Systemgebietsschema.  
   
-- Trennen Sie die Typen <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>und <xref:System.Windows.FontStyle> zum Definieren eines <xref:System.Windows.Media.FontFamily>. Dies bietet mehr Flexibilität gegenüber der Programmierung in [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], bei der boolesche Kombinationen aus Kursiv und Fett zum Definieren einer Schriftfamilie verwendet werden.  
+- Trennen Sie die Typen <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>und <xref:System.Windows.FontStyle> zum Definieren eines <xref:System.Windows.Media.FontFamily>. Dies bietet mehr Flexibilität als bei der Win32-Programmierung, bei der boolesche Kombinationen aus kursiv-und Fettdruck zum Definieren einer Schriftfamilie verwendet werden.  
   
 - Die Schreibrichtung (horizontal oder vertikal) wird unabhängig von dem Schriftnamen behandelt.  
   
@@ -142,7 +142,7 @@ Text mit ClearType-Antialiasing in y-Richtung
 ### <a name="advanced-text-formatting"></a>Erweiterte Textformatierung  
  Auf der fortschrittlichsten Ebene der Text-APIs bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ihnen die Möglichkeit, ein benutzerdefiniertes Text Layout zu erstellen, indem Sie das <xref:System.Windows.Media.TextFormatting.TextFormatter>-Objekt und andere Typen im <xref:System.Windows.Media.TextFormatting>-Namespace verwenden. Mit dem <xref:System.Windows.Media.TextFormatting.TextFormatter> und den zugehörigen Klassen können Sie ein benutzerdefiniertes Text Layout implementieren, das Ihre eigene Definition von Zeichenformaten, Absatz Stilen, Zeilenumbruch Regeln und anderen Layoutfunktionen für internationalen Text unterstützt. Es gibt nur sehr wenige Fälle, in denen es sinnvoll ist, die Standardimplementierung der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Textlayoutunterstützung zu überschreiben. Wenn Sie jedoch ein Steuerelement oder eine Anwendung erstellen, kann möglicherweise eine andere Implementierung als die standardmäßige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung benötigt werden.  
   
- Im Gegensatz zu einer herkömmlichen Text-API interagiert der <xref:System.Windows.Media.TextFormatting.TextFormatter> mithilfe eines Satzes von Rückruf Methoden mit einem Textlayoutclient. Der Client muss diese Methoden in einer Implementierung der <xref:System.Windows.Media.TextFormatting.TextSource>-Klasse bereitstellen. Das folgende Diagramm veranschaulicht die Text Layout-Interaktion zwischen der Client Anwendung und <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ Im Gegensatz zu einer herkömmlichen Text-API interagiert der <xref:System.Windows.Media.TextFormatting.TextFormatter> mit einem Textlayoutclient durch eine Reihe von Rückruf Methoden. Der Client muss diese Methoden in einer Implementierung der <xref:System.Windows.Media.TextFormatting.TextSource>-Klasse bereitstellen. Das folgende Diagramm veranschaulicht die Text Layout-Interaktion zwischen der Client Anwendung und <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagramm des Textlayout-Clients und TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
