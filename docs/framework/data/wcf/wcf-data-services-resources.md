@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 5110cdf53953bebd1a5ccd2781afa5c57175ea54
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8b86944808aa7a35341f4fdafb3a92c6d9d127ec
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568759"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900856"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services-Ressourcen
 WCF Data Services Einführungs Themen finden Sie an den folgenden Speicherorten. Viele dieser Themen enthalten auch Links zu verwandten Themen, die ausführlichere Informationen enthalten.  
@@ -29,34 +29,28 @@ WCF Data Services Einführungs Themen finden Sie an den folgenden Speicherorten.
 ## <a name="external-resources"></a>Externe Ressourcen  
  Die folgenden externen Ressourcen bieten zusätzliche Informationen und Unterstützung für das Erstellen von WCF Data Services Anwendungen, die odata-Feeds verfügbar machen und nutzen.  
   
- [WCF Data Services Forum](https://go.microsoft.com/fwlink/?LinkId=150512)  
+ [WCF Data Services Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  
  Unterstützung der Daten Programmierung für WCF Data Services-Entwickler.  
   
- [WCF Data Services-Teamblog](https://go.microsoft.com/fwlink/?LinkId=150511)  
+ [WCF Data Services-Teamblog](https://docs.microsoft.com/archive/blogs/astoriateam/)  
  Blog, das Updates und Erörterung von WCF Data Services Features und Funktionen enthält.  
   
- [Odata-Website](https://go.microsoft.com/fwlink/?LinkID=184554)  
+ [Odata-Website](https://www.odata.org/)  
  Die primäre Quelle von Informationen über odata.  
   
- [Odata-SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ [Odata-SDK-Beispiel Code](https://www.odata.org/ecosystem/#sdk)  
  Enthält Beispiele für Dienste, Beispiele und Programmierbibliotheken, die Ihnen das Arbeiten mit odata-Feeds ermöglichen.  
   
- [Odata-Blog](https://go.microsoft.com/fwlink/?LinkId=185868)  
+ [Odata-Blog](https://www.odata.org/blog/)  
  Blog, das Diskussionen zur odata-Programmierung enthält.  
   
- [Entwickler Center für Datenzugriff und-Speicherung](https://go.microsoft.com/fwlink/?LinkId=91903)  
- Zentraler Ort für Informationen und Ressourcen zum Arbeiten mit Daten.  
-  
- [Vorgehensweise bei der Datenplattform Videos: WCF Data Services Reihe](https://go.microsoft.com/fwlink/?LinkId=124600)  
- Enthält eine Reihe von Videos, die die Erstellung von Datendiensten und den Zugriff darauf veranschaulichen.  
-  
- [Übersicht: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Übersicht: WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
  Ein Whitepaper, das allgemeinere Informationen zu den Vorteilen von WCF Data Services bereitstellt.  
   
- [Verwenden von Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
+ [Verwenden von Microsoft WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  Ein Whitepaper, das zusätzliche Informationen und Beispiele zum Erstellen von Datendiensten und zum Zugriff auf Datendienste in Clientanwendungen bereitstellt.  
   
- [Das Entitäts Beziehungsmodell: für eine einheitliche Ansicht der Daten](https://go.microsoft.com/fwlink/?LinkId=91909) von Peter PIN-Shan Chen, Massachusetts Institute of Technology  
+ [Das Entitäts Beziehungsmodell: für eine einheitliche Ansicht der Daten](https://dl.acm.org/doi/10.1145/320434.320440) von Peter PIN-Shan Chen, Massachusetts Institute of Technology  
  Beschreibt die Grundlage für das Entitäts relationale Modell, das von WCF Data Services implementiert wird. Dieser Artikel wurde 1976 geschrieben und gehört zu den im Computerbereich am häufigsten zitierten.  
   
 ## <a name="see-also"></a>Siehe auch

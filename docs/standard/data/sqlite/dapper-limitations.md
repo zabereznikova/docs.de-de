@@ -2,12 +2,12 @@
 title: Dappereinschränkungen
 ms.date: 12/13/2019
 description: Beschreibt einige der Einschränkungen, die bei der Verwendung von dapperauftreten werden.
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450495"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901199"
 ---
 # <a name="dapper-limitations"></a>Dappereinschränkungen
 
@@ -15,7 +15,7 @@ Es gibt einige Einschränkungen, die Sie beachten sollten, wenn Sie Microsoft. D
 
 ## <a name="parameters"></a>Parameters
 
-Bei sqlite-Parameternamen wird Groß-/Kleinschreibung beachtet Stellen Sie sicher, dass die in SQL verwendeten Parameternamen der Groß-/Kleinschreibung der Eigenschaften des anonymen Objekts entsprechen. Problem [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861) würde diese Vorgehensweise verbessern.
+Bei sqlite-Parameternamen wird Groß-/Kleinschreibung beachtet Stellen Sie sicher, dass die in SQL verwendeten Parameternamen der Groß-/Kleinschreibung der Eigenschaften des anonymen Objekts entsprechen. Problem [#18861](https://github.com/dotnet/efcore/issues/18861) würde diese Vorgehensweise verbessern.
 
 Dappererwartet auch, dass Parameter das `@` Präfix verwenden. Andere Präfixe funktionieren nicht.
 

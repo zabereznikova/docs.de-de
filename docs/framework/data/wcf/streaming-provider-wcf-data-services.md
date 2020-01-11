@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568806"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900920"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 
@@ -39,7 +39,7 @@ Folgende Schritte sind erforderlich, um einen Datendienst zu konfigurieren, der 
 
 5. Aktivieren Sie den Zugriff auf binäre Ressourcen auf dem Server oder in einer Datenquelle.
 
-Die Beispiele in diesem Thema basieren auf einem Beispiel-Streaming-Foto-Dienst, der im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989)ausführlich erläutert wird. Der Quellcode für diesen Beispiel Dienst ist auf der [Beispielseite Streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkID=198988) auf der MSDN Code Gallery verfügbar.
+Die Beispiele in diesem Thema basieren auf einem Beispiel-Streaming-Foto-Dienst, der im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (Teil 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)ausführlich erläutert wird. Der Quellcode für das Streaming Photo Data Service-Beispiel ist auf [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)verfügbar.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definieren eines Medienlinkeintrags im Datenmodell
 
@@ -53,7 +53,7 @@ Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Entit
 
 Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.
 
-Ein Beispiel für einen Datendienst, der den Entity Framework Anbieter verwendet und eine Medien Ressource verfügbar macht, finden Sie im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Ein Beispiel für einen Datendienst, der den Entity Framework Anbieter verwendet und eine Medien Ressource verfügbar macht, finden Sie im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (Teil 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Reflektionsanbieter**
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b3feb2a22fc38c6a2d13d6802b94386d6f7841ac
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568787"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900895"
 ---
 # <a name="wcf-data-services-overview"></a>Übersicht über WCF Data Services
 WCF Data Services ermöglicht die Erstellung und Nutzung von Datendiensten für das Internet oder ein Intranet mithilfe des Open Data Protocol (odata). Mit odata können Sie Ihre Daten als Ressourcen verfügbar machen, die durch URIs adressierbar sind. Dies ermöglicht Ihnen das Zugreifen auf und Ändern von Daten mit der Semantik Representational State Transfer (REST), speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE. Dieses Thema enthält eine Übersicht über die von odata definierten Muster und Methoden sowie über die von WCF Data Services bereitgestellten Funktionen, um odata in .NET Framework basierten Anwendungen zu nutzen.  
@@ -25,7 +25,7 @@ WCF Data Services ermöglicht die Erstellung und Nutzung von Datendiensten für 
 ## <a name="interoperable-data-access"></a>Interoperabler Datenzugriff  
  Odata basiert auf standardmäßigen Internet Protokollen, damit Datendienste mit Anwendungen interoperabel sind, die die .NET Framework nicht verwenden. Da Sie die Daten mithilfe von Standard-URIs adressieren können, kann die Anwendung mithilfe der Semantik von Representational State Transfer (Rest), insbesondere der standardmäßigen HTTP-Verben GET, Put, Post und DELETE, auf Daten zugreifen und diese ändern. Dies ermöglicht Ihnen den Zugriff auf diese Dienste von einem Client, der über Standard-HTTP-Protokolle übertragene Daten analysieren und darauf zugreifen kann.  
   
- Odata definiert einen Satz von Erweiterungen für das Atom Publishing Protocol (AtomPub). HTTP-Anforderungen und -Antworten werden in mehreren Datenformaten unterstützt, um verschiedene Clientanwendungen und -plattformen zu unterstützen. Ein odata-Feed kann Daten in Atom, JavaScript Object Notation (JSON) und als reines XML darstellen. Atom ist zwar das Standardformat, das Format des Feeds wird jedoch im Header der HTTP-Anforderung angegeben. Weitere Informationen finden Sie unter [odata: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794) und [odata: JSON-Format](https://go.microsoft.com/fwlink/?LinkID=185795).  
+Odata definiert einen Satz von Erweiterungen für das Atom Publishing Protocol (AtomPub). HTTP-Anforderungen und -Antworten werden in mehreren Datenformaten unterstützt, um verschiedene Clientanwendungen und -plattformen zu unterstützen. Ein odata-Feed kann Daten in Atom, JavaScript Object Notation (JSON) und als reines XML darstellen. Atom ist zwar das Standardformat, das Format des Feeds wird jedoch im Header der HTTP-Anforderung angegeben. Weitere Informationen finden Sie unter [odata: Atom-Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/) und [odata: JSON-Format](https://www.odata.org/documentation/odata-version-2-0/json-format/).  
   
  Beim Veröffentlichen von Daten als odata-Feed stützt WCF Data Services andere vorhandene Internet Funktionen für Vorgänge wie Caching und Authentifizierung. Um dies zu erreichen, WCF Data Services in vorhandene Hostinganwendungen und-Dienste wie ASP.net, Windows Communication Foundation (WCF) und Internetinformationsdienste (IIS) integriert.  
   
@@ -48,7 +48,7 @@ WCF Data Services ermöglicht die Erstellung und Nutzung von Datendiensten für 
   
  WCF Data Services umfasst Client Bibliotheken sowohl für .NET Framework-als auch für Silverlight-basierte Client Anwendungen. Diese Clientbibliotheken ermöglichen die Interaktion mit Datendiensten mithilfe von .NET Framework-Objekten. Zudem werden objektbasierte Abfragen und LINQ-Abfragen, das Laden verknüpfter Objekte, eine Änderungsnachverfolgung und die Identitätsauflösung unterstützt. Weitere Informationen finden Sie unter [WCF Data Services-Client Bibliothek](wcf-data-services-client-library.md).  
   
- Zusätzlich zu den odata-Client Bibliotheken, die in der .NET Framework und mit Silverlight enthalten sind, gibt es weitere Client Bibliotheken, die es Ihnen ermöglichen, einen odata-Feed in Client Anwendungen (z. b. php-, AJAX-und Java-Anwendungen) zu nutzen. Weitere Informationen finden Sie unter [odata SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Zusätzlich zu den odata-Client Bibliotheken, die in der .NET Framework und mit Silverlight enthalten sind, gibt es weitere Client Bibliotheken, die es Ihnen ermöglichen, einen odata-Feed in Client Anwendungen (z. b. php-, AJAX-und Java-Anwendungen) zu nutzen. Weitere Informationen zum odata SDK finden Sie unter [odata SDK-Sample Code](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="architecture-overview"></a>Architekturübersicht  
  Das folgende Diagramm veranschaulicht die WCF Data Services-Architektur für das verfügbar machen von odata-Feeds und die Verwendung dieser Feeds in odata-fähigen Client Bibliotheken:  
@@ -62,4 +62,4 @@ WCF Data Services ermöglicht die Erstellung und Nutzung von Datendiensten für 
 - [Defining WCF Data Services](defining-wcf-data-services.md)
 - [Zugreifen auf Datendienst Ressourcen (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
