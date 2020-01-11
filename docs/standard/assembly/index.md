@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733150"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900599"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
-Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien (*.exe*) oder Dynamic Link Library-Dateien (*.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.
+Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien ( *.exe*) oder Dynamic Link Library-Dateien ( *.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.
 
 In .NET Core und .NET Framework können Sie eine Assembly entweder aus einer oder aus mehreren Quellcodedateien erstellen. In .NET Framework können Assemblys ein Modul oder mehrere Module umfassen. Dies macht es möglich, größere Projekte so zu planen, dass mehrere Entwickler an verschiedenen Quellcodedateien oder Modulen arbeiten, die anschließend in einer einzigen Assembly kombiniert werden. Weitere Informationen zu Modulen finden Sie unter [Vorgehensweise: Erstellen einer Assembly aus mehreren Dateien](../../framework/app-domains/build-multifile-assembly.md).
 
@@ -91,7 +91,7 @@ In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung 
 
 ## <a name="related-content"></a>Verwandter Inhalt
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Assemblyinhalte](contents.md)|Elemente, aus denen die Assembly besteht|
 |[Assemblymanifest](manifest.md)|Die Daten im Assemblymanifest und wie diese in Assemblys gespeichert werden|
@@ -111,7 +111,6 @@ In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung 
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET-Assemblydateiformat](file-format.md)
-- [Assemblys in .NET](index.md)
 - [Friend-Assemblys](friend.md)
 - [Verweisassemblys](reference-assemblies.md)
 - [Vorgehensweise: Laden und Entladen von Assemblys](load-unload.md)
