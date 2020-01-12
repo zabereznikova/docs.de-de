@@ -2,17 +2,17 @@
 title: Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976070"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904602"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 
 > [!NOTE]
-> In diesem Artikel geht es um <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Für die meisten Szenarien, in denen JSON serialisiert und deserialisiert wird, empfehlen wir die Tools im [System. Text. Json-Namespace](../../../standard/serialization/system-text-json-overview.md). 
+> In diesem Artikel geht es um <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. In den meisten Szenarien, in denen JSON serialisiert und deserialisiert wird, empfehlen wir die APIs im [System. Text. Json-Namespace](../../../standard/serialization/system-text-json-overview.md). 
 
 JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendung von JavaScript-Code entworfen wurde, der auf Webseiten innerhalb des Browsers ausgeführt wird. Dies ist das Standarddatenformat, das von ASP.NET AJAX-Diensten verwendet wird, die in Windows Communication Foundation (WCF) erstellt werden.
 
@@ -26,18 +26,18 @@ Bei der Arbeit mit JSON werden mit wenigen Ausnahmen dieselben .NET-Typen unters
 
 Die folgende Tabelle zeigt die Entsprechungen zwischen .NET-Typen und JSON/JavaScript-Typen, die für die Zuordnung während der Serialisierung und Deserialisierung gelten.
 
-|.NET-Typen|JSON/JavaScript|Notizen|
+|.NET-Typen|JSON/JavaScript|Hinweise|
 |----------------|----------------------|-----------|
-|Alle numerischen Typen, z.&#160;B. <xref:System.Int32>, <xref:System.Decimal> oder <xref:System.Double>|Anzahl|Spezielle Werte, z.&#160;B. `Double.NaN`, `Double.PositiveInfinity` und `Double.NegativeInfinity` werden nicht unterstützt und führen zu ungültigen JSON-Daten.|
-|<xref:System.Enum>|Anzahl|Siehe "Enumerationen und JSON" weiter unten in diesem Thema.|
-|<xref:System.Boolean>|Boolesch|--|
-|<xref:System.String>, <xref:System.Char>|Zeichenfolge|--|
-|<xref:System.TimeSpan>ist <xref:System.Guid>ist <xref:System.Uri>|Zeichenfolge|Das Format dieser Typen in JSON ist identisch mit dem XML-Format (im wesentlichen TimeSpan im Format der ISO 8601-Dauer, GUID im Format "12345678-ABCD-ABCD-ABCD-1234567890AB" und URI in der natürlichen Zeichen folgen Form wie "http://www.example.com"). Genaue Informationen finden Sie unter [Daten Vertrags Schema-Referenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
-|<xref:System.Xml.XmlQualifiedName>|Zeichenfolge|Das Format ist "name:namespace" (sämtliche Zeichen vor dem ersten Doppelpunkt bilden den Namen). Der Name oder der Namespace kann fehlen. Wenn kein Namespace angegeben wird, kann auch der Doppelpunkt weggelassen werden.|
+|Alle numerischen Typen, z.&#160;B. <xref:System.Int32>, <xref:System.Decimal> oder <xref:System.Double>|Number|Spezielle Werte, z.&#160;B. `Double.NaN`, `Double.PositiveInfinity` und `Double.NegativeInfinity` werden nicht unterstützt und führen zu ungültigen JSON-Daten.|
+|<xref:System.Enum>|Number|Siehe "Enumerationen und JSON" weiter unten in diesem Thema.|
+|<xref:System.Boolean>|Boolean|--|
+|<xref:System.String>, <xref:System.Char>|String|--|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Das Format dieser Typen in JSON ist identisch mit dem XML-Format (im wesentlichen TimeSpan im Format der ISO 8601-Dauer, GUID im Format "12345678-ABCD-ABCD-ABCD-1234567890AB" und URI in der natürlichen Zeichen folgen Form wie "http://www.example.com"). Genaue Informationen finden Sie unter [Daten Vertrags Schema-Referenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
+|<xref:System.Xml.XmlQualifiedName>|String|Das Format ist "name:namespace" (sämtliche Zeichen vor dem ersten Doppelpunkt bilden den Namen). Der Name oder der Namespace kann fehlen. Wenn kein Namespace angegeben wird, kann auch der Doppelpunkt weggelassen werden.|
 |<xref:System.Array> vom Typ <xref:System.Byte>|Array von Zahlen|Jede Zahl stellt den Wert eines Bytes dar.|
 |<xref:System.DateTime>|DateTime oder Zeichenfolge|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|
 |<xref:System.DateTimeOffset>|Komplexer Typ|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|
-|XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement> Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>) angezeigt wird.|Zeichenfolge|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|
+|XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|
 |<xref:System.DBNull>|Leerer komplexer Typ|--|
 |Auflistungen, Wörterbücher und Arrays|Array|Siehe den Abschnitt "Auflistungen, Wörterbücher und Arrays" in diesem Thema.|
 |Komplexe Typen (mit angewendetem <xref:System.Runtime.Serialization.DataContractAttribute> oder <xref:System.SerializableAttribute>)|Komplexer Typ|Datenmember werden Member des komplexen JavaScript-Typs.|
@@ -95,7 +95,7 @@ Alle Auflistungen, Wörterbücher und Arrays werden in JSON als Arrays dargestel
 
   - *Polymorphismus* im Kontext der Serialisierung bezieht sich auf die Fähigkeit, einen abgeleiteten Typ zu serialisieren, bei dem sein Basistyp erwartet wird. Es gelten spezielle JSON-spezifische Regeln für die polymorphe Verwendung von Auflistungen (beispielsweise die Zuweisung einer Auflistung zu einem <xref:System.Object>. Dieser Punkt wird ausführlicher im Abschnitt "Weitere Informationen" weiter unten in diesem Thema erläutert.
 
-## <a name="additional-details"></a>Weitere Details
+## <a name="additional-details"></a>Zusätzliche Details
 
 ### <a name="order-of-data-members"></a>Reihenfolge der Datenmember
 
@@ -131,7 +131,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 
 Wenn Sie ein ASP.NET AJAX Script-Manager-Steuerelement und einen Proxy für den Aufruf des Diensts verwenden, wird diese URL automatisch vom Proxy erstellt und nicht erkannt. JSON kann nicht in URLs auf Nicht-ASP.NET AJAX-Endpunkten verwendet werden.
 
-## <a name="advanced-information"></a>Weitere Informationen
+## <a name="advanced-information"></a>Weiterführende Informationen
 
 ### <a name="iserializable-support"></a>ISerializable-Unterstützung
 
