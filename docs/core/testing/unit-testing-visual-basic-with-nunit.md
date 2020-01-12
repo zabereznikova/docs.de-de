@@ -3,13 +3,12 @@ title: Komponententests für Visual Basic in .NET Core mit „dotnet test“ und
 description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Visual Basic-Beispielprojektmappe mithilfe von NUnit erstellen.
 author: rprouse
 ms.date: 10/04/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4776916c316e18de954c8ccaa985075dc2ea0fc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428734"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715403"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 
@@ -17,7 +16,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen.
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
@@ -135,7 +134,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Das `<TestFixture>`-Attribut gibt eine Klasse an, die Tests enthält. Das `<Test>`-Attribut kennzeichnet eine Methode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-vb-nunit* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der NUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `<TestFixture>`-Attribut gibt eine Klasse an, die Tests enthält. Das `<Test>`-Attribut kennzeichnet eine Methode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-vb-nunit*[`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der NUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Ihr Test schlägt fehl. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `PrimeService`-Klasse:
 

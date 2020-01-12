@@ -4,21 +4,18 @@ description: Verwenden Sie einen Paket-Manager, um das .NET Core SDK und die -Ru
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8781d6bd14daf975fcc602fd2924a333750d4256
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998912"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714374"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8.1-Paket-Manager: Installieren von .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 In diesem Artikel wird beschrieben, wie Sie mit einem Paket-Manager .NET Core auf RHEL 8.1 installieren. .NET Core 3.1 ist für RHEL 8.1 noch nicht verfügbar.
-
-> [!NOTE]
-> RHEL 8.0 umfasst nicht .NET Core 3.0. Verwenden Sie den Befehl `yum upgrade`, um ein Update auf RHEL 8.1 durchzuführen.
 
 > [!NOTE]
 > RHEL 8.0 umfasst nicht .NET Core 3.0. Verwenden Sie den Befehl `yum upgrade`, um ein Update auf RHEL 8.1 durchzuführen.
@@ -40,7 +37,6 @@ scl enable dotnet-sdk-3.0 bash
 
 Nachdem Sie sich beim Abonnement-Manager registriert haben, können Sie nun die ASP.NET Core-Runtime installieren und aktivieren. Führen Sie in Ihrem Terminal die folgenden Befehle aus.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 dnf install aspnetcore-runtime-3.0
 scl enable aspnetcore-runtime-3.0 bash

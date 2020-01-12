@@ -2,13 +2,12 @@
 title: Verwalten von Abhängigkeiten in .NET Core-Tools
 description: Erläutert, wie Abhängigkeiten mit den .NET Core-Tools verwaltet werden können.
 ms.date: 03/06/2017
-ms.custom: seodec18
-ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611925"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714213"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Verwalten von Abhängigkeiten mit .NET Core SDK 1.0
 

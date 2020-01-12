@@ -2,13 +2,12 @@
 title: .NET Core-CLI-Erweiterbarkeitsmodell
 description: Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle (CLI, Command-line Interface) erweitern können.
 ms.date: 04/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012976"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714181"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
