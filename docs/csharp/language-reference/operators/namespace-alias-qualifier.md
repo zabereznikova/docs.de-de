@@ -1,6 +1,5 @@
 ---
 title: 'Operator „::“: C#-Referenz'
-ms.custom: seodec18
 ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
@@ -11,18 +10,18 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 97ed24b050f79cf44ffd1c03c213ffcf91758260
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038992"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712675"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="16628-102">Operator „::“ (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="16628-102">:: operator (C# reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="25536-102">Operator „::“ (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="25536-102">:: operator (C# reference)</span></span>
 
-<span data-ttu-id="16628-103">Verwenden Sie den Namespacealias-Qualifizierer `::`, um auf einen Member eines Namespace mit Alias zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="16628-103">Use the namespace alias qualifier `::` to access a member of an aliased namespace.</span></span> <span data-ttu-id="16628-104">Sie können den `::`-Qualifizierer nur zwischen zwei Bezeichnern verwenden.</span><span class="sxs-lookup"><span data-stu-id="16628-104">You can use the `::` qualifier only between two identifiers.</span></span> <span data-ttu-id="16628-105">Der linke Bezeichner kann einer der folgenden Aliase sein:</span><span class="sxs-lookup"><span data-stu-id="16628-105">The left-hand identifier can be any of the following aliases:</span></span>
+<span data-ttu-id="25536-103">Verwenden Sie den Namespacealias-Qualifizierer `::`, um auf einen Member eines Namespace mit Alias zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="25536-103">Use the namespace alias qualifier `::` to access a member of an aliased namespace.</span></span> <span data-ttu-id="25536-104">Sie können den `::`-Qualifizierer nur zwischen zwei Bezeichnern verwenden.</span><span class="sxs-lookup"><span data-stu-id="25536-104">You can use the `::` qualifier only between two identifiers.</span></span> <span data-ttu-id="25536-105">Der linke Bezeichner kann einer der folgenden Aliase sein:</span><span class="sxs-lookup"><span data-stu-id="25536-105">The left-hand identifier can be any of the following aliases:</span></span>
 
-- <span data-ttu-id="16628-106">Ein mit einer [using alias-Anweisung](../keywords/using-directive.md) erstellter Namespacealias:</span><span class="sxs-lookup"><span data-stu-id="16628-106">A namespace alias created with a [using alias directive](../keywords/using-directive.md):</span></span>
+- <span data-ttu-id="25536-106">Ein mit einer [using alias-Anweisung](../keywords/using-directive.md) erstellter Namespacealias:</span><span class="sxs-lookup"><span data-stu-id="25536-106">A namespace alias created with a [using alias directive](../keywords/using-directive.md):</span></span>
 
   ```csharp
   using forwinforms = System.Drawing;
@@ -34,10 +33,10 @@ ms.locfileid: "73038992"
   }
   ```
 
-- <span data-ttu-id="16628-107">Ein [externer Alias](../keywords/extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="16628-107">An [extern alias](../keywords/extern-alias.md).</span></span>
-- <span data-ttu-id="16628-108">Der `global`-Alias, ein globaler Namespacealias.</span><span class="sxs-lookup"><span data-stu-id="16628-108">The `global` alias, which is the global namespace alias.</span></span> <span data-ttu-id="16628-109">Der globale Namespace ist der Namespace, der Namespaces und Typen enthält, die nicht in einem benannten Namespace deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="16628-109">The global namespace is the namespace that contains namespaces and types that are not declared inside a named namespace.</span></span> <span data-ttu-id="16628-110">Bei Verwendung mit dem `::`-Qualifizierer verweist der `global`-Alias immer auf den globalen Namespace, auch wenn ein benutzerdefinierter `global` Namespacealias vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="16628-110">When used with the `::` qualifier, the `global` alias always references the global namespace, even if there is the user-defined `global` namespace alias.</span></span>
+- <span data-ttu-id="25536-107">Ein [externer Alias](../keywords/extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="25536-107">An [extern alias](../keywords/extern-alias.md).</span></span>
+- <span data-ttu-id="25536-108">Der `global`-Alias, ein globaler Namespacealias.</span><span class="sxs-lookup"><span data-stu-id="25536-108">The `global` alias, which is the global namespace alias.</span></span> <span data-ttu-id="25536-109">Der globale Namespace ist der Namespace, der Namespaces und Typen enthält, die nicht in einem benannten Namespace deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="25536-109">The global namespace is the namespace that contains namespaces and types that are not declared inside a named namespace.</span></span> <span data-ttu-id="25536-110">Bei Verwendung mit dem `::`-Qualifizierer verweist der `global`-Alias immer auf den globalen Namespace, auch wenn ein benutzerdefinierter `global` Namespacealias vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="25536-110">When used with the `::` qualifier, the `global` alias always references the global namespace, even if there is the user-defined `global` namespace alias.</span></span>
 
-  <span data-ttu-id="16628-111">Im folgenden Beispiel wird der `global`-Alias verwendet, um auf den .NET-Namespace <xref:System> zuzugreifen, der ein Member des globalen Namespace ist.</span><span class="sxs-lookup"><span data-stu-id="16628-111">The following example uses the `global` alias to access the .NET <xref:System> namespace, which is a member of the global namespace.</span></span> <span data-ttu-id="16628-112">Ohne den `global`-Alias würde auf den benutzerdefinierten `System`-Namespace, der ein Member des `MyCompany.MyProduct`-Namespace ist, zugegriffen:</span><span class="sxs-lookup"><span data-stu-id="16628-112">Without the `global` alias, the user-defined `System` namespace, which is a member of the `MyCompany.MyProduct` namespace, would be accessed:</span></span>
+  <span data-ttu-id="25536-111">Im folgenden Beispiel wird der `global`-Alias verwendet, um auf den .NET-Namespace <xref:System> zuzugreifen, der ein Member des globalen Namespace ist.</span><span class="sxs-lookup"><span data-stu-id="25536-111">The following example uses the `global` alias to access the .NET <xref:System> namespace, which is a member of the global namespace.</span></span> <span data-ttu-id="25536-112">Ohne den `global`-Alias würde auf den benutzerdefinierten `System`-Namespace, der ein Member des `MyCompany.MyProduct`-Namespace ist, zugegriffen:</span><span class="sxs-lookup"><span data-stu-id="25536-112">Without the `global` alias, the user-defined `System` namespace, which is a member of the `MyCompany.MyProduct` namespace, would be accessed:</span></span>
 
   ```csharp
   namespace MyCompany.MyProduct.System
@@ -55,16 +54,16 @@ ms.locfileid: "73038992"
   ```
 
   > [!NOTE]
-  > <span data-ttu-id="16628-113">Das Schlüsselwort `global` ist nur dann der globale Namespacealias, wenn es sich um den linken Bezeichner des `::`-Qualifizierers handelt.</span><span class="sxs-lookup"><span data-stu-id="16628-113">The `global` keyword is the global namespace alias only when it's the left-hand identifier of the `::` qualifier.</span></span>
+  > <span data-ttu-id="25536-113">Das Schlüsselwort `global` ist nur dann der globale Namespacealias, wenn es sich um den linken Bezeichner des `::`-Qualifizierers handelt.</span><span class="sxs-lookup"><span data-stu-id="25536-113">The `global` keyword is the global namespace alias only when it's the left-hand identifier of the `::` qualifier.</span></span>
 
-<span data-ttu-id="16628-114">Sie können auch den [member access`.`-Operator ](member-access-operators.md#member-access-operator-) verwenden, um auf einen Member eines Namespace mit Alias zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="16628-114">You can also use the [member access `.` operator](member-access-operators.md#member-access-operator-) to access a member of an aliased namespace.</span></span> <span data-ttu-id="16628-115">Allerdings wird der `.`-Operator auch verwendet, um auf einen Typmember zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="16628-115">However, the `.` operator is also used to access a type member.</span></span> <span data-ttu-id="16628-116">Der Qualifizierer `::` stellt sicher, dass sein linker Bezeichner immer auf einen Namespacealias verweist, selbst wenn ein Typ oder ein Namespace mit demselben Namen vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="16628-116">The `::` qualifier ensures that its left-hand identifier always references a namespace alias, even if there exists a type or namespace with the same name.</span></span>
+<span data-ttu-id="25536-114">Sie können auch den [member access`.`-Operator ](member-access-operators.md#member-access-operator-) verwenden, um auf einen Member eines Namespace mit Alias zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="25536-114">You can also use the [member access `.` operator](member-access-operators.md#member-access-operator-) to access a member of an aliased namespace.</span></span> <span data-ttu-id="25536-115">Allerdings wird der `.`-Operator auch verwendet, um auf einen Typmember zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="25536-115">However, the `.` operator is also used to access a type member.</span></span> <span data-ttu-id="25536-116">Der Qualifizierer `::` stellt sicher, dass sein linker Bezeichner immer auf einen Namespacealias verweist, selbst wenn ein Typ oder ein Namespace mit demselben Namen vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="25536-116">The `::` qualifier ensures that its left-hand identifier always references a namespace alias, even if there exists a type or namespace with the same name.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="16628-117">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="16628-117">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="25536-117">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="25536-117">C# language specification</span></span>
 
-<span data-ttu-id="16628-118">Weitere Informationen finden Sie im Abschnitt [Namespacealias-Qualifizierer](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="16628-118">For more information, see the [Namespace alias qualifiers](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="25536-118">Weitere Informationen finden Sie im Abschnitt [Namespacealias-Qualifizierer](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="25536-118">For more information, see the [Namespace alias qualifiers](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="16628-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16628-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25536-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="25536-119">See also</span></span>
 
-- [<span data-ttu-id="16628-120">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="16628-120">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="16628-121">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="16628-121">C# operators</span></span>](index.md)
-- [<span data-ttu-id="16628-122">Verwenden von Namespaces</span><span class="sxs-lookup"><span data-stu-id="16628-122">Using namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
+- [<span data-ttu-id="25536-120">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="25536-120">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="25536-121">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="25536-121">C# operators</span></span>](index.md)
+- [<span data-ttu-id="25536-122">Verwenden von Namespaces</span><span class="sxs-lookup"><span data-stu-id="25536-122">Using namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
