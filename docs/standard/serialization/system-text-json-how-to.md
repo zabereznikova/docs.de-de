@@ -442,19 +442,19 @@ Im Folgenden finden Sie ein Beispiel für die JSON-Ausgabe, die durch den vorang
 
 ### <a name="serialize-all-characters"></a>Alle Zeichen serialisieren
 
-Um das Escapezeichen zu minimieren, können Sie <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>verwenden, wie im folgenden Beispiel gezeigt:
+Um das Schützen zu minimieren, können Sie <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType> verwenden, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUnsafeRelaxed)]
 
 > [!CAUTION]
-> Im Vergleich zum Standard-Encoder ist der `UnsafeRelaxedJsonEscaping` Encoder eher für das Zulassen von Zeichen ohne Escapezeichen zulässig:
+> Im Vergleich zum Standardencoder lässt der `UnsafeRelaxedJsonEscaping`-Encoder mehr Zeichen ohne Escapezeichen durch:
 >
-> * Es werden keine HTML-sensiblen Zeichen wie `<`, `>`, `&`und `'`mit Escapezeichen versehen.
+> * Es werden keine HTML-sensiblen Zeichen wie `<`, `>`, `&`und `'` mit Escapezeichen versehen.
 > * Er bietet keine zusätzlichen Schutzmaßnahmen vor XSS-oder Informations Offenlegungs Angriffen, wie z. b. solche, die sich aus dem Client und dem Server ergeben könnten, die auf dem *CharSet*nicht einverstanden sind.
 >
-> Verwenden Sie den unsicheren Encoder nur dann, wenn bekannt ist, dass der Client die resultierende Nutzlast als UTF-8-codiertes JSON interpretiert. Sie können Sie beispielsweise verwenden, wenn der Server den Antwortheader `Content-Type: application/json; charset=utf-8`sendet. Gestatten Sie niemals, dass die Roh`UnsafeRelaxedJsonEscaping` Ausgabe in eine HTML-Seite oder ein `<script>` Element ausgegeben wird.
+> Verwenden Sie den unsicheren Encoder nur dann, wenn bekannt ist, dass der Client die resultierende Nutzlast als UTF-8-codiertes JSON-Format interpretiert. Sie können ihn beispielsweise verwenden, wenn der Server den Antwortheader `Content-Type: application/json; charset=utf-8` sendet. Erlauben Sie niemals, dass eine rohe `UnsafeRelaxedJsonEscaping`-Ausgabe in eine HTML-Seite oder ein `<script>`-Element ausgegeben wird.
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serialisieren von Eigenschaften abgeleiteter Klassen
 
@@ -470,7 +470,7 @@ Angenommen, das Typargument der `Serialize` Methode zum Zeitpunkt der Kompilieru
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-In diesem Szenario wird die `WindSpeed`-Eigenschaft nicht serialisiert, auch wenn das `weatherForecast`-Objekt tatsächlich ein `WeatherForecastDerived`-Objekt ist. Es werden nur die Basisklassen Eigenschaften serialisiert:
+In diesem Szenario wird die `WindSpeed`-Eigenschaft nicht serialisiert, auch wenn das `weatherForecast`-Objekt tatsächlich ein `WeatherForecastDerived`-Objekt ist. Es werden nur die Eigenschaften der Basisklasse serialisiert:
 
 ```json
 {
@@ -480,7 +480,7 @@ In diesem Szenario wird die `WindSpeed`-Eigenschaft nicht serialisiert, auch wen
 }
 ```
 
-Dieses Verhalten soll das versehentliche verfügbar machen von Daten in einem abgeleiteten, von der Laufzeit erstellten Typ verhindern.
+Dieses Verhalten soll dabei helfen, das versehentliche Verfügbarmachen von Daten in einem abgeleiteten, von der Laufzeit erstellten Typ zu verhindern.
 
 Verwenden Sie einen der folgenden Ansätze, um die Eigenschaften des abgeleiteten Typs im vorherigen Beispiel zu serialisieren:
 
@@ -488,7 +488,7 @@ Verwenden Sie einen der folgenden Ansätze, um die Eigenschaften des abgeleitete
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeGetType)]
 
-* Deklarieren Sie das Objekt, das als `object`serialisiert werden soll.
+* Deklarieren Sie das Objekt, das serialisiert werden soll, als `object`.
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeObject)]
 
@@ -572,7 +572,7 @@ Um nachfolgende Kommas zuzulassen, legen Sie die <xref:System.Text.Json.JsonSeri
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCommasComments.cs?name=SnippetDeserialize)]
 
-Im folgenden finden Sie ein Beispiel für JSON mit Kommentaren und einem nachfolgenden Komma:
+Im Folgenden finden Sie ein Beispiel für JSON mit Kommentaren und einem nachfolgenden Komma:
 
 ```json
 {
