@@ -3,12 +3,12 @@ title: C#-Schnittstellen – Überblick über C#
 description: Schnittstellen definieren von Typen in C# implementierte Verträge.
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634552"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346838"
 ---
 # <a name="interfaces"></a>Schnittstellen
 
@@ -40,4 +40,4 @@ Der Zugriff auf explizite Schnittstellenmember kann nur über den Schnittstellen
 
 >[!div class="step-by-step"]
 >[Zurück](arrays.md)
->[Weiter](enums.md)
+>[Weiter](delegates.md)

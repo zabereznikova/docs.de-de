@@ -1,6 +1,5 @@
 ---
 title: <value> – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 09577d931c6b1f571cd4112c788da38bab85bf42
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a30435c40ad31e026b9cb1952086984548f0cdb6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523278"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694542"
 ---
 # <a name="value-c-programming-guide"></a>\<value> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -26,7 +25,7 @@ ms.locfileid: "72523278"
  `property-description`  
  Eine Beschreibung der Eigenschaft  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit dem \<value>-Tag können Sie den Wert beschreiben, den eine Eigenschaft darstellt. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mithilfe des Code-Assistenten in der Entwicklungsumgebung von Visual Studio .NET der neuen Eigenschaft ein [\<summary>](./summary.md)-Tag hinzugefügt wird. Sie sollten dann manuell ein \<value>-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
   
  Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  

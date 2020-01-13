@@ -1,17 +1,16 @@
 ---
 title: Verarbeiten der XML-Datei – C# Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846937"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696518"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
 
@@ -25,7 +24,7 @@ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
 
 - Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet:
 
-    |Zeichen|BESCHREIBUNG|
+    |Zeichen|Beschreibung|
     |---------------|-----------------|
     |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Falls unterstützt, können jedoch cref-Verweise hinzugefügt werden.|
     |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|
@@ -71,7 +70,7 @@ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
 
 - Nur für Konvertierungsoperatoren („op_Implicit“ und „op_Explicit“) wird der Rückgabewert der Methode als ~ gefolgt vom Rückgabewert codiert, wie weiter oben gezeigt.
 
-- Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird. Beispiel:
+- Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und dann eine Zahl, mit der die Anzahl generischer Typparameter angegeben wird. Zum Beispiel:
 
      ``<member name="T:SampleClass`2">`` ist das Tag für einen Typ, der als `public class SampleClass<T, U>` definiert ist.
 

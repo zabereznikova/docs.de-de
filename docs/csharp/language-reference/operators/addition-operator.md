@@ -1,6 +1,5 @@
 ---
 title: + und +=-Operatoren – C#-Referenz
-ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972639"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712766"
 ---
 # <a name="-and--operators-c-reference"></a>Operatoren „+“ und „+=“ (C#-Referenz)
 
@@ -71,7 +70,7 @@ Sie verwenden den `+=`-Operator auch, um eine Ereignishandlermethode anzugeben, 
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Ein benutzerdefinierter Typ kann den Operator `+` [überladen](operator-overloading.md). Wenn ein binärer Operator vom Typ `+` überladen wird, wird der Operator `+=` implizit ebenfalls überladen. Ein benutzerdefinierter Typ kann den Operator `+=` nicht explizit überladen.
+Ein benutzerdefinierter Typ kann den Operator `+`[überladen](operator-overloading.md). Wenn ein binärer Operator vom Typ `+` überladen wird, wird der Operator `+=` implizit ebenfalls überladen. Ein benutzerdefinierter Typ kann den Operator `+=` nicht explizit überladen.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

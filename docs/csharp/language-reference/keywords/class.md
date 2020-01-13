@@ -1,6 +1,5 @@
 ---
 title: class-Schlüsselwort – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922393"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713689"
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 
@@ -27,7 +26,7 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 In C# ist nur die einfache Vererbung zulässig. Eine Klasse kann also Implementierungen aus nur einer Basisklasse erben. Es kann allerdings mehr als eine Schnittstelle implementiert werden. Die folgende Tabelle zeigt Beispiele für Klassenvererbung und Implementierung der Schnittstelle:
 
@@ -74,7 +73,7 @@ Eine Klasse kann Deklarationen der folgenden Member enthalten:
 
 - [Strukturen](../../programming-guide/classes-and-structs/structs.md)
 
-- [Enumerationen](../../programming-guide/enumeration-types.md)
+- [Enumerationen](../builtin-types/enum.md)
 
 ## <a name="example"></a>Beispiel
 

@@ -1,6 +1,5 @@
 ---
 title: 'sizeof-Operator: C#-Verweis'
-ms.custom: seodec18
 ms.date: 07/25/2019
 f1_keywords:
 - sizeof_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c88f205a616587e5437bf4fc81bcbdcbbc19a9ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712636"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof-Operator (C#-Verweis)
 
@@ -37,7 +36,7 @@ Der `sizeof`-Operator erfordert einen [unsicheren](../keywords/unsafe.md) Kontex
 |`sizeof(decimal)`|16|
 |`sizeof(bool)`|1|
 
-Sie müssen auch keinen unsicheren Kontext verwenden, wenn der Operand des `sizeof`-Operators der Name eines [Enumerationstyps](../keywords/enum.md) ist.
+Sie müssen auch keinen unsicheren Kontext verwenden, wenn der Operand des `sizeof`-Operators der Name eines [Enumerationstyps](../builtin-types/enum.md) ist.
 
 Im folgenden Beispiel wird die Verwendung des `sizeof`-Operators veranschaulicht:
 

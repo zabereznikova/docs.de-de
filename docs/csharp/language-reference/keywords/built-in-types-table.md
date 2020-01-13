@@ -1,18 +1,17 @@
 ---
 title: Tabelle integrierter Typen – C#-Referenz
-ms.custom: seodec18
 description: Schlüsselwörter für integrierte C#-Typen
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: dc324b5d79d3b09f7131cbdf901b64c544bdc104
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 1344b29a8751722e36eae58ece5242a2bcdb8a69
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552292"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713748"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabelle integrierter Typen (C#-Referenz)
 
@@ -36,7 +35,7 @@ Die folgende Tabelle zeigt die Schlüsselwörter für integrierte C#-Typen, bei 
 |[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](../builtin-types/reference-types.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Mit Ausnahme von `object` und `string` werden alle in der Tabelle enthaltenen Typen als einfache Typen bezeichnet.
 

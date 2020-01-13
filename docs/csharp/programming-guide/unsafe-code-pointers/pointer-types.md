@@ -1,16 +1,15 @@
 ---
 title: Zeigertypen – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423125"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711817"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -25,7 +24,7 @@ Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** 
 
 Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../language-reference/builtin-types/reference-types.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
 
-Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Beispiel:
+Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Zum Beispiel:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -36,7 +35,7 @@ Ein Zeiger kann nicht auf einen Verweis oder eine [Struktur](../../language-refe
 
 Der Wert der Zeigervariablen vom Typ `myType*` ist die Adresse einer Variablen vom Typ `myType`. Im Folgenden finden Sie Beispiele für Zeigertypdeklarationen:
 
-|Beispiel|BESCHREIBUNG|
+|Beispiel|Beschreibung|
 |-------------|-----------------|
 |`int* p`|`p` ist ein Zeiger auf einen ganzzahligen Wert.|
 |`int** p`|`p` ist ein Zeiger auf einen Zeiger auf einen ganzzahligen Wert.|
@@ -87,5 +86,6 @@ Weitere Informationen finden Sie im Abschnitt [Zeigertypen](~/_csharplang/spec/u
 - [C#-Programmierhandbuch](../index.md)
 - [Unsicherer Code und Zeiger](index.md)
 - [Zeigerkonvertierungen](pointer-conversions.md)
-- [Typen](/dotnet/csharp/language-reference/keywords)
+- [Verweistypen](../../language-reference/keywords/reference-types.md)
+- [Werttypen](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

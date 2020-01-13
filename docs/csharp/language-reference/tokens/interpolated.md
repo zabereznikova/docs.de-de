@@ -1,6 +1,5 @@
 ---
 title: $ – Zeichenfolgeninterpolation – C#-Referenz
-ms.custom: seodec18
 description: Mit der Zeichenfolgeninterpolation lassen sich Zeichenfolgenausgaben durch eine Syntax formatieren, die besser lesbar und praktischer ist als bei der herkömmlichen zusammengesetzten Formatierung von Zeichenfolgen.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421854"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715087"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
@@ -38,7 +37,7 @@ Die Struktur eines Elements mit einem Interpolationsausdruck sieht wie folgt aus
 
 Elemente in eckigen Klammern sind optional. In der folgenden Tabelle wird jedes Element beschrieben:
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`interpolationExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung von `null` lautet <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Der konstante Ausdruck, dessen Wert die Mindestanzahl von Zeichen in der Zeichenfolgendarstellung des Ausdrucksergebnisses definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|

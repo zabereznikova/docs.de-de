@@ -1,6 +1,5 @@
 ---
 title: 'lock-Anweisung: C#-Referenz'
-ms.custom: seodec18
 description: Verwenden Sie die lock-Anweisung von C#, um den Threadzugriff auf eine freigegebene Ressource zu synchronisieren.
 ms.date: 10/01/2018
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168778"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713385"
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
 
@@ -49,7 +48,7 @@ Da ein [try...finally](try-finally.md)-Block in diesem Code verwendet wird, wird
 
 Sie können den Operator [await](../operators/await.md) nicht im Text einer `lock`-Anweisung verwenden.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie den Threadzugriff auf eine freigegebene Ressource synchronisieren, sperren Sie eine dedizierte Objektinstanz (z.B. `private readonly object balanceLock = new object();`) oder eine andere Instanz, die wahrscheinlich nicht von anderen Teilen des Codes als lock-Objekt verwendet wird. Vermeiden Sie, die gleiche lock-Objektinstanz für verschiedene freigegebene Ressourcen zu verwenden, da dies zu einem Deadlock oder Sperrkonflikt führen kann. Vermeiden Sie insbesondere die Verwendung der folgenden Objekte als Sperre:
 

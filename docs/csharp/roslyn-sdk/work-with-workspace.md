@@ -3,12 +3,12 @@ title: Arbeiten mit dem Arbeitsbereichsmodell für .NET Compiler Platform SDK
 description: In dieser Übersicht werden die Typen vorgestellt, die Sie zum Abfragen und Bearbeiten von Arbeitsbereichen und Projekten für Ihren Code verwenden.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354802"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346913"
 ---
 # <a name="work-with-a-workspace"></a>Arbeiten mit einem Arbeitsbereich
 
@@ -40,4 +40,4 @@ Im folgenden Diagramm wird deutlich, in welcher Beziehung der Arbeitsbereich zu 
 
 ## <a name="summary"></a>Zusammenfassung
 
-Roslyn stellt mehrere Compiler-APIs und Arbeitsbereich-APIs zur Verfügung, die umfangreiche Informationen über Ihren Quellcode zur Verfügung stellen und uneingeschränkt mit den Sprachen C# und Visual Basic zusammenarbeiten.  Das .NET Compiler Platform SDK vereinfacht die Erstellung von codeabhängigen Tools und Anwendungen um ein Vielfaches. Es schafft zahlreiche Innovationsmöglichkeiten in Bereichen wie etwa folgenden: Metaprogrammierung, Codegenerierung und -transformation, interaktive Nutzung der C#- und VB-Sprachen und Einbettung von C# und VB in domänenspezifischen Sprachen.  
+Roslyn stellt mehrere Compiler-APIs und Arbeitsbereich-APIs zur Verfügung, die umfangreiche Informationen über Ihren Quellcode zur Verfügung stellen und uneingeschränkt mit den Sprachen C# und Visual Basic zusammenarbeiten.  Das .NET Compiler Platform SDK vereinfacht die Erstellung von codeabhängigen Tools und Anwendungen um ein Vielfaches. Dieses schafft viele Möglichkeiten für Innovationen in Bereichen wie Metaprogrammierung, Codegenerierung und -transformation, die interaktive Verwendung der Programmiersprachen C# und Visual Basic und die Einbettung von C# und Visual Basic in domänenspezifische Sprachen.  

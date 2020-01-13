@@ -1,18 +1,17 @@
 ---
 title: '#undef – C#-Referenz'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: fdf22e90be766e87e823a7f8cc27ea00c17d2bb5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712441"
 ---
 # <a name="undef-c-reference"></a>#undef (C#-Referenz)
 Mit `#undef` können Sie ein Symbol definieren. Wenn dieses Symbol dann als Ausdruck in einer [#if`false`-Anweisung verwendet wird, wird der Ausdruck als ](./preprocessor-if.md) ausgewertet.  

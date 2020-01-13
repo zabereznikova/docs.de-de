@@ -1,22 +1,21 @@
 ---
 title: Kontextabhängige Schlüsselwörter – C#-Referenz
-ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422870"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713656"
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontextabhängige Schlüsselwörter (C#-Referenz)
 
 Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code bereitzustellen, es ist jedoch kein reserviertes Wort in C#. In diesem Abschnitt werden die folgenden Kontextschlüsselwörter eingeführt:  
   
-|Stichwort|BESCHREIBUNG|  
+|Stichwort|Beschreibung|  
 |-------------|-----------------|  
 |[add](./add.md)|Definiert einen benutzerdefinierten Ereignisaccessor, der aufgerufen wird, wenn der Clientcode das Ereignis abonniert|  
 |[async](./async.md)|Zeigt an, dass die geänderte Methode, der Lambdaausdruck oder die anonyme Methode asynchron ist.|  

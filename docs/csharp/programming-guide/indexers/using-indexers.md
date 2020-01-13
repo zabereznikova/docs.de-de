@@ -1,16 +1,15 @@
 ---
 title: Verwenden von Indexern – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 4411fe0ffe7dc136b4e74adeba3e5596af3aa1db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589427"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702895"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Verwenden von Indexern (C#-Programmierhandbuch)
 
@@ -25,7 +24,7 @@ public int this[int index]    // Indexer declaration
 }  
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Typ eines Indexers und der Typ seiner Parameter müssen zumindest dieselben Zugriffsmöglichkeiten bieten wie der Indexer selbst. Weitere Informationen zu den Zugriffsebenen finden Sie unter [Zugriffsmodifizierer](../../language-reference/keywords/access-modifiers.md).  
   
