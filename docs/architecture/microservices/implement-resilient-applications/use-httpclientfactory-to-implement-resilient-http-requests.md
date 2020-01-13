@@ -2,12 +2,12 @@
 title: Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 description: Erfahren Sie, wie Sie HttpClientFactory, verfügbar seit .NET Core 2.1, zum Erstellen von `HttpClient`-Instanzen verwenden, damit Sie HttpClientFactory mühelos in Ihren Anwendungen verwenden können.
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737741"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900326"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
@@ -37,7 +37,7 @@ Um diese Probleme zu beheben und die Verwaltung von `HttpClient`-Instanzen zu er
 - Für das Verwalten der Lebensdauer von `HttpClientMessageHandlers`-Meldungshandlern, um die erwähnten Probleme zu vermeiden, die auftreten können, wenn Sie die `HttpClient`-Lebensdauer selbst verwalten.
 
 > [!NOTE]
-> `HttpClientFactory` ist eng an die Implementierung der Abhängigkeitseinschleusung im NuGet-Paket `Microsoft.Extensions.DependencyInjection` gebunden. Weitere Informationen zur Verwendung anderer Abhängigkeitseinschleusungscontainer finden Sie in dieser [GitHub-Diskussion](https://github.com/aspnet/Extensions/issues/1345).
+> `HttpClientFactory` ist eng an die Implementierung der Abhängigkeitseinschleusung im NuGet-Paket `Microsoft.Extensions.DependencyInjection` gebunden. Weitere Informationen zur Verwendung anderer Abhängigkeitseinschleusungscontainer finden Sie in dieser [GitHub-Diskussion](https://github.com/dotnet/extensions/issues/1345).
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Mehrere Verwendungsmöglichkeiten für HttpClientFactory
 
@@ -119,7 +119,7 @@ Für jeden typisierten Client kann ein eigener Wert für die Lebensdauer des Han
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Implementieren von typisierten Clientklassen, die das injizierte und konfigurierte HttpClient-Objekt verwenden
 
-Zuvor müssen Sie Ihre typisierten Clientklassen definieren, z.B. die Klassen im Beispielcode („BasketService“, „CatalogService“, „OrderingService“ usw.). Bei einem typisierten Client handelt es sich um eine Klasse, die ein `HttpClient`-Objekt akzeptiert (das über deren Konstruktor injiziert wird) und dieses verwendet, um HTTP-Remotedienste aufzurufen. Beispiel:
+Zuvor müssen Sie Ihre typisierten Clientklassen definieren, z.B. die Klassen im Beispielcode („BasketService“, „CatalogService“, „OrderingService“ usw.). Bei einem typisierten Client handelt es sich um eine Klasse, die ein `HttpClient`-Objekt akzeptiert (das über deren Konstruktor injiziert wird) und dieses verwendet, um HTTP-Remotedienste aufzurufen. Zum Beispiel:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -188,14 +188,14 @@ Bis zu diesem Punkt führt der Code nur reguläre HTTP-Anforderungen aus. In den
 - **Verwenden von HttpClientFactory in .NET Core**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory-Quellcode im `aspnet/Extensions`-GitHub-Repository**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **HttpClientFactory-Quellcode im `dotnet/extensions`-GitHub-Repository**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**  
   <http://www.thepollyproject.org/>
   
 - **Verwenden von HttpClientFactory ohne Abhängigkeitseinschleusung (GitHub-Problem)**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[Zurück](explore-custom-http-call-retries-exponential-backoff.md)

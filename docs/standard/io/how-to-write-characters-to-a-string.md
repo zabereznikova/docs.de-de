@@ -11,14 +11,12 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb35c61b34fa571f35da6691ebe7fa2516eb2df1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674749"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706620"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge
 In den folgenden Codebeispielen werden Zeichen synchron oder asynchron aus einem Zeichenarray in eine Zeichenfolge geschrieben.  

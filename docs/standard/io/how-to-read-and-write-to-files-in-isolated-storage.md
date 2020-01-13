@@ -16,14 +16,12 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491519"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706685"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Vorgehensweise: Lesen von bzw. Schreiben in Dateien im isolierten Speicher
 Um aus einer Datei in einem isolierten Speicher zu lesen oder in sie zu schreiben, verwenden Sie ein <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-Objekt mit einem Streamreader (<xref:System.IO.StreamReader>-Objekt) oder Streamwriter (<xref:System.IO.StreamWriter>-Objekt).  

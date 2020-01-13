@@ -2,12 +2,12 @@
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
 ms.date: 10/08/2018
-ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739874"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899776"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -238,7 +238,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-Sie können die `OwnsOne`-Methode auch in eine Fluentzuordnung ketten. Im folgenden hypothetischen Beispiel besitzt `OrderDetails` `BillingAddress` und `ShippingAddress`, wobei es sich um `Address`-Typen handelt. Dann besitzt der `Order`-Typ `OrderDetails`.
+Sie können die `OwnsOne`-Methode auch in eine Fluentzuordnung ketten. Im folgenden hypothetischen Beispiel besitzt `OrderDetails``BillingAddress` und `ShippingAddress`, wobei es sich um `Address`-Typen handelt. Dann besitzt der `Order`-Typ `OrderDetails`.
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -320,7 +320,7 @@ public class Address
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)** . Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
-  <https://github.com/aspnet/EntityFramework/issues/246>
+  <https://github.com/dotnet/efcore/issues/246>
 
 - **ValueObject.cs.** Basisklasse der Wertobjekte in eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552883"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341553"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: Klassifizieren des Schweregrads von Integritätsverletzungen in Restaurants mit dem Modell-Generator
 
@@ -31,7 +31,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!NOTE]
 > Der Modell-Generator befindet sich derzeit in der Vorschauphase.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Eine Liste der Voraussetzungen und Installationsanweisungen finden Sie in der [Installationsanleitung für den Modell-Generator](../how-to-guides/install-model-builder.md).
 
@@ -152,4 +152,4 @@ Weitere Informationen zu den in diesem Tutorial erwähnten Themen finden Sie in 
 
 - [Szenarien für den Modellgenerator](../automate-training-with-model-builder.md#scenarios)
 - [Multiklassenklassifizierung](../resources/glossary.md#multiclass-classification)
-- [Modellmetriken zur Multiklassenklassifizierung](../resources/metrics.md#metrics-for-multi-class-classification)
+- [Modellmetriken zur Multiklassenklassifizierung](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

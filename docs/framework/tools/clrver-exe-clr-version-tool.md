@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5a94965c106b6ec231e3f80802f82c76dfd5eac6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044760"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715799"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR-Versionstool)
 Das CLR-Versionstool (Clrver.exe) führt alle installierten Versionen der Common Language Runtime (CLR) auf dem Computer auf.  
@@ -29,13 +27,13 @@ clrver [option]
   
 ## <a name="options"></a>Optionen  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |`-all`|Zeigt alle Prozesse auf dem Computer an, die die CLR verwenden.|  
 |*pid*|Zeigt die Versionen der CLR an, die von dem Prozess verwendet werden, der über angegebene Prozess-ID (PID) aufweist.|  
 |`-?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie "Clrver.exe" ohne Optionen aufrufen, werden alle installierten CLR-Versionen angezeigt. Wenn Sie eine PID für einen anderen Benutzer angeben, müssen Sie über Administratorberechtigungen verfügen, um die Versionsinformationen abzurufen.  
   
 > [!NOTE]

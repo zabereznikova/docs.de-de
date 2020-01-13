@@ -8,14 +8,12 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f02f7a8a327e117b92ef826b8dcd7fc742c9b4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 693dd1eb0b0b9bb87973eead26a344ed67641e34
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647811"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706555"
 ---
 # <a name="pipe-operations-in-net"></a>Pipevorgänge in .NET
 Pipes stellen eine Möglichkeit zur prozessübergreifenden Kommunikation dar. Es gibt zwei Arten von Pipes:  

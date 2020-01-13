@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802465"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348254"
 ---
 # <a name="format-types-in-net"></a>Formatieren von Typen in .NET
 
@@ -251,7 +251,7 @@ Eine Reihe von Formatierungs- oder Zeichenfolgenkonvertierungsmethoden enthalten
 
 - <xref:System.Globalization.NumberFormatInfo>, eine Klasse, die numerische Formatierungsinformationen für eine bestimmte Kultur bereitstellt. Die zugehörige <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> -Implementierung gibt eine Instanz von sich selbst zurück.
 
-- <xref:System.Globalization.CultureInfo>. Die zugehörige <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> -Implementierung kann ein <xref:System.Globalization.NumberFormatInfo> -Objekt zurückgeben, um numerische Formatierungsinformationen bereitzustellen, oder ein <xref:System.Globalization.DateTimeFormatInfo> -Objekt, um Formatierungsinformationen für Datums- und Uhrzeitwerte bereitzustellen.
+- <xref:System.Globalization.CultureInfo> Die zugehörige <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> -Implementierung kann ein <xref:System.Globalization.NumberFormatInfo> -Objekt zurückgeben, um numerische Formatierungsinformationen bereitzustellen, oder ein <xref:System.Globalization.DateTimeFormatInfo> -Objekt, um Formatierungsinformationen für Datums- und Uhrzeitwerte bereitzustellen.
 
 Sie können auch einen eigenen Formatanbieter implementieren, um eine dieser Klassen zu ersetzen. Die <xref:System.IFormatProvider.GetFormat%2A>-Methode Ihrer Implementierung muss jedoch ein Objekt eines in der vorangehenden Tabelle aufgeführten Typs zurückgeben, um Formatierungsinformationen für die `ToString`-Methode bereitzustellen.
 

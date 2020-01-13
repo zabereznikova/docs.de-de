@@ -11,14 +11,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2fb5a30e165b78fef797bf8bfe536b66cae9a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 42b758eeb36a4c319c3e1f24676cb600d580902e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640750"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706607"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Vorgehensweise: Schreiben von Text in eine Datei
 In diesem Artikel werden verschiedene Vorgehensweisen zum Schreiben von Text in eine Datei für eine .NET-Anwendung veranschaulicht. 

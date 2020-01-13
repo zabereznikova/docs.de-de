@@ -1,5 +1,5 @@
 ---
-title: 'Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit: .NET'
+title: Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103774"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348295"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
 
@@ -44,7 +44,7 @@ In Analysevorgängen können benutzerdefinierte Formatzeichenfolgen für Datum u
 
 Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit und zeigt eine Ergebniszeichenfolge an, die von den einzelnen Formatbezeichnern erstellt wird. Standardmäßig entsprechen Ergebniszeichenfolgen den Formatierungskonventionen der Kultur "en-US". Wenn ein bestimmter Formatbezeichner eine lokalisierte Ergebniszeichenfolge erzeugt, wird im Beispiel auch die Kultur angegeben, für die die Ergebniszeichenfolge gilt. Weitere Informationen zum Verwenden von benutzerdefinierten Formatzeichenfolgen für Datum und Uhrzeit finden Sie im Abschnitt [Hinweise](#notes).
 
-| Formatbezeichner | BESCHREIBUNG | Beispiele |
+| Formatbezeichner | Beschreibung | Beispiele |
 | ---------------------- | ----------------- | -------------- |
 |"d"|Der Tag des Monats, von 1 bis 31.<br /><br /> Weitere Informationen finden Sie unter: [Der benutzerdefinierte Formatspezifizierer „d“](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|Der Tag des Monats, von 01 bis 31.<br /><br /> Weitere Informationen finden Sie unter: [Der benutzerdefinierte Formatbezeichner „dd“](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|

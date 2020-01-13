@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121757"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346640"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
@@ -51,7 +51,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
 
 <a name="table"></a> Die folgenden Tabelle beschreibt die standardmäßigen Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von standardmäßigen Zahlenformatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesStandardFormatting). Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.
 
-|Formatbezeichner|name|BESCHREIBUNG|Beispiele|
+|Formatbezeichner|name|Beschreibung|Beispiele|
 |----------------------|----------|-----------------|--------------|
 |"C" oder "c"|Währung|Ergebnis:  Ein Währungswert<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen finden Sie unter: [Der Währungsformatspezifizierer „C“](#CFormatString)|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> 123 ¥<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -123,456 ¥|
 |"D" oder "d"|Decimal|Ergebnis:  Ganzzahlige Ziffern mit optionalem Minuszeichen<br /><br /> Unterstützt von: ausschließlich integralen Typen<br /><br /> Genauigkeitsspezifizierer: Mindestanzahl von Ziffern<br /><br /> Standardgenauigkeitsspezifizierer: Mindestanzahl von erforderlichen Ziffern<br /><br /> Weitere Informationen finden Sie unter: [Der Dezimalformatspezifizierer „D“](#DFormatString)|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
@@ -104,7 +104,7 @@ Wenn der zu formatierende Wert mehr als die angegebene oder die standardmäßige
 
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Definiert die Platzierung des Währungssymbols für positive Werte.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Definiert die Platzierung des Währungssymbols für negative Werte und gibt an, ob das Minuszeichen durch Klammern oder durch die <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>-Eigenschaft dargestellt wird.|
@@ -133,7 +133,7 @@ Die Genauigkeitsangabe gibt die gewünschte Mindestanzahl von Ziffern für die r
 
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. Wie die folgende Tabelle zeigt, wirkt sich eine einzelne Eigenschaft auf die Formatierung der Ergebniszeichenfolge aus.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|
 
@@ -157,7 +157,7 @@ Die Groß- oder Kleinschreibung des Formatbezeichners gibt an, ob dem Exponenten
 
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl sowohl für den Koeffizienten als auch für den Exponenten negativ ist.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die die ganzzahlige Ziffer von Dezimalstellen im Koeffizienten trennt.|
@@ -181,7 +181,7 @@ Die Genauigkeitsangabe gibt die gewünschte Anzahl von Dezimalstellen an. Bei fe
 
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die Eigenschaften des <xref:System.Globalization.NumberFormatInfo>-Objekts aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|
@@ -228,7 +228,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
 
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|
@@ -250,7 +250,7 @@ Der numerische Formatbezeichner ("N") konvertiert eine Zahl in eine Zeichenfolge
 
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Definiert das Format von negativen Werten und gibt an, ob das Minuszeichen durch Klammern oder durch die <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>-Eigenschaft dargestellt wird.|
@@ -275,7 +275,7 @@ Der Prozentformatbezeichner "P" multipliziert eine Zahl mit 100 und konvertiert 
 
 In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Definiert die Platzierung des Prozentsymbols für positive Werte.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Definiert die Platzierung des Prozentsymbols sowie des Minuszeichens für negative Werte.|
@@ -307,7 +307,7 @@ Wenn ein <xref:System.Numerics.BigInteger>-Wert mit diesem Bezeichner formatiert
 Eine Genauigkeitsangabe kann zwar vorhanden sein, sie wird jedoch ignoriert. Bei diesem Bezeichner hat die Rückkonvertierbarkeit höhere Priorität als die Genauigkeit.
 Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.
 
-|NumberFormatInfo-Eigenschaft|BESCHREIBUNG|
+|NumberFormatInfo-Eigenschaft|Beschreibung|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|
