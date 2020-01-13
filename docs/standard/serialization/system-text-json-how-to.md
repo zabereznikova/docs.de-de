@@ -367,9 +367,9 @@ Hier ist ein Beispiel für die Serialisierung und JSON-Ausgabe:
 
 Diese Option gilt nur für die Serialisierung. Während der Deserialisierung werden schreibgeschützte Eigenschaften standardmäßig ignoriert.
 
-### <a name="exclude-all-null-value-properties"></a>Alle NULL-Wert Eigenschaften ausschließen
+### <a name="exclude-all-null-value-properties"></a>Alle Eigenschaften mit NULL-Wert ausschließen
 
-Um alle NULL-Wert Eigenschaften auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>-Eigenschaft auf `true`fest, wie im folgenden Beispiel gezeigt:
+Um alle Eigenschaften mit NULL-Werten auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>-Eigenschaft auf `true` fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
@@ -402,15 +402,15 @@ Standardmäßig schützt das Serialisierungsprogramm alle nicht-ASCII-Zeichen.  
 }
 ```
 
-### <a name="serialize-language-character-sets"></a>Serialisieren von sprach Zeichensätzen
+### <a name="serialize-language-character-sets"></a>Serialisieren von Sprachzeichensätzen
 
-Wenn Sie die Zeichensätze mindestens einer Sprache ohne Escapezeichen serialisieren möchten, müssen Sie beim Erstellen einer Instanz von <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>[Unicode-Bereiche](xref:System.Text.Unicode.UnicodeRanges) angeben, wie im folgenden Beispiel gezeigt:
+Wenn Sie die Zeichensätze mindestens einer Sprache ohne Escapezeichen serialisieren möchten, geben Sie einen oder mehrere [Unicode-Bereiche](xref:System.Text.Unicode.UnicodeRanges) beim Erstellen einer <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>-Instanz an, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetLanguageSets)]
 
-Mit diesem Code werden keine kyrillischen oder griechischen Zeichen entfernt. Wenn die `Summary`-Eigenschaft auf Cyrillic--,-festgelegt ist, wird das `WeatherForecast`-Objekt wie in diesem Beispiel gezeigt serialisiert:
+Mit diesem Code werden kyrillische und griechische Zeichen nicht geschützt. Wenn die `Summary`-Eigenschaft auf kyrillisch жарко festgelegt ist, wird das `WeatherForecast`-Objekt wie in diesem Beispiel gezeigt serialisiert:
 
 ```json
 {
@@ -420,7 +420,7 @@ Mit diesem Code werden keine kyrillischen oder griechischen Zeichen entfernt. We
 }
 ```
 
-Verwenden Sie <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>, um alle sprach Sätze ohne Escapezeichen zu serialisieren.
+Verwenden Sie <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>, um alle Sprachzeichensätze ungeschützt zu serialisieren.
 
 ### <a name="serialize-specific-characters"></a>Serialisieren bestimmter Zeichen
 
@@ -430,7 +430,7 @@ Eine Alternative besteht darin, einzelne Zeichen anzugeben, die Sie zulassen mö
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetSelectedCharacters)]
 
-Im folgenden finden Sie ein Beispiel für JSON, das durch den vorangehenden Code generiert wird:
+Im Folgenden finden Sie ein Beispiel für die JSON-Ausgabe, die durch den vorangehenden Code generiert wird:
 
 ```json
 {
