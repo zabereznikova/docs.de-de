@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 700bcc5b818c452d3642d325fb6fe19cbb162474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141446"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937772"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx-Methode
 Ruft den öffentlichen Schlüssel aus einem Paar aus öffentlichem und privatem Schlüssel ab und gibt einen Hash Algorithmus und einen Signatur Algorithmus an.  
@@ -39,7 +39,7 @@ HRESULT StrongNameGetPublicKey (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pwzKeyContainer`  
  in Der Name des Schlüssel Containers, der das Paar aus öffentlichem und privatem Schlüssel enthält. Wenn `pbKeyBlob` NULL ist, muss `szKeyContainer` einen gültigen Container innerhalb des Kryptografiedienstanbieters (kryptografischen Service Provider, CSP) angeben. In diesem Fall extrahiert die `StrongNameGetPublicKeyEx`-Methode den öffentlichen Schlüssel aus dem Schlüsselpaar, das im Container gespeichert ist.  
   
@@ -66,7 +66,7 @@ HRESULT StrongNameGetPublicKey (
  in Für zukünftige Verwendung reserviert. der Standardwert ist NULL.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
+ `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](/windows/win32/seccrypto/common-hresult-values) für eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
  Der öffentliche Schlüssel ist in einer [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) -Struktur enthalten.  
@@ -74,22 +74,22 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle wird der Satz akzeptierter Werte für den `uHashAlgId`-Parameter angezeigt.  
   
-|-Name|Wert|  
+|-Name|{2&gt;Wert&lt;2}|  
 |----------|-----------|  
-|Keiner|0|  
+|Keine|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
 |SHA-512|0x800e|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81640e8e34335898f4dd7f4f43eafbd3ef191d19
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141408"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938157"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2-Method
 Überprüft die Signatur einer Assembly mit starkem Namen und stellt eine Zuordnung zwischen dem ECMA-Schlüssel und einem echten Schlüssel bereit.  
@@ -36,7 +36,7 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `wszFilePath`  
  in Der Pfad zur portablen ausführbaren Datei (exe-oder DLL-Datei) für die zu überprüfende Assembly.  
   
@@ -53,16 +53,16 @@ HRESULT StrongNameSignatureVerificationEx (
  [out] `true`, wenn die Signatur des starken Namens überprüft wurde. Andernfalls `false`. Dieser Parameter ist auch auf `false` festgelegt, wenn die Überprüfung aufgrund von Registrierungs Einstellungen erfolgreich war.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK`, wenn die Überprüfung erfolgreich war. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
+ `S_OK`, wenn die Überprüfung erfolgreich war. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](/windows/win32/seccrypto/common-hresult-values) für eine Liste).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

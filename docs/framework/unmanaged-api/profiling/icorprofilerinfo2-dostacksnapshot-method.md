@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426825"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936856"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
 Führt die verwalteten Frames auf dem Stapel für den angegebenen Thread durch und sendet Informationen über einen Rückruf an den Profiler.  
@@ -37,7 +37,7 @@ HRESULT DoStackSnapshot(
     [in] ULONG32 contextSize);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `thread`  
  in Die ID des Ziel Threads.  
   
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  Die Reihenfolge, in der der Stapel durchlaufen wird, ist das Gegenteil, wie die Frames auf den Stapel verschoben werden: Blatt (zuletzt per pushübertragung), erster Hauptrahmen (First-pushübertragung).  
   
- Weitere Informationen zum Programmieren des Profilers zum Durchlaufen verwalteter Stapel finden Sie unter [Profiler Stack Walking in the .NET Framework 2,0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Weitere Informationen zum Programmieren des Profilers zum Durchlaufen verwalteter Stapel finden Sie unter [Profiler Stack Walking in the .NET Framework 2,0: Basics and Beyond](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Ein Stackwalk kann synchron oder asynchron sein, wie in den folgenden Abschnitten erläutert.  
   
@@ -93,18 +93,18 @@ HRESULT DoStackSnapshot(
   
 - Blockieren Sie in Ihrem [ICorProfilerCallback:: Thread}](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) -Rückruf immer, bis der Stapel Durchlauf dieses Threads beendet ist.  
   
-- Behalten Sie keine Sperre bei, während der Profiler eine CLR-Funktion aufruft, die eine Garbage Collection auslöst. Das heißt, keine Sperre aufrechterhalten, wenn der besitzende Thread einen-Garbage Collection auslösen kann, der einen auslöst.  
+- Aktivieren Sie keine Sperre, während Ihr Profiler einen Aufruf in eine CLR-Funktion sendet, die eine Garbage Collection auslösen könnte. Das heißt, keine Sperre aufrechterhalten, wenn der besitzende Thread einen-Garbage Collection auslösen kann, der einen auslöst.  
   
  Außerdem besteht das Risiko eines Deadlocks, wenn Sie `DoStackSnapshot` von einem Thread abrufen, den der Profiler erstellt hat, sodass Sie den Stapel eines separaten Zielthreads durchlaufen können. Beim ersten Mal, wenn der von Ihnen erstellte Thread bestimmte `ICorProfilerInfo*` Methoden (einschließlich `DoStackSnapshot`) eingibt, führt die CLR eine Thread spezifische, CLR-spezifische Initialisierung für diesen Thread aus. Wenn Ihr Profiler den Zielthread angehalten hat, dessen Stapel Sie durchlaufen möchten, und wenn der Zielthread eine Sperre besitzt, die für die Durchführung dieser Thread spezifischen Initialisierung erforderlich ist, tritt ein Deadlock auf. Um diesen Deadlock zu vermeiden, führen Sie einen ersten Rückruf für `DoStackSnapshot` von Ihrem Profiler erstellten Thread aus, um einen separaten Zielthread zu durchlaufen, ohne den Zielthread zuerst anzuhalten. Dieser anfängliche-Befehl stellt sicher, dass die Initialisierung pro Thread ohne deadlockvorgang durchgeführt werden kann. Wenn `DoStackSnapshot` erfolgreich ist und mindestens einen Frame meldet, ist es nach diesem Punkt sicher, dass der vom Profiler erstellte Thread sicher ist, dass ein beliebiger Zielthread angehalten und `DoStackSnapshot` aufgerufen wird, um den Stapel dieses Zielthreads zu durchlaufen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

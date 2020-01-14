@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283282"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938055"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.
 
-Digitale Zertifikate sind Teil einer *Public Key-Infrastruktur* (PKI). Dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen zur Überprüfung und Authentifizierung der Gültigkeit aller beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Public Key-Kryptografie. Die Zertifikate werden von einer Zertifizierungsstelle ausgestellt, und jedes Zertifikat enthält eine Reihe von Feldern mit Daten, z.B. *Antragsteller* (die Entität, für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (das Datum, bis zu dem das Zertifikat gültig ist), Aussteller (die Entität, von der das Zertifikat ausgestellt wurde) und öffentlicher Schlüssel. In WCF werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Weitere Informationen über Ansprüche und Autorisierung in WCF finden Sie unter [Managing Claims and Authorization with the Identity Model (Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell)](managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zum Implementieren einer PKI finden Sie [unter Unternehmens-PKI mit Windows Server 2012 R2 Active Directory Certificate Services](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).
+Digitale Zertifikate sind Teil einer *Public Key-Infrastruktur* (PKI). Dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen zur Überprüfung und Authentifizierung der Gültigkeit aller beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Public Key-Kryptografie. Die Zertifikate werden von einer Zertifizierungsstelle ausgestellt, und jedes Zertifikat enthält eine Reihe von Feldern mit Daten, z.B. *Antragsteller* (die Entität, für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (das Datum, bis zu dem das Zertifikat gültig ist), Aussteller (die Entität, von der das Zertifikat ausgestellt wurde) und öffentlicher Schlüssel. In WCF werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Weitere Informationen über Ansprüche und Autorisierung in WCF finden Sie unter [Managing Claims and Authorization with the Identity Model (Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell)](managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zum Implementieren einer PKI finden Sie [unter Unternehmens-PKI mit Windows Server 2012 R2 Active Directory Certificate Services](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 Die zentrale Funktion eines Zertifikats ist die Authentifizierung der Identität des Besitzers des Zertifikats gegenüber anderen. Ein Zertifikat enthält den *öffentlichen Schlüssel* des Besitzers, während der Besitzer den privaten Schlüssel behält. Der öffentliche Schlüssel kann zum Verschlüsseln von Nachrichten verwendet werden, die an den Besitzer des Zertifikats gesendet werden. Nur der Besitzer hat Zugriff auf den privaten Schlüssel, sodass niemand anders diese Nachrichten entschlüsseln kann.
 
@@ -141,7 +141,7 @@ Sie können den Modus mithilfe des `revocationMode`-Attributs von [\<authenticat
 
 In WCF müssen häufig Zertifikate oder Gruppen von Zertifikaten angegeben werden, die von einem Dienst oder von einem Client zum Authentifizieren, Verschlüsseln oder digitalen Signieren von Nachrichten verwendet werden. Dies kann programmgesteuert mit der `SetCertificate`-Methode verschiedener Klassen geschehen, die X.509-Zertifikate darstellen. Folgende Klassen geben mit der `SetCertificate`-Methode ein Zertifikat an.
 
-|Klasse|Methode|
+|Klasse|-Methode|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|

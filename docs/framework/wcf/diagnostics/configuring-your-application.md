@@ -2,23 +2,23 @@
 title: Konfigurieren der Anwendung
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 4e19e4d0ecb6bc90402f99dddd280ee1dbcf7ea0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6fc33e7b114bb78f823575a2b456d601ae75db94
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798153"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937642"
 ---
 # <a name="configuring-your-application"></a>Konfigurieren der Anwendung
 Windows Communication Foundation (WCF) verwendet das .NET-Konfigurationssystem und ermöglicht es Ihnen, Dienste sowohl im Computer-als auch im Anwendungsbereich zu konfigurieren.  
   
- Die von WCF definierten Konfigurationseinstellungen befinden sich in `<system.serviceModel>` der Abschnitts Gruppe. Weitere Informationen zum Konfigurieren eines WCF-Dienstanbieter finden Sie in den folgenden Themen:  
+ Die von WCF definierten Konfigurationseinstellungen befinden sich in der `<system.serviceModel>` Abschnitts Gruppe. Weitere Informationen zum Konfigurieren eines WCF-Dienstanbieter finden Sie in den folgenden Themen:  
   
 - [Konfigurieren von Diensten](../configuring-services.md)  
   
 - [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Anwendungsdefinierte Konfigurationseinstellungen sind in der `<appSettings>`-Abschnittsgruppe definiert. Weitere Informationen zu Anwendungseinstellungen in .NET-Konfigurationsdateien finden [ \<Sie unter appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
+ Anwendungsdefinierte Konfigurationseinstellungen sind in der `<appSettings>`-Abschnittsgruppe definiert. Weitere Informationen zu Anwendungseinstellungen in .NET-Konfigurationsdateien finden Sie unter [\<appSettings >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)).  
   
 ## <a name="using-the-configuration-editor"></a>Verwenden von Configuration Editor  
  Das WCF- [Konfigurations-Editor-Tool (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md) ermöglicht es Administratoren und Entwicklern, Konfigurationseinstellungen für WCF-Dienste mithilfe einer grafischen Benutzeroberfläche zu erstellen und zu ändern. Mit diesem Tool können Sie Einstellungen für WCF-Bindungen, Verhaltensweisen, Dienste und Diagnosen verwalten, ohne XML-Konfigurationsdateien direkt bearbeiten zu müssen.  

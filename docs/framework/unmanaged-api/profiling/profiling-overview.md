@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die Profilerstellung
+title: Profiling Overview (Übersicht über die Profilerstellung)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed code, profiling API support
@@ -27,14 +27,14 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427102"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937819"
 ---
-# <a name="profiling-overview"></a>Übersicht über die Profilerstellung
+# <a name="profiling-overview"></a>Profiling Overview (Übersicht über die Profilerstellung)
 
 Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht. Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden. Die Profiler-DLL wird zur Laufzeit von der CLR geladen.
 
@@ -175,7 +175,7 @@ Die Profilerstellungs-API bietet zwei Methoden zum Abrufen von Aufruflisten: ein
 
 Unter einer Stapelmomentaufnahme versteht man die Überwachung eines Threadstapels zu einem bestimmten Zeitpunkt. Die Profilerstellungs-API unterstützt die Überwachung von verwalteten Funktionen im Stapel, überlässt jedoch die Überwachung nicht verwalteter Funktionen dem Stackwalker des Profilers.
 
-Weitere Informationen zum Programmieren des Profilers zum Durchlaufen verwalteter Stapel finden Sie in der [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) -Methode in dieser Dokumentation und [im Abschnitt "Profiler Stack Walking" in der .NET Framework 2,0: Basics und darüber hinaus](https://go.microsoft.com/fwlink/?LinkId=73638).
+Weitere Informationen zum Programmieren des Profilers zum Durchlaufen verwalteter Stapel finden Sie in der [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) -Methode in dieser Dokumentation und [im Abschnitt "Profiler Stack Walking" in der .NET Framework 2,0: Basics und darüber hinaus](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Schattenstapel
 
@@ -189,7 +189,7 @@ Profilerrückrufe können ausgegeben werden, wenn der Stapel stark eingeschränk
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Einrichten einer Profilerstellungsumgebung](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Erklärt, wie ein Profiler initialisiert, Ereignisbenachrichtigungen festgelegt und ein Profil für einen Windows-Dienst erstellt werden.|
 |[Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Beschreibt die nicht verwalteten Schnittstellen, die die Profilerstellungs-API verwendet.|

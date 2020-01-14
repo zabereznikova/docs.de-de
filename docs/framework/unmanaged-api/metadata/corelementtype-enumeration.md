@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443629"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937951"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType-Enumeration
 
@@ -121,7 +121,7 @@ typedef enum CorElementType {
 Die typmodifiziererer bilden die Grundlage für das darstellen komplexer Typen. Ein `CorElementType` Typmodifiziererwert wird auf den Wert angewendet, der in der Typsignatur unmittelbar darauf folgt. Der Wert, der auf den `CorElementType` Typmodifiziererwert folgt, kann ein `CorElementType` einfacher Typwert, ein Metadatentoken oder ein anderer Wert sein, wie in der folgenden Tabelle angegeben.
 
 > [!NOTE]
-> Alle Zahlen (*Anzahl*, *Argument Anzahl*,Metadatentoken, *Rang*, *Anzahl*und *gebunden*) werden als komprimierte ganze Zahlen gespeichert. Weitere Informationen finden Sie in der ECMA [-Website Standard-ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) .
+> Alle Zahlen (*Anzahl*, *Argument Anzahl*,Metadatentoken, *Rang*, *Anzahl*und *gebunden*) werden als komprimierte ganze Zahlen gespeichert. Weitere Informationen finden Sie in der ECMA [-Website Standard-ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) .
 
 |Typmodifizierer|Format|
 |-------------------|------------|
@@ -138,13 +138,13 @@ Die typmodifiziererer bilden die Grundlage für das darstellen komplexer Typen. 
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<eine `mdTypeRef` oder `mdTypeDef` Metadatentoken >|
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<eine `mdTypeRef` oder `mdTypeDef` Metadatentoken >|
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** Corhdr. h
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

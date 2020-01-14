@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124158"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935564"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver-Funktion
 Lädt eine Typbibliothek und verwendet die angegebene [ITypeLibResolver-Schnittstelle](itypelibresolver-interface.md) , um alle intern referenzierten Typbibliotheken aufzulösen.  
@@ -34,12 +34,12 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `szFile`  
  in Der Dateipfad der Typbibliothek.  
   
  `regkind`  
- in Ein [REGKIND](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) -Enumerationsflag, das steuert, wie die Typbibliothek registriert wird. Folgende Werte sind möglich:  
+ in Ein [REGKIND](/windows/win32/api/oleauto/ne-oleauto-regkind) -Enumerationsflag, das steuert, wie die Typbibliothek registriert wird. Folgende Werte sind möglich:  
   
 - `REGKIND_DEFAULT`: Verwenden Sie das Standard Registrierungs Verhalten.  
   
@@ -61,7 +61,7 @@ HRESULT LoadTypeLibWithResolver(
 |`S_OK`|Erfolgreich.|  
 |`E_OUTOFMEMORY`|Nicht genügend Arbeitsspeicher.|  
 |`E_POINTER`|Mindestens ein Zeiger ist ungültig.|  
-|`E_INVALIDARG`|Mindestens eines der Argumente ist ungültig.|  
+|`E_INVALIDARG`|Mindestens ein Argument ist ungültig.|  
 |`TYPE_E_IOERROR`|Die Funktion konnte nicht in die Datei schreiben.|  
 |`TYPE_E_REGISTRYACCESS`|Die System Registrierungsdatenbank konnte nicht geöffnet werden.|  
 |`TYPE_E_INVALIDSTATE`|Die Typbibliothek konnte nicht geöffnet werden.|  
@@ -82,7 +82,7 @@ HRESULT LoadTypeLibWithResolver(
   
  Wenn Sie `LoadTypeLibWithResolver` direkt aufrufen, müssen Sie eine eigene [ITypeLibResolver-Schnittstellen](itypelibresolver-interface.md) Implementierung angeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** TlbRef. h  

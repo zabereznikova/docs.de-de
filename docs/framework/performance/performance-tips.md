@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 48b62990abf85eac4d4ab30c9a4b891de0875cd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444530"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937899"
 ---
 # <a name="net-performance-tips"></a>.NET-Leistungstipps
 Der Begriff *Leistung* bezieht sich im Allgemeinen auf die Ausführungsgeschwindigkeit eines Programms. In manchen Fällen können Sie die Ausführungsgeschwindigkeit erhöhen, indem Sie im Quellcode bestimmte Grundregeln befolgen. In einigen Programmen müssen Sie den Code genau untersuchen und mithilfe von Profilern sicherstellen, dass dieser so schnell wie möglich ausgeführt wird. In anderen Programmen müssen Sie keine solche Optimierung ausführen, da Code in der aktuellen Form mit akzeptabler Geschwindigkeit ausgeführt wird. Dieser Artikel beschreibt einige häufige Bereiche, in denen die Leistung abnehmen kann, und enthält Tipps zur Verbesserung sowie Links zu weiteren Leistungsthemen. Weitere Informationen zum Planen und Messen der Leistung finden Sie unter [Performance](index.md).  
@@ -38,9 +38,9 @@ Der Begriff *Leistung* bezieht sich im Allgemeinen auf die Ausführungsgeschwind
   
 - [Performance Tips and Tricks in .NET Applications (Tipps und Tricks zur Leistung in .NET-Anwendungen)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Rico Mariani's Performance Tidbits (Rico Marianis spezielle Leistungstipps)](https://blogs.msdn.microsoft.com/ricom/)  
+- [Rico Mariani's Performance Tidbits (Rico Marianis spezielle Leistungstipps)](https://docs.microsoft.com/archive/blogs/ricom/)  
 
-- [Blog von Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog von Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>Siehe auch
 

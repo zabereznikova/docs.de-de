@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343519"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937757"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic in alphabetischer Reihenfolge aufgeführten Compileroptionen
 Der Visual Basic-Befehlszeilen Compiler wird als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bereitgestellt. Im folgenden finden Sie eine Liste der Visual Basic Befehlszeilen-Compileroptionen, die alphabetisch sortiert sind.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|Option|Zweck|  
+|-Option|Zweck|  
 |------------|-------------|  
 |[@ (Antwortdatei festlegen)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Legt eine Antwortdatei fest.|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Zeigt Compileroptionen an Dieser Befehl entspricht der Angabe der `-help`-Option. Es findet keine Kompilierung statt.|  
@@ -57,7 +57,7 @@ Der Visual Basic-Befehlszeilen Compiler wird als Alternative zum Kompilieren von
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Erzwingt strenge Sprachsemantik.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Gibt eine Ausgabedatei an.|  
-|`-parallel[+&#124;-]`|Gibt an, ob parallele Builds (+) verwendet werden sollen.|  
+|<code>-parallel[+&#124;-]</code>|Gibt an, ob parallele Builds (+) verwendet werden sollen.|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Gibt die Prozessorplattform an, auf die der Compiler für die Ausgabedatei verweist.|  
 |`-preferreduilang`|Geben Sie den Namen der bevorzugten Ausgabesprache an.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Verhindert, dass der Compiler Code für syntaxbezogene Fehler und Warnungen anzeigt.|  

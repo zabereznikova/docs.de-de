@@ -2,12 +2,12 @@
 title: Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978181"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938172"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
 Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwendungen, eingeführt. Diese Anwendungen sind für Touchscreenoberflächen konzipiert. .NET Framework 4.5 ermöglicht Windows Store-Anwendungen das Aufrufen von WCF-Diensten.  
@@ -16,12 +16,12 @@ Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwen
  Innerhalb einer Windows Store-Anwendung ist ein Teilbereich der WCF-Funktionen verfügbar. Ausführliche Informationen finden Sie in den folgenden Abschnitten.  
   
 > [!IMPORTANT]
-> Verwenden Sie die WinRT-Syndication-APIs anstelle der von WCF verfügbar gemachten APIs. Weitere Informationen finden Sie unter , [WinRT-Syndication-API](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Verwenden Sie die WinRT-Syndication-APIs anstelle der von WCF verfügbar gemachten APIs. Weitere Informationen finden Sie unter , [WinRT-Syndication-API](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > Das Hinzufügen eines Webdienstverweises zu einer Windows Runtime-Komponente unter Verwendung von „Dienstverweis hinzufügen“ wird nicht unterstützt.  
   
-### <a name="supported-bindings"></a>Unterstützte Bindungen  
+### <a name="supported-bindings"></a>Nicht unterstützte Bindungen  
  Die folgenden WCF-Bindungen werden in Windows Store-Anwendungen unterstützt:  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
@@ -94,7 +94,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
     }  
 ```  
   
-### <a name="serialization"></a>Serialisierung  
+### <a name="serialization"></a>Serialization  
  Die folgenden Serialisierungsprogramme werden in Windows Store-Anwendungen unterstützt:  
   
 1. DataContractSerializer  
@@ -120,7 +120,7 @@ Die folgenden Sicherheitsmodi werden in Windows Store-Anwendungen unterstützt:
   
 Die folgenden Client Anmelde Informationstypen werden in Windows Store-Anwendungen unterstützt:
   
-1. Keiner  
+1. Keine  
   
 2. Standard  
   
@@ -141,7 +141,7 @@ Die folgenden Client Anmelde Informationstypen werden in Windows Store-Anwendung
 > [!IMPORTANT]
 > Damit Windows Store-Anwendungen Computer übergreifende Aufrufe durchführen können, müssen Sie eine weitere Funktion mit dem Namen "Home/work Networking" aktivieren. Diese Einstellung befindet sich auch in der Datei "Package. AppManifest" auf der Registerkarte "Funktionen". Aktivieren Sie das Kontrollkästchen "Home/work Networking" Dadurch erhält die Anwendung eingehenden und ausgehenden Zugriff auf die Netzwerke der vertrauenswürdigen Orte des Benutzers wie Heim und Arbeit. Wichtige eingehende Ports sind immer blockiert. Für den Zugriff auf Internetdienste müssen Sie auch die Internetfunktion (Client) aktivieren.  
   
-### <a name="misc"></a>Sonstiges  
+### <a name="misc"></a>Sonstige  
  Die Verwendung der folgenden Klassen wird für Windows Store-Anwendungen unterstützt:  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF in Windows Store-Apps-Blog](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [WCF-Windows Store-Clients und-Sicherheit](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Windows Store-Apps und Computer übergreifende Aufrufe](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Aufrufen eines in Azure bereitgestellten WCF-dienstanaus einer Windows Store-App](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [WCF in Windows Store-Apps-Blog](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [WCF-Windows Store-Clients und-Sicherheit](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Windows Store-Apps und Computer übergreifende Aufrufe](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Aufrufen eines in Azure bereitgestellten WCF-dienstanaus einer Windows Store-App](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Bindungen](../../../../docs/framework/wcf/bindings.md)

@@ -2,12 +2,12 @@
 title: Neues in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b14f18dce64bc5738f3d3c6af11d6d6224764486
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837583"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937892"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Neues in Windows Workflow Foundation in .NET 4.5
 
@@ -220,7 +220,7 @@ Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Wor
 
 ### <a name="BKMK_StateMachine"></a>Zustandsautomatworkflows
 
-Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im [Microsoft .NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
+Zustandsautomatworkflows wurden als Teil der .NET Framework 4, Version 4.0.1, im [Microsoft .NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
 
 1. Festlegen von Haltepunkten für Zustände
 

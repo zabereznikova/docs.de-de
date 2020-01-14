@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: e64a0512e05965b3da2e7486e986ee34ca8a20d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f05eb2e6ef31cf1993a623c38bb177f7e3c297e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104305"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935653"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo-Funktion
-Gibt Informationen über die angegebene Typbibliothek zurück, indem die [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) -Struktur überprüft wird.  
+Gibt Informationen über die angegebene Typbibliothek zurück, indem die [TLIBATTR](/windows/win32/api/oaidl/ns-oaidl-tlibattr) -Struktur überprüft wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `szFile`  
  in Der Dateiname der Typbibliothek.  
   
@@ -48,7 +48,7 @@ HRESULT GetTypeLibInfo(
  vorgenommen Die Lokalisierungs-ID der Typbibliothek.  
   
  `pTypeLibPlatform`  
- vorgenommen Ein [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) -Flag, das das Ziel Betriebssystem für die Typbibliothek identifiziert. Allgemeine Werte sind SYS_WIN32 und SYS_WIN64.  
+ vorgenommen Ein [SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind) -Flag, das das Ziel Betriebssystem für die Typbibliothek identifiziert. Allgemeine Werte sind SYS_WIN32 und SYS_WIN64.  
   
  `pTypeLibMajorVer`  
  vorgenommen Die Hauptversionsnummer der Typbibliothek. Bei Version *x. y*lautet die Hauptversionsnummer z. b. *x*.  
@@ -61,14 +61,14 @@ HRESULT GetTypeLibInfo(
   
  Wenn ein beliebiger Parameter NULL ist, gibt die Funktion eine `HRESULT` `E_POINTER`zurück. Andernfalls wird `S_OK` zurückgegeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** TlbRef. h  
   
  **Bibliothek:** TlbRef. lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

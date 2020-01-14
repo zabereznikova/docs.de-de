@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344772"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938129"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und Windows Store-Apps
 
@@ -76,7 +76,7 @@ Windows RT-Geräte sind recht gesperrt. Profiler von Drittanbietern können einf
 
 In einer Reihe von Szenarios, die in den folgenden Abschnitten erläutert werden, muss ihre Profiler UI Desktop-Anwendung einige neue Windows-Runtime-APIs nutzen. Sie sollten sich mit der Dokumentation vertraut machen, um zu verstehen, welche Windows-Runtime APIs von Desktop Anwendungen verwendet werden können und ob Ihr Verhalten bei der Aufruf von Desktop Anwendungen und Windows Store-Apps unterschiedlich ist.
 
-Wenn die Profiler-Benutzeroberfläche in verwaltetem Code geschrieben ist, müssen Sie einige Schritte ausführen, um die Nutzung dieser Windows-Runtime APIs zu erleichtern. Weitere Informationen finden Sie im Artikel [verwaltete Desktop-Apps und Windows-Runtime](https://go.microsoft.com/fwlink/?LinkID=271858) .
+Wenn die Profiler-Benutzeroberfläche in verwaltetem Code geschrieben ist, müssen Sie einige Schritte ausführen, um die Nutzung dieser Windows-Runtime APIs zu erleichtern. Weitere Informationen finden Sie im Artikel [verwaltete Desktop-Apps und Windows-Runtime](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Laden der Profiler-DLL
 
@@ -378,11 +378,11 @@ Die Garbage Collector und der verwaltete Heap unterscheiden sich in einer Window
 
 Bei der Speicher Profilerstellung erstellt die Profiler-DLL in der Regel einen separaten Thread, von dem die Methode der [ForceGC-Methode](icorprofilerinfo-forcegc-method.md) aufgerufen wird. Das ist nichts Neues. Es kann jedoch überraschend sein, dass der Vorgang der Durchführung einer Garbage Collection in einer Windows Store-App den Thread in einen verwalteten Thread umwandelt (z. b. wird eine Profilerstellungs-API für diesen Thread erstellt).
 
-Um die Folgen zu verstehen, ist es wichtig, die Unterschiede zwischen synchronen und asynchronen Aufrufen zu verstehen, wie von der CLR-Profilerstellungs-API definiert. Beachten Sie, dass sich dies vom Konzept der asynchronen Aufrufe in Windows Store-Apps unterscheidet. Weitere Informationen finden Sie im Blog [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) Beitrag.
+Um die Folgen zu verstehen, ist es wichtig, die Unterschiede zwischen synchronen und asynchronen Aufrufen zu verstehen, wie von der CLR-Profilerstellungs-API definiert. Beachten Sie, dass sich dies vom Konzept der asynchronen Aufrufe in Windows Store-Apps unterscheidet. Weitere Informationen finden Sie im Blog [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) Beitrag.
 
 Der relevante Punkt ist, dass Aufrufe von Threads, die von Ihrem Profiler erstellt wurden, immer als synchron angesehen werden, auch wenn diese Aufrufe von außerhalb einer Implementierung einer der [ICorProfilerCallback](icorprofilercallback-interface.md) -Methoden ihrer Profiler-DLL vorgenommen werden. Dies war zumindest der Fall. Nun, da die CLR den Thread Ihres Profilers aufgrund des Aufrufens der [ForceGC-Methode](icorprofilerinfo-forcegc-method.md)in einen verwalteten Thread verwandelt hat, wird dieser Thread nicht mehr als Thread des Profilers angesehen. Die CLR erzwingt daher eine strengere Definition, was für diesen Thread synchron ist – d.., dass ein-Befehl aus einer der [ICorProfilerCallback](icorprofilercallback-interface.md) -Methoden ihrer Profiler-DLL stammen muss, um als synchron zu qualifizieren.
 
-Was bedeutet dies in der Praxis? Die meisten [ICorProfilerInfo](icorprofilerinfo-interface.md) -Methoden können nur synchron aufgerufen werden. andernfalls tritt ein Fehler auf. Wenn Ihre Profiler-DLL Ihren [ForceGC-Methoden](icorprofilerinfo-forcegc-method.md) Thread für andere Aufrufe wieder verwendet, die in der Regel für von Profiler erstellte Threads (z. b. [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit](icorprofilerinfo4-requestrejit-method.md)oder [requestrevert](icorprofilerinfo4-requestrevert-method.md)) durchgeführt werden, haben Sie Probleme. Auch eine asynchrone sichere Funktion wie [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) verfügt über spezielle Regeln, wenn Sie von verwalteten Threads aufgerufen wird. (Weitere Informationen finden Sie im Blogbeitrag [Profiler Stack Walking: Basics und Beyond](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) .)
+Was bedeutet dies in der Praxis? Die meisten [ICorProfilerInfo](icorprofilerinfo-interface.md) -Methoden können nur synchron aufgerufen werden. andernfalls tritt ein Fehler auf. Wenn Ihre Profiler-DLL Ihren [ForceGC-Methoden](icorprofilerinfo-forcegc-method.md) Thread für andere Aufrufe wieder verwendet, die in der Regel für von Profiler erstellte Threads (z. b. [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit](icorprofilerinfo4-requestrejit-method.md)oder [requestrevert](icorprofilerinfo4-requestrevert-method.md)) durchgeführt werden, haben Sie Probleme. Auch eine asynchrone sichere Funktion wie [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) verfügt über spezielle Regeln, wenn Sie von verwalteten Threads aufgerufen wird. (Weitere Informationen finden Sie im Blogbeitrag [Profiler Stack Walking: Basics und Beyond](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) .)
 
 Daher empfiehlt es sich, dass jeder Thread, der von der Profiler-DLL zum Aufrufen der [ForceGC-Methode](icorprofilerinfo-forcegc-method.md) erstellt wird, *nur* für das Auslösen von GCS und dann das reagieren auf die GC-Rückrufe verwendet werden soll. Es sollte nicht in die Profilerstellungs-API aufgerufen werden, um andere Aufgaben wie z. b
 
