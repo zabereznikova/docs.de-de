@@ -10,13 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.custom: seodec18
-ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711492"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 
@@ -103,7 +102,7 @@ Standardmäßig werden die letzten 15 zuletzt verwendeten statischen Muster für
 
 Der in diesem Beispiel verwendete reguläre Ausdruck `\p{Sc}+\s*\d+` überprüft, ob die Eingabezeichenfolge ein Währungssymbol und mindestens eine Dezimalziffer enthält. Das Muster wird entsprechend der folgenden Tabelle definiert.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`\p{Sc}+`|Übereinstimmung mit mindestens einem Zeichen aus der Unicode-Kategorie Symbol, Währung.|
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|
@@ -124,7 +123,7 @@ Im folgenden Beispiel wird die Leistung von kompilierten und interpretierten reg
 
 Das im Beispiel verwendete Muster für reguläre Ausdrücke, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, wird entsprechend der folgenden Tabelle definiert.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|
@@ -168,7 +167,7 @@ Durch die Unterstützung des Zurückverfolgens werden reguläre Ausdrücke leist
 
 Leistungseinbußen bei Anwendungen kommen häufig vor, wenn die Rückverfolgung verwendet wird, obwohl diese für eine Übereinstimmung nicht erforderlich ist. Beispielsweise stimmt der reguläre Ausdruck `\b\p{Lu}\w*\b` mit allen Wörtern überein, die mit einem Großbuchstaben beginnen, wie in der folgenden Tabelle dargestellt.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-|-|
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|
 |`\p{Lu}`|Übereinstimmung mit einem Großbuchstaben.|
@@ -191,7 +190,7 @@ Beispielsweise soll das Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A
 
 In diesen Fällen können Sie die Leistung regulärer Ausdrücke optimieren, indem Sie die geschachtelten Quantifizierer entfernen und den äußeren Teilausdruck durch eine Lookahead- oder Lookbehindassertion mit einer Breite von 0 ersetzen. Lookahead- und Lookbehindassertionen sind Anker, d. h., sie bewegen nicht den Mauszeiger in der Eingabezeichenfolge, sondern überprüfen in Vorwärts- bzw. Rückwärtsrichtung, ob eine bestimmte Bedingung erfüllt ist. Beispielsweise kann der reguläre Ausdruck für die Teilenummer wie folgt umgeschrieben werden: `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Dieses Muster für den regulären Ausdruck wird entsprechend der folgenden Tabelle definiert.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Die Teilenummer muss aus mindestens diesem Zeichen bestehen.|
@@ -207,7 +206,7 @@ Im folgenden Beispiel wird die Verwendung dieses regulären Ausdrucks veranschau
 
 Die Sprache für reguläre Ausdrücke in .NET beinhaltet die folgenden Sprachelemente, die Sie verwenden können, um geschachtelte Quantifizierer zu vermeiden. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-|Sprachelement|BESCHREIBUNG|
+|Sprachelement|Beschreibung|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Positives Lookahead mit einer Breite von 0. Lookahead-Überprüfung für die aktuelle Position, um zu ermitteln, ob `subexpression` mit der Eingabezeichenfolge übereinstimmt.|
 |`(?!` `subexpression` `)`|Negatives Lookahead mit einer Breite von 0. Lookahead-Überprüfung für die aktuelle Position, um zu ermitteln, ob `subexpression` nicht mit der Eingabezeichenfolge übereinstimmt.|
@@ -241,7 +240,7 @@ Die Verwendung dieser Sprachelemente hat jedoch auch Nachteile. Sie führen dazu
 
 Gruppierungskonstrukte werden häufig nur in einem regulären Ausdruck verwendet, damit Quantifizierer auf sie angewendet werden können. Die von diesen Teilausdrücken erfassten Gruppen werden später nicht verwendet. Beispielsweise soll der reguläre Ausdruck `\b(\w+[;,]?\s?)+[.?!]` einen vollständigen Satz erfassen. In der folgenden Tabelle werden die Sprachelemente in diesem regulären Ausdrucksmuster und ihre Auswirkungen auf die <xref:System.Text.RegularExpressions.Match>-Auflistung und die <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Auflistung des <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Objekts beschrieben.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|
@@ -272,7 +271,7 @@ Erfassungen können Sie auf eine der folgenden Arten deaktivieren:
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Einzelheiten zum Verhalten regulärer Ausdrücke](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Überprüft die Implementierung der Engine für reguläre Ausdrücke in .NET. Schwerpunkt dieses Themas ist die Flexibilität regulärer Ausdrücke. Außerdem wird die Verantwortung des Entwicklers erläutert, das effiziente und stabile Ausführen der Engine für reguläre Ausdrücke sicherzustellen.|
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Erläutert die Rückverfolgung und deren Auswirkungen auf die Leistung von regulären Ausdrücken. Zudem werden Sprachelemente beschrieben, die Alternativen zum Zurückverfolgen bieten.|
