@@ -6,14 +6,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975669"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716432"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen
 Das .NET Framework 4.5-Installationsprogramm verwendet den [Neustart-Manager](/windows/win32/rstmgr/about-restart-manager), um Systemneustarts während der Installation nach Möglichkeit zu verhindern. Wenn das App-Setupprogramm .NET Framework installiert, kann es über eine Schnittstelle mit dem Neustart-Manager diese Funktion nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  

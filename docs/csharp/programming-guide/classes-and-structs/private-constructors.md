@@ -1,20 +1,19 @@
 ---
 title: Private Konstruktoren – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 918d39b8aed25395106942524baa3b51221933dc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2f8b93fbeb7c2996f3e2683fe86f159fbfa61a92
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418878"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705443"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Private Konstruktoren (C#-Programmierhandbuch)
-Ein privater Konstruktor ist ein spezieller Instanzenkonstruktor. Er wird im Allgemeinen in Klassen verwenden, die nur statische Member enthalten. Wenn eine Klasse einen oder mehrere private und keine öffentlichen Konstruktoren besitzt, können andere Klassen (außer geschachtelte Klassen) keine Instanzen dieser Klasse erstellen. Beispiel:  
+Ein privater Konstruktor ist ein spezieller Instanzenkonstruktor. Er wird im Allgemeinen in Klassen verwenden, die nur statische Member enthalten. Wenn eine Klasse einen oder mehrere private und keine öffentlichen Konstruktoren besitzt, können andere Klassen (außer geschachtelte Klassen) keine Instanzen dieser Klasse erstellen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   

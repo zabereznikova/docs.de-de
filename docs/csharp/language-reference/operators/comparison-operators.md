@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039072"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345330"
 ---
 # <a name="comparison-operators-c-reference"></a>Vergleichsoperatoren (C#-Referenz)
 
@@ -33,7 +33,7 @@ Die Vergleichsoperatoren [`<` (kleiner als)](#less-than-operator-), [`>` (größ
 > [!NOTE]
 > Bei den Operatoren `==`, `<`, `>`, `<=` und `>=` ist das Ergebnis eines Vorgangs gleich `false`, wenn einer der Operanden keine Zahl ist (<xref:System.Double.NaN?displayProperty=nameWithType> oder <xref:System.Single.NaN?displayProperty=nameWithType>). Das bedeutet, dass der `NaN`-Wert weder größer als noch kleiner als noch gleich einem anderen `double`-Wert (oder `float`-Wert) ist, einschließlich `NaN`. Weitere Informationen und Beispiele finden Sie im <xref:System.Double.NaN?displayProperty=nameWithType>- oder <xref:System.Single.NaN?displayProperty=nameWithType>-Referenzartikel.
 
-Enumerationstypen unterstützen auch Vergleichsoperatoren. Für Operanden desselben [enum](../keywords/enum.md)-Typs werden die entsprechenden Werte des zugrunde liegenden integralen Typs verglichen.
+Enumerationstypen unterstützen auch Vergleichsoperatoren. Für Operanden desselben [enum](../builtin-types/enum.md)-Typs werden die entsprechenden Werte des zugrunde liegenden integralen Typs verglichen.
 
 Die Operatoren [`==` und `!=`](equality-operators.md) überprüfen, ob die Operanden gleich sind oder nicht.
 
@@ -63,7 +63,7 @@ Der `>=`-Operator gibt `true` zurück, wenn sein linker Operand größer ist als
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Ein benutzerdefinierter Typ kann die Operatoren `<`, `>`, `<=` und `>=` [überladen](operator-overloading.md).
+Ein benutzerdefinierter Typ kann die Operatoren `<`, `>`, `<=` und `>=`[überladen](operator-overloading.md).
 
 Wenn ein Typ einen der `<`- oder `>`-Operatoren überlädt, muss er sowohl `<` als auch `>` überladen. Wenn ein Typ einen der `<=`- oder `>=`-Operatoren überlädt, muss er sowohl `<=` als auch `>=` überladen.
 

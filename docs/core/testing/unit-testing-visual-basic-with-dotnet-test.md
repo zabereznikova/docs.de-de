@@ -4,13 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: 1738aa805947fbe0c1b7c2c770947ce650692b5f
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c587aaa5c4c50ec66ac6cd8cd7aefd7b0ca1a80c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117047"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715422"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und xUnit
 
@@ -30,7 +29,7 @@ Erstellen Sie im Projektmappenverzeichnis ein *PrimeService*-Verzeichnis. Soweit
     /PrimeService
 ```
 
-Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen. Benennen Sie *Class1.VB* in *PrimeService.VB* um. Erstellen Sie eine fehlerhafte Implementierung der `PrimeService`-Klasse:
+Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen. Benennen Sie *Class1.VB* in *PrimeService.VB* um. Sie erstellen eine fehlerhafte Implementierung der `PrimeService`-Klasse:
 
 ```vb
 Namespace Prime.Services
@@ -112,7 +111,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Das `<Fact>`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-using-dotnet-test* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der xUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `<Fact>`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-using-dotnet-test*[`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der xUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Ihr Test schlägt fehl. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `PrimeService`-Klasse:
 

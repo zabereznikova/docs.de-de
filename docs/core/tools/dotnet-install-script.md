@@ -2,12 +2,12 @@
 title: Dotnet-Installationsskripts
 description: Informationen zu Dotnet-Installationsskripts zur Installation von .NET Core CLI-Tools und freigegebener Laufzeit.
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849573"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740529"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -25,7 +25,7 @@ Mac OS/Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Die `dotnet-install`-Skripts werden verwendet, um eine Nicht-Administrator-Installation des .NET Core-SDK durchzuführen, die die .NET Core-CLI-Tools und die freigegebene Laufzeit enthält.
 
@@ -55,7 +55,7 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `--version`. Die 
   - Zweiteilige Version im X.Y-Format, das eine bestimmte Version darstellt (z.B. `2.0` oder `1.0`).
   - Branchname. Zum Beispiel `release/2.0.0`, `release/2.0.0-preview2` or `master` (für nächtliche Releases).
 
-  Der Standardwert ist `LTS`sein. Weitere Informationen zu .NET-Supportkanälen finden Sie auf der Seite [.NET-Supportrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+  Der Standardwert ist `LTS`. Weitere Informationen zu .NET-Supportkanälen finden Sie auf der Seite [.NET-Supportrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
 - **`-Version <VERSION>`**
 
@@ -103,7 +103,7 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `--version`. Die 
 
 - **`-AzureFeed`**
 
-  Gibt die URL für den Azure-Feed für den Installer an. Es wird nicht empfohlen, diesen Wert nicht zu ändern. Der Standardwert ist `https://dotnetcli.azureedge.net/dotnet`sein.
+  Gibt die URL für den Azure-Feed für den Installer an. Es wird nicht empfohlen, diesen Wert nicht zu ändern. Der Standardwert ist `https://dotnetcli.azureedge.net/dotnet`.
 
 - **`-UncachedFeed`**
 
@@ -195,7 +195,7 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `--version`. Die 
   Mac OS/Linux:
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>Siehe auch

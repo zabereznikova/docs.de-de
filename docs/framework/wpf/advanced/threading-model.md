@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974076"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740267"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Folglich müssen die meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Entwickler keine Schnittstelle schreiben, die mehr als einen Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.
@@ -203,7 +203,7 @@ ms.locfileid: "73974076"
  Es ist möglich, dass `handler2` viel Zeit in Anspruch nimmt, dieses Ereignis zu verarbeiten. `handler2` können <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> verwenden, um eine schinstanzschleife zu starten, die für Stunden nicht zurückgibt. Wenn `handler2` das Ereignis nicht als behandelt markiert, wenn diese Nachrichten Schleife beendet ist, wird das Ereignis in der Struktur nach oben weitergegeben, obwohl es sehr alt ist.
 
 ### <a name="reentrancy-and-locking"></a>Wiedereintritt und Sperrung
- Der Sperrmechanismus des Common Language Runtime (CLR) verhält sich nicht genau so, wie man sich vorstellen könnte. ein Thread kann davon ausgehen, dass der Vorgang vollständig beendet wird, wenn eine Sperre angefordert wird. In Wirklichkeit empfängt und verarbeitet der Thread weiterhin Meldungen mit hoher Priorität. Dadurch können Deadlocks vermieden und Schnittstellen minimal reaktionsfähig gemacht werden, aber dadurch können auch schwer erkennbare Fehler entstehen.  Der Großteil der Fälle, in denen Sie nichts wissen müssen, aber in seltenen Fällen (in der Regel [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster Nachrichten oder COM-STA-Komponenten) ist dies zu wissen.
+ Der Sperrmechanismus des Common Language Runtime (CLR) verhält sich nicht genau so, wie man sich vorstellen könnte. ein Thread kann davon ausgehen, dass der Vorgang vollständig beendet wird, wenn eine Sperre angefordert wird. In Wirklichkeit empfängt und verarbeitet der Thread weiterhin Meldungen mit hoher Priorität. Dadurch können Deadlocks vermieden und Schnittstellen minimal reaktionsfähig gemacht werden, aber dadurch können auch schwer erkennbare Fehler entstehen.  Der Großteil der Fälle, in denen Sie nichts wissen müssen, aber in seltenen Fällen (in der Regel mit Win32-Fenster Meldungen oder COM-STA-Komponenten) ist dies zu wissen.
 
  Die meisten Schnittstellen werden nicht mit Thread Sicherheit erstellt, da Entwickler daran arbeiten, dass ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie von mehr als einem Thread aufgerufen wird. In diesem Fall kann es vorkommen, dass ein einzelner Thread Änderungen an der Umgebung zu unerwarteten Zeiten vornimmt, wodurch sich die negativen Auswirkungen der <xref:System.Windows.Threading.DispatcherObject> gegenseitigen Ausschlussmechanismus lösen lassen. Betrachten Sie den folgenden Pseudocode:
 

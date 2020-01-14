@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f6ff9cf732e11bbf61eeb7e5cff3f1cba2b744e6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568963"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900982"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
 Dieses Thema enthält Informationen über die Art und Weise, in der LINQ-Abfragen zusammengestellt und ausgeführt werden, wenn Sie den WCF Data Services-Client verwenden und Einschränkungen bei der Verwendung von LINQ zum Abfragen eines Daten Dienstanbieter, der die Open Data Protocol (odata) implementiert. Weitere Informationen zum Erstellen und Ausführen von Abfragen für einen odata-basierten Datendienst finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
@@ -164,7 +164,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Gruppierende Operatoren|Alle Gruppierungsoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt. Dazu zählen folgende Operatoren:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Gruppierungsvorgänge müssen auf dem Client ausgeführt werden.|  
 |Aggregatoperatoren|Alle Aggregatoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt. Dazu zählen folgende Operatoren:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Aggregatvorgänge müssen entweder auf dem Client ausgeführt oder von einem Dienstvorgang gekapselt werden.|  
 |Pagingoperatoren|Die folgenden Pagingoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Hinweis:** Paging-Operatoren, die für eine leere Sequenz ausgeführt werden, geben NULL zurück.|  
-|Andere Operatoren|Die folgenden anderen Operatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt:<br /><br /> 1. <xref:System.Linq.Enumerable.Empty%2A><br />2. <xref:System.Linq.Enumerable.Range%2A><br />3. <xref:System.Linq.Enumerable.Repeat%2A><br />4. <xref:System.Linq.Enumerable.ToDictionary%2A><br />5. <xref:System.Linq.Enumerable.ToLookup%2A>|  
+|Andere Operatoren|Die folgenden anderen Operatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
 ## <a name="supported-expression-functions"></a>Unterstützte Ausdrucksfunktionen  
@@ -215,4 +215,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 - [Abfragen des Datendiensts](querying-the-data-service-wcf-data-services.md)
 - [Abfrageprojektionen](query-projections-wcf-data-services.md)
 - [Objektmaterialisierung](object-materialization-wcf-data-services.md)
-- [Odata: URI-Konventionen](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [Odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-ms.openlocfilehash: 412bcde811c0c2157088763e59c0d1e0fab2adbe
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c0c184c250566b19098a8409ab0e92259f9763de
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800230"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741432"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Struktur-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800230"
   
  Der Struktur Steuerungstyp wird für Container verwendet, deren Inhalt als Hierarchie von Knoten relevant ist, wie die Art und Weise, wie Dateien und Ordner im linken Bereich von Microsoft Windows Explorer angezeigt werden. Jeder Knoten kann andere Knoten enthalten, die als untergeordnete Knoten bezeichnet werden. Übergeordnete Knoten oder Knoten mit untergeordneten Knoten können in erweiterter oder reduzierter Form angezeigt werden.  
   
- In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Tree“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anforderungen gelten für alle Struktursteuerelemente, egal ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Tree“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Struktur Steuerelemente, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  
@@ -48,12 +48,12 @@ ms.locfileid: "74800230"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Siehe Hinweise.|Struktursteuerelemente enthalten einen durch Klicken aktivierbaren Punkt, mit dem der Fokus auf die Struktur oder auf eines der Elemente im Strukturcontainer gelegt werden kann. Für einen durch Klicken aktivierbaren Punkt muss in der Struktur ein Bereich vorhanden sein, auf den geklickt werden kann, ohne dass eines der Elemente ausgewählt wird bzw. den Fokus erhält.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Struktur|Dieser Wert ist für alle Benutzeroberflächenframeworks gleich.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Struktur|Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Struktursteuerelement ist in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur immer enthalten.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Das Struktursteuerelement ist in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur immer enthalten.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Wenn dem Sturktursteuerelement eine Bezeichnung zugeordnet wurde, wird von dieser Eigenschaft ein <xref:System.Windows.Automation.AutomationElement> für diese Bezeichnung zurückgegeben. Andernfalls gibt die Eigenschaft einen NULL-Verweis zurück (`Nothing` in Microsoft Visual Basic .net).|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Struktur“|Lokalisierte Zeichenfolge für den Steuerelementtyp „Tree“.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Struktur“|Lokalisierte Zeichenfolge für den Steuerelementtyp „List“.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Der Wert der Eigenschaft „Name“ eines Struktursteuerelements entspricht normalerweise dem Text, durch den das Steuerelement bezeichnet wird. Wenn keine Textbezeichnung vorhanden ist, muss der Anwendungsentwickler einen Wert für diese Eigenschaft angeben.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   

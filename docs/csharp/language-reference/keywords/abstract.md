@@ -1,6 +1,5 @@
 ---
 title: abstract – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422943"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713862"
 ---
 # <a name="abstract-c-reference"></a>abstract (C#-Referenz)
 Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implementierung fehlt oder dass diese unvollständig ist. Der abstract-Modifizierer kann für Klassen, Methoden, Eigenschaften, Indexer und Ereignisse verwendet werden. Verwenden Sie den `abstract`-Modifizierer in einer Klassendeklaration, um anzugeben, dass die Klasse nur die Basisklasse für andere Klassen sein und nicht selbst instanziiert werden soll. Als abstrakt markierte Member müssen von Klassen, die von nicht abstrakten Klassen abgeleitet wurden, implementiert werden.
@@ -41,7 +40,7 @@ Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implemen
   
 - Abstrakte Methodendeklarationen sind nur in abstrakten Klassen zulässig.  
   
-- Es gibt keinen Methodenkörper, da eine abstrakte Methodendeklaration keine Implementierungen bietet; die Methodendeklaration enden ganz einfach mit einem Semikolon; auf die Signatur folgen keine geschweiften Klammern ({ }). Beispiel:  
+- Es gibt keinen Methodenkörper, da eine abstrakte Methodendeklaration keine Implementierungen bietet; die Methodendeklaration enden ganz einfach mit einem Semikolon; auf die Signatur folgen keine geschweiften Klammern ({ }). Zum Beispiel:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -61,7 +60,7 @@ Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implemen
   
  Eine abstrakte Klasse muss eine Implementierung für alle Schnittstellenmember bereitstellen.  
   
- Eine abstrakte Klasse, die eine Schnittstelle implementiert, ordnet die Schnittstellenmethoden möglicherweise abstrakten Methoden zu. Beispiel:  
+ Eine abstrakte Klasse, die eine Schnittstelle implementiert, ordnet die Schnittstellenmethoden möglicherweise abstrakten Methoden zu. Zum Beispiel:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   

@@ -1,6 +1,5 @@
 ---
 title: extern-Alias – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520286"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713547"
 ---
 # <a name="extern-alias-c-reference"></a>extern-Alias (C#-Referenz)
 Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die denselben vollqualifizierten Namen besitzen. Beispielsweise müssen Sie möglicherweise zwei oder mehr Versionen einer Assembly in derselben Anwendung verwenden. Indem Sie einen externen Assemblyalias verwenden, können die Namespaces jeder Assembly in Namespaces auf Stammebene, benannt durch den Alias, umschlossen werden, was es ihnen ermöglicht, von derselben Datei verwendet zu werden.  
@@ -28,7 +27,7 @@ Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die dens
   
  `/r:GridV2=grid20.dll`  
   
- Dies erstellt die externen Aliase `GridV1` und `GridV2`. Um diese Aliase aus einem Programm heraus zu verwenden, verweisen Sie mithilfe des `extern`-Schlüsselworts auf sie. Beispiel:  
+ Dies erstellt die externen Aliase `GridV1` und `GridV2`. Um diese Aliase aus einem Programm heraus zu verwenden, verweisen Sie mithilfe des `extern`-Schlüsselworts auf sie. Zum Beispiel:  
   
  `extern alias GridV1;`  
   

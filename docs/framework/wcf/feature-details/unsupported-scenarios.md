@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: 87c0d9984fe823eae0e3cc281ebda55bc33a541e
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837973"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544790"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) einige bestimmte Sicherheits Szenarios nicht. Beispielsweise implementiert [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI-oder Kerberos-Authentifizierungsprotokolle nicht, weshalb WCF das Ausführen eines Dienstanbieter mit Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, z. b. Benutzername/Kennwort und integrierte HTTP/HTTPS-Authentifizierung, werden bei der Ausführung von WCF unter Windows XP Home Edition unterstützt.  
@@ -62,7 +62,7 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
  Die FIPS-kompatible AES-Verschlüsselung funktioniert nicht bei Duplexrückrufen unter dem Identitätswechsel auf Identifizierungsebene.  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP-Zertifikate  
- *kryptografieapi: Next Generation (CNG)* ist die langfristige Ersetzung der CryptoAPI. Diese API ist in nicht verwaltetem Code unter Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] und höheren Windows-Versionen verfügbar.  
+ *kryptografieapi: Next Generation (CNG)* ist die langfristige Ersetzung der CryptoAPI. Diese API ist in nicht verwaltetem Code unter Windows Vista, Windows Server 2008 und späteren Windows-Versionen verfügbar.  
   
  .NET Framework 4.6.1 und frühere Versionen unterstützen diese Zertifikate nicht, da Sie die Legacy-CryptoAPI verwenden, um CNG/KSP-Zertifikate zu verarbeiten. Die Verwendung dieser Zertifikate mit .NET Framework 4.6.1 und früheren Versionen führt zu einer Ausnahme.  
   

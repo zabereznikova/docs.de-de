@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120594"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711440"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 
@@ -67,7 +66,7 @@ Alle Zeichencodierungsklassen in .NET erben von der abstrakten <xref:System.Text
 
 Sie können Informationen über alle in .NET verfügbaren Codierungen abrufen, indem Sie die <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>-Methode aufrufen. .NET unterstützt die in der folgenden Tabelle aufgelisteten Zeichencodierungssysteme.
 
-|Codierung|Klasse|BESCHREIBUNG|Vorteile/Nachteile|
+|Codierung|Klasse|Beschreibung|Vorteile/Nachteile|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|Codiert einen begrenzten Bereich von Zeichen mithilfe der unteren sieben Bits eines Bytes.|Da diese Codierung nur Zeichenwerte von U+0000 bis U+007F unterstützt, ist sie in den meisten Fällen für weltweit einsetzbare Anwendungen nicht geeignet.|
 |UTF-7|<xref:System.Text.UTF7Encoding>|Stellt Zeichen als Sequenzen von 7-Bit-ASCII-Zeichen dar. Nicht-ASCII-Unicode-Zeichen werden durch eine Escapesequenz von ASCII-Zeichen dargestellt.|UTF-7 unterstützt Protokolle wie E-Mail- und Newsgroupprotokolle. UTF-7 ist jedoch nicht besonders sicher oder robust. In einigen Fällen kann die Änderung eines Bits die Interpretation einer gesamten UTF-7-Zeichenfolge radikal ändern. In anderen Fällen können verschiedene UTF-7-Zeichenfolgen denselben Text codieren. Bei Sequenzen, die Nicht-ASCII-Zeichen enthalten, benötigt UTF-7 mehr Speicherplatz als UTF-8, und auch die Codierung/Decodierung erfolgt langsamer. Daher sollten Sie nach Möglichkeit UTF-8 anstelle von UTF-7 verwenden.|

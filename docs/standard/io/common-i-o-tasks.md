@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609628"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708177"
 ---
 # <a name="common-io-tasks"></a>Allgemeine E/A-Aufgaben
 Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene Aktionen ermöglichen, z. B. Lese- und Schreibvorgänge für Dateien, Verzeichnisse und Streams. Weitere Informationen finden Sie unter [File and Stream I/O (Datei- und Datenstrom-E/A)](../../../docs/standard/io/index.md).  
@@ -32,8 +30,8 @@ Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene A
 |Abrufen der Attribute einer Datei|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>-Methode|  
 |Festlegen der Attribute einer Datei|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>-Methode|  
 |Bestimmen, ob eine Datei vorhanden ist|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>-Methode|  
-|Lesen aus einer Binärdatei|[Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Schreiben in eine Binärdatei|[Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Lesen aus einer Binärdatei|[Vorgehensweise: Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Schreiben in eine Binärdatei|[Vorgehensweise: Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Abrufen einer Dateierweiterung|<xref:System.IO.Path.GetExtension%2A?displayProperty=nameWithType>-Methode|  
 |Abrufen des vollqualifizierten Pfads einer Datei|<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>-Methode|  
 |Abrufen des Dateinamens und der Dateierweiterung aus einem Pfad|<xref:System.IO.Path.GetFileName%2A?displayProperty=nameWithType>-Methode|  

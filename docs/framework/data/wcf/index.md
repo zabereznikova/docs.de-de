@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 890f0ba25d8320008228c73660753b9899269fd7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975234"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901002"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (früher als "ADO.NET Data Services" bezeichnet) ist eine Komponente des .NET Framework, die es Ihnen ermöglicht, Dienste zu erstellen, die die Open Data Protocol (odata) verwenden, um Daten mithilfe der Semantik von [Representational State Transfer (Rest)](https://go.microsoft.com/fwlink/?LinkId=113919)über das Internet oder Intranet verfügbar zu machen und zu nutzen. OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Der Zugriff auf und die Änderung von Daten erfolgt mithilfe der Standard-HTTP-Befehle GET, PUT, POST und DELETE. Odata verwendet die Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md) , um Ressourcen als Sätze von Entitäten verfügbar zu machen, die durch Zuordnungen verknüpft sind.
+WCF Data Services (früher als "ADO.NET Data Services" bezeichnet) ist eine Komponente des .NET Framework, die es Ihnen ermöglicht, Dienste zu erstellen, die die Open Data Protocol (odata) verwenden, um Daten mithilfe der Semantik von [Representational State Transfer (Rest)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)über das Internet oder Intranet verfügbar zu machen und zu nutzen. OData macht Daten als Ressourcen verfügbar, die durch URIs adressierbar sind. Der Zugriff auf Daten und deren Änderung erfolgt mithilfe der Standard-HTTP-Verben GET, PUT, POST und DELETE. Odata verwendet die Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md) , um Ressourcen als Sätze von Entitäten verfügbar zu machen, die durch Zuordnungen verknüpft sind.
 
 WCF Data Services verwendet das odata-Protokoll zum adressieren und Aktualisieren von Ressourcen. Auf diese Weise können Sie von jedem Client aus auf diese Dienste zugreifen, der odata unterstützt. Odata ermöglicht das anfordern und Schreiben von Daten in Ressourcen mithilfe von bekannten Übertragungs Formaten: Atom, ein Satz von Standards zum austauschen und Aktualisieren von Daten als XML und JavaScript Object Notation (JSON), ein in AJAX häufig verwendetes textbasiertes Datenaustauschformat. Bereich.
 
@@ -32,10 +32,6 @@ Ich möchte direkt beginnen…
 
 - [Erste Schritte](getting-started-with-wcf-data-services.md)
 
-- [Silverlight-Schnellstart](https://go.microsoft.com/fwlink/?LinkID=192782)
-
-- [Silverlight-Schnellstart für Windows Phone-Entwicklung](https://go.microsoft.com/fwlink/?LinkID=214535)
-
 Nur Code anzeigen...
 
 - [Schnellstart](quickstart-wcf-data-services.md)
@@ -46,29 +42,14 @@ Nur Code anzeigen...
 
 Ich möchte mehr über odata erfahren...
 
-- [Whitepaper: Einführung in OData](https://go.microsoft.com/fwlink/?LinkId=220867)
-
-- [Open Data Protocol-Website](https://go.microsoft.com/fwlink/?LinkID=184554)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
-
-- [OData: Häufig gestellte Fragen](https://go.microsoft.com/fwlink/?LinkId=185867)
-
-Ich möchte einige Videos ansehen...
-
-- [Einführung in WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=220864)
-
-- [WCF Data Services Developer-Videos](https://go.microsoft.com/fwlink/?LinkId=220861)
-
-- [OData: Entwickler-Website](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [Whitepaper: Einführung in OData](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
+- [Open Data Protocol-Website](https://www.odata.org/)
+- [OData: SDK](https://www.odata.org/ecosystem/)
 
 Ich möchte End-to-End-Beispiele sehen...
 
-- [WCF Data Services-Dokumentationsbeispiele auf MSDN Samples Gallery](https://go.microsoft.com/fwlink/?LinkID=220865)
-
-- [Weitere WCF Data Services-Beispiele auf MSDN Samples Gallery](https://go.microsoft.com/fwlink/?LinkId=220866)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [WCF Data Services Schnellstart](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))
+- [Odata-SDK-Beispiel Code](https://www.odata.org/ecosystem/#sdk)
 
 Wie erfolgt die Integration in Visual Studio?
 
@@ -82,17 +63,7 @@ Für welche Aufgaben kann ich es verwenden?
 
 - [Übersicht](wcf-data-services-overview.md)
 
-- [Whitepaper: Einführung in OData](https://go.microsoft.com/fwlink/?LinkId=220867)
-
 - [Anwendungsszenarios](application-scenarios-wcf-data-services.md)
-
-Ich möchte Silverlight verwenden...
-
-- [Silverlight-Schnellstart](https://go.microsoft.com/fwlink/?LinkID=192782)
-
-- [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
-
-- [Erste Schritte mit Silverlight](https://go.microsoft.com/fwlink/?LinkId=148366)
 
 Ich möchte LINQ verwenden...
 
@@ -104,13 +75,9 @@ Ich möchte LINQ verwenden...
 
 Ich benötige noch weitere Informationen...
 
-- [WCF Data Services-Teamblog](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [WCF Data Services-Teamblog](https://docs.microsoft.com/archive/blogs/astoriateam/)
 
 - [Ressourcen](wcf-data-services-resources.md)
-
-- [WCF Data Services Developer Center](https://go.microsoft.com/fwlink/?LinkId=220868)
-
-- [Open Data Protocol-Website](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -136,4 +103,4 @@ Beschreibt die Verwendung von Client Bibliotheken für die Nutzung von odata-Fee
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

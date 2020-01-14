@@ -6,14 +6,12 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491008"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711206"
 ---
 # <a name="when-to-use-generic-collections"></a>Verwenden von generischen Auflistungen
 Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei Generics keine Notwendigkeit zum Einschließen der Elemente besteht.  

@@ -1,6 +1,5 @@
 ---
 title: <include> – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 125ab9476507babae9a707a6c42d24adda632267
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587996"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696557"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -36,7 +35,7 @@ ms.locfileid: "69587996"
  `id`  
  Die ID für das Tag, das sich vor den Kommentaren befindet. Die ID muss in doppelte Anführungszeichen („“) eingeschlossen werden.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei. Durch das Ablegen der Dokumentation in einer separaten Datei können Sie die Quellcodeverwaltung unabhängig vom Quellcode auf die Dokumentation anwenden. Eine Person kann die Quellcodedatei auschecken, eine andere die Dokumentationsdatei.  
   
  Das \<include>-Tag verwendet die XPath-Syntax von XML. Weitere Anpassungsmöglichkeiten der Verwendung von \<include> finden Sie in der XPath-Dokumentation.  

@@ -1,6 +1,5 @@
 ---
 title: try-catch – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - try
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 5289dbe3aff0a9e1f1024a293ff469df44d34a3b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168721"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713026"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 
@@ -98,7 +97,7 @@ catch (InvalidCastException e)
 ```
 
 > [!NOTE]
-> Es ist auch möglich, einen Ausnahmefilter zu verwenden, um ein ähnliches Ergebnis auf eine meist übersichtlichere Weise zu erhalten (sowie ohne den Stapel zu bearbeiten, wie weiter oben in diesem Artikel erläutert wurde). Das folgende Beispiel verfügt über das gleiche Verhalten für Aufrufer wie das vorherige Beispiel. Die Funktion gibt `InvalidCastException` an den Aufrufer zurück, wenn `e.Data` `null` ist.
+> Es ist auch möglich, einen Ausnahmefilter zu verwenden, um ein ähnliches Ergebnis auf eine meist übersichtlichere Weise zu erhalten (sowie ohne den Stapel zu bearbeiten, wie weiter oben in diesem Artikel erläutert wurde). Das folgende Beispiel verfügt über das gleiche Verhalten für Aufrufer wie das vorherige Beispiel. Die Funktion gibt `InvalidCastException` an den Aufrufer zurück, wenn `e.Data``null` ist.
 > 
 > ```csharp
 > catch (InvalidCastException e) when (e.Data != null) 

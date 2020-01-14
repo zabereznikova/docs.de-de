@@ -2,21 +2,21 @@
 title: 'Gewusst wie: Verwenden von DataContractJsonSerializer'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976876"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901215"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>Verwenden von DataContractJsonSerializer
 
 > [!NOTE]
-> In diesem Artikel geht es um <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Für die meisten Szenarien, in denen JSON serialisiert und deserialisiert wird, empfehlen wir die Tools im [System. Text. Json-Namespace](../../../standard/serialization/system-text-json-overview.md).
+> In diesem Artikel geht es um <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. In den meisten Szenarien, in denen JSON serialisiert und deserialisiert wird, empfehlen wir die APIs im [System. Text. Json-Namespace](../../../standard/serialization/system-text-json-overview.md).
 
 JSON (JavaScript Object Notation) ist ein effizientes Datencodierungsformat, das einen schnellen Austausch kleiner Datenmengen zwischen Clientbrowsern und AJAX-aktivierten Webdiensten ermöglicht.
 
-In diesem Artikel wird veranschaulicht, wie .net-Typobjekte in JSON-codierte Daten serialisiert und anschließend Daten im JSON-Format wieder in Instanzen von .NET-Typen deserialisiert werden. In diesem Beispiel wird ein Datenvertrag verwendet, um die Serialisierung und Deserialisierung eines benutzerdefinierten `Person`-Typs zu veranschaulichen und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zu verwenden.
+In diesem Artikel wird veranschaulicht, wie .net-Typobjekte in JSON-codierte Daten serialisiert und anschließend Daten im JSON-Format wieder in Instanzen von .NET-Typen deserialisiert werden. In diesem Beispiel wird ein Datenvertrag verwendet, um die Serialisierung und Deserialisierung eines benutzerdefinierten `Person` Typs zu veranschaulichen und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>verwendet.
 
 Normalerweise werden die JSON-Serialisierung und-Deserialisierung automatisch von Windows Communication Foundation (WCF) verarbeitet, wenn Sie Daten Vertragstypen in Dienst Vorgängen verwenden, die für AJAX-aktivierte Endpunkte verfügbar gemacht werden. In einigen Fällen müssen Sie jedoch möglicherweise direkt mit JSON-Daten arbeiten.
 
@@ -51,7 +51,7 @@ Dieser Artikel basiert auf dem [Beispiel DataContractJsonSerializer](../samples/
     p.age = 42;
     ```
 
-2. Serialisieren Sie das `Person`-Objekt in einen Speicherdaten Strom, indem Sie den <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> verwenden.
+2. Serialisieren Sie das `Person`-Objekt mithilfe des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>in einen Speicherdaten Strom.
 
     ```csharp
     var stream1 = new MemoryStream();

@@ -1,17 +1,16 @@
 ---
 title: Delegaten mit benannten im Vergleich zu Anonyme Methoden – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418029"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712376"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegaten mit benannten im Vergleich zu Anonyme Methoden (C#-Programmierhandbuch)
 Ein [Delegat](../../language-reference/builtin-types/reference-types.md) kann einer benannten Methode zugeordnet werden. Wenn Sie einen Delegaten mit einer benannten Methode instanziieren, wird die Methode als Parameter übergeben:  
@@ -20,7 +19,7 @@ Ein [Delegat](../../language-reference/builtin-types/reference-types.md) kann ei
   
  Dies wird mit einer benannten Methode aufgerufen. Mit einer benannten Methode erstellte Delegaten können entweder eine [statische](../../language-reference/keywords/static.md) Methode oder eine Instanzmethode kapseln. Benannte Methoden sind die einzige Möglichkeit, einen Delegaten in früheren Versionen von C# zu instanziieren. Wenn das Erstellen einer neuen Methode jedoch einen unerwünschten Aufwand für Sie darstellt, können Sie in C# einen Delegaten instanziieren und sofort einen Codeblock bestimmen, den der Delegat bei seinem Aufruf verarbeitet. Der Block kann entweder einen Lambdaausdruck oder eine anonyme Methode enthalten. Weitere Informationen finden Sie unter [Anonyme Funktionen](../statements-expressions-operators/anonymous-functions.md).  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Methode, die Sie als Delegatparameter übergeben, muss die gleiche Signatur wie die Delegatdeklaration aufweisen.  
   
  Eine Delegatinstanz kann entweder eine statische Methode oder eine Instanzmethode kapseln.  
@@ -41,5 +40,5 @@ Ein [Delegat](../../language-reference/builtin-types/reference-types.md) kann ei
 
 - [C#-Programmierhandbuch](../index.md)
 - [Delegaten](./index.md)
-- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](./how-to-combine-delegates-multicast-delegates.md)
+- [Kombinieren von Delegaten (Multicastdelegaten)](./how-to-combine-delegates-multicast-delegates.md)
 - [Ereignisse](../events/index.md)

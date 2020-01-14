@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085209"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741791"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
 
 Native Image Generator (Ngen.exe) ist ein Tool zur Leistungsoptimierung verwalteter Anwendungen. Mit "Ngen.exe" können Sie systemeigene Images erstellen, also Dateien mit kompiliertem prozessorspezifischem Computercode, die daraufhin im Cache für systemeigene Images auf dem lokalen Computer installiert werden. Die Laufzeit kann systemeigene Abbilder aus dem Cache nutzen und muss nicht den JIT (Just-In-Time)-Compiler verwenden, um die ursprüngliche Assembly zu kompilieren.
 
 > [!NOTE]
-> „Ngen. exe“ kompiliert native Images für Assemblys, die nur .NET Framework als Ziel verwenden. Der äquivalente Generator für native Images für .NET Core ist [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
+> „Ngen. exe“ kompiliert native Images für Assemblys, die nur .NET Framework als Ziel verwenden. Der äquivalente Generator für native Images für .NET Core ist [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md).
 
 Änderungen an „Ngen.exe“ in .NET Framework 4:
 
@@ -75,20 +75,20 @@ ngen /? | /help
 
 In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt. Beschreibungen der einzelnen Teile einer `action` finden Sie in den Tabellen [Argumente](#ArgumentTable), [Prioritätsebenen](#PriorityTable), [Szenarien](#ScenarioTable) und [Konfigurationen](#ConfigTable). In der Tabelle [Optionen](#OptionTable) werden die `options` und die Hilfeschalter beschrieben.
 
-|Aktion|BESCHREIBUNG|
+|Aktion|Beschreibung|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generiert systemeigene Images für eine Assembly und ihre Abhängigkeiten und installiert die Images im Cache für systemeigene Images.<br /><br /> Wenn `/queue` angegeben wird, wird die Aktion in die Warteschlange des Diensts für systemeigene Images gestellt. Die Standardpriorität ist 3. Informationen hierzu finden Sie in der Tabelle [Prioritätsebenen](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Löscht die systemeigenen Images einer Assembly und ihre Abhängigkeiten aus dem Cache für systemeigene Images.<br /><br /> Verwenden Sie zum Deinstallieren eines einzelnen Images und seiner Abhängigkeiten dieselben Befehlszeilenargumente wie beim Installieren des Images. **Hinweis**:  Ab .NET Framework 4 wird die Aktion `uninstall` * nicht mehr unterstützt.|
 |`update` [`/queue`]|Aktualisiert systemeigene Images, die ungültig geworden sind.<br /><br /> Wenn `/queue` angegeben wird, werden die Aktualisierungen in die Warteschlange des Diensts für systemeigene Images gestellt. Aktualisierungen werden immer mit Priorität 3 geplant, sodass sie zu Leerlaufzeiten des Computers ausgeführt werden.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Zeigt den Zustand der systemeigenen Images für eine Assembly und ihre Abhängigkeiten an.<br /><br /> Wenn kein Argument angegeben wird, wird der gesamte Inhalt des Caches für native Images angezeigt.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> Oder<br /><br /> `eqi` [1&#124;2&#124;3]|Führt die in der Warteschlange enthaltenen Kompilierungsaufträge aus.<br /><br /> Wenn eine Priorität angegeben wird, werden Kompilierungsaufträge mit höherer oder gleicher Priorität ausgeführt. Wenn keine Priorität angegeben wird, werden alle in die Warteschlange gestellten Kompilierungsaufträge ausgeführt.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - oder -<br /><br /> `eqi` [1&#124;2&#124;3]|Führt die in der Warteschlange enthaltenen Kompilierungsaufträge aus.<br /><br /> Wenn eine Priorität angegeben wird, werden Kompilierungsaufträge mit höherer oder gleicher Priorität ausgeführt. Wenn keine Priorität angegeben wird, werden alle in die Warteschlange gestellten Kompilierungsaufträge ausgeführt.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Hält den Dienst für systemeigene Images an, setzt den angehaltenen Dienst fort bzw. fragt den Dienststatus ab.|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>Argumente
 
-|Argument|BESCHREIBUNG|
+|Argument|Beschreibung|
 |--------------|-----------------|
 |`assemblyName`|Der vollständige Anzeigename der Assembly. Beispielsweise `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Hinweis**:  Sie können einen partiellen Assemblynamen wie `myAssembly` für die `display`-Aktion und die `uninstall`-Aktion angeben. <br /><br /> In jeder Befehlszeile von "Ngen.exe" kann nur eine Assembly angegeben werden.|
 |`assemblyPath`|Der explizite Pfad der Assembly. Sie können einen vollständigen oder einen relativen Pfad angeben.<br /><br /> Wenn Sie einen Dateinamen ohne Pfad angeben, muss sich die Assembly im aktuellen Verzeichnis befinden.<br /><br /> In jeder Befehlszeile von "Ngen.exe" kann nur eine Assembly angegeben werden.|
@@ -97,7 +97,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="priority-levels"></a>Prioritätsebenen
 
-|Priorität|BESCHREIBUNG|
+|Priorität|Beschreibung|
 |--------------|-----------------|
 |`1`|Systemeigene Images werden sofort generiert und installiert, ohne dass auf Leerlaufzeit gewartet wird.|
 |`2`|Systemeigene Images werden ohne Warten auf Leerlaufzeit generiert und installiert, aber nachdem alle Aktionen mit Priorität 1 (und ihre Abhängigkeiten) abgeschlossen wurden.|
@@ -107,7 +107,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="scenarios"></a>Szenarien
 
-|Szenario|BESCHREIBUNG|
+|Szenario|Beschreibung|
 |--------------|-----------------|
 |`/Debug`|Generiert systemeigene Images, die unter einem Debugger verwendet werden können.|
 |`/Profile`|Generiert systemeigene Images, die unter einem Profiler verwendet werden können.|
@@ -117,7 +117,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="config"></a>Konfigurationen
 
-|Konfiguration|BESCHREIBUNG|
+|Konfiguration|Beschreibung|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Verwendet die Konfiguration der angegebenen ausführbaren Assembly.<br /><br /> "Ngen.exe" muss beim Binden an Abhängigkeiten die gleichen Entscheidungen wie das Ladeprogramm treffen. Wenn eine freigegebene Komponente zur Laufzeit mit der <xref:System.Reflection.Assembly.Load%2A>-Methode geladen wird, bestimmt die Konfigurationsdatei der Anwendung die Abhängigkeiten, die für die freigegebene Komponente geladen werden, beispielsweise die Version einer zu ladenden Abhängigkeit. Über den Schalter `/ExeConfig` erhält "Ngen.exe" Anweisungen dazu, welche Abhängigkeiten zur Laufzeit geladen werden.|
 |`/AppBase:` `directoryPath`|Verwendet das angegebene Verzeichnis beim Suchen nach Abhängigkeiten als Anwendungsbasis.|
@@ -126,14 +126,14 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="options"></a>Optionen
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|
 |`/verbose`|Zeigt ausführliche Informationen zum Debuggen an. **Hinweis**:  Aufgrund von Beschränkungen im Betriebssystem werden in Windows 98 und Windows Millennium Edition durch diese Option nicht so viele zusätzliche Informationen angezeigt.|
 |`/help`, `/?`|Zeigt die Befehlssyntax sowie Optionen für das aktuelle Release an.|
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Zum Ausführen von "Ngen.exe" müssen Sie über Administratorrechte verfügen.
 
@@ -461,7 +461,7 @@ Verwenden Sie zum Deinstallieren einer Abhängigkeit dieselben Befehlszeilenopti
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-Verwendung Sie zum Erstellen eines systemeigenen Images für eine Assembly im globalen Assemblycache den Anzeigenamen der Assembly. Beispiel:
+Verwendung Sie zum Erstellen eines systemeigenen Images für eine Assembly im globalen Assemblycache den Anzeigenamen der Assembly. Zum Beispiel:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,

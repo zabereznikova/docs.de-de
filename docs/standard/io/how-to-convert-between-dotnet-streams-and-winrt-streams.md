@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877938"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708041"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Vorgehensweise: Konvertieren von .NET Framework- und Windows-Runtime-Streams (nur unter Windows)
 

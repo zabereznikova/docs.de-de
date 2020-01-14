@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Split Button
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-ms.openlocfilehash: c2c5a0d2994040f0eba8408e5fbd0d61d62aeecf
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: d0470f23942c7df868c6cc8fce158f1575c66bec
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801772"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741136"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den SplitButton-Steuerelementtyp
 > [!NOTE]
@@ -21,14 +21,14 @@ ms.locfileid: "74801772"
   
  Das Steuerelement für eine unterteilte Schaltfläche bietet die Möglichkeit, eine Aktion für ein Steuerelement auszuführen und das Steuerelement zu erweitern, um eine Liste mit anderen möglichen Aktionen, die ausgeführt werden können, anzuzeigen.  
   
- In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „SplitButton“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anforderungen gelten für alle Steuerelemente für unterteilte Schaltflächen in [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „SplitButton“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Steuerelemente für unterteilte Schaltflächen, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  
  In der folgenden Tabelle werden die Steuerelementansicht und die Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur für Steuerelemente für unterteilte Schaltflächen sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen über die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur finden Sie unter [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
-|SplitButton<br /><br /> <ul><li>Image (0 oder 1)</li><li>Text (0 oder 1)</li><li>Button (1 oder 2)<br /><br /> <ul><li>Menu (0 oder 1; erscheint als untergeordnetes Element von „Button“, das das ExpandCollapse-Muster unterstützt)</li><li>MenuItem (1:n)</li></ul></li></ul>|SplitButton<br /><br /> -MenuItem (1 bis viele)|  
+|SplitButton<br /><br /> <ul><li>Bild (0 oder 1)</li><li>Text (0 oder 1)</li><li>Button (1 oder 2)<br /><br /> <ul><li>Menu (0 oder 1; erscheint als untergeordnetes Element von „Button“, das das ExpandCollapse-Muster unterstützt)</li><li>MenuItem (1:n)</li></ul></li></ul>|SplitButton<br /><br /> -MenuItem (1 bis viele)|  
   
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Steuerelemente für unterteilte Schaltflächen besonders relevant sind. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "74801772"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|"Zurück"|Der Name des Steuerelements für eine unterteilte Schaltfläche wird auf der Schaltfläche angezeigt.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|NULL|Steuerelemente für unterteilte Schaltflächen verfügen nicht über eine statische Textbezeichnung.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|Dieser Wert ist für alle Benutzeroberflächenframeworks gleich.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Unterteilte Schaltfläche“|Lokalisierte Zeichenfolge für den Steuerelementtyp „SplitButton“.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Siehe Hinweise.|Der Hilfetext kann das Ergebnis der Aktivierung der unterteilten Schaltfläche angeben. Hierbei handelt es sich in der Regel um dieselben Informationen, die durch ein QuickInfo angezeigt werden.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Steuerelement für eine unterteilte Schaltfläche enthält Informationen für den Endbenutzer.|  

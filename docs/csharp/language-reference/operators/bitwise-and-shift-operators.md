@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428435"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345340"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren: C#-Referenz
 
@@ -162,9 +162,9 @@ Für die Schiebeoperatoren `<<` und `>>` muss der Typ des rechten Operanden `int
 
 Für die Ausdrücke `x << count` und `x >> count` hängt die tatsächliche Verschiebungsanzahl wie folgt vom Typ von `x` ab:
 
-- Lautet der Typ von `x` `int` oder `uint`, wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
+- Lautet der Typ von `x``int` oder `uint`, wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
 
-- Lautet der Typ von `x` `long` oder `ulong`, wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
+- Lautet der Typ von `x``long` oder `ulong`, wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
 
 Das folgende Beispiel veranschaulicht dieses Verhalten:
 
@@ -172,13 +172,13 @@ Das folgende Beispiel veranschaulicht dieses Verhalten:
 
 ## <a name="enumeration-logical-operators"></a>Logische Enumerationsoperatoren
 
-Die Operatoren `~`, `&`, `|` und `^` werden auch von jedem [Enumerationstyp](../keywords/enum.md) unterstützt. Für Operanden mit dem gleichen Enumerationstyp wird ein logischer Vorgang für die entsprechenden Werte des zugrunde liegenden integralen Typs durchgeführt. Für alle `x`- und `y`-Elemente des Enumerationstyps `T` mit dem zugrunde liegenden Typ `U` führt der Ausdruck `x & y` zum gleichen Ergebnis wie der Ausdruck `(T)((U)x & (U)y)`.
+Die Operatoren `~`, `&`, `|` und `^` werden auch von jedem [Enumerationstyp](../builtin-types/enum.md) unterstützt. Für Operanden mit dem gleichen Enumerationstyp wird ein logischer Vorgang für die entsprechenden Werte des zugrunde liegenden integralen Typs durchgeführt. Für alle `x`- und `y`-Elemente des Enumerationstyps `T` mit dem zugrunde liegenden Typ `U` führt der Ausdruck `x & y` zum gleichen Ergebnis wie der Ausdruck `(T)((U)x & (U)y)`.
 
-Normalerweise verwenden Sie bitweise logische Operatoren mit einem Enumerationstyp, der mit dem [Flags](xref:System.FlagsAttribute)-Attribut definiert wird. Weitere Informationen finden Sie im Abschnitt [Enumerationstypen als Bitflags](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) des Artikels [Enumerationstypen](../../programming-guide/enumeration-types.md).
+Normalerweise verwenden Sie bitweise logische Operatoren mit einem Enumerationstyp, der mit dem [Flags](xref:System.FlagsAttribute)-Attribut definiert wird. Weitere Informationen finden Sie im Abschnitt [Enumerationstypen als Bitflags](../builtin-types/enum.md#enumeration-types-as-bit-flags) des Artikels [Enumerationstypen](../builtin-types/enum.md).
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Ein benutzerdefinierter Typ kann die Operatoren `~`, `<<`, `>>`, `&`, `|` und `^` [überladen](operator-overloading.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
+Ein benutzerdefinierter Typ kann die Operatoren `~`, `<<`, `>>`, `&`, `|` und `^`[überladen](operator-overloading.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
 
 Wenn ein benutzerdefinierter Typ `T` den Operator `<<` oder `>>` überlädt, muss der Typ des linken Operanden `T` und der Typ des rechten Operanden `int` lauten.
 

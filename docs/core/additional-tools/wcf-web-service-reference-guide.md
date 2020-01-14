@@ -3,13 +3,13 @@ title: Hinzufügen von WCF Web Service Reference
 description: Übersicht zum Microsoft WCF Web Service Reference Provider-Tool, über das Funktionen für .NET Core- und ASP.NET Core-Projekte hinzugefügt werden, z.B. das Hinzufügen von Dienstverweisen für .NET Framework-Projekte.
 author: dasetser
 ms.date: 10/29/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.custom: mvc
+ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191900"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715682"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Verwenden des Provider-Tools für den WCF-Webdienstverweis
 
@@ -18,7 +18,7 @@ Im Laufe der Jahre konnten viele Visual Studio-Entwickler von dem [**Dienstverwe
 > [!IMPORTANT]
 > Sie sollten nur auf Dienste aus einer vertrauenswürdigen Quelle verweisen. Wenn Sie Verweise aus nicht vertrauenswürdigen Quellen hinzufügen, hat das möglicherweise Auswirkungen auf die Sicherheit.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Visual Studio 2017, Version 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) oder höhere Versionen
 

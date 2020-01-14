@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: d3776b9b4edb550ef6b484a0060d364cd5a17bc2
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: af87fefae8c6e0a8166d7cf02419282bc0661f35
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800276"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741483"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Tabellen-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800276"
   
  Table-Steuerelemente enthalten Zeilen und Spalten von Text sowie optional Zeilen- und Spaltenüberschriften.  
   
- In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Table“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anforderungen gelten für alle Table-Steuerelemente, egal ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Table“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Table-Steuerelemente, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  
@@ -29,7 +29,7 @@ ms.locfileid: "74800276"
   
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
-|Tabelle<br /><br /> -Header (0 oder 1)<br />-Text (0 oder 1)<br />-Verschiedene Steuerelemente (0 oder mehr)|Tabelle<br /><br /> -Text (0 oder mehr)<br />-Verschiedene Steuerelemente (0 oder mehr)|  
+|Table<br /><br /> -Header (0 oder 1)<br />-Text (0 oder 1)<br />-Verschiedene Steuerelemente (0 oder mehr)|Table<br /><br /> -Text (0 oder mehr)<br />-Verschiedene Steuerelemente (0 oder mehr)|  
   
  Wenn ein Table-Steuerelement Zeilen- oder Spaltenüberschriften aufweist, müssen sie in der Steuerelementansicht der Benutzeroberflächenautomatisierungs-Struktur verfügbar gemacht werden. Die Inhaltsansicht muss diese Informationen nicht verfügbar machen, da mithilfe von „TablePattern“ darauf zugegriffen werden kann.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74800276"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Das Table-Steuerelement ruft seinen Namen in der Regel aus einer statischen Textbezeichnung ab. Wenn keine statische Bezeichnung vorhanden ist, müssen Sie eine Name-Eigenschaft zuweisen, die immer verfügbar sein muss, um den Zweck der Tabelle zu erläutern.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Wenn eine statische Textbezeichnung vorhanden ist, muss diese Eigenschaft einen Verweis auf das Automatisierungselement des Steuerelements verfügbar machen.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tabelle|Dieser Wert ist für alle Benutzeroberflächenframeworks gleich.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Table|Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Tabelle“|Lokalisierte Zeichenfolge für den Steuerelementtyp „Table“.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Siehe Hinweise.|Weitere Informationen zum Zweck der Tabelle sollten über diese Eigenschaft verfügbar gemacht werden, wenn er durch den Zugriff auf „NameProperty“ nicht ausreichend erläutert wird.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Table-Steuerelement muss immer ein Inhaltselement sein.|  

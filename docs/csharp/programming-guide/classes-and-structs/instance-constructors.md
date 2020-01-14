@@ -1,17 +1,16 @@
 ---
 title: Instanzkonstruktoren – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 198f9db1430226343fd3709c66d16b68e975ab3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922172"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714814"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Instanzkonstruktoren (C#-Programmierhandbuch)
 
@@ -50,7 +49,7 @@ Instanzkonstruktoren werden zum Erstellen und Initialisieren von Instanzmemberva
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- Beachten Sie, dass der Standardwert von `age` `0` ist, und der Standardwert von `name` ist `null`. Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md).  
+ Beachten Sie, dass der Standardwert von `age``0` ist, und der Standardwert von `name` ist `null`. Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md).  
   
 ## <a name="example-3"></a>Beispiel 3  
  Im folgenden Beispiel wird die Verwendung vom Basisklasseninitialisierer veranschaulicht. Die `Circle`-Klasse wird von der allgemeinen Klasse `Shape` abgeleitet, und die `Cylinder`-Klasse wird von der `Circle`-Klasse abgeleitet. Der Konstruktor von jeder abgeleiteten Klasse verwendet deren Basisklasseninitialisierer.  

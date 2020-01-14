@@ -1,16 +1,15 @@
 ---
 title: 'default-Operator: C#-Referenz'
-ms.custom: seodec18
 description: Verwendung des Default-Operators zum Erzeigen des Standardwerts eines Typs
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 6503e82a42f116a7ba8461ae060592377579f255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039048"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712714"
 ---
 # <a name="default-operator-c-reference"></a>default-Operator (C#-Referenz)
 

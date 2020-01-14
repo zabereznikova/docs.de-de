@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151849"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740380"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType-Registrierungseinstellungen
 Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierungs Einstellungen, die von WPF-Anwendungen verwendet werden.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen, die Text auf einem Anzeigegerät darstellen, verwenden ClearType-Funktionen, um ein verbessertes Leseverhalten bereitzustellen. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Weitere Informationen zu ClearType finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen, die Text auf einem Anzeigegerät darstellen, verwenden ClearType-Funktionen, um ein verbessertes Leseverhalten bereitzustellen. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Weitere Informationen zu ClearType finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
  Text, der mit ClearType gerendert wird, kann bei Anzeige auf verschiedenen Anzeigegeräten erheblich anders erscheinen. Eine kleine Anzahl von Monitoren implementiert beispielsweise die Farbstreifen Elemente in der blauen, grünen und roten Reihenfolge anstelle der gängigeren roten, grünen und blauen Reihenfolge (RGB).  
   
@@ -27,21 +27,21 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Registrierungseinstellungen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]gibt vier Registrierungs Einstellungen zum Steuern von ClearType-Features an:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibt vier Registrierungs Einstellungen zum Steuern von ClearType-Features an:  
   
-|Einstellung|Beschreibung|  
+|-Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |ClearType-Ebene|Beschreibt die Ebene der ClearType-Farb Übersichtlichkeit.|  
 |Gammastufe|Beschreibt die Ebene der Pixelfarbkomponente für ein Anzeigegerät.|  
 |Pixelstruktur|Beschreibt die Anordnung der Pixel für ein Anzeigegerät.|  
 |Textkontrastebene|Beschreibt die Kontrastebene für den angezeigten Text.|  
   
- Auf diese Einstellungen kann von einem externen Konfigurations Hilfsprogramm zugegriffen werden, das auf die identifizierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen verweist. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den Windows-Registrierungs-Editor auf die Werte zugreifen.  
+ Auf diese Einstellungen kann von einem externen Konfigurations Hilfsprogramm zugegriffen werden, das auf die identifizierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ClearType-Registrierungs Einstellungen verweist. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den Windows-Registrierungs-Editor auf die Werte zugreifen.  
   
- Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen nicht festgelegt sind (Dies ist der Standardzustand) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , fragt die Anwendung die Windows-Systemparameter Informationen für die Einstellungen der Schriftart Glättung ab.  
+ Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen nicht festgelegt sind (Dies ist der Standardzustand), fragt die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung die Windows-Systemparameter Informationen für die Einstellungen der Schriftart Glättung ab.  
   
 > [!NOTE]
-> Weitere Informationen zum Aufzählen von Anzeigegeräte Namen finden Sie unter `SystemParametersInfo` der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Funktion.  
+> Weitere Informationen zum Auflisten von Anzeigegeräte Namen finden Sie in der `SystemParametersInfo`Win32-Funktion.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType-Ebene  
@@ -59,7 +59,7 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
  ![ClearType-Einstellungen im Registrierungs-Editor.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen RenderText in einem von zwei Modi, mit und ohne ClearType. Wenn Text ohne ClearType gerendert wird, wird er als Graustufen Rendering bezeichnet.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen RenderText in einem von zwei Modi, mit und ohne ClearType. Wenn Text ohne ClearType gerendert wird, wird er als Graustufen Rendering bezeichnet.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gammastufe  
@@ -80,7 +80,7 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
 ## <a name="pixel-structure"></a>Pixelstruktur  
  Die Pixelstruktur beschreibt den Pixeltyp, aus dem ein Anzeigegerät besteht. Die Pixelstruktur ist definiert als eine der folgenden drei Typen:  
   
-|Typ|Wert|Beschreibung|  
+|Typ|{2&gt;Wert&lt;2}|Beschreibung|  
 |----------|-----------|-----------------|  
 |Flach|0|Das Anzeigegerät hat keine Pixelstruktur. Das bedeutet, dass Lichtquellen für jede Farbe gleichmäßig über den Pixelbereich verteilt werden, was auch als Graustufenrendering bezeichnet wird. Auf diese Weise funktioniert ein Standardanzeigegerät. ClearType wird nie auf den gerenderten Text angewendet.|  
 |RGB|1|Das Anzeigegerät hat Pixel, die aus drei Farbstreifen in der folgenden Reihenfolge bestehen: Rot, Grün und Blau. ClearType wird auf den gerenderten Text angewendet.|  
@@ -89,7 +89,7 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
  Die Pixelstruktur entspricht einem Ganzzahlwert zwischen 0 und 2. Der Standardwert ist 0, was einer flachen Pixelstruktur entspricht.  
   
 > [!NOTE]
-> Weitere Informationen zum Aufzählen von Anzeigegeräte Namen finden Sie unter `EnumDisplayDevices` der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Funktion.  
+> Weitere Informationen zum Auflisten von Anzeigegeräte Namen finden Sie in der `EnumDisplayDevices`Win32-Funktion.  
   
 ### <a name="registry-setting"></a>Registrierungseinstellung  
  Der Ort für die Registrierungseinstellung der Pixelstruktur ist eine lokale Computereinstellung und entspricht einem bestimmten Anzeigegerätenamen:  

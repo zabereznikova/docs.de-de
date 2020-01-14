@@ -1,6 +1,5 @@
 ---
 title: <exception> – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65c146684b7fd83a814f4b27d21efdd25c4da950
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523471"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711778"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -32,7 +31,7 @@ ms.locfileid: "72523471"
  `description`  
  Eine Beschreibung der Ausnahme.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit dem Tag \<exception> können Sie angeben, welche Ausnahmen ausgelöst werden können. Dieses Tag kann für Definitionen für Methoden, Eigenschaften, Ereignisse und Indexer angewendet werden.  
   
  Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  

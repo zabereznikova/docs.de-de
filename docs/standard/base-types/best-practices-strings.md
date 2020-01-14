@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973948"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711479"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
 
@@ -57,7 +56,7 @@ Vermeiden Sie folgende Vorgehensweisen bei der Verwendung von Zeichenfolgen:
 
 Die Methoden zum Bearbeiten von Zeichenfolgen in .NET werden i.d.R. überladen. Während einige Überladungen normalerweise Standardwerte akzeptieren, geben andere Überladungen exakt an, wie Zeichenfolgen verglichen oder bearbeitet werden sollen. Methoden, die keine Standardwerte verwenden, enthalten i. d. R einen Parameter vom Typ <xref:System.StringComparison>. Dabei handelt es sich um eine Enumeration, die explizit Regeln für Zeichenfolgenvergleiche anhand von Kultur und Schreibweise angibt. In der folgenden Tabelle werden die Member der <xref:System.StringComparison> -Enumeration beschrieben.
 
-|StringComparison-Member|BESCHREIBUNG|
+|StringComparison-Member|Beschreibung|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Führt einen Vergleich mit der aktuellen Kultur unter Beachtung der Groß- und Kleinschreibung durch.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Führt einen Vergleich mit der aktuellen Kultur ohne Beachtung der Groß- und Kleinschreibung durch.|
@@ -112,7 +111,7 @@ Vergleiche mit der Semantik der aktuellen Kultur werden standardmäßig für fol
 - <xref:System.String.Compare%2A?displayProperty=nameWithType> -Überladungen, die keinen <xref:System.StringComparison> -Parameter enthalten.
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType> -Überladungen.
 - Die <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> -Standardmethode und die <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> -Methode mit einem `null`<xref:System.Globalization.CultureInfo> -Parameter enthalten.
-- Die <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> -Standardmethode und die <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> -Methode mit einem `null`<xref:System.Globalization.CultureInfo> -Parameter enthalten.
+- Die <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter
 - <xref:System.String.IndexOf%2A?displayProperty=nameWithType> -Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison> -Parameter aufweisen.
 - <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> -Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison> -Parameter aufweisen.
 
@@ -204,8 +203,8 @@ In der folgenden Tabelle wird die Zuordnung von semantischem Zeichenfolgenkontex
 |----------|--------------|-----------------------------------------------------|
 |Interne Bezeichner, die die Groß- und Kleinschreibung beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung beachten.<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung beachten.|Ein nicht linguistischer Bezeichner mit exakt übereinstimmenden Bytes.|<xref:System.StringComparison.Ordinal>|
 |Interne Bezeichner, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Dateipfade.<br /><br /> Registrierungsschlüssel und -werte.<br /><br /> Umgebungsvariablen.<br /><br /> Ressourcenbezeichner (z. B. Handlenamen).<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung nicht beachten.|Ein nicht linguistischer Bezeichner, bei dem die Groß- und Kleinschreibung keine Rolle spielt; insbesondere für Daten, die in den meisten Systemdiensten von Windows gespeichert werden.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> Oder<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> Oder<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> - oder -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> - oder -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>Allgemeine Methoden zum Zeichenfolgenvergleich in .NET
 
@@ -291,7 +290,7 @@ Eine empfohlene Variante wird im folgenden Beispiel angezeigt, in dem die gleich
 [!code-csharp[Conceptual.Strings.BestPractices#8](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#8)]
 [!code-vb[Conceptual.Strings.BestPractices#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#8)]
 
-Wenn diese Daten beibehalten und zwischen Kulturen verschoben werden, und wenn eine Sortierung verwendet wird, um die Daten für den Benutzer anzuzeigen, können Sie <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> verwenden, da durch die linguistische Verarbeitung eine bessere Benutzerausgabe erzielt wird und Änderungen der Kultur keine Auswirkungen haben. Im folgenden Beispiel werden die zwei vorherigen Beispiele geändert, um die invariante Kultur zum Sortieren und Durchsuchen des Arrays zu verwenden.
+Wenn diese Daten beibehalten und zwischen Kulturen verschoben werden, und wenn eine Sortierung verwendet wird, um die Daten für den Benutzer anzuzeigen, können Sie <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType>verwenden, da durch die linguistische Verarbeitung eine bessere Benutzerausgabe erzielt wird und Änderungen der Kultur keine Auswirkungen haben. Im folgenden Beispiel werden die zwei vorherigen Beispiele geändert, um die invariante Kultur zum Sortieren und Durchsuchen des Arrays zu verwenden.
 
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]

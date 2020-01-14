@@ -2,13 +2,12 @@
 title: Erste Schritte mit ASP.NET Core
 description: Weitere Informationen zu ASP.NET Core mit Tutorials in der Dokumentation zu ASP.NET Core.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 2f256796bab461a20a3d88465db12e564a119604
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: ade7d2ca8a4dcec555d0052e60fb13bba7a7380c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788231"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714090"
 ---
 # <a name="get-started-with-aspnet-core"></a>Erste Schritte mit ASP.NET Core
 

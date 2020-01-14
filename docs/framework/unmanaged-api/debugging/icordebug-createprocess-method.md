@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110995"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901014"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess-Methode
 Startet einen Prozess und seinen primären Thread unter der Kontrolle des Debuggers.  
@@ -44,7 +44,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `lpApplicationName`  
  in Zeiger auf eine auf NULL endende Zeichenfolge, die das Modul angibt, das vom gestarteten Prozess ausgeführt werden soll. Das Modul wird im Sicherheitskontext des aufrufenden Prozesses ausgeführt.  
   
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  in Legen Sie diese Einstellung auf `true` fest, um anzugeben, dass jedes vererbbare Handle im aufrufenden Prozess vom gestarteten Prozess geerbt wird, oder `false`, um anzugeben, dass die Handles nicht vererbt werden. Die geerbten Handles haben den gleichen Wert und die gleichen Zugriffsrechte wie die ursprünglichen Handles.  
   
  `dwCreationFlags`  
- in Eine bitweise Kombination der [Win32-Prozesserstellungsflags](https://go.microsoft.com/fwlink/?linkid=69981) , die die Prioritäts Klasse und das Verhalten des gestarteten Prozesses steuern.  
+ in Eine bitweise Kombination der [Win32-Prozesserstellungsflags](/windows/win32/procthread/process-creation-flags) , die die Prioritäts Klasse und das Verhalten des gestarteten Prozesses steuern.  
   
  `lpEnvironment`  
  in Zeiger auf einen Umgebungsblock für den neuen Prozess.  
@@ -90,14 +90,14 @@ HRESULT CreateProcess (
   
  Interop-Debuggen wird auf Win9x-und nicht-x86-Plattformen wie IA-64-basierten und AMD64-basierten Plattformen nicht unterstützt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

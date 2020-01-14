@@ -9,6 +9,8 @@
           href: system-text-json-how-to.md
         - name: Schreiben von benutzerdefinierten Konvertern
           href: system-text-json-converters-how-to.md
+        - name: Migration von „Newtonsoft.Json“
+          href: system-text-json-migrate-from-newtonsoft-how-to.md
     - name: Binäre Serialisierung
       href: binary-serialization.md
       items:

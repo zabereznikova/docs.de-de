@@ -3,12 +3,12 @@ title: REST und gRPC
 description: Erfahren Sie mehr über GrpC, seine Rolle in Cloud-native Anwendungen und die Unterschiede zwischen der http-Rest-Funktion
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4c829407d494a3529d1fb9953cd3f56f73e90636
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337072"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711635"
 ---
 # <a name="rest-and-grpc"></a>REST und gRPC
 
@@ -24,7 +24,7 @@ GrpC ist ein modernes RPC-Framework, das einfach und leistungsfähig ist. Für d
 
 - Obwohl HTTP 1,1 Daten als Klartext sendet, ist http/2 ein binäres Protokoll. Sie analysiert Daten schneller mit weniger Arbeitsspeicher, verringert die Netzwerk Latenz mit den damit verbundenen Verbesserungen der Geschwindigkeit und verwaltet die Netzwerkressourcen effizienter.
 - Obwohl HTTP 1,1 auf die Verarbeitung von Roundtrip-Anforderungen/-Antworten auf einmal beschränkt ist, unterstützt HTTP/2 Multiplexing oder mehrere parallele Anforderungen über dieselbe Verbindung.
-- HTTP/2 unterstützt eine Vollduplex-oder bidirektionale Kommunikation, bei der sowohl der Client als auch der Server und gleichzeitig kommunizieren können. Der Client kann Anforderungs Daten hochladen, wenn der Serverantwort Daten zurücksendet.
+- HTTP/2 unterstützt eine Vollduplex-oder bidirektionale Kommunikation, bei der sowohl der Client als auch der Server gleichzeitig miteinander kommunizieren können. Der Client kann Anforderungs Daten hochladen, wenn der Serverantwort Daten zurücksendet.
 - Streaming ist in http/2 integriert, was bedeutet, dass sowohl Anforderungen als auch Antworten große Datensätze asynchron streamen können.
 - Die Kombination von GrpC und http/2 steigert die Leistung erheblich. In [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) -Parametern trifft die GrpC-Leistung zu und überschreitet die Geschwindigkeit und Effizienz von [NetTcp-Bindungen](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Anders als C# NetTcp ist GrpC jedoch nicht auf Microsoft-Sprachen wie oder Visual Basic beschränkt.
 

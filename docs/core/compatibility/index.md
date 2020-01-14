@@ -2,12 +2,12 @@
 title: Typen von Breaking Changes – .NET Core
 description: Erfahren Sie, wie .NET Core versucht, die Kompatibilität für Entwickler für alle .NET-Versionen zu gewährleisten und welche Änderung als Breaking Change angesehen wird.
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567715"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740894"
 ---
 # <a name="changes-that-affect-compatibility"></a>Änderungen, die sich auf die Kompatibilität auswirken
 
@@ -19,7 +19,7 @@ Im Laufe seines Bestehens hat .NET versucht, ein hohes Maß an Kompatibilität v
 
 Neben der Kompatibilität zwischen .NET-Implementierungen erwarten Entwickler ein hohes Maß an Kompatibilität zwischen .NET Core-Versionen. Insbesondere sollte Code, der für eine frühere Version von .NET Core geschrieben wurde, problemlos auf einer späteren Version von .NET Core ausgeführt werden können. Tatsächlich erwarten viele Entwickler, dass die neuen APIs in den neu veröffentlichten Versionen von .NET Core auch mit den Vorabversionen kompatibel sein sollten, in denen diese APIs eingeführt wurden.
 
-Dieser Artikel beschreibt die Kategorien von Kompatibilitätsänderungen (oder Breaking Changes) und die Art und Weise, wie das .NET-Team Änderungen in jeder dieser Kategorien bewertet. Zu verstehen, wie das .NET-Team mit möglichen Breaking Changes umgeht, ist besonders hilfreich für Entwickler, die Pull Requests im GitHub-Repository [dotnet/corefx](https://github.com/dotnet/corefx) öffnen, das das Verhalten bestehender APIs ändert.
+Dieser Artikel beschreibt die Kategorien von Kompatibilitätsänderungen (oder Breaking Changes) und die Art und Weise, wie das .NET-Team Änderungen in jeder dieser Kategorien bewertet. Zu verstehen, wie das .NET-Team mit möglichen Breaking Changes umgeht, ist besonders hilfreich für Entwickler, die Pull Requests im GitHub-Repository [dotnet/runtime](https://github.com/dotnet/runtime) öffnen, das das Verhalten bestehender APIs ändert.
 
 > [!NOTE]
 > Eine Definition von Kompatibilitätskategorien, wie z.B. Binärkompatibilität und Abwärtskompatibilität, finden Sie unter [Breaking Change-Kategorien](categories.md).
@@ -192,7 +192,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **❌ Auslösen eines vorhandenen Ereignisses, das bisher noch nicht ausgelöst wurde**
 
-## <a name="behavioral-changes"></a>Verhaltensänderungen
+## <a name="behavioral-changes"></a>Verhaltensänderung
 
 ### <a name="assemblies"></a>Assemblys
 
@@ -296,7 +296,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **❌ Ändern einer synchronen API in eine asynchrone API (und umgekehrt)**
 
-## <a name="code-changes"></a>Änderungen am Code
+## <a name="code-changes"></a>Codeänderungen
 
 - **✔️ Hinzufügen von [params](../../csharp/language-reference/keywords/params.md) zu einem Parameter**
 

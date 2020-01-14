@@ -13,14 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16018be820951a2739d602edb99845eb89495d5e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706646"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
 Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Computer bereit. Sie bieten zwar weniger Funktionen als benannte Pipes, erfordern aber auch weniger Mehraufwand. Sie können anonyme Pipes verwenden, um die prozessübergreifende Kommunikation auf einem lokalen Computer zu vereinfachen. Anonyme Pipes können nicht zur Kommunikation über ein Netzwerk verwendet werden.  

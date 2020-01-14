@@ -1,17 +1,16 @@
 ---
 title: 'Gewusst wie: Definieren von abstrakten Eigenschaften – C#-Programmierhandbuch'
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971001"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705612"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch)
 Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-reference/keywords/abstract.md) Eigenschaften definieren: Eine abstrakte Eigenschaftendeklaration stellt keine Implementierung des Eigenschaftenaccessors bereit, sondern deklariert, dass die Klasse Eigenschaften unterstützt, die Accessorenimplementierung jedoch abgeleiteten Klassen überlässt. Das folgende Beispiel veranschaulicht das Implementieren von abstrakten Eigenschaften, die von einer Basisklasse geerbt wurden.  
@@ -35,7 +34,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Beispiel:  
+- Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Zum Beispiel:  
   
     ```csharp  
     public abstract double Area  

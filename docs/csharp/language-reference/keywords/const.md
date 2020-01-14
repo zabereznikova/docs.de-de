@@ -1,6 +1,5 @@
 ---
 title: const-Schlüsselwort – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - const_CSharpKeyword
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 81660e6a56efe5737600122d4ff7e182654f9a9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 812aeb331b6dd333075d19076a896246ecc5b374
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422891"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713677"
 ---
 # <a name="const-c-reference"></a>const (C#-Referenz)
 
-Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren. Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden. Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein. Erstellen Sie keine Konstante, um Informationen darzustellen, bei denen Sie davon ausgehen, dass sie sich einmal ändern. Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern. Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden. Weitere Informationen finden Sie auch unter dem [readonly](./readonly.md)-Schlüsselwort. Beispiel:
+Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren. Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden. Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein. Erstellen Sie keine Konstante, um Informationen darzustellen, bei denen Sie davon ausgehen, dass sie sich einmal ändern. Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern. Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden. Weitere Informationen finden Sie auch unter dem [readonly](./readonly.md)-Schlüsselwort. Zum Beispiel:
 
 ```csharp
 const int X = 0;
@@ -25,7 +24,7 @@ public const double GravitationalConstant = 6.673e-11;
 private const string ProductName = "Visual C#";
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Typ einer Konstantendeklaration gibt den Typ der Member an, die durch die Deklaration eingeführt werden. Der Initialisierer einer konstanten lokalen Variable oder eines konstanten Felds muss ein konstanter Ausdruck sein, der implizit in den Zieltyp konvertiert werden kann.
 

@@ -3,13 +3,12 @@ title: Vergleich von project.json und csproj
 description: Informationen zur Zuordnung zwischen project.json und csproj-Elementen.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747410"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714136"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -313,7 +312,7 @@ Beachten Sie, dass sich der `<RuntimeFrameworkVersion>`-Wert im migrierten Proje
 
 Es gibt keine Entsprechung in csproj.
 
-## <a name="runtimes"></a>Laufzeiten
+## <a name="runtimes"></a>runtimes
 
 ```json
 {
@@ -379,7 +378,7 @@ Siehe auch [Dateien](#files).
 </PropertyGroup>
 ```
 
-Wenn `emitEntryPoint` `false` betrug, wird der Wert von `OutputType` zu `Library` konvertiert, der der folgende Standardwert ist:
+Wenn `emitEntryPoint``false` betrug, wird der Wert von `OutputType` zu `Library` konvertiert, der der folgende Standardwert ist:
 
 ```json
 {

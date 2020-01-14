@@ -13,14 +13,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674346"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708147"
 ---
 # <a name="compose-streams"></a>Erstellen von Streams
 Ein *Sicherungsspeicher* ist ein Speichermedium, wie etwa ein Datenträger oder Arbeitsspeicher. Jeder einzelne Sicherungsspeicher implementiert seinen eigenen Datenstrom als Implementierung der <xref:System.IO.Stream>-Klasse. 

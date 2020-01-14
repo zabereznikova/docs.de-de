@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043902"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715708"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -35,15 +33,15 @@ winres /?
 
 ## <a name="arguments"></a>Argumente
 
-|Argument|BESCHREIBUNG|
+|Argument|Beschreibung|
 |--------------|-----------------|
 |`resourceFile`|Die zu lokalisierende Ressourcendatei. Diese Datei muss ein als RESX- oder RESOURCES-Datei durch den Visual Studio-Designer generiertes Windows Forms-Formular sein. "Winres.exe" kann generische RESX- bzw. RESOURCES-Dateien nicht öffnen.|
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Zustand von Elementen der Benutzeroberfläche aus einem Formular in einem Windows Forms-Projekt wird in der Regel in Ressourcendateien gespeichert, bei denen es sich entweder um XML-basierte Dateien mit der Erweiterung ".resx" oder die entsprechenden kompilierten binären Versionen mit der Erweiterung ".resources" handelt. "Winres.exe" ist ein Tool, das eine begrenzte Bearbeitung beider Dateitypen außerhalb der Visual Studio-Entwurfsumgebung ermöglicht. Insbesondere können die folgenden Bearbeitungsvorgänge durchgeführt werden:
 
@@ -110,7 +108,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 2. Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
 
-     Oder
+     - oder -
 
      Geben Sie die zu öffnende Datei beim Starten von "Winres.exe" in der Befehlszeile an.
 

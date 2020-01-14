@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-ms.openlocfilehash: fcba014a1ff13204688ce176a5efcb5fecb58b8f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 0a445d0631fe6a24d8e9b5cb21cd78f260465486
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800346"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741601"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Bereich-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800346"
   
  Der Pane-Steuerelementtyp dient zur Darstellung eines Objekts innerhalb eines Frames oder Dokumentfensters. Benutzer können zwischen Pane-Steuerelementen und dem Inhalt des aktuellen Bereichs, aber nicht zwischen Elementen in unterschiedlichen Bereichen navigieren. Daher stellen Pane-Steuerelemente eine Gruppierungsebene unterhalb von Fenstern oder Dokumenten dar, jedoch oberhalb einzelner Steuerelemente. Der Benutzer kann je nach Kontext durch Drücken von TAB, F6 oder STRG+TAB zwischen den Bereichen navigieren. Für den Pane-Steuerelementtyp ist keine bestimmte Tastaturnavigation erforderlich.  
   
- In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Pane“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anforderungen gelten für alle Listensteuerelemente in [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Pane“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Listen Steuerelemente, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  

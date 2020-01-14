@@ -2,20 +2,20 @@
 title: Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 description: .NET Microservicesarchitektur für Containerized .NET-Anwendungen | Nutzung von Enumerationsklassen anstelle von Enumerationen als Lösungsmöglichkeit für die Einschränkungen der Enumerationen
 ms.date: 10/08/2018
-ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093864"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337681"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 
-Bei [Enumerationen](../../../csharp/language-reference/keywords/enum.md) (bzw. *Enumerationstypen*) handelt es sich um dünne Sprachwrapper um einen integralen Typ. Sie sollten deren Verwendung darauf beschränken, einen Wert aus einem vollständigen Wertesatz zu speichern. Klassifizierung anhand von Größen (klein, mittel, groß) ist ein gutes Beispiel. Das Verwenden von Enumerationen zur Ablaufsteuerung oder für robustere Abstraktionen kann zu [schlecht strukturiertem Code](https://deviq.com/code-smells/) führen. Diese Art der Verwendung führt zu instabilem Code mit vielen Anweisungen für die Ablaufsteuerung, die die Werte der Enumeration überprüfen.
+Bei [Enumerationen](../../../csharp/language-reference/builtin-types/enum.md) (bzw. *Enumerationstypen*) handelt es sich um dünne Sprachwrapper um einen integralen Typ. Sie sollten deren Verwendung darauf beschränken, einen Wert aus einem vollständigen Wertesatz zu speichern. Klassifizierung anhand von Größen (klein, mittel, groß) ist ein gutes Beispiel. Das Verwenden von Enumerationen zur Ablaufsteuerung oder für robustere Abstraktionen kann zu [schlecht strukturiertem Code](https://deviq.com/code-smells/) führen. Diese Art der Verwendung führt zu instabilem Code mit vielen Anweisungen für die Ablaufsteuerung, die die Werte der Enumeration überprüfen.
 
 Sie können stattdessen Enumerationsklassen erstellen, um die umfassenden Features von objektorientierten Sprachen nutzen zu können.
 
-Dabei handelt es sich jedoch nicht um ein kritisches Thema und in vielen Fällen können Sie aus Gründen der Einfachheit dennoch reguläre [Enumerationstypen](../../../csharp/language-reference/keywords/enum.md) verwenden, wenn Sie diese bevorzugen. Jedenfalls bezieht sich die Verwendung von Enumerationsklassen mehr auf geschäftliche Konzepte.
+Dabei handelt es sich jedoch nicht um ein kritisches Thema und in vielen Fällen können Sie aus Gründen der Einfachheit dennoch reguläre [Enumerationstypen](../../../csharp/language-reference/builtin-types/enum.md) verwenden, wenn Sie diese bevorzugen. Jedenfalls bezieht sich die Verwendung von Enumerationsklassen mehr auf geschäftliche Konzepte.
 
 ## <a name="implement-an-enumeration-base-class"></a>Implementieren einer Basisklasse für Enumerationen
 

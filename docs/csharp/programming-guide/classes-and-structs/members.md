@@ -1,17 +1,16 @@
 ---
 title: Member – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: acd992cba67a79f2a63c28c1d9d9ac70e4f4d029
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922161"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705508"
 ---
 # <a name="members-c-programming-guide"></a>Member (C#-Programmierhandbuch)
 
@@ -19,7 +18,7 @@ Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten 
   
  In der folgenden Tabelle sind die Arten von Membern aufgeführt, die in einer Klasse oder Struktur enthalten sein können:  
   
-|Member|BESCHREIBUNG|  
+|Member|Beschreibung|  
 |------------|-----------------|  
 |[Felder](./fields.md)|Felder sind im Gültigkeitsbereich einer Klasse deklarierte Variablen. Ein Feld kann ein integrierter numerischer Typ oder eine Instanz einer anderen Klasse sein. So kann zum Beispiel eine Kalenderklasse über ein Feld verfügen, das das aktuelle Datum enthält.|  
 |[Konstanten](./constants.md)|Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nicht geändert werden kann.|  

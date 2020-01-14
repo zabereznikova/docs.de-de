@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615316"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345551"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
@@ -155,7 +155,7 @@ public MainWindow()
 }
 ```
 
-Der `+=`-Operator in diesem Kontext wird zum Abonnieren eines [Ereignisses](../../docs/csharp/language-reference/keywords/event.md) verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Der `+=`-Operator in diesem Kontext wird zum Abonnieren eines [Ereignisses](../../docs/csharp/language-reference/keywords/event.md) verwendet. Weitere Informationen finden Sie unter [Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="further-reading-and-resources"></a>Weitere Informationen und Ressourcen
 

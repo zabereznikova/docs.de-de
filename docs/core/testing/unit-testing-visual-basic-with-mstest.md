@@ -4,13 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: c52fc7393718f6af44bd85dd23353f3e32f29f79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428715"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714251"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und MSTest
 
@@ -113,7 +112,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Das `<TestClass>`-Attribut gibt eine Klasse an, die Tests enthält. Das `<TestMethod>`-Attribut kennzeichnet eine Methode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-vb-mstest* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `<TestClass>`-Attribut gibt eine Klasse an, die Tests enthält. Das `<TestMethod>`-Attribut kennzeichnet eine Methode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-vb-mstest*[`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Ihr Test schlägt fehl. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `PrimeService`-Klasse:
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: 553acc178bc5805b5afef5931fefc8ad74cbac39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5821abed4d6c7f7595bad3240ab86d5a128d794
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135176"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901146"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW-Methode
 Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge angegebenen Datei.  
@@ -37,7 +37,7 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `wszFilePath`  
  in Der Unicode-Name der zu hashenden Datei.  
   
@@ -54,19 +54,19 @@ HRESULT GetHashFromFileW (
  vorgenommen Die Größe `pbHash`in Byte.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
+ `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](/windows/win32/seccrypto/common-hresult-values) für eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode ist identisch mit der [ICLRStrongName:: GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) -Methode, mit der Ausnahme, dass die Dateinamen Spezifikation anstelle von ANSI Unicode ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
  **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

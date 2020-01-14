@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: a306bfe4b794409f7f64359daee7e18d34826921
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3619214bcd8830e82c827680d08260e95dc2b36
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441444"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741711"
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441444"
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht keine Kommunikation zwischen Prozessen, die von anderen Benutzern durch den Befehl **Ausführen als** gestartet werden.  
   
- Benutzeroberflächenautomatisierungs-Client-Anwendungen können mit der Gewissheit geschrieben werden, dass sie mit verschiedenen Frameworks funktionieren. Der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern maskiert alle Unterschiede in den Frameworks, die den verschiedenen Komponenten von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]zugrunde liegen. Beispielsweise sind die `Content` -Eigenschaft einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Schaltfläche, die `Caption` -Eigenschaft einer [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Schaltfläche und die `ALT` -Eigenschaft eines HTML-Bildes alle nur einer einzelnen Eigenschaft, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ansicht zugewiesen.  
+ Benutzeroberflächenautomatisierungs-Client-Anwendungen können mit der Gewissheit geschrieben werden, dass sie mit verschiedenen Frameworks funktionieren. Der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern maskiert alle Unterschiede in den Frameworks, die den verschiedenen Komponenten von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]zugrunde liegen. Beispielsweise werden die `Content`-Eigenschaft einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Schaltfläche, die `Caption`-Eigenschaft einer Win32-Schaltfläche und die `ALT`-Eigenschaft eines HTML-Bilds alle einer einzelnen Eigenschaft (<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>) in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ansicht zugeordnet.  
   
 Die Benutzeroberflächen Automatisierung bietet vollständige Funktionalität für unterstützte Windows-Betriebssysteme, auf denen die .NET Framework ausgeführt wird (siehe [.NET Framework Systemanforderungen](../get-started/system-requirements.md) oder Versionen von .net Core ab .net Core 3,0.  
   
@@ -43,18 +43,18 @@ Die Benutzeroberflächen Automatisierung bietet vollständige Funktionalität f�
   
  Aus Sicht des Softwareentwicklers gibt es zwei Möglichkeiten zum Verwenden von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: entweder kann eine Unterstützung für benutzerdefinierte Steuerelemente mithilfe der Anbieter-API erstellt werden oder Anwendungen, die den [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern verwenden, um mit [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elementen mithilfe der Client-API zu kommunizieren. Abhängig von Ihren Schwerpunkten sollten Sie auf verschiedene Teile der Dokumentation zugreifen. In den folgenden Abschnitten können Sie mehr über die Konzepte erfahren und sich praktisches Wissen aneignen.  
   
-|Bereich|Inhalt|Zielgruppe|  
+|Abschnitt|Inhalt|Zielgruppe|  
 |-------------|--------------------|--------------|  
-|[Grundlagen der Benutzeroberflächen Automatisierung](index.md) (dieser Abschnitt)|Allgemeine Übersichten über die Konzepte.|Alle|  
+|[Grundlagen der Benutzeroberflächen Automatisierung](index.md) (dieser Abschnitt)|Allgemeine Übersichten über die Konzepte.|All.|  
 |[Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code](ui-automation-providers-for-managed-code.md)|Übersichten und Hilfethemen zum Verwenden der Anbieter-API.|Entwickler von Steuerelementen.|  
 |[Benutzeroberflächenautomatisierungs-Clients für verwalteten Code](ui-automation-clients-for-managed-code.md)|Übersichten und Hilfethemen zum Verwenden der Client-API.|Entwickler von Clientanwendungen.|  
-|[Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns.md)|Informationen zum Implementieren von Steuerelementmustern durch Anbieter und den Funktionalitäten, die Clients zur Verfügung stehen.|Alle|  
-|[Textmuster zur Benutzeroberflächenautomatisierung](ui-automation-text-pattern.md)|Informationen zum Implementieren des Text-Steuerelementmusters durch Anbieter und den Funktionalitäten, die Clients zur Verfügung stehen.|Alle|  
-|[UI Automation Control Types](ui-automation-control-types.md)|Informationen über die Eigenschaften und Steuerelementmuster, die von verschiedenen Steuerelementtypen unterstützt werden.|Alle|  
+|[Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns.md)|Informationen zum Implementieren von Steuerelementmustern durch Anbieter und den Funktionalitäten, die Clients zur Verfügung stehen.|All.|  
+|[Textmuster zur Benutzeroberflächenautomatisierung](ui-automation-text-pattern.md)|Informationen zum Implementieren des Text-Steuerelementmusters durch Anbieter und den Funktionalitäten, die Clients zur Verfügung stehen.|All.|  
+|[UI Automation Control Types](ui-automation-control-types.md)|Informationen über die Eigenschaften und Steuerelementmuster, die von verschiedenen Steuerelementtypen unterstützt werden.|All.|  
   
  In der folgenden Tabelle werden [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Namespaces, die DLLs, die sie enthalten, und die sie verwendende Zielgruppe, aufgelistet.  
   
-|Namespace|DLLs, auf die verwiesen wird|Zielgruppe|  
+|-Namespace|DLLs, auf die verwiesen wird|Zielgruppe|  
 |---------------|---------------------|--------------|  
 |<xref:System.Windows.Automation>|UIAutomationClientUIAutomationTypes|Benutzeroberflächenautomatisierungs-Cliententwickler: wird zum Suchen nach <xref:System.Windows.Automation.AutomationElement> -Objekten, zum Registrieren von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignissen und zum Arbeiten mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementmustern verwendet.|  
 |<xref:System.Windows.Automation.Provider>|UIAutomationProviderUIAutomationTypes|Entwickler von Benutzeroberflächenautomatisierungs-Anbietern für andere Frameworks als [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].|  

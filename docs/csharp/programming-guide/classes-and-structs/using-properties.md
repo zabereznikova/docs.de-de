@@ -1,18 +1,17 @@
 ---
 title: Verwenden von Eigenschaften – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579159"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705404"
 ---
 # <a name="using-properties-c-programming-guide"></a>Verwenden von Eigenschaften (C#-Programmierhandbuch)
 
@@ -22,7 +21,7 @@ Im Gegensatz zu Feldern, werden Eigenschaften nicht als Variablen klassifiziert.
 
 Eigenschaften sind vielseitig verwendbar: Sie können Daten überprüfen, bevor sie eine Änderung zulassen. Sie können Daten in einer Klasse transparent verfügbar machen, in denen die Daten in Wirklichkeit von einer anderen Quelle abgerufen werden, z.B. einer Datenbank. Sie können eine Aktion ausführen, wenn Daten geändert werden, z.B. ein Ereignis auslösen, oder den Wert anderer Felder verändern.
 
-Eigenschaften werden im Klassenblock deklariert, indem die Zugriffsebene des Felds angegeben wird, gefolgt vom Typ der Eigenschaft, gefolgt vom Namen der Eigenschaft und gefolgt von einem Codeblock, der einen `get`-Accessor und/oder einen `set` Accessor deklariert. Beispiel:
+Eigenschaften werden im Klassenblock deklariert, indem die Zugriffsebene des Felds angegeben wird, gefolgt vom Typ der Eigenschaft, gefolgt vom Namen der Eigenschaft und gefolgt von einem Codeblock, der einen `get`-Accessor und/oder einen `set` Accessor deklariert. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -36,7 +35,7 @@ Der Text des `get` Accessors ähnelt dem einer Methode. Er muss einen Wert des E
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-Wenn Sie auf die Eigenschaft, außer als Ziel einer Zuweisung, verweisen, wird der `get`-Accessor aufgerufen, um den Wert der Eigenschaft zu lesen. Beispiel:
+Wenn Sie auf die Eigenschaft, außer als Ziel einer Zuweisung, verweisen, wird der `get`-Accessor aufgerufen, um den Wert der Eigenschaft zu lesen. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -46,7 +45,7 @@ Es ist ein unzulässiger Programmierstil den Zustand des Objekts mithilfe des `g
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückgeben. Beispiel:
+Der `get`-Accessor kann verwendet werden, um den Wert des Felds zurückzugeben, oder um den Wert des Felds zu berechnen und zurückgeben. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
@@ -58,13 +57,13 @@ Der `set`-Accessor ähnelt einer Methode, deren Rückgabetyp [void](../../langua
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-Wenn Sie der Eigenschaft einen Wert zuweisen, wird der `set`-Accessor mit einem Argument aufgerufen, das den neuen Wert bereitstellt. Beispiel:
+Wenn Sie der Eigenschaft einen Wert zuweisen, wird der `set`-Accessor mit einem Argument aufgerufen, das den neuen Wert bereitstellt. Zum Beispiel:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
 Das Verwenden des impliziten Parameternamens, `value`, für die Deklaration einer lokalen Variablen in einem `set`-Accessor ist ein Fehler.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Eigenschaften können als `public`, `private`, `protected`, `internal`, `protected internal` oder `private protected` gekennzeichnet werden. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Eigenschaft zugreifen können. Die `get`- und `set`-Accessoren für die gleiche Eigenschaft haben möglicherweise verschiedene Zugriffsmodifizierer. Z.B. kann `get` möglicherweise `public` sein, um den schreibgeschützten Zugriff von außerhalb des Typs zu ermöglichen, und `set` kann möglicherweise `private` oder `protected` sein. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](./access-modifiers.md).
 

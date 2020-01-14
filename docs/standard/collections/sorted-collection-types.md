@@ -9,14 +9,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c49b3fcd5b50cc5b48497dcf97862e80b066ab46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957886"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711336"
 ---
 # <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
 Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  

@@ -4,12 +4,12 @@ description: Dieser Artikel bietet eine kurze Übersicht über Komponententests 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714299"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899885"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
@@ -28,7 +28,7 @@ Mit automatisierten Tests können Sie sicherstellen, dass eine Softwareanwendung
 Beachten Sie, dass es bewährte Methode für das Schreiben von Tests gibt. Bei der [testgesteuerten Entwicklung (Test Driven Development, TDD)](https://deviq.com/test-driven-development/) wird ein Komponententest vor dem Code geschrieben, den er prüfen soll. Stellen Sie sich die TDD wie eine Gliederung für ein Buch vor, bevor dieses geschrieben wird. Dadurch sollen Entwickler einfacheren, lesbareren und effizienteren Code schreiben können. 
 
 > [!NOTE]
-> Das ASP.NET-Team hält sich an [diese Konventionen](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests), um Entwicklern das Festlegen von aussagekräftigen Namen für Testklassen und -methoden zu erleichtern.
+> Das ASP.NET-Team hält sich an [diese Konventionen](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests), um Entwicklern das Festlegen von aussagekräftigen Namen für Testklassen und -methoden zu erleichtern.
 
 Achten Sie beim Schreiben von Komponententests darauf, dass diese nicht von der Infrastruktur abhängig sind. Dadurch werden die Tests langsam und fehleranfällig. Diese Abhängigkeiten sollten nur bei Integrationstests bestehen. Sie können diese Abhängigkeiten in Ihrem Code vermeiden, indem Sie das [Prinzip der expliziten Abhängigkeit](https://deviq.com/explicit-dependencies-principle/) und [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) einsetzen. Sie können die Komponententests und die Integrationstests in unterschiedlichen Projekten erstellen. Dadurch wird sichergestellt, dass Ihr Komponententestprojekt keine Verweise auf oder Abhängigkeiten von Infrastrukturpaketen aufweist.
 

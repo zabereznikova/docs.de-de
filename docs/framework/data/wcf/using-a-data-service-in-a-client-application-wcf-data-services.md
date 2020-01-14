@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568833"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900911"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Verwenden eines Datendiensts in einer Clientanwendung (WCF Data Services)
 Sie können auf einen Dienst zugreifen, der einen Open Data Protocol (odata)-Feed verfügbar macht, indem Sie einen URI an einen Webbrowser bereitstellen. Der URI stellt die Adresse einer Ressource bereit, und Anforderungsnachrichten werden an diese Adressen gesendet, um auf die zugrunde liegenden Daten, die die Ressource darstellt, zuzugreifen oder um diese zu ändern. Der Browser gibt einen HTTP GET-Befehl aus und gibt die angeforderte Ressource als odata-Feed zurück. Weitere Informationen finden Sie unter [zugreifen auf den Dienst über einen Webbrowser](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,23 +33,23 @@ Sie können auf einen Dienst zugreifen, der einen Open Data Protocol (odata)-Fee
   
 - **Http Merge** : aufgrund der Ineffizienzen beim Ausführen eines Löschvorgangs, gefolgt von einer Einfügung in der Datenquelle, nur um Entitäts Daten zu ändern, führt odata eine neue http-Merge-Aktion ein. Die Nutzlast der Anforderungsnachricht enthält die Eigenschaften, die für die adressierte Entitätsressource geändert werden müssen. Da HTTP Merge nicht in der HTTP-Spezifikation definiert ist, ist möglicherweise eine zusätzliche Verarbeitung erforderlich, um eine HTTP Merge-Anforderung über nicht odata-fähige Server weiterzuleiten.  
   
- Weitere Informationen finden Sie unter [odata: Vorgänge](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Weitere Informationen finden Sie unter [odata: Vorgänge](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ### <a name="payload-formats"></a>Nutzlastformate  
  Für eine HTTP PUT-, HTTP POST- oder HTTP MERGE-Anforderung enthält die Nutzlast einer Anforderungsnachricht die Entitätsdaten, die Sie an den Datendienst senden. Der Inhalt der Nutzlast hängt vom Datenformat der Nachricht ab. Die HTTP-Antworten auf alle Aktionen außer DELETE enthalten auch eine entsprechende Nutzlast. Odata unterstützt die folgenden Nutz Last Formate zum Zugreifen auf und Ändern von Daten mit dem Dienst:  
   
-- **Atom** : eine XML-basierte Nachrichten Codierung, die von odata als Erweiterung des Atom Publishing Protocol (AtomPub) definiert wird, um den Datenaustausch über HTTP für Webfeeds, Podcasts, Wikis und XML-basierte Internet Funktionalität zu ermöglichen. Weitere Informationen finden Sie unter [odata: Atom-Format](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** : eine XML-basierte Nachrichten Codierung, die von odata als Erweiterung des Atom Publishing Protocol (AtomPub) definiert wird, um den Datenaustausch über HTTP für Webfeeds, Podcasts, Wikis und XML-basierte Internet Funktionalität zu ermöglichen. Weitere Informationen finden Sie unter [odata: Atom-Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/).
   
-- **JSON** -JavaScript Object Notation (JSON) ist ein schlankes Datenaustauschformat, das auf einer Teilmenge der Programmiersprache JavaScript basiert. Weitere Informationen finden Sie unter [odata: JSON-Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Object Notation (JSON) ist ein schlankes Datenaustauschformat, das auf einer Teilmenge der Programmiersprache JavaScript basiert. Weitere Informationen finden Sie unter [odata: JSON-Format](https://www.odata.org/documentation/odata-version-2-0/json-format/).
   
- Das Nachrichtenformat der Nutzlast wird im Header der HTTP-Anforderungsnachricht angefordert. Weitere Informationen finden Sie unter [odata: Vorgänge](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ Das Nachrichtenformat der Nutzlast wird im Header der HTTP-Anforderungsnachricht angefordert. Weitere Informationen finden Sie unter [odata: Vorgänge](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Zugreifen auf und Ändern von Daten mit Clientbibliotheken  
  WCF Data Services umfasst Client Bibliotheken, die es Ihnen ermöglichen, einen odata-Feed von .NET Framework und Silverlight-basierten Client Anwendungen aus leichter zu nutzen. Diese Bibliotheken vereinfachen das Senden und Empfangen von HTTP-Nachrichten. Sie übersetzen außerdem die Nachrichtennutzlast in CLR-Objekte, die Entitätsdaten darstellen. Die Clientbibliotheken enthalten die beiden Kernklassen <xref:System.Data.Services.Client.DataServiceContext> und <xref:System.Data.Services.Client.DataServiceQuery%601>. Diese Klassen ermöglichen es Ihnen, einen Datendienst abzufragen und dann die zurückgegebenen Entitätsdaten als CLR-Objekte zu verarbeiten. Weitere Informationen finden Sie unter [WCF Data Services Client Bibliothek](wcf-data-services-client-library.md) und [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Sie können das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio verwenden, um einen Verweis auf einen Datendienst hinzuzufügen. Dieses Tool fordert die Dienstmetadaten von einem Datendienst an, auf den verwiesen wird, und generiert den <xref:System.Data.Services.Client.DataServiceContext>, der einen Datendienst darstellt, sowie die Clientdatendienstklassen, die Entitäten darstellen. Weitere Informationen finden Sie unter [Erstellen der Datendienst-Client Bibliothek](generating-the-data-service-client-library-wcf-data-services.md).  
   
- Es stehen Programmierbibliotheken zur Verfügung, mit denen Sie einen odata-Feed in anderen Arten von Client Anwendungen nutzen können. Weitere Informationen finden Sie unter [odata SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
+ Es stehen Programmierbibliotheken zur Verfügung, mit denen Sie einen odata-Feed in anderen Arten von Client Anwendungen nutzen können. Weitere Informationen zum odata SDK finden Sie unter [odata SDK-Sample Code](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="see-also"></a>Siehe auch
 

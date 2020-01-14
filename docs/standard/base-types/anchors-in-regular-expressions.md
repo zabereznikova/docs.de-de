@@ -16,18 +16,17 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.custom: seodec18
-ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971372"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711544"
 ---
 # <a name="anchors-in-regular-expressions"></a>Anchor in regulären Ausdrücken
 Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anchor verwenden, durchsucht die Engine für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anchor aufgeführt.  
   
-|Anchor|BESCHREIBUNG|  
+|Anchor|Beschreibung|  
 |------------|-----------------|  
 |`^`|Die Übereinstimmung muss standardmäßig zu Beginn der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie zu Beginn der Zeile erfolgen. Weitere Informationen finden Sie unter [Anfang der Zeichenfolge oder Zeile](#start-of-string-or-line-).|  
 |`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen. Weitere Informationen finden Sie unter [Ende der Zeichenfolge oder Zeile](#end-of-string-or-line-).|  
@@ -52,7 +51,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
   
  Das Muster für reguläre Ausdrücke `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Suchen Sie nach einer Übereinstimmung am Anfang der Eingabezeichenfolge (oder am Anfang der Zeile, wenn die Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> -Option aufgerufen wird).|  
 |`((\w+(\s?)){2,}`|Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das mindestens zwei Mal eine 0 (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Dieser Ausdruck definiert auch eine zweite und dritte Erfassungsgruppe: Die zweite Gruppe enthält erfasste Wörter und die dritte erfasste Leerzeichen.|  
@@ -110,7 +109,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
   
  Der reguläre Ausdruck `\G(\w+\s?\w*),?` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\G`|Beginnt die Übereinstimmung am Ende der vorherigen.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -129,7 +128,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`are`|Übereinstimmung mit der Teilzeichenfolge "are".|  
@@ -146,7 +145,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\B`|Übereinstimmung beginnt nicht an einer Wortgrenze.|  
 |`qu`|Übereinstimmung mit der Teilzeichenfolge "qu".|  

@@ -1,15 +1,13 @@
 ---
 title: NuGet für .NET-Bibliotheken
 description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliotheken
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775311"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706477"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +44,7 @@ Abhängigkeiten von NuGet-Paketen werden im Artikel [Abhängigkeiten](./dependen
 
 Ein NuGet-Paket unterstützt viele [Metadateneigenschaften](/nuget/reference/nuspec). Die folgende Tabelle enthält die wichtigsten Metadaten, die jedes Paket auf NuGet.org bereitstellen sollte:
 
-| MSBuild-Eigenschaftenname              | NUSPEC-Name              | BESCHREIBUNG  |
+| MSBuild-Eigenschaftenname              | NUSPEC-Name              | Beschreibung  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Der Paketbezeichner. Ein Präfix aus dem Bezeichner kann reserviert werden, wenn es die [Kriterien](/nuget/reference/id-prefix-reservation) erfüllt. |
 | `PackageVersion`                   | `version`                  | Die NuGet-Paketversion. Weitere Informationen finden Sie unter [NuGet-Paketversion](./versioning.md#nuget-package-version).             |
@@ -94,7 +92,7 @@ NuGet-Pakete mit einem Versionssuffix gelten als [Vorabversion](/nuget/create-pa
 
 Symboldateien (`*.pdb`) werden vom .NET-Compiler neben Assemblys erstellt. Symboldateien ordnen Ausführungsstandorte dem ursprünglichen Quellcode zu, sodass Sie den Quellcode bei der Ausführung mit einem Debugger durchgehen können. NuGet unterstützt das [Generieren eines separaten Symbolpakets (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg) mit Symboldateien neben dem Hauptpaket mit .NET-Assemblys. Die Idee von Symbolpaketen ist, dass sie auf einem Symbolserver gehostet und nur bei Bedarf von einem Tool wie Visual Studio heruntergeladen werden.
 
-NuGet.org hostet sein eigenes [Symbolserverrepository](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Entwickler können die auf dem NuGet.org-Symbolserver veröffentlichten Symbole verwenden, indem sie ihren [-Symbolquellen in Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger) `https://symbols.nuget.org/download/symbols` hinzufügen.
+NuGet.org hostet sein eigenes [Symbolserverrepository](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Entwickler können die auf dem NuGet.org-Symbolserver veröffentlichten Symbole verwenden, indem sie ihren [-Symbolquellen in Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)`https://symbols.nuget.org/download/symbols` hinzufügen.
 
 > [!IMPORTANT]
 > Der NuGet.org-Symbolserver unterstützt nur die neuen [portierbaren Symboldateien](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`), die von SDK-Projekten erstellt wurden.

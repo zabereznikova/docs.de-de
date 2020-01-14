@@ -1,14 +1,13 @@
 ---
 title: Versionsverwaltung für .NET Core-Runtime und SDK
 description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
-author: bleroy
 ms.date: 07/26/2018
-ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713966"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777316"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
@@ -24,7 +23,7 @@ Das .NET Core SDK folgt keiner semantischen Versionierung. Das .NET Core SDK wir
 
 Die dritte Stelle der SDK-Versionsnummer gibt sowohl die Nebenversions- als auch die Patchnummer an. Die Nebenversion wird mit 100 multipliziert. Nebenversion 1, Patchversion 2 würde als 102 dargestellt. Die letzten zwei Ziffern stehen für die Patchnummer. Das Release von .NET Core 2.2 kann z.B. Releases wie in der folgenden Tabelle gezeigt erstellen:
 
-| Änderung                | .NET Core Runtime | .NET Core SDK (*) |
+| Änderung                | .NET Core Runtime | .NET Core SDK (\*) |
 |-----------------------|-------------------|-------------------|
 | Erstrelease       | 2.2.0             | 2.2.100           |
 | SDK-Patch             | 2.2.0             | 2.2.101           |

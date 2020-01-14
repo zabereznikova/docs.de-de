@@ -1,24 +1,23 @@
 ---
 title: Statische Konstruktoren – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596031"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714678"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statische Konstruktoren (C#-Programmierhandbuch)
 Ein statischer Konstruktor wird verwendet, um [static](../../language-reference/keywords/static.md)-Daten zu initialisieren oder um eine bestimmte Aktion auszuführen, die nur einmal ausgeführt werden muss. Er wird automatisch aufgerufen, bevor die erste Instanz erstellt oder auf irgendwelche statischen Member verwiesen wird.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 Statische Konstruktoren verfügen über folgende Eigenschaften:  
   
 - Ein statischer Konstruktor kann nicht über Zugriffsmodifizierer oder Parameter verfügen.  

@@ -22,14 +22,12 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf5144cb1abd3a916d2b5afc361c8c96a221d47e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372294"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708114"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Vorgehensweise: Vorhersehen von Speicherengpässen bei isoliertem Speicher
 

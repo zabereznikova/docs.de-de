@@ -185,7 +185,7 @@
       items:
         - name: Debuggen eines Speicherverlusts
           href: diagnostics/debug-memory-leak.md
-- name: Unittests
+- name: Komponententest
   href: testing/index.md
   items:
     - name: Bewährte Methoden für Komponententests
@@ -339,8 +339,9 @@
     - name: XML Serializer Generator
       href: additional-tools/xml-serializer-generator.md
 - name: Portieren aus .NET Framework
-  href: porting/index.md
   items:
+    - name: Übersicht
+      href: porting/index.md
     - name: '.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind'
       href: porting/net-framework-tech-unavailable.md
     - name: Analysieren der Abhängigkeiten von Drittanbietern

@@ -1,15 +1,13 @@
 ---
 title: Leitfaden zur Open Source-Bibliothek für .NET
 description: Empfehlungen für bewährte Methoden für Entwickler zum Erstellen von qualitativ hochwertigen .NET-Bibliotheken
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928965"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706451"
 ---
 # <a name="open-source-library-guidance"></a>Leitfaden für die Open Source-Bibliothek
 
@@ -32,7 +30,7 @@ Aspekte hochqualitativer Open Source-Bibliotheken für .NET:
 
 Jeder Artikel enthält vier Empfehlungstypen: **Do**, **Erwägen**, **Vermeiden** und **Don‘t**. Der Empfehlungstyp kennzeichnet, wie streng die Empfehlung befolgt werden sollte.
 
-Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Beispiel:
+Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Zum Beispiel:
 
 **✔️ DO** Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 
@@ -42,11 +40,11 @@ Andererseits gibt es Empfehlungen, die Sie **erwägen** sollten. Berechtigte Aus
 
 Empfehlungen hinsichtlich **Vermeiden** geben Dinge an, die allgemein als keine gute Idee angesehen werden, jedoch kann das Brechen dieser Regel manchmal auch sinnvoll sein:
 
-**❌ VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
+**❌VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
 Schließlich kennzeichnen **Do not**-Empfehlungen Vorgänge, die Sie niemals ausführen sollten:
 
-**❌ DON‘T** Veröffentlichen Sie keine Versionen mit starkem Namen oder nicht starkem Namen Ihrer Bibliothek. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
+**❌ NICHT** die Versionen mit oder ohne starkem Namen Ihrer Bibliothek veröffentlichen. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Nächste](get-started.md)

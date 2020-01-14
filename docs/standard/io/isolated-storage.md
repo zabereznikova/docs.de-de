@@ -18,14 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802452"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706581"
 ---
 # <a name="isolated-storage"></a>Isolierte Speicherung
 <a name="top"></a> Die isolierte Speicherung ist ein Mechanismus zur Datenspeicherung von Desktop-Apps, der Isolation und Sicherheit gewährleistet, indem er standardisierte Möglichkeiten zur Verknüpfung von Code mit gespeicherten Daten definiert. Die Standardisierung hat weitere Vorteile. Administratoren können spezielle Tools zum Ändern isolierter Speichervorgänge verwenden, um Speicherplätze für Dateien zu konfigurieren, Sicherheitsrichtlinien festzulegen und nicht verwendete Daten zu löschen. Dank isolierter Speicherung benötigt der Code keine eindeutigen Pfade zur Festlegung sicherer Speicherplätze im Dateisystem. Außerdem werden die Daten vor anderen Anwendungen geschützt, die nur über Zugriff auf isolierte Speicherplätze verfügen. Fest codierte Daten, die den Speicherbereich einer Anwendung angeben, sind nicht erforderlich.
@@ -164,7 +162,7 @@ Viele Anwendungen verwenden Datenbanken zur Speicherung und Isolation von Daten,
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Isolationstypen](../../../docs/standard/io/types-of-isolation.md)|Beschreibt verschiedene Isolationstypen.|
 |[Vorgehensweise: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Stellt ein Beispiel für die Verwendung der <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse bereit, um einen nach Benutzer und Assembly isolierten Speicher abzurufen.|

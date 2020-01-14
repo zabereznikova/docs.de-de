@@ -13,14 +13,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835199"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706672"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge
 In den folgenden Codebeispielen wird das synchrone und asynchrone Lesen von Zeichen aus einer Zeichenfolge veranschaulicht.  

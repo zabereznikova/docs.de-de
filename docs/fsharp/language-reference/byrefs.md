@@ -2,12 +2,12 @@
 title: Byrefs
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 11/04/2019
-ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545130"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901312"
 ---
 # <a name="byrefs"></a>Byrefs
 

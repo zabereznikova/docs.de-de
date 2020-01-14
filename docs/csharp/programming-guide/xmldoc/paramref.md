@@ -1,6 +1,5 @@
 ---
 title: <paramref> – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - paramref
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 43e98565ff7294ebb6fa7e71d1be17522dbb15de
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 42c428b74f0df9d4ca37e85d805db8012670521c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523406"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696544"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -27,7 +26,7 @@ ms.locfileid: "72523406"
  `name`  
  Der Name des Parameters, auf den verwiesen wird. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Das Tag \<paramref> bietet Ihnen eine Möglichkeit anzugeben, dass sich ein Wort in den Codekommentaren, z.B. in einem \<summary>- oder \<remarks>-Block, auf einen Parameter bezieht. Die XML-Datei kann so verarbeitet werden, dass dieses Wort anders formatiert wird, z.B. fett oder kursiv.  
   
  Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  

@@ -1,18 +1,17 @@
 ---
 title: Partielle Klassen und Methoden – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419172"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714746"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 
@@ -113,7 +112,7 @@ Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](../g
 
 ## <a name="example-1"></a>Beispiel 1
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Im folgenden Beispiel werden die Felder und der Konstruktor der Klasse (`Coords`) in einer partiellen Klassendefinition deklariert, und der Member (`PrintCoords`) wird in einer anderen partiellen Klassendefinition deklariert.
 
@@ -123,7 +122,7 @@ Im folgenden Beispiel werden die Felder und der Konstruktor der Klasse (`Coords`
 
 ## <a name="example-2"></a>Beispiel 2
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Im folgenden Beispiel wird gezeigt, dass Sie auch partielle Strukturen und Schnittstellen entwickeln können.
 

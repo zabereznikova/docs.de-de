@@ -2,12 +2,12 @@
 title: Varianz bei Delegaten (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: a65b2fb84e2eae57eecaf5307ca76fbce412d44c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cdf7cad97ececbf4baae8328b1df55318c627cbb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772043"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345166"
 ---
 # <a name="variance-in-delegates-c"></a>Varianz bei Delegaten (C#)
 Mit .NET Framework 3.5 wurde die Unterstützung von Varianz eingeführt, um Methodensignaturen und Delegattypen in allen Delegaten in C# vergleichen zu können. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
@@ -87,7 +87,7 @@ public static void Test()
   
  Wenn Sie die Unterstützung von Varianz nur verwenden, um Methodensignaturen mit Delegaten zu vergleichen und nicht die Schlüsselwörter `in` und `out` verwenden, kann es möglicherweise passieren, dass Sie zwar Delegate mit identischen Lambdaausdrücken oder -Methoden instanziieren, aber keinen Delegaten einem anderen zuweisen können.  
   
- Im folgenden Codebeispiel kann `SampleGenericDelegate<String>` nicht expliziert in `SampleGenericDelegate<Object>` konvertiert werden, obwohl `String` `Object` erbt. Sie können dieses Problem beheben, indem Sie den generischen Parameter `T` mit dem Schlüsselwort `out` markieren.  
+ Im folgenden Codebeispiel kann `SampleGenericDelegate<String>` nicht expliziert in `SampleGenericDelegate<Object>` konvertiert werden, obwohl `String``Object` erbt. Sie können dieses Problem beheben, indem Sie den generischen Parameter `T` mit dem Schlüsselwort `out` markieren.  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -200,4 +200,4 @@ public static void Test()
 
 - [Generics](../../../../standard/generics/index.md)
 - [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)
-- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Kombinieren von Delegaten (Multicastdelegaten)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

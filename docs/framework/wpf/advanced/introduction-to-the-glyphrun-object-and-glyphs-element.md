@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581891"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740360"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Einführung in das "GlyphRun"-Objekt und das "Glyphs"-Element
 In diesem Thema werden das <xref:System.Windows.Media.GlyphRun>-Objekt und das <xref:System.Windows.Documents.Glyphs>-Element beschrieben.  
@@ -31,7 +31,7 @@ In diesem Thema werden das <xref:System.Windows.Media.GlyphRun>-Objekt und das <
   
     - Microsoft XPS-Dokumentwriter.  
   
-    - Vorherige Druckertreiber, Ausgabe von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Anwendungen an das feste Format  
+    - Vorherige Druckertreiber, Ausgabe von Win32-Anwendungen im Fixed-Format.  
   
     - Druckerspooler-Format  
   
@@ -50,13 +50,13 @@ In diesem Thema werden das <xref:System.Windows.Media.GlyphRun>-Objekt und das <
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Das Glyphs-Element  
- Das <xref:System.Windows.Documents.Glyphs> Element stellt die Ausgabe eines <xref:System.Windows.Media.GlyphRun> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dar. Die folgende Markup Syntax wird verwendet, um das <xref:System.Windows.Documents.Glyphs>-Element zu beschreiben.  
+ Das <xref:System.Windows.Documents.Glyphs> Element stellt die Ausgabe eines <xref:System.Windows.Media.GlyphRun> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]dar. Die folgende Markup Syntax wird verwendet, um das <xref:System.Windows.Documents.Glyphs>-Element zu beschreiben.  
   
  [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
  Die folgenden Eigenschaftendefinitionen entsprechen den ersten vier Attributen im Beispielmarkup.  
   
-|property|Beschreibung|  
+|Die Eigenschaften-|Beschreibung|  
 |--------------|-----------------|  
 |<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Gibt einen Ressourcen Bezeichner an: Datei Name, Web-Uniform Resource Identifier (URI) oder Ressourcen Verweis in der Datei "Application. exe" oder "Container".|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Gibt den Schriftgrad in Zeichenoberflächeneinheiten an (Der Standardwert ist .96 Zoll)|  
@@ -83,13 +83,13 @@ In diesem Thema werden das <xref:System.Windows.Media.GlyphRun>-Objekt und das <
   
 <a name="text_glyphrunovw_glyphmetrics"></a>   
 ## <a name="glyph-metrics"></a>Symbolmetriken  
- Jedes Symbol definiert Metriken, die angeben, wie Sie mit anderen <xref:System.Windows.Documents.Glyphs> ausgerichtet werden. Die folgende Abbildung definiert die verschiedenen typografischen Eigenschaften von zwei unterschiedlichen Symbolen.  
+ Jedes Symbol definiert Metriken, die angeben, wie Sie mit anderen <xref:System.Windows.Documents.Glyphs>ausgerichtet werden. Die folgende Abbildung definiert die verschiedenen typografischen Eigenschaften von zwei unterschiedlichen Symbolen.  
   
  ![Diagraph von Glyphe-Messungen](./media/glyph-example.png "glyph_example")  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
 ## <a name="glyphs-markup"></a>Symbol-Markup  
- Im folgenden Codebeispiel wird gezeigt, wie verschiedene Eigenschaften des <xref:System.Windows.Documents.Glyphs>-Elements in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verwendet werden.  
+ Im folgenden Codebeispiel wird gezeigt, wie verschiedene Eigenschaften des <xref:System.Windows.Documents.Glyphs>-Elements in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]verwendet werden.  
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   

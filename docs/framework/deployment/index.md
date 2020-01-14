@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975679"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716462"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 
@@ -160,12 +158,12 @@ Sicherheitsüberlegungen können bei der Bereitstellung einer Anwendung ebenfall
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[So sucht Common Language Runtime nach Assemblys](how-the-runtime-locates-assemblies.md)|Beschreibt, wie die Common Language Runtime ermittelt, welche Assembly zur Erfüllung einer Bindungsanforderung verwendet wird.|
 |[Bewährte Methoden für das Laden von Assemblys](best-practices-for-assembly-loading.md)|In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.|
 |[Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](reducing-system-restarts.md)|Beschreibt den Neustart-Manager, der Neustarts nach Möglichkeit verhindert, und erläutert, wie Anwendungen, mit denen .NET Framework installiert wird, den Neustart-Manager nutzen können.|
-|[Bereitstellungshandbuch für Administratoren](guide-for-administrators.md)|Hierin wird erläutert, wie ein Systemadministrator mit System Center Configuration Manager (SCCM) .NET Framework und dessen Systemabhängigkeiten in einem Netzwerk bereitstellen kann.|
+|[Bereitstellungshandbuch für Administratoren](guide-for-administrators.md)|Hierin wird erläutert, wie ein Systemadministrator mit Microsoft Endpoint Configuration Manager .NET Framework und dessen Systemabhängigkeiten in einem Netzwerk bereitstellen kann.|
 |[Bereitstellungshandbuch für Entwickler](deployment-guide-for-developers.md)|Es wird erklärt, wie Entwickler .NET Framework auf den Computern der Benutzer mit ihren Anwendungen installieren können.|
 |[Bereitstellen von Anwendungen, Diensten und Komponenten](/visualstudio/deployment/deploying-applications-services-and-components)|Erläutert Bereitstellungsoptionen in Visual Studio, einschließlich Anweisungen zum Veröffentlichen einer Anwendung mit ClickOnce- und Windows Installer-Technologie.|
 |[Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)|Beschreibt, wie eine Windows Forms-Anwendung verpackt und mit ClickOnce auf Clientcomputern in einem Netzwerk bereitgestellt wird.|

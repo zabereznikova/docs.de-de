@@ -2,13 +2,12 @@
 title: Migrieren von DNX zur .Net Core-CLI
 description: Migrieren der Verwendung von DNX-Tools zu .NET Core-CLI-Tools.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160835"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715528"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrieren von DNX zur .NET Core-CLI (project.json)
 

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052129"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741334"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 
@@ -35,7 +33,7 @@ Die bevorzugte Methode zum Verweisen auf eine Assembly ist die Verwendung eines 
 
 Sie können auch dynamisch auf eine Assembly verweisen, indem Sie die aufrufende Methode nur unter Angabe partieller Informationen zur Assembly, z. B. des Assemblynamens, bereitstellen. In diesem Fall wird lediglich das Anwendungsverzeichnis nach der Assembly durchsucht; es erfolgen keine weiteren Überprüfungen. Einen partiellen Verweis können Sie mit jeder der verschiedenen Methoden zum Laden von Assemblys erstellen, z. B. mit <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>.
 
-Mit einer Methode wie <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> können Sie auch einen dynamischen Verweis erstellen und nur partielle Informationen angeben. Dann qualifizieren Sie den Verweis mithilfe des [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md)-Elements in der Anwendungskonfigurationsdatei. Mit diesem Element können Sie die vollständigen Verweisinformationen (Name, Version, Kultur und ggf. das Token des öffentlichen Schlüssels) in der Anwendungskonfigurationsdatei statt im Code bereitstellen. Dieses Verfahren sollten Sie anwenden, wenn Sie einen Verweis auf eine Assembly außerhalb des Anwendungsverzeichnisses vollständig qualifizieren oder auf eine Assembly im globalen Assemblycache verweisen möchten, aber gleichzeitig aus praktischen Gründen den vollständigen Verweis in der Konfigurationsdatei statt im Code angeben möchten.
+Mit einer Methode wie <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> können Sie auch einen dynamischen Verweis erstellen und nur partielle Informationen angeben. Dann qualifizieren Sie den Verweis mithilfe des [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md)-Elements in der Anwendungskonfigurationsdatei. Mit diesem Element können Sie die vollständigen Verweisinformationen (Name, Version, Kultur und ggf. das Token des öffentlichen Schlüssels) in der Anwendungskonfigurationsdatei statt im Code bereitstellen. Dieses Verfahren sollten Sie anwenden, wenn Sie einen Verweis auf eine Assembly außerhalb des Anwendungsverzeichnisses vollständig qualifizieren oder auf eine Assembly im globalen Assemblycache verweisen möchten, aber gleichzeitig aus praktischen Gründen den vollständigen Verweis in der Konfigurationsdatei statt im Code angeben möchten.
 
 > [!NOTE]
 > Diesen Typ des partiellen Verweises sollten Sie nicht bei Assemblys verwenden, die für mehrere Anwendungen freigegeben sind. Da Konfigurationseinstellungen nach Anwendung und nicht nach Assembly erfolgen, müssten bei einer freigegebenen Assembly mit diesem Typ des partiellen Verweises für jede Anwendung, die diese freigegebene Assembly verwendet, die qualifizierenden Informationen in der jeweiligen Konfigurationsdatei enthalten sein.

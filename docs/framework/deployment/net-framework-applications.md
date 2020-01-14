@@ -5,14 +5,12 @@ helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c025643b6dd103e35231df5c983a06c899af02b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052047"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716443"
 ---
 # <a name="deploying-net-framework-applications"></a>Bereitstellen von .NET Framework-Anwendungen
 Dieser Abschnitt der Dokumentation zu .NET Framework bietet wichtige Informationen zum Bereitstellen von .NET Framework-Anwendungen, einschließlich der Richtlinien für das Laden von Assemblys, das Auflösen von Assemblyverweisen und das Verbessern der Leistung Ihrer Anwendung durch die Generierung von systemeigenen Images.  

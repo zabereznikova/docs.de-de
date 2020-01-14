@@ -1,17 +1,16 @@
 ---
 title: Ausdrücke – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417692"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699092"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 
@@ -79,7 +78,7 @@ Mithilfe von Ausdrucksbaumstrukturen können Ausdrücke als Datenstrukturen darg
 
 C# unterstützt *Ausdruckskörpermember*, mit denen Sie eine präzise Ausdrückskörperdefiniton für Methoden, Konstruktoren, Finalizer, Eigenschaften und Indexer angeben können. Weitere Informationen finden Sie unter [Ausdruckskörpermember](expression-bodied-members.md).
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
  Wann immer eine Variable, eine Objekteigenschaft oder ein Objektindexerzugriff von einem Ausdruck identifiziert wird, wird der Wert dieses Elements als Wert des Ausdrucks verwendet. Ein Ausdruck kann dort in C# platziert werden, wo ein Wert oder Objekt benötigt wird, solange der Ausdruck letztendlich den geforderten Typ ergibt.  
 

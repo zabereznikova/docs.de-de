@@ -1,16 +1,15 @@
 ---
 title: Einschränkungen bei der Verwendung von Zugriffsebenen – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90c76e68ca526106f3a8be6e3db2640edbb2bc80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922331"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715164"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)
 
@@ -23,7 +22,7 @@ public class MyClass: BaseClass {...} // Error
 
 In der folgenden Tabelle werden die Einschränkungen für deklarierte Zugriffsebenen zusammengefasst.
 
-|Kontext|Anmerkungen|
+|Kontext|Hinweise|
 |-------------|-------------|
 |[Klassen](../../programming-guide/classes-and-structs/classes.md)|Die direkte Basisklasse eines Klassentyps muss mindesten dieselben Zugriffsmöglichkeiten wie der Klassentyp selbst bieten.|
 |[Schnittstellen](../../programming-guide/interfaces/index.md)|Die explizite Basisschnittstelle eines Schnittstellentyps muss mindesten dieselben Zugriffsmöglichkeiten bieten wie der Schnittstellentyp selbst.|

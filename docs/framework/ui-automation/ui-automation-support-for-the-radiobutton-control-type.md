@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: b5a64c987fd8d7816e2327e048b90ce20fa61c53
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800312"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741558"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800312"
   
  Ein Optionsfeld besteht aus einer runden Schaltfläche und anwendungsdefiniertem Text (eine Bezeichnung), einem Symbol oder eine Bitmap, die eine Option anzeigt, die der Benutzer durch Aktivieren der Schaltfläche auswählen kann. Eine Anwendung verwendet in der Regel Optionsfelder in einem Gruppenfeld, um es dem Benutzer zu gestatten, aus einer Gruppe von verwandten, aber sich gegenseitig ausschließenden Optionen auszuwählen. Die Anwendung kann z. B. eine Gruppe von Optionsfeldern darstellen, unter denen der Benutzer eine Formateinstellung für Text auswählen kann, der im Clientbereich markiert ist. Der Benutzer kann ein linksbündiges, rechtsbündiges oder zentriertes Format auswählen, indem er das entsprechende Optionsfeld aktiviert. In der Regel kann der Benutzer jeweils nur eine Option zur Zeit aus einer Gruppe von Optionsfeldern auswählen.  
   
- In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „RadioButton“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anforderungen gelten für alle Listensteuerelemente in [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „RadioButton“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Listen Steuerelemente, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  
@@ -57,7 +57,7 @@ ms.locfileid: "74800312"
 |Steuerelementmuster/Steuerelementmustereigenschaft|Unterstützung/Wert|Hinweise|  
 |-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Ja|Alle Optionsfeldsteuerelemente müssen das SelectionItem-Muster unterstützen, um ihre Aktivierung zu ermöglichen.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Siehe Hinweise.|Die `SelectionContainerProperty` muss immer abgeschlossen werden, damit ein Benutzeroberflächenautomatisierungs-Client ermitteln kann, welche anderen Optionsfelder sich in einem bestimmten Kontext aufeinander beziehen.  Für die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Version des Optionsfelds wird diese Eigenschaft nicht unterstützt, da es nicht möglich ist, diese Informationen vom Legacyframework abzurufen.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Siehe Hinweise.|Die `SelectionContainerProperty` muss immer abgeschlossen werden, damit ein Benutzeroberflächenautomatisierungs-Client ermitteln kann, welche anderen Optionsfelder sich in einem bestimmten Kontext aufeinander beziehen.  Für die Win32-Version des Options Felds wird diese Eigenschaft nicht unterstützt, da es nicht möglich ist, diese Informationen von diesem Legacy Framework abzurufen.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Nie|Das Optionsfeld kann seinen Zustand nicht durchlaufen, nachdem es festgelegt wurde.  Dieses Muster darf von einem Optionsfeld nie unterstützt werden.|  
   
 <a name="Required_UI_Automation_Events"></a>   

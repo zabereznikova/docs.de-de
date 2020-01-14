@@ -1,23 +1,22 @@
 ---
 title: Finalizer – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9c00f14da9d79418e4fb204bac30e539b234197f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419363"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715011"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
 Mit Finalizern (die auch als **Destruktoren** bezeichnet werden) werden alle erforderlichen endgültigen Bereinigungen durchgeführt, wenn eine Klasseninstanz vom Garbage Collector gesammelt wird.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
   
 - Finalizer können nicht in Strukturen definiert werden. Sie werden nur mit Klassen verwendet.  
   

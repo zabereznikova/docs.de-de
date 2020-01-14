@@ -1,17 +1,16 @@
 ---
 title: Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“ – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196205"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705391"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
@@ -69,11 +68,11 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../langua
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Beispiel:  
+ Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Beispiel:  
+ Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Zum Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   

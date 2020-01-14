@@ -1,16 +1,15 @@
 ---
 title: Zeigerkonvertierungen – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417532"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698364"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Zeigerkonvertierungen (C#-Programmierhandbuch)
 Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Implizite Konvertierungen können in vielen Situationen auftreten, einschließlich methodenaufrufender und Zuweisungsansweisungen.  
@@ -42,8 +41,9 @@ Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Impliz
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [Zeigertypen](./pointer-types.md)
-- [Typen](/dotnet/csharp/language-reference/keywords)
+- [Zeigertypen](pointer-types.md)
+- [Verweistypen](../../language-reference/keywords/reference-types.md)
+- [Werttypen](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed-Anweisung](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

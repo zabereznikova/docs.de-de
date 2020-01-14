@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135670"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711388"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Sammlungen
 Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Verwaltung von Auflistungen Vergleiche durch, sei es bei der Suche nach zu entfernenden Elementen oder bei der Rückgabe eines Schlüssel-Wert-Paars.  

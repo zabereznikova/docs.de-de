@@ -2,12 +2,12 @@
 title: Vergleich mit System. Data. sqlite
 ms.date: 12/13/2019
 description: Beschreibt einige der Unterschiede zwischen den Bibliotheken Microsoft. Data. sqlite und System. Data. sqlite.
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450279"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900712"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>Vergleich mit System. Data. sqlite
 
@@ -63,15 +63,15 @@ System. Data. sqlite wendet zusätzliche Semantik auf Spaltentypen an, die Sie d
 
 ## <a name="authorization"></a>Autorisierung
 
-Microsoft. Data. sqlite verfügt über keine API, die den Autorisierungs Rückruf von SQLite verfügbar macht. Verwenden Sie Problem [#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835) , um Feedback zu diesem Feature bereitzustellen.
+Microsoft. Data. sqlite verfügt über keine API, die den Autorisierungs Rückruf von SQLite verfügbar macht. Verwenden Sie Problem [#13835](https://github.com/dotnet/efcore/issues/13835) , um Feedback zu diesem Feature bereitzustellen.
 
 ## <a name="data-change-notifications"></a>Daten Änderungs Benachrichtigungen
 
-Microsoft. Data. sqlite verfügt über keine API, die SQLite-Daten Änderungs Benachrichtigungen verfügbar macht. Verwenden Sie Problem [#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827) , um Feedback zu diesem Feature bereitzustellen.
+Microsoft. Data. sqlite verfügt über keine API, die SQLite-Daten Änderungs Benachrichtigungen verfügbar macht. Verwenden Sie Problem [#13827](https://github.com/dotnet/efcore/issues/13827) , um Feedback zu diesem Feature bereitzustellen.
 
 ## <a name="virtual-table-modules"></a>Module für virtuelle Tabellen
 
-Microsoft. Data. sqlite verfügt über keine API zum Erstellen von virtuellen Tabellen Modulen. Verwenden Sie Problem [#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823) , um Feedback zu diesem Feature bereitzustellen.
+Microsoft. Data. sqlite verfügt über keine API zum Erstellen von virtuellen Tabellen Modulen. Verwenden Sie Problem [#13823](https://github.com/dotnet/efcore/issues/13823) , um Feedback zu diesem Feature bereitzustellen.
 
 ## <a name="see-also"></a>Siehe auch
 

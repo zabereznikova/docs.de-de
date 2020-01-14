@@ -1,6 +1,5 @@
 ---
 title: <example> – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 17956838c20a4342873478869c07c6382f037fcb
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 13f4a2bb9dcef5bd0359f7e5bd9cab60acde3719
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523509"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697012"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -27,7 +26,7 @@ ms.locfileid: "72523509"
  `description`  
  Eine Beschreibung des Codebeispiels.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit dem \<example>-Tag kann ein Beispiel für die Verwendung einer Methode oder eines anderen Bibliothekmembers angegeben werden. Dies schließt im Allgemeinen die Verwendung des [\<code](./code.md)-Tags ein.  
   
  Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800292"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741392"
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800292"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Rohdatenansicht  
- Die Rohdatenansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur ist die vollständige Struktur der <xref:System.Windows.Automation.AutomationElement>-Objekte, deren Stamm der Desktop ist. Die Rohdatenansicht orientiert sich stark an der programmatischen Struktur einer Anwendung und ist daher die ausführlichste verfügbare Ansicht. Sie stellt gleichzeitig die Basis zum Erstellen anderer Ansichten der Struktur dar. Da diese Ansicht vom zugrunde liegenden [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Framework abhängig ist, unterscheidet sich die Rohdatenansicht einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Schaltfläche von der einer [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]-Schaltfläche.  
+ Die Rohdatenansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Struktur ist die vollständige Struktur der <xref:System.Windows.Automation.AutomationElement>-Objekte, deren Stamm der Desktop ist. Die Rohdatenansicht orientiert sich stark an der programmatischen Struktur einer Anwendung und ist daher die ausführlichste verfügbare Ansicht. Sie stellt gleichzeitig die Basis zum Erstellen anderer Ansichten der Struktur dar. Da diese Ansicht vom zugrunde liegenden [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Framework abhängt, weist die Rohdaten Ansicht einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Schaltfläche eine andere unformatierte Ansicht auf als eine Win32-Schaltfläche.  
   
  Sie erhalten die Rohdatenansicht, indem Sie ohne Angabe von Eigenschaften nach Elementen suchen oder mit <xref:System.Windows.Automation.TreeWalker.RawViewWalker> in der Struktur navigieren.  
   

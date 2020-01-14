@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: 500dc450ad171ed50316c8e08d62258d745049cb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f51e55a8a87ad1112c1b752568220611b9bf70e8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448462"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741665"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Bearbeitungssteuerelementtyp
 
@@ -22,7 +22,7 @@ Dieses Thema enthält Informationen über [!INCLUDE[TLA2#tla_uiautomation](../..
 
 Mit einem Bearbeitungssteuerelement kann ein Benutzer eine einfache Textzeile ohne umfangreiche Formatierungsunterstützung anzeigen und bearbeiten
 
-In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Edit“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anforderungen gelten für alle Bearbeitungssteuerelemente in [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
+In den folgenden Abschnitten werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, -Eigenschaften, -Steuerelementmuster und -Ereignisse definiert, die für den Steuerelementtyp „Edit“ erforderlich sind. Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen gelten für alle Bearbeitungs Steuerelemente, ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -32,7 +32,7 @@ In der folgenden Tabelle werden die Steuerelementansicht und die Inhaltsansicht 
 
 |Steuerelementansicht|Inhaltsansicht|
 |------------------|------------------|
-|Bearbeiten|Bearbeiten|
+|Edit|Edit|
 
 Die Steuerelemente, die den Edit-Steuerelementtyp implementieren, enthalten niemals Bildlaufleisten in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, da es sich um ein einzeiliges Steuerelement handelt. Die einzelne Textzeile wird in einigen Layoutszenarien möglicherweise umgebrochen. Der Edit-Steuerelementtyp eignet sich optimal für kleine Mengen von bearbeitbarem oder auswählbarem Text.
 
@@ -42,7 +42,7 @@ Die Steuerelemente, die den Edit-Steuerelementtyp implementieren, enthalten niem
 
 Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Bearbeitungssteuerelemente besonders relevant sind. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|{2&gt;Wert&lt;2}|Hinweise|
 |------------------------------------------------------------------------------------|-----------|-----------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|
@@ -50,7 +50,7 @@ Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../incl
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Der Name des Bearbeitungssteuerelements wird üblicherweise aus einer statischen Textbezeichnung generiert. Ist keine statische Textbezeichnung vorhanden, muss der Anwendungsentwickler einen Eigenschaftswert für `Name` zuweisen. Die `Name` -Eigenschaft darf niemals den Textinhalt des Bearbeitungssteuerelements enthalten.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Siehe Hinweise.|Wenn dem Steuerelement eine statische Textbezeichnung zugewiesen ist, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen. Ist das Textsteuerelement eine Unterkomponente eines anderen Steuerelements, ist für das Textsteuerelement keine `LabeledBy` -Eigenschaft festgelegt.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Bearbeiten|Dieser Wert gilt für alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Frameworks.|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Edit|Dieser Wert gilt für alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Frameworks.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Bearbeiten“|Lokalisierte Zeichenfolge für den Steuerelementtyp „Edit“.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Das Bearbeitungssteuerelement ist stets in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur enthalten.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Das Bearbeitungssteuerelement ist stets in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur enthalten.|
@@ -60,7 +60,7 @@ Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../incl
 
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Steuerelementmuster und -Eigenschaften
 
-In der folgenden Tabelle werden die Steuerelementmuster aufgelistet, die von allen Bearbeitungssteuerelementen unterstützt werden müssen. Weitere Informationen über Steuerelementmuster finden Sie unter [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).
+In der folgenden Tabelle werden die Steuerelementmuster aufgelistet, die von allen Bearbeitungssteuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).
 
 |Steuerelementmuster/Steuerelementmustereigenschaft|Unterstützung/Wert|Hinweise|
 |-----------------------------------------------|--------------------|-----------|
@@ -81,7 +81,7 @@ In der folgenden Tabelle werden die Steuerelementmuster aufgelistet, die von all
 
 Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen Bearbeitungssteuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](ui-automation-events-overview.md).
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützungswert|Hinweise|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|-Unterstützung|Hinweise|
 |---------------------------------------------------------------------------------|-------------|-----------|
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Erforderlich|Keine|
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Erforderlich|Keine|

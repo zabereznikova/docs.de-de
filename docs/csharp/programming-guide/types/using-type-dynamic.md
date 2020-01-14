@@ -1,23 +1,22 @@
 ---
 title: Verwenden des Typs „dynamic“ – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417596"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711856"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Verwenden des Typs „dynamic“ (C#-Programmierhandbuch)
 
 C# 4 führt einen neuen Typ ein: `dynamic`. Bei diesem Typ handelt es sich um einen statischen Typ. Ein Objekt des Typs `dynamic` umgeht aber die Überprüfung statischer Typen. In den meisten Fällen entspricht es der Funktionsweise des Typs `object`. Bei einem Element, das zur Kompilierzeit als `dynamic` typisiert wird, wird davon ausgegangen, dass es alle Vorgänge unterstützt. Daher müssen Sie sich keine Gedanken darüber machen, ob das Objekt seinen Wert von einer COM-API, einer dynamischen Sprache wie IronPython, vom HTML-DOM (Document Object Model), aus der Reflektion oder von einer anderen Quelle im Programm erhält. Wenn der Code jedoch nicht gültig ist, werden Fehler zur Laufzeit abgefangen.
 
-Wenn z.B. die Instanzmethode `exampleMethod1` im folgenden Code nur einen Parameter hat, erkennt der Compiler, dass der erste Aufruf der Methode, `ec.exampleMethod1(10, 4)`, nicht gültig ist, da er zwei Argumente enthält. Dieser Aufruf löst einen Compilerfehler aus. Der zweite Aufruf der Methode, `dynamic_ec.exampleMethod1(10, 4)`, wird vom Compiler nicht überprüft, da der Typ von `dynamic_ec` `dynamic` ist. Daher wird kein Compilerfehler gemeldet. Allerdings bleibt der Fehler nicht unbegrenzt unbemerkt. Er wird zur Laufzeit abgefangen und führt zu einer Laufzeitausnahme.
+Wenn z.B. die Instanzmethode `exampleMethod1` im folgenden Code nur einen Parameter hat, erkennt der Compiler, dass der erste Aufruf der Methode, `ec.exampleMethod1(10, 4)`, nicht gültig ist, da er zwei Argumente enthält. Dieser Aufruf löst einen Compilerfehler aus. Der zweite Aufruf der Methode, `dynamic_ec.exampleMethod1(10, 4)`, wird vom Compiler nicht überprüft, da der Typ von `dynamic_ec``dynamic` ist. Daher wird kein Compilerfehler gemeldet. Allerdings bleibt der Fehler nicht unbegrenzt unbemerkt. Er wird zur Laufzeit abgefangen und führt zu einer Laufzeitausnahme.
 
 [!code-csharp[CsProgGuideTypes#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#50)]
 
@@ -54,7 +53,7 @@ Umgekehrt kann eine implizite Konvertierung dynamisch auf einen Ausdruck vom Typ
 
 ## <a name="overload-resolution-with-arguments-of-type-dynamic"></a>Überladungsauflösung mit Argumenten vom Typ „dynamic“
 
-Überladungsauflösung erfolgt zur Laufzeit anstatt zur Kompilierzeit, wenn eines oder mehrere der Argumente in einem Methodenaufruf vom Typ `dynamic` sind, oder wenn der Empfänger des Methodenaufrufs vom Typ `dynamic` ist. Im folgenden Beispiel wird durch das Senden von `d1` als Argument kein Compilerfehler ausgelöst, wenn die einzige zugängliche `exampleMethod2`-Methode so definiert wird, dass sie ein Zeichenfolgenargument akzeptiert. Allerdings wird eine Laufzeitausnahme ausgelöst. Die Überladungsauflösung schlägt zur Laufzeit fehl, da der Laufzeittyp von `d1` `int` ist und `exampleMethod2` eine Zeichenfolge benötigt.
+Überladungsauflösung erfolgt zur Laufzeit anstatt zur Kompilierzeit, wenn eines oder mehrere der Argumente in einem Methodenaufruf vom Typ `dynamic` sind, oder wenn der Empfänger des Methodenaufrufs vom Typ `dynamic` ist. Im folgenden Beispiel wird durch das Senden von `d1` als Argument kein Compilerfehler ausgelöst, wenn die einzige zugängliche `exampleMethod2`-Methode so definiert wird, dass sie ein Zeichenfolgenargument akzeptiert. Allerdings wird eine Laufzeitausnahme ausgelöst. Die Überladungsauflösung schlägt zur Laufzeit fehl, da der Laufzeittyp von `d1``int` ist und `exampleMethod2` eine Zeichenfolge benötigt.
 
 [!code-csharp[CsProgGuideTypes#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#55)]
 
@@ -74,9 +73,9 @@ Viele COM-Methoden ermöglichen die Variation von Argument- und Rückgabetypen d
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[dynamic](../../language-reference/builtin-types/reference-types.md)|Beschreibt die Verwendung des Schlüsselworts `dynamic`.|
 |[Übersicht über die Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Bietet eine Übersicht über die Dynamic Language Runtime (DLR), eine Laufzeitumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt.|
 |[Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](walkthrough-creating-and-using-dynamic-objects.md)|Bietet eine ausführliche Anleitung zum Erstellen eines benutzerdefinierten dynamischen Objekts und zum Erstellen eines Projekts, das auf eine `IronPython`-Bibliothek zugreift.|
-|[Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen](../interop/how-to-access-office-onterop-objects.md)|Veranschaulicht, wie Sie ein Projekt erstellen, das benannte und optionale Argumente, den Typ `dynamic` und andere Verbesserungen verwendet, die den Zugriff auf Office-API-Objekte vereinfachen.|
+|[Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen](../interop/how-to-access-office-onterop-objects.md)|Veranschaulicht, wie Sie ein Projekt erstellen, das benannte und optionale Argumente, den Typ `dynamic` und andere Verbesserungen verwendet, die den Zugriff auf Office-API-Objekte vereinfachen.|

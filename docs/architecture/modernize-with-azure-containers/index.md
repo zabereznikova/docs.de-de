@@ -2,12 +2,12 @@
 title: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
 description: Erfahren Sie in diesem E-Book, wie vorhandene Anwendungen in Azure Cloud und Container übertragen, verschoben und modernisiert werden können.
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714574"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
 
@@ -89,7 +89,7 @@ Die dritte Reifestufe ist das ultimative Ziel in der Cloud, aber sie ist für vi
 
 Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der einzelnen Migrations- oder Modernisierungsansätze.
 
-| **Bereit für Cloudinfrastruktur** <br /> *Übertragen und verschieben* | **Cloudoptimiert** <br /> *Modernisierung* | **Cloudnativ** <br /> *Modernisieren, Neustrukturieren und Umschreiben* |
+| **Bereit für Cloudinfrastruktur** <br /> *Übertragen und verschieben* | **Cloudoptimiert** <br /> *Modernisieren* | **Cloudnativ** <br /> *Modernisieren, Neustrukturieren und Umschreiben* |
 |---|---|---|
 | **Computeziel der Anwendung** |
 | Auf virtuellen Computern in Azure bereitgestellte Anwendungen | Monolithische oder n-schichtige Apps, die in Azure App Service bereitgestellt werden, Azure Container Instance (ACI), VMs mit Containern oder AKS (Azure Kubernetes Service) | Containerisierte Microservices in Azure Kubernetes Service (AKS) und/oder serverlose Microservices, die auf Azure Functions basieren. |
@@ -199,7 +199,7 @@ Für diese Beispiel-Apps ist eine zweite Version mit modernisiertem Code verfüg
 
 ## <a name="send-your-feedback"></a>Senden Sie uns Ihr Feedback
 
-Dieser Leitfaden wurde verfasst, um Ihnen zu helfen, Ihre Möglichkeiten zur Verbesserung und Modernisierung vorhandener .NET-Webanwendungen zu verstehen. Der Leitfaden und die zugehörigen Anwendungsbeispiele werden ständig weiterentwickelt. Wir freuen uns auf Ihr Feedback! Wenn Sie Anmerkungen dazu haben, wie dieser Leitfaden hilfreicher gestaltet werden könnte, senden Sie diese bitte an [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
+Dieser Leitfaden wurde verfasst, um Ihnen zu helfen, Ihre Möglichkeiten zur Verbesserung und Modernisierung vorhandener .NET-Webanwendungen zu verstehen. Der Leitfaden und die zugehörigen Anwendungsbeispiele werden ständig weiterentwickelt. Ihr Feedback ist uns wichtig! Wenn Sie Anmerkungen dazu haben, wie dieser Leitfaden hilfreicher gestaltet werden könnte, senden Sie diese bitte an [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
 >[Nächste](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

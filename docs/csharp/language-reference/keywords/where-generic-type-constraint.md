@@ -1,18 +1,17 @@
 ---
 title: where (Einschränkung des generischen Typs) – C#-Referenz
-ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972726"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712805"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (Einschränkung des generischen Typs) (C#-Referenz)
 
@@ -44,7 +43,7 @@ Die `where`-Klausel kann auch eine `unmanaged`-Einschränkung einschließen. Die
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-Die `where`-Klausel kann auch eine `new()`-Konstruktoreinschränkung einschließen. Diese Einschränkung ermöglicht das Erstellen einer Instanz eines Typparameters unter Verwendung des `new`-Operators. Die [new()-Einschränkung](new-constraint.md) informiert den Compiler, dass jedes angegebene Typargument über einen zugänglichen parameterlosen Konstruktor verfügen muss. Beispiel:
+Die `where`-Klausel kann auch eine `new()`-Konstruktoreinschränkung einschließen. Diese Einschränkung ermöglicht das Erstellen einer Instanz eines Typparameters unter Verwendung des `new`-Operators. Die [new()-Einschränkung](new-constraint.md) informiert den Compiler, dass jedes angegebene Typargument über einen zugänglichen parameterlosen Konstruktor verfügen muss. Zum Beispiel:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

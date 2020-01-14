@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60fdc0317975d94433401e3214953b77d0970f60
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916240"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741056"
 ---
 # <a name="custom-serialization"></a>Benutzerdefinierte Serialisierung
 Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung und Deserialisierung eines Typs verstanden. Durch die Steuerung der Serialisierung lässt sich die Serialisierungskompatibilität sicherstellen. Damit ist die Fähigkeit gemeint, Objekte unterschiedlicher Versionen eines Typs serialisieren und deserialisieren zu können, ohne die Kernfunktionalität des Typs zu beeinträchtigen. Zum Beispiel kann die erste Version eines Typs nur zwei Felder umfassen. In der nächsten Version des Typs werden mehrere weitere Felder hinzugefügt. Die zweite Version einer Anwendung muss jedoch fähig sein, beide Typen zu serialisieren und zu deserialisieren. In den folgenden Abschnitten wird beschrieben, wie Serialisierung gesteuert wird.
@@ -177,7 +177,7 @@ End Class
   
  Vergessen Sie nicht, die Basisklasse im Deserialisierungskonstruktor aufzurufen. Andernfalls wird der Konstruktor für die Basisklasse nicht aufgerufen, und das Objekt wird nach der Deserialisierung nicht vollständig erstellt.  
   
- Objekte werden von innen nach außen rekonstruiert. Dies bedeutet, dass das Aufrufen von Methoden während der Deserialisierung unerwünschte Nebeneffekte haben kann, wenn sich die aufgerufenen Methoden auf Objektverweise beziehen, die zum Zeitpunkt des Aufrufs noch nicht deserialisiert worden sind. Wenn die deserialisierte Klasse <xref:System.Runtime.Serialization.IDeserializationCallback> implementiert, wird die <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*>-Methode automatisch aufgerufen, sobald die gesamte Objektgrafik deserialisiert wurde. Zu diesem Zeitpunkt sind auch die untergeordneten Objekte, auf die verwiesen wurde, vollständig wiederhergestellt. Eine Hashtabelle ist ein typisches Beispiel für eine Klasse, die ohne Verwendung des Ereignislisteners schwer zu deserialisieren ist. Es ist einfach, die Schlüssel- und Wert-Paare während der Deserialisierung abzurufen. Es kann jedoch problematisch sein, diese Objekte dann wieder der Hashtabelle hinzuzufügen, da nicht gewährleistet ist, dass die von der Hashtabelle abgeleiteten Klassen deserialisiert wurden. Daher wird davon abgeraten, zu diesem Zeitpunkt Methoden für Hashtabellen aufzurufen.  
+ Objekte werden von innen nach außen rekonstruiert. Dies bedeutet, dass das Aufrufen von Methoden während der Deserialisierung unerwünschte Nebeneffekte haben kann, wenn sich die aufgerufenen Methoden auf Objektverweise beziehen, die zum Zeitpunkt des Aufrufs noch nicht deserialisiert worden sind. Wenn die deserialisierte Klasse <xref:System.Runtime.Serialization.IDeserializationCallback> implementiert, wird die <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A>-Methode automatisch aufgerufen, sobald die gesamte Objektgrafik deserialisiert wurde. Zu diesem Zeitpunkt sind auch die untergeordneten Objekte, auf die verwiesen wurde, vollständig wiederhergestellt. Eine Hashtabelle ist ein typisches Beispiel für eine Klasse, die ohne Verwendung des Ereignislisteners schwer zu deserialisieren ist. Es ist einfach, die Schlüssel- und Wert-Paare während der Deserialisierung abzurufen. Es kann jedoch problematisch sein, diese Objekte dann wieder der Hashtabelle hinzuzufügen, da nicht gewährleistet ist, dass die von der Hashtabelle abgeleiteten Klassen deserialisiert wurden. Daher wird davon abgeraten, zu diesem Zeitpunkt Methoden für Hashtabellen aufzurufen.  
   
 ## <a name="see-also"></a>Siehe auch
 

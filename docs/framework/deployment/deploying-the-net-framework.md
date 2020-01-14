@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052171"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716546"
 ---
 # <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
 In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für Entwickler bereitgestellt, die .NET Framework mit ihren Anwendungen installieren, und Administratoren, die .NET Framework in einem Netzwerk bereitstellen möchten. Außerdem werden Probleme bei der Aktivierung und dem Neustart im Zusammenhang mit der Bereitstellung besprochen sowie erläutert, wie der Status der .NET Framework-Installation überwacht wird.  
@@ -22,7 +20,7 @@ In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für E
  Es wird erklärt, wie Entwickler .NET Framework auf den Computern der Benutzer mit ihren Anwendungen installieren können.  
   
  [Bereitstellungshandbuch für Administratoren](guide-for-administrators.md)  
- Hierin wird erläutert, wie ein Systemadministrator mit System Center Configuration Manager (SCCM) .NET Framework und dessen Systemabhängigkeiten in einem Netzwerk bereitstellen kann.  
+ Hierin wird erläutert, wie ein Systemadministrator mit Microsoft Endpoint Configuration Manager .NET Framework und dessen Systemabhängigkeiten in einem Netzwerk bereitstellen kann.  
   
  [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](reducing-system-restarts.md)  
  Beschreibt den Neustart-Manager, der Neustarts nach Möglichkeit verhindert, und erläutert, wie Anwendungen, mit denen .NET Framework installiert wird, den Neustart-Manager nutzen können.  
