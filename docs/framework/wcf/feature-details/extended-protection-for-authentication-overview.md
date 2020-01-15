@@ -2,12 +2,12 @@
 title: Übersicht über den erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665952"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964604"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
@@ -34,4 +34,4 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

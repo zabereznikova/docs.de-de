@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e71664b4361ba28a50b29499585b20a8adbaefd2
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837414"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964465"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 
@@ -106,4 +106,4 @@ Nach der Installation und Konfiguration von was finden Sie unter Gewusst [wie: H
 - [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

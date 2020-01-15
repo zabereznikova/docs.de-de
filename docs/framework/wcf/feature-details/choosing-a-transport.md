@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838064"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964473"
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Thema werden die Kriterien für die Auswahl der drei Haupt Transporte erläutert, die in Windows Communication Foundation (WCF) enthalten sind: http, TCP und Named Pipes. WCF enthält auch einen Message Queueing-Transport (auch als MSMQ bezeichnet), aber in diesem Dokument werden Message Queueing nicht behandelt.  
@@ -26,7 +26,7 @@ In diesem Thema werden die Kriterien für die Auswahl der drei Haupt Transporte 
  In diesem Abschnitt sind die Hauptgründe für die Wahl einer der drei wichtigsten Transportarten beschrieben. Er enthält auch ein ausführliches Diagramm als Hilfe bei der Auswahl.  
   
 ### <a name="when-to-use-http-transport"></a>Verwenden des HTTP-Transports  
- HTTP ist ein Anforderung-/Antwortprotokoll für den Austausch zwischen Clients und Servern. Diese Transportart wird am häufigsten von Webbrowserclients verwendet, die mit einem Webserver kommunizieren. Der Client sendet eine Anforderung an einen Server, der nach Anforderungsnachrichten von Clients lauscht. Wenn der Server eine Anforderung empfängt, gibt er eine Antwort zurück, die den Status der Anforderung enthält. Wenn dieser Vorgang erfolgreich ist, werden optionale Daten, z. B. eine Webseite, eine Fehlermeldung oder andere Informationen, zurückgegeben. Weitere Informationen zum HTTP-Protokoll finden Sie unter [HTTP-Hypertext Transfer Protocol](https://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP ist ein Anforderung-/Antwortprotokoll für den Austausch zwischen Clients und Servern. Diese Transportart wird am häufigsten von Webbrowserclients verwendet, die mit einem Webserver kommunizieren. Der Client sendet eine Anforderung an einen Server, der nach Anforderungsnachrichten von Clients lauscht. Wenn der Server eine Anforderung empfängt, gibt er eine Antwort zurück, die den Status der Anforderung enthält. Wenn dieser Vorgang erfolgreich ist, werden optionale Daten, z. B. eine Webseite, eine Fehlermeldung oder andere Informationen, zurückgegeben. Weitere Informationen zum HTTP-Protokoll finden Sie unter [HTTP-Hypertext Transfer Protocol](https://www.w3.org/Protocols/).  
   
  Das HTTP-Protokoll basiert nicht auf einer Verbindung. Nachdem die Antwort gesendet wurde, wird kein entsprechender Zustand beibehalten. Die Anwendung muss jeden erforderlichen Zustand beibehalten, um Transaktionen mit mehreren Seiten verarbeiten zu können.  
   
@@ -50,7 +50,7 @@ In diesem Thema werden die Kriterien für die Auswahl der drei Haupt Transporte 
 ## <a name="decision-points-for-choosing-a-transport"></a>Entscheidungspunkte für die Auswahl eines Transports  
  In der folgenden Tabelle werden allgemeine Punkte beschrieben, die für die Auswahl eines Transports von Bedeutung sind. Sie sollten alle zusätzlichen Attribute und Transporte berücksichtigen, die für Ihre Anwendung gelten. Wählen Sie die Attribute aus, die für die Anwendung wichtig sind, wählen Sie die Transporte, die sich für die Attribute eignen, und wählen Sie anschließend die Transporte aus, die am besten mit Ihrem Attributsatz funktionieren.  
   
-|Attribut|Beschreibung|Häufig verwendete Transporte|  
+|Attribute|Beschreibung|Häufig verwendete Transporte|  
 |---------------|-----------------|------------------------|  
 |Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. WCF enthält jedoch keine Diagnosetools für die Untersuchung von Netzwerkproblemen.|Keine|  
 |Hosting|Alle WCF-Endpunkte müssen innerhalb einer Anwendung gehostet werden. IIS 6,0 und frühere Versionen unterstützen nur Host Anwendungen, die den HTTP-Transport verwenden. Unter Windows Vista wird die Unterstützung für das Hosting aller WCF-Transporte, einschließlich TCP und Named Pipes, hinzugefügt. Weitere Informationen finden Sie unter [Hosting in Internetinformationsdienste](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosting in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  

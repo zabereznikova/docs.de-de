@@ -2,15 +2,16 @@
 title: Cacheunterstützung für WCF-Web-HTTP-Dienste
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141789"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964223"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cacheunterstützung für WCF-Web-HTTP-Dienste
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ermöglicht Ihnen die Verwendung des deklarativen zwischen Speicherungs Mechanismus, der in ASP.net in den WCF-Web-http-Diensten bereits verfügbar ist. Auf diese Weise können Sie Antworten der WCF-Web-HTTP-Dienstvorgänge zwischenspeichern. Wenn ein Benutzer HTTP GET an den Dienst sendet, der zum Zwischenspeichern konfiguriert ist, sendet ASP.NET die zwischengespeicherte Antwort zurück, und die Dienstmethode wird nicht aufgerufen. Wenn der Cache abgelaufen ist, wird beim nächsten Senden eines HTTP GET durch einen Benutzer die Dienstmethode aufgerufen und die Antwort erneut zwischengespeichert. Weitere Informationen zum Zwischenspeichern von ASP.net finden Sie unter [ASP.NET Caching Overview](https://go.microsoft.com/fwlink/?LinkId=152534) .  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ermöglicht Ihnen die Verwendung des deklarativen zwischen Speicherungs Mechanismus, der in ASP.net in den WCF-Web-http-Diensten bereits verfügbar ist. Auf diese Weise können Sie Antworten der WCF-Web-HTTP-Dienstvorgänge zwischenspeichern. Wenn ein Benutzer HTTP GET an den Dienst sendet, der zum Zwischenspeichern konfiguriert ist, sendet ASP.NET die zwischengespeicherte Antwort zurück, und die Dienstmethode wird nicht aufgerufen. Wenn der Cache abgelaufen ist, wird beim nächsten Senden eines HTTP GET durch einen Benutzer die Dienstmethode aufgerufen und die Antwort erneut zwischengespeichert. Weitere Informationen zum Zwischenspeichern von ASP.net finden Sie unter [ASP.NET Caching Overview](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Grundlegendes Zwischenspeichern von Web-HTTP-Diensten  
  Zum Aktivieren des Zwischenspeicherns von WEB-HTTP-Diensten müssen Sie zuerst die ASP.NET-Kompatibilität aktivieren, indem Sie <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf die Diensteinstellung <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> und <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> anwenden.  
@@ -122,10 +123,10 @@ public class Service
  Hier wird die Cachedauer auf 60 Sekunden festgelegt, `varyByParam` wird auf "none" festgelegt, und `sqlDependency` wird auf eine durch Semikolons getrennte Liste mit Datenbankname/Tabelle-Paaren festgelegt, die jeweils durch Doppelpunkte getrennt sind. Falls Daten in `MyTable` geändert werden, wird die zwischengespeicherte Antwort für den Dienstvorgang entfernt. Wenn der Vorgang dann aufgerufen wird, wird eine neue Antwort generiert (durch das Aufrufen des Dienstvorgangs), zwischengespeichert und für den Client zurückgegeben.  
   
 > [!IMPORTANT]
-> Damit ASP.net auf eine SQL-Datenbank zugreifen kann, müssen Sie das [Registrierungs Tool ASP.NET SQL Server](https://go.microsoft.com/fwlink/?LinkId=152536)verwenden. Außerdem müssen Sie für das entsprechende Benutzerkonto den Zugriff auf die Datenbank und die Tabelle zulassen. Weitere Informationen finden Sie unter [zugreifen auf SQL Server aus einer Webanwendung](https://go.microsoft.com/fwlink/?LinkId=178988).  
+> Damit ASP.net auf eine SQL-Datenbank zugreifen kann, müssen Sie das [Registrierungs Tool ASP.NET SQL Server](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))verwenden. Außerdem müssen Sie für das entsprechende Benutzerkonto den Zugriff auf die Datenbank und die Tabelle zulassen. Weitere Informationen finden Sie unter [zugreifen auf SQL Server aus einer Webanwendung](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Bedingtes HTTP GET-basiertes Zwischenspeichern  
- In Web-HTTP-Szenarien wird ein bedingtes HTTP Get häufig von Diensten verwendet, um intelligentes http-Caching wie in der [http-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=165800)beschrieben zu implementieren. Dazu muss der Dienst den Wert des ETag-Headers in der HTTP-Antwort festlegen. Außerdem muss er den If-None-Match-Header in der HTTP-Anforderung überprüfen, um zu ermitteln, ob ein angegebener ETag mit dem aktuellen ETag übereinstimmt.  
+ In Web-HTTP-Szenarien wird ein bedingtes HTTP Get häufig von Diensten verwendet, um intelligentes http-Caching wie in der [http-Spezifikation](https://www.w3.org/Protocols/rfc2616/rfc2616.html)beschrieben zu implementieren. Dazu muss der Dienst den Wert des ETag-Headers in der HTTP-Antwort festlegen. Außerdem muss er den If-None-Match-Header in der HTTP-Anforderung überprüfen, um zu ermitteln, ob ein angegebener ETag mit dem aktuellen ETag übereinstimmt.  
   
  Für GET- und HEAD-Anforderungen verwendet <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> einen ETag-Wert und überprüft diesen anhand des If-None-Match-Headers der Anforderung. Wenn der Header vorhanden ist und eine Übereinstimmung vorliegt, wird eine <xref:System.ServiceModel.Web.WebFaultException> mit dem HTTP-Statuscode 304 (Nicht geändert) ausgelöst, und der Antwort mit dem übereinstimmenden ETag wird ein ETag-Header hinzugefügt.  
   

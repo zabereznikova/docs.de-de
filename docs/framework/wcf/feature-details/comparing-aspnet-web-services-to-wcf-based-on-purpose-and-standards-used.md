@@ -2,19 +2,19 @@
 title: Vergleichen von ASP.NET-Webdiensten mit WCF nach Zweck und verwendeten Standards
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
-ms.openlocfilehash: f57e895680b5cc043dad365b9f25f32477f42e72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1600a398ac250f015f2a1d9aa4ae2d808c593b95
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048061"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963571"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>Vergleichen von ASP.NET-Webdiensten mit WCF nach Zweck und verwendeten Standards
 ASP.NET-Webdienste wurden zum Erstellen von Anwendungen entwickelt, die Nachrichten mit SOAP (Simple Object Access Protocol) über HTTP senden und empfangen. Die Struktur der Nachrichten kann mit einem XML-Schema definiert werden, und zur einfacheren Serialisierung der Nachrichten an und von .NET-Framework-Objekten wird ein Tool bereitgestellt. Mit der Technologie können Metadaten zum Beschreiben von Webdiensten in WSDL (Web Services Description Language) automatisch generiert werden, und ein zweites Tool wird zum Generieren von Clients für Webdienste aus WSDL bereitgestellt.  
   
- WCF ist für die Aktivierung von .NET Framework-Anwendungen zum Austausch von Nachrichten mit anderen Softwareeinheiten. SOAP wird standardmäßig verwendet, die Nachrichten können jedoch ein beliebiges Format aufweisen und mit jedem Transportprotokoll übermittelt werden. Die Struktur der Nachrichten kann mit einem XML-Schema definiert werden, und zur einfacheren Serialisierung der Nachrichten an und von .NET-Framework-Objekten sind mehrere Optionen verfügbar. WCF kann automatisch Metadaten zum Beschreiben von Anwendungen, die mit der Technologie in WSDL erstellt, und außerdem wird ein Tool zum Generieren von Clients für diese Anwendungen aus WSDL.  
+ WCF dient zum Aktivieren von .NET Framework Anwendungen zum Austauschen von Nachrichten mit anderen Software Entitäten. SOAP wird standardmäßig verwendet, die Nachrichten können jedoch ein beliebiges Format aufweisen und mit jedem Transportprotokoll übermittelt werden. Die Struktur der Nachrichten kann mit einem XML-Schema definiert werden, und zur einfacheren Serialisierung der Nachrichten an und von .NET-Framework-Objekten sind mehrere Optionen verfügbar. WCF kann automatisch Metadaten generieren, um Anwendungen zu beschreiben, die mit der Technologie in WSDL erstellt wurden, und bietet außerdem ein Tool zum Generieren von Clients für diese Anwendungen aus der WSDL.  
   
- Die von ASP.NET-Webdiensten unterstützten Standards werden dokumentiert [mit ASP.NET erstellten XML Web Services](https://go.microsoft.com/fwlink/?LinkId=94872). Die ausführlichere Liste der von WCF unterstützten Standards finden Sie unter [unterstützte Webdienstprotokolle vom System-provided Interoperabilitätsbindungen](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ Die von ASP.NET-Webdiensten unterstützten Standards sind in den [Vorteilen von XML-Webdiensten dokumentiert, die mithilfe von ASP.NET erstellt wurden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0859ebft(v=vs.100)). Die umfassendere Liste der von WCF unterstützten Standards ist unter [Webdienst Protokolle aufgeführt, die von vom System bereitgestellten Interoperabilitäts Bindungen unterstützt](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

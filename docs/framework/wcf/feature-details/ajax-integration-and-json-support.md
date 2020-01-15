@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: a3d9c29f3223624653f2d568bb351d90334a4318
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb18ca2e3ef25a9e408669db2a58d6314d6e22a1
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781614"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964176"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX-Integration und JSON-Unterstützung
-Die Windows Communication Foundation (WCF)-Unterstützung für (ASP.NET Asynchronous JavaScript and XML (AJAX) und das Datenformat JavaScript Object Notation (JSON) können WCF-Dienste, Vorgänge für AJAX-Clients verfügbar zu machen. AJAX-Clients sind Webseiten, JavaScript-Code ausführen und den Zugriff auf diese WCF-Dienste, die über HTTP-Anforderungen. Die Themen in diesem Abschnitt enthalten Informationen über diese Unterstützung und ihre Implementierung.  
+Die Windows Communication Foundation (WCF)-Unterstützung für ASP.NET Asynchronous JavaScript and XML (Ajax) und das JavaScript Object Notation JSON-Datenformat (JSON) ermöglichen es WCF-Diensten, Vorgänge für AJAX-Clients verfügbar zu machen. AJAX-Clients sind Webseiten, die JavaScript-Code ausführen und über HTTP-Anforderungen auf diese WCF-Dienste zugreifen. Die Themen in diesem Abschnitt enthalten Informationen über diese Unterstützung und ihre Implementierung.  
   
- Weitere Informationen zu ASP.NET AJAX und die Integration in ASP.NET 2.0 finden Sie [ASP.NET AJAX Overview](https://go.microsoft.com/fwlink/?LinkId=96725).  
+ Weitere Informationen zu ASP.NET AJAX und der zugehörigen Integration in ASP.NET 2,0 finden Sie unter [ASP.NET AJAX Overview](https://docs.microsoft.com/previous-versions/aspnet/bb398874(v=vs.100)).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen von WCF-Diensten für ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- Beschreibt, wie ein WCF-Dienst verfügbar gemacht werden kann für AJAX-Clients durch das Hinzufügen des entsprechenden AJAX-Endpunkts entweder über die Konfiguration oder mithilfe einer Diensthostfactory angepasst, um ein Diensthost zu generieren, der den AJAX-Endpunkt automatisch konfiguriert.  
+ Beschreibt, wie ein WCF-Dienst für AJAX-Clients verfügbar gemacht werden kann, indem der entsprechende AJAX-Endpunkt entweder über die Konfiguration oder mithilfe einer Diensthostfactory für die Generierung eines Dienst Hosts, der den AJAX-Endpunkt automatisch konfiguriert, hinzugefügt wird.  
   
  [Erstellen von WCF AJAX-Diensten ohne ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
- Beschreibt, wie einen WCF-Dienst zu erstellen, ohne mit ASP.NET.  
+ Beschreibt, wie ein WCF-Dienst ohne Verwendung von ASP.NET erstellt wird.  
   
  [Unterstützung für JSON und andere Datenübertragungsformate](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  Beschreibt die Unterstützung des JSON-Formats, das in der Regel (statt XML) für den Nachrichtenaustausch mit ASP.NET AJAX-Diensten verwendet wird.  
   
- [Vorgehensweise: Migrate AJAX-Enabled ASP.NET Web Services to WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
- Beschreibt, wie einen AJAX-aktivierten ASP.NET-Webdienst zu WCF-Webdienst zu migrieren.  
+ [Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste zu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ Beschreibt, wie ein AJAX-fähiger ASP.NET-Webdienst zu einem WCF-Webdienst migriert wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 36bdd22ec838af8b1a6b3be8c5636beced9b9132
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053316"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964854"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -23,7 +23,7 @@ Das entwickeln und Bereitstellen eines Windows Communication Foundation (WCF)-Di
 
 - Konfigurieren Sie den WCF-Dienst.
 
-Eine ausführliche Exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF- [Dienstanbieter finden Sie unter Gewusst wie: Hosten eines WCF-Diensts in IIS](how-to-host-a-wcf-service-in-iis.md).
+Eine ausführliche exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF-Diensts finden Sie unter [Gewusst wie: Hosten eines WCF-Diensts in IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Sicherstellen, dass IIS, ASP.NET und WCF ordnungsgemäß installiert und registriert sind
 
@@ -37,13 +37,13 @@ Beim Installationsvorgang für .NET Framework wird WCF automatisch bei IIS regis
 
 - Windows 7 und Windows Server 2003: Verwenden Sie das [Service Model-Registrierungs Tool (ServiceModelReg. exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) , um WCF bei IIS zu registrieren. Um dieses Tool zu verwenden, geben Sie im [Developer-Eingabeaufforderung für Visual Studio](../../tools/developer-command-prompt-for-vs.md) **ServiceModelReg. exe/i/x** ein.
 
-- Windows 7: Abschließend müssen Sie überprüfen, ob ASP.net für die Verwendung der .NET Framework Version 4 oder höher konfiguriert ist. Dazu führen Sie das ASPNET_Regiis-Tool mit der `–i` -Option aus. Weitere Informationen finden Sie unter [ASP.NET IIS Registration Tool](https://go.microsoft.com/fwlink/?LinkId=201186).
+- Windows 7: Schließlich müssen Sie überprüfen, ob ASP.net für die Verwendung der .NET Framework Version 4 oder höher konfiguriert ist. Dazu führen Sie das ASPNET_Regiis Tool mit der `–i`-Option aus. Weitere Informationen finden Sie unter [ASP.NET IIS Registration Tool](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Erstellen einer neuen IIS-Anwendung oder Wiederverwenden einer vorhandenen ASP.NET-Anwendung
 
 IIS-gehostete WCF-Dienste müssen sich innerhalb einer IIS-Anwendung befinden. Sie können eine neue IIS-Anwendung erstellen, um ausschließlich WCF-Dienste zu hosten. Alternativ können Sie einen WCF-Dienst in einer vorhandenen Anwendung bereitstellen, die bereits ASP.NET 2,0-Inhalte (z. b. aspx-Seiten und ASP.NET-Webdienste [ASMX]) gehostet. Weitere Informationen zu diesen Optionen finden Sie im Abschnitt "parallele Hosting von WCF mit ASP.net" und "Hosting von WCF-Diensten im ASP.NET-Kompatibilitätsmodus" unter [WCF-Dienste und ASP.net](wcf-services-and-aspnet.md).
 
-Beachten Sie, dass IIS 6,0 und höhere Versionen regelmäßig eine isolierte objektorientierte Programmier Anwendung neu starten. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter [periodikrestarttime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Beachten Sie, dass IIS 6,0 und höhere Versionen regelmäßig eine isolierte objektorientierte Programmier Anwendung neu starten. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter [periodikrestarttime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Erstellen einer SVC-Datei für den WCF-Dienst
 
@@ -51,15 +51,15 @@ In IIS gehostete WCF-Dienste werden in der IIS-Anwendung als spezielle Inhalts D
 
 `<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
-Er besteht aus der [ \@Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) -Direktive und einem einzelnen `Service`Attribut,. Der Wert des `Service` -Attributs ist der CLR-Typname (Common Language Runtime) der Dienstimplementierung. Die Verwendung dieser Direktive ist praktisch mit der Erstellung eines Diensthosts mithilfe des folgenden Codes gleichzusetzen:
+Sie besteht aus der [\@Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) -Direktive und einem einzelnen Attribut, `Service`. Der Wert des `Service` -Attributs ist der CLR-Typname (Common Language Runtime) der Dienstimplementierung. Die Verwendung dieser Direktive ist praktisch mit der Erstellung eines Diensthosts mithilfe des folgenden Codes gleichzusetzen:
 
 ```csharp
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 ```
 
-Zudem kann eine zusätzliche Hostkonfiguration vorgenommen werden, indem z.&#160;B. eine Liste mit Basisadressen für den Dienst erstellt wird. Sie können auch eine benutzerdefinierte <xref:System.ServiceModel.Activation.ServiceHostFactory> verwenden, um die Direktive zur Verwendung mit benutzerdefinierten Hostlösungen zu erweitern. Die IIS-Anwendungen, die WCF-Dienste hosten, sind nicht für die Verwaltung <xref:System.ServiceModel.ServiceHost> der Erstellung und Lebensdauer von-Instanzen verantwortlich. Die verwaltete WCF-Hostinginfrastruktur erstellt <xref:System.ServiceModel.ServiceHost> die erforderliche Instanz dynamisch, wenn die erste Anforderung für die SVC-Datei empfangen wird. Die Instanz wird erst freigegeben, wenn sie entweder explizit durch Code geschlossen oder die Anwendung wiederverwendet wird.
+Zudem kann eine zusätzliche Hostkonfiguration vorgenommen werden, indem z.&#160;B. eine Liste mit Basisadressen für den Dienst erstellt wird. Sie können auch eine benutzerdefinierte <xref:System.ServiceModel.Activation.ServiceHostFactory> verwenden, um die Direktive zur Verwendung mit benutzerdefinierten Hostlösungen zu erweitern. Die IIS-Anwendungen, die WCF-Dienste hosten, sind nicht für die Verwaltung der Erstellung und der Lebensdauer von <xref:System.ServiceModel.ServiceHost> Instanzen verantwortlich. Die verwaltete WCF-Hostinginfrastruktur erstellt die erforderliche <xref:System.ServiceModel.ServiceHost> Instanz dynamisch, wenn die erste Anforderung für die SVC-Datei empfangen wird. Die Instanz wird erst freigegeben, wenn sie entweder explizit durch Code geschlossen oder die Anwendung wiederverwendet wird.
 
-Weitere Informationen zur Syntax für SVC-Dateien finden [ \@Sie unter Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
+Weitere Informationen zur Syntax für SVC-Dateien finden Sie unter [\@Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Bereitstellen der Dienstimplementierung für die IIS-Anwendung
 
@@ -67,11 +67,11 @@ In IIS gehostete WCF-Dienste verwenden das gleiche dynamische Kompilierungs Mode
 
 - Als vorkompilierte DLL im globalen Assemblycache (GAC) oder im \bin-Verzeichnis der Anwendung. Vorkompilierte Binärdateien werden erst aktualisiert, wenn eine neue Version der Klassenbibliothek bereitgestellt wird.
 
-- Als nicht kompilierte Quelldateien, die sich im \App_Code-Verzeichnis der Anwendung befinden. Quelldateien in diesem Verzeichnis werden dynamisch angefordert, wenn die erste Anforderung der Anwendung verarbeitet wird. Änderungen an Dateien im \App_Code-Verzeichnis führen dazu, dass die gesamte Anwendung wiederverwendet und neu kompiliert wird, wenn die nächste Anforderung empfangen wird.
+- Als nicht kompilierte Quelldateien, die sich im Verzeichnis \ App_Code der Anwendung befinden. Quelldateien in diesem Verzeichnis werden dynamisch angefordert, wenn die erste Anforderung der Anwendung verarbeitet wird. Änderungen an Dateien im \App_Code-Verzeichnis führen dazu, dass die gesamte Anwendung wiederverwendet und neu kompiliert wird, wenn die nächste Anforderung empfangen wird.
 
 - Als nicht kompilierter Code, der direkt in die SVC-Datei eingefügt wird. Implementierungs Code kann auch Inline in der SVC-Datei des Diensts nach der \@Service Host-Direktive abgelegt werden. Änderungen an Inlinecode führen dazu, dass die Anwendung wiederverwendet und neu kompiliert wird, wenn die nächste Anforderung empfangen wird.
 
-Weitere Informationen zum ASP.NET 2,0-Kompilierungs Modell finden Sie unter [Übersicht über die ASP.NET-Kompilierung](https://go.microsoft.com/fwlink/?LinkId=94773).
+Weitere Informationen zum ASP.NET 2,0-Kompilierungs Modell finden Sie unter [Übersicht über die ASP.NET-Kompilierung](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100)).
 
 ## <a name="configure-the-wcf-service"></a>Konfigurieren des WCF-Diensts
 
@@ -79,25 +79,25 @@ IIS-gehostete WCF-Dienste speichern Ihre Konfiguration in der Web. config-Datei 
 
 - Basisadressen für IIS-gehostete Dienste
 
-- Anwendungen, die WCF-Dienste außerhalb von IIS hosten, können die Basisadresse der Dienste steuern, die Sie hosten, indem Sie <xref:System.ServiceModel.ServiceHost> einen Satz von Basisadressen-URIs an den-Konstruktor übergeben oder ein [ \<Host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) Element im Dienst konfiguri. Dienste, die in IIS gehostet werden, können ihre Basisadressen nicht steuern. Die Basisadresse eines IIS-gehosteten Diensts ist die Adresse seiner SVC-Datei.
+- Anwendungen, die WCF-Dienste außerhalb von IIS hosten, können die Basisadresse der von Ihnen gehosteten Dienste steuern, indem Sie einen Satz von Basisadressen-URIs an den <xref:System.ServiceModel.ServiceHost>-Konstruktor übergeben oder ein [\<Host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) -Element in der Konfiguration des Diensts bereitstellen. Dienste, die in IIS gehostet werden, können ihre Basisadressen nicht steuern. Die Basisadresse eines IIS-gehosteten Diensts ist die Adresse seiner SVC-Datei.
 
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Endpunktadressen für IIS-gehostete Dienste
 
-Wenn ein Dienst in IIS gehostet wird, werden Endpunktadressen als relativ zur Adresse der SVC-Datei betrachtet, die den Dienst darstellt. Wenn die Basisadresse eines WCF-Dienstanbieter z. `http://localhost/Application1/MyService.svc` b. mit der folgenden Endpunkt Konfiguration erfolgt:
+Wenn ein Dienst in IIS gehostet wird, werden Endpunktadressen als relativ zur Adresse der SVC-Datei betrachtet, die den Dienst darstellt. Wenn z. b. die Basisadresse eines WCF-Dienstanbieter mit der folgenden Endpunkt Konfiguration `http://localhost/Application1/MyService.svc` wird:
 
 ```xml
 <endpoint address="anotherEndpoint" .../>
 ```
 
-Dadurch wird ein Endpunkt bereitstellt, der bei `http://localhost/Application1/MyService.svc/anotherEndpoint`erreicht werden kann.
+Dadurch wird ein Endpunkt bereitstellt, der unter `http://localhost/Application1/MyService.svc/anotherEndpoint`erreicht werden kann.
 
-Ebenso stellt das Endpunkt Konfigurationselement, das eine leere Zeichenfolge als relative Adresse verwendet, einen Endpunkt bereit `http://localhost/Application1/MyService.svc`, der für erreichbar ist. Dies ist die Basisadresse.
+Ebenso stellt das Endpunkt Konfigurationselement, das eine leere Zeichenfolge als relative Adresse verwendet, einen Endpunkt bereit, der für `http://localhost/Application1/MyService.svc`erreichbar ist. Dies ist die Basisadresse.
 
 ```xml
 <endpoint address="" ... />
 ```
 
-Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Das Bereitstellen einer voll qualifizierten Endpunkt Adresse (z `http://localhost/MyService.svc`. b.) kann zu Fehlern bei der Bereitstellung des Diensts führen, wenn die Endpunkt Adresse nicht auf die IIS-Anwendung verweist, die den Dienst hostet, der den Endpunkt verfügbar macht. Durch die Verwendung relativer Endpunktadressen für gehostete Dienste werden diese potenziellen Konflikte vermieden.
+Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte verwenden. Das Bereitstellen einer voll qualifizierten Endpunkt Adresse (z. b. `http://localhost/MyService.svc`) kann zu Fehlern bei der Bereitstellung des Diensts führen, wenn die Endpunkt Adresse nicht auf die IIS-Anwendung verweist, die den Dienst hostet, der den Endpunkt verfügbar macht. Durch die Verwendung relativer Endpunktadressen für gehostete Dienste werden diese potenziellen Konflikte vermieden.
 
 ### <a name="available-transports"></a>Verfügbare Transporte
 
@@ -113,4 +113,4 @@ Beispielsweise muss ein WCF-Endpunkt, der für die HTTP Digest-Authentifizierung
 
 - [Hosten in IIS (Internetinformationsdienste)](hosting-in-internet-information-services.md)
 - [Bewährte Methoden für das Hosten in IIS (Internetinformationsdienste)](internet-information-services-hosting-best-practices.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

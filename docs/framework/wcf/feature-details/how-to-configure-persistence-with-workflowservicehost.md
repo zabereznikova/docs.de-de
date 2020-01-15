@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Konfigurieren der Persistenz mit WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 2cae73bd503afec6ddd1faf435645ebc21f4fc76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b65b89db674a624f7dfbf8ca816e0f0c2d2ff80
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968481"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963480"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Vorgehensweise: Konfigurieren der Persistenz mit WorkflowServiceHost
-In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspeicher“ konfigurieren, um die Beibehaltung für Workflows zu aktivieren, die in <xref:System.ServiceModel.Activities.WorkflowServiceHost> mit einer Konfigurationsdatei gehostet werden. Vor dem Verwenden der Funktion „SQL-Workflowinstanzspeicher“ müssen Sie eine SQL-Datenbank erstellen, die verwendet wird, um Workflowinstanzen beizubehalten. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)und Workflow Dienste.  
+In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspeicher“ konfigurieren, um die Beibehaltung für Workflows zu aktivieren, die in <xref:System.ServiceModel.Activities.WorkflowServiceHost> mit einer Konfigurationsdatei gehostet werden. Vor dem Verwenden der Funktion „SQL-Workflowinstanzspeicher“ müssen Sie eine SQL-Datenbank erstellen, die verwendet wird, um Workflowinstanzen beizubehalten. Weitere Informationen finden Sie unter Gewusst [wie: Aktivieren der SQL-Persistenz für Workflows und Workflow Dienste](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>So konfigurieren Sie den SQL-Workflowinstanzspeicher in einer Konfigurationsdatei  
   
-1. Die Eigenschaften des SQL-Workflowinstanzspeichers können mithilfe von <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> konfiguriert werden. Dabei handelt es sich um ein Dienstverhalten, mit dem Sie die Einstellungen per XML-Konfiguration ändern können. Im folgenden Konfigurationsbeispiel wird gezeigt, wie der SQL-workflowinstanzspeicher`sqlWorkflowInstanceStore`mithilfe des < > Behavior-Elements in einer Konfigurationsdatei konfiguriert wird.  
+1. Die Eigenschaften des SQL-Workflowinstanzspeichers können mithilfe von <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> konfiguriert werden. Dabei handelt es sich um ein Dienstverhalten, mit dem Sie die Einstellungen per XML-Konfiguration ändern können. Im folgenden Konfigurationsbeispiel wird gezeigt, wie der SQL-workflowinstanzspeicher mithilfe des <`sqlWorkflowInstanceStore`> Behavior-Elements in einer Konfigurationsdatei konfiguriert wird.  
   
     ```xml  
     <serviceBehaviors>  
@@ -31,7 +31,7 @@ In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspe
     </serviceBehaviors>  
     ```  
   
-     Weitere Informationen zum Konfigurieren des SQL-workflowinstanzspeichers finden [Sie unter Gewusst wie: Aktivieren der SQL-Persistenz für Workflows](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)und Workflow Dienste. Weitere Informationen zu den einzelnen Einstellungen für das Verhaltenselement <`sqlWorkflowInstanceStore`> finden Sie unter [SQL-Workflowinstanzspeicher](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric stellt einen eigenen Persistenzspeicher bereit. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://go.microsoft.com/fwlink/?LinkId=193121).  
+     Weitere Informationen zum Konfigurieren des SQL-workflowinstanzspeichers finden Sie unter Gewusst [wie: Aktivieren der SQL-Persistenz für Workflows und Workflow Dienste](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). Weitere Informationen zu den einzelnen Einstellungen für das Verhaltenselement <`sqlWorkflowInstanceStore`> finden Sie unter [SQL-Workflowinstanzspeicher](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric stellt einen eigenen Persistenzspeicher bereit. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10)).  
   
     > [!NOTE]
     > Im vorangehenden Konfigurationsbeispiel wird die vereinfachte Konfiguration verwendet. Weitere Informationen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) .  
@@ -52,15 +52,15 @@ In diesem Thema wird beschrieben, wie Sie die Funktion „SQL-Workflowinstanzspe
     });  
     ```  
   
-     Weitere Informationen zum Konfigurieren des SQL-workflowinstanzspeichers finden [Sie unter Gewusst wie: Aktivieren der SQL-Persistenz für Workflows](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)und Workflow Dienste. Weitere Informationen zu den einzelnen Einstellungen für das Verhaltenselement <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> finden Sie unter [SQL-Workflowinstanzspeicher](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric stellt einen eigenen Persistenzspeicher bereit. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://go.microsoft.com/fwlink/?LinkId=193121).  
+     Weitere Informationen zum Konfigurieren des SQL-workflowinstanzspeichers finden Sie unter Gewusst [wie: Aktivieren der SQL-Persistenz für Workflows und Workflow Dienste](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). Weitere Informationen zu den einzelnen Einstellungen für das Verhaltenselement <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> finden Sie unter [SQL-Workflowinstanzspeicher](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server AppFabric stellt einen eigenen Persistenzspeicher bereit. Weitere Informationen finden Sie unter [Windows Server App Fabric-Persistenz](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10)).  
   
     > [!NOTE]
     > Im vorangehenden Konfigurationsbeispiel wird die vereinfachte Konfiguration verwendet. Weitere Informationen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) .  
   
-     Ein Beispiel für die programmgesteuerte Konfiguration der Persistenz finden [Sie unter Gewusst wie: Aktivieren der Persistenz für Workflows und](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)Workflow Dienste  
+     Ein Beispiel für die programmgesteuerte Konfiguration der Persistenz finden Sie unter Gewusst [wie: Aktivieren der Persistenz für Workflows und Workflow Dienste](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Workflowpersistenz](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
-- [Windows Server App Fabric-Persistenz](https://go.microsoft.com/fwlink/?LinkId=193121)
+- [Windows Server App Fabric-Persistenz](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))

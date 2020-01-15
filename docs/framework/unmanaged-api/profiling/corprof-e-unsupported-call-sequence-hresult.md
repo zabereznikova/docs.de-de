@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: 4d835f749a33d21a13be307e1524671e36496899
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440831"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964499"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 Der CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wurde in der .NET Framework Version 2,0 eingeführt. Der .NET Framework 4 gibt dieses HRESULT in zwei Szenarien zurück:  
@@ -67,7 +67,7 @@ Der CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wurde in der .NET Framework Vers
   
 - [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- Weitere Informationen finden Sie im Eintrag Grund für die [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://go.microsoft.com/fwlink/?LinkId=169156) im Blog zur CLR-Profilerstellungs-API.  
+ Weitere Informationen finden Sie im Eintrag Grund für die [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) im Blog zur CLR-Profilerstellungs-API.  
   
 ## <a name="triggering-garbage-collections"></a>Auslösen von Garbage Collections  
  Dieses Szenario umfasst einen Profiler, der innerhalb einer Rückruf Methode ausgeführt wird (z. b. eine der `ICorProfilerCallback` Methoden), die Garbage Collection verbietet. Wenn der Profiler versucht, eine informationsmethode (z. b. eine Methode für die `ICorProfilerInfo`-Schnittstelle) aufzurufen, die möglicherweise eine Garbage Collection auslöst, schlägt die informationsmethode mit einem CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT fehl.  

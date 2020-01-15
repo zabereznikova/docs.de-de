@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486638"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963777"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
-Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Die WAS-Prozessmodell generalisiert das IIS 6.0-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird ein WCF-Diensten für die Verwendung von HTTP- und nicht-HTTP-Protokolle, z. B. Net.TCP, in einer hostumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem bestimmten Computer hosten.  
+Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) verwaltet die Aktivierung und Lebensdauer der Workerprozesse, die Anwendungen enthalten, die WCF-Dienste (Windows Communication Foundation) hosten. Das WAS-Prozessmodell generalisiert das IIS 6.0-Prozessmodell für den HTTP-Server, indem die Abhängigkeit von HTTP entfernt wird. Dadurch können WCF-Dienste sowohl HTTP-als auch nicht-HTTP-Protokolle, wie z. b. net. TCP, in einer Hostingumgebung verwenden, die Nachrichten basierte Aktivierung unterstützt und die Möglichkeit bietet, eine große Anzahl von Anwendungen auf einem bestimmten Computer zu hosten.  
   
- Weitere Informationen zum Erstellen eines WCF-Diensts, die in der WAS-hostumgebung ausgeführt wird, finden Sie unter [Vorgehensweise: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Weitere Informationen zum Aufbau eines WCF-Diensts, der in der was-Host Umgebung ausgeführt wird, finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Das WAS-Prozessmodell bietet verschiedene Funktionen, die ermöglichen, Anwendungen auf robustere, besser verwaltbare und ressourcenschonendere Weise zu hosten:  
   
@@ -25,19 +25,19 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
 - Zentralisierte Anwendungskonfiguration und -verwaltung.  
   
 - Ermöglicht Anwendungen, die Vorteile des IIS-Prozessmodells zu nutzen, ohne dass der Bereitstellungsaufwand einer vollständigen IIS-Installation erforderlich wäre.  
-[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) arbeitet mit IIS 7.0 und Windows Process Activation Service (WAS), um eine vielseitige anwendungshostingumgebung für NET4 WCF- und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=196494) und [AppFabric-Hostingkonzepte](https://go.microsoft.com/fwlink/?LinkId=196495).  
+[Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funktioniert mit IIS 7,0 und Windows Process Activation Service (was), um eine umfangreiche anwendungshostingumgebung für NET4 WCF-und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) und [AppFabric-hostingkonzepte](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elemente des WAS-Adressierungsmodells  
- Anwendungen besitzen Uniform Resource Identifier (URI)-Adressen. Diese stellen die Codeeinheiten dar, deren Lebensdauer und Ausführungsumgebung vom Server verwaltet werden. Eine einzelne WAS-Serverinstanz kann viele verschiedene Anwendungen beherbergen. Server organisieren, Anwendungen in Gruppen, genannt *Websites*. Innerhalb einer Site sind die Anwendungen entsprechend der Struktur der URIs, die als ihre externen Adressen dienen, hierarchisch angeordnet.  
+ Anwendungen besitzen Uniform Resource Identifier (URI)-Adressen. Diese stellen die Codeeinheiten dar, deren Lebensdauer und Ausführungsumgebung vom Server verwaltet werden. Eine einzelne WAS-Serverinstanz kann viele verschiedene Anwendungen beherbergen. Server organisieren Anwendungen in Gruppen, die als *Sites*bezeichnet werden. Innerhalb einer Site sind die Anwendungen entsprechend der Struktur der URIs, die als ihre externen Adressen dienen, hierarchisch angeordnet.  
   
- Anwendungsadressen bestehen aus zwei Teilen: einem Basis-URI-Präfix und einer anwendungsspezifischen, relativen Adresse (Pfad), die zusammen die externe Adresse einer Anwendung ergeben. Das Basis-URI-Präfix wird aus der Sitebindung erstellt und für alle Anwendungen innerhalb dieser Site verwendet. Anwendungsadressen werden anschließend mithilfe einer anwendungsspezifischen Pfad-Fragmente erstellt (z. B. "/ ApplicationOne") und Anfügen an die Basis URI-Präfix (z. B. "Net. TCP://localhost") um den vollständigen Anwendungs-URI zu erreichen.  
+ Anwendungsadressen bestehen aus zwei Teilen: einem Basis-URI-Präfix und einer anwendungsspezifischen, relativen Adresse (Pfad), die zusammen die externe Adresse einer Anwendung ergeben. Das Basis-URI-Präfix wird aus der Sitebindung erstellt und für alle Anwendungen innerhalb dieser Site verwendet. Anwendungs Adressen werden dann mithilfe von anwendungsspezifischen Pfad Fragmenten (z. b. "/applicationOne") erstellt und an das Basis-URI-Präfix angehängt (z. b. "net. TCP://localhost"), um den vollständigen Anwendungs-URI zu erhalten.  
   
  In der folgenden Tabelle werden mehrere mögliche Adressierungsszenarien für WAS-Sites mit HTTP- und Nicht-HTTP-Sitebindungen gezeigt.  
   
 |Szenario|Sitebindungen|Anwendungspfad|Basis-URIs der Anwendung|  
 |--------------|-------------------|----------------------|---------------------------|  
 |Nur HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|Sowohl HTTP als auch Nicht-HTTP|http: *: 80:\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
+|Sowohl HTTP als auch Nicht-HTTP|http: *: 80:\*<br /><br /> NET. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |Nur Nicht-HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
   
  Dienste und Ressourcen innerhalb einer Anwendung können ebenfalls adressiert werden. Innerhalb einer Anwendung werden Anwendungsressourcen mit zum Basisanwendungspfad relativen Adressen angesprochen. Nehmen Sie zum Beispiel an, eine Site auf einem Computer namens contoso.com verfügt über Sitebindungen sowohl für das HTTP- als auch das Net.TCP-Protokoll. Nehmen Sie weiter an, dass die Site eine Anwendung im Verzeichnis /Billing enthält, die den Dienst GetOrders.svc verfügbar macht. Wenn dann der Dienst GetOrders.svc einen Endpunkt mit der relativen Adresse SecureEndpoint verfügbar macht, kann der Dienstendpunkt über die beiden folgenden URIs angesprochen werden:  
@@ -53,5 +53,5 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
 - [WAS-Aktivierungsarchitektur](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Konfigurieren von WAS für die Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
 - [Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Vorgehensweise: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [How to: Host a WCF Service in IIS (Vorgehensweise: Hosten eines WCF-Diensts in WAS)](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

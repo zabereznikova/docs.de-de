@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Hosten eines WCF-Diensts in WAS'
+title: 'Gewusst wie: Hosten eines WCF-Diensts in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9945e398bbd33776cce808b44388a4415da297a1
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972206"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964773"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Vorgehensweise: Hosten eines WCF-Diensts in WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Gewusst wie: Hosten eines WCF-Diensts in WAS
 In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen eines Windows-Prozess Aktivierungs Diensts (auch bekannt als was) Windows Communication Foundation gehostet werden müssen. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF kommuniziert mithilfe der Listeneradapter-Schnittstelle Aktivierungs Anforderungen, die über die von WCF unterstützten nicht-HTTP-Protokolle empfangen werden, wie z. b. TCP, Named Pipes und Message Queuing.  
   
- Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Installieren und Konfigurieren von was finden [Sie unter Vorgehensweise: Installieren und konfigurieren Sie WCF-](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)Aktivierungs Komponenten.  
+ Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Installieren und Konfigurieren von was finden Sie unter Gewusst [wie: Installieren und Konfigurieren von WCF-Aktivierungs Komponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 > Die WAS-Aktivierung wird nicht unterstützt, wenn die Anforderungsverarbeitungspipeline des Webservers auf den klassischen Modus festgelegt ist. Die Anforderungsverarbeitungspipeline des Webservers muss auf den integrierten Modus festgelegt sein, wenn die WAS-Aktivierung verwendet werden soll.  
@@ -101,4 +101,4 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
 ## <a name="see-also"></a>Siehe auch
 
 - [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

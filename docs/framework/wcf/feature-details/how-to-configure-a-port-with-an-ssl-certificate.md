@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344626"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963311"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
 Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Diensts mit der <xref:System.ServiceModel.WSHttpBinding>-Klasse, die Transportsicherheit verwendet, müssen Sie auch einen Port mit einem X. 509-Zertifikat konfigurieren. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [http-Transport Sicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Welches Tool zum Konfigurieren eines Anschlusses verwendet wird, hängt vom Betriebssystem des Computers ab.  
   
- Wenn Sie Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]ausführen, verwenden Sie das Tool "Httpcfg. exe". Mit Windows Server 2003 ist dieses Tool installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)]können Sie das Tool unter [Windows XP Service Pack 2-Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606)herunterladen. Weitere Informationen finden Sie unter [Httpcfg Overview](https://go.microsoft.com/fwlink/?LinkId=88605). In der [Dokumentation zur Windows-Support Tools](https://go.microsoft.com/fwlink/?LinkId=94840) wird die Syntax für das Tool "Httpcfg. exe" erläutert.  
+ Wenn Sie Windows Server 2003 oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)]ausführen, verwenden Sie das Tool "Httpcfg. exe". Mit Windows Server 2003 ist dieses Tool installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)]können Sie das Tool unter [Windows XP Service Pack 2-Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606)herunterladen. Weitere Informationen finden Sie unter [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). In der [Dokumentation zur Windows-Support Tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) wird die Syntax für das Tool "Httpcfg. exe" erläutert.  
   
  Wenn Sie Windows Vista ausführen, verwenden Sie das Tool "Netsh. exe", das bereits installiert ist.  
   

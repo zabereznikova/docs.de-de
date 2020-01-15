@@ -2,16 +2,16 @@
 title: Suche und FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 477edabb5d6fe263db43debc2f1d4f29df862609
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663356"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964836"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
 
-Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Suchnachrichten finden Sie unter den [WS-Ermittlungsspezifikation](https://go.microsoft.com/fwlink/?LinkID=122347).
+Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Ermittlungs Nachrichten finden Sie in der [WS-Discovery-Spezifikation](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf).
 
 ## <a name="discoveryclient"></a>DiscoveryClient
 
@@ -23,7 +23,7 @@ Die <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse stellt den Mecha
 
 Zu den Suchkriterien gehört Folgendes:
 
-- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> – Optional. Der Vertragsname des Diensts, nach dem gesucht wird, und die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die mit ALLEN Verträgen übereinstimmen. Beachten Sie, dass in WCF ein Endpunkt nur einen Vertrag unterstützen kann.
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> – Optional. Der Vertragsname des Diensts, nach dem gesucht wird, und die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die mit ALLEN Verträgen übereinstimmen. Beachten Sie, dass ein Endpunkt in WCF nur einen Vertrag unterstützen kann.
 
 - <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> – Optional. Bereiche sind absolute URIs, die verwendet werden, um einzelne Dienstendpunkte zu kategorisieren. Dies ist in Szenarien nützlich, in denen mehrere Endpunkte den gleichen Vertrag verfügbar machen und in denen Sie nach einer Möglichkeit suchen, nach einer Teilmenge der Endpunkte zu suchen. Wenn mehr als ein Bereich angegeben wird, antworten nur Dienstendpunkte, die mit ALLEN Bereichen übereinstimmen.
 
@@ -31,7 +31,7 @@ Zu den Suchkriterien gehört Folgendes:
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> führt einen grundlegenden Zeichenfolgenvergleich aus, bei dem die Groß-/Kleinschreibung beachtet wird.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> ermittelt Übereinstimmungen nach Segmenten, getrennt durch "/". Eine Suche nach `http://contoso/building1` Übereinstimmung mit dem Bereich `http://contoso/building/floor1`. Beachten Sie, die sie nicht übereinstimmen `http://contoso/building100` , weil die letzten beiden Segmente nicht übereinstimmen.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Übereinstimmungen nach Segmenten, die durch "/" getrennt sind. Eine Suche nach `http://contoso/building1` entspricht einem Dienst mit Bereichs `http://contoso/building/floor1`. Beachten Sie, dass Sie nicht `http://contoso/building100` entspricht, da die beiden letzten Segmente nicht mit identisch sind.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> ermittelt für Bereiche Übereinstimmungen nach Segmenten unter Verwendung einer LDAP-URL.
 

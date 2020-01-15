@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346695"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964421"
 ---
 # <a name="denial-of-service"></a>Dienstverweigerung (Denial of Service)
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
@@ -44,7 +44,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="auditing-event-log-can-be-filled"></a>Überwachungsereignisprotokoll kann ausgefüllt werden  
  Wenn ein böswilliger Benutzer erkennt, dass die Überwachung aktiviert ist, kann dieser Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl.  
   
- Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige finden Sie unter [Ereignisanzeige](https://go.microsoft.com/fwlink/?LinkId=186123). Weitere Informationen finden Sie unter [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige finden Sie unter [Ereignisanzeige](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Weitere Informationen finden Sie unter [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Ungültige Implementierungen von IAuthorizationPolicy können bewirken, dass der Dienst nicht mehr reagiert.  
  Wenn Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für eine fehlerhafte Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> Schnittstelle aufrufen, kann dies dazu führen, dass der Dienst nicht mehr reagiert.  
@@ -52,7 +52,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
  Entschärfung: Verwenden Sie ausschließlich vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF unterscheidet nicht zwischen Anwendungscode und fremd Code, der mithilfe von Erweiterungs Punkten eingebunden wird.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Maximale Größe des Kerberos-Tokens muss möglicherweise geändert werden  
- Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Größe des Kerberos-Tokens erhöhen, wie im Microsoft-Support Artikel "die[Kerberos-Authentifizierung in Internet Explorer funktioniert nicht aufgrund eines unzureichenden Puffers zum Herstellen einer Verbindung mit IIS](https://go.microsoft.com/fwlink/?LinkId=89176)" beschrieben. Möglicherweise müssen Sie auch die maximale Größe der WCF-Nachrichten erhöhen, um dem größeren Kerberos-Token Rechnung zu tragen.  
+ Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Größe des Kerberos-Tokens erhöhen. Möglicherweise müssen Sie auch die maximale Größe der WCF-Nachrichten erhöhen, um dem größeren Kerberos-Token Rechnung zu tragen.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Automatische Registrierung führt zu mehreren Zertifikaten mit gleichem Antragstellernamen für den Computer  
  Die *Automatische* Registrierung ist die Funktion von Windows Server 2003 zum automatischen Registrieren von Benutzern und Computern für Zertifikate. Befindet sich ein Computer in einer Domäne mit aktivierter Funktion, wird ein X.509-Zertifikat mit dem beabsichtigten Zweck der Clientauthentifizierung automatisch erstellt und in den persönlichen Zertifikatspeicher des lokalen Computers eingefügt, wenn ein neuer Computer mit dem Netzwerk verbunden wird. Die automatische Registrierung verwendet jedoch den gleichen Antragstellernamen für alle Zertifikate, die sie im Cache erstellt.  
@@ -61,7 +61,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
   
  Um dies zu vermeiden, verweisen Sie auf das exakte zu verwendende Zertifikat, indem Sie ein genaueres Suchkriterium für den [\<servicecreden->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)verwenden. Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
   
- Weitere Informationen zur automatischen anmeldungsfunktion finden Sie unter [automatische Registrierung von Zertifikaten in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
+ Weitere Informationen zur automatischen anmeldungsfunktion finden Sie unter [automatische Registrierung von Zertifikaten in Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Der letzte von mehreren für die Autorisierung verwendeten alternativen Antragstellernamen  
  In dem seltenen Fall, dass ein X.509-Zertifikat mehrere alternative Antragstellernamen enthält und Sie die Verwendung des alternativen Antragstellernamens autorisieren, kann die Autorisierung fehlschlagen.  

@@ -2,29 +2,29 @@
 title: Filtern
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efbedc16fe48d83cdc4223862bc691e9cbe15c10
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593500"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964295"
 ---
 # <a name="filtering"></a>Filtern
-Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen zu können. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
+Das Filtersystem Windows Communication Foundation (WCF) kann deklarative Filter verwenden, um Nachrichten abzugleichen und betriebliche Entscheidungen zu treffen. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
   
- Das Filtersystem besteht aus einer Reihe von Klassen, die effizient zu bestimmen, welche der einen Satz von Filtern `true` für eine bestimmte WCF-Nachricht.  
+ Das Filtersystem besteht aus einer Reihe von Klassen, mit denen effizient bestimmt werden kann, welche einer Reihe von Filtern für eine bestimmte WCF-Nachricht `true` werden.  
   
- Das Filtersystem ist eine Kernkomponente des WCF-messaging. Es ist äußerst schnell ausgeführt werden soll. Jede filterimplementierung wurde optimiert, für einen bestimmten Vergleich WCF-Nachrichten.  
+ Das Filtersystem ist eine Kernkomponente von WCF Messaging. die Anwendung ist äußerst schnell. Jede Filter Implementierung wurde für eine bestimmte Art von Abgleich mit WCF-Nachrichten optimiert.  
   
  Das Filtersystem ist nicht threadsicher. Sperrsemantik muss von der Anwendung verarbeitet werden. Es unterstützt jedoch mehrere Reader und einen Writer.  
   
 ## <a name="where-filtering-fits"></a>Anwendung des Filtersystems  
- Die Filterung wird nach Eingang einer Nachricht durchgeführt und ist Teil des Prozesses, durch den eine Nachricht an die richtige Anwendungskomponente verteilt wird. Der Entwurf das Filtersystem erfüllt die Anforderungen mehrere WCF-Subsysteme, einschließlich messaging, routing, Sicherheit, Ereignisbehandlung und systemverwaltung.  
+ Die Filterung wird nach Eingang einer Nachricht durchgeführt und ist Teil des Prozesses, durch den eine Nachricht an die richtige Anwendungskomponente verteilt wird. Der Entwurf des Filtersystems erfüllt die Anforderungen mehrerer WCF-Subsysteme, einschließlich Messaging, Routing, Sicherheit, Ereignis Behandlung und Systemverwaltung.  
   
-## <a name="filters"></a>Filter  
+## <a name="filters"></a>Filters  
  Die Filter-Engine besteht aus zwei primären Komponenten: Filtern und Filtertabellen. Ein Filter trifft anhand von benutzerdefinierten logischen Bedingungen boolesche Entscheidungen bezüglich der Nachricht. Filter implementieren die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse.  
   
- Mit den <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>-Methoden wird ermittelt, ob eine Nachricht zu einem Filter passt. Eine der Methoden prüft den Nachrichtenheader, kann jedoch nicht den Nachrichtentext überprüfen. Die andere Methode nimmt einen *Nachrichtenpuffer* als Eingabeparameter und kann den Nachrichtentext überprüfen.  
+ Mit den <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>-Methoden wird ermittelt, ob eine Nachricht zu einem Filter passt. Eine der Methoden prüft den Nachrichtenheader, kann jedoch nicht den Nachrichtentext überprüfen. Die andere Methode nimmt einen *Nachrichten Puffer* als Eingabeparameter an und kann den Nachrichtentext überprüfen.  
   
  Filter werden im Allgemeinen nicht einzeln überprüft, sondern als Teil einer Filtertabelle, bei der es sich um eine durch die <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.CreateFilterTable%2A>-Methode erstellte generische Klasse handelt.  
   
@@ -42,10 +42,10 @@ Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filt
   
 ### <a name="prefix-endpoint-address-filters"></a>Präfixfilter für Endpunktadressen  
   
-1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> funktioniert wie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mit der Ausnahme, dass sich die Übereinstimmung in einem Präfix des Nachrichten-URIs befinden kann. Z. B. einen Filter, die Angabe der Adresse `http://www.adatum.com` entspricht an adressierten `http://www.adatum.com/userA`.  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> funktioniert wie <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mit der Ausnahme, dass sich die Übereinstimmung in einem Präfix des Nachrichten-URIs befinden kann. Ein Filter, der die Adress `http://www.adatum.com` angibt, entspricht beispielsweise den Nachrichten, die an `http://www.adatum.com/userA`adressiert sind  
   
 ### <a name="xpath-message-filters"></a>XPath-Nachrichtenfilter  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> überprüft anhand eines XPath-Ausdrucks, ob ein XML-Dokument bestimmte Elemente, Attribute, Text oder andere syntaktische XML-Konstrukte enthält. Der Filter ist so optimiert, dass er sehr effizient bei einer eng gefassten Teilmenge von XPath funktioniert. Die XML Path Language wird beschrieben, der [W3C XML Path Language 1.0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94779).  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> überprüft anhand eines XPath-Ausdrucks, ob ein XML-Dokument bestimmte Elemente, Attribute, Text oder andere syntaktische XML-Konstrukte enthält. Der Filter ist so optimiert, dass er sehr effizient bei einer eng gefassten Teilmenge von XPath funktioniert. Die XML-Pfad Sprache wird in der [Spezifikation der W3C XML Path Language 1,0](https://www.w3.org/TR/xpath/all/)beschrieben.  
   
  Im Allgemeinen wird der Inhalt einer SOAP-Nachricht von einer Anwendung mithilfe von <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> an einem Endpunkt abgefragt. Anschließend wird auf Grundlage des Abfrageergebnisses die entsprechende Aktion eingeleitet. Ein Warteschlangenprozess kann beispielsweise mithilfe einer XPath-Abfrage das Prioritätselement eines bekannten Headers im Hinblick darauf untersuchen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
   
@@ -68,7 +68,7 @@ Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filt
   
  Die <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601>-Klasse optimiert den Vergleich für eine XPath-Teilmenge, durch die die meisten Messaging-Szenarien abgedeckt werden und die zudem die vollständige XPath 1.0-Grammatik unterstützt. Sie verfügt über optimierte Algorithmen für einen effizienten Parallelvergleich.  
   
- Diese Tabelle verfügt über mehrere spezielle `Match`-Methoden, die mit <xref:System.Xml.XPath.XPathNavigator> und <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> arbeiten. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> erweitert die <xref:System.Xml.XPath.XPathNavigator>-Klasse durch Hinzufügen einer <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>-Eigenschaft. Diese Eigenschaft ermöglicht es, Positionen innerhalb des XML-Dokuments zu speichern und rasch zu laden, ohne den Navigator klonen zu müssen (eine ressourcenintensive Speicherbelegung, die <xref:System.Xml.XPath.XPathNavigator> für einen solchen Vorgang benötigt). Das WCF-XPath-Modul muss häufig die Position des Cursors im Verlauf der Ausführung von Abfragen von XML-Dokumenten aufzeichnen daher <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> bietet eine wichtige Optimierung der Nachrichtenverarbeitung.  
+ Diese Tabelle verfügt über mehrere spezielle `Match`-Methoden, die mit <xref:System.Xml.XPath.XPathNavigator> und <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> arbeiten. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> erweitert die <xref:System.Xml.XPath.XPathNavigator>-Klasse durch Hinzufügen einer <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>-Eigenschaft. Diese Eigenschaft ermöglicht es, Positionen innerhalb des XML-Dokuments zu speichern und rasch zu laden, ohne den Navigator klonen zu müssen (eine ressourcenintensive Speicherbelegung, die <xref:System.Xml.XPath.XPathNavigator> für einen solchen Vorgang benötigt). Die WCF-XPath-Engine muss die Position des Cursors im Verlauf der Ausführung von Abfragen für XML-Dokumente häufig aufzeichnen, sodass die <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> eine wichtige Optimierung der Nachrichtenverarbeitung bereitstellt.  
   
 ## <a name="customer-scenarios"></a>Kundenszenarien  
  Sie können die Filterung verwenden, wenn Sie eine Nachricht basierend auf den darin enthaltenen Daten an verschiedene Verarbeitungsmodule senden möchten. Zwei typische Szenarien sind die Weiterleitung einer Nachricht auf Grundlage ihres Aktionscodes und das Demultiplexing eines Nachrichtenstroms basierend auf der Endpunktadresse der Nachricht.  

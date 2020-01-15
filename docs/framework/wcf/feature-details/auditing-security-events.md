@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338019"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964715"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, können mit der Überwachungsfunktion Sicherheitsereignisse (entweder Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -76,7 +76,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
  Falls bei aktivierter Überwachung `auditLogLocation` nicht angegeben wird, lautet der standardmäßige Protokollname "Security" bei Plattformen, auf denen in das Sicherheitsprotokoll geschrieben werden darf. Andernfalls wird "Application" verwendet. Nur das Betriebssystem Windows Server 2003 und Windows Vista unterstützt das Schreiben in das Sicherheitsprotokoll. Weitere Informationen finden Sie im Abschnitt "Betriebs System" weiter unten in diesem Thema.  
   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
- Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen finden Sie im Microsoft-Support Artikel zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe des Ereignisanzeige in Windows XP unter [anzeigen und Verwalten von Ereignisprotokollen in Ereignisanzeige in Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
+ Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen.  
   
  Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sind die in das Anwendungsprotokoll geschriebenen Überwachungsereignisse für alle authentifizierten Benutzer sichtbar.  
   
@@ -107,4 +107,4 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
 - [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

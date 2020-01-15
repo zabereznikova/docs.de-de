@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 578ec2d7d5abe1285007ad22d8bacd69e695b1d3
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857570"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964285"
 ---
 # <a name="common-security-scenarios"></a>Häufige Sicherheitsszenarien
 Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und Dienstsicherheitskonfigurationen. Die Konfigurationen ändern sich aufgrund verschiedenster Faktoren. Zum Beispiel ob sich ein Dienst oder Client im Intranet befindet oder ob die Sicherheit von Windows oder vom Transport (wie HTTPS) gewährleistet wird.  
@@ -19,7 +19,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  Ein Beispiel eines öffentlichen, ungesicherten Clients und Diensts.  
   
  [Intranet: Ungesicherter Client und Dienst](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Ein grundlegenden Windows Communication Foundation (WCF)-Dienst entwickelt, um Informationen in einem sicheren privaten Netzwerk zu einer WCF-Anwendung bereitzustellen.  
+ Ein grundlegender Windows Communication Foundation (WCF)-Dienst, der entwickelt wurde, um Informationen zu einem sicheren privaten Netzwerk für eine WCF-Anwendung bereitzustellen.  
   
  [Transportsicherheit mit Standardauthentifizierung](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Mit dieser Anwendung können sich Clients anhand einer benutzerdefinierten Authentifizierung anmelden.  
@@ -34,7 +34,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  Zeigt einen mit einem Zertifikat gesicherten Client und Dienst.  
   
  [Nachrichtensicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Zeigt einen Client und-Dienst gesichert durch WCF-nachrichtensicherheit.  
+ Zeigt einen von der WCF-Nachrichten Sicherheit gesicherten Client und Dienst.  
   
  [Nachrichtensicherheit mit einem Benutzernamenclient](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Der Client ist eine Windows Forms-Anwendung, mit der sich die Clients mithilfe eines Domänenbenutzernamens und -Kennworts anmelden können.  
@@ -69,7 +69,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
   
  [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
  [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
@@ -82,4 +82,4 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Hosten eines WCF-Diensts in IIS'
+title: 'Gewusst wie: Hosten eines WCF-Diensts in IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: ad1fb7d289dea3396b4edb4d3b3e9fb7fb1891e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 204aa9ce86e8798c1f2d8de664f53ad2a86555de
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972420"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964792"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>Vorgehensweise: Hosten eines WCF-Diensts in IIS
-In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen eines in Internetinformationsdienste (IIS) gehosteten Windows Communication Foundation (WCF)-Dienstanbieter erforderlich sind. Es wird vorausgesetzt, dass Sie mit IIS vertraut sind und wissen, wie mithilfe des IIS-Verwaltungstools IIS-Anwendungen erstellt und verwaltet werden. Weitere Informationen zu IIS finden Sie unter [Internetinformationsdienste](https://go.microsoft.com/fwlink/?LinkId=132449). Ein WCF-Dienst, der in der IIS-Umgebung ausgeführt wird, nutzt die IIS-Features, wie z. b. die Prozess Wiederverwendung, das Herunterfahren im Leerlauf, die Prozessüberwachung und die Nachrichten basierte Aktivierung. Diese Hostingoption erfordert, dass IIS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Sie können IIS-Hosting nur mit einem HTTP-Transport verwenden.  
+# <a name="how-to-host-a-wcf-service-in-iis"></a>Gewusst wie: Hosten eines WCF-Diensts in IIS
+In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen eines in Internetinformationsdienste (IIS) gehosteten Windows Communication Foundation (WCF)-Dienstanbieter erforderlich sind. Es wird vorausgesetzt, dass Sie mit IIS vertraut sind und wissen, wie mithilfe des IIS-Verwaltungstools IIS-Anwendungen erstellt und verwaltet werden. Weitere Informationen zu IIS finden Sie unter [Internetinformationsdienste](https://www.iis.net/). Ein WCF-Dienst, der in der IIS-Umgebung ausgeführt wird, nutzt die IIS-Features, wie z. b. die Prozess Wiederverwendung, das Herunterfahren im Leerlauf, die Prozessüberwachung und die Nachrichten basierte Aktivierung. Diese Hostingoption erfordert, dass IIS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Sie können IIS-Hosting nur mit einem HTTP-Transport verwenden.  
   
  Weitere Informationen zur Interaktion von WCF und ASP.net finden Sie unter [WCF-Dienste und ASP.net](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Weitere Informationen zum Konfigurieren der Sicherheit finden Sie unter [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md).  
   
@@ -21,11 +21,11 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>So erstellen Sie einen von IIS gehosteten Dienst  
   
-1. Vergewissern Sie sich, dass IIS installiert ist und auf dem Computer ausgeführt wird. Weitere Informationen zum Installieren und Konfigurieren von IIS finden Sie unter [Installieren und Konfigurieren von IIS 7,0](https://go.microsoft.com/fwlink/?LinkID=132128) .  
+1. Vergewissern Sie sich, dass IIS installiert ist und auf dem Computer ausgeführt wird. Weitere Informationen zum Installieren und Konfigurieren von IIS finden Sie unter [Installieren und Konfigurieren von IIS 7,0](https://docs.microsoft.com/iis/install/installing-iis-7/installing-necessary-iis-components-on-windows-vista) .  
   
 2. Erstellen Sie einen neuen Ordner für die Anwendungs Dateien namens "IISHostedCalcService", stellen Sie sicher, dass ASP.net auf den Inhalt des Ordners zugreifen kann, und erstellen Sie mit dem IIS-Verwaltungs Tool eine neue IIS-Anwendung, die sich physisch in diesem Anwendungsverzeichnis befindet. Verwenden Sie "IISHostedCalc", wenn Sie einen Alias für das Anwendungsverzeichnis erstellen.  
   
-3. Erstellen Sie eine neue Datei namens "service.svc" im Anwendungsverzeichnis. Bearbeiten Sie diese Datei, indem Sie @ServiceHost das folgende-Element hinzufügen.  
+3. Erstellen Sie eine neue Datei namens "service.svc" im Anwendungsverzeichnis. Bearbeiten Sie diese Datei, indem Sie Folgendes @ServiceHost Element hinzufügen.  
   
    ```
    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
@@ -81,4 +81,4 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen
 - [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)
 - [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

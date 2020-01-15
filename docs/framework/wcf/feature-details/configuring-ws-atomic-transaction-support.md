@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544730"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964583"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Konfigurieren der WS-Atomic Transaction-Unterstützung
 
@@ -59,7 +59,7 @@ Im folgenden Beispiel werden die Schritte zum Einrichten einer Vertrauensstellun
 
 Für dieses Verfahren ist das MMC-Zertifikat-Snap-In erforderlich. Öffnen Sie zum Zugriff auf das Snap-In das Menü "Start/Ausführen", geben Sie "mmc" im Eingabefeld ein, und klicken Sie auf "OK". Navigieren Sie dann im Fenster **Konsole1** zum **Datei-/ausfüger-Snap** -in, klicken Sie auf Hinzufügen, und wählen Sie in der Liste **Verfügbare eigenständige** Snap-Ins die Option **Zertifikate** aus. Wählen Sie schließlich zu verwaltende **Computer Konto** aus, und klicken Sie auf **OK**. Der Knoten **Zertifikate** wird in der Snap-In-Konsole angezeigt.
 
-Sie müssen bereits die erforderlichen Zertifikate besitzen, um Vertrauensstellungen einzurichten. Informationen zum Erstellen und Installieren neuer Zertifikate vor den folgenden Schritten finden Sie unter Gewusst [wie: Erstellen und installieren temporärer Client Zertifikate in WCF während der Entwicklung](https://go.microsoft.com/fwlink/?LinkId=158925).
+Sie müssen bereits die erforderlichen Zertifikate besitzen, um Vertrauensstellungen einzurichten. Informationen zum Erstellen und Installieren neuer Zertifikate vor den folgenden Schritten finden Sie unter Gewusst [wie: Erstellen und installieren temporärer Client Zertifikate in WCF während der Entwicklung](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10)).
 
 1. Importieren Sie auf Computer A mit dem MMC-Zertifikat-Snap-In das vorhandene Zertifikat (certA) in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle). Um ein Zertifikat in einen bestimmten Knoten zu importieren, klicken Sie mit der rechten Maustaste auf den Knoten, und wählen Sie **Alle Tasks/Importieren**aus.
 

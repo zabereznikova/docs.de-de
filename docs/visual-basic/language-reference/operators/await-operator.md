@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712347"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964337"
 ---
 # <a name="await-operator-visual-basic"></a>Await-Operator (Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 Ein `Await`-Ausdruck oder eine Await-Anweisung blockiert nicht den Thread, auf dem sie ausgeführt wird. Stattdessen wird damit verursacht, dass der Compiler den Rest der asynchronen Methode nach dem `Await`-Ausdruck als Fortsetzung der erwarteten Aufgabe registriert. Die Steuerung wird dann wieder an den Aufrufer der Async-Methode übergeben. Wenn die Aufgabe abgeschlossen ist, löst sie ihre Fortsetzung aus, und die Ausführung der asynchronen Methode wird da fortgesetzt, wo sie angehalten wurde.
 
-Ein `Await`-Ausdruck kann nur im Text einer unmittelbar einschließenden Methode oder eines Lambda-Ausdrucks auftreten, die oder der durch einen `Async`-Modifizierer gekennzeichnet ist. Der Begriff " *warten* " dient nur in diesem Kontext als Schlüsselwort. In anderen Kontexten wird er als Bezeichner interpretiert. Innerhalb der Async-Methode oder des Lambda-Ausdrucks kann ein `Await` Ausdruck nicht in einem Abfrage Ausdruck auftreten, im `catch` oder `finally` Block eines [try... Catch... Schließlich](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) Anweisung im Schleifen Steuerungsvariablen Ausdruck einer `For`-oder `For Each` Schleife oder im Text einer [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) -Anweisung.
+Ein `Await`-Ausdruck kann nur im Text einer unmittelbar einschließenden Methode oder eines Lambda-Ausdrucks auftreten, die oder der durch einen `Async`-Modifizierer gekennzeichnet ist. Der Begriff " *warten* " dient nur in diesem Kontext als Schlüsselwort. In anderen Kontexten wird er als Bezeichner interpretiert. Innerhalb der `Async` Methode oder des Lambda-Ausdrucks kann ein `Await` Ausdruck nicht in einem Abfrage Ausdruck, im `Catch` oder `Finally` Block eines [try... Catch... Schließlich Anweisung](../statements/try-catch-finally-statement.md)im Schleifen Steuerungsvariablen Ausdruck einer `For`-oder `For Each` Schleife oder im Text einer [SyncLock](../statements/synclock-statement.md) -Anweisung.
 
 ## <a name="exceptions"></a>Ausnahmen
 

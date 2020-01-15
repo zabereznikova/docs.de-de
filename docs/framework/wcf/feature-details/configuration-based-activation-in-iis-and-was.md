@@ -2,12 +2,12 @@
 title: Konfigurationsbasierte Aktivierung unter IIS und WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 6515d6621798a9dab67aa7b73a39b9481c1779fc
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928774"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963486"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
 
@@ -33,7 +33,7 @@ Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC
 > [!NOTE]
 >
 > - Bei Verwendung der konfigurationsbasierten Aktivierung wird Inlinecode in SVC-Dateien nicht unterstützt.
-> - Das `relativeAddress` -Attribut muss auf eine relative Adresse wie "\<Sub-Directory >/Service.svc" oder "~/\<Sub-Directory/Service. svc" festgelegt werden.
+> - Das `relativeAddress`-Attribut muss auf eine relative Adresse wie "\<Unterverzeichnis >/Service.svc" oder "~/\<Sub-Directory/Service. svc" festgelegt werden.
 > - Es wird eine Konfigurationsausnahme ausgelöst, wenn Sie eine relative Adresse registrieren, für die keine bekannte Erweiterung mit WCF-Zuordnung vorhanden ist.
 > - Die angegebene relative Adresse ist relativ zum Stamm der virtuellen Anwendung.
 > - Aufgrund des hierarchischen Konfigurationsmodells werden die registrierten relativen Adressen auf Computer- und Siteebene von den virtuellen Anwendungen geerbt.
@@ -46,4 +46,4 @@ Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC
 - [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)
 - [Übersicht über das Hosten von Workflowdiensten](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
