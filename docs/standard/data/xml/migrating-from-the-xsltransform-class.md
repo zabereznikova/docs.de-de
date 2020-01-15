@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2b0536607faa629e6113db0012056622d1adb541
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 95e71e1fdd0ded145025316a5d6597b27a6cc970
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674600"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710647"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrieren von der XslTransform-Klasse
 
@@ -23,12 +21,12 @@ In den folgenden Abschnitten werden einige der Hauptunterschiede zwischen der <x
 
 ## <a name="performance"></a>Leistung
 
-Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse weist eine Reihe von Leistungsverbesserungen auf. Der neue XSLT-Prozessor kompiliert das XSLT-Stylesheet in ein allgemeines Zwischenformat, ähnlich wie dies von der CLR (Common Language Runtime) für andere Programmiersprachen erfolgt. Sobald das Stylesheet kompiliert ist, kann es zwischengespeichert und wiederverwendet werden.
+Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse weist eine Reihe von Leistungsverbesserungen auf. Der neue XSLT-Prozessor kompiliert das XSLT-Stylesheet in ein allgemeines Zwischenformat, ähnlich wie dies von der CLR (Common Language Runtime) für andere Programmiersprachen erfolgt. Nachdem ein Stylesheet kompiliert wurde, kann es zwischengespeichert und erneut verwendet werden.
 
 Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse enthält zudem weitere Optimierungen, wodurch sie viel schneller als die <xref:System.Xml.Xsl.XslTransform>-Klasse ist.
 
 > [!NOTE]
-> Obwohl die Gesamtleistung der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse besser ist als die der <xref:System.Xml.Xsl.XslTransform>-Klasse, ist die Leistung der <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse möglicherweise langsamer als die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslTransform>-Klasse, wenn sie zum ersten Mal für eine Transformation aufgerufen wird. Dies liegt daran, dass die XSLT-Datei zunächst kompiliert werden muss, bevor sie geladen wird. Weitere Informationen finden Sie im folgenden Blogbeitrag: [XslCompiledTransform Slower than XslTransform? (Ist XslCompiledTransform langsamer als XslTransform?)](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+> Obwohl die Gesamtleistung der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse besser ist als die der <xref:System.Xml.Xsl.XslTransform>-Klasse, ist die Leistung der <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse möglicherweise langsamer als die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslTransform>-Klasse, wenn sie zum ersten Mal für eine Transformation aufgerufen wird. Dies liegt daran, dass die XSLT-Datei zunächst kompiliert werden muss, bevor sie geladen wird. Weitere Informationen finden Sie im folgenden Blogbeitrag: [XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/) (XslCompiledTransform langsamer als XslTransform)
 
 ## <a name="security"></a>Sicherheit
 
@@ -39,7 +37,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse deaktiviert standardmäßi
 
 Weitere Informationen finden Sie unter [XSLT-Sicherheitsaspekte](../../../../docs/standard/data/xml/xslt-security-considerations.md).
 
-## <a name="new-features"></a>Neue Funktionen
+## <a name="new-features"></a>Neue Features
 
 ### <a name="temporary-files"></a>Temporäre Dateien
 
@@ -123,9 +121,9 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wurde um die Unterstützun
 
 - msxsl:version: Diese Funktion wird in <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt.
 
-- XPath-Erweiterungsfunktionen: Die [ms:string-compare-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) und [ms:format-time Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) werden jetzt unterstützt.
+- XPath-Erweiterungsfunktionen: die [ms:string-compare-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) und [ms:format-time Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) werden jetzt unterstützt.
 
-- Schemabezogene XPath-Erweiterungsfunktionen: Diese Funktionen werden nicht systemintern von <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt. Sie können aber als Erweiterungsfunktionen implementiert werden.
+- Schemabezogene XPath-Erweiterungsfunktionen: Diese Funktionen werden von <xref:System.Xml.Xsl.XslCompiledTransform> nicht als native Funktionen unterstützt. Sie können aber als Erweiterungsfunktionen implementiert werden.
 
 ## <a name="see-also"></a>Siehe auch
 
