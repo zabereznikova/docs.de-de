@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: Nicht verwaltete Typen
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: Standardwerte
+              href: language-reference/builtin-types/default-values.md
             - name: Verweistabellen für Typen
               items:
                 - name: Tabelle integrierter Typen
                   href: language-reference/keywords/built-in-types-table.md
                 - name: Tabelle der Werttypen
                   href: language-reference/keywords/value-types-table.md
-                - name: Tabelle für Standardwerte
-                  href: language-reference/keywords/default-values-table.md
                 - name: Tabelle zur Formatierung numerischer Ergebnisse
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modifizierer

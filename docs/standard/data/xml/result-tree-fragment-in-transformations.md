@@ -3,14 +3,12 @@ title: Ergebnisstrukturfragment in Transformationen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170773"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710257"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Ergebnisstrukturfragment in Transformationen
 
@@ -35,7 +33,7 @@ Beim `parameter`-Element kann der Wert dem `Qname` (qualifizierter Name) auf ver
 
 Dem `variable`-Element kann der Wert ebenfalls auf verschiedene Weise zugewiesen werden. Die Zuordnung kann erfolgen, indem der Inhalt aus dem XPath-Ausdruck im `select`-Attribut zurückgegeben wird, oder indem der Inhalt des Vorlagenkörpers zugewiesen wird.
 
-Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolesch, Zeichenfolge, Zahl oder Knotengruppe. Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
+Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolean (boolescher Wert), string (Zeichenfolge), number (Zahl) oder node set (Knotengruppe). Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
 
 Nur wenn eine Variable nicht an einen der vier XPath-Grunddatentypen, sondern an ein Ergebnisstrukturfragment gebunden ist, gibt eine XPath-Abfrage einen Typ zurück, der nicht zu den vier XPath-Objekttypen gehört. Das Verhalten von Ergebnisstrukturfragmenten wird in der [W3C-Spezifikation](https://www.w3.org/TR/xslt-10/), [Abschnitt 11.1, „Result Tree Fragments“](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments), bis [Abschnitt 11.6, „Passing Parameters to Templates“](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates), erörtert. Darüber hinaus werden in [Abschnitt 1, „Introduction“](https://www.w3.org/TR/xslt-10/#section-Introduction) Möglichkeiten erläutert, wie Vorlagen auch Elemente aus dem XSLT-Namespace enthalten können, die Ergebnisstrukturfragmente zurückgeben oder erstellen.
 
@@ -113,13 +111,13 @@ Im nächsten Beispiel wird eine Variable im RTF-Format (Rich Text Format) und da
 
 In der folgenden Ausgabe wird das Ergebnis der XML-Transformation mit diesem Stylesheet dargestellt.
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
 ```
 
-Wie oben angegeben, können Sie mit der `node-set`-Funktion ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Der resultierende Knoten enthält immer einen einzelnen Knoten, der den Stammknoten der Struktur darstellt. Wenn Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren, können Sie es überall verwenden, wo reguläre Knotengruppen verwendet werden, z. B. in einer for-each`select`-Anweisung oder im Wert eines -Attributs. Im folgenden Beispiel wird die Umwandlung eines Fragments in eine Knotengruppe und die anschließende Verwendung als Knotengruppe dargestellt:
+Wie oben angegeben, können Sie mit der `node-set`-Funktion ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Der resultierende Knoten enthält immer einen einzelnen Knoten, der den Stammknoten der Struktur darstellt. Wenn Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren, können Sie es überall verwenden, wo reguläre Knotengruppen verwendet werden, z. B. in einer `select` for-each-Anweisung oder im Wert eines -Attributs. Im folgenden Beispiel wird die Umwandlung eines Fragments in eine Knotengruppe und die anschließende Verwendung als Knotengruppe dargestellt:
 
 `<xsl:for-each select="msxsl:node-set($node-fragment)">`
 

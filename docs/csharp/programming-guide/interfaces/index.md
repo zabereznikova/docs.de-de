@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 43e37dc4b0977542add05c8cc13e2d7fa47b19bf
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714614"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937495"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -22,7 +22,7 @@ Sie definieren eine Schnittstelle durch die Verwendung des Schlüsselworts [inte
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-Der Name der Struktur muss ein gültiger C#- [Bezeichnername](../inside-a-program/identifier-names.md) sein. Gemäß Konvention beginnen Schnittstellennamen mit dem Großbuchstaben `I`.
+Der Name der Schnittstelle muss ein gültiger C#-[Bezeichnername](../inside-a-program/identifier-names.md) sein. Gemäß Konvention beginnen Schnittstellennamen mit dem Großbuchstaben `I`.
 
 Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
   

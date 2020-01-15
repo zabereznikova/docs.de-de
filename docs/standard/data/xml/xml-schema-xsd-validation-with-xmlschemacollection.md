@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916090"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709893"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XSD-Validierung (XML Schema) mit „XmlSchemaCollection“
 Mit der <xref:System.Xml.Schema.XmlSchemaCollection> können XML-Dokumente anhand von XSD-Schemata (XML Schema Definition Language) validiert werden. Die <xref:System.Xml.Schema.XmlSchemaCollection> verbessert die Leistung, indem die Schemata in der Auflistung gespeichert werden, sodass sie nicht bei jeder Validierung erneut in den Speicher geladen werden müssen. Wenn das Schema in der Auflistung der Schemata enthalten ist, wird es mithilfe des `schemaLocation`-Attributs in der Auflistung gesucht.  

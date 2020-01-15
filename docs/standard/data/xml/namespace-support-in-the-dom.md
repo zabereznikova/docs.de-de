@@ -3,14 +3,12 @@ title: Namespaceunterstützung im Dokumentobjektmodell
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1a468d1a2b15d1f92726d8d429fbc5ddece96e6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 7efe03f25fde0681ebd9e3c7c8ea81f6686a8ec1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647862"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710608"
 ---
 # <a name="namespace-support-in-the-dom"></a>Namespaceunterstützung im Dokumentobjektmodell
 Das XML-DOM (Dokumentobjektmodell) unterstützt Namespaces vollständig. Es werden nur XML-Dokumente unterstützt, die mit Namespaces arbeiten können. Gemäß einer Spezifikation des W3C (World Wide Web Consortium) können DOM-Anwendungen, bei denen Level 1 implementiert ist, Namespaces nicht unterstützen, und DOM-Funktionen mit Level 2 unterstützen Namespaces. Alle Funktionen des XML-DOMs sind jedoch namespacefähig, ungeachtet dessen, ob die Methode aus der Level 1- oder der Level 2-Empfehlung stammt.  

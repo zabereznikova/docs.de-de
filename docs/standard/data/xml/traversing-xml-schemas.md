@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6040a7aa8f3244ea0ce2e66042537bc45c347b05
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037854"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710114"
 ---
 # <a name="traversing-xml-schemas"></a>Durchlaufen von XML-Schemata
 
@@ -24,7 +22,7 @@ Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) e
 
 Die folgenden Eigenschaften der <xref:System.Xml.Schema.XmlSchema>-Klasse ermöglichen einen Zugriff auf die Auflistung aller globalen Elemente, die dem XML-Schema hinzugefügt wurden.
 
-|Eigenschaft|Objekttyp, der in der Auflistung oder im Array gespeichert ist|
+|Die Eigenschaften-|Objekttyp, der in der Auflistung oder im Array gespeichert ist|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|
@@ -33,7 +31,7 @@ Die folgenden Eigenschaften der <xref:System.Xml.Schema.XmlSchema>-Klasse ermög
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> oder <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (ermöglicht den Zugriff auf alle Elemente, Attribute und Typen auf globaler Ebene).|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>ist <xref:System.Xml.Schema.XmlSchemaSimpleType>ist <xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (ermöglicht den Zugriff auf Attribute, die nicht zum Schemanamespace gehören)|
 
 > [!NOTE]
@@ -55,7 +53,7 @@ Im Codebeispiel wird das Kundenschema in den folgenden Schritten durchlaufen.
 
 5. Wenn der komplexe Typ über Attribute verfügt, wird ein <xref:System.Collections.IDictionaryEnumerator> abgerufen, um jedes <xref:System.Xml.Schema.XmlSchemaAttribute> aufzuzählen und den Namen in die Konsole zu schreiben.
 
-6. Ruft den sequence<xref:System.Xml.Schema.XmlSchemaSequence>-Partikel des komplexen Typs mithilfe der -Klasse ab.
+6. Ruft den <xref:System.Xml.Schema.XmlSchemaSequence> sequence-Partikel des komplexen Typs mithilfe der -Klasse ab.
 
 7. Durchläuft jedes <xref:System.Xml.Schema.XmlSchemaElement> in der <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>-Auflistung und schreibt die Namen der einzelnen untergeordneten Elemente in die Konsole.
 

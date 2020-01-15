@@ -3,14 +3,12 @@ title: Unterstützung der msxsl:node-set()-Funktion
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3670803ff20351fd9ff6892a0cef48b9caa70199
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939527"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710127"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Unterstützung der msxsl:node-set()-Funktion
 Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
@@ -21,7 +19,7 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
  Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die for-each`node-set`-Anweisung in Verbindung mit der -Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.  
+ Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die `node-set` for-each-Anweisung in Verbindung mit der -Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
   
@@ -45,7 +43,7 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Die Ausgabe der Transformation lautet:  
   
 ```xml  

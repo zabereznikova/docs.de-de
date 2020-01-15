@@ -3,12 +3,12 @@ title: Portieren von .NET Framework zu .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777360"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937316"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Übersicht über das Portieren von .NET Framework zu .NET Core
 
@@ -29,9 +29,9 @@ Die folgende Vorgehensweise wird empfohlen, um Ihr Projekt zu .NET Core zu porti
 
    Das API Portability Analyzer-Tool analysiert Ihre kompilierten Assemblys und generiert einen Bericht. Dieser Bericht zeigt eine allgemeine Übersicht über die Portierbarkeit und eine Aufschlüsselung nach allen von Ihnen verwendeten APIs, die in .NET Core nicht verfügbar sind.
 
-3. Installieren Sie das [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md) in Ihren Projekten, um APIs zu identifizieren, die eine <xref:System.PlatformNotSupportedException> für einige Plattformen auslösen, und weitere potenzielle Kompatibilitätsprobleme zu ermitteln.
+3. Installieren Sie das [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md) in Ihren Projekten, um APIs zu identifizieren, die eine <xref:System.PlatformNotSupportedException> für einige Plattformen auslösen, und um weitere potenzielle Kompatibilitätsprobleme zu ermitteln.
 
-   Dieses Tool ähnelt Portability Analyzer, analysiert jedoch nicht, ob Elemente in .NET Core kompiliert werden können, sondern, ob Sie eine API auf eine Weise verwenden, die zur Laufzeit eine <xref:System.PlatformNotSupportedException> auslöst. Wenn Sie von .NET Framework 4.7.2 oder höher wechseln, ist dies zwar nicht häufig der Fall, aber eine Überprüfung ist dennoch eine gute Idee.
+   Dieses Tool ähnelt Portability Analyzer, analysiert jedoch nicht, ob Code in .NET Core kompiliert werden kann, sondern ob Sie eine API auf eine Weise verwenden, die zur Laufzeit eine <xref:System.PlatformNotSupportedException> auslöst. Wenn Sie von .NET Framework 4.7.2 oder höher wechseln, ist dies zwar nicht häufig der Fall, aber eine Überprüfung ist dennoch eine gute Idee. Weitere Informationen zu APIs, die Ausnahmen in .NET Core auslösen, finden Sie unter [APIs, die grundsätzlich Ausnahmen in .NET Core auslösen](../compatibility/unsupported-apis.md).
 
 4. Konvertieren Sie alle `packages.config`-Abhängigkeiten mit dem [Konvertierungstool in Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference) in das [PackageReference](/nuget/consume-packages/package-references-in-project-files)-Format.
 
@@ -50,4 +50,4 @@ Darüber hinaus können Sie versuchen, kleinere Lösungen oder einzelne Projekte
 ## <a name="next-steps"></a>Nächste Schritte
 
 >[!div class="nextstepaction"]
->[Nicht verfügbare Technologien auf .NET Core](net-framework-tech-unavailable.md)
+>[Analysieren von Abhängigkeiten](third-party-deps.md)

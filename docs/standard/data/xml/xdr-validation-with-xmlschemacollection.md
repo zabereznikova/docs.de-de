@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957013"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709997"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XDR-Validierung mit „XmlSchemaCollection“
 
@@ -22,7 +20,7 @@ Wenn das XDR-Schema (XML-Data Reduced), anhand dessen validiert wird, in der **X
 > [!IMPORTANT]
 > Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](xmlschemaset-for-schema-compilation.md).
 
-Beispiel: Wenn das Stammelement des XML-Dokuments `<bookstore xmlns="urn:newbooks-schema">` lautet und das Schema der **XmlSchemaCollection** hinzugefügt wurde, verweist es auf denselben Namespace, nämlich:
+Beispiel: Wenn das Stammelement des XML-Dokuments `<bookstore>` lautet und das Schema der **XmlSchemaCollection** hinzugefügt wurde, verweist es auf denselben Namespace, nämlich:
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
