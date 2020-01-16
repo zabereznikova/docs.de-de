@@ -358,6 +358,8 @@
       href: porting/winforms.md
     - name: Portieren von WPF-Projekten
       href: porting/wpf.md
+    - name: Portieren von C++/CLI-Projekten
+      href: porting/cpp-cli.md
 - name: Laden von Abhängigkeiten
   items:
     - name: Übersicht
