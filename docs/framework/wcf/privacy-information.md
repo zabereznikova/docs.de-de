@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837934"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347783"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Wenn Sie eine Anwendung mit Windows Communication Foundation (WCF), Version 3,0, erstellen, wirkt sich die Anwendung möglicherweise auf den Datenschutz der Endbenutzer aus. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet keine Informationen von Ihrer Anwendung an Microsoft, es sei denn, Sie oder der Endbenutzer haben diese an uns gesendet.  
@@ -44,17 +44,17 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Die Authentifizierung kann zu einer sicheren Sitzung zwischen den kommunizierenden Endpunkten führen. Die Sitzung wird durch eine GUID identifiziert, die über die Lebensdauer der Sicherheitssitzung reicht. Die folgende Tabelle zeigt, welche Elemente wo gespeichert werden.  
   
-|importieren|-Speicher|  
+|Daten|Speicher|  
 |----------|-------------|  
 |Präsentationsanmeldeinformationen, z. B. Benutzername, X.509-Zertifikate, Kerberos-Token und Verweise auf Anmeldeinformationen.|Standardmäßige Windows-Verwaltungsmechanismen für Anmeldeinformationen, z. B. der Windows-Zertifikatspeicher.|  
 |Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|ASP.net-Mitgliedschafts Anbieter.|  
 |Identitätsinformationen über den Dienst zum Authentifizieren des Diensts gegenüber Clients.|Endpunktadresse des Diensts.|  
 |Aufruferdaten.|Überwachungsprotokolle.|  
   
-## <a name="auditing"></a>-Überwachung  
+## <a name="auditing"></a>Überwachung  
  Bei der Überwachung wird der Erfolg und das Fehlschlagen von Authentifizierungs- und Autorisierungsereignissen aufgezeichnet. Überwachungsdatensätze enthalten die folgenden Daten: Dienst-URI, Aktions-URI und Identifikation des Aufrufers.  
   
- Bei der Überwachung werden Daten auch dann aufgezeichnet, wenn der Administrator die Konfiguration der Nachrichtenprotokollierung ändert (aktiviert oder deaktiviert), da bei der Nachrichtenprotokollierung anwendungsspezifische Daten im Header und Text erfasst werden können. In [!INCLUDE[wxp](../../../includes/wxp-md.md)] wird ein Datensatz im Anwendungsereignisprotokoll protokolliert. Für Windows Vista und [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]wird ein Datensatz im Sicherheits Ereignisprotokoll protokolliert.  
+ Bei der Überwachung werden Daten auch dann aufgezeichnet, wenn der Administrator die Konfiguration der Nachrichtenprotokollierung ändert (aktiviert oder deaktiviert), da bei der Nachrichtenprotokollierung anwendungsspezifische Daten im Header und Text erfasst werden können. In [!INCLUDE[wxp](../../../includes/wxp-md.md)] wird ein Datensatz im Anwendungsereignisprotokoll protokolliert. Für Windows Vista und Windows Server 2003 wird ein Datensatz im Sicherheits Ereignisprotokoll protokolliert.  
   
 ## <a name="transactions"></a>Transaktionen  
  Die Transaktions Funktion stellt Transaktionsdienste für eine WCF-Anwendung bereit.  
@@ -95,7 +95,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 ### <a name="tracing"></a>Ablaufverfolgung  
  Das Diagnose Feature der WCF-Infrastruktur protokolliert Nachrichten, die die Transport-und Dienstmodell Schichten durchlaufen, sowie die Aktivitäten und Ereignisse, die diesen Nachrichten zugeordnet sind. Diese Funktion ist standardmäßig deaktiviert. Sie wird mithilfe der Konfigurationsdatei der Anwendung aktiviert, und das Ablauf Verfolgungs Verhalten kann mithilfe des WCF-WMI-Anbieters zur Laufzeit geändert werden. Wenn das Feature aktiviert ist, gibt die Ablaufverfolgungsinfrastruktur eine Diagnoseablaufverfolgung mit Nachrichten, Aktivitäten und Verarbeitungsereignissen an konfigurierte Listener aus. Format und Speicherort der Ausgabe werden durch die Listener-Konfigurationsauswahl des Administrators bestimmt; normalerweise ist es eine Datei im XML-Format. Der Administrator ist verantwortlich für das Festlegen der Zugriffssteuerungsliste (ACL) für die Ablaufverfolgungsdateien. Insbesondere beim Hosten durch WAS (Windows Activation System) muss der Administrator sicherstellen, dass die Dateien nicht im öffentlichen virtuellen Stammverzeichnis befinden, falls dies nicht gewünscht ist.  
   
- Es gibt zwei Typen von Ablaufverfolgung, Nachrichtenprotokollierung und Dienstmodell-Diagnoseablaufverfolgung, die im folgenden Abschnitt beschrieben werden. Jeder Typ wird über seine eigene Ablaufverfolgungsquelle konfiguriert: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> und <xref:System.ServiceModel>. Beide Protokollierungs-Ablaufverfolgungsquellen erfassen Daten, die lokale Daten der Anwendung sind.  
+ Es gibt zwei Arten der Ablauf Verfolgung: Nachrichten Protokollierung und Diagnose Ablauf Verfolgung für Dienst Modelle, die im folgenden Abschnitt beschrieben werden. Jeder Typ wird über seine eigene Ablaufverfolgungsquelle konfiguriert: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> und <xref:System.ServiceModel>. Beide Protokollierungs-Ablaufverfolgungsquellen erfassen Daten, die lokale Daten der Anwendung sind.  
   
 ### <a name="message-logging"></a>Nachrichtenprotokollierung  
  Die Ablaufverfolgungsquelle für die Nachrichtenprotokollierung (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) ermöglicht einem Administrator das Protokollieren der Nachrichten, die das System durchlaufen. Über die Konfiguration kann der Benutzer entscheiden, ob ganze Nachrichten oder nur Nachrichtenheader protokolliert werden, ob die Protokollierung auf der Transport- und/oder der Dienstmodellebene erfolgt und ob falsch formatierte Nachrichten erfasst werden. Außerdem kann der Benutzer die Filterung konfigurieren, um einzuschränken, welche Nachrichten protokolliert werden.  
