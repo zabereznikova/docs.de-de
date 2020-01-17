@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900920"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116603"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und das Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können, definiert der Open Data Protocol (odata) einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu der er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.
 
-- Medienressource – Binärdaten, die zu einer Entität gehören, z. B. ein Video, ein Audioelement, ein Bild oder ein anderer Typ von Medienressourcenstream.
+- Medien Ressource: Binärdaten, die zu einer Entität gehören, z. b. ein Video, ein audiobild, ein Bild oder eine andere Art von Medienressourcen Datenstrom.
 
 - Medienlinkeintrag – eine Entität, die über einen Verweis auf einen zugehörigen Medienressourcenstream verfügt.
 
@@ -88,14 +88,14 @@ Allgemeine Informationen zum Erstellen eines Daten dienstanzdienstanbieter finde
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Aktivieren von großen binären Datenströmen in der Hostumgebung
 
-Wenn Sie einen Datendienst in einer ASP.NET-Webanwendung erstellen, wird Windows Communication Foundation (WCF) verwendet, um die HTTP-Protokoll Implementierung bereitzustellen. Standardmäßig schränkt WCF die Größe von HTTP-Nachrichten auf nur 65 KB ein. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:
+Wenn Sie einen Datendienst in einer ASP.NET-Webanwendung erstellen, wird Windows Communication Foundation (WCF) verwendet, um die HTTP-Protokoll Implementierung bereitzustellen. Standardmäßig schränkt WCF die Größe von HTTP-Nachrichten auf 65 KB ein. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:
 
 > [!NOTE]
 > Sie müssen einen <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> Übertragungsmodus verwenden, um sicherzustellen, dass die Binärdaten in den Anforderungs-und Antwort Nachrichten per Streaming gestreamt und nicht von WCF gepuffert werden.
 
 Weitere Informationen finden Sie unter [Streaming Message Transfer](../../wcf/feature-details/streaming-message-transfer.md) and [Transport Kontingenten](../../wcf/feature-details/transport-quotas.md).
 
-Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Damit der Datendienst bei Ausführung unter IIS Datenströme empfangen kann, die größer als 4 MB sind, müssen Sie auch das `maxRequestLength`-Attribut des [httpRuntime-Elements (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) im `<system.web />`-Konfigurations Abschnitt festlegen, wie im folgenden Beispiel gezeigt:
+Standardmäßig schränkt Internetinformationsdienste (IIS) auch die Größe von Anforderungen auf 4 MB ein. Damit der Datendienst bei Ausführung unter IIS Datenströme empfangen kann, die größer als 4 MB sind, müssen Sie auch das `maxRequestLength`-Attribut des [httpRuntime-Elements (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) im `<system.web />`-Konfigurations Abschnitt festlegen, wie im folgenden Beispiel gezeigt:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Verwenden von Datenströmen in einer Clientanwendung
 

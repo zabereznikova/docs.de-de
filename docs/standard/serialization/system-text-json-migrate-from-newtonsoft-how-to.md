@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904695"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116684"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Migrieren von "newtonsoft. JSON" zu "System. Text. JSON"
 
@@ -42,7 +42,7 @@ Während der Deserialisierung wird in `Newtonsoft.Json` standardmäßig die Gro�
 
 Wenn Sie `System.Text.Json` indirekt mit ASP.net Core verwenden, müssen Sie nichts tun, um Verhalten wie `Newtonsoft.Json`zu erhalten. ASP.net Core gibt die Einstellungen für [Eigenschaftsnamen mit Kamel](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) Schreibweise und die Groß-/Kleinschreibung bei der Verwendung von `System.Text.Json`an.
 
-### <a name="comments"></a>Kommentare
+### <a name="comments"></a>Comments
 
 Während der Deserialisierung ignoriert `Newtonsoft.Json` Kommentare in der JSON-Datei standardmäßig. Der Standard <xref:System.Text.Json> ist das Auslösen von Ausnahmen für Kommentare, da die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation diese nicht enthält. Weitere Informationen zum Zulassen von Kommentaren finden Sie unter [Zulassen von Kommentaren und nachfolgenden Kommas](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 
@@ -136,17 +136,6 @@ Um den Typrückschluss für `object` Eigenschaften zu implementieren, erstellen 
 ### <a name="maximum-depth"></a>Maximale Tiefe
 
 `Newtonsoft.Json` hat standardmäßig keine Obergrenze für die Tiefe. Für <xref:System.Text.Json> gibt es ein Standard Limit von 64 und kann durch Festlegen von <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>konfiguriert werden.
-
-### <a name="stack-type-handling"></a>Verarbeitung von Stapel Typen
-
-In <xref:System.Text.Json>wird die Reihenfolge der Inhalte eines Stapels bei der Serialisierung rückgängig gemacht. Dieses Verhalten gilt für die folgenden Typen und Schnittstellen sowie benutzerdefinierte Typen, die von Ihnen abgeleitet werden:
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-Ein benutzerdefinierter Konverter könnte implementiert werden, um den Stapel Inhalt in der gleichen Reihenfolge zu behalten.
 
 ### <a name="omit-null-value-properties"></a>NULL-Wert-Eigenschaften weglassen
 
