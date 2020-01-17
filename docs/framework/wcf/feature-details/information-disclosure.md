@@ -2,12 +2,12 @@
 title: Veröffentlichung von Informationen
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0e45a71855ecb172f36aae8139f89d4b8c8ffd0d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425309"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211955"
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
 
@@ -19,11 +19,11 @@ Falls Sie die Sicherheit auf Nachrichtenebene mit einer HTTP-Transportschicht ve
 
 ## <a name="policy-information"></a>Richtlinieninformationen
 
-Der Schutz von Richtlinien ist sehr wichtig, vor allem in Verbundszenarien, bei denen die Richtlinien auch vertrauliche Informationen zu den Anforderungen für ausgegebene Token und zu den Tokenausstellern enthalten. In diesen Fällen sollte möglichst der Richtlinienendpunkt des Verbunddiensts gesichert werden, damit Angreifer keine Informationen zum Dienst, wie zum Beispiel Informationen zur Art der Ansprüche, die in das ausgegebene Token aufgenommen werden müssen, einholen oder keine Clients an bösartige Tokenaussteller umleiten können. So können Angreifer beispielsweise Benutzernamen-/Kennwortkombinationen ermitteln, indem sie die Vertrauenskette des Verbunds so umkonfigurieren, dass sie bei einem Aussteller endet, der einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) durchgeführt hat. Auch sollte von Verbundclients, die ihre Bindungen über den Abruf einer Richtlinie erhalten, überprüft werden, ob die Aussteller in der bezogenen Vertrauenskette des Verbunds tatsächlich vertrauenswürdig sind. Weitere Informationen zu Verbundszenarien finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).
+Der Schutz von Richtlinien ist sehr wichtig, vor allem in Verbundszenarien, bei denen die Richtlinien auch vertrauliche Informationen zu den Anforderungen für ausgegebene Token und zu den Tokenausstellern enthalten. In diesen Fällen sollte möglichst der Richtlinienendpunkt des Verbunddiensts gesichert werden, damit Angreifer keine Informationen zum Dienst, wie zum Beispiel Informationen zur Art der Ansprüche, die in das ausgegebene Token aufgenommen werden müssen, einholen oder keine Clients an bösartige Tokenaussteller umleiten können. So können Angreifer beispielsweise Benutzernamen-/Kennwortkombinationen ermitteln, indem sie die Vertrauenskette des Verbunds so umkonfigurieren, dass sie bei einem Aussteller endet, der einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) durchgeführt hat. Auch sollte von Verbundclients, die ihre Bindungen über den Abruf einer Richtlinie erhalten, überprüft werden, ob die Aussteller in der bezogenen Vertrauenskette des Verbunds tatsächlich vertrauenswürdig sind. Weitere Informationen zu Verbund Szenarien finden Sie unter [Federation](../../../../docs/framework/wcf/feature-details/federation.md).
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Anspruchsinformationen in Speicherabbildern
 
-Falls in einer Anwendung ein Fehler auftritt, können Protokolldateien (z. B. die von Dr. Watson erzeugten Protokolldateien) Anspruchsinformationen enthalten. Diese Informationen sollten nicht für andere Einheiten in der Organisation wie Supportteams exportiert werden, da sonst auch die Anspruchsinformationen mit persönlichen Daten exportiert werden. Sie können diese Gefahr umgehen, indem Sie keine Protokolldateien an Unbekannte senden. Weitere Informationen finden Sie unter [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160).
+Falls in einer Anwendung ein Fehler auftritt, können Protokolldateien (wie zum Beispiel die von Dr. Watson erzeugten Protokolldateien) Anspruchsinformationen enthalten. Diese Informationen sollten nicht für andere Einheiten in der Organisation wie Supportteams exportiert werden, da sonst auch die Anspruchsinformationen mit persönlichen Daten exportiert werden. Sie können diese Gefahr umgehen, indem Sie keine Protokolldateien an Unbekannte senden.
 
 ## <a name="endpoint-addresses"></a>Endpunktadressen
 
@@ -35,13 +35,13 @@ Wenn Sie für die Authentifizierung eines Clients ein X.509-Zertifikat verwenden
 
 ## <a name="service-references"></a>Dienstverweise
 
-Bei einem Dienstverweis handelt es sich um einen Verweis auf einen anderen Dienst. So kann zum Beispiel ein Dienst im Laufe eines Vorgangs einen Dienstverweis an einen Client übergeben. Der Dienstverweis wird auch verwendet, mit einem *vertrauen identitätsüberprüfung*, eine interne Komponente, die die Identität des zielprinzipals sichergestellt wird, bevor die Veröffentlichung von Informationen wie z. B. Anwendungs- oder Anmeldedaten für das Ziel. Falls die Remotevertrauensidentität nicht überprüft werden kann oder falsch ist, sollte sich der Sender vergewissern, dass keine Daten veröffentlicht wurden, die den Sender, die Anwendung oder den Benutzer gefährden könnten.
+Bei einem Dienstverweis handelt es sich um einen Verweis auf einen anderen Dienst. So kann zum Beispiel ein Dienst im Laufe eines Vorgangs einen Dienstverweis an einen Client übergeben. Der Dienst Verweis wird auch mit einer *Vertrauensstellungs Identität*verwendet. Dies ist eine interne Komponente, die die Identität des Ziel Prinzipals sicherstellt, bevor Informationen wie Anwendungsdaten oder Anmelde Informationen für das Ziel offenlegen werden. Falls die Remotevertrauensidentität nicht überprüft werden kann oder falsch ist, sollte sich der Sender vergewissern, dass keine Daten veröffentlicht wurden, die den Sender, die Anwendung oder den Benutzer gefährden könnten.
 
 Folgende Maßnahmen mindern das Risiko:
 
 - Dienstverweise werden als vertrauenswürdig angesehen. Falls Sie Dienstverweisinstanzen übertragen, sollten Sie daher sicherstellen, dass diese nicht manipuliert wurden.
 
-- Bei einigen Anwendungen haben Benutzer die Möglichkeit, die Vertrauenswürdigkeit interaktiv basierend auf Daten im Dienstverweis und anhand von vertrauenswürdigen Daten, die durch den Remotehost belegt wurden, herzustellen. WCF stellt Erweiterungspunkte für diese Funktion bereit, aber der Benutzer muss implementiert werden.
+- Bei einigen Anwendungen haben Benutzer die Möglichkeit, die Vertrauenswürdigkeit interaktiv basierend auf Daten im Dienstverweis und anhand von vertrauenswürdigen Daten, die durch den Remotehost belegt wurden, herzustellen. WCF bietet Erweiterbarkeits Punkte für eine solche Funktion, der Benutzer muss Sie jedoch implementieren.
 
 ## <a name="ntlm"></a>NTLM
 
@@ -55,7 +55,7 @@ In der Windows-Domänenumgebung wird zur Authentifizierung und Autorisierung von
 
 Werden beim Erstellen eines Clients Clientanmeldeinformationen ohne Domänennamen oder eine ungültige Serveridentität angegeben, wird NTLM anstelle des Kerberos-Protokolls verwendet (sofern die `AllowNtlm`-Eigenschaft auf `true` festgelegt wurde). Da NTLM keine Serverauthentifizierung durchführt, können Informationen potenziell offengelegt werden.
 
-Beispielsweise kann es an der Windows-Clientanmeldeinformationen ohne Domänennamen, wie im folgenden Visual C#-Code dargestellt.
+Beispielsweise ist es möglich, Windows-Client Anmelde Informationen ohne Domänen Namen anzugeben, wie im folgenden visuellen C# Code dargestellt.
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,7 +63,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 Da im Code kein Domänenname angegeben wird, wird NTLM verwendet.
 
-Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. Weitere Informationen dazu, wie die Identität des Endpunkts angegeben wird, finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
+Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. Weitere Informationen zur Angabe der Endpunkt Identität finden Sie unter [Dienst Identität und-Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).
 
 ## <a name="see-also"></a>Siehe auch
 

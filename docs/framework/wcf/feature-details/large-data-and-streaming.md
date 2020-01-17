@@ -2,20 +2,21 @@
 title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5719f941c71867699960c6029f9cc512021986f3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991516"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212194"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
-Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten häufig in dem Standardtext Format codiert sind, das in der [XML 1,0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94838)definiert ist, haben Entwickler und Architekten von verbundenen Systemen in der Regel den Netzwerk Bedarf (oder die Größe) von Nachrichten, die über das Netzwerk gesendet werden, und die die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung von Binärdaten dar.  
+
+Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten in der Regel im Standardtext Format codiert sind, das in der [XML 1,0-Spezifikation](https://www.w3.org/TR/REC-xml/)definiert ist, haben Entwickler und Architekten von verbundenen Systemen in der Regel den Übertragungs Bedarf (oder die Größe) von Nachrichten, die über das Netzwerk gesendet werden, und die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung von Binärdaten dar.  
   
 ## <a name="basic-considerations"></a>Allgemeine Überlegungen  
  Um Hintergrundinformationen zu den folgenden Informationen für WCF bereitzustellen, werden in diesem Abschnitt einige allgemeine Aspekte und Überlegungen zu Codierungen, Binärdaten und Streaming, die im Allgemeinen für verbundene System Infrastrukturen gelten, hervorgehoben.  
   
-### <a name="encoding-data-text-vs-binary"></a>Codieren von Daten: Text im Vergleich zu Binär  
+### <a name="encoding-data-text-vs-binary"></a>Codieren von Daten: Text oder binär  
  Zu den verbreiteten Bedenken von Entwicklern gehört die Annahme, dass XML im Vergleich zu binären Formaten einen erheblichen Mehraufwand mit sich bringt, angesichts der sich wiederholenden Natur von Starttags und Endtags. Die Codierung numerische Werte scheint ihnen wesentlich umfangreicher, da diese Werte in Textwerten ausgedrückt werden, und sie fürchten, dass binäre Daten nicht effizient ausgedrückt werden, da sie speziell codiert werden müssen, um in ein Textformat eingebettet werden zu können.  
   
  Zwar treffen diese und ähnliche Bedenken zu, doch ist der tatsächliche Unterschied zwischen XML-textcodierten Nachrichten in einer XML-Webdienstumgebung und binärcodierten Nachrichten in einer älteren RPC-Umgebung (Remote Procedure Call) häufig wesentlich geringer als auf den ersten Blick vermutet.  
@@ -56,10 +57,10 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
   
  Bei Daten, die diesen Einschränkungen nicht unterliegen, ist es in der Regel besser, anstatt einer großen Nachricht Sequenzen der Nachrichten im Rahmen einer Sitzung zu senden. Weitere Informationen finden Sie im Abschnitt "Streaming von Daten" weiter unten in diesem Thema.  
   
- Wenn Sie große Datenmengen senden, müssen Sie die `maxAllowedContentLength` IIS-Einstellung festlegen (Weitere Informationen finden Sie unter Konfigurieren von IIS- [Anforderungs Limits](https://go.microsoft.com/fwlink/?LinkId=253165)) und die `maxReceivedMessageSize` Bindungseinstellung (z [. b. System. Service Model. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) oder <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Die `maxAllowedContentLength` -Eigenschaft ist standardmäßig auf 28,6 `maxReceivedMessageSize` M und die-Eigenschaft standardmäßig auf 64 KB eingestellt.  
+ Wenn Sie große Datenmengen senden, müssen Sie die Einstellung für die `maxAllowedContentLength` IIS festlegen (Weitere Informationen finden Sie unter [Konfigurieren von IIS-Anforderungs Limits](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) und die Einstellung für die `maxReceivedMessageSize` Bindung (z. b. [System. Service Model. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) oder <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Die `maxAllowedContentLength`-Eigenschaft ist standardmäßig auf 28,6 MB und die `maxReceivedMessageSize`-Eigenschaft standardmäßig auf 64 KB eingestellt.  
   
 ## <a name="encodings"></a>Codierungen  
- Eine *Codierung* definiert einen Satz von Regeln für die Darstellung von Nachrichten im Netzwerk. Ein *Encoder* implementiert eine solche Codierung und ist auf der Absender Seite dafür verantwortlich, dass ein in-Memory <xref:System.ServiceModel.Channels.Message> -Objekt in einen Bytestream oder Byte Puffer verwandelt wird, der über das Netzwerk gesendet werden kann. Auf der Empfängerseite wandelt der Encoder die Bytesequenz wieder in eine Nachricht im Arbeitsspeicher um.  
+ Eine *Codierung* definiert einen Satz von Regeln für die Darstellung von Nachrichten im Netzwerk. Ein *Encoder* implementiert eine solche Codierung und ist auf der Absender Seite dafür verantwortlich, eine in-Memory-<xref:System.ServiceModel.Channels.Message> in einen Bytestream oder Byte Puffer zu schalten, der über das Netzwerk gesendet werden kann. Auf der Empfängerseite wandelt der Encoder die Bytesequenz wieder in eine Nachricht im Arbeitsspeicher um.  
   
  WCF enthält drei Encoder und ermöglicht das Schreiben und Einbinden Ihrer eigenen Encoder, falls erforderlich.  
   
@@ -67,7 +68,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
   
 |Bindungselement des Encoders|Beschreibung|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Der Textnachrichtencoder ist der Standardencoder für alle HTTP-basierten Bindungen. Er empfiehlt sich für alle benutzerdefinierten Bindungen, bei denen besonders auf Interoperabilität Wert gelegt wird. Dieser Encoder liest und schreibt auf SOAP 1.1/SOAP 1.2 basierende Standardtextnachrichten ohne spezielle Behandlung von binären Daten. Wenn die <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> -Eigenschaft einer Nachricht auf festgelegt <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>ist, wird der SOAP-Umschlag Wrapper in der Ausgabe weggelassen, und nur der Nachrichtentext Inhalt wird serialisiert.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Der Textnachrichtencoder ist der Standardencoder für alle HTTP-basierten Bindungen. Er empfiehlt sich für alle benutzerdefinierten Bindungen, bei denen besonders auf Interoperabilität Wert gelegt wird. Dieser Encoder liest und schreibt auf SOAP 1.1/SOAP 1.2 basierende Standardtextnachrichten ohne spezielle Behandlung von binären Daten. Wenn die <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>-Eigenschaft einer Nachricht auf <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>festgelegt ist, wird der SOAP-Umschlag Wrapper in der Ausgabe weggelassen, und nur der Nachrichtentext Inhalt wird serialisiert.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Der MTOM-Nachrichtenencoder ist ein Textencoder, der eine spezielle Behandlung binärer Daten implementiert und nicht standardmäßig in den Standardbindungen verwendet wird, da es sich um ein extrem fallabhängiges Hilfsprogramm für Optimierungen handelt. Wenn die Nachricht binäre Daten enthält, die einen Schwellenwert überschreiten, nach dem die MTOM-Codierung vorteilhafter ist, werden die Daten in einen MIME-Teil externalisiert, der auf den Nachrichtenumschlag folgt. Siehe "Aktivieren von MTOM" weiten unten in diesem Abschnitt.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Der binäre Nachrichten Encoder ist der Standard Encoder für die Net *-Bindungen und die geeignete Wahl, wenn beide Kommunikationspartner auf WCF basieren. Der binäre Nachrichtenencoder verwendet das .NET Binary XML-Format. Dieses Format ist eine spezielle Binärdarstellung für XML-Informationssets (Infosets) von Microsoft, die in der Regel kompakter ist als die entsprechende XML 1.0-Darstellung und binäre Daten als Bytestream codiert.|  
   
@@ -126,7 +127,7 @@ class MyData
   
  Aktivieren Sie bei großen Nachrichten (mit Text oder binärem Inhalt) die Streamingfunktion, wenn die Daten nicht segmentiert werden können, schnell zugestellt werden müssen oder wenn die Daten beim Beginn der Übertragung noch nicht vollständig verfügbar sind.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Beschränkungen  
  Wenn Streaming aktiviert ist, ist es nicht möglich, eine große Anzahl von WCF-Funktionen zu verwenden:  
   
 - Digitale Signaturen für den Nachrichtentext sind nicht möglich, da sie Berechnungen oder einen Hash zum gesamten Nachrichteninhalt erfordern. Beim Streaming ist der Inhalt nicht vollständig verfügbar, wenn die Nachrichtenheader erstellt und gesendet werden, weshalb keine digitale Signatur berechnet werden kann.  
@@ -152,7 +153,7 @@ class MyData
  Streaming ist auch beim Peerkanaltransport nicht verfügbar und kann deshalb nicht mit <xref:System.ServiceModel.NetPeerTcpBinding> verwendet werden.  
   
 #### <a name="streaming-and-sessions"></a>Streaming und Sitzungen  
- Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients Streamingaufrufe an dasselbe Dienstobjekt über eine sitzungsbasierte Bindung durchführen und der Parallelitätsmodus des Dienstobjekts auf „single“ und sein Instanzkontextmodus auf „PerSession“ festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Bei einem oder mehreren Clients kommt es dabei unter Umständen zu einem Timeout. Sie können dieses Problem umgehen, indem Sie entweder den Instanzkontextmodus des Dienstobjekts auf "PerCall" oder die Parallelität auf "Multiple" festlegen.  
+ Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients Streamingaufrufe an dasselbe Dienstobjekt über eine sitzungsbasierte Bindung durchführen und der Parallelitätsmodus des Dienstobjekts auf „single“ und sein Instanzkontextmodus auf „PerSession“ festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Für mindestens einen Client kann ein Timeout auftreten. Sie können dieses Problem umgehen, indem Sie entweder den Instanzkontextmodus des Dienst Objekts auf "Recall" oder "Parallelität" auf "Multiple" festlegen.  
   
 > [!NOTE]
 > MaxConcurrentSessions hat in diesem Fall keine Auswirkungen, da nur eine "Sitzung" verfügbar ist.  
@@ -220,18 +221,18 @@ public class UploadStreamMessage
 }   
 ```  
   
- Streamingübertragungen sind beendet und die Nachricht wird geschlossen, wenn der Stream das Ende der Datei (End of File, EOF) erreicht. Wenn Sie eine Nachricht senden (einen Wert zurückgeben oder einen Vorgang aufrufen), können Sie <xref:System.IO.FileStream> übergeben, und die WCF-Infrastruktur ruft anschließend alle Daten aus diesem Stream ab, bis der Stream vollständig gelesen und mit EOF erreicht wurde. Um Streamingdaten für die Quelle zu übertragen, die über keine integrierte, von <xref:System.IO.Stream> abgeleitete Klasse dieser Art verfügt, erstellen sie eine solche Klasse, überlagern Sie die Streamquelle mit dieser Klasse, und verwenden Sie das als Argument oder Rückgabewert.  
+ Streamingübertragungen sind beendet und die Nachricht wird geschlossen, wenn der Stream das Ende der Datei (End of File, EOF) erreicht. Wenn Sie eine Nachricht senden (einen Wert zurückgeben oder einen Vorgang aufrufen), können Sie eine <xref:System.IO.FileStream> übergeben, und die WCF-Infrastruktur ruft anschließend alle Daten aus diesem Stream ab, bis der Stream vollständig gelesen und durch EOF erreicht wurde. Um Streamingdaten für die Quelle zu übertragen, die über keine integrierte, von <xref:System.IO.Stream> abgeleitete Klasse dieser Art verfügt, erstellen sie eine solche Klasse, überlagern Sie die Streamquelle mit dieser Klasse, und verwenden Sie das als Argument oder Rückgabewert.  
   
  Beim Empfang einer Nachricht erstellt WCF einen Stream über den Base64-codierten Nachrichtentext Inhalt (oder den entsprechenden MIME-Teil, wenn MTOM verwendet wird), und der Stream erreicht EOF, wenn der Inhalt gelesen wurde.  
   
  Streaming auf Transportebene funktioniert auch mit jedem anderen Nachrichtenvertragstyp (Parameterlisten, Datenvertragsargumente und explizitem Nachrichtenvertrag). Da jedoch die Serialisierung und Deserialisierung von Nachrichten dieses Typs eine Pufferung durch das Serialisierungsprogramm erfordert, ist die Verwendung dieser Vertragsvarianten nicht ratsam.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Besondere Sicherheitsüberlegungen für umfangreiche Daten  
- Sie können mit allen Bindungen die Größe eingehender Nachrichten einschränken, um Denial-of-Service-Angriffe zu verhindern. Beispielsweise macht eine [System. Service Model. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) -Eigenschaft verfügbar, die die Größe der eingehenden Nachricht umschließt. Außerdem wird die maximale Menge an Arbeitsspeicher begrenzt, auf die bei der Verarbeitung der zugegriffen wird. <xref:System.ServiceModel.BasicHttpBinding> Nachricht. Diese Wert wird in Byte festgelegt, mit einem Standardwert von 65.536 Bytes.  
+ Sie können mit allen Bindungen die Größe eingehender Nachrichten einschränken, um Denial-of-Service-Angriffe zu verhindern. Der <xref:System.ServiceModel.BasicHttpBinding>macht beispielsweise eine [System. Service Model. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) -Eigenschaft verfügbar, die die Größe der eingehenden Nachricht einschränkt, und begrenzt außerdem die maximale Menge an Arbeitsspeicher, auf die beim Verarbeiten der Nachricht zugegriffen wird. Diese Wert wird in Byte festgelegt, mit einem Standardwert von 65.536 Bytes.  
   
  Ein Sicherheitsrisiko, das speziell beim Streaming umfangreicher Daten entsteht, und einen Denial-of-Service-Angriff bedeuten kann, besteht darin, wenn Daten gepuffert werden, während der Empfänger ein Streaming erwartet. Beispielsweise puffert WCF immer die SOAP-Header einer Nachricht, sodass ein Angreifer eine große böswillige Nachricht erstellen kann, die vollständig aus Headern besteht, um zu erzwingen, dass die Daten gepuffert werden. Legen Sie bei aktiviertem Streaming `MaxReceivedMessageSize` auf einen extrem hohen Wert fest, da der Empfänger nicht davon ausgeht, dass die gesamte Nachricht gleichzeitig im Arbeitsspeicher gepuffert wird. Wenn WCF gezwungen wird, die Nachricht zu puffern, tritt ein Speicher Überlauf auf.  
   
- Deshalb reicht es in diesem Fall nicht aus, die maximale Größe eingehender Nachrichten einzuschränken. Die `MaxBufferSize` -Eigenschaft ist erforderlich, um den Arbeitsspeicher einzuschränken, den WCF puffert. Legen Sie beim Streaming dafür einen sicheren Wert fest (oder behalten Sie den Standardwert bei). Angenommen, der Dienst muss Dateien bis zu einer Größe von 4 GB empfangen und auf der lokalen Festplatte speichern. Der Arbeitsspeicher ist in diesem Szenario so eingeschränkt, dass immer nur 64 KB gepuffert werden können. Sie würden dann `MaxReceivedMessageSize` auf 4 GB und `MaxBufferSize` auf 64 KB festlegen. Außerdem müssen Sie in der Dienstimplementierung sicherstellen, dass nur aus dem eingehenden Stream in 64-KB-Segmenten gelesen wird und das nächste Segment erst gelesen wird, nachdem das vorherige auf die Festplatte geschrieben wurde und es dann aus dem Arbeitspeicher gelöscht wird.  
+ Deshalb reicht es in diesem Fall nicht aus, die maximale Größe eingehender Nachrichten einzuschränken. Die `MaxBufferSize`-Eigenschaft ist erforderlich, um den Arbeitsspeicher einzuschränken, den WCF puffert. Legen Sie beim Streaming dafür einen sicheren Wert fest (oder behalten Sie den Standardwert bei). Angenommen, der Dienst muss Dateien bis zu einer Größe von 4 GB empfangen und auf der lokalen Festplatte speichern. Der Arbeitsspeicher ist in diesem Szenario so eingeschränkt, dass immer nur 64 KB gepuffert werden können. Sie würden dann `MaxReceivedMessageSize` auf 4 GB und `MaxBufferSize` auf 64 KB festlegen. Außerdem müssen Sie in der Dienstimplementierung sicherstellen, dass nur aus dem eingehenden Stream in 64-KB-Segmenten gelesen wird und das nächste Segment erst gelesen wird, nachdem das vorherige auf die Festplatte geschrieben wurde und es dann aus dem Arbeitspeicher gelöscht wird.  
   
  Es ist auch wichtig zu verstehen, dass dieses Kontingent nur die Pufferung von WCF einschränkt und Sie nicht vor Puffern schützen können, die Sie in ihrer eigenen Dienst-oder Client Implementierung durchführen. Weitere Informationen zu zusätzlichen Sicherheitsüberlegungen finden Sie unter [Sicherheitsüberlegungen für Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
@@ -240,4 +241,4 @@ public class UploadStreamMessage
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Streaming aktivieren](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Vorgehensweise: Aktivieren von Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

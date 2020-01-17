@@ -2,16 +2,16 @@
 title: Beschränken der Nachrichtenverteilung
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 113244e6c7eb356d70e9ffb7b85367e9feb34c54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750649"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211896"
 ---
 # <a name="limiting-message-distribution"></a>Beschränken der Nachrichtenverteilung
 
-Der Peerkanal ist als Übertragungsnetz konzipiert. Das grundlegende Weitergabemodell umfasst die Verteilung jeder Nachricht, die von einem Mitglied eines Netzes gesendet wird, an alle anderen Mitglieder dieses Netzes. Dies ist besonders in Situationen von Vorteil, in denen jede von einem Mitglied generierte Nachricht für alle anderen Mitglieder relevant und hilfreich ist – beispielsweise in einem Chatraum. Bei vielen Anwendungen muss die Nachrichtenverteilung jedoch gelegentlich eingeschränkt werden. Tritt beispielsweise ein neues Mitglied dem Netz bei und möchte die letzte durch das Netz gesendete Nachricht abrufen, muss diese Anforderung nicht an alle Mitglieder des Netzes weitergeleitet werden. Die Anforderung kann auf nahe gelegene Nachbarn beschränkt werden, oder es können lokal generierte Nachrichten herausgefiltert werden. Nachrichten können auch an einen einzelnen Knoten des Netzes gesendet werden. In diesem Thema wird erläutert, wie mithilfe der Hopanzahl, eines Nachrichtenweitergabefilters, eines lokalen Filters oder einer Direktverbindung gesteuert werden kann, auf welche Weise Nachrichten innerhalb des Netzes weitergeleitet werden. Darüber hinaus finden Sie hier allgemeine Richtlinien für die Auswahl eines geeigneten Ansatzes.
+Der Peerkanal ist als Übertragungsnetz konzipiert. Das grundlegende Weitergabemodell umfasst die Verteilung jeder Nachricht, die von einem Mitglied eines Netzes gesendet wird, an alle anderen Mitglieder dieses Netzes. Dies ist besonders in Situationen von Vorteil, in denen jede von einem Mitglied generierte Nachricht für alle anderen Mitglieder relevant und hilfreich ist – beispielsweise in einem Chatraum. Bei vielen Anwendungen muss die Nachrichtenverteilung jedoch gelegentlich eingeschränkt werden. Tritt beispielsweise ein neues Mitglied dem Netz bei und möchte die letzte durch das Netz gesendete Nachricht abrufen, muss diese Anforderung nicht an alle Mitglieder des Netzes weitergeleitet werden. Die Anforderung kann auf nahe Nachbarn beschränkt werden, oder lokal generierte Nachrichten können herausgefiltert werden. Nachrichten können auch an einen einzelnen Knoten im Mesh gesendet werden. In diesem Thema wird erläutert, wie mithilfe der Hopanzahl, eines Nachrichtenweitergabefilters, eines lokalen Filters oder einer Direktverbindung gesteuert werden kann, auf welche Weise Nachrichten innerhalb des Netzes weitergeleitet werden. Darüber hinaus finden Sie hier allgemeine Richtlinien für die Auswahl eines geeigneten Ansatzes.
 
 ## <a name="hop-counts"></a>Hopanzahl
 
@@ -19,7 +19,7 @@ Das `PeerHopCount`-Konzept ähnelt dem im IP verwendeten TTL (Time-To-Live)-Konz
 
 Sie können die Hopanzahl zu einer Nachricht hinzufügen, indem Sie `PeerHopCount` bei der Implementierung der Nachrichtenklasse als Attribut zu der anwendbaren Eigenschaft oder dem anwendbaren Feld hinzufügen. Sie können hierfür vor dem Senden der Nachricht an das Netz einen bestimmten Wert festlegen. Auf diese Weise kann die Verteilung von Nachrichten innerhalb des Netzes mithilfe der Hopanzahl gegebenenfalls eingeschränkt werden, was zu einer Verringerung unnötiger doppelter Nachrichten führen kann. Dies ist hilfreich, wenn das Netz eine große Menge redundanter Daten enthält oder wenn Nachrichten nur an direkte Nachbarn (oder an Nachbarn, die nur wenige Hops entfernt sind) gesendet werden sollen.
 
-- Codeausschnitte und Weitere Informationen finden Sie unter den [Peer Channel Team Blog](https://go.microsoft.com/fwlink/?LinkID=114531).
+- Code Ausschnitte und zugehörige Informationen finden Sie im Peer Channel-Blog im [PeerHopCount-Attribut: Steuern der Nachrichten Verteilung](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) .
 
 ## <a name="message-propagation-filter"></a>Nachrichtenweitergabefilter
 
@@ -27,7 +27,7 @@ Sie können die Hopanzahl zu einer Nachricht hinzufügen, indem Sie `PeerHopCoun
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter> ist eine abstrakte Basisklasse mit einer einzelnen Funktion: <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Das erste Argument des Methodenaufrufs übergibt eine vollständige Kopie der Nachricht. Änderungen an der Nachricht wirken sich nicht auf die eigentliche Nachricht aus. Das letzte Argument des Methodenaufrufs identifiziert den Ursprung der Nachricht (`PeerMessageOrigination.Local` oder `PeerMessageOrigination.Remote`). Konkrete Implementierungen dieser Methode müssen eine Konstante aus der <xref:System.ServiceModel.PeerMessagePropagation>-Enumeration zurückgeben, die angibt, dass die Nachricht an die lokale Anwendung (`Local`), an Remoteclients (`Remote`), an beide dieser Optionen (`LocalAndRemote`) oder an keine dieser Optionen (`None`) weitergeleitet werden soll. Sie können diesen Filter durch Zugreifen auf das entsprechende `PeerNode`-Objekt und Angeben einer Instanz der abgeleiteten Weitergabefilterklasse in der `PeerNode.MessagePropagationFilter`-Eigenschaft anwenden. Vergewissern Sie sich vor dem Öffnen des Peerkanals, dass der Weitergabefilter angefügt ist.
 
-- Codeausschnitte und Weitere Informationen finden Sie unter den [Peer Channel Team Blog](https://go.microsoft.com/fwlink/?LinkID=114532).
+- Code Ausschnitte und zugehörige Informationen finden Sie im Peer [Channel-und MessagePropagationFilter-](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) Beitrag im Peerkanal-Blog.
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>Kontaktieren eines einzelnen Netzknotens
 
@@ -41,33 +41,33 @@ Bei dauerhaften Verbindungen mit hoher Bandbreite empfiehlt sich die Verwendung 
 
 Ist eine Einschränkung der Nachrichtenverteilung erforderlich, sollten Sie sich die folgenden Fragen stellen:
 
-- **Wer** zum Empfangen der Nachricht benötigt? Lediglich ein Nachbarknoten? Ein Knoten an einem anderen Ort im Netz? Die Hälfte des Netzes?
+- **Wer** muss die Nachricht erhalten? Lediglich ein Nachbarknoten? Ein Knoten an einem anderen Ort im Netz? Die Hälfte des Netzes?
 
-- **Wie oft** wird diese Nachricht gesendet werden?
+- **Wie oft** wird diese Nachricht gesendet?
 
-- Welche Art von **Bandbreite** wird diese Nachricht verwenden?
+- Welche Art von **Bandbreite** wird von dieser Nachricht verwendet?
 
 Die Antworten auf die Fragen können Ihnen die Entscheidung für eine der Methoden – Hopanzahl, Nachrichtenweitergabefilter, lokaler Filter oder Direktverbindung – erleichtern. Berücksichtigen Sie die folgenden allgemeinen Richtlinien:
 
-- **Wer**
+- **Möchten**
 
-  - *Einzelner Knoten*:  Lokaler Filter oder direktverbindung.
+  - *Einzelner Knoten*: lokaler Filter oder direkte Verbindung.
 
-  - *Nachbarn innerhalb einer bestimmten Umgebung*:  PeerHopCount.
+  - *Nachbarn innerhalb einer bestimmten Nähe*: Peer-HopCount.
 
-  - *Komplexe Teilmenge des Netzes*:  MessagePropagationFilter.
+  - *Komplexe Teilmenge des Mesh*: MessagePropagationFilter.
 
-- **Wie oft**
+- **Häufigkeit**
 
-  - *Sehr häufig*:  Direktverbindung, PeerHopCount, MessagePropagationFilter.
+  - *Sehr häufig*: direkte Verbindung, PeerHopCount, MessagePropagationFilter.
 
-  - *Occasional*:  Lokaler Filter.
+  - *Gelegentlich*: lokaler Filter.
 
-- **Nutzung der Netzwerkbandbreite**
+- **Bandbreitennutzung**
 
-  - *Hohe*:  Direkte Verbindung, MessagePropagationFilter oder lokalem Filter nicht ratsam.
+  - *Hoch*: direkte Verbindung, weniger empfehlenswert für die Verwendung von MessagePropagationFilter oder lokalem Filter.
 
-  - *Niedrig*:  Beliebig; direktverbindung wahrscheinlich nicht erforderlich.
+  - *Niedrig*: eine beliebige, direkte Verbindung ist wahrscheinlich nicht erforderlich.
 
 ## <a name="see-also"></a>Siehe auch
 

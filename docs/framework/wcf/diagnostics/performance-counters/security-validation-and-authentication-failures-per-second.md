@@ -2,15 +2,15 @@
 title: Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-ms.openlocfilehash: 5db8b656b626ea16f89ce432bf4cf1030b87a0b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 546d81b73e912915d265fb194de4ad9e45d55cea
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664995"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163916"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde
-Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde.  
+Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde  
   
 ## <a name="description"></a>Beschreibung  
  Dieser Zähler wird jedes Mal inkrementiert, wenn eine Nachricht wegen eines Sicherheitsproblems abgelehnt wird, das nicht von dem Zähler "Nicht autorisierte Sicherheitsanrufe" abgedeckt wird. Zu derartigen Problemen gehören:  
@@ -29,6 +29,6 @@ Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde.
   
 - Während des TLSNEGO-/SPNEGO-Handshakes sind Fehler aufgetreten.  
   
- Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird:  
+ Dieser Leistungs Bewert ist vom Typ [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))des Leistungs Zählers, dessen Wert mit der folgenden Formel berechnet wird:  
   
  (N1-N0)/((D1-D0)/F)

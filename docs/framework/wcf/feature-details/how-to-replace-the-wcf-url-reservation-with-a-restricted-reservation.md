@@ -2,15 +2,16 @@
 title: 'Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544649"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212188"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung
-Mithilfe einer URL-Reservierung können Sie einschränken, wer Nachrichten von einer URL oder einem Satz von URLs empfangen darf. Eine Reservierung besteht aus einer URL-Vorlage, einer Zugriffssteuerungsliste (ACL) und einer Gruppe von Flags. Die URL-Vorlage definiert, auf welche URLs sich die Reservierung auswirkt. Weitere Informationen zur Verarbeitung von URL-Vorlagen finden Sie unter [Routing eingehender Anforderungen](https://go.microsoft.com/fwlink/?LinkId=136764). Die ACL steuert, welche Benutzer oder Benutzergruppen Nachrichten von den angegebenen URLs empfangen dürfen. Die Flags geben an, ob die Reservierung einem Benutzer oder einer Benutzergruppe die Berechtigung erteilt, die URL direkt zu überwachen oder die Überwachungsberechtigung an einen anderen Prozess zu übergeben.  
+
+Mithilfe einer URL-Reservierung können Sie einschränken, wer Nachrichten von einer URL oder einem Satz von URLs empfangen darf. Eine Reservierung besteht aus einer URL-Vorlage, einer Zugriffssteuerungsliste (ACL) und einer Gruppe von Flags. Die URL-Vorlage definiert, auf welche URLs sich die Reservierung auswirkt. Weitere Informationen zur Verarbeitung von URL-Vorlagen finden Sie unter [Routing eingehender Anforderungen](/windows/win32/http/routing-incoming-requests). Die ACL steuert, welche Benutzer oder Benutzergruppen Nachrichten von den angegebenen URLs empfangen dürfen. Die Flags geben an, ob die Reservierung einem Benutzer oder einer Benutzergruppe die Berechtigung erteilt, die URL direkt zu überwachen oder die Überwachungsberechtigung an einen anderen Prozess zu übergeben.  
   
  Im Rahmen der Standardkonfiguration des Betriebssystems erstellt Windows Communication Foundation (WCF) eine Global barrierefreie Reservierung für Port 80, um allen Benutzern das Ausführen von Anwendungen zu ermöglichen, die eine duale HTTP-Bindung für die Duplex Kommunikation verwenden. Da die ACL bei dieser Reservierung allen Benutzern zur Verfügung steht, können Administratoren die Berechtigung, eine URL oder einen Satz von URLs zu überwachen, nicht explizit zulassen oder verweigern. In diesem Thema wird erläutert, wie Sie diese Reservierung löschen und mit einer eingeschränkten ACL neu erstellen.  
   
@@ -24,7 +25,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```
 
- Die Reservierung besteht aus einer URL-Vorlage, die verwendet wird, wenn eine WCF-Anwendung eine duale HTTP-Bindung für die Duplex Kommunikation verwendet. URLs dieses Formulars werden für einen WCF-Dienst verwendet, um Nachrichten bei der Kommunikation über eine duale HTTP-Bindung an den WCF-Client zurückzusenden. Allen Benutzern wird die Berechtigung erteilt, die URL zu überwachen, sie sind jedoch nicht berechtigt, die Überwachung an einen anderen Prozess zu delegieren. Die ACL wird in Security Descriptor Definition Language (SSDL) beschrieben. Weitere Informationen zu SSDL finden Sie unter [SSDL](https://go.microsoft.com/fwlink/?LinkId=136789) .  
+ Die Reservierung besteht aus einer URL-Vorlage, die verwendet wird, wenn eine WCF-Anwendung eine duale HTTP-Bindung für die Duplex Kommunikation verwendet. URLs dieses Formulars werden für einen WCF-Dienst verwendet, um Nachrichten bei der Kommunikation über eine duale HTTP-Bindung an den WCF-Client zurückzusenden. Allen Benutzern wird die Berechtigung erteilt, die URL zu überwachen, sie sind jedoch nicht berechtigt, die Überwachung an einen anderen Prozess zu delegieren. Die ACL wird in Security Descriptor Definition Language (SSDL) beschrieben. Weitere Informationen zu SSDL finden Sie unter [SSDL](/windows/win32/secauthz/security-descriptor-definition-language) .  
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>So löschen Sie die WCF URL-Reservierung  
   

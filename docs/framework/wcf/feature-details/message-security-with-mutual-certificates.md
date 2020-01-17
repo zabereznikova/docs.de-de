@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955341"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211994"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Nachrichtensicherheit durch gegenseitige Zertifikate
 Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst und einen Client, der mithilfe des Nachrichten Sicherheitsmodus gesichert wurde. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert.  
@@ -33,7 +33,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
 |Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -45,7 +45,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a>Konfiguration  
+### <a name="configuration"></a>-Konfiguration  
  Die folgende Konfiguration kann statt des Codes verwendet werden, um denselben Dienst einzurichten.  
   
 ```xml  
@@ -91,7 +91,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
@@ -106,8 +106,8 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a>Konfiguration  
- Der Client wird wie folgt konfiguriert. Ein Client Zertifikat muss mithilfe des [ \<ClientCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)angegeben werden. Außerdem wird das Dienst Zertifikat mit dem [ \<> defaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)angegeben.  
+### <a name="configuration"></a>-Konfiguration  
+ Der Client wird wie folgt konfiguriert. Ein Client Zertifikat muss mithilfe der [\<ClientCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)angegeben werden. Außerdem wird das Dienst Zertifikat mit dem [\<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)angegeben.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Dienst 
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Vorgehensweise: Erstellen und installieren temporärer Zertifikate in WCF für die Transport Sicherheit während der Entwicklung](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Vorgehensweise: Erstellen und installieren temporärer Zertifikate in WCF für die Transport Sicherheit während der Entwicklung](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
