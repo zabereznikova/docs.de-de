@@ -8,16 +8,16 @@ helpviewer_keywords:
 - objects, serializing
 ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
 ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/12/2020
 ms.locfileid: "75904657"
 ---
-# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Mars Hallen und Unmarshalling) von JSON in .net
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Mars Hallen und Unmarshalling) von JSON in .NET
 
 In diesem Artikel wird gezeigt, wie Sie den <xref:System.Text.Json>-Namespace zum Serialisieren und Deserialisieren in und aus JavaScript Object Notation (JSON) verwenden.
 
-Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt und nicht über ein Framework, wie z. b. [ASP.net Core](/aspnet/core/).
+Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt, nicht über ein Framework wie z. B. [ASP.NET Core](/aspnet/core/).
 
 Der größte Teil des Serialisierungsbeispielcodes legt <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> auf `true` fest, um die JSON-Datei formatiert auszugeben (mit Einzügen und Leerraum für bessere Lesbarkeit). In der produktiven Umgebung würden Sie für diese Einstellung in der Regel den Standardwert `false` beibehalten.
 
@@ -64,7 +64,7 @@ Die JSON-Ausgabe der Serialisierung einer Instanz des vorangehenden Typs sieht w
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-Im folgenden Beispiel wird derselbe JSON-Code dargestellt, der formatiert ist (d. h. mit Leerraum und Einzug):
+Im folgenden Beispiel wird derselbe JSON-Code formatiert dargestellt (d. h. mit Leerraum und Einzug):
 
 ```json
 {
@@ -392,7 +392,7 @@ Diese Einstellung gilt für die Serialisierung und Deserialisierung. Information
 
 ## <a name="customize-character-encoding"></a>Zeichencodierung anpassen
 
-Standardmäßig schützt das Serialisierungsprogramm alle nicht-ASCII-Zeichen.  Das heißt, Sie ersetzt Sie durch `\uxxxx`, wobei `xxxx` der Unicode-Code des Zeichens ist.  Wenn die `Summary`-Eigenschaft z. b. auf Cyrillic-"-Eigenschaft" festgelegt ist, wird das `WeatherForecast` Objekt wie in diesem Beispiel gezeigt serialisiert:
+Standardmäßig schützt der Serialisierer alle Nicht-ASCII-Zeichen.  Das heißt, er ersetzt sie durch `\uxxxx`, wobei `xxxx` der Unicode-Code des Zeichens ist.  Wenn die `Summary`-Eigenschaft z. B. auf kyrillisch жарко festgelegt ist, wird das `WeatherForecast`-Objekt serialisiert, wie in diesem Beispiel gezeigt:
 
 ```json
 {
@@ -424,7 +424,7 @@ Verwenden Sie <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWi
 
 ### <a name="serialize-specific-characters"></a>Serialisieren bestimmter Zeichen
 
-Eine Alternative besteht darin, einzelne Zeichen anzugeben, die Sie zulassen möchten, ohne mit Escapezeichen versehen zu werden. Im folgenden Beispiel werden nur die ersten zwei Zeichen von "..." serialisiert:
+Alternativ können Sie einzelne Zeichen angeben, die Sie zulassen möchten, ohne dass sie geschützt werden. Im folgenden Beispiel werden nur die ersten zwei Zeichen von "жарко" serialisiert:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
@@ -588,7 +588,7 @@ Standardmäßig wird bei der Deserialisierung darauf geachtet, dass die Groß-/K
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCaseInsensitive.cs?name=SnippetDeserialize)]
 
-Im folgenden finden Sie eine Beispiel-JSON-Datei mit den Namen der Kamel Sie kann in den folgenden Typ deserialisiert werden, der über die Namen der Pascal-Großbuchstaben verfügt.
+Im Folgenden finden Sie eine Beispiel-JSON-Datei mit Camel-Case Namen. Sie kann in den folgenden Typ deserialisiert werden, der über Pascal-Case-Eigenschaftsnamen verfügt.
 
 ```json
 {
@@ -686,7 +686,7 @@ Um dieses Verhalten zu ändern, legen Sie die <xref:System.Text.Json.JsonSeriali
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
 
-Bei dieser Option ist die `Summary`-Eigenschaft des `WeatherForecastWithDefault` Objekts der Standardwert "keine Zusammenfassung" nach der Deserialisierung.
+Mit dieser Option ist die `Summary`-Eigenschaft des `WeatherForecastWithDefault`-Objekts nach der Deserialisierung der Standardwert "No summary".
 
 NULL-Werte in JSON werden nur ignoriert, wenn sie gültig sind. NULL-Werte für Werttypen, die keine NULL-Werte zulassen, verursachen Ausnahmen.
 
@@ -761,7 +761,7 @@ Im folgenden Beispiel wird gezeigt, wie eine Datei synchron gelesen und nach ein
 
 Der vorangehende Code:
 
-* Geht davon aus, dass der JSON-Code ein Array von Objekten enthält und jedes Objekt eine "Name"-Eigenschaft vom Typ "String" enthalten kann.
+* Geht davon aus, dass der JSON-Code ein Array von Objekten enthält und jedes Objekt eine "name"-Eigenschaft vom Typ "String" enthalten kann.
 * Zählt Objekte und "Name"-Eigenschaftswerte, die mit "University" enden.
 * Geht davon aus, dass die Datei UTF-16-codiert ist, und transcodiert sie in UTF-8. Eine Datei, die als UTF-8 codiert ist, kann mithilfe des folgenden Codes direkt in eine `ReadOnlySpan<byte>` gelesen werden:
 
@@ -771,7 +771,7 @@ Der vorangehende Code:
 
   Wenn die Datei eine UTF-8-Byte Reihenfolge-Marke (BOM) enthält, entfernen Sie diese, bevor Sie die Bytes an den `Utf8JsonReader`übergeben, da der Reader Text erwartet. Andernfalls wird die BOM als ungültige JSON betrachtet, und der Reader löst eine Ausnahme aus.
 
-Im folgenden finden Sie ein JSON-Beispiel, das der vorherige Code lesen kann. Die resultierende Zusammenfassungs Meldung lautet: "2 von 4 haben Namen, die mit" University "enden:
+Im Folgenden finden Sie ein JSON-Beispiel, das der vorherige Code lesen kann. Die resultierende Zusammenfassungsmeldung lautet: "2 out of 4 have names that end with 'University'":
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
 
