@@ -2,19 +2,19 @@
 title: Reliable Messaging Messages Dropped Per Second
 ms.date: 03/30/2017
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
-ms.openlocfilehash: 7722b32f99b302c5c272e095033879c9e04c7ee1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 946e0408b8b6602bba7824b45e4d6cb91cdaa4eb
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916031"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163955"
 ---
-# <a name="reliable-messaging-messages-dropped-per-second"></a><span data-ttu-id="4fb29-102">Reliable Messaging Messages Dropped Per Second</span><span class="sxs-lookup"><span data-stu-id="4fb29-102">Reliable Messaging Messages Dropped Per Second</span></span>
-<span data-ttu-id="4fb29-103">Indikatorname: Reliable Messaging Sessions Dropped Per Second.</span><span class="sxs-lookup"><span data-stu-id="4fb29-103">Counter Name: Reliable Messaging Sessions Dropped Per Second.</span></span>  
+# <a name="reliable-messaging-messages-dropped-per-second"></a><span data-ttu-id="51acb-102">Reliable Messaging Messages Dropped Per Second</span><span class="sxs-lookup"><span data-stu-id="51acb-102">Reliable Messaging Messages Dropped Per Second</span></span>
+<span data-ttu-id="51acb-103">Indikatorname: Reliable Messaging Sessions Dropped Per Second.</span><span class="sxs-lookup"><span data-stu-id="51acb-103">Counter Name: Reliable Messaging Sessions Dropped Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4fb29-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4fb29-104">Description</span></span>  
- <span data-ttu-id="4fb29-105">Gesamtzahl der zuverlässigen Messagingnachrichten, die pro Sekunde in diesem Dienst verworfen wurden.</span><span class="sxs-lookup"><span data-stu-id="4fb29-105">Total number of reliable messaging messages that have been dropped in this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="51acb-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="51acb-104">Description</span></span>  
+ <span data-ttu-id="51acb-105">Gesamtzahl der zuverlässigen Messagingnachrichten, die pro Sekunde in diesem Dienst verworfen wurden.</span><span class="sxs-lookup"><span data-stu-id="51acb-105">Total number of reliable messaging messages that have been dropped in this service in a second.</span></span>  
   
- <span data-ttu-id="4fb29-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="4fb29-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="51acb-106">Dieser Leistungs Bewert ist vom Typ [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))des Leistungs Zählers, dessen Wert mit der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="51acb-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="4fb29-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="4fb29-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="51acb-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="51acb-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
