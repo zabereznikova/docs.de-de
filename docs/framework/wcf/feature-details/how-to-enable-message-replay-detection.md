@@ -10,27 +10,27 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: a41c53e87d82452eac8d7535a422b7aa4bd4e270
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 450a99fc6604ccb3fa796e8a73e1ddc3e3adff9e
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626893"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964662"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
-Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
+Ein Wiederholungsangriff tritt auf, wenn ein Angreifer einen Nachrichtenstream zwischen zwei Parteien kopiert und den Stream für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
   
- Weitere Informationen zu nachrichtenreplay-Erkennung, finden Sie unter [Replay-Erkennung Nachrichten](https://go.microsoft.com/fwlink/?LinkId=88536).  
+ Weitere Informationen zur Erkennung von Nachrichten Replay finden Sie unter [Message Replay-Erkennung](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
- Die folgende Prozedur veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um Replay-Erkennung, die mit Windows Communication Foundation (WCF) zu steuern.  
+ Das folgende Verfahren veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um die Wiedergabe Erkennung mithilfe von Windows Communication Foundation (WCF) zu steuern.  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>So steuern Sie die Replay-Erkennung für den Client mithilfe von Code  
   
-1. Erstellen Sie ein <xref:System.ServiceModel.Channels.SecurityBindingElement> zur Verwendung in einer <xref:System.ServiceModel.Channels.CustomBinding>. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Im folgenden Beispiel wird eine <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> verwendet, die mithilfe der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse erstellt worden ist.  
+1. Erstellen Sie ein <xref:System.ServiceModel.Channels.SecurityBindingElement> zur Verwendung in einer <xref:System.ServiceModel.Channels.CustomBinding>. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Im folgenden Beispiel wird eine <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> verwendet, die mithilfe der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse erstellt worden ist.  
   
 2. Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>-Eigenschaft, um einen Verweis auf die <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>-Klasse zurückzugeben und die folgenden Eigenschaften nach Bedarf festzulegen:  
   
-    1. `DetectReplay`. Ein boolescher Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Die Standardeinstellung ist `true`.  
+    1. `DetectReplay`. Ein Boolean-Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Die Standardeinstellung ist `true`.  
   
     2. `MaxClockSkew`. Ein <xref:System.TimeSpan>-Wert. Bestimmt die Zeitverschiebung, die der Replay-Mechanismus zwischen dem Client und dem Server tolerieren kann. Das Sicherheitsverfahren untersucht den gesendeten Zeitstempel und bestimmt, ob er zu weit in der Vergangenheit zurückliegend gesendet wurde. Der Standardwert beträgt fünf Minuten.  
   
@@ -46,13 +46,13 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>So steuern Sie die Replay-Erkennung in der Konfiguration für den Client oder den Dienst  
   
-1. Erstellen Sie eine [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Erstellen Sie eine [\<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 2. Erstellen Sie ein `<security>`-Element.  
   
-3. Erstellen Sie eine [ \<LocalClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) oder [ \<LocalServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Erstellen Sie eine [\<LocalClientSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) oder [\<LocalServiceSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4. Legen Sie die folgenden Attributwerte nach Bedarf fest: `detectReplays`, `maxClockSkew`, `replayWindow` und `replayCacheSize`. Im folgenden Beispiel werden sowohl die Attribute eines `<localServiceSettings>`<localClientSettings>- als auch eines`<localClientSettings>`-Elements festgelegt:  
+4. Legen Sie die folgenden Attributwerte nach Bedarf fest: `detectReplays`, `maxClockSkew`, `replayWindow` und `replayCacheSize`. Im folgenden Beispiel werden sowohl die Attribute eines `<localServiceSettings>`&lt;localClientSettings&gt;- als auch eines`<localClientSettings>`-Elements festgelegt:  
   
     ```xml  
     <customBinding>  
