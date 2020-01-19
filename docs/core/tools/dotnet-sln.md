@@ -2,12 +2,12 @@
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191818"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937250"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -27,7 +27,7 @@ ms.locfileid: "73191818"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet sln` bietet eine praktische Möglichkeit, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>Beispiele
 
-Fügen Sie ein C#-Projekt zu einer Projektmappe hinzu:
+- Fügen Sie ein C#-Projekt zu einer Projektmappe hinzu:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-Entfernen Sie ein C#-Projekt aus einer Projektmappe:
+- Entfernen Sie ein C#-Projekt aus einer Projektmappe:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu:
+- Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Entfernen Sie mehrere C#-Projekte aus einer Projektmappe:
+- Entfernen Sie mehrere C#-Projekte aus einer Projektmappe:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu, indem Sie ein Globmuster (nur UNIX/Linux) verwenden:
+- Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu, indem Sie ein Globmuster (nur UNIX/Linux) verwenden:
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-Entfernen Sie mehrere C#-Projekte aus einer Projektmappe, indem Sie ein Globmuster (nur UNIX/Linux) verwenden:
+- Entfernen Sie mehrere C#-Projekte aus einer Projektmappe, indem Sie ein Globmuster (nur UNIX/Linux) verwenden:
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```
