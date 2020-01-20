@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191696"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336726"
 ---
 # <a name="contributing"></a>Beitragen
 
@@ -22,12 +22,9 @@ Das Dokument beschreibt den Prozess bei der Mitwirkung an den Artikeln und Codeb
 
 Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die Website „.NET-Dokumentation“ besteht neben diesem Repository aus den folgenden Repositorys:
 
-- [Codebeispiele und -ausschnitte](https://github.com/dotnet/samples)  
-    Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
-- [.NET-API-Referenz](https://github.com/dotnet/dotnet-api-docs)  
-    Probleme und Aufgaben für dieses Repository werden in [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) nachverfolgt.
-- [Referenz: .NET Compiler Platform-SDK](https://github.com/dotnet/roslyn-api-docs)  
-    Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
+- [Codebeispiele und -ausschnitte](https://github.com/dotnet/samples): Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
+- [.NET-API-Referenz](https://github.com/dotnet/dotnet-api-docs): Probleme und Aufgaben für dieses Repository werden in [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) nachverfolgt.
+- [.NET Compiler Platform SDK-Referenz](https://github.com/dotnet/roslyn-api-docs): Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
 
 ## <a name="dos-and-donts"></a>Verhaltensregeln
 
@@ -37,7 +34,7 @@ Die folgende Liste enthält einige grundlegende Regeln, die Sie beachten sollten
 - **JA:** Sehen Sie sich die aktuellen [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs)-Issues für Vorschläge zu den Aufgaben an.
 - **JA:** Erstellen Sie einen PR für jede Aufgabe. PRs, die mehrere nicht zusammenhängende Änderungen enthalten, sind viel schwieriger zu überprüfen. Dies verzögert die Überprüfung und Zusammenführung von PRS. Diese Richtlinie gilt auch für Überprüfungen: Wir versuchen, nicht zusammenhängenden Änderungen in Überprüfungen nicht vorzuschlagen. Diese Richtlinie gilt es auch bei Communityüberprüfungen zu beachten.
 - **JA:** Bieten Sie eine klare Beschreibung der Arbeit in Ihrem PR. Teilen Sie uns mit, was Sie verändert haben und warum. Die Standardbeschreibung „update article.md“ ist für die Prüfer nicht hilfreich.
-- **NEIN:** Übermitteln Sie keine PRs für reine Stiländerungen ohne vorherige Erörterung. Für die Überprüfung auf Genauigkeit dieser PRs wird zusätzliche Zeit benötigt, und die Zusammenführung führt häufig zu Zusammenführungskonflikten mit anderen wichtigen Updates. Wir arbeiten daran, einen konsistenten Stil zu befolgen, allerdings gestaltet sich dies durch die vielen verschiedenen Aufgaben schwierig. Wenn aus anderen Gründen wichtige Updates vorgenommen werden, werden diese Artikel vereinheitlicht. 
+- **NEIN:** Übermitteln Sie keine PRs für reine Stiländerungen ohne vorherige Erörterung. Für die Überprüfung auf Genauigkeit dieser PRs wird zusätzliche Zeit benötigt, und die Zusammenführung führt häufig zu Zusammenführungskonflikten mit anderen wichtigen Updates. Wir arbeiten daran, einen konsistenten Stil zu befolgen, allerdings gestaltet sich dies durch die vielen verschiedenen Aufgaben schwierig. Wenn aus anderen Gründen wichtige Updates vorgenommen werden, werden diese Artikel vereinheitlicht.
 - **JA** Lesen Sie den [Styleguide](./styleguide/template.md) und die Richtlinien bezüglich [Sprache und Schreibstil](./styleguide/voice-tone.md). Neue Ergänzungen sollten diese Richtlinien einhalten.
 - **JA** Erstellen Sie einen separaten Branch in Ihrer Verzweigung, bevor Sie an den Artikeln arbeiten.
 - **JA** Folgen Sie dem [GitHub-Flow-Workflow](https://guides.github.com/introduction/flow/).
@@ -54,7 +51,7 @@ Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.co
 **Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten (wenn Sie beispielsweise einen Tippfehler korrigieren oder sofort einen Pull Request öffnen, um ein Problem zu beheben, das Sie in der Dokumentation finden). Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
 Der Inhalt im Ordner *docs* ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
-Oder
+- oder -
 
 Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Beiträge willkommen sind. Unter [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Projekte für .NET-Community-Mitwirkende) sind viele der Arbeitsaufgaben aufgelistet, die für Community-Mitwirkende verfügbar sind. Je nach Interesse und Engagement können Sie Tickets in den folgenden Kategorien auswählen:
 
@@ -64,7 +61,7 @@ Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Bei
 
 - **Erstellen neuer Inhalte**. Wenn Sie an der Erstellung eines eigenen Themas interessiert sind, werden unter diesen Tickets auch Themen aufgelistet, die wir gerne zu unserem Dokumentationssatz hinzufügen möchten. Informieren Sie uns trotzdem bitte, bevor Sie mit der Arbeit an einem Thema beginnen. Wenn Sie über ein Thema schreiben möchten, das hier nicht aufgeführt ist, eröffnen Sie ein Ticket.
 
-Sie können sich auch die Liste [open issues](https://github.com/dotnet/docs/issues) (offene Tickets) anschauen und die Bearbeitung eines Tickets anbieten, das Sie interessiert. Wir verwenden die Bezeichnung [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (zu haben), um Tickets zu kennzeichnen, bei denen eine Mitwirkung möglich ist. 
+Sie können sich auch die Liste [open issues](https://github.com/dotnet/docs/issues) (offene Tickets) anschauen und die Bearbeitung eines Tickets anbieten, das Sie interessiert. Wir verwenden die Bezeichnung [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (zu haben), um Tickets zu kennzeichnen, bei denen eine Mitwirkung möglich ist.
 
 **Schritt 2:** Verzweigen Sie bei Bedarf das Repository `dotnet/docs`, `dotnet/samples` oder `dotnet/dotnet-api-docs`, und erstellen Sie einen Branch für Ihre Änderungen.
 
@@ -138,7 +135,7 @@ Weitere Informationen finden Sie unter [Samples/Readme.md](https://github.com/do
 
 ## <a name="the-c-interactive-experience"></a>Die interaktive C#-Umgebung
 
-Für kurze Codebeispiele in C# können Sie das Sprachtag `csharp-interactive` verwenden, um ein C#-Beispiel anzugeben, das im Browser ausgeführt wird. (Für Inline-Codebeispiele wird das Tag `csharp-interactive`, für von der Quelle eingefügte Codeausschnitte wird das Tag `code-csharp-interactive` verwendet.) Mit diesen Codebeispielen werden im Artikel ein Codefenster und ein Ausgabefenster angezeigt. Im Ausgabefenster werden alle durch die Ausführung des interaktiven Codes generierten Ausgaben angezeigt, sobald der Benutzer das Beispiel ausgeführt hat. 
+Für kurze Codebeispiele in C# können Sie das Sprachtag `csharp-interactive` verwenden, um ein C#-Beispiel anzugeben, das im Browser ausgeführt wird. (Für Inline-Codebeispiele wird das Tag `csharp-interactive`, für von der Quelle eingefügte Codeausschnitte wird das Tag `code-csharp-interactive` verwendet.) Mit diesen Codebeispielen werden im Artikel ein Codefenster und ein Ausgabefenster angezeigt. Im Ausgabefenster werden alle durch die Ausführung des interaktiven Codes generierten Ausgaben angezeigt, sobald der Benutzer das Beispiel ausgeführt hat.
 
 Die interaktive C#-Umgebung passt sich der Arbeitsweise mit den Beispielen an. Besucher können das Beispiel ausführen und die Ergebnisse anzeigen. Über eine Reihe von Faktoren wird bestimmt, ob das Beispiel oder der entsprechende Text Informationen zur Ausgabe enthalten soll.
 
@@ -149,7 +146,7 @@ Die interaktive C#-Umgebung passt sich der Arbeitsweise mit den Beispielen an. B
 - Wenn Beispiel und erwartete Ausgabe kurz sind, sollten Sie das Anzeigen der Ausgabe in Betracht ziehen. Das spart ein wenig Zeit.
 - In Artikeln, in denen erläutert wird, wie die aktuelle oder die invariante Kultur die Ausgabe beeinflusst, sollte auch die erwartete Ausgabe erläutert werden. Der interaktive REPL (Read, Evaluate, Print Loop) wird auf einem Linux-basierten Host ausgeführt. Die Standardkultur und die invariante Kultur führen auf verschiedenen Betriebssystemen und Computern zu unterschiedlichen Ausgaben. Der Artikel sollte eine Erläuterung der Ausgabe in Windows-, Linux- und Mac-Systemen enthalten.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>Wann soll die erwartete Ausgabe aus dem Beispiel ausgeschlossen werden? 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>Wann soll die erwartete Ausgabe aus dem Beispiel ausgeschlossen werden?
 
 - Bei Artikeln, in denen das Beispiel eine größere Ausgabe generiert, sollte diese Ausgabe in den Kommentaren nicht enthalten sein. Sie verdeckt den Code, nachdem das Beispiel ausgeführt wurde.
 - Bei Artikeln, in denen das Beispiel ein Thema veranschaulicht, die Ausgabe für das Verständnis aber nicht unbedingt erforderlich ist, kann die Ausgabe ausgeschlossen werden. Beispiel: Code, der eine LINQ-Abfrage zum Erläutern der Abfragesyntax ausführt und dann jedes Element in der Ausgabeauflistung anzeigt.

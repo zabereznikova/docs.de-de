@@ -1,14 +1,13 @@
 ---
 title: 'Tutorial: Erstellen einer .NET Core-Lösung unter macOS mit Visual Studio Code'
 description: Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe mithilfe von Visual Studio Code.
-ms.date: 03/23/2017
-ms.custom: seodec18
-ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/19/2019
+ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117360"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715303"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET Core-Lösung unter macOS mit Visual Studio Code
 
@@ -17,19 +16,19 @@ Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum 
 > [!NOTE]
 > In diesem Artikel wird [Visual Studio Code](https://code.visualstudio.com) unter macOS verwendet.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Installieren Sie das [.NET Core SDK](https://dotnet.microsoft.com/download). Das .NET Core SDK umfasst die neueste Version von .NET Core-Framework und -Runtime.
 
 Installieren Sie [Visual Studio Code](https://code.visualstudio.com). Im Rahmen dieses Artikels installieren Sie auch Visual Studio Code-Erweiterungen, die den .NET Core-Entwicklungsprozess verbessern.
 
-Installieren Sie die C#-Erweiterung für Visual Studio Code, indem Sie Visual Studio Code öffnen und <kbd>F1</kbd> drücken, um die Visual Studio Code-Palette zu öffnen. Geben Sie **ext install** ein, um die Liste mit Erweiterungen anzuzeigen. Wählen Sie die C#-Erweiterung aus. Starten Sie Visual Studio Code neu, um die Erweiterung zu aktivieren. Weitere Informationen finden Sie unter [Dokumentation zur C#-Erweiterung von Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+Installieren Sie die C#-Erweiterung für Visual Studio Code, indem Sie Visual Studio Code öffnen und <kbd>Fn</kbd>+<kbd>F1</kbd> drücken, um die Visual Studio Code-Palette zu öffnen. Geben Sie **ext install** ein, um die Liste mit Erweiterungen anzuzeigen. Wählen Sie die C#-Erweiterung aus. Starten Sie Visual Studio Code neu, um die Erweiterung zu aktivieren. Weitere Informationen finden Sie unter [Dokumentation zur C#-Erweiterung von Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
 ## <a name="get-started"></a>Erste Schritte
 
-In diesem Tutorial erstellen Sie drei Projekte: ein Bibliotheksprojekt, Tests für dieses Bibliotheksprojekt sowie eine Konsolenanwendung, die die Bibliothek nutzt. Sie können die Quelle für dieses Thema im Repository „dotnet/samples“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+In diesem Tutorial erstellen Sie drei Projekte: ein Bibliotheksprojekt, Tests für dieses Bibliotheksprojekt sowie eine Konsolenanwendung, die die Bibliothek nutzt. Sie können die Quelle für diesen Artikel im Repository „dotnet/samples“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Starten Sie Visual Studio Code. Drücken Sie <kbd>STRG</kbd>+<kbd>\`</kbd> (das Zeichen für das invertierte Hochkomma oder das Graviszeichen), oder wählen Sie **Anzeigen > Integriertes Terminal** aus dem Menü aus, um ein eingebettetes Terminal in Visual Studio Code zu öffnen. Sie können noch immer eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter Mac oder Linux) öffnen, wenn Sie lieber außerhalb von Visual Studio Code arbeiten möchten.
+Starten Sie Visual Studio Code. Drücken Sie <kbd>STRG</kbd>+<kbd>\`</kbd> (das Zeichen für das invertierte Hochkomma oder das Graviszeichen), oder wählen Sie **Anzeigen > Terminal** aus dem Menü aus, um ein eingebettetes Terminal in Visual Studio Code zu öffnen. Sie können noch immer eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter Mac oder Linux) öffnen, wenn Sie lieber außerhalb von Visual Studio Code arbeiten möchten.
 
 Beginnen Sie, indem Sie eine Projektmappendatei erstellen, die als Container für mindestens ein .NET Core-Projekt dient. Führen Sie im Terminal den Befehl [`dotnet new`](../tools/dotnet-new.md) aus, um eine neue Projektmappe *golden.sln* in einem neuen Ordner namens *golden* zu erstellen:
 
@@ -210,13 +209,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>Debuggen der Anwendung
 
-Legen Sie bei der Anweisung `WriteLine` in der `Main`-Methode einen Haltepunkt fest. Dies erreichen Sie, indem Sie entweder die <kbd>F9</kbd>-Taste drücken, wenn sich der Cursor auf der `WriteLine`-Zeile befindet, oder indem Sie auf den linken Rand der Zeile klicken, wo Sie den Haltepunkt festlegen möchten. Es erscheint ein Roter Kreis im Rand neben der Codezeile. Wenn der Haltepunkt erreicht ist, wird die Ausführung des Codes angehalten, *bevor* die Haltepunktzeile ausgeführt wird.
+Legen Sie bei der Anweisung `WriteLine` in der `Main`-Methode einen Haltepunkt fest. Sie erreichen dies, indem Sie entweder die <kbd>Fn</kbd>+<kbd>F9</kbd>-Taste drücken, wenn sich der Cursor in der `WriteLine`-Zeile befindet, oder indem Sie auf den linken Rand der Zeile klicken, in der Sie den Breakpoint festlegen möchten. Es erscheint ein Roter Kreis im Rand neben der Codezeile. Wenn der Haltepunkt erreicht ist, wird die Ausführung des Codes angehalten, *bevor* die Haltepunktzeile ausgeführt wird.
 
-Öffnen Sie die Registerkarte „Debugger“, indem Sie das Debugger-Symbol in der Visual Studio Code-Symbolleiste auswählen, **Anzeigen > Debuggen** aus der Menüleiste auswählen oder den Tastaturkurzbefehl <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd> verwenden:
+Öffnen Sie die Registerkarte „Debugger“, indem Sie das Debugger-Symbol in der Visual Studio Code-Symbolleiste auswählen, **Anzeigen > Debuggen** aus der Menüleiste auswählen oder die Tastenkombination <kbd>Befehl</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd> verwenden:
 
 ![Visual Studio Code-Debugger](./media/using-on-macos/visual-studio-code-debugger.png)
 
-Klicken Sie auf die Schaltfläche „Wiedergabe“, um die Anwendung unter dem Debugger zu starten. Die App startet mit der Ausführung und läuft bis zum Haltepunkt, wo sie anhält. Führen Sie die `Get`-Methode schrittweise aus, und stellen Sie sicher, dass Sie die richtigen Argumente eingefügt haben. Bestätigen Sie, dass die Antwort 42 ist.
+Klicken Sie auf die Schaltfläche „Wiedergabe“, um die Anwendung unter dem Debugger zu starten. Sie haben in diesem Projekt sowohl ein Testprojekt als auch eine Anwendung erstellt. Der Debugger fragt, welches Projekt gestartet werden soll. Wählen Sie das Projekt „App“ aus. Die App startet mit der Ausführung und läuft bis zum Haltepunkt, wo sie anhält. Führen Sie die `Get`-Methode schrittweise aus, und stellen Sie sicher, dass Sie die richtigen Argumente eingefügt haben. Bestätigen Sie, dass die Antwort 42 ist.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

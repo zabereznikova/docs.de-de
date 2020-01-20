@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106688"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346086"
 ---
 # <a name="async-overview"></a>Async (Übersicht)
 
@@ -20,7 +20,7 @@ Es ist noch nicht lange her, da wurden Apps einfach durch die Ausführung auf ei
 - Clientanwendungen sollen Always On/Always Connected sein und ständig auf Benutzerinteraktionen reagieren (z.B. Berühren) – mit hohen App Store-Bewertungen!
 - Dienste sollen Verkehrsspitzen durch ordnungsgemäßes zentrales Hoch- und Herunterskalieren behandeln. 
 
-Asynchrone Programmierung ist eine wichtige Technik, mit der E/A-Blockierung und gleichzeitige Vorgänge auf mehreren Kernen direkt behandelt werden können. .NET bietet mit benutzerfreundlichen asynchronen Programmiermodellen auf Sprachebene in C#, VB und F# die Möglichkeit, Apps und Dienste reaktionsfähig und flexibel zu machen.
+Asynchrone Programmierung ist eine wichtige Technik, mit der E/A-Blockierung und gleichzeitige Vorgänge auf mehreren Kernen direkt behandelt werden können. .NET bietet mit benutzerfreundlichen asynchronen Programmiermodellen auf Sprachebene in C#, Visual Basic und F# die Möglichkeit, Apps und Dienste reaktionsfähig und flexibel zu machen.
 
 ## <a name="why-write-async-code"></a>Warum sollten Sie Async-Code schreiben?
 

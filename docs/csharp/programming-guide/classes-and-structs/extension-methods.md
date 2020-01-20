@@ -1,23 +1,22 @@
 ---
 title: Erweiterungsmethoden – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1ab831b10b4152e8713cdfba4962822042c15673
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971054"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714948"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
   
- Die häufigsten Erweiterungsmethoden sind die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Standardabfrageoperatoren, die vorhandenen <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>-Typen Funktionalität hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint Instanzmethoden zu haben, wie z. B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung sehen, wenn Sie nach einer Instanz eines <xref:System.Collections.Generic.IEnumerable%601>-Typs, z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array>, "dot" eingeben.  
+ Die häufigsten Erweiterungsmethoden sind die LINQ-Standardabfrageoperatoren, die vorhandenen <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>-Typen Funktionalität hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint Instanzmethoden zu haben, wie z. B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung sehen, wenn Sie nach einer Instanz eines <xref:System.Collections.Generic.IEnumerable%601>-Typs, z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array>, "dot" eingeben.  
   
  Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator-Methode `OrderBy` für ein Ganzzahlarray aufrufen können. Der Ausdruck in Klammern ist ein Lambda-Ausdruck. Viele Standardabfrageoperatoren verwenden Lambda-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../statements-expressions-operators/lambda-expressions.md).  
   

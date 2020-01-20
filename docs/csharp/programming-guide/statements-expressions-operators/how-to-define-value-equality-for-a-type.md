@@ -1,6 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren von Wertgleichheit für einen Typ – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Definieren von Wertgleichheit für einen Typ (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,14 +8,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 0e1c736c7a2826c1218cb078a6e9f874b3b72c3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755007"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711973"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Gewusst wie: Definieren von Wertgleichheit für einen Typ (C#-Programmierhandbuch)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Vorgehensweise: Definieren von Wertgleichheit für einen Typ (C#-Programmierleitfaden)
 
 Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll ist, eine benutzerdefinierte Definition der Wertgleichheit (oder Äquivalenz) für den Typ zu erstellen. In der Regel implementieren Sie Wertgleichheit, wenn Objekte des Typs zu einer Auflistung hinzugefügt werden sollen oder wenn ihr Hauptzweck im Speichern einer Reihe von Feldern oder Eigenschaften besteht. Sie können die Definition der Wertgleichheit auf einem Vergleich aller Felder und Eigenschaften im Typ oder auf einer Teilmenge aufbauen. Ihre Implementierung in Klassen und Strukturen sollte in beiden Fällen die fünf Äquivalenzgarantien befolgen:  
   

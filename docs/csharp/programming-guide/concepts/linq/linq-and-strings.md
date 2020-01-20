@@ -2,12 +2,12 @@
 title: LINQ und Zeichenfolgen (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140897"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635534"
 ---
 # <a name="linq-and-strings-c"></a>LINQ und Zeichenfolgen (C#)
 
@@ -48,7 +48,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 
   Zeigt, wie Textzeilen anhand eines beliebigen Worts oder Felds sortiert werden.
 
-- [Vorgehensweise: Neuordnen der Felder einer durch Trennzeichen getrennten Datei (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
+- [Vorgehensweise: Neuanordnen der Felder einer Datei mit Trennzeichen (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
 
   Zeigt, wie Felder in einer Zeile in einer CSV-Datei neu angeordnet werden
 
@@ -56,7 +56,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 
   Zeigt, wie Zeichenfolgenlisten auf verschiedene Weise verbunden werden
 
-- [Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Vorgehensweise: Auffüllen von Objektsammlungen mit Daten aus mehreren Quellen (LINQ) (C#)](how-to-populate-object-collections-from-multiple-sources-linq.md)
 
   Zeigt, wie Auflistungen erstellt werden, indem Sie mehrere Textdateien als Datenquellen verwenden
 
@@ -64,7 +64,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
   
   Zeigt, wie Zeichenfolgen in zwei Listen mit einem übereinstimmenden Schlüssel in einer einzigen Zeichenfolge vereint werden
 
-- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
   Veranschaulicht, wie neue Dateien mithilfe einer einzelnen Datei als Datenquelle erstellt werden
 
@@ -75,4 +75,4 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 ## <a name="see-also"></a>Siehe auch
 
 - [Language Integrated Query (LINQ) (C#)](index.md)
-- [Vorgehensweise: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)
+- [Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)

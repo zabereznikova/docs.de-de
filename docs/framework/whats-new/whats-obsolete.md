@@ -1,5 +1,5 @@
 ---
-title: Veraltete Elemente in der .NET Framework-Klassenbibliothek
+title: Veraltete Elemente in .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: eda60ce9e1396805541229c9756b13cdd167dc72
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140599"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901335"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 
-.NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.
+.NET ändert sich im Laufe der Zeit. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die den alten überlegener sind.
 
-.NET Framework und die Common Language Runtime sollen Abwärtskompatibilität unterstützen (dadurch können Anwendungen, die mit einer bestimmten Version von .NET Framework entwickelt wurden, unter der nächsten Version von .NET Framework ausgeführt werden). Dadurch wird es schwierig, einfach einen Typ oder einen Typmember zu entfernen. Stattdessen gibt .NET Framework an, dass ein Typ oder Typmember nicht mehr verwendet werden sollte, indem er als veraltet markiert wird. Ein veralteter Typ oder Member muss entsprechend markiert werden, damit Entwickler Bescheid wissen, dass er entfernt werden soll und die Zeit haben, auf das Entfernen des Typs zu reagieren. Allerdings wird vorhandener Code, in dem der Typ oder Member verwendet wird, weiterhin in der neuen Version von .NET Framework ausgeführt.
+.NET Framework und die Common Language Runtime sollen Abwärtskompatibilität unterstützen (dadurch können Anwendungen, die mit einer bestimmten Version von .NET Framework entwickelt wurden, unter der nächsten Version von .NET Framework ausgeführt werden). Dadurch wird es schwierig, einfach einen Typ oder einen Typmember zu entfernen. Stattdessen gibt .NET an, dass ein Typ oder Typmember nicht mehr verwendet werden sollte, indem er als veraltet markiert wird. Ein veralteter Typ oder Member muss entsprechend markiert werden, damit Entwickler Bescheid wissen, dass er entfernt werden soll und die Zeit haben, auf das Entfernen des Typs zu reagieren. Allerdings wird vorhandener Code, in dem der Typ oder Member verwendet wird, weiterhin in der neuen Version von .NET ausgeführt.
 
 > [!NOTE]
-> Die Begriffe *veraltet* und *nicht mehr aktuell* haben die gleiche Bedeutung, wenn sie in Bezug auf die Typen und Member von .NET Framework angewendet werden.
+> Die Begriffe *veraltet* und *nicht mehr aktuell* haben die gleiche Bedeutung, wenn sie in Bezug auf die .NET-Typen und -Member angewendet werden.
 
 ## <a name="the-obsoleteattribute-attribute"></a>Das ObsoleteAttribute-Attribut
 
@@ -37,13 +37,13 @@ Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres 
 
 - Ändern Sie, falls möglich, den Code durch Entfernen der Verwendung des Typs oder des Members.
 
-     Oder
+     - oder -
 
 - Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.
 
 Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Ein Beispiel: Angenommen, Sie besitzen eine für .NET Framework 3.5 kompilierte Anwendung mit dem Namen „app1.exe“ und möchten, dass diese Anwendung für .NET Framework 4.5 ausgeführt wird. Gehen Sie dazu folgendermaßen vor:
 
-1. Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.
+1. Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen *app1.exe* in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen *app1.exe.config* erstellen.
 
 2. Fügen Sie der Konfigurationsdatei Folgendes hinzu:
 
@@ -55,7 +55,7 @@ Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Ver
     </configuration>
     ```
 
-In der folgenden Tabelle sind die Zeichenfolgenwerte aufgeführt, die Sie dem `version`-Attribut zuweisen können, um eine bestimmte Version von .NET Framework als Zielversion festzulegen:
+Um eine bestimmte Version von .NET Framework als Ziel zu verwenden, weisen Sie dem `version`-Attribut einen der folgenden Zeichenfolgenwerte zu:
 
 |.NET Framework-Version|`version`-Zeichenfolge|
 |-|-|
@@ -69,19 +69,16 @@ In der folgenden Tabelle sind die Zeichenfolgenwerte aufgeführt, die Sie dem `v
 |1.1|v1.1.4322|
 |1.0|v1.0.3705|
 
-## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listen mit veralteten Komponenten für .NET Framework 4.5 und höhere Versionen
+## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>Veraltete APIs für .NET Framework 4.5 und höhere Versionen
 
 - [Veraltete Typen](obsolete-types.md)
 - [Veraltete Member](obsolete-members.md)
 
-## <a name="obsolete-lists-for-previous-versions"></a>Listen mit veralteten Komponenten für frühere Versionen
+## <a name="obsolete-apis-for-previous-versions"></a>Veraltete APIs für frühere Versionen
 
 - [Veraltete Typen in .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
-
 - [Veraltete Member in .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
-
 - [Liste veralteter Elemente in .NET Framework 3.5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
-
 - [Liste veralteter Elemente in .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
 ## <a name="see-also"></a>Siehe auch

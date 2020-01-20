@@ -4,12 +4,12 @@ description: Verwenden Sie einen Paket-Manager, um das .NET Core SDK und die -Ru
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 5551ce8cffa92d4efb6bbe9db2a4887f4b26cd6e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 18a0068e5494d6a25e9cd278ce88f5915e2000b8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998900"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740648"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15-Paket-Manager: Installieren von .NET Core
 

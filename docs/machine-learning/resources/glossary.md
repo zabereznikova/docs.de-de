@@ -1,15 +1,14 @@
 ---
 title: Maschinelles Lernen – Glossar
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977286"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739873"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -57,7 +56,7 @@ Daten sind für alle Machine Learning-Anwendungen von zentraler Bedeutung. In ML
 
 Eine Klasse in ML.NET, die die <xref:Microsoft.ML.IEstimator%601>-Schnittstelle implementiert.
 
-Ein Estimator ist eine Spezifikation einer Transformation (sowohl Transformation der Datenaufbereitung als auch Transformation des Machine Learning-Modells). Estimators können zu einer Pipeline von Transformationen verkettet werden. Die Parameter eines Estimators oder einer Estimatorpipeline werden gelernt, wenn <xref:Microsoft.ML.IEstimator`1.Fit*> aufgerufen wird. Das Ergebnis des <xref:Microsoft.ML.IEstimator`1.Fit*> ist ein [Transformator](#transformer).
+Ein Estimator ist eine Spezifikation einer Transformation (sowohl Transformation der Datenaufbereitung als auch Transformation des Machine Learning-Modells). Estimators können zu einer Pipeline von Transformationen verkettet werden. Die Parameter eines Estimators oder einer Estimatorpipeline werden gelernt, wenn <xref:Microsoft.ML.IEstimator%601.Fit%2A> aufgerufen wird. Das Ergebnis des <xref:Microsoft.ML.IEstimator%601.Fit%2A> ist ein [Transformator](#transformer).
 
 ## <a name="extension-method"></a>Erweiterungsmethode
 

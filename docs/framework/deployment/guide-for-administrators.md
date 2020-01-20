@@ -5,21 +5,19 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975571"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716526"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 
-In diesem Artikel erfahren Sie Schritt für Schritt, wie Systemadministratoren .NET Framework 4.5 und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste mit den Software- und Hardwareanforderungen für die Installation von .NET Framework 4.5 finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
+In diesem Artikel erfahren Sie Schritt für Schritt, wie Systemadministratoren .NET Framework 4.5 und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft Endpoint Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste mit den Software- und Hardwareanforderungen für die Installation von .NET Framework 4.5 finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
 
 > [!NOTE]
-> Die Software, auf die in diesem Dokument verwiesen wird (einschließlich .NET Framework 4.5, System Center Configuration Manager und Active Directory), unterliegt jeweils den geltenden Lizenzbedingungen. In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden. Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.
+> Die Software, auf die in diesem Dokument verwiesen wird (einschließlich .NET Framework 4.5, Configuration Manager und Active Directory), unterliegt ohne Einschränkungen den jeweils geltenden Lizenzbedingungen. In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden. Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.
 >
 > Informationen zur Unterstützung für .NET Framework finden Sie unter [.NET Framework Support-Richtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) auf der Microsoft Support-Website.
 
@@ -38,13 +36,13 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="the-deployment-process"></a>Bereitstellungsprozess
 
-Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das verteilbare .NET Framework-Paket mit System Center 2012 Configuration Manager auf Computern im Netzwerk bereit. Der Aufbau der Infrastruktur umfasst das Erstellen und Definieren von fünf primären Bereichen: Sammlungen, ein Paket und ein Programm für die Software, Verteilungspunkte und Bereitstellungen.
+Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das verteilbare .NET Framework-Paket mit Configuration Manager auf Computern im Netzwerk bereit. Der Aufbau der Infrastruktur umfasst das Erstellen und Definieren von fünf primären Bereichen: Sammlungen, ein Paket und ein Programm für die Software, Verteilungspunkte und Bereitstellungen.
 
-- Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
+- Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections).
 
-- **Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs).
+- **Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs).
 
-- **Verteilungspunkte** sind Configuration Manager-Standortsystemrollen, die zum Ausführen von Software auf Clientcomputern erforderliche Dateien speichern. Wenn der Configuration Manager-Client eine Softwarebereitstellung empfängt und verarbeitet, stellt er eine Verbindung mit einem Verteilungspunkt her, um den mit der Software verbundenen Inhalt herunterzuladen und den Installationsvorgang zu starten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
+- **Verteilungspunkte** sind Configuration Manager-Standortsystemrollen, die zum Ausführen von Software auf Clientcomputern erforderliche Dateien speichern. Wenn der Configuration Manager-Client eine Softwarebereitstellung empfängt und verarbeitet, stellt er eine Verbindung mit einem Verteilungspunkt her, um den mit der Software verbundenen Inhalt herunterzuladen und den Installationsvorgang zu starten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management).
 
 - **Bereitstellungen** weisen zutreffende Member der angegebenen Zielsammlung an, das Softwarepaket zu installieren.
 
@@ -55,7 +53,7 @@ Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das v
 
 ## <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
 
-Sie können mit System Center 2012 Configuration Manager eine automatische Installation von .NET Framework 4.5 bereitstellen, bei der die Benutzer nicht in den Installationsvorgang eingreifen. Führen Sie folgende Schritte aus:
+Sie können mit Configuration Manager eine automatische Installation von .NET Framework 4.5 bereitstellen, bei der die Benutzer nicht in den Installationsvorgang eingreifen. Führen Sie folgende Schritte aus:
 
 1. [Erstellen Sie eine Sammlung](#creating_a_collection).
 
@@ -69,7 +67,7 @@ Sie können mit System Center 2012 Configuration Manager eine automatische Inst
 
 ### <a name="create-a-collection"></a>Erstellen einer Sammlung
 
-In diesem Schritt wählen Sie die Computer aus, auf denen Sie das Paket und Programm bereitstellen, und gruppieren sie in einer Gerätesammlung. Zum Erstellen einer Sammlung im Configuration Manager können Sie Regeln für die direkte Mitgliedschaft verwenden (wobei Sie die Sammlungsmitglieder manuell angeben). Alternativ können Sie Abfrageregeln verwenden (wobei die Sammlungsmitglieder vom Configuration Manager auf der Grundlage von Kriterien bestimmt werden, die Sie angegeben haben). Weitere Informationen zu Mitgliedschaftsregeln, einschließlich abfragebezogenen und direkten Regeln, finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).
+In diesem Schritt wählen Sie die Computer aus, auf denen Sie das Paket und Programm bereitstellen, und gruppieren sie in einer Gerätesammlung. Zum Erstellen einer Sammlung im Configuration Manager können Sie Regeln für die direkte Mitgliedschaft verwenden (wobei Sie die Sammlungsmitglieder manuell angeben). Alternativ können Sie Abfrageregeln verwenden (wobei die Sammlungsmitglieder vom Configuration Manager auf der Grundlage von Kriterien bestimmt werden, die Sie angegeben haben). Weitere Informationen zu abfragebezogenen und direkten Mitgliedschaftsregeln finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in Configuration Manager](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 So erstellen Sie eine Sammlung
 
@@ -135,7 +133,7 @@ In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoption
 |------------|-----------------|
 |**/q**|Legt den stillen Modus fest. Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.|
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|
-|**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"**.|
+|**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"** .|
 
 Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer nicht in den Installationsvorgang ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der unter [Getting Progress Information from an Installation Package (Abrufen von Statusinformationen aus einem Installationspaket)](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
@@ -163,7 +161,7 @@ Führen Sie die folgenden Schritte aus, um einen Verteilungspunkt für das im vo
 
 8. Durchlaufen Sie den Assistenten.
 
-Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Überprüfen Sie vor dem Bereitstellen des Pakets und Programms, ob die Installation auf dem Verteilungspunkt ausgeführt wurde. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek [Überwachen von mit System Center Configuration Manager verteilten Inhalten](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) im Abschnitt „Überwachen von Inhalten“.
+Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Überprüfen Sie vor dem Bereitstellen des Pakets und Programms, ob die Installation auf dem Verteilungspunkt ausgeführt wurde. Weitere Informationen finden Sie im Abschnitt „Überwachen des Inhaltsstatus“ unter [Überwachen von mit Configuration Manager verteilten Inhalten](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) in der Configuration Manager-Dokumentationsbibliothek.
 
 <a name="deploying_package"></a>
 

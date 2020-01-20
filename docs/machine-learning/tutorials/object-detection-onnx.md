@@ -3,15 +3,15 @@ title: 'Tutorial: Erkennen von Objekten mithilfe von Deep Learning mit ONNX und 
 description: In diesem Tutorial wird veranschaulicht, wie Sie ein vortrainiertes ONNX Deep Learning-Modell in ML.NET verwenden, um Objekte in Bildern zu erkennen.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/27/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420033"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345030"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -51,7 +51,7 @@ Einige Anwendungsfälle für die Objekterkennung sind:
 
 - Autonomes Fahren
 - Robotik
-- Gesichtserfassung
+- Gesichtserkennung
 - Arbeitsplatzsicherheit
 - Objektzählung
 - Aktivitätserkennung
@@ -74,7 +74,7 @@ Das Yolo-Modell verwendet ein Bild mit `3(RGB) x 416px x 416px`. Das Modell nimm
 
 ONNX (Open Neural Network Exchange) ist ein Open-Source-Format für KI-Modelle. ONNX unterstützt die Interoperabilität zwischen Frameworks. Das bedeutet, dass Sie ein Modell in einem der vielen gängigen Machine Learning-Frameworks wie PyTorch trainieren, es in das ONNX-Format konvertieren und das ONNX-Modell in einem anderen Framework wie ML.NET verwenden können. Weitere Informationen finden Sie auf der [ONNX-Website](https://onnx.ai/).
 
-![Diagramm der verwendeten unterstützten ONNX-Formate](./media/object-detection-onnx/onyx-supported-formats.png)
+![Diagramm der verwendeten unterstützten ONNX-Formate](./media/object-detection-onnx/onnx-supported-formats.png)
 
 Das vortrainierte Tiny YOLOv2-Modell wird im ONNX-Format gespeichert, einer serialisierten Darstellung der Schichten und erlernten Muster dieser Schichten. In ML.NET wird die Interoperabilität mit ONNX mit den NuGet-Paketen [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) und [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) erreicht. Das Paket [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) enthält eine Reihe von Transformationen, die ein Bild annehmen und in numerische Werte codieren, die als Eingabe in eine Vorhersage- oder Trainingspipeline verwendet werden können. Das Paket [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) nutzt die ONNX Runtime, um ein ONNX-Modell zu laden und damit Vorhersagen basierend auf bereitgestellten Eingaben zu treffen.
 
@@ -448,7 +448,7 @@ Geben Sie schließlich außerhalb der anfänglichen for-Schleife der `FilterBoun
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Prima. Nun ist es an der Zeit, diesen Code zusammen mit dem Modell für die Bewertung zu verwenden.
+Großartig! Nun ist es an der Zeit, diesen Code zusammen mit dem Modell für die Bewertung zu verwenden.
 
 ## <a name="use-the-model-for-scoring"></a>Verwenden des Modells für die Bewertung
 

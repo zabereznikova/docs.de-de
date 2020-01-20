@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394446"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901997"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: Name des JavaScript-Clientpakets geändert
 
@@ -12,7 +12,7 @@ In ASP.NET Core 3.0 Preview 7 wurde der Name des SignalR-JavaScript-Clientpake
 
 Um auf diese Änderung zu reagieren, ändern Sie die Verweise in Ihren *package.json*-Dateien, `require`-Anweisungen und ECMAScript-`import`-Anweisungen. Im Rahmen dieser Umbenennung werden keine APIs geändert.
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#11637](https://github.com/aspnet/AspNetCore/issues/11637).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#11637](https://github.com/dotnet/aspnetcore/issues/11637).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -30,7 +30,7 @@ Das Clientpaket hat jetzt den Namen `@microsoft/signalr`.
 
 Die Namensänderung macht deutlich, dass SignalR dank Azure SignalR Service für mehr als nur ASP.NET Core-Apps nützlich ist.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Stellen Sie auf das neue Paket `@microsoft/signalr` um.
 

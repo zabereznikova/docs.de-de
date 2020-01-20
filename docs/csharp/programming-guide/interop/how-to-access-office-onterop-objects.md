@@ -1,6 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Zugreifen auf Office-Interop-Objekte (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417709"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700834"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte (C#-Programmierleitfaden)
 
-Visual C# verfügt über Funktionen, die den Zugriff auf Office-API-Objekte vereinfachen. Zu den neuen Funktionen zählen benannte und optionale Argumente, ein neuer Typ namens `dynamic` und die Möglichkeit, Argumente an Verweisparameter in COM-Methoden zu übergeben, als handele es sich um Werteparameter.
+C# verfügt über Funktionen, die den Zugriff auf Office-API-Objekte vereinfachen. Zu den neuen Funktionen zählen benannte und optionale Argumente, ein neuer Typ namens `dynamic` und die Möglichkeit, Argumente an Verweisparameter in COM-Methoden zu übergeben, als handele es sich um Werteparameter.
 
 In diesem Thema verwenden Sie die neuen Funktionen, um Code zu schreiben, mit dem ein Microsoft Office Excel-Arbeitsblatt erstellt und angezeigt wird. Dann schreiben Sie Code, um ein Office Word-Dokument hinzuzufügen, das ein Symbol enthält, das mit dem Excel-Arbeitsblatt verknüpft ist.
 

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552162"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901934"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Browser-SameSite-Änderungen mit Auswirkung auf die Authentifizierung
 
 Bei einigen Browsern, z. B. Chrome und Firefox, gab es Breaking Changes bei deren Implementierungen von `SameSite` für Cookies. Die Änderungen wirken sich auf Remoteauthentifizierungsszenarien aus, z. B. OpenID Connect und WS-Verbund, die durch das Senden von `SameSite=None` deaktiviert werden müssen. `SameSite=None` funktioniert jedoch unter iOS 12 und einigen älteren Versionen anderer Browser nicht. Die App muss ermitteln, ob diese Versionen vorliegen, und `SameSite` weglassen.
 
-Dieses Problem wird unter [aspnet/AspNetCore#14996](https://github.com/aspnet/AspNetCore/issues/14996) behandelt.
+Dieses Problem wird unter [dotnet/aspnetcore#14996](https://github.com/dotnet/aspnetcore/issues/14996) behandelt.
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -32,7 +32,7 @@ Weitere aktuelle Änderungen in diesem Bereich finden Sie unter [HTTP: Einige St
 
 Änderungen bei Browsern und Spezifikationen, wie im vorangehenden Text erläutert.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Apps, die mit Remotestandorten interagieren, z. B. über die Anmeldung über Drittanbieter, müssen folgende Aktionen ausführen:
 

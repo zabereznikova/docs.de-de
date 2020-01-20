@@ -1,20 +1,19 @@
 ---
 title: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: 22f80365b974df66999ac68f7bc2a9ffa7d445a5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1e6e7fac9dd49ad1943ac9046bd9e4932c383257
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596816"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741365"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer (C#-Programmierhandbuch)
 
-Eine <xref:System.Collections.Generic.Dictionary%602> enthält eine Sammlung von Schlüssel-Wert-Paaren. Die <xref:System.Collections.Generic.Dictionary%602.Add*>-Methode nimmt zwei Parameter an, einen für den Schlüssel und einen für den Wert. Eine Möglichkeit, um eine <xref:System.Collections.Generic.Dictionary%602>-Klasse oder eine beliebige Sammlung zu initialisieren, deren `Add`-Methode mehrere Parameter annimmt, ist es, jedes Parameterpaar in Klammern einzuschließen, so wie im folgenden Beispiel dargestellt. Eine andere Möglichkeit besteht darin, einen Index-Initialisierer zu verwenden, wie im nächsten Beispiel gezeigt wird.
+Eine <xref:System.Collections.Generic.Dictionary%602> enthält eine Sammlung von Schlüssel-Wert-Paaren. Die <xref:System.Collections.Generic.Dictionary%602.Add%2A>-Methode nimmt zwei Parameter an, einen für den Schlüssel und einen für den Wert. Eine Möglichkeit, um eine <xref:System.Collections.Generic.Dictionary%602>-Klasse oder eine beliebige Sammlung zu initialisieren, deren `Add`-Methode mehrere Parameter annimmt, ist es, jedes Parameterpaar in Klammern einzuschließen, so wie im folgenden Beispiel dargestellt. Eine andere Möglichkeit besteht darin, einen Index-Initialisierer zu verwenden, wie im nächsten Beispiel gezeigt wird.
 
 ## <a name="example"></a>Beispiel
 

@@ -3,12 +3,12 @@ title: Zahlen in C# – Einführung in das C#-Tutorial
 description: Machen Sie sich mit C# vertraut, indem Sie numerische Typen, ihre Eigenschaften und Methoden erkunden.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739138"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694659"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Bearbeiten von Ganzzahlen und Gleitkommazahlen in C\#
 

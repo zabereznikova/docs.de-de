@@ -3,13 +3,12 @@ title: Verpacken einer Verteilung von .NET Core
 description: Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, benennen und mit einer Versionsnummer versehen.
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393580"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740933"
 ---
 # <a name="net-core-distribution-packaging"></a>Verpacken einer Verteilung von .NET Core
 
@@ -84,7 +83,7 @@ Der Ordner **shared** enthält Frameworks. Ein gemeinsames (shared) Framework st
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**: Dies sind die .NET Core-Lizenzen und die Lizenzen von Drittanbieterbibliotheken, die in .NET Core jeweils verwendet werden.
 
-- (9, 10) **dotnet.1.gz, dotnet**: `dotnet.1.gz` ist die Dotnet-Handbuchseite. `dotnet` ist eine symbolische Verknüpfung mit dem Dotnet-Host (1). Diese Dateien werden zur Systemintegration an bekannten Speicherorten installiert.
+- (9, 10) **dotnet.1.gz, dotnet**: `dotnet.1.gz` ist die dotnet-Handbuchseite. `dotnet` ist eine symbolische Verknüpfung mit dem Dotnet-Host (1). Diese Dateien werden zur Systemintegration an bekannten Speicherorten installiert.
 
 - (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref** beschreibt jeweils die API einer `x.y`-Version von .NET Core und ASP.NET Core. Diese Pakete werden bei der Kompilierung für diese Zielversionen verwendet.
 
@@ -104,7 +103,7 @@ Die mit `(*)` markierten Ordner werden von mehreren Paketen verwendet. Einige Pa
 
 Die .NET Core-Versionierung basiert auf dem Versionsnummernmuster `[major].[minor]` der Runtimekomponente.
 Die SDK-Version verwendet das gleiche `[major].[minor]`-Muster und weist eine unabhängige `[patch]`-Zeichenfolge auf, die die Feature- und Patchsemantik für das SDK kombiniert.
-Beispiel: Die SDK-Version 2.2.302 ist das zweite Patchrelease des dritten Featurerelease des SDK, das die Runtimeversion 2.2 unterstützt. Weitere Informationen zur Funktionsweise der Versionsverwaltung finden Sie unter [.NET Core-Versionskontrolle: Übersicht](../versions/index.md).
+Zum Beispiel: Die SDK-Version 2.2.302 ist das zweite Patchrelease des dritten Featurerelease des SDK, das die Runtimeversion 2.2 unterstützt. Weitere Informationen zur Funktionsweise der Versionsverwaltung finden Sie unter [.NET Core-Versionskontrolle: Übersicht](../versions/index.md).
 
 Einige Pakete enthalten einen Teil der Versionsnummer im Namen. Dies ermöglicht Ihnen, eine bestimmte Version zu installieren.
 Der Rest der Version ist im Versionsnamen nicht enthalten. Dies ermöglicht dem Paket-Manager des Betriebssystems, die Pakete zu aktualisieren (z.B. durch automatisches Installieren von Sicherheitsfixes). Unterstützte Paket-Manager sind Linux-spezifisch.
@@ -112,49 +111,49 @@ Der Rest der Version ist im Versionsnamen nicht enthalten. Dies ermöglicht dem 
 Im Folgenden werden die empfohlenen Pakete aufgeführt:
 
 - `dotnet-sdk-[major].[minor]`: installiert das neueste SDK für eine spezifische Runtime.
-  - **Version:** \<runtime version>
+  - **Version:** \<runtimeversion>
   - **Beispiel:** dotnet-sdk-2.1
   - **Enthält:** (3), (4)
   - **Abhängigkeiten:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`: installiert eine spezifische ASP.NET Core-Runtime.
-  - **Version:** \<aspnetcore runtime version>
+  - **Version:** \<aspnetcore runtimeversion>
   - **Beispiel:** aspnetcore-runtime-2.1
-  - **Enthält:**  (6)
+  - **Enthält:** (6)
   - **Abhängigkeiten:** `dotnet-runtime-[major].[minor]`
 
-- `dotnet-runtime-deps-[major].[minor]` _(Optional):_ installiert die Abhängigkeiten zum Ausführen eigenständiger Anwendungen.
-  - **Version:** \<runtime version>
+- `dotnet-runtime-deps-[major].[minor]` _(Optional):_ Installiert die Abhängigkeiten zum Ausführen eigenständiger Anwendungen.
+  - **Version:** \<runtimeversion>
   - **Beispiel:** dotnet-runtime-deps-2.1
-  - **Abhängigkeiten:** _Abhängigkeiten für spezifische Verteilungen_
+  - **Abhängigkeiten:** _Verteilungsspezifische Abhängigkeiten_
 
 - `dotnet-runtime-[major].[minor]`: installiert eine spezifische Runtime
-  - **Version:** \<runtime version>
+  - **Version:** \<runtimeversion>
   - **Beispiel:** dotnet-runtime-2.1
   - **Enthält:** (5)
   - **Abhängigkeiten:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`: Abhängigkeit
-  - **Version:** \<runtime version>
+  - **Version:** \<runtimeversion>
   - **Beispiel:** dotnet-hostfxr-3.0
   - **Enthält:** (2)
   - **Abhängigkeiten:** `dotnet-host`
 
 - `dotnet-host`: Abhängigkeit
-  - **Version:** \<runtime version>
+  - **Version:** \<runtimeversion>
   - **Beispiel:** dotnet-host
   - **Enthält:** (1),(8),(9),(10),(16)
 
 - `dotnet-apphost-pack-[major].[minor]`: Abhängigkeit
-  - **Version:** \<runtime version>
+  - **Version:** \<runtimeversion>
   - **Enthält:** (13)
 
 - `dotnet-targeting-pack-[major].[minor]`: ermöglicht eine ältere Runtime als Ziel.
-  - **Version:** \<runtime version>
+  - **Version:** \<runtimeversion>
   - **Enthält:** (12)
 
 - `aspnetcore-targeting-pack-[major].[minor]`: ermöglicht eine ältere Runtime als Ziel.
-  - **Version:** \<aspnetcore runtime version>
+  - **Version:** \<aspnetcore runtimeversion>
   - **Enthält:** (11)
 
 - `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`: ermöglicht eine NetStandard-Zielversion

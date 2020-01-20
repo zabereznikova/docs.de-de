@@ -3,12 +3,12 @@ title: Verwenden des .NET Compiler Platform SDK-Syntaxmodells
 description: Diese Übersicht bietet einen Überblick über die Typen, die Sie zum Verstehen und Bearbeiten von Syntaxknoten verwenden.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774102"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740476"
 ---
 # <a name="work-with-syntax"></a>Arbeiten mit der Syntax
 
@@ -65,13 +65,13 @@ Im Gegensatz zu Syntaxknoten und Token haben Syntaxtrivia keine übergeordneten 
 
 Alle Knoten, Token und Trivia kennen ihre Position im Quelltext und die Anzahl der von ihnen enthaltenen Zeichen. Eine Position im Text wird von einer 32-Bit-Ganzzahl, also einem nullbasierten `char`-Index, dargestellt. Ein <xref:Microsoft.CodeAnalysis.Text.TextSpan>-Objekt ist eine Anfangsposition und eine Anzahl von Zeichen, die jeweils beide als ganze Zahl dargestellt werden. Wenn <xref:Microsoft.CodeAnalysis.Text.TextSpan> die Länge 0 (null) hat, bezieht es sich auf eine Position zwischen zwei Zeichen.
 
-Jeder Knoten verfügt über zwei <xref:Microsoft.CodeAnalysis.Text.TextSpan>-Eigenschaften: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> und <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
+Jeder Knoten verfügt über zwei <xref:Microsoft.CodeAnalysis.Text.TextSpan>-Eigenschaften: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> und <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> bezeichnet die Textspanne vom ersten Token in der Unterstruktur des Knotens bis zum Ende des letzten Tokens. Diese Spanne umfasst keine führenden oder nachgestellten Trivia.
+Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> bezeichnet die Textspanne vom ersten Token in der Unterstruktur des Knotens bis zum Ende des letzten Tokens. Diese Spanne umfasst keine führenden oder nachgestellten Trivia.
 
-Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> bezeichnet die Textspanne, die die normale Spanne des Knotens und die Spannen jeglicher führenden oder nachgestellten Trivia, enthält.
+Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> bezeichnet die Textspanne, die die normale Spanne des Knotens und die Spannen jeglicher führenden oder nachgestellten Trivia, enthält.
 
-Beispiel:
+Zum Beispiel:
 
 ``` csharp
       if (x > 3)
@@ -85,11 +85,11 @@ Der Anweisungsknoten im Block verfügt über eine Spanne, die von einzelnen senk
 
 ## <a name="kinds"></a>Kind-Eigenschaften
 
-Alle Knoten, Token und Trivia über die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> vom Typ <xref:System.Int32?displayProperty=nameWithType>, die das genaue Syntax-Element identifiziert, das dargestellt wird. Dieser Wert kann in eine sprachspezifische Enumeration umgewandelt werden; jede Programmiersprache, C# oder VB, verfügt über eine einzelne `SyntaxKind`-Enumeration (jeweils <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> und <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), die alle möglichen Knoten, Token und Trivia in der Grammatik auflistet. Diese Konvertierung kann automatisch erfolgen, indem Sie auf die Erweiterungsmethoden <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> zugreifen.
+Alle Knoten, Token und Trivia über die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> vom Typ <xref:System.Int32?displayProperty=nameWithType>, die das genaue Syntax-Element identifiziert, das dargestellt wird. Dieser Wert kann in eine sprachspezifische Enumeration umgewandelt werden. Jede Programmiersprache (C# oder Visual Basic) verfügt über eine einzelne `SyntaxKind`-Enumeration (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> bzw. <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>), die alle möglichen Knoten, Token und Trivia in der Grammatik auflistet. Diese Konvertierung kann automatisch erfolgen, indem Sie auf die Erweiterungsmethoden <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> zugreifen.
 
 Die <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind>-Eigenschaft ermöglicht einfache Mehrdeutigkeitsvermeidung für Syntaxknotentypen, die die gleiche Knotenklasse nutzen. Für Token und Trivia ist diese Eigenschaft die einzige Möglichkeit, verschiedene Elementtypen voneinander zu unterscheiden.
 
-Angenommen, eine einzelne <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax>-Klasse verfügt über die untergeordneten Elemente <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> und <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Dann unterscheidet die <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*>-Eigenschaft, ob es sich um einen Syntaxknoten mit <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> oder <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> handelt.
+Angenommen, eine einzelne <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax>-Klasse verfügt über die untergeordneten Elemente <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> und <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Dann unterscheidet die <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A>-Eigenschaft, ob es sich um einen Syntaxknoten mit <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> oder <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> handelt.
 
 ## <a name="errors"></a>Fehler
 

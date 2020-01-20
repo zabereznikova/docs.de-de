@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733197"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338556"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Exemplarische Vorgehensweise: Einbetten von Typen verwalteter Assemblys in Visual Studio
 
@@ -22,7 +22,7 @@ Nachdem Sie die öffentlichen Schnittstellen angegeben haben, die eingebettet we
 
 Wenn Sie eine neue Version Ihrer Runtimeassembly mit starkem Namen erstellen, muss das Clientprogramm nicht neu kompiliert werden. Das Clientprogramm verwendet weiterhin die verfügbare Version der Runtimeassembly und die eingebetteten Typinformationen für die öffentlichen Schnittstellen.
 
-In dieser exemplarischen Vorgehensweise führen Sie folgende Aktionen aus:
+In dieser exemplarischen Vorgehensweise:
 
 1. Erstellen Sie eine Assembly mit starkem Namen mit einer öffentlichen Schnittstelle, die Typinformationen enthält, die eingebettet werden können.
 1. Erstellen Sie eine Runtimeassembly mit starkem Namen, die diese öffentliche Schnittstelle implementiert.
@@ -53,7 +53,7 @@ Der erste Schritt besteht darin, die Schnittstellenassembly mit Typäquivalenz z
 
 1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**.
 
-1. Geben Sie *Klassenbibliothek* im Feld **Nach Vorlagen suchen** des Dialogfelds **Neues Projekt erstellen** ein. Wählen Sie die Vorlage **Klassenbibliothek (.NET Framework)** für C# oder VB aus der Liste aus, und klicken Sie dann auf **Weiter**.
+1. Geben Sie *Klassenbibliothek* im Feld **Nach Vorlagen suchen** des Dialogfelds **Neues Projekt erstellen** ein. Wählen Sie die Vorlage **Klassenbibliothek (.NET Framework)** für C# oder Visual Basic aus der Liste aus, und klicken Sie dann auf **Weiter**.
 
 1. Geben Sie *TypeEquivalenceInterface* im Dialogfeld **Neues Projekt konfigurieren** unter **Projektname** ein, und klicken Sie dann auf **Erstellen**. Das neue Projekt wird erstellt.
 
@@ -120,7 +120,7 @@ Als Nächstes erstellen Sie die Lauftzeitklasse für die Typäquivalenz.
 
 1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**.
 
-1. Geben Sie *Klassenbibliothek* im Feld **Nach Vorlagen suchen** des Dialogfelds **Neues Projekt erstellen** ein. Wählen Sie die Vorlage **Klassenbibliothek (.NET Framework)** für C# oder VB aus der Liste aus, und klicken Sie dann auf **Weiter**.
+1. Geben Sie *Klassenbibliothek* im Feld **Nach Vorlagen suchen** des Dialogfelds **Neues Projekt erstellen** ein. Wählen Sie die Vorlage **Klassenbibliothek (.NET Framework)** für C# oder Visual Basic aus der Liste aus, und klicken Sie dann auf **Weiter**.
 
 1. Geben Sie *TypeEquivalenceRuntime* unter **Projektname** im Dialogfeld **Neues Projekt konfigurieren** ein, und klicken Sie dann auf **Erstellen**. Das neue Projekt wird erstellt.
 
@@ -192,7 +192,7 @@ Schließlich erstellen Sie ein Typäquivalenz-Clientprogramm, das auf die Schnit
 
 1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**.
 
-1. Geben Sie *Konsole* im Feld **Nach Vorlagen suchen** des Dialogfelds **Neues Projekt erstellen** ein. Wählen Sie die Vorlage **Konsolen-App (.NET Framework)** für C# oder VB aus der Liste aus, und klicken Sie dann auf **Weiter**.
+1. Geben Sie *Konsole* im Feld **Nach Vorlagen suchen** des Dialogfelds **Neues Projekt erstellen** ein. Wählen Sie die Vorlage **Konsolen-App (.NET Framework)** für C# oder Visual Basic aus der Liste aus, und klicken Sie dann auf **Weiter**.
 
 1. Geben Sie *TypeEquivalenceClient* unter **Projektname** im Dialogfeld **Neues Projekt konfigurieren** ein, und klicken Sie dann auf **Erstellen**. Das neue Projekt wird erstellt.
 

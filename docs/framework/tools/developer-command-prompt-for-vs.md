@@ -1,6 +1,6 @@
 ---
 title: Developer-Eingabeaufforderung für Visual Studio.
-ms.date: 08/14/2018
+ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -10,87 +10,89 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044729"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715830"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Developer-Eingabeaufforderung für Visual Studio.
 
-Mithilfe der Developer-Eingabeaufforderung für Visual Studio können Sie .NET Framework-Tools komfortabler verwenden. Es handelt sich um eine Eingabeaufforderung, die automatisch bestimmte Umgebungsvariablen festlegt.
+Mithilfe der Developer-Eingabeaufforderung für Visual Studio können Sie .NET Framework-Tools komfortabler verwenden. Es handelt sich um eine Eingabeaufforderung, die automatisch bestimmte Umgebungsvariablen festlegt. Nachdem Sie die Developer-Eingabeaufforderung geöffnet haben, können Sie die Befehle für [.NET Framework-Tools](index.md) wie `ildasm` oder `clrver` eingeben.
 
-> [!div class="button"]
-> [Herunterladen von Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+## <a name="prerequisites"></a>Voraussetzungen
+
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Suchen nach der Eingabeaufforderung auf Ihrem Computer
 
-Abhängig von der Version von Visual Studio und jeglichen zusätzlichen installierten SDKs verfügen Sie möglicherweise über mehrere Eingabeaufforderungen. Beispielsweise stellen 64-Bit-Versionen von Visual Studio sowohl 32-Bit- als auch 64-Bit-Eingabeaufforderungen bereit. (Die 32-Bit- und 64-Bit-Versionen der meisten Tools sind identisch. Möglicherweise nehmen jedoch einige Tools bestimmte Änderungen an der 32-Bit- bzw. der 64-Bit-Umgebung vor.) Wenn die folgenden Schritte nicht funktionieren, können Sie versuchen, [die Dateien manuell auf Ihrem Computer zu finden](#manually-locate-the-files-on-your-machine) oder [die Eingabeaufforderung innerhalb von Visual Studio auszuführen](#run-the-command-prompt-from-inside-visual-studio).
+Abhängig von der Version von Visual Studio und zusätzlich installierten SDKs und Workloads verfügen Sie möglicherweise über mehrere Eingabeaufforderungen. Wenn die folgenden Schritte nicht funktionieren, können Sie versuchen, [die Dateien manuell auf Ihrem Computer zu finden](#manually-locate-the-files-on-your-machine) oder [die Eingabeaufforderung innerhalb von Visual Studio zu starten](#start-the-command-prompt-from-inside-visual-studio).
 
-### <a name="in-windows-10"></a>In Windows 10
+### <a name="windows-10"></a>Windows 10
 
-1. Geben Sie den Namen des Tools im Suchfeld auf der Taskleiste ein, z.B. `dev` oder `developer command prompt`. Dadurch wird eine Liste der installierten Apps angezeigt, die Ihrem Suchmuster entsprechen. Wenn Sie nach einer anderen Eingabeaufforderung suchen, geben Sie einen anderen Suchbegriff als `prompt` ein.
+1. Wählen Sie **Start** ![Windows Logo-Taste auf der Tastatur starten aus](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png), und scrollen Sie zum Buchstaben **V**.
 
-2. Wählen Sie die **Developer-Eingabeaufforderung für Visual Studio** (oder die gewünschte Eingabeaufforderung) aus.
+1. Erweitern Sie den Ordner **Visual Studio 2019**.
 
-### <a name="in-windows-81"></a>Unter Windows 8.1
+1. Wählen Sie **Developer-Eingabeaufforderung für VS 2019** (oder die gewünschte Eingabeaufforderung) aus.
 
-1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo-Taste auf der Tastatur](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) auf der Tastatur drücken.
+   Sie können auch beginnen, den Namen der Eingabeaufforderung in das Suchfeld auf der Taskleiste einzugeben, und das gewünschte Ergebnis auswählen, wenn die Ergebnisliste damit beginnt, um die Suchübereinstimmungen anzuzeigen.
 
-2. Drücken Sie auf dem Bildschirm **Start** die Tastenkombination **STRG**+**TAB**, um die Liste **Apps** zu öffnen, und geben Sie dann `V` ein. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
+   ![Animierte GIF-Datei, die das Suchverhalten unter Windows 10 zeigt](./media/developer-command-prompt-for-vs/windows10-search.gif)
 
-3. Wählen Sie **Developer-Eingabeaufforderung** (oder die gewünschte Eingabeaufforderung) aus.
-
-### <a name="in-windows-8"></a>Unter Windows 8
+### <a name="windows-81"></a>Windows 8.1
 
 1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo-Taste auf der Tastatur](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) auf der Tastatur drücken.
 
-2. Drücken Sie auf dem Bildschirm **Start** die Windows-Logo-Taste ![Windows-Logo-Taste auf der Tastatur](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
+1. Drücken Sie auf dem Bildschirm **Start** die Tastenkombination **STRG**+**TAB**, um die Liste **Apps** zu öffnen, und drücken Sie dann **V**. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
 
-3. Wählen Sie im unteren Bereich des Bildschirms das Symbol **Apps-Ansicht** aus, und geben Sie anschließend `V` ein. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
+1. Wählen Sie **Developer-Eingabeaufforderung für VS 2019** (oder die gewünschte Eingabeaufforderung) aus.
 
-4. Wählen Sie **Developer-Eingabeaufforderung** (oder die gewünschte Eingabeaufforderung) aus.
+### <a name="windows-7"></a>Windows 7
 
-### <a name="in-windows-7"></a>Unter Windows 7
+1. Wählen Sie **Start** aus, und erweitern Sie dann **Alle Programme**.
 
-1. Wählen Sie **Start** aus, erweitern Sie **Alle Programme**, und erweitern Sie anschließend **Microsoft Visual Studio**.
+1. Wählen Sie die **Visual Studio 2019** > **Visual Studio-Tools** > **Developer-Eingabeaufforderung für VS 2019** oder die gewünschte Eingabeaufforderung aus.
 
-2. Wählen Sie abhängig von der installierten Visual Studio-Version **Visual Studio-Tools**, **Visual Studio-Eingabeaufforderung** oder die gewünschte Eingabeaufforderung aus.
+   ![Windows 7-Startmenü mit hervorgehobener Eingabeaufforderung](./media/developer-command-prompt-for-vs/windows7-menu.png)
 
-Wenn Sie andere SDKs installiert haben, z.B. das [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) oder [frühere Versionen](https://developer.microsoft.com/windows/downloads/sdk-archive), werden Ihnen möglicherweise zusätzliche Eingabeaufforderungen für ARM-, x86- oder x64-Architekturen angezeigt. Informationen dazu, welche Version der Eingabeaufforderung Sie verwenden sollten, finden Sie in der Dokumentation der einzelnen Tools.
+Wenn Sie andere SDKs installiert haben, z. B. das [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) oder [frühere Versionen](https://developer.microsoft.com/windows/downloads/sdk-archive), werden Ihnen möglicherweise zusätzliche Eingabeaufforderungen angezeigt. Informationen dazu, welche Version der Eingabeaufforderung Sie verwenden sollten, finden Sie in der Dokumentation der einzelnen Tools.
 
 ## <a name="manually-locate-the-files-on-your-machine"></a>Manuelles Suchen der Dateien auf Ihrem Computer
 
-In der Regel werden die Tastenkombinationen für die installierten Eingabeaufforderungen im Ordner **Start Menu** für Visual Studio platziert, beispielsweise in „C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools“. Wenn die Suche nach der Eingabeaufforderung jedoch nicht die erwarteten Ergebnisse liefert, können Sie versuchen, die Tastenkombination manuell auf Ihrem Computer zu finden. Suchen Sie z.B. den Namen der Eingabeaufforderungsdatei (z.B. *VsDevCmd.bat*), oder wechseln Sie zum Ordner „Tools“, z.B. unter „ C:\Programme (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools“ (der Pfad kann gemäß der Version, der Edition und des Speicherorts von Visual Studio von diesem Beispiel abweichen).
+In der Regel werden die Tastenkombinationen für die installierten Eingabeaufforderungen im Ordner **Start Menu** für Visual Studio platziert, beispielsweise in *%:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019\Visual Studio Tools*. Wenn die Suche nach der Eingabeaufforderung jedoch nicht die erwarteten Ergebnisse liefert, können Sie versuchen, die Tastenkombination manuell auf Ihrem Computer zu finden. Suchen Sie z. B. den Namen der Eingabeaufforderungsdatei (z. B. *VsDevCmd.bat*), oder navigieren Sie zum Ordner „Tools“, z. B. unter *%Programme (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools* (der Pfad kann gemäß der Version, der Edition und des Speicherorts von Visual Studio von diesem Beispiel abweichen).
 
-## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Ausführen der Eingabeaufforderung innerhalb von Visual Studio
+## <a name="start-the-command-prompt-from-inside-visual-studio"></a>Starten der Eingabeaufforderung aus Visual Studio
 
-Für den einfacheren Zugriff können Sie die Developer-Eingabeaufforderung von Visual Studio oder eine beliebige andere Eingabeaufforderung zum Menü **Extras** in Visual Studio hinzufügen. Fügen Sie das Tool der Liste externer Tools hinzu, damit Sie auf dieses zugreifen können. Folgende Schritte müssen ausgeführt werden:
+Für den einfacheren Zugriff können Sie dem Menü „Extras“ in Visual Studio die Developer-Eingabeaufforderung oder eine beliebige andere Eingabeaufforderung hinzufügen. Fügen Sie das Tool der Liste externer Tools hinzu, damit Sie auf dieses zugreifen können. Folgende Schritte müssen ausgeführt werden:
 
 1. Öffnen Sie Visual Studio.
 
-2. Klicken Sie auf das Menü **Extras**, und wählen Sie dann **Externe Tools** aus.
+1. Wählen Sie im Startfenster **Ohne Code fortfahren** aus.
 
-3. Wählen Sie im Dialogfeld **Externe Tools** die Schaltfläche **Hinzufügen** aus. Ein neuer Eintrag wird angezeigt.
+1. Klicken Sie in der Menüleiste auf **Extras** > **Externe Tools**.
 
-4. Geben Sie einen **Titel** für das neue Menüelement ein, z.B. `Command Prompt`.
+1. Wählen Sie im Dialogfeld **Externe Tools** die Schaltfläche **Hinzufügen** aus. Ein neuer Eintrag wird angezeigt.
 
-5. Geben Sie im Feld **Befehl** die Datei an, die Sie starten möchten, z.B. `%comspec%` oder `C:\Windows\System32\cmd.exe`.
+1. Geben Sie einen **Titel** für das neue Menüelement ein, z.B. `Command Prompt`.
 
-6. Geben Sie im Feld **Argumente** an, wo diejenige Eingabeaufforderung, die Sie verwenden möchten, zu finden ist, z.B. `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (dieser Befehl startet die Developer-Eingabeaufforderung, die mit Visual Studio 2017 Enterprise installiert wurde). Ändern Sie diesen Wert entsprechend der Version, der Edition und dem Installationsspeicherort von Visual Studio.
+1. Geben Sie im Feld **Befehl** die Datei an, die Sie starten möchten, z.B. `%comspec%` oder `C:\Windows\System32\cmd.exe`.
 
-7. Wählen Sie einen Wert für das Feld **Ausgangsverzeichnis** aus, z.B. **Projektverzeichnis**.
+1. Geben Sie im Feld **Argumente** an, wo sich die bestimmte Eingabeaufforderung befindet, die Sie verwenden möchten, z. B. `/k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"`. Mit diesem Befehl wird die Developer-Eingabeaufforderung gestartet, die mit Visual Studio 2019 Community installiert wird. Ändern Sie diesen Wert entsprechend der Version, der Edition und dem Installationsspeicherort von Visual Studio.
 
-8. Klicken Sie auf die Schaltfläche **OK** .
+1. Geben Sie im Feld **Ausgangsverzeichnis** das Verzeichnis an, in dem die Eingabeaufforderung gestartet wird. Wählen Sie einen Wert wie **Projektverzeichnis** aus, indem Sie den Pfeil neben dem Feld auswählen.
 
-   Das neue Menüelement wird hinzugefügt, und Sie können über das Menü **Extras** auf die Eingabeaufforderung zugreifen.
+1. Klicken Sie auf die Schaltfläche **OK** .
 
-   ![Menüelement „Eingabeaufforderung“ in Visual Studio](./media/command-prompt-vs-menu.png)
+   ![Dialogfeld „Externe Tools“ mit ausgefüllten Feldwerten.](./media/developer-command-prompt-for-vs/add-external-tool.png)
+
+   Das neue Menüelement wird hinzugefügt, und Sie können über das Menü „Extras“ auf die Eingabeaufforderung zugreifen.
+
+   ![Menüelement „Eingabeaufforderung“ in Visual Studio](./media/developer-command-prompt-for-vs/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](index.md)
+- [.NET Framework-Tools](index.md)
 - [Verwalten von externen Tools](/visualstudio/ide/managing-external-tools)
+- [Verwenden des Microsoft C++-Toolsets in der Befehlszeile](/cpp/build/building-on-the-command-line)

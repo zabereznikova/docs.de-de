@@ -1,19 +1,21 @@
 ---
 title: Machine Learning-Aufgaben
 description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learning-Aufgaben und zugehörigen Aufgaben.
-ms.custom: seodec18
-ms.date: 04/23/2019
-author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 12/23/2019
+ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977255"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739628"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Machine Learning-Aufgaben in ML.NET
 
-Wenn Sie ein Machine Learning-Modell erstellen, müssen Sie zuerst definieren, was Sie mit Ihren Daten erreichen möchten. Dadurch können Sie die richtige Machine Learning-Aufgabe für Ihren Zweck auswählen. In der folgenden Liste werden die verschiedenen Machine Learning-Aufgaben beschrieben, unter denen Sie auswählen können, und einige häufige Anwendungsfälle. Weitere Informationen zum Auswählen der für Ihr Szenario geeigneten Aufgabe finden Sie unter [Algorithmen](../how-to-choose-an-ml-net-algorithm.md).
+Bei einer Machine Learning-Aufgabe handelt es sich um den Typ der Vorhersage oder Rückschlüsse, basierend auf dem Problem oder der Frage, das bzw. die gestellt wird, und den verfügbaren Daten. Beispielsweise ordnet die Klassifizierungsaufgabe Daten Kategorien zu, und die Clusteringaufgabe gruppiert Daten nach ihrer Ähnlichkeit.
+
+Machine Learning-Aufgaben basieren auf Mustern in den Daten, anstatt explizit programmiert zu werden.
+
+In diesem Artikel werden die verschiedenen Machine Learning-Aufgaben beschrieben, unter denen Sie in ML.NET auswählen können, sowie einige häufige Anwendungsfälle.
 
 Nachdem Sie entschieden haben, welche Aufgabe auf Ihr Szenario zutrifft, müssen Sie den besten Algorithmus zum Trainieren Ihres Modells auswählen. Die verfügbaren Algorithmen sind im Abschnitt zur jeweiligen Aufgabe aufgeführt.
 
@@ -54,7 +56,7 @@ Die Daten in der Spalte für die Eingabefeatures müssen ein Vektor fester Grö�
 
 Diese Trainer geben die folgenden Spalten aus:
 
-| Name der Ausgabespalte | Spaltentyp | BESCHREIBUNG|
+| Name der Ausgabespalte | Spaltentyp | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die vom Modell berechnete unformatierte Bewertung|
 | `PredictedLabel` | <xref:System.Boolean> | Der vorhergesagte Bezeichnung, basierend auf dem Abzeichnen der Bewertung. Eine negative Bewertung wird `false` und eine positive Bewertung wird `true` zugeordnet.|
@@ -91,7 +93,7 @@ Die Featurespalte muss ein Vektor fester Größe von <xref:System.Single> sein.
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | BESCHREIBUNG|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | Vektor von <xref:System.Single> | Die Bewertungen aller Klassen. Ein höherer Wert bedeutet eine höhere Wahrscheinlichkeit, in die zugehörige Klasse zu fallen. Wenn das i-te Element den größten Wert hat, wäre der vorhergesagte Bezeichnungsindex i. Beachten Sie, dass „i“ ein nullbasierter Index ist. |
 | `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index der vorhergesagten Bezeichnung. Wenn sein Wert i ist, wäre die eigentliche Bezeichnung die i-te Kategorie des Typs der Schlüssel-Wert-Eingabebezeichnung. |
@@ -124,7 +126,7 @@ Die Daten in der Spalte für die Eingabezeichnung müssen <xref:System.Single> s
 
 Die Trainer für diese Ausgabe geben folgende Daten aus:
 
-| Ausgabename | Typ | BESCHREIBUNG|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die vom Modell vorhergesagte unformatierte Bewertung |
 
@@ -148,7 +150,7 @@ Die Daten der Eingabefeatures müssen <xref:System.Single> sein. Es sind keine B
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | BESCHREIBUNG|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | Vektor von <xref:System.Single> | Die Abstände der angegebenen Daten weisen auf die Schwerpunkte aller Cluster hin. |
 | `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index des nächsten Clusters, der durch das Modell vorhergesagt wird. |
@@ -180,9 +182,10 @@ Die Eingabefeatures müssen ein Vektor fester Größe von <xref:System.Single> s
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | BESCHREIBUNG|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die nicht-negative, unbegrenzte Bewertung, die durch das Anomalieerkennungsmodell berechnet wurde. |
+| `PredictedLabel` | <xref:System.Boolean> | Ein TRUE/FALSE-Wert, der angibt, ob es sich bei der Eingabe um eine Anomalie (PredictedLabel=true) oder um keine Anomalie (PredictedLabel=false) handelt. |
 
 ## <a name="ranking"></a>Rangfolge
 
@@ -203,7 +206,7 @@ Die Featuredaten müssen ein Vektor mit fester Größe von <xref:System.Single> 
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | BESCHREIBUNG|
+| Ausgabename | Typ | Beschreibung|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die unbegrenzte Bewertung, die vom Modell berechnet wurde, um die Vorhersage zu bestimmen. |
 

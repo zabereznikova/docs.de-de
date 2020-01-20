@@ -1,55 +1,75 @@
 ---
-title: Veröffentlichen Ihrer „Hallo Welt“-.NET Core-Anwendung mit Visual Studio 2017
+title: Veröffentlichen Ihrer .NET Core-Anwendung „Hello World“ mit Visual Studio
 description: Die Veröffentlichung erstellt eine Reihe von Dateien, die zum Ausführen Ihrer .NET Core-Anwendung benötigt werden.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 10/05/2017
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.date: 12/10/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660473"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715370"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Veröffentlichen Ihrer „Hallo Welt“-.NET Core-Anwendung mit Visual Studio 2017
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Veröffentlichen Ihrer .NET Core-Anwendung „Hello World“ mit Visual Studio
 
-In [Build a C# Hello World Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017](with-visual-studio.md)) oder [Build a Visual Basic Hallo Welt Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017)](vb-with-visual-studio.md) haben Sie eine „Hallo Welt“-Konsolenanwendung erstellt. In [Debug your C# Hello World application with Visual Studio 2017 (Debuggen Ihrer C#-Anwendung „Hallo Welt“ mit Visual Studio 2017)](debugging-with-visual-studio.md) haben Sie diese mithilfe des Visual Studio-Debuggers getestet. Nun, da Sie sicher sind, dass sie erwartungsgemäß funktioniert, können Sie sie veröffentlichen, damit andere Benutzer sie ausführen können. Bei der Veröffentlichung wird der Satz von Dateien erstellt, die zum Ausführen der Anwendung erforderlich sind. Sie können sie durch Kopieren auf einen Zielcomputer bereitstellen.
+Unter [Erstellen einer Hello World-Anwendung mit .NET Core in Visual Studio](with-visual-studio.md) haben Sie eine Hello World-Konsolenanwendung erstellt. Unter [Debuggen Ihrer Hello World-Anwendung mit Visual Studio](debugging-with-visual-studio.md) haben Sie diese mithilfe des Visual Studio-Debuggers getestet. Nun, da Sie sicher sind, dass sie erwartungsgemäß funktioniert, können Sie sie veröffentlichen, damit andere Benutzer sie ausführen können. Die Veröffentlichung erstellt eine Reihe von Dateien, die zum Ausführen Ihrer Anwendung benötigt werden. Zum Bereitstellen der Dateien kopieren Sie diese auf den Zielcomputer.
 
-So veröffentlichen Sie Ihre Anwendung und führen sie aus: 
+## <a name="publish-the-app"></a>Veröffentlichen der App
 
 1. Stellen Sie sicher, dass Visual Studio die endgültige Produktversion der Anwendung erstellt. Ändern Sie ggf. die Einstellung der Buildkonfiguration auf der Symbolleiste von **Debuggen** in **Freigabe**.
 
    ![Visual Studio-Symbolleiste mit ausgewähltem Releasebuild](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. Klicken Sie mit der rechten Maustaste auf das **HelloWorld**-Projekt (nicht die HelloWorld-Projektmappe), und wählen Sie **Veröffentlichen** im Menü. Sie können auch **HelloWorld veröffentlichen** im Hauptmenü **Build** von Visual Studio auswählen.
+1. Klicken Sie mit der rechten Maustaste auf das **HelloWorld**-Projekt (nicht die HelloWorld-Projektmappe), und wählen Sie **Veröffentlichen** im Menü. (Sie können auch **HelloWorld veröffentlichen** im Hauptmenü **Erstellen** von Visual Studio auswählen.)
 
    ![Visual Studio-Kontextmenü zum Veröffentlichen](media/publishing-with-visual-studio/publish-context-menu.png)
+   
+1. Wählen Sie auf der Seite **Veröffentlichungsziel auswählen** die Option **Ordner**aus, und wählen Sie dann **Profil erstellen** aus.
 
-   ![Visual Studio-Veröffentlichungsfenster](media/publishing-with-visual-studio/publish-settings-window.png)
+   ![Auswählen eines Veröffentlichungsziels in Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
+   
+1. Wählen Sie auf der Seite **Veröffentlichen** die Option **Veröffentlichen** aus.
 
-1. Öffnen Sie ein Konsolenfenster. Geben Sie z.B. im Textfeld **Geben Sie hier Text für die Suche ein** in der Windows-Taskleiste `Command Prompt` (oder `cmd` als Abkürzung) ein, und öffnen Sie ein Konsolenfenster, indem Sie entweder die Desktopanwendung **Eingabeaufforderung** auswählen oder die EINGABETASTE drücken, wenn die Anwendung in den Suchergebnissen angezeigt wird.
+   ![Visual Studio-Veröffentlichungsfenster](media/publishing-with-visual-studio/publish-page.png)
+   
+## <a name="inspect-the-files"></a>Untersuchen der Dateien
 
-1. Navigieren Sie zu der veröffentlichen Anwendung im `bin\release\PublishOutput`-Unterverzeichnis des Projektverzeichnisses Ihrer Anwendung. Wie in der folgenden Abbildung gezeigt, enthält die veröffentlichte Ausgabe die folgenden vier Dateien:
+Der Veröffentlichungsprozess erstellt eine frameworkabhängige Bereitstellung. Dies ist ein Bereitstellungstyp, bei dem die veröffentlichte Anwendung auf jeder Plattform ausgeführt werden kann, die von .NET Core unterstützt wird, wenn .NET Core auf dem System installiert ist. Benutzer können die veröffentlichte App ausführen, indem Sie auf die ausführbare Datei doppelklicken oder den Befehl `dotnet HelloWorld.dll` an einer Eingabeaufforderung ausgeben.
 
-      * *HelloWorld.deps.json*
+In den folgenden Schritten sehen Sie sich die durch den Veröffentlichungsvorgang erstellten Dateien an.
 
-         Die Datei für Runtimeabhängigkeiten der Anwendung. In dieser werden die Komponenten und Bibliotheken (einschließlich der Dynamic Link Library, die Ihre Anwendung enthält) von .NET Core definiert, die zum Ausführen der Anwendung erforderlich sind. Weitere Informationen finden Sie unter [Runtime Configuration Files (Konfigurationsdateien der Runtime)](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
- 
-      * *HelloWorld.dll*
+1. Öffnen Sie eine Eingabeaufforderung.
 
-         Die Datei, die Ihre Anwendung enthält. Dabei handelt es sich um eine Dynamic Link Library, die in einem Konsolenfenster mithilfe des Befehls `dotnet HelloWorld.dll` ausgeführt werden kann. 
+   Eine Möglichkeit, eine Eingabeaufforderung zu öffnen, ist die Eingabe von **Eingabeaufforderung** (oder kurz **cmd**) in das Suchfeld auf der Windows-Taskleiste. Wählen Sie die Desktop-App **Eingabeaufforderung** aus, oder drücken Sie die **EINGABETASTE**, wenn sie in den Suchergebnissen bereits ausgewählt ist.
 
-      * *HelloWorld.pdb* (optional für die Bereitstellung)
-
-         Eine Datei, die Debugsymbole enthält. Sie müssen die Datei nicht zusammen mit der Anwendung bereitstellen, obwohl Sie sie speichern sollten für den Fall, dass Sie die veröffentlichte Version der Anwendung debuggen müssen.
-
-      * *HelloWorld.runtimeconfig.json*
-
-         Die Runtimekonfigurationsdatei der Anwendung. Diese Datei identifiziert die Version von .NET Core, für die Ihre Anwendung erstellt wurde. Weitere Informationen finden Sie unter [Runtime Configuration Files (Konfigurationsdateien der Runtime)](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
+1. Navigieren Sie zu der veröffentlichen Anwendung im Unterverzeichnis *bin\Release\netcoreapp3.1\publish* des Projektverzeichnisses der Anwendung.
 
    ![Konsolenfenster, das veröffentlichte Dateien zeigt](media/publishing-with-visual-studio/published-files-output.png)
 
-Der Veröffentlichungsprozess erstellt eine Framework-abhängige Bereitstellung, was ein Bereitstellungstyp ist, wobei die veröffentlichte Anwendung auf jeder Plattform ausgeführt werden kann, die von .NET Core unterstützt wird, wenn .NET Core auf dem System installiert ist. Benutzer können Ihre Anwendung durch Eingabe des `dotnet HelloWorld.dll`-Befehls in einem Konsolenfenster ausführen.
+   Wie in der folgenden Abbildung gezeigt, enthält die veröffentlichte Ausgabe die folgenden Dateien:
 
-Weitere Informationen zum Veröffentlichen und Bereitstellen von .NET Core-Anwendungen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md).
+      * *HelloWorld.deps.json*
+
+         Dies ist Datei für Runtimeabhängigkeiten der Anwendung. In dieser werden die Komponenten und Bibliotheken (einschließlich der Dynamic Link Library, die Ihre Anwendung enthält) von .NET Core definiert, die zum Ausführen der App erforderlich sind. Weitere Informationen finden Sie unter [Konfigurationsdateien der Runtime](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+
+      * *HelloWorld.dll*
+
+         Dies ist die [frameworkabhängige Bereitstellungsversion](../deploying/deploy-with-cli.md#framework-dependent-deployment) der Anwendung. Um diese Dynamic Link Library (DLL) auszuführen, geben Sie an einer Eingabeaufforderung `dotnet HelloWorld.dll` ein.
+
+      * *HelloWorld.exe*
+      
+         Dies ist die [frameworkabhängige ausführbare Dateiversion](../deploying/deploy-with-cli.md#framework-dependent-executable) der Anwendung. Geben Sie `HelloWorld.exe` an einer Eingabeaufforderung ein, um sie auszuführen.
+
+      * *HelloWorld.pdb* (optional für die Bereitstellung)
+
+         Dies ist die Debugsymboldatei. Sie müssen die Datei nicht zusammen mit der Anwendung bereitstellen, obwohl Sie sie speichern sollten für den Fall, dass Sie die veröffentlichte Version der Anwendung debuggen müssen.
+
+      * *HelloWorld.runtimeconfig.json*
+
+         Dies ist die Runtimekonfigurationsdatei der Anwendung. Diese Datei identifiziert die Version von .NET Core, für die Ihre Anwendung erstellt wurde. Weitere Informationen finden Sie unter [Konfigurationsdateien der Runtime](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
+
+- [.NET Core-Anwendungsbereitstellung](../deploying/index.md)

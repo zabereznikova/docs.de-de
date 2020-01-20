@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140553"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711557"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Alternierungskonstrukte in regulären Ausdrücken
 
@@ -43,7 +42,7 @@ Wie bei der positiven Zeichenklasse kann das `|` -Zeichen für Vergleiche mit je
 
 Der reguläre Ausdruck `\bgr(a|e)y\b`, der das `|`-Zeichen verwendet, wird entsprechend der Darstellung in der folgenden Tabelle interpretiert:
 
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`gr`|Übereinstimmung mit den Zeichen "gr".|  
@@ -57,7 +56,7 @@ Das `|`-Zeichen kann auch verwendet werden, um einen Entweder-Oder-Vergleich mit
 
 Der reguläre Ausdruck `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Eine der folgenden Varianten muss übereinstimmen: zwei Dezimalstellen gefolgt von einem Bindestrich gefolgt von sieben Dezimalstellen; oder drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen.|  
@@ -68,11 +67,11 @@ Der reguläre Ausdruck `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend d
 
 Dieses Sprachelement versucht, mit einem der zwei Muster übereinzustimmen, abhängig davon, ob es ein ursprüngliches Muster zuordnen kann. Die Syntax lautet:  
 
-`(?(` *Ausdruck* `)` *ja* `|` *nein* `)`
+`(?(` *expression* `)` *yes* `|` *no* `)`
 
 wobei *expression* das ursprüngliche zu enstprechende Muster ist. *yes* ist das entsprechende Muster, wenn *expression* zugeordnet ist, und *no* ist das entsprechende optionale Muster, wenn *expression* nicht übereinstimmt. Die Engine für reguläre Ausdrücke behandelt *Ausdruck* als Assertion mit einer Breite von Null, das heißt, dass die Engine für reguläre Ausdrücke im Eingabestream nicht weitergeführt wird, nachdem sie *Ausdruck* auswertet. Daher entspricht dieses Konstrukt Folgendem:
 
-`(?(?=` *expression* `)` *ja* `|` *nein* `)`
+`(?(?=` *expression* `)` *yes* `|` *no* `)`
 
 wobei `(?=`*Ausdruck*`)` ein Assertionskonstrukt mit einer Breite von null ist. (Weitere Informationen finden Sie unter [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).) Da die Engine für reguläre Ausdrücke *Ausdruck* als Anker (eine Assertion mit einer Breite von null) interpretiert, muss *Ausdruck* entweder eine Assertion mit einer Breite von null (weitere Informationen finden Sie unter [Anker](anchors-in-regular-expressions.md)) oder ein Teilausdruck sein, der auch in *a* enthalten ist. Andernfalls kann das Muster *yes* nicht zugeordnet werden.  
   
@@ -86,7 +85,7 @@ Das folgende Beispiel ist eine Abwandlung des Beispiels, das im Abschnitt [Entwe
 
 Das Muster für reguläre Ausdrücke `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:
 
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?(\d{2}-)`|Bestimmen, ob die nächsten drei Zeichen aus zwei Ziffern gefolgt von einem Bindestrich bestehen.|  
@@ -99,15 +98,15 @@ Das Muster für reguläre Ausdrücke `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})
 
 Dieses Sprachelement versucht, mit einem der zwei Muster übereinzustimmen, abhängig davon, ob es mit einer angegebenen Erfassungsgruppe übereingestimmt hat. Die Syntax lautet:
 
-`(?(` *Name* `)` *ja* `|` *nein* `)`
+`(?(` *name* `)` *yes* `|` *no* `)`
 
 oder
 
-`(?(` *number* `)` *ja* `|` *nein* `)`
+`(?(` *number* `)` *yes* `|` *no* `)`
 
 , wobei *name* der Name und *number* die Nummer einer Erfassungsgruppe ist. *yes* ist der zu übereinstimmende Ausdruck, wenn *name* oder *number* eine Übereinstimmung aufweist, und *no* ist der optionale zu übereinstimmende Ausdruck, wenn dies nicht der Fall ist.
 
-Wenn *name* nicht dem Namen einer Erfassungsgruppe entspricht, die im Muster des regulären Ausdrucks verwendet wird, wird das Alternierungskonstrukt, wie im vorherigen Abschnitt erläutert, als Ausdruckstest interpretiert. In der Regel bedeutet dies, dass *expression* `false`ergibt. Wenn *number* keiner nummerierten Erfassungsgruppe entspricht, die im Muster des regulären Ausdrucks verwendet wird, löst die Engine für reguläre Ausdrücke eine <xref:System.ArgumentException> aus.
+Wenn *name* nicht dem Namen einer Erfassungsgruppe entspricht, die im Muster des regulären Ausdrucks verwendet wird, wird das Alternierungskonstrukt, wie im vorherigen Abschnitt erläutert, als Ausdruckstest interpretiert. In der Regel bedeutet dies, dass *expression*`false`ergibt. Wenn *number* keiner nummerierten Erfassungsgruppe entspricht, die im Muster des regulären Ausdrucks verwendet wird, löst die Engine für reguläre Ausdrücke eine <xref:System.ArgumentException> aus.
 
 Das folgende Beispiel ist eine Abwandlung des Beispiels, das im Abschnitt [Entweder-Oder-Musterabgleich mit &#124;](#Either_Or) vorhanden ist. Es wird eine Erfassungsgruppe mit dem Namen `n2` verwendet, die aus zwei Ziffern gefolgt von einem Bindestrich besteht. Das Alternierungskonstrukt testet, ob diese Erfassungsgruppe in der Eingabezeichenfolge abgeglichen wurde. Wenn dies der Fall ist, versucht das Alternierungskonstrukt, mit den letzten sieben Ziffern einer neunstelligen Identifikationsnummer des Arbeitgebers in den USA versucht. Wenn dies nicht der Fall ist, versucht es, mit einer neunstelligen Sozialversicherungsnummer in den USA versucht.
 
@@ -116,10 +115,10 @@ Das folgende Beispiel ist eine Abwandlung des Beispiels, das im Abschnitt [Entwe
 
 Das Muster für reguläre Ausdrücke `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:
 
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
-|`(?<n2>\d{2}-)?`|Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2`als Namen an.|  
+|`(?<n2>\d{2}-)?`|Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2` als Namen an.|  
 |`(?(n2)`|Prüfen, ob `n2` in der Eingabezeichenfolge abgeglichen wurde.|  
 |`\d{7}`|Wenn `n2` abgeglichen wurde, stimmen sieben Dezimalstellen überein.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Wenn `n2` nicht abgeglichen wurde, stimmen drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen überein.|  

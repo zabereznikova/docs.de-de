@@ -3,17 +3,16 @@ title: Veröffentlichen von .NET Core-Apps mit der CLI
 description: Erfahren Sie, wie Sie NET Core-Apps mit den CLI-Tools (command-line interface, Befehlszeilenschnittstelle) des .NET Core SDK veröffentlichen.
 author: thraka
 ms.author: adegeo
-ms.date: 01/16/2019
+ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.custom: seodec18
-ms.openlocfilehash: 41af1c708a264833f1f7217529b5c0206d405449
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428912"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740857"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Veröffentlichen von .NET Core-Apps mit der CLI
 
@@ -43,9 +42,9 @@ Sie können mehrere durch Semikolons getrennte TFM-Werte in der `<TargetFramewor
 
 Sofern es nicht anders festgelegt ist, ist `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` das Ausgabeverzeichnis des [`dotnet publish`](../tools/dotnet-publish.md)-Befehls. Der **BUILD-CONFIGURATION**-Standardmodus ist **Debug**, sofern er nicht mithilfe des `-c`-Parameters geändert wurde. Zum Beispiel wird mit `dotnet publish -c Release -f netcoreapp2.1` in `myfolder/bin/Release/netcoreapp2.1/publish/` veröffentlicht.
 
-Wenn Sie das .NET Core SDK 3.0 verwenden, ist die frameworkabhängige ausführbare Datei der Standardveröffentlichungsmodus für Apps für die .NET Core-Versionen 2.1, 2.2 und 3.0.
+Wenn Sie das .NET Core SDK 3.0 oder höher verwenden, ist die frameworkabhängige ausführbare Datei der Standardveröffentlichungsmodus für Apps für die .NET Core-Versionen 2.1, 2.2, 3.0 oder höher.
 
-Wenn Sie das .NET Core SDK 2.1 verwenden, ist die frameworkabhängige Bereitstellung der Standardveröffentlichungsmodus für Apps für die .NET Core-Versionen 2.1 und 2.2.
+Wenn Sie das .NET Core SDK 2.1 verwenden, ist die frameworkabhängige Bereitstellung der Standardveröffentlichungsmodus für Apps für die .NET Core-Versionen 2.1 und 2.2.
 
 ### <a name="native-dependencies"></a>Native Abhängigkeiten
 
@@ -110,7 +109,7 @@ Für die .NET Core SDK 2.x-CLI ist die frameworkabhängige Bereitstellung der St
 
 Wenn Sie Ihre App als frameworkabhängige Bereitstellung veröffentlichen, wird eine `<PROJECT-NAME>.dll`-Datei im `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`-Ordner erstellt. Navigieren Sie zum Ausgabeordner, und verwenden Sie den Befehl `dotnet <PROJECT-NAME>.dll`, um Ihre App auszuführen.
 
-Ihre App wird für eine bestimmte Version von .NET Core konfiguriert. Die .NET Core-Zielruntime ist auf dem Computer erforderlich, auf dem die App ausgeführt werden soll. Wenn Ihre App beispielsweise auf .NET Core 2.2 ausgerichtet ist, muss die .NET Core 2.2-Runtime auf Computern installiert sein, auf denen Ihre App ausgeführt werden soll. Sie können Ihre Projektdatei wie im Abschnitt [Grundlagen der Veröffentlichung](#publishing-basics) beschrieben bearbeiten, um das Standardzielframework zu ändern oder mehr als ein Zielframework einzurichten.
+Ihre App wird für eine bestimmte Version von .NET Core konfiguriert. Die .NET Core-Zielruntime ist auf jedem Computer erforderlich, auf dem Ihre App ausgeführt wird. Wenn Ihre App beispielsweise auf .NET Core 2.2 ausgerichtet ist, muss die .NET Core 2.2-Runtime auf Computern installiert sein, auf denen Ihre App ausgeführt werden soll. Sie können Ihre Projektdatei wie im Abschnitt [Grundlagen der Veröffentlichung](#publishing-basics) beschrieben bearbeiten, um das Standardzielframework zu ändern oder mehr als ein Zielframework einzurichten.
 
 Beim Veröffentlichen einer frameworkabhängigen Bereitstellung wird eine App erstellt, die automatisch ein Rollforward auf den neuesten .NET Core-Sicherheitspatch ausführt, der auf dem System verfügbar ist. Weitere Informationen über die Versionsbindung zur Kompilierzeit finden Sie unter [.NET Core-Versionsauswahl](../versions/selection.md#framework-dependent-apps-roll-forward).
 
@@ -120,11 +119,11 @@ Für die .NET Core SDK 3.x-CLI ist die frameworkabhängige ausführbare Datei de
 
 In diesem Modus wird ein Host für die plattformspezifische ausführbare Datei erstellt, der Ihre plattformübergreifende App hostet. Dieser Modus ähnelt der frameworkabhängigen Bereitstellung, da dabei ein Host in Form des `dotnet`-Befehls erforderlich ist. Der Dateiname des ausführbaren Hosts variiert je nach Plattform. Der Name sollte `<PROJECT-FILE>.exe` ähnlich sein. Sie können diese ausführbare Datei direkt ausführen, anstatt `dotnet <PROJECT-FILE>.dll` aufzurufen, was jedoch auch eine akzeptable Möglichkeit zum Ausführen der App darstellt.
 
-Ihre App wird für eine bestimmte Version von .NET Core konfiguriert. Die .NET Core-Zielruntime ist auf dem Computer erforderlich, auf dem die App ausgeführt werden soll. Wenn Ihre App beispielsweise auf .NET Core 2.2 ausgerichtet ist, muss die .NET Core 2.2-Runtime auf Computern installiert sein, auf denen Ihre App ausgeführt werden soll. Sie können Ihre Projektdatei wie im Abschnitt [Grundlagen der Veröffentlichung](#publishing-basics) beschrieben bearbeiten, um das Standardzielframework zu ändern oder mehr als ein Zielframework einzurichten.
+Ihre App wird für eine bestimmte Version von .NET Core konfiguriert. Die .NET Core-Zielruntime ist auf jedem Computer erforderlich, auf dem Ihre App ausgeführt wird. Wenn Ihre App beispielsweise auf .NET Core 2.2 ausgerichtet ist, muss die .NET Core 2.2-Runtime auf Computern installiert sein, auf denen Ihre App ausgeführt werden soll. Sie können Ihre Projektdatei wie im Abschnitt [Grundlagen der Veröffentlichung](#publishing-basics) beschrieben bearbeiten, um das Standardzielframework zu ändern oder mehr als ein Zielframework einzurichten.
 
 Beim Veröffentlichen einer frameworkabhängigen ausführbaren Datei wird eine App erstellt, die automatisch ein Rollforward auf den neuesten .NET Core-Sicherheitspatch ausführt, der auf dem System verfügbar ist. Weitere Informationen über die Versionsbindung zur Kompilierzeit finden Sie unter [.NET Core-Versionsauswahl](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden um eine frameworkabhängige ausführbare Datei zu veröffentlichen (dies gilt nicht, wenn Sie bei .NET Core 3.x die aktuelle Plattform als Zielplattform verwenden):
+Für :NET Core 2.2 oder früher müssen Sie die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, um eine frameworkabhängige ausführbare Datei zu veröffentlichen:
 
 - `-r <RID>` Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
 
@@ -135,7 +134,7 @@ Wenn Sie den `-r`-Switch verwenden, wird der Pfad des Ausgabeordner in folgenden
 Führen Sie `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` aus, wenn Sie die [Beispiel-App](#sample-app) verwenden. Mit diesem Befehl wird die folgende ausführbare Datei erstellt: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Invarianter Globalisierungsmodus von .NET Core).
+> Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) (Invarianter Globalisierungsmodus von .NET Core).
 
 ## <a name="self-contained-deployment"></a>Eigenständige Bereitstellung
 
@@ -150,7 +149,7 @@ Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, u
 - `--self-contained true` Dieser Switch weist das .NET Core SDK an, eine ausführbare Datei als eigenständige Bereitstellung zu erstellen.
 
 > [!NOTE]
-> Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Invarianter Globalisierungsmodus von .NET Core).
+> Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) (Invarianter Globalisierungsmodus von .NET Core).
 
 ## <a name="see-also"></a>Siehe auch
 

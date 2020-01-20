@@ -4,14 +4,12 @@ description: ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offli
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976739"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740081"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Was ist ML.NET, und wie funktioniert es?
 
@@ -21,7 +19,7 @@ Zentraler Bestandteil von ML.NET ist ein Machine Learning-**Modell**. Das Modell
 
 Sobald Sie über ein Modell verfügen, können Sie es Ihrer Anwendung hinzufügen, um Vorhersagen zu treffen.
 
-ML.NET kann unter Windows, Linux und macOS mit .NET Core oder unter Windows mit .NET Framework ausgeführt. 64-Bit wird auf allen Plattformen unterstützt. 32-Bit wird unter Windows unterstützt (mit Ausnahme der Funktionen TensorFlow, LightGBM und ONNX).
+ML.NET kann unter Windows, Linux und macOS mit .NET Core oder unter Windows mit .NET Framework ausgeführt. 64-Bit wird auf allen Plattformen unterstützt. 32-Bit wird unter Windows unterstützt (mit Ausnahme der Funktionen für TensorFlow, LightGBM und ONNX).
 
 Beispiele für den Typ von Vorhersagen, die Sie mit ML.NET treffen können:
 
@@ -127,7 +125,7 @@ Hauspreismodell und Textklassifizierungsmodell sind beide **lineare** Modelle. J
 
 ## <a name="data-preparation"></a>Datenvorbereitung
 
-In den meisten Fällen können die Daten, die Ihnen zur Verfügung stehen, nicht direkt zum Trainieren von Machine Learning-Modellen verwendet werden. Die unformatierten Daten müssen vorbereitet, d.h. vorverarbeitet werden, bevor Sie sie verwenden können, um die Parameter Ihres Modells zu finden. Möglicherweise müssen Ihre Daten von Zeichenfolgenwerten in eine numerische Darstellung konvertiert werden. Vielleicht enthalten Ihre Eingabedaten redundante Informationen. Sie müssen möglicherweise die Dimensionen der Eingabedaten reduzieren oder erweitern. Ihre Daten müssen vielleicht normalisiert oder skaliert werden.
+In den meisten Fällen können die Daten, die Ihnen zur Verfügung stehen, nicht direkt zum Trainieren von Machine Learning-Modellen verwendet werden. Die unformatierten Daten müssen vorbereitet, d. h. vorverarbeitet werden, bevor Sie sie verwenden können, um die Parameter Ihres Modells zu finden. Möglicherweise müssen Ihre Daten von Zeichenfolgenwerten in eine numerische Darstellung konvertiert werden. Vielleicht enthalten Ihre Eingabedaten redundante Informationen. Sie müssen möglicherweise die Dimensionen der Eingabedaten reduzieren oder erweitern. Ihre Daten müssen vielleicht normalisiert oder skaliert werden.
 
 Die [ML.NET-Tutorials](./tutorials/index.md) informieren Sie über verschiedene Datenverarbeitungspipelines für Text-, Bild-, numerische und Zeitreihendaten, die für bestimmte Machine Learning-Aufgaben verwendet werden.
 
@@ -180,7 +178,7 @@ Eine ML.NET-Anwendung beginnt mit einem <xref:Microsoft.ML.MLContext>-Objekt. Di
 ||Multiklassenklassifizierung|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Anomalieerkennung|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Clusterbildung|<xref:Microsoft.ML.ClusteringCatalog>||
-||Vorhersagen|<xref:Microsoft.ML.ForecastingCatalog>||
+||Vorhersage|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Rangfolge|<xref:Microsoft.ML.RankingCatalog>||
 ||Regression|<xref:Microsoft.ML.RegressionCatalog>||
 ||Empfehlung|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender`-NuGet-Paket hinzufügen|
@@ -214,7 +212,7 @@ Nachdem die Objekte in der Pipeline erstellt wurden, können Daten zum Trainiere
 
 Beim Aufruf von `Fit()` werden die Eingabetrainingsdaten verwendet, um die Parameter des Modells zu schätzen. Dies wird als Trainieren des Modells bezeichnet. Beachten Sie, dass das Modell der linearen Regression oben zwei Modellparameter hatte: **Trend** und **Gewichtung**. Nach dem `Fit()`-Aufruf sind die Werte der Parameter bekannt. Die meisten Modelle haben viel mehr Parameter als dieses.
 
-Weitere Informationen über das Modelltraining finden Sie unter [Trainieren und Auswerten eines Modells](./how-to-guides/train-machine-learning-model-ml-net.md).
+Weitere Informationen zum Modelltraining finden Sie unter [Trainieren eines Modells](./how-to-guides/train-machine-learning-model-ml-net.md).
 
 Das resultierende Modellobjekt implementiert die <xref:Microsoft.ML.ITransformer>-Schnittstelle. Das Modell transformiert also Eingabedaten in Vorhersagen.
 
@@ -242,7 +240,7 @@ Jede Transformation in der Pipeline weist ein Eingabeschema (Datennamen, -typen 
 
 Wenn das Ausgabeschema einer Transformation in der Pipeline nicht dem Eingabeschema der nächsten Transformation entspricht, löst ML.NET eine Ausnahme aus.
 
-Ein Datenansichtsobjekt enthält Spalten und Zeilen. Jede Spalte hat einen Namen, einen Typ und eine Länge. Beispiel: die Eingabespalten im Hauspreisbeispiel sind **Size** und **Price** („Größe“ und „Preis“). Beide sind Typen, und sie sind eher Skalar- als Vektormengen.
+Ein Datenansichtsobjekt enthält Spalten und Zeilen. Jede Spalte hat einen Namen, einen Typ und eine Länge. Beispiel: Die Eingabespalten im Hauspreisbeispiel sind **Size** und **Price** („Größe“ und „Preis“). Beide sind Typen, und sie sind eher Skalar- als Vektormengen.
 
    ![Beispiel der ML.NET-Datenansicht mit Hauspreis-Vorhersagedaten](./media/ml-net-dataview.png)
 

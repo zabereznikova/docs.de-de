@@ -12,13 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.custom: seodec18
-ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140536"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711531"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 
@@ -33,7 +32,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
 
 Ein nummerierter Rückverweis verwendet die folgende Syntax:
 
-`\` *Zahl*
+`\` *number*
 
 wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *number* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt. Wenn darüber hinaus *number* eine Erfassungsgruppe an einer bestimmten Ordnungsposition identifiziert, dieser Erfassungsgruppe jedoch ein anderer Name als die zugehörige Ordnungsposition zugewiesen wurde, löst der Parser für reguläre Ausdrücke ebenfalls eine <xref:System.ArgumentException> aus.
 
@@ -51,7 +50,7 @@ Wenn die Mehrdeutigkeit ein Problem ist, können Sie die Notation `\k<`*name*`>`
 
 Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(\w)\1` wird definiert, der aus den folgenden Elementen besteht.
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`(\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zur ersten Erfassungsgruppe.|
 |`\1`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der ersten Erfassungsgruppe identisch ist.|
@@ -63,17 +62,17 @@ Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht.
 
 Ein benannter Rückverweis wird mit der folgenden Syntax definiert:
 
-`\k<` *Name* `>`
+`\k<` *name* `>`
 
 oder:
 
-`\k'` *Name* `'`
+`\k'` *name* `'`
 
 wobei *Name* der Name einer Erfassungsgruppe ist, die im Muster eines regulären Ausdrucks definiert ist. Wenn *name* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus.
 
 Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(?<char>\w)\k<char>` wird definiert, der aus den folgenden Elementen besteht.
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`(?<char>\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zu einer Erfassungsgruppe mit dem Namen `char`|
 |`\k<char>`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der `char`-Erfassungsgruppe identisch ist|
@@ -104,7 +103,7 @@ Ein Rückverweis bezieht sich auf die aktuellste Definition einer Gruppe (beim A
 
 Das folgende Beispiel enthält ein Muster für reguläre Ausdrücke, `(?<1>a)(?<1>\1b)*`, das die Gruppe namens „\1“ neu definiert. Die folgende Tabelle beschreibt jedes Muster im regulären Ausdruck.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`(?<1>a)`|Übereinstimmung mit dem Zeichen „a“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|
 |`(?<1>\1b)*`|Übereinstimmung mit null oder einem Vorkommen der Gruppe `1` zusammen mit einem „b“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|
@@ -124,7 +123,7 @@ In diesem Beispiel ist `*` ein Schleifenquantifizierer – er wird wiederholt au
 
 Wurden durch eine Gruppe keine Teilzeichenfolgen gefunden, ist der Rückverweis auf diese Gruppe nicht definiert und führt niemals zu einer Übereinstimmung. Dies wird durch das Muster des regulären Ausdrucks `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` veranschaulicht, das folgendermaßen definiert ist:
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|
 |`(\p{Lu}{2})`|Übereinstimmung mit zwei Großbuchstaben. Dies ist die erste Erfassungsgruppe.|

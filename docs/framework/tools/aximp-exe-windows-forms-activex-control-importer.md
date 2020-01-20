@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044891"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715786"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
 Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
@@ -34,22 +32,22 @@ Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliot
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*datei*|Der Name der Quelldatei mit dem zu konvertierenden ActiveX-Steuerelement. Das Dateiargument muss die Erweiterung ".dll" oder ".ocx" aufweisen.|  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |`/delaysign`|Legt fest, dass "Aximp.exe" das resultierende Steuerelement verzögert signiert. Diese Option müssen Sie entweder mit der Option `/keycontainer:`, `/keyfile:` oder `/publickey:` angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|`/keycontainer:` *containername*|Signiert die resultierende Steuerelement mit einem starken Namen, wobei das Paar aus privatem und öffentlichem Schlüssel aus dem Schlüsselcontainer verwendet wird, der mit *containername* angegeben wurde|  
+|`/keycontainer:` *containerName*|Signiert die resultierende Steuerelement mit einem starken Namen, wobei das Paar aus privatem und öffentlichem Schlüssel aus dem Schlüsselcontainer verwendet wird, der mit *containername* angegeben wurde|  
 |`/keyfile:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des unter *dateiname* angegebenen Paar aus privatem und öffentlichem Schlüssel des Herausgebers mit einem starken Namen.|  
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |`/out:` *dateiname*|Legt den Namen der zu erstellenden Assembly fest.|  
 |`/publickey:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des öffentlichen Schlüssels, der in der durch *dateiname* angegebenen Datei enthalten ist, mit einem starken Namen.|  
-|`/rcw:` *dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *Dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
 |`/source`|Erstellt C#-Quellcode für den Windows Forms-Wrapper.|  
 |`/verbose`|Gibt den ausführlichen Modus an und zeigt zusätzliche Verlaufsinformationen an.|  

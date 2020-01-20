@@ -3,12 +3,12 @@ title: Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio
 description: Die Syntaxschnellansicht bietet ein visuelles Tool, um die Modelle zu untersuchen, die das .NET Compiler Platform SDK für Code generiert.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972015"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346963"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -20,7 +20,7 @@ Lesen Sie den Artikel zur [Übersicht](compiler-api-model.md), und machen Sie si
 
 ## <a name="syntax-visualizer"></a>Syntaxschnellansicht
 
-Die **Syntaxschnellansicht** ermöglicht die Untersuchung der Syntaxstruktur für die C#- oder VB-Codedatei im aktuellen aktiven Editor-Fenster in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. Die Schnellansicht kann gestartet werden, indem Sie auf **Ansicht** > **Andere Fenster** > **Syntaxschnellansicht** klicken.  Sie können auch die **Schnellstart**-Symbolleiste in der oberen rechten Ecke verwenden. Geben Sie „syntax“ ein, und der Befehl zum Öffnen der **Syntaxschnellansicht** sollte erscheinen.
+Die **Syntaxschnellansicht** ermöglicht die Untersuchung der Syntaxstruktur für die C#- oder Visual Basic-Codedatei im aktuellen aktiven Editor-Fenster in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. Die Schnellansicht kann gestartet werden, indem Sie auf **Ansicht** > **Andere Fenster** > **Syntaxschnellansicht** klicken.  Sie können auch die **Schnellstart**-Symbolleiste in der oberen rechten Ecke verwenden. Geben Sie „syntax“ ein, und der Befehl zum Öffnen der **Syntaxschnellansicht** sollte erscheinen.
 
 Dieser Befehl öffnet die Syntaxschnellansicht als unverankertes Toolfenster. Wenn Sie kein Code-Editor-Fenster geöffnet haben, ist die Anzeige leer, wie in der folgenden Abbildung dargestellt. 
 
@@ -28,14 +28,15 @@ Dieser Befehl öffnet die Syntaxschnellansicht als unverankertes Toolfenster. We
 
 Docken Sie dieses Toolfenster an einem geeigneten Ort innerhalb von Visual Studio an, z.B. an die linke Seite. Die Schnellansicht zeigt Informationen über die aktuelle Codedatei.
 
-Erstellen Sie ein neues Projekt mit dem Befehl **Datei** > **Neues Projekt**. Sie können entweder ein VB- oder ein C#-Projekt erstellen. Wenn Visual Studio die Haupt-Codedatei für dieses Projekt öffnet, zeigt die Schnellansicht die entsprechende Syntaxstruktur an. Sie können eine beliebige C#-/VB-Datei in dieser Instanz von Visual Studio öffnen, und die Schnellansicht zeigt die Syntaxstruktur dieser Datei an. Wenn Sie mehrere Codedateien in Visual Studio geöffnet haben, zeigt die Schnellansicht die Syntaxstruktur für die derzeit aktive Codedatei (die Codedatei, die über den Tastaturfokus verfügt) an.
+Erstellen Sie ein neues Projekt mit dem Befehl **Datei** > **Neues Projekt**. Sie können ein Visual Basic- oder ein C#-Projekt erstellen. Wenn Visual Studio die Haupt-Codedatei für dieses Projekt öffnet, zeigt die Schnellansicht die entsprechende Syntaxstruktur an. Sie können eine beliebige C#-/Visual Basic-Datei in dieser Instanz von Visual Studio öffnen, und die Schnellansicht zeigt die Syntaxstruktur dieser Datei an. Wenn Sie mehrere Codedateien in Visual Studio geöffnet haben, zeigt die Schnellansicht die Syntaxstruktur für die derzeit aktive Codedatei (die Codedatei, die über den Tastaturfokus verfügt) an.
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualisieren einer C#-Syntaxstruktur](media/syntax-visualizer/visualize-csharp.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-![Visualisieren einer VB-Syntaxstruktur](media/syntax-visualizer/visualize-visual-basic.png)
+![Visualisieren einer Visual Basic-Syntaxstruktur](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
@@ -48,7 +49,7 @@ Jedes Element in der Struktur zeigt außerdem seinen eigenen **Bereich** an. Der
 Es gibt zwei Möglichkeiten, in der Struktur zu navigieren:
 
 * Erweitern oder klicken Sie auf Elemente in der Struktur. Die Schnellansicht wählt automatisch den entsprechenden Text aus, der zum Bereich des Elements im Code-Editor gehört.
-* Klicken Sie auf oder wählen Sie Text im Code-Editor. Wenn Sie im vorangegangenen VB-Beispiel die Zeile mit „Module Module1“ im Code-Editor auswählen, navigiert die Schnellansicht automatisch zum entsprechenden ModuleStatement-Knoten in der Struktur. 
+* Klicken Sie auf oder wählen Sie Text im Code-Editor. Wenn Sie im vorangegangenen Visual Basic-Beispiel die Zeile mit „Module Module1“ im Code-Editor auswählen, navigiert die Schnellansicht automatisch zum entsprechenden ModuleStatement-Knoten in der Struktur. 
 
 Die Schnellansicht markiert das Element in der Struktur, dessen Bereich am besten zum Bereich des im Editor ausgewählten Texts passt.
 
@@ -65,11 +66,12 @@ Klicken Sie mit der rechten Maustaste auf ein beliebiges Element in der Struktur
 Die Schnellansicht zeigt eine grafische Darstellung des Teilbaums, der von dem ausgewählten Element abstammt. Versuchen Sie diese Schritte für den **MethodDeclaration**-Knoten, der der `Main()`-Methode im C#-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
 ![C#-Syntaxdiagramm](media/syntax-visualizer/csharp-syntax-graph.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-Versuchen Sie das Gleiche für den **SubBlock**-Knoten, der der `Main()`-Methode im vorangehenden VB-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
+Versuchen Sie das Gleiche für den **SubBlock**-Knoten, der der `Main()`-Methode im vorangehenden Visual Basic-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
-![VB-Syntaxdiagramm](media/syntax-visualizer/visual-basic-syntax-graph.png)
+![Anzeigen eines Visual Basic-Syntaxgraphen](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
@@ -103,9 +105,9 @@ Versuchen Sie als Letztes **View Constant Value (if any)** (Konstanten Wert anze
 
 ![Ein konstanter Wert](media/syntax-visualizer/constant-value.png)
 
-Das vorherige Beispiel kann auch in VB repliziert werden. Geben Sie `Dim x As Double = 1 + 1` in einer VB-Datei ein. Wählen Sie den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den entsprechenden **AddExpression**-Knoten in der Schnellansicht hervor. Wiederholen Sie die vorherigen Schritte für **AddExpression**, und Sie sollten identische Ergebnisse erhalten.
+Das vorherige Beispiel kann auch in Visual Basic repliziert werden. Geben Sie `Dim x As Double = 1 + 1` in einer Visual Basic-Datei ein. Wählen Sie den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den entsprechenden **AddExpression**-Knoten in der Schnellansicht hervor. Wiederholen Sie die vorherigen Schritte für **AddExpression**, und Sie sollten identische Ergebnisse erhalten.
 
-Untersuchen Sie weiteren Code in VB. Aktualisieren Sie Ihre VB-Hauptdatei mit dem folgenden Code:
+Untersuchen Sie weiteren Code in Visual Basic. Aktualisieren Sie Ihre Visual Basic-Hauptdatei mit dem folgenden Code:
 
 ```vb
 Imports C = System.Console
@@ -129,7 +131,7 @@ Untersuchen Sie das Symbol auf deklarierten Typ, Methode, Eigenschaft. Wählen S
 
 ![Symbol für eine Methodendeklaration anzeigen](media/syntax-visualizer/method-symbol.png)
 
-Die obengenannten Beispiele können problemlos in C# nachgestellt werden. Geben Sie `using C = System.Console;` anstelle von `Imports C = System.Console` für den Alias ein. Die vorhergehenden Schritte in C# ergeben identische Ergebnisse im Schnellansichtsfenster.
+Die oben genannten Visual Basic-Beispiele können problemlos in C# reproduziert werden. Geben Sie `using C = System.Console;` anstelle von `Imports C = System.Console` für den Alias ein. Die vorhergehenden Schritte in C# ergeben identische Ergebnisse im Schnellansichtsfenster.
 
 Semantische Überprüfungsvorgänge sind nur an Knoten verfügbar. Sie sind nicht an Tokens oder Trivia verfügbar. Nicht alle Knoten haben relevante semantische Informationen, die überprüft werden können. Wenn ein Knoten keine relevanten semantischen Informationen hat, wird beim Klicken auf **Symbol \* anzeigen (sofern vorhanden)** ein leeres Eigenschaftenraster angezeigt.
 

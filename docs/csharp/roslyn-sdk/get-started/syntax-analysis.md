@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxanalyse (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931758"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347003"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Erste Schritte mit der Syntaxanalyse
 
@@ -51,14 +51,14 @@ Eine Syntaxstruktur ist eine Datenstruktur, die von den C#- und Visual Basic-Com
 
 Syntaxstrukturen bestehen aus den folgenden vier primären Bausteinen:
 
-* Die <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>-Klasse: Eine Instanz dieser Klasse repräsentiert eine vollständige Analysestruktur. <xref:Microsoft.CodeAnalysis.SyntaxTree> ist eine abstrakte Klasse mit sprachspezifischen Ableitungen. Sie verwenden die Analysemethoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>), um Text in C# oder VB zu analysieren.
+* Die <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>-Klasse: Eine Instanz dieser Klasse repräsentiert eine vollständige Analysestruktur. <xref:Microsoft.CodeAnalysis.SyntaxTree> ist eine abstrakte Klasse mit sprachspezifischen Ableitungen. Sie verwenden die Analysemethoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>), um Text in C# oder Visual Basic zu analysieren.
 * Die <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>-Klasse: Instanzen dieser Klasse repräsentieren syntaktische Konstrukte wie Deklarationen, Anweisungen, Klauseln und Ausdrücke.
 * Die <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>-Struktur: Diese Struktur repräsentiert ein einzelnes Schlüsselwort oder Interpunktionszeichen oder einen einzelnen Bezeichner oder Operator.
 * Die <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>-Struktur: Diese Struktur repräsentiert syntaktisch unwichtige Informationen wie Leerräume zwischen Token, Vorverarbeitungsdirektiven und Kommentare.
 
 Trivia, Token und Knoten werden hierarchisch zusammengestellt und bilden eine Struktur, die alle Elemente in einem Visual Basic- oder C#-Codefragment vollständig repräsentiert. Sie können diese Struktur im Fenster **Syntaxschnellansicht** anzeigen. Wählen Sie in Visual Studio **Ansicht** > **Weitere Fenster** > **Syntaxschnellansicht** aus. Die oben gezeigte C#-Quelldatei sieht in der **Syntaxschnellansicht** ungefähr wie folgt aus:
 
-**SyntaxNode**: Blau | **SyntaxToken**: Grün | **SyntaxTrivia**: Rot ![C#-Codedatei](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode-** : Blau | **SyntaxToken**: Grün | **SyntaxTrivia**: Rot ![C#-Codedatei](media/walkthrough-csharp-syntax-figure1.png)
 
 Durch Navigieren in dieser Struktur lässt sich jede Anweisung, jeder Ausdruck, jedes Token und jeder Leerraum in einer Codedatei auffinden.
 
@@ -78,7 +78,7 @@ Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Re
 Erstellen Sie ein neues **Stand-Alone Code Analysis Tool**-Projekt für C#:
 
 * Wählen Sie in Visual Studio **Datei** > **Neu** > **Projekt** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen.
-* Wählen Sie unter **Visual C#** > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus.
+* Wählen Sie unter **Visual C#**  > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus.
 * Nennen Sie Ihr Projekt **SyntaxTreeManualTraversal**, und klicken Sie auf „OK“.
 
 Sie werden das einfache Hello World!- Programm analysieren, das weiter oben in diesem Artikel gezeigt wurde.

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a54677fa0fa2845dd635f89ddb7ed1c5c279e03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253502"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345719"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML) (C#)
 
@@ -49,7 +49,7 @@ class Program {
 }
 ```
 
-In diesem Beispiel wird die <xref:System.Xml.Linq.XContainer.Element%2A>-Methode verwendet, die im Artikel [Vorgehensweise: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md) eingeführt wurde. Außerdem verwendet das Beispiel Umwandlungen, um die Werte der Elemente abzurufen, die von der <xref:System.Xml.Linq.XContainer.Element%2A>-Methode zurückgegeben werden.  
+In diesem Beispiel wird die <xref:System.Xml.Linq.XContainer.Element%2A>-Methode verwendet, die im Thema [Vorgehensweise: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md) eingeführt wurde. Außerdem verwendet das Beispiel Umwandlungen, um die Werte der Elemente abzurufen, die von der <xref:System.Xml.Linq.XContainer.Element%2A>-Methode zurückgegeben werden.  
 
 Dieses Beispiel erzeugt die folgende Ausgabe:
 

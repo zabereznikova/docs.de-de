@@ -4,13 +4,13 @@ description: Hier erfahren Sie, wie Sie ML.NET in einem Clusteringszenario verwe
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204838"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716235"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Kategorisieren von Schwertlilien unter Verwendung eines k-Means-Algorithmus mit ML.NET
 
@@ -27,7 +27,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > - Trainieren des Modells
 > - Verwenden des Modells für Vorhersagen
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
@@ -118,7 +118,7 @@ Ersetzen Sie in der `Main`-Methode die Zeile `Console.WriteLine("Hello World!");
 
 Die Klasse <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> stellt die Umgebung für maschinelles Lernen dar und bietet Mechanismen für die Protokollierung sowie Einstiegspunkte für das Laden von Daten, das Trainieren von Modellen, Vorhersagen und weitere Aufgaben. Dies ist im Prinzip vergleichbar mit der Verwendung von `DbContext` in Entity Framework.
 
-## <a name="setup-data-loading"></a>Einrichten des Ladens von Daten
+## <a name="set-up-data-loading"></a>Einrichten des Ladens von Daten
 
 Fügen Sie der `Main`-Methode den folgenden Code hinzu, um das Verfahren zum Laden von Daten einzurichten:
 

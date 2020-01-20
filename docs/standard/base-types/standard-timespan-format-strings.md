@@ -1,5 +1,5 @@
 ---
-title: TimeSpan-Standardformatzeichenfolgen
+title: Standardmäßige TimeSpan-Formatzeichenfolgen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972094"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346630"
 ---
-# <a name="standard-timespan-format-strings"></a>TimeSpan-Standardformatzeichenfolgen
+# <a name="standard-timespan-format-strings"></a>Standardmäßige TimeSpan-Formatzeichenfolgen
 
 Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
@@ -40,7 +40,7 @@ Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen 
   
 Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.  
   
-|Formatbezeichner|name|BESCHREIBUNG|Beispiele|  
+|Formatbezeichner|name|Beschreibung|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen finden Sie unter: [Der Konstantenformatbezeichner "c"](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Kurzformatbezeichner "g"](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -53,7 +53,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Punkt (.) und der Doppelpunkt (:) sind Literalsymbole. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die optionale Anzahl von Tagen ohne führende Nullen.|  
@@ -79,7 +79,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die optionale Anzahl von Tagen ohne führende Nullen.|  
@@ -103,7 +103,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die Anzahl von Tagen ohne führende Nullen.|  

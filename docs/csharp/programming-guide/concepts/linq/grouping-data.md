@@ -2,12 +2,12 @@
 title: Gruppieren von Daten (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423416"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635742"
 ---
 # <a name="grouping-data-c"></a>Gruppieren von Daten (C#)
 Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass die Elemente in jeder Gruppe über ein gemeinsames Attribut verfügen.  
@@ -20,9 +20,9 @@ Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass d
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|BESCHREIBUNG|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Gruppenelemente, die über ein gemeinsames Attribut verfügen. Jede Gruppe wird durch ein <xref:System.Linq.IGrouping%602>-Objekt dargestellt.|`group … by`<br /><br /> Oder<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|Gruppenelemente, die über ein gemeinsames Attribut verfügen. Jede Gruppe wird durch ein <xref:System.Linq.IGrouping%602>-Objekt dargestellt.|`group … by`<br /><br /> - oder -<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Fügt Elemente basierend auf einer Schlüsselauswahlfunktion in eine <xref:System.Linq.Lookup%602>-Klasse (one-to-many-Wörterbuch) ein.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [group-Klausel](../../../language-reference/keywords/group-clause.md)
-- [Vorgehensweise: Erstellen einer geschachtelten Gruppe](../../../linq/create-a-nested-group.md)
+- [Erstellen einer geschachtelten Gruppe](../../../linq/create-a-nested-group.md)
 - [Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Vorgehensweise: Gruppieren von Abfrageergebnissen](../../../linq/group-query-results.md)
-- [Vorgehensweise: Ausführen einer Unterabfrage für eine Gruppierungsoperation](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Gruppieren von Abfrageergebnissen](../../../linq/group-query-results.md)
+- [Ausführen einer Unterabfrage für eine Gruppierungsoperation](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

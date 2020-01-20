@@ -4,22 +4,22 @@ description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generie
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039169"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345613"
 ---
-# <a name="working-with-linq"></a>Arbeiten mit LINQ
+# <a name="work-with-language-integrated-query-linq"></a>Arbeiten mit LINQ (Language-Integrated Query)
 
 ## <a name="introduction"></a>Einführung
 
-In diesem Tutorial lernen Sie Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
+In diesem Tutorial lernen Sie Features in .NET Core und der Sprache C# kennen. Sie lernen, die folgende Aufgaben auszuführen:
 
-- Generieren von Sequenzen mit LINQ
-- Schreiben von Methoden, die sich problemlos in LINQ-Abfragen verwenden lassen
-- Unterscheiden zwischen strenger und verzögerter Auswertung
+- Generieren von Sequenzen mit LINQ.
+- Schreiben von Methoden, die sich problemlos in LINQ-Abfragen verwenden lassen.
+- Unterscheiden zwischen strenger und verzögerter Auswertung.
 
 Sie lernen diese Techniken durch Erstellen einer Anwendung, die eine der grundlegenden Fertigkeiten jedes Zauberkünstlers demonstriert: den [Faro-Shuffle](https://en.wikipedia.org/wiki/Faro_shuffle). Ein Faro-Shuffle ist eine Kartenmischtechnik, bei der zwei Kartenpäckchen exakt so ineinander gefächert werden, dass auf eine Karte des einen Stapels stets eine Karte des anderen Stapels folgt.
 
@@ -29,9 +29,9 @@ Im vorliegenden Artikel dient die Technik dazu, das Manipulieren von Datensequen
 
 Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jedem Schritt ausführen und sich den Fortschritt ansehen. Sie können sich auch das [abgeschlossene Beispiel](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) in unserem Repository „dotnet/samples“ auf GitHub ansehen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Downloadseite für [.NET Core](https://dotnet.microsoft.com/download). Sie können diese Anwendung unter Windows, Ubuntu Linux, OS X oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Downloadseite für [.NET Core](https://dotnet.microsoft.com/download). Sie können diese Anwendung unter Windows, Ubuntu Linux, OS X oder in einem Docker-Container ausführen. Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open-Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
@@ -39,7 +39,7 @@ Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeauf
 
 Wenn Sie C# noch nie verwendet haben, erläutert [dieses Tutorial](console-teleprompter.md) die Struktur eines C#-Programms. Sie können dieses Tutorial lesen und dann zu diesem Artikel zurückkehren, um mehr über LINQ zu erfahren.
 
-## <a name="creating-the-data-set"></a>Erstellen des Datasets
+## <a name="create-the-data-set"></a>Erstellen des Datasets
 
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Zeilen am Anfang der Datei `Program.cs` stehen, die von `dotnet new console` generiert wurde:
 
@@ -118,7 +118,7 @@ Führen Sie jetzt das erstellte Beispiel aus. Es werden alle 52 Karten des Karte
 
 ![Ein Konsolenfenster, das die App zeigt, die 52 Karten schreibt.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>Ändern der Reihenfolge
+## <a name="manipulate-the-order"></a>Ändern der Reihenfolge
 
 Konzentrieren Sie sich nun darauf, wie die Karten im Kartenstapel gemischt werden sollen. Der erste Schritt bei jedem guten Mischen ist das Aufteilen des Kartenstapels in zwei Hälften. Die zu den LINQ-APIs gehörenden Methoden <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> stellen Ihnen diese Funktion bereit. Platzieren Sie sie unterhalb der `foreach`-Schleife:
 
@@ -351,8 +351,8 @@ Abgesehen von LINQ haben Sie ein wenig über die Verfahren gelernt, die Zauberer
 Weitere Informationen zu LINQ finden Sie unter:
 
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [Einführung in LINQ](../programming-guide/concepts/linq/index.md)
-  - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [Einführung in LINQ](../programming-guide/concepts/linq/index.md)
+- [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)

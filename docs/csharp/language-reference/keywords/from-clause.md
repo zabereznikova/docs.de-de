@@ -1,6 +1,5 @@
 ---
 title: from-Klausel – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: d44c0b7a2f6617a01416ccc5bd1eb857b1f782da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607893"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715290"
 ---
 # <a name="from-clause-c-reference"></a>from-Klausel (C#-Referenz)
 

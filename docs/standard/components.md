@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838194"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348061"
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -37,7 +37,7 @@ Es gibt vier primäre .NET-Implementierungen, die Microsoft aktiv entwickelt und
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core ist eine plattformübergreifende Implementierung von .NET und wurde entwickelt, um Server- und Cloud-Arbeitsauslastungen nach Maß zu bewältigen. Es kann unter Windows, macOS und Linux ausgeführt werden. Damit wird der .NET Standard implementiert. Code, der auf den .NET Standard abzielt, kann also in .NET Core ausgeführt werden. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) und [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) werden in .NET Core ausgeführt.
+.NET Core ist eine plattformübergreifende Implementierung von .NET und wurde entwickelt, um Server- und Cloud-Arbeitsauslastungen nach Maß zu bewältigen. Diese Implementierung kann unter Windows, macOS und Linux ausgeführt werden. Damit wird der .NET Standard implementiert. Code, der auf den .NET Standard abzielt, kann also in .NET Core ausgeführt werden. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) und [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) werden in .NET Core ausgeführt.
 
 Weitere Informationen zu .NET Core finden Sie unter [Leitfaden für .NET Core](../core/index.md) und [Wahl zwischen .NET Core und .NET Framework für Server-Apps](choosing-core-framework-server.md).
 
@@ -49,7 +49,7 @@ Weitere Informationen zu .NET Framework finden Sie im [Leitfaden für .NET Frame
 
 ### <a name="mono"></a>Mono
 
-Bei Mono handelt es sich um eine .NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, Mac, iOS, tvOS und watchOS und ist hauptsächlich auf einen geringen Ressourcenbedarf ausgelegt. Mono treibt Spiele an, die mit der Unity-Engine erstellt wurden.
+Bei Mono handelt es sich um eine .NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, macOS, iOS, tvOS und watchOS und ist hauptsächlich auf einen geringen Ressourcenbedarf ausgelegt. Mono treibt Spiele an, die mit der Unity-Engine erstellt wurden.
 
 Außerdem unterstützt Mono alle derzeit veröffentlichten Versionen des .NET Standards.
 
@@ -61,7 +61,7 @@ Weitere Informationen zu Mono finden Sie in der [Mono-Dokumentation](https://www
 
 ### <a name="universal-windows-platform-uwp"></a>Universelle Windows-Plattform (UWP)
 
-Die UWP ist eine Implementierung von .NET, mit der moderne Windows-Anwendungen für Touchscreengeräte und Software für das Internet der Dinge (Internet of Things, IoT) erstellt werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für ganz verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können auf dieser Plattform in C++, C#, VB.NET und JavaScript geschrieben werden. Die .NET-APIs für C# und VB.NET werden von .NET Core bereitgestellt.
+Die UWP ist eine Implementierung von .NET, mit der moderne Windows-Anwendungen für Touchscreengeräte und Software für das Internet der Dinge (Internet of Things, IoT) erstellt werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für ganz verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können auf dieser Plattform in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
 
 Weitere Informationen zur UWP finden Sie unter [Einführung in die universelle Windows-Plattform](/windows/uwp/get-started/universal-application-platform-guide).
 
@@ -112,4 +112,4 @@ Die offiziellen ISO/IEC-Dokumente sind auf der ISO/IEC-Seite [Publicly Available
 - [Leitfaden für .NET Framework](../framework/index.md)
 - [Leitfaden für C#](../csharp/index.yml)
 - [Leitfaden für F#](../fsharp/index.yml)
-- [Leitfaden für VB.NET](../visual-basic/index.yml)
+- [Leitfaden für Visual Basic](../visual-basic/index.yml)

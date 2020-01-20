@@ -1,18 +1,17 @@
 ---
 title: Kontextabhängiges remove-Schlüsselwort – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: b5c604cbb0fef158750b0fa487374ab293795fc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ea3ea1910e28c03b2a894c64415cb2ccff942d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633722"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713143"
 ---
 # <a name="remove-c-reference"></a>remove (C#-Referenz)
 
@@ -20,7 +19,7 @@ Das kontextabhängige Schlüsselwort `remove` definiert einen benutzerdefinierte
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird ein Ereignis mit den benutzerdefinierten Accessoren [add](add.md) und `remove` gezeigt. Das vollständige Beispiel finden Sie unter [Vorgehensweise:  Implementieren von Schnittstellenereignissen](../../programming-guide/events/how-to-implement-interface-events.md).
+Im folgende Beispiel wird ein Ereignis mit den benutzerdefinierten Accessoren [add](add.md) und `remove` gezeigt. Das vollständige Beispiel finden Sie unter [Vorgehensweise: Implementieren von Schnittstellenereignissen](../../programming-guide/events/how-to-implement-interface-events.md).
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 

@@ -1,15 +1,14 @@
 ---
-title: Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
-description: Hier erhalten Sie Informationen zur Verwendung des .NET Core SDK und der zugehörigen Tools auf dem Buildserver.
+title: Continuous Integration (CI) mit dem .NET Core SDK und Tools
+description: Erfahren Sie, wie Sie das .NET Core SDK und die zugehörigen Tools auf dem Buildserver mit Continuous Integration verwenden.
 author: mairaw
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428597"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714121"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 

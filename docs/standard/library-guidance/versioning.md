@@ -1,15 +1,13 @@
 ---
 title: Versionsverwaltung und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für die Versionsverwaltung für .NET-Bibliotheken.
-author: jamesnk
-ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969006"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706412"
 ---
 # <a name="versioning"></a>Versionskontrolle
 
@@ -63,7 +61,7 @@ Ein starker Name in Kombination mit der Assemblyversion ermöglicht das [strikte
 
 > Die Assemblyversion ist in einigen Informationsmeldungen enthalten, die dem Benutzer angezeigt werden, z.B. der Assemblyname und Typnamen mit Assemblyqualifikation in Ausnahmemeldungen. Durch die Beibehaltung einer Beziehung zwischen den Versionen erhalten Entwickler weitere Informationen darüber, welche Version sie verwenden.
 
-**❌ DON‘T** Verwenden Sie keine feste Assemblyversion.
+**❌ VERWENDEN SIE KEINE** feste Assemblyversion.
 
 > Da eine unveränderliche Assemblyversion die Notwendigkeit von Bindungsumleitungen vermeidet, bedeutet dies, dass nur eine einzige Version der Assembly im globalen Assemblycache (GAC) installiert werden kann. Außerdem werden die Anwendungen, die auf die Assembly im GAC verweisen, unterbrochen, wenn eine andere Anwendung die GAC-Assembly mit Änderungen aktualisiert.
 
@@ -75,7 +73,7 @@ Die Assemblydateiversion wird verwendet, um eine Dateiversion unter Windows anzu
 <FileVersion>11.0.2.21924</FileVersion>
 ```
 
-![Windows Explorer](./media/versioning/win-properties.png "Windows Explorer")
+![Windows-Explorer](./media/versioning/win-properties.png "Windows-Explorer")
 
 **✔️ ERWÄGEN** Sie, eine fortlaufenden Continuous Integration-Buildnummer als AssemblyFileVersion-Revision hinzuzufügen.
 

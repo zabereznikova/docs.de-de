@@ -1,22 +1,21 @@
 ---
 title: '#if-Präprozessoranweisung – C#-Referenz'
-ms.custom: seodec18
 ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552445"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899858"
 ---
 # <a name="if-c-reference"></a>#if (C#-Referenz)
 
-Wenn der C#-Compiler eine `#if`-Anweisung vorfindet, auf die möglicherweise eine [#endif](preprocessor-endif.md)-Anweisung folgt, wird der Code zwischen den Anweisungen nur dann kompiliert, wenn das angegebene Symbol definiert wurde. Im Gegensatz zu C und C++ können Sie einem Symbol keinen numerischen Wert zuweisen. Die #if-Anweisung in C# ist ein boolescher Wert und überprüft nur, ob das Symbol definiert wurde. Beispiel:
+Wenn der C#-Compiler eine `#if`-Anweisung vorfindet, auf die möglicherweise eine [#endif](preprocessor-endif.md)-Anweisung folgt, wird der Code zwischen den Anweisungen nur dann kompiliert, wenn das angegebene Symbol definiert wurde. Im Gegensatz zu C und C++ können Sie einem Symbol keinen numerischen Wert zuweisen. Die `#if`-Anweisung in C# ist ein boolescher Wert und überprüft nur, ob das Symbol definiert wurde. Zum Beispiel:
 
 ```csharp
 #if DEBUG
@@ -24,9 +23,9 @@ Wenn der C#-Compiler eine `#if`-Anweisung vorfindet, auf die möglicherweise ein
 #endif
 ```
 
-Sie können die Operatoren [==](../operators/equality-operators.md#equality-operator-) (Gleichheit) und [!=](../operators/equality-operators.md#inequality-operator-) (Ungleichheit) nur zum Testen auf die [booleschen Werte](../builtin-types/bool.md) `true` oder `false` verwenden. „True“ bedeutet, dass das Symbol definiert wurde. Die `#if DEBUG`-Anweisung hat die gleiche Bedeutung wie `#if (DEBUG == true)`. Sie können mithilfe der Operatoren [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (und), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (oder) und [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nicht ) auswerten, ob mehrere Symbole definiert wurden. Symbole und Operatoren können auch mit Klammern gruppiert werden.
+Sie können die Operatoren [==](../operators/equality-operators.md#equality-operator-) (Gleichheit) und [!=](../operators/equality-operators.md#inequality-operator-) (Ungleichheit) nur zum Testen auf die [booleschen Werte](../builtin-types/bool.md)`true` oder `false` verwenden. `true` bedeutet, dass das Symbol definiert wurde. Die `#if DEBUG`-Anweisung hat die gleiche Bedeutung wie `#if (DEBUG == true)`. Sie können die Operatoren [&& (und)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124; (oder)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) und [! (nicht)](../operators/boolean-logical-operators.md#logical-negation-operator-) verwenden, um auszuwerten, ob mehrere Symbole definiert wurden. Symbole und Operatoren können auch mit Klammern gruppiert werden.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie `#if` mit den Direktiven [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) und [#undef](preprocessor-undef.md) verwenden, können Sie Code je nach dem Vorhandensein eines oder mehrerer Symbole ein- oder ausschließen. Dies kann hilfreich sein, wenn Code für einen Debugbuild oder für eine bestimmte Konfiguration kompiliert wird.
 

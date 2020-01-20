@@ -3,17 +3,16 @@ title: Runtimebereitstellung für eigenständige .NET Core-App-Bereitstellungen.
 description: Erfahren Sie mehr über die Änderungen an „dotnet publish“ für eigenständige Bereitstellungen.
 author: KathleenDollard
 ms.date: 05/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522092"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740787"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Rollforward der eigenständigen Runtimebereitstellung
 
-[Eigenständige Anwendungsbereitstellungen](index.md) von .NET Core enthalten sowohl die .NET Core-Bibliotheken als auch die .NET Core-Runtime. Beginnend mit .NET Core SDK 2.1 (Version 2.1.300) veröffentlicht eine eigenständige Anwendungsbereitstellung [die höchste Patch-Runtime auf Ihrem Computer](https://github.com/dotnet/designs/pull/36). [`dotnet publish`](../tools/dotnet-publish.md) wählt für eine eigenständige Bereitstellung standardmäßig die aktuellste installierte Version als Teil des SDK auf dem veröffentlichenden Computer aus. Dadurch kann Ihre bereitgestellte Anwendung während `publish` mit Problembehebungen der Sicherheit (und anderen Problembehebungen) ausgeführt werden. Die Anwendung muss neu veröffentlicht werden, um einen neuen Patch abzurufen. Eigenständige Anwendungen werden durch Angabe von `-r <RID>` auf dem Befehl `dotnet publish` oder durch Angabe des [Runtime-Bezeichners (RID)](../rid-catalog.md) in der Projektdatei (CSPROJ/VBPROJ) oder der Befehlszeile erstellt.
+[Eigenständige Anwendungsbereitstellungen](index.md) von .NET Core enthalten sowohl die .NET Core-Bibliotheken als auch die .NET Core-Runtime. Beginnend mit .NET Core SDK 2.1 (Version 2.1.300) veröffentlicht eine eigenständige Anwendungsbereitstellung [die höchste Patch-Runtime auf Ihrem Computer](https://github.com/dotnet/designs/pull/36). [`dotnet publish`](../tools/dotnet-publish.md) wählt für eine eigenständige Bereitstellung standardmäßig die aktuellste installierte Version als Teil des SDK auf dem veröffentlichenden Computer aus. Dadurch kann Ihre bereitgestellte Anwendung während `publish` mit Problembehebungen der Sicherheit (und anderen Problembehebungen) ausgeführt werden. Die Anwendung muss erneut veröffentlicht werden, um einen neuen Patch abzurufen. Eigenständige Anwendungen werden durch Angabe von `-r <RID>` auf dem Befehl `dotnet publish` oder durch Angabe des [Runtime-Bezeichners (RID)](../rid-catalog.md) in der Projektdatei (CSPROJ/VBPROJ) oder der Befehlszeile erstellt.
 
 ## <a name="patch-version-roll-forward-overview"></a>Übersicht über Rollforward der Patchversion
 

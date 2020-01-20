@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198445"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901639"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: Async-Suffix aus Controlleraktionsnamen entfernt
 
-Im Zusammenhang mit [aspnet/AspNetCore#4849](https://github.com/aspnet/AspNetCore/issues/4849) entfernt ASP.NET Core MVC das Suffix `Async` standardmäßig aus Aktionsnamen. Ab ASP.NET Core 3.0 wirkt sich diese Änderung sowohl auf das Routing als auch auf die Linkgenerierung aus.
+Im Zusammenhang mit [dotnet/aspnetcore#4849](https://github.com/dotnet/aspnetcore/issues/4849) entfernt ASP.NET Core MVC das Suffix `Async` standardmäßig aus Aktionsnamen. Ab ASP.NET Core 3.0 wirkt sich diese Änderung sowohl auf das Routing als auch auf die Linkgenerierung aus.
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-Die Aktion ist über `Product/ListAsync` routingfähig. Für die Linkgenerierung muss das Suffix `Async` angegeben werden. Beispiel:
+Die Aktion ist über `Product/ListAsync` routingfähig. Für die Linkgenerierung muss das Suffix `Async` angegeben werden. Zum Beispiel:
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,7 +37,7 @@ Die Aktion ist über `Product/ListAsync` routingfähig. Für die Linkgenerierung
 
 #### <a name="new-behavior"></a>Neues Verhalten
 
-In ASP.NET Core 3.0 ist die Aktion über `Product/List` routingfähig. Der Code zur Linkgenerierung sollte das Suffix `Async` nicht verwenden. Beispiel:
+In ASP.NET Core 3.0 ist die Aktion über `Product/List` routingfähig. Der Code zur Linkgenerierung sollte das Suffix `Async` nicht verwenden. Zum Beispiel:
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
@@ -56,7 +56,7 @@ services.AddMvc(options =>
 
 Es gibt die Konvention, asynchrone .NET-Methoden durch das Suffix `Async` zu kennzeichnen. Wenn eine Methode jedoch eine MVC-Aktion definiert, ist das Suffix `Async` nicht wünschenswert.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Wenn Ihre App von MVC-Aktionen abhängig ist, die das Suffix `Async` im Namen beibehalten, führen Sie eine der folgenden Maßnahmen aus:
 

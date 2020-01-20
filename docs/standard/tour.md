@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552863"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337577"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -27,13 +27,13 @@ Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codeb
 
 .NET unterstützt mehrere Programmiersprachen. Die .NET-Implementierungen implementieren die [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), die unter anderem eine sprachunabhängige Runtime und Spracheninteroperabilität angibt. Dies bedeutet, dass Sie zum Erstellen von Apps und Diensten in .NET eine beliebige .NET-Sprache auswählen können.
 
-Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic (VB). 
+Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic. 
 
 * C# ist einfach, leistungsstark, typsicher und objektorientiert, behält aber gleichzeitig die Ausdruckskraft und Eleganz der C-Sprachen bei. Wer sich mit C und ähnlichen Sprachen auskennt, hat wenig Probleme bei der Verwendung von C#. Weitere Informationen zu C# finden Sie im [Leitfaden für C#](../csharp/index.yml).
 
 * F# ist eine plattformübergreifende, funktionsorientierte Programmiersprache, die auch die herkömmliche und imperative Programmierung unterstützt. Weitere Informationen zu F# finden Sie im [Leitfaden für F#](../fsharp/index.yml).
 
-* Visual Basic ist eine einfach zu erlernende Sprache, mit der Sie eine Vielzahl von Apps erstellen können, die in .NET ausgeführt werden. Von allen .NET-Sprachen gleicht die Syntax von VB der menschlichen Sprache am meisten. Dies erleichtert den Einstieg in die Softwareentwicklung.
+* Visual Basic ist eine einfach zu erlernende Sprache, mit der Sie eine Vielzahl von Apps erstellen können, die in .NET ausgeführt werden. Von allen .NET-Sprachen gleicht die Syntax von Visual Basic der menschlichen Sprache am meisten. Dies erleichtert den Einstieg in die Softwareentwicklung.
 
 ## <a name="automatic-memory-management"></a>Automatische Speicherverwaltung
 
@@ -47,7 +47,7 @@ Es gibt kein entsprechendes Schlüsselwort zum Aufheben der Speicherzuweisung, d
 
 Der Garbage Collector ist nur einer der Dienste, die bei der Sicherstellung der *Speichersicherheit* helfen. Ein Programm ist speichersicher, wenn es nur auf belegten Speicherplatz zugreift. Beispielsweise stellt die Runtime sicher, dass eine App nicht auf belegten Arbeitsspeicher außerhalb des zulässigen Bereichs eines Arrays zugreift.
 
-Im folgenden Beispiel löst die Runtime eine `InvalidIndexException`-Ausnahme aus, um Speichersicherheit zu erzwingen:
+Im folgenden Beispiel löst die Runtime eine <xref:System.IndexOutOfRangeException>-Ausnahme aus, um Speichersicherheit zu erzwingen:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Weitere Einzelheiten dazu finden Sie in folgenden Themen:
 
 * Informationen zu C# finden Sie im Thema [using-Anweisung (C#-Referenz)](../csharp/language-reference/keywords/using-statement.md).
 * Informationen zu F# finden Sie unter [Ressourcenverwaltung: Das Use-Schlüsselwort](../fsharp/language-reference/resource-management-the-use-keyword.md).
-* Informationen zu VB finden Sie im Thema [Using-Anweisung (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
+* Informationen zu Visual Basic finden Sie im Thema [Using-Anweisung (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="type-safety"></a>Typsicherheit
 
@@ -79,11 +79,11 @@ Mithilfe der Typsicherheit lässt sich auch eine Kapselung erzwingen, indem die 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB und F# unterstützen einen lokalen *Typrückschluss*. Ein Typrückschluss bedeutet, dass der Compiler den Typ eines Ausdrucks auf der linken Seite aus dem Ausdruck auf der rechten Seite ableitet. Dies bedeutet nicht, dass die Typsicherheit verletzt oder außer Kraft gesetzt wird. Der resultierende Typ besitzt einen starken Typ mit allem, was dies impliziert. `dog` aus dem vorherigen Beispiel wird umgeschrieben, um einen Typrückschluss einzufügen. Der Rest des Beispiels bleibt unverändert:
+C#, Visual Basic und F# unterstützen einen lokalen *Typrückschluss*. Ein Typrückschluss bedeutet, dass der Compiler den Typ eines Ausdrucks auf der linken Seite aus dem Ausdruck auf der rechten Seite ableitet. Dies bedeutet nicht, dass die Typsicherheit verletzt oder außer Kraft gesetzt wird. Der resultierende Typ besitzt einen starken Typ mit allem, was dies impliziert. `dog` aus dem vorherigen Beispiel wird umgeschrieben, um einen Typrückschluss einzufügen. Der Rest des Beispiels bleibt unverändert:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# weist sogar noch weitergehende Funktionen für den Typrückschluss auf als nur den Typrückschluss innerhalb einer Methode wie in C# und VB. Weitere Informationen finden Sie unter [Typrückschluss](../fsharp/language-reference/type-inference.md).
+F# weist sogar noch weitergehende Funktionen für den Typrückschluss auf als der Typrückschluss innerhalb einer Methode wie in C# und Visual Basic. Weitere Informationen finden Sie unter [Typrückschluss](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
@@ -97,7 +97,7 @@ Delegaten werden in .NET häufig in Ereignishandlern, beim Definieren asynchrone
 
 Generics ermöglichen dem Programmierer, beim Entwerfen der Klassen einen *Typparameter* einzuführen, über den der Clientcode (die Benutzer des Typs) den genauen Typ angeben kann, der anstelle des Typparameters verwendet werden soll.
 
-Generics wurden hinzugefügt, um Programmierer beim Implementieren generischer Datenstrukturen zu unterstützen. Vor der Einführung von Generika mussten Programmierer mit Elementen vom Typ `object` arbeiten, um z.B. den Typ `List` generisch zu machen. Dies hat zu verschiedenen Leistungs- und Semantikproblemen sowie zu möglichen kleinen Runtimefehlern geführt. Die bekannteste Variante solcher Fehler tritt auf, wenn eine Datenstruktur z.B. sowohl ganze Zahlen als auch Zeichenfolgen enthält und beim Arbeiten mit den Members der Liste eine `InvalidCastException` ausgelöst wird.
+Generics wurden hinzugefügt, um Programmierer beim Implementieren generischer Datenstrukturen zu unterstützen. Vor ihrer Einführung musste ein Typ wie der Typ `List` mit Elementen vom Typ `object` arbeiten, damit er generisch ist. Dies hat zu verschiedenen Leistungs- und Semantikproblemen sowie zu möglichen kleinen Laufzeitfehlern geführt. Ein allgemeiner Laufzeitfehler besteht, wenn eine Datenstruktur beispielsweise sowohl Integerwerte als auch Zeichenfolgen enthält und eine <xref:System.InvalidCastException> bei der Verarbeitung der Member der Liste ausgelöst wird.
 
 Das folgende Beispiel zeigt ein einfaches Programm, das unter Verwendung einer Instanz von <xref:System.Collections.Generic.List%601>-Typen ausgeführt wird:
 
@@ -113,7 +113,7 @@ Erste Informationen über die asynchrone Programmierung in .NET finden Sie im Th
 
 ## <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
-LINQ ist ein Satz leistungsstarker Features für C# und VB, mit denen Sie einfachen, deklarativen Code für Datenvorgänge schreiben können. Die Daten können in vielfältiger Form vorliegen (als In-Memory-Objekte, in einer SQL-Datenbank oder in einem XML-Dokument), aber der LINQ-Code weicht in der Regel nicht für die verschiedenen Datenquellen ab.
+LINQ ist ein Satz leistungsstarker Features für C# und Visual Basic, mit denen Sie einfachen, deklarativen Code für Datenvorgänge schreiben können. Die Daten können in vielfältiger Form vorliegen (als In-Memory-Objekte, in einer SQL-Datenbank oder in einem XML-Dokument), aber der LINQ-Code weicht in der Regel nicht für die verschiedenen Datenquellen ab.
 
 Weitere Informationen sowie einige Beispiele finden Sie im Thema [LINQ (Language Integrated Query)](using-linq.md).
 

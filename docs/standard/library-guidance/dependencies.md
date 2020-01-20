@@ -1,15 +1,13 @@
 ---
 title: Abhängigkeiten und .NET-Bibliotheken
 description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung von NuGet-Abhängigkeiten in .NET-Bibliotheken.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644277"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706503"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
 
@@ -56,11 +54,11 @@ Aufgrund der NuGet-Regel, dass immer die niedrigste anwendbare Version verwendet
 
 Obergrenzen für Versionen verursachen einen Fehler in NuGet, wenn ein Konflikt auftritt. Ein Beispiel: Eine Bibliothek akzeptiert genau Version 1.0, während eine andere Bibliothek Version 2.0 oder höher erfordert. Wenn in Version 2.0 Breaking Changes eingeführt wurden, sind bei einer Abhängigkeit, die eine exakte Version oder die höchste verfügbare Version anfordert, Fehler garantiert.
 
-![Konflikt bei Rautenabhängigkeit](./media/dependencies/diamond-dependency-conflict.png "Konflikt bei Rautenabhängigkeit")
+![Rautenabhängigkeitskonflikt](./media/dependencies/diamond-dependency-conflict.png "Rautenabhängigkeitskonflikt")
 
 **❌ VERWENDEN SIE KEINE** NuGet-Paketverweise ohne Mindestversion.
 
-**❌ VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
+**❌VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
 **❌ VERMEIDEN** Sie NuGet-Paketverweise mit Angabe einer Höchstversion.
 
@@ -70,13 +68,13 @@ Eine Möglichkeit, externe Abhängigkeiten für NuGet-Pakete zu reduzieren, ist 
 
 Pakete mit freigegebenen Quellen eignen sich hervorragend für kleine Funktionsteile. Beispiel: ein Paket mit freigegebenen Quellen mit Hilfsmethoden für das Ausführen von HTTP-Aufrufen.
 
-![Paket mit freigegebenen Quellen](./media/dependencies/shared-source-package.png "Paket mit freigegebenen Quellen")
+![Freigegebenes Quellpaket](./media/dependencies/shared-source-package.png "Freigegebenes Quellpaket")
 
 ```xml
 <PackageReference Include="Microsoft.Extensions.Buffers.Testing.Sources" PrivateAssets="All" Version="1.0" />
 ```
 
-![Projekt mit freigegebenen Quellen](./media/dependencies/shared-source-project.png "Projekt mit freigegebenen Quellen")
+![Freigegebenes Quellprojekt](./media/dependencies/shared-source-project.png "Freigegebenes Quellprojekt")
 
 Pakete mit freigegebenen Quellen weisen einige Einschränkungen auf. Auf sie kann nur durch `PackageReference` verwiesen werden, ältere `packages.config`-Projekte sind also ausgeschlossen. Pakete mit freigegebenen Quellen können nur von Paketen mit dem gleichen Sprachtyp verwendet werden. Aufgrund dieser Einschränkungen eignen sich Pakete mit freigegebenen Quellen am besten für die Freigabe von Funktionen in einem Open Source-Projekt.
 

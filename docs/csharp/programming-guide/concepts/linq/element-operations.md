@@ -2,12 +2,12 @@
 title: Elementvorgänge (C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: b32066d13e700d95e4d2eef29e24e8b87690037d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e9ec41793afffe60a7184622f91b5fc023e0958f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594577"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345161"
 ---
 # <a name="element-operations-c"></a>Elementvorgänge (C#)
 
@@ -17,7 +17,7 @@ Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zu
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|BESCHREIBUNG|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |ElementAt|Gibt das Element an einen angegebenen Index in einer Auflistung zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
 |ElementAtOrDefault|Gibt das Element an einen angegebenen Index in einer Auflistung oder einen Standardwert zurück, wenn der Index außerhalb des gültigen Bereichs liegt.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
@@ -32,4 +32,4 @@ Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zu
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
-- [Vorgehensweise: Abfragen der größten Datei(en) in einer Verzeichnisstruktur (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [Vorgehensweise: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

@@ -1,19 +1,18 @@
 ---
-title: 'Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 9f477649dba1b42d7a10d521c010977707daf3ec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698754"
 ---
-# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ (C#-Programmierhandbuch)
+# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ (C#-Programmierleitfaden)
 
 In diesem Beispiel wird veranschaulicht, wie Sie die <xref:System.BitConverter>-Klasse dazu verwenden, einen Bytearray in einen [int](../../language-reference/builtin-types/integral-numeric-types.md)-Typ und wieder zurück in ein Bytearray zu konvertieren. Sie müssen möglicherweise Bytes in einen integrierten Datentyp konvertieren, wenn Sie z.B. Bytes aus dem Netzwerk gelesen haben. Die folgende Tabelle enthält zusätzlich zu der Methode [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) aus dem Beispiel auch die Methoden in der <xref:System.BitConverter>-Klasse, die Bytes (aus einem Bytearray) in andere integrierte Typen konvertiert.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Benutzerdefinierte TimeSpan-Formatzeichenfolgen: .NET'
+title: Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126556"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348321"
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 
@@ -41,7 +41,7 @@ Benutzerdefinierte <xref:System.TimeSpan>-Formatzeichenfolgen werden auch von de
 
 <a name="table"></a> In der folgenden Tabelle werden die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit beschrieben.
 
-| Formatbezeichner | BESCHREIBUNG | Beispiel |
+| Formatbezeichner | Beschreibung | Beispiel |
 |----------------------|-----------------|-------------|
 |"d", "%d"|Die Anzahl ganzer Tage im Zeitintervall.<br /><br /> Weitere Informationen finden Sie unter: [Der benutzerdefinierte Formatbezeichner „d“](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|Die Anzahl ganzer Tage im Zeitintervall, bei Bedarf mit führenden Nullen aufgefüllt.<br /><br /> Weitere Informationen finden Sie unter: [Die benutzerdefinierten Formatbezeichner „dd“ bis „dddddddd“](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|

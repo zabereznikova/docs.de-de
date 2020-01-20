@@ -1,15 +1,13 @@
 ---
 title: dotnet-dump – .NET Core
 description: Installieren und Verwenden des Befehlszeilentools dotnet-dump.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973455"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740771"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (`dotnet-dump`)
 
@@ -32,7 +30,7 @@ dotnet tool install -g dotnet-dump
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Mit dem globalen Tool `dotnet-dump` können Sie Windows- und Linux-Speicherabbilder ohne nativen Debugger wie `lldb` unter Linux sammeln und analysieren. Dieses Tool ist auf Plattformen wie z. B. Alpine Linux wichtig, bei denen kein voll funktionsfähiges Tool `lldb` verfügbar ist. Mit dem Tool `dotnet-dump` können Sie SOS-Befehle zum Analysieren von Abstürzen und dem Garbage Collector (GC) ausführen, es handelt sich jedoch nicht um einen nativen Debugger, sodass Elemente wie das Anzeigen von nativen Stapelrahmen nicht unterstützt werden.
 
@@ -160,7 +158,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>Verwenden von `dotnet-dump`
 
-Der erste Schritt besteht im Sammeln eines Speicherabbilds. Dieser Schritt kann übersprungen werden, wenn bereits ein Kernspeicherabbild generiert wurde. Das Betriebssystem und die integrierte [Speicherabbild-Generierungsfunktion](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) der .NET Core-Runtime können Kernspeicherabbilder erstellen.
+Der erste Schritt besteht im Sammeln eines Speicherabbilds. Dieser Schritt kann übersprungen werden, wenn bereits ein Kernspeicherabbild generiert wurde. Das Betriebssystem und die integrierte [Speicherabbild-Generierungsfunktion](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) der .NET Core-Runtime können Kernspeicherabbilder erstellen.
 
 ```console
 $ dotnet-dump collect --process-id 1902

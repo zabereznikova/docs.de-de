@@ -3,25 +3,24 @@ title: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 description: Erfahren Sie, wie Sie mit .NET Core-CLI-Tools .NET-Bibliotheken erstellen. Sie erstellen damit eine Bibliothek, die mehrere Frameworks unterstützt.
 author: cartermp
 ms.date: 05/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420456"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714026"
 ---
-# <a name="developing-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
+# <a name="develop-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 
 Dieser Artikel behandelt, wie man mithilfe von plattformübergreifenden CLI-Tools Bibliotheken für .NET schreibt. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 [Das .NET Core SDK und die CLI](https://dotnet.microsoft.com/download) müssen auf Ihrem Computer installiert sein.
 
 Für die Abschnitte dieses Dokuments, in denen es um .NET Framework-Versionen geht, muss das [.NET Framework](https://dotnet.microsoft.com) auf einem Windows-Computer installiert sein.
 
-Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außerdem Pakete zum Festlegen von Zielversionen und Entwicklerpakete für ältere Frameworkversionen installieren. Sie erhalten diese auf der Seite [.NET-Downloadarchive](https://dotnet.microsoft.com/download/archives). Weitere Informationen finden Sie in dieser Tabelle:
+Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außerdem Pakete zum Festlegen von Zielversionen oder Entwicklerpakete von der Seite [.NET-Downloadarchive](https://dotnet.microsoft.com/download/archives) installieren. Weitere Informationen finden Sie in dieser Tabelle:
 
 | .NET Framework-Version | Empfohlene Downloads                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -43,11 +42,11 @@ In diesem Artikel finden Sie eine Tabelle, in der die Versionen von .NET Standar
 
 Im Folgenden wird erklärt, was diese Tabelle für das Erstellen einer Bibliothek bedeutet:
 
-Die Version von .NET Standard, die Sie auswählen, bildet einen Kompromiss zwischen dem Zugang zu den neuesten APIs und der Möglichkeit, mehr .NET-Implementierungen und .NET Standard-Versionen nutzen zu können. Sie kontrollieren den Bereich der Plattformen, die als Ziel gesetzt werden können, und der Versionen, indem Sie eine `netstandardX.X`-Version auswählen (`X.X` steht für eine Versionsnummer) und sie zu Ihrer Projektdatei (`.csproj` oder `.fsproj`) hinzufügen.
+Die Version von .NET Standard, die Sie auswählen, bildet einen Kompromiss zwischen dem Zugang zu den neuesten APIs und der Möglichkeit, mehr .NET-Implementierungen und .NET Standard-Versionen nutzen zu können. Sie kontrollieren den Bereich der Plattformen und der Versionen, die als Ziel festgelegt werden können, indem Sie eine Version von `netstandardX.X` auswählen (`X.X` steht für eine Versionsnummer) und sie Ihrer Projektdatei (`.csproj` oder `.fsproj`) hinzufügen.
 
 Wenn Sie .NET Standard als Ziel festlegen, stehen Ihnen je nach Bedarf drei Optionen zur Verfügung.
 
-1. Sie können die Standardversion von .NET Standard verwenden, die von Vorlagen (`netstandard1.4`) bereitgestellt wurden. Dadurch erhalten Sie Zugriff auf die meisten APIs unter .NET Standard, wobei UWP, .NET Framework 4.6.1 und die bald erscheinende Version .NET Standard 2.0 noch immer kompatibel sind.
+1. Sie können die Standardversion von .NET Standard verwenden, die durch Vorlagen (`netstandard1.4`) bereitgestellt wird. Dadurch erhalten Sie Zugriff auf die meisten APIs unter .NET Standard, wobei UWP, .NET Framework 4.6.1 und .NET Standard 2.0 noch immer kompatibel sind.
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -59,18 +58,18 @@ Wenn Sie .NET Standard als Ziel festlegen, stehen Ihnen je nach Bedarf drei Opti
 
 2. Sie können eine niedrigere oder höhere Version von .NET Standard verwenden, indem Sie den Wert im `TargetFramework`-Knoten Ihrer Projektdatei bearbeiten.
 
-    .NET Standard-Versionen sind abwärtskompatibel. Das bedeutet, dass `netstandard1.0`-Bibliotheken auf `netstandard1.1`-Plattformen und höher ausgeführt werden können. Es gibt allerdings keine Aufwärtskompatibilität – niedrigere .NET Standard-Plattformen können nicht auf höhere verweisen. Das bedeutet, dass `netstandard1.0`-Bibliotheken nicht auf Bibliotheken verweisen können, die `netstandard1.1` oder höher als Ziel haben. Wählen Sie die Standard-Version aus, die die beste Mischung aus APIs und Plattformunterstützung für Ihre Anforderungen bietet. Wir empfehlen aktuell `netstandard1.4`.
+    .NET Standard-Versionen sind abwärtskompatibel. Das bedeutet, dass `netstandard1.0`-Bibliotheken auf `netstandard1.1`-Plattformen und höher ausgeführt werden können. Es gibt jedoch keine Vorwärtskompatibilität. Frühere .NET Standard Plattformen-können nicht auf höhere Versionen verweisen. Das bedeutet, dass `netstandard1.0`-Bibliotheken nicht auf Bibliotheken verweisen können, die `netstandard1.1` oder höher als Ziel haben. Wählen Sie die Standard-Version aus, die die beste Mischung aus APIs und Plattformunterstützung für Ihre Anforderungen bietet. Wir empfehlen aktuell `netstandard1.4`.
 
-3. Wenn Sie die .NET Framework-Version 4.0 oder niedriger als Ziel festlegen wollen, oder Sie eine API verwenden wollen, die in .NET Framework verfügbar ist, aber nicht in .NET Standard (z.B. `System.Drawing`), lesen Sie die folgenden Abschnitte. Hier lernen Sie, wie man die Zielversion festlegt.
+3. Wenn Sie die .NET Framework-Version 4.0 oder niedriger als Ziel festlegen oder eine API verwenden möchten, die in .NET Framework verfügbar ist, aber nicht in .NET Standard (z. B. `System.Drawing`), lesen Sie die folgenden Abschnitte. In ihnen erfahren Sie, wie mehrere Ziele festlegt werden.
 
-## <a name="how-to-target-the-net-framework"></a>So legen Sie .NET Framework als Ziel fest
+## <a name="how-to-target-net-framework"></a>Vorgehensweise: .NET Framework als Ziel
 
 > [!NOTE]
-> In diesen Anweisungen wird vorausgesetzt, dass .NET Framework auf Ihrem Computer installiert ist. Informationen zum Installieren von Abhängigkeiten finden Sie unter [Erforderliche Komponenten](#prerequisites).
+> In diesen Anleitungen wird vorausgesetzt, dass .NET Framework auf Ihrem Computer installiert ist. Informationen zum Installieren von Abhängigkeiten finden Sie unter [Erforderliche Komponenten](#prerequisites).
 
 Bedenken Sie, dass einige der hier verwendeten .NET Framework-Versionen nicht mehr unterstützt werden. Für weitere Informationen über nicht unterstütze Versionen, besuchen Sie [.NET Framework Support Lifecycle Policy FAQ (.NET Framework Support Lifecycle-Richtlinien FAQ)](https://support.microsoft.com/gp/framework_faq/en-us).
 
-Wenn Sie so viele Entwickler und Projekte erreichen möchten wie möglich, verwenden Sie das .NET Framework 4.0 als Baseline-Ziel. Um .NET Framework als Ziel festzulegen, müssen Sie zuerst den richtigen Zielframeworkmoniker (Target Framework Moniker, TMF) auswählen, der der .NET Framework-Version entspricht, die Sie unterstützen möchten.
+Wenn Sie so viele Entwickler und Projekte erreichen möchten wie möglich, verwenden Sie .NET Framework 4.0 als Baselineziel. Um .NET Framework als Ziel festzulegen, müssen Sie zunächst den richtigen Zielframeworkmoniker (Target Framework Moniker, TMF) auswählen, der der .NET Framework-Version entspricht, die Sie unterstützen möchten.
 
 | .NET Framework-Version | TFM      |
 | ---------------------- | -------- |
@@ -87,7 +86,7 @@ Wenn Sie so viele Entwickler und Projekte erreichen möchten wie möglich, verwe
 | .NET Framework 4.7     | `net47`  |
 | .NET Framework 4.8     | `net48`  |
 
-Sie fügen anschließend TFM in den `TargetFramework`-Abschnitt Ihrer Projektdatei ein. Hier sehen Sie zum Beispiel, wie Sie eine Bibliothek schreiben, die das .NET Framework 4.0 als Ziel festlegt:
+Sie fügen anschließend TFM in den `TargetFramework`-Abschnitt Ihrer Projektdatei ein. Hier sehen Sie zum Beispiel, wie Sie eine Bibliothek schreiben, die .NET Framework 4.0 als Ziel festlegt:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -97,9 +96,9 @@ Sie fügen anschließend TFM in den `TargetFramework`-Abschnitt Ihrer Projektdat
 </Project>
 ```
 
-Und das ist schon alles! Obwohl dies nur für .NET Framework 4 kompiliert, können Sie die Bibliothek auf neueren Versionen von .NET Framework verwenden.
+Und das ist schon alles! Obwohl dieses Beispiel nur für .NET Framework 4 kompiliert wurde, können Sie die Bibliothek für neueren Versionen von .NET Framework verwenden.
 
-## <a name="how-to-multitarget"></a>So legen Sie die Zielversion fest
+## <a name="how-to-multitarget"></a>Vorgehensweise: Festlegen mehrerer Ziele
 
 > [!NOTE]
 > In den folgenden Anweisungen wird vorausgesetzt, dass .NET Framework auf Ihrem Computer installiert ist. Im Abschnitt [Erforderliche Komponenten](#prerequisites) finden Sie weitere Informationen darüber, welche Abhängigkeiten Sie installieren müssen, und wo Sie diese herunterladen können.
@@ -258,7 +257,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
 
-Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
+Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools plattformübergreifend testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
 
 1. Nehmen Sie Änderungen an Ihrer Bibliothek vor.
 1. Führen Sie mit dem Befehl `dotnet test` in Ihrem Testverzeichnis Tests über die Befehlszeile aus.
@@ -269,7 +268,7 @@ Der Code wird automatisch neu erstellt, wenn Sie den Befehl `dotnet test` aufruf
 
 Eine häufige Anforderung an größere Bibliotheken ist es, Funktionalität in verschiedenen Projekten zu bieten.
 
-Stellen Sie sich vor, Sie möchten eine Bibliothek erstellen, die in idiomatischem C# und F# benutzt wird. Das würde bedeuten, dass Benutzer Ihrer Bibliotheken diese auf eine Art nutzen, die natürlich für C# und F# ist. In C# z.B. könnten Sie die Bibliothek wie folgt nutzen:
+Stellen Sie sich vor, Sie möchten eine Bibliothek erstellen, die in idiomatischem C# und F# genutzt werden kann. Das würde bedeuten, dass Benutzer Ihrer Bibliotheken diese auf eine Art nutzen, die natürlich für C# und F# ist. In C# z.B. könnten Sie die Bibliothek wie folgt nutzen:
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -308,14 +307,14 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
 dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
-Dadurch werden die drei Projekte von oben in eine Projektmappe hinzugefügt, die sie verknüpft. Durch das Erstellen der Projektmappe und das Verknüpfen der Projekte können Sie Projekte auf oberster Ebene wiederherstellen und erstellen.
+Dadurch werden die drei oben genannten Projekte und eine Projektmappendatei hinzugefügt, die sie verknüpft. Durch das Erstellen der Projektmappendatei und das Verknüpfen der Projekte können Sie Projekte auf oberster Ebene wiederherstellen und erstellen.
 
 ### <a name="project-to-project-referencing"></a>Projekt-zu-Projekt-Verweise
 

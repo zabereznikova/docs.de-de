@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974764"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900584"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 
@@ -133,7 +133,7 @@ Fragmentierung tritt immer im Heap für große Objekte auf, da dieser nicht komp
 
 Die Fragmentierung kann in Generation 1 und in Generation 2 zu einem Problem werden. Wenn diese Generationen nach einer Garbage Collection viel freien Speicherplatz aufweisen, muss die Objektverwendung einer Anwendung möglicherweise angepasst werden, und Sie sollten die Lebensdauer von langfristigen Objekten neu prüfen.
 
-Ein übermäßiges Fixieren von Objekten kann die Fragmentierung erhöhen. Wenn die Fragmentierung zu groß ist, wurden eventuell zu viele Objekte fixiert.
+Ein übermäßiges Fixieren von Objekten kann die Fragmentierung erhöhen. Wenn die Fragmentierung zu groß ist, wurden möglicherweise zu viele Objekte fixiert.
 
 Wenn die Fragmentierung des virtuellen Arbeitsspeichers verhindert, dass der Garbage Collector Segmente hinzufügen kann, kann dies eine der folgenden Ursachen haben:
 
@@ -327,7 +327,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
   In diesem Beispiel ist die Größe des größten freien Bereichs ungefähr 24.000 KB (3A980 als Hexadezimalwert). Dieser Bereich ist wesentlich kleiner als der Bereich, den die Garbage Collection für ein Segment benötigt.
 
-  Oder
+  - oder -
 
 - Verwenden Sie den Befehl **vmstat**:
 
@@ -423,7 +423,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
   Wenn der verwaltete Heap groß ist, kann die Ausführung von **dumpheap** eine Weile dauern.
 
-  Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Beispiel:
+  Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Zum Beispiel:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo

@@ -2,12 +2,12 @@
 title: Funktionale Transformation von XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594305"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336797"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Funktionale Transformation von XML (C#)
 In diesem Thema wird der Ansatz der reinen funktionalen Transformation zum Ändern von XML-Dokumenten erläutert und dem prozeduralen Ansatz gegenübergestellt.  
@@ -30,7 +30,7 @@ In diesem Thema wird der Ansatz der reinen funktionalen Transformation zum Ände
   
  Einen ausführlicheren Vergleich zwischen LINQ to XML und anderen XML-Technologien von Microsoft finden Sie unter [LINQ to XML vs.(LINQ to XML im Vergleich zu) Other XML Technologies (anderen XML-Technologien)](./linq-to-xml-vs-other-xml-technologies.md).  
   
- XSLT ist das empfohlene Tool für dokumentorientierte Transformationen, wenn das Quelldokument eine unregelmäßige Struktur besitzt. Dokumentorientierte Transformationen können aber auch von LINQ to XML ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+XSLT ist das empfohlene Tool für dokumentorientierte Transformationen, wenn das Quelldokument eine unregelmäßige Struktur besitzt. Dokumentorientierte Transformationen können aber auch von LINQ to XML ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Strukturen in einer XSLT-Formatvorlage (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Verknüpfungsvorgänge (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423385"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635599"
 ---
 # <a name="join-operations-c"></a>Verknüpfungsvorgänge (C#)
 Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten einer Datenquelle zu den Objekten einer anderen Datenquelle, die ein Attribut gemeinsam haben.  
@@ -22,7 +22,7 @@ Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten ei
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|BESCHREIBUNG|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Join|Verknüpft zwei Sequenzen auf Basis von Schlüsselauswahlfunktionen und extrahiert Wertepaare.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Verknüpft zwei Sequenzen auf Basis von Schlüsselauswahlfunktionen und gruppiert die sich ergebenden Übereinstimmungen für die einzelnen Elemente.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -34,11 +34,11 @@ Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten ei
 - [Anonyme Typen](../../classes-and-structs/anonymous-types.md)
 - [Formulieren von Joins und produktübergreifenden Abfragen](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join-Klausel](../../../language-reference/keywords/join-clause.md)
-- [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../linq/join-by-using-composite-keys.md)
+- [Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../linq/join-by-using-composite-keys.md)
 - [Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Vorgehensweise: Sortieren der Ergebnisse einer Join-Klausel](../../../linq/order-the-results-of-a-join-clause.md)
-- [Vorgehensweise: Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../../linq/perform-custom-join-operations.md)
-- [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../../linq/perform-grouped-joins.md)
-- [Vorgehensweise: Ausführen von inneren Verknüpfungen](../../../linq/perform-inner-joins.md)
-- [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../../linq/perform-left-outer-joins.md)
-- [Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Sortieren der Ergebnisse einer Join-Klausel](../../../linq/order-the-results-of-a-join-clause.md)
+- [Ausführen von benutzerdefinierten Verknüpfungsoperationen](../../../linq/perform-custom-join-operations.md)
+- [Ausführen von Gruppenverknüpfungen](../../../linq/perform-grouped-joins.md)
+- [Ausführen innerer Verknüpfungen](../../../linq/perform-inner-joins.md)
+- [Ausführen linker äußerer Verknüpfungen](../../../linq/perform-left-outer-joins.md)
+- [Vorgehensweise: Auffüllen von Objektsammlungen mit Daten aus mehreren Quellen (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

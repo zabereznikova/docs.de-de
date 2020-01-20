@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#)'
+title: 'Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflexion (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592916"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345690"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflexion (LINQ) (C#)
 
 Die Reflektions-APIs der .NET Framework-Klassenbibliothek können verwendet werden, um die Metadaten in einer .NET-Assembly zu untersuchen und Auflistungen von Typen, Typmembern, Parametern usw., die sich in der Assembly befinden, zu erstellen. Da diese Auflistungen die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle unterstützen, können sie mithilfe von LINQ abgefragt werden.  
   

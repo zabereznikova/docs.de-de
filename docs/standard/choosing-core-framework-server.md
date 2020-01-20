@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799254"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738668"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -95,7 +95,7 @@ Einige .NET Framework-Technologien sind in .NET Core nicht verfügbar. Mögliche
 
 - Sprachenunterstützung: Visual Basic und F# werden aktuell in .NET Core unterstützt, allerdings nicht für alle Projekttypen. Eine Liste der unterstützten Projektvorlagen finden Sie im Abschnitt [Vorlagenoptionen für dotnet new](../core/tools/dotnet-new.md#arguments).
 
-Zusätzlich zum offiziellen Meilensteinplan werden auch andere Frameworks in .NET Core portiert. Eine vollständige Liste finden Sie bei den CoreFX-Problemen, die als [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) (Port auf Core) gekennzeichnet wurden. Diese Liste stellt jedoch nicht die Komponenten dar, die Microsoft auch tatsächlich in .NET Core integrieren wird. Sie spiegelt lediglich die Wünsche der Community wider. Wenn Ihnen eine als `port-to-core` gekennzeichnete Komponente als wichtig erscheint, beteiligen Sie sich an der Diskussion auf GitHub. Wenn Ihrer Ansicht nach noch etwas fehlt, erstellen Sie im [CoreFX-Repository](https://github.com/dotnet/corefx/issues/new) ein neues Problem.
+Zusätzlich zum offiziellen Meilensteinplan werden auch andere Frameworks in .NET Core portiert. Eine vollständige Liste finden Sie bei den CoreFX-Problemen, die als [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) (Port auf Core) gekennzeichnet wurden. Diese Liste stellt jedoch nicht die Komponenten dar, die Microsoft auch tatsächlich in .NET Core integrieren wird. Sie spiegelt lediglich die Wünsche der Community wider. Wenn Ihnen eine als `port-to-core` gekennzeichnete Komponente als wichtig erscheint, beteiligen Sie sich an der Diskussion auf GitHub. Wenn Ihrer Ansicht nach noch etwas fehlt, erstellen Sie im [.NET-Repository](https://github.com/dotnet/runtime/issues/new) ein neues Problem.
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Notwendigkeit einer Plattform, die .NET Core nicht unterstützt
 

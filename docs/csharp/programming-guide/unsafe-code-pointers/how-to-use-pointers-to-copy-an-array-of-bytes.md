@@ -1,19 +1,18 @@
 ---
-title: 'Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays (C#-Programmierleitfaden)'
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640302"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698455"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays (C#-Programmierhandbuch)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays (C#-Programmierleitfaden)
 
 In folgendem Beispiel werden Zeiger verwendet, um Bytes aus einem Array in ein anderes zu kopieren.
 

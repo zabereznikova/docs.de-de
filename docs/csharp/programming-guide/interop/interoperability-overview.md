@@ -1,6 +1,5 @@
 ---
 title: Überblick über die Interoperabilität – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1342711ca17b0d2bf5122f4c749514e3b96c9ad7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921821"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700730"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
@@ -22,7 +21,7 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
 ## <a name="platform-invoke"></a>Plattformaufruf  
  Der *Plattformaufruf* ist ein Dienst, durch den verwalteter Code nicht verwaltete Funktionen aufrufen kann, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Microsoft Windows-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
   
- Weitere Informationen finden Sie unter [Verwenden nicht verwalteter DLL-Funktionen](../../../framework/interop/consuming-unmanaged-dll-functions.md) und [Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei](./how-to-use-platform-invoke-to-play-a-wave-file.md).  
+Weitere Informationen finden Sie unter [Nutzen nicht verwalteter DLL-Funktionen](../../../framework/interop/consuming-unmanaged-dll-functions.md) und [Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer WAV-Datei](./how-to-use-platform-invoke-to-play-a-wave-file.md).
   
 > [!NOTE]
 > Die [Common Language Runtime](../../../standard/clr.md) (CLR) verwaltet den Zugriff auf Systemressourcen. Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar. Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR. Weitere Informationen finden Sie unter [Sicherheit in .NET](../../../standard/security/index.md).  

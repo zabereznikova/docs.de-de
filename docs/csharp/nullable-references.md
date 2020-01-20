@@ -3,12 +3,12 @@ title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8.0 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737836"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559624"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -23,7 +23,7 @@ Mit den in C# 8.0 eingeführten **Nullable-Verweistypen** und **Nicht-Nullable-V
 
 Dieses neue Feature bietet große Vorteile hinsichtlich der Verarbeitung von Verweisvariablen in früheren Versionen von C#, bei denen die Entwurfsabsicht nicht über die Variablendeklaration bestimmt werden konnte. Der Compiler bot keinen Schutz gegen Nullverweisausnahmen für Verweistypen:
 
-- **Ein Verweis kann NULL sein**. Wenn ein Verweistyp mit NULL initialisiert oder später NULL zugewiesen wird, werden keine Warnungen ausgegeben.
+- **Ein Verweis kann NULL sein**. Wenn ein Verweistyp mit NULL initialisiert oder ihm später NULL zugewiesen wird, wird keine Warnung ausgegeben.
 - **Es wird angenommen, dass ein Verweis nicht NULL ist**. Der Compiler gibt keine Warnungen aus, wenn Verweistypen dereferenziert werden. (Bei Nullable-Verweisen gibt der Compiler Warnungen aus, sobald Sie eine Variable dereferenzieren, die möglicherweise NULL ist).
 
 Durch das Hinzufügen von Nullable-Verweistypen können Sie Ihre Absicht klarer deklarieren. Der `null`-Wert ist die richtige Wahl, um darzustellen, dass eine Variable auf keinen Wert verweist. Verwenden Sie dieses Feature nicht dazu, alle `null`-Werte aus Ihrem Code zu entfernen. Stattdessen sollten Sie Ihre Absicht gegenüber dem Compiler und anderen Entwicklern deklarieren, die Ihren Code lesen. Indem Sie Ihre Absicht deklarieren, werden Sie vom Compiler informiert, sobald Sie Code schreiben, der dieser Absicht widerspricht.
@@ -93,7 +93,7 @@ Standardmäßig sind die Nullable-Anmerkungs- und -Warnungskontexte **deaktivier
 Der Compiler verwendet die folgenden Regeln in einem „disabled“-Nullable-Anmerkungskontext:
 
 - Sie können keine Nullable-Verweise in einem „disabled“-Kontext deklarieren.
-- Alle Verweisvariablen können NULL zugewiesen werden.
+- Alle Verweisvariablen kann ein Wert von NULL zugewiesen werden.
 - Wenn eine Variable eines Verweistyps dereferenziert wird, werden keine Warnungen generiert.
 - Der NULL-tolerante Operator kann in einem „disabled“-Kontext nicht verwendet werden.
 

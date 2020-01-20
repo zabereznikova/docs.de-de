@@ -1,6 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer WAV-Datei (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -8,16 +7,16 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6c2313f7b600bc1670c944f6a93868c1bc4c7c16
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3ea90f0739ad45c31e4f25836c9de8e708dff2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039327"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700821"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei (C#-Programmierhandbuch)
+# <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer WAV-Datei (C#-Programmierleitfaden)
 
-In folgendem C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum Abspielen einer Audiodatei im Waveformat im Windows-Betriebssystem veranschaulicht.
+Im folgenden C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum Wiedergeben einer WAV-Audiodatei unter dem Betriebssystem Windows veranschaulicht.
 
 ## <a name="example"></a>Beispiel
 

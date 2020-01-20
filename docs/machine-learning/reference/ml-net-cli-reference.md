@@ -1,89 +1,65 @@
 ---
-title: Der Befehl „auto-train“ im ML.NET-CLI-Tool
+title: Befehlsreferenz für die ML.NET-CLI
 description: Übersicht, Beispiele und Verweise für den Befehl „auto-train“ im ML.NET-CLI-Tool
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 12/18/2019
+ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929197"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636119"
 ---
-# <a name="the-auto-train-command-in-mlnet-cli"></a>Der Befehl „auto-train“ in der ML.NET-CLI
+# <a name="the-mlnet-cli-command-reference"></a>Befehlsreferenz für die ML.NET-CLI
+
+Der `auto-train`-Befehl ist der Hauptbefehl des ML.NET-CLI-Tools. Mit dem Befehl können Sie ein qualitativ hochwertiges ML.NET-Modell mithilfe von automatisiertem Machine Learning (AutoML) sowie den C#-Beispielcode generieren, um dieses Modell auszuführen bzw. zu bewerten. Außerdem wird der C#-Code zum Trainieren des Modells für Sie generiert, damit Sie den Algorithmus und die Einstellungen des Modells untersuchen können.
 
 > [!NOTE]
 > Dieses Thema bezieht sich auf die ML.NET-CLI und ML.NET AutoML, die derzeit als Vorschau verfügbar sind, und das Material kann jederzeit geändert werden.
 
-Der `auto-train`-Befehl ist der Hauptbefehl des ML.NET-CLI-Tools. Mit dem Befehl können Sie ein qualitativ hochwertiges ML.NET-Modell (serialisierte ZIP-Datei des Modells) plus den Beispiel-C#-Code generieren, um dieses Modell auszuführen/zu bewerten. Darüber hinaus wird der C#-Code zum Erstellen/Trainieren dieses Modells generiert, sodass Sie suchen können, welcher Algorithmus und welche Einstellungen für dieses generierte „beste Modell“ verwendet wurden.
+## <a name="overview"></a>Übersicht
 
-Sie können diese Objekte aus Ihren eigenen Datasets generieren, ohne selbst zu codieren. Damit steigern Sie also auch Ihre Produktivität, selbst wenn Sie ML.NET bereits kennen.
-
-Derzeit unterstützt die ML.NET-CLI folgende Aufgaben:
-
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-
-- Zukünftig: weitere Machine Learning-Aufgaben wie
-  - `recommendation`
-  - `anomaly-detection`
-  - `clustering`
-
-Beispiel für die Verwendung in der Eingabeaufforderung:
+Verwendungsbeispiel:
 
 ```console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
 ```
 
 Der Befehl `mlnet auto-train` generiert folgende Objekte:
 
 - Eine serialisierte ZIP-Datei des Modells („bestes Modell“), die sofort verwendet werden kann.
-- C#-Code, um das generierte Modell auszuführen/zu bewerten (um mit diesem Modell Vorhersagen in Ihren Endbenutzer-Apps zu treffen).
-- C#-Code mit dem Trainingscode, der zur Erstellung dieses Modells verwendet wird (zu Lernzwecken).
+- C#-Code zum Ausführen/Bewerten des generierten Modells.
+- C#-Code mit dem Trainingscode, der zur Erstellung dieses Modells verwendet wird.
 
-Die ersten beiden Objekte können direkt in Ihren Endbenutzer-App (ASP.NET Core-Web-App, Dienste, Desktop-App usw.) verwendet werden, um mit dem generierten ML-Modell Vorhersagen zu treffen.
+Die ersten beiden Objekte können direkt in Ihren Endbenutzer-App (ASP.NET Core-Web-App, Dienste, Desktop-App usw.) verwendet werden, um mit dem Modell Vorhersagen zu treffen.
 
-Das dritte Objekt, der Trainingscode, zeigt Ihnen, welchen ML.NET-API-Code die CLI zum Trainieren des generierten Modells verwendet hat, sodass Sie untersuchen können, welchen spezifischen Trainer/Algorithmus und Hyperparameter die CLI und die ML.NET AutoML-Engine ausgewählt haben.
-
-## <a name="the-auto-train-command-uses-the-automl-engine"></a>Der Befehl „auto-train“ verwendet die AutoML-Engine
-
-Die CLI verwendet die ML.NET AutoML-Engine (NuGet-Paket), um intelligent nach den besten Modellen zu suchen, wie in der folgenden Abbildung dargestellt:
-
-![Bild](./media/ml-net-automl-working-diagram.png "AutoML-Engine arbeitet in der ML.NET-CLI")
-
-Wenn Sie das ML.NET-CLI-Tool mit dem Befehl „auto-train“ ausführen, sehen Sie, wie das Tool zahlreiche Iterationen mit verschiedenen Algorithmen und Kombinationen der Konfiguration ausprobiert.
-
-## <a name="reference-for-auto-train-command"></a>Verweis für den Befehl „auto-train“
+Das dritte Objekt, der Trainingscode, zeigt Ihnen, welchen ML.NET-API-Code die CLI zum Trainieren des generierten Modells verwendet hat, sodass Sie den spezifischen Algorithmus und die Einstellungen des Modells untersuchen können.
 
 ## <a name="examples"></a>Beispiele
 
-Einfachster CLI-Befehl für ein binäres Klassifizierungsproblem (AutoML muss den Großteil der Konfiguration aus den bereitgestellten Daten ableiten):
+Der einfachste CLI-Befehl für ein binäres Klassifizierungsproblem (AutoML leitet den Großteil der Konfiguration aus den bereitgestellten Daten ab):
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
 Ein weiterer einfacher CLI-Befehl für ein Regressionsproblem:
 
 ``` console
-> mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
 ```
 
 Erstellen und trainieren Sie ein binäres Klassifizierungsmodell mit einem Trainingsdataset, einem Testdataset und weiteren benutzerdefinierten Argumenten:
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
-## <a name="name"></a>name
+## <a name="command-options"></a>Befehlsoptionen
 
-`mlnet auto-train` -Trainiert mehrere Modelle ('n' Iterationen) basierend auf dem bereitgestellten Dataset und wählt schließlich das beste Modell aus, speichert es als serialisierte ZIP-Datei und generiert den zugehörigen C#-Code für Bewertung und Training.
-
-## <a name="synopsis"></a>Übersicht
+`mlnet auto-train`: Trainiert mehrere Modelle basierend auf dem bereitgestellten Dataset und wählt schließlich das beste Modell aus, speichert es als serialisierte ZIP-Datei und generiert außerdem den zugehörigen C#-Code für Bewertung und Training.
 
 ```console
-> mlnet auto-train
+mlnet auto-train
 
 --task | --mltask | -T <value>
 
@@ -116,11 +92,9 @@ Erstellen und trainieren Sie ein binäres Klassifizierungsmodell mit einem Train
 
 ```
 
-Ungültige Eingabeoptionen sollten dazu führen, dass das CLI-Tool eine Liste gültiger Eingaben und eine Fehlermeldung ausgibt, aus der hervorgeht, welches Argument fehlt, falls dies der Fall ist.
+Ungültige Eingabeoptionen bewirken, dass das CLI-Tool eine Liste gültiger Eingaben und eine Fehlermeldung ausgibt.
 
-## <a name="options"></a>Optionen
-
- ----------------------------------------------------------
+## <a name="task"></a>Aufgabe
 
 `--task | --mltask | -T` (Zeichenfolge)
 
@@ -130,11 +104,9 @@ Eine einzelne Zeichenfolge, die das zu lösende ML-Problem enthält. Zum Beispie
 - `binary-classification` –Wählen Sie, ob das Ergebnis des ML-Modells zwei mögliche kategorische boolesche Werte hat (0 oder 1).
 - `multiclass-classification` –Wählen Sie, ob das Ergebnis des ML-Modells zwei mögliche kategorische boolesche Werte hat (0 oder 1).
 
-In zukünftigen Releases werden zusätzliche ML-Aufgaben und Szenarien wie `recommendations`, `clustering` und `ranking` unterstützt.
+In diesem Argument sollte nur eine ML-Aufgabe bereitgestellt werden.
 
- In diesem Argument sollte nur eine ML-Aufgabe bereitgestellt werden.
-
- ----------------------------------------------------------
+## <a name="dataset"></a>DataSet
 
 `--dataset | -d` (Zeichenfolge)
 
@@ -144,7 +116,7 @@ Dieses Argument stellt den Dateipfad zu einer der folgenden Optionen bereit:
 
 - *B: Die Datei für das Trainingsdataset:* Wenn der Benutzer auch Datasets für die Modellvalidierung bereitstellt (mit `--test-dataset` und optional `--validation-dataset`), dann bedeutet das Argument `--dataset`, dass nur das „Trainingsdataset“ vorhanden ist. Wenn Sie beispielsweise 80%-20%ig-Ansatz zur Validierung der Modellqualität und zum Ermitteln von Genauigkeitsmetriken verwenden, enthält das „Trainingsdataset“ 80 % der Daten und das „Testdataset“ 20 % der Daten.
 
-----------------------------------------------------------
+## <a name="test-dataset"></a>Testdataset
 
 `--test-dataset | -t` (Zeichenfolge)
 
@@ -154,7 +126,7 @@ Bei der Verwendung des `--test-dataset` ist auch das `--dataset` erforderlich.
 
 Das `--test-dataset`-Argument ist optional, sofern das „--validation-dataset“ verwendet wird. In diesem Fall muss der Benutzer die drei Argumente verwenden.
 
-----------------------------------------------------------
+## <a name="validation-dataset"></a>Validierungsdataset
 
 `--validation-dataset | -v` (Zeichenfolge)
 
@@ -173,7 +145,7 @@ Grundsätzlich wird bei die Validierungsphase bei Verwendung eines `validation d
 1. Im ersten Teil betrachten Sie einfach Ihre Modelle und wählen den leistungsstärksten Ansatz anhand der Validierungsdaten (=Validierung) aus.
 2. Dann schätzen Sie die Genauigkeit des gewählten Ansatzes (=Test).
 
-Daher sollten die Daten im Verhältnis 80/10/10 oder 75/15/10 geteilt werden. Beispiel:
+Daher sollten die Daten im Verhältnis 80/10/10 oder 75/15/10 geteilt werden. Zum Beispiel:
 
 - Die Datei `training-dataset` sollte 75 % der Daten enthalten.
 - Die Datei `validation-dataset` sollte 15 % der Daten enthalten.
@@ -181,7 +153,7 @@ Daher sollten die Daten im Verhältnis 80/10/10 oder 75/15/10 geteilt werden. Be
 
 In jedem Fall entscheidet der Benutzer anhand der CLI, die die bereits aufgeteilten Dateien bereitstellt, über die Prozentangaben.
 
-----------------------------------------------------------
+## <a name="label-column-name"></a>Bezeichnung Spaltenname
 
 `--label-column-name | -n` (Zeichenfolge)
 
@@ -189,7 +161,7 @@ Mit diesem Argument kann eine bestimmte Objekt-/Zielspalte (die Variable, die Si
 
 Dieses Argument wird nur für überwachte ML-Aufgaben verwendet, wie z.B. ein *Klassifizierungsproblem*. Es kann nicht für nicht überwachte ML-Aufgaben verwendet werden, wie z.B. *Clustering*.
 
-----------------------------------------------------------
+## <a name="label-column-index"></a>Bezeichnung Spaltenindex
 
 `--label-column-index | -i` (Ganzzahl)
 
@@ -199,7 +171,7 @@ Mit diesem Argument kann eine bestimmte Ziel-/Zielspalte (die Variable, die Sie 
 
 Dieses Argument wird nur für eine überwachte ML-Aufgabe verwendet, wie z.B. ein *Klassifizierungsproblem*. Es kann nicht für nicht überwachte ML-Aufgaben verwendet werden, wie z.B. *Clustering*.
 
-----------------------------------------------------------
+## <a name="ignore-columns"></a>Spalten ignorieren
 
 `--ignore-columns | -I` (Zeichenfolge)
 
@@ -211,7 +183,7 @@ Beispiel:
 
 `--ignore-columns email, address, id, logged_in`
 
-----------------------------------------------------------
+## <a name="has-header"></a>Hat Header
 
 `--has-header | -h` (Bool)
 
@@ -225,7 +197,7 @@ Der Standardwert ist `true`, wenn der Benutzer dieses Argument nicht angibt.
 
 Um das `--label-column-name`-Argument zu verwenden, benötigen Sie in der Datasetdatei einen Header und `--has-header` muss auf `true` (Standardwert) gesetzt werden.
 
-----------------------------------------------------------
+## <a name="max-exploration-time"></a>Maximale Auswertungszeit
 
 `--max-exploration-time | -x` (Zeichenfolge)
 
@@ -235,7 +207,7 @@ Dieses Argument legt die maximale Zeit (in Sekunden) für den Prozess fest, um m
 
 Die für Iterationen benötigte Zeit kann je nach Größe des Datasets variieren.
 
-----------------------------------------------------------
+## <a name="cache"></a>cache
 
 `--cache | -c` (Zeichenfolge)
 
@@ -253,7 +225,7 @@ Sie können folgende Werte angeben:
 
 Wenn Sie den `--cache`-Parameter nicht angeben, wird standardmäßig die Cachekonfiguration `auto` verwendet.
 
-----------------------------------------------------------
+## <a name="name"></a>name
 
 `--name | -N` (Zeichenfolge)
 
@@ -261,13 +233,13 @@ Der Name für das erstellte Ausgabeprojekt oder die erstellte Projektmappe. Wenn
 
 Die ML.NET-Modelldatei (ZIP-Datei) erhält ebenfalls denselben Namen.
 
-----------------------------------------------------------
+## <a name="output-path"></a>Ausgabepfad
 
 `--output-path | -o` (Zeichenfolge)
 
 Stammspeicherort/-ordner für die generierte Ausgabe. Der Standardwert ist das aktuelle Verzeichnis.
 
-----------------------------------------------------------
+## <a name="verbosity"></a>Ausführlichkeit
 
 `--verbosity | -V` (Zeichenfolge)
 
@@ -281,17 +253,15 @@ Zulässige Werte sind:
 
 Standardmäßig sollte das CLI-Tool ein Mindestfeedback (minimal) anzeigen, wenn es funktioniert, wie z.B. die Angabe, dass es funktioniert und, wenn möglich, Angaben dazu, wie viel Zeit übrig ist oder wie viel Prozent der Zeit abgeschlossen sind.
 
-----------------------------------------------------------
+## <a name="help"></a>Hilfe
 
 `-h|--help`
 
 Druckt die Hilfe für den Befehl und eine Beschreibung der einzelnen Parameter für den Befehl aus.
 
-----------------------------------------------------------
-
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Installieren des ML.NET-CLI-Tools](../how-to-guides/install-ml-net-cli.md)
-- [Automatisieren des Modelltrainings mit der ML.NET-CLI](../automate-training-with-cli.md)
-- [Tutorial: Automatisches Generieren eines binären Klassifizierers mit der ML.NET-CLI](../tutorials/mlnet-cli.md)
+- [Übersicht über die ML.NET-CLI](../automate-training-with-cli.md)
+- [Tutorial: Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle](../tutorials/sentiment-analysis-cli.md)
 - [Telemetrie in der ML.NET-CLI](../resources/ml-net-cli-telemetry.md)

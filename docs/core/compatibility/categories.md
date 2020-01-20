@@ -2,12 +2,12 @@
 title: 'Breaking-Change-Kategorien: .NET Core'
 description: Erfahren Sie mehr über die Kategorisierung von Breaking Changes in .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567929"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343601"
 ---
 # <a name="breaking-change-categories"></a>Breaking Change-Kategorien
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567929"
 - [Quellkompatibilität](#source-compatibility)
 - [Entwurfszeitkompatibilität](#design-time-compatibility)
 - [Abwärtskompatibilität](#backwards-compatibility)
-
-[Aufwärtskompatibilität](#forward-compatibility) ist kein Ziel von .NET Core.
+- [Aufwärtskompatibilität](#forward-compatibility) (kein Ziel von .NET Core)
 
 ## <a name="behavioral-change"></a>Behavior Change
 
@@ -43,7 +42,7 @@ Die Entwurfszeitkompatibilität bezieht sich auf die Beibehaltung der Entwurfsze
 
 Die Abwärtskompatibilität bezieht sich auf die Fähigkeit, dass ein vorhandener Consumer einer API für eine neue Version ausgeführt werden kann, während er sich auf die gleiche Weise verhält. Sowohl Behavior Changes als auch Änderungen in der Binärkompatibilität beeinflussen die Abwärtskompatibilität. Wenn ein Consumer nicht für die neuere Version der API ausgeführt werden kann oder sich anders verhält, ist die API *abwärtskompatibel*.
 
-Da Entwickler in neueren Versionen einer API standardmäßig Abwärtskompatibilität erwarten, wird dringend von Änderungen abgeraten, die sich auf die Abwärtskompatibilität auswirken.
+Da Entwickler in neueren Versionen einer API Abwärtskompatibilität erwarten, wird von Änderungen abgeraten, die sich auf die Abwärtskompatibilität auswirken.
 
 ## <a name="forward-compatibility"></a>Aufwärtskompatibilität
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198441"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902033"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: Synchrones E/A auf allen Servern deaktiviert
 
@@ -29,7 +29,7 @@ Erwartbare Fehler:
 
 Jeder Server verfügt über eine `AllowSynchronousIO`-Option, die dieses Verhalten steuert und nun standardmäßig `false` ist.
 
-Das Verhalten kann auch auf Anforderung als vorübergehende Entschärfung überschrieben werden. Beispiel:
+Das Verhalten kann auch auf Anforderung als vorübergehende Entschärfung überschrieben werden. Zum Beispiel:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -41,7 +41,7 @@ if (syncIOFeature != null)
 
 Wenn Sie Probleme mit einem `TextWriter` oder einem anderen Stream haben, der eine synchrone API in `Dispose` aufruft, rufen Sie stattdessen die neue `DisposeAsync`-API auf.
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -65,7 +65,7 @@ Erwartbare Fehler:
 
 Diese synchronen APIs waren schon länger Ursache für fehlende Threads und hängende Apps. Ab ASP.NET Core 3.0 Preview 3 sind synchrone Vorgänge standardmäßig deaktiviert.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Verwenden Sie die asynchronen Versionen der Methoden. Das Verhalten kann auch auf Anforderung als vorübergehende Entschärfung überschrieben werden.
 

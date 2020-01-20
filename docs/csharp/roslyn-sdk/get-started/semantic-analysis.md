@@ -3,12 +3,12 @@ title: Erste Schritte mit der semantischen Analyse
 description: Dieses Tutorial bietet einen Überblick über die Arbeit mit semantischen Analysen mithilfe des .NET Compiler SDK.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252938"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346979"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Erste Schritte mit der semantischen Analyse
 
@@ -22,7 +22,7 @@ Die Installation des **SDK für die .NET Compiler Platform** ist erforderlich.
 
 ## <a name="understanding-compilations-and-symbols"></a>Grundlegendes zu Kompilierungen und Symbolen
 
-Wenn Sie eine Weile mit dem .NET Compiler SDK arbeiten, werden Ihnen die Unterschiede zwischen der Syntax-API und der Semantik-API immer vertrauter. Die **Syntax-API** ermöglicht es Ihnen, die _Struktur_ eines Programms zu untersuchen. In vielen Fällen benötigen Sie jedoch weitere Informationen zur Semantik bzw. _Bedeutung_ eines Programms. Sie können zwar eine einzelne, losgelöste Codedatei oder einen isolierten VB- oder C#-Codeausschnitt syntaktisch analysieren, aber es ist wenig sinnvoll, Fragen wie „Welchen Typ weist diese Variable auf?“ sozusagen im luftleeren Raum zu stellen. Die Bedeutung eines Typnamens kann von Assemblyverweisen, Namespaceimporten oder anderen Codedateien abhängig sein. Diese Fragen werden mithilfe der **Semantik-API**, insbesondere der <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>-Klasse, beantwortet.
+Wenn Sie eine Weile mit dem .NET Compiler SDK arbeiten, werden Ihnen die Unterschiede zwischen der Syntax-API und der Semantik-API immer vertrauter. Die **Syntax-API** ermöglicht es Ihnen, die _Struktur_ eines Programms zu untersuchen. In vielen Fällen benötigen Sie jedoch weitere Informationen zur Semantik bzw. _Bedeutung_ eines Programms. Sie können zwar eine einzelne, losgelöste Codedatei oder einen isolierten Visual Basic- oder C#-Codeausschnitt syntaktisch analysieren, aber es ist wenig sinnvoll, Fragen wie „Welchen Typ weist diese Variable auf?“ sozusagen im luftleeren Raum zu stellen. Die Bedeutung eines Typnamens kann von Assemblyverweisen, Namespaceimporten oder anderen Codedateien abhängig sein. Diese Fragen werden mithilfe der **Semantik-API**, insbesondere der <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>-Klasse, beantwortet.
 
 Eine Instanz von <xref:Microsoft.CodeAnalysis.Compilation> entspricht einem einzelnen Projekt aus Sicht des Compilers und repräsentiert alle Elemente, die zum Kompilieren eines Visual Basic- oder C#-Programms erforderlich sind. Die **Kompilierung** umfasst die Quelldateien, die kompiliert werden sollen, sowie Assemblyverweise und Compileroptionen. Sie können alle weiteren Informationen in diesem Kontext heranziehen, um die Bedeutung des Codes genau zu verstehen. Eine <xref:Microsoft.CodeAnalysis.Compilation> ermöglicht es Ihnen, **Symbole** zu suchen: Entitäten wie z.B. Typen, Namespaces, Member und Variablen, auf die Namen und andere Ausdrücke verweisen. Der Prozess der Verknüpfung von Namen und Ausdrücken mit **Symbolen** wird als **Bindung** bezeichnet.
 

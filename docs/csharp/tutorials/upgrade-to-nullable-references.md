@@ -1,15 +1,15 @@
 ---
-title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
-description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
+title: Upgrade auf Nullable-Verweistypen
+description: In diesem erweiterten Tutorial wird veranschaulicht, wie vorhandener Code mit Nullable-Verweistypen migriert wird.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969348"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740467"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > - Verwalten der Schnittstelle zwischen NULL-Werte zulassenden und NULL-Werte nicht zulassenden Kontexten.
 > - Steuern NULL-Werte zulassender Anmerkungskontexte.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8-Compiler steht ab [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder mit dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) zur Verfügung.
 
@@ -83,7 +83,7 @@ Diese beiden Eigenschaften lösen `CS8618` aus: „Initialisierung der NULL-Wert
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Im vorherigen Codeblock ist einiges los. Diese Anwendung verwendet das [AutoMapper](https://automapper.org/)-NuGet-Paket zum Erstellen eines Nachrichtenelements aus einem `ISyndicationItem`. Sie haben festgestellt, dass in dieser einen Anweisung die Nachrichtenelemente erstellt und die Eigenschaften festgelegt werden. Das bedeutet, dass der Entwurf für das `NewsStoryViewModel` angibt, dass diese Eigenschaften nie den Wert `null` haben sollten. Diese Eigenschaften sollten **Nullwerte nicht zulassende Verweistypen** sein. Das drückt am besten die ursprüngliche Entwurfsabsicht aus. Jedes `NewsStoryViewModel` *ist* in der Tat mit NULL nicht zulassenden Werten ordnungsgemäß instanziiert. Das macht den folgenden Initialisierungscode zu einer gültigen Fehlerbehebung:
+Im vorherigen Codeblock ist einiges los. Diese Anwendung verwendet das [AutoMapper](https://automapper.org/)-NuGet-Paket zum Erstellen eines Nachrichtenelements aus einem `ISyndicationItem`. Sie haben festgestellt, dass in dieser einen Anweisung die Nachrichtenelemente erstellt und die Eigenschaften festgelegt werden. Das bedeutet, dass der Entwurf für das `NewsStoryViewModel` angibt, dass diese Eigenschaften nie den Wert `null` haben sollten. Diese Eigenschaften sollten **Nullwerte nicht zulassende Verweistypen** sein. Das drückt am besten die ursprüngliche Entwurfsabsicht aus. Jedes `NewsStoryViewModel` *ist* in der Tat mit Werten ungleich NULL ordnungsgemäß instanziiert. Das macht den folgenden Initialisierungscode zu einer gültigen Fehlerbehebung:
 
 ```csharp
 public class NewsStoryViewModel
@@ -167,4 +167,4 @@ Der `IMapper`-Parameter ist als Nullwerte nicht zulassender Verweis typisiert. E
 
 Da Sie die Warnungen behoben haben, die Sie in der ersten Testkompilierung identifizierten, können Sie jetzt den NULL-Werte zulassenden Anmerkungskontext für beide Projekte aktivieren. Erstellen Sie die Projekte neu; der Compiler gibt keine Warnungen aus. Den Code für das fertige Projekt können Sie im GitHub-Repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) aufrufen.
 
-Die neuen Features, die NULL-Werte zulassende Verweistypen unterstützen, helfen Ihnen, mögliche Fehler in der Behandlung von `null`-Werten in Ihrem Code zu suchen und zu beheben. Das Aktivieren des NULL-Werte zulassenden Anmerkungskontexts ermöglicht Ihnen, Ihre Entwurfsabsicht auszudrücken: Einige Variablen sollten niemals NULL sein, andere Variablen können NULL-Werte enthalten. Diese Funktionen erleichtern Ihnen, Ihre Entwurfsabsicht zu deklarieren. Auf ähnliche Weise weist der NULL-Werte zulassende Warnungskontext den Compiler an, Warnungen auszugeben, wenn Sie diese Absicht verletzt haben. Diese Warnungen leiten Sie an, Aktualisierungen vorzunehmen, die Ihren Code robuster machen, sodass das Auslösen einer `NullReferenceException` während der Ausführung unwahrscheinlicher wird. Sie können den Rahmen dieser Kontexte steuern, damit Sie sich auf lokale zu migrierende Codebereiche konzentrieren können, während die übrige Codebasis hiervon unberührt bleibt. In der Praxis können Sie diese Migrationsaufgabe als Teil der regelmäßigen Wartung Ihrer Klassen durchführen. Dieses Tutorial veranschaulicht das Verfahren zum Migrieren einer Anwendung zur Verwendung von NULL-Werte zulassenden Verweistypen. Der PR von [Jon Skeet](https://github.com/jskeet) zum Integrieren Nullwerte zulassender Verweistypen in [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) bietet Ihnen ein umfangreicheren Beispiel dieses Prozesses aus der realen Welt.
+Die neuen Features, die NULL-Werte zulassende Verweistypen unterstützen, helfen Ihnen, mögliche Fehler in der Behandlung von `null`-Werten in Ihrem Code zu suchen und zu beheben. Das Aktivieren des NULL-Werte zulassenden Anmerkungskontexts ermöglicht Ihnen, Ihre Entwurfsabsicht auszudrücken: Einige Variablen sollten niemals NULL sein, andere Variablen können NULL-Werte enthalten. Diese Funktionen erleichtern Ihnen, Ihre Entwurfsabsicht zu deklarieren. Auf ähnliche Weise weist der NULL-Werte zulassende Warnungskontext den Compiler an, Warnungen auszugeben, wenn Sie diese Absicht verletzt haben. Diese Warnungen leiten Sie an, Aktualisierungen vorzunehmen, die Ihren Code robuster machen, sodass das Auslösen einer `NullReferenceException` während der Ausführung unwahrscheinlicher wird. Sie können den Rahmen dieser Kontexte steuern, damit Sie sich auf lokale zu migrierende Codebereiche konzentrieren können, während die übrige Codebasis hiervon unberührt bleibt. In der Praxis können Sie diese Migrationsaufgabe als Teil der regelmäßigen Wartung Ihrer Klassen durchführen. Dieses Tutorial veranschaulicht das Verfahren zum Migrieren einer Anwendung zur Verwendung von NULL-Werte zulassenden Verweistypen. Der PR von [Jon Skeet](https://github.com/jskeet) zum Integrieren Nullwerte zulassender Verweistypen in [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) bietet Ihnen ein umfangreicheren Beispiel dieses Prozesses aus der realen Welt. Sie können auch zusätzlich Techniken zum Verwenden von Nullable-Verweistypen mit Entity Framework Core unter [Entity Framework Core: Arbeiten mit Nullable-Verweistypen](/ef/core/miscellaneous/nullable-reference-types) erlernen.

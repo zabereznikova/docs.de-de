@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120775"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337675"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -71,7 +71,7 @@ UNC-Pfade müssen immer absolut sein. Sie können relative Verzeichnissegmente (
 
 Das Windows-Betriebssystem verfügt über ein einheitliches Objektmodell, das auf alle Ressourcen, einschließlich Dateien, verweist. Sie können über das Konsolenfenster auf diese Objektpfade zugreifen. Diese werden über einen speziellen Ordner aus symbolischen Verknüpfungen, denen ältere DOS- und UNC-Pfade zugeordnet sind, für die Win32-Schicht zur Verfügung gestellt. Der Zugriff auf diesen speziellen Ordner erfolgt über die DOS-Gerätepfadsyntax, die einer der Folgenden entspricht:
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 Zusätzlich zum Identifizieren eines Laufwerks anhand des Laufwerkbuchstabens können Sie ein Volume mithilfe des Volume-GUID identifizieren. Dieser weist folgendes Format auf:
@@ -93,12 +93,12 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 
    Das erste Segment des DOS-Gerätepfads, nachdem der Gerätepfadbezeichner das Volume oder Laufwerk identifiziert. (Zum Beispiel `\\?\C:\` und `\\.\BootPartition\`.)
 
-   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Beispiel:
+   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Zum Beispiel:
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Bei Geräte-UNCs bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ bei `\\?\server1\e:\utilities\\filecomparer\` „server1\utilities“. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren. 
+    Bei Geräte-UNCs bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ bei `\\?\server1\e:\utilities\\filecomparer\` „server1\utilities“. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren.
 
 DOS-Gerätepfade sind definitionsgemäß absolut. Die relativen Verzeichnissegmente (`.` und `..`) sind nicht zulässig. Aktuelle Verzeichnisse haben bei Verwendung von UNC-Pfaden keine Relevanz.
 
@@ -126,7 +126,7 @@ Diese Normalisierung erfolgt implizit, Sie können sie jedoch explizit ausführe
 Der erste Schritt der Pfadnormalisierung ist das Identifizieren des Pfadtyps. Pfade gehören zu einer von wenigen Kategorien:
 
 - Gerätepfade, d.h. sie beginnen mit zwei Trennzeichen und einem Fragezeichen oder einem Punkt (`\\?` oder `\\.`).
-- UNC-Pfade, d.h. sie beginnen mit zwei Trennzeichen ohne einem Fragezeichen oder Punkt. 
+- UNC-Pfade, d.h. sie beginnen mit zwei Trennzeichen ohne einem Fragezeichen oder Punkt.
 - Absolute DOS-Pfade, d.h. sie beginnen mit einem Laufwerkbuchstaben, einem Volumetrennzeichen und einem Komponententrennzeichen (`C:\`).
 - Sie legen ein Legacygerät fest (`CON`, `LPT1`).
 - Sie sind relativ zum Stamm des aktuellen Laufwerks, d.h. sie beginnen mit einem einzelnen Komponententrennzeichen (`\`).
@@ -137,9 +137,9 @@ Der Typ des Pfad bestimmt, ob ein aktuelles Verzeichnis in irgendeiner Weise ang
 
 ### <a name="handling-legacy-devices"></a>Handhaben von Legacygeräten
 
-Wenn der Pfad ein DOS-Legacygerät wie `CON`, `COM1` oder `LPT1` ist, wird er durch Voranstellen von `\\.\` in einen Gerätepfad konvertiert und zurückgegeben. 
+Wenn der Pfad ein DOS-Legacygerät wie `CON`, `COM1` oder `LPT1` ist, wird er durch Voranstellen von `\\.\` in einen Gerätepfad konvertiert und zurückgegeben.
 
-Ein Pfad, der mit einem Legacygerätenamen beginnt, wird von der Methode <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> immer als Legacygerät interpretiert. Beispielsweise ist der DOS-Gerätepfad für `CON.TXT` `\\.\CON`, und der DOS-Gerätepfad für `COM1.TXT\file1.txt` ist `\\.\COM1`.
+Ein Pfad, der mit einem Legacygerätenamen beginnt, wird von der Methode <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> immer als Legacygerät interpretiert. Beispielsweise ist der DOS-Gerätepfad für `CON.TXT``\\.\CON`, und der DOS-Gerätepfad für `COM1.TXT\file1.txt` ist `\\.\COM1`.
 
 ### <a name="applying-the-current-directory"></a>Anwenden des aktuellen Verzeichnisses
 
@@ -152,7 +152,7 @@ Wenn der Pfad mit einem Laufwerkbuchstaben, einem Volumetrennzeichen und keinem 
 Wenn der Pfad mit etwas anderem als einem Trennzeichen beginnt, werden das aktuelle Laufwerk und das aktuelle Verzeichnis angewendet. Wenn der Pfad beispielsweise `filecompare` entspricht, und das aktuelle Verzeichnis `C:\utilities\` ist, ist das Ergebnis `C:\utilities\filecompare\`.
 
 > [!IMPORTANT]
-> Relative Pfade sind in Multithreadanwendungen gefährlich (d.h. in den meisten Anwendungen), da das aktuelle Verzeichnis eine prozessspezifische Einstellung ist. Jeder Thread kann das aktuelle Verzeichnis jederzeit ändern. Beginnend mit .NET Core 2.1 können Sie die Methode <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> aufrufen, um einen absoluten Pfad von einem relativen Pfad und dem Basispfad (dem aktuellen Verzeichnis) abzurufen, gegen die Sie auflösen möchten. 
+> Relative Pfade sind in Multithreadanwendungen gefährlich (d.h. in den meisten Anwendungen), da das aktuelle Verzeichnis eine prozessspezifische Einstellung ist. Jeder Thread kann das aktuelle Verzeichnis jederzeit ändern. Beginnend mit .NET Core 2.1 können Sie die Methode <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> aufrufen, um einen absoluten Pfad von einem relativen Pfad und dem Basispfad (dem aktuellen Verzeichnis) abzurufen, gegen die Sie auflösen möchten.
 
 ### <a name="canonicalizing-separators"></a>Kanonisierende Trennzeichen
 
@@ -160,7 +160,7 @@ Alle führenden Schrägstriche (`/`) werden in das standardmäßige Trennzeichen
 
 ### <a name="evaluating-relative-components"></a>Auswerten relativer Komponenten
 
-Während der Pfad verarbeitet wird, werden alle Komponenten oder Segmente ausgewertet, die aus einem oder zwei Punkten (`.` oder `..`) bestehen: 
+Während der Pfad verarbeitet wird, werden alle Komponenten oder Segmente ausgewertet, die aus einem oder zwei Punkten (`.` oder `..`) bestehen:
 
 - Bei einzelnen Punkten wird das aktuelle Segment entfernt, da es auf das aktuelle Verzeichnis verweist.
 
@@ -174,9 +174,9 @@ Zusätzlich zu den Ausführungen von Trennzeichen und Segmenten, die weiter oben
 
 - Wenn ein Segment mit einem einzelnen Punkt endet, wird der Punkt entfernt. (Im vorherigen Schritt wurde ein Segment aus einem oder zwei Punkten normalisiert. Ein Segment aus mindestens drei Punkten wird nicht normalisiert. Tatsächlich ist das ein gültiger Datei- oder Verzeichnisname.)
 
-- Wenn der Pfad nicht mit einem Trennzeichen endet, werden alle nachfolgenden Punkte und Leerzeichen (U+0020) entfernt. Wenn das letzte Segment nur aus einem oder zwei Punkten besteht, unterliegt es den oben genannten Regeln für relative Komponenten. 
+- Wenn der Pfad nicht mit einem Trennzeichen endet, werden alle nachfolgenden Punkte und Leerzeichen (U+0020) entfernt. Wenn das letzte Segment nur aus einem oder zwei Punkten besteht, unterliegt es den oben genannten Regeln für relative Komponenten.
 
-   Diese Regel bedeutet, dass Sie einen Verzeichnisnamen mit einem nachfolgendem Leerzeichen erstellen können, indem Sie nach dem Leerzeichen ein Trennzeichen hinzufügen.  
+   Diese Regel bedeutet, dass Sie einen Verzeichnisnamen mit einem nachfolgendem Leerzeichen erstellen können, indem Sie nach dem Leerzeichen ein Trennzeichen hinzufügen.
 
    > [!IMPORTANT]
    > Sie sollten **nie** Verzeichnisse oder Dateinamen mit nachstehenden Leerzeichen erstellen. Nachstehende Leerzeichen machen es schwer, wenn nicht sogar unmöglich, auf ein Verzeichnis zuzugreifen. Außerdem treten häufig Fehler auf, wenn Anwendungen versuchen, Verzeichnisse oder Dateien zu verarbeiten, deren Namen nachstehende Leerzeichen enthalten.
@@ -187,7 +187,7 @@ Normalerweise werden alle Pfade, die an die Windows-API übergeben werden, effek
 
 Warum kann es sinnvoll sein, die Normalisierung zu überspringen? Es gibt drei wichtige Gründe:
 
-1. Um Zugriff auf Pfade zu erhalten, die zwar zulässig sind, aber normalerweise nicht verfügbar. Beispielsweise ist es auf keine andere Weise möglich, Zugriff auf eine Datei oder ein Verzeichnis namens `hidden.` zu erhalten. 
+1. Um Zugriff auf Pfade zu erhalten, die zwar zulässig sind, aber normalerweise nicht verfügbar. Beispielsweise ist es auf keine andere Weise möglich, Zugriff auf eine Datei oder ein Verzeichnis namens `hidden.` zu erhalten.
 
 1. Zur Verbesserung der Leistung, wenn Sie die Normalisierung bereits durchgeführt haben.
 
@@ -200,7 +200,7 @@ Das Überspringen der Normalisierung und MAX_PATH-Überprüfungen ist der einzig
 
 Pfade, die mit `\\?\` beginnen, werden weiterhin normalisiert, wenn Sie sie explizit an die [GetFullPathName-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) übergeben.
 
-Beachten Sie, dass Sie Pfade mit mehr Zeichen als `MAX_PATH` verwenden können, um [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ohne `\\?\` abzurufen. Beliebige Pfadlängen werden bis zur maximalen Länge von Zeichenfolgen unterstützt, die Windows verarbeiten kann.
+Sie können Pfade mit mehr Zeichen als `MAX_PATH` übergeben, um [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ohne `\\?\` abzurufen. Beliebige Pfadlängen werden bis zur maximalen Länge von Zeichenfolgen unterstützt, die Windows verarbeiten kann.
 
 ## <a name="case-and-the-windows-file-system"></a>Groß-/Kleinbuchstaben im Windows-Dateisystem
 

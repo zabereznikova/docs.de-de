@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in Version 7.0 der C#-Sprache.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926577"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694581"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -211,7 +211,7 @@ Das gleiche Verfahren kann mit `async`-Methoden eingesetzt werden, um sicherzust
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Einige der Entwürfe, die von lokalen Funktionen unterstützt werden, könnten auch mithilfe von *Lambdaausdrücken* erreicht werden. Interessierte Benutzer können [mehr über die Unterschiede erfahren](../local-functions-vs-lambdas.md).
+> Einige der Entwürfe, die von lokalen Funktionen unterstützt werden, könnten auch mithilfe von *Lambdaausdrücken* erreicht werden. Weitere Informationen finden Sie unter [Lokale Funktionen im Vergleich zu Lambdaausdrücken](../local-functions-vs-lambdas.md).
 
 ## <a name="more-expression-bodied-members"></a>Mehr Ausdruckskörpermember
 
@@ -241,7 +241,7 @@ Durch die neue Sprachfunktion sind die Rückgabetypen asynchroner Methoden nicht
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> Sie müssen das NuGet-Paket hinzufügen [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/), um den Typ <xref:System.Threading.Tasks.ValueTask%601> verwenden zu können.
+> Sie müssen das NuGet-Paket hinzufügen [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/), um den Typ <xref:System.Threading.Tasks.ValueTask%601> verwenden zu können.
 
 Diese Verbesserung ist besonders für Bibliotheksautoren hilfreich, um die Zuordnung von `Task` in leistungskritischem Code zu verhindern.
 

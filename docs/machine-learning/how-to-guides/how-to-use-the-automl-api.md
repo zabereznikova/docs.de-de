@@ -1,14 +1,14 @@
 ---
 title: 'Gewusst wie: Verwenden der automatisierten ML-API von ML.NET'
 description: Die automatisierte ML-API von ML.NET automatisiert das Erstellen von Modellen und generiert ein zur Bereitstellung geeignetes Modell. Erfahren Sie, welche Optionen Sie verwenden können, um automatisierte Machine Learning-Aufgaben zu konfigurieren.
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977115"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636561"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Gewusst wie: Verwenden der automatisierten ML-API von ML.NET
 
@@ -38,6 +38,7 @@ Bevor Sie ein Experiment erstellen, ermitteln Sie die Art des Machine Learning-P
 * Binäre Klassifizierung
 * Multiklassenklassifizierung
 * Regression
+* Empfehlung
 
 ## <a name="create-experiment-settings"></a>Erstellen von Experimenteinstellungen
 
@@ -59,6 +60,12 @@ Erstellen Sie Experimenteinstellungen für den bestimmten ML-Aufgabentyp:
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* Empfehlung
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>Konfigurieren von Experimenteinstellungen
@@ -110,12 +117,13 @@ Die Liste der pro ML-Aufgabe unterstützten Trainer finden Sie unter dem entspre
 * [Unterstützte Algorithmen für binäre Klassifizierung](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Unterstützte Algorithmen für Multiklassenklassifizierung](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Unterstützte Regressionsalgorithmen](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [Unterstützte Empfehlungsalgorithmen](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Metrikoptimierung
 
 Die Metrikoptimierung, wie im obigen Beispiel dargestellt, bestimmt, welche Metrik während des Modelltrainings optimiert werden soll. Welche Metrikoptimierung Sie auswählen können, richtet sich nach der Art der ausgewählten Aufgabe. Es folgt eine Liste der verfügbaren Metriken.
 
-|[Binäre Klassifizierung](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Multiklassenklassifizierung](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regression](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Binäre Klassifizierung](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Multiklassenklassifizierung](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regression und Empfehlung](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Genauigkeit| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -219,7 +227,7 @@ Im Folgenden finden Sie alle verfügbaren Metriken pro ML-Aufgabe:
 
 * [Metriken zur binären Klassifizierung](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Metriken zur Multiklassenklassifizierung](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Regressionsmetriken](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Regression und Empfehlungsmetriken](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Siehe auch
 

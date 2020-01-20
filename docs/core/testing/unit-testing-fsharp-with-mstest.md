@@ -4,13 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests für F# i
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117005"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714275"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und MSTest
 
@@ -21,7 +20,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 ## <a name="creating-the-source-project"></a>Erstellen des Quellprojekts
 
 Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-with-fsharp*, um die Projektmappe zu speichern.
-Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappe zu erstellen. Dies vereinfacht die Verwaltung des Klassenbibliotheks- und Komponententestprojekts.
+Führen Sie in diesem neuen Verzeichnis `dotnet new sln` aus, um eine neue Projektmappe zu erstellen. Dies vereinfacht die Verwaltung des Klassenbibliotheks- und Komponententestprojekts.
 Erstellen Sie im Projektmappenverzeichnis ein *MathService*-Verzeichnis. Nachfolgend wird die bisherige Verzeichnis- und Dateistruktur dargestellt:
 
 ```
@@ -30,14 +29,14 @@ Erstellen Sie im Projektmappenverzeichnis ein *MathService*-Verzeichnis. Nachfol
     /MathService
 ```
 
-Machen Sie *MathService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen.  Sie erstellen eine fehlerhafte Implementierung des Math-Diensts:
+Machen Sie *MathService* zum aktuellen Verzeichnis, und führen Sie `dotnet new classlib -lang "F#"` aus, um das Quellprojekt zu erstellen.  Sie erstellen eine fehlerhafte Implementierung des Math-Diensts:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-with-fsharp*. Führen Sie [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen.
+Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-with-fsharp*. Führen Sie `dotnet sln add .\MathService\MathService.fsproj` aus, um der Projektmappe das Klassenbibliotheksprojekt hinzuzufügen.
 
 ## <a name="creating-the-test-project"></a>Erstellen des Testprojekts
 
@@ -52,7 +51,7 @@ Erstellen Sie als Nächstes das Verzeichnis *MathService.Tests*. Die folgende Gl
     /MathService.Tests
 ```
 
-Machen Sie das *MathService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und erstellen Sie ein neues Projekt mit [`dotnet new mstest -lang F#`](../tools/dotnet-new.md). Dies erstellt ein Testprojekt, das MSTest als Testframework verwendet. Die generierte Vorlage konfiguriert Test Runner in *MathServiceTests.fsproj*:
+Machen Sie das *MathService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und erstellen Sie ein neues Projekt mit `dotnet new mstest -lang "F#"`. Dies erstellt ein Testprojekt, das MSTest als Testframework verwendet. Die generierte Vorlage konfiguriert Test Runner in *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -62,7 +61,7 @@ Machen Sie das *MathService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und er
 </ItemGroup>
 ```
 
-Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt MSTest und MSTest Runner hinzugefügt. Fügen Sie jetzt die `MathService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt MSTest und MSTest Runner hinzugefügt. Fügen Sie jetzt die `MathService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl `dotnet add reference`:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,7 +82,7 @@ Sie verfügen über das folgende endgültige Projektmappenlayout:
         MathServiceTests.fsproj
 ```
 
-Führen Sie [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-with-fsharp* aus.
+Führen Sie `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` im Verzeichnis *unit-testing-with-fsharp* aus.
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
@@ -107,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-Das `[<TestClass>]`-Attribut gibt eine Klasse an, die Tests enthält. Das `[<TestMethod>]`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *unit-testing-with-fsharp* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
+Das `[<TestClass>]`-Attribut gibt eine Klasse an, die Tests enthält. Das `[<TestMethod>]`-Attribut kennzeichnet eine Testmethode, die von Test Runner ausgeführt wird. Führen Sie `dotnet test` im Verzeichnis *unit-testing-with-fsharp* aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
 Diese zwei Tests geben jeweils den grundlegendsten bestandenen und fehlerhaften Test an. `My test` wurde erfolgreich und `Fail every time` fehlerhaft abgeschlossen. Erstellen Sie jetzt einen Test für die `squaresOfOdds`-Methode. Die `squaresOfOdds`-Methode gibt eine Liste der Quadrate aller ungeraden ganzzahligen Werte zurück, die Teil der Eingabesequenz sind. Anstatt zu versuchen, alle diese Funktionen gleichzeitig zu schreiben, können Sie iterativ Tests zum Überprüfen der Funktionalität erstellen. Damit jeder Test erfolgreich abgeschlossen wird, muss die erforderliche Funktionalität für die Methode erstellt werden.
 
@@ -180,3 +179,10 @@ let squaresOfOdds xs =
 ```
 
 Sie haben eine kleine Bibliothek und eine Reihe von Unittests für diese Bibliothek erstellt. Sie haben die Projektmappe so strukturiert, dass das Hinzufügen neuer Pakete und Tests Teil des normalen Workflows ist. Sie haben den Großteil Ihrer Zeit und Ihres Aufwands mit der Erreichung der Anwendungsziele verbracht.
+
+## <a name="see-also"></a>Siehe auch
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-sln.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Zeilenweises Lesen einer Textdatei (Visual C#)'
+title: 'Vorgehensweise: Zeilenweises Lesen einer Textdatei (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6af48cdacd836465d776a3fd4e1d17aa0298b77
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589962"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635339"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Vorgehensweise: Zeilenweises Lesen einer Textdatei (Visual C#)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>Vorgehensweise: Zeilenweises Lesen einer Textdatei (C#-Programmierleitfaden)
 Dieses Beispiel liest den Inhalt einer Textdatei Zeile pro Zeile in eine Zeichenfolge mithilfe der `ReadLine`-Methode der `StreamReader`-Klasse. Jede Textzeile wird in der Zeichenfolge `line` gespeichert und auf dem Bildschirm angezeigt.  
   
 ## <a name="example"></a>Beispiel  

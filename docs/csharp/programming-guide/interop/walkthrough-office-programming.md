@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423195"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635352"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 
@@ -24,7 +24,7 @@ Beide Sprachen ermöglichen das Einbetten von Typinformationen, wodurch Assembly
 
 Diese exemplarische Vorgehensweise veranschaulicht diese Funktionen im Kontext der Office-Programmierung, aber viele dieser Funktionen sind auch bei der allgemeinen Programmierung nützlich. In der exemplarischen Vorgehensweise verwenden Sie eine Excel-Add-In-Anwendung, um eine Excel-Arbeitsmappe zu erstellen. Als nächstes erstellen Sie ein Word-Dokument, das einen Link zur Arbeitsmappe enthält. Zum Schluss sehen Sie, wie Sie die PIA-Abhängigkeit aktivieren und deaktivieren können.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder neuere Versionen installiert sein, um diese exemplarische Vorgehensweise ausführen zu können.
 
@@ -203,7 +203,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 - [Verwenden von dynamischen Typen](../types/using-type-dynamic.md)
 - [Lambdaausdrücke (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambdaausdrücke (C#)](../statements-expressions-operators/lambda-expressions.md)
-- [Vorgehensweise: Verwenden von indizierten Eigenschaften bei der COM-Interop-Programmierung](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Indizierte Eigenschaften bei der COM-Interop-Programmierung](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../standard/assembly/embed-types-visual-studio.md)
 - [Exemplarische Vorgehensweise: Creating Your First VSTO Add-in for Excel (Exemplarische Vorgehensweise: Erstellen Ihres ersten VSTO-Add-Ins für Excel)](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)

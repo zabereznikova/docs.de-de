@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038997"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345305"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatoren für den Memberzugriff (C#-Referenz)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>NULL-bedingte Operatoren „?.“ und „?[]“
 
-Ein in C# 6 und höher verfügbarer NULL-bedingter Operator wendet nur dann einen Memberzugriffsvorgang (`?.`) oder Elementzugriffsvorgang (`?[]`) auf seinen Operanden an, wenn dieser Operand als ungleich NULL ausgewertet wird. Wenn der Operand als `null` ausgewertet wird, ist das Ergebnis der Anwendung des Operators `null`. Der NULL-bedingte Memberzugriffsoperator `?.` wird auch als Elvis-Operator bezeichnet.
+Ein in C# 6 und höher verfügbarer NULL-bedingter Operator wendet nur dann einen [Memberzugriffsvorgang](#member-access-operator-) (`?.`) oder [Elementzugriffsvorgang](#indexer-operator-) (`?[]`) auf seinen Operanden an, wenn dieser Operand als ungleich NULL ausgewertet wird. Andernfalls gibt er `null` zurück. Dies bedeutet:
+
+- Wenn `a` als `null` ausgewertet wird, ist das Ergebnis von `a?.x` oder `a?[x]` `null`.
+- Wenn `a` in einen Wert ungleich NULL ausgewertet wird, ist das Ergebnis von `a?.x` oder `a?[x]` mit dem Ergebnis von `a.x` bzw. `a[x]` identisch.
+
+  > [!NOTE]
+  > Wenn `a.x` oder `a[x]` eine Ausnahme auslöst, würden `a?.x` oder `a?[x]` für `a` ungleich NULL dieselbe Ausnahme auslösen. Wenn `a` z. B. eine Arrayinstanz ungleich NULL ist und `x` außerhalb der Grenzen von `a` liegt, löst `a?[x]` eine <xref:System.IndexOutOfRangeException> aus.
 
 Die NULL-bedingten Operatoren sind Kurzschlussoperatoren. D.h., wenn ein Vorgang in einer Kette von bedingten Member- oder Elementzugriffsvorgängen `null` zurückgibt, wird der Rest der Kette nicht ausgeführt. Im folgenden Beispiel wird `B` nicht ausgewertet, wenn `A` als `null` ausgewertet wird, und `C` wird nicht ausgewertet, wenn `A` oder `B` als `null` ausgewertet wird:
 
@@ -123,6 +129,8 @@ Im folgenden Beispiel wird die Verwendung des `?.`- und `?[]`-Operators veransch
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 Im vorangehenden Beispiel wird auch der [NULL-Sammeloperator`??`](null-coalescing-operator.md) zum Angeben eines alternativen Ausdrucks zum Auswerten verwendet, falls das Ergebnis eines NULL-bedingten Vorgangs `null` ist.
+
+Der NULL-bedingte Memberzugriffsoperator `?.` wird auch als Elvis-Operator bezeichnet.
 
 ### <a name="thread-safe-delegate-invocation"></a>Threadsicherer Delegataufruf
 
@@ -150,7 +158,7 @@ Im folgenden Beispiel wird der Aufruf einer Methode mit oder ohne Argumente sowi
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-Klammern verwenden Sie auch beim Aufrufen eines [Konstruktors](../../programming-guide/classes-and-structs/constructors.md) mit dem [ `new` ](new-operator.md)-Operator.
+Klammern verwenden Sie auch beim Aufrufen eines [Konstruktors](../../programming-guide/classes-and-structs/constructors.md) mit dem [`new`](new-operator.md)-Operator.
 
 ### <a name="other-usages-of-"></a>Andere Verwendungen von „()“
 
@@ -168,7 +176,7 @@ Wie das vorherige Beispiel zeigt, weist Ausdruck `^e` den Typ <xref:System.Index
 
 Sie können auch den `^`-Operator mit dem [Bereichsoperator](#range-operator-) verwenden, um einen Bereich von Indizes zu erstellen. Weitere Informationen finden Sie unter [Indizes und Bereiche](../../tutorials/ranges-indexes.md).
 
-## <a name="range-operator-"></a>Bereichsoperator ..
+## <a name="range-operator-"></a>Bereichsoperator .
 
 Der Operator `..`, der in C# 8.0 und höher verfügbar ist, gibt den Anfang und das Ende eines Bereichs von Indizes als seine Operanden an. Der linke Operand ist der *inklusive* Anfang eines Bereichs. Der rechte Operand ist das *exklusive* Ende eines Bereichs. Beide Operanden können ein Index vom Anfang oder vom Ende einer Sequenz sein, wie das folgende Beispiel zeigt:
 

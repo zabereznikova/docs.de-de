@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198448"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901590"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: Vorkompilierungstool wurde als veraltet markiert.
 
@@ -28,9 +28,9 @@ Das Razor SDK unterstützt diese Funktion nun nativ. Das Paket `Microsoft.AspNet
 
 Das Razor SDK bietet mehr Funktionen und überprüft die Richtigkeit der *CSHTML*-Dateien zur Erstellungszeit. Das SDK verbessert auch die Startzeit von Apps.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
-Benutzer von ASP.NET Core 2.1 oder höher sollten auf die native Unterstützung für die Vorkompilierung im [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0) wechseln. Wenn Fehler oder fehlende Features die Migration zum Razor SDK verhindern, melden Sie auf [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues) ein Problem.
+Benutzer von ASP.NET Core 2.1 oder höher sollten auf die native Unterstützung für die Vorkompilierung im [Razor SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0) wechseln. Wenn Fehler oder fehlende Features die Migration zum Razor SDK verhindern, melden Sie auf [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) ein Problem.
 
 #### <a name="category"></a>Kategorie
 

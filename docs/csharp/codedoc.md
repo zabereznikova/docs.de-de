@@ -4,14 +4,14 @@ description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationsk
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710991"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713937"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
+# <a name="document-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
 XML-Dokumentationskommentare sind eine besondere Art von Kommentaren, die über der Definition von benutzerdefinierten Typen oder Membern hinzugefügt werden.
 Sie sind besonders, da sie vom Compiler verarbeitet werden können, um eine XML-Dokumentationsdatei zur Kompilierzeit zu generieren.
@@ -37,7 +37,7 @@ Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folge
 
 - Wenn Sie eine .NET Framework-Anwendung über die Befehlszeile kompilieren, fügen Sie beim Kompilieren die [-doc-Compileroption](language-reference/compiler-options/doc-compiler-option.md) hinzu.  
 
-XML-Dokumentationskommentare verwenden dreifache Schrägstriche (`///`) und einen Kommentartext im XML-Format. Beispiel:
+XML-Dokumentationskommentare verwenden dreifache Schrägstriche (`///`) und einen Kommentartext im XML-Format. Zum Beispiel:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
@@ -137,7 +137,7 @@ Dies kann jeder Typ sein, der im Projekt definiert ist, oder eine Assembly, auf 
 
 ## <a name="param"></a>\<param>
 
-Das `<param>`-Tag wird verwendet, um die Parameter einer Methode zu beschreiben. Hier sehen Sie ein Beispiel für die doppelte `Add`-Methode: Der Parameter, den der Tag beschreibt, ist im **erforderlichen** `name`-Attribut angegeben.
+Das `<param>`-Tag wird verwendet, um die Parameter einer Methode zu beschreiben. Hier sehen Sie ein Beispiel für die doppelte `Add`-Methode: Der Parameter, den der Tag beschreibt, wird im **erforderlichen** `name`-Attribut angegeben.
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ Fügen Sie der `Math`-Klasse eine schnelle generische Methode hinzu, um zu über
 
 ## <a name="paramref"></a>\<paramref>
 
-Manchmal beschreiben Sie möglicherweise gerade die Funktionsweise einer Methode in einem möglichen `<summary>`-Tag und wollen dann auf einen Parameter verweisen. Der `<paramref>`-Tag eignet sich hervorragend dafür. Aktualisieren wir die Zusammenfassung der doppelt basierten `Add`-Methode. Wie beim `<param>`-Tag wird der Name des Parameters im **erforderlichen** `name`-Attribut angegeben.
+Manchmal beschreiben Sie möglicherweise gerade die Funktionsweise einer Methode in einem möglichen `<summary>`-Tag und wollen dann auf einen Parameter verweisen. Der `<paramref>`-Tag eignet sich hervorragend dafür. Aktualisieren wir die Zusammenfassung der doppelt basierten `Add`-Methode. Wie das `<param>`-Tag wird der Name des Parameters im **erforderlichen** `name`-Attribut angegeben.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -170,7 +170,7 @@ Erstellen Sie eine unsortierte Liste aller mathematischen Operationen, die Ihre 
 
 Sie können eine sortierte Liste oder eine Tabelle erstellen, indem Sie das Attribut `type` auf `number` bzw. `table` ändern.
 
-### <a name="putting-it-all-together"></a>Zusammenfassung
+### <a name="put-it-all-together"></a>Zusammenfassung
 
 Wenn Sie diesem Tutorial gefolgt sind und die Tags soweit erforderlich für Ihren Code übernommen haben, sollte Ihr Code nun ähnlich wie der folgende aussehen:
 
@@ -203,10 +203,10 @@ Das `name`-Attribut stellt den Namensbezeichner in dem Tag dar, das sich vor den
 
 Das `id`-Attribut, das anstelle von `name` verwendet werden kann, stellt die ID für das Tag dar, das sich vor den Kommentaren befindet.
 
-### <a name="user-defined-tags"></a>Benutzerdefinierte Tags
+### <a name="user-defined-tags"></a>Benutzerdefinierter Tags
 
 Alle oben genannten Tags werden vom C#-Compiler erkannt. Ein Benutzer kann jedoch auch eigene Tags definieren.
-Tools wie Sandcastle bieten Unterstützung für zusätzliche Tags wie [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) oder [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) und unterstützen sogar [documenting namespaces (Dokumentieren von Namespaces)](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Tools wie Sandcastle bieten Unterstützung für zusätzliche Tags wie [\<event>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) und [\<note>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) und unterstützen sogar das [Dokumentieren von Namespaces](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Benutzerdefinierte oder interne Dokumentationsgenerierungstools können auch mit den Standardtags verwendet werden, und mehrere Ausgabeformate von HTML in PDF können unterstützt werden.
 
 ## <a name="recommendations"></a>Empfehlungen

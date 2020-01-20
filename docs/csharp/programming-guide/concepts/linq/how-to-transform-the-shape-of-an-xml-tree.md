@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Transformieren der Form eines XML-Baums (C#)'
+title: 'Vorgehensweise: Transformieren der Form einer XML-Struktur (C#)'
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: c6f78decdcc32d202f4a0f1e51a012dce8aa7d6c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592223"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347307"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Vorgehensweise: Transformieren der Form eines XML-Baums (C#)
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Vorgehensweise: Transformieren der Form einer XML-Struktur (C#)
 Die *Form* eines XML-Dokuments wird von dessen Elementnamen, Attributnamen und den Merkmalen seiner Hierarchie bestimmt.  
   
  Es kann passieren, dass Sie die Form eines XML-Dokuments ändern müssen. Dies kann z. B. der Fall sein, wenn Sie ein vorhandenes XML-Dokument an ein anderes System senden müssen, das andere Element- und Attributnamen verlangt. Sie können das Dokument zwar selbst durchgehen und die Elemente nach Bedarf löschen und umbenennen, bei Verwendung der funktionalen Konstruktion erhalten Sie aber besser lesbaren und verwaltbaren Code. Weitere Informationen zu funktionalen Konstruktionen finden Sie unter [Functional Construction (LINQ to XML) (C#) (Funktionale Konstruktion (LINQ to XML) (C#))](./functional-construction-linq-to-xml.md).  

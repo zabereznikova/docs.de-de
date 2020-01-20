@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: LINQ bietet Abfragefunktionen auf Sprachebene und eine API für C# und VB, sodass die Möglichkeit besteht, aussagekräftigen, deklarativen Code zu schreiben.
+description: LINQ bietet Abfragefunktionen auf Sprachebene und eine API für C# und Visual Basic, sodass die Möglichkeit besteht, aussagekräftigen, deklarativen Code zu schreiben.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238634"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347270"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>Was ist das?
 
-LINQ bietet Abfragefunktionen auf Sprachebene und eine API einer [Funktion höherer Ordnung](https://en.wikipedia.org/wiki/Higher-order_function) für C# und VB, sodass die Möglichkeit besteht, aussagekräftigen, deklarativen Code zu schreiben.
+LINQ bietet Abfragefunktionen auf Sprachebene und eine API einer [Funktion höherer Ordnung](https://en.wikipedia.org/wiki/Higher-order_function) für C# und Visual Basic, sodass die Möglichkeit besteht, aussagekräftigen, deklarativen Code zu schreiben.
 
 Abfragesyntax auf Sprachebene:
 
@@ -395,5 +395,5 @@ Parallelisierbare CPU-gebundene Aufträge, die problemlos über LINQ ausgedrück
 ## <a name="further-resources"></a>Weitere Ressourcen:
 
 * [101 LINQ-Beispiele](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/VB
+* [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), ein E-Book, in dem die Implementierung von LINQ to Objects erläutert wird

@@ -1,16 +1,15 @@
 ---
 title: Übereinstimmungsvergleiche – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d8dc1fd9ba99116d4d6ec84ca6e48b4307b30dbb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552423"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699183"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
 
@@ -24,7 +23,7 @@ Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu 
   
  In diesem Code werden zwei Objekte erstellt, nach der Zuweisungsanweisung verweisen jedoch beide Verweise auf das gleiche Objekt. Es liegt eine Verweisgleichheit vor. Verwenden Sie die <xref:System.Object.ReferenceEquals%2A>-Methode, um zu ermitteln, ob zwei Verweise auf das gleiche Objekt verweisen.  
   
- Das Konzept der Verweisgleichheit gilt nur für Verweistypen. Bei Werttypobjekten kann keine Verweisgleichheit vorliegen, da bei Zuweisung einer Werttypinstanz zu einer Variablen eine Kopie des Werts erstellt wird. Aus diesem Grund ist es unmöglich, dass zwei nicht geschachtelte Strukturen vorhanden sind, die auf die gleiche Position im Arbeitsspeicher verweisen. Wenn Sie zwei Werttypen mit der <xref:System.Object.ReferenceEquals%2A>-Methode vergleichen, ist das Ergebnis immer `false`, selbst wenn die in den Objekten enthaltenen Werte alle identisch sind. Der Grund hierfür ist, dass jede Variable in einer eigenen Objektinstanz geschachtelt ist. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)](./how-to-test-for-reference-equality-identity.md).  
+Das Konzept der Verweisgleichheit gilt nur für Verweistypen. Bei Werttypobjekten kann keine Verweisgleichheit vorliegen, da bei Zuweisung einer Werttypinstanz zu einer Variablen eine Kopie des Werts erstellt wird. Aus diesem Grund ist es unmöglich, dass zwei nicht geschachtelte Strukturen vorhanden sind, die auf die gleiche Position im Arbeitsspeicher verweisen. Wenn Sie zwei Werttypen mit der <xref:System.Object.ReferenceEquals%2A>-Methode vergleichen, ist das Ergebnis immer `false`, selbst wenn die in den Objekten enthaltenen Werte alle identisch sind. Der Grund hierfür ist, dass jede Variable in einer eigenen Objektinstanz geschachtelt ist. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)](./how-to-test-for-reference-equality-identity.md).
 
 ## <a name="value-equality"></a>Wertgleichheit
 
@@ -43,7 +42,7 @@ if( b == a)
   
  Für die meisten anderen Typen ist die Prüfung auf Wertgleichheit komplexer, da es darauf ankommt, wie die Wertgleichheit für den jeweiligen Typ definiert wird. Für Klassen und Strukturen mit mehreren Feldern oder Eigenschaften wird Wertgleichheit oft so definiert, dass alle Felder oder Eigenschaften den gleichen Wert aufweisen. Zwei `Point`-Objekte werden z. B. als äquivalent definiert, wenn pointA.X gleich pointB.X und pointA.Y gleich pointB.Y ist.  
   
- Die Äquivalenz muss jedoch nicht unbedingt auf allen Feldern in einem Typ basieren. Die Basis kann auch eine Teilmenge sein. Wenn Sie Typen von einem anderen Besitzer vergleichen, vergewissern Sie sich, wie die Gleichheit für den jeweiligen Typ definiert ist. Informationen zum Definieren von Wertgleichheit für Ihre eigenen Klassen und Strukturen finden Sie unter [ Vorgehensweise: Definieren von Wertgleichheit für einen Typ](./how-to-define-value-equality-for-a-type.md).  
+Die Äquivalenz muss jedoch nicht unbedingt auf allen Feldern in einem Typ basieren. Die Basis kann auch eine Teilmenge sein. Wenn Sie Typen von einem anderen Besitzer vergleichen, vergewissern Sie sich, wie die Gleichheit für den jeweiligen Typ definiert ist. Informationen zum Definieren von Wertgleichheit für Ihre eigenen Klassen und Strukturen finden Sie unter [Vorgehensweise: Definieren von Wertgleichheit für einen Typ](./how-to-define-value-equality-for-a-type.md).
   
 ### <a name="value-equality-for-floating-point-values"></a>Wertgleichheit für Gleitkommawerte
 
@@ -51,7 +50,7 @@ if( b == a)
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|BESCHREIBUNG|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)](./how-to-test-for-reference-equality-identity.md)|Beschreibt, wie zwei Variablen auf Verweisgleichheit geprüft werden.|  
 |[Vorgehensweise: Definieren von Wertgleichheit für einen Typ](./how-to-define-value-equality-for-a-type.md)|Beschreibt, wie eine benutzerdefinierte Definition der Wertgleichheit für einen Typ erstellt wird.|  

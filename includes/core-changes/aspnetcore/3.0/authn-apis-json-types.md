@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad451329d7b9ec15bc8b3c49159346d79944d692
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 494e792d63a611cdaedf3e40aa607cfbb0420ae4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393973"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901857"
 ---
 ### <a name="authentication-newtonsoftjson-types-replaced"></a>Authentifizierung: Newtonsoft.Json-Typen wurden ersetzt.
 
@@ -13,15 +13,15 @@ In ASP.NET Core 3.0 wurden die in Authentifizierungs-APIs verwendeten `Newtonso
 * Von den OAuth-Anbietern abgeleitete Klassen (z. B. von [aspnet-contrib ](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers))
 * Erweiterte Implementierungen von Anspruchsbearbeitungen
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#7105](https://github.com/aspnet/AspNetCore/pull/7105). Weitere Informationen finden Sie unter [aspnet/AspNetCore#7289](https://github.com/aspnet/AspNetCore/issues/7289).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#7105](https://github.com/dotnet/aspnetcore/pull/7105). Weitere Informationen finden Sie unter [dotnet/aspnetcore#7289](https://github.com/dotnet/aspnetcore/issues/7289).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
 3.0
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
-Bei abgeleiteten OAuth-Implementierungen besteht die häufigste Änderung darin, dass `JObject.Parse` in der `CreateTicketAsync`-Überschreibung durch `JsonDocument.Parse` ersetzt wird, wie [hier](https://github.com/aspnet/AspNetCore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40) gezeigt. `JsonDocument` implementiert `IDisposable`.
+Bei abgeleiteten OAuth-Implementierungen besteht die häufigste Änderung darin, dass `JObject.Parse` in der `CreateTicketAsync`-Überschreibung durch `JsonDocument.Parse` ersetzt wird, wie [hier](https://github.com/dotnet/aspnetcore/pull/7105/files?utf8=%E2%9C%93&diff=unified&w=1#diff-e1c9f9740a6fe8021020a6f249c589b0L40) gezeigt. `JsonDocument` implementiert `IDisposable`.
 
 In der folgenden Liste werden bekannte Änderungen erläutert:
 

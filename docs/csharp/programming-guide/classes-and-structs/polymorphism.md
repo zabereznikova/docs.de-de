@@ -1,17 +1,16 @@
 ---
 title: Polymorphismus – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f65082ad5094eb0aab28edeb06790a9af4019c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970344"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714730"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -58,7 +57,7 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- Auf ausgeblendete Klassenmember kann vom Clientcode immer noch zugegriffen werden, indem die Instanz der abgeleiteten Klasse in eine Instanz der Basisklasse umgewandelt wird. Beispiel:  
+ Auf ausgeblendete Klassenmember kann vom Clientcode immer noch zugegriffen werden, indem die Instanz der abgeleiteten Klasse in eine Instanz der Basisklasse umgewandelt wird. Zum Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   

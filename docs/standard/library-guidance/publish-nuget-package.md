@@ -1,15 +1,13 @@
 ---
 title: Veröffentlichen eines NuGet-Pakets
 description: Best Practices für die Veröffentlichung von .NET-Bibliotheken in NuGet.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640772"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706464"
 ---
 # <a name="publishing-a-nuget-package"></a>Veröffentlichen eines NuGet-Pakets
 
@@ -34,7 +32,7 @@ NuGet-Pakete werden über Paketrepositorys veröffentlicht und verwendet. NuGet.
 
 Es ist wichtig, dass keine Angreifer Zugriff auf Ihr NuGet-Konto erhalten und eine schädliche Version Ihrer Bibliothek hochladen. NuGet.org bietet zweistufige Authentifizierung und E-Mail-Benachrichtigungen, wenn ein Paket veröffentlicht wird. Aktivieren Sie diese Features nach der Anmeldung bei NuGet.org auf der Seite **Kontoeinstellungen**.
 
-![Alternativtext](./media/publish-nuget-package/nuget-2fa.png "NuGet-Kontosicherheit")
+![Alternativer Text](./media/publish-nuget-package/nuget-2fa.png "NuGet-Kontosicherheit")
 
 **✔️ VERWENDEN️** Sie ein Microsoft-Konto zur Anmeldung bei NuGet.
 

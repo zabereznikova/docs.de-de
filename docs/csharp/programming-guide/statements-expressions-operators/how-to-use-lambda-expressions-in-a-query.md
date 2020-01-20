@@ -1,18 +1,17 @@
 ---
-title: 'Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423168"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711960"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierhandbuch)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierleitfaden)
 Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sondern nur in Methodenaufrufen. Abfrageausdrücke können Methodenaufrufe enthalten. Einige Abfragevorgänge können nur in Methodensyntax ausgedrückt werden. Weitere Informationen zu den Unterschieden zwischen Abfragesyntax und Methodensyntax finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Beispiel  
@@ -28,7 +27,7 @@ Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sonder
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um diesen Code auszuführen, kopieren Sie die Methode, fügen Sie sie in die `StudentClass` ein, die in [Vorgehensweise: Abfragen einer Auflistung von Objekten](../../linq/query-a-collection-of-objects.md) bereitgestellt wird, und rufen Sie sie von der `Main`-Methode auf.  
+ Um diesen Code auszuführen, kopieren Sie die Methode, und fügen Sie sie in die `StudentClass` ein, die in [Abfragen einer Sammlung von Objekten](../../linq/query-a-collection-of-objects.md) bereitgestellt wird. Rufen Sie diese Methode dann in der `Main`-Methode auf.
   
 ## <a name="see-also"></a>Siehe auch
 

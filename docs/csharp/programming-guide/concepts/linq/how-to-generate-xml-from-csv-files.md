@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: bcae061bd5899f4ae5cbb89f8e05079bc9222312
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486787"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635807"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)
-In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
+In diesem Beispiel wird gezeigt, wie Sie mit LINQ (Language Integrated Query) und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code führt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage für ein Zeichenfolgenarray aus.  
+ Der folgende Code führt eine LINQ-Abfrage für ein Zeichenfolgenarray aus.  
   
  Die Abfrage verwendet die `let`-Klausel, um die einzelnen Zeichenfolgen in ein Array von Feldern aufzuteilen.  
   

@@ -1,6 +1,5 @@
 ---
 title: readonly-Schlüsselwort – C#-Referenz
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454957"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713117"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
@@ -103,7 +102,7 @@ Es ergeben sich zwei Vorteile, wenn Sie den `readonly`-Modifizierer auf anwendba
 
 Der `readonly`-Modifizierer ist für die meisten Member einer `struct`-Methode gültig, einschließlich Methoden, die die in <xref:System.Object?displayProperty=nameWithType> deklarierte Methoden außer Kraft setzen. Es gibt einige Einschränkungen:
 
-- Sie können keine statischen `readonly`-Member deklarieren.
+- Sie können keine statischen `readonly`-Methoden oder -Eigenschaften deklarieren.
 - Sie können keine `readonly`-Konstruktoren deklarieren.
 
 Sie können den `readonly`-Modifizierer zu einer Eigenschafts- oder Indexerdeklaration hinzufügen:

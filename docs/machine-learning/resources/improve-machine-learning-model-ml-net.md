@@ -5,12 +5,12 @@ ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557805"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739583"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>Verbessern der ML.NET-Modellgenauigkeit
 
@@ -32,7 +32,7 @@ Ein einzelner Datenpunkt kann schwer zu interpretieren sein. Der Aufbau von Kont
 
 Mehr Datenbeispiele und Features können zwar dazu beitragen, die Genauigkeit des Modells zu verbessern, aber sie können auch Rauschen verursachen, da nicht alle Daten und Features sinnvoll sind. Daher ist es wichtig zu verstehen, welche Features die Entscheidungen des Algorithmus am stärksten beeinflussen. Die Verwendung von Techniken wie Permutation Feature Importance (PFI) kann helfen, diese wichtigen Features zu identifizieren. Und damit können Sie nicht nur das Modell erklären, sondern auch die Ausgabe als Methode zur Auswahl von Features verwenden, um die Anzahl der verrauschten Features zu reduzieren, die in den Trainingsprozess eingehen.
 
-Informationen zur Verwendung von PFI finden Sie unter folgendem [Link](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
+Weitere Informationen zur Verwendung von PFI finden Sie unter [Erläutern von Modellvorhersagen mit PFI (Permutation Feature Importance, Permutationsmerkmalsgewichtung)](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
 ## <a name="cross-validation"></a>Kreuzvalidierung
 

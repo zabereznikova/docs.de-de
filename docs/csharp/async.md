@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037685"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713954"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -219,7 +218,7 @@ Obwohl es weniger Code ist, sollten Sie trotzdem vorsichtig sein, wenn Sie LINQ 
 
 Asynchrone Programmierung ist relativ einfach, es sind jedoch einige Details zu berücksichtigen, die unerwartetes Verhalten verhindern können.
 
-* `async` **-Methoden benötigen ein**  `await` **-Schlüsselwort in Ihrem Textkörper, oder sie werden nie zurückgeben!**
+* `async` **-Methoden benötigen ein Schlüsselwort**  `await`  **in Ihrem Textkörper, andernfalls erfolgt niemals eine Rückgabe!**
 
 Berücksichtigen Sie dies.  Wenn `await` im Textkörper einer `async`-Methode nicht verwendet wird, generiert der C#-Compiler eine Warnung, aber der Code wird kompiliert und ausgeführt, als ob es sich um eine normale Methode handeln würde.  Beachten Sie, dass dies auch sehr ineffizient wäre, da der Zustandsautomat, der vom C#-Compiler für die asynchrone Methode generiert wurde, nichts erreichen würde.
 

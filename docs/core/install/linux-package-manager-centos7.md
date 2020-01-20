@@ -4,12 +4,12 @@ description: Verwenden Sie einen Paket-Manager, um das .NET Core SDK und die -Ru
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: cb65811d5cae5c747c2660b4b10486f3162b9f33
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a7b4a76d780714850fe0792f51f1fa1282f6525d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998990"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740734"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>CentOS 7-Paket-Manager: Installieren von .NET Core
 

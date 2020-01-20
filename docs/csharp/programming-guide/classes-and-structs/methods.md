@@ -1,17 +1,16 @@
 ---
 title: Methoden – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699969"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714772"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 
@@ -39,7 +38,7 @@ Das Aufrufen einer Methode für ein Objekt ähnelt dem Zugreifen auf ein Feld. F
 
 ## <a name="method-parameters-vs-arguments"></a>Methodenparameter und Argumente
 
-Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments (sofern vorhanden) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Beispiel:
+Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments (sofern vorhanden) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Zum Beispiel:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -120,7 +119,7 @@ Weitere Informationen finden Sie unter [return](../../language-reference/keyword
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
-Wenn Sie eine Methode mit dem [async](../../language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../language-reference/operators/await.md) Operator in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
+Wenn Sie eine Methode mit dem Modifizierer [async](../../language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](../../language-reference/operators/await.md) in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
 
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
@@ -158,7 +157,7 @@ Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durc
 
 Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../language-reference/keywords/foreach-in.md) Anweisung auf.
 
-Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>oder <xref:System.Collections.Generic.IEnumerator%601>sein.
+Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.
 
 Weitere Informationen finden Sie unter [Iteratoren](../concepts/iterators.md).
 

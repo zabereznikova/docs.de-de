@@ -1,5 +1,5 @@
 ---
-title: Kombinierte Formatierung
+title: Zusammengesetzte Formatierung
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091570"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338511"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -55,7 +55,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 ## <a name="format-item-syntax"></a>Formatelementsyntax  
  Alle Formatelemente weisen die folgende Form auf und bestehen aus folgenden Komponenten:  
   
- `{` *Index*[`,`*Ausrichtung*][`:`*Formatzeichenfolge*]`}`  
+ `{` *Index*[`,`*Ausrichtung*][`:`*formatString*]`}`  
   
  Die übereinstimmenden geschweiften Klammern ("{" and "}") sind erforderlich.  
   
@@ -65,7 +65,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Mehrere Formatelemente können auf dasselbe Element in der Objektliste verweisen, indem derselbe Parameterbezeichner festgelegt wird. Sie können beispielsweise denselben numerischen Wert im hexadezimalen, im wissenschaftlichen und im Zahlenformat formatieren, indem Sie eine kombinierte Formatzeichenfolge wie die Folgende angeben: "0x{0:X} {0:E} {0:N}" wie im folgenden Beispiel gezeigt.  
+ Mehrere Formatelemente können auf dasselbe Element in der Objektliste verweisen, indem derselbe Parameterbezeichner festgelegt wird. Sie können beispielsweise denselben numerischen Wert im hexadezimalen, im wissenschaftlichen und im Zahlenformat formatieren, indem Sie eine kombinierte Formatzeichenfolge wie die Folgende angeben: „0x{0:X} {0:E} {0:N}“ wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  

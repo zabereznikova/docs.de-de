@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 16b9fde49f513643a37f65f3e926a34fc991c55a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393915"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901745"
 ---
 ### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hosting: ObjectPoolProvider wurde aus WebHostBuilder-Abhängigkeiten entfernt.
 
 Um ASP.NET Core produktiver zu machen, wurde der `ObjectPoolProvider` aus dem Hauptsatz von Abhängigkeiten entfernt. Bestimmte Komponenten, die von `ObjectPoolProvider` abhängen, fügen sich jetzt selbst hinzu.
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#5944](https://github.com/aspnet/AspNetCore/issues/5944).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -28,7 +28,7 @@ Weitere Informationen finden Sie unter [aspnet/AspNetCore#5944](https://github.c
 
 Diese Änderung wurde vorgenommen, um ASP.NET Core produktiver zu machen.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Wenn die Komponente `ObjectPoolProvider` erfordert, muss sie Ihren Abhängigkeiten über die `IServiceCollection` hinzugefügt werden.
 

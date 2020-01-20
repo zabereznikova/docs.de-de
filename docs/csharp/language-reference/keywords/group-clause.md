@@ -1,6 +1,5 @@
 ---
 title: group-Klausel – C#-Referenz
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428501"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713468"
 ---
 # <a name="group-clause-c-reference"></a>group-Klausel (C#-Referenz)
 
@@ -54,7 +53,7 @@ Das folgende Beispiel zeigt die Verwendung eines booleschen Werts für einen Sch
 
 ### <a name="grouping-by-numeric-range"></a>Gruppieren nach numerischen Bereich
 
-Das nächste Beispiel verwendet einen Ausdruck, um einen nummerischen Gruppenschlüssel zu erstellen, der einen Prozentbereich darstellt. Beachten Sie, dass [let](let-clause.md) an einer geeigneten Position eingesetzt wird, um Ergebnisse eines Methodenaufrufs zu speichern, damit Sie die Methode nicht zweimal in der `group`-Klausel aufrufen müssen. Weitere Informationen zur sicheren Verwendung von Methoden in Abfrageausdrücken finden Sie unter [Vorgehensweise: Behandeln von Ausnahmen in Abfrageausdrücken](../../linq/handle-exceptions-in-query-expressions.md).
+Das nächste Beispiel verwendet einen Ausdruck, um einen nummerischen Gruppenschlüssel zu erstellen, der einen Prozentbereich darstellt. Beachten Sie, dass [let](let-clause.md) an einer geeigneten Position eingesetzt wird, um Ergebnisse eines Methodenaufrufs zu speichern, damit Sie die Methode nicht zweimal in der `group`-Klausel aufrufen müssen. Weitere Informationen zur sicheren Verwendung von Methoden in Abfrageausdrücken finden Sie unter [Behandeln von Ausnahmen in Abfrageausdrücken](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ Verwenden Sie einen zusammengesetzten Schlüssel, wenn Sie Elemente gemäß mehr
 group person by new {name = person.surname, city = person.city};
 ```
 
-Verwenden Sie einen benannten Typ, wenn Sie die Abfragevariable an eine andere Methode übergeben müssen. Erstellen Sie eine spezielle Klasse mit automatisch implementierten Eigenschaften für die Schlüssel, und setzen Sie anschließend die Methoden <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A> außer Kraft. Sie können auch eine Struktur verwenden. In diesem Fall müssen Sie diese Methoden nicht unbedingt außer Kraft setzen. Weitere Informationen finden Sie unter[Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) und unter [Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Der zweite Artikel enthält ein Codebeispiel, in dem dargestellt wird, wie ein zusammengesetzter Schlüssel mit einem benannten Typ verwendet wird.
+Verwenden Sie einen benannten Typ, wenn Sie die Abfragevariable an eine andere Methode übergeben müssen. Erstellen Sie eine spezielle Klasse mit automatisch implementierten Eigenschaften für die Schlüssel, und setzen Sie anschließend die Methoden <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A> außer Kraft. Sie können auch eine Struktur verwenden. In diesem Fall müssen Sie diese Methoden nicht unbedingt außer Kraft setzen. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) und [Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Der zweite Artikel enthält ein Codebeispiel, in dem dargestellt wird, wie ein zusammengesetzter Schlüssel mit einem benannten Typ verwendet wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -82,7 +81,7 @@ Dieses Beispiel zeigt, wie zusätzliche Logik auf die Gruppen ausgeführt wird, 
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 `group`-Klauseln werden zur Kompilierzeit in Aufrufe der <xref:System.Linq.Enumerable.GroupBy%2A>-Methode übersetzt.
 

@@ -1,19 +1,18 @@
 ---
-title: 'Vorgehensweise: Implementieren von Schnittstellenereignissen – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Implementieren von Schnittstellenereignissen (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590503"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712337"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Vorgehensweise: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Vorgehensweise: Implementieren von Schnittstellenereignissen (C#-Programmierleitfaden)
 Eine [Schnittstelle](../../language-reference/keywords/interface.md) kann ein [Ereignis](../../language-reference/keywords/event.md) deklarieren. Das folgende Beispiel zeigt, wie Schnittstellenereignisse in einer Klasse implementiert werden. Die Regeln sind mit den Regeln zum Implementieren von Schnittstellenmethoden oder -eigenschaften weitestgehend identisch.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>So implementieren Sie Schnittstellenereignisse in einer Klasse  
@@ -64,4 +63,4 @@ Durch das Bereitstellen Ihrer eigenen Accessoren können Sie festlegen, ob die b
 - [Ereignisse](./index.md)
 - [Delegaten](../delegates/index.md)
 - [Explizite Schnittstellenimplementierung](../interfaces/explicit-interface-implementation.md)
-- [Vorgehensweise: Auslösen von Basisklassenereignissen in abgeleiteten Klassen](./how-to-raise-base-class-events-in-derived-classes.md)
+- [Auslösen von Basisklassenereignissen in abgeleiteten Klassen](./how-to-raise-base-class-events-in-derived-classes.md)

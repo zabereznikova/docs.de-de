@@ -1,15 +1,13 @@
 ---
 title: Breaking Changes und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Umgang mit Breaking Changes beim Erstellen von .NET-Bibliotheken.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104661"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740983"
 ---
 # <a name="breaking-changes"></a>Breaking Changes
 
@@ -66,9 +64,9 @@ Ein binärer Breaking Change tritt auf, wenn Sie die öffentliche API Ihrer Bibl
 
 Eine binärer Breaking Change kann auch eine **ganze Assembly** unterbrechen. Das Umbenennen einer Assembly mit `AssemblyName` ändert die Identität der Assembly ebenso wie das Hinzufügen, Entfernen oder Ändern des starken Namensschlüssels der Assembly. Eine Änderung der Identität einer Assembly unterbricht alle kompilierten Codes, die diese verwenden.
 
-**❌ Sie dürfen nicht** Assemblynamen ändern.
+**❌ ÄNDERN SIE KEINE** Assemblynamen.
 
-**❌ DON‘T** Sie dürfen den starken Namensschlüssel nicht hinzufügen, entfernen oder ändern.
+**❌ NICHT** den Schlüssel mit starkem Namen hinzufügen, entfernen oder ändern.
 
 **✔️ Verwenden Sie** abstrakte Basisklassen anstelle von Schnittstellen.
 
@@ -102,7 +100,7 @@ public class Document
 
 - [Versions- und Updateüberlegungen für C#-Entwickler](../../csharp/whats-new/version-update-considerations.md)
 - [Umfassendes Handbuch für API-Breaking Changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [Regeln von Breaking Changes in CoreFX ](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Regeln von Breaking Changes in .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Vorherige](versioning.md)

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198440"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901935"
 ---
 ### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Autorisierung: Implementierungen von IAuthorizationPolicyProvider erfordern eine neue Methode.
 
 In ASP.NET Core 3.0 wurde `IAuthorizationPolicyProvider` eine neue `GetFallbackPolicyAsync`-Methode hinzugefügt. Diese Fallbackrichtlinie wird von der Autorisierungsmiddleware verwendet, wenn keine Richtlinie angegeben wird.
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#9759](https://github.com/aspnet/AspNetCore/pull/9759).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#9759](https://github.com/dotnet/aspnetcore/pull/9759).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -28,7 +28,7 @@ Implementierungen von `IAuthorizationPolicyProvider` erfordern eine `GetFallback
 
 Es war eine neue Methode erforderlich, damit die neue `AuthorizationMiddleware` verwendet wird, wenn keine Richtlinie angegeben wird.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Fügen Sie Ihren Implementierungen von `IAuthorizationPolicyProvider` die `GetFallbackPolicyAsync`-Methode hinzu.
 

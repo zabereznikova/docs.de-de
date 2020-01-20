@@ -1,6 +1,5 @@
 ---
 title: 'Kontextabhängiges yield-Schlüsselwort: C#-Referenz'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363130"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712779"
 ---
 # <a name="yield-c-reference"></a>yield (C#-Referenz)
 
@@ -26,7 +25,7 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie verwenden eine `yield return`-Anweisung, um jedes Element einzeln zurückzugeben.
 

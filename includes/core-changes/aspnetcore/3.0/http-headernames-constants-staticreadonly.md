@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e0d0a680915f14c2d33f1864ad5ad05aff3dde5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394145"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901681"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: HeaderNames-Konstanten wurden in „static readonly“ geändert.
 
 Ab ASP.NET Core 3.0 Preview 5 wurden die Felder in <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> von `const` in `static readonly` geändert.
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#9514](https://github.com/aspnet/AspNetCore/issues/9514).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -31,7 +31,7 @@ Die Änderung hat folgende Gründe:
 * Sie verhindert, dass die Werte über Assemblygrenzen hinweg eingebettet werden, sodass bei Bedarf Korrekturen an Werten möglich sind.
 * Sie ermöglicht schnellere Überprüfungen der Verweisgleichheit.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Kompilieren Sie mit 3.0 neu. Sie müssen Quellcode ändern, der diese Felder auf folgende Weise verwendet:
 

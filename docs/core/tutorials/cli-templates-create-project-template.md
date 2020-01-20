@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318275"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340363"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Erstellen einer Projektvorlage
 
@@ -26,16 +26,16 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 > * Testen einer Elementvorlage
 > * Deinstallieren einer Elementvorlage
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 * Absolvieren Sie [Teil 1](cli-templates-create-item-template.md) dieser Tutorialreihe.
-* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_ .
+* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates_.
 
 ## <a name="create-a-project-template"></a>Erstellen einer Projektvorlage
 
 Projektvorlagen ermöglichen die Erstellung sofort einsatzbereiter Projekte, sodass Benutzer ganz einfach mit einer funktionierenden Codegrundlage beginnen können. .NET Core enthält einige Projektvorlagen – beispielsweise eine Konsolenanwendung und eine Klassenbibliothek. In diesem Beispiel wird ein neues Konsolenprojekt erstellt, das C# 8.0 aktiviert und einen Einstiegspunkt vom Typ `async main` erzeugt.
 
-Navigieren Sie in Ihrem Terminal zum Ordner _working\templates\\_ , und erstellen Sie einen neuen Unterordner mit dem Namen _consoleasync_. Öffnen Sie den Unterordner, und führen Sie `dotnet new console` aus, um die Standardkonsolenanwendung zu generieren. Die von dieser Vorlage erstellten Dateien müssen bearbeitet werden, um eine neue Vorlage zu erstellen.
+Navigieren Sie in Ihrem Terminal zum Ordner _working\templates_, und erstellen Sie einen neuen Unterordner mit dem Namen _consoleasync_. Öffnen Sie den Unterordner, und führen Sie `dotnet new console` aus, um die Standardkonsolenanwendung zu generieren. Die von dieser Vorlage erstellten Dateien müssen bearbeitet werden, um eine neue Vorlage zu erstellen.
 
 ```console
 working
@@ -98,7 +98,7 @@ Nachdem Sie den Inhalt der Vorlage erstellt haben, müssen Sie als Nächstes im 
 
 ## <a name="create-the-template-config"></a>Erstellen der Vorlagenkonfiguration
 
-Vorlagen werden in .NET Core anhand eines speziellen Ordners und einer Konfigurationsdatei am Stamm Ihrer Vorlage erkannt. In diesem Tutorial befindet sich Ihr Vorlagenordner unter _working\templates\consoleasync\\_ .
+Vorlagen werden in .NET Core anhand eines speziellen Ordners und einer Konfigurationsdatei am Stamm Ihrer Vorlage erkannt. In diesem Tutorial befindet sich Ihr Vorlagenordner unter _working\templates\consoleasync_.
 
 Bei der Vorlagenerstellung werden mit Ausnahme des speziellen Konfigurationsordners alle Dateien und Ordner aus dem Vorlagenordner in die Vorlage eingeschlossen. Dieser Konfigurationsordner heißt _.template.config_.
 

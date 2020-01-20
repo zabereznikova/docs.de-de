@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393942"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901785"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: „pubternal“-Typen in „internal“-Typen geändert
 
@@ -30,11 +30,11 @@ Alle diese Typen wurden entweder als `public` in einem unterstützten Namespace 
 
 Da die „pubternal“-Typen relativ häufig versehentlich verwendet wurden, konnten an diesen Projekten Breaking Changes auftreten, und die Fähigkeit zum Verwalten des Frameworks konnte eingeschränkt werden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Wenn Sie Typen verwenden, die tatsächlich `public` waren und in einen neuen, unterstützten Namespace verschoben wurden, aktualisieren Sie Ihre Verweise entsprechend den neuen Namespaces.
 
-Wenn Sie Typen verwenden, die als `internal` gekennzeichnet wurden, müssen Sie eine Alternative suchen. Die zuvor als „pubternal“ deklarierten Typen waren nie für die öffentliche Verwendung vorgesehen. Wenn diese Namespaces bestimmte Typen enthalten, die für Ihre Apps wichtig sind, melden Sie ein Problem bei [aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues). Es ist eventuell möglich, die angeforderten Typen `public` zu machen.
+Wenn Sie Typen verwenden, die als `internal` gekennzeichnet wurden, müssen Sie eine Alternative suchen. Die zuvor als „pubternal“ deklarierten Typen waren nie für die öffentliche Verwendung vorgesehen. Wenn diese Namespaces bestimmte Typen enthalten, die für Ihre Apps wichtig sind, melden Sie ein Problem bei [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues). Es ist eventuell möglich, die angeforderten Typen `public` zu machen.
 
 #### <a name="category"></a>Kategorie
 

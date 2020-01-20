@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204588"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634923"
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -48,7 +48,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht einige der häufig ausgeführten Aufgaben wie das Hinzufügen oder Entfernen einer Registerkarte auf einem `TabControl`, das Andocken eines Steuerelements an seinem übergeordneten Element und das Ändern der Ausrichtung eines `SplitContainer`-Steuerelements.  
   
  [Schreiben von Abfragen in C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke verwendet werden.  
+ Veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücken verwendet werden.  
   
  [Bearbeiten von Daten (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Beschreibt ein [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Szenario für das Hinzufügen, Ändern und Löschen von Daten in einer Datenbank.  

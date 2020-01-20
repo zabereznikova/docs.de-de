@@ -2,12 +2,12 @@
 title: Funktionale Konstruktion (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486037"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635755"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Funktionale Konstruktion (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet mit der *funktionalen Konstruktion* eine leistungsfähige Möglichkeit zur Erstellung von XML-Elementen. Funktionale Konstruktion ist die Fähigkeit, eine XML-Struktur in einer einzelnen Anweisung zu erstellen.  
@@ -18,7 +18,7 @@ ms.locfileid: "66486037"
   
 - Der <xref:System.Xml.Linq.XElement>-Konstruktor verwendet ein `params`-Array vom Typ <xref:System.Object>, sodass Sie beliebig viele Objekte an den Konstruktor übergeben können. Auf diese Weise können Sie ein Element erstellen, das über komplexen Inhalt verfügt.  
   
-- Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XElement>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Dies ist wichtig, da Sie auf diese Weise die Ergebnisse einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage an den Konstruktor übergeben können.  
+- Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XElement>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Dies ist wichtig, da Sie auf diese Weise die Ergebnisse einer LINQ-Abfrage an den Konstruktor übergeben können.  
   
  Diese Funktionen ermöglichen es Ihnen, Code zu schreiben, um eine XML-Struktur zu erstellen. Im Folgenden finden Sie ein Beispiel dazu:  
   
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Diese Funktionen ermöglichen es Ihnen auch, Code zu schreiben, der die Ergebnisse von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen verwendet, wenn Sie wie folgt eine XML-Struktur erstellen:  
+ Diese Funktionen ermöglichen es Ihnen auch, Code zu schreiben, der die Ergebnisse von LINQ-Abfragen verwendet, wenn Sie wie folgt eine XML-Struktur erstellen:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

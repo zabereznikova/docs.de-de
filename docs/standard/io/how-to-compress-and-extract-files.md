@@ -10,14 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a4ea4c32f5b73b283a5982f16e55a4d078171c1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255002"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708101"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Vorgehensweise: Komprimieren und Extrahieren von Dateien
 
@@ -58,7 +56,7 @@ Wenn der Fehler "The type 'ZipArchive' is defined in an assembly that is not ref
 [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]
 
-## <a name="example-3-add-a-file-to-an-existing-zip"></a>Beispiel 3: Hinzufügen einer Datei zu einer bestehenden ZIP-Datei
+## <a name="example-3-add-a-file-to-an-existing-zip"></a>Beispiel 3: Hinzufügen einer Datei zu einer bestehenden ZIP-Datei
 
 Im folgenden Beispiel wird die Klasse <xref:System.IO.Compression.ZipArchive> verwendet, um auf eine vorhandene *ZIP*-Datei zuzugreifen, der anschließend eine Datei hinzugefügt wird. Die neue Datei wird komprimiert, wenn Sie sie zur vorhandenen ZIP-Datei hinzufügen.
 

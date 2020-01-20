@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 5f2f675f5ce4914124f62981a2591441260b6976
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592633"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347472"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Vorgehensweise: Abrufen eines einzelnen untergeordneten Elements (LINQ to XML) (C#)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen untergeordneten Elements nach dessen Namen erläutert. Wenn Sie den Namen des untergeordneten Elements kennen und wissen, dass es nur ein Element mit diesem Namen gibt, ist es möglicherweise sinnvoll, statt einer ganzen Auflistung nur ein einzelnes Element abzurufen.  

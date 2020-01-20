@@ -4,14 +4,14 @@ description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core un
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039262"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714602"
 ---
-# <a name="console-application"></a>Konsolenanwendung
+# <a name="console-app"></a>Konsolen-App
 
 In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
@@ -21,16 +21,17 @@ In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache
 - Grundlagen der Datei-E/A-APIs in .NET
 - Grundlagen des taskbasierten asynchronen Programmiermodells in .NET
 
-Sie erstellen eine Anwendung, die eine Textdatei einliest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole ist so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten „<“ (kleiner als) oder „>“ (größer als) drücken.
+Sie erstellen eine Anwendung, die eine Textdatei liest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole ist so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten „<“ (kleiner als) oder „>“ (größer als) drücken.
 
 In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core-Downloads](https://dotnet.microsoft.com/download). Sie können diese Anwendung unter Windows, Linux, macOS oder in einem Docker-Container ausführen.
-Sie müssen Ihren bevorzugten Code-Editor installieren.
+- Richten Sie Ihren Computer für die Ausführung von .NET Core ein. Die Installationsanweisungen finden Sie auf der Seite [.NET Core-Downloads](https://dotnet.microsoft.com/download). Sie können diese Anwendung unter Windows, Linux, macOS oder in einem Docker-Container ausführen.
 
-## <a name="create-the-application"></a>Erstellen der Anwendung
+- Installieren Sie Ihren bevorzugten Code-Editor.
+
+## <a name="create-the-app"></a>Erstellen der App
 
 Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
 
@@ -40,8 +41,7 @@ Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur
 
 Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird die Build-Engine ausgeführt und die ausführbare Datei für Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.
 
-Der gesamte Code für die einfache Hello World-Anwendung ist in „Program.cs“ enthalten. Öffnen Sie diese Datei mit Ihrem bevorzugten Text-Editor. Wir werden jetzt die ersten Änderungen vornehmen.
-Am Anfang der Datei sehen Sie eine using-Anweisung:
+Der gesamte Code für die einfache Hello World-Anwendung ist in „Program.cs“ enthalten. Öffnen Sie diese Datei mit Ihrem bevorzugten Text-Editor. Wir werden jetzt die ersten Änderungen vornehmen. Am Anfang der Datei sehen Sie eine using-Anweisung:
 
 ```csharp
 using System;
@@ -88,7 +88,7 @@ Es gibt zwei weitere C#-Syntaxelemente, die möglicherweise neu für Sie sind. D
 
 Die `reader`-Variable wird mit dem `var`-Schlüsselwort definiert. [`var`](../language-reference/keywords/var.md) definiert eine *implizit typisierte lokale Variable*. Dies bedeutet, dass der Typ der Variablen durch den Kompilierzeittyp des Objekts bestimmt wird, das der Variablen zugewiesen ist. Hier ist dies der Rückgabewert der <xref:System.IO.File.OpenText(System.String)>-Methode, bei dem es sich um ein <xref:System.IO.StreamReader>-Objekt handelt.
 
-Füllen wir jetzt den Code in der `Main`-Methode, um die Datei zu lesen:
+Geben Sie jetzt den Code ein, um die Datei in der `Main`-Methode zu lesen:
 
 ```csharp
 var lines = ReadFrom("sampleQuotes.txt");
@@ -102,7 +102,7 @@ Führen Sie das Programm (unter Verwendung von `dotnet run`) aus. Jede Zeile wir
 
 ## <a name="adding-delays-and-formatting-output"></a>Hinzufügen von Verzögerungen und Formatieren der Ausgabe
 
-Der Text wird momentan zu schnell ausgegeben, um ihn laut mitzulesen. Jetzt müssen Sie Verzögerungen in der Ausgabe hinzufügen. Zu Beginn erstellen Sie einen Teil des grundlegenden Codes, der eine asynchrone Verarbeitung ermöglicht. Auf diese ersten Schritte folgen jedoch einige Antimuster. Die Antimuster werden in Kommentaren erläutert, die Sie im Code hinzufügen, und der Code wird in späteren Schritten aktualisiert.
+Der Text wird momentan zu schnell ausgegeben, um ihn laut mitzulesen. Jetzt müssen Sie Verzögerungen in der Ausgabe hinzufügen. Zu Beginn erstellen Sie einen Teil des grundlegenden Codes, der asynchrone Verarbeitung ermöglicht. Auf diese ersten Schritte folgen jedoch einige Antimuster. Die Antimuster werden in Kommentaren erläutert, die Sie im Code hinzufügen, und der Code wird in späteren Schritten aktualisiert.
 
 Dieser Abschnitt umfasst zwei Schritte. Zunächst aktualisieren Sie die Iteratormethode, um anstelle von ganzen Zeilen einzelne Wörter zurückzugeben. Dies wird durch diese Änderungen erreicht. Ersetzen Sie die `yield return line;`-Anweisung durch den folgenden Code:
 
@@ -156,10 +156,9 @@ Führen Sie das Beispiel aus. Jetzt sollten Sie in der Lage sein, den Text im fe
 
 ## <a name="async-tasks"></a>Asynchrone Tasks
 
-In diesem letzten Schritt fügen Sie den Code hinzu, mit dem in einem Task die Ausgabe asynchron geschrieben wird, während in einem weiteren Task Eingaben vom Benutzer gelesen werden, um ggf. die Geschwindigkeit der Textanzeige zu erhöhen oder zu verringern oder die Textanzeige ganz zu beenden. Hierzu sind einige Schritte erforderlich, damit Sie am Ende über alle benötigten Aktualisierungen verfügen.
-Im ersten Schritt erstellen Sie eine asynchrone <xref:System.Threading.Tasks.Task>-Rückgabemethode, die den Code repräsentiert, den Sie bisher zum Lesen und Anzeigen der Datei erstellt haben.
+In diesem letzten Schritt fügen Sie den Code hinzu, mit dem in einem Task die Ausgabe asynchron geschrieben wird, während in einem weiteren Task Eingaben vom Benutzer gelesen werden, um ggf. die Geschwindigkeit der Textanzeige zu erhöhen oder zu verringern oder die Textanzeige ganz zu beenden. Hierzu sind einige Schritte erforderlich, damit Sie am Ende über alle benötigten Aktualisierungen verfügen. Im ersten Schritt erstellen Sie eine asynchrone <xref:System.Threading.Tasks.Task>-Rückgabemethode, die den Code darstellt, den Sie bisher zum Lesen und Anzeigen der Datei erstellt haben.
 
-Fügen Sie diese Methode zu Ihrer `Program`-Klasse hinzu (diese stammt aus dem Körper Ihrer `Main`-Methode):
+Fügen Sie diese Methode Ihrer `Program`-Klasse hinzu (diese stammt aus dem Textkörper Ihrer `Main`-Methode):
 
 ```csharp
 private static async Task ShowTeleprompter()
@@ -176,8 +175,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-Sie werden zwei Änderungen bemerken. Zunächst wird im Methodenkörper anstelle eines Aufrufs von <xref:System.Threading.Tasks.Task.Wait> zum synchronen Warten auf eine Taskbeendigung in dieser Version das Schlüsselwort `await` verwendet. Hierzu müssen Sie der Methodensignatur den `async`-Modifizierer hinzufügen. Diese Methode gibt einen `Task` zurück. Beachten Sie, dass es keine return-Anweisungen gibt, die ein `Task`-Objekt zurückgeben. Stattdessen wird dieses `Task`-Objekt durch Code erstellt, den der Compiler beim Verwenden des `await`-Operators generiert. Sie können sich dies so vorstellen, dass die Methode eine Rückgabe durchführt, wenn sie ein `await`-Schlüsselwort erreicht. Der zurückgegebene `Task` gibt an, dass der Vorgang noch nicht abgeschlossen wurde.
-Die Methode wird fortgesetzt, wenn der erwartete Task abgeschlossen ist. Nach Abschluss der Ausführung weist der zurückgegebene `Task` darauf hin, dass er abgeschlossen wurde.
+Sie werden zwei Änderungen bemerken. Zunächst wird im Methodenkörper anstelle eines Aufrufs von <xref:System.Threading.Tasks.Task.Wait> zum synchronen Warten auf eine Taskbeendigung in dieser Version das Schlüsselwort `await` verwendet. Hierzu müssen Sie der Methodensignatur den `async`-Modifizierer hinzufügen. Diese Methode gibt einen `Task` zurück. Beachten Sie, dass es keine return-Anweisungen gibt, die ein `Task`-Objekt zurückgeben. Stattdessen wird dieses `Task`-Objekt durch Code erstellt, den der Compiler beim Verwenden des `await`-Operators generiert. Sie können sich dies so vorstellen, dass die Methode eine Rückgabe durchführt, wenn sie ein `await`-Schlüsselwort erreicht. Der zurückgegebene `Task` gibt an, dass der Vorgang noch nicht abgeschlossen wurde. Die Methode wird fortgesetzt, wenn der erwartete Task abgeschlossen ist. Nach Abschluss der Ausführung weist der zurückgegebene `Task` darauf hin, dass er abgeschlossen wurde.
 Der aufrufende Code kann den zurückgegebenen `Task` überwachen, um zu ermitteln, wann dieser abgeschlossen ist.
 
 Sie können diese neue Methode in Ihrer `Main`-Methode aufrufen:
@@ -191,7 +189,7 @@ Hier führt der Code in `Main` einen asynchronen Wartevorgang aus. Sie sollten n
 > [!NOTE]
 > Wenn Sie C# 7.1 oder höher verwenden, können Sie Konsolenanwendungen mit der [`async` `Main`-Methode](../whats-new/csharp-7-1.md#async-main) erstellen.
 
-Als Nächstes müssen Sie die zweite asynchrone Methode schreiben, um Inhalte aus der Konsole zu lesen und auf die Tasteneingaben „<“ (kleiner als) und „>“ (größer als) sowie „X“ und „x“ zu überwachen. Hier ist die Methode, die Sie für diesen Task hinzufügen:
+Als Nächstes müssen Sie die zweite asynchrone Methode schreiben, um Inhalte aus der Konsole zu lesen und auf die Tasteneingaben „<“ (kleiner als) und „>“ (größer als) sowie „X“ und „x“ zu überwachen. Dies ist die Methode, die Sie für diesen Task hinzufügen:
 
 ```csharp
 private static async Task GetInput()
@@ -219,8 +217,7 @@ private static async Task GetInput()
 }
 ```
 
-Hiermit wird ein Lambda-Ausdruck zur Darstellung eines <xref:System.Action>-Delegaten erstellt. Mit diesem wird ein Schlüssel aus der Konsole gelesen und eine lokale Variable geändert, die die Verzögerung beim Drücken der Tasten „<“ (kleiner als) oder „>“ (größer als) durch den Benutzer repräsentiert. Die Delegatmethode wird beendet, wenn der Benutzer die Tasten „X“ oder „x“ drückt, sodass der Benutzer die Textanzeige jederzeit beenden kann.
-Diese Methode verwendet <xref:System.Console.ReadKey> zum Blockieren und wartet darauf, dass der Benutzer eine Taste drückt.
+Hiermit wird ein Lambdaausdruck zur Darstellung eines <xref:System.Action>-Delegaten erstellt. Mit diesem wird ein Schlüssel aus der Konsole gelesen und eine lokale Variable geändert, die die Verzögerung beim Drücken der Tasten „<“ (kleiner als) oder „>“ (größer als) durch den Benutzer darstellt. Die Delegatmethode wird beendet, wenn der Benutzer die Tasten „X“ oder „x“ drückt, sodass der Benutzer die Textanzeige jederzeit beenden kann. Diese Methode verwendet <xref:System.Console.ReadKey> zum Blockieren und wartet darauf, dass der Benutzer eine Taste drückt.
 
 Um dieses Feature abzuschließen, müssen Sie eine neue `async Task`-Rückgabemethode erstellen, die beide Tasks (`GetInput` und `ShowTeleprompter`) startet und außerdem die von diesen Tasks gemeinsam verwendeten Daten verwaltet.
 
@@ -306,7 +303,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `TeleprompterConfig`-Klasse auf. Jetzt müssen Sie `Main` aktualisieren, um anstelle von `ShowTeleprompter` `RunTeleprompter` aufzurufen:
+Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `TeleprompterConfig`-Klasse auf. Jetzt müssen Sie `Main` aktualisieren, um anstelle von `ShowTeleprompter``RunTeleprompter` aufzurufen:
 
 ```csharp
 RunTeleprompter().Wait();
@@ -314,7 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Schlussbemerkung
 
-In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden.
-Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-Befehlszeilenschnittstelle (CLI) und andere Tools kennengelernt.
+In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden. Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-Befehlszeilenschnittstelle (CLI) und andere Tools kennengelernt.
 
 Weitere Informationen zur Datei-E/A finden Sie im Thema [Datei- und Stream-E/A](../../standard/io/index.md). Weitere Informationen zu dem in diesem Tutorial verwendeten asynchronen Programmiermodell finden sie in den Themen [Aufgabenbasierte asynchrone Programmierung](../..//standard/parallel-programming/task-based-asynchronous-programming.md) und [Asynchrone Programmierung](../async.md).

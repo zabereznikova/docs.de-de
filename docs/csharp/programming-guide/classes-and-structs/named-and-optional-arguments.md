@@ -1,6 +1,5 @@
 ---
 title: Benannte und optionale Argumente – C#-Programmierhandbuch
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970507"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714798"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
 C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
@@ -70,7 +69,7 @@ C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglic
   
 - Ein konstanter Ausdruck  
   
-- Ein Ausdruck der Form `new ValType()`, wobei `ValType` ein Werttyp wie [enum](../../language-reference/keywords/enum.md) oder [struct](./structs.md) ist  
+- Ein Ausdruck der Form `new ValType()`, wobei `ValType` ein Werttyp wie [enum](../../language-reference/builtin-types/enum.md) oder [struct](structs.md) ist  
   
 - Ein Ausdruck in Form von [default(ValType)](../../language-reference/operators/default.md), wobei `ValType` ein Werttyp ist  
   
@@ -113,7 +112,7 @@ C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglic
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Weitere Informationen und Beispiele finden Sie unter [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md) und [Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen](../interop/how-to-access-office-onterop-objects.md).  
+ Weitere Informationen und Beispiele finden Sie unter [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md) und [Vorgehensweise: Zugreifen auf Office Interop-Objekte mithilfe von C#-Funktionen](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  Das Verwenden von benannten und optionalen Argumenten wirkt sich auf die Überladungsauflösung folgendermaßen aus:  
@@ -129,7 +128,7 @@ C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglic
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Verwenden von dynamischen Typen](../types/using-type-dynamic.md)
 - [Verwenden von Konstruktoren](./using-constructors.md)
 - [Verwenden von Indexern](../indexers/using-indexers.md)

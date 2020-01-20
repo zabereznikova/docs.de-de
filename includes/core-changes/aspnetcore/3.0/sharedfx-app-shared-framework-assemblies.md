@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198450"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901805"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Freigegebenes Framework: Assemblys aus Microsoft.AspNetCore.App entfernt
 
@@ -34,13 +34,13 @@ Außerdem enthielt `Microsoft.AspNetCore.App` die folgenden Unterkomponenten:
 
 Für einen Verweis auf `Microsoft.AspNetCore.App` ist kein `<PackageReference>`-Element in der Projektdatei mehr erforderlich. Das .NET Core SDK unterstützt ein neues Element mit dem Namen `<FrameworkReference>`, das `<PackageReference>` ersetzt.
 
-Weitere Informationen finden Sie unter [aspnet/AspNetCore#3612](https://github.com/aspnet/AspNetCore/issues/3612).
+Weitere Informationen finden Sie unter [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
 Entity Framework Core wird als NuGet-Pakete bereitgestellt. Diese Änderung stellt eine Anpassung an das Auslieferungsmodell aller anderen Datenzugriffsbibliotheken in .NET dar. Es bietet Entity Framework Core die einfachste Möglichkeit, weiterhin Innovationen mit Unterstützung der verschiedenen .NET-Plattformen zu schaffen. Das Verschieben von Entity Framework Core aus dem freigegebenen Framework hat keine Auswirkung auf seinen Status als eine von Microsoft entwickelte, unterstützte und gewartete Bibliothek. Die [.NET Core-Supportrichtlinie](https://www.microsoft.com/net/platform/support-policy) gilt auch weiterhin.
 
 Json.NET und Entity Framework Core funktionieren auch In Zukunft mit ASP.NET Core. Sie sind jedoch nicht mehr im freigegebenen Framework enthalten.
 
-Weitere Informationen finden Sie unter [The future of JSON in .NET Core 3.0](https://github.com/dotnet/announcements/issues/90) (Die Zukunft von JSON in .NET Core 3.0). Sehen Sie sich auch [die komplette Liste der Binärdateien](https://github.com/aspnet/AspNetCore/issues/3755) an, die aus dem freigegebenen Framework entfernt wurden.
+Weitere Informationen finden Sie unter [The future of JSON in .NET Core 3.0](https://github.com/dotnet/announcements/issues/90) (Die Zukunft von JSON in .NET Core 3.0). Sehen Sie sich auch [die komplette Liste der Binärdateien](https://github.com/dotnet/aspnetcore/issues/3755) an, die aus dem freigegebenen Framework entfernt wurden.
 
 #### <a name="reason-for-change"></a>Grund für die Änderung
 
@@ -48,22 +48,22 @@ Diese Änderung vereinfacht die Verwendung von `Microsoft.AspNetCore.App` und ve
 
 Weitere Informationen zu den Gründen für diese Änderung finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Projekte müssen Assemblys in `Microsoft.AspNetCore.App` nicht als NuGet-Pakete verwenden. Um die Ausrichtung und Verwendung des freigegebenen ASP.NET Core-Frameworks zu vereinfachen, werden viele NuGet-Pakete, die seit ASP.NET Core 1.0 eingeführt wurden, nicht mehr erstellt. Die von diesen Paketen bereitgestellten APIs sind für Apps weiterhin mithilfe eines `<FrameworkReference>` auf `Microsoft.AspNetCore.App` verfügbar. Beispiele für gängige APIs sind Kestrel, MVC und Razor.
 
 Diese Änderung gilt nicht für alle Binärdateien, auf die über `Microsoft.AspNetCore.App` in ASP.NET Core 2.x verwiesen wird. Wichtige Ausnahmen sind:
 
-- `Microsoft.Extensions`-Bibliotheken, die weiterhin auf .NET Standard abzielen, werden als NuGet-Pakete verfügbar gemacht (siehe https://github.com/aspnet/Extensions).
+- `Microsoft.Extensions`-Bibliotheken, die weiterhin auf .NET Standard abzielen, werden als NuGet-Pakete verfügbar gemacht (siehe https://github.com/dotnet/extensions).
 - APIs, die vom ASP.NET Core-Team erstellt werden und die nicht Teil `Microsoft.AspNetCore.App` sind. Die folgenden Komponenten sind beispielsweise als NuGet-Pakete verfügbar:
   - Entity Framework Core
   - APIs, die eine Integration von Drittanbietern bereitstellen
   - Experimentelle Features
-  - APIs mit Abhängigkeiten, die die [Anforderungen für die Aufnahme in das freigegebene Framework](https://github.com/aspnet/AspNetCore/blob/4e44e5bcbedd961cc0d4f6b846699c7c494f5597/docs/SharedFramework.md) nicht erfüllen konnten
+  - APIs mit Abhängigkeiten, die die [Anforderungen für die Aufnahme in das freigegebene Framework](https://github.com/dotnet/aspnetcore/blob/4e44e5bcbedd961cc0d4f6b846699c7c494f5597/docs/SharedFramework.md) nicht erfüllen konnten
 - Erweiterungen für MVC zur Unterstützung von Json.NET. Eine API wird als NuGet-Paket bereitgestellt, um die Verwendung von Json.NET und MVC zu unterstützen.
 - Der SignalR-.NET-Client unterstützt weiterhin .NET Standard und wird als NuGet-Paket bereitgestellt. Er ist für die Verwendung in vielen .NET-Runtimes vorgesehen, z. B. Xamarin und UWP.
 
-Weitere Informationen finden Sie unter [Stop producing packages for shared framework assemblies in 3.0](https://github.com/aspnet/AspNetCore/issues/3756) (Beenden der Erstellung von Paketen für Assemblys in freigegebenen Frameworks in 3.0). Weitere Informationen finden Sie unter [aspnet/AspNetCore#3757](https://github.com/aspnet/AspNetCore/issues/3757).
+Weitere Informationen finden Sie unter [Stop producing packages for shared framework assemblies in 3.0](https://github.com/dotnet/aspnetcore/issues/3756) (Beenden der Erstellung von Paketen für Assemblys in freigegebenen Frameworks in 3.0). Weitere Informationen finden Sie unter [dotnet/aspnetcore#3757](https://github.com/dotnet/aspnetcore/issues/3757).
 
 #### <a name="category"></a>Kategorie
 

@@ -1,6 +1,5 @@
 ---
 title: Tabelle zur Formatierung numerischer Ergebnisse – C#-Referenz
-ms.custom: seodec18
 description: Erfahren Sie mehr über numerische Standardformatzeichenfolgen in C#
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -8,20 +7,20 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: eb93f0a4f3c66e9f7b295366a77b9fb099fc3a1e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422756"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713510"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
 
 Die folgende Tabelle weist die unterstützten Formatbezeichner zum Formatieren von numerischen Ergebnissen aus. Das formatierte Ergebnis in der letzten Spalte entspricht dem „en-US“ <xref:System.Globalization.CultureInfo>.
 
-|Formatbezeichner|BESCHREIBUNG|Beispiele|Ergebnis|  
+|Formatbezeichner|Beschreibung|Beispiele|Ergebnis|  
 |----------------------|-----------------|--------------|------------|  
-|C oder c|Währung|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C oder c|Währung|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> (\\$2.50)|  
 |D oder d|Decimal|`string s = $"{25:D5}";`|00025|  
 |E oder e|Exponentiell|`string s = $"{250000:E2}";`|2.50E + 005|  
 |F oder f|Festkomma|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
@@ -31,7 +30,7 @@ Die folgende Tabelle weist die unterstützten Formatbezeichner zum Formatieren v
 |R oder r|Schleife|`string s = $"{2.5:R}";`|2.5|  
 |X oder x|Hexadezimal|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Ein Formatbezeichner wird zum Erstellen einer Formatzeichenfolge verwendet. Die Formatzeichenfolge weist die folgende Form auf: `Axx`, wobei
 

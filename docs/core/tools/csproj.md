@@ -2,12 +2,12 @@
 title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739296"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899882"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -156,7 +156,7 @@ Das `ExcludeAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<Package
 Das `PrivateAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt, aber nicht an das nächste Projekt übertragen werden sollen. Die Objekte `Analyzers`, `Build` und `ContentFiles` sind standardmäßig privat, wenn dieses Attribut nicht vorhanden ist.
 
 > [!NOTE]
-> `PrivateAssets` entspricht dem Element *project.json*/*xproj* `SuppressParent`.
+> `PrivateAssets` entspricht dem `SuppressParent`-Element *project.json*/*xproj*.
 
 Diese Attribute können eines oder mehrere der folgenden Elemente enthalten, getrennt durch das Semikolon `;`-Zeichen, wenn mehr als eines aufgeführt ist:
 
@@ -179,6 +179,8 @@ Ein `<DotNetCliToolReference>`-Element gibt das CLI-Tool an, das der Benutzer im
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
+
+Beachten Sie, dass `DotNetCliToolReference` [nun veraltet ist](https://github.com/dotnet/announcements/issues/107) und durch die [lokalen .NET Core-Tools](https://aka.ms/local-tools) ersetzt wird.
 
 #### <a name="version"></a>Version
 
@@ -254,7 +256,7 @@ Mit dem Wechsel zu MSBuild haben wir die Eingabemetadaten, die beim Packen eines
 
 ### <a name="ispackable"></a>IsPackable
 
-Ein Boolescher Wert, der angibt, ob das Projekt verpackt werden kann. Der Standardwert ist `true`sein.
+Ein Boolescher Wert, der angibt, ob das Projekt verpackt werden kann. Der Standardwert ist `true`.
 
 ### <a name="packageversion"></a>PackageVersion
 
@@ -276,7 +278,7 @@ Eine durch Semikolons getrennte Liste der Paketautoren, die mit Profilnamen unte
 
 Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche.
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Eine lange Beschreibung für die Assembly. Wenn `PackageDescription` nicht angegeben ist, wird diese Eigenschaft auch als Beschreibung des Pakets verwendet.
 
@@ -286,7 +288,7 @@ Copyright-Informationen für das Paket.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
-Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Die Standardeinstellung ist `false`.
+Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Der Standardwert ist `false`.
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
@@ -394,7 +396,7 @@ Dieser Boolesche Werte gibt an, ob die Buildausgabeassemblys in die *.nupkg*-Dat
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
-Dieser Boolesche Wert gibt an, ob alle Elemente, die über einen `Content`-Typ verfügen, automatisch im resultierenden Paket enthalten sind. Die Standardeinstellung ist `true`.
+Dieser Boolesche Wert gibt an, ob alle Elemente, die über einen `Content`-Typ verfügen, automatisch im resultierenden Paket enthalten sind. Der Standardwert ist `true`.
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 
@@ -450,7 +452,7 @@ Notizen:
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 
-Ein boolescher Wert zum Aktivieren oder Deaktivieren der AssemblyInfo-Erstellung insgesamt. Der Standardwert ist `true`sein.
+Ein boolescher Wert zum Aktivieren oder Deaktivieren der AssemblyInfo-Erstellung insgesamt. Der Standardwert ist `true`.
 
 ### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
 

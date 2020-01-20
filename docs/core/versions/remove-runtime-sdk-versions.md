@@ -1,16 +1,16 @@
 ---
 title: Entfernen von .NET Core Runtime und SDK
 description: In diesem Artikel wird beschrieben, wie Sie feststellen können, welche Versionen von .NET Core Runtime und SDK derzeit installiert sind, und wie Sie sie unter Windows, Mac und Linux entfernen.
-ms.date: 07/28/2018
+ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
-ms.custom: seodec18
-ms.openlocfilehash: 6d1012b8ddc5fd4a5ee8227902886727dbb10739
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.custom: updateeachrelease
+ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713987"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Entfernen von .NET Core-Runtime und SDK
 
@@ -20,7 +20,7 @@ Wenn Sie im Laufe der Zeit aktualisierte Versionen der .NET Core-Runtime und des
 
 Durch das Verhalten bei der [.NET Core-Versionsauswahl](selection.md) und die Laufzeitkompatibilität von .NET Core zwischen Updates können frühere Versionen sicher entfernt werden. Updates für die .NET Core-Runtime sind innerhalb des „Bereichs“ einer Hauptversion kompatibel, wie z.B. 1.x und 2.x. Darüber hinaus können in neueren Versionen des .NET Core SDK in der Regel Anwendungen erstellt werden, die mit früheren Versionen der Laufzeit kompatibel sind.
 
-Im Allgemeinen benötigen Sie nur das neueste SDK und die neueste Patchversion der Laufzeiten, die für Ihre Anwendung erforderlich sind. Instanzen mit älteren SDK- oder Runtime-Versionen beinhalten die Verwaltung von auf **project.json** basierenden Anwendungen. Sie können ältere Versionen sicher entfernen, wenn Ihre Anwendung keine bestimmten Gründe für frühere SDKs oder Laufzeiten aufweist.
+Im Allgemeinen benötigen Sie nur das neueste SDK und die neueste Patchversion der Laufzeiten, die für Ihre Anwendung erforderlich sind. Instanzen mit älteren SDK- oder Runtimeversionen beinhalten die Verwaltung von auf **project.json** basierenden Anwendungen. Sie können ältere Versionen sicher entfernen, wenn Ihre Anwendung keine bestimmten Gründe für frühere SDKs oder Laufzeiten aufweist.
 
 ## <a name="determine-what-is-installed"></a>Feststellen, was installiert ist
 
@@ -203,3 +203,37 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 Die übergeordneten Verzeichnisse für das SDK und die Runtime werden in der Ausgabe des Befehls `dotnet --list-sdks` und `dotnet --list-runtimes` aufgeführt, wie in der obigen Tabelle dargestellt.
 
 ---
+
+## <a name="net-core-uninstall-tool"></a>.NET Core-Deinstallationstool
+
+Mit dem [.NET Core-Deinstallationstool](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) können Sie .NET Core SDKs und -Runtimes von einem System entfernen. Hierfür stehen Ihnen verschiedene Optionen zur Verfügung, um anzugeben, welche Versionen deinstalliert werden sollen.
+
+## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Visual Studio-Abhängigkeit von .NET Core SDK Versionen
+
+Vor Visual Studio 2019 Version 16.3 haben Visual Studio-Installer den eigenständigen .NET Core SDK-Installer aufgerufen. Folglich werden die SDK-Versionen im Dialogfeld Windows-Dialogfeld **Software** angezeigt. Das Entfernen von .Core SDKs, die von Visual Studio mit dem eigenständigen Installer installiert wurden, kann dazu führen, dass Visual Studio nicht mehr funktioniert. Wenn in Visual Studio nach der Deinstallation von SDKs Probleme auftreten, führen Sie „Reparieren“ für diese bestimmte Version von Visual Studio aus. In der folgenden Tabelle werden einige der Visual Studio-Abhängigkeiten von .NET Core SDK-Versionen gezeigt:
+
+| Visual Studio-Version | .NET Core SDK-Version |
+| -- | -- |
+| Visual Studio 2019 Version 16.2 | .NET Core SDK 2.2.4xx, 2.1.8xx |
+| Visual Studio 2019 Version 16.1 | .NET Core SDK 2.2.3xx, 2.1.7xx |
+| Visual Studio 2019, Version 16.0 | .NET Core SDK 2.2.2xx, 2.1.6xx |
+| Visual Studio 2017 Version 15.9 | .NET Core SDK 2.2.1xx, 2.1.5xx |
+| Visual Studio 2017 Version 15.8 | .NET Core SDK 2.1.4xx |
+
+Ab Visual Studio 2019 16.3 ist Visual Studio für eine eigene Kopie des .NET Core SDK verantwortlich. Aus diesem Grund werden diese SDK-Versionen nicht mehr im Dialogfeld **Software** angezeigt.
+
+## <a name="remove-the-nuget-fallback-folder"></a>Entfernen des NuGet-Fallbackordners
+
+Vor dem .NET Core 3.0 SDK verwendeten die .NET Core SDK-Installer den Ordner *NuGetFallbackFolder-* , um einen Cache mit NuGet-Paketen zu speichern. Dieser Cache wurde bei Vorgängen wie `dotnet restore` oder `dotnet build /t:Restore`verwendet. `NuGetFallbackFolder` befindet sich unter Windows unter *C:\Programme\dotnet\sdk* und unter macOS unter */usr/local/share/dotnet/sdk*.
+
+Möglicherweise möchten Sie diesen Ordner entfernen, wenn Folgendes zutrifft:
+
+* Sie entwickeln nur mit dem .NET Core 3.0 SDK oder höheren Versionen.
+* Sie entwickeln mit .NET Core SDK-Versionen vor 3.0, können aber online arbeiten, und Geschwindigkeit ist nicht immer wichtig.
+
+Wenn Sie den NuGet-Fallbackordner entfernen möchten, können Sie ihn löschen, aber hierfür benötigen Sie Administratorberechtigungen.
+
+Es wird nicht empfohlen, den Ordner *dotnet* zu löschen. Dadurch würden Sie alle globalen Tools entfernen, die Sie zuvor installiert haben. Unter Windows gilt außerdem:
+
+- Sie verlieren die Funktionalität von Visual Studio 2019 Version 16.3 und höheren Versionen. Zum Wiederherstellen können Sie **Reparieren** ausführen.
+- Wenn .NET Core SDK-Einträge im Dialogfeld **Software** angezeigt werden, sind sie verwaist.

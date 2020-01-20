@@ -4,12 +4,12 @@ description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mi
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039673"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345621"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
@@ -78,9 +78,11 @@ Das folgende Beispiel zeigt viele der Gründe für diese Auswahl. Ändern Sie `x
 
 ## <a name="type-support-for-indices-and-ranges"></a>Typunterstützung für Indizes und Bereiche
 
-Wenn ein Typ einen [Indexer](../programming-guide/indexers/index.md) mit einem <xref:System.Index>- oder <xref:System.Range>-Parameter bereitstellt, unterstützt er explizit Indizes bzw. Bereiche.
+Indizes und Bereiche stellen eine klare, präzise Syntax für den Zugriff auf ein einzelnes Element oder einen Teilbereich von Elementen in einer Sequenz bereit. Ein Indexausdruck gibt in der Regel den Typ der Elemente einer Sequenz zurück. Ein Bereichsausdruck gibt in der Regel den gleichen Sequenztyp wie die Quellsequenz zurück.
 
-Ein Typ ist **zählbar**, wenn er über eine Eigenschaft mit dem Namen `Length` oder `Count` mit einem zugreifbaren Getter und einem Rückgabetyp von `int` verfügt. Ein zählbarer Typ, der Indizes oder Bereiche nicht explizit unterstützt, kann implizite Unterstützung dafür bieten. Weitere Informationen finden Sie in den Abschnitten [Implizite Indexunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) und [Implizite Bereichsunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) der [Featurevorschläge](~/_csharplang/proposals/csharp-8.0/ranges.md).
+Wenn ein Typ einen [Indexer](../programming-guide/indexers/index.md) mit einem <xref:System.Index>- oder <xref:System.Range>-Parameter bereitstellt, unterstützt er explizit Indizes bzw. Bereiche. Wenn der Typ einen Indexer bereitstellt, der einen einzelnen <xref:System.Range>-Parameter annimmt, kann er einen anderen Sequenztyp zurückgeben, etwa <xref:System.Span%601?displayProperty=nameWithType>.
+
+Ein Typ ist **zählbar**, wenn er über eine Eigenschaft mit dem Namen `Length` oder `Count` mit einem zugreifbaren Getter und einem Rückgabetyp von `int` verfügt. Ein zählbarer Typ, der Indizes oder Bereiche nicht explizit unterstützt, kann implizite Unterstützung dafür bieten. Weitere Informationen finden Sie in den Abschnitten [Implizite Indexunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) und [Implizite Bereichsunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) der [Featurevorschläge](~/_csharplang/proposals/csharp-8.0/ranges.md). Bereiche, die die implizite Bereichsunterstützung verwenden, geben denselben Sequenztyp wie die Quellsequenz zurück.
 
 Beispielsweise unterstützen die folgenden .NET-Typen Indizes und Bereiche: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> und <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> unterstützt Indizes, jedoch keine Bereiche.
 

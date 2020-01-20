@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: e3439d2e0e0fb8f3126770ec7922f5ae180f781b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74a6f2e1e9296551f4faf73a905b49d3e2e3687e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418250"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635716"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Einführung in LINQ-Abfragen (C#)
-Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden normalerweise in einer spezialisierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für die verschiedenen Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Aus diesem Grund mussten Entwickler für jeden Typ von Datenquelle oder Datenformat, den sie unterstützen müssen, eine neue Abfragesprache erlernen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets, .NET-Auflistungen sowie allen anderen Quellen und Formaten, für die ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter verfügbar ist.  
+Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden normalerweise in einer spezialisierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für die verschiedenen Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Aus diesem Grund mussten Entwickler für jeden Typ von Datenquelle oder Datenformat, den sie unterstützen müssen, eine neue Abfragesprache erlernen. LINQ vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets, .NET-Auflistungen sowie allen anderen Quellen und Formaten, für die ein LINQ-Anbieter verfügbar ist.  
   
 ## <a name="three-parts-of-a-query-operation"></a>Drei Teile einer Abfrageoperation  
- Alle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperationen bestehen aus drei unterschiedlichen Aktionen:  
+ Alle LINQ-Abfrageoperationen bestehen aus drei unterschiedlichen Aktionen:  
   
 1. Abrufen der Datenquelle  
   
@@ -30,14 +30,14 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfrage
   
  [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
- Die folgende Abbildung zeigt die vollständige Abfrageoperation. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] unterscheidet sich die Ausführung der Abfrage von der Abfrage selbst, oder anders ausgedrückt: Durch das bloße Erstellen einer Abfragevariablen werden keine Daten abgefragt.  
+ Die folgende Abbildung zeigt die vollständige Abfrageoperation. In LINQ unterscheidet sich die Ausführung der Abfrage von der Abfrage selbst. Anders ausgedrückt: Sie haben keine Daten abgerufen, indem Sie nur eine Abfragevariable erstellen.  
   
  ![Diagramm des vollständigen LINQ-Abfragevorgangs](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>Die Datenquelle  
- Da es sich bei der Datenquelle im vorherigen Beispiel um ein Array handelt, unterstützt sie implizit die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Das bedeutet, dass sie mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] abgefragt werden kann. Eine Abfrage wird in einer `foreach`-Anweisung ausgeführt, und `foreach` erfordert <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>. Typen, die <xref:System.Collections.Generic.IEnumerable%601> unterstützen oder eine abgeleitete Schnittstelle, wie z.B. der generische Typ <xref:System.Linq.IQueryable%601>, werden als *abfragbare Typen* bezeichnet.  
+ Da es sich bei der Datenquelle im vorherigen Beispiel um ein Array handelt, unterstützt sie implizit die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Das bedeutet, dass sie mit L abgefragt werden kann. Eine Abfrage wird in einer `foreach`-Anweisung ausgeführt, und `foreach` erfordert <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>. Typen, die <xref:System.Collections.Generic.IEnumerable%601> unterstützen oder eine abgeleitete Schnittstelle, wie z.B. der generische Typ <xref:System.Linq.IQueryable%601>, werden als *abfragbare Typen* bezeichnet.  
   
- Für abfragbare Typen ist keine Änderung oder besondere Behandlung notwendig, um sie als [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Datenquelle zu verwenden. Wenn die Quelldaten nicht bereits als abfragbarer Typ im Arbeitsspeicher vorhanden sind, muss der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter diese als solcher darstellen. Zum Beispiel lädt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ein XML-Dokument in einen abfragbaren <xref:System.Xml.Linq.XElement>-Typ:  
+ Für abfragbare Typen ist keine Änderung oder besondere Behandlung notwendig, um sie als LINQ-Datenquelle zu verwenden. Wenn die Quelldaten nicht bereits als abfragbarer Typ im Arbeitsspeicher vorhanden sind, muss der LINQ-Anbieter diese als solcher darstellen. Zum Beispiel lädt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ein XML-Dokument in einen abfragbaren <xref:System.Xml.Linq.XElement>-Typ:  
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
@@ -53,15 +53,15 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter. Die Grundregel ist jedoch sehr einfach: Eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Datenquelle ist jedes Objekt, das die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder eine Schnittstelle unterstützt, die davon erbt.  
+ Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen LINQ-Anbieter. Die Grundregel ist jedoch sehr einfach: Eine LINQ-Datenquelle ist jedes Objekt, das die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder eine Schnittstelle unterstützt, die davon erbt.  
   
 > [!NOTE]
-> Typen wie <xref:System.Collections.ArrayList>, die die nicht generische <xref:System.Collections.IEnumerable>-Schnittstelle unterstützen, können ebenso als [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abfragen der ArrayList-Klasse mit LINQ (C#)](./how-to-query-an-arraylist-with-linq.md).  
+> Typen wie <xref:System.Collections.ArrayList>, die die nicht generische <xref:System.Collections.IEnumerable>-Schnittstelle unterstützen, können ebenso als LINQ-Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)](./how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="query"></a> Die Abfrage  
  Die Abfrage gibt an, welche Informationen aus der Datenquelle oder den Datenquellen abgerufen werden sollen. Optional kann eine Abfrage auch angeben, wie diese Informationen vor der Rückgabe sortiert, gruppiert und strukturiert werden sollen. Eine Abfrage wird in einer Abfragevariablen gespeichert und mit einem Abfrageausdruck initialisiert. Um das Schreiben von Abfragen zu erleichtern, hat C# eine neue Abfragesyntax eingeführt.  
   
- Die Abfrage im vorherigen Beispiel gibt alle geraden Zahlen aus einem Ganzzahlen-Array zurück. Der Abfrageausdruck enthält drei Klauseln: `from`, `where` und `select`. (Wenn Sie mit SQL vertraut sind, ist Ihnen wahrscheinlich aufgefallen, dass die Klauseln umgekehrt wie in SQL angeordnet sind.) Die `from`-Klausel gibt die Datenquelle an, die `where`-Klausel wendet den Filter an, und die `select`-Klausel gibt den Typ der zurückgegebenen Elemente an. Diese und weitere Abfrageklauseln werden ausführlich im Abschnitt [LINQ-Abfrageausdrücke](../../../linq/index.md) erläutert. Wichtig ist hier, dass die Abfragevariable selbst in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] keine Aktion ausführt und keine Daten zurückgibt. Sie speichert nur die Informationen, die erforderlich sind, um Ergebnisse zu erzeugen, wenn die Abfrage zu einem späteren Zeitpunkt ausgeführt wird. Weitere Informationen zum Erstellen von Abfragen hinter den Kulissen finden Sie unter [Übersicht über Standardabfrageoperatoren (C#)](./standard-query-operators-overview.md).  
+ Die Abfrage im vorherigen Beispiel gibt alle geraden Zahlen aus einem Ganzzahlen-Array zurück. Der Abfrageausdruck enthält drei Klauseln: `from`, `where` und `select`. (Wenn Sie mit SQL vertraut sind, ist Ihnen wahrscheinlich aufgefallen, dass die Klauseln umgekehrt wie in SQL angeordnet sind.) Die `from`-Klausel gibt die Datenquelle an, die `where`-Klausel wendet den Filter an, und die `select`-Klausel gibt den Typ der zurückgegebenen Elemente an. Diese und weitere Abfrageklauseln werden ausführlich im Abschnitt [LINQ-Abfrageausdrücke](../../../linq/index.md) erläutert. Wichtig ist hier, dass die Abfragevariable selbst in LINQ keine Aktion ausführt und keine Daten zurückgibt. Sie speichert nur die Informationen, die erforderlich sind, um Ergebnisse zu erzeugen, wenn die Abfrage zu einem späteren Zeitpunkt ausgeführt wird. Weitere Informationen zum Erstellen von Abfragen hinter den Kulissen finden Sie unter [Übersicht über Standardabfrageoperatoren (C#)](./standard-query-operators-overview.md).  
   
 > [!NOTE]
 > Abfragen können auch unter Verwendung der Methodensyntax ausgedrückt werden. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](./query-syntax-and-method-syntax-in-linq.md).  

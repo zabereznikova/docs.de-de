@@ -1,18 +1,17 @@
 ---
-title: 'Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 30ab84054d26f5b32a3f042a8d35d5ef1211d928
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590050"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705131"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen (C#-Programmierhandbuch)
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateioperationen (C#-Programmierleitfaden)
 Sie können ein Standarddialogfeld bereitstellen, das den Verlauf bei Dateivorgängen in Windows anzeigt, wenn Sie die Methode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> im <xref:Microsoft.VisualBasic?displayProperty=nameWithType>-Namespace verwenden.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

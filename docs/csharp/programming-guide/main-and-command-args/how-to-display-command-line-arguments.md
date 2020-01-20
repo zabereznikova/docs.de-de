@@ -1,18 +1,17 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Befehlszeilenargumenten – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Anzeigen von Befehlszeilenargumenten (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: ba732930d08c74433d6ea7b38e7dc3a9fddf594c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923865"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712025"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Vorgehensweise: Anzeigen von Befehlszeilenargumenten (C#-Programmierhandbuch)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Vorgehensweise: Anzeigen von Befehlszeilenargumenten (C#-Programmierleitfaden)
 Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitgestellt wurden, können Sie über einen optionalen Parameter für `Main` zugreifen. Die Argumente werden in Form eines Arrays von Zeichenfolgen bereitgestellt. Jedes Element des Arrays enthält ein Argument. Leerzeichen zwischen Argumenten wird entfernt. Beachten Sie z.B. diese Befehlszeilenaufrufe einer fiktiven ausführbaren Datei:  
   
 |Eingabe in der Befehlszeile|An Main übergebenes Array von Zeichenfolgen|  

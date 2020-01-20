@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801950"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900621"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -57,8 +57,8 @@ Mehrere Frameworks wurden basierend auf .NET Core entwickelt:
 .NET Core umfasst folgende Bestandteile:
 
 - Eine [.NET Core-Runtime](https://github.com/dotnet/runtime/tree/master/src/coreclr), die ein Typsystem, eine Funktion zum Laden von Assemblys, einen Garbage Collector, natives Interop und andere grundlegende Dienste bereitstellt. [.NET Core-Frameworkbibliotheken](https://github.com/dotnet/runtime/tree/master/src/libraries) stellen primitive Datentypen, Typen zur Anwendungsgestaltung und grundlegende Hilfsprogramme bereit.
-- Die [ASP.NET-Runtime](https://github.com/aspnet/home), die ein Framework zum Erstellen moderner, cloudbasierter Anwendungen mit Internetverbindung, wie etwa Web-Apps, IoT-Apps und mobile Back-Ends, bietet.
-- Die [.NET Core-CLI-Tools](https://github.com/dotnet/cli) und Sprachcompiler ([Roslyn](https://github.com/dotnet/roslyn) und [F#](https://github.com/microsoft/visualfsharp)), die Funktionen für .NET Core-Entwickler bereitstellen.
+- Die [ASP.NET Core-Runtime](https://github.com/dotnet/aspnetcore), die ein Framework zum Erstellen moderner, cloudbasierter Anwendungen mit Internetverbindung, wie etwa Web-Apps, IoT-Apps und mobile Back-Ends, bietet.
+- Die [.NET Core-CLI-Tools](https://github.com/dotnet/sdk) und Sprachcompiler ([Roslyn](https://github.com/dotnet/roslyn) und [F#](https://github.com/microsoft/visualfsharp)), die Funktionen für .NET Core-Entwickler bereitstellen.
 - Der Befehl [dotnet tool](https://github.com/dotnet/core-setup), der zum Starten von .NET Core-Anwendungen und CLI-Tools verwendet wird. Er wählt und hostet die Runtime, stellt eine Richtlinie zum Laden der Assembly bereit und startet die Anwendungen und Tools.
 
 Die Komponenten sind wie folgt verfügbar:
@@ -113,7 +113,7 @@ Da .NET Core die parallele Installation unterstützt und die Runtime vollständi
 
 ### <a name="comparison-with-mono"></a>Vergleich mit Mono
 
-[Mono](https://www.mono-project.com/) ist die ursprüngliche plattformübergreifende Implementierung von .NET. Sie wurde zunächst als [Open-Source-](https://github.com/mono/mono)-Alternative zu .NET Framework angeboten und mit zunehmender Beliebtheit von iOS- und Android-Geräten an mobile Geräte angepasst. Sie kann als Community-Klon des .NET Frameworks betrachtet werden. Das Mono-Projektteam griff auf die offenen [.NET-Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (insbesondere ECMA 335) zurück, die von Microsoft veröffentlicht wurden, um eine kompatible Implementierung bereitzustellen.
+[Mono](https://www.mono-project.com/) ist die ursprüngliche plattformübergreifende Implementierung von .NET. Sie wurde zunächst als [Open-Source-](https://github.com/mono/mono)-Alternative zu .NET Framework angeboten und mit zunehmender Beliebtheit von iOS- und Android-Geräten an mobile Geräte angepasst. Sie kann als Community-Klon des .NET Frameworks betrachtet werden. Das Mono-Projektteam griff auf die offenen [.NET-Standards](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) (insbesondere ECMA 335) zurück, die von Microsoft veröffentlicht wurden, um eine kompatible Implementierung bereitzustellen.
 
 Die Hauptunterschiede zwischen .NET Core und Mono:
 

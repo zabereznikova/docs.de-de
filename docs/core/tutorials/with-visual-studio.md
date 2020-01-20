@@ -1,88 +1,142 @@
 ---
-title: Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017
-description: Erfahren Sie, wie Sie mithilfe von Visual Studio 2017 eine einfache .NET Core-Konsolenanwendung mit C# erstellen.
+title: Erstellen einer Hello World-Anwendung mit .NET Core in Visual Studio
+description: Erfahren Sie, wie Sie mithilfe von Visual Studio Ihre erste .NET-Konsolenanwendung mit C# oder Visual Basic erstellen.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 09/13/2017
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/09/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428560"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714001"
 ---
-# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit dem .NET Core SDK in Visual Studio 2017
+# <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>Tutorial: Ihre erste .NET Core-Konsolenanwendung in Visual Studio 2019
 
-Dieser Artikel bietet eine grundlegende Einführung in das Erstellen, Debuggen und Veröffentlichen einer einfachen .NET Core-Konsolenanwendung in C# mithilfe von Visual Studio 2017. Visual Studio 2017 bietet eine Entwicklungsumgebung mit vollem Funktionsumfang für die Erstellung von .NET Core-Anwendungen. Sofern die Anwendung keine plattformspezifischen Abhängigkeiten aufweist, kann sie auf jeder von .NET Core unterstützten Plattform und in jedem System mit installiertem .NET Core ausgeführt werden.
+Dieser Artikel bietet eine schrittweise Einführung in das Erstellen und Ausführen einer .NET Core-Konsolenanwendung „Hello World“ in Visual Studio 2019. Eine Hello World-Anwendung wird normalerweise verwendet, um Einsteiger in eine neue Programmiersprache einzuführen. Dieses Programm zeigt einfach den Text „Hello World“ an. auf dem Bildschirm ausgegeben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-[Visual Studio 2017 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“ Sie können Ihre App mit .NET Core 2.1 oder höher entwickeln.
+- [Visual Studio 2019 Version 16.4 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload **Plattformübergreifende .NET Core-Entwicklung**. Das .NET Core 3.1 SDK wird automatisch installiert, wenn Sie diese Workload auswählen.
 
-Weitere Informationen finden Sie im Artikel [.NET Core-Abhängigkeiten und -Anforderungen](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio).
+Weitere Informationen finden Sie im Abschnitt [Installieren mit Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio) des Artikels [Installieren des .NET Core SDK](../install/sdk.md?pivots=os-windows).
 
-## <a name="a-simple-hello-world-application"></a>Eine einfache „Hello World“-Anwendung
+## <a name="create-the-app"></a>Erstellen der App
 
-Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstellen. Führen Sie folgende Schritte aus:
+In den folgenden Anleitungen wird eine einfache Hello World-Konsolenanwendung erstellt:
 
-1. Starten Sie Visual Studio. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Wählen Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#** und anschließend den Knoten **.NET Core** aus. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)** . Geben Sie im Textfeld **Name** „HelloWorld“ ein. Klicken Sie auf die Schaltfläche **OK**.
+<!-- markdownlint-disable MD025 -->
 
-   ![Dialogfeld „Neues Projekt“, in dem die Konsolen-App ausgewählt ist](./media/with-visual-studio/visual-studio-new-project.png)
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 
-1. Visual Studio verwendet die Vorlage, um Ihr Projekt zu erstellen. Die C#-Konsolenanwendungsvorlage für .NET Core definiert automatisch die Klasse `Program` mit der einzelnen Methode `Main`, die ein <xref:System.String> Array als Argument akzeptiert. `Main` ist der Einstiegspunkt der Anwendung, die Methode, die automatisch von der Laufzeit aufgerufen wird, wenn diese die Anwendung startet. Alle Befehlszeilenargumente, die beim Start der Anwendung bereitgestellt werden, sind im *args*-Array verfügbar.
+1. Öffnen Sie Visual Studio 2019.
+
+1. Erstellen Sie ein neues C# .NET Core-Konsolenanwendungsprojekt mit dem Namen „HelloWorld“.
+
+   1. Wählen Sie im Startfenster **Neues Projekt erstellen** aus.
+
+      ![Schaltfläche „Neues Projekt erstellen“, die im Visual Studio-Startfenster ausgewählt ist](./media/with-visual-studio/start-window.png)
+
+   1. Geben Sie auf der Seite **Neues Projekt erstellen** die Angabe **Konsole** in das Suchfeld ein. Wählen Sie anschließend in der Liste der Sprachen **C#** und dann in der Liste der Plattformen **Alle Plattformen** aus. Wählen Sie die Vorlage **Konsolen-App (.NET Core)** und anschließend **Weiter** aus.
+
+      ![Erstellen eines neuen Projektfenster mit ausgewählten Filtern](./media/with-visual-studio/create-new-project.png)
+
+      > [!TIP]
+      > Wenn die .NET Core-Vorlagen nicht angezeigt werden, ist möglicherweise die erforderliche Workload nicht installiert. Wählen Sie unter der Meldung **Sie finden nicht, wonach Sie suchen?** den Link **Weitere Tools und Features installieren** aus. Der Visual Studio-Installer wird geöffnet. Stellen Sie sicher, dass Sie die Workload **Plattformübergreifende .NET Core-Entwicklung** installiert haben.
+
+   1. Geben Sie **HelloWorld** auf der Seite **Neues Projekt konfigurieren** in das Feld **Projektname** ein. Wählen Sie anschließend **Erstellen** aus.
+
+      ![Konfigurieren Sie das Fenster für das neue Projekt mit den Feldern „Projektname“, „Speicherort“ und „Projektmappenname“.](./media/with-visual-studio/configure-new-project.png)
+
+   Die C#-Konsolenanwendungsvorlage für .NET Core definiert automatisch die Klasse `Program` mit der einzelnen Methode `Main`, die ein <xref:System.String> Array als Argument akzeptiert. `Main` ist der Einstiegspunkt der Anwendung, die Methode, die automatisch von der Laufzeit aufgerufen wird, wenn diese die Anwendung startet. Alle Befehlszeilenargumente, die beim Start der Anwendung bereitgestellt werden, sind im *args*-Array verfügbar.
 
    ![Visual Studio und das neue HelloWorld-Projekt](./media/with-visual-studio/visual-studio-main-window.png)
 
-   Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode auf, um die literale Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen. Indem Sie auf der Symbolleiste die **HelloWorld**-Schaltfläche mit dem grünen Pfeil auswählen, können Sie das Programm im Debugmodus ausführen. In diesem Fall ist das Konsolenfenster nur sehr kurz zu sehen und wird wieder geschlossen. Dies liegt daran, dass die Methode `Main` beendet wird und die Anwendung endet, sobald die einzige Anweisung in der `Main`-Methode ausgeführt wurde.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-1. Damit die Anwendung anhält, bevor sie das Konsolenfenster schließt, fügen Sie den folgenden Code sofort nach dem Aufruf der <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode hinzu:
+1. Öffnen Sie Visual Studio 2019.
 
-   ```csharp
-   Console.Write("Press any key to continue...");
-   Console.ReadKey(true);
-   ```
+1. Erstellen Sie ein neues Visual Basic .NET Core-Konsolenanwendungsprojekt mit dem Namen „HelloWorld“.
 
-   Dieser Code fordert den Benutzer auf, eine beliebige Taste zu drücken, und hält das Programm an, bis eine Taste gedrückt wurde.
+   1. Wählen Sie im Startfenster **Neues Projekt erstellen** aus.
 
-1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus. Dies kompiliert Ihr Programm in eine Zwischensprache (IL), die dann von einem JIT-Compiler (Just in Time) in Binärcode konvertiert wird.
+      ![Schaltfläche „Neues Projekt erstellen“, die im Visual Studio-Startfenster ausgewählt ist](./media/with-visual-studio/start-window.png)
 
-1. Führen Sie das Programm aus, indem Sie auf der Symbolleiste die **HelloWorld**-Schaltfläche mit dem grünen Pfeil auswählen.
+   1. Geben Sie auf der Seite **Neues Projekt erstellen** die Angabe **Konsole** in das Suchfeld ein. Wählen Sie **Visual Basic** in der Liste der Sprachen und dann in der Liste der Plattformen **Alle Plattformen** aus. Wählen Sie die Vorlage **Konsolen-App (.NET Core)** und anschließend **Weiter** aus.
+
+      ![Auswählen der Visual Basic-Vorlage für die Konsolen-App (.NET Framework)](./media/with-visual-studio/vb/create-new-project.png)
+
+      > [!TIP]
+      > Wenn die .NET Core-Vorlagen nicht angezeigt werden, ist möglicherweise die erforderliche Workload nicht installiert. Wählen Sie unter der Meldung **Sie finden nicht, wonach Sie suchen?** den Link **Weitere Tools und Features installieren** aus. Der Visual Studio-Installer wird geöffnet. Stellen Sie sicher, dass Sie die Workload **Plattformübergreifende .NET Core-Entwicklung** installiert haben.
+
+   1. Geben Sie **HelloWorld** auf der Seite **Neues Projekt konfigurieren** in das Feld **Projektname** ein. Wählen Sie anschließend **Erstellen** aus.
+
+   Die Konsolenanwendungsvorlage für .NET Core definiert automatisch die Klasse `Program` mit der einzelnen Methode `Main`, die ein <xref:System.String>-Array als Argument annimmt. `Main` ist der Einstiegspunkt der Anwendung, die Methode, die automatisch von der Laufzeit aufgerufen wird, wenn diese die Anwendung startet. Alle Befehlszeilenargumente, die beim Start der Anwendung bereitgestellt werden, sind im `args`-Parameter verfügbar.
+
+   ![Visual Studio und das neue HelloWorld-Projekt](./media/with-visual-studio/vb/visual-studio-main-window.png)
+
+---
+
+   Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode auf, um die literale Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen.
+
+## <a name="run-the-app"></a>Ausführen der App
+
+1. Um das Programm auszuführen, wählen Sie **HelloWorld** auf der Symbolleiste aus, oder drücken Sie **F5**.
+
+   ![Visual Studio-Symbolleiste mit ausgewählter Schaltfläche zum Ausführen von HelloWorld](./media/with-visual-studio/run-program.png)
+
+   Ein Konsolenfenster wird geöffnet, das den Text „Hello World!“ auf dem Bildschirm sowie einige Visual Studio-Debuginformationen ausgibt.
 
    ![Konsolenfenster, das Hello World „Drücken Sie eine beliebige Taste, um fortzufahren...“ zeigt](./media/with-visual-studio/hello-world-console.png)
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
 
-## <a name="enhancing-the-hello-world-application"></a>Erweitern der Hello World-Anwendung
+## <a name="enhance-the-app"></a>Optimieren der App
 
-Erweitern Sie ihre Anwendung, um die Benutzer aufzufordern, Ihren Namen einzugeben und diesen mit dem Datum und der Uhrzeit anzuzeigen. Um das Programm zu ändern und zu testen, gehen Sie folgendermaßen vor:
+Erweitern Sie ihre Anwendung, um die Benutzer aufzufordern, Ihren Namen einzugeben und diesen mit dem Datum und der Uhrzeit anzuzeigen. Die folgenden Anleitungen ändern und führen die App erneut aus:
 
-1. Geben Sie im Codefenster unmittelbar nach der öffnenden geschweiften Klammer, die auf die Zeile `static void Main(string[] args)` folgt, und vor der ersten schließenden geschweiften Klammer den folgenden C#-Code ein:
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
+1. Ersetzen Sie den Inhalt der `Main`-Methode, die derzeit nur aus der Zeile besteht, die `Console.WriteLine`aufruft, durch den folgenden Code:
 
    [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
-
-   Dieser Code ersetzt den Inhalt der `Main`-Methode.
-
-   ![C#-Programmdatei von Visual Studio mit aktualisierter Main-Methode](./media/with-visual-studio/visual-csharp-code-window.png)
 
    Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../csharp/language-reference/tokens/interpolated.md), um diese Werte im Konsolenfenster anzuzeigen.
 
 1. Kompilieren Sie das Programm durch Auswählen von **Erstellen** > **Projektmappe erstellen**.
 
-1. Führen Sie das Programm in Visual Studio im Debugmodus aus, indem Sie den grünen Pfeil auf der Symbolleiste auswählen, F5 drücken oder das Menüelement **Debuggen** > **Debuggen starten** auswählen. Reagieren Sie auf die Aufforderung, indem Sie einen Namen eingeben und die EINGABETASTE drücken.
+1. Um das Programm auszuführen, wählen Sie **HelloWorld** auf der Symbolleiste aus, oder drücken Sie **F5**.
+
+1. Reagieren Sie auf die Eingabeaufforderung, indem Sie einen Namen eingeben und die **EINGABETASTE** drücken.
 
    ![Konsolenfenster mit veränderter Programmausgabe](./media/with-visual-studio/hello-world-update.png)
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
 
-Sie haben Ihre Anwendung erstellt und ausgeführt. Wenn Sie professionelle Anwendungen erstellen möchten, führen Sie einige weitere Schritte aus, um Ihre Anwendung für die Veröffentlichung bereit zu machen:
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-- Informationen zum Debuggen Ihrer Anwendung finden Sie unter [Debuggen Ihrer .NET Core-Anwendung „Hello World“ mit Visual Studio 2017](debugging-with-visual-studio.md).
+1. Ersetzen Sie den Inhalt der `Main`-Methode, die derzeit nur aus der Zeile besteht, die `Console.WriteLine`aufruft, durch den folgenden Code:
 
-- Informationen zum Entwickeln und Veröffentlichen einer bereitstellbaren Version Ihrer Anwendung finden Sie unter [Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017](publishing-with-visual-studio.md).
+   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-## <a name="related-articles"></a>Verwandte Artikel
+   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), um diese Werte im Konsolenfenster anzuzeigen.
 
-Anstatt eine Konsolenanwendung zu verwenden, können Sie auch mit .NET Core und Visual Studio 2017 eine Klassenbibliothek erstellen. Eine Schrittanleitung dazu finden Sie im Thema [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](library-with-visual-studio.md).
+1. Kompilieren Sie das Programm durch Auswählen von **Erstellen** > **Projektmappe erstellen**.
 
-Sie können auch mit [Visual Studio Code](https://code.visualstudio.com/), einem kostenlosen, herunterladbaren Code-Editor, eine .NET Core-Konsolen-App unter Mac, Linux oder Windows entwickeln. Ein Tutorial mit Schrittanleitungen finden Sie unter [Erste Schritte mit Visual Studio Code](with-visual-studio-code.md).
+1. Um das Programm auszuführen, wählen Sie **HelloWorld** auf der Symbolleiste aus, oder drücken Sie **F5**.
+
+1. Reagieren Sie auf die Eingabeaufforderung, indem Sie einen Namen eingeben und die **EINGABETASTE** drücken.
+
+   ![Konsolenfenster mit veränderter Programmausgabe](./media/with-visual-studio/hello-world-update.png)
+
+1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
+
+---
+
+## <a name="next-steps"></a>Nächste Schritte
+
+In diesem Artikel haben Sie Ihre erste .NET Core-Anwendung erstellt und ausgeführt. Im nächsten Schritt debuggen Sie Ihre App.
+
+> [!div class="nextstepaction"]
+> [Debuggen einer Hello World-Anwendung (.NET Core) in Visual Studio](debugging-with-visual-studio.md)

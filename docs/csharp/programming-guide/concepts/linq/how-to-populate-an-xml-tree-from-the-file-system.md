@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Auffüllen einer XML-Struktur über das Dateisystem (C#)'
+title: 'Vorgehensweise: Auffüllen einer XML-Struktur mit Daten über das Dateisystem (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485169"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345783"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Vorgehensweise: Auffüllen einer XML-Struktur über das Dateisystem (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Vorgehensweise: Auffüllen einer XML-Struktur mit Daten über das Dateisystem (C#)
 Eine häufige und sinnvolle Anwendung von XML-Strukturen besteht in deren Verwendung als hierarchischer Name/Wert-Datenspeicher. Sie können eine XML-Struktur mit hierarchischen Daten auffüllen und die Struktur dann abfragen, transformieren und bei Bedarf serialisieren. In diesem Verwendungsszenario ist ein großer Teil der XML-spezifischen Semantik, wie das Namespace- und Leerraumverhalten, ohne Bedeutung. Die XML-Struktur wird stattdessen als kleine hierarchische Datenbank für einen einzelnen Benutzer verwendet, die im Arbeitsspeicher gespeichert ist.  
   
 ## <a name="example"></a>Beispiel  

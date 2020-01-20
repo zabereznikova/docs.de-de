@@ -2,24 +2,24 @@
 title: 'Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 3ddafc0e053a5dc18d024588e9f71081c8d6da14
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 86b74534635dcca7e8c7f94873abcb50ea7c4d2b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593180"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345827"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)
 Es kann vorkommen, dass Sie große XML-Dateien transformieren und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer sehr großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  
   
  Streamingverfahren eignen sich vor allem für Situationen, bei denen Sie das Quelldokument nur einmal verarbeiten müssen und bei denen die Elemente in der Reihenfolge verarbeitet werden können, in der sie im Dokument auftreten. Einige Standardabfrageoperatoren, wie <xref:System.Linq.Enumerable.OrderBy%2A>, durchlaufen ihre Quelle, erfassen alle Daten, sortieren sie und geben dann das erste Element in der Sequenz zurück. Beachten Sie, dass Sie bei der Verwendung eines Abfrageoperators, der seine Quelle vor der Rückgabe des ersten Elements materialisiert, keine minimale Speicherbeanspruchung für Ihre Anwendung aufrechterhalten können.  
   
- Aber selbst dann, wenn Sie das in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) beschriebene Verfahren verwenden, wird die Speicherbeanspruchung zu groß, wenn Sie versuchen, eine XML-Struktur unter Einbeziehung des transformierten Dokuments zusammenzustellen.  
+Aber selbst dann, wenn Sie das in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) beschriebene Verfahren verwenden, wird die Speicherbeanspruchung zu groß, wenn Sie versuchen, eine XML-Struktur unter Einbeziehung des transformierten Dokuments zusammenzustellen.
   
  Es gibt im Wesentlichen zwei Lösungsansätze: Zum einen können Sie versuchen, sich die verzögerte Verarbeitung von <xref:System.Xml.Linq.XStreamingElement> zunutze zu machen, und zum anderen können Sie einen <xref:System.Xml.XmlWriter> erstellen und dann mithilfe von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Elemente in den <xref:System.Xml.XmlWriter> zu schreiben. In diesem Thema werden beide Ansätze besprochen.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel baut auf dem Beispiel in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) auf.  
+ Das folgende Beispiel baut auf dem Beispiel in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) auf.
   
  In diesem Beispiel wird die verzögerte Ausführung von <xref:System.Xml.Linq.XStreamingElement> verwendet, um die Ausgabe zu streamen. Damit kann auch ein sehr großes Dokument transformiert werden, ohne dass die Speicherbeanspruchung zu groß wird.  
   
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Auch das folgende Beispiel baut auf dem Beispiel in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) auf.  
+Das folgende Beispiel baut ebenfalls auf dem Beispiel in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) auf.
   
  In diesem Beispiel wird die Fähigkeit von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] genutzt, Elemente in einen <xref:System.Xml.XmlWriter> zu schreiben. Damit kann auch ein sehr großes Dokument transformiert werden, ohne dass die Speicherbeanspruchung zu groß wird.  
   

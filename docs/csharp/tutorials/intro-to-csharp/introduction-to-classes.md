@@ -3,12 +3,12 @@ title: Klassen und Objekte – Tutorial zur Einführung in C#
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736828"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634949"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Erkunden der objektorientierten Programmierung mit Klassen und Objekten
 
@@ -73,7 +73,7 @@ namespace classes
 
 Bevor wir fortfahren, lassen Sie uns anschauen, was Sie erstellt haben.  Die `namespace`-Deklaration ist eine Möglichkeit, Ihren Code logisch zu organisieren. Da dieses Tutorial relativ klein ist, platzieren Sie den gesamten Code in einen einzigen Namespace. 
 
-`public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren das Verhalten der Klasse. Die `BankAccount`-Klasse verfügt über fünf ***Member***. Die ersten drei sind ***Eigenschaften***. Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind ***Methoden***. Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
+`public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren den Zustand und das Verhalten der Klasse. Die `BankAccount`-Klasse verfügt über fünf ***Member***. Die ersten drei sind ***Eigenschaften***. Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind ***Methoden***. Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
 
 ## <a name="open-a-new-account"></a>Eröffnen eines neuen Kontos
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in *Program.cs* durch die folgende Zeile (ersetzen Sie `<name>` durch Ihren Namen):
+Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in *Program.cs* durch den folgende Code (ersetzen Sie `<name>` durch Ihren Namen):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Fügen Sie der `BankAccount`-Klasse die folgende Memberdeklaration hinzu:
 private static int accountNumberSeed = 1234567890;
 ```
 
-Dies ist ein Datenelement. Es ist `private`, d.h. der Zugriff darauf ist nur über Code in der `BankAccount`-Klasse möglich. Dies ist eine Möglichkeit, die öffentlichen Verantwortlichkeiten (z.B. Besitz einer Kontonummer) von der privaten Implementierung (wie Kontonummern generiert werden) zu trennen. Es ist auch als `static` definiert, wird also von allen `BankAccount`-Objekten gemeinsam genutzt. Der Wert einer nicht statischen Variable ist für jede Instanz des `BankAccount`-Objekts eindeutig. Fügen Sie dem Konstruktor die folgenden zwei Zeilen hinzu, um die Kontonummer zuzuweisen:
+Dies ist ein Datenelement. Es ist `private`, d.h. der Zugriff darauf ist nur über Code in der `BankAccount`-Klasse möglich. Dies ist eine Möglichkeit, die öffentlichen Verantwortlichkeiten (z. B. Besitz einer Kontonummer) von der privaten Implementierung (wie Kontonummern generiert werden) zu trennen. Es ist auch als `static` definiert, wird also von allen `BankAccount`-Objekten gemeinsam genutzt. Der Wert einer nicht statischen Variable ist für jede Instanz des `BankAccount`-Objekts eindeutig. Fügen Sie dem Konstruktor die folgenden zwei Zeilen hinzu, um die Kontonummer zuzuweisen:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();

@@ -4,14 +4,12 @@ description: Erfahren Sie, wie Sie das erworbene Wissen aus einem vorhandenen Te
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204991"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738950"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generieren eines ML.NET-Bildklassifizierungsmodells aus einem vortrainierten TensorFlow-Modell
 
@@ -37,7 +35,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 Für dieses Tutorial verwenden Sie einen Teil eines TensorFlow-Modells – trainiert, um Bilder in tausend Kategorien zu klassifizieren – in einem ML.NET-Modell, das Bilder in drei Kategorien klassifiziert.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 * [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 * [Die ZIP-Datei mit dem Tutorialassetsverzeichnis ](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
@@ -336,7 +334,7 @@ Eine ML.NET-Modellpipeline ist eine Kette von Kalkulatoren. Beachten Sie, dass w
     Für die Bildklassifizierung werden die folgenden Metriken ausgewertet:
 
     * `Log-loss` – siehe [Protokollverlust](../resources/glossary.md#log-loss). Der Protokollverlust sollte so nahe wie möglich bei 0 liegen.
-    * `Per class Log-loss`. Der Protokollverlust pro Klasse sollte so nahe wie möglich bei 0 liegen.
+    * `Per class Log-loss` Der Protokollverlust pro Klasse sollte so nahe wie möglich bei 0 liegen.
 
 1. Fügen Sie den folgenden Code hinzu, um das trainierte Modell als nächste Zeile zurückzugeben:
 

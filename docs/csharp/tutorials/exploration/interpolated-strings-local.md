@@ -2,12 +2,12 @@
 title: Zeichenfolgeninterpolation – C#-Tutorial
 description: Dieses Tutorial erläutert, wie Sie mit dem Zeichenfolgeninterpolations-Feature in C# formatierte Ausdrucksergebnisse in eine größere Zeichenfolge einfügen.
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120117"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346781"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 
@@ -46,7 +46,7 @@ Im Folgenden finden Sie weitere Beispiele für die Zeichenfolgeninterpolation mi
 
 Im vorherigen Abschnitt haben Sie die Zeichenfolgeninterpolation verwendet, um eine Zeichenfolge in eine andere einzufügen. Das Ergebnis eines Interpolationsausdrucks kann jedoch jeden Datentyp aufweisen. Im Folgenden werden mehrere Datentypen in eine interpolierte Zeichenfolge einbezogen.
 
-Im folgenden Beispiel wird zunächst ein [Klassen](../../programming-guide/classes-and-structs/classes.md)-Datentyp `Vegetable` definiert, der über die [Eigenschaft](../../properties.md) `Name` und die [Methode](../../methods.md) `ToString` verfügt. Diese Methode [überschreibt](../../language-reference/keywords/override.md) das Verhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode. Der [`public`-Zugriffsmodifizierer](../../language-reference/keywords/public.md) stellt diese Methode jedem Clientcode zur Verfügung, um die Zeichenfolgendarstellung einer `Vegetable`-Instanz abzurufen. Im Beispiel gibt die Methode `Vegetable.ToString` den Wert der Eigenschaft `Name` zurück, die beim [Konstruktor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable` initialisiert wird:
+Im folgenden Beispiel wird zunächst ein [Klassen](../../programming-guide/classes-and-structs/classes.md)-Datentyp `Vegetable` definiert, der über die [Eigenschaft](../../properties.md)`Name` und die [Methode](../../methods.md) `ToString` verfügt. Diese Methode [überschreibt](../../language-reference/keywords/override.md) das Verhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode. Der [`public`-Zugriffsmodifizierer](../../language-reference/keywords/public.md) stellt diese Methode jedem Clientcode zur Verfügung, um die Zeichenfolgendarstellung einer `Vegetable`-Instanz abzurufen. Im Beispiel gibt die Methode `Vegetable.ToString` den Wert der Eigenschaft `Name` zurück, die beim [Konstruktor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable` initialisiert wird:
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -58,7 +58,7 @@ Dann wird eine Instanz der Klasse `Vegetable` mit dem Namen `item` mithilfe des 
 var item = new Vegetable("eggplant");
 ```
 
-Zum Schluss wird die Variable `item` in eine interpolierte Zeichenfolge einbezogen, die auch einen <xref:System.DateTime>-Wert, <xref:System.Decimal>-Wert und einen [Enumerationswert](../../programming-guide/enumeration-types.md) `Unit` enthält. Ersetzen Sie sämtlichen C#-Code in Ihrem Editor durch folgenden Code, und verwenden Sie dann den `dotnet run`-Befehl, um diesen auszuführen:
+Zum Schluss wird die Variable `item` in eine interpolierte Zeichenfolge einbezogen, die auch einen <xref:System.DateTime>-Wert, <xref:System.Decimal>-Wert und einen [Enumerationswert](../../language-reference/builtin-types/enum.md) `Unit` enthält. Ersetzen Sie sämtlichen C#-Code in Ihrem Editor durch folgenden Code, und verwenden Sie dann den `dotnet run`-Befehl, um diesen auszuführen:
 
 ```csharp
 using System;

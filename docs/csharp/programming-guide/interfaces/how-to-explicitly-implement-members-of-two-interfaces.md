@@ -1,19 +1,18 @@
 ---
-title: 'Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 1d4dd0485be1d859e3e9594ab1558a907b8f1f7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589195"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701237"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen (C#-Programmierhandbuch)
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen (C#-Programmierleitfaden)
 Die explizite [Schnittstellenimplementierung](../../language-reference/keywords/interface.md) erlaubt dem Programmierer auch, zwei Schnittstellen zu implementieren, die über die gleichen Membernamen verfügen, sowie jedem Schnittstellenmember eine separate Implementierung zu geben. Dieses Beispiel zeigt die Dimensionen eines Felds in jeweils der metrischen und der englischen Einheit. Das Feld [class](../../language-reference/keywords/class.md) implementiert zwei Schnittstellen, „IEnglishDimensions“ und „IMetricDimensions“, die die unterschiedlichen Messsysteme darstellen. Beide Schnittstellen verfügen über identische Elementnamen, sowie unterschiedliche Länge und Breite.  
   
 ## <a name="example"></a>Beispiel  
@@ -33,4 +32,4 @@ Die explizite [Schnittstellenimplementierung](../../language-reference/keywords/
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](../classes-and-structs/index.md)
 - [Schnittstellen](./index.md)
-- [Vorgehensweise: Explizites Implementieren von Schnittstellenmembern](./how-to-explicitly-implement-interface-members.md)
+- [Explizites Implementieren von Schnittstellenmembern](./how-to-explicitly-implement-interface-members.md)

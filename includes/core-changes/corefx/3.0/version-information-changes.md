@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2a751acc129ebd1c917b87f8083ffef72c7d8c17
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5612ebce67946e22aaeeba861115ce4f8967e1f5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568176"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344453"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>APIs, die Versionsinformationen melden, melden nun die Produktversion und nicht die Dateiversion
 
@@ -22,7 +22,7 @@ In der folgenden Abbildung sind die unterschiedlichen Versionsinformationen für
 
 3.0
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Keine Durch diese Änderung soll die Version einfacher und intuitiver zu erkennen sein.
 

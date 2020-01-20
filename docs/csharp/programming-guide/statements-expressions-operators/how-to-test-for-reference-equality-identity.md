@@ -1,19 +1,18 @@
 ---
-title: 'Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität) – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität) (C#-Programmierleitfaden)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588642"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699053"
 ---
-# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität) (C#-Programmierhandbuch)
+# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität) (C#-Programmierleitfaden)
 Sie müssen zur Unterstützung von Verweisgleichheitsprüfungen in Ihren Typen keine benutzerdefinierte Logik implementieren. Diese Funktionalität wird für alle Typen mit der statischen <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>-Methode bereitgestellt.  
   
  Im folgenden Beispiel wird gezeigt, wie Sie zwei Variablen auf *Verweisgleichheit* prüfen, d.h. ob diese auf das gleiche Objekt im Arbeitsspeicher verweisen.  

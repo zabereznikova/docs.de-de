@@ -7,24 +7,24 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582035"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738655"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
-[.NET Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Implementierungsverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek.
+[.NET Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Implementierungsverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek.
 
-.NET Standard ermöglicht im Wesentlichen die folgenden Szenarios:
+.NET Standard ermöglicht im Wesentlichen die folgenden Szenarien:
 
 - Sie definiert einen einheitlichen Satz von BCL-APIs, die unabhängig von der Arbeitsauslastung für alle .NET-Implementierungen implementiert werden.
 - Sie ermöglicht Entwicklern die Erstellung portabler Bibliotheken, die anhand desselben Satzes von APIs in .NET-Implementierungen eingesetzt werden können.
 - Sie reduziert oder beseitigt sogar die bedingte Kompilierung freigegebener Quellen aufgrund von .NET-APIs (nur für Betriebssystem-APIs).
 
-Die verschiedenen .NET-Implementierungen verwenden spezifische Versionen von .NET Standard als Ziel. Jede .NET-Implementierung kündigt die höchste .NET Standardversion an, die von ihr unterstützt wird, was bedeutet, dass sie auch frühere Versionen unterstützt. .NET Framework 4.6 implementiert z.B. .NET Standard 1.3 und macht damit alle APIs verfügbar, die in den Versionen 1.0 bis 1.3 von .NET Standard definiert sind. Auf ähnliche Weise implementiert .NET Framework 4.6.1 .NET Standard 1.4, während .NET Core 1.0 .NET Standard 1.6 implementiert.
+Die verschiedenen .NET-Implementierungen verwenden spezifische Versionen von .NET Standard als Ziel. Jede .NET-Implementierung kündigt die höchste .NET Standardversion an, die von ihr unterstützt wird, was bedeutet, dass sie auch frühere Versionen unterstützt. .NET Framework 4.6 implementiert z. B. .NET Standard 1.3 und stellt damit alle APIs bereit, die in den Versionen 1.0 bis 1.3 von .NET Standard definiert sind. Auf ähnliche Weise implementiert .NET Framework 4.6.1 .NET Standard 1.4, während .NET Core 1.0 .NET Standard 1.6 implementiert.
 
 ## <a name="net-implementation-support"></a>Unterstützung der .NET-Implementierung
 
@@ -84,7 +84,7 @@ Abgeleitete Elemente werden bereitgestellt, um ein einfacheres Lesen und bestimm
 
 Das primäre Verteilungsinstrument für .NET Standard sind [NuGet-Pakete](../core/packages.md). Implementierungen werden in einer Vielzahl von Methoden abgeleitet, die jeweils für die einzelnen .NET-Implementierungen geeignet sind.
 
-NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete von .NET Standard sind für das Framework „.NET Standard“ ausgelegt. Sie können über den [komprimierten TFM](frameworks.md) `netstandard` (z.B. `netstandard1.4`) das .NET Standard-Framework als Ziel angeben. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Ein Großteil der APIs sollte auf `netstandard2.0` ausgerichtet sein, da sich die Anzahl an verfügbaren APIs im Laufe der Versionen .NET Standard 1.6 und 2.0 mehr als verdoppelt hat.
+NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete von .NET Standard sind für das Framework „.NET Standard“ ausgelegt. Sie können über den `netstandard` [komprimierten TFM](frameworks.md) (z. B. `netstandard1.4`) das .NET Standard-Framework als Ziel angeben. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Ein Großteil der APIs sollte auf `netstandard2.0` ausgerichtet sein, da sich die Anzahl an verfügbaren APIs im Laufe der Versionen .NET Standard 1.6 und 2.0 mehr als verdoppelt hat.
 
 Das Metapaket [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) verweist auf den vollständigen Satz von NuGet-Paketen, die .NET Standard definieren.  Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa 40 .NET-Bibliotheken und zugehörige APIs, die .NET Standard definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel verwenden, um Zugriff auf weitere APIs zu erhalten.
 

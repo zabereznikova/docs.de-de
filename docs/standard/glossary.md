@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929077"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708203"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -58,7 +58,7 @@ Die CoreCLR basiert auf demselben Code wie die CLR. rsprünglich war CoreCLR die
 
 .NET Core-Basisklassenbibliothek (BCL)
 
-Eine Reihe von Bibliotheken, aus denen die Systemnamespaces\* (und in beschränktem Umfang die Microsoft*-Namespaces) bestehen. Bei der BCL handelt es sich um ein allgemeines Framework auf niedriger Ebene, auf dem Anwendungsframeworks auf höherer Ebene, z.B. ASP.NET Core, basieren. Der Quellcode der .NET Core-BCL ist im [CoreFX-Repository](https://github.com/dotnet/corefx) enthalten. Der Großteil der .NET Core-APIs ist jedoch auch im .NET Framework verfügbar, sodass Sie sich CoreFX als einen Fork der .NET Framework-BCL vorstellen können.
+Eine Reihe von Bibliotheken, aus denen die Namespaces System.\* (und in beschränktem Umfang Microsoft.\*) bestehen. Bei der BCL handelt es sich um ein allgemeines Framework auf niedriger Ebene, auf dem Anwendungsframeworks auf höherer Ebene, z.B. ASP.NET Core, basieren. Der Quellcode der .NET Core-BCL ist im [.NET Core-Runtimerepository](https://github.com/dotnet/runtime) enthalten. Der Großteil der .NET Core-APIs ist jedoch auch im .NET Framework verfügbar, sodass Sie sich CoreFX als einen Fork der .NET Framework-BCL vorstellen können.
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,7 +66,7 @@ Eine Reihe von Bibliotheken, aus denen die Systemnamespaces\* (und in beschränk
 
 Im Gegensatz zu CLR und CoreCLR handelt es sich bei CoreRT nicht um einen virtuellen Computer. Das bedeutet, dass die Funktionen zum dynamischen Generieren und Ausführen von Code nicht enthalten sind, da kein [JIT](#jit) enthalten ist. Es ist jedoch ein [GC](#gc) enthalten sowie die Möglichkeit zur Identifikation und Reflektion des Laufzeittyps (RTTI). Das Typsystem wurde jedoch so entwickelt, dass keine Metadaten für die Reflektion erforderlich sind. Dadurch wird eine [AOT](#aot)-Toolkette ermöglicht, die die Verknüpfung zu überflüssigen Metadaten aufheben und (was noch wichtiger ist) Code identifizieren kann, der von der App nicht verwendet wird. CoreRT befindet sich in der Entwicklung.
 
-Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+Weitere Informationen finden Sie unter [Einführung in .NET Native und CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>plattformübergreifend
 
@@ -269,7 +269,7 @@ Siehe [Zielframeworks](frameworks.md).
 
 Universelle Windows-Plattform
 
-Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können auf dieser Plattform in C++, C#, VB.NET und JavaScript geschrieben werden. Die .NET-APIs für C# und VB.NET werden von .NET Core bereitgestellt.
+Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
 
 ## <a name="see-also"></a>Siehe auch
 

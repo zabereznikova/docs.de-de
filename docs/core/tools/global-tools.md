@@ -3,13 +3,12 @@ title: Globale .NET Core-Tools
 description: Eine Übersicht über globale .NET Core-Tools und die .NET Core-CLI-Befehle, die ihnen zur Verfügung stehen.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318306"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899863"
 ---
 # <a name="net-core-global-tools-overview"></a>Übersicht über globale .NET Core-Tools
 
@@ -35,7 +34,7 @@ Derzeit gibt es kein Suchfeature für globale Tools in der .NET Core-CLI (Befehl
 
 * Sie können globale .NET Core-Tools auf [NuGet](https://www.nuget.org) finden. Allerdings können Sie auf der NuGet-Website nicht spezifisch nach globalen .NET Core-Tools suchen.
 * Empfehlungen für Tools finden Sie in Blogbeiträgen oder im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
-* Sie können sich den Quellcode für die vom ASP.NET-Team erstellten globalen Tools im GitHub-Repository [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) ansehen.
+* Sie können sich den Quellcode für die vom ASP.NET-Team erstellten globalen Tools im GitHub-Repository [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) ansehen.
 * Weitere Informationen zu Diagnosetools finden Sie unter [Globale .NET Core-dotnet-Diagnosetools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Überprüfen des Autors und der Statistiken

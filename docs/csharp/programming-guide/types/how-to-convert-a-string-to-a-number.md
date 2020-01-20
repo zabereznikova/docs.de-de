@@ -1,6 +1,5 @@
 ---
-title: 'Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl – C#-Programmierhandbuch'
-ms.custom: seodec18
+title: 'Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierleitfaden)'
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,20 +7,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552412"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711869"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierleitfaden)
 
 Sie können eine [Zeichenfolge](../../language-reference/builtin-types/reference-types.md) in eine Zahl umwandeln, indem Sie die Methode `Parse` oder `TryParse` in den verschiedenen numerischen Typen (`int`, `long`, `double` usw.) oder Methoden in der <xref:System.Convert?displayProperty=nameWithType>-Klasse aufrufen.  
   
  Bei einer Zeichenfolge ist es etwas effizienter und einfacher, eine `TryParse`-Methode (beispielsweise [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) oder eine `Parse`-Methode (beispielsweise [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) aufzurufen.  Die Verwendung einer <xref:System.Convert>-Methode eignet sich eher für allgemeine Objekte, die <xref:System.IConvertible> implementieren.  
   
- Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Die `Parse`-Methode gibt die konvertierte Zahl zurück, und die `TryParse`-Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die Konvertierung erfolgreich war. Anschließend wird die konvertierte Zahl in einem [`out`-Parameter](../../language-reference/keywords/out.md) zurückgegeben. Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse` `false` zurückgibt. Beim Aufrufen einer `Parse`-Methode sollten Sie grundsätzlich die Ausnahmebehandlung zum Abfangen einer <xref:System.FormatException> verwenden, falls beim Analysevorgang ein Fehler auftritt.  
+ Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Die `Parse`-Methode gibt die konvertierte Zahl zurück, und die `TryParse`-Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die Konvertierung erfolgreich war. Anschließend wird die konvertierte Zahl in einem [`out`-Parameter](../../language-reference/keywords/out.md) zurückgegeben. Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse``false` zurückgibt. Beim Aufrufen einer `Parse`-Methode sollten Sie grundsätzlich die Ausnahmebehandlung zum Abfangen einer <xref:System.FormatException> verwenden, falls beim Analysevorgang ein Fehler auftritt.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Aufrufen der Methoden „Parse“ und „TryParse“
 
@@ -58,5 +57,5 @@ In der folgenden Tabelle werden einige der Methoden aus der <xref:System.Convert
 ## <a name="see-also"></a>Siehe auch
 
 - [Typen](./index.md)
-- [Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

@@ -1,15 +1,13 @@
 ---
 title: Protokollierung und Ablaufverfolgung – .NET Core
 description: Eine Einführung in die Protokollierung und Ablaufverfolgung mit .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303653"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714422"
 ---
 # <a name="net-core-logging-and-tracing"></a>Protokollierung und Ablaufverfolgung mit .NET Core
 
@@ -31,7 +29,7 @@ Diese einfache Technik ist überraschend leistungsfähig. Sie kann in Situatione
 
 Die Klassen <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType> und <xref:System.Diagnostics.Debug?displayProperty=nameWithType> stellen jeweils ähnliche Ausgabeformat-APIs bereit, die für die Protokollierung gut geeignet sind.
 
-Welche Ausgabeformat-API Sie verwenden, ist Ihnen überlassen. Folgende wichtige Unterschiede bestehen:
+Welche Ausgabeformat-API Sie verwenden, ist Ihnen überlassen. Hauptunterschiede:
 
 - <xref:System.Console?displayProperty=nameWithType>
   - Immer aktiviert und schreibt immer in die Konsole.
@@ -70,7 +68,7 @@ Die folgenden APIs sind eher ereignisorientiert. Anstelle von einfachen Zeichenf
   - Bietet eine eindeutige Methode zum Identifizieren von Protokollmeldungen, die sich aus einer bestimmten Aktivität oder Transaktion ergeben. Dieses Objekt kann zum dienstübergreifenden Korrelieren von Protokollen verwendet werden.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
-  - Nur Windows
+  - Nur Windows.
   - Schreibt Nachrichten in das Windows-Ereignisprotokoll.
   - Systemadministratoren erwarten, dass schwerwiegende Anwendungsfehlermeldungen im Windows-Ereignisprotokoll aufgeführt werden.
 

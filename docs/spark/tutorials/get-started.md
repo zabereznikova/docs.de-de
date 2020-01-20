@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core unter Windows eine .NET für Ap
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740527"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337590"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Erste Schritte mit .NET für Apache Spark
 
@@ -31,18 +31,18 @@ Bevor Sie mit dem Schreiben Ihrer App beginnen, müssen Sie einige grundlegende 
 
 Sie müssen das .NET SDK (Software Development Kit) herunterladen und installieren, um mit der Entwicklung von .NET-Apps zu beginnen.
 
-Laden Sie das [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) herunter, und installieren Sie es. Dadurch wird die `dotnet`-Toolkette der PATH-Umgebungsvariable hinzugefügt. 
+Laden Sie das [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) herunter, und installieren Sie es. Dadurch wird die `dotnet`-Toolkette der PATH-Umgebungsvariable hinzugefügt.
 
 Nachdem Sie das .NET Core SDK installiert haben, öffnen Sie eine neue Eingabeaufforderung, und führen Sie `dotnet` aus.
 
-Wenn der Befehl ausgeführt wird und Informationen zur Verwendung von dotnet ausgibt, können Sie mit dem nächsten Schritt fortfahren. Wenn Sie einen `'dotnet' is not recognized as an internal or external command`-Fehler erhalten, stellen Sie sicher, dass Sie vor dem Ausführen des Befehls eine **neue** Eingabeaufforderung geöffnet haben. 
+Wenn der Befehl ausgeführt wird und Informationen zur Verwendung von dotnet ausgibt, können Sie mit dem nächsten Schritt fortfahren. Wenn Sie einen `'dotnet' is not recognized as an internal or external command`-Fehler erhalten, stellen Sie sicher, dass Sie vor dem Ausführen des Befehls eine **neue** Eingabeaufforderung geöffnet haben.
 
 ### <a name="2-install-java"></a>2. Installieren von Java
 
 Installieren Sie [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Wählen Sie die für Ihr Betriebssystem geeignete Version aus. Für einen Windows-Computer mit x64-Architektur wählen Sie beispielsweise **jdk-8u201-windows-x64.exe** aus. Verwenden Sie dann den Befehl `java`, um die Installation zu überprüfen.
-   
+
 ![Java-Download](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
 ### <a name="3-install-7-zip"></a>3. Installieren von 7-Zip
@@ -52,12 +52,12 @@ Apache Spark wird als komprimierte TGZ-Datei heruntergeladen. Verwenden Sie ein 
 * Besuchen Sie [7-Zip-Downloads](https://www.7-zip.org/).
 * Wählen Sie in der ersten Tabelle auf der Seite je nach Betriebssystem den 32-Bit-x86- oder 64-Bit-x64-Download aus.
 * Führen Sie nach Abschluss des Downloads das Installationsprogramm aus.
-   
+
 ![7-Zip-Download](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
 ### <a name="4-install-apache-spark"></a>4. Installieren von Apache Spark
 
-[Laden Sie Apache Spark herunter, und installieren Sie es](https://spark.apache.org/downloads.html). Sie müssen aus den Versionen 2.3.* oder 2.4.0, 2.4.1, 2.4.3 oder 2.4.4 auswählen (.NET für Apache Spark ist mit anderen Versionen von Apache Spark nicht kompatibel).  
+[Laden Sie Apache Spark herunter, und installieren Sie es](https://spark.apache.org/downloads.html). Sie müssen aus den Versionen 2.3.* oder 2.4.0, 2.4.1, 2.4.3 oder 2.4.4 auswählen (.NET für Apache Spark ist mit anderen Versionen von Apache Spark nicht kompatibel).
 
 Anhand der in den folgenden Schritten verwendeten Befehle wird davon ausgegangen, dass Sie [Apache Spark 2.4.1 heruntergeladen und installiert](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz) haben. Wenn Sie eine andere Version verwenden möchten, ersetzen Sie **2.4.1** durch die entsprechende Versionsnummer. Extrahieren Sie anschließend die **TAR**-Datei und die Apache Spark-Dateien.
 
@@ -74,9 +74,9 @@ So extrahieren Sie die Apache Spark-Dateien:
 * Deaktivieren Sie das Kontrollkästchen unterhalb des Felds **Extrahieren nach**.
 * Klicken Sie auf **OK**.
 * Die Apache Spark-Dateien werden nach C:\bin\spark-2.4.1-bin-hadoop2.7\ extrahiert.
-      
+
 ![Spark-Installation](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
+
 Führen Sie die folgenden Befehle aus, um die Umgebungsvariablen für die Suche nach Apache Spark festzulegen:
 
 ```console
@@ -103,7 +103,7 @@ So extrahieren Sie Microsoft.Spark.Worker:
 * Geben Sie **C:\bin** in das Feld **Extrahieren nach** ein.
 * Deaktivieren Sie das Kontrollkästchen unterhalb des Felds **Extrahieren nach**.
 * Klicken Sie auf **OK**.
-  
+
 ![.NET Spark-Installation](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
 ### <a name="6-install-winutils"></a>6. Installieren von WinUtils
@@ -111,7 +111,7 @@ So extrahieren Sie Microsoft.Spark.Worker:
 .NET für Apache Spark erfordert die Installation von WinUtils neben Apache Spark. [Laden Sie die winutils.exe-Datei herunter](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Kopieren Sie dann WinUtils in **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.
 
 > [!NOTE]
-> Wenn Sie eine andere Version von Hadoop verwenden (dies ist am Ende des Namens Ihres Spark-Installationsordner angemerkt), [wählen Sie die Version von WinUtils aus](https://github.com/steveloughran/winutils), die mit Ihrer Version von Hadoop kompatibel ist. 
+> Wenn Sie eine andere Version von Hadoop verwenden (dies ist am Ende des Namens Ihres Spark-Installationsordner angemerkt), [wählen Sie die Version von WinUtils aus](https://github.com/steveloughran/winutils), die mit Ihrer Version von Hadoop kompatibel ist.
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. Festlegen von DOTNET_WORKER_DIR und Überprüfen von Abhängigkeiten
 
