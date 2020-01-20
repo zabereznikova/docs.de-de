@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 0abb728c58d50e3d7709d680dd91794c4be6afef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fc3dc534756c462fdc368d997da40277e5dc2869
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705742"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937577"
 ---
 # <a name="constants-c-programming-guide"></a>Konstanten (C#-Programmierhandbuch)
 Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und sich während der Lebensdauer des Programms nicht ändern. Konstanten werden mit dem [const](../../language-reference/keywords/const.md)-Modifizierer deklariert. Nur die in C# integrierten Typen (außer <xref:System.Object?displayProperty=nameWithType>) können als `const` deklariert werden. Eine Liste der integrierten Typen finden Sie unter [Tabelle integrierter Typen](../../language-reference/keywords/built-in-types-table.md). Benutzerdefinierte Typen einschließlich Klassen, Strukturen und Arrays können nicht `const` sein. Verwenden Sie den [readonly](../../language-reference/keywords/readonly.md)-Modifizierer zum Erstellen einer Klasse, einer Struktur oder eines Arrays, die/das zur Laufzeit einmal initialisiert wird (z.B. in einem Konstruktor) und danach nicht geändert werden kann.  
@@ -52,4 +52,4 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
 - [Eigenschaften](./properties.md)
 - [Typen](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Unveränderlichkeit in C#, Teil 1: Arten von Unveränderlichkeit](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)
+- [Unveränderlichkeit in C#, Teil 1: Arten von Unveränderlichkeit](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

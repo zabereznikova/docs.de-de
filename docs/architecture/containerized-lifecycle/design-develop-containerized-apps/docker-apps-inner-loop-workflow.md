@@ -2,12 +2,12 @@
 title: Inner-Loop-Entwicklungsworkflow für Docker-Apps
 description: Lernen Sie den Workflow der „inneren Schleife“ bei der Entwicklung von Docker-Anwendungen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394778"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936813"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Inner-Loop-Entwicklungsworkflow für Docker-Apps
 
@@ -266,7 +266,7 @@ Visual Studio Code unterstützt das Debuggen von Docker, wenn Sie Node.js und an
 Wenn Sie Visual Studio für Windows oder Mac verwenden, können Sie darüber hinaus .NET Core- oder .NET Framework-Container in Docker debuggen, wie im nächsten Abschnitt beschrieben.
 
 > [!TIP]
-> Weitere Informationen zum Debuggen von Node.js-Docker-Containern finden Sie unter <https://blog.docker.com/2016/07/live-debugging-docker/> und <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
+> Weitere Informationen zum Debuggen von Node.js-Docker-Containern finden Sie unter <https://blog.docker.com/2016/07/live-debugging-docker/> und <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>.
 
 >[!div class="step-by-step"]
 >[Zurück](docker-apps-development-environment.md)

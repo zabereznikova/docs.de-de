@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714659"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964745"
 ---
 # <a name="using-structs-c-programming-guide"></a>Verwenden von Strukturen (C#-Programmierhandbuch)
 
@@ -21,7 +21,7 @@ Die Definition eines parameterlosen Konstruktors für eine Struktur verursacht e
 
 Wenn Sie ein Strukturobjekt mit dem Operator [new](../../language-reference/operators/new-operator.md) erzeugen, wird das Objekt erstellt und der geeignete Konstruktor gemäß der [Signatur des Konstruktors](constructors.md#constructor-syntax) aufgerufen. Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden. In einem solchen Fall gibt es keinen Konstruktoraufruf, sodass die Zuordnung effizienter ausgeführt werden kann. Die Felder werden jedoch nicht zugewiesen, und das Objekt kann erst verwendet werden, nachdem alle Felder initialisiert wurden. Dazu gehört die Unfähigkeit, Werte abzurufen oder festzulegen.
 
-Wenn Sie ein Strukturobjekt unter Verwendung des parameterlosen Konstruktors instanziieren, werden alle Member gemäß ihrer [Standardwerte](../../language-reference/keywords/default-values-table.md) zugeordnet.
+Wenn Sie ein Strukturobjekt unter Verwendung des parameterlosen Konstruktors instanziieren, werden alle Member gemäß ihrer [Standardwerte](../../language-reference/builtin-types/default-values.md) zugeordnet.
 
 Wenn Sie einen Konstruktor mit Parametern für eine Struktur schreiben, müssen Sie alle Member explizit initialisieren. Andernfalls bleibt mindestens ein Member nicht zugewiesen, die Struktur kann nicht verwendet werden, und der Compilerfehler [CS0171](../../misc/cs0171.md) wird ausgelöst.
 

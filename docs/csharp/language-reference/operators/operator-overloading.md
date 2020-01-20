@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 04c8731867e32ce1000a511c9ab36db554664a97
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038952"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937196"
 ---
 # <a name="operator-overloading-c-reference"></a>Operatorüberladung (C#-Referenz)
 
@@ -39,7 +39,7 @@ Die folgende Tabelle enthält Informationen zur Überladbarkeit von C#-Operatore
 | --------- | --------------- |
 |[+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++](arithmetic-operators.md#increment-operator-), [--](arithmetic-operators.md#decrement-operator---), [true](true-false-operators.md), [false](true-false-operators.md)|Diese unären Operatoren können überladen werden.|
 |[x + y](addition-operator.md), [x - y](subtraction-operator.md), [x \* y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-), [x & y](boolean-logical-operators.md#logical-and-operator-), [x &#124; y](boolean-logical-operators.md#logical-or-operator-), [x ^ y](boolean-logical-operators.md#logical-exclusive-or-operator-), [x \<\< y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-), [x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-), [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x >= y](comparison-operators.md#greater-than-or-equal-operator-)|Diese binären Operatoren können überladen werden. Manche Operatoren müssen paarweise überladen werden. Weitere Informationen dazu finden Sie im Hinweisfeld unter dieser Tabelle.|
-|[x && y](boolean-logical-operators.md#conditional-logical-and-operator-), [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|Bedingte logische Operatoren können nicht überladen werden. Wenn jedoch ein Typ mit den überladenen Operatoren [`true` und `false` ebenfalls den Operator](true-false-operators.md) `&` oder <code>&#124;</code> auf eine bestimmte Weise überlädt, kann jeweils entweder der Operator `&&` oder der Operator <code>&#124;&#124;</code> für die Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).|
+|[x && y](boolean-logical-operators.md#conditional-logical-and-operator-), [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|Bedingte logische Operatoren können nicht überladen werden. Wenn jedoch ein Typ mit den überladenen Operatoren [`true` und `false` ebenfalls den Operator](true-false-operators.md)`&` oder <code>&#124;</code> auf eine bestimmte Weise überlädt, kann jeweils entweder der Operator `&&` oder der Operator <code>&#124;&#124;</code> für die Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).|
 |[a&#91;i&#93;](member-access-operators.md#indexer-operator-)|Der Elementzugriff wird nicht als überladbarer Operator betrachtet. Sie können aber einen [Indexer](../../programming-guide/indexers/index.md) definieren.|
 |[(T)x](type-testing-and-cast.md#cast-operator-)|Der Umwandlungsoperator kann nicht überladen werden. Sie können jedoch neue Konvertierungsoperatoren definieren. Weitere Informationen finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](user-defined-conversion-operators.md).|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|Zusammengesetzte Zuweisungsoperatoren können nicht explizit überladen werden. Wenn Sie einen binären Operator überladen, wird der zugehörige zusammengesetzte Zuweisungsoperator jedoch, sofern er vorhanden ist, auch implizit überladen. Wenn `+=` beispielsweise mit `+` ausgewertet wird. Selbiger kann überladen werden.|
@@ -64,4 +64,4 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)
 - [Benutzerdefinierte Konvertierungsoperatoren](user-defined-conversion-operators.md)
-- [Why are overloaded operators always static in C#? (Warum sind überladene Operatoren in C# immer statisch?)](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)
+- [Why are overloaded operators always static in C#? (Warum sind überladene Operatoren in C# immer statisch?)](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)

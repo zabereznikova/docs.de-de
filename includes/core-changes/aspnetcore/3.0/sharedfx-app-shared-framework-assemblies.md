@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2067ea2a70277d188950c449d3990f4426f69beb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901805"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937282"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Freigegebenes Framework: Assemblys aus Microsoft.AspNetCore.App entfernt
 
@@ -46,7 +46,7 @@ Weitere Informationen finden Sie unter [The future of JSON in .NET Core 3.0](ht
 
 Diese Änderung vereinfacht die Verwendung von `Microsoft.AspNetCore.App` und verringert Duplizierungen zwischen NuGet-Paketen und freigegebenen Frameworks.
 
-Weitere Informationen zu den Gründen für diese Änderung finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Weitere Informationen zu den Gründen für diese Änderung finden Sie in [diesem Blogbeitrag](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="recommended-action"></a>Empfohlene Aktion
 

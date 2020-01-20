@@ -2,12 +2,12 @@
 title: Abonnieren von Ereignissen
 description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
 ms.date: 10/02/2018
-ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737064"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937143"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -368,7 +368,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)**  \
-    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
+    <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
