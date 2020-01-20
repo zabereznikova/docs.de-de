@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926150"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340370"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Erstellen einer Elementvorlage
 
@@ -26,14 +26,14 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 > * Testen einer Elementvorlage
 > * Deinstallieren einer Elementvorlage
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) oder eine höhere Version
 * Lesen Sie den Referenzartikel [Benutzerdefinierte Vorlagen für dotnet new](../tools/custom-templates.md).
 
   Der Referenzartikel enthält grundlegende Informationen zu Vorlagen und zu deren Erstellung. Einige dieser Informationen werden hier wiederholt.
 
-* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_ .
+* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates_.
 
 ## <a name="create-the-required-folders"></a>Erstellen der erforderlichen Ordner
 
@@ -54,7 +54,7 @@ parent_folder
 
 Eine Elementvorlage ist eine spezielle Art von Vorlage, die eine oder mehrere Dateien enthält. Diese Art von Vorlage ist hilfreich, wenn Sie beispielsweise eine Konfigurations-, Code- oder Projektmappendatei generieren möchten. In diesem Beispiel wird eine Klasse erstellt, die dem Zeichenfolgentyp eine Erweiterungsmethode hinzufügt.
 
-Navigieren Sie in Ihrem Terminal zum Ordner _working\templates\\_ , und erstellen Sie einen neuen Unterordner mit dem Namen _extensions_. Öffnen Sie den Ordner.
+Navigieren Sie in Ihrem Terminal zum Ordner _working\templates_, und erstellen Sie einen neuen Unterordner mit dem Namen _extensions_. Öffnen Sie den Ordner.
 
 ```console
 working
@@ -85,7 +85,7 @@ Nachdem Sie den Inhalt der Vorlage erstellt haben, müssen Sie als Nächstes im 
 
 ## <a name="create-the-template-config"></a>Erstellen der Vorlagenkonfiguration
 
-Vorlagen werden in .NET Core anhand eines speziellen Ordners und einer Konfigurationsdatei am Stamm Ihrer Vorlage erkannt. In diesem Tutorial befindet sich Ihr Vorlagenordner unter _working\templates\extensions\\_ .
+Vorlagen werden in .NET Core anhand eines speziellen Ordners und einer Konfigurationsdatei am Stamm Ihrer Vorlage erkannt. In diesem Tutorial befindet sich Ihr Vorlagenordner unter _working\templates\extensions_.
 
 Bei der Vorlagenerstellung werden mit Ausnahme des speziellen Konfigurationsordners alle Dateien und Ordner aus dem Vorlagenordner in die Vorlage eingeschlossen. Dieser Konfigurationsordner heißt _.template.config_.
 

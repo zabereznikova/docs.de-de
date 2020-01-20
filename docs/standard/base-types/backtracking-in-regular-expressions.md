@@ -17,13 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.custom: seodec18
-ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968256"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711518"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) enthält und die Engine für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -130,7 +129,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
 ### <a name="lookbehind-assertions"></a>Lookbehindassertionen  
  .NET enthält zwei Sprachelemente, `(?<=`*Teilausdruck*`)` und `(?<!`*Teilausdruck*`)`, die mit dem bzw. den vorherigen Zeichen in der Eingabezeichenfolge übereinstimmen. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar vor dem aktuellen Zeichen mit *Teilausdruck*vorliegt.  
   
- `(?<=` *Teilausdruck* `)` ist eine positive Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen mit *Teilausdruck*übereinstimmen. `(?<!`*Teilausdruck*`)` ist eine negative Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookbehindassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des vorherigen Teilausdrucks ist.  
+ `(?<=` *Teilausdruck* `)` ist eine positive Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen mit *Teilausdruck* übereinstimmen. `(?<!`*Teilausdruck*`)` ist eine negative Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookbehindassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des vorherigen Teilausdrucks ist.  
   
  Im folgenden Beispiel werden zwei äquivalente reguläre Ausdrucksmuster verwendet, die den Benutzernamen in einer E-Mail-Adresse überprüfen. Aufgrund übermäßiger Rückverfolgung tritt beim ersten Muster eine schlechte Leistung auf. Das zweite Muster ist eine Änderung des ersten regulären Ausdrucks, indem ein geschachtelter Quantifizierer durch eine positive Lookbehindassertion ersetzt wird. In der Beispielausgabe wird die Ausführungszeit der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode angezeigt.  
   
@@ -139,7 +138,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
   
  Das erste Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  
@@ -150,7 +149,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
   
  Das zweite Muster für reguläre Ausdrücke `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`verwendet eine positive Lookbehindassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  
@@ -161,7 +160,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
 ### <a name="lookahead-assertions"></a>Lookaheadassertionen  
  .NET enthält zwei Sprachelemente, `(?=`*Teilausdruck*`)` und `(?!`*Teilausdruck*`)`, die mit dem bzw. den nächsten Zeichen in der Eingabezeichenfolge übereinstimmen. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar nach dem aktuellen Zeichen mit *Teilausdruck*vorliegt.  
   
- `(?=` *Teilausdruck* `)` ist eine positive Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen mit *Teilausdruck*übereinstimmen. `(?!`*Teilausdruck*`)` ist eine negative Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookaheadassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des nächsten Teilausdrucks ist.  
+ `(?=` *Teilausdruck* `)` ist eine positive Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen mit *Teilausdruck* übereinstimmen. `(?!`*Teilausdruck*`)` ist eine negative Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookaheadassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des nächsten Teilausdrucks ist.  
   
  Im folgenden Beispiel werden zwei äquivalente Muster für reguläre Ausdrücke verwendet, die einen vollqualifizierten Typnamen überprüfen. Aufgrund übermäßiger Rückverfolgung tritt beim ersten Muster eine schlechte Leistung auf. Das zweite Muster ist eine Änderung des ersten regulären Ausdrucks, indem ein geschachtelter Quantifizierer durch eine positive Lookaheadassertion ersetzt wird. In der Beispielausgabe wird die Ausführungszeit der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode angezeigt.  
   
@@ -170,7 +169,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
   
  Das erste Muster für reguläre Ausdrücke `^(([A-Z]\w*)+\.)*[A-Z]\w*$`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`([A-Z]\w*)+\.`|Übereinstimmung mit einem Buchstaben (A-Z), gefolgt von keinem oder mehreren Wortzeichen (einmaliges oder mehrmaliges Vorkommen), gefolgt von einem Punkt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  
@@ -180,7 +179,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
   
  Das zweite Muster für reguläre Ausdrücke `^((?=[A-Z])\w+\.)*[A-Z]\w*$`verwendet eine positive Lookaheadassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`(?=[A-Z])`|Lookahead zum ersten Zeichen und die Suche nach Übereinstimmungen fortsetzen, wenn es sich um einen Buchstaben (A-Z) handelt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.custom: seodec18
-ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120587"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711427"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
@@ -36,7 +35,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 ## <a name="character-escapes-in-net"></a>Escapezeichen in .NET  
  In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären Ausdrücken in .NET unterstützt werden.  
   
-|Zeichen oder Sequenz|BESCHREIBUNG|  
+|Zeichen oder Sequenz|Beschreibung|  
 |---------------------------|-----------------|  
 |Alle Zeichen außer Folgenden:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
 |`\a`|Entspricht dem Klingelzeichen (Warnsignal) `\u0007`.|  
@@ -61,7 +60,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
   
  Der reguläre Ausdruck `\G(.+)[\t|\u007c](.+)\r?\n` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\G`|Beginnen Sie den Abgleich an der Stelle, wo der letzte Abgleich geendet hat.|  
 |`(.+)`|Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen. Dies ist die erste Erfassungsgruppe.|  

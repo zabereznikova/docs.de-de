@@ -2,15 +2,15 @@
 title: Erstellen eines Vorlagenpakets für „dotnet new“
 description: Hier erfahren Sie, wie Sie eine CSPROJ-Datei zum Erstellen eines Vorlagenpakets für den Befehl „dotnet new“ erstellen.
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117401"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340177"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Erstellen eines Vorlagenpakets
 
@@ -25,13 +25,13 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 > * Installieren einer Vorlage aus einer NuGet-Paketdatei
 > * Deinstallieren einer Vorlage anhand der Paket-ID
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 * Absolvieren Sie [Teil 1](cli-templates-create-item-template.md) und [Teil 2](cli-templates-create-project-template.md) dieser Tutorialreihe.
 
-  In diesem Tutorial werden die beiden Vorlagen verwendet, die in den ersten beiden Teilen dieses Tutorials erstellt wurden. Gegebenenfalls kann auch eine andere Vorlage verwendet werden, solange diese als Ordner in den Ordner _working\templates\\_ kopiert wird.
+  In diesem Tutorial werden die beiden Vorlagen verwendet, die in den ersten beiden Teilen dieses Tutorials erstellt wurden. Sie können auch eine andere Vorlage verwenden, solange diese als Ordner in den Ordner _working\templates\\_ kopiert wird.
 
-* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_ .
+* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\\_ .
 
 ## <a name="create-a-template-pack-project"></a>Erstellen eines Vorlagenpaketprojekts
 
