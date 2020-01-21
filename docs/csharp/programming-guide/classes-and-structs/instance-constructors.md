@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714814"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964732"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Instanzkonstruktoren (C#-Programmierhandbuch)
 
@@ -31,7 +31,7 @@ Instanzkonstruktoren werden zum Erstellen und Initialisieren von Instanzmemberva
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Wenn eine Klasse über keinen Konstruktor verfügt, wird automatisch ein parameterloser Konstruktor generiert, und die Objektfelder werden mit Standardwerte initialisiert. Ein [int](../../language-reference/builtin-types/integral-numeric-types.md)-Objekt wird beispielsweise auf 0 (null) initialisiert. Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md). Da der parameterloser Konstruktor der `Coords`-Klasse alle Datenmember auf 0 (null) initialisiert, kann er komplett entfernt werden, ohne dass die Arbeitsweise der Klasse geändert wird. Unter Beispiel 1 weiter unten in diesem Thema finden Sie ein vollständiges Beispiel mit mehreren Konstruktoren. Unter Beispiel 2 finden Sie ein Beispiel für einen automatisch generierten Konstruktor.  
+ Wenn eine Klasse über keinen Konstruktor verfügt, wird automatisch ein parameterloser Konstruktor generiert, und die Objektfelder werden mit Standardwerte initialisiert. Ein [int](../../language-reference/builtin-types/integral-numeric-types.md)-Objekt wird beispielsweise auf 0 (null) initialisiert. Informationen zu den Typstandardwerten finden Sie unter [Standardwerte der C#-Typen](../../language-reference/builtin-types/default-values.md). Da der parameterloser Konstruktor der `Coords`-Klasse alle Datenmember auf 0 (null) initialisiert, kann er komplett entfernt werden, ohne dass die Arbeitsweise der Klasse geändert wird. Unter Beispiel 1 weiter unten in diesem Thema finden Sie ein vollständiges Beispiel mit mehreren Konstruktoren. Unter Beispiel 2 finden Sie ein Beispiel für einen automatisch generierten Konstruktor.  
   
  Instanzkonstruktoren können ebenfalls dazu verwendet werden, die Instanzkonstruktoren von Basisklassen aufzurufen. Der Klassenkonstruktor kann den Konstruktor der Basisklasse mit dem Initialisierer wie folgt aufrufen:  
   
@@ -49,7 +49,7 @@ Instanzkonstruktoren werden zum Erstellen und Initialisieren von Instanzmemberva
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- Beachten Sie, dass der Standardwert von `age``0` ist, und der Standardwert von `name` ist `null`. Weitere Informationen zu Standardwerten finden Sie unter [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md).  
+ Beachten Sie, dass der Standardwert von `age``0` ist, und der Standardwert von `name` ist `null`.
   
 ## <a name="example-3"></a>Beispiel 3  
  Im folgenden Beispiel wird die Verwendung vom Basisklasseninitialisierer veranschaulicht. Die `Circle`-Klasse wird von der allgemeinen Klasse `Shape` abgeleitet, und die `Cylinder`-Klasse wird von der `Circle`-Klasse abgeleitet. Der Konstruktor von jeder abgeleiteten Klasse verwendet deren Basisklasseninitialisierer.  

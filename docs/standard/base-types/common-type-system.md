@@ -316,5 +316,5 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET API-Browser](/dotnet/api)
-- [Common Language Runtime](../../../docs/standard/clr.md)
+- [Übersicht: Common Language Runtime (CLR)](../../../docs/standard/clr.md)
 - [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)

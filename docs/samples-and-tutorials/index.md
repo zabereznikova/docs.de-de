@@ -53,7 +53,7 @@ Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Indexer. D
 
 Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Delegaten und -Ereignisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) finden Sie im dotnet/samples-Repository auf GitHub. Im gleichen Repository finden Sie ein [zweites Beispiel](https://github.com/dotnet/samples/tree/master/csharp/events), bei dem es hauptsächlich um Ereignisse geht.
 
-**[Expression Trees](../csharp/expression-trees.md)**
+**[Ausdrucksbaumstrukturen](../csharp/expression-trees.md)**
 
 Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksbaumstrukturen gelöst werden können. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) finden Sie im dotnet/samples-Repository auf GitHub.
 

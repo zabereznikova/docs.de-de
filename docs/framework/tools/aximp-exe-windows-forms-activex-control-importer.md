@@ -47,7 +47,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |`/out:` *dateiname*|Legt den Namen der zu erstellenden Assembly fest.|  
 |`/publickey:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des öffentlichen Schlüssels, der in der durch *dateiname* angegebenen Datei enthalten ist, mit einem starken Namen.|  
-|`/rcw:` *Dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *Dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [RCW](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
 |`/source`|Erstellt C#-Quellcode für den Windows Forms-Wrapper.|  
 |`/verbose`|Gibt den ausführlichen Modus an und zeigt zusätzliche Verlaufsinformationen an.|  

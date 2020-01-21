@@ -4,16 +4,16 @@ description: Verwendung des Default-Operators zum Erzeigen des Standardwerts ein
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712714"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964620"
 ---
 # <a name="default-operator-c-reference"></a>default-Operator (C#-Referenz)
 
-Der `default`-Operator dient zum Erzeugen des [Standardwerts](../keywords/default-values-table.md) eines Typs. Das Argument für den `default`-Operator muss der Name eines Typs oder ein Typparameter sein.
+Der `default`-Operator dient zum Erzeugen des [Standardwerts](../builtin-types/default-values.md) eines Typs. Das Argument für den `default`-Operator muss der Name eines Typs oder ein Typparameter sein.
 
 Im folgenden Beispiel wird die Verwendung des `default`-Operators veranschaulicht:
 
@@ -44,5 +44,5 @@ Weitere Informationen zum `default`-Literal finden Sie unter [Hinweis zum Featur
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)
-- [Tabelle für Standardwerte](../keywords/default-values-table.md)
+- [Standardwerte der C#-Typen](../builtin-types/default-values.md)
 - [Generics in .NET](../../../standard/generics/index.md)

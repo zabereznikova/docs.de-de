@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345340"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115828"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren: C#-Referenz
 
@@ -60,7 +60,7 @@ Sie können das Symbol `~` auch verwenden, um Finalizers zu deklarieren. Weitere
 
 ## <a name="left-shift-operator-"></a>Operator für Linksverschiebung \<\<
 
-Mit dem Operator `<<` wird der linke Operand um die Anzahl von Bits nach links verschoben, die durch den rechten Operanden angegeben wird.
+Mit dem Operator `<<` wird der linke Operand um die [Anzahl von Bits nach links verschoben, die durch den rechten Operanden angegeben wird](#shift-count-of-the-shift-operators).
 
 Bei der Operation zum Verschieben nach links werden die hohen Bits, die außerhalb des Bereichs des Ergebnistyps liegen, verworfen, und die niedrigen leeren Bitpositionen werden auf null festgelegt. Dies ist im folgenden Beispiel dargestellt:
 
@@ -74,7 +74,7 @@ Informationen dazu, wie der rechte Operand des Operators `<<` die Anzahl für di
 
 ## <a name="right-shift-operator-"></a>Operator für Rechtsverschiebung >>
 
-Mit dem Operator `>>` wird der linke Operand um die Anzahl von Bits nach rechts verschoben, die durch den rechten Operanden angegeben wird.
+Mit dem Operator `>>` wird der linke Operand um die [Anzahl von Bits nach rechts verschoben, die durch den rechten Operanden angegeben wird](#shift-count-of-the-shift-operators).
 
 Bei der Operation zum Verschieben nach rechts werden die niedrigen Bits verworfen. Dies ist im folgenden Beispiel dargestellt:
 
@@ -169,6 +169,9 @@ Für die Ausdrücke `x << count` und `x >> count` hängt die tatsächliche Versc
 Das folgende Beispiel veranschaulicht dieses Verhalten:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> Wie im vorherigen Beispiel gezeigt wird, kann das Ergebnis eines Verschiebungsvorgangs nicht 0 (Null) sein, auch wenn der Wert des rechten Operanden größer ist als die Anzahl der Bits im linken Operanden.
 
 ## <a name="enumeration-logical-operators"></a>Logische Enumerationsoperatoren
 

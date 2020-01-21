@@ -16,7 +16,7 @@ ms.locfileid: "74714474"
 
 Bei Manifest Generation and Editing Tool (*Mage.exe*) handelt es sich um ein Befehlszeilentool, das Sie beim Erstellen und Bearbeiten von Anwendungs- und Bereitstellungsmanifesten unterstützt. Als Befehlszeilentool kann *Mage.exe* von Batchskripten und anderen Windows-basierten Anwendungen ausgeführt werden, beispielsweise ASP.NET-Anwendungen.
 
-Sie können statt *Mage.exe* auch die grafische Anwendung *MageUI.exe* verwenden. Weitere Informationen finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+Sie können statt *Mage.exe* auch die grafische Anwendung *MageUI.exe* verwenden. Weitere Informationen finden Sie unter [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
 Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio, um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 

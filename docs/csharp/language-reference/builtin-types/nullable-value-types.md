@@ -4,12 +4,12 @@ description: Informationen zu Werttypen, die Nullwerte zulassen, in C# und der V
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740966"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964315"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable-Werttypen (C#-Referenz)
 
@@ -24,7 +24,7 @@ Sie verwenden in der Regel einen Nullable-Werttyp, wenn Sie den nicht definierte
 
 ## <a name="declaration-and-assignment"></a>Deklaration und Zuweisung
 
-Da ein Werttyp implizit in den entsprechenden Nullable-Werttyp konvertiert werden kann, können Sie einer Variablen eines Nullable-Werttyps auf die gleiche Weise wie seinem zugrunde liegenden Werttyp einen Wert zuweisen. Sie können auch den `null`-Wert zuweisen. Beispiel:
+Da ein Werttyp implizit in den entsprechenden Nullable-Werttyp konvertiert werden kann, können Sie einer Variablen eines Nullable-Werttyps auf die gleiche Weise wie seinem zugrunde liegenden Werttyp einen Wert zuweisen. Sie können auch den `null`-Wert zuweisen. Zum Beispiel:
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -40,7 +40,7 @@ Sie können immer die folgenden schreibgeschützten Eigenschaften verwenden, um 
 
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> gibt an, ob eine Instanz des Nullable-Werttyps über einen Wert des zugrunde liegenden Typs verfügt.
 
-- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> ruft den Wert eines zugrunde liegenden Typs ab, wenn <xref:System.Nullable%601.HasValue%2A> `true` ist. Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, löst die <xref:System.Nullable%601.Value%2A>-Eigenschaft eine <xref:System.InvalidOperationException> aus.
+- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> ruft den Wert eines zugrunde liegenden Typs ab, wenn <xref:System.Nullable%601.HasValue%2A>`true` ist. Wenn <xref:System.Nullable%601.HasValue%2A>`false` ist, löst die <xref:System.Nullable%601.Value%2A>-Eigenschaft eine <xref:System.InvalidOperationException> aus.
 
 Im folgenden Beispiel wird mit der `HasValue`-Eigenschaft überprüft, ob die Variable einen Wert enthält. Erst danach erfolgt die Anzeige:
 
@@ -56,7 +56,7 @@ Wenn Sie einen Wert eines Nullable-Werttyps einer Variablen eines Nicht-Nullable
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-Wenn Sie den [Standardwert](../keywords/default-values-table.md) des zugrunde liegenden Werttyps anstelle von `null` verwenden möchten, verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>-Methode.
+Wenn Sie den [Standardwert](default-values.md) des zugrunde liegenden Werttyps anstelle von `null` verwenden möchten, verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>-Methode.
 
 Sie können einen Nullable-Werttyp wie im folgenden Beispiel gezeigt auch explizit in einen Nicht-Nullable-Typ umwandeln:
 
@@ -68,7 +68,7 @@ Ein Nicht-Nullable-Werttyp `T` kann implizit in den entsprechenden Nullable-Wert
 
 ## <a name="lifted-operators"></a>„Lifted“ Operatoren
 
-Die vordefinierten unären und binären Operatoren oder alle überladenen Operatoren, die von einem Werttyp `T` unterstützt werden, werden auch vom entsprechenden Nullable-Werttyp `T?` unterstützt. Durch diese Operatoren (auch als *„lifted“ Operatoren* bezeichnet) wird `null` generiert, wenn mindestens ein Operand `null` ist. Andernfalls verwendet der Operator die enthaltenen Werte seiner Operanden zur Berechnung des Ergebnisses. Beispiel:
+Die vordefinierten unären und binären Operatoren oder alle überladenen Operatoren, die von einem Werttyp `T` unterstützt werden, werden auch vom entsprechenden Nullable-Werttyp `T?` unterstützt. Durch diese Operatoren (auch als *„lifted“ Operatoren* bezeichnet) wird `null` generiert, wenn mindestens ein Operand `null` ist. Andernfalls verwendet der Operator die enthaltenen Werte seiner Operanden zur Berechnung des Ergebnisses. Zum Beispiel:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -90,8 +90,8 @@ Wenn eine [benutzerdefinierte Konvertierung](../operators/user-defined-conversio
 
 Das [Boxing](../../programming-guide/types/boxing-and-unboxing.md) einer Instanz eines Nullable-Werttyps `T?` erfolgt folgendermaßen:
 
-- Wenn <xref:System.Nullable%601.HasValue%2A> `false` zurückgibt, wird der Nullverweis erstellt.
-- Wenn <xref:System.Nullable%601.HasValue%2A> `true` zurückgibt, wird nicht für eine Instanz von <xref:System.Nullable%601>, sondern für den entsprechenden Wert des zugrunde liegenden Werttyps `T` Boxing durchgeführt.
+- Wenn <xref:System.Nullable%601.HasValue%2A>`false` zurückgibt, wird der Nullverweis erstellt.
+- Wenn <xref:System.Nullable%601.HasValue%2A>`true` zurückgibt, wird nicht für eine Instanz von <xref:System.Nullable%601>, sondern für den entsprechenden Wert des zugrunde liegenden Werttyps `T` Boxing durchgeführt.
 
 Sie können den Werttyp, für den das Boxing durchgeführt wurde, vom Werttyp `T` mittels Unboxing in den entsprechenden Nullable-Werttyp `T?` konvertieren, wie im folgenden Beispiel gezeigt wird:
 
@@ -105,7 +105,7 @@ Das folgende Beispiel zeigt, wie Sie bestimmen können, ob eine <xref:System.Typ
 
 Wie Sie im Beispiel sehen können, wird der Operator [typeof](../operators/type-testing-and-cast.md#typeof-operator) verwendet, um eine <xref:System.Type?displayProperty=nameWithType>-Instanz zu erstellen.
 
-Wenn Sie bestimmen möchten, ob eine Instanz einen Nullable-Werttyp aufweist, verwenden Sie nicht die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode, um eine <xref:System.Type>-Instanz abzurufen, die mit dem vorangehenden Code überprüft werden soll. Wenn Sie die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode in einer Instanz eines Nullable-Werttyps aufrufen, wird die Instanz in <xref:System.Object> [geschachtelt](#boxing-and-unboxing). Da das Schachteln einer nicht-NULL-Instanz von einem Nullable-Werttyp dem Schachteln eines Werts des zugrunde liegenden Typs entspricht, gibt <xref:System.Object.GetType%2A> eine <xref:System.Type>-Instanz zurück, die den zugrunde liegenden Typ eines Nullable-Werttyps darstellt:
+Wenn Sie bestimmen möchten, ob eine Instanz einen Nullable-Werttyp aufweist, verwenden Sie nicht die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode, um eine <xref:System.Type>-Instanz abzurufen, die mit dem vorangehenden Code überprüft werden soll. Wenn Sie die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode in einer Instanz eines Nullable-Werttyps aufrufen, wird die Instanz in <xref:System.Object>[geschachtelt](#boxing-and-unboxing). Da das Schachteln einer nicht-NULL-Instanz von einem Nullable-Werttyp dem Schachteln eines Werts des zugrunde liegenden Typs entspricht, gibt <xref:System.Object.GetType%2A> eine <xref:System.Type>-Instanz zurück, die den zugrunde liegenden Typ eines Nullable-Werttyps darstellt:
 
 [!code-csharp-interactive[GetType example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
 
@@ -133,7 +133,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was bedeutet „Lifted“ genau?)
+- [What exactly does 'lifted' mean?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean) (Was bedeutet „Lifted“ genau?)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

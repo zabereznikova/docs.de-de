@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714678"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115763"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statische Konstruktoren (C#-Programmierhandbuch)
 Ein statischer Konstruktor wird verwendet, um [static](../../language-reference/keywords/static.md)-Daten zu initialisieren oder um eine bestimmte Aktion auszuführen, die nur einmal ausgeführt werden muss. Er wird automatisch aufgerufen, bevor die erste Instanz erstellt oder auf irgendwelche statischen Member verwiesen wird.  
@@ -30,9 +30,9 @@ Statische Konstruktoren verfügen über folgende Eigenschaften:
 
 - Der Benutzer hat keine Kontrolle, wenn der statische Konstruktor im Programm ausgeführt wird.
   
-- Ein statischer Konstruktor wird automatisch zum Initialisieren von [class](../../language-reference/keywords/class.md) aufgerufen, bevor die erste Instanz erzeugt wird oder auf irgendwelche statischen Member verwiesen wird. Ein statischer Konstruktor wird vor einem Instanzkonstruktor ausgeführt. Beachten Sie, dass der statische Konstruktor eines Typs aufgerufen wird, wenn eine statische Methode, die einem Ereignis oder Delegaten zugewiesen ist, aufgerufen wird. Dies erfolgt nicht während der Zuweisung. Wenn Variableninitialisierer für statische Felder in der Klasse des statischen Konstruktors vorhanden sind, werden sie direkt vor Ausführung des statischen Konstruktors in der Textreihenfolge ausgeführt, in der sie in der Klassendeklaration vorhanden sind.
+- Ein statischer Konstruktor wird automatisch zum Initialisieren von [class](../../language-reference/keywords/class.md) aufgerufen, bevor die erste Instanz erzeugt wird oder auf irgendwelche statischen Member verwiesen wird. Ein statischer Konstruktor wird vor einem Instanzkonstruktor ausgeführt. Der statische Konstruktor eines Typs wird aufgerufen, wenn eine statische Methode, die einem Ereignis oder Delegaten zugewiesen ist, aufgerufen wird. Dies erfolgt nicht während der Zuweisung. Wenn Variableninitialisierer für statische Felder in der Klasse des statischen Konstruktors vorhanden sind, werden sie direkt vor Ausführung des statischen Konstruktors in der Textreihenfolge ausgeführt, in der sie in der Klassendeklaration vorhanden sind.
 
-- Wenn Sie keinen statischen Konstruktor zum Initialisieren von statischen Feldern angeben, werden alle statischen Felder mit ihrem Standardwert initialisiert, wie in der [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md) aufgeführt. 
+- Wenn Sie keinen statischen Konstruktor zum Initialisieren von statischen Feldern angeben, werden alle statischen Felder mit ihrem Standardwert initialisiert, wie unter [Standardwerte für C#-Typen](../../language-reference/builtin-types/default-values.md) aufgeführt.
   
 - Wenn ein statischer Konstruktor eine Ausnahme auslöst, wird die Laufzeit ihn kein zweites Mal aufrufen, und der Typ bleibt für die Lebensdauer der Anwendungsdomäne, in der das Programm ausgeführt wird, nicht initialisiert. Eine <xref:System.TypeInitializationException>-Ausnahme wird in aller Regel ausgelöst, wenn ein statischer Konstruktor keinen Typ instanziieren kann oder wenn in einem statischen Konstruktor ein Ausnahmefehler auftritt. Bei impliziten statischen Konstruktoren, die im Quellcode nicht explizit definiert sind, ist zur Problembehandlung möglicherweise eine Prüfung des IL-Codes (Intermediate Language, Zwischensprache) erforderlich.
 

@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899695"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116532"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -26,15 +26,15 @@ Wenn Sie eine neue ASP.NET Core-App erstellen, sollten Sie sich zuvor genau übe
 
 ### <a name="why-razor-pages"></a>Was spricht für Razor Pages?
 
-Razor Pages werden standardmäßig für neue Webanwendungen in Visual Studio verwendet. Mithilfe von Razor Pages können Sie seitenbasierte Anwendungsfeatures (wie Nicht-Single-Page-Formulare) einfacher erstellen. Wenn Controller und Ansichten verwendet werden, enthalten Anwendungen häufig sehr große Controller, die mit mehreren Abhängigkeiten und Ansichtsmodellen arbeiten und viele unterschiedliche Ansichten zurückgeben. Dadurch wird die Anwendung sehr komplex, und häufig sind Controller vorhanden, die das Prinzip der einzigen Verantwortung oder das Offen-Geschlossen-Prinzip nicht befolgen. Dieses Problem wird durch Razor Pages behoben, indem die serverseitige Logik für eine bestimmte lokale Seite in einer Webanwendung mit entsprechendem Razor-Markup gekapselt wird. Eine Razor Page ohne serverseitige Logik kann aus einer Razor-Datei bestehen (z.B. „Index.cshtml“). Den meisten nicht trivialen Razor Pages ist jedoch eine Seitenmodellklasse zugeordnet, die üblicherweise genauso wie die Razor-Datei benannt wird, aber die Erweiterung „.cs“ aufweist (z.B. „Index.cshtml.cs“).
+Razor Pages werden standardmäßig für neue Webanwendungen in Visual Studio verwendet. Mithilfe von Razor Pages können Sie seitenbasierte Anwendungsfeatures (wie Nicht-Single-Page-Formulare) einfacher erstellen. Wenn Controller und Ansichten verwendet werden, enthalten Anwendungen häufig sehr große Controller, die mit mehreren Abhängigkeiten und Ansichtsmodellen arbeiten und viele unterschiedliche Ansichten zurückgeben. Dadurch wird die Anwendung sehr komplex, und häufig sind Controller vorhanden, die das Single Responsibility Principle (Prinzip der eindeutigen Zuständigkeit) oder das Offen-Geschlossen-Prinzip nicht befolgen. Dieses Problem wird durch Razor Pages behoben, indem die serverseitige Logik für eine bestimmte lokale Seite in einer Webanwendung mit entsprechendem Razor-Markup gekapselt wird. Eine Razor Page ohne serverseitige Logik kann aus einer Razor-Datei bestehen (z.B. „Index.cshtml“). Den meisten nicht trivialen Razor Pages ist jedoch eine Seitenmodellklasse zugeordnet, die üblicherweise genauso wie die Razor-Datei benannt wird, aber die Erweiterung „.cs“ aufweist (z.B. „Index.cshtml.cs“).
 
 Das Seitenmodell einer Razor Page kombiniert die Zuständigkeit eines MVC und eines Ansichtsmodells. Anforderungen werden nicht mit Controlleraktionsmethoden verarbeitet, sondern Seitenmodellhandler wie OnGet() werden ausgeführt, um die zugehörige Seite standardmäßig zu rendern. Durch Razor Pages wird das Erstellen einzelner Seiten in einer ASP.NET Core-App vereinfacht, während alle Architekturfeatures von ASP.NET Core MVC genutzt werden können. Diese sind für neue seitenbasierte Funktionen gut geeignet.
 
 ### <a name="when-to-use-mvc"></a>Wann sollten Sie MVC verwenden?
 
-Wenn Sie Web-APIs erstellen, ist das MVC-Muster besser als Razor Pages geeignet. Wenn Ihr Projekt nur Web-API-Endpunkte verfügbar macht, sollten Sie im Idealfall die Projektvorlage für Web-APIs auswählen. Wenn Sie das nicht tun, können Sie jedoch auch einfach Controller und zugehörige API-Endpunkte zu ASP.NET Core-Apps hinzufügen. Sie sollten den ansichtsbasierten MVC-Ansatz ebenfalls verwenden, wenn Sie eine vorhandene Anwendung mit geringem Aufwand von ASP.NET Core MVC 5 oder früher zu ASP.NET Core MVC migrieren möchten. Nach der Migration können Sie überprüfen, ob Razor Pages für neue Feature oder als gesamte Migration sinnvoll eingesetzt werden können.
+Wenn Sie Web-APIs erstellen, ist das MVC-Muster besser als Razor Pages geeignet. Wenn Ihr Projekt nur Web-API-Endpunkte verfügbar macht, sollten Sie idealerweise mit der Web-API-Projektvorlage beginnen. Andernfalls ist es auch ganz einfach, Controller und zugehörige API-Endpunkte zu einer beliebigen ASP.NET Core-App hinzuzufügen. Verwenden Sie den ansichtsbasierten MVC-Ansatz, wenn Sie eine vorhandene Anwendung mit geringem Aufwand von ASP.NET Core MVC 5 oder früher zu ASP.NET Core MVC migrieren möchten. Nach der Migration können Sie überprüfen, ob Razor Pages für neue Feature oder als gesamte Migration sinnvoll eingesetzt werden können.
 
-Die Leistung Ihrer Web-App hängt nur geringfügig davon ab, ob Sie Razor Pages oder MVC-Ansichten verwenden, außerdem werden bei beiden Methoden Features wie Dependency Injection, Filter, Modellbindungen und Validierung unterstützt.
+Die Leistung Ihrer Web-App hängt nur geringfügig davon ab, ob Sie Razor Pages oder MVC-Ansichten verwenden, außerdem werden bei beiden Methoden Features wie Abhängigkeitsinjektion, Filter, Modellbindung, Validierung usw. unterstützt.
 
 ## <a name="mapping-requests-to-responses"></a>Zuordnen von Anforderungen zu Antworten
 
@@ -420,7 +420,7 @@ Die meisten Web-APIs sollten ein tokenbasiertes Authentifizierungssystem impleme
 
 **Abbildung 7-4.** Tokenbasierte Authentifizierung für Web-APIs.
 
-Sie können einen eigenen Authentifizierungsdienst erstellen und diesen in Azure AD oder OAuth integrieren oder einen Dienst über ein Open Source-Tool wie [IdentityServer](https://github.com/IdentityServer) implementieren.
+Sie können einen eigenen Authentifizierungsdienst erstellen, Ihre API in Azure AD und OAuth integrieren oder einen Dienst über ein Open-Source-Tool wie z. B. [IdentityServer](https://github.com/IdentityServer) implementieren.
 
 #### <a name="custom-security"></a>Benutzerdefinierte Sicherheit
 
@@ -540,7 +540,7 @@ Für DDD wird auch die Verwendung der bereits erwähnten Clean Architecture empf
 
 ### <a name="when-should-you-apply-ddd"></a>Empfohlene Anwendung von DDD
 
-DDD eignet sich besonders für große Anwendungen mit erheblicher Geschäftskomplexität, die nicht nur den technischen Bereich umfasst. Zum Erstellen der Anwendung wird dann das Fachwissen von Domänenexperten benötigt. Das Domänenmodell selbst sollte ein bedeutungsvolles Verhalten aufweisen, indem es Geschäftsregeln und Interaktionen darstellt und nicht nur den aktuellen Status verschiedener Datensätze aus Datenspeichern speichert und abfragt.
+DDD eignet sich besonders für große Anwendungen mit erheblicher Komplexität im geschäftlichen Bereich (nicht nur im technischen Bereich). Zum Erstellen der Anwendung wird dann das Fachwissen von Domänenexperten benötigt. Das Domänenmodell selbst sollte ein bedeutungsvolles Verhalten aufweisen, indem es Geschäftsregeln und Interaktionen darstellt und nicht nur den aktuellen Status verschiedener Datensätze aus Datenspeichern speichert und abfragt.
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>Nicht empfohlene Anwendung von DDD
 

@@ -1,5 +1,5 @@
 ---
-title: Zusammengesetzte Formatierung
+title: Kombinierte Formatierung
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -87,9 +87,9 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
 |Typ oder Typkategorie|Siehe|  
 |---------------------------|---------|  
-|Datums-/Zeittypen (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Enumerationstypen (alle Typen abgeleitet von <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Numerische Typen (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Datums-/Zeittypen (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Enumerationstypen (alle Typen abgeleitet von <xref:System.Enum?displayProperty=nameWithType>)|[Enumerationsformatzeichenfolgen](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Numerische Typen (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -170,4 +170,4 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 - [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Enumerationsformatzeichenfolgen](../../../docs/standard/base-types/enumeration-format-strings.md)

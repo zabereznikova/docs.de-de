@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714641"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964363"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Verwenden von Konstruktoren (C#-Programmierhandbuch)
 
@@ -29,7 +29,7 @@ Wenn eine [Klasse](../../language-reference/keywords/class.md) oder [Struktur](.
   
  Weitere Informationen finden Sie unter [Private Konstruktoren](./private-constructors.md).  
   
- Konstruktoren für [struct](../../language-reference/keywords/struct.md)-Typen ähneln Klassenkonstruktoren, `structs` können aber keinen expliziten parameterlosen Konstruktor enthalten, da er automatisch vom Compiler bereitgestellt wird. Dieser Konstruktor initialisiert alle Felder in `struct` auf die Standardwerte. Weitere Informationen finden Sie unter [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md). Dieser parameterlose Konstruktor wird jedoch nur aufgerufen, wenn `struct` mit `new` instanziiert wird. Dieser Code verwendet den parameterlosen Konstruktor z.B. für <xref:System.Int32>, damit sichergestellt ist, dass der ganzzahlige Typ initialisiert wird:  
+ Konstruktoren für [struct](../../language-reference/keywords/struct.md)-Typen ähneln Klassenkonstruktoren, `structs` können aber keinen expliziten parameterlosen Konstruktor enthalten, da er automatisch vom Compiler bereitgestellt wird. Dieser Konstruktor initialisiert alle Felder in `struct` auf die [Standardwerte](../../language-reference/builtin-types/default-values.md). Dieser parameterlose Konstruktor wird jedoch nur aufgerufen, wenn `struct` mit `new` instanziiert wird. Dieser Code verwendet den parameterlosen Konstruktor z.B. für <xref:System.Int32>, damit sichergestellt ist, dass der ganzzahlige Typ initialisiert wird:  
   
 ```csharp  
 int i = new int();  

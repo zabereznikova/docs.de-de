@@ -41,7 +41,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Eine vollständige Liste aller impliziten numerischen Konvertierungen finden Sie unter [Implicit numeric conversions](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) (Implizite numerische Konvertierungen) im Artikel [Built-in numeric conversions](../../language-reference/builtin-types/numeric-conversions.md) (Integrierte numerische Konvertierungen).
+ Eine vollständige Liste aller impliziten numerischen Konvertierungen finden Sie unter [Implizite numerische Konvertierungen](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) im Artikel [Integrierte numerische Konvertierungen (C#-Referenz)](../../language-reference/builtin-types/numeric-conversions.md).
   
  Eine implizite Konvertierungen für Verweistypen von einer Klasse in jede ihrer direkten oder indirekten Basisklassen oder Schnittstellen ist immer möglich. Es ist keine spezielle Syntax erforderlich, da eine abgeleitete Klasse immer alle Member der Basisklasse enthält.  
   

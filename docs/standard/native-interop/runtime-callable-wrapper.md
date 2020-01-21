@@ -16,7 +16,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123212"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper (RCW)
-Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper, Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
+Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper (RCW), Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
   
  Die Common Language Runtime erstellt genau einen RCW für jedes COM-Objekt, unabhängig von der Anzahl der vorhandenen Verweise auf das Objekt. Die Common Language Runtime verwaltet für jedes Objekt einen einzelnen RCW pro Prozess.  Wenn Sie einen RCW in einer Anwendungsdomäne oder einem Apartment erstellen und anschließend einen Verweis an eine andere Anwendungsdomäne oder ein anderes Apartment übergeben, wird ein Proxy für das erste Objekt verwendet.  Wie die folgende Abbildung zeigt, kann eine beliebige Anzahl verwalteter Clients auf die COM-Objekte verweisen, welche die Schnittstellen "INew" und "INewer" verfügbar machen.  
 

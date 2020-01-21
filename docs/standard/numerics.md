@@ -42,7 +42,7 @@ Jeder Ganzzahltyp unterstützt eine Reihe von arithmetischen Standardoperatoren.
 Sie können auch mit den einzelnen Bit in einem ganzzahligen Wert arbeiten, indem Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse verwenden.  
 
 > [!NOTE]  
-> Die Ganzzahltypen ohne Vorzeichen sind nicht CLS-kompatibel. Weitere Informationen finden Sie unter [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md).
+> Die Ganzzahltypen ohne Vorzeichen sind nicht CLS-kompatibel. Weitere Informationen finden Sie unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md).
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -96,4 +96,4 @@ Die SIMD-fähigen Typen sind so implementiert, dass sie mit nicht-SIMD-fähiger 
 ## <a name="see-also"></a>Siehe auch
 
 - [Grundlagen der Anwendung](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](base-types/standard-numeric-format-strings.md)

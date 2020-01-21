@@ -2,12 +2,12 @@
 title: Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 description: Festlegen der Zusammensetzung von Microservices für eine Anwendung mit mehreren Containern mit „docker-compose.yml“
 ms.date: 10/02/2018
-ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737088"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116540"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-Der Stammschlüssel in dieser Datei ist „services“. Unter diesem Schlüssel definieren Sie die Dienste, die Sie bereitstellen und ausführen möchten, wenn Sie den Befehl `docker-compose up` ausführen, oder wenn Sie von Visual Studio aus mithilfe dieser docker-compose.yml-Datei bereitstellen. In diesem Fall sind wie in der folgenden Tabelle beschrieben mehrere Dienste für die docker-compose.yml-Datei definiert.
+Der Stammschlüssel in dieser Datei ist „services“. Unter diesem Schlüssel definieren Sie die Dienste, die Sie bereitstellen und ausführen möchten, wenn Sie den Befehl `docker-compose up` ausführen oder wenn Sie die Bereitstellung von Visual Studio aus mithilfe dieser docker-compose.yml-Datei durchführen. In diesem Fall sind wie in der folgenden Tabelle beschrieben mehrere Dienste für die docker-compose.yml-Datei definiert.
 
 | Dienstname | Beschreibung |
 |--------------|-------------|
@@ -129,7 +129,7 @@ Da die Verbindungszeichenfolge von einer Umgebungsvariable definiert ist, könne
 
 - Er verknüpft den Webdienst mit dem sql.data-Dienst (der SQL Server-Instanz für die Linux-Datenbank, die in einem Container ausgeführt wird). Bei Angabe dieser Abhängigkeit wird der catalog.api-Container nicht gestartet, bis der sql.data-Container gestartet wird. Dies ist wichtig, da catalog.api erfordert, dass zunächst die SQL Server-Datenbank verfügbar ist und ausgeführt wird. Diese Art der Containerabhängigkeit reicht jedoch in vielen Fällen nicht aus, da Docker nur auf Containerebene prüft. Manchmal ist der Dienst (in diesem Fall SQL Server) womöglich noch immer nicht verfügbar, deshalb ist es ratsam, die Wiederholungsversuchslogik mit exponentiellem Backoff in Ihren Clientmicroservices zu implementieren. Auf diese Weise ist die Anwendung noch immer widerstandsfähig, wenn ein Abhängigkeitscontainer für kurze Zeit nicht bereit ist.
 
-- Er ist so konfiguriert, dass er Zugriff auf externe Server zulässt: Die Einstellung „extra\_hosts“ ermöglicht Ihnen, auf externe Server oder Computer außerhalb des Docker-Hosts zuzugreifen (das heißt, außerhalb der standardmäßigen Linux-VM, die einen Docker-Entwicklungshost darstellt), z.B. auf eine lokalen SQL Server-Instanz auf Ihrem Entwicklungs-PC.
+- Er ist so konfiguriert, dass er Zugriff auf externe Server zulässt: Die Einstellung „extra\_hosts“ ermöglicht es Ihnen, auf externe Server oder Computer außerhalb des Docker-Hosts zuzugreifen (das heißt, außerhalb der standardmäßigen Linux-VM, die einen Docker-Entwicklungshost darstellt), z. B. auf eine lokale SQL Server-Instanz auf Ihrem Entwicklungs-PC.
 
 Es sind auch andere, leistungsstärkere docker-compose.yml-Einstellungen verfügbar, die in den folgenden Abschnitten erläutert werden.
 
@@ -141,7 +141,7 @@ Aus diesem Grund können Sie durch die Verwendung des „docker-compose“-Befeh
 
 #### <a name="development-environments"></a>Entwicklungsumgebungen
 
-Wenn Sie Anwendungen entwickeln, ist es wichtig, dass Sie eine Anwendung in einer isolierten Entwicklungsumgebung ausführen können. Sie können den CLI-Befehl „docker-compose“ verwenden, um diese Umgebung zu erstellen, oder Visual Studio im Hintergrund ausführen, was „docker-compose“ verwendet.
+Wenn Sie Anwendungen entwickeln, ist es wichtig, dass Sie eine Anwendung in einer isolierten Entwicklungsumgebung ausführen können. Sie können diese Umgebung mithilfe des CLI-Befehls „docker-compose“ oder in Visual Studio erstellen. Visual Studio verwendet „docker-compose“ im Hintergrund.
 
 Die docker-compose.yml-Datei ermöglicht Ihnen, alle Dienstabhängigkeiten Ihrer Anwendung (andere Dienste, Caches, Datenbanken, Warteschlangen usw.) zu konfigurieren und zu dokumentieren. Mithilfe des CLI-Befehls „docker-compose“ können Sie mindestens einen Container für jede Abhängigkeit mit einem einzelnen Befehl („docker-compose up“) erstellen oder starten.
 
@@ -151,7 +151,7 @@ Die docker-compose.yml-Dateien sind Konfigurationsdateien, die von der Docker-En
 
 Ein wichtiger Teil des Prozesses jeder fortlaufenden Bereitstellung (Continuous Deployment, CD) oder fortlaufenden Integration (Continuous Integration, CI) sind die Komponententests und Integrationstests. Diese automatisierten Tests erfordern eine isolierte Umgebung, damit sie nicht von den Benutzern oder anderen Änderungen in den Daten der Anwendung betroffen sind.
 
-Mit Docker Compose können Sie diese isolierte Umgebung sehr einfach mithilfe von ein paar Befehlen aus Ihrer Eingabeaufforderung oder Skripts, die nachfolgend aufgeführt sind, erstellen und zerstören:
+Mit Docker Compose können Sie diese isolierte Umgebung sehr einfach mit einigen wenigen Befehlen an der Eingabeaufforderung oder in Skripts erstellen und zerstören. Hier einige Beispiele für diese Befehle:
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -390,7 +390,7 @@ In diesem Beispiel macht die Konfiguration zur Entwicklungsaußerkraftsetzung de
 
 Wenn Sie `docker-compose up` ausführen (oder von Visual Studio aus starten), liest der Befehl die Außerkraftsetzungen automatisch so, als ob er beide Dateien zusammenführen würde.
 
-Angenommen, Sie möchten eine andere Compose-Datei mit unterschiedlichen Konfigurationswerten, Ports oder Verbindungszeichenfolgen für die Produktionsumgebung verwenden. Sie können eine weitere Außerkraftsetzungsdatei (z.B. eine Datei namens `docker-compose.prod.yml`) mit verschiedenen Einstellungen und Umgebungsvariablen erstellen. Diese Datei kann in einem anderen Git-Repository oder von einem anderen Team verwaltet und gesichert werden.
+Angenommen, Sie möchten eine andere Compose-Datei mit anderen Konfigurationswerten, Ports oder Verbindungszeichenfolgen für die Produktionsumgebung verwenden. Sie können eine weitere Außerkraftsetzungsdatei (z.B. eine Datei namens `docker-compose.prod.yml`) mit verschiedenen Einstellungen und Umgebungsvariablen erstellen. Diese Datei kann in einem anderen Git-Repository oder von einem anderen Team verwaltet und gesichert werden.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Durchführen einer Bereitstellung mit einer bestimmten Außerkraftsetzungsdatei
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-compose erwartet, dass jede Zeile in einer ENV-Datei im Format \<variable\>=\<wert\> ist.
 
-Beachten Sie, dass die in der Laufzeitumgebung festgelegten Werte immer die innerhalb der ENV-Datei definierten Werte außer Kraft setzen. Auf ähnliche Weise setzen Werte, die über die Befehlsargumente der Befehlszeile übergeben werden, die in der ENV-Datei festgelegten Standardwerte außer Kraft.
+Die in der Laufzeitumgebung festgelegten Werte setzen immer die in der ENV-Datei definierten Werte außer Kraft. Auf ähnliche Weise setzen Werte, die über Befehlszeilenargumente übergeben werden, die in der ENV-Datei festgelegten Standardwerte außer Kraft.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -470,7 +470,7 @@ Für einen schnelleren Start setzen Runtimeimages auch automatisch aspnetcore\_u
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Building Optimized Docker Images with ASP.NET Core (Erstellen von optimierten Docker-Images mit ASP.NET Core)**  
-  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+  <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
 - **Erstellen von Docker-Images für .NET Core-Anwendungen**  
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 9c57ff6dd9acd8a8bcff6de4fce7d898f1135703
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714967"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964672"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktoren (C#-Programmierhandbuch)
 
@@ -19,7 +19,7 @@ Wenn eine [class](../../language-reference/keywords/class.md) oder [struct](../.
 
 ## <a name="parameterless-constructors"></a>Parameterlose Konstruktoren
   
-Wenn Sie keinen Konstruktor für die Klasse angeben, erstellt C# standardmäßig einen, der das Objekt instanziiert und Membervariablen auf die Standardwerte festlegt, wie in der [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md) aufgeführt. Wenn Sie keinen Konstruktor für die Struktur angeben, stützt sich C# auf einen *impliziten parameterlosen Konstruktor*, um automatisch jedes Feld eines Werttyps auf seinen Standardwert zu initialisieren, wie in der [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md) aufgeführt. Weitere Informationen und Beispiele finden Sie unter [Instanzkonstruktoren](./instance-constructors.md).  
+Wenn Sie keinen Konstruktor für die Klasse angeben, erstellt C# standardmäßig einen, der das Objekt instanziiert und Membervariablen auf die Standardwerte festlegt, wie in den [Standardwerten der C#-Typen](../../language-reference/builtin-types/default-values.md) aufgeführt. Wenn Sie keinen Konstruktor für die Struktur angeben, stützt sich C# auf einen *impliziten parameterlosen Konstruktor*, um automatisch jedes Feld auf seinen Standardwert zu initialisieren. Weitere Informationen und Beispiele finden Sie unter [Instanzkonstruktoren](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Konstruktorsyntax
 
@@ -33,13 +33,13 @@ Wenn ein Konstruktor als einzelne Anweisung implementiert werden kann, können S
 
 ## <a name="static-constructors"></a>Statische Konstruktoren
 
-Die vorherigen Beispiele haben alle Instanzkonstruktoren gezeigt, die ein neues Objekt erstellen. Eine Klasse oder Struktur kann auch einen statischen Konstruktor haben, der statische Member dieses Typs initialisiert.  Statische Konstruktoren sind parameterlos. Wenn Sie keinen statischen Konstruktor zum Initialisieren von statischen Feldern angeben, initialisiert der C#-Compiler statische Felder mit ihrem Standardwert, wie in der [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md) aufgeführt.
+Die vorherigen Beispiele haben alle Instanzkonstruktoren gezeigt, die ein neues Objekt erstellen. Eine Klasse oder Struktur kann auch einen statischen Konstruktor haben, der statische Member dieses Typs initialisiert.  Statische Konstruktoren sind parameterlos. Wenn Sie keinen statischen Konstruktor zum Initialisieren von statischen Feldern angeben, initialisiert der C#-Compiler statische Felder mit ihrem Standardwert, wie unter [Standardwerte der C#-Typen](../../language-reference/builtin-types/default-values.md) aufgeführt.
 
 Im folgenden Beispiel wird ein statischer Konstruktor verwendet, um ein statisches Feld zu initialisieren.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Sie können einen statischen Konstruktor auch mit einer Ausdruckstextdefinition definieren, wie im folgenden Beispiel gezeigt. 
+Sie können einen statischen Konstruktor auch mit einer Ausdruckstextdefinition definieren, wie im folgenden Beispiel gezeigt.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
@@ -62,4 +62,4 @@ Weitere Informationen und Beispiele finden Sie unter [Statische Konstruktoren](.
 - [Klassen und Strukturen](./index.md)
 - [Finalizer](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [Why Do Initializers Run In The Opposite Order As Constructors? Part One (Warum werden Initialisierer In der entgegengesetzten Reihenfolge ausgeführt wie Konstruktoren? Teil Eins)](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [Why Do Initializers Run In The Opposite Order As Constructors? Part One (Warum werden Initialisierer In der entgegengesetzten Reihenfolge ausgeführt wie Konstruktoren? Teil Eins)](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

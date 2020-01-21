@@ -54,6 +54,6 @@ In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Typen](./index.md)
 - [Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

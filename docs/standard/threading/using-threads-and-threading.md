@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131495"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936845"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -28,11 +28,13 @@ Sie können einen neuen Thread erstellen, indem Sie eine neue Instanz der <xref:
 
 ## <a name="how-to-stop-a-thread"></a>Vorgehensweise: Anhalten eines Threads
 
-Verwenden Sie die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode, um die Ausführung eines Threads zu beenden. Diese Methode löst eine <xref:System.Threading.ThreadAbortException> im Thread aus, in dem sie aufgerufen wird. Weitere Informationen finden Sie unter [Zerstören von Threads](destroying-threads.md).
+Verwenden Sie <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, um die Ausführung eines Threads zu beenden. Mit dieser Methode lassen sich Threads kooperativ anhalten. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](cancellation-in-managed-threads.md).
 
-Ab .NET Framework 4 können Sie die <xref:System.Threading.CancellationToken?displayProperty=nameWithType> verwenden, um einen Thread kooperativ abzubrechen. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](cancellation-in-managed-threads.md).
+Manchmal ist es nicht möglich, einen Thread kooperativ anzuhalten, weil darin Drittanbietercode ausgeführt wird, der für einen kooperativen Abbruch nicht geeignet ist. In diesem Fall müssen Sie die Beendigung der Ausführung möglicherweise erzwingen. Um die Beendigung der Ausführung eines Threads zu erzwingen, können Sie in .NET Framework die Methode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> verwenden. Diese Methode löst eine <xref:System.Threading.ThreadAbortException> im Thread aus, in dem sie aufgerufen wird. Weitere Informationen finden Sie unter [Zerstören von Threads](destroying-threads.md). Die Methode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> wird in .NET Core nicht unterstützt. Wenn Sie die Beendigung der Ausführung von Drittanbietercode in .NET Core erzwingen müssen, führen Sie den Code in einem separaten Prozess aus und verwenden <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
-Verwenden Sie die <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>-Methode, damit der aufrufende Thread auf das Beenden des Threads wartet, in dem die Methode aufgerufen wurde.
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> steht erst ab .NET Framework 4 zur Verfügung. Um einen Thread in einer älteren .NET Framework-Version anzuhalten, müssen Sie den kooperativen Abbruch mithilfe von Techniken zur Threadsynchronisierung manuell implementieren. Sie können beispielsweise das flüchtige (volatile) boolesche Feld `shouldStop` erstellen und damit anfordern, dass der vom Thread ausgeführte Code angehalten wird. Weitere Informationen finden Sie unter [volatile](../../csharp/language-reference/keywords/volatile.md) in der C#-Referenz sowie unter <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+
+Verwenden Sie die <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>-Methode, damit der aufrufende Thread auf die Beendigung des Threads wartet, der angehalten wird.
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>Vorgehensweise: Anhalten oder Unterbrechen eines Threads
 
@@ -42,7 +44,7 @@ Mit der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>-Met
 
 In der folgenden Tabelle werden einige <xref:System.Threading.Thread>-Eigenschaften aufgeführt:  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Gibt `true` zurück, wenn dieser Thread gestartet und ordnungsgemäß beendet bzw. abgebrochen wurde.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Es wird ein boolescher Wert abgerufen oder festgelegt, der angibt, ob ein Thread ein Hintergrundthread ist. Hintergrundthreads sind wie Vordergrundthreads, aber ein Hintergrundthread verhindert nicht, dass ein Prozess beendet wird. Sobald alle zu einem Prozess gehörenden Vordergrundthreads beendet wurden, beendet die Common Language Runtime den Prozess, indem die Methode <xref:System.Threading.Thread.Abort%2A> in Hintergrundthreads aufgerufen wird, die noch aktiv sind. Weitere Informationen finden Sie im Artikel zu [Vordergrund- und Hintergrundthreads](foreground-and-background-threads.md).|  

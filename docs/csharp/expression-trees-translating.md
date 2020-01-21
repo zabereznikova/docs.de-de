@@ -4,14 +4,14 @@ description: Hier erfahren Sie, wie Sie auf jeden Knoten in einer Ausdrucksbaums
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036624"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115780"
 ---
-# <a name="translating-expression-trees"></a>Übersetzen von Ausdrucksbaumstrukturen
+# <a name="translate-expression-trees"></a>Übersetzen von Ausdrucksbaumstrukturen
 
 [Vorheriges – Erstellen von Ausdrücken](expression-trees-building.md)
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 Es ist einiges an Code, aber die Konzepte sind sehr zugänglich.
-Dieser Code besucht untergeordnete Elemente in einer ersten tiefgründigen Suche. Wenn er einen konstanten Knoten erkennt, gibt der Besucher den Wert der Konstanten zurück. Nachdem der Besucher auf beide untergeordnete Elemente zugegriffen hat, werden diese untergeordneten Elemente die Summe berechnet haben, die für die Unterstruktur berechnet wurde. Der Additionsknoten kann jetzt seine Summe berechnen.
+Dieser Code besucht untergeordnete Elemente in einer ersten tiefgründigen Suche. Wenn er einen konstanten Knoten erkennt, gibt der Besucher den Wert der Konstanten zurück. Nachdem der Besucher auf beide untergeordnete Elemente zugegriffen hat, werden diese untergeordneten Elemente die Summe für die Unterstruktur berechnet haben. Der Additionsknoten kann jetzt seine Summe berechnen.
 Sobald alle Knoten in der Ausdrucksbaumstruktur aufgerufen wurden, wird die Summe berechnet worden sein. Sie können die Ausführung verfolgen, indem Sie das Beispiel im Debugger ausführen und die Ausführung verfolgen.
 
 Wir erleichtern die Verfolgung, wie die Knoten analysiert werden und wie die Summe berechnet wird, indem wir die Struktur durchlaufen. Hier ist eine aktualisierte Version der Aggregatmethode, die ziemlich viel Ablaufverfolgungsinformationen enthält:
@@ -192,7 +192,7 @@ Während die endgültige Antwort identisch ist, ist das Durchlaufen der Struktur
 
 ## <a name="learning-more"></a>Weitere Informationen
 
-Dieses Beispiel zeigt eine kleine Teilmenge des Codes, den Sie erstellen möchten, um die durch eine Ausdrucksbaumstruktur dargestellten Algorithmen zu durchlaufen und zu interpretieren. Für eine vollständige Beschreibung aller notwendigen Arbeiten zur Erstellung einer allgemeinen Bibliothek, die Ausdrucksbaumstrukturen in eine andere Sprache übersetzt, lesen Sie [diese Serie](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/) von Matt Warren. Es wird bis ins Detail erklärt, wie jeder Code übersetzt wird, den Sie in einer Ausdrucksbaumstruktur finden könnten.
+Dieses Beispiel zeigt eine kleine Teilmenge des Codes, den Sie erstellen möchten, um die durch eine Ausdrucksbaumstruktur dargestellten Algorithmen zu durchlaufen und zu interpretieren. Für eine vollständige Beschreibung aller notwendigen Arbeiten zur Erstellung einer allgemeinen Bibliothek, die Ausdrucksbaumstrukturen in eine andere Sprache übersetzt, lesen Sie [diese Serie](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) von Matt Warren. Es wird bis ins Detail erklärt, wie jeder Code übersetzt wird, den Sie in einer Ausdrucksbaumstruktur finden könnten.
 
 Ich hoffe, dass Sie jetzt die tatsächliche Leistungsfähigkeit von Ausdrucksbaumstrukturen gesehen haben.
 Sie können einen Satz von Code untersuchen, alle Änderungen vornehmen, die Sie für diesen Code haben möchten, und die geänderte Version ausführen. Da die Ausdrucksbaumstrukturen unveränderlich sind, können Sie neue Strukturen mithilfe der Komponenten von vorhandenen Strukturen erstellen. Dies minimiert die Menge an erforderlichem Arbeitsspeicher, um geänderte Ausdrucksbaumstrukturen zu erstellen.

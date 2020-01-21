@@ -41,7 +41,7 @@ Die im Stream enthaltenen Daten stammen möglicherweise aus dem Arbeitsspeicher,
 
 - **Suchen**. Sie können Ihre Position im Stream abfragen und ändern.
 
-Weitere Informationen finden Sie unter [Composing Streams](../../../../standard/io/composing-streams.md).
+Weitere Informationen finden Sie unter [Erstellen von Streams](../../../../standard/io/composing-streams.md).
 
 ## <a name="types-of-streams"></a>Arten von Streams
 
@@ -110,5 +110,5 @@ Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderunge
 
 - [Erstellen von Streams](../../../../standard/io/composing-streams.md)
 - [Datei- und Stream-E/A](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Asynchrone Datei-E/A](../../../../standard/io/asynchronous-file-i-o.md)
 - [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 776d0ca65944e943c1c5114f95801c20d31a2b74
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900741"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115872"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -38,11 +38,11 @@ Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschre
 
 Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie den folgenden Befehl in ein Konsolenfenster ein:
 
-```console
+```dotnetcli
 dotnet new console --name WebApiClient
 ```
 
-Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt. Der Projektname lautet „WebApiClient“. Da es sich um ein neues Projekt handelt, ist keine der Abhängigkeiten vorhanden, sodass die erste Ausführung das .NET Core-Framework herunterlädt, ein Entwicklungszertifikat installiert und den NuGet-Paket-Manager ausführt, um die fehlenden Abhängigkeiten wiederherzustellen.
+Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt. Der Projektname lautet „WebApiClient“. Da es sich hier um ein neues Projekt handelt, ist keine der Abhängigkeiten vorhanden. Mit der ersten Ausführung wird das .NET Core-Framework heruntergeladen, ein Entwicklungszertifikat installiert und der NuGet-Paket-Manager ausgeführt, um die fehlenden Abhängigkeiten wiederherzustellen.
 
 Bevor Sie beginnen, Änderungen vornehmen, geben Sie `dotnet run` ([siehe Hinweis](#dotnet-restore-note)) zum Ausführen der Anwendung an der Eingabeaufforderung ein. `dotnet run` führt automatisch `dotnet restore` aus, wenn Ihrer Umgebung Abhängigkeiten fehlen. Wenn Ihre Anwendung neu erstellt werden muss, wird auch `dotnet build` ausgeführt.
 Nach dem ersten Setup müssen Sie nur dann `dotnet restore` oder `dotnet build` ausführen, wenn es für Ihr Projekt sinnvoll ist.

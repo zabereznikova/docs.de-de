@@ -20,7 +20,7 @@ In der ersten Lektion werden C#-Konzepte anhand kleiner Codeausschnitte erläute
 
 Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind über einen Onlinebrowser oder [in Ihrer eigenen lokalen Entwicklungsumgebung](local-environment.md) verfügbar. Am Ende jedes Tutorials entscheiden Sie, ob Sie mit der nächsten Lektion online oder auf Ihrem eigenen Computer fortfahren möchten. Es sind Links verfügbar, die Ihnen helfen, Ihre Umgebung einzurichten und mit dem nächsten Tutorial auf Ihrem Computer fortzufahren.
 
-## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hallo Welt](hello-world.yml)
 
 Im [Hallo Welt](hello-world.yml)-Tutorial erstellen Sie das einfachste C#-Programm. Sie untersuchen den `string`-Typ und lernen, mit Text zu arbeiten.
 

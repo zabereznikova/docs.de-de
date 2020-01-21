@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973013"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163097"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Integrierte Verweistypen (C#-Referenz)
 
@@ -33,13 +33,13 @@ C# enthält eine Reihe von integrierten Verweistypen. Diese enthalten Schlüssel
 
 ## <a name="the-object-type"></a>Der Objekttyp
 
-Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `null` eine beliebige `object`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable eines Typobjekts in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `null` eine beliebige `object`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
 
 ## <a name="the-string-type"></a>Der Zeichenfolgentyp
 
 Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar. `string` ist ein Alias für <xref:System.String?displayProperty=nameWithType> in .NET.
 
-Obwohl `string` ein Verweistyp ist, werden die [Gleichheitsoperatoren`==` und `!=`](../operators/equality-operators.md#string-equality) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert. Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver. Beispiel:
+Obwohl `string` ein Verweistyp ist, werden die [Gleichheitsoperatoren`==` und `!=`](../operators/equality-operators.md#string-equality) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert. Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver. Zum Beispiel:
 
 ```csharp-interactive
 string a = "hello";
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-Der `[]`-[Operator](../operators/member-access-operators.md#indexer-operator-) kann für schreibgeschützten Zugriff auf einzelne Zeichen eines `string` verwendet werden: Gültige Werte beginnen bei `0` und müssen eine Länge kleiner als die von `string` aufweisen:
+Der `[]`-[Operator](../operators/member-access-operators.md#indexer-operator-) kann für schreibgeschützten Zugriff auf einzelne Zeichen einer Zeichenfolge verwendet werden: Gültige Indexwerte beginnen bei `0` und müssen kleiner als die Länge der Zeichenfolge sein:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-Auf gleiche Weise kann der `[]`-Operator auch für das Durchlaufen jedes Zeichens in `string` verwendet werden:
+Auf gleiche Weise kann der `[]`-Operator auch für das Durchlaufen jedes Zeichens in der Zeichenfolge verwendet werden:
 
 ```csharp-interactive
 string str = "test";
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Der Escapecode `\udddd` (wobei `dddd` eine vierstellige Zahl ist) stellt das Unicode-Zeichen U+`dddd` dar. Escapecodes aus achtstelligen Unicode werden auch erkannt: `\Udddddddd`.
 
-[Wörtliche Zeichenfolgenliterale](../tokens/verbatim.md) beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen. Beispiel:
+[Wörtliche Zeichenfolgenliterale](../tokens/verbatim.md) beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen. Zum Beispiel:
 
 ```csharp
 @"good morning"  // a string literal
@@ -162,7 +162,7 @@ dyn = dyn + 3;
 obj = obj + 3;
 ```
 
- Es wird ein Kompilierfehler für den Versuch, einen Integer und ein Objekt im Ausdruck `obj + 3` einzufügen, ausgegeben. Es wird jedoch kein Fehler für `dyn + 3` gemeldet. Der Ausdruck, der `dyn` enthält, wird nicht zur Kompilierzeit überprüft, da der Typ von `dyn` `dynamic` ist.
+ Es wird ein Kompilierfehler für den Versuch, einen Integer und ein Objekt im Ausdruck `obj + 3` einzufügen, ausgegeben. Es wird jedoch kein Fehler für `dyn + 3` gemeldet. Der Ausdruck, der `dyn` enthält, wird nicht zur Kompilierzeit überprüft, da der Typ von `dyn``dynamic` ist.
 
 Das folgende Beispiel verwendet `dynamic` in einigen Deklarationen. Die `Main`-Methode unterscheidet auch die Typüberprüfung zur Kompilierzeit und die Laufzeittypüberprüfung.
 

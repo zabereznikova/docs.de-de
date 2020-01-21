@@ -45,7 +45,7 @@ Bei der Formatierung wird eine Instanz einer Klasse, Struktur oder eines Enumera
 - Unter Umständen muss ein Wert in einer Anwendung auf unterschiedliche Arten angezeigt werden. Beispielsweise stellt eine Anwendung einen Enumerationsmember möglicherweise dar, indem eine Zeichenfolgendarstellung des Namens oder des zugrunde liegende Werts angezeigt wird. Ein Beispiel für die Formatierung eines Members der <xref:System.DayOfWeek> -Enumeration auf unterschiedliche Weise finden Sie im Abschnitt [Standardformatzeichenfolgen](#standard-format-strings) .
 
 > [!NOTE]
-> Durch das Formatieren wird der Wert eines Typs in eine Zeichenfolgendarstellung konvertiert. Die Analyse ist die Umkehroperation zum Formatieren. In einem Analysevorgang wird eine Instanz eines Datentyps aus seiner Zeichenfolgendarstellung erstellt. Informationen zum Konvertieren von Zeichenfolgen in andere Datentypen finden Sie unter [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md).
+> Durch das Formatieren wird der Wert eines Typs in eine Zeichenfolgendarstellung konvertiert. Die Analyse ist die Umkehroperation zum Formatieren. In einem Analysevorgang wird eine Instanz eines Datentyps aus seiner Zeichenfolgendarstellung erstellt. Informationen zum Konvertieren von Zeichenfolgen in andere Datentypen finden Sie unter [Analysieren von Zeichenfolgen in .NET](../../../docs/standard/base-types/parsing-strings.md).
 
 .NET bietet eine umfangreiche Formatierungsunterstützung, die es Entwicklern ermöglicht, diese Anforderungen zu erfüllen.
 
@@ -329,7 +329,7 @@ Zusätzlich zum Ersetzen eines Formatelements durch die Zeichenfolgendarstellung
 
      Beachten Sie, dass, wenn sowohl die Ausrichtungszeichenfolge-Komponente als auch die Formatzeichenfolgen-Komponente vorhanden ist, die erste der letzteren vorausgeht (z. B. `{0,-20:g}`).
 
-Weitere Informationen zur zusammengesetzten Formatierung finden Sie unter [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).
+Weitere Informationen zur zusammengesetzten Formatierung finden Sie unter [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md).
 
 ## <a name="custom-formatting-with-icustomformatter"></a>Benutzerdefinierte Formatierung mit ICustomFormatter
 

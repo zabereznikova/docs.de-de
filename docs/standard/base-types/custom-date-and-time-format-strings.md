@@ -1,5 +1,5 @@
 ---
-title: Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
+title: Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348295"
 ---
-# <a name="custom-date-and-time-format-strings"></a>Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
+# <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 
 Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung eines <xref:System.DateTime>-Werts oder eines <xref:System.DateTimeOffset>-Werts, der sich aus einem Formatierungsvorgang ergibt. Sie kann auch die Darstellung eines Datums- und Uhrzeitwerts definieren, der in einem Analysevorgang erforderlich ist, um die Zeichenfolge erfolgreich in ein Datum und eine Uhrzeit zu konvertieren. Benutzerdefinierte Formatzeichenfolgen bestehen aus einem oder mehreren benutzerdefinierten Formatbezeichnern für Datum und Uhrzeit. Alle Zeichenfolgen, bei denen es sich nicht um [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) handelt, werden als benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit interpretiert.
 

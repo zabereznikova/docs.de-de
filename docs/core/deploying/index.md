@@ -91,7 +91,7 @@ Es gibt auch einige Nachteile:
 
 ## <a name="step-by-step-examples"></a>Beispiele mit Schrittanleitungen
 
-Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio). 
+Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Veröffentlichen von .NET Core-Apps mit der CLI](deploy-with-cli.md). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Siehe auch
 

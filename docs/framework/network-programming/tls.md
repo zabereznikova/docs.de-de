@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196372"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937693"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -104,7 +104,7 @@ Wenn Sie **keine** benutzerdefinierte Bindung verwenden **und** Ihre WCF-Bindung
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>Für WCF-Nachrichtensicherheit mit Zertifikatanmeldeinformationen
 
-.NET Framework 4.7 und höhere Versionen verwenden standardmäßig das in der <xref:System.Net.ServicePointManager.SecurityProtocol>-Eigenschaft angegebene Protokoll. Wenn der [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` auf `true` gesetzt ist, wählt WCF das beste Protokoll bis TLS 1.0.
+.NET Framework 4.7 und höhere Versionen verwenden standardmäßig das in der <xref:System.Net.ServicePointManager.SecurityProtocol>-Eigenschaft angegebene Protokoll. Wenn die [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` auf `true` gesetzt ist, wählt WCF das beste Protokoll bis TLS 1.0.
 
 ## <a name="if-your-app-targets-a-net-framework-version-earlier-than-47"></a>Wenn Ihre App auf eine höhere .NET Framework-Version als 4.7 abzielt
 
@@ -112,7 +112,7 @@ Wenn Sie **keine** benutzerdefinierte Bindung verwenden **und** Ihre WCF-Bindung
 
 ### <a name="for-net-framework-46---462-and-not-wcf"></a>Für .NET Framework 4.6 bis 4.6.2 und ohne WCF
 
-Setzen Sie den `DontEnableSystemDefaultTlsVersions` `AppContext`-Switch auf `false`. Siehe [Konfigurieren der Sicherheit über AppContext-Switches](#configuring-security-via-appcontext-switches).
+Setzen Sie die `DontEnableSystemDefaultTlsVersions` `AppContext`-Option auf `false`. Siehe [Konfigurieren der Sicherheit über AppContext-Switches](#configuring-security-via-appcontext-switches).
 
 ### <a name="for-wcf-using-net-framework-46---462-using-tcp-transport-security-with-certificate-credentials"></a>Für WCF mit .NET Framework 4.6 bis 4.6.2 unter Berücksichtigung der Transportsicherheit mit Zertifikatanmeldeinformationen
 
