@@ -1,17 +1,20 @@
 ---
 title: Serialisieren und Deserialisieren von JSON mit C# -.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
-ms.translationtype: HT
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904657"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163201"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Mars Hallen und Unmarshalling) von JSON in .NET
 
@@ -64,7 +67,7 @@ Die JSON-Ausgabe der Serialisierung einer Instanz des vorangehenden Typs sieht w
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-Im folgenden Beispiel wird derselbe JSON-Code formatiert dargestellt (d. h. mit Leerraum und Einzug):
+Im folgenden Beispiel wird derselbe JSON-Code dargestellt, der formatiert ist (d. h. mit Leerraum und Einzug):
 
 ```json
 {
@@ -369,17 +372,17 @@ Diese Option gilt nur für die Serialisierung. Während der Deserialisierung wer
 
 ### <a name="exclude-all-null-value-properties"></a>Alle Eigenschaften mit NULL-Wert ausschließen
 
-Um alle Eigenschaften mit NULL-Werten auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>-Eigenschaft auf `true` fest, wie im folgenden Beispiel gezeigt:
+Um alle Eigenschaften mit NULL-Werten auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>-Eigenschaft auf `true` fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
 Im folgenden finden Sie ein Beispiel Objekt für die Serialisierung und JSON-Ausgabe:
 
-|Eigenschaft |Wert  |
+|Die Eigenschaften- |{2&gt;Wert&lt;2}  |
 |---------|---------|
-| date    | 01.08.2019 00:00:00 -07:00|
+| Datum    | 01.08.2019 00:00:00 -07:00|
 | TemperatureCelsius| 25 |
-| Zusammenfassung| NULL|
+| Summary| NULL|
 
 ```json
 {
@@ -563,7 +566,7 @@ Das folgende Beispiel zeigt die JSON-Datei, die sich aus dem vorangehenden Code 
 }
 ```
 
-Weitere Informationen zur polymorphen **Serialisierung**und Informationen zur **Deserialisierung**finden [Sie unter Migrieren von "newtonsoft. JSON" zu "System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)".
+Weitere Informationen zur polymorphen **Serialisierung**und Informationen zur **Deserialisierung**finden [Sie unter Migrieren von Newtonsoft.Json zu System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Kommentare und nachfolgende Kommas zulassen
 
@@ -631,14 +634,14 @@ Wenn Sie den obenstehenden JSON-Code in den angezeigten Typ deserialisieren, sin
 
 Wenn Sie den zuvor gezeigten JSON-Code in diesen Beispieltyp deserialisieren, werden die zusätzlichen Daten zu Schlüssel-Wert-Paaren der `ExtensionData`-Eigenschaft:
 
-|Eigenschaft |Wert  |Hinweise  |
+|Die Eigenschaften- |{2&gt;Wert&lt;2}  |Hinweise  |
 |---------|---------|---------|
-| date    | 01.08.2019 00:00:00 -07:00||
+| Datum    | 01.08.2019 00:00:00 -07:00||
 | TemperatureCelsius| 0 | Unterscheidung nach Groß-/Kleinschreibung (`temperatureCelsius` im JSON-Code), sodass die-Eigenschaft nicht festgelegt ist. |
-| Zusammenfassung | Heiße Ebene ||
+| Summary | Hohe Auslastung ||
 | ExtensionData | TemperatureCelsius: 25 |Da die Groß-/Kleinschreibung nicht entsprach, ist diese JSON-Eigenschaft ein zusätzliches und wird zu einem Schlüssel-Wert-Paar im Wörterbuch.|
 || Datesavailable:<br>  01.08.2019 00:00:00 -07:00<br>8/2/2019 12:00:00 Uhr-07:00 |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
-| |Summarywords:<br>Kalte Ebene<br>Windy<br>Feu |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
+| |Summarywords:<br>Toll<br>Windy<br>Feu |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
 
 Wenn das Zielobjekt serialisiert wird, werden die Schlüssel-Wert-Paare der Erweiterungsdaten zu JSON-Eigenschaften, genauso wie sie im eingelesenen JSON-Code waren:
 
@@ -777,9 +780,9 @@ Im Folgenden finden Sie ein JSON-Beispiel, das der vorherige Code lesen kann. Di
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-* [Übersicht über System. Text. JSON](system-text-json-overview.md)
+* [Übersicht über System.Text.Json](system-text-json-overview.md)
 * [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md)
-* [Vorgehensweise beim Migrieren von "newtonsoft. JSON"](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [DateTime-und DateTimeOffset-Unterstützung in System. Text. JSON](../datetime/system-text-json-support.md)
-* [System. Text. JSON-API-Referenz](xref:System.Text.Json)
+* [Migrieren von Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [DateTime-und DateTimeOffset-Unterstützung in System.Text.Json](../datetime/system-text-json-support.md)
+* [API-Referenz für System.Text.Json](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
