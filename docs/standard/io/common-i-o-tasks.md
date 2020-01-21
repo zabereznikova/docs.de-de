@@ -55,4 +55,4 @@ Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene A
 
 - [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
 - [Erstellen von Streams](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)

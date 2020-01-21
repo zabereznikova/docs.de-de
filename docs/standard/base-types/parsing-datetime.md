@@ -86,7 +86,7 @@ Jede Überladung der Methode <xref:System.DateTime.Parse%2A> und <xref:System.Da
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Parsing Strings](parsing-strings.md)
+- [Analysieren von Zeichenfolgen in .NET](parsing-strings.md)
 - [Formatierung von Typen](formatting-types.md)
 - [Typkonvertierung in .NET](type-conversion.md)
 - [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)
