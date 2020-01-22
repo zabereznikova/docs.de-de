@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 459e7e1f0b5543f069682dadf60668e94b472377
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 80fc75d0736e2ae17699073a025e79b52b340613
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643862"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937077"
 ---
-### <a name="switchsystemwindowsformsdomainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>Kompatibilitätsswitch „Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling“ wird nicht unterstützt
+### <a name="domainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>Kompatibilitätsoption DomainUpDown.UseLegacyScrolling wird nicht unterstützt
 
 Der mit .NET Framework 4.7.1 eingeführte Kompatibilitätsswitch `Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling` wird in Windows Forms unter .NET Core 3.0 nicht unterstützt.
 
@@ -20,7 +20,7 @@ In .NET Core wird der Switch `Switch.System.Windows.Forms.DomainUpDown.UseLegacy
 
 3.0 Vorschau 9
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Entfernen Sie den Switch. Der Switch wird nicht unterstützt, und es ist keine alternative Funktionalität verfügbar.
 

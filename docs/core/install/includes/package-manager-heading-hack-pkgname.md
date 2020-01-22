@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7a55641b3673dc4d8d9b328f0de99b7247ca51d4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74998798"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116148"
 ---
 
 Die Pakete, die dem Paket-Manager-Feed hinzugefügt werden, werden in einem Format benannt, das gehackt werden kann: `{product}-{type}-{version}`.
@@ -31,7 +31,7 @@ Die Version des zu installierenden SDK oder der zu installierenden Runtime. In d
 ### <a name="examples"></a>Beispiele
 
 - Installieren des .NET Core 2.2 SDK: `dotnet-sdk-2.2`
-- Installieren der ASP.NET Core 3.0-Runtime: `aspnetcore-runtime-3.0`
+- Installieren der ASP.NET Core 3.1-Runtime: `aspnetcore-runtime-3.1`
 - Installieren der .NET Core 2.1-Runtime: `dotnet-runtime-2.1`
 
 ### <a name="troubleshoot"></a>Problembehandlung

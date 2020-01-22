@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393963"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937290"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Zielframework: .NET Framework-Unterstützung aufgehoben
 
@@ -20,7 +20,7 @@ Weitere Informationen zum Portieren von .NET Framework zu .NET Core finden Sie u
 
 `Microsoft.Extensions`-Pakete (z. B. Protokollierung, Abhängigkeitsinjektion und Konfiguration) und Entity Framework Core sind nicht betroffen. Sie unterstützen .NET Standard auch weiterhin.
 
-Weitere Informationen zu den Gründen für diese Änderung finden Sie im [ursprünglichen Blogbeitrag](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Weitere Informationen zu den Gründen für diese Änderung finden Sie im [ursprünglichen Blogbeitrag](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -34,7 +34,7 @@ ASP.NET Core-Apps konnten unter .NET Core oder .NET Framework ausgeführt werden
 
 ASP.NET Core-Apps können nur unter .NET Core ausgeführt werden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Führen Sie eine der folgenden Aktionen aus:
 

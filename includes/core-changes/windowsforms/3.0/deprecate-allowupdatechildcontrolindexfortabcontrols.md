@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 1d01de4b978309e05a6036953f2a6909628a2480
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643886"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937111"
 ---
-### <a name="switchsystemwindowsformsallowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Kompatibilitätsswitch „Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls“ wird nicht unterstützt
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Kompatibilitätsoption AllowUpdateChildControlIndexForTabControls wird nicht unterstützt
 
 Der Kompatibilitätsswitch `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` wird in Windows Forms unter .NET Framework 4.6 und höheren Versionen unterstützt. In Windows Forms ab .NET Core 3.0 gibt es diese Unterstützung jedoch nicht mehr.
 
@@ -20,7 +20,7 @@ In .NET Core wird der Switch `Switch.System.Windows.Forms.AllowUpdateChildContro
 
 3.0 Vorschau 9
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Entfernen Sie den Switch. Der Switch wird nicht unterstützt, und es ist keine alternative Funktionalität verfügbar.
 

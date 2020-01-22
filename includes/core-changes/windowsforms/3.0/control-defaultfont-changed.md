@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 843007ac6467584fbe6350b6ea19ef67609d73e2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643844"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937016"
 ---
-### <a name="controldefaultfont-changed-to-segoe-ui-9pt"></a>`Control.DefaultFont` wurde in `Segoe UI 9pt` geändert
+### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Standardschriftart für Steuerelemente in Segoe UI 9 pt geändert
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-In .NET Framework wurde die <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType>-Eigenschaft auf `Microsoft Sans Serif 8pt` festgelegt. Die folgende Abbildung zeigt ein Fenster, in dem die Standardschriftart verwendet wird.
+Im .NET Framework wurde die Eigenschaft <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> auf `Microsoft Sans Serif 8 pt` festgelegt. Die folgende Abbildung zeigt ein Fenster, in dem die Standardschriftart verwendet wird.
 
-![Steuerelement-Standardschriftart in .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
+![Standardschriftart für Steuerelemente im .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-In .NET Core (ab .NET Core 3.0) wird sie auf `Segoe UI 9pt` festgelegt (die gleiche Schriftart wie <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). Infolge dieser Änderung werden Formulare und Steuerelemente etwa 27 % größer dimensioniert, um die größere Größe der neuen Standardschriftart zu berücksichtigen. Beispiel:
+Ab .NET Core 3.0 ist die Standardschriftart auf `Segoe UI 9 pt` festgelegt (dieselbe Schriftart wie <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). Infolge dieser Änderung werden Formulare und Steuerelemente etwa 27 % größer dimensioniert, um der größeren neuen Standardschriftart gerecht zu werden. Zum Beispiel:
 
-![Steuerelement-Standardschriftart in .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
+![Standardschriftart für Steuerelemente in .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-Diese Änderung wurde vorgenommen, um den [Leitfäfen für Windows-UX](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors) zu genügen.
+Diese Änderung wurde entsprechend den [Leitfäden für Benutzeroberflächen unter Windows](/windows/win32/uxguide/vis-fonts#fonts-and-colors) vorgenommen.
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
 3.0
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Aufgrund der Änderung der Größe von Formularen und Steuerelementen sollten Sie sicherstellen, dass Ihre Anwendung richtig gerendert wird.
 
-Wenn Sie die ursprüngliche Schriftart beibehalten möchten, legen Sie die Standardschriftart des Formulars auf `Microsoft Sans Serif 8pt` fest. Beispiel:
+Wenn Sie die ursprüngliche Schriftart beibehalten möchten, legen Sie die Standardschriftart des Formulars auf `Microsoft Sans Serif 8 pt` fest. Zum Beispiel:
 
 ```csharp
 public MyForm()

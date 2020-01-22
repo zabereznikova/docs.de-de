@@ -1,17 +1,35 @@
 ---
 title: Breaking Changes bei Windows Forms – .NET Core
 description: Listet die Breaking Changes bei Windows Forms für .NET Core auf.
-ms.date: 11/27/2019
-ms.openlocfilehash: 8fefa6e2f5a004e8bbe0e6e715f7fd467debb7a4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.date: 01/08/2020
+ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567357"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116458"
 ---
-# <a name="breaking-changes-in-windows-forms-net-core-to-net-core"></a>Listet die Breaking Changes bei Windows Forms (.NET Core zu .NET Core) auf.
+# <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
 
-Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. In diesem Artikel werden Breaking Changes für Windows Forms anhand der .NET Core-Version aufgeführt, in der sie eingeführt wurden. Wenn Sie ein Upgrade einer Windows Forms-App von einer früheren Version von .NET Core (3.0 oder höher) durchführen, gilt dieser Artikel für Sie. Wenn Sie eine Windows Forms-App von .NET Framework zu .NET Core migrieren, finden Sie weitere Informationen unter [Breaking Changes für Windows Forms (.NET Framework zu .NET Core)](../porting/winforms-breaking-changes.md).
+Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. In diesem Artikel werden Breaking Changes für Windows Forms anhand der .NET Core-Version aufgeführt, in der sie eingeführt wurden. Wenn Sie ein Upgrade einer Windows Forms-App von .NET Framework oder einer früheren Version von .NET Core (3.0 oder höher) durchführen, bietet Ihnen dieser Artikel Unterstützung.
+
+Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
+
+- [Entfernte Steuerelemente](#removed-controls)
+- [CellFormatting-Ereignis wird nicht ausgelöst, wenn QuickInfo angezeigt wird](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [Control.DefaultFont wurde in Segoe UI 9 pt geändert](#default-control-font-changed-to-segoe-ui-9-pt)
+- [Modernisierung von FolderBrowserDialog](#modernization-of-the-folderbrowserdialog)
+- [SerializableAttribute aus einigen Windows Forms-Typen entfernt](#serializableattribute-removed-from-some-windows-forms-types)
+- [Kompatibilitätsoption AllowUpdateChildControlIndexForTabControls wird nicht unterstützt](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [Kompatibilitätsoption DomainUpDown.UseLegacyScrolling wird nicht unterstützt](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [Kompatibilitätsoption DoNotLoadLatestRichEditControl wird nicht unterstützt](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [Kompatibilitätsoption DoNotSupportSelectAllShortcutInMultilineTextBox wird nicht unterstützt](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [Kompatibilitätsoption DontSupportReentrantFilterMessage wird nicht unterstützt](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [Kompatibilitätsoption EnableVisualStyleValidation wird nicht unterstützt](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [Kompatibilitätsoption UseLegacyContextMenuStripSourceControlValue wird nicht unterstützt](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [Kompatibilitätsoption UseLegacyImages wird nicht unterstützt](#uselegacyimages-compatibility-switch-not-supported)
+- [Zugriffsänderung für AccessibleObject.RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Doppelte APIs aus Windows Forms entfernt](#duplicated-apis-removed-from-windows-forms)
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
@@ -21,6 +39,62 @@ Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. In 
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
 
+***
+
+## <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
+
+***
+
+[!INCLUDE[Modernization of the FolderBrowserDialog](~/includes/core-changes/windowsforms/3.0/modernized-folderbrowserdialog.md)]
+
+***
+
+[!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/3.0/remove-serializationattribute.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-allowupdatechildcontrolindexfortabcontrols.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyscrolling.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-donotloadlatestricheditcontrol.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-donotsupportselectallshortcutinmultilinetextbox.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DontSupportReentrantFilterMessage compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-dontsupportreentrantfiltermessage.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.EnableVisualStyleValidation compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-enablevisualstylevalidation.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacycontextmenustripsourcecontrolvalue.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
+
+***
+
+[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
+
+***
+
+[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
+
+***
+
 ## <a name="see-also"></a>Siehe auch
 
-- [Breaking Changes für Windows Forms (.NET Framework zu .NET Core)](../porting/winforms-breaking-changes.md)
+- [Portieren einer Windows Forms-App zu .NET Core](../porting/winforms.md)

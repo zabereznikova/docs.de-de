@@ -2,16 +2,16 @@
 title: Nicht unterstützte APIs in .NET Core
 description: Erfahren Sie, welche APIs aus .NET Framework immer eine Ausnahme in .NET Core auslösen.
 ms.date: 12/23/2019
-ms.openlocfilehash: 0cb533f10d53fd3d287265032e3de13c242a8ae0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: f27aeca31226a95dacf100813762eedb56876fbd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901343"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936971"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>APIs, die in .NET Core immer Ausnahmen auslösen
 
-Die folgenden APIs lösen bei der Ausführung von .NET Core auf der angegebenen Plattform immer eine <xref:System.PlatformNotSupportedException> aus.
+Die folgenden APIs lösen für .NET Core auf allen oder einer Teilmenge aller Plattformen immer die Ausnahme <xref:System.PlatformNotSupportedException> aus.
 
 In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
@@ -22,7 +22,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="system"></a>System
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> | Alle |
 | <xref:System.AppDomain.ExecuteAssembly(System.String,System.String[],System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)?displayProperty=nameWithType> | Alle |
@@ -37,7 +37,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A?displayProperty=nameWithType> | Alle |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A?displayProperty=nameWithType> | Alle |
@@ -45,7 +45,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemcollectionsspecialized"></a>System.Collections.Specialized
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
@@ -53,13 +53,13 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemconfiguration"></a>System.Configuration
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType> (alle Member) | Alle |
 
 ## <a name="systemconsole"></a>System.Console
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux und macOS |
 | <xref:System.Console.BufferHeight?displayProperty=nameWithType> (nur „set“) | Linux und macOS |
@@ -77,13 +77,13 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType> (löst <xref:System.NotSupportedException> aus) | Alle |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType> (nur „set“) | Linux |
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType> (nur „set“) | Linux |
@@ -100,14 +100,14 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemio"></a>System.IO
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemiopipes"></a>System.IO.Pipes
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances?displayProperty=nameWithType> | Linux und macOS |
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux und macOS |
@@ -118,13 +118,13 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemmedia"></a>System. Media
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemnet"></a>System.Net
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Alle |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Alle |
@@ -146,25 +146,25 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformation
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows (UWP) |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Net.WebSockets.WebSocket.RegisterPrefixes?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemreflection"></a>System.Reflection
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> | Alle |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | Alle |
@@ -176,13 +176,13 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemruntimeinteropservices"></a>System.Runtime.InteropServices
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Runtime.InteropServices.Marshal.GetIDispatchForObject(System.Object)?displayProperty=nameWithType> | Alle |
 | <xref:System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile?displayProperty=nameWithType> | Alle |
@@ -194,13 +194,13 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemruntimeserialization"></a>System.Runtime.Serialization
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemsecurity"></a>System.Security
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.CodeAccessPermission.Deny?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.CodeAccessPermission.PermitOnly?displayProperty=nameWithType> | Alle |
@@ -219,7 +219,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemsecurityclaims"></a>System.Security.Claims
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
@@ -229,7 +229,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux und macOS |
@@ -263,7 +263,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemsecuritycryptographypkcs"></a>System.Security.Cryptography.Pkcs
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | Alle |
@@ -271,7 +271,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | Alle |
@@ -280,31 +280,31 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemsecuritypolicy"></a>System.Security.Policy
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceController
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> | Alle |
 
 ## <a name="systemthreading"></a>System.Threading
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Alle |
@@ -315,7 +315,7 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="systemxml"></a>System.Xml
 
-| Member | Plattform |
+| Member | Plattformen, auf denen eine Ausnahme ausgelöst wird |
 | - | - |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Alle |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Alle |

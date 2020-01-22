@@ -2,17 +2,21 @@
 title: 'Breaking Changes für Netzwerke: .NET Core'
 description: Listet die Breaking Changes für Netzwerke in .NET Core auf.
 ms.date: 10/03/2019
-ms.openlocfilehash: 6d7f32a2817999feb6a84af07c8030aca1ab95e4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: fb53dfc230623d7fda515341209a1853d4319468
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567737"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116433"
 ---
 # <a name="networking-breaking-changes"></a>Breaking Changes für Netzwerke
 
-Im Folgenden werden Breaking Changes für Netzwerke in .NET Core aufgeführt.
+Die folgenden Breaking Changes sind auf dieser Seite dokumentiert:
+
+- [Standardwert von HttpRequestMessage.Version wurde in 1.1 geändert](#default-value-of-httprequestmessageversion-changed-to-11)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
 [!INCLUDE[Default value of HttpRequestMessage.Version changed to 1.1](~/includes/core-changes/networking/3.0/httprequestmessage-version-change.md)]
+
+***

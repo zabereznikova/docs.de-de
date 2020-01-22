@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567415"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116369"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Typen im Microsoft.VisualBasic.MyServices-Namespace nicht verfügbar
 
@@ -20,7 +20,7 @@ Die Typen im <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName>-Na
 
 Die Typen wurden entfernt, um unnötige Assemblyabhängigkeiten oder Breaking Changes in nachfolgenden Releases zu vermeiden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Wenn Sie für Ihren Code **Microsoft.VisualBasic.MyServices**-Typen und deren Member benötigen, finden Sie entsprechende Typen und Member in der .NET-Klassenbibliothek. Im Folgenden ist eine Zuordnung von **Microsoft.VisualBasic.MyServices**-Typen zu den entsprechenden .NET-Klassenbibliothekstypen dargestellt:
 
@@ -45,5 +45,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.MyServices`
 
--- >
-
+-->

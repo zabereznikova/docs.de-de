@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567334"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115799"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -74,7 +74,7 @@ Legen Sie zum Veröffentlichen einer einzelnen ausführbaren Datei `PublishSingl
 </PropertyGroup>
 ```
 
-Oder
+- oder -
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -470,7 +470,7 @@ Weitere Informationen finden Sie unter [.NET Platform Dependent Intrinsics](http
 
 ### <a name="improved-net-core-version-apis"></a>Verbesserte .NET Core-Versions-APIs
 
-Ab .NET Core 3.0 geben die mit .NET Core gelieferten Versions-APIs jetzt die Informationen zurück, die Sie erwarten. Beispiel:
+Ab .NET Core 3.0 geben die mit .NET Core gelieferten Versions-APIs jetzt die Informationen zurück, die Sie erwarten. Zum Beispiel:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Schneller integrierter JSON-Support
 
-.NET-Benutzer haben sich weitgehend auf [**Json.NET**](https://www.newtonsoft.com/json) und andere beliebte JSON-Bibliotheken verlassen, die weiterhin eine gute Wahl sind. **Json.NET** verwendet als Basisdatentyp .NET-Zeichenfolgen, die intern in UTF-16 codiert sind.
+.NET-Benutzer haben sich weitgehend auf [Newtonsoft.Json](https://www.newtonsoft.com/json) und andere beliebte JSON-Bibliotheken verlassen, die weiterhin eine gute Wahl sind. `Newtonsoft.Json` verwendet als Basisdatentyp .NET-Zeichenfolgen, die intern in UTF-16 codiert sind.
 
-Die neue integrierte JSON-Unterstützung ist überaus leistungsfähig und basiert auf `Span<byte>`. Außerdem wird damit nur wenig Speicher belegt. Weitere Informationen zu zum <xref:System.Text.Json>-Namespace und den Typen finden Sie unter [JSON-Serialisierung in .NET – Übersicht](../../standard/serialization/system-text-json-overview.md). Tutorials zu häufigen JSON-Serialisierungsszenarios finden Sie unter [Serialisieren und Deserialisieren von JSON in .NET](../../standard/serialization/system-text-json-how-to.md).
+Die neue integrierte JSON-Unterstützung ist überaus leistungsfähig mit geringer Zuteilung und funktioniert mit UTF-8-codiertem JSON-Text. Weitere Informationen zum Namespace <xref:System.Text.Json> und den Typen finden Sie in den folgenden Artikeln:
+
+* [Übersicht zur JSON-Serialisierung in .NET](../../standard/serialization/system-text-json-overview.md)
+* [Serialisieren und Deserialisieren von JSON-Daten in .NET](../../standard/serialization/system-text-json-how-to.md):
+* [Migrieren aus Newtonsoft.Json zu System.Text.Json](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2-Unterstützung
 
@@ -520,4 +524,4 @@ Oftmals möchten Sie bei der Entwicklung einer Anwendung eine unverschlüsselte 
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Informationen zu den wichtigsten Unterschieden zwischen .NET Core 2.2 und 3.0](../compatibility/2.2-3.0.md)
-- [Informationen zu den wichtigsten Unterschieden zwischen .NET Framework und .NET Core 3.0 für Windows Forms-Apps](../porting/winforms-breaking-changes.md)
+- [Überprüfen von Breaking Changes in .NET Core 3.0 für Windows Forms-Apps](../compatibility/winforms.md#net-core-30)

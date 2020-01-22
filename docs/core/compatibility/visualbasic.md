@@ -2,16 +2,21 @@
 title: Breaking Changes bei Visual Basic – .NET Core
 description: Listet die Breaking Changes bei Visual Basic in .NET Core auf.
 ms.date: 09/20/2019
-ms.openlocfilehash: e06f7a3d896a1f40f64c083f51997a231bc2f29d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: e5a8070bdcf69df3aab8efa45968e226dc8054d6
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567433"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116322"
 ---
 # <a name="visual-basic-breaking-changes"></a>Breaking Changes bei Visual Basic
 
-Im Folgenden sind die Breaking Changes bei Visual Basic in .NET Core aufgeführt.
+Im Folgenden werden die Breaking Changes bei Visual Basic aufgeführt:
+
+- [Typen im Microsoft.VisualBasic.ApplicationServices-Namespace nicht verfügbar](#types-in-microsoftvisualbasicapplicationservices-namespace-not-available)
+- [Typen im Microsoft.VisualBasic.Devices-Namespace nicht verfügbar](#types-in-microsoftvisualbasicdevices-namespace-not-available)
+- [Typen im Microsoft.VisualBasic.MyServices-Namespace nicht verfügbar](#types-in-microsoftvisualbasicmyservices-namespace-not-available)
+- [Microsoft.VisualBasic.Constants.vbNewLine ist veraltet](#microsoftvisualbasicconstantsvbnewline-is-obsolete)
 
 ## <a name="net-core-30-preview-9"></a>.NET Core 3.0 Preview 9
 
@@ -24,6 +29,8 @@ Im Folgenden sind die Breaking Changes bei Visual Basic in .NET Core aufgeführt
 ***
 
 [!INCLUDE[Types in Microsoft.VisualBasic.MyServices namespace not available](~/includes/core-changes/visualbasic/3.0/microsoft.visualbasic.myservices-unavailable.md)]
+
+***
 
 ## <a name="net-core-30-preview-8"></a>.NET Core 3.0 Preview 8
 

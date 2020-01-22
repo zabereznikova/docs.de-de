@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie eine .NET Framework Windows Forms-Anwend
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567276"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116022"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
 
@@ -17,14 +17,14 @@ Dieser Artikel beschreibt, wie Sie Ihre Desktop-App auf Windows Forms-Basis von 
 
 In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migration verwendeten Dateitypen verwendet. Weil Ihre Dateien anders benannt werden, wenn Sie Ihr Projekt migrieren, gleichen Sie sie mit den unten aufgeführten Versionen ab:
 
-| Datei | BESCHREIBUNG |
+| Datei | Beschreibung |
 | ---- | ----------- |
 | **MyApps.sln** | Der Name der Projektmappendatei. |
 | **MyForms.csproj** | Der Name des zu portierenden .NET Framework Windows Forms-Projekts. |
 | **MyFormsCore.csproj** | Der Name des neuen .NET Core-Projekts, das Sie erstellen. |
 | **MyAppCore.exe** | Die ausführbare .NET Core-Windows Forms-App. |
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Visual Studio-2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) für alle Designerarbeiten, die Sie durchführen möchten.
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-Um das **MyFormsCore.csproj**-Projekt zu **MyApps.sln** hinzuzufügen, verwenden Sie entweder Visual Studio oder die .NET Core-CLI aus dem **SolutionFolder**-Verzeichnis:
+Fügen Sie das **MyFormsCore.csproj**-Projekt zu **MyApps.sln** hinzu, und verwenden Sie entweder Visual Studio oder die .NET Core-CLI aus dem **SolutionFolder**-Verzeichnis:
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -188,7 +188,7 @@ Wenn Sie ein Windows Forms-Steuerelemente-Bibliotheksprojekt portieren müssen, 
 
 Erweitern Sie mithilfe des vorherigen Schrittbeispiels, mit welchen Projekten und Dateien wir arbeiten.
 
-| Datei | BESCHREIBUNG |
+| Datei | Beschreibung |
 | ---- | ----------- |
 | **MyApps.sln** | Der Name der Projektmappendatei. |
 | **MyControls.csproj** | Der Name des zu portierenden .NET Framework Windows Forms-Steuerelemente-Projekts. |
@@ -261,7 +261,7 @@ Die Projektdatei der .NET Core-Windows Forms-Steuerelemente-Bibliothek könnte z
 
 Wie Sie sehen können, wurde der `<OutputType>`-Knoten entfernt, der standardmäßig anstelle einer ausführbaren Datei der Compiler zum Erstellen einer Bibliothek ist. `<AssemblyName>` und `<RootNamespace>` wurden geändert. Insbesondere der `<RootNamespace>` sollte mit dem Namespace der Windows Forms-Steuerelemente-Bibliothek übereinstimmen, die Sie portieren. Schließlich wurden die Knoten `<Compile>` und `<EmbeddedResource>` so angepasst, dass sie auf den Ordner der Windows Forms-Steuerelemente-Bibliothek verweisen, die Sie portieren.
 
-Fügen Sie als Nächstes im .NET Core-Hauptprojekt **MyFormsCore.csproj** den Verweis auf die neue .NET Core-Windows Forms-Steuerelemente-Bibliothek hinzu. Fügen Sie entweder mit Visual Studio oder der .NET Core-CLI einen Verweis vom **SolutionFolder**-Verzeichnis hinzu:
+Fügen Sie als Nächstes im .NET Core-Hauptprojekt **MyFormsCore.csproj** den Verweis auf die neue Windows Forms-Steuerelementebibliothek von .NET Core hinzu. Fügen Sie entweder mit Visual Studio oder der .NET Core-CLI einen Verweis vom **SolutionFolder**-Verzeichnis hinzu:
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
@@ -287,7 +287,7 @@ Der vorherige Befehl fügt dem **MyFormsCore.csproj**-Projekt Folgendes hinzu:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Sobald Visual Studio 2019 den Windows Forms-Designer unterstützt, können Sie d
 
 ## <a name="next-steps"></a>Nächste Schritte
 
+- Weitere Informationen finden Sie unter [Breaking Changes von .NET Framework zu .NET Core](../compatibility/fx-core.md).
 - Lesen Sie mehr über das [Windows Compatibility Pack][compat-pack].
 - Sehen Sie sich ein [Video zum Portieren](https://www.youtube.com/watch?v=upVQEUc_KwU) Ihres .NET Framework-Windows Forms-Projekts zu .NET Core an.
 

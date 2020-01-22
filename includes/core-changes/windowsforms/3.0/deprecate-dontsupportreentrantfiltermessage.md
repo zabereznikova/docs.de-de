@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: cb72e1b92172b8989ce99b47181c13561a7ccd76
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643892"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937053"
 ---
-### <a name="switchsystemwindowsformsdontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Kompatibilitätsswitch „Switch.System.Windows.Forms.DontSupportReentrantFilterMessage“ wird nicht unterstützt
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Kompatibilitätsoption DontSupportReentrantFilterMessage wird nicht unterstützt
 
 Der mit .NET Framework 4.6.1 eingeführte Kompatibilitätsswitch `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` wird in Windows Forms unter .NET Core 3.0 nicht unterstützt.
 
@@ -20,7 +20,7 @@ In .NET Core wird der Switch `Switch.System.Windows.Forms.DontSupportReentrantFi
 
 3.0 Vorschau 9
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Entfernen Sie den Switch. Der Switch wird nicht unterstützt, und es ist keine alternative Funktionalität verfügbar.
 
