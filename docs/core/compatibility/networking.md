@@ -2,17 +2,21 @@
 title: 'Breaking Changes für Netzwerke: .NET Core'
 description: Listet die Breaking Changes für Netzwerke in .NET Core auf.
 ms.date: 10/03/2019
-ms.openlocfilehash: 6d7f32a2817999feb6a84af07c8030aca1ab95e4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: fb53dfc230623d7fda515341209a1853d4319468
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567737"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116433"
 ---
-# <a name="networking-breaking-changes"></a><span data-ttu-id="1b98d-103">Breaking Changes für Netzwerke</span><span class="sxs-lookup"><span data-stu-id="1b98d-103">Networking breaking changes</span></span>
+# <a name="networking-breaking-changes"></a><span data-ttu-id="616b1-103">Breaking Changes für Netzwerke</span><span class="sxs-lookup"><span data-stu-id="616b1-103">Networking breaking changes</span></span>
 
-<span data-ttu-id="1b98d-104">Im Folgenden werden Breaking Changes für Netzwerke in .NET Core aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="1b98d-104">The following is a list of breaking changes in networking by .NET Core version.</span></span>
+<span data-ttu-id="616b1-104">Die folgenden Breaking Changes sind auf dieser Seite dokumentiert:</span><span class="sxs-lookup"><span data-stu-id="616b1-104">The following breaking changes are documented on this page:</span></span>
 
-## <a name="net-core-30"></a><span data-ttu-id="1b98d-105">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="1b98d-105">.NET Core 3.0</span></span>
+- [<span data-ttu-id="616b1-105">Standardwert von HttpRequestMessage.Version wurde in 1.1 geändert</span><span class="sxs-lookup"><span data-stu-id="616b1-105">Default value of HttpRequestMessage.Version changed to 1.1</span></span>](#default-value-of-httprequestmessageversion-changed-to-11)
+
+## <a name="net-core-30"></a><span data-ttu-id="616b1-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="616b1-106">.NET Core 3.0</span></span>
 
 [!INCLUDE[Default value of HttpRequestMessage.Version changed to 1.1](~/includes/core-changes/networking/3.0/httprequestmessage-version-change.md)]
+
+***
